@@ -11,13 +11,70 @@ body {
   color: var(--black);
   margin: 0;
   font-family: 'Georgia', serif;
+  padding-bottom: 60px; /* To make space for the fixed footer */
 }
 
 .header {
   background-color: var(--saffron);
   color: var(--white);
   padding: 20px;
-  font-size: 2em;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+.header h1 {
+  margin: 0;
+  font-size: 1.5em;
+}
+
+.header nav {
+  display: flex;
+  gap: 15px;
+}
+
+.header nav a {
+  color: var(--white);
+  text-decoration: none;
+}
+
+.search-bar {
+  position: relative;
+}
+
+.search-bar input {
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 1em;
+}
+
+.search-results {
+  position: absolute;
+  background-color: white;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  width: 100%;
+  z-index: 10;
+}
+
+.search-results li {
+  padding: 10px;
+  border-bottom: 1px solid #ccc;
+}
+
+.search-results li:last-child {
+  border-bottom: none;
+}
+
+.search-results a {
+  text-decoration: none;
+  color: var(--black);
+  display: block;
 }
 
 .main-content {

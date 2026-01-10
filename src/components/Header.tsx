@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import SearchBar from './SearchBar';
 
 export default function Header() {
   return (
@@ -6,10 +7,13 @@ export default function Header() {
       <Link href="/">
         <h1>The Bharat Repo</h1>
       </Link>
+      <SearchBar />
       <nav>
-        <Link href="/philosophy-and-scriptures">Philosophy & Scriptures</Link>
-        <Link href="/science-and-technology">Science & Technology</Link>
+        <Link href="/philosophy">Philosophy</Link>
+        <Link href="/science">Science</Link>
         <Link href="/art-and-culture">Art & Culture</Link>
+        <Link href="/history">History</Link>
+        <Link href="/literature">Literature</Link>
       </nav>
     </header>
   );
