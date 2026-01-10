@@ -1,0 +1,38 @@
+:root {
+  --saffron: #FF9933;
+  --white: #FFFFFF;
+  --green: #138808;
+  --blue: #000080;
+  --black: #000000;
+}
+
+body {
+  background-color: var(--white);
+  color: var(--black);
+  margin: 0;
+  font-family: 'Georgia', serif;
+}
+
+.App {
+  text-align: center;
+}
+
+.header {
+  background-color: var(--saffron);
+  color: var(--white);
+  padding: 20px;
+  font-size: 2em;
+}
+
+.main-content {
+  padding: 20px;
+}
+
+.footer {
+  background-color: var(--green);
+  color: var(--white);
+  padding: 10px;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+}
