@@ -1,20 +1,16 @@
 import { getArticlesByCategory } from '@/lib/articles';
-import Link from 'next/link';
+import ArticleCard from '@/components/ArticleCard';
 
 export default function LiteraturePage() {
   const articles = getArticlesByCategory('literature');
   return (
     <main className="main-content">
       <h1>Literature</h1>
-      <ul>
-        {articles.map((article) => (
-          <li key={article.slug}>
-            <Link href={`/literature/${article.slug}`}>
-              {article.title}
-            </Link>
-          </li>
+      <div className="category-grid">
+        {articles.map((article: any) => (
+          <ArticleCard key={article.slug} article={article} category="literature" />
         ))}
-      </ul>
+      </div>
     </main>
   );
 }

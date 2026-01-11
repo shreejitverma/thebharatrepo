@@ -8,7 +8,7 @@ export default async function Article({ params }: { params: { category: string; 
       <article>
         <h1>{articleData.title}</h1>
         <div>{articleData.date}</div>
-        <div dangerouslySetInnerHTML={{ __html: articleData.contentHtml }} />
+        <div className="article-content" dangerouslySetInnerHTML={{ __html: articleData.contentHtml }} />
       </article>
     </main>
   );

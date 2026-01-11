@@ -1,20 +1,16 @@
 import { getArticlesByCategory } from '@/lib/articles';
-import Link from 'next/link';
+import ArticleCard from '@/components/ArticleCard';
 
 export default function PhilosophyPage() {
   const articles = getArticlesByCategory('philosophy');
   return (
     <main className="main-content">
       <h1>Philosophy</h1>
-      <ul>
-        {articles.map((article) => (
-          <li key={article.slug}>
-            <Link href={`/philosophy/${article.slug}`}>
-              {article.title}
-            </Link>
-          </li>
+      <div className="category-grid">
+        {articles.map((article: any) => (
+          <ArticleCard key={article.slug} article={article} category="philosophy" />
         ))}
-      </ul>
+      </div>
     </main>
   );
 }
