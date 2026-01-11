@@ -1,57 +1,27 @@
 'use client';
 
-import { useState, useEffect } from 'react';
-import Link from 'next/link';
-import Fuse from 'fuse.js';
-import { Article } from '@/types/article';
+import { useState } from 'react';
+import { useRouter } from 'next/navigation';
 
 export default function SearchBar() {
   const [query, setQuery] = useState('');
-  const [results, setResults] = useState<Article[]>([]);
-  const [fuse, setFuse] = useState<Fuse<Article> | null>(null);
+  const router = useRouter();
 
-  useEffect(() => {
-    fetch('/search.json')
-      .then((response) => response.json())
-      .then((articles) => {
-        const fuseInstance = new Fuse(articles, {
-          keys: ['title', 'content', 'tags'],
-          includeScore: true,
-        });
-        setFuse(fuseInstance);
-      });
-  }, []);
-
-  const handleSearch = (e: React.ChangeEvent<HTMLInputElement>) => {
-    const newQuery = e.target.value;
-    setQuery(newQuery);
-    if (fuse && newQuery) {
-      const searchResults = fuse.search(newQuery).map((result) => result.item);
-      setResults(searchResults);
-    } else {
-      setResults([]);
+  const handleSearch = (e: React.FormEvent) => {
+    e.preventDefault();
+    if (query) {
+      router.push(`/search?q=${query}`);
     }
   };
 
   return (
-    <div className="search-bar">
+    <form onSubmit={handleSearch} className="search-bar">
       <input
         type="text"
         value={query}
-        onChange={handleSearch}
+        onChange={(e) => setQuery(e.target.value)}
         placeholder="Search..."
       />
-      {results.length > 0 && (
-        <ul className="search-results">
-          {results.map((article) => (
-            <li key={article.slug}>
-              <Link href={`/${article.category}/${article.slug}`}>
-                {article.title}
-              </Link>
-            </li>
-          ))}
-        </ul>
-      )}
-    </div>
+    </form>
   );
 }

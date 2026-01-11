@@ -171,6 +171,28 @@ h1, h2, h3, h4, h5, h6 {
   line-height: 1.8;
 }
 
+.social-share {
+  margin-top: 40px;
+  padding-top: 20px;
+  border-top: 1px solid #eee;
+}
+
+.share-buttons {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+
+.share-buttons button {
+  cursor: pointer;
+  background-color: var(--blue);
+  color: var(--white);
+  border: none;
+  padding: 8px 12px;
+  border-radius: 4px;
+  font-family: var(--font-roboto);
+}
+
 .footer {
   background-color: var(--black);
   color: var(--white);

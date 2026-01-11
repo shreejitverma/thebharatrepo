@@ -1,5 +1,6 @@
 import { getArticleData, getAllArticleIds } from '@/lib/articles';
 import type { Article as ArticleType } from '@/types/article';
+import SocialShare from '@/components/SocialShare';
 
 export default async function Article({ params }: { params: { category: string; slug: string } }) {
   const articleData: ArticleType = await getArticleData(params.category, params.slug);
@@ -9,6 +10,7 @@ export default async function Article({ params }: { params: { category: string; 
         <h1>{articleData.title}</h1>
         <div>{articleData.date}</div>
         <div className="article-content" dangerouslySetInnerHTML={{ __html: articleData.contentHtml }} />
+        <SocialShare title={articleData.title} category={params.category} slug={params.slug} tags={articleData.tags} />
       </article>
     </main>
   );
