@@ -17,10 +17,8 @@ export function getAllArticleIds() {
     const fileNames = fs.readdirSync(categoryPath);
     return fileNames.map((fileName) => {
       return {
-        params: {
-          category,
-          slug: fileName.replace(/\.md$/, ''),
-        },
+        category,
+        slug: fileName.replace(/\.md$/, ''),
       };
     });
   });
