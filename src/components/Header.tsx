@@ -14,6 +14,7 @@ export default function Header() {
         <Link href="/art-and-culture">Art & Culture</Link>
         <Link href="/history">History</Link>
         <Link href="/literature">Literature</Link>
+        <Link href="/music">Music</Link>
       </nav>
     </header>
   );

@@ -6,6 +6,7 @@ const categories = [
   { slug: 'science', title: 'Science', description: 'Discover the scientific and technological advancements from ancient India.' },
   { slug: 'literature', title: 'Literature', description: 'Immerse yourself in the vast ocean of Indian literature.' },
   { slug: 'art-and-culture', title: 'Art & Culture', description: 'Experience the vibrant tapestry of Indian art and culture.' },
+  { slug: 'music', title: 'Music', description: 'Discover the rich traditions of Indian classical and folk music.' },
 ];
 
 export default function Home() {
