@@ -1,0 +1,56 @@
+id: site.hunsgi-baichbal-valley
+type: site
+kind: prehistory
+names:
+  en: Hunsgi-Baichbal Valley Palaeolithic Complex
+summary: >-
+  A tertiary drainage basin in the Shorapur Doab of northern Karnataka containing over two hundred Lower
+  and Middle Palaeolithic sites, documenting hominin raw-material procurement, seasonal aggregation near
+  travertine springs and Acheulian settlement organization across the Pleistocene.
+summaries:
+  kids: >-
+    The Hunsgi and Baichbal valleys in Karnataka formed a sheltered basin with fresh water and good stone,
+    where Stone Age people camped and made tools at more than two hundred sites.
+  teen: >-
+    Surveyed and excavated by K. Paddayya and colleagues, the Hunsgi-Baichbal basin preserves one of South
+    Asia's densest concentrations of Acheulian and Middle Palaeolithic occupation and workshop sites.
+region: Shorapur Doab, Yadgir district, Karnataka
+location:
+  name: Hunsgi
+  lat: 16.46
+  lon: 76.52
+datings:
+  - method: archaeological-stratigraphic
+    range:
+      earliest: -1200000
+      latest: -50000
+      precision: ka
+      circa: true
+    grade: B
+    label: Lower and Middle Palaeolithic basin sequence
+    sources:
+      - src.petraglia-1999-isampur-acheulian-quarry
+      - src.paddayya-2000-isampur-excavation
+      - src.misra-2001-prehistoric-colonization-india
+    note: >-
+      Spans Early-Middle Pleistocene Acheulian horizons (such as Isampur and Yediyapur) through Late Pleistocene
+      Middle Palaeolithic occurrences in the basin's travertine and fluvial deposits.
+claims:
+  - text: >-
+      Intensive basin-wide surveys in the Hunsgi and Baichbal valleys identified more than 200 Acheulian and
+      Middle Palaeolithic localities clustered around spring-fed streams and limestone outcrops.
+    grade: A
+    sources:
+      - src.petraglia-1999-isampur-acheulian-quarry
+      - src.misra-2001-prehistoric-colonization-india
+relations:
+  - kind: related-to
+    target: site.isampur
+wikidata: Q93273668
+tags:
+  - palaeolithic
+  - acheulian
+  - karnataka
+review:
+  status: draft
+  author: gemini-4-argon

@@ -1,0 +1,70 @@
+id: site.balathal
+type: site
+kind: prehistory
+names:
+  en: Balathal Chalcolithic Site
+summary: >-
+  A two-hectare fortified Ahar-Banas Chalcolithic settlement mound in Vallabhnagar tehsil, Udaipur district,
+  Rajasthan (c. 3000-1500 BCE), featuring multi-room stone-and-mud-brick complexes, a massive stone-revetted
+  central fortified enclosure filled with burnt cow dung ash, and the earliest osteological evidence of leprosy.
+summaries:
+  kids: >-
+    At Balathal near Udaipur, Chalcolithic villagers built stone houses around a huge walled central fort, stored
+    grain in clay bins and wove cloth nearly 4,500 years ago.
+  teen: >-
+    Excavated between 1994 and 2000 by V. N. Misra and V. S. Shinde, Balathal established the early 3rd-millennium
+    BCE origins of the Ahar-Banas culture, its monumental stone-revetted enclosure and a 2000 BCE human skeleton
+    preserving the oldest known archaeological evidence of leprosy.
+region: Berach basin, Udaipur district, Rajasthan
+location:
+  name: Balathal
+  lat: 24.72
+  lon: 74.01
+datings:
+  - method: archaeological-radiocarbon
+    range:
+      earliest: -3000
+      latest: -1500
+      best: -2200
+      precision: century
+      circa: true
+    grade: A
+    label: Thirty-radiocarbon-date sequence of Period I Chalcolithic occupation
+    sources:
+      - src.misra-2001-prehistoric-colonization-india
+      - src.robbins-2009-balathal-leprosy
+      - src.coningham-2015-archaeology-south-asia
+    note: >-
+      Over thirty calibrated radiocarbon dates place the Balathal Chalcolithic sequence from c. 3000-2800 BCE
+      (Phase A) through the fortified mature phase (c. 2500-2000 BCE) to abandonment around 1800-1500 BCE.
+claims:
+  - text: >-
+      During its mature Chalcolithic phase, Balathal contained a rectangular central fortified enclosure covering
+      roughly 500 square metres with bastions and walls nearly five metres wide built of mud-brick and stone revetments.
+    grade: A
+    sources:
+      - src.misra-2001-prehistoric-colonization-india
+      - src.coningham-2015-archaeology-south-asia
+  - text: >-
+      An adult male skeleton interred inside the ash-filled stone enclosure at Balathal and AMS-dated to c. 2000 BCE
+      exhibits rhinomaxillary resorption and peripheral bone lesions diagnostic of Mycobacterium leprae infection (leprosy).
+    grade: A
+    sources:
+      - src.robbins-2009-balathal-leprosy
+relations:
+  - kind: part-of
+    target: tradition.ahar-banas-culture
+  - kind: contemporary-of
+    target: site.ahar
+  - kind: contemporary-of
+    target: site.gilund
+wikidata: Q4850125
+tags:
+  - chalcolithic
+  - ahar-banas
+  - bioarchaeology
+  - leprosy
+  - rajasthan
+review:
+  status: draft
+  author: gemini-4-argon

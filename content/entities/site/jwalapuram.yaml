@@ -1,0 +1,87 @@
+id: site.jwalapuram
+type: site
+kind: prehistory
+names:
+  en: Jwalapuram and the Toba Super-Eruption Debate
+summary: >-
+  A stratified Palaeolithic complex in the Jurreru River valley of Andhra Pradesh where stone tool assemblages
+  occur directly below and above a 2.5-metre ash horizon of the c. 74,000-year-old Youngest Toba Tuff, making
+  it the focal point of debate over hominin survival and continuity across the Toba super-eruption.
+summaries:
+  kids: >-
+    About 74,000 years ago, a massive volcanic eruption in Indonesia covered Jwalapuram in deep ash, yet stone
+    tools found below and above the ash show that prehistoric people continued living in the valley.
+  teen: >-
+    At Jwalapuram in the Jurreru valley, archaeologists found Middle Palaeolithic stone tools both beneath and
+    above the 74,000-year-old Toba volcanic ash layer, challenging the idea that the eruption wiped out local
+    human populations.
+region: Jurreru River valley, Nandyal (Kurnool) district, Andhra Pradesh
+location:
+  name: Jwalapuram
+  lat: 15.32
+  lon: 78.13
+datings:
+  - method: luminescence
+    range:
+      earliest: -77000
+      latest: -38000
+      best: -74000
+      precision: ka
+      circa: true
+    grade: A
+    label: Pre- and post-Youngest Toba Tuff Middle Palaeolithic sequence (Petraglia et al. 2007)
+    sources:
+      - src.petraglia-2007-jwalapuram-toba
+    note: >-
+      Optically stimulated luminescence (OSL) dates at Jwalapuram Locality 3 and Locality 22 bracket the c. 74 ka
+      Youngest Toba Tuff horizon between pre-ash (~77 ka) and post-ash (~74-38 ka) Middle Palaeolithic levels.
+  - method: geological
+    range:
+      earliest: -75000
+      latest: -71000
+      best: -73500
+      precision: ka
+      circa: true
+    grade: C
+    label: Volcanic winter bottleneck and environmental disruption model (Ambrose 1998; Williams et al. 2009)
+    sources:
+      - src.ambrose-1998-toba-volcanic-winter
+      - src.williams-2009-toba-environmental-impact
+      - src.mellars-2013-colonization-southern-asia
+    note: >-
+      Argues that the c. 73-74 ka Toba eruption caused severe regional deforestation and cooling, and questions
+      whether pre-Toba tools at Jwalapuram were made by modern humans rather than archaic hominins.
+claims:
+  - text: >-
+      Lithic analyses at Jwalapuram Localities 3, 20 and 21 show technological continuity in small prepared-core
+      Middle Palaeolithic flake industries across the c. 74 ka Youngest Toba Tuff ash layer.
+    grade: A
+    sources:
+      - src.petraglia-2007-jwalapuram-toba
+  - text: >-
+      Isotopic and pollen records associated with Toba tephra in central and southern India have been interpreted
+      by critics as indicating prolonged ecological stress following the eruption.
+    grade: B
+    sources:
+      - src.williams-2009-toba-environmental-impact
+relations:
+  - kind: contemporary-of
+    target: site.dhaba
+  - kind: related-to
+    target: event.arrival-of-modern-humans-south-asia
+  - kind: related-to
+    target: site.bori
+wikidata: Q6319278
+debate: >-
+  Petraglia et al. (2007) argue that Middle Palaeolithic technological continuity below and above the 74 ka Toba
+  ash at Jwalapuram reflects early Homo sapiens survival in India, whereas Ambrose (1998), Williams et al. (2009)
+  and Mellars et al. (2013) contend that pre-Toba tools may belong to archaic hominins and that modern humans
+  colonized South Asia after c. 65-55 ka.
+tags:
+  - palaeolithic
+  - middle-palaeolithic
+  - toba-eruption
+  - andhra-pradesh
+review:
+  status: draft
+  author: gemini-4-argon

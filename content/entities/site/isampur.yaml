@@ -1,0 +1,59 @@
+id: site.isampur
+type: site
+kind: prehistory
+names:
+  en: Isampur Acheulian Quarry
+summary: >-
+  An in situ Lower Palaeolithic limestone quarry and tool-manufacturing workshop in the Hunsgi valley of
+  Karnataka, where hominins extracted weathered siliceous limestone slabs from bedrock outcrops to knap
+  Acheulian handaxes and cleavers during the Early to Middle Pleistocene.
+summaries:
+  kids: >-
+    Isampur in Karnataka was a prehistoric stone-tool workshop where early humans pried up flat blocks of
+    limestone and chipped them into sharp handaxes over a million years ago.
+  teen: >-
+    Located in the Hunsgi valley, Isampur is the best-preserved Acheulian quarry-workshop in India, preserving
+    chipping floors where hominins selected specific limestone beds to fashion handaxes and cleavers.
+region: Hunsgi valley, Yadgir district, Karnataka
+location:
+  name: Isampur
+  lat: 16.51
+  lon: 76.48
+datings:
+  - method: archaeological-stratigraphic
+    range:
+      earliest: -1200000
+      latest: -700000
+      precision: Ma
+      circa: true
+    grade: B
+    label: Early-Middle Pleistocene Acheulian quarry horizon
+    sources:
+      - src.petraglia-1999-isampur-acheulian-quarry
+      - src.paddayya-2000-isampur-excavation
+      - src.coningham-2015-archaeology-south-asia
+    note: >-
+      Stratigraphic position below brown-black silts and preliminary electron spin resonance (ESR) assays on
+      fossil herbivore teeth place the Acheulian workshop in the Early to early Middle Pleistocene (c. 1.2 Ma).
+claims:
+  - text: >-
+      Excavations at Isampur exposed undisturbed Acheulian knapping floors with hammerstones, cores, debitage
+      and unfinished bifaces directly atop weathered Bhima Group limestone beds.
+    grade: A
+    sources:
+      - src.petraglia-1999-isampur-acheulian-quarry
+      - src.paddayya-2000-isampur-excavation
+relations:
+  - kind: located-at
+    target: site.hunsgi-baichbal-valley
+  - kind: contemporary-of
+    target: site.attirampakkam
+wikidata: Q10773159
+tags:
+  - palaeolithic
+  - acheulian
+  - quarry
+  - karnataka
+review:
+  status: draft
+  author: gemini-4-argon

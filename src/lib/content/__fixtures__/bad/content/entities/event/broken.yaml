@@ -1,0 +1,13 @@
+id: event.broken
+type: event
+kind: event
+names: { en: Broken }
+summary: A fixture with an unknown source and an unknown relation target.
+datings:
+  - method: epigraphic
+    range: { earliest: 100, latest: 120, precision: year, circa: true }
+    grade: A
+    sources: [src.nobody-1999-nothing]
+relations:
+  - { kind: related-to, target: person.ghost }
+review: { status: draft }

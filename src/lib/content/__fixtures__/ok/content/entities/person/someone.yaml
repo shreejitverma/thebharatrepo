@@ -1,0 +1,15 @@
+id: person.someone
+type: person
+kind: person
+names: { en: Someone }
+summary: A fixture person used to exercise the content loader in tests.
+datings:
+  - method: epigraphic
+    range: { earliest: -267, latest: -232, precision: year, circa: true }
+    grade: A
+    sources: [src.doe-2001-a-book]
+  - method: traditional-puranic
+    range: { earliest: -1500, latest: -1500, precision: year, circa: true }
+    grade: D
+    sources: [{ id: src.doe-2001-a-book, locator: "p. 4" }]
+review: { status: draft }

@@ -1,0 +1,72 @@
+id: tradition.copper-hoard-culture
+type: tradition
+kind: prehistory
+names:
+  en: Gangetic Copper Hoard Culture
+summary: >-
+  A distinctive Bronze Age metallurgical tradition known from over ninety caches of heavy copper and bronze
+  artefacts across the Ganga-Yamuna Doab, Chota Nagpur plateau, Haryana and Rajasthan (c. 2000-1500 BCE),
+  featuring barbed harpoons, antennae-hilted swords, flat and shouldered celts, rings and enigmatic anthropomorphic figures.
+summaries:
+  kids: >-
+    Across northern India, farmers ploughing their fields have discovered buried hoards of heavy copper tools
+    and weapons from 3,800 years ago, including barbed harpoons, long swords and human-shaped copper figures.
+  teen: >-
+    Comprising over a thousand copper objects found in caches at sites such as Bithur, Bisauli, Rajpur Parsu,
+    Saipai and Gungeria, the Copper Hoard culture represents a specialized 2nd-millennium BCE metallurgical
+    tradition closely linked to Ochre Coloured Pottery settlements.
+region: Ganga-Yamuna Doab, Rohilkhand, Haryana, Rajasthan and Chota Nagpur plateau
+location:
+  name: Bisauli and Saipai (Upper Ganga Basin)
+  lat: 26.89
+  lon: 79.0
+datings:
+  - method: archaeological-stratigraphic
+    range:
+      earliest: -2100
+      latest: -1400
+      best: -1750
+      precision: century
+      circa: true
+    grade: B
+    label: Stratigraphic correlation with thermoluminescence-dated OCP and Late Harappan horizons
+    sources:
+      - src.misra-2001-prehistoric-colonization-india
+      - src.coningham-2015-archaeology-south-asia
+      - src.petraglia-2007-evolution-history-human-populations
+    note: >-
+      Dated by in situ stratigraphic association with Ochre Coloured Pottery at Saipai and with Late Harappan /
+      Chalcolithic burials and levels at Sanauli, Madarpur and Mitathal to the 2nd millennium BCE (c. 2000-1500 BCE).
+claims:
+  - text: >-
+      Diagnostic types of the Gangetic Copper Hoards include bilaterally barbed harpoons, antennae-hilted swords,
+      hooked spearheads, flat and shouldered axes, double axes, rings and sheet-or-cast anthropomorphic figures.
+    grade: A
+    sources:
+      - src.misra-2001-prehistoric-colonization-india
+      - src.coningham-2015-archaeology-south-asia
+  - text: >-
+      The largest single hoard, discovered at Gungeria in Balaghat district, Madhya Pradesh, contained 424 copper
+      implements weighing over 200 kilograms together with 102 thin silver bull-head and disc plates.
+    grade: A
+    sources:
+      - src.misra-2001-prehistoric-colonization-india
+      - src.coningham-2015-archaeology-south-asia
+relations:
+  - kind: contemporary-of
+    target: tradition.ochre-coloured-pottery-culture
+wikidata: Q458076
+image:
+  commons: "File:Map of some Copper Hoard sites in North India 1.png"
+  alt: Map showing the geographic distribution of major Copper Hoard find-spots in northern India
+  credit: Merikanto
+  license: CC BY 4.0
+tags:
+  - chalcolithic
+  - bronze-age
+  - copper-hoards
+  - metallurgy
+  - ganga-valley
+review:
+  status: draft
+  author: gemini-4-argon

@@ -1,0 +1,71 @@
+id: tradition.jorwe-culture
+type: tradition
+kind: prehistory
+names:
+  en: Jorwe Chalcolithic Culture
+summary: >-
+  The principal Chalcolithic farming tradition of the western Deccan in Maharashtra (c. 1400-700 BCE), named
+  after the type-site of Jorwe on the Pravara River and encompassing over 200 settlements across the Tapi,
+  Godavari and Bhima basins, characterized by high-fired wheel-made black-on-red Jorwe Ware, spouted vessels,
+  intramural urn burials and public irrigation works.
+summaries:
+  kids: >-
+    Named after a village in Maharashtra, the Jorwe people made ringing red clay pots with long drinking spouts,
+    dug canals to water their fields and buried children inside twin clay urns beneath their house floors.
+  teen: >-
+    Divided into Early Jorwe (c. 1400-1000 BCE) and Late Jorwe (c. 1000-700 BCE, restricted to the Bhima valley
+    at sites like Inamgaon), the Jorwe culture marks the culmination and climatic stress-driven decline of Deccan
+    Chalcolithic village life.
+region: Western Deccan (Tapi, Pravara-Godavari and Bhima basins), Maharashtra
+location:
+  name: Jorwe (Pravara Valley)
+  lat: 19.55
+  lon: 74.27
+datings:
+  - method: archaeological-radiocarbon
+    range:
+      earliest: -1400
+      latest: -700
+      best: -1200
+      precision: century
+      circa: true
+    grade: A
+    label: Early Jorwe (c. 1400-1000 BCE) and Late Jorwe (c. 1000-700 BCE) radiocarbon chronology
+    sources:
+      - src.lukacs-1998-physiological-stress-prehistoric-india
+      - src.misra-2001-prehistoric-colonization-india
+      - src.coningham-2015-archaeology-south-asia
+    note: >-
+      Extensive radiocarbon series from Inamgaon, Daimabad, Nevasa and Prakash define Early Jorwe between
+      c. 1400 and 1000 BCE and Late Jorwe at Inamgaon between c. 1000 and 700 BCE.
+claims:
+  - text: >-
+      Jorwe settlements exhibit a clear two-tier settlement hierarchy led by regional centres exceeding 20 hectares
+      (Prakash, Daimabad and Inamgaon) alongside smaller farming villages and seasonal pastoral camps.
+    grade: A
+    sources:
+      - src.misra-2001-prehistoric-colonization-india
+      - src.coningham-2015-archaeology-south-asia
+  - text: >-
+      Characteristic Jorwe burial practices placed adults in extended North-South pit graves with the lower feet
+      removed below the ankle, and infants or children in mouth-to-mouth twin grey-ware urns beneath house floors.
+    grade: A
+    sources:
+      - src.lukacs-1998-physiological-stress-prehistoric-india
+      - src.coningham-2015-archaeology-south-asia
+relations:
+  - kind: succeeded
+    target: tradition.malwa-culture
+  - kind: related-to
+    target: site.inamgaon
+  - kind: related-to
+    target: site.daimabad
+wikidata: Q48728694
+tags:
+  - chalcolithic
+  - jorwe-culture
+  - deccan
+  - maharashtra
+review:
+  status: draft
+  author: gemini-4-argon

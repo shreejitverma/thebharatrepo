@@ -1,0 +1,73 @@
+id: site.inamgaon
+type: site
+kind: prehistory
+names:
+  en: Inamgaon Chalcolithic Settlement
+summary: >-
+  A benchmark 5-hectare Chalcolithic settlement on the right bank of the Ghod River in Pune district,
+  Maharashtra, excavated horizontally by M. K. Dhavalikar, H. D. Sankalia and Z. D. Ansari (1968-1983),
+  revealing a complete sequence from Malwa (c. 1700-1400 BCE) and Early Jorwe (c. 1400-1000 BCE) to Late Jorwe
+  (c. 1000-700 BCE), including craft quarters, an irrigation canal, a granary and over 260 human burials.
+summaries:
+  kids: >-
+    Inamgaon beside the Ghod River in Maharashtra is one of the most thoroughly excavated ancient villages in
+    India, showing the houses of potters, bead-makers and a village chief, along with a stone embankment and canal.
+  teen: >-
+    Horizontal excavations at Inamgaon uncovered 130 houses, a 240-metre irrigation embankment and canal, a
+    multi-roomed chief's house and granary, and over 260 skeletons documenting how Deccan farmers adapted to
+    late 2nd-millennium BCE aridity.
+region: Ghod River valley (Bhima basin), Pune district, Maharashtra
+location:
+  name: Inamgaon
+  lat: 18.6
+  lon: 74.53
+datings:
+  - method: archaeological-radiocarbon
+    range:
+      earliest: -1700
+      latest: -700
+      best: -1250
+      precision: century
+      circa: true
+    grade: A
+    label: Period I Malwa, Period II Early Jorwe and Period III Late Jorwe radiocarbon series
+    sources:
+      - src.lukacs-1998-physiological-stress-prehistoric-india
+      - src.misra-2001-prehistoric-colonization-india
+      - src.coningham-2015-archaeology-south-asia
+    note: >-
+      Over thirty radiocarbon dates define Period I (Malwa, c. 1700-1400 BCE), Period II (Early Jorwe,
+      c. 1400-1000 BCE) and Period III (Late Jorwe, c. 1000-700 BCE).
+claims:
+  - text: >-
+      Early Jorwe (Period II) at Inamgaon featured planned rectangular houses, an irrigation canal and rubble
+      embankment, a central five-roomed house connected to a public granary, and a four-legged clay sarcophagus burial.
+    grade: A
+    sources:
+      - src.misra-2001-prehistoric-colonization-india
+      - src.coningham-2015-archaeology-south-asia
+  - text: >-
+      During the Late Jorwe phase (c. 1000-700 BCE) at Inamgaon, rectangular houses were replaced by small
+      round huts, barley and dryland farming yielded to increased sheep-goat pastoralism and wild game hunting,
+      and bioarchaeological analyses record altered physiological stress patterns in deciduous teeth.
+    grade: A
+    sources:
+      - src.lukacs-1998-physiological-stress-prehistoric-india
+      - src.misra-2001-prehistoric-colonization-india
+relations:
+  - kind: part-of
+    target: tradition.jorwe-culture
+  - kind: part-of
+    target: tradition.malwa-culture
+  - kind: contemporary-of
+    target: site.daimabad
+wikidata: Q6013487
+tags:
+  - chalcolithic
+  - jorwe-culture
+  - malwa-culture
+  - bioarchaeology
+  - maharashtra
+review:
+  status: draft
+  author: gemini-4-argon

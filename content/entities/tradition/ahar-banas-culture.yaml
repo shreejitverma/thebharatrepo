@@ -1,0 +1,79 @@
+id: tradition.ahar-banas-culture
+type: tradition
+kind: prehistory
+names:
+  en: Ahar-Banas Chalcolithic Culture
+summary: >-
+  A major regional Chalcolithic farming and copper-working tradition in the Banas and Berach river basins of
+  Mewar, southeastern Rajasthan (c. 3000-1500 BCE), distinguished by white-painted Black-and-Red Ware, stone
+  and mud-brick architecture, fortified enclosures and copper smelting near Aravalli ore sources.
+summaries:
+  kids: >-
+    Along the Banas River in Rajasthan, the Ahar-Banas people built stone-and-mud houses, farmed wheat and barley,
+    made black-and-red pots painted with white designs and smelted copper from nearby hills.
+  teen: >-
+    Flourishing in Mewar between c. 3000 and 1500 BCE concurrently with the Early and Mature Harappan phases,
+    the Ahar-Banas culture encompasses over 90 settlements including Ahar, Balathal and Gilund.
+region: Mewar plain (Banas and Berach basins), southeastern Rajasthan
+location:
+  name: Banas Basin (Udaipur-Rajsamand-Chittorgarh sector)
+  lat: 24.75
+  lon: 74.0
+datings:
+  - method: archaeological-radiocarbon
+    range:
+      earliest: -3000
+      latest: -1500
+      best: -2200
+      precision: century
+      circa: true
+    grade: A
+    label: Calibrated radiocarbon chronology across Balathal, Gilund and Ahar
+    sources:
+      - src.misra-2001-prehistoric-colonization-india
+      - src.robbins-2009-balathal-leprosy
+      - src.coningham-2015-archaeology-south-asia
+    note: >-
+      Calibrated radiocarbon series from Balathal and Gilund divide the Ahar-Banas tradition into Early Ahar
+      (c. 3000-2500 BCE), Mature Ahar (c. 2500-2000 BCE) and Late Ahar (c. 2000-1500 BCE).
+claims:
+  - text: >-
+      More than ninety Ahar-Banas settlements have been documented in the Banas-Berach valleys of southeastern
+      Rajasthan, sharing distinctive inverted-fired Black-and-Red Ware decorated with white geometric motifs.
+    grade: A
+    sources:
+      - src.misra-2001-prehistoric-colonization-india
+      - src.coningham-2015-archaeology-south-asia
+  - text: >-
+      Ahar-Banas settlements exploited Aravalli chalcopyrite deposits to manufacture copper flat axes, bangles,
+      sheets and knives while practicing mixed wheat, barley, millet and pulse agriculture.
+    grade: A
+    sources:
+      - src.misra-2001-prehistoric-colonization-india
+      - src.fuller-2006-agricultural-origins-south-asia
+relations:
+  - kind: related-to
+    target: site.ahar
+  - kind: related-to
+    target: site.balathal
+  - kind: related-to
+    target: site.gilund
+  - kind: related-to
+    target: site.bagor
+  - kind: preceded
+    target: tradition.malwa-culture
+wikidata: Q399951
+image:
+  commons: "File:Topographic map of Ahar-Banas culture 1.svg"
+  alt: Topographic map showing the distribution of Ahar-Banas Chalcolithic sites in southeastern Rajasthan
+  credit: Merikanto
+  license: CC BY-SA 4.0
+tags:
+  - chalcolithic
+  - ahar-banas
+  - black-and-red-ware
+  - copper-metallurgy
+  - rajasthan
+review:
+  status: draft
+  author: gemini-4-argon

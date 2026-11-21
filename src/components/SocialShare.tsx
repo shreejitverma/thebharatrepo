@@ -10,7 +10,8 @@ import {
   LinkedinIcon,
   WhatsappIcon,
 } from 'react-share';
-import { useState, useEffect } from 'react';
+import { useState } from 'react';
+import { SITE_URL } from '@/lib/content/site-url';
 
 type SocialShareProps = {
   title: string;
@@ -20,17 +21,15 @@ type SocialShareProps = {
 };
 
 export default function SocialShare({ title, category, slug, tags }: SocialShareProps) {
-  const [shareUrl, setShareUrl] = useState('');
-
-  useEffect(() => {
-    setShareUrl(window.location.href);
-  }, []);
+  const shareUrl = `${SITE_URL}/${category}/${slug}`;
+  const hashtag = tags.length > 0 ? `#${tags[0].replace(/[^A-Za-z0-9]/g, '')}` : undefined;
+  const [copied, setCopied] = useState(false);
 
   return (
     <div className="social-share">
-      <h4>Share this article:</h4>
+      <h2 style={{ fontSize: '1.1rem', marginTop: 0 }}>Share this article</h2>
       <div className="share-buttons">
-        <FacebookShareButton url={shareUrl} hashtag={tags.length > 0 ? `#${tags[0]}` : undefined}>
+        <FacebookShareButton url={shareUrl} hashtag={hashtag}>
           <FacebookIcon size={32} round />
         </FacebookShareButton>
         <TwitterShareButton url={shareUrl} title={title}>
@@ -42,8 +41,16 @@ export default function SocialShare({ title, category, slug, tags }: SocialShare
         <WhatsappShareButton url={shareUrl} title={title}>
           <WhatsappIcon size={32} round />
         </WhatsappShareButton>
-        <button onClick={() => navigator.clipboard.writeText(shareUrl)}>
-          Copy Link
+        <button
+          type="button"
+          onClick={() =>
+            navigator.clipboard.writeText(shareUrl).then(
+              () => setCopied(true),
+              () => setCopied(false),
+            )
+          }
+        >
+          {copied ? 'Link copied' : 'Copy link'}
         </button>
       </div>
     </div>

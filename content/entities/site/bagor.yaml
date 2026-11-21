@@ -1,0 +1,67 @@
+id: site.bagor
+type: site
+kind: prehistory
+names:
+  en: Bagor Mesolithic Site
+summary: >-
+  The largest and best-documented Mesolithic habitation site in India, situated on the Mahasati sand dune
+  beside the Kothari river in Bhilwara district, Rajasthan, documenting a transition from hunting-foraging
+  and sheep/goat-cattle pastoralism (c. 5000-2800 BCE) to Chalcolithic copper tools and pottery.
+summaries:
+  kids: >-
+    At Bagor in Rajasthan, prehistoric families camped on a sand dune by a river, making tiny geometric stone
+    blades, paving their hut floors with stones and herding sheep, goats and cattle.
+  teen: >-
+    Excavated by V. N. Misra between 1968 and 1970, Bagor on the Kothari river yielded the richest geometric
+    microlith industry in India alongside domesticated animal bones and stone-paved living floors from c. 5000 BCE.
+region: Mewar plain (Kothari river valley), Bhilwara district, Rajasthan
+location:
+  name: Bagor
+  lat: 25.36
+  lon: 74.38
+datings:
+  - method: archaeological-radiocarbon
+    range:
+      earliest: -5000
+      latest: -600
+      best: -4480
+      precision: century
+      circa: true
+    grade: A
+    label: Radiocarbon-dated Phase I Mesolithic to Phase III Iron Age sequence (Misra 1973)
+    sources:
+      - src.misra-1973-bagor-mesolithic
+      - src.misra-2001-prehistoric-colonization-india
+    note: >-
+      Five radiocarbon dates on charred bone place Phase I (aceramic Mesolithic with microliths and domesticated
+      fauna) at c. 5000-2800 BCE, Phase II (Chalcolithic) at c. 2800-600 BCE, and Phase III in the Iron Age.
+claims:
+  - text: >-
+      Phase I at Bagor (c. 5000-2800 BCE) yielded hundreds of thousands of quartz and chert geometric microliths,
+      schist-paved habitation floors, human burial and bones of domesticated sheep, goat and zebu cattle.
+    grade: A
+    sources:
+      - src.misra-1973-bagor-mesolithic
+      - src.misra-2001-prehistoric-colonization-india
+  - text: >-
+      Phase II at Bagor introduced handmade pottery, perforated stone weights and copper arrowheads showing
+      contact with Ahar-Banas Chalcolithic communities in Mewar.
+    grade: A
+    sources:
+      - src.misra-1973-bagor-mesolithic
+      - src.coningham-2015-archaeology-south-asia
+relations:
+  - kind: related-to
+    target: tradition.ahar-banas-culture
+  - kind: contemporary-of
+    target: site.langhnaj
+  - kind: related-to
+    target: site.didwana
+tags:
+  - mesolithic
+  - microlithic
+  - pastoralism
+  - rajasthan
+review:
+  status: draft
+  author: gemini-4-argon

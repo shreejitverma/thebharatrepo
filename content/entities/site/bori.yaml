@@ -1,0 +1,80 @@
+id: site.bori
+type: site
+kind: prehistory
+names:
+  en: Bori Palaeolithic Site
+summary: >-
+  An open-air Acheulian locality on the Kukdi river in Pune district, Maharashtra, where early Acheulian
+  trihedral picks, handaxes and flakes occur in gravels associated with a volcanic tephra layer whose age
+  has been debated between early Middle Pleistocene Ar-Ar estimates and the c. 75 ka Youngest Toba Tuff.
+summaries:
+  kids: >-
+    At Bori in Maharashtra, archaeologists found ancient stone tools buried near layers of volcanic ash that
+    drifted across the sea from a giant volcano in Indonesia.
+  teen: >-
+    Bori in the Kukdi river valley yielded early Acheulian stone tools associated with volcanic ash; scientists
+    have debated whether the ash dates the tools to around 670,000 years ago or represents reworked 75,000-year-old
+    Toba tephra.
+region: Kukdi river valley, Pune district, Maharashtra
+location:
+  name: Bori
+  lat: 19.11
+  lon: 74.1
+datings:
+  - method: geological
+    range:
+      earliest: -740000
+      latest: -600000
+      best: -670000
+      precision: ka
+      circa: true
+    grade: C
+    label: 39Ar-40Ar tephra dating hypothesis (Mishra et al. 1995)
+    sources:
+      - src.mishra-1995-bori-earliest-acheulian
+    note: >-
+      39Ar-40Ar step-heating of magnetic mineral separates from the Bori tephra layer yielded a plateau age of
+      0.67 +/- 0.03 Ma for the associated early Acheulian industry.
+  - method: geological
+    range:
+      earliest: -80000
+      latest: -70000
+      best: -75000
+      precision: ka
+      circa: true
+    grade: B
+    label: Youngest Toba Tuff geochemical correlation (Westgate et al. 1998)
+    sources:
+      - src.westgate-1998-toba-tephra-peninsular-india
+    note: >-
+      Glass-shard major- and trace-element chemistry and fission-track dates identify the Bori ash as the c. 75 ka
+      Youngest Toba Tuff, indicating reworking of older Acheulian gravels and younger ash.
+claims:
+  - text: >-
+      Early Acheulian artefacts from the Kukdi river gravels at Bori include crude trihedral picks, polyhedrons
+      and bifaces knapped on dolerite and basalt.
+    grade: A
+    sources:
+      - src.mishra-1995-bori-earliest-acheulian
+      - src.misra-2001-prehistoric-colonization-india
+  - text: >-
+      Geochemical fingerprinting of volcanic glass shards from Bori matches the composition of the Youngest
+      Toba Tuff eruption in Sumatra.
+    grade: A
+    sources:
+      - src.westgate-1998-toba-tephra-peninsular-india
+relations:
+  - kind: related-to
+    target: site.jwalapuram
+debate: >-
+  Initial K-Ar and 39Ar-40Ar measurements placed the Bori tephra at c. 1.4 Ma to 670 ka, whereas glass-shard
+  geochemistry and fission-track analyses by Westgate et al. (1998) correlate the tephra with the c. 75 ka
+  Youngest Toba Tuff, pointing to fluvial reworking of the older Acheulian gravels.
+tags:
+  - palaeolithic
+  - acheulian
+  - toba-tephra
+  - maharashtra
+review:
+  status: draft
+  author: gemini-4-argon

@@ -1,0 +1,64 @@
+id: event.earliest-cotton-mehrgarh
+type: event
+kind: prehistory
+names:
+  en: Earliest Known Cotton Fibres at Mehrgarh
+summary: >-
+  The earliest known archaeological evidence of cotton textile thread in the Old World, identified from
+  mineralized Gossypium fibres preserved by copper corrosion products inside a biconical copper bead from a
+  Period II burial at Neolithic Mehrgarh in Balochistan (c. 6000-5500 BCE).
+summaries:
+  kids: >-
+    Inside a tiny copper bead buried at Mehrgarh nearly 8,000 years ago, scientists using strong microscopes
+    discovered preserved threads of cotton - the earliest known cotton string in the world.
+  teen: >-
+    In 2002, archaeobotanists and metallurgists analyzing a copper bead from Period II at Mehrgarh identified
+    mineralized spun cotton (Gossypium) thread dating to the 6th millennium BCE, pushing back the history of
+    South Asian cotton use by over two thousand years.
+region: Kachi Plain (Bolan River valley), Balochistan
+location:
+  name: Mehrgarh
+  lat: 29.39
+  lon: 67.62
+datings:
+  - method: archaeological-stratigraphic
+    range:
+      earliest: -6000
+      latest: -5000
+      best: -5500
+      precision: century
+      circa: true
+    grade: A
+    label: Period II Neolithic burial horizon at Mehrgarh (Moulherat et al. 2002)
+    sources:
+      - src.moulherat-2002-mehrgarh-cotton
+      - src.fuller-2006-agricultural-origins-south-asia
+    note: >-
+      Recovered from Grave 153 in Structure 2 of Period II at Mound MR2, Mehrgarh, dated stratigraphically
+      and radiometrically to the 6th millennium BCE.
+claims:
+  - text: >-
+      Scanning electron microscopy and reflected-light microscopy of mineralized threads inside a copper bead
+      from Period II at Mehrgarh identified ribbon-like convoluted cellulose fibres diagnostic of cotton (Gossypium sp.).
+    grade: A
+    sources:
+      - src.moulherat-2002-mehrgarh-cotton
+  - text: >-
+      Charred Gossypium seeds recovered alongside the mineralized fibres at Mehrgarh point to the early exploitation
+      and domestication of tree cotton (Gossypium arboreum) in the Greater Indus region prior to the Mature Harappan textile industry.
+    grade: B
+    sources:
+      - src.moulherat-2002-mehrgarh-cotton
+      - src.fuller-2006-agricultural-origins-south-asia
+relations:
+  - kind: located-at
+    target: site.mehrgarh
+tags:
+  - neolithic
+  - cotton
+  - textiles
+  - mehrgarh
+  - archaeobotany
+review:
+  status: draft
+  author: gemini-4-argon

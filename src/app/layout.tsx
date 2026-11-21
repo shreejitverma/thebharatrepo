@@ -1,39 +1,39 @@
-import type { Metadata } from "next";
-import { Tiro_Devanagari_Hindi, Roboto } from 'next/font/google';
-import "./globals.css";
-import Header from "../components/Header";
-import Footer from "../components/Footer";
+import type { Metadata, Viewport } from 'next';
+import { Tiro_Devanagari_Hindi, Noto_Serif, Noto_Sans } from 'next/font/google';
+import './globals.css';
+import Header from '../components/Header';
+import Footer from '../components/Footer';
+import { SITE_URL } from '@/lib/content/site';
 
-const tiro = Tiro_Devanagari_Hindi({
-  subsets: ['latin'],
-  weight: ['400'],
-  variable: '--font-tiro',
-});
-
-const roboto = Roboto({
-  subsets: ['latin'],
-  weight: ['400', '700'],
-  variable: '--font-roboto',
-});
+const tiro = Tiro_Devanagari_Hindi({ subsets: ['latin', 'latin-ext', 'devanagari'], weight: ['400'], variable: '--font-tiro', display: 'swap' });
+const serif = Noto_Serif({ subsets: ['latin', 'latin-ext'], weight: ['400', '700'], style: ['normal', 'italic'], variable: '--font-serif', display: 'swap' });
+const sans = Noto_Sans({ subsets: ['latin', 'latin-ext'], weight: ['400', '600', '700'], variable: '--font-sans', display: 'swap' });
 
 export const metadata: Metadata = {
-  title: "The Bharat Repo",
-  description: "A repository of knowledge about Bharatiya civilisation",
-  icons: {
-    icon: '/favicon.svg',
-  },
+  metadataBase: new URL(SITE_URL),
+  title: { default: 'The Bharat Repo: the evidence-based archive of Bharat', template: '%s | The Bharat Repo' },
+  description:
+    'The history, knowledge and living traditions of Bharat and Sanatana Dharma, every entry placed in time on the Kaalchakra and backed by graded, verifiable evidence.',
+  icons: { icon: '/favicon.svg' },
+  openGraph: { siteName: 'The Bharat Repo', type: 'website', locale: 'en_IN' },
 };
 
-export default function RootLayout({
-  children,
-}: Readonly<{
-  children: React.ReactNode;
-}>) {
+export const viewport: Viewport = {
+  themeColor: [
+    { media: '(prefers-color-scheme: light)', color: '#f7f1e6' },
+    { media: '(prefers-color-scheme: dark)', color: '#12111c' },
+  ],
+};
+
+export default function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {
   return (
-    <html lang="en">
-      <body className={`${tiro.variable} ${roboto.variable}`}>
+    <html lang="en" className={`${tiro.variable} ${serif.variable} ${sans.variable}`}>
+      <body>
+        <a className="skip-link" href="#main">
+          Skip to content
+        </a>
         <Header />
-        {children}
+        <main id="main">{children}</main>
         <Footer />
       </body>
     </html>

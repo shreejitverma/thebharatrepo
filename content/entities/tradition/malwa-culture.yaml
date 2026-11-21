@@ -1,0 +1,78 @@
+id: tradition.malwa-culture
+type: tradition
+kind: prehistory
+names:
+  en: Malwa Chalcolithic Culture
+summary: >-
+  A widespread Chalcolithic agrarian tradition across the Malwa Plateau of western Madhya Pradesh and the
+  Tapi, Pravara and Godavari valleys of Maharashtra (c. 1900-1400 BCE), characterized by thick buff- or
+  orange-slipped Malwa Ware richly painted in black with geometric, animal and human motifs, and large settlements
+  such as Navdatoli, Nagda, Eran, Daimabad and Inamgaon.
+summaries:
+  kids: >-
+    The Malwa culture was a group of farming villages in central and western India where people made bright
+    orange-and-buff clay pots painted with black pictures of deer, peacocks and dancing figures.
+  teen: >-
+    Spanning roughly 1900 to 1400 BCE across Madhya Pradesh and Maharashtra, the Malwa Chalcolithic culture
+    established large multi-crop farming villages such as Navdatoli and Nagda and expanded southward into the
+    Deccan before giving rise to the Jorwe culture.
+region: Malwa Plateau (Narmada and Chambal valleys) and Northern Deccan (Tapi-Godavari valleys)
+location:
+  name: Navdatoli and Malwa Plateau
+  lat: 22.16
+  lon: 75.59
+datings:
+  - method: archaeological-radiocarbon
+    range:
+      earliest: -1900
+      latest: -1350
+      best: -1600
+      precision: century
+      circa: true
+    grade: A
+    label: Radiocarbon series from Navdatoli, Nagda, Eran, Inamgaon and Daimabad
+    sources:
+      - src.misra-2001-prehistoric-colonization-india
+      - src.fuller-2006-agricultural-origins-south-asia
+      - src.coningham-2015-archaeology-south-asia
+    note: >-
+      Calibrated radiocarbon dates place the Malwa horizon at c. 1900-1400 BCE in Madhya Pradesh (Navdatoli,
+      Nagda, Eran) and c. 1700-1400 BCE in Maharashtra (Daimabad Phase IV, Inamgaon Period I).
+claims:
+  - text: >-
+      Excavations at Navdatoli by H. D. Sankalia revealed circular and rectangular wattle-and-daub houses,
+      multi-mouthed hearths and one of the most diverse crop assemblages in Chalcolithic India, including wheat,
+      barley, rice, lentil, black gram, green gram, grass pea and linseed.
+    grade: A
+    sources:
+      - src.misra-2001-prehistoric-colonization-india
+      - src.fuller-2006-agricultural-origins-south-asia
+      - src.coningham-2015-archaeology-south-asia
+  - text: >-
+      Malwa Ware is a wheel-made buff or orange-red slipped ceramic painted in black or dark brown with panels
+      of running antelopes, bulls, peacocks, solar motifs and stylized human figures.
+    grade: A
+    sources:
+      - src.misra-2001-prehistoric-colonization-india
+      - src.coningham-2015-archaeology-south-asia
+relations:
+  - kind: succeeded
+    target: site.kayatha
+  - kind: succeeded
+    target: tradition.ahar-banas-culture
+  - kind: preceded
+    target: tradition.jorwe-culture
+  - kind: related-to
+    target: site.inamgaon
+  - kind: related-to
+    target: site.daimabad
+wikidata: Q48728691
+tags:
+  - chalcolithic
+  - malwa-culture
+  - navdatoli
+  - madhya-pradesh
+  - maharashtra
+review:
+  status: draft
+  author: gemini-4-argon

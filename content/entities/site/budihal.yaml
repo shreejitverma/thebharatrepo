@@ -1,0 +1,67 @@
+id: site.budihal
+type: site
+kind: prehistory
+names:
+  en: Budihal Neolithic Ash-Mound Site
+summary: >-
+  An extensively excavated Southern Neolithic ash-mound and village settlement on a sandstone plateau in the
+  Shorapur Doab of Yadgir (formerly Gulbarga) district, Karnataka, where K. Paddayya documented circular hut
+  floors, a dedicated cattle-penning and dung-disposal enclosure, a communal animal-butchering floor and child burials.
+summaries:
+  kids: >-
+    At Budihal in Karnataka, archaeologists uncovered a whole Neolithic village alongside its giant ash mound,
+    showing where families lived in round huts, penned their cattle and shared meat feasts.
+  teen: >-
+    Excavated by K. Paddayya in the 1990s, Budihal resolved a century-old debate by proving that Deccan ash mounds
+    were not isolated camps or industrial slag heaps, but cattle-penning and ceremonial dung-burning zones integrated
+    within permanent Neolithic villages.
+region: Shorapur Doab, Yadgir district, Karnataka
+location:
+  name: Budihal
+  lat: 16.37
+  lon: 76.39
+datings:
+  - method: archaeological-radiocarbon
+    range:
+      earliest: -2450
+      latest: -1700
+      best: -2100
+      precision: century
+      circa: true
+    grade: A
+    label: Radiocarbon and AMS series from Ashmound I and habitation layers
+    sources:
+      - src.fuller-2007-dating-neolithic-south-india
+      - src.boivin-2004-deccan-ashmounds
+      - src.misra-2001-prehistoric-colonization-india
+    note: >-
+      Calibrated radiocarbon measurements from Budihal Ashmound I, the habitation area and the butchering floor
+      concentrate between c. 2450 and 1700 BCE.
+claims:
+  - text: >-
+      Excavations at Budihal Ashmound I exposed a lower cattle-penning enclosure bounded by a rubble-and-thorn
+      embankment and an upper platform of episodically burned cow dung surrounded by residential hut floors.
+    grade: A
+    sources:
+      - src.boivin-2004-deccan-ashmounds
+      - src.misra-2001-prehistoric-colonization-india
+  - text: >-
+      A hard-packed rubble floor at Budihal yielded chopped and split zebu cattle bones, chert blades and
+      chopping tools identified as a communal cattle-butchering and feasting area.
+    grade: A
+    sources:
+      - src.boivin-2004-deccan-ashmounds
+      - src.coningham-2015-archaeology-south-asia
+relations:
+  - kind: part-of
+    target: concept.southern-neolithic-ash-mounds
+  - kind: contemporary-of
+    target: site.sanganakallu
+tags:
+  - neolithic
+  - southern-neolithic
+  - ashmounds
+  - karnataka
+review:
+  status: draft
+  author: gemini-4-argon

@@ -1,0 +1,71 @@
+id: concept.southern-neolithic-ash-mounds
+type: concept
+kind: prehistory
+names:
+  en: Southern Neolithic Ash-Mound Tradition
+summary: >-
+  A distinctive monumental and pastoral phenomenon of the South Indian Neolithic across the semi-arid Deccan
+  granite hills of Karnataka and western Andhra Pradesh (c. 3000-1200 BCE), in which communities accumulated
+  and periodically burned massive stockaded enclosures of zebu cattle dung, forming vitrified ash mounds.
+summaries:
+  kids: >-
+    Across the rocky hills of southern India, Neolithic cattle herders built giant fenced corrals where piles
+    of cow dung were burned in seasonal festivals, leaving behind huge mounds of hardened ash.
+  teen: >-
+    Dating between roughly 2900 and 1200 BCE in the Raichur, Shorapur and Bellary regions, the Southern Neolithic
+    ash-mound tradition combined zebu pastoralism, native browntop millet and horsegram cultivation, and episodic
+    ritual burning of cattle-pen dung accumulations.
+region: Raichur Doab, Shorapur Doab and Bellary-Kurnool region (Karnataka and Andhra Pradesh)
+location:
+  name: Utnur and Bellary-Raichur Ash-Mound Zone
+  lat: 15.98
+  lon: 76.9
+datings:
+  - method: archaeological-radiocarbon
+    range:
+      earliest: -2900
+      latest: -1200
+      best: -2200
+      precision: century
+      circa: true
+    grade: A
+    label: Bayesian AMS radiocarbon chronology of Southern Neolithic ashmounds (Fuller et al. 2007)
+    sources:
+      - src.fuller-2007-dating-neolithic-south-india
+      - src.boivin-2004-deccan-ashmounds
+    note: >-
+      Bayesian modelling of AMS radiocarbon series from Budihal, Kodekal, Utnur, Kupgal/Sanganakallu and Palavoy
+      places ashmound formation between c. 2900/2800 BCE and 1200 BCE, with peak activity before c. 1800 BCE.
+claims:
+  - text: >-
+      Stratigraphic and micromorphological studies at Utnur, Kodekal, Budihal and Kupgal demonstrate that the
+      Deccan ash mounds formed in situ from repeated accumulation and high-temperature burning of cattle dung inside thorn-and-timber enclosures.
+    grade: A
+    sources:
+      - src.boivin-2004-deccan-ashmounds
+      - src.fuller-2007-dating-neolithic-south-india
+  - text: >-
+      Southern Neolithic subsistence paired zebu cattle pastoralism with indigenous dryland domestication of
+      browntop millet (Brachiaria ramosa), bristly foxtail millet, mungbean and horsegram (Macrotyloma uniflorum).
+    grade: A
+    sources:
+      - src.fuller-2006-agricultural-origins-south-asia
+      - src.fuller-2007-dating-neolithic-south-india
+relations:
+  - kind: related-to
+    target: site.budihal
+  - kind: related-to
+    target: site.sanganakallu
+  - kind: related-to
+    target: site.paiyampalli
+  - kind: related-to
+    target: event.domestication-of-zebu-cattle
+tags:
+  - neolithic
+  - southern-neolithic
+  - ashmounds
+  - pastoralism
+  - deccan
+review:
+  status: draft
+  author: gemini-4-argon

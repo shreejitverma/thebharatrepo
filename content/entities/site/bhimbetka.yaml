@@ -1,0 +1,72 @@
+id: site.bhimbetka
+type: site
+kind: site
+names:
+  en: Bhimbetka Rock Shelters
+  iast: Bhīmabeṭakā
+  native: भीमबेटका
+summary: >-
+  A UNESCO World Heritage complex of over 700 sandstone rock shelters in the Vindhyan hills of Raisen district,
+  Madhya Pradesh, preserving continuous stratified human occupation from the Lower Palaeolithic Acheulian through
+  the Mesolithic, together with multi-period rock paintings depicting hunting, dancing and animal life.
+summaries:
+  kids: >-
+    High in the rocky hills of Madhya Pradesh, the caves of Bhimbetka sheltered people for over 100,000 years
+    and hold hundreds of colourful rock paintings of wild animals, hunters and dancers.
+  teen: >-
+    Discovered by V. S. Wakankar in 1957 and inscribed by UNESCO in 2003, Bhimbetka combines deeply stratified
+    Palaeolithic and Mesolithic cave floors with one of the largest concentrations of prehistoric rock art in South Asia.
+region: Vindhyan hills, Raisen district, Madhya Pradesh
+location:
+  name: Bhimbetka
+  lat: 22.94
+  lon: 77.61
+datings:
+  - method: archaeological-stratigraphic
+    range:
+      earliest: -100000
+      latest: -1000
+      precision: ka
+      circa: true
+    grade: A
+    label: Stratified Lower Palaeolithic to Mesolithic shelter occupation and rock art sequence
+    sources:
+      - src.misra-2001-prehistoric-colonization-india
+      - src.unesco-2003-bhimbetka
+      - src.coningham-2015-archaeology-south-asia
+    note: >-
+      Excavations in Shelter III F-23 by V. N. Misra revealed an unbroken stratigraphic sequence from Late
+      Acheulian through Middle and Upper Palaeolithic to Mesolithic microlithic floors and rock paintings.
+claims:
+  - text: >-
+      Excavation of Shelter III F-23 at Bhimbetka exposed nearly four metres of deposit spanning Late Acheulian
+      handaxes and cleavers, Middle Palaeolithic scrapers, Upper Palaeolithic blades and Mesolithic microliths.
+    grade: A
+    sources:
+      - src.misra-2001-prehistoric-colonization-india
+      - src.coningham-2015-archaeology-south-asia
+  - text: >-
+      More than 400 painted rock shelters across five hill clusters at Bhimbetka preserve superimposed layers
+      of Mesolithic, Chalcolithic and early historic rock art and were inscribed as a UNESCO World Heritage Site in 2003.
+    grade: A
+    sources:
+      - src.unesco-2003-bhimbetka
+      - src.coningham-2015-archaeology-south-asia
+relations:
+  - kind: related-to
+    target: site.bagor
+wikidata: Q331603
+image:
+  commons: "File:Rock painting, Bhimbetka, Raisen district, MP.jpg"
+  alt: Prehistoric red and white rock painting on a sandstone shelter wall at Bhimbetka
+  credit: Yann
+  license: CC BY-SA 4.0
+tags:
+  - rock-art
+  - palaeolithic
+  - mesolithic
+  - unesco
+  - madhya-pradesh
+review:
+  status: draft
+  author: gemini-4-argon

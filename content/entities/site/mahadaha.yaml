@@ -1,0 +1,64 @@
+id: site.mahadaha
+type: site
+kind: prehistory
+names:
+  en: Mahadaha Mesolithic Site
+summary: >-
+  A stratified Mesolithic lake-shore habitation, butchering area and cemetery in Pratapgarh district,
+  Uttar Pradesh, preserving 28 graves over four burial phases, bone tools, antler ornaments, pit hearths
+  and faunal remains documenting semi-sedentary foraging in the middle Ganga plain.
+summaries:
+  kids: >-
+    At Mahadaha in Uttar Pradesh, prehistoric families lived beside an ancient lake, wore necklaces and earrings
+    carved from deer antler and left behind roast-pits and burial grounds.
+  teen: >-
+    Located near Sarai Nahar Rai in the middle Ganga valley, Mahadaha preserves distinct habitation, cemetery
+    and lake-margin butchering zones with bone arrowheads, antler rings and 32 human skeletons across four phases.
+region: Middle Ganga plain, Pratapgarh district, Uttar Pradesh
+location:
+  name: Mahadaha
+  lat: 25.89
+  lon: 82.03
+datings:
+  - method: archaeological-radiocarbon
+    range:
+      earliest: -6000
+      latest: -2000
+      best: -3000
+      precision: millennium
+      circa: true
+    grade: B
+    label: Early-to-Middle Holocene Ganga Mesolithic chronology (Lukacs & Pal 1993; Misra 2001)
+    sources:
+      - src.lukacs-1993-mesolithic-subsistence-north-india
+      - src.misra-2001-prehistoric-colonization-india
+      - src.coningham-2015-archaeology-south-asia
+    note: >-
+      Available radiocarbon dates on bone and charcoal span roughly 4000-2000 BCE, while geomorphological and
+      bioarchaeological syntheses place the Pratapgarh Mesolithic complex across the Early to Middle Holocene.
+claims:
+  - text: >-
+      Excavations at Mahadaha identified three functional zones - a habitation-cum-cemetery area with 28 graves
+      (including two double burials), a lake-margin butchering area and a lacustrine deposit.
+    grade: A
+    sources:
+      - src.lukacs-1993-mesolithic-subsistence-north-india
+      - src.coningham-2015-archaeology-south-asia
+  - text: >-
+      Dental pathology and wear patterns from Mahadaha skeletons reflect a broad-spectrum Mesolithic foraging
+      economy supplemented by stone querns for wild plant processing.
+    grade: A
+    sources:
+      - src.lukacs-1993-mesolithic-subsistence-north-india
+relations:
+  - kind: contemporary-of
+    target: site.sarai-nahar-rai
+wikidata: Q97124538
+tags:
+  - mesolithic
+  - ganga-valley
+  - bioarchaeology
+  - uttar-pradesh
+review:
+  status: draft
+  author: gemini-4-argon

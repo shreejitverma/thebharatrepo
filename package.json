@@ -4,10 +4,17 @@
   "private": true,
   "scripts": {
     "dev": "next dev",
-    "prebuild": "node scripts/generate-search-index.mjs",
+    "prebuild": "npm run content:validate && tsx scripts/build-content.ts",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "eslint .",
+    "test": "vitest run",
+    "typecheck": "tsc --noEmit",
+    "content:validate": "tsx scripts/content-validate.ts",
+    "content:report": "tsx scripts/content-validate.ts --report",
+    "content:verify-sources": "tsx scripts/content-verify-sources.ts",
+    "content:build": "tsx scripts/build-content.ts",
+    "test:e2e": "playwright test"
   },
   "dependencies": {
     "fuse.js": "^7.1.0",
@@ -17,9 +24,13 @@
     "react-dom": "19.2.3",
     "react-share": "^5.2.2",
     "remark": "^15.0.1",
-    "remark-html": "^16.0.1"
+    "remark-html": "^16.0.1",
+    "yaml": "^2.9.1",
+    "zod": "^4.6.7"
   },
   "devDependencies": {
+    "@axe-core/playwright": "^4.14.0",
+    "@playwright/test": "^1.65.1",
     "@tailwindcss/postcss": "^4",
     "@types/node": "^20",
     "@types/react": "^19",
@@ -28,6 +39,8 @@
     "eslint": "^9",
     "eslint-config-next": "16.1.1",
     "tailwindcss": "^4",
-    "typescript": "^5"
+    "tsx": "^4.23.15",
+    "typescript": "^5",
+    "vitest": "^3.2.7"
   }
 }

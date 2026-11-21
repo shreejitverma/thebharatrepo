@@ -1,0 +1,85 @@
+id: site.bhirrana
+type: site
+kind: prehistory
+names:
+  en: Bhirrana Pre-Harappan and Harappan Site
+summary: >-
+  A stratified mound along the dry Ghaggar-Hakra palaeochannel in Fatehabad district, Haryana, excavated by
+  L. S. Rao (ASI, 2003-2006), preserving an unbroken cultural sequence from circular subterranean dwelling pits
+  with Hakra Wares (Period IA) through Early Harappan and Mature Harappan fortified urbanism, with contested
+  early radiometric dates.
+summaries:
+  kids: >-
+    At Bhirrana in Haryana beside the ancient Ghaggar river bed, the earliest settlers lived in round plastered
+    pits before building mud-brick houses, fortified walls and a thriving Harappan town.
+  teen: >-
+    Excavated by the Archaeological Survey of India, Bhirrana traces a continuous evolution from Hakra-ware
+    pit-dwellings (Period IA) to Early and Mature Harappan urbanism, and sits at the centre of debate over
+    8th-7th millennium BCE radiocarbon and OSL dates versus the conventional 4th-millennium BCE regional chronology.
+region: Ghaggar-Hakra valley, Fatehabad district, Haryana
+location:
+  name: Bhirrana
+  lat: 29.55
+  lon: 75.55
+datings:
+  - method: archaeological-radiocarbon
+    range:
+      earliest: -7500
+      latest: -6000
+      best: -6600
+      precision: century
+      circa: true
+    grade: C
+    label: Early Holocene radiocarbon and OSL dates for Period IA Hakra Ware levels (Rao et al.; Sarkar et al. 2016)
+    sources:
+      - src.sarkar-2016-bhirrana-oxygen-isotope
+    note: >-
+      Charcoal radiocarbon dates from Period IA Hakra-ware levels and OSL dates on pottery published by
+      Sarkar et al. (2016) range from c. 7500 to 5000 BCE (9.5-7 ka BP).
+  - method: scholarly-consensus
+    range:
+      earliest: -3800
+      latest: -1900
+      best: -3000
+      precision: century
+      circa: true
+    grade: B
+    label: Mainstream Hakra-Ware and Early-to-Mature Harappan chronology
+    sources:
+      - src.coningham-2015-archaeology-south-asia
+      - src.fuller-2006-agricultural-origins-south-asia
+    note: >-
+      Comparative ceramic and radiometric syntheses across the Ghaggar-Hakra and Indus valleys place Hakra Ware
+      levels at c. 3800-3200 BCE, Early Harappan at c. 3200-2600 BCE, and Mature Harappan at c. 2600-1900 BCE.
+claims:
+  - text: >-
+      Period IA at Bhirrana consists of circular subterranean dwelling and sacrificial/cooking pits cut into
+      natural alluvium, yielding handmade and wheel-made Hakra Wares (mud-applique, incised, bi-chrome and black-on-red wares).
+    grade: A
+    sources:
+      - src.sarkar-2016-bhirrana-oxygen-isotope
+      - src.coningham-2015-archaeology-south-asia
+  - text: >-
+      Oxygen-isotope ratios (delta-18O) in bovid tooth-enamel bioapatites from Bhirrana track an early-to-mid
+      Holocene monsoon maximum followed by progressive monsoon weakening across the Mature Harappan phase.
+    grade: A
+    sources:
+      - src.sarkar-2016-bhirrana-oxygen-isotope
+relations:
+  - kind: succeeded
+    target: site.mehrgarh
+wikidata: Q4901824
+debate: >-
+  Charcoal radiocarbon assays and pottery OSL measurements from Period IA at Bhirrana were interpreted by
+  Sarkar et al. (2016) and L. S. Rao as evidence for an 8th-7th millennium BCE pre-Harappan Hakra-ware occupation,
+  whereas many Indus archaeologists attribute the oldest charcoal dates to the old-wood effect or reworked sediment
+  and date the Hakra-ware phase across the Ghaggar-Hakra basin to the 4th millennium BCE (c. 3800-3200 BCE).
+tags:
+  - neolithic
+  - chalcolithic
+  - hakra-ware
+  - early-harappan
+  - haryana
+review:
+  status: draft
+  author: gemini-4-argon

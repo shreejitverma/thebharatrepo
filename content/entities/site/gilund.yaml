@@ -1,0 +1,63 @@
+id: site.gilund
+type: site
+kind: prehistory
+names:
+  en: Gilund Chalcolithic Site
+summary: >-
+  The largest known Ahar-Banas Chalcolithic settlement (locally called Modiya Magari), occupying twin mounds
+  near the Banas River in Rajsamand district, Rajasthan (c. 3000-1700 BCE), renowned for its monumental parallel-wall
+  mud-brick warehouse complex containing over a hundred clay seal impressions (bullae).
+summaries:
+  kids: >-
+    Gilund in Rajasthan was a large Chalcolithic town with two big mounds, mud-brick storage buildings and
+    over a hundred stamped clay seals used to lock up trade goods 4,000 years ago.
+  teen: >-
+    First excavated by B. B. Lal in 1959-60 and later by V. S. Shinde and Gregory Possehl (1999-2005), Gilund
+    was a 25-hectare regional centre of the Ahar-Banas culture featuring monumental mud-brick architecture and
+    a cache of stamped terracotta sealings showing administrative control and long-distance exchange.
+region: Banas River valley, Rajsamand district, Rajasthan
+location:
+  name: Gilund
+  lat: 25.03
+  lon: 74.26
+datings:
+  - method: archaeological-radiocarbon
+    range:
+      earliest: -3000
+      latest: -1700
+      best: -2200
+      precision: century
+      circa: true
+    grade: A
+    label: Radiocarbon and stratigraphic chronology of Chalcolithic Gilund
+    sources:
+      - src.misra-2001-prehistoric-colonization-india
+      - src.coningham-2015-archaeology-south-asia
+      - src.robbins-2009-balathal-leprosy
+    note: >-
+      Excavations across the twin mounds GLD-1 and GLD-2 document Mesolithic basal levels followed by Early,
+      Mature and Late Ahar-Banas Chalcolithic horizons between c. 3000 and 1700 BCE.
+claims:
+  - text: >-
+      Excavations at Gilund exposed a massive mud-brick and burnt-brick parallel-wall magazine structure along
+      with a bin containing more than one hundred clay sealings stamped with geometric and compartmented motifs.
+    grade: A
+    sources:
+      - src.coningham-2015-archaeology-south-asia
+      - src.misra-2001-prehistoric-colonization-india
+relations:
+  - kind: part-of
+    target: tradition.ahar-banas-culture
+  - kind: contemporary-of
+    target: site.ahar
+  - kind: contemporary-of
+    target: site.balathal
+wikidata: Q5562638
+tags:
+  - chalcolithic
+  - ahar-banas
+  - seals
+  - rajasthan
+review:
+  status: draft
+  author: gemini-4-argon

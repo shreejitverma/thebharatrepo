@@ -1,0 +1,68 @@
+id: tradition.ochre-coloured-pottery-culture
+type: tradition
+kind: prehistory
+names:
+  en: Ochre Coloured Pottery (OCP) Culture
+summary: >-
+  A Bronze Age and Chalcolithic ceramic horizon distributed across the upper Ganga-Yamuna Doab and eastern
+  Rajasthan (c. 2000-1500 BCE), named by B. B. Lal after its rolled, porous orange-red pottery that leaves
+  an ochre powder on the fingers and is frequently associated in stratigraphy with Late Harappan and Gangetic
+  Copper Hoard assemblages.
+summaries:
+  kids: >-
+    In the Ganga and Yamuna river plains, archaeologists found soft orange-red clay pots that rub off an ochre
+    colour on your fingers, made by Bronze Age villagers who lived at the same time as the Copper Hoard smiths.
+  teen: >-
+    First identified by B. B. Lal at Bisauli and Rajpur Parsu in 1951, the Ochre Coloured Pottery (OCP) culture
+    dates by thermoluminescence to c. 2000-1500 BCE across the upper Ganga-Yamuna Doab and links Late Harappan
+    traditions with the Gangetic Copper Hoards.
+region: Upper Ganga-Yamuna Doab and northeastern Rajasthan (Jodhpura-Ganeshwar zone)
+location:
+  name: Atranjikhera and Saipai (Ganga-Yamuna Doab)
+  lat: 27.69
+  lon: 78.73
+datings:
+  - method: luminescence
+    range:
+      earliest: -2100
+      latest: -1300
+      best: -1750
+      precision: century
+      circa: true
+    grade: B
+    label: Thermoluminescence dates from Atranjikhera, Lal Qila, Jhinjhana and Nasirpur
+    sources:
+      - src.misra-2001-prehistoric-colonization-india
+      - src.coningham-2015-archaeology-south-asia
+    note: >-
+      Thermoluminescence dates on OCP sherds from Atranjikhera, Lal Qila, Jhinjhana and Nasirpur range from
+      2650 to 1180 BCE, clustering primarily between c. 2000 and 1500 BCE (with earlier 3rd-millennium BCE dates
+      in the Jodhpura-Ganeshwar complex of Rajasthan).
+claims:
+  - text: >-
+      At Saipai in Etawah district, Uttar Pradesh, controlled excavation recovered a hooked copper spearhead
+      and a harpoon in situ within an undisturbed Ochre Coloured Pottery deposit, confirming the association
+      between OCP and the Gangetic Copper Hoards.
+    grade: A
+    sources:
+      - src.misra-2001-prehistoric-colonization-india
+      - src.coningham-2015-archaeology-south-asia
+  - text: >-
+      Excavations at Lal Qila in Bulandshahr district showed that well-preserved OCP was a sturdy wheel-made
+      red-slipped pottery painted in black and decorated with incised motifs, whose rolled appearance at other
+      Doab sites resulted from prolonged waterlogging.
+    grade: A
+    sources:
+      - src.coningham-2015-archaeology-south-asia
+relations:
+  - kind: contemporary-of
+    target: tradition.copper-hoard-culture
+wikidata: Q2663163
+tags:
+  - chalcolithic
+  - bronze-age
+  - ochre-coloured-pottery
+  - ganga-yamuna-doab
+review:
+  status: draft
+  author: gemini-4-argon
