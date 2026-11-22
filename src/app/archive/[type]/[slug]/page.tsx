@@ -5,10 +5,11 @@ import { preconnect } from 'react-dom';
 import GradeBadge from '@/components/GradeBadge';
 import DatingList from '@/components/DatingList';
 import KaalchakraStrip from '@/components/KaalchakraStrip';
+import SearchIndexMeta from '@/components/SearchIndexMeta';
 import SourceCitation from '@/components/SourceCitation';
 import { getGraph, getIndex, issueUrl, SITE_URL } from '@/lib/content/site';
 import { entityHref } from '@/lib/content/kaalchakra';
-import { rankDatings } from '@/lib/content/lens';
+import { rankDatings, summarizeDatings } from '@/lib/content/lens';
 import { KIND_LABELS, isTraditional, citationId } from '@/lib/content/schema';
 import { verifiedImage } from '@/lib/content/verification';
 import { yearToUnit } from '@/lib/time/scale';
@@ -52,7 +53,7 @@ export default async function EntityPage({ params }: { params: Promise<{ type: s
   const articles = g.articlesByEntity.get(e.id) ?? [];
   const src = (ref: Parameters<typeof citationId>[0]) => {
     const s = g.sources.get(citationId(ref));
-    return s ? <SourceCitation source={s} locator={typeof ref === 'string' ? undefined : ref.locator} /> : citationId(ref);
+    return s ? <SourceCitation source={s} locator={typeof ref === 'string' ? undefined : ref.locator} record /> : citationId(ref);
   };
   const jsonLd = {
     '@context': 'https://schema.org',
@@ -65,9 +66,19 @@ export default async function EntityPage({ params }: { params: Promise<{ type: s
   };
 
   return (
-    <div className="main-content">
+    <div className="main-content" data-pagefind-body>
+      <SearchIndexMeta
+        title={e.names.en}
+        kind={e.kind}
+        when={summarizeDatings(e.datings)}
+        filters={{
+          kind: [e.kind],
+          grade: [...e.datings.map((d) => d.grade), ...e.claims.map((c) => c.grade)],
+          lens: e.datings.map((d) => (isTraditional(d.method) ? 'tradition' : 'scholarship')),
+        }}
+      />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
-      <nav className="breadcrumbs" aria-label="Breadcrumb">
+      <nav className="breadcrumbs" aria-label="Breadcrumb" data-pagefind-ignore>
         <Link href="/archive" prefetch={false}>Archive</Link> / <Link href={`/archive#${e.kind}`} prefetch={false}>{KIND_LABELS[e.kind]}</Link>
       </nav>
       <div className="entity-head">
@@ -75,7 +86,7 @@ export default async function EntityPage({ params }: { params: Promise<{ type: s
           <h1>{e.names.en}</h1>
           {e.names.iast || e.names.native ? (
             <div className="names">
-              {e.names.native ? <span lang="sa">{e.names.native}</span> : null}
+              {e.names.native ? <span lang="sa">{e.names.native}</span> : null}{' '}
               {e.names.iast ? <span>{e.names.iast}</span> : null}
             </div>
           ) : null}
@@ -90,7 +101,7 @@ export default async function EntityPage({ params }: { params: Promise<{ type: s
           {e.region ? <p className="muted">Region: {e.region}</p> : null}
         </div>
         {img && e.image ? (
-          <figure>
+          <figure data-pagefind-ignore>
             {/* Anonymous CORS keeps Wikimedia from reading or setting third-party cookies. Lazy, because React turns an eager image
                 into a preload hint in this page's RSC payload, and every prefetched link to this entity would then download it. */}
             {/* eslint-disable-next-line @next/next/no-img-element */}
@@ -103,9 +114,11 @@ export default async function EntityPage({ params }: { params: Promise<{ type: s
         ) : null}
       </div>
 
-      <KaalchakraStrip items={getIndex()} dating={primary} selfId={e.id} focusHref={`${focus}&view=river&win=${Math.max(0, u - 0.02).toFixed(5)},${Math.min(1, u + 0.02).toFixed(5)}`} />
+      <div data-pagefind-ignore>
+        <KaalchakraStrip items={getIndex()} dating={primary} selfId={e.id} focusHref={`${focus}&view=river&win=${Math.max(0, u - 0.02).toFixed(5)},${Math.min(1, u + 0.02).toFixed(5)}`} />
+      </div>
 
-      <h2>When, and how we know</h2>
+      <h2 data-pagefind-ignore>When, and how we know</h2>
       <DatingList datings={ordered} sources={g.sources} />
 
       {e.debate ? (
@@ -123,7 +136,7 @@ export default async function EntityPage({ params }: { params: Promise<{ type: s
               <li key={i}>
                 <p>{c.text}</p>
                 <GradeBadge grade={c.grade} />
-                <ul className="dating__sources">
+                <ul className="dating__sources" data-pagefind-ignore>
                   {c.sources.map((s, j) => (
                     <li key={j}>{src(s)}</li>
                   ))}
@@ -175,7 +188,7 @@ export default async function EntityPage({ params }: { params: Promise<{ type: s
         </>
       ) : null}
 
-      <p className="review-note" style={{ marginTop: 32, maxWidth: 860 }}>
+      <p className="review-note" style={{ marginTop: 32, maxWidth: 860 }} data-pagefind-ignore>
         Review status: {e.review.status === 'reviewed' ? `reviewed by ${e.review.reviewer} on ${e.review.lastReviewed}` : 'draft. Every DOI, ISBN, Wikidata and Commons identifier on this page has been machine-verified; editor review is pending'}.
         {e.wikidata ? (
           <>

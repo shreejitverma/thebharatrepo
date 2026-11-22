@@ -72,7 +72,7 @@ const ROUTES: { name: string; path: string; ready?: string }[] = [
   { name: 'corrections', path: '/corrections' },
   { name: 'methodology', path: '/methodology' },
   { name: 'search', path: '/search' },
-  { name: 'search results', path: '/search?q=Harappa', ready: 'a.card' },
+  { name: 'search results', path: '/search?q=Harappa', ready: '.search-result' },
   { name: 'not found', path: '/no-such-page' },
 ];
 
@@ -136,8 +136,9 @@ test.describe('content pages', () => {
     const flood = page.locator('.article-header .dating__sources a[href="https://doi.org/10.1111/b.9780631215356.2005.00005.x"]');
     await expect(flood).toBeVisible();
     await expect(flood).toContainText('The Blackwell Companion to Hinduism');
-    await expect(page.locator('.article-meta')).toContainText('3 sources cited');
-    await expect(page.locator('.references li')).toHaveCount(2);
+    // Two sources cited in the text and one cited only for a dating: all three are numbered references.
+    await expect(page.getByRole('complementary', { name: 'Evidence at a glance' }).getByRole('link', { name: '3 references' })).toBeVisible();
+    await expect(page.locator('.references ol > li')).toHaveCount(3);
     await noHorizontalScroll(page);
     await noSeriousA11yViolations(page);
   });
@@ -155,10 +156,10 @@ test.describe('content pages', () => {
 
   test('search finds entities and articles, and says so when nothing matches', async ({ page }) => {
     await page.goto('/search?q=Harappa');
-    await expect(page.locator('.card').first()).toBeVisible();
-    await expect(page.getByText(/^(?:Showing \d+ of )?\d+ results?$/)).toBeVisible();
+    await expect(page.locator('.search-result').first()).toBeVisible();
+    await expect(page.locator('.search-status')).toHaveText(/^\d+ results? for “Harappa”\.$/);
     await page.goto('/search?q=zzzzqqqq');
-    await expect(page.getByText('0 results for')).toBeVisible();
+    await expect(page.locator('.search-status')).toContainText('0 results for');
   });
 
   test('the header search box opens results', async ({ page }) => {
@@ -166,7 +167,7 @@ test.describe('content pages', () => {
     await page.getByRole('searchbox', { name: 'Search the archive' }).fill('Ashoka');
     await page.getByRole('searchbox', { name: 'Search the archive' }).press('Enter');
     await expect(page).toHaveURL(/\/search\?q=Ashoka/);
-    await expect(page.locator('.card').first()).toBeVisible();
+    await expect(page.locator('.search-result').first()).toBeVisible();
   });
 });
 

@@ -43,14 +43,15 @@ npm run lint
 npm run content:validate        # schemas and cross-references; exit 1 on any problem
 npm run content:report          # coverage: entities, grades, kinds, sources
 npm run content:verify-sources  # resolve every DOI, ISBN, OCLC, QID and Commons file, and each URL that is a source's only identifier; exit 1 on any mismatch
-npm run build                   # validate, offline verification gate, search index and open data, then next build
+npm run build                   # validate, offline verification gate and open data, then next build and the Pagefind index
+npm run search:build            # rebuild only the Pagefind index from an existing .next build
 npm run test:e2e                # Playwright, axe and visual snapshots against a production build (Chromium, Firefox, WebKit, Pixel 7, iPhone 14)
 npx vitest run src/lib/design/palette.test.ts  # contrast of every documented colour pair in light and dark; fails below AA
 npm run test:lighthouse         # Lighthouse CI budgets against a production build (lighthouserc.js)
 ```
 
 Both browser suites expect `npm run build` first; set `E2E_PORT` or `LHCI_PORT` to avoid a port another server holds.
-After editing content during `npm run dev`, run `npm run content:build` to refresh the search index and the Kaalchakra data in `public/`.
+After editing content during `npm run dev`, run `npm run content:build` to refresh the open data and the Kaalchakra data in `public/data/`.
 
 `npm run build` refuses to build when content is invalid or when any identifier lacks a matching verified record in `content/verification.json` (`content-verify-sources.ts --offline`).
 Every cached verification is re-checked against the current title or name, so a reused or edited identifier cannot ride on an old success.
@@ -103,6 +104,24 @@ npx playwright test e2e/visual.spec.ts --update-snapshots=all      # macOS
 docker run --rm -v "$PWD":/work -v /work/node_modules -v /work/.next -w /work -e CI=1 mcr.microsoft.com/playwright:v1.65.1-noble \
   sh -c 'npm ci && npm run build && npx playwright test e2e/visual.spec.ts --update-snapshots=all'
 ```
+## Search
+
+Search is [Pagefind](https://pagefind.app), built inside `npm run build` (`next build && tsx scripts/build-search.ts`), so the index can never be skipped by a package manager that ignores lifecycle scripts.
+`scripts/build-search.ts` reads the prerendered HTML in `.next/server/app`, indexes every entity, article and source page under its real route, and writes `public/pagefind/`.
+The build fails if any expected page is missing or unindexed.
+On Vercel this is served because the Next.js builder collects `public/` only after the build command exits, and `vercel.json` pins that build command to `npm run build` so a dashboard override cannot drop the index; `vercel build` locally puts all of `public/pagefind/` in `.vercel/output/static/pagefind/`.
+Content-hashed chunks (`/pagefind/{index,filter,fragment}/`) are served as immutable (`next.config.ts`); `pagefind.js` and `pagefind-entry.json` keep the default revalidation.
+Pages declare what is indexed with `data-pagefind-body` and `data-pagefind-ignore`, and their filters (kind, article category, evidence grade, lens) through `src/components/SearchIndexMeta.tsx`.
+`/search` keeps its `?q=` contract and adds repeatable `kind`, `category`, `grade` and `lens` parameters (`src/lib/search/facets.ts`).
+Ranking lowers Pagefind's page-length penalty to 0.25 and puts an exact title match first (`src/lib/search/pagefind.ts`), so a name query finds its record before the shorter bibliography entries that mention it.
+`npm run dev` serves the index from the last production build; run `npm run build` once before testing search locally.
+
+## References
+
+Each article's references are generated from its inline citations and its dating sources (`src/lib/content/references.ts`): one numbered entry per source in order of first use, locators deduplicated, with back-links to every use.
+The evidence summary at the top of an article counts the graded datings and claims of the archive records it links in `entities`.
+Every source has a record at `/sources/<slug>` listing each entity, article and correction that cites it.
+Identifiers are linked only when verified: DOI, ISBN and OCLC always, a URL only when it is the source's sole identifier.
 
 ## Time model
 

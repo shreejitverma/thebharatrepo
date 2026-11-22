@@ -271,8 +271,6 @@ export const SourceSchema = z
   });
 export type Source = z.infer<typeof SourceSchema>;
 
-export const CATEGORIES = ['history', 'philosophy', 'science', 'literature', 'art-and-culture', 'music', 'language'] as const;
-
 export const ArticleFrontmatterSchema = z.strictObject({
   title: z.string().min(3),
   summary: z.string().min(20).max(400),

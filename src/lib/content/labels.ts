@@ -91,3 +91,17 @@ export const KIND_LABELS: Record<Kind, string> = {
   event: 'Events',
 };
 
+
+/** Article categories, one directory each under _content/. */
+export const CATEGORIES = ['history', 'philosophy', 'science', 'literature', 'art-and-culture', 'music', 'language'] as const;
+export type Category = (typeof CATEGORIES)[number];
+
+export const CATEGORY_LABELS: Record<Category, string> = {
+  history: 'History',
+  philosophy: 'Philosophy',
+  science: 'Science',
+  literature: 'Literature',
+  'art-and-culture': 'Art and Culture',
+  music: 'Music',
+  language: 'Language',
+};
