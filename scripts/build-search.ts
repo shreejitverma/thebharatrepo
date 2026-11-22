@@ -1,10 +1,12 @@
 /**
- * Post-build Pagefind index (run automatically by `npm run build` as the postbuild step).
+ * Pagefind index, built by `npm run build` right after `next build` (part of the build script itself, not a
+ * lifecycle hook, so no package manager setting can skip it).
  *
  * Reads the prerendered HTML that `next build` writes to .next/server/app, indexes every entity, article
  * and source page under its real route (Next serves /archive/event/x, not /archive/event/x.html), and
- * writes the browser index to public/pagefind. Vercel collects public/ after the build command finishes,
- * and `next start` serves it, so the index ships with the deployment without a static export.
+ * writes the browser index to public/pagefind. The Vercel Next.js builder collects public/ after the build
+ * command exits (vercel.json pins that command to `npm run build`), and `next start` serves it, so the
+ * index ships with the deployment without a static export.
  *
  * What is indexed, and with which filters, is declared on the pages themselves (data-pagefind-body and
  * SearchIndexMeta). The build fails if any expected page is missing, unmarked or fails to index, so a

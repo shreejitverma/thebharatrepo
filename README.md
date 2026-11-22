@@ -41,7 +41,7 @@ npm run lint
 npm run content:validate        # schemas and cross-references; exit 1 on any problem
 npm run content:report          # coverage: entities, grades, kinds, sources
 npm run content:verify-sources  # resolve every DOI, ISBN, OCLC, QID and Commons file, and each URL that is a source's only identifier; exit 1 on any mismatch
-npm run build                   # validate, offline verification gate and open data, then next build, then the Pagefind index
+npm run build                   # validate, offline verification gate and open data, then next build and the Pagefind index
 npm run search:build            # rebuild only the Pagefind index from an existing .next build
 npm run test:e2e                # Playwright and axe against a production build (desktop and mobile)
 ```
@@ -64,9 +64,11 @@ Run `npm run content:verify-sources` after every merge.
 
 ## Search
 
-Search is [Pagefind](https://pagefind.app), built after `next build` by `scripts/build-search.ts` (the `postbuild` step).
-It reads the prerendered HTML in `.next/server/app`, indexes every entity, article and source page under its real route, and writes `public/pagefind/`, which Vercel collects with `public/` after the build and `next start` serves.
+Search is [Pagefind](https://pagefind.app), built inside `npm run build` (`next build && tsx scripts/build-search.ts`), so the index can never be skipped by a package manager that ignores lifecycle scripts.
+`scripts/build-search.ts` reads the prerendered HTML in `.next/server/app`, indexes every entity, article and source page under its real route, and writes `public/pagefind/`.
 The build fails if any expected page is missing or unindexed.
+On Vercel this is served because the Next.js builder collects `public/` only after the build command exits, and `vercel.json` pins that build command to `npm run build` so a dashboard override cannot drop the index; `vercel build` locally puts all of `public/pagefind/` in `.vercel/output/static/pagefind/`.
+Content-hashed chunks (`/pagefind/{index,filter,fragment}/`) are served as immutable (`next.config.ts`); `pagefind.js` and `pagefind-entry.json` keep the default revalidation.
 Pages declare what is indexed with `data-pagefind-body` and `data-pagefind-ignore`, and their filters (kind, article category, evidence grade, lens) through `src/components/SearchIndexMeta.tsx`.
 `/search` keeps its `?q=` contract and adds repeatable `kind`, `category`, `grade` and `lens` parameters (`src/lib/search/facets.ts`).
 `npm run dev` serves the index from the last production build; run `npm run build` once before testing search locally.
