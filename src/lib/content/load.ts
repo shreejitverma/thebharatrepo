@@ -132,6 +132,25 @@ export function bceOffByOne(range: { earliest: number; latest: number; best?: nu
   return [...flagged];
 }
 
+const LABEL_RANGE = /\b(\d{2,5})\s*(BCE|BC|CE|AD)?\s*(?:to|-|–)\s*(\d{2,5})\s*(BCE|BC|CE|AD)\b/gi;
+
+/**
+ * A dating label that states one span and no other year, such as "Reign (about 268 to 232 BCE)", is what
+ * readers see beside the range, so it must name the range's own endpoints. Labels that name several
+ * phases or alternatives are left alone. Returns a message when they disagree.
+ */
+export function labelRangeMismatch(dating: { label?: string; range: { earliest: number; latest: number } }): string | null {
+  const label = (dating.label ?? '').replace(/,(?=\d{3})/g, '');
+  const spans = [...label.matchAll(LABEL_RANGE)];
+  if (spans.length !== 1 || /\d/.test(label.replace(spans[0][0], ''))) return null;
+  const [, a, eraA, b, eraB] = spans[0];
+  const astro = (n: string, era: string | undefined) => (era && /^B/i.test(era) ? 1 - Number(n) : Number(n));
+  const earliest = astro(a, eraA ?? eraB);
+  const latest = astro(b, eraB);
+  if (earliest === dating.range.earliest && latest === dating.range.latest) return null;
+  return `label "${dating.label}" names a different span from the range; make the label and the range agree`;
+}
+
 const CENTURY_ORDINALS = ['first', 'second', 'third', 'fourth', 'fifth', 'sixth', 'seventh', 'eighth', 'ninth', 'tenth', 'eleventh', 'twelfth', 'thirteenth', 'fourteenth', 'fifteenth', 'sixteenth', 'seventeenth', 'eighteenth', 'nineteenth', 'twentieth', 'twenty-first'];
 
 function ordinalSuffix(n: number): string {
@@ -366,6 +385,8 @@ export function loadContentUncached(): ContentGraph {
       for (const n of ceOffByOne(d, `${text} ${d.label ?? ''} ${d.note ?? ''}`)) {
         errors.push({ file: rel(file), message: `datings[${i}]: latest is written as "${n - 1} CE" but the text gives ${n} CE (or the century ending then); a CE year needs no BCE-style shift` });
       }
+      const mismatch = labelRangeMismatch(d);
+      if (mismatch) errors.push({ file: rel(file), message: `datings[${i}]: ${mismatch}` });
     });
     const expected = `${path.basename(path.dirname(file))}.${path.basename(file, '.yaml')}`;
     if (e.id !== expected) errors.push({ file: rel(file), message: `id ${e.id} must match path (${expected})` });
@@ -408,6 +429,8 @@ export function loadContentUncached(): ContentGraph {
         for (const n of ceOffByOne(d, `${parsed.data.summary} ${d.label ?? ''} ${d.note ?? ''}`)) {
           errors.push({ file: relFile, message: `datings[${i}]: latest is written as "${n - 1} CE" but the text gives ${n} CE (or the century ending then); a CE year needs no BCE-style shift` });
         }
+        const mismatch = labelRangeMismatch(d);
+        if (mismatch) errors.push({ file: relFile, message: `datings[${i}]: ${mismatch}` });
       });
       articles.push({ ...parsed.data, slug: path.basename(file, '.md'), file: relFile, category, body: content, inlineCitations });
     }

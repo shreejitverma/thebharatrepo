@@ -25,21 +25,6 @@ location:
 datings:
   - method: archaeological-radiocarbon
     range:
-      earliest: "3300 BCE"
-      latest: "2600 BCE"
-      precision: century
-      circa: true
-    grade: A
-    label: Early Harappan Phase (Regionalisation Era)
-    sources:
-      - src.kenoyer-1998-ancient-cities-indus
-      - src.possehl-2002-indus-civilization
-      - src.wright-2010-ancient-indus
-    note: >-
-      Formative regional cultures (Ravi, Hakra, Kot Diji, Amri-Nal, Sothi-Siswal) showing fortified towns,
-      early craft specialisation, and proto-inscribed potsherds prior to full urban integration.
-  - method: archaeological-radiocarbon
-    range:
       earliest: "2600 BCE"
       latest: "1900 BCE"
       precision: century
@@ -53,6 +38,21 @@ datings:
     note: >-
       Peak urban phase anchored by calibrated radiocarbon sequences across Harappa, Mohenjo-daro, Dholavira,
       Rakhigarhi, and Kalibangan, and corroborated by Akkadian and Ur III synchronisms in Mesopotamia.
+  - method: archaeological-radiocarbon
+    range:
+      earliest: "3300 BCE"
+      latest: "2600 BCE"
+      precision: century
+      circa: true
+    grade: A
+    label: Early Harappan Phase (Regionalisation Era)
+    sources:
+      - src.kenoyer-1998-ancient-cities-indus
+      - src.possehl-2002-indus-civilization
+      - src.wright-2010-ancient-indus
+    note: >-
+      Formative regional cultures (Ravi, Hakra, Kot Diji, Amri-Nal, Sothi-Siswal) showing fortified towns,
+      early craft specialisation, and proto-inscribed potsherds prior to full urban integration.
   - method: archaeological-radiocarbon
     range:
       earliest: "1900 BCE"

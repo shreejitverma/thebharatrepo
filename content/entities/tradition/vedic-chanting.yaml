@@ -32,16 +32,6 @@ datings:
     note: >-
       Rooted in the composition of the Vedic Samhitas (c. 1500 to 1000 BCE) and still practiced by
       surviving Vedic shakhas across India, recognized by UNESCO in 2003.
-  - method: documentary
-    range: { earliest: "2003", latest: "2003", precision: year, circa: false }
-    grade: A
-    label: UNESCO Masterpiece proclamation
-    sources: [src.unesco-2003-tradition-vedic-chanting]
-  - method: documentary
-    range: { earliest: "2008", latest: "2008", precision: year, circa: false }
-    grade: A
-    label: UNESCO Representative List inscription
-    sources: [src.unesco-2003-tradition-vedic-chanting]
 claims:
   - text: >-
       Vedic recitation distinguishes three primary pitch accents - udatta (raised tone), anudatta

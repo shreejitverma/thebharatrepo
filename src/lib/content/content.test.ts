@@ -279,6 +279,19 @@ describe('integrity checks', () => {
     expect(ceOffByOne(ending(1199, 'traditional-sampradaya'), 'twelfth century CE')).toEqual([]);
     expect(ceOffByOne(ending(399), 'from 399 CE onward')).toEqual([]);
   });
+  it('requires a label that states one span to match the range', async () => {
+    const { labelRangeMismatch } = await import('./load');
+    const { parseYear } = await import('./schema');
+    const r = (a: string, b: string) => ({ earliest: parseYear(a) as number, latest: parseYear(b) as number });
+    expect(labelRangeMismatch({ label: 'Reign (about 268 to 232 BCE)', range: r('273 BCE', '232 BCE') })).toContain('names a different span');
+    expect(labelRangeMismatch({ label: 'Reign (about 268 to 232 BCE)', range: r('268 BCE', '232 BCE') })).toBeNull();
+    expect(labelRangeMismatch({ label: "Faxian's journey (399-414 CE)", range: r('399', '414') })).toBeNull();
+    expect(labelRangeMismatch({ label: 'Mauryan rule (c. 322 BCE to 185 BCE)', range: r('322 BCE', '185 BCE') })).toBeNull();
+    // Several phases or alternatives: the label is not a statement of the whole range.
+    expect(labelRangeMismatch({ label: 'Chronology (c. 165/155-130 BCE)', range: r('165 BCE', '130 BCE') })).toBeNull();
+    expect(labelRangeMismatch({ label: 'Two phases (c. 100 BCE and c. 462-480 CE)', range: r('150 BCE', '480') })).toBeNull();
+    expect(labelRangeMismatch({ range: r('1 BCE', '1') })).toBeNull();
+  });
   it('rejects raw negative years in authored datings', async () => {
     const { rawNegativeYears } = await import('./load');
     const msgs = rawNegativeYears([

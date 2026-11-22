@@ -2759,3 +2759,65 @@
   sources:
     - src.thapar-2012-asoka-decline-mauryas
     - src.trautmann-1971-kautilya-arthasastra
+- date: 2026-11-22
+  target: person.ashoka
+  before: "The summary, teen summary and dating label gave his reign as about 268 to 232 BCE, while the displayed dating runs from about 273 BCE."
+  after: "The texts say he came to the throne a few years before his consecration in about 268 BCE and reigned until about 232 BCE, and the label names the accession and the consecration, so they agree with the 273 to 232 BCE range."
+  reason: "The dating's note already distinguishes the consecration fixed by Major Rock Edict XIII from an accession a few years earlier in the Buddhist chronicles; the summaries gave the consecration year as the start of the reign."
+  sources:
+    - src.thapar-2012-asoka-decline-mauryas
+    - src.hultzsch-1925-inscriptions-of-asoka
+- date: 2026-11-22
+  target: person.menander-i
+  before: "The teen summary gave his reign as c. 155 to 130 BCE."
+  after: "The teen summary gives c. 165 or 155 to 130 BCE, as the summary and the displayed dating do."
+  reason: "The dating and the summary keep both proposed starting years; the teen summary dropped the earlier one."
+  sources:
+    - src.stoneman-2019-greek-experience-of-india
+    - src.kulke-2004-history-of-india
+- date: 2026-11-22
+  target: artifact.dancing-girl-mohenjo-daro
+  before: "The summary placed the Mature Harappan period at c. 2500-1900 BCE."
+  after: "The summary places it at c. 2600-1900 BCE, the range of the displayed dating."
+  reason: "The summary and the dating described the same Mature Harappan context with different start years."
+  sources:
+    - src.kenoyer-1998-ancient-cities-indus
+    - src.possehl-2002-indus-civilization
+- date: 2026-11-22
+  target: concept.southern-neolithic-ash-mounds
+  before: "The summary dated the ash-mound tradition to c. 3000-1200 BCE."
+  after: "The summary gives c. 2900-1200 BCE, as the teen summary and the displayed dating do."
+  reason: "The cited Bayesian AMS chronology places the start at about 2900 or 2800 BCE, not 3000 BCE."
+  sources:
+    - src.fuller-2007-dating-neolithic-south-india
+- date: 2026-11-22
+  target: site.sanganakallu
+  before: "The teen summary placed the complex between c. 2200 and 1200 BCE."
+  after: "The teen summary gives c. 2200 to 1100 BCE, the range of the displayed dating."
+  reason: "The cited AMS sequence runs to the Late Neolithic and Megalithic transition at about 1400 to 1100 BCE."
+  sources:
+    - src.fuller-2007-dating-neolithic-south-india
+- date: 2026-11-22
+  target: tradition.harappan-civilisation and concept.indus-script
+  before: "Both entries were displayed by their Early Harappan dating (c. 3300 to 2600 BCE), the first of several equally graded datings."
+  after: "Both are displayed by their Mature Harappan dating (c. 2600 to 1900 BCE); the Early and Late phase datings are unchanged."
+  reason: "The summaries describe an urban civilisation and a script known mainly from Mature Harappan objects, so the pre-urban phase misplaced both on cards and on the Kaalchakra."
+  sources:
+    - src.kenoyer-1998-ancient-cities-indus
+    - src.wright-2010-ancient-indus
+- date: 2026-11-22
+  target: tradition.vedic-chanting, tradition.kumbha-mela and concept.rakhigarhi-i6113-genome
+  before: "Grade A documentary datings for UNESCO recognition (2003 and 2008, and 2017) and for the 2019 publication of the genome outranked the entities' own datings, so Vedic chanting was displayed as 2003 CE, the Kumbh Mela as 2017 CE and a Harappan burial as 2019 CE."
+  after: "The milestones are recorded in each entity's existing claims and no longer as datings; the entries are displayed by the Vedic-period practice, the documented emergence of the twelve-year Kumbha cycle, and the Mature Harappan burial context."
+  reason: "A dating places the entity itself in time. Recognition and publication dates are facts about the entity, and as top-graded datings they contradicted the summaries."
+  sources:
+    - src.unesco-2003-tradition-vedic-chanting
+    - src.unesco-2017-kumbh-mela
+    - src.shinde-2019-ancient-harappan-genome
+- date: 2026-11-22
+  target: text.arthashastra
+  before: "The grade C textual-internal dating of 321 to 290 BCE was labelled \"Traditional Mauryan attribution\"."
+  after: "The same dating is labelled \"Mauryan attribution\", held by R. P. Kangle and, for a Mauryan core, by Romila Thapar."
+  reason: "The label called a scholarly position held by named scholars a traditional one, which mixed the two lenses."
+  sources:
+    - src.thapar-2012-asoka-decline-mauryas
