@@ -1,0 +1,26 @@
+id: event.india-pakistan-war-1971
+type: event
+kind: event
+names:
+  en: "India-Pakistan War of 1971"
+summary: "The Bangladesh independence struggle and a refugee crisis preceded open war between India and Pakistan in December 1971. Pakistani forces in East Pakistan surrendered on 16 December, and Bangladesh emerged as an independent state."
+summaries:
+  kids: "People in East Pakistan fought to create Bangladesh. India joined the war against Pakistan, whose forces in the east surrendered in December 1971."
+  teen: "Years of political tension and the Pakistani army's 1971 crackdown led to an independence struggle and a refugee crisis. Open war between India and Pakistan followed in December. The eastern surrender on 16 December secured Bangladesh's independence."
+region: "Bangladesh and the India-Pakistan border"
+datings:
+  - method: documentary
+    range: { earliest: "1971", latest: "1971", precision: year, circa: false }
+    grade: A
+    label: "December interstate war"
+    sources: ["src.state-department-1971-south-asia-crisis", "src.united-nations-1972-simla-agreement"]
+    note: "The reference point is the December war between India and Pakistan, within the longer Bangladesh liberation struggle."
+claims:
+  - text: "The Pakistani army's crackdown in East Pakistan in 1971 drove refugees into India and was followed by fighting between the army and Bengali independence forces."
+    grade: A
+    sources: ["src.state-department-1971-south-asia-crisis"]
+  - text: "Pakistani forces in East Pakistan surrendered on 16 December. The ceasefire recorded in the Simla Agreement took effect on 17 December 1971."
+    grade: A
+    sources: ["src.state-department-1971-south-asia-crisis", "src.united-nations-1972-simla-agreement"]
+tags: ["republic","war","bangladesh"]
+review: { status: draft, author: codex-gpt-6 }

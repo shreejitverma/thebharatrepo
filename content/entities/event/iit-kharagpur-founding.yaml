@@ -1,0 +1,26 @@
+id: event.iit-kharagpur-founding
+type: event
+kind: science
+names:
+  en: "Founding of IIT Kharagpur"
+summary: "The institution that became IIT Kharagpur began in 1950, and Education Minister Maulana Abul Kalam Azad formally inaugurated it on 18 August 1951. Its campus at Hijli occupied a former colonial detention camp."
+summaries:
+  kids: "India's first IIT opened at Kharagpur. The institute used buildings that had once been part of a prison camp and trained students in technology."
+  teen: "India's first Indian Institute of Technology grew out of postwar proposals for advanced technical education. It began in 1950, and Maulana Abul Kalam Azad formally opened it in 1951 at Hijli."
+region: "Kharagpur, West Bengal"
+datings:
+  - method: documentary
+    range: { earliest: "1950", latest: "1951", precision: year, circa: false }
+    grade: A
+    label: "Establishment and formal inauguration"
+    sources: ["src.iitsystem-history"]
+    note: "The Council of IITs records the beginnings in 1950 and formal inauguration on 18 August 1951."
+claims:
+  - text: "The Council of IITs identifies Kharagpur as the first institution in the IIT system and dates its formal inauguration to 18 August 1951."
+    grade: A
+    sources: ["src.iitsystem-history"]
+  - text: "The institute occupied the former Hijli Detention Camp, where the colonial administration had held political prisoners."
+    grade: A
+    sources: ["src.iitsystem-history"]
+tags: ["republic","engineering","education"]
+review: { status: draft, author: codex-gpt-6 }

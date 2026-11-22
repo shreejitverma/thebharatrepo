@@ -1,0 +1,26 @@
+id: event.covid-19-vaccination-drive-2021
+type: event
+kind: event
+names:
+  en: "Launch of India's COVID-19 vaccination drive"
+summary: "India launched its nationwide COVID-19 vaccination programme on 16 January 2021. The opening phase prioritised health workers and used the Co-WIN system to record vaccinations."
+summaries:
+  kids: "India began a nationwide vaccination drive against COVID-19 in January 2021. Health workers were among the first people called for vaccination."
+  teen: "The 16 January 2021 launch began a phased rollout in which health workers were prioritised. Co-WIN recorded vaccination activity during the rollout."
+region: "India"
+datings:
+  - method: documentary
+    range: { earliest: "2021", latest: "2021", precision: day, circa: false }
+    grade: A
+    label: "Nationwide launch"
+    sources: ["src.who-2021-india-vaccination-drive"]
+    note: "The World Health Organization documented the launch on 16 January 2021."
+claims:
+  - text: "The nationwide drive began on 16 January 2021 with sessions in states and union territories."
+    grade: A
+    sources: ["src.who-2021-india-vaccination-drive"]
+  - text: "Co-WIN was used to track vaccine doses as the programme rolled out."
+    grade: A
+    sources: ["src.who-2025-emerging-from-the-unknowing"]
+tags: ["republic","public-health","vaccination"]
+review: { status: draft, author: codex-gpt-6 }

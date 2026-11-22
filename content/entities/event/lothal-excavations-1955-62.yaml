@@ -1,0 +1,29 @@
+id: event.lothal-excavations-1955-62
+type: event
+kind: science
+names:
+  en: "Archaeological Survey of India excavations at Lothal"
+summary: "S. R. Rao directed excavations at Lothal in Gujarat from 1955 to 1962. The Archaeological Survey of India published the results, including evidence of Harappan buildings, craft production and burials."
+summaries:
+  kids: "Archaeologists began digging at Lothal in 1955. They found traces of buildings, workshops and graves left by people of the Harappan civilisation."
+  teen: "The 1955 to 1962 ASI campaigns at Lothal recorded layers of settlement, buildings and a cemetery. Rao published the finds in the Survey's excavation report."
+region: "Lothal, Gujarat"
+datings:
+  - method: documentary
+    range: { earliest: "1955", latest: "1962", precision: year, circa: false }
+    grade: A
+    label: "Rao's excavation campaigns"
+    sources: ["src.rao-1979-lothal-harappan-port"]
+    note: "The title of the ASI excavation report gives the years 1955 to 1962."
+claims:
+  - text: "Rao's first volume describes the excavated layers, structures and cemetery at Lothal."
+    grade: A
+    sources: ["src.rao-1979-lothal-harappan-port"]
+  - text: "The excavations recovered beads and evidence of bead manufacture in the Harappan settlement."
+    grade: A
+    sources: ["src.rao-1979-lothal-harappan-port"]
+relations:
+  - kind: excavated-at
+    target: site.lothal
+tags: ["republic","archaeology","harappan"]
+review: { status: draft, author: codex-gpt-6 }

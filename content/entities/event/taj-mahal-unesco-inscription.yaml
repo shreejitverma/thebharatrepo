@@ -1,0 +1,26 @@
+id: event.taj-mahal-unesco-inscription
+type: event
+kind: site
+names:
+  en: "Taj Mahal inscribed on the World Heritage List"
+summary: "The World Heritage Committee inscribed the Taj Mahal in 1983 under cultural criterion (i). The property includes Shah Jahan's mausoleum for Mumtaz Mahal and its associated structures and garden."
+summaries:
+  kids: "The Taj Mahal in Agra joined the World Heritage List in 1983. Its white marble tomb stands in a garden."
+  teen: "The 1983 inscription recognises the Taj Mahal as a work of exceptional artistic merit. The property is a planned Mughal ensemble of a mausoleum, garden and associated buildings."
+region: "Agra, Uttar Pradesh"
+datings:
+  - method: documentary
+    range: { earliest: "1983", latest: "1983", precision: year, circa: false }
+    grade: A
+    label: "World Heritage inscription"
+    sources: ["src.unesco-1983-taj-mahal"]
+    note: "UNESCO records the property's inscription in 1983 under cultural criterion (i)."
+claims:
+  - text: "The Committee inscribed the Taj Mahal under cultural criterion (i) in 1983."
+    grade: A
+    sources: ["src.unesco-1983-taj-mahal"]
+  - text: "The World Heritage property encompasses the mausoleum of Mumtaz Mahal and the planned complex surrounding it."
+    grade: A
+    sources: ["src.unesco-1983-taj-mahal"]
+tags: ["republic","unesco","heritage"]
+review: { status: draft, author: codex-gpt-6 }

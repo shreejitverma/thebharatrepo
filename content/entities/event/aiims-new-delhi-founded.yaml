@@ -1,0 +1,26 @@
+id: event.aiims-new-delhi-founded
+type: event
+kind: science
+names:
+  en: "Establishment of AIIMS New Delhi"
+summary: "Parliament established the All India Institute of Medical Sciences in New Delhi in 1956 as an institution of national importance. Its founding objectives included developing standards for undergraduate and postgraduate medical education."
+summaries:
+  kids: "In 1956 India set up AIIMS in New Delhi to train people in medicine and improve the way doctors were taught."
+  teen: "The 1956 Act established AIIMS as an institution of national importance. The institute was to develop teaching models for undergraduate and postgraduate medical education."
+region: "New Delhi, India"
+datings:
+  - method: documentary
+    range: { earliest: "1956", latest: "1956", precision: year, circa: false }
+    grade: A
+    label: "Establishment by Act of Parliament"
+    sources: ["src.aiims-community-medicine-introduction"]
+    note: "AIIMS identifies 1956 as its statutory founding year."
+claims:
+  - text: "An Act of Parliament established AIIMS as an institution of national importance in 1956."
+    grade: A
+    sources: ["src.aiims-community-medicine-introduction"]
+  - text: "The founding objectives included developing models for undergraduate and postgraduate medical teaching that could serve as standards for other colleges."
+    grade: A
+    sources: ["src.aiims-community-medicine-introduction"]
+tags: ["republic","medicine","education"]
+review: { status: draft, author: codex-gpt-6 }

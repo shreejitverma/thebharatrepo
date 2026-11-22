@@ -1,0 +1,29 @@
+id: event.india-pakistan-war-1965
+type: event
+kind: event
+names:
+  en: "India-Pakistan War of 1965"
+summary: "The second India-Pakistan war escalated from fighting over Kashmir in August 1965 to combat across the international border in September. A UN-backed ceasefire ended the fighting, and Soviet mediation led to talks in Tashkent."
+summaries:
+  kids: "India and Pakistan fought again in 1965. The United Nations called for both countries to stop fighting, and the leaders later met in Tashkent."
+  teen: "Fighting intensified in Kashmir in August 1965 and spread across the international border. UN Security Council Resolution 211 called for a ceasefire. The two governments subsequently negotiated in Soviet-mediated talks at Tashkent."
+region: "Jammu and Kashmir and the India-Pakistan border"
+datings:
+  - method: documentary
+    range: { earliest: "1965", latest: "1965", precision: year, circa: false }
+    grade: A
+    label: "August to September 1965 hostilities"
+    sources: ["src.state-department-1965-india-pakistan-war", "src.united-nations-1965-unipom-background"]
+    note: "The UN Security Council called for a ceasefire on 20 September and both governments accepted it that month."
+claims:
+  - text: "Security Council Resolution 211 called on India and Pakistan to cease hostilities in September 1965."
+    grade: A
+    sources: ["src.united-nations-1965-unipom-background"]
+  - text: "India and Pakistan reached an agreement on withdrawals through Soviet-mediated talks in Tashkent in January 1966."
+    grade: A
+    sources: ["src.state-department-1965-india-pakistan-war", "src.united-nations-1965-unipom-background"]
+relations:
+  - kind: related-to
+    target: event.first-india-pakistan-war-1947
+tags: ["republic","war","kashmir"]
+review: { status: draft, author: codex-gpt-6 }

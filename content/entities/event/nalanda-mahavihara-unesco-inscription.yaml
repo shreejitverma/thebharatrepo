@@ -1,0 +1,39 @@
+id: event.nalanda-mahavihara-unesco-inscription
+type: event
+kind: site
+names:
+  en: Nalanda Mahavihara inscribed on the World Heritage List
+summary: >-
+  The World Heritage Committee inscribed the archaeological site of Nalanda Mahavihara in Bihar in 2016.
+  It recognised the planned layout of the Buddhist monastic and teaching complex and requested a conservation plan for the excavated remains.
+summaries:
+  kids: >-
+    The ruins of Nalanda in Bihar joined the World Heritage List in 2016.
+    The people who made the decision also asked for a plan to protect the remains.
+  teen: >-
+    In 2016 the World Heritage Committee recognised Nalanda Mahavihara for its planned architecture and its role in Buddhist learning.
+    The decision asked India to prepare a conservation plan and improve how visitors experience the site.
+region: Nalanda, Bihar
+datings:
+  - method: documentary
+    range: { earliest: "2016", latest: "2016", precision: year, circa: false }
+    grade: A
+    label: World Heritage inscription
+    sources: [src.unesco-2016-nalanda-inscription-decision]
+    note: The Committee adopted Decision 40 COM 8B.20 at its 40th session in 2016.
+claims:
+  - text: The Committee inscribed the archaeological site under World Heritage criteria (iv) and (vi).
+    grade: A
+    sources: [src.unesco-2016-nalanda-inscription-decision, src.unesco-2016-nalanda-mahavihara]
+  - text: The decision requests a conservation plan for the excavated remains and a plan for visitor management and interpretation.
+    grade: A
+    sources: [src.unesco-2016-nalanda-inscription-decision]
+relations:
+  - { kind: related-to, target: site.nalanda-mahavihara }
+image:
+  commons: "File:Nalanda Temple 12 ei7-23.jpg"
+  alt: Excavated brick structures and courtyard at Nalanda Mahavihara
+  credit: G41rn8
+  license: CC BY-SA 4.0
+tags: [republic, unesco, heritage]
+review: { status: draft, author: codex-gpt-6 }

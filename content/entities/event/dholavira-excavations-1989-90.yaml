@@ -1,0 +1,29 @@
+id: event.dholavira-excavations-1989-90
+type: event
+kind: science
+names:
+  en: "Dholavira excavations begin"
+summary: "The Archaeological Survey of India began excavating Dholavira in the 1989-90 field season under R. S. Bisht. The excavations revealed a Harappan city with extensive fortifications and reservoirs."
+summaries:
+  kids: "Archaeologists began digging at Dholavira in Gujarat around 1990. They uncovered parts of an ancient city, including walls and places that stored water."
+  teen: "Bisht reported early findings from Dholavira in 1990. Over successive field seasons, the excavated walls, gateways and reservoirs gave archaeologists evidence for the city's layout and water management."
+region: "Khadir Bet, Gujarat"
+datings:
+  - method: documentary
+    range: { earliest: "1989", latest: "1990", precision: year, circa: false }
+    grade: A
+    label: "First excavation season"
+    sources: ["src.bisht-1990-dholavira-new-horizons", "src.unesco-2021-dholavira"]
+    note: "The World Heritage documentation records the start in 1989. Bisht's preliminary account appeared in 1990."
+claims:
+  - text: "R. S. Bisht published an account of surveys and excavations at Dholavira in 1990."
+    grade: A
+    sources: ["src.bisht-1990-dholavira-new-horizons"]
+  - text: "Excavated features of the city include gateways, fortifications and reservoirs."
+    grade: A
+    sources: ["src.unesco-2021-dholavira"]
+relations:
+  - kind: excavated-at
+    target: site.dholavira
+tags: ["republic","archaeology","harappan"]
+review: { status: draft, author: codex-gpt-6 }

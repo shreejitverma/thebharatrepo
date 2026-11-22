@@ -1,0 +1,26 @@
+id: event.economic-liberalisation-1991
+type: event
+kind: polity
+names:
+  en: "India's 1991 economic reforms"
+summary: "Facing a balance-of-payments crisis in 1991, India began a programme of economic stabilisation and structural reform. The July measures changed exchange-rate policy and reduced industrial licensing, with trade and investment reforms following as part of the wider programme."
+summaries:
+  kids: "In 1991 India was running short of foreign money to pay for imports and other bills. The government changed rules about what businesses could make and how they could trade."
+  teen: "A shortage of foreign exchange led India to adjust the rupee in July 1991 and begin wider industrial, trade and investment reforms. The measures reduced licensing requirements and opened designated industries to more foreign investment."
+region: "India"
+datings:
+  - method: documentary
+    range: { earliest: "1991", latest: "1991", precision: year, circa: false }
+    grade: A
+    label: "July stabilisation and reform measures"
+    sources: ["src.rbi-1997-capital-account-convertibility"]
+    note: "The Reserve Bank's committee report describes the external payments crisis and the July 1991 exchange-rate adjustments that accompanied wider reforms."
+claims:
+  - text: "The rupee's exchange rate was adjusted downwards in two steps on 1 and 3 July 1991."
+    grade: A
+    sources: ["src.rbi-1997-capital-account-convertibility"]
+  - text: "The reform programme sharply narrowed the scope of industrial licensing and introduced automatic approval for foreign equity participation up to 51 per cent in specified high-priority industries."
+    grade: A
+    sources: ["src.rbi-1997-capital-account-convertibility"]
+tags: ["republic","economy","liberalisation"]
+review: { status: draft, author: codex-gpt-6 }

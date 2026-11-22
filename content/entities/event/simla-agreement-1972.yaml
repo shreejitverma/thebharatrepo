@@ -1,0 +1,29 @@
+id: event.simla-agreement-1972
+type: event
+kind: polity
+names:
+  en: "Simla Agreement"
+summary: "India and Pakistan signed the Simla Agreement on 2 July 1972 after the 1971 war. It set out principles for resolving disputes peacefully and committed both governments to respect the Line of Control in Jammu and Kashmir."
+summaries:
+  kids: "After the 1971 war, India and Pakistan signed an agreement in Shimla. They agreed to settle disagreements peacefully and to respect the Line of Control."
+  teen: "Indira Gandhi and Zulfikar Ali Bhutto signed the agreement at Simla, now Shimla. The text allows bilateral negotiations or other mutually agreed peaceful means and commits both sides to respect the Line of Control while preserving their stated positions."
+region: "Shimla, Himachal Pradesh"
+datings:
+  - method: documentary
+    range: { earliest: "1972", latest: "1972", precision: day, circa: false }
+    grade: A
+    label: "Signing at Simla"
+    sources: ["src.united-nations-1972-simla-agreement"]
+    note: "The agreement was signed on 2 July 1972."
+claims:
+  - text: "Indira Gandhi and Zulfikar Ali Bhutto signed the bilateral agreement on 2 July 1972."
+    grade: A
+    sources: ["src.united-nations-1972-simla-agreement"]
+  - text: "The agreement requires respect for the Line of Control resulting from the December 1971 ceasefire and commits the parties to avoid changing it unilaterally."
+    grade: A
+    sources: ["src.united-nations-1972-simla-agreement"]
+relations:
+  - kind: related-to
+    target: event.india-pakistan-war-1971
+tags: ["republic","diplomacy","treaties"]
+review: { status: draft, author: codex-gpt-6 }

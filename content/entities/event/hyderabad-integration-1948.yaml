@@ -1,0 +1,29 @@
+id: event.hyderabad-integration-1948
+type: event
+kind: polity
+names:
+  en: "Military incorporation of Hyderabad"
+summary: "The Nizam sought to keep Hyderabad independent after British rule ended. India intervened militarily in September 1948 and assumed control, and the operation and its aftermath brought widespread violence against Muslim civilians."
+summaries:
+  kids: "Hyderabad's ruler wanted his state to stay independent. Indian troops took control in 1948, and many Muslim civilians suffered violence during and after the fighting."
+  teen: "The September 1948 military intervention that the Indian government called a police action ended the Nizam's bid for independence. The aftermath included extensive attacks on Muslim civilians documented in historical research."
+region: "Hyderabad State, Deccan"
+datings:
+  - method: scholarly-consensus
+    range: { earliest: "1948", latest: "1948", precision: year, circa: false }
+    grade: B
+    label: "September 1948 military action"
+    sources: ["src.purushotham-2015-internal-violence-hyderabad"]
+    note: "Indian forces intervened in September 1948. The constitutional and administrative integration continued after the military operation."
+claims:
+  - text: "India's September 1948 intervention ended the Nizam's attempt to keep the princely state independent."
+    grade: B
+    sources: ["src.purushotham-2015-internal-violence-hyderabad"]
+  - text: "Sunil Purushotham documents mass violence against Muslims during and after the intervention."
+    grade: B
+    sources: ["src.purushotham-2015-internal-violence-hyderabad"]
+relations:
+  - kind: part-of
+    target: event.princely-states-integration
+tags: ["republic","princely-states","hyderabad"]
+review: { status: draft, author: codex-gpt-6 }

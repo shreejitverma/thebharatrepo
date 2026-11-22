@@ -1,0 +1,29 @@
+id: event.states-reorganisation-act-1956
+type: event
+kind: polity
+names:
+  en: "States Reorganisation Act, 1956"
+summary: "The States Reorganisation Act redrew state boundaries on 1 November 1956. Among its changes, it created Kerala and joined the Telangana region of Hyderabad State to Andhra State to form Andhra Pradesh."
+summaries:
+  kids: "In 1956, India changed many state borders. Kerala became a state, and Telangana joined Andhra State to form Andhra Pradesh."
+  teen: "From 1 November 1956, Parliament's reorganisation law transferred territories between states and created new ones. The reorganisation produced Andhra Pradesh and Kerala through different territorial mergers."
+region: "India"
+datings:
+  - method: documentary
+    range: { earliest: "1956", latest: "1956", precision: day, circa: false }
+    grade: A
+    label: "Appointed day"
+    sources: ["src.rangareddy-district-history"]
+    note: "State boundaries were reorganised with effect from 1 November 1956."
+claims:
+  - text: "The Telangana region of Hyderabad State joined Andhra State to form Andhra Pradesh."
+    grade: A
+    sources: ["src.telangana-state-profile"]
+  - text: "The reorganisation brought Travancore-Cochin and Malabar territories together in Kerala."
+    grade: A
+    sources: ["src.kerala-gad-history-state-emblem"]
+relations:
+  - kind: related-to
+    target: event.hyderabad-integration-1948
+tags: ["republic","federalism","legislation"]
+review: { status: draft, author: codex-gpt-6 }
