@@ -58,7 +58,10 @@ jobs:
           restore-keys: next-${{ runner.os }}-${{ hashFiles('package-lock.json') }}-
       - name: Build (validation, offline verification gate, data, next build)
         run: npm run build
+      # The container runs as root but $HOME is owned by pwuser, and Firefox refuses to start in that state.
       - run: npx playwright test
+        env:
+          HOME: /root
       - if: failure()
         uses: actions/upload-artifact@v4
         with:
