@@ -24,6 +24,16 @@ describe('review queue', () => {
     expect(formatReviewQueue(records)).toMatch(/^awaiting_review: 2\nevent\[1\]\{id,title,file\}:\n/);
   });
 
+  it('lists unpublished debates, which wait for the owner, and learning paths awaiting review', () => {
+    const phase3 = path.join(__dirname, '__fixtures__/phase3');
+    const { records } = readContentRecords([path.join(phase3, 'content')], path.join(phase3, '_content'));
+    const groups = new Map(reviewQueue(records).map(({ type, items }) => [type, items]));
+    const debates = groups.get('debate') ?? [];
+    expect(debates.map(({ id }) => id)).toContain('debate.draft-one');
+    expect(debates.find(({ id }) => id === 'debate.draft-one')!.title).toMatch(/unpublished, awaiting owner approval/);
+    expect(formatReviewQueue(records)).toContain('A debate is published only by the owner');
+  });
+
   it('reports an explicit zero when the queue is empty', () => {
     expect(formatReviewQueue({ entities: [], articles: [] })).toBe('awaiting_review: 0');
   });

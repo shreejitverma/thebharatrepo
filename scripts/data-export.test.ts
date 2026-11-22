@@ -62,7 +62,7 @@ describe('open data export', () => {
     const graph = fixtureGraph();
     graph.entities.get('event.thing')!.names.en = 'Thing, "quoted"';
     const manifest = writeDataExport(temp, graph, known);
-    expect(manifest.counts).toEqual({ entities: 2, sources: 1, articles: 1, corrections: 0, datings: 3 });
+    expect(manifest.counts).toEqual({ entities: 2, sources: 1, articles: 1, corrections: 0, datings: 3, debates: 0, learningPaths: 0 });
     expect(fs.readdirSync(temp).sort()).toEqual([...DATA_FILES, 'manifest.json'].sort());
 
     const archive = JSON.parse(contents('archive.json'));
@@ -79,6 +79,30 @@ describe('open data export', () => {
       expect(createHash('sha256').update(contents(name)).digest('hex')).toBe(manifest.sha256[name as keyof typeof manifest.sha256]);
     }
     expect(verifyDataExport(temp, graph, known)).toEqual(manifest);
+  });
+
+  it('exports published debates and learning paths, never a draft debate, and still round-trips', () => {
+    const phase3 = path.join(__dirname, '../src/lib/content/__fixtures__/phase3');
+    const { records, errors } = readContentRecords([path.join(phase3, 'content')], path.join(phase3, '_content'));
+    for (const article of records.articles) article.file = `_content/${article.category}/${article.slug}.md`;
+    const graph = assembleContent(records, errors);
+    expect(graph.errors).toEqual([]);
+    expect(graph.debates.map((d) => [d.id, d.published])).toEqual([['debate.approved-one', true], ['debate.draft-one', false]]);
+
+    const manifest = writeDataExport(temp, graph, known);
+    expect(manifest.counts).toMatchObject({ debates: 1, learningPaths: 1 });
+    const archive = JSON.parse(contents('archive.json'));
+    expect(archive.debates.map((d: { id: string }) => d.id)).toEqual(['debate.approved-one']);
+    expect(archive.debates[0]).not.toHaveProperty('file');
+    expect(archive.learningPaths.map((p: { id: string }) => p.id)).toEqual(['learn.a-path']);
+    for (const text of Object.values(snapshot())) expect(text).not.toContain('draft-one');
+    expect(verifyDataExport(temp, graph, known)).toEqual(manifest);
+
+    // A draft cannot be smuggled in: the archive schema itself rejects an unpublished debate.
+    replaceArchive((a) => {
+      a.debates[0].published = false;
+    });
+    expect(() => verifyDataExport(temp, graph, known)).toThrow(/published/);
   });
 
   it('is byte-stable: a rerun rewrites identical files, and only the manifest depends on the commit date', () => {

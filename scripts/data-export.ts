@@ -3,6 +3,7 @@ import fs from 'node:fs';
 import path from 'node:path';
 import { stringify as csv } from 'csv-stringify/sync';
 import { z } from 'zod';
+import { publishedDebates } from '../src/lib/content/debates';
 import { primaryDating, summarizeDatings } from '../src/lib/content/lens';
 import {
   CONTENT_DIR, ROOT, assembleContent, readContentRecords,
@@ -13,7 +14,7 @@ import {
   type DataFile, type Manifest,
 } from '../src/lib/content/open-data';
 import {
-  ArticleFrontmatterSchema, CATEGORIES, CorrectionSchema, EntitySchema, SLUG, SOURCE_ID, SourceSchema,
+  ArticleFrontmatterSchema, CATEGORIES, CorrectionSchema, DebateSchema, EntitySchema, LearningPathSchema, SLUG, SOURCE_ID, SourceSchema,
 } from '../src/lib/content/schema';
 import type { ContentCommitDate } from './content-commit-date';
 
@@ -28,6 +29,15 @@ const ArticleMetadataSchema = ArticleFrontmatterSchema.extend({
 });
 
 /**
+ * Owner rule: a debate reaches the public only when it is published, and the export is public. The schema
+ * itself rejects an unpublished debate, so a draft cannot be exported, or re-imported, by any path.
+ */
+const PublishedDebateSchema = DebateSchema.refine((debate) => debate.published, {
+  path: ['published'],
+  message: 'only published debates belong in the export',
+});
+
+/**
  * archive.json is a pure function of the validated content, so its bytes change only when content does.
  * The content commit date, which depends on the checkout's git history, lives in manifest.json alone.
  */
@@ -38,6 +48,8 @@ const ArchiveSchema = z.strictObject({
   sources: z.array(SourceSchema),
   articles: z.array(ArticleMetadataSchema),
   corrections: z.array(CorrectionSchema),
+  debates: z.array(PublishedDebateSchema),
+  learningPaths: z.array(LearningPathSchema),
 });
 
 function json(value: unknown): string {
@@ -72,6 +84,15 @@ function artifactContents(graph: ContentGraph<ArticleMetadata>, commit: ContentC
     return metadata;
   }).sort((a, b) => compare(a.file, b.file));
   const corrections = graph.corrections;
+  // The loader adds slug and file to these records; the export carries the authored record, and its id gives both back.
+  const authored = <T extends { slug: string; file: string }>(doc: T): Omit<T, 'slug' | 'file'> => {
+    const record: Partial<T> = { ...doc };
+    delete record.slug;
+    delete record.file;
+    return record as Omit<T, 'slug' | 'file'>;
+  };
+  const debates = publishedDebates(graph.debates).map(authored).sort(byId);
+  const learningPaths = graph.learningPaths.map(authored).sort(byId);
   const datings = entities.flatMap((entity) => {
     const primary = primaryDating(entity.datings);
     return entity.datings.map((dating, index) => ({
@@ -93,11 +114,12 @@ function artifactContents(graph: ContentGraph<ArticleMetadata>, commit: ContentC
   const counts = {
     entities: entities.length, sources: sources.length, articles: articles.length,
     corrections: corrections.length, datings: datings.length,
+    debates: debates.length, learningPaths: learningPaths.length,
   };
   const csvOptions = { header: true, record_delimiter: 'windows' } as const;
   const files: Record<DataFile, string> = {
     'archive.json': json(ArchiveSchema.parse({
-      schemaVersion: DATA_SCHEMA_VERSION, license: DATA_LICENSE, entities, sources, articles, corrections,
+      schemaVersion: DATA_SCHEMA_VERSION, license: DATA_LICENSE, entities, sources, articles, corrections, debates, learningPaths,
     })),
     'entities.csv': csv(entities.map((entity) => ({
       id: entity.id, type: entity.type, kind: entity.kind, name: entity.names.en, primaryDate: summarizeDatings(entity.datings),
@@ -178,8 +200,8 @@ export function verifyDataExport(dir: string, current: ContentGraph<ArticleMetad
     sources: imported.sources.map((data) => ({ data, file: `content/sources/${data.id.slice(4)}.yaml` })),
     articles: imported.articles,
     corrections: imported.corrections.map((data) => ({ data, file: 'content/corrections.yaml' })),
-    debates: [],
-    learningPaths: [],
+    debates: imported.debates.map((data) => ({ ...data, slug: data.id.slice('debate.'.length), file: `content/debates/${data.id.slice('debate.'.length)}.yaml` })),
+    learningPaths: imported.learningPaths.map((data) => ({ ...data, slug: data.id.slice('learn.'.length), file: `content/learning/${data.id.slice('learn.'.length)}.yaml` })),
   });
   assertValid(reloaded, 'Export re-import');
   const roundTrip = artifactContents(reloaded, {

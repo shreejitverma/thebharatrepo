@@ -32,7 +32,7 @@ export function pathsForEntity(g: Pick<ContentGraph, 'learningPaths'>, entityId:
 }
 
 /**
- * Where a path sits in time: its `focus` when set (a scholarship-lens span, see STYLE.md section 12), else
+ * Where a path sits in time: its `focus` when set (a scholarship-lens span, see STYLE.md section 13), else
  * the span of its entity steps' datings, else of its articles' datings, scholarship before tradition.
  */
 export function pathPlacement(g: Pick<ContentGraph, 'entities' | 'articles'>, p: LearningPathDoc): Placement | null {

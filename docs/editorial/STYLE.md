@@ -266,7 +266,7 @@ Legacy `machine-checked` records also appear in the queue.
 
 Every substantive change to an existing published claim is recorded in `content/corrections.yaml` with the date, the target, the text before and after, the reason, and sources.
 
-## 11. Debates
+## 12. Debates
 
 Debate pages live at `content/debates/<slug>.yaml`, id `debate.<slug>`.
 They present every serious position on a contested question at its strongest.
@@ -325,7 +325,7 @@ Rules:
 - `range` is the span the position proposes; ranges are drawn on one shared scale, and the Kaalchakra placement is the span of the scholarship positions' ranges (or, without ranges, of the related entities' datings).
 - The loader rejects unknown sources, entities and articles, duplicate position ids, and a file whose id does not match its filename.
 
-## 12. Learning paths and quizzes
+## 13. Learning paths and quizzes
 
 Learning paths live at `content/learning/<slug>.yaml`, id `learn.<slug>`.
 A path tells a story across the archive, one step at a time, and ends with a quiz that rewards reasoning about evidence.
@@ -374,7 +374,7 @@ Rules:
 - Progress and quiz answers stay in the viewer's browser; nothing is sent or tracked.
 - Every path has a printable pack at `/learn/<slug>/print`: summary, goals, entity cards, the quiz, and the answer key on its own page.
 
-## 13. Names in native script and IAST
+## 14. Names in native script and IAST
 
 - `names.native` is tagged by its script: Devanagari as Sanskrit (`sa-Deva`) for entities placed before 1200 CE and as Hindi (`hi`) after, Tamil as `ta`, Kannada as `kn`, Perso-Arabic as `fa` or `ar`, and so on.
 - When the default is wrong, set `names.nativeLang` to a BCP 47 tag, for example `nativeLang: mr` for a Marathi name in Devanagari.

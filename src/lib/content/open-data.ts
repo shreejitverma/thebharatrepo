@@ -16,7 +16,7 @@ export const DATA_FILES = {
   'archive.json': {
     label: 'Full archive',
     format: 'JSON',
-    description: 'Every entity with its datings, claims and relations, every source, article metadata with inline citations, and the corrections log.',
+    description: 'Every entity with its datings, claims and relations, every source, article metadata with inline citations, the corrections log, the learning paths and the published debates.',
   },
   'entities.csv': {
     label: 'Entities',
@@ -52,7 +52,7 @@ export const ManifestSchema = z.strictObject({
   licenseUrl: z.literal(DATA_LICENSE_URL),
   contentCommitDate: z.iso.datetime().nullable(),
   contentCommitDateNote: z.string().min(1).nullable(),
-  counts: z.strictObject({ entities: count, sources: count, articles: count, corrections: count, datings: count }),
+  counts: z.strictObject({ entities: count, sources: count, articles: count, corrections: count, datings: count, debates: count, learningPaths: count }),
   sha256: z.strictObject(Object.fromEntries(Object.keys(DATA_FILES).map((name) => [name, sha256Hex])) as Record<DataFile, typeof sha256Hex>),
 }).refine((m) => (m.contentCommitDate === null) !== (m.contentCommitDateNote === null), {
   path: ['contentCommitDateNote'],

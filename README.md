@@ -142,7 +142,7 @@ Identifiers are linked only when verified: DOI, ISBN and OCLC always, a URL only
 - The reading level (Full, Teen, Kids) is chosen with the switcher on entity pages and in the Kaalchakra panel; it is read from `?level=` first, then `localStorage`, and applied before paint by an inline script in the root layout (`src/lib/reading-level.ts`).
 - Native-script names carry `lang` tags derived from their script (`src/lib/content/script.ts`); `content:validate` prints a warning with the count of entities missing `names.iast` or `names.native`.
 
-The content formats are specified in `docs/editorial/STYLE.md`, sections 11 to 13.
+The content formats are specified in `docs/editorial/STYLE.md`, sections 12 to 14.
 
 ## Time model
 
@@ -191,7 +191,9 @@ Every entity page draws its relations as a tree, merging both declarations of on
 `npm run build` regenerates it and then runs `npm run data:verify-export`, so no build ships a bundle that fails the round trip.
 `npm run dev` regenerates it first as well.
 
-- `archive.json` includes schema version 1, entities, sources, article frontmatter and inline citation metadata, and corrections.
+- `archive.json` includes schema version 1, entities, sources, article frontmatter and inline citation metadata, corrections, learning paths and published debates.
+  A debate with `published: false` is never exported: the archive schema rejects it, so neither the export nor a re-import can carry a draft.
+  `npm run content:review-queue` still lists every unpublished debate, marked as awaiting owner approval.
 - `entities.csv` covers core entity fields plus `primaryDate`, the entity's primary dating as the site writes it.
 - `datings.csv` has one row per entity dating, with a 1-based ordinal, a `primary` flag set by the shared ranking rule (`primaryDating` in `src/lib/content/lens.ts`), and a JSON-encoded sources field.
 - `schema.json` is generated from the archive's Zod schemas and describes the exported JSON structure.

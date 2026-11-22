@@ -30,6 +30,9 @@ export default function DataPage() {
     [counts.sources, 'sources'],
     [counts.articles, 'articles'],
     [counts.corrections, 'corrections'],
+    [counts.learningPaths, 'learning paths'],
+    // Published debates only; nothing is listed until the first one is approved.
+    ...(counts.debates ? ([[counts.debates, 'debates']] as [number, string][]) : []),
   ];
 
   return (
