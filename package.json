@@ -6,6 +6,7 @@
     "dev": "next dev",
     "prebuild": "npm run content:validate && tsx scripts/content-verify-sources.ts --offline && tsx scripts/build-content.ts",
     "build": "next build",
+    "postbuild": "tsx scripts/build-search.ts",
     "start": "next start",
     "lint": "eslint .",
     "test": "vitest run",
@@ -14,11 +15,11 @@
     "content:report": "tsx scripts/content-validate.ts --report",
     "content:verify-sources": "tsx scripts/content-verify-sources.ts",
     "content:build": "tsx scripts/build-content.ts",
+    "search:build": "tsx scripts/build-search.ts",
     "test:e2e": "playwright test",
     "content:merge": "tsx scripts/content-merge-staging.ts"
   },
   "dependencies": {
-    "fuse.js": "^7.1.0",
     "gray-matter": "^4.0.3",
     "next": "16.1.1",
     "react": "19.2.3",
@@ -40,6 +41,7 @@
     "babel-plugin-react-compiler": "1.0.0",
     "eslint": "^9",
     "eslint-config-next": "16.1.1",
+    "pagefind": "^1.6.0",
     "tailwindcss": "^4",
     "tsx": "^4.23.15",
     "typescript": "^5",

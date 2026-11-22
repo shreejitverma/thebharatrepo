@@ -4,6 +4,7 @@ import { notFound } from 'next/navigation';
 import { preconnect } from 'react-dom';
 import GradeBadge, { LensTag } from '@/components/GradeBadge';
 import KaalchakraStrip from '@/components/KaalchakraStrip';
+import SearchIndexMeta from '@/components/SearchIndexMeta';
 import SourceCitation from '@/components/SourceCitation';
 import { getGraph, getIndex, issueUrl, SITE_URL } from '@/lib/content/site';
 import { entityHref } from '@/lib/content/kaalchakra';
@@ -51,7 +52,7 @@ export default async function EntityPage({ params }: { params: Promise<{ type: s
   const articles = g.articlesByEntity.get(e.id) ?? [];
   const src = (ref: Parameters<typeof citationId>[0]) => {
     const s = g.sources.get(citationId(ref));
-    return s ? <SourceCitation source={s} locator={typeof ref === 'string' ? undefined : ref.locator} /> : citationId(ref);
+    return s ? <SourceCitation source={s} locator={typeof ref === 'string' ? undefined : ref.locator} record /> : citationId(ref);
   };
   const jsonLd = {
     '@context': 'https://schema.org',
@@ -64,9 +65,19 @@ export default async function EntityPage({ params }: { params: Promise<{ type: s
   };
 
   return (
-    <div className="main-content">
+    <div className="main-content" data-pagefind-body>
+      <SearchIndexMeta
+        title={e.names.en}
+        kind={e.kind}
+        when={formatRange(primary.range)}
+        filters={{
+          kind: [e.kind],
+          grade: [...e.datings.map((d) => d.grade), ...e.claims.map((c) => c.grade)],
+          lens: e.datings.map((d) => (isTraditional(d.method) ? 'tradition' : 'scholarship')),
+        }}
+      />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
-      <nav className="breadcrumbs" aria-label="Breadcrumb">
+      <nav className="breadcrumbs" aria-label="Breadcrumb" data-pagefind-ignore>
         <Link href="/archive">Archive</Link> / <Link href={`/archive#${e.kind}`}>{KIND_LABELS[e.kind]}</Link>
       </nav>
       <div className="entity-head">
@@ -74,7 +85,7 @@ export default async function EntityPage({ params }: { params: Promise<{ type: s
           <h1>{e.names.en}</h1>
           {e.names.iast || e.names.native ? (
             <div className="names">
-              {e.names.native ? <span lang="sa">{e.names.native}</span> : null}
+              {e.names.native ? <span lang="sa">{e.names.native}</span> : null}{' '}
               {e.names.iast ? <span>{e.names.iast}</span> : null}
             </div>
           ) : null}
@@ -89,7 +100,7 @@ export default async function EntityPage({ params }: { params: Promise<{ type: s
           {e.region ? <p className="muted">Region: {e.region}</p> : null}
         </div>
         {img && e.image ? (
-          <figure>
+          <figure data-pagefind-ignore>
             {/* eslint-disable-next-line @next/next/no-img-element */}
             <img src={img.thumb} alt={e.image.alt} width={img.width} height={img.height} decoding="async" fetchPriority="high" />
             <figcaption>
@@ -100,7 +111,9 @@ export default async function EntityPage({ params }: { params: Promise<{ type: s
         ) : null}
       </div>
 
-      <KaalchakraStrip items={getIndex()} range={primary.range} selfId={e.id} focusHref={`${focus}&view=river&win=${Math.max(0, u - 0.02).toFixed(5)},${Math.min(1, u + 0.02).toFixed(5)}`} />
+      <div data-pagefind-ignore>
+        <KaalchakraStrip items={getIndex()} range={primary.range} selfId={e.id} focusHref={`${focus}&view=river&win=${Math.max(0, u - 0.02).toFixed(5)},${Math.min(1, u + 0.02).toFixed(5)}`} />
+      </div>
 
       <h2>When, and how we know</h2>
       <div className="datings">
@@ -118,7 +131,7 @@ export default async function EntityPage({ params }: { params: Promise<{ type: s
                 {d.label ? `: ${d.label}` : ''}
               </div>
               {d.note ? <p>{d.note}</p> : null}
-              <ul className="dating__sources">
+              <ul className="dating__sources" data-pagefind-ignore>
                 {d.sources.map((s, j) => (
                   <li key={j}>{src(s)}</li>
                 ))}
@@ -143,7 +156,7 @@ export default async function EntityPage({ params }: { params: Promise<{ type: s
               <li key={i}>
                 <p>{c.text}</p>
                 <GradeBadge grade={c.grade} />
-                <ul className="dating__sources">
+                <ul className="dating__sources" data-pagefind-ignore>
                   {c.sources.map((s, j) => (
                     <li key={j}>{src(s)}</li>
                   ))}
@@ -195,7 +208,7 @@ export default async function EntityPage({ params }: { params: Promise<{ type: s
         </>
       ) : null}
 
-      <p className="review-note" style={{ marginTop: 32, maxWidth: 860 }}>
+      <p className="review-note" style={{ marginTop: 32, maxWidth: 860 }} data-pagefind-ignore>
         Review status: {e.review.status === 'reviewed' ? `reviewed by ${e.review.reviewer} on ${e.review.lastReviewed}` : 'draft. Every DOI, ISBN, Wikidata and Commons identifier on this page has been machine-verified; editor review is pending'}.
         {e.wikidata ? (
           <>

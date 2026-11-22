@@ -41,7 +41,8 @@ npm run lint
 npm run content:validate        # schemas and cross-references; exit 1 on any problem
 npm run content:report          # coverage: entities, grades, kinds, sources
 npm run content:verify-sources  # resolve every DOI, ISBN, OCLC, QID and Commons file, and each URL that is a source's only identifier; exit 1 on any mismatch
-npm run build                   # validate, offline verification gate, search index and open data, then next build
+npm run build                   # validate, offline verification gate and open data, then next build, then the Pagefind index
+npm run search:build            # rebuild only the Pagefind index from an existing .next build
 npm run test:e2e                # Playwright and axe against a production build (desktop and mobile)
 ```
 
@@ -60,6 +61,22 @@ Large batches are written to `staging/<batch>/` (gitignored), validated in isola
 and merged with `npm run content:merge -- staging/<batch>`, which re-validates the combined content, aborts on any conflict before writing, and never copies the staging verification cache.
 Run `npm run content:verify-sources` after every merge.
 `npx tsx scripts/content-fix-bce.ts content/entities` mechanically repairs ranges that store `-N` for "N BCE".
+
+## Search
+
+Search is [Pagefind](https://pagefind.app), built after `next build` by `scripts/build-search.ts` (the `postbuild` step).
+It reads the prerendered HTML in `.next/server/app`, indexes every entity, article and source page under its real route, and writes `public/pagefind/`, which Vercel collects with `public/` after the build and `next start` serves.
+The build fails if any expected page is missing or unindexed.
+Pages declare what is indexed with `data-pagefind-body` and `data-pagefind-ignore`, and their filters (kind, article category, evidence grade, lens) through `src/components/SearchIndexMeta.tsx`.
+`/search` keeps its `?q=` contract and adds repeatable `kind`, `category`, `grade` and `lens` parameters (`src/lib/search/facets.ts`).
+`npm run dev` serves the index from the last production build; run `npm run build` once before testing search locally.
+
+## References
+
+Each article's references are generated from its inline citations and its dating sources (`src/lib/content/references.ts`): one numbered entry per source in order of first use, locators deduplicated, with back-links to every use.
+The evidence summary at the top of an article counts the graded datings and claims of the archive records it links in `entities`.
+Every source has a record at `/sources/<slug>` listing each entity, article and correction that cites it.
+Identifiers are linked only when verified: DOI, ISBN and OCLC always, a URL only when it is the source's sole identifier.
 
 ## Time model
 

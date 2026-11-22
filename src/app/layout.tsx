@@ -28,7 +28,11 @@ export const viewport: Viewport = {
 
 export default function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {
   return (
-    <html lang="en" className={`${tiro.variable} ${serif.variable} ${sans.variable}`}>
+    // data-js is set before first paint so no-JavaScript fallbacks (.no-js-only) never flash; React does not own it.
+    <html lang="en" className={`${tiro.variable} ${serif.variable} ${sans.variable}`} suppressHydrationWarning>
+      <head>
+        <script dangerouslySetInnerHTML={{ __html: "document.documentElement.setAttribute('data-js','')" }} />
+      </head>
       <body>
         <a className="skip-link" href="#main">
           Skip to content

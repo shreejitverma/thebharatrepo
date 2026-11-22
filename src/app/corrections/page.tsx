@@ -1,6 +1,9 @@
 import type { Metadata } from 'next';
+import Link from 'next/link';
 import SourceCitation from '@/components/SourceCitation';
+import { entityHref } from '@/lib/content/kaalchakra';
 import { citationId } from '@/lib/content/schema';
+import { correctionAnchors } from '@/lib/content/references';
 import { getGraph } from '@/lib/content/site';
 
 export const metadata: Metadata = { title: 'Corrections log', description: 'Every substantive correction made to The Bharat Repo, with reasons and sources.' };
@@ -8,6 +11,9 @@ export const metadata: Metadata = { title: 'Corrections log', description: 'Ever
 export default function CorrectionsPage() {
   const g = getGraph();
   const list = g.corrections;
+  const anchors = correctionAnchors(list);
+  // Link a target only when it is a page that exists.
+  const pages = new Set([...g.articles.map((a) => `/${a.category}/${a.slug}`), ...[...g.entities.keys()].map(entityHref)]);
   return (
     <div className="main-content">
       <div className="prose-wrap">
@@ -18,9 +24,9 @@ export default function CorrectionsPage() {
         </p>
         {list.length === 0 ? <p className="empty">0 corrections recorded.</p> : null}
         {list.map((c, i) => (
-          <section key={i} style={{ borderBottom: '1px solid var(--line)', padding: '12px 0' }}>
+          <section key={anchors[i]} id={anchors[i]} className="correction" aria-label={`Correction of ${c.date} to ${c.target}`}>
             <p className="muted" style={{ margin: 0 }}>
-              {c.date} / {c.target}
+              {c.date} / {pages.has(c.target) ? <Link href={c.target}>{c.target}</Link> : c.target}
             </p>
             <p style={{ margin: '6px 0' }}>
               <strong>Before:</strong> {c.before}
@@ -39,7 +45,7 @@ export default function CorrectionsPage() {
                 <ul className="correction-sources">
                   {c.sources.map((ref, j) => {
                     const s = g.sources.get(citationId(ref));
-                    return <li key={j}>{s ? <SourceCitation source={s} locator={typeof ref === 'string' ? undefined : ref.locator} /> : citationId(ref)}</li>;
+                    return <li key={j}>{s ? <SourceCitation source={s} locator={typeof ref === 'string' ? undefined : ref.locator} record /> : citationId(ref)}</li>;
                   })}
                 </ul>
               </>

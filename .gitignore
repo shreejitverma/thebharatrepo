@@ -42,7 +42,7 @@ next-env.d.ts
 
 # content staging batches (merged into content/ after validation)
 /staging/
-/public/search.json
+/public/pagefind/
 /public/data/
 /test-results/
 /playwright-report/

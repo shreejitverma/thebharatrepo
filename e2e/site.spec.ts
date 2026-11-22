@@ -132,5 +132,5 @@ test.describe('Kaalchakra', () => {
 
 test('search finds entities and articles', async ({ page }) => {
   await page.goto('/search?q=Harappa');
-  await expect(page.locator('.card').first()).toBeVisible();
+  await expect(page.locator('.search-result').first()).toBeVisible();
 });

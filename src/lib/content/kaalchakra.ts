@@ -45,6 +45,11 @@ export function entityHref(id: string): string {
   return `/archive/${type}/${slug}`;
 }
 
+/** Page of a source and everything that cites it: src.<slug> -> /sources/<slug>. */
+export function sourceHref(id: string): string {
+  return `/sources/${id.replace(/^src\./, '')}`;
+}
+
 function anchorFor(datings: KcDating[]): number | null {
   if (datings.length === 0) return null;
   // Prefer the best-graded dating; ties keep the author's order.
