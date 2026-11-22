@@ -22,7 +22,7 @@ region: Rohilkhand (Bareilly district, Uttar Pradesh)
 location: { name: "Ahichhatra (Ramnagar)", lat: 28.374, lon: 79.136 }
 datings:
   - method: archaeological-stratigraphic
-    range: { earliest: "1200 BCE", latest: 1099, best: "600 BCE", precision: century, circa: true }
+    range: { earliest: "1200 BCE", latest: 1100, best: "600 BCE", precision: century, circa: true }
     grade: A
     label: Continuous stratigraphic sequence from PGW to early medieval periods
     sources:

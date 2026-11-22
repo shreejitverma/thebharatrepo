@@ -130,6 +130,31 @@ export function bceOffByOne(range: { earliest: number; latest: number; best?: nu
   return [...flagged];
 }
 
+const CENTURY_ORDINALS = ['first', 'second', 'third', 'fourth', 'fifth', 'sixth', 'seventh', 'eighth', 'ninth', 'tenth', 'eleventh', 'twelfth', 'thirteenth', 'fourteenth', 'fifteenth', 'sixteenth', 'seventeenth', 'eighteenth', 'nineteenth', 'twentieth', 'twenty-first'];
+
+function ordinalSuffix(n: number): string {
+  if (n % 100 >= 11 && n % 100 <= 13) return 'th';
+  return ['th', 'st', 'nd', 'rd'][n % 10] ?? 'th';
+}
+
+/**
+ * Detects a CE end year one short of the round year the text gives: a non-traditional latest
+ * endpoint of the form N99 CE while the text names "(N+1)00 CE" or the century ending there
+ * ("fifth century CE" for 500), and never names the N99 year itself. Returns the round year.
+ */
+export function ceOffByOne(dating: { method: DatingMethod; range: { latest: number } }, text: string): number[] {
+  const { latest } = dating.range;
+  if (isTraditional(dating.method) || latest <= 0 || latest % 100 !== 99) return [];
+  const round = latest + 1;
+  const flat = text.replace(/,/g, '');
+  const names = (year: number) => new RegExp(`\\b${year}\\s*(?:CE|AD)\\b`).test(flat);
+  if (names(latest)) return [];
+  const century = round / 100;
+  const ordinals = [`${century}${ordinalSuffix(century)}`, CENTURY_ORDINALS[century - 1]].filter(Boolean).join('|');
+  const namesCentury = new RegExp(`\\b(?:${ordinals})[- ]centur(?:y|ies)(?![- ]*(?:BCE|BC)\\b)`, 'i').test(flat);
+  return names(round) || namesCentury ? [round] : [];
+}
+
 /**
  * Authored datings must write BCE years as strings ("7000 BCE"), never as raw negative numbers.
  * A raw -7000 is the astronomical year 7001 BCE, and authors repeatedly wrote -N meaning N BCE,
@@ -288,6 +313,9 @@ export function loadContentUncached(): ContentGraph {
       for (const n of bceOffByOne(d.range, `${text} ${d.label ?? ''} ${d.note ?? ''}`)) {
         errors.push({ file: rel(file), message: `datings[${i}]: endpoint is written as "${n + 1} BCE" but the text says "${n} BCE"; check which is meant` });
       }
+      for (const n of ceOffByOne(d, `${text} ${d.label ?? ''} ${d.note ?? ''}`)) {
+        errors.push({ file: rel(file), message: `datings[${i}]: latest is written as "${n - 1} CE" but the text gives ${n} CE (or the century ending then); a CE year needs no BCE-style shift` });
+      }
     });
     const expected = `${path.basename(path.dirname(file))}.${path.basename(file, '.yaml')}`;
     if (e.id !== expected) errors.push({ file: rel(file), message: `id ${e.id} must match path (${expected})` });
@@ -326,6 +354,9 @@ export function loadContentUncached(): ContentGraph {
       parsed.data.datings.forEach((d, i) => {
         for (const n of bceOffByOne(d.range, `${parsed.data.summary} ${d.label ?? ''} ${d.note ?? ''}`)) {
           errors.push({ file: relFile, message: `datings[${i}]: endpoint is written as "${n + 1} BCE" but the text says "${n} BCE"; check which is meant` });
+        }
+        for (const n of ceOffByOne(d, `${parsed.data.summary} ${d.label ?? ''} ${d.note ?? ''}`)) {
+          errors.push({ file: relFile, message: `datings[${i}]: latest is written as "${n - 1} CE" but the text gives ${n} CE (or the century ending then); a CE year needs no BCE-style shift` });
         }
       });
       articles.push({ ...parsed.data, slug: path.basename(file, '.md'), file: relFile, category, body: content, inlineCitations });

@@ -158,6 +158,19 @@ describe('integrity checks', () => {
     expect(bceOffByOne({ earliest: y('7000 BCE'), latest: y('2600 BCE') }, 'from c. 7000 BCE to 2600 BCE')).toEqual([]);
     expect(bceOffByOne({ earliest: y('7001 BCE'), latest: y('7000 BCE') }, 'around 7000 BCE')).toEqual([]);
   });
+  it('flags a CE end year one short of the round year or century the text gives', async () => {
+    const { ceOffByOne } = await import('./load');
+    const ending = (latest: number, method: 'textual-internal' | 'traditional-sampradaya' = 'textual-internal') => ({ method, range: { latest } });
+    expect(ceOffByOne(ending(499), "completed by Dridhabala (c. 300-500 CE)")).toEqual([500]);
+    expect(ceOffByOne(ending(499), 'later expansions up to the fifth century CE')).toEqual([500]);
+    expect(ceOffByOne(ending(599), 'Gupta inscriptions of the fourth to sixth centuries CE')).toEqual([600]);
+    expect(ceOffByOne(ending(1199), 'a single 8th-12th century CE manuscript copy')).toEqual([1200]);
+    expect(ceOffByOne(ending(500), 'up to the fifth century CE')).toEqual([]);
+    expect(ceOffByOne(ending(499), 'composed in 499 CE, early in the fifth century CE')).toEqual([]);
+    expect(ceOffByOne(ending(499), 'by the fifth century BCE')).toEqual([]);
+    expect(ceOffByOne(ending(1199, 'traditional-sampradaya'), 'twelfth century CE')).toEqual([]);
+    expect(ceOffByOne(ending(399), 'from 399 CE onward')).toEqual([]);
+  });
   it('rejects raw negative years in authored datings', async () => {
     const { rawNegativeYears } = await import('./load');
     const msgs = rawNegativeYears([

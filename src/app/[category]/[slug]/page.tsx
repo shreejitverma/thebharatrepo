@@ -10,6 +10,7 @@ import { CATEGORY_META, getGraph, getIndex, issueUrl } from '@/lib/content/site'
 import { renderArticle } from '@/lib/content/render';
 import { entityHref } from '@/lib/content/kaalchakra';
 import { METHOD_LABELS, isTraditional } from '@/lib/content/labels';
+import { citationId } from '@/lib/content/schema';
 import { formatRange } from '@/lib/time';
 import { rankDatings, summarizeDatings } from '@/lib/content/lens';
 import { yearToUnit } from '@/lib/time/scale';
@@ -38,6 +39,7 @@ export default async function ArticlePage({ params }: { params: Promise<{ catego
   const { html, references } = await renderArticle(a.body, g.sources);
   const ordered = rankDatings(a.datings, (d) => isTraditional(d.method));
   const primary = ordered[0];
+  const cited = new Set([...references.map((r) => r.source.id), ...a.datings.flatMap((d) => d.sources.map(citationId))]);
   const u = yearToUnit(primary.range.best ?? (primary.range.earliest + primary.range.latest) / 2);
   const focus = `/kaalchakra?view=river&win=${Math.max(0, u - 0.02).toFixed(5)},${Math.min(1, u + 0.02).toFixed(5)}`;
   const linked = a.entities.map((id) => g.entities.get(id)).filter((e) => e !== undefined);
@@ -57,7 +59,7 @@ export default async function ArticlePage({ params }: { params: Promise<{ catego
             <GradeBadge grade={primary.grade} />
             <LensTag lens={isTraditional(primary.method) ? 'tradition' : 'scholarship'} />
             <span>{METHOD_LABELS[primary.method]}</span>
-            <span>{references.length} sources cited</span>
+            <span>{cited.size} sources cited</span>
           </div>
           <KaalchakraStrip items={getIndex()} range={primary.range} selfId={null} focusHref={focus} />
           <section className="article-datings" aria-labelledby="when">

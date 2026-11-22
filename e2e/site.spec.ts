@@ -61,6 +61,8 @@ test.describe('pages render, are accessible and fit the viewport', () => {
     const flood = page.locator('.article-header .dating__sources a[href="https://doi.org/10.1111/b.9780631215356.2005.00005.x"]');
     await expect(flood).toBeVisible();
     await expect(flood).toContainText('The Blackwell Companion to Hinduism');
+    await expect(page.locator('.article-meta')).toContainText('3 sources cited');
+    await expect(page.locator('.references li')).toHaveCount(2);
     await noHorizontalScroll(page);
     await noSeriousA11yViolations(page);
   });

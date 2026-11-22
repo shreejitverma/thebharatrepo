@@ -15,7 +15,7 @@ summaries:
 region: Pan-Indian, with extensions into Central, East and Southeast Asia
 datings:
   - method: epigraphic
-    range: { earliest: "268 BCE", latest: 599, precision: century, circa: true }
+    range: { earliest: "268 BCE", latest: 600, precision: century, circa: true }
     grade: A
     label: Dated epigraphic trajectory from Early (Ashokan) Brahmi to Late (Gupta) Brahmi
     sources:

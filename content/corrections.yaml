@@ -1279,3 +1279,59 @@
   reason: The Library of Congress and Open Library records for the cited ISBN (9780198060987, Oxford University Press 2013) give the title as Rock Art of India.
   sources:
     - src.neumayer-2013-prehistoric-rock-art-india
+- date: 2026-11-22
+  target: /archive/text/charaka-samhita
+  before: c. 100 BCE to 499 CE
+  after: c. 100 BCE to 500 CE
+  reason: The end year was one short of the round CE year the text gives, as if a BCE-style shift had been applied to a CE year; the dating's own label places Dridhabala's completion at c. 300-500 CE.
+  sources:
+    - src.wujastyk-2008-body-of-knowledge-ayurvedic
+- date: 2026-11-22
+  target: /archive/text/tolkappiyam
+  before: c. 200 BCE to 499 CE
+  after: c. 200 BCE to 500 CE
+  reason: The end year was one short of the round CE year the text gives, as if a BCE-style shift had been applied to a CE year; the dating's note places the later Porulatikaram expansions up to the fifth century CE.
+  sources:
+    - src.zvelebil-1973-smile-of-murugan
+    - src.wilden-2014-manuscript-print-memory
+- date: 2026-11-22
+  target: /archive/site/sanchi-stupa
+  before: c. 260 BCE to 499 CE
+  after: c. 260 BCE to 500 CE
+  reason: The end year was one short of the round CE year the text gives, as if a BCE-style shift had been applied to a CE year; the dating's note ends the sequence with Gupta-era shrines of the fifth century CE.
+  sources:
+    - src.shaw-2016-buddhist-landscapes-sanchi
+    - src.lahiri-2015-ashoka-ancient-india
+- date: 2026-11-22
+  target: /archive/tradition/gandhara-art
+  before: c. 50 BCE to 499 CE
+  after: c. 50 BCE to 500 CE
+  reason: The end year was one short of the round CE year the text gives, as if a BCE-style shift had been applied to a CE year; the entry's summary says the school flourished to the fifth century CE.
+  sources:
+    - src.behrendt-2004-buddhist-architecture-gandhara
+    - src.stoneman-2019-greek-experience-of-india
+- date: 2026-11-22
+  target: /archive/concept/brahmi-to-gupta-script
+  before: c. 268 BCE to 599 CE
+  after: c. 268 BCE to 600 CE
+  reason: The end year was one short of the round CE year the text gives, as if a BCE-style shift had been applied to a CE year; the entry traces the script to the sixth century CE.
+  sources:
+    - src.salomon-1998-indian-epigraphy
+    - src.coningham-1996-early-brahmi-script
+- date: 2026-11-22
+  target: /archive/site/ahichhatra
+  before: c. 1200 BCE to 1099 CE
+  after: c. 1200 BCE to 1100 CE
+  reason: The end year was one short of the round CE year the text gives, as if a BCE-style shift had been applied to a CE year; the stratigraphic sequence is dated to the century, and its early medieval end is a round century.
+  sources:
+    - src.lal-1955-excavation-hastinapura
+    - src.singh-2008-ancient-early-medieval-india
+    - src.allchin-1995-archaeology-early-historic-south-asia
+- date: 2026-11-22
+  target: /archive/artifact/bakhshali-manuscript
+  before: c. 600 to 1199 CE
+  after: c. 600 to 1200 CE
+  reason: The end year was one short of the round CE year the text gives, as if a BCE-style shift had been applied to a CE year; the palaeographic dating places the manuscript in the eighth to twelfth centuries CE.
+  sources:
+    - src.plofker-2009-mathematics-in-india
+    - src.plofker-2017-bakhshali-radiocarbon
