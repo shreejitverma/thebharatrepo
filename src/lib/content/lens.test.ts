@@ -17,13 +17,15 @@ describe('primary dating for one-line summaries', () => {
     expect(summarizeDatings([kaliEpoch])).toBe('3102 BCE (tradition)');
   });
 
-  it('never summarises Rama or Krishna by their traditional reckoning', async () => {
+  it('summarises tradition-only figures by their traditional reckoning, marked as tradition', async () => {
+    // Scholarship dates the texts and inscriptions about Rama and Krishna, not the figures, so their one-line
+    // date is the traditional placement, always marked so it never reads as dated history.
     const { loadContentUncached } = await import('./load');
     const g = loadContentUncached();
-    for (const id of ['person.rama', 'person.krishna']) {
-      const label = summarizeDatings(g.entities.get(id)!.datings);
-      expect(label, id).not.toMatch(/million|ka\b|\(tradition\)|3102 BCE/);
+    for (const id of ['person.rama', 'person.krishna', 'person.vaivasvata-manu']) {
+      expect(summarizeDatings(g.entities.get(id)!.datings), id).toMatch(/\(tradition\)$/);
     }
+    expect(summarizeDatings(g.entities.get('person.ashoka')!.datings)).not.toMatch(/\(tradition\)/);
     expect(summarizeDatings(g.entities.get('cosmology.kali-yuga')!.datings)).toMatch(/\(tradition\)$/);
   });
 
@@ -48,10 +50,10 @@ describe('primary dating for one-line summaries', () => {
     const { rangeAnchor } = await import('../time');
     const krishna = loadContentUncached().entities.get('person.krishna')!;
     const chosen = primaryDating(krishna.datings);
-    expect(chosen.method).toBe('epigraphic');
-    expect(chosen.grade).toBe('B');
+    expect(chosen.method).toBe('traditional-puranic');
     const item = toKcItem(krishna);
-    expect(item.anchor.scholarship).toBe(rangeAnchor(chosen.range));
+    expect(item.anchor.scholarship).toBeNull();
+    expect(item.anchor.tradition).toBe(rangeAnchor(chosen.range));
     const kc = kcPrimary(item, 'both')!;
     expect(formatDating(kc, 'ce')).toBe(summarizeDatings(krishna.datings));
   });
