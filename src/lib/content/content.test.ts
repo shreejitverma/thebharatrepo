@@ -218,10 +218,15 @@ describe('loader against fixtures', () => {
       const msgs = g.errors.map((e) => e.message);
       expect(msgs).toContain('datings[0]: unknown source src.nobody-1999-nothing');
       expect(msgs).toContain('extents[0]: unknown source src.nobody-1999-nothing');
-      // Relation consistency is advisory: it is reported as a warning, never as an error.
-      expect(g.warnings).toEqual([{ file: 'content/entities/event/broken.yaml', message: 'relation part-of points at the entity itself' }]);
-      expect(msgs.some((m) => m.includes('points at the entity itself'))).toBe(false);
-      expect(g.relationStats).toMatchObject({ declared: 2, unknownTargets: 1, selfRelations: 1, contradictions: 0 });
+      // The relation graph's own checks are advisory warnings; the loader separately rejects a self relation and
+      // a second relation between the same two entities as errors (duplicateRelations), so both lists name them.
+      expect(g.warnings).toEqual([
+        { file: 'content/entities/event/broken.yaml', message: 'relation part-of points at the entity itself' },
+        { file: 'content/entities/event/misdated.yaml', message: 'relation contemporary-of -> event.toba is declared twice' },
+        { file: 'content/entities/event/toba.yaml', message: 'relation related-to points at the entity itself' },
+      ]);
+      expect(msgs).toContain('relation part-of -> event.broken points at the entity itself');
+      expect(g.relationStats).toMatchObject({ declared: 7, unknownTargets: 2, selfRelations: 2, duplicates: 1, contradictions: 0 });
       expect(msgs).toContain('datings[0]: endpoint is written as "7001 BCE" but the text says "7000 BCE"; check which is meant');
       expect(msgs).toContain('datings[0].range.earliest: "74000 BCE" is a deep-time date; write it as years before present ("N ka" or "N Ma") as the cited source reports it');
       expect(msgs).toContain('relation related-to -> unknown entity person.ghost');
