@@ -1,56 +1,21 @@
 'use client';
 
-import { useEffect, useMemo, useRef, useState } from 'react';
+import { useEffect, useLayoutEffect, useMemo, useRef, useState } from 'react';
 import { KIND_LABELS, type Kind } from '@/lib/content/labels';
 import type { KcItem } from '@/lib/content/kaalchakra';
 import type { Lens } from '@/lib/content/lens';
-import { formatYear, yearsAgo, PRESENT_YEAR } from '@/lib/time';
 import { panWindow, zoomWindow, type UnitWindow } from '@/lib/time/scale';
-import { BOUNDARY_LABELS, SEGMENTS, SHORT_SEGMENT_LABELS, kindColor, unitToYear, visibleDatings, yearToUnit } from './shared';
+import { BOUNDARY_LABELS, SEGMENTS, SHORT_SEGMENT_LABELS, kindColor, visibleDatings, yearToUnit } from './shared';
+import { edgeLabel, ticksFor } from './ticks';
 
 const LANE_H = 38;
 const TOP = 30;
 const AXIS_H = 34;
 const LABEL_W_PER_CHAR = 6.6;
-
-function niceStep(x: number): number {
-  const p = Math.pow(10, Math.floor(Math.log10(Math.max(x, 1e-9))));
-  const m = x / p;
-  return (m < 1.5 ? 1 : m < 3.5 ? 2 : m < 7.5 ? 5 : 10) * p;
-}
-
-/** Tick years for a window: rounds to nice values in years-ago for deep time and in calendar years otherwise. */
-function ticksFor(win: UnitWindow, width: number): { year: number; label: string }[] {
-  const n = Math.max(2, Math.floor(width / 110));
-  const out: { year: number; label: string }[] = [];
-  const seen = new Set<string>();
-  for (let i = 0; i <= n; i++) {
-    const u = win.start + ((win.end - win.start) * i) / n;
-    const du = (win.end - win.start) / n;
-    const y = unitToYear(u);
-    const span = Math.abs(unitToYear(Math.min(1, u + du)) - unitToYear(Math.max(0, u - du))) / 2;
-    const step = niceStep(span);
-    let ry: number;
-    let label: string;
-    if (y < -9999) {
-      const ago = Math.round(yearsAgo(y) / step) * step;
-      ry = PRESENT_YEAR - ago;
-      label = ago >= 1e9 ? `${+(ago / 1e9).toFixed(2)} Ga` : ago >= 1e6 ? `${+(ago / 1e6).toFixed(2)} Ma` : `${+(ago / 1e3).toFixed(1)} ka`;
-    } else {
-      // Round in historical numbering so labels read 500 BCE rather than 499 BCE.
-      const hist = y <= 0 ? 1 - y : y;
-      const rh = Math.max(step >= 1 ? Math.round(hist / step) * step : hist, 1);
-      ry = y <= 0 ? 1 - rh : rh;
-      label = formatYear(ry);
-      if (ry > 0 && ry < 3000) label = ry >= 1000 && step >= 1 ? `${ry}` : label;
-    }
-    if (!seen.has(label)) {
-      seen.add(label);
-      out.push({ year: ry, label });
-    }
-  }
-  return out;
-}
+/** Marks are clamped to this margin beyond the canvas so huge off-screen rects are never drawn. */
+const BLEED = 10;
+/** Horizontal movement in pixels before a press becomes a drag. */
+const DRAG_PX = 4;
 
 export interface RiverProps {
   items: KcItem[];
@@ -67,12 +32,13 @@ export default function River({ items, kinds, lens, selectedId, win, onWindow, o
   const wrapRef = useRef<HTMLDivElement>(null);
   const svgRef = useRef<SVGSVGElement>(null);
   const [width, setWidth] = useState(900);
+  // Handlers read and advance this synchronously so consecutive events never start from a stale window.
   const winRef = useRef(win);
-  useEffect(() => {
+  useLayoutEffect(() => {
     winRef.current = win;
   }, [win]);
   const pointers = useRef(new Map<number, { x: number; y: number }>());
-  const drag = useRef<{ x: number; moved: boolean; pinch?: number } | null>(null);
+  const drag = useRef<{ startX: number; x: number; moved: boolean; pinch?: number } | null>(null);
 
   useEffect(() => {
     const el = wrapRef.current;
@@ -89,14 +55,19 @@ export default function River({ items, kinds, lens, selectedId, win, onWindow, o
     const onWheel = (e: WheelEvent) => {
       const w = winRef.current;
       const rect = el.getBoundingClientRect();
-      const focus = w.start + ((e.clientX - rect.left) / rect.width) * (w.end - w.start);
+      const k = e.deltaMode === 1 ? 16 : e.deltaMode === 2 ? rect.width : 1;
+      const dx = e.deltaX * k;
+      const dy = e.deltaY * k;
+      let next: UnitWindow;
       if (e.ctrlKey || e.metaKey) {
-        e.preventDefault();
-        onWindow(zoomWindow(w, focus, Math.exp(e.deltaY * 0.01)));
-      } else if (Math.abs(e.deltaX) > Math.abs(e.deltaY)) {
-        e.preventDefault();
-        onWindow(panWindow(w, (e.deltaX / rect.width) * (w.end - w.start)));
-      }
+        const focus = w.start + ((e.clientX - rect.left) / rect.width) * (w.end - w.start);
+        next = zoomWindow(w, focus, Math.exp(Math.max(-1, Math.min(1, dy * 0.01))));
+      } else if (Math.abs(dx) > Math.abs(dy)) {
+        next = panWindow(w, (dx / rect.width) * (w.end - w.start));
+      } else return;
+      e.preventDefault();
+      winRef.current = next;
+      onWindow(next);
     };
     el.addEventListener('wheel', onWheel, { passive: false });
     return () => el.removeEventListener('wheel', onWheel);
@@ -106,22 +77,20 @@ export default function River({ items, kinds, lens, selectedId, win, onWindow, o
   const x = (u: number) => ((u - win.start) / (win.end - win.start)) * width;
 
   const lanes = useMemo(() => {
-    const byKind = new Map<Kind, { item: KcItem; x0: number; x1: number; trad: boolean; grade: string }[]>();
+    const px = (u: number) => ((u - win.start) / (win.end - win.start)) * width;
+    const byKind = new Map<Kind, { item: KcItem; key: string; x0: number; x1: number; trad: boolean }[]>();
     for (const item of items) {
-      const ds = visibleDatings(item, lens);
-      if (!ds.length) continue;
-      for (const d of ds) {
-        const x0 = x(yearToUnit(d.earliest));
-        const x1 = x(yearToUnit(d.latest));
-        if (x1 < -200 || x0 > width + 200) continue;
+      visibleDatings(item, lens).forEach((d, k) => {
+        const x0 = px(yearToUnit(d.earliest));
+        const x1 = px(yearToUnit(d.latest));
+        if (x1 < -2 * BLEED || x0 > width + 2 * BLEED) return;
         const list = byKind.get(item.kind) ?? [];
-        list.push({ item, x0, x1, trad: d.lens === 'tradition', grade: d.grade });
+        list.push({ item, key: `${item.id}-${k}`, x0, x1, trad: d.lens === 'tradition' });
         byKind.set(item.kind, list);
-      }
+      });
     }
     for (const list of byKind.values()) list.sort((a, b) => a.x0 - b.x0);
     return byKind;
-    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [items, lens, win.start, win.end, width]);
 
   const ticks = useMemo(() => ticksFor(win, width), [win, width]);
@@ -136,38 +105,81 @@ export default function River({ items, kinds, lens, selectedId, win, onWindow, o
     return { s, a, b };
   }).filter((l) => l.b - l.a > 70);
 
-  const onPointerDown = (e: React.PointerEvent) => {
-    (e.target as Element).setPointerCapture?.(e.pointerId);
-    pointers.current.set(e.pointerId, { x: e.clientX, y: e.clientY });
-    if (pointers.current.size === 2) {
-      const [p, q] = [...pointers.current.values()];
-      drag.current = { x: (p.x + q.x) / 2, moved: true, pinch: Math.abs(p.x - q.x) };
-    } else drag.current = { x: e.clientX, moved: false };
+  const commit = (next: UnitWindow) => {
+    winRef.current = next;
+    onWindow(next);
   };
 
-  const onPointerMove = (e: React.PointerEvent) => {
-    if (!drag.current || !pointers.current.has(e.pointerId)) return;
+  const capture = (el: Element, id: number) => {
+    try {
+      el.setPointerCapture(id);
+    } catch {
+      // The pointer may already be gone; the drag still ends through pointerup or pointercancel.
+    }
+  };
+
+  const onPointerDown = (e: React.PointerEvent<SVGSVGElement>) => {
+    if (e.pointerType === 'mouse' && e.button !== 0) return;
+    // Touch captures implicitly to the mark under the finger, which can unmount while panning.
+    const t = e.target as Element;
+    if (t !== e.currentTarget && t.hasPointerCapture?.(e.pointerId)) t.releasePointerCapture(e.pointerId);
     pointers.current.set(e.pointerId, { x: e.clientX, y: e.clientY });
-    const rect = svgRef.current!.getBoundingClientRect();
-    const w = winRef.current;
-    if (pointers.current.size === 2 && drag.current.pinch) {
+    if (pointers.current.size >= 2) {
       const [p, q] = [...pointers.current.values()];
-      const dist = Math.max(10, Math.abs(p.x - q.x));
       const mid = (p.x + q.x) / 2;
-      const focus = w.start + ((mid - rect.left) / rect.width) * (w.end - w.start);
-      onWindow(zoomWindow(w, focus, drag.current.pinch / dist));
-      drag.current.pinch = dist;
+      drag.current = { startX: mid, x: mid, moved: true, pinch: Math.max(10, Math.hypot(p.x - q.x, p.y - q.y)) };
+      for (const id of pointers.current.keys()) capture(e.currentTarget, id);
+    } else drag.current = { startX: e.clientX, x: e.clientX, moved: false };
+  };
+
+  const endPointer = (id: number) => {
+    if (!pointers.current.delete(id)) return;
+    const rest = [...pointers.current.values()];
+    if (rest.length >= 2) {
+      const [p, q] = rest;
+      const mid = (p.x + q.x) / 2;
+      drag.current = { startX: mid, x: mid, moved: true, pinch: Math.max(10, Math.hypot(p.x - q.x, p.y - q.y)) };
+    } else if (rest.length === 1) {
+      drag.current = { startX: rest[0].x, x: rest[0].x, moved: true };
+    } else {
+      // Cleared after the click that follows pointerup, so a drag never also selects.
+      const d = drag.current;
+      setTimeout(() => {
+        if (drag.current === d) drag.current = null;
+      }, 0);
+    }
+  };
+
+  const onPointerMove = (e: React.PointerEvent<SVGSVGElement>) => {
+    const d = drag.current;
+    if (!d || !pointers.current.has(e.pointerId)) return;
+    if (e.pointerType === 'mouse' && e.buttons === 0) return endPointer(e.pointerId);
+    pointers.current.set(e.pointerId, { x: e.clientX, y: e.clientY });
+    const rect = e.currentTarget.getBoundingClientRect();
+    const w = winRef.current;
+    if (pointers.current.size >= 2 && d.pinch !== undefined) {
+      const [p, q] = [...pointers.current.values()];
+      const dist = Math.max(10, Math.hypot(p.x - q.x, p.y - q.y));
+      const focus = w.start + (((p.x + q.x) / 2 - rect.left) / rect.width) * (w.end - w.start);
+      commit(zoomWindow(w, focus, d.pinch / dist));
+      d.pinch = dist;
       return;
     }
-    const dx = e.clientX - drag.current.x;
-    if (Math.abs(dx) > 3) drag.current.moved = true;
-    drag.current.x = e.clientX;
-    onWindow(panWindow(w, (-dx / rect.width) * (w.end - w.start)));
+    if (!d.moved) {
+      if (Math.abs(e.clientX - d.startX) <= DRAG_PX) return;
+      d.moved = true;
+      capture(e.currentTarget, e.pointerId);
+    }
+    const dx = e.clientX - d.x;
+    d.x = e.clientX;
+    if (dx) commit(panWindow(w, (-dx / rect.width) * (w.end - w.start)));
   };
 
-  const onPointerUp = (e: React.PointerEvent) => {
-    pointers.current.delete(e.pointerId);
-    if (pointers.current.size === 0) setTimeout(() => (drag.current = null), 0);
+  const onPointerUp = (e: React.PointerEvent<SVGSVGElement>) => endPointer(e.pointerId);
+
+  const onLostPointerCapture = (e: React.PointerEvent<SVGSVGElement>) => {
+    // lostpointercapture bubbles; only the SVG's own capture ending matters here.
+    if (e.target === e.currentTarget) endPointer(e.pointerId);
   };
 
   const click = (id: string) => {
@@ -175,7 +187,9 @@ export default function River({ items, kinds, lens, selectedId, win, onWindow, o
     onSelect(id);
   };
 
-  const zoomBy = (f: number) => onWindow(zoomWindow(win, (win.start + win.end) / 2, f));
+  const zoomBy = (f: number) => commit(zoomWindow(win, (win.start + win.end) / 2, f));
+  const clampX = (v: number) => Math.min(width + BLEED, Math.max(-BLEED, v));
+  const range = `${edgeLabel(win.start)} to ${edgeLabel(win.end)}`;
 
   return (
     <div ref={wrapRef}>
@@ -186,12 +200,10 @@ export default function River({ items, kinds, lens, selectedId, win, onWindow, o
         <button type="button" className="btn" onClick={() => zoomBy(2)} aria-label="Zoom out">
           -
         </button>
-        <button type="button" className="btn" onClick={() => onWindow({ start: 0, end: 1 })}>
+        <button type="button" className="btn" onClick={() => commit({ start: 0, end: 1 })}>
           Whole wheel
         </button>
-        <span>
-          {formatYear(unitToYear(win.start))} to {formatYear(unitToYear(win.end))}. Drag to move, pinch or Ctrl and scroll to zoom.
-        </span>
+        <span>{range}. Drag, or Shift and arrow keys, to move. Pinch, Ctrl and scroll, or the + and - keys to zoom.</span>
       </div>
       <svg
         ref={svgRef}
@@ -200,11 +212,12 @@ export default function River({ items, kinds, lens, selectedId, win, onWindow, o
         height={height}
         viewBox={`0 0 ${width} ${height}`}
         role="img"
-        aria-label={`Timeline from ${formatYear(unitToYear(win.start))} to ${formatYear(unitToYear(win.end))}`}
+        aria-label={`Timeline from ${range}`}
         onPointerDown={onPointerDown}
         onPointerMove={onPointerMove}
         onPointerUp={onPointerUp}
         onPointerCancel={onPointerUp}
+        onLostPointerCapture={onLostPointerCapture}
       >
         {segLabels.map(({ s, a, b }, i) => (
           <g key={s.id}>
@@ -238,22 +251,24 @@ export default function River({ items, kinds, lens, selectedId, win, onWindow, o
             let labelEnd = -Infinity;
             return (
               <g key={k}>
-                {list.map(({ item, x0, x1, trad }, j) => {
-                  const w = Math.max(x1 - x0, 0);
-                  const isPoint = w < 8;
-                  const cx = isPoint ? (x0 + x1) / 2 : x0;
-                  const visibleStart = Math.max(x0, 0);
-                  const labelX = isPoint ? cx + 8 : visibleStart + 4;
+                {list.map(({ item, key, x0, x1, trad }) => {
+                  const isPoint = x1 - x0 < 8;
+                  const cx = (x0 + x1) / 2;
+                  const left = clampX(x0);
+                  const right = clampX(x1);
+                  const labelX = isPoint ? cx + 8 : Math.max(x0, 0) + 4;
                   const lw = item.name.length * LABEL_W_PER_CHAR;
                   const active = item.id === selectedId;
                   if (!trad && labelX >= 4 && labelX > labelEnd + 8 && labelX + lw < width - 4) {
                     labelEnd = labelX + lw;
-                    labels.push({ key: `${item.id}-${j}`, x: labelX, y: isPoint ? y + 4 : y - 8, text: item.name, active });
+                    labels.push({ key, x: labelX, y: isPoint ? y + 4 : y - 8, text: item.name, active });
                   }
                   const color = trad ? 'var(--gold)' : kindColor(item.kind);
+                  const hitLeft = isPoint ? cx - 10 : left;
+                  const hitRight = isPoint ? cx + 10 : Math.max(right, left + 20);
                   return (
                     <g
-                      key={`${item.id}-${j}`}
+                      key={key}
                       className="kc-mark"
                       data-active={active}
                       onClick={() => click(item.id)}
@@ -264,9 +279,9 @@ export default function River({ items, kinds, lens, selectedId, win, onWindow, o
                         <circle cx={cx} cy={y} r={active ? 7 : 5.5} fill={trad ? 'var(--bg-elev)' : color} stroke={trad ? color : 'var(--bg-elev)'} strokeWidth={trad ? 2.2 : 1.2} />
                       ) : (
                         <rect
-                          x={x0}
+                          x={left}
                           y={y - (trad ? 3 : 4)}
-                          width={w}
+                          width={right - left}
                           height={trad ? 6 : 8}
                           rx={trad ? 3 : 4}
                           fill={trad ? 'none' : color}
@@ -275,7 +290,7 @@ export default function River({ items, kinds, lens, selectedId, win, onWindow, o
                           opacity={active ? 1 : 0.8}
                         />
                       )}
-                      <rect x={Math.min(x0, cx - 10)} y={y - 12} width={Math.max(w, 20)} height={24} fill="transparent" />
+                      <rect x={hitLeft} y={y - 12} width={hitRight - hitLeft} height={24} fill="transparent" />
                     </g>
                   );
                 })}
@@ -307,18 +322,14 @@ export default function River({ items, kinds, lens, selectedId, win, onWindow, o
           );
         })()}
         <line x1={0} x2={width} y1={height - AXIS_H} y2={height - AXIS_H} stroke="var(--ink-faint)" />
-        {ticks.map((t) => {
-          const px = x(yearToUnit(t.year));
-          if (px < 20 || px > width - 20) return null;
-          return (
-            <g key={t.label}>
-              <line x1={px} x2={px} y1={height - AXIS_H} y2={height - AXIS_H + 6} stroke="var(--ink-faint)" />
-              <text x={px} y={height - AXIS_H + 20} fontSize={11} textAnchor="middle" fill="var(--ink-soft)">
-                {t.label}
-              </text>
-            </g>
-          );
-        })}
+        {ticks.map((t) => (
+          <g key={t.label}>
+            <line x1={t.px} x2={t.px} y1={height - AXIS_H} y2={height - AXIS_H + 6} stroke="var(--ink-faint)" />
+            <text x={t.px} y={height - AXIS_H + 20} fontSize={11} textAnchor="middle" fill="var(--ink-soft)">
+              {t.label}
+            </text>
+          </g>
+        ))}
       </svg>
     </div>
   );

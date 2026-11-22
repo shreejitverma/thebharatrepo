@@ -31,6 +31,8 @@ import {
 
 export interface Article extends ArticleFrontmatter {
   slug: string;
+  /** Repo-relative path of the source file. */
+  file: string;
   category: (typeof CATEGORIES)[number];
   body: string;
   /** Source ids cited inline in the body, in first-use order. */
@@ -95,6 +97,39 @@ export function extractCitations(body: string): { id: string; locator?: string }
   return out;
 }
 
+/** Citation-like text that is not a well-formed group, e.g. "[see @src.x]", "[@ src.x]", a bare "@src.x". */
+export function findMalformedCitations(body: string): string[] {
+  const stripped = body.replace(CITATION_GROUP, '');
+  const out: string[] = [];
+  for (const m of stripped.matchAll(/\[[^\]\n]*@\s*src[^\]\n]*\]|@\s*src[._-][\w.-]*/gi)) out.push(m[0]);
+  return out;
+}
+
+/** Citations inside HTML comments or code are invisible to readers and must not count. */
+export function findHiddenCitations(body: string): string[] {
+  const hidden: string[] = [];
+  const regions = [...body.matchAll(/<!--[\s\S]*?-->|```[\s\S]*?```|`[^`\n]*`/g)].map((m) => m[0]);
+  for (const r of regions) for (const m of r.matchAll(CITATION_GROUP)) hidden.push(m[0]);
+  return hidden;
+}
+
+/**
+ * Detects the most common authoring error with raw astronomical years: storing -N for "N BCE"
+ * (correct is 1 - N). Flags a dating when the accompanying text names "N BCE", an endpoint equals -N,
+ * and no endpoint equals 1 - N.
+ */
+export function bceOffByOne(range: { earliest: number; latest: number; best?: number }, text: string): number[] {
+  const ends = [range.earliest, range.latest, range.best].filter((x): x is number => x !== undefined);
+  const flagged = new Set<number>();
+  for (const m of text.replace(/,/g, '').matchAll(/\b(\d{2,6})\s*(?:BCE|BC)\b/g)) {
+    const n = Number(m[1]);
+    if (ends.includes(-n) && !ends.includes(1 - n)) flagged.add(n);
+  }
+  return [...flagged];
+}
+
+let strays: string[] = [];
+
 function walk(dir: string, ext: string): string[] {
   if (!fs.existsSync(dir)) return [];
   const out: string[] = [];
@@ -102,6 +137,7 @@ function walk(dir: string, ext: string): string[] {
     const p = path.join(dir, entry.name);
     if (entry.isDirectory()) out.push(...walk(p, ext));
     else if (entry.isFile() && entry.name.endsWith(ext)) out.push(p);
+    else if (!entry.name.startsWith('.')) strays.push(p);
   }
   return out.sort();
 }
@@ -132,6 +168,7 @@ export function loadContentUncached(): ContentGraph {
 
   const roots = contentRoots();
   const artDir = articlesDir();
+  strays = [];
 
   for (const file of roots.flatMap((r) => walk(path.join(r, 'sources'), '.yaml'))) {
     const raw = readYaml(file, errors);
@@ -156,26 +193,54 @@ export function loadContentUncached(): ContentGraph {
       continue;
     }
     const e = parsed.data;
+    const text = [e.summary, e.summaries?.kids, e.summaries?.teen, ...e.claims.map((c) => c.text)].join(' ');
+    e.datings.forEach((d, i) => {
+      for (const n of bceOffByOne(d.range, `${text} ${d.label ?? ''} ${d.note ?? ''}`)) {
+        errors.push({ file: rel(file), message: `datings[${i}]: stores -${n} for "${n} BCE"; ${n} BCE is ${1 - n} (or write "${n} BCE")` });
+      }
+    });
     const expected = `${path.basename(path.dirname(file))}.${path.basename(file, '.yaml')}`;
     if (e.id !== expected) errors.push({ file: rel(file), message: `id ${e.id} must match path (${expected})` });
     if (entities.has(e.id)) errors.push({ file: rel(file), message: `duplicate entity id ${e.id}` });
     entities.set(e.id, e);
   }
 
+  if (artDir && fs.existsSync(artDir)) {
+    for (const entry of fs.readdirSync(artDir, { withFileTypes: true })) {
+      if (entry.name.startsWith('.')) continue;
+      if (!entry.isDirectory() || !(CATEGORIES as readonly string[]).includes(entry.name)) {
+        errors.push({ file: rel(path.join(artDir, entry.name)), message: `not a category directory; categories are ${CATEGORIES.join(', ')}` });
+      }
+    }
+  }
   for (const category of artDir ? CATEGORIES : []) {
     for (const file of walk(path.join(artDir!, category), '.md')) {
+      const relFile = rel(file);
+      if (path.dirname(file) !== path.join(artDir!, category)) {
+        errors.push({ file: relFile, message: 'articles must sit directly in their category directory' });
+        continue;
+      }
       const { data, content } = matter(fs.readFileSync(file, 'utf8'));
       const parsed = ArticleFrontmatterSchema.safeParse(data);
       if (!parsed.success) {
-        for (const m of formatZod(parsed.error)) errors.push({ file: rel(file), message: m });
+        for (const m of formatZod(parsed.error)) errors.push({ file: relFile, message: m });
         continue;
       }
-      const inlineCitations = extractCitations(content);
-      if (inlineCitations.length === 0) errors.push({ file: rel(file), message: 'article body cites no sources; use [@src.id, locator]' });
-      articles.push({ ...parsed.data, slug: path.basename(file, '.md'), category, body: content, inlineCitations });
+      for (const h of findHiddenCitations(content)) errors.push({ file: relFile, message: `citation inside a comment or code is invisible to readers: ${h}` });
+      const visible = content.replace(/<!--[\s\S]*?-->|```[\s\S]*?```|`[^`\n]*`/g, '');
+      for (const m of findMalformedCitations(visible)) errors.push({ file: relFile, message: `malformed citation "${m}"; use [@src.id] or [@src.id, locator]` });
+      const inlineCitations = extractCitations(visible);
+      if (inlineCitations.length === 0) errors.push({ file: relFile, message: 'article body cites no sources; use [@src.id, locator]' });
+      parsed.data.datings.forEach((d, i) => {
+        for (const n of bceOffByOne(d.range, `${parsed.data.summary} ${d.label ?? ''} ${d.note ?? ''}`)) {
+          errors.push({ file: relFile, message: `datings[${i}]: stores -${n} for "${n} BCE"; ${n} BCE is ${1 - n} (or write "${n} BCE")` });
+        }
+      });
+      articles.push({ ...parsed.data, slug: path.basename(file, '.md'), file: relFile, category, body: content, inlineCitations });
     }
   }
 
+  const correctionFiles: string[] = [];
   for (const correctionsFile of roots.map((r) => path.join(r, 'corrections.yaml')).filter((f) => fs.existsSync(f))) {
     const raw = readYaml(correctionsFile, errors);
     if (raw === undefined || raw === null) continue;
@@ -185,11 +250,16 @@ export function loadContentUncached(): ContentGraph {
     }
     raw.forEach((c, i) => {
       const parsed = CorrectionSchema.safeParse(c);
-      if (parsed.success) corrections.push(parsed.data);
+      if (parsed.success) {
+        corrections.push(parsed.data);
+        correctionFiles.push(rel(correctionsFile));
+      }
       else for (const m of formatZod(parsed.error)) errors.push({ file: rel(correctionsFile), message: `[${i}] ${m}` });
     });
   }
-  corrections = corrections.sort((a, b) => b.date.localeCompare(a.date));
+  // Check sources before sorting so each correction keeps its file.
+  const correctionSourceChecks = corrections.map((c, i) => ({ c, file: correctionFiles[i] }));
+  corrections = [...corrections].sort((a, b) => b.date.localeCompare(a.date));
 
   // Cross-reference checks.
   const checkSource = (file: string, where: string, id: string) => {
@@ -218,7 +288,7 @@ export function loadContentUncached(): ContentGraph {
 
   const articlesByEntity = new Map<string, Article[]>();
   for (const a of articles) {
-    const file = `_content/${a.category}/${a.slug}.md`;
+    const file = a.file;
     a.datings.forEach((d, i) => d.sources.forEach((s) => checkSource(file, `datings[${i}]`, citationId(s))));
     a.inlineCitations.forEach((c) => checkSource(file, 'body', c.id));
     for (const id of a.entities) {
@@ -229,7 +299,9 @@ export function loadContentUncached(): ContentGraph {
     }
   }
 
-  corrections.forEach((c, i) => c.sources.forEach((s) => checkSource('corrections.yaml', `[${i}] ${c.target}`, citationId(s))));
+  correctionSourceChecks.forEach(({ c, file }) => c.sources.forEach((s) => checkSource(file, c.target, citationId(s))));
+
+  for (const p of strays) errors.push({ file: rel(p), message: 'unexpected file: entities and sources must be .yaml, articles must be .md' });
 
   return { entities, sources, articles, corrections, articlesByEntity, inbound, errors };
 }

@@ -1,0 +1,142 @@
+id: concept.indus-script
+type: concept
+kind: text
+names:
+  en: Indus Script (Harappan Script)
+summary: >-
+  The undeciphered graphic system of the Harappan Civilisation, attested on roughly 4,000 to 5,000 inscribed objects
+  (primarily steatite stamp seals, clay sealings, copper tablets, miniature tablets, and pottery) with an inventory
+  of approximately 400 to 450 distinct principal signs; subject of major scholarly debate between logo-syllabic
+  Dravidian hypotheses (Iravatham Mahadevan, Asko Parpola), Indo-Aryan hypotheses (S. R. Rao), and the non-linguistic
+  emblem-system hypothesis (Steve Farmer, Richard Sproat, Michael Witzel).
+summaries:
+  kids: >-
+    The people of the Harappan cities carved over 400 different picture-like symbols onto stone seals, copper
+    tablets, and clay pots, creating a famous ancient script that no one has been able to read yet.
+  teen: >-
+    Known from nearly 5,000 short inscriptions averaging five signs in length and written mostly from right to
+    left, the Indus script remains undeciphered because no bilingual text has been found; scholars debate whether
+    it records an early Dravidian language, an Indo-Aryan language, or a non-linguistic system of clan and trade symbols.
+region: Pan-Harappan (with examples discovered in Mesopotamia and the Persian Gulf)
+datings:
+  - method: archaeological-radiocarbon
+    range:
+      earliest: -3299
+      latest: -2599
+      precision: century
+      circa: true
+    grade: B
+    label: Formative Early Indus Graphic Signs (Ravi and Kot Diji Phases)
+    sources:
+      - src.kenoyer-1998-ancient-cities-indus
+      - src.wright-2010-ancient-indus
+    note: >-
+      Pre-firing and post-firing potters' marks and single or paired graphic signs on pottery from Harappa Periods 1
+      and 2 (c. 3300-2600 BCE) that prefigure Mature Harappan sign forms.
+  - method: archaeological-radiocarbon
+    range:
+      earliest: -2599
+      latest: -1899
+      precision: century
+      circa: true
+    grade: A
+    label: Mature Harappan Logo-Syllabic / Proto-Dravidian Hypothesis (Asko Parpola, Iravatham Mahadevan)
+    sources:
+      - src.parpola-1994-deciphering-indus-script
+      - src.rao-2009-entropic-evidence-indus-script
+    note: >-
+      Mainstream linguistic decipherment school interpreting the Mature Harappan sign system (c. 2600-1900 BCE,
+      roughly 400-450 core signs) as a logo-syllabic writing system using the rebus principle, most plausibly
+      encoding an early Dravidian language; supported by conditional entropy analyses (Rao et al. 2009).
+  - method: linguistic
+    range:
+      earliest: -2599
+      latest: -1599
+      precision: century
+      circa: true
+    grade: C
+    label: Indo-Aryan / Old Indic Decipherment Proposal (S. R. Rao)
+    sources:
+      - src.rao-1979-lothal-harappan-port
+      - src.possehl-2002-indus-civilization
+    note: >-
+      Proposal by S. R. Rao arguing that the Mature and Late Harappan signs simplified from a mixed system into
+      a 22-sign consonantal/syllabic script recording an early Indo-Aryan language; rejected by most comparative
+      linguists and epigraphists for lacking methodological constraints.
+  - method: scholarly-consensus
+    range:
+      earliest: -2599
+      latest: -1899
+      precision: century
+      circa: true
+    grade: C
+    label: Non-Linguistic Symbol System Hypothesis (Farmer, Sproat, and Witzel)
+    sources:
+      - src.sproat-2014-statistical-comparison-symbol-systems
+    note: >-
+      Contested thesis formulated by Steve Farmer, Richard Sproat, and Michael Witzel (2004, 2014) arguing that
+      extreme brevity (average 4.6 signs, maximum 26-34 signs) and sign-repetition patterns indicate a non-linguistic
+      heraldic, ritual, or administrative emblem system rather than speech-encoding writing.
+claims:
+  - text: >-
+      Indus inscriptions are predominantly written from right to left (demonstrated by sign crowding and overlapping
+      strokes at the left edge of seals and potsherds), with occasional boustrophedon (alternating direction)
+      multi-line texts.
+    grade: A
+    sources:
+      - src.parpola-1994-deciphering-indus-script
+      - src.kenoyer-1998-ancient-cities-indus
+      - src.possehl-2002-indus-civilization
+  - text: >-
+      The surviving corpus comprises around 4,000 to 5,000 short texts with an average length of roughly five signs
+      and a core sign inventory estimated by concordances (Mahadevan 1977; Parpola 1994; Wells) at 400 to 450 signs,
+      a count typical of logo-syllabic systems rather than pure alphabets.
+    grade: A
+    sources:
+      - src.parpola-1994-deciphering-indus-script
+      - src.possehl-2002-indus-civilization
+      - src.singh-2008-ancient-early-medieval-india
+  - text: >-
+      Rajesh P. N. Rao, Iravatham Mahadevan, and colleagues (2009) demonstrated in Science that the conditional
+      entropy of Indus sign sequences matches natural linguistic scripts (such as Sumerian, Old Tamil, and Sanskrit)
+      rather than random or rigidly ordered non-linguistic systems, whereas Richard Sproat (2014) countered in
+      Language that statistical entropy alone cannot distinguish short linguistic texts from certain structured
+      non-linguistic symbol systems.
+    grade: B
+    sources:
+      - src.rao-2009-entropic-evidence-indus-script
+      - src.sproat-2014-statistical-comparison-symbol-systems
+  - text: >-
+      Despite over a hundred published decipherment claims since the 1920s, scholarly consensus holds that the
+      Indus script remains undeciphered due to the absence of verified bilingual inscriptions and the extreme
+      brevity of surviving texts.
+    grade: A
+    sources:
+      - src.possehl-2002-indus-civilization
+      - src.kenoyer-1998-ancient-cities-indus
+      - src.singh-2008-ancient-early-medieval-india
+relations:
+  - kind: part-of
+    target: tradition.harappan-civilisation
+  - kind: related-to
+    target: artifact.harappan-steatite-seals
+  - kind: related-to
+    target: artifact.dholavira-signboard
+  - kind: related-to
+    target: artifact.pashupati-seal
+wikidata: Q601388
+debate: >-
+  The Indus script is contested along two axes: (1) whether it encodes spoken language (the majority position,
+  arguing for a logo-syllabic script, supported by positional syntax and Rao et al. 2009) or functions as a
+  non-linguistic emblem system (Farmer, Sproat & Witzel 2004; Sproat 2014); and (2) among linguistic proposals,
+  whether the underlying language belongs to the Proto-Dravidian family (Iravatham Mahadevan, Asko Parpola 1994,
+  Yuri Knorozov), an Indo-Aryan / Para-Munda / lost substratum language (S. R. Rao, Michael Witzel's Para-Munda
+  substratum), or multiple languages across the Indus realm.
+tags:
+  - harappan
+  - indus-script
+  - epigraphy
+  - contested
+review:
+  status: draft
+  author: gemini-4-argon

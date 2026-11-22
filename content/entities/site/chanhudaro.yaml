@@ -1,0 +1,92 @@
+id: site.chanhudaro
+type: site
+kind: site
+names:
+  en: Chanhudaro (Chanhu-daro)
+  iast: Chāñhu-dāro
+summary: >-
+  An intensive craft-manufacturing Harappan town in Nawabshah (Shaheed Benazirabad) District, Sindh, excavated
+  by N. G. Majumdar (1930) and E. J. H. Mackay (1935-1936), renowned as a major centre for steatite seal carving,
+  carnelian bead drilling, shell working, and cubical stone weight production, as well as a subsequent Late
+  Harappan Jhukar-phase occupation.
+summaries:
+  kids: >-
+    Chanhudaro in Sindh was a town of skilled artisans with workshops that made tiny stone beads, carved seals,
+    shell bangles, and copper tools.
+  teen: >-
+    Excavated by N. G. Majumdar and E. J. H. Mackay in the 1930s, Chanhudaro was a specialized industrial settlement
+    in Sindh with baked-brick drains and workshops producing etched carnelian beads, steatite seals, and chert weights.
+region: Shaheed Benazirabad (Nawabshah) District, Sindh, Pakistan
+location:
+  name: Chanhudaro
+  lat: 26.1714
+  lon: 68.3278
+datings:
+  - method: archaeological-stratigraphic
+    range:
+      earliest: -2599
+      latest: -1899
+      precision: century
+      circa: true
+    grade: A
+    label: Mature Harappan Urban Craft Centre (Chanhudaro I)
+    sources:
+      - src.possehl-2002-indus-civilization
+      - src.wright-2010-ancient-indus
+      - src.kenoyer-1998-ancient-cities-indus
+    note: >-
+      Three Mature Harappan building levels separated by Indus flood deposits.
+  - method: archaeological-stratigraphic
+    range:
+      earliest: -1899
+      latest: -1499
+      precision: century
+      circa: true
+    grade: B
+    label: Late Harappan Jhukar and Jhangar Levels (Chanhudaro II-III)
+    sources:
+      - src.possehl-2002-indus-civilization
+      - src.singh-2008-ancient-early-medieval-india
+    note: >-
+      Post-urban Jhukar occupation (Period II) followed by ephemeral Jhangar phase occupation (Period III).
+claims:
+  - text: >-
+      Although covering only about 5 to 6 hectares across three low mounds, Chanhudaro contained one of the highest
+      concentrations of specialized craft workshops in the Harappan world, with unfinished steatite seals, cylindrical
+      Ernestite stone drills, bead-heating kilns, shell ladles, and copper-bronze tools.
+    grade: A
+    sources:
+      - src.kenoyer-1998-ancient-cities-indus
+      - src.possehl-2002-indus-civilization
+      - src.wright-2010-ancient-indus
+  - text: >-
+      Unlike Mohenjo-daro and Kalibangan, excavated areas of Chanhudaro lacked a monumental fortified citadel mound,
+      though its residential and industrial blocks featured baked-brick houses, bathrooms, and street drains.
+    grade: B
+    sources:
+      - src.possehl-2002-indus-civilization
+      - src.singh-2008-ancient-early-medieval-india
+relations:
+  - kind: part-of
+    target: tradition.harappan-civilisation
+  - kind: contemporary-of
+    target: site.mohenjo-daro
+  - kind: related-to
+    target: tradition.jhukar-phase
+  - kind: related-to
+    target: concept.harappan-carnelian-bead-making
+wikidata: Q1062208
+image:
+  commons: "File:Chanhu-Daro beads.jpg"
+  alt: Carnelian and stone beads excavated at Chanhudaro
+  credit: Ernest John Henry Mackay
+  license: Public domain
+tags:
+  - harappan
+  - site
+  - sindh
+  - bead-making
+  - crafts
+review:
+  status: draft
+  author: gemini-4-argon

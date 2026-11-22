@@ -19,12 +19,12 @@ describe('dating rules', () => {
     expect(DatingSchema.safeParse({ ...baseDating, sources: [], method: 'epigraphic', grade: 'A' }).success).toBe(false);
   });
   it('rejects inverted ranges, best outside range, and future dates', () => {
-    expect(DatingSchema.safeParse({ ...baseDating, method: 'epigraphic', grade: 'A', range: { earliest: 10, latest: 5, precision: 'year' } }).success).toBe(false);
-    expect(DatingSchema.safeParse({ ...baseDating, method: 'epigraphic', grade: 'A', range: { earliest: 1, latest: 5, best: 9, precision: 'year' } }).success).toBe(false);
-    expect(DatingSchema.safeParse({ ...baseDating, method: 'documentary', grade: 'A', range: { earliest: 2200, latest: 2200, precision: 'year' } }).success).toBe(false);
+    expect(DatingSchema.safeParse({ ...baseDating, method: 'epigraphic', grade: 'A', range: { earliest: 10, latest: 5, precision: 'year', circa: false } }).success).toBe(false);
+    expect(DatingSchema.safeParse({ ...baseDating, method: 'epigraphic', grade: 'A', range: { earliest: 1, latest: 5, best: 9, precision: 'year', circa: false } }).success).toBe(false);
+    expect(DatingSchema.safeParse({ ...baseDating, method: 'documentary', grade: 'A', range: { earliest: 2200, latest: 2200, precision: 'year', circa: false } }).success).toBe(false);
   });
   it('allows cosmological precision only for tradition', () => {
-    const cosmic = { earliest: -1.97e9, latest: -1.97e9, precision: 'cosmological' };
+    const cosmic = { earliest: -1.97e9, latest: -1.97e9, precision: 'cosmological', circa: true };
     expect(DatingSchema.safeParse({ ...baseDating, range: cosmic, method: 'geological', grade: 'B' }).success).toBe(false);
     expect(DatingSchema.safeParse({ ...baseDating, range: cosmic, method: 'traditional-puranic', grade: 'D' }).success).toBe(true);
   });
@@ -114,5 +114,37 @@ describe('loader against fixtures', () => {
     } finally {
       process.chdir(cwd);
     }
+  });
+});
+
+describe('human-readable years', () => {
+  it('converts era strings to astronomical years', async () => {
+    const { parseYear } = await import('./schema');
+    expect(parseYear('7000 BCE')).toBe(-6999);
+    expect(parseYear('1 BCE')).toBe(0);
+    expect(parseYear('320 CE')).toBe(320);
+    expect(parseYear('1,947')).toBe(1947);
+    expect(parseYear('385 ka')).toBe(2026 - 385000);
+    expect(parseYear('1.5 Ma')).toBe(2026 - 1500000);
+    expect(parseYear(-100)).toBe(-100);
+    expect(parseYear('sometime')).toBe('sometime');
+  });
+});
+
+describe('integrity checks', () => {
+  it('flags BCE off-by-one storage', async () => {
+    const { bceOffByOne } = await import('./load');
+    expect(bceOffByOne({ earliest: -7000, latest: -2599 }, 'from c. 7000 BCE to 2600 BCE')).toEqual([7000]);
+    expect(bceOffByOne({ earliest: -6999, latest: -2599 }, 'from c. 7000 BCE to 2600 BCE')).toEqual([]);
+    expect(bceOffByOne({ earliest: -7000, latest: -6999 }, 'around 7000 BCE')).toEqual([]);
+  });
+  it('finds malformed citations', async () => {
+    const { findMalformedCitations } = await import('./load');
+    expect(findMalformedCitations('ok [@src.a-1, p. 2] and [see @src.b-2] and @src.c-3 and [@ src.d]')).toEqual(['[see @src.b-2]', '@src.c-3', '[@ src.d]']);
+    expect(findMalformedCitations('fine [@src.a; @src.b, ch. 1].')).toEqual([]);
+  });
+  it('finds citations hidden in comments or code', async () => {
+    const { findHiddenCitations } = await import('./load');
+    expect(findHiddenCitations('<!-- [@src.x] --> text `[@src.y]` ok [@src.z]')).toEqual(['[@src.x]', '[@src.y]']);
   });
 });

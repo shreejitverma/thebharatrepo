@@ -1,0 +1,81 @@
+id: tradition.hakra-ware-phase
+type: tradition
+kind: civilisation
+names:
+  en: Hakra Ware and Ravi Phase
+summary: >-
+  The earliest formative phase of the Early Harappan Regionalisation Era in the Cholistan desert, the Ghaggar-Hakra
+  valley and the Ravi basin, characterised by hand-made and early wheel-thrown pottery with mud-applique and
+  incised surfaces.
+summaries:
+  kids: >-
+    Before the big Harappan cities were built, early villagers in the Ravi and Ghaggar-Hakra valleys made patterned
+    clay pots, copper tools, and shell beads.
+  teen: >-
+    The Hakra Ware and Ravi phase marks the earliest village-to-town stage of the Harappan tradition, found at
+    Harappa, Jalilpur, Bhirrana, and across Cholistan between roughly 3800 and 2800 BCE.
+region: Cholistan (Punjab, Pakistan), Ravi basin, and Ghaggar-Hakra valley (Haryana, India)
+location:
+  name: Harappa (Mound AB, Ravi phase)
+  lat: 30.6311
+  lon: 72.8639
+datings:
+  - method: archaeological-radiocarbon
+    range:
+      earliest: -3799
+      latest: -2799
+      precision: century
+      circa: true
+    grade: A
+    label: Ravi Phase at Harappa and Hakra Ware Horizon
+    sources:
+      - src.kenoyer-1998-ancient-cities-indus
+      - src.possehl-2002-indus-civilization
+      - src.wright-2010-ancient-indus
+    note: >-
+      Calibrated radiocarbon dates from Harappa Period 1A-1B (Ravi aspect of the Hakra phase) place the phase
+      between c. 3700/3300 and 2800 BCE.
+  - method: archaeological-radiocarbon
+    range:
+      earliest: -7499
+      latest: -5999
+      precision: millennium
+      circa: true
+    grade: C
+    label: Early radiocarbon claims at Bhirrana Period IA (contested)
+    sources:
+      - src.sarkar-2016-bhirrana-oxygen-isotope
+      - src.coningham-2015-archaeology-south-asia
+    note: >-
+      Charcoal and bioapatite analyses from Bhirrana Period IA Hakra Ware pit-dwellings have been interpreted by
+      some excavators as extending back to the 8th-7th millennium BCE, though many archaeologists attribute the
+      oldest dates to old-wood effects or pre-Hakra Neolithic levels.
+claims:
+  - text: >-
+      M. Rafique Mughal identified over 99 Hakra Ware settlements in the Cholistan desert along the dry Hakra
+      riverbed, establishing a dense pre-urban settlement network prior to the Kot Diji phase.
+    grade: A
+    sources:
+      - src.possehl-2002-indus-civilization
+      - src.wright-2010-ancient-indus
+  - text: >-
+      Excavations of the Ravi phase (Period 1) at Harappa uncovered post-firing graffiti on pottery that
+      anticipate several graphic motifs later incorporated into the Mature Harappan script.
+    grade: A
+    sources:
+      - src.kenoyer-1998-ancient-cities-indus
+      - src.wright-2010-ancient-indus
+relations:
+  - kind: part-of
+    target: tradition.harappan-civilisation
+  - kind: preceded
+    target: tradition.kot-diji-phase
+wikidata: null
+tags:
+  - harappan
+  - early-harappan
+  - hakra-ware
+  - ravi-phase
+review:
+  status: draft
+  author: gemini-4-argon

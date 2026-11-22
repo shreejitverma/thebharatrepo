@@ -24,7 +24,7 @@ location:
 datings:
   - method: archaeological-radiocarbon
     range:
-      earliest: -7000
+      earliest: "7000 BCE"
       latest: -2599
       best: -6500
       precision: century

@@ -1,5 +1,7 @@
 import type { Metadata } from 'next';
+import { Suspense } from 'react';
 import Kaalchakra from '@/components/kaalchakra/Kaalchakra';
+import KaalchakraFallback from '@/components/kaalchakra/KaalchakraFallback';
 import { getIndex } from '@/lib/content/site';
 
 export const metadata: Metadata = {
@@ -16,7 +18,10 @@ export default function KaalchakraPage() {
       <p className="lede" style={{ marginTop: 0 }}>
         {items.length} entries from the archive, each placed in time by its evidence. Switch lenses to see where scholarship and tradition agree, and where they differ.
       </p>
-      <Kaalchakra items={items} />
+      {/* Kaalchakra reads its state from the search params, so static prerendering stops at this boundary. */}
+      <Suspense fallback={<KaalchakraFallback items={items} />}>
+        <Kaalchakra items={items} />
+      </Suspense>
     </div>
   );
 }

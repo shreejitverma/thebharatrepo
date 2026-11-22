@@ -1,0 +1,65 @@
+id: text.aranyakas
+type: text
+kind: text
+names:
+  en: Aranyakas
+  iast: Āraṇyaka
+  native: आरण्यक
+summary: >-
+  The Aranyakas ("wilderness texts") form the transitional stratum of Vedic Shruti literature
+  between the ritualistic Brahmanas and the philosophical Upanishads. Studied outside villages in
+  the forest, they interpret esoteric and dangerous rituals such as the Pravargya and Mahavrata.
+summaries:
+  kids: >-
+    The Aranyakas, or "forest books," were taught in quiet places outside villages and explored
+    the inner, spiritual meaning of Vedic rituals.
+  teen: >-
+    Standing between the Brahmanas and the Upanishads, the Aranyakas ("wilderness treatises") were
+    transmitted outside settlements because of the sacred power of the Pravargya and Mahavrata
+    rites they explained, shifting focus toward inner meditation (upasana).
+region: Kuru-Panchala and middle Ganga plain (northern India)
+datings:
+  - method: linguistic
+    range: { earliest: -799, latest: -499, best: -699, precision: century, circa: true }
+    grade: C
+    label: Late Brahmana to Early Upanishadic prose period
+    sources:
+      - src.gonda-1975-vedic-literature
+      - src.flood-2003-blackwell-companion-hinduism
+      - src.olivelle-1998-early-upanisads
+    note: >-
+      Linguistically continuous with late Brahmana prose and the earliest Upanishads, which are
+      directly embedded within or appended to Aranyaka collections.
+  - method: traditional-puranic
+    range: { earliest: -3101, latest: -2499, precision: century, circa: true }
+    grade: D
+    label: Traditional sampradaya reckoning
+    sources:
+      - src.flood-2003-blackwell-companion-hinduism
+    note: >-
+      In traditional Vedic taxonomy, the Aranyakas belong to the eternal Shruti revelation and
+      correspond to the forest-dweller (vanaprastha) stage of reflection.
+claims:
+  - text: >-
+      The surviving Aranyakas include the Aitareya and Shankhayana (Kaushitaki) Aranyakas of the
+      Rigveda, the Taittiriya and Maitrayaniya Aranyakas of the Krishna Yajurveda, and the
+      Jaiminiya Upanishad Brahmana of the Samaveda.
+    grade: A
+    sources:
+      - src.gonda-1975-vedic-literature
+      - src.flood-2003-blackwell-companion-hinduism
+  - text: >-
+      Rather than abandoning ritual, the Aranyakas focus on the symbolic and meditative equivalence
+      (upasana) of dangerous or esoteric rites such as the Pravargya heated-vessel ceremony and the
+      solstitial Mahavrata ritual.
+    grade: B
+    sources:
+      - src.gonda-1975-vedic-literature
+      - src.flood-2003-blackwell-companion-hinduism
+relations:
+  - { kind: succeeded, target: text.brahmanas }
+  - { kind: preceded, target: text.upanishads }
+  - { kind: related-to, target: tradition.shrauta-ritual }
+wikidata: Q265461
+tags: [veda, aranyaka, shruti, ritual, philosophy]
+review: { status: draft, author: "gemini-4-argon" }

@@ -1,0 +1,80 @@
+id: site.great-bath-mohenjo-daro
+type: site
+kind: art
+names:
+  en: Great Bath of Mohenjo-daro
+summary: >-
+  A monumental watertight brick-lined public tank on the Citadel mound (SD Area) of Mohenjo-daro (Mature Harappan,
+  c. 2500-1900 BCE), excavated in 1925-1926 under Sir John Marshall, measuring 11.88 by 7.01 metres and 2.43 metres
+  deep, waterproofed with precision-fitted baked bricks set in gypsum mortar over a 2.5-centimetre layer of natural
+  bitumen (asphalt).
+summaries:
+  kids: >-
+    The Great Bath at Mohenjo-daro is a large sunken brick pool sealed with natural tar to keep water from leaking,
+    with brick steps at both ends and a tall drain tunnel.
+  teen: >-
+    Built on the elevated Citadel mound of Mohenjo-daro in the 3rd millennium BCE, the Great Bath is an masterpiece
+    of Bronze Age hydraulic engineering, using close-jointed baked bricks, gypsum mortar, and a bitumen membrane
+    for ritual or civic bathing.
+region: Mohenjo-daro, Larkana District, Sindh, Pakistan
+location:
+  name: Mohenjo-daro (Citadel, SD Area)
+  lat: 27.3292
+  lon: 68.1389
+datings:
+  - method: archaeological-stratigraphic
+    range:
+      earliest: -2499
+      latest: -1899
+      precision: century
+      circa: true
+    grade: A
+    label: Mature Harappan Citadel Construction Phase
+    sources:
+      - src.marshall-1931-mohenjo-daro
+      - src.kenoyer-1998-ancient-cities-indus
+      - src.possehl-2002-indus-civilization
+    note: >-
+      Constructed during the Mature Harappan phase on the elevated mud-brick platform of the Citadel mound (SD Area)
+      and decommissioned during the late Mature Harappan phase.
+claims:
+  - text: >-
+      The central basin of the Great Bath measures approximately 11.88 metres north-south by 7.01 metres east-west
+      with a maximum depth of 2.43 metres, entered via two wide brick staircases at the northern and southern ends
+      originally fitted with wooden treads set in bitumen.
+    grade: A
+    sources:
+      - src.marshall-1931-mohenjo-daro
+      - src.kenoyer-1998-ancient-cities-indus
+      - src.possehl-2002-indus-civilization
+  - text: >-
+      To render the tank watertight, Harappan builders laid sawn baked bricks edge-to-edge in gypsum mortar, backed
+      them with a 2.5-centimetre damp-proof course of natural bitumen sandwiched between additional brick courses,
+      supplied clean water from a double-walled circular brick well in an eastern room, and emptied the basin
+      through a 1.8-metre-high corbelled brick vault drain.
+    grade: A
+    sources:
+      - src.marshall-1931-mohenjo-daro
+      - src.kenoyer-1998-ancient-cities-indus
+      - src.singh-2008-ancient-early-medieval-india
+relations:
+  - kind: located-at
+    target: site.mohenjo-daro
+  - kind: part-of
+    target: tradition.harappan-civilisation
+  - kind: related-to
+    target: concept.harappan-town-planning-and-drainage
+wikidata: Q3346415
+image:
+  commons: "File:Great bath view Mohenjodaro.JPG"
+  alt: View of the sunken baked-brick basin and steps of the Great Bath at Mohenjo-daro
+  credit: Saqib Qayyum
+  license: CC BY-SA 3.0
+tags:
+  - harappan
+  - architecture
+  - mohenjo-daro
+  - water-management
+review:
+  status: draft
+  author: gemini-4-argon

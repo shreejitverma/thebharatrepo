@@ -1,10 +1,10 @@
 import Link from 'next/link';
-import Wheel from '@/components/kaalchakra/Wheel';
+import WheelSvg from '@/components/kaalchakra/WheelSvg';
 import GradeBadge from '@/components/GradeBadge';
 import { CATEGORY_META, getGraph, getIndex } from '@/lib/content/site';
 import { CATEGORIES } from '@/lib/content/schema';
 import { KINDS, GRADE_LABELS, isTraditional } from '@/lib/content/labels';
-import { orderedItems } from '@/components/kaalchakra/shared';
+import { orderedItems, toPlacedItem } from '@/components/kaalchakra/shared';
 
 export default function Home() {
   const g = getGraph();
@@ -46,8 +46,8 @@ export default function Home() {
             </div>
           </div>
         </div>
-        <Link href="/kaalchakra" className="home-hero__wheel" aria-label="Open the Kaalchakra">
-          <Wheel items={orderedItems(items, 'both')} kinds={KINDS} lens="both" selectedId={null} cal="ce" interactive={false} />
+        <Link href="/kaalchakra" className="home-hero__wheel" aria-hidden="true" tabIndex={-1}>
+          <WheelSvg items={orderedItems(items, 'both').map(toPlacedItem)} kinds={KINDS} lens="both" selectedId={null} />
         </Link>
       </section>
 

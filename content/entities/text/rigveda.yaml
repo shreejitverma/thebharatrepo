@@ -1,0 +1,115 @@
+id: text.rigveda
+type: text
+kind: text
+names:
+  en: Rigveda
+  iast: Ṛgveda
+  native: ऋग्वेद
+summary: >-
+  The Rigveda is the oldest surviving collection of Vedic Sanskrit hymns, comprising 1,028 suktas
+  organized into ten mandalas. Its absolute chronology is contested between mainstream linguistic
+  and comparative scholarship, Out-of-India reconstructions, and traditional Hindu reckoning.
+summaries:
+  kids: >-
+    The Rigveda is the oldest collection of Sanskrit hymns in the Vedic tradition, containing
+    1,028 poems organized into ten books that praise deities such as Agni, Indra, and Soma.
+  teen: >-
+    Comprising 1,028 hymns in ten mandalas, the Rigveda is the earliest stratum of Vedic Sanskrit
+    literature. Historians debate its date using comparative linguistics, the c. 1380 BCE Mitanni
+    treaty synchronism, and traditional Puranic chronology.
+region: Sapta Sindhu (northwestern Indian subcontinent, Punjab and Haryana)
+datings:
+  - method: linguistic
+    range: { earliest: -1499, latest: -999, best: -1199, precision: century, circa: true }
+    grade: C
+    label: Mainstream Indology (Witzel, Jamison and Brereton)
+    sources:
+      - src.jamison-brereton-2014-rigveda
+      - src.witzel-1997-early-sanskritization-kuru
+      - src.flood-2003-blackwell-companion-hinduism
+    note: >-
+      Dated by comparative Indo-Iranian linguistics, internal stratification between the Family
+      Books (Mandalas 2 to 7) and late books (1 and 10), and the absence of iron (shyama ayas) in
+      the Rigvedic vocabulary.
+  - method: foreign-synchronism
+    range: { earliest: -1399, latest: -1349, best: -1379, precision: decade, circa: true }
+    grade: C
+    label: Mitanni treaty synchronism
+    sources:
+      - src.thieme-1960-aryan-gods-mitanni-treaties
+      - src.beckman-1999-hittite-diplomatic-texts
+      - src.jamison-brereton-2014-rigveda
+    note: >-
+      The c. 1380 BCE treaty between Suppiluliuma I of Hatti and Shattiwaza of Mitanni invokes the
+      Indo-Aryan deities Mitra, Varuna, Indra, and the Nasatyas, providing an external chronological
+      anchor for early Indo-Aryan religious vocabulary.
+  - method: textual-internal
+    range: { earliest: -2999, latest: -1499, precision: century, circa: true }
+    grade: E
+    label: Out-of-India and indigenous chronologies (Talageri, Lal)
+    sources:
+      - src.talageri-2000-rigveda-historical-analysis
+      - src.lal-2002-saraswati-flows-on
+      - src.bryant-2001-quest-origins-vedic-culture
+    note: >-
+      Indigenous and Out-of-India proponents such as Shrikant Talageri and B. B. Lal place the
+      Rigveda in the third or early second millennium BCE based on internal dynastic lists and
+      the perennial flow of the Sarasvati river before its late Harappan drying.
+  - method: traditional-puranic
+    range: { earliest: -3101, latest: -2999, precision: century, circa: true }
+    grade: D
+    label: Traditional Puranic and sampradaya reckoning
+    sources:
+      - src.bryant-2001-quest-origins-vedic-culture
+      - src.flood-2003-blackwell-companion-hinduism
+    note: >-
+      Orthodox Hindu tradition regards the Vedic mantras as eternal (apaurusheya) and attributes
+      their compilation into four Samhitas by Vyasa to the transition from Dvapara Yuga to Kali
+      Yuga around 3102 BCE.
+claims:
+  - text: >-
+      The Shakala recension of the Rigveda consists of 1,028 hymns (suktas), including the eleven
+      Valakhilya hymns, arranged into ten books (mandalas).
+    grade: A
+    sources:
+      - src.jamison-brereton-2014-rigveda
+      - src.gonda-1975-vedic-literature
+  - text: >-
+      Mandalas 2 through 7, known as the Family Books and attributed to the lineages of Gritsamada,
+      Vishvamitra, Vamadeva, Atri, Bharadvaja, and Vasishtha, constitute the oldest linguistic core
+      of the collection.
+    grade: B
+    sources:
+      - src.jamison-brereton-2014-rigveda
+      - src.witzel-1997-early-sanskritization-kuru
+  - text: >-
+      The Rigvedic hymns reflect a pastoral and agrarian Bronze Age society using copper or bronze
+      (ayas) and horse-drawn spoked-wheel chariots (ratha), prior to the urbanisation of the Ganga
+      plain.
+    grade: B
+    sources:
+      - src.jamison-brereton-2014-rigveda
+      - src.singh-2008-ancient-early-medieval-india
+relations:
+  - { kind: related-to, target: concept.vedic-sanskrit }
+  - { kind: related-to, target: event.mitanni-treaty }
+  - { kind: related-to, target: event.dasarajna }
+  - { kind: related-to, target: concept.rigvedic-sarasvati }
+  - { kind: related-to, target: tradition.soma-ritual }
+  - { kind: related-to, target: tradition.vedic-oral-transmission }
+  - { kind: commented-on, target: text.aitareya-brahmana }
+  - { kind: preceded, target: text.samaveda }
+wikidata: Q727413
+image:
+  commons: "File:Rigveda MS2097.jpg"
+  alt: Manuscript page of the Rigveda in Devanagari script from the Schoyen Collection
+  credit: Unknown scribe (19th-century manuscript)
+  license: Public domain
+debate: >-
+  Mainstream philologists and historical linguists date the composition of the Rigveda to c.
+  1500 to 1000 BCE based on Indo-Iranian linguistic comparisons, chariot technology, and the
+  Mitanni synchronism. Indigenous and Out-of-India researchers argue for a third-millennium BCE
+  date tied to a perennial Sarasvati river, while orthodox tradition treats the hymns as timeless
+  revelation compiled at the onset of Kali Yuga.
+tags: [veda, samhita, rigveda, vedic-sanskrit, sapta-sindhu]
+review: { status: draft, author: "gemini-4-argon" }

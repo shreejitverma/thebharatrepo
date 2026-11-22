@@ -1,16 +1,17 @@
 'use client';
 
-import { useCallback, useEffect, useMemo, useRef, useState, useSyncExternalStore } from 'react';
+import { useCallback, useEffect, useId, useMemo, useRef, useState } from 'react';
+import { useSearchParams } from 'next/navigation';
 import { KINDS, KIND_LABELS, type Kind } from '@/lib/content/labels';
 import type { KcItem } from '@/lib/content/kaalchakra';
 import { LENSES, LENS_LABELS, type Lens } from '@/lib/content/lens';
 import type { CalendarSystem } from '@/lib/time';
-import type { UnitWindow } from '@/lib/time/scale';
+import { panWindow, zoomWindow, type UnitWindow } from '@/lib/time/scale';
 import Wheel from './Wheel';
 import River from './River';
 import ListView from './ListView';
 import Panel from './Panel';
-import { SEGMENTS, SHORT_SEGMENT_LABELS, formatDating, kindColor, orderedItems, primaryDating, segmentUnitBounds, type Level, type View } from './shared';
+import { SEGMENTS, SHORT_SEGMENT_LABELS, formatDating, kindColor, orderedItems, primaryAnchor, primaryDating, segmentUnitBounds, yearToUnit, type Level, type View } from './shared';
 
 const VIEWS: { id: View; label: string }[] = [
   { id: 'wheel', label: 'Wheel' },
@@ -66,6 +67,7 @@ function parseState(search: string, ids: Set<string>): State {
   return s;
 }
 
+/** Query string for a state, without the leading "?", in URLSearchParams encoding. */
 function serialise(s: State): string {
   const p = new URLSearchParams();
   if (s.view !== DEFAULT.view) p.set('view', s.view);
@@ -76,8 +78,11 @@ function serialise(s: State): string {
   if (s.sel) p.set('id', s.sel);
   if (s.view === 'river' && (s.win.start > 0 || s.win.end < 1)) p.set('win', `${s.win.start.toFixed(5)},${s.win.end.toFixed(5)}`);
   if (s.level !== 'adult') p.set('level', s.level);
-  const str = p.toString();
-  return str ? `?${str}` : '';
+  return p.toString();
+}
+
+function hrefFor(pathname: string, query: string): string {
+  return query ? `${pathname}?${query}` : pathname;
 }
 
 function matches(item: KcItem, q: string): boolean {
@@ -90,33 +95,59 @@ function matches(item: KcItem, q: string): boolean {
     .every((t) => hay.includes(t));
 }
 
-const noopSubscribe = () => () => {};
-
-/**
- * Server and first client render use the default state; once hydrated, the component remounts with the
- * state parsed from the URL. This avoids hydration mismatches without setting state inside an effect.
- */
-export default function Kaalchakra({ items }: { items: KcItem[] }) {
-  const hydrated = useSyncExternalStore(noopSubscribe, () => true, () => false);
-  const ids = useMemo(() => new Set(items.map((i) => i.id)), [items]);
-  const initial = hydrated ? parseState(window.location.search, ids) : DEFAULT;
-  return <KaalchakraInner key={hydrated ? 'client' : 'server'} items={items} initial={initial} writeUrl={hydrated} />;
+interface Mount {
+  /** Search params last seen from the router. */
+  seen: string;
+  /** Query string this component last wrote with history.replaceState, if any since the last mount. */
+  written: string | null;
+  epoch: number;
+  initial: State;
 }
 
-function KaalchakraInner({ items, initial, writeUrl }: { items: KcItem[]; initial: State; writeUrl: boolean }) {
+/**
+ * State is initialised from useSearchParams, so deep links work on first load and on client-side
+ * navigation. The inner component remounts only when the search params change to something this
+ * component did not write itself: Back and Forward, or following a link such as the nav link to
+ * /kaalchakra. Its own debounced replaceState writes are recognised and do not remount it.
+ */
+export default function Kaalchakra({ items }: { items: KcItem[] }) {
+  const search = useSearchParams().toString();
+  const ids = useMemo(() => new Set(items.map((i) => i.id)), [items]);
+  const [mount, setMount] = useState<Mount>(() => ({ seen: search, written: null, epoch: 0, initial: parseState(search, ids) }));
+  if (search !== mount.seen) {
+    if (search === mount.written) setMount({ ...mount, seen: search });
+    else setMount({ seen: search, written: null, epoch: mount.epoch + 1, initial: parseState(search, ids) });
+  }
+  const onWrite = useCallback((query: string) => setMount((m) => ({ ...m, written: query })), []);
+  return <KaalchakraInner key={mount.epoch} items={items} initial={mount.initial} onWrite={onWrite} />;
+}
+
+/** Pan the window so the item's anchor is comfortably inside it; unchanged if it already is. */
+function reveal(win: UnitWindow, item: KcItem, lens: Lens): UnitWindow {
+  const a = primaryAnchor(item, lens);
+  if (a === null) return win;
+  const u = yearToUnit(a);
+  const margin = (win.end - win.start) * 0.08;
+  if (u >= win.start + margin && u <= win.end - margin) return win;
+  return panWindow(win, u - (win.start + win.end) / 2);
+}
+
+function KaalchakraInner({ items, initial, onWrite }: { items: KcItem[]; initial: State; onWrite: (query: string) => void }) {
   const [s, setS] = useState<State>(initial);
   const [hover, setHover] = useState<{ id: string; x: number; y: number } | null>(null);
   const canvasRef = useRef<HTMLDivElement>(null);
+  const keysId = useId();
 
   // Debounced so continuous panning never exceeds browser limits on history.replaceState.
   useEffect(() => {
-    if (!writeUrl) return;
+    const query = serialise(s);
     const t = setTimeout(() => {
-      const next = `${window.location.pathname}${serialise(s)}`;
-      if (next !== `${window.location.pathname}${window.location.search}`) window.history.replaceState(null, '', next);
+      if (query === new URLSearchParams(window.location.search).toString()) return;
+      onWrite(query);
+      window.history.replaceState(null, '', hrefFor(window.location.pathname, query));
     }, 250);
     return () => clearTimeout(t);
-  }, [s, writeUrl]);
+  }, [s, onWrite]);
 
   const update = useCallback((patch: Partial<State>) => setS((prev) => ({ ...prev, ...patch })), []);
 
@@ -125,6 +156,22 @@ function KaalchakraInner({ items, initial, writeUrl }: { items: KcItem[]; initia
   const ringKinds = useMemo(() => KINDS.filter((k) => kindSet.has(k)), [kindSet]);
   const selected = s.sel ? items.find((i) => i.id === s.sel) : undefined;
   const selIdx = selected ? visible.findIndex((i) => i.id === selected.id) : -1;
+  const selDating = selected ? primaryDating(selected, s.lens) : undefined;
+
+  // A hovered mark can unmount without a pointerleave when the items, view or window change.
+  const [hoverCtx, setHoverCtx] = useState({ visible, view: s.view, win: s.win });
+  if (hoverCtx.visible !== visible || hoverCtx.view !== s.view || hoverCtx.win !== s.win) {
+    setHoverCtx({ visible, view: s.view, win: s.win });
+    if (hover) setHover(null);
+  }
+
+  // Count announcements wait for typing and toggling to settle.
+  const [announcedCount, setAnnouncedCount] = useState(visible.length);
+  useEffect(() => {
+    const t = setTimeout(() => setAnnouncedCount(visible.length), 800);
+    return () => clearTimeout(t);
+  }, [visible.length]);
+  const announcement = selected ? (selDating ? `${selected.name}, ${formatDating(selDating, s.cal)}` : selected.name) : `${announcedCount} entries shown`;
 
   const select = useCallback((id: string) => update({ sel: id }), [update]);
   const onHover = useCallback((id: string | null, x: number, y: number) => {
@@ -145,10 +192,25 @@ function KaalchakraInner({ items, initial, writeUrl }: { items: KcItem[]; initia
   const step = (dir: -1 | 1) => {
     if (!visible.length) return;
     const i = selIdx < 0 ? (dir === 1 ? 0 : visible.length - 1) : Math.min(visible.length - 1, Math.max(0, selIdx + dir));
-    update({ sel: visible[i].id });
+    const item = visible[i];
+    update(s.view === 'river' ? { sel: item.id, win: reveal(s.win, item, s.lens) } : { sel: item.id });
   };
 
   const onKey = (e: React.KeyboardEvent) => {
+    if (s.view === 'river' && !e.altKey && !e.ctrlKey && !e.metaKey) {
+      const span = s.win.end - s.win.start;
+      const mid = (s.win.start + s.win.end) / 2;
+      let win: UnitWindow | null = null;
+      if (e.key === '+' || e.key === '=') win = zoomWindow(s.win, mid, 0.5);
+      else if (e.key === '-' || e.key === '_') win = zoomWindow(s.win, mid, 2);
+      else if (e.shiftKey && e.key === 'ArrowLeft') win = panWindow(s.win, -0.2 * span);
+      else if (e.shiftKey && e.key === 'ArrowRight') win = panWindow(s.win, 0.2 * span);
+      if (win) {
+        e.preventDefault();
+        update({ win });
+        return;
+      }
+    }
     if (e.key === 'ArrowRight' || e.key === 'ArrowDown') {
       e.preventDefault();
       step(1);
@@ -163,7 +225,7 @@ function KaalchakraInner({ items, initial, writeUrl }: { items: KcItem[]; initia
     update({ kinds: next.length ? next : [...KINDS] });
   };
 
-  const hoverItem = hover ? items.find((i) => i.id === hover.id) : undefined;
+  const hoverItem = hover ? visible.find((i) => i.id === hover.id) : undefined;
   const hoverDating = hoverItem ? primaryDating(hoverItem, s.lens) : undefined;
 
   return (
@@ -210,11 +272,14 @@ function KaalchakraInner({ items, initial, writeUrl }: { items: KcItem[]; initia
       </div>
 
       <p className="visually-hidden" aria-live="polite">
-        {selected ? `${selected.name}, ${primaryDating(selected, s.lens) ? formatDating(primaryDating(selected, s.lens)!, s.cal) : ''}` : `${visible.length} entries shown`}
+        {announcement}
+      </p>
+      <p className="visually-hidden" id={keysId}>
+        Arrow keys move between entries in time order and Escape clears the selection. In the River view, Shift and the left or right arrow move the window, and + and - zoom.
       </p>
 
       <div className="kc-stage">
-        <div className="kc-canvas" ref={canvasRef} tabIndex={0} onKeyDown={onKey} aria-label="Kaalchakra. Use arrow keys to move between entries in time order.">
+        <div className="kc-canvas" ref={canvasRef} tabIndex={0} onKeyDown={onKey} role="group" aria-roledescription="timeline" aria-label="Kaalchakra" aria-describedby={keysId}>
           {s.view === 'wheel' ? (
             <>
               <Wheel items={visible} kinds={ringKinds} lens={s.lens} selectedId={s.sel} cal={s.cal} onSelect={select} onHover={onHover} onSegment={onSegment} />
@@ -250,6 +315,8 @@ function KaalchakraInner({ items, initial, writeUrl }: { items: KcItem[]; initia
           onPrev={selIdx > 0 ? () => step(-1) : undefined}
           onNext={selIdx >= 0 && selIdx < visible.length - 1 ? () => step(1) : undefined}
           total={visible.length}
+          filteredOut={selected !== undefined && selIdx < 0}
+          shareUrl={() => `${window.location.origin}${hrefFor(window.location.pathname, serialise(s))}`}
         />
       </div>
     </div>

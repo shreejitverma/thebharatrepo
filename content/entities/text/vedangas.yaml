@@ -1,0 +1,69 @@
+id: text.vedangas
+type: text
+kind: text
+names:
+  en: Vedangas
+  iast: Vedāṅga
+  native: वेदाङ्ग
+summary: >-
+  The Vedangas ("limbs of the Veda") are six auxiliary technical disciplines developed in the Late
+  Vedic period to ensure the exact preservation, comprehension, and timely performance of the Vedic
+  corpus: Shiksha (phonetics), Kalpa (ritual procedure), Vyakarana (grammar), Nirukta (etymology),
+  Chandas (prosody), and Jyotisha (astronomy and calendrics).
+summaries:
+  kids: >-
+    The six Vedangas, or "limbs of the Veda," were ancient fields of study - phonetics, grammar,
+    word meanings, poetry meter, astronomy, and ritual geometry - created to keep the Vedas
+    accurate.
+  teen: >-
+    Codified in concise aphoristic texts (sutras) toward the end of the Vedic period, the six
+    Vedangas laid the foundations of Indian linguistics, phonetics, etymology, prosody, ritual
+    geometry, and mathematical astronomy.
+region: Pan-Indian (northwestern and northern Indian subcontinent)
+datings:
+  - method: linguistic
+    range: { earliest: -699, latest: -199, best: -499, precision: century, circa: true }
+    grade: B
+    label: Late Vedic Sutra period
+    sources:
+      - src.flood-2003-blackwell-companion-hinduism
+      - src.plofker-2009-mathematics-in-india
+      - src.cardona-1988-panini-work-traditions
+    note: >-
+      The formal codification of the six Vedanga disciplines in the sutra genre spans from roughly
+      the 7th or 6th century BCE (early Shrauta, Shulba, and Nirukta traditions) to the 3rd or
+      2nd century BCE.
+  - method: traditional-puranic
+    range: { earliest: -3101, latest: -1499, precision: century, circa: true }
+    grade: D
+    label: Traditional sampradaya reckoning
+    sources:
+      - src.flood-2003-blackwell-companion-hinduism
+    note: >-
+      Traditional scholarship treats the six Vedangas as the foundational Smriti sciences
+      coeval with the transmission of the Vedic shakhas.
+claims:
+  - text: >-
+      The Mundaka Upanishad (1.1.5) enumerates the six Vedangas as Shiksha (phonetics), Kalpa
+      (ritual instruction), Vyakarana (grammar), Nirukta (semantic etymology), Chandas (meter),
+      and Jyotisha (astronomy).
+    grade: A
+    sources:
+      - src.olivelle-1998-early-upanisads
+      - src.flood-2003-blackwell-companion-hinduism
+  - text: >-
+      The Kalpa Vedanga encompasses the Shrauta Sutras (solemn rituals), Grihya Sutras (domestic
+      rites), Dharma Sutras (social and legal norms), and Shulba Sutras (altar geometry).
+    grade: A
+    sources:
+      - src.flood-2003-blackwell-companion-hinduism
+      - src.plofker-2009-mathematics-in-india
+relations:
+  - { kind: related-to, target: text.nirukta }
+  - { kind: related-to, target: text.ashtadhyayi }
+  - { kind: related-to, target: text.shulba-sutras }
+  - { kind: related-to, target: text.vedanga-jyotisha }
+  - { kind: related-to, target: tradition.vedic-oral-transmission }
+wikidata: Q917680
+tags: [veda, vedanga, sutra, linguistics, astronomy, geometry]
+review: { status: draft, author: "gemini-4-argon" }

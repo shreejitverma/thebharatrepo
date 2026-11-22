@@ -1,0 +1,80 @@
+id: artifact.priest-king-mohenjo-daro
+type: artifact
+kind: art
+names:
+  en: Priest-King of Mohenjo-daro
+summary: >-
+  A 17.5-centimetre carved white steatite sculpture discovered in 1927 by Kashinath Narayan Dikshit in the DK-B
+  Area of Mohenjo-daro (late Mature Harappan, c. 2200-1900 BCE), depicting a bearded male elite wearing a fillet
+  headband, an armband, and a robe draped over the left shoulder carved with trefoil motifs originally filled with
+  red pigment.
+summaries:
+  kids: >-
+    The Priest-King is a famous stone statue from Mohenjo-daro showing a bearded man wearing a headband and a cloak
+    carved with three-leaf clover patterns.
+  teen: >-
+    Excavated in Mohenjo-daro's DK-B Area in 1927 and preserved in the National Museum of Pakistan, Karachi, this
+    fired white steatite bust portrays a high-ranking Harappan clan leader or ritual official with shell-inlaid eyes
+    and a trefoil-patterned robe.
+region: Mohenjo-daro, Sindh (housed in the National Museum of Pakistan, Karachi)
+location:
+  name: Mohenjo-daro (DK-B Area)
+  lat: 27.3267
+  lon: 68.1381
+datings:
+  - method: archaeological-stratigraphic
+    range:
+      earliest: -2199
+      latest: -1899
+      precision: century
+      circa: true
+    grade: A
+    label: Late Mature Harappan (Period 3C) Context at Mohenjo-daro
+    sources:
+      - src.marshall-1931-mohenjo-daro
+      - src.kenoyer-1998-ancient-cities-indus
+      - src.possehl-2002-indus-civilization
+    note: >-
+      Found at a depth of 1.37 metres in a late Mature Harappan brick structure in the DK-B Area of the Lower Town
+      at Mohenjo-daro.
+claims:
+  - text: >-
+      Carved from soft steatite and hardened by firing, the bust measures 17.5 cm in height; its half-closed eyes
+      originally held marine-shell inlays (one of which survived at discovery), and the recessed trefoil and circle
+      designs on the cloak retain traces of red pigment paste.
+    grade: A
+    sources:
+      - src.marshall-1931-mohenjo-daro
+      - src.kenoyer-1998-ancient-cities-indus
+      - src.possehl-2002-indus-civilization
+  - text: >-
+      Although John Marshall provisionally dubbed the sculpture the "Priest-King", archaeologists emphasize that
+      there is no direct evidence for monarchic kingship in the Indus Valley and suggest the figure likely represents
+      a high-ranking clan ruler, civic elder, or seated ritual image that was deliberately broken in antiquity.
+    grade: B
+    sources:
+      - src.kenoyer-1998-ancient-cities-indus
+      - src.possehl-2002-indus-civilization
+      - src.wright-2010-ancient-indus
+relations:
+  - kind: excavated-at
+    target: site.mohenjo-daro
+  - kind: part-of
+    target: tradition.harappan-civilisation
+  - kind: contemporary-of
+    target: artifact.dancing-girl-mohenjo-daro
+wikidata: Q60847016
+image:
+  commons: "File:Priest King (Sculpture) of Mohenjo-daro.jpg"
+  alt: The carved steatite Priest-King sculpture from Mohenjo-daro
+  credit: Ganesh Mohan T
+  license: CC BY-SA 4.0
+tags:
+  - harappan
+  - artifact
+  - sculpture
+  - steatite
+  - mohenjo-daro
+review:
+  status: draft
+  author: gemini-4-argon

@@ -1,0 +1,80 @@
+id: text.chandogya-upanishad
+type: text
+kind: text
+names:
+  en: Chandogya Upanishad
+  iast: Chāndogya Upaniṣad
+  native: छान्दोग्योपनिषद्
+summary: >-
+  The Chandogya Upanishad is one of the two oldest and most influential Principal Upanishads,
+  belonging to the Tandya school of the Samaveda. Spanning eight chapters (prapathakas), it moves
+  from meditations on the Udgitha liturgical chant to the philosophical dialogue of Uddalaka Aruni
+  and his son Shvetaketu ("tat tvam asi").
+summaries:
+  kids: >-
+    The Chandogya Upanishad is an ancient philosophical book connected to the Samaveda. In it, a
+    teacher uses everyday examples like salt dissolved in water to explain how the unseen soul
+    pervades everything.
+  teen: >-
+    Belonging to the Samaveda tradition, the Chandogya Upanishad is alongside the Brihadaranyaka
+    one of the two earliest Upanishads. Its sixth chapter contains Uddalaka Aruni's famous
+    instruction to Shvetaketu, "tat tvam asi" ("that thou art"), identifying the individual self
+    with ultimate reality.
+region: Kuru-Panchala (western and central Uttar Pradesh)
+datings:
+  - method: linguistic
+    range: { earliest: -699, latest: -499, best: -599, precision: century, circa: true }
+    grade: B
+    label: Earliest prose Upanishad stratum (Olivelle)
+    sources:
+      - src.olivelle-1998-early-upanisads
+      - src.flood-2003-blackwell-companion-hinduism
+      - src.singh-2008-ancient-early-medieval-india
+    note: >-
+      Dated alongside the Brihadaranyaka Upanishad to the 7th to 6th century BCE on linguistic
+      grounds and its pre-Buddhist geographical focus on Kuru-Panchala.
+  - method: traditional-puranic
+    range: { earliest: -3101, latest: -2499, precision: century, circa: true }
+    grade: D
+    label: Traditional Vedanta reckoning
+    sources:
+      - src.olivelle-1998-early-upanisads
+    note: >-
+      Traditional Vedanta schools classify the Chandogya Upanishad as part of the eternal
+      Chandogya Brahmana Shruti of the Samaveda.
+claims:
+  - text: >-
+      The Chandogya Upanishad comprises eight chapters forming the final eight books of the ten-book
+      Chandogya Brahmana of the Kauthuma-Ranayaniya Samaveda.
+    grade: A
+    sources:
+      - src.olivelle-1998-early-upanisads
+      - src.gonda-1975-vedic-literature
+  - text: >-
+      Chapter 6 preserves the dialogue between the Kuru-Panchala sage Uddalaka Aruni and his son
+      Shvetaketu, formulating the mahavakya "tat tvam asi" ("that is what you are") and arguing
+      that Being (sat) existed in the beginning rather than Non-being (asat).
+    grade: A
+    sources:
+      - src.olivelle-1998-early-upanisads
+  - text: >-
+      Chapter 5 presents the Five Fires doctrine (panchagnividya) taught by King Pravahana Jaivali
+      of Panchala, linking cremation, cosmic cycles, karma, and rebirth.
+    grade: A
+    sources:
+      - src.olivelle-1998-early-upanisads
+      - src.singh-2008-ancient-early-medieval-india
+relations:
+  - { kind: part-of, target: text.upanishads }
+  - { kind: related-to, target: text.samaveda }
+  - { kind: contemporary-of, target: text.brihadaranyaka-upanishad }
+  - { kind: related-to, target: polity.panchala }
+  - { kind: related-to, target: polity.kuru-kingdom }
+wikidata: Q773328
+image:
+  commons: "File:Chandogya Upanishad verses 1.1.1-1.1.9, Samaveda, Sanskrit, Devanagari script, 1849 CE manuscript.jpg"
+  alt: 1849 CE Devanagari manuscript folio of Chandogya Upanishad verses 1.1.1 to 1.1.9
+  credit: Ms Sarah Welch
+  license: CC BY-SA 4.0
+tags: [veda, upanishad, samaveda, vedanta, uddalaka-aruni, panchala]
+review: { status: draft, author: "gemini-4-argon" }

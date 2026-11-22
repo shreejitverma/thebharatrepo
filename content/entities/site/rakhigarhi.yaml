@@ -1,0 +1,89 @@
+id: site.rakhigarhi
+type: site
+kind: site
+names:
+  en: Rakhigarhi
+  iast: Rākhīgaṛhī
+  native: राखीगढ़ी
+summary: >-
+  One of the largest urban metropolises of the Harappan Civilisation, spanning at least seven mounds (RGR-1 to RGR-7)
+  in the Chautang (Drishadvati) palaeochannel basin in Hisar District, Haryana, occupied from the Early Harappan
+  through the Mature Harappan phases and source of the first sequenced ancient genome from an in situ Harappan cemetery.
+summaries:
+  kids: >-
+    Rakhigarhi in Haryana was one of the biggest cities of the Harappan world, built across at least seven mounds
+    with workshops for making shell, copper, and stone beads.
+  teen: >-
+    Situated along the dry Chautang riverbed in Haryana, Rakhigarhi preserves both Early and Mature Harappan urban
+    phases across more than seven mounds and yielded the Rakhigarhi I6113 ancient DNA sample from cemetery mound RGR-7.
+region: Hisar District, Haryana, India
+location:
+  name: Rakhigarhi
+  lat: 29.2886
+  lon: 76.1144
+datings:
+  - method: archaeological-radiocarbon
+    range:
+      earliest: -3299
+      latest: -1899
+      precision: century
+      circa: true
+    grade: A
+    label: Early and Mature Harappan Sequence
+    sources:
+      - src.shinde-2019-ancient-harappan-genome
+      - src.possehl-2002-indus-civilization
+      - src.singh-2008-ancient-early-medieval-india
+    note: >-
+      Stratigraphic and radiocarbon dates from excavations by Amarendra Nath (ASI) and Vasant Shinde (Deccan College)
+      span Early Harappan Sothi-Siswal levels and Mature Harappan urban deposits (c. 2600-1900 BCE).
+claims:
+  - text: >-
+      Rakhigarhi comprises at least seven archaeological mounds (RGR-1 through RGR-7), including a fortified citadel
+      mound, residential and craft manufacturing quarters, and a dedicated Mature Harappan necropolis (RGR-7).
+    grade: A
+    sources:
+      - src.shinde-2019-ancient-harappan-genome
+      - src.singh-2008-ancient-early-medieval-india
+  - text: >-
+      Excavations at Rakhigarhi uncovered planned mud-brick and baked-brick architecture, public drainage channels,
+      granary platforms, steatite seals, terracotta animal figurines, and specialised workshops for lapis lazuli,
+      carnelian, and steatite bead production.
+    grade: A
+    sources:
+      - src.possehl-2002-indus-civilization
+      - src.singh-2008-ancient-early-medieval-india
+  - text: >-
+      In 2019, researchers led by Vasant Shinde and David Reich published the first nuclear genome from an individual
+      (I6113) excavated directly from a Harappan cemetery at Rakhigarhi (Mound RGR-7).
+    grade: A
+    sources:
+      - src.shinde-2019-ancient-harappan-genome
+relations:
+  - kind: part-of
+    target: tradition.harappan-civilisation
+  - kind: contemporary-of
+    target: site.mohenjo-daro
+  - kind: contemporary-of
+    target: site.harappa
+  - kind: contemporary-of
+    target: site.kalibangan
+  - kind: contemporary-of
+    target: site.banawali
+  - kind: related-to
+    target: concept.rakhigarhi-i6113-genome
+wikidata: Q3418050
+image:
+  commons: "File:Harappan Burial Remains from Rakhigarhi.jpg"
+  alt: Excavated Harappan skeleton and grave pottery offerings from Rakhigarhi
+  credit: Aadrit28
+  license: CC BY-SA 4.0
+tags:
+  - harappan
+  - site
+  - haryana
+  - ghaggar-hakra
+  - archaeogenetics
+review:
+  status: draft
+  author: gemini-4-argon

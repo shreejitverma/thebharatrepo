@@ -1,0 +1,84 @@
+id: concept.rakhigarhi-i6113-genome
+type: concept
+kind: science
+names:
+  en: Rakhigarhi Individual I6113 Ancient Genome
+summary: >-
+  The first ancient nuclear genome sequenced directly from an excavated Harappan Civilisation skeleton (individual
+  I6113, an adult female buried in the Mature Harappan necropolis RGR-7 at Rakhigarhi, Haryana, c. 2800-2300 BCE),
+  published by Vasant Shinde, Vagheesh Narasimhan, Niraj Rai, David Reich and colleagues in Cell (2019), demonstrating
+  a mixture of indigenous South Asian hunter-gatherer ancestry and an ancient Iranian-related lineage that diverged
+  prior to the rise of agriculture in the Zagros Mountains, with zero detectable Anatolian farmer or Steppe
+  pastoralist ancestry.
+summaries:
+  kids: >-
+    Scientists studied ancient DNA from a woman buried over 4,300 years ago at Rakhigarhi in Haryana, showing
+    that Harappan people had deep roots in South Asia and are the main ancestors of most people living in South
+    Asia today.
+  teen: >-
+    Published in Cell in 2019 by Vasant Shinde and colleagues, the genome of Rakhigarhi individual I6113 matched
+    11 "Indus Periphery" outlier individuals found in Iran and Turkmenistan, lacked Steppe pastoralist DNA, and
+    showed that the Iranian-related ancestry in Harappans split from Zagros Highland lineages over 10,000 years
+    ago before farming began.
+region: Rakhigarhi (Mound RGR-7), Hisar District, Haryana, India
+location:
+  name: Rakhigarhi (Cemetery RGR-7)
+  lat: 29.2886
+  lon: 76.1144
+datings:
+  - method: genetic
+    range:
+      earliest: -2799
+      latest: -2299
+      precision: century
+      circa: true
+    grade: A
+    label: Mature Harappan Context of Burial I6113 at Rakhigarhi RGR-7
+    sources:
+      - src.shinde-2019-ancient-harappan-genome
+      - src.narasimhan-2019-formation-human-populations
+    note: >-
+      Dated by Mature Harappan archaeological context (typical Harappan ceramic grave goods in cemetery RGR-7) and
+      genetic co-clustering with directly radiocarbon-dated Indus Periphery individuals at Gonur and Shahr-i-Sokhta.
+claims:
+  - text: >-
+      After screening 61 skeletal samples from the Mature Harappan cemetery at Rakhigarhi, Shinde et al. (2019)
+      recovered sufficient endogenous nuclear DNA from petrous bone powder of one female burial (sample I6113, burial
+      BR02) through more than 100 DNA library preparations.
+    grade: A
+    sources:
+      - src.shinde-2019-ancient-harappan-genome
+  - text: >-
+      The I6113 genome fell along the exact genetic cline defined by 11 contemporaneous "Indus Periphery" outlier
+      individuals from Shahr-i-Sokhta (eastern Iran) and Gonur (Turkmenistan), confirming that this profile - a
+      mixture of an ancient Iranian-related lineage and indigenous South Asian hunter-gatherer (AASI) ancestry - was
+      representative of the Harappan population and acts as the primary source of ancestry for modern South Asians.
+    grade: A
+    sources:
+      - src.shinde-2019-ancient-harappan-genome
+      - src.narasimhan-2019-formation-human-populations
+  - text: >-
+      Phylogenetic modelling by Shinde et al. (2019) showed that the Iranian-related ancestry in I6113 lacked
+      Anatolian farmer admixture present in Iranian farmers after c. 6000 BCE and diverged from prehistoric Zagros
+      herder/hunter-gatherer lineages more than 10,000 years ago (prior to c. 8000 BCE), while carrying no detectable
+      Bronze Age Steppe pastoralist (Sintashta/Andronovo-related) ancestry.
+    grade: A
+    sources:
+      - src.shinde-2019-ancient-harappan-genome
+relations:
+  - kind: excavated-at
+    target: site.rakhigarhi
+  - kind: related-to
+    target: concept.indus-periphery-cline
+  - kind: part-of
+    target: tradition.harappan-civilisation
+wikidata: null
+tags:
+  - harappan
+  - archaeogenetics
+  - rakhigarhi
+  - ancient-dna
+  - science
+review:
+  status: draft
+  author: gemini-4-argon

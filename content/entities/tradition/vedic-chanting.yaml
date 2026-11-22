@@ -1,0 +1,66 @@
+id: tradition.vedic-chanting
+type: tradition
+kind: dharma
+names:
+  en: Vedic Chanting
+  iast: Vedagāna
+  native: वेदमन्त्रगान
+summary: >-
+  Vedic chanting is the liturgical and pedagogical recitation of Vedic mantras according to strict
+  phonetic rules of pitch accent (svara), syllable duration (matra), and articulation codified in
+  the Pratishakhyas and Shiksha texts. It encompasses the three-tone recitation of the Rigveda and
+  Yajurveda as well as the multi-note musical chant (samagana) of the Samaveda.
+summaries:
+  kids: >-
+    Vedic chanting is the ancient art of reciting Sanskrit hymns with exact musical pitch, rhythm,
+    and hand movements so that every syllable sounds just as it did thousands of years ago.
+  teen: >-
+    Guided by the Pratishakhya and Shiksha manuals, Vedic chanting preserves three pitch-accent
+    levels (udatta, anudatta, svarita) accompanied by mnemonic hand gestures (mudras) and forms the
+    oldest continuously practiced liturgical vocal tradition in South Asia.
+region: Pan-Indian
+datings:
+  - method: scholarly-consensus
+    range: { earliest: -1499, latest: 2003, precision: century, circa: true }
+    grade: B
+    label: Continuous liturgical practice from the Vedic period to UNESCO recognition
+    sources:
+      - src.unesco-2003-tradition-vedic-chanting
+      - src.gonda-1975-vedic-literature
+      - src.staal-1983-agni-fire-altar
+    note: >-
+      Rooted in the composition of the Vedic Samhitas (c. 1500 to 1000 BCE) and still practiced by
+      surviving Vedic shakhas across India, recognized by UNESCO in 2003.
+claims:
+  - text: >-
+      Vedic recitation distinguishes three primary pitch accents - udatta (raised tone), anudatta
+      (unraised or low tone), and svarita (falling or circumflex tone) - along with precise
+      syllabic quantities (hrasva, dirgha, and pluta).
+    grade: A
+    sources:
+      - src.katre-1987-astadhyayi-panini
+      - src.gonda-1975-vedic-literature
+      - src.unesco-2003-tradition-vedic-chanting
+  - text: >-
+      While the Rigveda and Yajurveda are chanted around three tonal levels, Samavedic chanting
+      (samagana) expands the melodies to up to seven musical notes (svaras) and uses finger and
+      hand gestures (mudras) to mark tonal intervals.
+    grade: A
+    sources:
+      - src.gonda-1975-vedic-literature
+      - src.staal-1983-agni-fire-altar
+      - src.unesco-2003-tradition-vedic-chanting
+relations:
+  - { kind: related-to, target: tradition.vedic-oral-transmission }
+  - { kind: related-to, target: text.samaveda }
+  - { kind: related-to, target: text.rigveda }
+  - { kind: related-to, target: text.vedangas }
+  - { kind: related-to, target: tradition.shrauta-ritual }
+wikidata: Q48723594
+image:
+  commons: "File:अङ्गुलिविन्यासः4 Finger configuration.png"
+  alt: Traditional finger configurations (mudras) used to mark musical notes in Samavedic chanting
+  credit: Puranastudy
+  license: CC BY-SA 4.0
+tags: [chanting, samaveda, svara, shiksha, unesco, oral-heritage]
+review: { status: draft, author: "gemini-4-argon" }

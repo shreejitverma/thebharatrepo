@@ -1,0 +1,73 @@
+id: polity.panchala
+type: polity
+kind: polity
+names:
+  en: Panchala
+  iast: Pañcāla
+  native: पञ्चाल
+summary: >-
+  Panchala was a major Vedic confederacy and kingdom in the upper and middle Ganga-Yamuna Doab and
+  Rohilkhand, closely allied with the neighboring Kuru state. Formed from five coalescing tribes
+  (including the Krivis and Turvashas), it became a premier center of Brahmana ritual scholarship
+  and Upanishadic philosophy, with capitals at Ahichhatra and Kampilya.
+summaries:
+  kids: >-
+    Panchala was a powerful ancient kingdom in northern India next to Kuru. Its capitals were
+    Ahichhatra and Kampilya, and its courts were famous for Vedic learning and philosophy.
+  teen: >-
+    Formed from a confederation of five tribes in the Ganga-Yamuna Doab and Rohilkhand, Panchala
+    partnered with the Kuru kingdom as the cultural heartland of Middle and Late Vedic orthodoxy,
+    hosting philosophers such as Uddalaka Aruni and Pravahana Jaivali.
+region: Rohilkhand and central Ganga-Yamuna Doab (western and central Uttar Pradesh)
+location: { name: "Ahichhatra (Ramnagar, Bareilly)", lat: 28.374, lon: 79.136 }
+datings:
+  - method: textual-internal
+    range: { earliest: -1099, latest: -349, best: -799, precision: century, circa: true }
+    grade: B
+    label: Middle Vedic Kuru-Panchala to Mahajanapada period
+    sources:
+      - src.witzel-1997-early-sanskritization-kuru
+      - src.singh-2008-ancient-early-medieval-india
+      - src.thapar-2002-early-india
+    note: >-
+      Attested from the Yajurveda Samhitas and Brahmanas (c. 1100 to 700 BCE) through the early
+      Upanishads and the sixteen Mahajanapadas of the 6th to 4th centuries BCE.
+claims:
+  - text: >-
+      The Shatapatha Brahmana (13.5.4.7) notes that the Panchalas were formerly called the Krivis,
+      and modern historians reconstruct Panchala as a union of five tribes including the Krivis,
+      Turvashas, Keshins, Srinjayas, and Somakas.
+    grade: B
+    sources:
+      - src.witzel-1997-early-sanskritization-kuru
+      - src.singh-2008-ancient-early-medieval-india
+  - text: >-
+      Panchala was divided by the Ganga into Uttara-Panchala (Northern Panchala), with its capital
+      at Ahichhatra, and Dakshina-Panchala (Southern Panchala), with its capital at Kampilya.
+    grade: A
+    sources:
+      - src.singh-2008-ancient-early-medieval-india
+      - src.thapar-2002-early-india
+  - text: >-
+      In the Brihadaranyaka and Chandogya Upanishads, the Panchala assembly (parishad) led by King
+      Pravahana Jaivali is portrayed as a leading intellectual center where sages such as
+      Shvetaketu and Uddalaka Aruni debated cosmology and rebirth.
+    grade: A
+    sources:
+      - src.olivelle-1998-early-upanisads
+      - src.witzel-1997-early-sanskritization-kuru
+relations:
+  - { kind: contemporary-of, target: polity.kuru-kingdom }
+  - { kind: located-at, target: site.ahichhatra }
+  - { kind: located-at, target: site.atranjikhera }
+  - { kind: related-to, target: concept.painted-grey-ware-culture }
+  - { kind: related-to, target: text.chandogya-upanishad }
+  - { kind: related-to, target: text.shatapatha-brahmana }
+wikidata: Q558603
+image:
+  commons: "File:Late Vedic Culture (1100-500 BCE).png"
+  alt: Map of Late Vedic polities showing Kuru and Panchala in the Ganga-Yamuna Doab
+  credit: Avantiputra7
+  license: CC BY-SA 3.0
+tags: [panchala, mahajanapada, ahichhatra, kampilya, kuru-panchala, upanishads]
+review: { status: draft, author: "gemini-4-argon" }

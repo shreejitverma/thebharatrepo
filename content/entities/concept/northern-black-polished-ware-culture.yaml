@@ -1,0 +1,73 @@
+id: concept.northern-black-polished-ware-culture
+type: concept
+kind: civilisation
+names:
+  en: Northern Black Polished Ware Culture
+summary: >-
+  The Northern Black Polished Ware (NBPW) culture is the diagnostic urban Iron Age archaeological
+  horizon of northern and central India, spanning from the late Vedic / early Mahajanapada period
+  to the Mauryan era (c. 700 to 200 BCE). Named after its deluxe, mirror-like glossy black ceramic
+  tableware, it accompanies the Second Urbanisation of the Gangetic plain, baked-brick architecture,
+  punch-marked coinage, and fortified capitals.
+summaries:
+  kids: >-
+    Northern Black Polished Ware was a luxury pottery with a mirror-shiny metallic finish made
+    during the rise of great walled cities and kingdoms across northern India.
+  teen: >-
+    Succeeding Painted Grey Ware and Black and Red Ware around 700 to 600 BCE, the Northern Black
+    Polished Ware horizon marks the Second Urbanisation of the Gangetic valley, correlating with
+    the sixteen Mahajanapadas, punch-marked silver coins, and early historic cities.
+region: Gangetic plain and northern Indian subcontinent (from Taxila to Bengal and the Deccan)
+datings:
+  - method: archaeological-radiocarbon
+    range: { earliest: -699, latest: -199, best: -499, precision: century, circa: true }
+    grade: A
+    label: Stratified radiocarbon chronology of Early and Late NBPW
+    sources:
+      - src.allchin-1995-archaeology-early-historic-south-asia
+      - src.singh-2008-ancient-early-medieval-india
+      - src.gaur-1983-excavations-atranjikhera
+    note: >-
+      Radiocarbon dates from Ayodhya, Shringaverapura, Kausambi, Rajghat, and Atranjikhera place
+      early NBPW in the middle Ganga plain around 700 to 600 BCE, with widespread distribution
+      across northern India from c. 600 to 200 BCE.
+claims:
+  - text: >-
+      Northern Black Polished Ware is a thin, hard-fired, wheel-made deluxe ware coated with an
+      iron-rich slip and fired at high temperatures in a reducing atmosphere to produce a metallic,
+      mirror-like lustre ranging from jet black and steel blue to silvery and golden hues.
+    grade: A
+    sources:
+      - src.singh-2008-ancient-early-medieval-india
+      - src.allchin-1995-archaeology-early-historic-south-asia
+  - text: >-
+      At western Gangetic sites including Hastinapura, Ahichhatra, and Atranjikhera, NBPW
+      stratigraphically succeeds or overlaps the late Painted Grey Ware horizon.
+    grade: A
+    sources:
+      - src.lal-1955-excavation-hastinapura
+      - src.gaur-1983-excavations-atranjikhera
+      - src.allchin-1995-archaeology-early-historic-south-asia
+  - text: >-
+      The NBPW cultural phase coincides with the Second Urbanisation of South Asia, characterized
+      by mud-brick and baked-brick fortifications, terracotta ring-wells, widespread agricultural
+      iron tools, and silver punch-marked coins.
+    grade: A
+    sources:
+      - src.allchin-1995-archaeology-early-historic-south-asia
+      - src.singh-2008-ancient-early-medieval-india
+      - src.thapar-2002-early-india
+relations:
+  - { kind: succeeded, target: concept.painted-grey-ware-culture }
+  - { kind: excavated-at, target: site.hastinapura }
+  - { kind: excavated-at, target: site.ahichhatra }
+  - { kind: excavated-at, target: site.atranjikhera }
+  - { kind: related-to, target: concept.iron-metallurgy-in-india }
+wikidata: Q2495995
+image:
+  commons: "File:Northern Polished Black Ware Culture (700-200 BCE).png"
+  alt: Map showing the distribution of the Northern Black Polished Ware culture across South Asia
+  credit: Avantiputra7
+  license: CC BY-SA 3.0
+tags: [nbpw, archaeology, iron-age, second-urbanisation, pottery, mahajanapada]
+review: { status: draft, author: "gemini-4-argon" }

@@ -1,0 +1,89 @@
+id: event.harappan-deurbanisation
+type: event
+kind: event
+names:
+  en: Harappan De-urbanisation and Post-Urban Transition
+summary: >-
+  The gradual transformation of the Harappan Civilisation between c. 1900 and 1300 BCE (the Late Harappan or
+  Localisation Era), during which large cities such as Mohenjo-daro, Kalibangan, and Dholavira were progressively
+  depopulated or abandoned, long-distance maritime trade with Mesopotamia ceased, the Indus script and standardised
+  cubical chert weights fell out of use, and population shifted markedly toward smaller agrarian villages in the
+  upper Ghaggar-Yamuna watershed and Gujarat.
+summaries:
+  kids: >-
+    Around 1900 BCE, people gradually left the big Harappan cities and moved into hundreds of smaller farming
+    villages in Gujarat and near the Yamuna and Ganga rivers.
+  teen: >-
+    Modern archaeology has overturned the old theory that the Harappan cities were destroyed by a sudden military
+    invasion; instead, changing river flows, monsoon weakening, civic breakdown, and shifting trade networks
+    between 1900 and 1300 BCE caused a gradual de-urbanisation and an eastward shift of rural settlements.
+region: Indus Basin, Ghaggar-Hakra-Yamuna plains, Punjab, Haryana, western Uttar Pradesh, and Gujarat
+datings:
+  - method: archaeological-radiocarbon
+    range:
+      earliest: -1899
+      latest: -1299
+      precision: century
+      circa: true
+    grade: A
+    label: Late Harappan Localisation Era and De-urbanisation
+    sources:
+      - src.kenoyer-1998-ancient-cities-indus
+      - src.possehl-2002-indus-civilization
+      - src.wright-2010-ancient-indus
+    note: >-
+      Anchored by radiocarbon sequences across Harappa Periods 4-5, Dholavira Stages VI-VII, Lothal B, and Late
+      Harappan settlements in Haryana and Gujarat.
+claims:
+  - text: >-
+      Mortimer Wheeler's 1947 hypothesis of a sudden military destruction of Mohenjo-daro by invading "Aryans" has
+      been refuted by modern stratigraphic and osteological studies (George Dales, Kenneth A. R. Kennedy, J. M.
+      Kenoyer), which demonstrated that the 37 unburied skeletons at Mohenjo-daro came from different late stratigraphic
+      levels and show healed trauma, infectious disease (malaria/anaemia), and civic breakdown rather than a single
+      massacre.
+    grade: A
+    sources:
+      - src.kenoyer-1998-ancient-cities-indus
+      - src.possehl-2002-indus-civilization
+      - src.singh-2008-ancient-early-medieval-india
+  - text: >-
+      Current scholarly consensus explains Harappan de-urbanisation as a multi-causal systemic reorganisation driven
+      by hydrological changes in the Ghaggar-Hakra and Indus river channels, multi-century summer monsoon weakening
+      following the 4.2 ka event, breakdown of municipal maintenance and sanitation, and the reorientation of
+      Mesopotamian maritime trade toward the Mediterranean and Dilmun after the Ur III/Isin-Larsa period.
+    grade: B
+    sources:
+      - src.giosan-2012-fluvial-landscapes-harappan
+      - src.possehl-2002-indus-civilization
+      - src.wright-2010-ancient-indus
+  - text: >-
+      While supra-regional elite markers - the Indus script, square steatite animal seals, cubical Rohri chert weights,
+      and monumental public baths - disappeared after c. 1900 BCE, the total number of Late Harappan village settlements
+      increased dramatically in the upper Ghaggar-Sutlej-Yamuna plain (Haryana, Punjab, western Uttar Pradesh) and
+      in Saurashtra, carrying Harappan crafts, metallurgy, and crop packages into later Indian culture.
+    grade: A
+    sources:
+      - src.kenoyer-1998-ancient-cities-indus
+      - src.possehl-2002-indus-civilization
+      - src.giosan-2012-fluvial-landscapes-harappan
+relations:
+  - kind: part-of
+    target: tradition.harappan-civilisation
+  - kind: succeeded
+    target: event.4-2-ka-climate-aridification
+  - kind: related-to
+    target: tradition.cemetery-h-culture
+  - kind: related-to
+    target: tradition.jhukar-phase
+  - kind: related-to
+    target: tradition.rangpur-late-harappan
+wikidata: null
+tags:
+  - harappan
+  - late-harappan
+  - deurbanisation
+  - decline
+  - climate-change
+review:
+  status: draft
+  author: gemini-4-argon

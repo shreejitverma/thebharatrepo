@@ -1,0 +1,72 @@
+id: tradition.jhukar-phase
+type: tradition
+kind: civilisation
+names:
+  en: Jhukar Phase (Sindh Late Harappan)
+summary: >-
+  The Late Harappan regional phase of Sindh (c. 1900-1500 BCE), attested at Jhukar, Chanhudaro (Period II),
+  Amri (Period IIID) and the upper levels of Mohenjo-daro, where Harappan ceramic traditions persisted while
+  square inscribed steatite seals and cubical weights were replaced by circular uninscribed button seals.
+summaries:
+  kids: >-
+    As the big cities of Sindh grew smaller after 1900 BCE, people in the Jhukar phase stopped using the Indus
+    script and made round clay and stone button seals instead.
+  teen: >-
+    The Jhukar phase marks the post-urban Late Harappan period in Sindh (c. 1900-1500 BCE), showing strong ceramic
+    continuity with Mature Harappan pottery alongside the disappearance of civic writing and standardised weights.
+region: Middle and Lower Indus valley (Sindh, Pakistan)
+location:
+  name: Chanhudaro
+  lat: 26.1714
+  lon: 68.3278
+datings:
+  - method: archaeological-stratigraphic
+    range:
+      earliest: -1899
+      latest: -1499
+      precision: century
+      circa: true
+    grade: B
+    label: Sindh Late Harappan (Localisation Era)
+    sources:
+      - src.possehl-2002-indus-civilization
+      - src.wright-2010-ancient-indus
+      - src.singh-2008-ancient-early-medieval-india
+    note: >-
+      Stratigraphically overlies Mature Harappan levels at Chanhudaro II, Jhukar, and Amri IIID, and precedes
+      the Jhangar phase.
+claims:
+  - text: >-
+      Re-analyses by M. Rafique Mughal and Gregory Possehl showed that Jhukar ceramics represent an evolutionary
+      continuation of Mature Harappan pottery forms in Sindh rather than an intrusive foreign culture.
+    grade: B
+    sources:
+      - src.possehl-2002-indus-civilization
+      - src.wright-2010-ancient-indus
+  - text: >-
+      In Jhukar levels at Chanhudaro, square inscribed Harappan seals were replaced by circular stamp seals in
+      terracotta, faience, stone, and metal bearing geometric, solar, and compartmented designs without Indus script.
+    grade: A
+    sources:
+      - src.possehl-2002-indus-civilization
+      - src.singh-2008-ancient-early-medieval-india
+relations:
+  - kind: part-of
+    target: tradition.harappan-civilisation
+  - kind: located-at
+    target: site.chanhudaro
+  - kind: located-at
+    target: site.mohenjo-daro
+  - kind: contemporary-of
+    target: tradition.cemetery-h-culture
+  - kind: related-to
+    target: event.harappan-deurbanisation
+wikidata: Q12823976
+tags:
+  - harappan
+  - late-harappan
+  - jhukar
+  - sindh
+review:
+  status: draft
+  author: gemini-4-argon

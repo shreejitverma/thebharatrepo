@@ -1,0 +1,85 @@
+id: site.harappa
+type: site
+kind: site
+names:
+  en: Harappa
+  iast: Harappā
+summary: >-
+  The type-site of the Harappan Civilisation, situated near an ancient course of the Ravi River in Sahiwal District,
+  Punjab, preserving a continuous five-period stratigraphic sequence from the Early Harappan Ravi phase (c. 3700/3300 BCE)
+  through the Mature Harappan metropolis to the Late Harappan Cemetery H phase (c. 1300 BCE).
+summaries:
+  kids: >-
+    Harappa was the first city of the Indus Valley Civilisation to be excavated by archaeologists, giving the
+    entire Harappan culture its name.
+  teen: >-
+    Located in Punjab near a former bed of the Ravi River, Harappa covers over 150 hectares and preserves an
+    unbroken 2,000-year sequence showing how a small farming village evolved into a walled Bronze Age metropolis.
+region: Sahiwal District, Punjab, Pakistan
+location:
+  name: Harappa
+  lat: 30.6311
+  lon: 72.8639
+datings:
+  - method: archaeological-radiocarbon
+    range:
+      earliest: -3699
+      latest: -1299
+      precision: century
+      circa: true
+    grade: A
+    label: Five-Period Stratigraphic Sequence (Periods 1 to 5)
+    sources:
+      - src.kenoyer-1998-ancient-cities-indus
+      - src.possehl-2002-indus-civilization
+      - src.wright-2010-ancient-indus
+    note: >-
+      Over 100 calibrated radiocarbon dates from the Harappa Archaeological Research Project (HARP) establish
+      Period 1 (Ravi phase, c. 3700/3300-2800 BCE), Period 2 (Kot Diji phase, c. 2800-2600 BCE), Period 3A-3C
+      (Harappa phase, c. 2600-1900 BCE), Period 4 (Transitional, c. 1900-1700 BCE), and Period 5 (Cemetery H,
+      c. 1700-1300 BCE).
+claims:
+  - text: >-
+      First excavated by Daya Ram Sahni in 1920-1921 and M. S. Vats in the 1920s-1930s, Harappa suffered heavy
+      brick-robbing during 19th-century railway construction before systematic modern excavations by the Harappa
+      Archaeological Research Project (Dales, Meadow, and Kenoyer).
+    grade: A
+    sources:
+      - src.kenoyer-1998-ancient-cities-indus
+      - src.possehl-2002-indus-civilization
+  - text: >-
+      Unlike the single citadel layout once assumed for all Indus cities, Harappa consisted of multiple distinct
+      walled mounds (Mounds AB, E, ET, and F), each possessing its own massive mud-brick perimeter wall, gateways,
+      and craft production zones.
+    grade: A
+    sources:
+      - src.kenoyer-1998-ancient-cities-indus
+      - src.wright-2010-ancient-indus
+  - text: >-
+      Mound F at Harappa contains the Great Granary complex, a series of circular brick working platforms, and
+      ordered rows of two-roomed brick quarters.
+    grade: A
+    sources:
+      - src.kenoyer-1998-ancient-cities-indus
+      - src.singh-2008-ancient-early-medieval-india
+relations:
+  - kind: part-of
+    target: tradition.harappan-civilisation
+  - kind: contemporary-of
+    target: site.mohenjo-daro
+  - kind: contemporary-of
+    target: site.rakhigarhi
+wikidata: Q185562
+image:
+  commons: "File:WellAndBathingPlatforms-Harappa.jpg"
+  alt: Excavated baked-brick well and bathing platforms at Harappa
+  credit: Obed Suhail
+  license: CC BY-SA 3.0
+tags:
+  - harappan
+  - site
+  - punjab
+  - type-site
+review:
+  status: draft
+  author: gemini-4-argon

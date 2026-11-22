@@ -1,0 +1,90 @@
+id: site.sanauli
+type: site
+kind: site
+names:
+  en: Sanauli (Sinauli)
+  iast: Sanaulī
+  native: सिनौली
+summary: >-
+  A major Bronze Age necropolis in Baghpat District, western Uttar Pradesh, in the Ganga-Yamuna Doab (c. 2100-1800 BCE),
+  excavated by the Archaeological Survey of India in 2005-2006 (D. V. Sharma) and 2018 (Sanjay Kumar Manjul), where
+  over 120 burials, wooden legged coffins, antenna-hilted copper swords, shields, helmets, and three two-wheeled
+  copper-sheathed vehicles sparked a major scholarly debate over Late Harappan vs Copper Hoard/Ochre Coloured Pottery
+  cultural affiliation and chariot vs solid-wheeled cart typology.
+summaries:
+  kids: >-
+    At Sanauli in Uttar Pradesh, archaeologists uncovered 4,000-year-old warrior burials with wooden coffins,
+    copper swords, and two-wheeled wooden vehicles decorated with copper triangles.
+  teen: >-
+    Excavated by the ASI in 2005-2006 and 2018, the Sanauli cemetery in western Uttar Pradesh yielded elite warrior
+    graves with copper weapons and solid-wheeled two-wheeled vehicles dated to c. 2100-1800 BCE, prompting debate
+    over whether they were horse-drawn battle chariots or bull-drawn solid-wheeled carts.
+region: Baghpat District, western Uttar Pradesh, India (Yamuna-Hindon interfluve)
+location:
+  name: Sanauli
+  lat: 29.1467
+  lon: 77.1856
+datings:
+  - method: archaeological-radiocarbon
+    range:
+      earliest: -2199
+      latest: -1799
+      precision: century
+      circa: true
+    grade: A
+    label: Radiocarbon and Thermoluminescence Dates of the Sanauli Cemeteries (2005 and 2018)
+    sources:
+      - src.parpola-2020-sanauli-chariot-burials
+      - src.singh-2008-ancient-early-medieval-india
+    note: >-
+      Calibrated AMS radiocarbon dates on organic material from the 2018 ASI excavations and luminescence dates
+      from the 2005-2006 cemetery cluster between c. 2200/2100 and 1800 BCE.
+claims:
+  - text: >-
+      During the 2005-2006 excavations led by D. V. Sharma, the ASI uncovered 116 Late Harappan / Bara-related graves
+      oriented northwest-southeast, including extended, secondary, and symbolic burials accompanied by flask-shaped
+      vessels, dish-on-stand pottery, a steatite inlay cemetery violin-shaped motif, and an antenna-hilted copper
+      sword with a copper sheath.
+    grade: A
+    sources:
+      - src.singh-2008-ancient-early-medieval-india
+      - src.parpola-2020-sanauli-chariot-burials
+  - text: >-
+      In 2018, ASI excavations led by Sanjay Kumar Manjul about 120 metres away uncovered elite wooden-coffin burials
+      associated with Ochre Coloured Pottery (OCP) and Copper Hoard weaponry (antenna swords, copper helmets, shields,
+      torch-bearers) alongside three two-wheeled wooden vehicles sheathed with geometric copper plates.
+    grade: A
+    sources:
+      - src.parpola-2020-sanauli-chariot-burials
+  - text: >-
+      Excavator S. K. Manjul interpreted the 2018 vehicles as horse-drawn war chariots demonstrating an indigenous
+      Bronze Age warrior class, whereas Asko Parpola (2020), Michael Witzel, and other scholars noted that the
+      vehicles had solid (non-spoked) disc wheels without horse remains and argued they were bull-drawn ritual or
+      battle carts, with Parpola linking the Copper Hoard elite to early Indo-Iranian / pre-Rgvedic speakers.
+    grade: C
+    sources:
+      - src.parpola-2020-sanauli-chariot-burials
+relations:
+  - kind: part-of
+    target: tradition.harappan-civilisation
+  - kind: related-to
+    target: artifact.sanauli-wheeled-vehicles
+  - kind: related-to
+    target: event.harappan-deurbanisation
+wikidata: Q7415547
+debate: >-
+  Three linked questions are debated at Sanauli: (1) whether the 2018 vehicles with solid copper-inlaid disc wheels
+  and pole-yoke drafts should be termed horse-drawn "chariots" (S. K. Manjul) or ox/bull-drawn two-wheeled carts/wagons
+  lacking true spoked wheels (Asko Parpola 2020, Michael Witzel); (2) how the OCP/Copper Hoard horizon relates to
+  Late Harappan traditions; and (3) whether the warrior elite represent indigenous Harappan continuity or early
+  Indo-Iranian migrants (Parpola 2020).
+tags:
+  - harappan
+  - late-harappan
+  - site
+  - uttar-pradesh
+  - sanauli
+  - chariot-debate
+review:
+  status: draft
+  author: gemini-4-argon

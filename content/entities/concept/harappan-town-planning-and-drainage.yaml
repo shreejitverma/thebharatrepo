@@ -1,0 +1,95 @@
+id: concept.harappan-town-planning-and-drainage
+type: concept
+kind: science
+names:
+  en: Harappan Urban Planning, Brick Standardisation and Drainage
+summary: >-
+  The hallmark civic engineering and architectural system of Mature Harappan cities (c. 2600-1900 BCE), featuring
+  elevated mud-brick platforms, walled upper and lower urban sectors oriented along the cardinal points, sun-dried
+  and kiln-fired bricks moulded to a uniform 1:2:4 thickness-to-width-to-length ratio, domestic bathing floors
+  and latrines connected via terracotta pipes to covered brick street drains with settling sumps, and monumental
+  wells and stormwater reservoirs.
+summaries:
+  kids: >-
+    Harappan cities were built with straight streets, bricks made in the exact 1:2:4 size ratio, private house
+    bathrooms, and underground brick drains that had removable stone covers for cleaning.
+  teen: >-
+    Unlike contemporary Bronze Age cities that focused primarily on royal palaces and temples, Mature Harappan
+    urbanism invested heavily in public and domestic infrastructure: flood-resistant foundation platforms, 1:2:4
+    standardised bricks, indoor wells, and city-wide covered drainage networks.
+region: Pan-Harappan (Mohenjo-daro, Harappa, Dholavira, Rakhigarhi, Kalibangan, Lothal, Banawali, Chanhudaro)
+datings:
+  - method: archaeological-radiocarbon
+    range:
+      earliest: -2799
+      latest: -1899
+      precision: century
+      circa: true
+    grade: A
+    label: Emergence in Kot Diji / Sothi-Siswal and Peak in Mature Harappan Phase
+    sources:
+      - src.kenoyer-1998-ancient-cities-indus
+      - src.possehl-2002-indus-civilization
+      - src.wright-2010-ancient-indus
+    note: >-
+      Perimeter walls and cardinal street grids emerge in the late Early Harappan period (c. 2800-2600 BCE, using
+      1:2:3 bricks at Kalibangan I), reaching pan-regional standardisation with 1:2:4 bricks and covered baked-brick
+      drainage between c. 2600 and 1900 BCE.
+claims:
+  - text: >-
+      Across the entire Indus and Ghaggar-Hakra domain, Mature Harappan builders manufactured both sun-dried
+      mud-bricks and kiln-baked bricks in a strict 1:2:4 ratio of thickness to width to length (typically around
+      7 x 14 x 28 cm for domestic construction and 10 x 20 x 40 cm for city walls), facilitating strong English-bond
+      masonry.
+    grade: A
+    sources:
+      - src.kenoyer-1998-ancient-cities-indus
+      - src.possehl-2002-indus-civilization
+      - src.singh-2008-ancient-early-medieval-india
+  - text: >-
+      Nearly every excavated brick residence at Mohenjo-daro and Harappa contained a dedicated waterproofed bathing
+      platform and often a commode-latrine connected through wall chutes or tapering terracotta pipes to covered
+      baked-brick street drains equipped with periodic brick-lined cesspits (soak-pits) that trapped solid sediment
+      for municipal clearing.
+    grade: A
+    sources:
+      - src.marshall-1931-mohenjo-daro
+      - src.kenoyer-1998-ancient-cities-indus
+      - src.wright-2010-ancient-indus
+  - text: >-
+      Harappan hydraulic engineering adapted systematically to local hydrology: alluvial Indus cities such as
+      Mohenjo-daro sunk hundreds of deep brick-lined cylindrical wells, whereas semi-arid Kutch cities such as
+      Dholavira constructed stone check-dams and rock-cut rainwater reservoirs around the city perimeter.
+    grade: A
+    sources:
+      - src.bisht-2015-excavations-at-dholavira
+      - src.kenoyer-1998-ancient-cities-indus
+      - src.possehl-2002-indus-civilization
+relations:
+  - kind: part-of
+    target: tradition.harappan-civilisation
+  - kind: related-to
+    target: site.mohenjo-daro
+  - kind: related-to
+    target: site.harappa
+  - kind: related-to
+    target: site.dholavira
+  - kind: related-to
+    target: site.great-bath-mohenjo-daro
+  - kind: related-to
+    target: concept.harappan-weights-and-measures
+wikidata: null
+image:
+  commons: "File:Manholes at Dholavira water management network.jpg"
+  alt: Stone-covered underground stormwater drainage channel and inspection manholes at Dholavira
+  credit: Prof Ranga Sai
+  license: CC BY-SA 4.0
+tags:
+  - harappan
+  - urban-planning
+  - drainage
+  - engineering
+  - architecture
+review:
+  status: draft
+  author: gemini-4-argon

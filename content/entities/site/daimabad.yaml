@@ -25,8 +25,8 @@ datings:
   - method: archaeological-radiocarbon
     range:
       earliest: -2200
-      latest: -1000
-      best: -1600
+      latest: "1000 BCE"
+      best: "1600 BCE"
       precision: century
       circa: true
     grade: A

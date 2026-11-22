@@ -1,0 +1,81 @@
+id: tradition.shrauta-ritual
+type: tradition
+kind: dharma
+names:
+  en: Shrauta Ritual Tradition
+  iast: Śrauta
+  native: श्रौतयज्ञ
+summary: >-
+  The Shrauta ritual tradition encompasses the solemn public Vedic fire sacrifices (yajna) grounded
+  directly in the Shruti corpus (Samhitas and Brahmanas) and systematized in the Shrauta Sutras.
+  Requiring three sacred fires (garhapatya, ahavaniya, and dakshinagni) maintained by an initiated
+  householder (ahitagni) and his wife (patni), it coordinates four specialized priestly orders
+  representing the four Vedas.
+summaries:
+  kids: >-
+    The Shrauta rituals are solemn Vedic ceremonies performed around three sacred fires, where four
+    teams of priests recite hymns, sing melodies, and offer ghee and grain into the flames.
+  teen: >-
+    Codified during the Kuru reorganization of the Vedas and detailed in the Brahmanas and Shrauta
+    Sutras, the Shrauta system coordinates the Hotri (Rigveda), Udgatri (Samaveda), Adhvaryu
+    (Yajurveda), and Brahman (Atharvaveda) priests around three perpetual ritual fires.
+region: Pan-Indian (codified in Kuru-Panchala)
+datings:
+  - method: linguistic
+    range: { earliest: -1199, latest: -399, best: -899, precision: century, circa: true }
+    grade: B
+    label: Kuru ritual reform through Shrauta Sutra codification (Witzel, Gonda, Staal)
+    sources:
+      - src.witzel-1997-early-sanskritization-kuru
+      - src.gonda-1980-vedic-ritual
+      - src.staal-1983-agni-fire-altar
+    note: >-
+      While fire offerings (yajna) go back to the Rigvedic and common Indo-Iranian period, Michael
+      Witzel shows that the classical four-Veda Shrauta ritual synthesis was organized in the early
+      Kuru kingdom (c. 1200 to 900 BCE) and codified in the Brahmanas and Shrauta Sutras (c. 900 to
+      400 BCE).
+claims:
+  - text: >-
+      Unlike domestic Grihya rites performed on a single household fire, Shrauta sacrifices require
+      three consecrated fires - the circular Garhapatya (householder's fire in the west), the
+      square Ahavaniya (offering fire in the east), and the semicircular Dakshinagni (southern
+      fire) - whose equal areas are prescribed in the Shulba Sutras.
+    grade: A
+    sources:
+      - src.staal-1983-agni-fire-altar
+      - src.plofker-2009-mathematics-in-india
+      - src.gonda-1980-vedic-ritual
+  - text: >-
+      A solemn Shrauta sacrifice distributes liturgical duties across four chief priests and their
+      assistants: the Hotri reciting Rigvedic verses, the Udgatri chanting Samavedic melodies, the
+      Adhvaryu executing physical actions with Yajurvedic formulas, and the Brahman supervising the
+      ceremony in silence to heal any ritual errors.
+    grade: A
+    sources:
+      - src.staal-1983-agni-fire-altar
+      - src.witzel-1997-early-sanskritization-kuru
+      - src.flood-2003-blackwell-companion-hinduism
+  - text: >-
+      Classical Shrauta manuals classify the sacrifices into seven Haviryajnas (oblations of milk,
+      butter, barley, and rice, such as Agnihotra and Darshapurnamasa) and seven Somayajnas (such
+      as Agnishtoma, Vajapeya, and Atiratra), alongside royal rites like the Rajasuya and
+      Ashvamedha.
+    grade: A
+    sources:
+      - src.staal-1983-agni-fire-altar
+      - src.flood-2003-blackwell-companion-hinduism
+relations:
+  - { kind: related-to, target: tradition.soma-ritual }
+  - { kind: related-to, target: tradition.agnicayana }
+  - { kind: related-to, target: text.brahmanas }
+  - { kind: related-to, target: text.shulba-sutras }
+  - { kind: patronised-by, target: polity.kuru-kingdom }
+  - { kind: related-to, target: text.yajurveda }
+wikidata: Q4526594
+image:
+  commons: "File:Agnidhriyam.JPG"
+  alt: Ritual shed and fire altar enclosure during a traditional Shrauta performance in Kerala
+  credit: വെള്ളെഴുത്ത്
+  license: CC BY-SA 3.0
+tags: [shrauta, yajna, ritual, kuru, agnihotra, brahmana, shulba-sutra]
+review: { status: draft, author: "gemini-4-argon" }

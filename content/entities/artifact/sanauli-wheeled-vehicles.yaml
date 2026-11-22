@@ -1,0 +1,82 @@
+id: artifact.sanauli-wheeled-vehicles
+type: artifact
+kind: art
+names:
+  en: Sanauli Copper-Sheathed Wheeled Vehicles
+summary: >-
+  Three two-wheeled wooden vehicles with solid (non-spoked) disc wheels decorated with radiating rows of copper
+  triangles, copper-sheathed D-shaped chassis frames, and long single draught poles for a yoked pair of draft
+  animals, excavated in 2018 by the Archaeological Survey of India in elite warrior graves at Sanauli, western
+  Uttar Pradesh (c. 2100-1800 BCE), and subject of a lively debate over whether they were horse-drawn battle
+  chariots or bull-drawn carts.
+summaries:
+  kids: >-
+    Buried alongside Bronze Age warriors at Sanauli in Uttar Pradesh were three two-wheeled wooden vehicles whose
+    solid wheels and frames were decorated with shining copper triangles.
+  teen: >-
+    Excavated at Sanauli in 2018 and dated to c. 2100-1800 BCE, these three copper-ornamented two-wheeled vehicles
+    are the earliest intact wheeled transport burials found in the Indian subcontinent, sparking debate over whether
+    they were pulled by horses as war chariots or by bulls as solid-wheeled battle carts.
+region: Sanauli, Baghpat District, Uttar Pradesh, India
+location:
+  name: Sanauli
+  lat: 29.1467
+  lon: 77.1856
+datings:
+  - method: archaeological-radiocarbon
+    range:
+      earliest: -2199
+      latest: -1799
+      precision: century
+      circa: true
+    grade: A
+    label: Radiocarbon Dating of the 2018 Sanauli Royal Burials
+    sources:
+      - src.parpola-2020-sanauli-chariot-burials
+    note: >-
+      Calibrated radiocarbon dates from the 2018 Sanauli Trial Trench burials place the copper-sheathed vehicles
+      and wooden coffins around c. 2100-1800 BCE.
+claims:
+  - text: >-
+      Each vehicle features two solid wooden disc wheels clamped around a fixed or rotating axle, inlaid on both
+      faces with three concentric radiating rings of triangular copper sheets, supporting a compact D-shaped standing
+      platform with a curved copper-sheathed dashboard and a long central draught pole.
+    grade: A
+    sources:
+      - src.parpola-2020-sanauli-chariot-burials
+  - text: >-
+      Excavator Sanjay Kumar Manjul classified the vehicles as horse-drawn war chariots on the basis of their compact
+      single-rider chassis, high dashboard hand-grip, and association with copper helmets, shields, and antenna swords.
+    grade: C
+    sources:
+      - src.parpola-2020-sanauli-chariot-burials
+  - text: >-
+      Asko Parpola (2020), Michael Witzel, and other scholars argued that because true chariots in Bronze Age
+      Eurasia are defined by lightweight spoked wheels and horse bits-neither of which was present at Sanauli-the
+      solid-wheeled vehicles were bull-drawn two-wheeled carts comparable to the Late Harappan Daimabad bronze
+      bull-cart and Mesopotamian straddle cars.
+    grade: B
+    sources:
+      - src.parpola-2020-sanauli-chariot-burials
+relations:
+  - kind: excavated-at
+    target: site.sanauli
+  - kind: part-of
+    target: tradition.harappan-civilisation
+  - kind: related-to
+    target: site.daimabad
+wikidata: null
+debate: >-
+  Sanjay Kumar Manjul and colleagues at the ASI identify the three 2018 Sanauli vehicles as horse-drawn battle
+  chariots, whereas Asko Parpola (2020), Michael Witzel, and other archaeologists and philologists emphasize their
+  solid (non-spoked) wooden wheels and absence of horse bones or cheek-pieces, identifying them as bull-drawn
+  two-wheeled carts or wagons.
+tags:
+  - harappan
+  - late-harappan
+  - artifact
+  - sanauli
+  - chariot-debate
+review:
+  status: draft
+  author: gemini-4-argon

@@ -1,0 +1,78 @@
+id: artifact.dancing-girl-mohenjo-daro
+type: artifact
+kind: art
+names:
+  en: Dancing Girl of Mohenjo-daro
+summary: >-
+  A 10.5-centimetre solid bronze statuette cast by the lost-wax (cire perdue) technique during the Mature Harappan
+  period (c. 2500-1900 BCE) and discovered by Ernest Mackay in 1926 in the HR Area of Mohenjo-daro, depicting a
+  slender young woman standing with her right hand on her hip and her left arm covered from shoulder to wrist
+  with 24 to 25 bangles.
+summaries:
+  kids: >-
+    The Dancing Girl is a small bronze statue from Mohenjo-daro, just over ten centimetres tall, showing a confident
+    young woman wearing more than twenty shell bangles on her left arm.
+  teen: >-
+    Excavated in Mohenjo-daro's HR Area in 1926 and now housed in the National Museum, New Delhi, the Dancing Girl
+    demonstrates Mature Harappan mastery of lost-wax bronze casting and naturalistic figural sculpture.
+region: Mohenjo-daro, Sindh (housed in the National Museum, New Delhi)
+location:
+  name: Mohenjo-daro (HR Area, House LV)
+  lat: 27.3228
+  lon: 68.1389
+datings:
+  - method: archaeological-stratigraphic
+    range:
+      earliest: -2599
+      latest: -1899
+      precision: century
+      circa: true
+    grade: A
+    label: Mature Harappan Context at Mohenjo-daro (HR Area)
+    sources:
+      - src.marshall-1931-mohenjo-daro
+      - src.kenoyer-1998-ancient-cities-indus
+      - src.possehl-2002-indus-civilization
+    note: >-
+      Excavated by Daya Ram Sahni and Ernest Mackay in 1926 from a Mature Harappan house in the southern HR Area
+      of Mohenjo-daro.
+claims:
+  - text: >-
+      Cast as a single solid bronze piece using the lost-wax (cire perdue) process, the figurine measures 10.5 cm
+      in height and portrays a young woman with her head tilted slightly back, her right hand resting on her hip,
+      and her left hand holding a small object against her forward left thigh.
+    grade: A
+    sources:
+      - src.marshall-1931-mohenjo-daro
+      - src.kenoyer-1998-ancient-cities-indus
+      - src.possehl-2002-indus-civilization
+  - text: >-
+      The figure wears 24 to 25 bangles stack-arranged along her entire left arm and four bangles on her right upper
+      arm and wrist, matching the asymmetric shell-bangle sets discovered on female burials at Harappa and in Baluchistan
+      and Gujarat ethnographic traditions.
+    grade: A
+    sources:
+      - src.kenoyer-1998-ancient-cities-indus
+      - src.wright-2010-ancient-indus
+relations:
+  - kind: excavated-at
+    target: site.mohenjo-daro
+  - kind: part-of
+    target: tradition.harappan-civilisation
+  - kind: contemporary-of
+    target: artifact.priest-king-mohenjo-daro
+wikidata: Q17008494
+image:
+  commons: "File:Dancing girl of Mohenjo-daro.jpg"
+  alt: The bronze Dancing Girl statuette from Mohenjo-daro in the National Museum, New Delhi
+  credit: Gary Todd
+  license: CC0
+tags:
+  - harappan
+  - artifact
+  - sculpture
+  - bronze
+  - mohenjo-daro
+review:
+  status: draft
+  author: gemini-4-argon

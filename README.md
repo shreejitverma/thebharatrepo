@@ -40,11 +40,13 @@ npm run typecheck
 npm run lint
 npm run content:validate        # schemas and cross-references; exit 1 on any problem
 npm run content:report          # coverage: entities, grades, kinds, sources
-npm run content:verify-sources  # resolve every DOI, ISBN, QID and Commons file; exit 1 on any mismatch
-npm run build                   # validates content, builds search index and open data, then next build
+npm run content:verify-sources  # resolve every DOI, ISBN, OCLC, URL, QID and Commons file; exit 1 on any mismatch
+npm run build                   # validate, offline verification gate, search index and open data, then next build
+npm run test:e2e                # Playwright and axe against a production build (desktop and mobile)
 ```
 
-`npm run build` refuses to build when content is invalid.
+`npm run build` refuses to build when content is invalid or when any identifier lacks a matching verified record in `content/verification.json` (`content-verify-sources.ts --offline`).
+Every cached verification is re-checked against the current title or name, so a reused or edited identifier cannot ride on an old success.
 
 ## Adding content
 
@@ -55,7 +57,9 @@ npm run build                   # validates content, builds search index and ope
 
 Large batches are written to `staging/<batch>/` (gitignored), validated in isolation with
 `CONTENT_ROOTS=content:staging/<batch> ARTICLES_ROOT= npm run content:validate -- --scope staging/<batch>`,
-and merged with `npx tsx scripts/content-merge-staging.ts staging/<batch>`.
+and merged with `npm run content:merge -- staging/<batch>`, which re-validates the combined content, aborts on any conflict before writing, and never copies the staging verification cache.
+Run `npm run content:verify-sources` after every merge.
+`npx tsx scripts/content-fix-bce.ts content/entities` mechanically repairs ranges that store `-N` for "N BCE".
 
 ## Time model
 

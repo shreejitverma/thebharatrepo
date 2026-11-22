@@ -9,6 +9,7 @@
  */
 
 import { z } from 'zod';
+import { PRESENT_YEAR } from '../time';
 
 import {
   PRECISIONS,
@@ -27,7 +28,7 @@ export const SOURCE_ID = /^src\.[a-z0-9]+(?:-[a-z0-9]+)*$/;
 
 export const CitationRef = z.union([
   z.string().regex(SOURCE_ID, 'source ids look like src.author-year-short-title'),
-  z.object({
+  z.strictObject({
     id: z.string().regex(SOURCE_ID),
     locator: z.string().min(1).optional(),
   }),
@@ -38,13 +39,31 @@ export function citationId(ref: CitationRef): string {
   return typeof ref === 'string' ? ref : ref.id;
 }
 
+/**
+ * A year is either an astronomical year number, or a human-readable string that is converted here so
+ * authors never do BCE arithmetic: "7000 BCE", "320 CE", "1947", "385 ka", "1.5 Ma", "1.97 Ga".
+ */
+export function parseYear(v: unknown): unknown {
+  if (typeof v !== 'string') return v;
+  const s = v.trim().replace(/,/g, '');
+  let m = /^(\d+(?:\.\d+)?)\s*(BCE|BC)$/i.exec(s);
+  if (m) return 1 - Number(m[1]);
+  m = /^(\d+(?:\.\d+)?)\s*(CE|AD)?$/i.exec(s);
+  if (m) return Number(m[1]);
+  m = /^(\d+(?:\.\d+)?)\s*(ka|Ma|Ga)$/.exec(s);
+  if (m) return PRESENT_YEAR - Math.round(Number(m[1]) * { ka: 1e3, Ma: 1e6, Ga: 1e9 }[m[2] as 'ka' | 'Ma' | 'Ga']);
+  return v;
+}
+
+const Year = z.preprocess(parseYear, z.number({ message: 'year must be a number or a string like "7000 BCE", "320 CE", "385 ka", "1.5 Ma"' }).finite());
+
 export const YearRangeSchema = z
-  .object({
-    earliest: z.number().finite(),
-    latest: z.number().finite(),
-    best: z.number().finite().optional(),
+  .strictObject({
+    earliest: Year,
+    latest: Year,
+    best: Year.optional(),
     precision: z.enum(PRECISIONS),
-    circa: z.boolean().default(false),
+    circa: z.boolean({ message: 'circa is required: true for any estimate' }),
   })
   .superRefine((r, ctx) => {
     if (r.earliest > r.latest) ctx.addIssue({ code: 'custom', message: `earliest (${r.earliest}) is after latest (${r.latest})` });
@@ -55,7 +74,7 @@ export const YearRangeSchema = z
   });
 
 export const DatingSchema = z
-  .object({
+  .strictObject({
     method: z.enum(DATING_METHODS),
     range: YearRangeSchema,
     grade: z.enum(GRADES),
@@ -73,7 +92,7 @@ export const DatingSchema = z
   });
 export type Dating = z.infer<typeof DatingSchema>;
 
-export const ClaimSchema = z.object({
+export const ClaimSchema = z.strictObject({
   text: z.string().min(10),
   grade: z.enum(GRADES),
   sources: z.array(CitationRef).min(1, 'every claim needs at least one source'),
@@ -103,26 +122,32 @@ export const RELATION_KINDS = [
   'related-to',
 ] as const;
 
-export const RelationSchema = z.object({
+export const RelationSchema = z.strictObject({
   kind: z.enum(RELATION_KINDS),
   target: z.string().regex(ENTITY_ID),
   note: z.string().optional(),
 });
 
-export const LocationSchema = z.object({
+export const LocationSchema = z.strictObject({
   name: z.string().min(1),
   lat: z.number().min(-90).max(90),
   lon: z.number().min(-180).max(180),
 });
 
-export const ReviewSchema = z.object({
-  status: z.enum(['draft', 'machine-checked', 'reviewed']),
-  reviewer: z.string().nullable().default(null),
-  lastReviewed: z.string().nullable().default(null),
-  author: z.string().optional(),
-});
+export const ReviewSchema = z
+  .strictObject({
+    status: z.enum(['draft', 'machine-checked', 'reviewed']),
+    reviewer: z.string().nullable().default(null),
+    lastReviewed: z.string().nullable().default(null),
+    author: z.string().optional(),
+  })
+  .superRefine((r, ctx) => {
+    if (r.status === 'reviewed' && (!r.reviewer || !r.lastReviewed)) {
+      ctx.addIssue({ code: 'custom', message: 'status reviewed requires reviewer and lastReviewed' });
+    }
+  });
 
-export const ImageSchema = z.object({
+export const ImageSchema = z.strictObject({
   commons: z.string().regex(/^File:.+/, 'use the Wikimedia Commons file title, e.g. File:Sanchi2.jpg'),
   alt: z.string().min(5),
   credit: z.string().min(2),
@@ -130,11 +155,11 @@ export const ImageSchema = z.object({
 });
 
 export const EntitySchema = z
-  .object({
+  .strictObject({
     id: z.string().regex(ENTITY_ID),
     type: z.enum(ENTITY_TYPES),
     kind: z.enum(KINDS),
-    names: z.object({
+    names: z.strictObject({
       en: z.string().min(1),
       iast: z.string().optional(),
       native: z.string().optional(),
@@ -184,7 +209,7 @@ export const SOURCE_TYPES = [
 ] as const;
 
 export const SourceSchema = z
-  .object({
+  .strictObject({
     id: z.string().regex(SOURCE_ID),
     type: z.enum(SOURCE_TYPES),
     title: z.string().min(3),
@@ -215,16 +240,18 @@ export const SourceSchema = z
     if ((s.type === 'book' || s.type === 'book-chapter' || s.type === 'translation' || s.type === 'reference-work') && !s.isbn && !s.oclc && !s.url && !s.doi) {
       ctx.addIssue({ code: 'custom', message: 'books need an ISBN, OCLC number, DOI or stable URL (e.g. archive.org)' });
     }
-    if (s.type === 'web' && !s.url) ctx.addIssue({ code: 'custom', message: 'web sources need a url' });
+    if (!s.doi && !s.isbn && !s.oclc && !s.url) {
+      ctx.addIssue({ code: 'custom', message: 'every source needs a verifiable identifier: doi, isbn, oclc or url' });
+    }
     if (s.authors.length === 0 && s.editors.length === 0 && !s.publisher && !s.corpus) {
       ctx.addIssue({ code: 'custom', message: 'a source needs authors, editors, a publisher or a corpus' });
     }
   });
 export type Source = z.infer<typeof SourceSchema>;
 
-export const CATEGORIES = ['history', 'philosophy', 'science', 'literature', 'art-and-culture', 'music'] as const;
+export const CATEGORIES = ['history', 'philosophy', 'science', 'literature', 'art-and-culture', 'music', 'language'] as const;
 
-export const ArticleFrontmatterSchema = z.object({
+export const ArticleFrontmatterSchema = z.strictObject({
   title: z.string().min(3),
   summary: z.string().min(20).max(400),
   date: z.string().regex(/^\d{4}-\d{2}-\d{2}$/),
@@ -239,7 +266,7 @@ export const ArticleFrontmatterSchema = z.object({
 });
 export type ArticleFrontmatter = z.infer<typeof ArticleFrontmatterSchema>;
 
-export const CorrectionSchema = z.object({
+export const CorrectionSchema = z.strictObject({
   date: z.string().regex(/^\d{4}-\d{2}-\d{2}$/),
   target: z.string().min(1),
   before: z.string().min(1),

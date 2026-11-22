@@ -39,7 +39,7 @@ datings:
   - method: scholarly-consensus
     range:
       earliest: -3800
-      latest: -1900
+      latest: "1900 BCE"
       best: -3000
       precision: century
       circa: true

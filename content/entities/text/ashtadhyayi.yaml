@@ -1,0 +1,67 @@
+id: text.ashtadhyayi
+type: text
+kind: science
+names:
+  en: Ashtadhyayi
+  iast: Aṣṭādhyāyī
+  native: अष्टाध्यायी
+summary: >-
+  The Ashtadhyayi ("Eight Chapters") of Panini is the foundational generative grammar of Sanskrit
+  and the pinnacle of the Vyakarana Vedanga. In nearly 4,000 algebraic rules (sutras), aided by
+  auxiliary lists of verbal roots (Dhatupatha) and phoneme classes (Shivasutras), it defines
+  Classical Sanskrit while recording differences in Vedic usage (chandas).
+summaries:
+  kids: >-
+    The Ashtadhyayi, meaning "Eight Chapters," is Panini's famous grammar book. It uses nearly
+    4,000 short, clever rules like a computer program to explain how Sanskrit words are built.
+  teen: >-
+    Composed by Panini in Gandhara, the Ashtadhyayi uses nearly 4,000 concise rules, metalinguistic
+    markers (anubandhas), and recursion to generate valid Sanskrit word forms, standardizing
+    Classical Sanskrit and preserving rules for Vedic accents and morphology.
+region: Gandhara (northwestern Indian subcontinent)
+datings:
+  - method: linguistic
+    range: { earliest: -599, latest: -349, best: -399, precision: century, circa: true }
+    grade: B
+    label: Mainstream Indological and linguistic consensus (Cardona, Katre)
+    sources:
+      - src.cardona-1988-panini-work-traditions
+      - src.katre-1987-astadhyayi-panini
+      - src.thapar-2002-early-india
+    note: >-
+      Dated to the 5th or 4th century BCE based on the state of the spoken Sanskrit language
+      (bhasha), references to punch-marked coin denominations (karshapana) and yavanani (Greek
+      writing or Ionians), and its pre-Mauryan date prior to Katyayana and Patanjali.
+claims:
+  - text: >-
+      The Ashtadhyayi comprises eight chapters (adhyayas), each divided into four quarters (padas),
+      containing roughly 3,959 to 3,996 concise aphorisms (sutras) accompanied by the fourteen
+      phonological Shivasutras, the Dhatupatha, and the Ganapatha.
+    grade: A
+    sources:
+      - src.katre-1987-astadhyayi-panini
+      - src.cardona-1988-panini-work-traditions
+  - text: >-
+      Panini employs a formal metalanguage using diacritical marker sounds (anubandhas or it),
+      abstract abbreviatory terms (pratyaharas), and explicit rule-ordering principles
+      (paribhashas) to derive valid Sanskrit utterances from roots and affixes.
+    grade: A
+    sources:
+      - src.cardona-1988-panini-work-traditions
+      - src.katre-1987-astadhyayi-panini
+  - text: >-
+      Alongside the contemporary spoken language (bhasha), the Ashtadhyayi formulates specific
+      rules for the Vedic dialect (chandas), including tonal pitch accents (udatta, anudatta, and
+      svarita).
+    grade: A
+    sources:
+      - src.katre-1987-astadhyayi-panini
+      - src.cardona-1988-panini-work-traditions
+relations:
+  - { kind: authored-by, target: person.panini }
+  - { kind: part-of, target: text.vedangas }
+  - { kind: succeeded, target: text.nirukta }
+  - { kind: related-to, target: concept.vedic-sanskrit }
+wikidata: Q2868351
+tags: [vedanga, vyakarana, grammar, linguistics, sanskrit, panini]
+review: { status: draft, author: "gemini-4-argon" }

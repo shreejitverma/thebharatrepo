@@ -1,0 +1,95 @@
+id: concept.harappan-mesopotamian-trade
+type: concept
+kind: civilisation
+names:
+  en: Harappan-Mesopotamian Trade and Meluhha
+  iast: Meluḫḫa
+summary: >-
+  The long-distance maritime and overland exchange network connecting the Mature Harappan Civilisation with
+  Mesopotamia (Akkadian, Post-Akkadian, and Ur III dynasties), the Persian Gulf (Dilmun/Bahrain and Magan/Oman),
+  and the Iranian plateau (c. 2500-1900 BCE), recorded in cuneiform inscriptions that identify the Indus region
+  as "Meluhha" (Meluhha) and corroborated by Harappan seals, etched carnelian beads, and chert weights excavated
+  across West Asia.
+summaries:
+  kids: >-
+    Harappan sailors and merchants travelled across the Arabian Sea to Oman, Bahrain, and Mesopotamia, where
+    clay tablets called the Indus homeland "Meluhha" and praised its carnelian beads, timber, ivory, and peacocks.
+  teen: >-
+    From the reign of Sargon of Akkad (c. 2334-2279 BCE) through the Ur III period, Mesopotamian cuneiform records
+    celebrate ships from Meluhha - widely identified with the Harappan Civilisation - trading carnelian, lapis lazuli,
+    ivory, and timber via the Gulf ports of Magan (Oman) and Dilmun (Bahrain).
+region: Indus Basin, Arabian Sea, Persian Gulf (Magan and Dilmun), and Mesopotamia
+datings:
+  - method: foreign-synchronism
+    range:
+      earliest: -2499
+      latest: -1899
+      precision: century
+      circa: true
+    grade: A
+    label: Royal Cemetery of Ur, Akkadian, and Ur III Synchronism
+    sources:
+      - src.possehl-2002-indus-civilization
+      - src.kenoyer-1998-ancient-cities-indus
+      - src.wright-2010-ancient-indus
+    note: >-
+      Anchored by Harappan long-barrel and etched carnelian beads in the Royal Cemetery of Ur (c. 2500-2400 BCE),
+      inscriptions of Sargon of Akkad (c. 2334-2279 BCE) naming Meluhha ships at Agade, an Akkadian cylinder seal
+      of "Shu-ilishu, interpreter of the Meluhhan language", and Ur III economic texts (c. 2112-2004 BCE).
+claims:
+  - text: >-
+      An inscription of Sargon of Akkad (c. 2334-2279 BCE) boasts that ships from Meluhha (the Indus region), Magan
+      (Oman), and Dilmun (Bahrain) moored directly at the quay of his capital Agade, providing the primary chronological
+      synchronism between Mesopotamian and Mature Harappan history.
+    grade: A
+    sources:
+      - src.possehl-2002-indus-civilization
+      - src.kenoyer-1998-ancient-cities-indus
+      - src.thapar-2002-early-india
+  - text: >-
+      Cuneiform texts enumerate imports from Meluhha including carnelian (gug), lapis lazuli (za-gin), gold dust,
+      copper, sissoo and ebony wood, inlaid ivory combs and figurines of "Meluhha birds" (peacocks), and mention
+      resident Meluhhans in Mesopotamia, including an Akkadian cylinder seal belonging to Shu-ilishu, "interpreter
+      of the Meluhhan language", and a Ur III village of Meluhhans near Lagash.
+    grade: A
+    sources:
+      - src.possehl-2002-indus-civilization
+      - src.wright-2010-ancient-indus
+      - src.parpola-2015-roots-of-hinduism
+  - text: >-
+      Archaeological exports from the Indus found in Mesopotamia, Susa, Oman, and Bahrain include square and cylinder
+      seals with Indus script and zebu/unicorn iconography, long-barrel and alkaline-etched carnelian beads, shell
+      inlays, and Harappan cubical chert weights (adopted in Dilmun as the "standard of Dilmun").
+    grade: A
+    sources:
+      - src.kenoyer-1998-ancient-cities-indus
+      - src.possehl-2002-indus-civilization
+      - src.mcintosh-2008-ancient-indus-valley
+relations:
+  - kind: part-of
+    target: tradition.harappan-civilisation
+  - kind: related-to
+    target: site.lothal
+  - kind: related-to
+    target: site.dholavira
+  - kind: related-to
+    target: site.shortugai
+  - kind: related-to
+    target: concept.harappan-carnelian-bead-making
+  - kind: related-to
+    target: concept.harappan-weights-and-measures
+wikidata: Q483421
+image:
+  commons: "File:Indus Valley Civilization carnelian beads excavated in Susa.jpg"
+  alt: Harappan etched and long-barrel carnelian beads excavated at Susa
+  credit: ALFGRN
+  license: CC BY-SA 2.0
+tags:
+  - harappan
+  - meluhha
+  - mesopotamia
+  - trade
+  - foreign-synchronism
+review:
+  status: draft
+  author: gemini-4-argon

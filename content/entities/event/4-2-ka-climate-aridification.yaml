@@ -1,0 +1,87 @@
+id: event.4-2-ka-climate-aridification
+type: event
+kind: event
+names:
+  en: The 4.2 ka Aridification Event and Monsoon Weakening in Northwest India
+summary: >-
+  A major multi-century palaeoclimatic shift commencing around 4,200 to 4,100 years ago (c. 2200-2100 BCE) at the
+  Northgrippian-Meghalayan boundary, attested in northwestern Indian palaeolake records (Kotla Dahar and Rann of
+  Kutch), Arabian Sea marine cores, and archaeological bioapatites (Bhirrana), during which an abrupt weakening of
+  the Indian Summer Monsoon reduced flood-water reliability along the Ghaggar-Hakra and Indus floodplains and
+  stressed Mature Harappan agricultural systems.
+summaries:
+  kids: >-
+    Around 2200 to 2100 BCE, the summer monsoon rains in northwestern India grew much weaker for several centuries,
+    drying up seasonal rivers and ponds that Harappan farmers relied on.
+  teen: >-
+    Documented in oxygen-isotope records from Lake Kotla Dahar in Haryana (Dixit et al. 2014) and fluvial geomorphology
+    across the Indus-Ghaggar plains (Giosan et al. 2012), the 4.2 ka climate event reduced summer monsoon rainfall,
+    prompting Harappan farmers to diversify into drought-hardy millets and gradually shift settlements eastward.
+region: Northwestern Indian Subcontinent (Indus and Ghaggar-Hakra basins, Haryana, Rajasthan, Gujarat)
+location:
+  name: Kotla Dahar Palaeolake, Haryana
+  lat: 28.0000
+  lon: 76.9500
+datings:
+  - method: geological
+    range:
+      earliest: -2299
+      latest: -1899
+      precision: century
+      circa: true
+    grade: A
+    label: Abrupt Summer Monsoon Weakening at Kotla Dahar (~4.1 ka BP) and 4.2 ka Event
+    sources:
+      - src.dixit-2014-abrupt-weakening-monsoon
+      - src.giosan-2012-fluvial-landscapes-harappan
+      - src.sarkar-2016-bhirrana-oxygen-isotope
+    note: >-
+      Anchored by radiocarbon-dated gastropod shell oxygen-isotope (delta-18O) shifts at paleolake Kotla Dahar
+      in Haryana (~4,100 cal yr BP, c. 2150 BCE; Dixit et al. 2014), marine cores off the Indus delta, and bioapatite
+      records at Bhirrana (Sarkar et al. 2016).
+claims:
+  - text: >-
+      Oxygen-isotope measurements of freshwater gastropod shells (Melanoides tuberculata) from the Kotla Dahar
+      palaeolake in Haryana by Yama Dixit, David Hodell, and Cameron Petrie (2014) documented an abrupt increase
+      in evaporation over precipitation around 4,100 cal yr BP (~2150 BCE), demonstrating a multi-century weakening
+      of the Indian Summer Monsoon right across the eastern Harappan heartland.
+    grade: A
+    sources:
+      - src.dixit-2014-abrupt-weakening-monsoon
+      - src.dixit-2018-intensified-summer-monsoon
+  - text: >-
+      Liviu Giosan and colleagues (2012) showed that early-to-mid Holocene monsoon weakening initially tamed destructive
+      Indus floods enough to enable recession agriculture and Mature Harappan urbanisation (c. 2600 BCE), but continued
+      aridification after c. 2200-2000 BCE reduced monsoonal flow in the Ghaggar-Hakra system below the threshold
+      needed to sustain large urban populations.
+    grade: A
+    sources:
+      - src.giosan-2012-fluvial-landscapes-harappan
+  - text: >-
+      Archaeobotanical and geoarchaeological research by Cameron Petrie and the Land, Water and Settlement project
+      (2017) emphasizes that Harappan communities occupied highly varied ecological zones and actively adapted to
+      monsoon variability through multi-cropping (combining winter wheat/barley with summer millets and pulses)
+      rather than collapsing instantaneously at 2200 BCE.
+    grade: A
+    sources:
+      - src.petrie-2017-adaptation-variable-environments
+      - src.dixit-2018-intensified-summer-monsoon
+relations:
+  - kind: related-to
+    target: tradition.harappan-civilisation
+  - kind: preceded
+    target: event.harappan-deurbanisation
+  - kind: related-to
+    target: concept.ghaggar-hakra-sarasvati-debate
+  - kind: related-to
+    target: site.bhirrana
+wikidata: Q1291515
+tags:
+  - harappan
+  - climate-change
+  - 4-2-ka-event
+  - monsoon
+  - palaeoclimate
+review:
+  status: draft
+  author: gemini-4-argon

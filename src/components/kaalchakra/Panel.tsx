@@ -18,9 +18,13 @@ export interface PanelProps {
   onPrev?: () => void;
   onNext?: () => void;
   total: number;
+  /** The selected item is filtered out of the current views. */
+  filteredOut?: boolean;
+  /** Link to the current state; the address bar lags behind by a debounce. */
+  shareUrl: () => string;
 }
 
-export default function Panel({ item, lens, cal, level, onLevel, onPrev, onNext, total }: PanelProps) {
+export default function Panel({ item, lens, cal, level, onLevel, onPrev, onNext, total, filteredOut, shareUrl }: PanelProps) {
   const [copied, setCopied] = useState(false);
 
   if (!item) {
@@ -77,7 +81,7 @@ export default function Panel({ item, lens, cal, level, onLevel, onPrev, onNext,
 
   const copy = async () => {
     try {
-      await navigator.clipboard.writeText(window.location.href);
+      await navigator.clipboard.writeText(shareUrl());
       setCopied(true);
       setTimeout(() => setCopied(false), 1600);
     } catch {
@@ -86,9 +90,14 @@ export default function Panel({ item, lens, cal, level, onLevel, onPrev, onNext,
   };
 
   return (
-    <aside className="kc-panel" aria-live="polite" aria-label={`Details: ${item.name}`}>
+    <aside className="kc-panel" aria-label={`Details: ${item.name}`}>
       <p className="eyebrow">{KIND_LABELS[item.kind]}</p>
       <h2>{item.name}</h2>
+      {filteredOut ? (
+        <p className="muted" style={{ fontSize: '0.9rem' }}>
+          Hidden by the current filters or lens, so it is not drawn in the view.
+        </p>
+      ) : null}
       {item.iast || item.native ? (
         <div className="names">
           {item.native ? <span lang="sa">{item.native}</span> : null}

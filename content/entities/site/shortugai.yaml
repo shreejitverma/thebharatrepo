@@ -1,0 +1,77 @@
+id: site.shortugai
+type: site
+kind: site
+names:
+  en: Shortugai
+  iast: Śortugāī
+summary: >-
+  A Mature Harappan trading and craft colony situated north of the Hindu Kush near the confluence of the Kokcha
+  and Amu Darya (Oxus) rivers in Badakhshan, northeastern Afghanistan (c. 2200-1800 BCE), excavated by Henri-Paul
+  Francfort (1976-1979), established to procure Badakhshan lapis lazuli, tin, and Central Asian resources.
+summaries:
+  kids: >-
+    Far across the Hindu Kush mountains in northern Afghanistan, Harappan traders built the outpost of Shortugai
+    near the mines that supplied deep-blue lapis lazuli stone.
+  teen: >-
+    Excavated by Henri-Paul Francfort in the late 1970s near the Amu Darya in northern Afghanistan, Shortugai is
+    the northernmost known Harappan settlement, showing pure Mature Harappan seals, pottery, and carnelian beads
+    hundreds of kilometres from the Indus plain.
+region: Takhar / Badakhshan border, Amu Darya (Oxus) valley, northern Afghanistan
+location:
+  name: Shortugai
+  lat: 37.3250
+  lon: 69.5250
+datings:
+  - method: archaeological-radiocarbon
+    range:
+      earliest: -2299
+      latest: -1799
+      precision: century
+      circa: true
+    grade: A
+    label: Periods I-II (Mature Harappan Colony) and Periods III-IV (Late/Bishkent Transition)
+    sources:
+      - src.possehl-2002-indus-civilization
+      - src.kenoyer-1998-ancient-cities-indus
+      - src.wright-2010-ancient-indus
+    note: >-
+      Calibrated radiocarbon dates from Henri-Paul Francfort's excavations place the Mature Harappan colony
+      (Period I, Mound A) around c. 2200-2000 BCE and Late Harappan / Bactrian interaction levels (Periods II-IV)
+      down to c. 1800/1700 BCE.
+claims:
+  - text: >-
+      Despite lying more than 1,000 km north of the core Indus alluvial plain across the Hindu Kush passes,
+      Shortugai Period I displays an entirely Mature Harappan material assemblage: mud-bricks in the 1:2:4 ratio,
+      a square steatite seal bearing a rhinoceros and Indus script, black-on-red painted pottery with pipal-leaf
+      and peacock motifs, etched carnelian beads, and marine shell bangles imported from the Arabian Sea.
+    grade: A
+    sources:
+      - src.kenoyer-1998-ancient-cities-indus
+      - src.possehl-2002-indus-civilization
+      - src.wright-2010-ancient-indus
+  - text: >-
+      Workshops at Shortugai contained unworked nodules, debitage, and stone drill bits for processing lapis lazuli
+      from the nearby Sar-i-Sang mines of Badakhshan, alongside an artificial irrigation canal drawing water from
+      the Kokcha River.
+    grade: A
+    sources:
+      - src.possehl-2002-indus-civilization
+      - src.wright-2010-ancient-indus
+      - src.singh-2008-ancient-early-medieval-india
+relations:
+  - kind: part-of
+    target: tradition.harappan-civilisation
+  - kind: related-to
+    target: concept.harappan-mesopotamian-trade
+  - kind: related-to
+    target: concept.harappan-carnelian-bead-making
+wikidata: Q1550221
+tags:
+  - harappan
+  - site
+  - afghanistan
+  - trade
+  - lapis-lazuli
+review:
+  status: draft
+  author: gemini-4-argon

@@ -14,6 +14,7 @@ export const CATEGORY_META: Record<(typeof CATEGORIES)[number], { title: string;
   literature: { title: 'Literature', description: 'Itihasa, kavya, Sangam poetry and the literatures of every Indian language.' },
   'art-and-culture': { title: 'Art and Culture', description: 'Architecture, sculpture, painting, dance, textiles and food.' },
   music: { title: 'Music', description: 'From Vedic chant to Hindustani and Carnatic classical traditions.' },
+  language: { title: 'Language', description: 'Sanskrit and the languages of Bharat: scripts, grammar from Panini onward, and how the words carry the civilisation.' },
 };
 
 let index: KcItem[] | undefined;

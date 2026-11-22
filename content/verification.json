@@ -1,59 +1,453 @@
 {
+  "commons:File:1200-1000 BCE, Vajasneyi samhita sample i, Shukla Yajurveda, Sanskrit, Devanagari.jpg": {
+    "ok": true,
+    "checkedAt": "2026-11-21T22:49:29.037Z",
+    "license": "CC BY-SA 4.0",
+    "artist": "Ms Sarah Welch",
+    "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/f/fd/1200-1000_BCE%2C_Vajasneyi_samhita_sample_i%2C_Shukla_Yajurveda%2C_Sanskrit%2C_Devanagari.jpg/960px-1200-1000_BCE%2C_Vajasneyi_samhita_sample_i%2C_Shukla_Yajurveda%2C_Sanskrit%2C_Devanagari.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "thumbWidth": 640,
+    "thumbHeight": 331,
+    "pageUrl": "https://commons.wikimedia.org/wiki/File:1200-1000_BCE,_Vajasneyi_samhita_sample_i,_Shukla_Yajurveda,_Sanskrit,_Devanagari.jpg"
+  },
+  "commons:File:1636 CE Samaveda, Sadvimsha Brahmana, Varanasi Sanskrit college, Edward Cowell collection, sample iii, Sanskrit, Devanagari.jpg": {
+    "ok": true,
+    "checkedAt": "2026-11-21T22:49:28.982Z",
+    "license": "CC BY-SA 4.0",
+    "artist": "Ms Sarah Welch",
+    "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/34/1636_CE_Samaveda%2C_Sadvimsha_Brahmana%2C_Varanasi_Sanskrit_college%2C_Edward_Cowell_collection%2C_sample_iii%2C_Sanskrit%2C_Devanagari.jpg/960px-1636_CE_Samaveda%2C_Sadvimsha_Brahmana%2C_Varanasi_Sanskrit_college%2C_Edward_Cowell_collection%2C_sample_iii%2C_Sanskrit%2C_Devanagari.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "thumbWidth": 640,
+    "thumbHeight": 292,
+    "pageUrl": "https://commons.wikimedia.org/wiki/File:1636_CE_Samaveda,_Sadvimsha_Brahmana,_Varanasi_Sanskrit_college,_Edward_Cowell_collection,_sample_iii,_Sanskrit,_Devanagari.jpg"
+  },
+  "commons:File:Agnichayanam अग्निचयनम्.jpg": {
+    "ok": true,
+    "checkedAt": "2026-11-21T22:49:29.086Z",
+    "license": "CC BY-SA 4.0",
+    "artist": "Puranastudy",
+    "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/3f/Agnichayanam_%E0%A4%85%E0%A4%97%E0%A5%8D%E0%A4%A8%E0%A4%BF%E0%A4%9A%E0%A4%AF%E0%A4%A8%E0%A4%AE%E0%A5%8D.jpg/960px-Agnichayanam_%E0%A4%85%E0%A4%97%E0%A5%8D%E0%A4%A8%E0%A4%BF%E0%A4%9A%E0%A4%AF%E0%A4%A8%E0%A4%AE%E0%A5%8D.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "thumbWidth": 640,
+    "thumbHeight": 360,
+    "pageUrl": "https://commons.wikimedia.org/wiki/File:Agnichayanam_%E0%A4%85%E0%A4%97%E0%A5%8D%E0%A4%A8%E0%A4%BF%E0%A4%9A%E0%A4%AF%E0%A4%A8%E0%A4%AE%E0%A5%8D.jpg"
+  },
+  "commons:File:Agnidhriyam.JPG": {
+    "ok": true,
+    "checkedAt": "2026-11-21T22:49:29.157Z",
+    "license": "CC BY-SA 3.0",
+    "artist": "വെള്ളെഴുത്ത്",
+    "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/ca/Agnidhriyam.JPG/960px-Agnidhriyam.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "thumbWidth": 640,
+    "thumbHeight": 480,
+    "pageUrl": "https://commons.wikimedia.org/wiki/File:Agnidhriyam.JPG"
+  },
+  "commons:File:Ahichchhatra Fort Temple Bareilly.jpg": {
+    "ok": true,
+    "checkedAt": "2026-11-21T22:49:28.703Z",
+    "license": "CC BY-SA 4.0",
+    "artist": "Suneet87",
+    "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/d7/Ahichchhatra_Fort_Temple_Bareilly.jpg/960px-Ahichchhatra_Fort_Temple_Bareilly.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "thumbWidth": 640,
+    "thumbHeight": 227,
+    "pageUrl": "https://commons.wikimedia.org/wiki/File:Ahichchhatra_Fort_Temple_Bareilly.jpg"
+  },
+  "commons:File:Atharva-Veda samhita page 471 illustration.png": {
+    "ok": true,
+    "checkedAt": "2026-11-21T22:49:28.923Z",
+    "license": "Public domain",
+    "artist": "William Dwight Whitney / Charles Rockwell Lanman",
+    "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/7b/Atharva-Veda_samhita_page_471_illustration.png/960px-Atharva-Veda_samhita_page_471_illustration.png?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "thumbWidth": 640,
+    "thumbHeight": 859,
+    "pageUrl": "https://commons.wikimedia.org/wiki/File:Atharva-Veda_samhita_page_471_illustration.png"
+  },
+  "commons:File:Brihadaranyaka Upanishad verses 1.3.1 to 1.3.4, Shatapatha Brahmana, Shukla Yajurveda, Sanskrit, Devanagari.jpg": {
+    "ok": true,
+    "checkedAt": "2026-11-21T22:49:28.951Z",
+    "license": "CC BY-SA 4.0",
+    "artist": "Ms Sarah Welch",
+    "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/00/Brihadaranyaka_Upanishad_verses_1.3.1_to_1.3.4%2C_Shatapatha_Brahmana%2C_Shukla_Yajurveda%2C_Sanskrit%2C_Devanagari.jpg/960px-Brihadaranyaka_Upanishad_verses_1.3.1_to_1.3.4%2C_Shatapatha_Brahmana%2C_Shukla_Yajurveda%2C_Sanskrit%2C_Devanagari.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "thumbWidth": 640,
+    "thumbHeight": 320,
+    "pageUrl": "https://commons.wikimedia.org/wiki/File:Brihadaranyaka_Upanishad_verses_1.3.1_to_1.3.4,_Shatapatha_Brahmana,_Shukla_Yajurveda,_Sanskrit,_Devanagari.jpg"
+  },
+  "commons:File:Chandogya Upanishad verses 1.1.1-1.1.9, Samaveda, Sanskrit, Devanagari script, 1849 CE manuscript.jpg": {
+    "ok": true,
+    "checkedAt": "2026-11-21T22:49:28.961Z",
+    "license": "CC BY-SA 4.0",
+    "artist": "Ms Sarah Welch",
+    "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/13/Chandogya_Upanishad_verses_1.1.1-1.1.9%2C_Samaveda%2C_Sanskrit%2C_Devanagari_script%2C_1849_CE_manuscript.jpg/960px-Chandogya_Upanishad_verses_1.1.1-1.1.9%2C_Samaveda%2C_Sanskrit%2C_Devanagari_script%2C_1849_CE_manuscript.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "thumbWidth": 640,
+    "thumbHeight": 280,
+    "pageUrl": "https://commons.wikimedia.org/wiki/File:Chandogya_Upanishad_verses_1.1.1-1.1.9,_Samaveda,_Sanskrit,_Devanagari_script,_1849_CE_manuscript.jpg"
+  },
+  "commons:File:Chanhu-Daro beads.jpg": {
+    "ok": true,
+    "checkedAt": "2026-11-21T22:49:28.760Z",
+    "license": "Public domain",
+    "artist": "Unknown authorUnknown author",
+    "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/a9/Chanhu-Daro_beads.jpg/960px-Chanhu-Daro_beads.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "thumbWidth": 640,
+    "thumbHeight": 288,
+    "pageUrl": "https://commons.wikimedia.org/wiki/File:Chanhu-Daro_beads.jpg"
+  },
   "commons:File:Coach driver Indus 01.jpg": {
     "ok": true,
-    "checkedAt": "2026-11-21T22:39:57.790Z",
+    "checkedAt": "2026-11-21T22:49:28.761Z",
     "license": "CC BY-SA 3.0",
     "artist": "Miya.m",
     "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/68/Coach_driver_Indus_01.jpg/960px-Coach_driver_Indus_01.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "thumbWidth": 640,
+    "thumbHeight": 505,
     "pageUrl": "https://commons.wikimedia.org/wiki/File:Coach_driver_Indus_01.jpg"
+  },
+  "commons:File:Dancing girl of Mohenjo-daro.jpg": {
+    "ok": true,
+    "checkedAt": "2026-11-21T22:49:25.857Z",
+    "license": "CC0",
+    "artist": "Gary Todd",
+    "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/0b/Dancing_girl_of_Mohenjo-daro.jpg/960px-Dancing_girl_of_Mohenjo-daro.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "thumbWidth": 640,
+    "thumbHeight": 998,
+    "pageUrl": "https://commons.wikimedia.org/wiki/File:Dancing_girl_of_Mohenjo-daro.jpg"
+  },
+  "commons:File:Dholavira gujarat.jpg": {
+    "ok": true,
+    "checkedAt": "2026-11-21T22:49:28.775Z",
+    "license": "CC BY-SA 3.0",
+    "artist": "Himalyan",
+    "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/80/Dholavira_gujarat.jpg/960px-Dholavira_gujarat.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "thumbWidth": 640,
+    "thumbHeight": 480,
+    "pageUrl": "https://commons.wikimedia.org/wiki/File:Dholavira_gujarat.jpg"
+  },
+  "commons:File:Etched carnelian bead of the Indus Valley Civilization.jpg": {
+    "ok": true,
+    "checkedAt": "2026-11-21T22:49:27.988Z",
+    "license": "Public domain",
+    "artist": "Ernest John Henry Mackay (5 July 1880 – 2 October 1943)",
+    "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/ac/Etched_carnelian_bead_of_the_Indus_Valley_Civilization.jpg/960px-Etched_carnelian_bead_of_the_Indus_Valley_Civilization.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "thumbWidth": 640,
+    "thumbHeight": 739,
+    "pageUrl": "https://commons.wikimedia.org/wiki/File:Etched_carnelian_bead_of_the_Indus_Valley_Civilization.jpg"
   },
   "commons:File:Farmer in Tamil Nadu 1993.JPG": {
     "ok": true,
-    "checkedAt": "2026-11-21T22:39:57.104Z",
+    "checkedAt": "2026-11-21T22:49:28.340Z",
     "license": "CC BY 3.0",
     "artist": "Michael Gäbler",
     "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/62/Farmer_in_Tamil_Nadu_1993.JPG/960px-Farmer_in_Tamil_Nadu_1993.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "thumbWidth": 640,
+    "thumbHeight": 478,
     "pageUrl": "https://commons.wikimedia.org/wiki/File:Farmer_in_Tamil_Nadu_1993.JPG"
+  },
+  "commons:File:Great bath view Mohenjodaro.JPG": {
+    "ok": true,
+    "checkedAt": "2026-11-21T22:49:28.777Z",
+    "license": "CC BY-SA 3.0",
+    "artist": "Saqib Qayyum",
+    "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/b3/Great_bath_view_Mohenjodaro.JPG/960px-Great_bath_view_Mohenjodaro.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "thumbWidth": 640,
+    "thumbHeight": 480,
+    "pageUrl": "https://commons.wikimedia.org/wiki/File:Great_bath_view_Mohenjodaro.JPG"
+  },
+  "commons:File:Guru and DiscipleI.jpg": {
+    "ok": true,
+    "checkedAt": "2026-11-21T22:49:29.035Z",
+    "license": "Public domain",
+    "artist": "Unknown authorUnknown author",
+    "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/bf/Guru_and_DiscipleI.jpg/960px-Guru_and_DiscipleI.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "thumbWidth": 640,
+    "thumbHeight": 447,
+    "pageUrl": "https://commons.wikimedia.org/wiki/File:Guru_and_DiscipleI.jpg"
+  },
+  "commons:File:Harappan Burial Remains from Rakhigarhi.jpg": {
+    "ok": true,
+    "checkedAt": "2026-11-21T22:49:28.909Z",
+    "license": "CC BY-SA 4.0",
+    "artist": "Aadrit28",
+    "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/85/Harappan_Burial_Remains_from_Rakhigarhi.jpg/960px-Harappan_Burial_Remains_from_Rakhigarhi.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "thumbWidth": 640,
+    "thumbHeight": 1135,
+    "pageUrl": "https://commons.wikimedia.org/wiki/File:Harappan_Burial_Remains_from_Rakhigarhi.jpg"
+  },
+  "commons:File:Harappan weights Delhi Museum.jpg": {
+    "ok": true,
+    "checkedAt": "2026-11-21T22:49:28.214Z",
+    "license": "CC BY-SA 3.0",
+    "artist": "Nomu420",
+    "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/34/Harappan_weights_Delhi_Museum.jpg/960px-Harappan_weights_Delhi_Museum.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "thumbWidth": 640,
+    "thumbHeight": 474,
+    "pageUrl": "https://commons.wikimedia.org/wiki/File:Harappan_weights_Delhi_Museum.jpg"
+  },
+  "commons:File:Hastinapur-Vidur ka Teela-Plaque.jpg": {
+    "ok": true,
+    "checkedAt": "2026-11-21T22:49:28.822Z",
+    "license": "CC BY-SA 3.0",
+    "artist": "Giridharmamidi",
+    "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/d3/Hastinapur-Vidur_ka_Teela-Plaque.jpg/960px-Hastinapur-Vidur_ka_Teela-Plaque.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "thumbWidth": 640,
+    "thumbHeight": 960,
+    "pageUrl": "https://commons.wikimedia.org/wiki/File:Hastinapur-Vidur_ka_Teela-Plaque.jpg"
+  },
+  "commons:File:Indus civilisation seal unicorn at Indian Museum, Kolkata.jpg": {
+    "ok": true,
+    "checkedAt": "2026-11-21T22:49:25.877Z",
+    "license": "CC BY-SA 4.0",
+    "artist": "Royroydeb",
+    "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/a8/Indus_civilisation_seal_unicorn_at_Indian_Museum%2C_Kolkata.jpg/960px-Indus_civilisation_seal_unicorn_at_Indian_Museum%2C_Kolkata.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "thumbWidth": 640,
+    "thumbHeight": 360,
+    "pageUrl": "https://commons.wikimedia.org/wiki/File:Indus_civilisation_seal_unicorn_at_Indian_Museum,_Kolkata.jpg"
+  },
+  "commons:File:Indus Valley Civilization carnelian beads excavated in Susa.jpg": {
+    "ok": true,
+    "checkedAt": "2026-11-21T22:49:28.104Z",
+    "license": "CC BY-SA 2.0",
+    "artist": "ALFGRN",
+    "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/5a/Indus_Valley_Civilization_carnelian_beads_excavated_in_Susa.jpg/960px-Indus_Valley_Civilization_carnelian_beads_excavated_in_Susa.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "thumbWidth": 640,
+    "thumbHeight": 878,
+    "pageUrl": "https://commons.wikimedia.org/wiki/File:Indus_Valley_Civilization_carnelian_beads_excavated_in_Susa.jpg"
+  },
+  "commons:File:Kalibangan cylinder seal.jpg": {
+    "ok": true,
+    "checkedAt": "2026-11-21T22:49:28.824Z",
+    "license": "GODL-India",
+    "artist": "Ministry of Culture",
+    "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/4e/Kalibangan_cylinder_seal.jpg/960px-Kalibangan_cylinder_seal.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "thumbWidth": 640,
+    "thumbHeight": 291,
+    "pageUrl": "https://commons.wikimedia.org/wiki/File:Kalibangan_cylinder_seal.jpg"
+  },
+  "commons:File:Late Vedic Culture (1100-500 BCE).png": {
+    "ok": true,
+    "checkedAt": "2026-11-21T22:49:28.702Z",
+    "license": "CC BY-SA 3.0",
+    "artist": "Avantiputra7",
+    "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/51/Late_Vedic_Culture_%281100-500_BCE%29.png/960px-Late_Vedic_Culture_%281100-500_BCE%29.png?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "thumbWidth": 640,
+    "thumbHeight": 491,
+    "pageUrl": "https://commons.wikimedia.org/wiki/File:Late_Vedic_Culture_(1100-500_BCE).png"
+  },
+  "commons:File:Lothal Dockyard N-GJ-60.jpg": {
+    "ok": true,
+    "checkedAt": "2026-11-21T22:49:28.842Z",
+    "license": "CC BY-SA 4.0",
+    "artist": "Jashjashjash",
+    "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/f/f5/Lothal_Dockyard_N-GJ-60.jpg/960px-Lothal_Dockyard_N-GJ-60.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "thumbWidth": 640,
+    "thumbHeight": 378,
+    "pageUrl": "https://commons.wikimedia.org/wiki/File:Lothal_Dockyard_N-GJ-60.jpg"
+  },
+  "commons:File:Manholes at Dholavira water management network.jpg": {
+    "ok": true,
+    "checkedAt": "2026-11-21T22:49:28.107Z",
+    "license": "CC BY-SA 4.0",
+    "artist": "Prof Ranga Sai",
+    "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/e1/Manholes_at_Dholavira_water_management_network.jpg/960px-Manholes_at_Dholavira_water_management_network.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "thumbWidth": 640,
+    "thumbHeight": 1138,
+    "pageUrl": "https://commons.wikimedia.org/wiki/File:Manholes_at_Dholavira_water_management_network.jpg"
+  },
+  "commons:File:Map of Kuru Kingdom.jpg": {
+    "ok": true,
+    "checkedAt": "2026-11-21T22:49:28.701Z",
+    "license": "CC BY-SA 4.0",
+    "artist": "Roshan Krishna Dhanawade (Srimant ROSHAN)",
+    "thumb": "https://upload.wikimedia.org/wikipedia/commons/a/a9/Map_of_Kuru_Kingdom.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+    "thumbWidth": 640,
+    "thumbHeight": 538,
+    "pageUrl": "https://commons.wikimedia.org/wiki/File:Map_of_Kuru_Kingdom.jpg"
   },
   "commons:File:Map of some Copper Hoard sites in North India 1.png": {
     "ok": true,
-    "checkedAt": "2026-11-21T22:39:58.569Z",
+    "checkedAt": "2026-11-21T22:49:29.090Z",
     "license": "CC BY 4.0",
     "artist": "Merikanto",
     "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/06/Map_of_some_Copper_Hoard_sites_in_North_India_1.png/960px-Map_of_some_Copper_Hoard_sites_in_North_India_1.png?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "thumbWidth": 640,
+    "thumbHeight": 540,
     "pageUrl": "https://commons.wikimedia.org/wiki/File:Map_of_some_Copper_Hoard_sites_in_North_India_1.png"
   },
   "commons:File:Mehrgarh ruins.jpg": {
     "ok": true,
-    "checkedAt": "2026-11-21T22:39:58.322Z",
+    "checkedAt": "2026-11-21T22:49:28.878Z",
     "license": "CC BY-SA 3.0",
     "artist": "Ashish_Premier",
     "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/83/Mehrgarh_ruins.jpg/960px-Mehrgarh_ruins.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "thumbWidth": 640,
+    "thumbHeight": 419,
     "pageUrl": "https://commons.wikimedia.org/wiki/File:Mehrgarh_ruins.jpg"
+  },
+  "commons:File:Mohenjodaro - view of the stupa mound.JPG": {
+    "ok": true,
+    "checkedAt": "2026-11-21T22:49:28.879Z",
+    "license": "CC BY-SA 3.0",
+    "artist": "Saqib Qayyum",
+    "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/03/Mohenjodaro_-_view_of_the_stupa_mound.JPG/960px-Mohenjodaro_-_view_of_the_stupa_mound.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "thumbWidth": 640,
+    "thumbHeight": 480,
+    "pageUrl": "https://commons.wikimedia.org/wiki/File:Mohenjodaro_-_view_of_the_stupa_mound.JPG"
+  },
+  "commons:File:Northern Polished Black Ware Culture (700-200 BCE).png": {
+    "ok": true,
+    "checkedAt": "2026-11-21T22:49:28.243Z",
+    "license": "CC BY-SA 3.0",
+    "artist": "Avantiputra7",
+    "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/31/Northern_Polished_Black_Ware_Culture_%28700-200_BCE%29.png/960px-Northern_Polished_Black_Ware_Culture_%28700-200_BCE%29.png?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "thumbWidth": 640,
+    "thumbHeight": 542,
+    "pageUrl": "https://commons.wikimedia.org/wiki/File:Northern_Polished_Black_Ware_Culture_(700-200_BCE).png"
+  },
+  "commons:File:Painted Grey Ware - Sonkh - 1000-600 BCE - Showcase 6-15 - Prehistory and Terracotta Gallery - Government Museum - Mathura 2013-02-24 6461.JPG": {
+    "ok": true,
+    "checkedAt": "2026-11-21T22:49:28.264Z",
+    "license": "CC BY 3.0",
+    "artist": "Biswarup Ganguly",
+    "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/1c/Painted_Grey_Ware_-_Sonkh_-_1000-600_BCE_-_Showcase_6-15_-_Prehistory_and_Terracotta_Gallery_-_Government_Museum_-_Mathura_2013-02-24_6461.JPG/960px-Painted_Grey_Ware_-_Sonkh_-_1000-600_BCE_-_Showcase_6-15_-_Prehistory_and_Terracotta_Gallery_-_Government_Museum_-_Mathura_2013-02-24_6461.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "thumbWidth": 640,
+    "thumbHeight": 425,
+    "pageUrl": "https://commons.wikimedia.org/wiki/File:Painted_Grey_Ware_-_Sonkh_-_1000-600_BCE_-_Showcase_6-15_-_Prehistory_and_Terracotta_Gallery_-_Government_Museum_-_Mathura_2013-02-24_6461.JPG"
+  },
+  "commons:File:Panini 1.jpg": {
+    "ok": true,
+    "checkedAt": "2026-11-21T22:49:28.353Z",
+    "license": "CC BY-SA 4.0",
+    "artist": "Jameela P.",
+    "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/db/Panini_1.jpg/960px-Panini_1.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "thumbWidth": 640,
+    "thumbHeight": 480,
+    "pageUrl": "https://commons.wikimedia.org/wiki/File:Panini_1.jpg"
+  },
+  "commons:File:Priest King (Sculpture) of Mohenjo-daro.jpg": {
+    "ok": true,
+    "checkedAt": "2026-11-21T22:49:27.630Z",
+    "license": "CC BY-SA 4.0",
+    "artist": "Ganesh Mohan T",
+    "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/6c/Priest_King_%28Sculpture%29_of_Mohenjo-daro.jpg/960px-Priest_King_%28Sculpture%29_of_Mohenjo-daro.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "thumbWidth": 640,
+    "thumbHeight": 1458,
+    "pageUrl": "https://commons.wikimedia.org/wiki/File:Priest_King_(Sculpture)_of_Mohenjo-daro.jpg"
+  },
+  "commons:File:Rigveda MS2097.jpg": {
+    "ok": true,
+    "checkedAt": "2026-11-21T22:49:28.961Z",
+    "license": "Public domain",
+    "artist": "Unknown authorUnknown author",
+    "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/02/Rigveda_MS2097.jpg/960px-Rigveda_MS2097.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "thumbWidth": 640,
+    "thumbHeight": 614,
+    "pageUrl": "https://commons.wikimedia.org/wiki/File:Rigveda_MS2097.jpg"
+  },
+  "commons:File:Rigvedic geography.jpg": {
+    "ok": true,
+    "checkedAt": "2026-11-21T22:49:27.988Z",
+    "license": "CC BY-SA 3.0",
+    "artist": "",
+    "thumb": "https://upload.wikimedia.org/wikipedia/commons/d/d5/Rigvedic_geography.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+    "thumbWidth": 640,
+    "thumbHeight": 456,
+    "pageUrl": "https://commons.wikimedia.org/wiki/File:Rigvedic_geography.jpg"
   },
   "commons:File:Rock painting, Bhimbetka, Raisen district, MP.jpg": {
     "ok": true,
-    "checkedAt": "2026-11-21T22:39:57.421Z",
+    "checkedAt": "2026-11-21T22:49:28.703Z",
     "license": "CC BY-SA 4.0",
     "artist": "Yann (talk)",
     "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/21/Rock_painting%2C_Bhimbetka%2C_Raisen_district%2C_MP.jpg/960px-Rock_painting%2C_Bhimbetka%2C_Raisen_district%2C_MP.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "thumbWidth": 640,
+    "thumbHeight": 427,
     "pageUrl": "https://commons.wikimedia.org/wiki/File:Rock_painting,_Bhimbetka,_Raisen_district,_MP.jpg"
+  },
+  "commons:File:Sarasvati river.jpg": {
+    "ok": true,
+    "checkedAt": "2026-11-21T22:49:28.282Z",
+    "license": "CC BY-SA 4.0",
+    "artist": "Joshua Jonathan",
+    "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/0c/Sarasvati_river.jpg/960px-Sarasvati_river.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "thumbWidth": 640,
+    "thumbHeight": 794,
+    "pageUrl": "https://commons.wikimedia.org/wiki/File:Sarasvati_river.jpg"
+  },
+  "commons:File:Shiva Pashupati.jpg": {
+    "ok": true,
+    "checkedAt": "2026-11-21T22:49:25.877Z",
+    "license": "Public domain",
+    "artist": "unknown Indus Valley Civilization sealmaker from Mohenjodaro archaeological site",
+    "thumb": "https://upload.wikimedia.org/wikipedia/commons/2/2f/Shiva_Pashupati.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+    "thumbWidth": 640,
+    "thumbHeight": 644,
+    "pageUrl": "https://commons.wikimedia.org/wiki/File:Shiva_Pashupati.jpg"
+  },
+  "commons:File:Signboard at Dholavira.jpg": {
+    "ok": true,
+    "checkedAt": "2026-11-21T22:49:25.876Z",
+    "license": "CC BY-SA 4.0",
+    "artist": "Nishith S. Parikh",
+    "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/ce/Signboard_at_Dholavira.jpg/960px-Signboard_at_Dholavira.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "thumbWidth": 640,
+    "thumbHeight": 640,
+    "pageUrl": "https://commons.wikimedia.org/wiki/File:Signboard_at_Dholavira.jpg"
+  },
+  "commons:File:Simple map of Indus valley civilization.png": {
+    "ok": true,
+    "checkedAt": "2026-11-21T22:49:29.115Z",
+    "license": "CC BY 4.0",
+    "artist": "Merikanto",
+    "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/76/Simple_map_of_Indus_valley_civilization.png/960px-Simple_map_of_Indus_valley_civilization.png?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "thumbWidth": 640,
+    "thumbHeight": 752,
+    "pageUrl": "https://commons.wikimedia.org/wiki/File:Simple_map_of_Indus_valley_civilization.png"
+  },
+  "commons:File:Sintashta culture.jpg": {
+    "ok": true,
+    "checkedAt": "2026-11-21T22:49:28.339Z",
+    "license": "CC BY-SA 4.0",
+    "artist": "Krakkos",
+    "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/85/Sintashta_culture.jpg/960px-Sintashta_culture.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "thumbWidth": 640,
+    "thumbHeight": 545,
+    "pageUrl": "https://commons.wikimedia.org/wiki/File:Sintashta_culture.jpg"
   },
   "commons:File:Topographic map of Ahar-Banas culture 1.svg": {
     "ok": true,
-    "checkedAt": "2026-11-21T22:39:58.521Z",
+    "checkedAt": "2026-11-21T22:49:29.087Z",
     "license": "CC BY-SA 4.0",
     "artist": "Merikanto",
     "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/71/Topographic_map_of_Ahar-Banas_culture_1.svg/960px-Topographic_map_of_Ahar-Banas_culture_1.svg.png?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "thumbWidth": 640,
+    "thumbHeight": 527,
     "pageUrl": "https://commons.wikimedia.org/wiki/File:Topographic_map_of_Ahar-Banas_culture_1.svg"
   },
   "commons:File:View over the Sivalik Hills 02.jpg": {
     "ok": true,
-    "checkedAt": "2026-11-21T22:39:56.884Z",
+    "checkedAt": "2026-11-21T22:49:28.340Z",
     "license": "CC BY-SA 4.0",
     "artist": "Kritzolina",
     "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/ac/View_over_the_Sivalik_Hills_02.jpg/960px-View_over_the_Sivalik_Hills_02.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "thumbWidth": 640,
+    "thumbHeight": 427,
     "pageUrl": "https://commons.wikimedia.org/wiki/File:View_over_the_Sivalik_Hills_02.jpg"
+  },
+  "commons:File:WellAndBathingPlatforms-Harappa.jpg": {
+    "ok": true,
+    "checkedAt": "2026-11-21T22:49:28.820Z",
+    "license": "CC BY-SA 3.0",
+    "artist": "Obed Suhail",
+    "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/bf/WellAndBathingPlatforms-Harappa.jpg/960px-WellAndBathingPlatforms-Harappa.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "thumbWidth": 640,
+    "thumbHeight": 480,
+    "pageUrl": "https://commons.wikimedia.org/wiki/File:WellAndBathingPlatforms-Harappa.jpg"
+  },
+  "commons:File:अङ्गुलिविन्यासः4 Finger configuration.png": {
+    "ok": true,
+    "checkedAt": "2026-11-21T22:49:29.167Z",
+    "license": "CC BY-SA 4.0",
+    "artist": "Puranastudy",
+    "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/03/%E0%A4%85%E0%A4%99%E0%A5%8D%E0%A4%97%E0%A5%81%E0%A4%B2%E0%A4%BF%E0%A4%B5%E0%A4%BF%E0%A4%A8%E0%A5%8D%E0%A4%AF%E0%A4%BE%E0%A4%B8%E0%A4%834_Finger_configuration.png/960px-%E0%A4%85%E0%A4%99%E0%A5%8D%E0%A4%97%E0%A5%81%E0%A4%B2%E0%A4%BF%E0%A4%B5%E0%A4%BF%E0%A4%A8%E0%A5%8D%E0%A4%AF%E0%A4%BE%E0%A4%B8%E0%A4%834_Finger_configuration.png?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "thumbWidth": 640,
+    "thumbHeight": 577,
+    "pageUrl": "https://commons.wikimedia.org/wiki/File:%E0%A4%85%E0%A4%99%E0%A5%8D%E0%A4%97%E0%A5%81%E0%A4%B2%E0%A4%BF%E0%A4%B5%E0%A4%BF%E0%A4%A8%E0%A5%8D%E0%A4%AF%E0%A4%BE%E0%A4%B8%E0%A4%834_Finger_configuration.png"
   },
   "doi:10.1006/jasc.1997.0260": {
     "ok": true,
@@ -80,6 +474,16 @@
     "checkedAt": "2026-11-21T22:39:56.695Z",
     "matched": "The Evolution and History of Human Populations in South Asia"
   },
+  "doi:10.1007/bf00327767": {
+    "ok": true,
+    "checkedAt": "2026-11-21T22:39:55.004Z",
+    "matched": "The ritual origin of geometry"
+  },
+  "doi:10.1007/bf00978474": {
+    "ok": true,
+    "checkedAt": "2026-11-21T22:39:46.118Z",
+    "matched": "The Indus Valley Tradition of Pakistan and western India"
+  },
   "doi:10.1007/bf02704749": {
     "ok": true,
     "checkedAt": "2026-11-21T22:39:54.965Z",
@@ -90,10 +494,20 @@
     "checkedAt": "2026-11-21T22:39:51.297Z",
     "matched": "Agricultural Origins and Frontiers in South Asia: A Working Synthesis"
   },
+  "doi:10.1016/j.cell.2019.08.048": {
+    "ok": true,
+    "checkedAt": "2026-11-21T22:39:47.768Z",
+    "matched": "An Ancient Harappan Genome Lacks Ancestry from Steppe Pastoralists or Iranian Farmers"
+  },
   "doi:10.1016/j.earscirev.2016.07.014": {
     "ok": true,
     "checkedAt": "2026-11-21T22:39:51.352Z",
     "matched": "The timing of India-Asia collision onset – Facts, theories, controversies"
+  },
+  "doi:10.1016/j.jas.2024.106046": {
+    "ok": true,
+    "checkedAt": "2026-11-21T22:39:46.092Z",
+    "matched": "Sabarmati and its connection with the Harappan port Lothal and the Nal corridor: A study using multi-sensor data, cloud-computing and multi-platforms"
   },
   "doi:10.1016/j.palaeo.2009.10.009": {
     "ok": true,
@@ -120,10 +534,25 @@
     "checkedAt": "2026-11-21T22:39:55.040Z",
     "matched": "Excavation of an Acheulian workshop at Isampur, Karnataka (India)"
   },
+  "doi:10.1017/s0003598x00092590": {
+    "ok": true,
+    "checkedAt": "2026-11-21T22:39:56.557Z",
+    "matched": "The origins of iron working in India: new evidence from the Central Ganga Plain and the Eastern Vindhyas"
+  },
   "doi:10.1017/s0003598x00095715": {
     "ok": true,
     "checkedAt": "2026-11-21T22:39:51.341Z",
     "matched": "Dating the Neolithic of South India: new radiometric evidence for key economic, social and ritual transformations"
+  },
+  "doi:10.1017/s0003598x00113535": {
+    "ok": true,
+    "checkedAt": "2026-11-21T22:39:46.119Z",
+    "matched": "Palaeogeography around the Harappan port of Lothal, Gujarat, western India"
+  },
+  "doi:10.1017/s0035869x00166134": {
+    "ok": true,
+    "checkedAt": "2026-11-21T22:39:47.689Z",
+    "matched": "Unhinging Śiva from the Indus civilization"
   },
   "doi:10.1017/s0079497x00011646": {
     "ok": true,
@@ -150,15 +579,30 @@
     "checkedAt": "2026-11-21T22:39:51.175Z",
     "matched": "Early Middle Palaeolithic culture in India around 385–172 ka reframes Out of Africa models"
   },
+  "doi:10.1038/s41467-017-01643-9": {
+    "ok": true,
+    "checkedAt": "2026-11-21T22:39:47.775Z",
+    "matched": "Counter-intuitive influence of Himalayan river morphodynamics on Indus Civilisation urban settlements"
+  },
   "doi:10.1038/s41467-020-14668-4": {
     "ok": true,
     "checkedAt": "2026-11-21T22:39:51.241Z",
     "matched": "Human occupation of northern India spans the Toba super-eruption ~74,000 years ago"
   },
+  "doi:10.1038/s41598-018-22504-5": {
+    "ok": true,
+    "checkedAt": "2026-11-21T22:39:46.050Z",
+    "matched": "Intensified summer monsoon and the urbanization of Indus Civilization in northwest India"
+  },
   "doi:10.1038/srep26555": {
     "ok": true,
     "checkedAt": "2026-11-21T22:39:56.153Z",
     "matched": "Oxygen isotope in archaeological bioapatites from India: Implications to climate change and decline of Bronze Age Harappan civilization"
+  },
+  "doi:10.1073/pnas.1112743109": {
+    "ok": true,
+    "checkedAt": "2026-11-21T22:39:46.091Z",
+    "matched": "Fluvial landscapes of the Harappan civilization"
   },
   "doi:10.1073/pnas.1117262109": {
     "ok": true,
@@ -190,15 +634,45 @@
     "checkedAt": "2026-11-21T22:39:52.937Z",
     "matched": "Earliest Acheulian Industry from Peninsular India"
   },
+  "doi:10.1086/690112": {
+    "ok": true,
+    "checkedAt": "2026-11-21T22:39:47.719Z",
+    "matched": "Adaptation to Variable Environments, Resilience to Climate Change: Investigating\n                    <i>Land, Water and Settlement</i>\n                    in Indus Northwest India"
+  },
   "doi:10.1086/jar.55.1.3630977": {
     "ok": true,
     "checkedAt": "2026-11-21T22:39:55.172Z",
     "matched": "The First Acheulian Quarry in India: Stone Tool Manufacture, Biface Morphology, and Behaviors"
   },
+  "doi:10.1093/0195137779.001.0001": {
+    "ok": true,
+    "checkedAt": "2026-11-21T22:39:54.831Z",
+    "matched": "The Quest for the Origins of Vedic Culture: The Indo-Aryan Migration Debate"
+  },
+  "doi:10.1093/acprof:oso/9780190226909.001.0001": {
+    "ok": true,
+    "checkedAt": "2026-11-21T22:39:46.153Z",
+    "matched": "The Roots of Hinduism: The Early Aryans and The Indus Civilization"
+  },
   "doi:10.1093/molbev/msp213": {
     "ok": true,
     "checkedAt": "2026-11-21T22:39:51.233Z",
     "matched": "Zebu Cattle Are an Exclusive Legacy of the South Asia Neolithic"
+  },
+  "doi:10.1093/oso/9780190633363.001.0001": {
+    "ok": true,
+    "checkedAt": "2026-11-21T22:39:52.991Z",
+    "matched": "The Rigveda"
+  },
+  "doi:10.1093/oso/9780195124354.001.0001": {
+    "ok": true,
+    "checkedAt": "2026-11-21T22:39:54.982Z",
+    "matched": "The Early Upanisads: Annotated Text and Translation"
+  },
+  "doi:10.1111/b.9780631215356.2005.00005.x": {
+    "ok": true,
+    "checkedAt": "2026-11-21T22:39:52.842Z",
+    "matched": "The Blackwell Companion to Hinduism"
   },
   "doi:10.1126/science.1109792": {
     "ok": true,
@@ -210,50 +684,210 @@
     "checkedAt": "2026-11-21T22:39:55.249Z",
     "matched": "Middle Paleolithic Assemblages from the Indian Subcontinent Before and After the Toba Super-Eruption"
   },
+  "doi:10.1126/science.1170391": {
+    "ok": true,
+    "checkedAt": "2026-11-21T22:39:46.188Z",
+    "matched": "Entropic Evidence for Linguistic Structure in the Indus Script"
+  },
   "doi:10.1126/science.1200183": {
     "ok": true,
     "checkedAt": "2026-11-21T22:39:55.038Z",
     "matched": "Early Pleistocene Presence of Acheulian Hominins in South India"
+  },
+  "doi:10.1126/science.aat7487": {
+    "ok": true,
+    "checkedAt": "2026-11-21T22:39:46.160Z",
+    "matched": "The formation of human populations in South and Central Asia"
+  },
+  "doi:10.1130/g32840.1": {
+    "ok": true,
+    "checkedAt": "2026-11-21T22:39:46.052Z",
+    "matched": "U-Pb zircon dating evidence for a Pleistocene Sarasvati River and capture of the Yamuna River"
+  },
+  "doi:10.1130/g35236.1": {
+    "ok": true,
+    "checkedAt": "2026-11-21T22:39:46.053Z",
+    "matched": "Abrupt weakening of the summer monsoon in northwest India  4100 yr ago"
+  },
+  "doi:10.1163/9789004492462": {
+    "ok": true,
+    "checkedAt": "2026-11-21T22:39:52.946Z",
+    "matched": "Vedic Ritual: The Non-Solemn Rites"
+  },
+  "doi:10.1163/ej.9789004160545.i-763": {
+    "ok": true,
+    "checkedAt": "2026-11-21T22:39:54.883Z",
+    "matched": "The Origin of the Indo-Iranians"
+  },
+  "doi:10.1353/lan.2014.0031": {
+    "ok": true,
+    "checkedAt": "2026-11-21T22:39:47.651Z",
+    "matched": "A Statistical Comparison of Written Language and Nonlinguistic Symbol\n                        Systems"
   },
   "doi:10.1371/journal.pone.0005669": {
     "ok": true,
     "checkedAt": "2026-11-21T22:39:56.147Z",
     "matched": "Ancient Skeletal Evidence for Leprosy in India (2000 B.C.)"
   },
+  "doi:10.1515/9780691292601": {
+    "ok": true,
+    "checkedAt": "2026-11-21T22:39:52.758Z",
+    "matched": "The Horse, the Wheel, and Language: How Bronze-Age Riders from the Eurasian Steppes Shaped the Modern World"
+  },
+  "doi:10.1515/9781400834075": {
+    "ok": true,
+    "checkedAt": "2026-11-21T22:39:55.017Z",
+    "matched": "Mathematics in India"
+  },
+  "doi:10.1524/9783486594355.27": {
+    "ok": true,
+    "checkedAt": "2026-11-21T22:39:55.086Z",
+    "matched": "Early Sanskritization Origins and Development of the Kuru State"
+  },
+  "doi:10.1525/aa.1968.70.5.02a00070": {
+    "ok": true,
+    "checkedAt": "2026-11-21T22:39:46.121Z",
+    "matched": "The Harappan “Port” at Lothal: Another View<sup>1</sup>"
+  },
+  "doi:10.1557/proc-267-495": {
+    "ok": true,
+    "checkedAt": "2026-11-21T22:39:47.611Z",
+    "matched": "A New Look at Stone Drills of the Indus Valley Tradition"
+  },
   "doi:10.1666/0094-8373(2002)28[1:faecit]2.0.co;2": {
     "ok": true,
     "checkedAt": "2026-11-21T22:39:51.196Z",
     "matched": "Faunal and environmental change in the late Miocene Siwaliks of northern Pakistan"
+  },
+  "doi:10.18520/cs/v114/i04/879-887": {
+    "ok": true,
+    "checkedAt": "2026-11-21T22:39:46.041Z",
+    "matched": "Archaeological Studies at Dholavira Using GPR"
   },
   "doi:10.18520/cs/v114/i10/2106-2115": {
     "ok": true,
     "checkedAt": "2026-11-21T22:39:57.790Z",
     "matched": "Paddy Cultivation during Early Holocene:Evidence from Diatoms in Lahuradewa Lake Sediments, Ganga Plain"
   },
+  "doi:10.2307/3631855": {
+    "ok": true,
+    "checkedAt": "2026-11-21T22:39:52.884Z",
+    "matched": "Excavations at Atranjikhera. Early Civilization of the Upper Ganga Basin"
+  },
+  "doi:10.2307/595878": {
+    "ok": true,
+    "checkedAt": "2026-11-21T22:39:59.649Z",
+    "matched": "The 'Aryan' Gods of the Mitanni Treaties"
+  },
+  "doi:10.2307/jj.25577269": {
+    "ok": true,
+    "checkedAt": "2026-11-21T22:39:52.839Z",
+    "matched": "Hittite Diplomatic Texts"
+  },
+  "doi:10.23993/store.98032": {
+    "ok": true,
+    "checkedAt": "2026-11-21T22:39:46.187Z",
+    "matched": "Royal \"Chariot\" Burials of Sanauli near Delhi and Archaeological Correlates of Prehistoric Indo-Iranian Languages"
+  },
   "doi:10.3109/03014461003639249": {
     "ok": true,
     "checkedAt": "2026-11-21T22:39:56.883Z",
     "matched": "Out of Africa: new hypotheses and evidence for the dispersal of\n                    <i>Homo sapiens</i>\n                    along the Indian Ocean rim"
+  },
+  "doi:10.5040/9798400612787": {
+    "ok": true,
+    "checkedAt": "2026-11-21T22:39:46.152Z",
+    "matched": "The Ancient Indus Valley: New Perspectives"
+  },
+  "qid:Q1017084:site.kot-diji": {
+    "ok": true,
+    "checkedAt": "2026-11-21T22:39:48.213Z",
+    "matched": "Kot Diji"
   },
   "qid:Q105393686:site.gufkral": {
     "ok": true,
     "checkedAt": "2026-11-21T22:39:57.849Z",
     "matched": "Gufkral"
   },
+  "qid:Q1062208:site.chanhudaro": {
+    "ok": true,
+    "checkedAt": "2026-11-21T22:39:48.035Z",
+    "matched": "Chāñhu-daro"
+  },
+  "qid:Q1068408:polity.kuru-kingdom": {
+    "ok": true,
+    "checkedAt": "2026-11-21T22:39:56.408Z",
+    "matched": "Kuru Kingdom"
+  },
   "qid:Q10773159:site.isampur": {
     "ok": true,
     "checkedAt": "2026-11-21T22:39:58.039Z",
     "matched": "Isampur"
+  },
+  "qid:Q118414942:text.baudhayana-shulba-sutra": {
+    "ok": true,
+    "checkedAt": "2026-11-21T22:39:56.779Z",
+    "matched": "Baudhayana sutras"
   },
   "qid:Q1264589:site.didwana": {
     "ok": true,
     "checkedAt": "2026-11-21T22:39:57.792Z",
     "matched": "Didwana"
   },
+  "qid:Q12823976:tradition.jhukar-phase": {
+    "ok": true,
+    "checkedAt": "2026-11-21T22:39:48.471Z",
+    "matched": "Jhukar Phase"
+  },
+  "qid:Q1291515:event.4-2-ka-climate-aridification": {
+    "ok": true,
+    "checkedAt": "2026-11-21T22:39:47.988Z",
+    "matched": "4.2 kiloyear event"
+  },
+  "qid:Q1550221:site.shortugai": {
+    "ok": true,
+    "checkedAt": "2026-11-21T22:39:48.369Z",
+    "matched": "Shortugai"
+  },
   "qid:Q16896353:site.paiyampalli": {
     "ok": true,
     "checkedAt": "2026-11-21T22:39:58.375Z",
     "matched": "Paiyampalli"
+  },
+  "qid:Q17008494:artifact.dancing-girl-mohenjo-daro": {
+    "ok": true,
+    "checkedAt": "2026-11-21T22:39:47.689Z",
+    "matched": "Dancing Girl"
+  },
+  "qid:Q1722226:site.kalibangan": {
+    "ok": true,
+    "checkedAt": "2026-11-21T22:39:48.201Z",
+    "matched": "Kalibangan"
+  },
+  "qid:Q177321:concept.rigvedic-sarasvati": {
+    "ok": true,
+    "checkedAt": "2026-11-21T22:39:55.923Z",
+    "matched": "Sarasvati River"
+  },
+  "qid:Q1812470:tradition.agnicayana": {
+    "ok": true,
+    "checkedAt": "2026-11-21T22:39:57.829Z",
+    "matched": "Agnicayana"
+  },
+  "qid:Q185562:site.harappa": {
+    "ok": true,
+    "checkedAt": "2026-11-21T22:39:48.172Z",
+    "matched": "Harappa"
+  },
+  "qid:Q189725:person.panini": {
+    "ok": true,
+    "checkedAt": "2026-11-21T22:39:56.230Z",
+    "matched": "Panini"
+  },
+  "qid:Q1942840:artifact.pashupati-seal": {
+    "ok": true,
+    "checkedAt": "2026-11-21T22:39:47.817Z",
+    "matched": "Pashupati seal"
   },
   "qid:Q19672252:site.chirand": {
     "ok": true,
@@ -265,10 +899,35 @@
     "checkedAt": "2026-11-21T22:39:57.548Z",
     "matched": "Burzahom archaeological site"
   },
+  "qid:Q2047159:text.nirukta": {
+    "ok": true,
+    "checkedAt": "2026-11-21T22:39:57.088Z",
+    "matched": "Nirukta"
+  },
   "qid:Q22935928:site.attirampakkam": {
     "ok": true,
     "checkedAt": "2026-11-21T22:39:57.121Z",
     "matched": "Attirampakkam"
+  },
+  "qid:Q2341875:site.rupnagar": {
+    "ok": true,
+    "checkedAt": "2026-11-21T22:39:48.333Z",
+    "matched": "Rupnagar"
+  },
+  "qid:Q236092:text.atharvaveda": {
+    "ok": true,
+    "checkedAt": "2026-11-21T22:39:56.709Z",
+    "matched": "Atharvaveda"
+  },
+  "qid:Q236226:text.samaveda": {
+    "ok": true,
+    "checkedAt": "2026-11-21T22:39:57.239Z",
+    "matched": "Samaveda"
+  },
+  "qid:Q2364797:tradition.cemetery-h-culture": {
+    "ok": true,
+    "checkedAt": "2026-11-21T22:39:48.424Z",
+    "matched": "Cemetery H culture"
   },
   "qid:Q242148:site.mehrgarh": {
     "ok": true,
@@ -280,35 +939,140 @@
     "checkedAt": "2026-11-21T22:39:58.164Z",
     "matched": "Lahuradewa"
   },
+  "qid:Q2495995:concept.northern-black-polished-ware-culture": {
+    "ok": true,
+    "checkedAt": "2026-11-21T22:39:55.738Z",
+    "matched": "Northern Black Polished Ware"
+  },
+  "qid:Q2525293:concept.painted-grey-ware-culture": {
+    "ok": true,
+    "checkedAt": "2026-11-21T22:39:55.864Z",
+    "matched": "Painted Grey Ware culture"
+  },
+  "qid:Q2525323:concept.black-and-red-ware-culture": {
+    "ok": true,
+    "checkedAt": "2026-11-21T22:39:55.018Z",
+    "matched": "Black and red ware culture"
+  },
+  "qid:Q2625916:concept.gandhara-grave-culture": {
+    "ok": true,
+    "checkedAt": "2026-11-21T22:39:55.086Z",
+    "matched": "Gandhara grave culture"
+  },
+  "qid:Q265461:text.aranyakas": {
+    "ok": true,
+    "checkedAt": "2026-11-21T22:39:56.634Z",
+    "matched": "Aranyaka"
+  },
   "qid:Q2663163:tradition.ochre-coloured-pottery-culture": {
     "ok": true,
     "checkedAt": "2026-11-21T22:39:58.646Z",
     "matched": "Ochre Coloured Pottery culture"
+  },
+  "qid:Q269145:concept.indo-aryan-migration": {
+    "ok": true,
+    "checkedAt": "2026-11-21T22:39:55.519Z",
+    "matched": "Indo-Aryan migrations"
+  },
+  "qid:Q2827417:site.ahichhatra": {
+    "ok": true,
+    "checkedAt": "2026-11-21T22:39:56.526Z",
+    "matched": "Ahichatra"
+  },
+  "qid:Q2868351:text.ashtadhyayi": {
+    "ok": true,
+    "checkedAt": "2026-11-21T22:39:56.705Z",
+    "matched": "Ashtadhyayi"
+  },
+  "qid:Q3095220:site.ganweriwala": {
+    "ok": true,
+    "checkedAt": "2026-11-21T22:39:48.102Z",
+    "matched": "Ganeriwala"
   },
   "qid:Q331603:site.bhimbetka": {
     "ok": true,
     "checkedAt": "2026-11-21T22:39:57.258Z",
     "matched": "Bhimbetka rock shelters"
   },
+  "qid:Q3346415:site.great-bath-mohenjo-daro": {
+    "ok": true,
+    "checkedAt": "2026-11-21T22:39:48.107Z",
+    "matched": "Great Bath, Mohenjo-daro"
+  },
+  "qid:Q3418050:site.rakhigarhi": {
+    "ok": true,
+    "checkedAt": "2026-11-21T22:39:48.298Z",
+    "matched": "Rakhigarhi"
+  },
+  "qid:Q36858:concept.vedic-sanskrit": {
+    "ok": true,
+    "checkedAt": "2026-11-21T22:39:56.087Z",
+    "matched": "Vedic Sanskrit"
+  },
   "qid:Q399951:tradition.ahar-banas-culture": {
     "ok": true,
     "checkedAt": "2026-11-21T22:39:58.418Z",
     "matched": "Ahar-Banas culture"
+  },
+  "qid:Q404199:text.vedanga-jyotisha": {
+    "ok": true,
+    "checkedAt": "2026-11-21T22:39:57.581Z",
+    "matched": "Vedanga Jyotisha"
+  },
+  "qid:Q42534:tradition.harappan-civilisation": {
+    "ok": true,
+    "checkedAt": "2026-11-21T22:39:48.428Z",
+    "matched": "Indus Valley Civilization"
+  },
+  "qid:Q4526594:tradition.shrauta-ritual": {
+    "ok": true,
+    "checkedAt": "2026-11-21T22:39:57.851Z",
+    "matched": "Śrauta"
   },
   "qid:Q458076:tradition.copper-hoard-culture": {
     "ok": true,
     "checkedAt": "2026-11-21T22:39:58.547Z",
     "matched": "Copper Hoard Culture"
   },
+  "qid:Q459714:site.hastinapura": {
+    "ok": true,
+    "checkedAt": "2026-11-21T22:39:56.604Z",
+    "matched": "Hastinapur"
+  },
   "qid:Q46889:event.domestication-of-zebu-cattle": {
     "ok": true,
     "checkedAt": "2026-11-21T22:39:56.929Z",
     "matched": "zebu"
   },
+  "qid:Q4699299:text.aitareya-brahmana": {
+    "ok": true,
+    "checkedAt": "2026-11-21T22:39:56.618Z",
+    "matched": "Aitareya Brahmana"
+  },
+  "qid:Q47142:text.yajurveda": {
+    "ok": true,
+    "checkedAt": "2026-11-21T22:39:57.713Z",
+    "matched": "Yajurveda"
+  },
+  "qid:Q483421:concept.harappan-mesopotamian-trade": {
+    "ok": true,
+    "checkedAt": "2026-11-21T22:39:47.913Z",
+    "matched": "Meluhha"
+  },
   "qid:Q4850125:site.balathal": {
     "ok": true,
     "checkedAt": "2026-11-21T22:39:57.193Z",
     "matched": "Balathal"
+  },
+  "qid:Q4853984:site.banawali": {
+    "ok": true,
+    "checkedAt": "2026-11-21T22:39:48.006Z",
+    "matched": "Banawali"
+  },
+  "qid:Q48723594:tradition.vedic-chanting": {
+    "ok": true,
+    "checkedAt": "2026-11-21T22:39:58.023Z",
+    "matched": "Vedic chant"
   },
   "qid:Q48728691:tradition.malwa-culture": {
     "ok": true,
@@ -325,25 +1089,60 @@
     "checkedAt": "2026-11-21T22:39:57.446Z",
     "matched": "Bhirrana"
   },
+  "qid:Q513097:event.dasarajna": {
+    "ok": true,
+    "checkedAt": "2026-11-21T22:39:56.224Z",
+    "matched": "Battle of the Ten Kings"
+  },
   "qid:Q5209403:site.daimabad": {
     "ok": true,
     "checkedAt": "2026-11-21T22:39:57.653Z",
     "matched": "Daimabad"
+  },
+  "qid:Q545112:text.brihadaranyaka-upanishad": {
+    "ok": true,
+    "checkedAt": "2026-11-21T22:39:56.898Z",
+    "matched": "Brihadaranyaka Upanishad"
   },
   "qid:Q5562638:site.gilund": {
     "ok": true,
     "checkedAt": "2026-11-21T22:39:57.797Z",
     "matched": "Gilund"
   },
+  "qid:Q558603:polity.panchala": {
+    "ok": true,
+    "checkedAt": "2026-11-21T22:39:56.499Z",
+    "matched": "Pancala"
+  },
+  "qid:Q5725:site.mohenjo-daro": {
+    "ok": true,
+    "checkedAt": "2026-11-21T22:39:48.282Z",
+    "matched": "Mohenjo-daro"
+  },
   "qid:Q6013487:site.inamgaon": {
     "ok": true,
     "checkedAt": "2026-11-21T22:39:58.011Z",
     "matched": "Inamgaon"
   },
+  "qid:Q601388:concept.indus-script": {
+    "ok": true,
+    "checkedAt": "2026-11-21T22:39:47.982Z",
+    "matched": "Indus script"
+  },
   "qid:Q60792137:site.koldihwa": {
     "ok": true,
     "checkedAt": "2026-11-21T22:39:58.138Z",
     "matched": "Koldihwa"
+  },
+  "qid:Q60847016:artifact.priest-king-mohenjo-daro": {
+    "ok": true,
+    "checkedAt": "2026-11-21T22:39:47.877Z",
+    "matched": "Priest-King"
+  },
+  "qid:Q6113985:text.upanishads": {
+    "ok": true,
+    "checkedAt": "2026-11-21T22:39:57.445Z",
+    "matched": "Upanishads"
   },
   "qid:Q613624:concept.siwalik-fossil-record": {
     "ok": true,
@@ -360,15 +1159,80 @@
     "checkedAt": "2026-11-21T22:39:58.224Z",
     "matched": "Langhnaj"
   },
+  "qid:Q64897:tradition.soma-ritual": {
+    "ok": true,
+    "checkedAt": "2026-11-21T22:39:57.987Z",
+    "matched": "Soma"
+  },
+  "qid:Q656393:concept.sintashta-steppe-chariot-question": {
+    "ok": true,
+    "checkedAt": "2026-11-21T22:39:56.027Z",
+    "matched": "Sintashta culture"
+  },
+  "qid:Q676774:text.shatapatha-brahmana": {
+    "ok": true,
+    "checkedAt": "2026-11-21T22:39:57.258Z",
+    "matched": "Shatapatha Brahmana"
+  },
+  "qid:Q727413:text.rigveda": {
+    "ok": true,
+    "checkedAt": "2026-11-21T22:39:57.108Z",
+    "matched": "Rigveda"
+  },
+  "qid:Q7415547:site.sanauli": {
+    "ok": true,
+    "checkedAt": "2026-11-21T22:39:48.335Z",
+    "matched": "Sanauli"
+  },
   "qid:Q7417832:site.sanganakallu": {
     "ok": true,
     "checkedAt": "2026-11-21T22:39:58.399Z",
     "matched": "Sanganakallu"
   },
+  "qid:Q7646429:site.surkotada": {
+    "ok": true,
+    "checkedAt": "2026-11-21T22:39:48.400Z",
+    "matched": "Surkotada"
+  },
+  "qid:Q773328:text.chandogya-upanishad": {
+    "ok": true,
+    "checkedAt": "2026-11-21T22:39:56.929Z",
+    "matched": "Chāndogya Upaniṣad"
+  },
+  "qid:Q798422:concept.ghaggar-hakra-sarasvati-debate": {
+    "ok": true,
+    "checkedAt": "2026-11-21T22:39:47.882Z",
+    "matched": "Ghaggar-Hakra river"
+  },
+  "qid:Q823671:text.brahmanas": {
+    "ok": true,
+    "checkedAt": "2026-11-21T22:39:56.824Z",
+    "matched": "Brahmana"
+  },
+  "qid:Q84052:text.shulba-sutras": {
+    "ok": true,
+    "checkedAt": "2026-11-21T22:39:57.305Z",
+    "matched": "Shulba Sutras"
+  },
+  "qid:Q917680:text.vedangas": {
+    "ok": true,
+    "checkedAt": "2026-11-21T22:39:57.616Z",
+    "matched": "Vedanga"
+  },
   "qid:Q93273668:site.hunsgi-baichbal-valley": {
     "ok": true,
     "checkedAt": "2026-11-21T22:39:57.954Z",
     "matched": "Hunsgi"
+  },
+  "qid:Q9443:site.lothal": {
+    "ok": true,
+    "checkedAt": "2026-11-21T22:39:48.234Z",
+    "matched": "Lothal"
+  },
+  "qid:Q9468:site.dholavira": {
+    "ok": true,
+    "checkedAt": "2026-11-21T22:39:48.075Z",
+    "matched": "Dholavira"
   },
   "qid:Q97124536:site.sarai-nahar-rai": {
     "ok": true,
@@ -379,5 +1243,10 @@
     "ok": true,
     "checkedAt": "2026-11-21T22:39:58.235Z",
     "matched": "Mahadaha (Ancient site)"
+  },
+  "qid:Q993504:person.yaska": {
+    "ok": true,
+    "checkedAt": "2026-11-21T22:39:56.399Z",
+    "matched": "Yāska"
   }
 }

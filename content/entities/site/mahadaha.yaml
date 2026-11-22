@@ -23,7 +23,7 @@ datings:
   - method: archaeological-radiocarbon
     range:
       earliest: -6000
-      latest: -2000
+      latest: "2000 BCE"
       best: -3000
       precision: millennium
       circa: true

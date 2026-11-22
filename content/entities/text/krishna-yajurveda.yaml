@@ -1,0 +1,68 @@
+id: text.krishna-yajurveda
+type: text
+kind: text
+names:
+  en: Krishna Yajurveda
+  iast: Kṛṣṇa Yajurveda
+  native: कृष्णयजुर्वेद
+summary: >-
+  The Krishna (Black) Yajurveda is the older branch of the Yajurveda, characterized by the
+  integration of sacrificial formulas (mantras) and explanatory ritual prose (brahmana) within the
+  same Samhita collections. It survives in four main recensions: Taittiriya, Maitrayani, Kathaka,
+  and Kapishthala.
+summaries:
+  kids: >-
+    The Krishna Yajurveda, or Black Yajurveda, is an ancient collection of ritual prayers that
+    combines sacred verses with prose explanations of how and why ceremonies are performed.
+  teen: >-
+    Preserved in the Taittiriya, Maitrayani, Kathaka, and Kapishthala recensions, the Krishna
+    Yajurveda combines ritual mantras directly with the earliest surviving theological prose
+    commentaries in Sanskrit.
+region: Kurukshetra and Kuru-Panchala (Haryana, Punjab, and western Uttar Pradesh)
+datings:
+  - method: linguistic
+    range: { earliest: -1199, latest: -799, best: -999, precision: century, circa: true }
+    grade: C
+    label: Early Kuru mantra and prose linguistic stratum
+    sources:
+      - src.witzel-1997-early-sanskritization-kuru
+      - src.keith-1914-veda-black-yajus-school
+      - src.gonda-1975-vedic-literature
+    note: >-
+      The mantra sections of the Maitrayani, Kathaka, and Taittiriya Samhitas belong to the early
+      Kuru state formation (c. 1200 to 1000 BCE), while their embedded Brahmana prose belongs to
+      c. 1000 to 800 BCE.
+  - method: traditional-puranic
+    range: { earliest: -3101, latest: -2999, precision: century, circa: true }
+    grade: D
+    label: Traditional Puranic reckoning
+    sources:
+      - src.flood-2003-blackwell-companion-hinduism
+    note: >-
+      Tradition traces the Krishna Yajurveda to the sage Vaishampayana and his pupil Tittiri at
+      the beginning of Kali Yuga.
+claims:
+  - text: >-
+      The Krishna Yajurveda survives in four recensions: the Taittiriya Samhita (widely preserved
+      in South India), the Maitrayani Samhita, the Kathaka Samhita, and the fragmentary
+      Kapishthala-Katha Samhita.
+    grade: A
+    sources:
+      - src.keith-1914-veda-black-yajus-school
+      - src.gonda-1975-vedic-literature
+      - src.flood-2003-blackwell-companion-hinduism
+  - text: >-
+      The prose portions of the Krishna Yajurveda Samhitas constitute the oldest extant explanatory
+      Brahmana prose in Vedic Sanskrit, detailing the Agnicayana fire altar and royal consecration
+      rites.
+    grade: B
+    sources:
+      - src.keith-1914-veda-black-yajus-school
+      - src.witzel-1997-early-sanskritization-kuru
+relations:
+  - { kind: part-of, target: text.yajurveda }
+  - { kind: related-to, target: text.baudhayana-shulba-sutra }
+  - { kind: related-to, target: tradition.agnicayana }
+  - { kind: related-to, target: polity.kuru-kingdom }
+tags: [veda, samhita, yajurveda, taittiriya, maitrayani, kathaka]
+review: { status: draft, author: "gemini-4-argon" }

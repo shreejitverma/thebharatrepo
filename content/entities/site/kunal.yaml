@@ -1,0 +1,76 @@
+id: site.kunal
+type: site
+kind: site
+names:
+  en: Kunal
+  iast: Kunāla
+  native: कुणाल
+summary: >-
+  An Early Harappan village settlement on the dry Sarasvati (Rangoi/Ghaggar) riverbed in Fatehabad District,
+  Haryana (c. 3300-2600 BCE), excavated by J. S. Khatri and M. Acharya (1990s), notable for its transition from
+  Hakra Ware pit-dwellings to Sothi-Siswal mud-brick houses and a hoard of silver and gold elite ornaments,
+  thousands of steatite and semi-precious beads, and six early steatite and shell seals.
+summaries:
+  kids: >-
+    At the early village of Kunal in Haryana, archaeologists found a clay pot buried beneath a house floor filled
+    with two silver tiara-like ornaments, gold beads, and early stone seals.
+  teen: >-
+    Excavated in the 1990s in Fatehabad District, Haryana, Kunal documents the Hakra-to-Early Harappan transition
+    and yielded an extraordinary cache of silver head-ornaments, gold disc beads, copper tools, and geometric steatite seals.
+region: Fatehabad District, Haryana, India
+location:
+  name: Kunal
+  lat: 29.6267
+  lon: 75.6583
+datings:
+  - method: archaeological-radiocarbon
+    range:
+      earliest: -3299
+      latest: -2599
+      precision: century
+      circa: true
+    grade: A
+    label: Periods IA, IB, and IC (Hakra Ware to Early Harappan Sothi-Siswal)
+    sources:
+      - src.possehl-2002-indus-civilization
+      - src.singh-2008-ancient-early-medieval-india
+    note: >-
+      Calibrated radiocarbon dates from Kunal Period I span c. 3300/3100 to 2600 BCE.
+claims:
+  - text: >-
+      Period IA at Kunal consists of circular subterranean pit-dwellings dug into natural soil associated with Hakra
+      Ware and bone and chalcedony micro-blades, evolving in Period IB-IC into rectangular mud-brick houses using
+      1:2:3 ratio bricks.
+    grade: A
+    sources:
+      - src.possehl-2002-indus-civilization
+      - src.singh-2008-ancient-early-medieval-india
+  - text: >-
+      Inside a red-ware pot from Period IC at Kunal, excavators discovered a hoard of elite regalia comprising two
+      silver tiara-like floral ornaments, a large silver armlet, gold beads, over 12,000 beads of carnelian, agate,
+      lapis lazuli, and steatite, and six square steatite and shell stamp seals with geometric patterns.
+    grade: A
+    sources:
+      - src.possehl-2002-indus-civilization
+      - src.singh-2008-ancient-early-medieval-india
+relations:
+  - kind: part-of
+    target: tradition.harappan-civilisation
+  - kind: related-to
+    target: tradition.hakra-ware-phase
+  - kind: related-to
+    target: tradition.sothi-siswal-phase
+  - kind: contemporary-of
+    target: site.bhirrana
+  - kind: contemporary-of
+    target: site.banawali
+wikidata: null
+tags:
+  - harappan
+  - early-harappan
+  - site
+  - haryana
+  - ghaggar-hakra
+review:
+  status: draft
+  author: gemini-4-argon

@@ -1,0 +1,70 @@
+id: text.atharvaveda
+type: text
+kind: text
+names:
+  en: Atharvaveda
+  iast: Atharvaveda
+  native: अथर्ववेद
+summary: >-
+  The Atharvaveda is the fourth Vedic Samhita, comprising hymns, healing charms, domestic rites,
+  royal consecration prayers, and philosophical speculations associated with the Atharvan and
+  Angiras priestly traditions. It survives in the Shaunakiya and Paippalada recensions.
+summaries:
+  kids: >-
+    The Atharvaveda is the fourth Veda. Alongside prayers to the gods, it records healing songs,
+    household blessings, and questions about how the universe began.
+  teen: >-
+    Unlike the three liturgical Vedas focused on the great Shrauta sacrifices, the Atharvaveda
+    preserves domestic rituals, early medical and botanical knowledge, royal charms, and
+    cosmological hymns in the Shaunakiya and Paippalada recensions.
+region: Kuru-Panchala and middle Ganga plain (northern India)
+datings:
+  - method: linguistic
+    range: { earliest: -1199, latest: -899, best: -999, precision: century, circa: true }
+    grade: C
+    label: Mantra-period Kuru compilation
+    sources:
+      - src.witzel-1997-early-sanskritization-kuru
+      - src.gonda-1975-vedic-literature
+      - src.flood-2003-blackwell-companion-hinduism
+    note: >-
+      Compiled during the Kuru reign (mentioning King Parikshit as a prosperous ruler) in the
+      early Iron Age, though preserving some archaic Indo-European poetic formulas alongside late
+      Rigvedic material.
+  - method: traditional-puranic
+    range: { earliest: -3101, latest: -2999, precision: century, circa: true }
+    grade: D
+    label: Traditional Puranic reckoning
+    sources:
+      - src.flood-2003-blackwell-companion-hinduism
+    note: >-
+      Traditional Puranic accounts attribute the transmission of the Atharvaveda to the sage
+      Sumantu, disciple of Vyasa, at the start of Kali Yuga.
+claims:
+  - text: >-
+      The Atharvaveda survives in two extant recensions, the Shaunakiya (20 books) and the
+      Paippalada (preserved in Kashmir and Odisha manuscripts).
+    grade: A
+    sources:
+      - src.gonda-1975-vedic-literature
+      - src.flood-2003-blackwell-companion-hinduism
+  - text: >-
+      Hymns in the Atharvaveda praise the Kuru ruler Parikshit and refer to shyama ayas (dark
+      metal, iron) and territories extending east toward Anga and Magadha.
+    grade: A
+    sources:
+      - src.witzel-1997-early-sanskritization-kuru
+      - src.singh-2008-ancient-early-medieval-india
+relations:
+  - { kind: succeeded, target: text.rigveda }
+  - { kind: related-to, target: polity.kuru-kingdom }
+  - { kind: related-to, target: concept.iron-metallurgy-in-india }
+  - { kind: related-to, target: concept.vedic-sanskrit }
+wikidata: Q236092
+image:
+  commons: "File:Atharva-Veda samhita page 471 illustration.png"
+  alt: Birch-bark manuscript folio of the Kashmirian Paippalada Atharvaveda
+  credit: William Dwight Whitney and Charles Rockwell Lanman
+  license: Public domain
+tags: [veda, samhita, atharvaveda, medicine, kuru]
+review: { status: draft, author: "gemini-4-argon" }

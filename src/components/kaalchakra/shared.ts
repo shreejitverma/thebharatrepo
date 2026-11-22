@@ -35,8 +35,34 @@ export function kindColor(kind: Kind): string {
   return `var(--k-${kind})`;
 }
 
+/** The fields of a dating that placement and ordering need. */
+export type PlacedDating = Pick<KcDating, 'lens' | 'grade' | 'earliest' | 'latest' | 'best'>;
+
+/** Minimal projection of an item that can be placed on the wheel or the river. */
+export interface PlacedItem<D extends PlacedDating = PlacedDating> {
+  id: string;
+  kind: Kind;
+  datings: D[];
+  anchor: KcItem['anchor'];
+}
+
+/** Trimmed projection for static renders that never show names, summaries or notes. */
+export function toPlacedItem(item: KcItem): PlacedItem {
+  return {
+    id: item.id,
+    kind: item.kind,
+    anchor: item.anchor,
+    datings: item.datings.map((d) => ({ lens: d.lens, grade: d.grade, earliest: d.earliest, latest: d.latest, best: d.best })),
+  };
+}
+
+/** primaryAnchor for any projection; it reads only the anchor. */
+export function anchorIn(item: Pick<KcItem, 'anchor'>, lens: Lens): number | null {
+  return primaryAnchor(item as KcItem, lens);
+}
+
 /** Datings of an item visible in a lens, scholarship first, best grade first. */
-export function visibleDatings(item: KcItem, lens: Lens): KcDating[] {
+export function visibleDatings<D extends PlacedDating>(item: { datings: D[] }, lens: Lens): D[] {
   return item.datings
     .filter((d) => lens === 'both' || d.lens === lens)
     .sort((a, b) => (a.lens === b.lens ? GRADE_ORDER.indexOf(a.grade) - GRADE_ORDER.indexOf(b.grade) : a.lens === 'scholarship' ? -1 : 1));
@@ -53,10 +79,10 @@ export function primaryDating(item: KcItem, lens: Lens): KcDating | undefined {
 }
 
 /** Items placed in time order for a lens; items without a dating in the lens are dropped. */
-export function orderedItems(items: KcItem[], lens: Lens): KcItem[] {
+export function orderedItems<T extends Pick<KcItem, 'anchor'>>(items: T[], lens: Lens): T[] {
   return items
-    .filter((i) => primaryAnchor(i, lens) !== null)
-    .sort((a, b) => primaryAnchor(a, lens)! - primaryAnchor(b, lens)!);
+    .filter((i) => anchorIn(i, lens) !== null)
+    .sort((a, b) => anchorIn(a, lens)! - anchorIn(b, lens)!);
 }
 
 export function segmentUnitBounds(seg: Segment): { start: number; end: number } {

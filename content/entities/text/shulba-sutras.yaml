@@ -1,0 +1,68 @@
+id: text.shulba-sutras
+type: text
+kind: science
+names:
+  en: Shulba Sutras
+  iast: Śulbasūtra
+  native: शुल्बसूत्र
+summary: >-
+  The Shulba Sutras ("rules of the cord") are technical appendices to the Shrauta Sutras within
+  the Kalpa Vedanga that prescribe the geometric construction of Vedic sacrificial fire altars
+  (vedi and agni) using stretched measuring cords. They constitute the earliest surviving corpus of
+  Indian geometry, including explicit statements of the Pythagorean relation and area-preserving
+  transformations.
+summaries:
+  kids: >-
+    The Shulba Sutras, or "rules of the measuring cord," are ancient geometry manuals that taught
+    Vedic priests how to use ropes and stakes to lay out brick fire altars in exact shapes.
+  teen: >-
+    Attached to the Kalpa Vedanga, the Shulba Sutras of Baudhayana, Apastamba, Katyayana, and
+    Manava preserve the earliest formal Indian mathematics, stating the Pythagorean theorem,
+    approximations for the square root of 2, and constructions for transforming squares into
+    circles and falcons.
+region: Northern Indian subcontinent
+datings:
+  - method: linguistic
+    range: { earliest: -799, latest: -199, best: -599, precision: century, circa: true }
+    grade: B
+    label: Late Vedic Sutra chronology (Plofker, Seidenberg)
+    sources:
+      - src.plofker-2009-mathematics-in-india
+      - src.seidenberg-1961-ritual-origin-geometry
+    note: >-
+      Kim Plofker dates the principal Shulba Sutras between roughly 800 and 200 BCE, with the
+      Baudhayana Shulba Sutra as the oldest (often placed around 800 to 500 BCE), while much of
+      their altar geometry is already presupposed in the Shatapatha and Taittiriya Brahmanas.
+claims:
+  - text: >-
+      The four major extant Shulba Sutras are attributed to Baudhayana, Apastamba, Manava (all
+      affiliated with the Krishna Yajurveda), and Katyayana (affiliated with the Shukla Yajurveda).
+    grade: A
+    sources:
+      - src.plofker-2009-mathematics-in-india
+  - text: >-
+      To satisfy the ritual requirement that altars of different shapes (such as a square, circle,
+      chariot wheel, or falcon) occupy the exact same surface area (typically 7.5 square purushas),
+      the Shulba Sutras formulate rules for squaring the circle, circling the square, and combining
+      squares of unequal areas.
+    grade: A
+    sources:
+      - src.plofker-2009-mathematics-in-india
+      - src.seidenberg-1961-ritual-origin-geometry
+      - src.staal-1983-agni-fire-altar
+  - text: >-
+      The Shulba Sutras give rational approximation for the diagonal of a unit square (the square
+      root of 2) as 1 + 1/3 + 1/(3*4) - 1/(3*4*34), equal to 577/408 (approximately 1.414215686),
+      accurate to five decimal places.
+    grade: A
+    sources:
+      - src.plofker-2009-mathematics-in-india
+relations:
+  - { kind: part-of, target: text.vedangas }
+  - { kind: related-to, target: text.baudhayana-shulba-sutra }
+  - { kind: related-to, target: tradition.agnicayana }
+  - { kind: related-to, target: tradition.shrauta-ritual }
+  - { kind: related-to, target: text.yajurveda }
+wikidata: Q84052
+tags: [vedanga, kalpa, shulba-sutra, mathematics, geometry, agnicayana]
+review: { status: draft, author: "gemini-4-argon" }

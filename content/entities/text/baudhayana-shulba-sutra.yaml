@@ -1,0 +1,64 @@
+id: text.baudhayana-shulba-sutra
+type: text
+kind: science
+names:
+  en: Baudhayana Shulba Sutra
+  iast: Baudhāyana Śulbasūtra
+  native: बौधायनशुल्बसूत्र
+summary: >-
+  The Baudhayana Shulba Sutra is the oldest and most detailed of the surviving Shulba Sutras,
+  forming part of the Baudhayana Kalpa Sutra of the Taittiriya branch of the Krishna Yajurveda. It
+  contains the earliest known explicit Indian general statement of the Pythagorean relation for the
+  sides and diagonal of a rectangle.
+summaries:
+  kids: >-
+    The Baudhayana Shulba Sutra is the oldest surviving geometry handbook from ancient India. It
+    explains that a square built on the diagonal of a rectangle equals the two squares built on its
+    sides.
+  teen: >-
+    Belonging to the Taittiriya school of the Krishna Yajurveda, the Baudhayana Shulba Sutra (c.
+    800 to 500 BCE) states the general Pythagorean theorem in terms of the diagonal of an oblong
+    rectangle and lists integer right triangles and brick layouts for the Agnicayana fire altar.
+region: Northern Indian subcontinent
+datings:
+  - method: linguistic
+    range: { earliest: -799, latest: -499, best: -599, precision: century, circa: true }
+    grade: C
+    label: Early Sutra period dating (Plofker)
+    sources:
+      - src.plofker-2009-mathematics-in-india
+      - src.seidenberg-1961-ritual-origin-geometry
+    note: >-
+      Dated by historians of Indian mathematics to roughly 800 to 500 BCE as the oldest of the
+      Shulba Sutras, preserving pre-Paninian linguistic usages in the Baudhayana tradition.
+claims:
+  - text: >-
+      Baudhayana Shulba Sutra 1.12 (1.48 in Thibaut's numbering) states that the cord stretched
+      across the diagonal (akshnaya-rajju) of an oblong rectangle produces both areas that the
+      vertical and horizontal sides produce separately.
+    grade: A
+    sources:
+      - src.plofker-2009-mathematics-in-india
+      - src.seidenberg-1961-ritual-origin-geometry
+  - text: >-
+      The text lists rectangles whose sides and diagonals correspond to Pythagorean triples such as
+      (3, 4, 5), (5, 12, 13), (8, 15, 17), (7, 24, 25), and (12, 35, 37) for constructing exact
+      right angles with a measuring cord.
+    grade: A
+    sources:
+      - src.plofker-2009-mathematics-in-india
+  - text: >-
+      In three chapters, the Baudhayana Shulba Sutra specifies the brick geometries and five-layer
+      layouts required to build the falcon-shaped (shyena-chit) and other altars of the Agnicayana.
+    grade: A
+    sources:
+      - src.plofker-2009-mathematics-in-india
+      - src.staal-1983-agni-fire-altar
+relations:
+  - { kind: part-of, target: text.shulba-sutras }
+  - { kind: related-to, target: text.krishna-yajurveda }
+  - { kind: related-to, target: tradition.agnicayana }
+  - { kind: related-to, target: text.vedangas }
+wikidata: Q118414942
+tags: [vedanga, shulba-sutra, baudhayana, mathematics, geometry, pythagorean-theorem]
+review: { status: draft, author: "gemini-4-argon" }

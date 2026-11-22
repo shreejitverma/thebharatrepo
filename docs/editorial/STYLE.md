@@ -29,7 +29,11 @@ Mechanical rules (the validator rejects violations):
 
 ## 3. Years
 
-All years are **astronomical year numbers**: 1 CE = `1`, 1 BCE = `0`, 2 BCE = `-1`, N BCE = `1 - N`.
+**Write years as strings** and let the build convert them: `"7000 BCE"`, `"320 CE"`, `"1947"`, `"385 ka"`, `"1.5 Ma"`, `"1.97 Ga"`.
+This is the preferred form because it removes BCE arithmetic, the most common authoring error.
+
+Internally all years are **astronomical year numbers**: 1 CE = `1`, 1 BCE = `0`, 2 BCE = `-1`, N BCE = `1 - N`.
+Raw numbers are still accepted and must follow this rule; the validator rejects a range that stores `-N` where the text says "N BCE".
 
 | Historical | Astronomical |
 |---|---|
@@ -127,7 +131,7 @@ region: Pan-Indian (copies at Kalsi, Shahbazgarhi, Mansehra, Girnar and elsewher
 location: { name: Kalsi, lat: 30.52, lon: 77.85 }
 datings:
   - method: foreign-synchronism
-    range: { earliest: -261, latest: -254, precision: decade, circa: true }
+    range: { earliest: "262 BCE", latest: "255 BCE", precision: decade, circa: true }
     grade: A
     label: Synchronism with Hellenistic kings
     sources: [src.example-a]
@@ -145,7 +149,7 @@ image:
   credit: Photographer name
   license: CC BY-SA 4.0
 tags: [inscription, maurya]
-review: { status: draft, author: "gemini-4-argon" }
+review: { status: draft, author: "<model or person>" }
 ```
 
 Rules:
@@ -180,7 +184,7 @@ datings:
     sources: [src.thapar-2002-early-india]
 entities: [polity.maurya-empire, person.ashoka]
 readingLevel: adult
-review: { status: draft, author: "gemini-4-argon" }
+review: { status: draft, author: "<model or person>" }
 ---
 
 Body in Markdown. Cite inline with [@src.thapar-2002-early-india, p. 175] or

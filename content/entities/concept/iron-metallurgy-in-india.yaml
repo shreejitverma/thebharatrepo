@@ -1,0 +1,88 @@
+id: concept.iron-metallurgy-in-india
+type: concept
+kind: science
+names:
+  en: Iron Technology and Early Iron Age in India
+  iast: Śyāma Ayas
+  native: श्याम अयस्
+summary: >-
+  Indigenous iron smelting and forging emerged across multiple regional centers of the Indian
+  subcontinent during the second and early first millennia BCE. While a strong consensus places
+  widespread iron technology across northern and peninsular India by c. 1200 to 1000 BCE,
+  radiocarbon dates from Rakesh Tewari's excavations in the central Ganga plain and eastern
+  Vindhyas (c. 1800 to 1200 BCE) have sparked active debate over an even earlier indigenous origin.
+summaries:
+  kids: >-
+    Ancient Indian blacksmiths learned to smelt iron ore in clay furnaces over three thousand years
+    ago, forging strong tools and weapons that helped clear forests and build towns.
+  teen: >-
+    Known in post-Rigvedic texts as shyama ayas or krishna ayas ("dark metal"), iron metallurgy is
+    securely attested across India by c. 1200 to 1000 BCE, with debated radiocarbon dates from
+    Uttar Pradesh (Malhar, Dadupur, Raja Nala-ka-Tila) extending back to c. 1800 to 1300 BCE.
+region: Central Ganga plain, Eastern Vindhyas, Ganga-Yamuna Doab, and southern India
+datings:
+  - method: archaeological-radiocarbon
+    range: { earliest: -1199, latest: -799, best: -999, precision: century, circa: true }
+    grade: B
+    label: Mainstream multi-regional Iron Age consensus (Chakrabarti, Allchin, Singh)
+    sources:
+      - src.chakrabarti-1992-early-use-iron-india
+      - src.gaur-1983-excavations-atranjikhera
+      - src.singh-2008-ancient-early-medieval-india
+    note: >-
+      Securely established across multiple independent zones - the upper Ganga basin (PGW levels at
+      Atranjikhera and Jakhera), Malwa, eastern India, and South Indian megalithic-BRW sites (such
+      as Hallur) - between c. 1200 and 900 BCE.
+  - method: archaeological-radiocarbon
+    range: { earliest: -1799, latest: -1199, best: -1499, precision: century, circa: true }
+    grade: C
+    label: Early Central Ganga and Eastern Vindhyan radiocarbon series (Tewari 2003)
+    sources:
+      - src.tewari-2003-origins-iron-working-india
+      - src.singh-2008-ancient-early-medieval-india
+    note: >-
+      Rakesh Tewari published calibrated radiocarbon dates from iron-bearing strata with slag and
+      furnaces at Malhar, Dadupur, Raja Nala-ka-Tila, and Lahuradewa in Uttar Pradesh ranging from
+      c. 1800/1700 to 1200 BCE; these early dates are widely discussed by archaeologists while some
+      specialists call for additional micro-stratigraphic verification.
+claims:
+  - text: >-
+      In the Rigveda, the term ayas denotes copper or bronze, whereas in the Atharvaveda and
+      Yajurveda Samhitas iron is explicitly distinguished as shyama ayas or krishna ayas ("dark
+      or black metal") alongside lohita ayas ("red metal," copper).
+    grade: B
+    sources:
+      - src.witzel-1997-early-sanskritization-kuru
+      - src.chakrabarti-1992-early-use-iron-india
+      - src.singh-2008-ancient-early-medieval-india
+  - text: >-
+      Excavations by Rakesh Tewari at Malhar (Chandauli district), Raja Nala-ka-Tila (Sonbhadra
+      district), and Dadupur (Lucknow district) yielded iron artifacts, tuyeres, and iron slag
+      associated with calibrated radiocarbon dates between c. 1800 and 1200 BCE.
+    grade: A
+    sources:
+      - src.tewari-2003-origins-iron-working-india
+  - text: >-
+      Dilip K. Chakrabarti and Upinder Singh conclude that iron metallurgy developed polycentrically
+      and indigenously within the Indian subcontinent from pre-existing copper-smelting and abundant
+      surface iron-ore traditions, rather than diffusing from a single external Near Eastern source.
+    grade: B
+    sources:
+      - src.chakrabarti-1992-early-use-iron-india
+      - src.tewari-2003-origins-iron-working-india
+      - src.singh-2008-ancient-early-medieval-india
+relations:
+  - { kind: related-to, target: concept.painted-grey-ware-culture }
+  - { kind: related-to, target: concept.black-and-red-ware-culture }
+  - { kind: related-to, target: concept.northern-black-polished-ware-culture }
+  - { kind: related-to, target: site.atranjikhera }
+  - { kind: related-to, target: text.yajurveda }
+  - { kind: related-to, target: text.atharvaveda }
+debate: >-
+  Earlier twentieth-century diffusionist models attributed Indian iron working to Near Eastern or
+  Achaemenid contact around 800 to 600 BCE. Radiocarbon dates from Atranjikhera and Hallur pushed
+  the consensus threshold back to c. 1200 to 1000 BCE, and Rakesh Tewari's 2003 Antiquity report
+  from the eastern Vindhyas and middle Ganga plain proposed indigenous iron smelting as early as
+  c. 1800 to 1500 BCE.
+tags: [iron-age, metallurgy, archaeometallurgy, tewari, malhar, atranjikhera, shyama-ayas]
+review: { status: draft, author: "gemini-4-argon" }

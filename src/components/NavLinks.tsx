@@ -12,6 +12,7 @@ const LINKS = [
   { href: '/literature', label: 'Literature' },
   { href: '/art-and-culture', label: 'Art and Culture' },
   { href: '/music', label: 'Music' },
+  { href: '/language', label: 'Language' },
   { href: '/methodology', label: 'Methodology' },
 ];
 

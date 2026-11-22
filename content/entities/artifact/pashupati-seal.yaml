@@ -1,0 +1,97 @@
+id: artifact.pashupati-seal
+type: artifact
+kind: art
+names:
+  en: Pashupati Seal (Mohenjo-daro Seal 420)
+  iast: Paśupati Mudrā
+summary: >-
+  A Mature Harappan carved steatite stamp seal (DK 5175 / Mackay Seal 420) excavated by Ernest Mackay in 1928-1929
+  in the DK-G Area of Mohenjo-daro, depicting a horned figure seated in a cross-legged yogic posture on a low
+  dais surrounded by an elephant, a tiger, a rhinoceros, a water buffalo, and two antelopes beneath a seven-sign
+  Indus inscription; focus of an enduring debate over John Marshall's 1931 identification of the figure as a
+  "Proto-Shiva" (Pashupati, Lord of Animals).
+summaries:
+  kids: >-
+    The Pashupati Seal is a small carved stone seal from Mohenjo-daro showing a horned figure sitting with crossed
+    legs, surrounded by an elephant, a tiger, a rhino, a buffalo, and two deer.
+  teen: >-
+    Excavated at Mohenjo-daro in 1928-1929, Seal 420 shows a horned figure in a yogic pose surrounded by wild animals;
+    John Marshall identified the figure in 1931 as an early form of Shiva Pashupati, an interpretation that remains
+    actively debated among historians of Indian religion.
+region: Mohenjo-daro, Sindh (housed in the National Museum, New Delhi)
+location:
+  name: Mohenjo-daro (DK-G Area, Block 1)
+  lat: 27.3264
+  lon: 68.1383
+datings:
+  - method: archaeological-stratigraphic
+    range:
+      earliest: -2499
+      latest: -1899
+      precision: century
+      circa: true
+    grade: A
+    label: Mature Harappan Context at Mohenjo-daro (DK-G Area)
+    sources:
+      - src.marshall-1931-mohenjo-daro
+      - src.kenoyer-1998-ancient-cities-indus
+      - src.possehl-2002-indus-civilization
+    note: >-
+      Excavated by E. J. H. Mackay during the 1928-1929 season in Block 1 of the southern DK-G Area at Mohenjo-daro.
+claims:
+  - text: >-
+      In 1931, Sir John Marshall identified the central figure on Seal 420 as a three-faced, ithyphallic, yogic
+      "Proto-Shiva" in his aspect as Pashupati (Lord of Beasts), pointing to the water-buffalo horn headdress,
+      cross-legged heel-to-heel posture (mulabandhasana), and surrounding wild animals as precursors to classical
+      Shaiva iconography.
+    grade: B
+    sources:
+      - src.marshall-1931-mohenjo-daro
+      - src.parpola-2015-roots-of-hinduism
+      - src.possehl-2002-indus-civilization
+  - text: >-
+      Doris Meth Srinivasan (1984) and other art historians challenged the direct identification with historical
+      Shiva, arguing that the figure's facial profile resembles a bovine or buffalo-man hybrid rather than a
+      three-headed anthropomorphic deity, that the vertical waistband ornament need not be ithyphallic, and that
+      comparative Near Eastern "Master of Animals" and Elamite bull-man motifs offer structural parallels.
+    grade: B
+    sources:
+      - src.srinivasan-1984-unhinging-siva
+      - src.possehl-2002-indus-civilization
+      - src.singh-2008-ancient-early-medieval-india
+  - text: >-
+      Other scholars including Alf Hiltebeitel and Asko Parpola situate the seal within a broader Harappan ritual
+      complex centered on a water-buffalo deity, yogic asceticism, and royal-sacrificial symbolism that later
+      contributed substratum elements to Vedic and Hindu traditions.
+    grade: C
+    sources:
+      - src.parpola-1994-deciphering-indus-script
+      - src.parpola-2015-roots-of-hinduism
+      - src.kenoyer-1998-ancient-cities-indus
+relations:
+  - kind: excavated-at
+    target: site.mohenjo-daro
+  - kind: part-of
+    target: artifact.harappan-steatite-seals
+  - kind: related-to
+    target: concept.indus-script
+wikidata: Q1942840
+image:
+  commons: "File:Shiva Pashupati.jpg"
+  alt: The Pashupati steatite seal (Seal 420) from Mohenjo-daro
+  credit: Archaeological Survey of India
+  license: Public domain
+debate: >-
+  John Marshall (1931), followed with modifications by Asko Parpola (1994, 2015), interpreted the horned yogic
+  figure on Seal 420 as a "Proto-Shiva" / Pashupati linking Harappan religion to later Shaivism, whereas Doris
+  Meth Srinivasan (1984), Herbert Sullivan, and Gregory Possehl argued that the figure represents a composite
+  divine buffalo-man or Master of Animals within an autonomous Bronze Age iconographic system.
+tags:
+  - harappan
+  - artifact
+  - seal
+  - pashupati-debate
+  - mohenjo-daro
+review:
+  status: draft
+  author: gemini-4-argon

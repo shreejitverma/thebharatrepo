@@ -1,0 +1,80 @@
+id: text.brihadaranyaka-upanishad
+type: text
+kind: text
+names:
+  en: Brihadaranyaka Upanishad
+  iast: Bṛhadāraṇyaka Upaniṣad
+  native: बृहदारण्यकोपनिषद्
+summary: >-
+  The Brihadaranyaka Upanishad ("Great Forest Upanishad") is one of the two oldest and largest
+  Principal Upanishads, forming the concluding part of the Shatapatha Brahmana of the Shukla
+  Yajurveda. It features the philosophical dialogues of Yajnavalkya, Gargi Vachaknavi, Maitreyi,
+  and King Janaka of Videha.
+summaries:
+  kids: >-
+    The Brihadaranyaka Upanishad is one of the oldest philosophical books of India. It records
+    debates at King Janaka's court where philosophers like Yajnavalkya and Gargi discussed the
+    nature of reality.
+  teen: >-
+    Forming the final chapters of the Shatapatha Brahmana, the Brihadaranyaka Upanishad is among
+    the earliest Upanishads. It records Yajnavalkya's teachings on the indescribable Brahman
+    ("neti, neti"), karma, and debates with women philosophers Gargi and Maitreyi.
+region: Kosala and Videha (eastern Uttar Pradesh and northern Bihar)
+datings:
+  - method: linguistic
+    range: { earliest: -699, latest: -499, best: -599, precision: century, circa: true }
+    grade: B
+    label: Earliest prose Upanishad stratum (Olivelle)
+    sources:
+      - src.olivelle-1998-early-upanisads
+      - src.flood-2003-blackwell-companion-hinduism
+      - src.singh-2008-ancient-early-medieval-india
+    note: >-
+      Dated by Patrick Olivelle and Michael Witzel to around the 7th to 6th century BCE on the
+      basis of its pre-Paninian Late Vedic prose and pre-Buddhist cultural setting in Videha and
+      Kuru-Panchala.
+  - method: traditional-puranic
+    range: { earliest: -3101, latest: -2499, precision: century, circa: true }
+    grade: D
+    label: Traditional Vedanta reckoning
+    sources:
+      - src.olivelle-1998-early-upanisads
+    note: >-
+      Tradition treats the Brihadaranyaka Upanishad as part of the eternal Shukla Yajurveda Shruti
+      revealed through Yajnavalkya.
+claims:
+  - text: >-
+      The Brihadaranyaka Upanishad consists of three major sections (kandas) - the Madhukanda, the
+      Yajnavalkiyakanda, and the Khilakanda - embedded at the end of Book 14 of the Shatapatha
+      Brahmana.
+    grade: A
+    sources:
+      - src.olivelle-1998-early-upanisads
+      - src.eggeling-1882-shatapatha-brahmana
+  - text: >-
+      In Book 3, the philosopher Gargi Vachaknavi publicly questions Yajnavalkya at the assembly
+      (brahmodya) convened by King Janaka of Videha regarding the warp and weft of the cosmos
+      (akasha and the Imperishable, akshara).
+    grade: A
+    sources:
+      - src.olivelle-1998-early-upanisads
+      - src.singh-2008-ancient-early-medieval-india
+  - text: >-
+      The text introduces the apophatic teaching "neti, neti" ("not thus, not thus") to describe
+      Atman-Brahman and presents the two-path doctrine (devayana and pitriyana) of transmigration.
+    grade: A
+    sources:
+      - src.olivelle-1998-early-upanisads
+relations:
+  - { kind: part-of, target: text.upanishads }
+  - { kind: part-of, target: text.shatapatha-brahmana }
+  - { kind: related-to, target: text.shukla-yajurveda }
+  - { kind: contemporary-of, target: text.chandogya-upanishad }
+wikidata: Q545112
+image:
+  commons: "File:Brihadaranyaka Upanishad verses 1.3.1 to 1.3.4, Shatapatha Brahmana, Shukla Yajurveda, Sanskrit, Devanagari.jpg"
+  alt: Devanagari manuscript folio of Brihadaranyaka Upanishad verses 1.3.1 to 1.3.4
+  credit: Ms Sarah Welch
+  license: CC BY-SA 4.0
+tags: [veda, upanishad, vedanta, yajnavalkya, gargi, maitreyi, videha]
+review: { status: draft, author: "gemini-4-argon" }

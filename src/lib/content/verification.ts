@@ -5,12 +5,14 @@ import path from 'node:path';
 
 export interface VerifiedImage {
   thumb: string;
+  width: number;
+  height: number;
   pageUrl: string;
   license: string;
   artist: string;
 }
 
-let cache: Record<string, { ok: boolean; thumb?: string; pageUrl?: string; license?: string; artist?: string }> | undefined;
+let cache: Record<string, { ok: boolean; thumb?: string; thumbWidth?: number; thumbHeight?: number; pageUrl?: string; license?: string; artist?: string }> | undefined;
 
 function load() {
   if (!cache) {
@@ -23,6 +25,7 @@ function load() {
 /** Only images that passed verification are ever rendered. */
 export function verifiedImage(commonsFile: string): VerifiedImage | null {
   const hit = load()[`commons:${commonsFile}`];
-  if (!hit?.ok || !hit.thumb || !hit.pageUrl) return null;
-  return { thumb: hit.thumb, pageUrl: hit.pageUrl, license: hit.license ?? 'unknown', artist: hit.artist ?? '' };
+  if (!hit?.ok || !hit.thumb || !hit.pageUrl || !hit.thumbWidth || !hit.thumbHeight) return null;
+  if (!hit.thumb.startsWith('https://upload.wikimedia.org/') || !hit.pageUrl.startsWith('https://commons.wikimedia.org/')) return null;
+  return { thumb: hit.thumb, width: hit.thumbWidth, height: hit.thumbHeight, pageUrl: hit.pageUrl, license: hit.license ?? 'unknown', artist: hit.artist ?? '' };
 }

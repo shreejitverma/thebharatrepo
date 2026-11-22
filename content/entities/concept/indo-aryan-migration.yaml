@@ -1,0 +1,104 @@
+id: concept.indo-aryan-migration
+type: concept
+kind: civilisation
+names:
+  en: Indo-Aryan Migration Debate
+  iast: Ārya
+summary: >-
+  The origin and dispersal of Indo-Aryan speakers into the Indian subcontinent is a central,
+  contested question in South Asian historiography. Mainstream historical linguistics, archaeology,
+  and ancient DNA studies model a second-millennium BCE migration of Indo-Iranian speakers from the
+  Central Asian steppes into northwestern South Asia, whereas indigenous and Out-of-India
+  proponents argue for deep biological and cultural continuity within the subcontinent.
+summaries:
+  kids: >-
+    Historians, archaeologists, and geneticists debate how the Sanskrit language and Vedic culture
+    spread in ancient India, comparing evidence for migration from Central Asia with evidence for
+    local continuity.
+  teen: >-
+    The Indo-Aryan migration debate weighs comparative Indo-European linguistics and ancient DNA
+    evidence for a c. 2000 to 1500 BCE movement from the Eurasian steppe into South Asia against
+    indigenous arguments pointing to archaeological continuity and the absence of sudden urban
+    destruction.
+region: Eurasian steppe, Central Asia, and northwestern Indian subcontinent
+datings:
+  - method: genetic
+    range: { earliest: -1999, latest: -1399, best: -1699, precision: century, circa: true }
+    grade: B
+    label: Ancient DNA Steppe MLBA admixture model (Narasimhan et al. 2019)
+    sources:
+      - src.narasimhan-2019-formation-human-populations
+    note: >-
+      Genome-wide ancient DNA from 523 individuals across Central and South Asia indicates that
+      Middle-to-Late Bronze Age (MLBA) steppe pastoralist ancestry flowed south through Central
+      Asia and admixed with Indus Periphery populations in the Swat valley and northern South Asia
+      between c. 2000 and 1500 BCE.
+  - method: linguistic
+    range: { earliest: -1899, latest: -1199, best: -1499, precision: century, circa: true }
+    grade: B
+    label: Comparative Indo-European and Indo-Iranian linguistics (Anthony, Witzel, Kuzmina)
+    sources:
+      - src.anthony-2007-horse-wheel-language
+      - src.kuzmina-2007-origin-indo-iranians
+      - src.witzel-1997-early-sanskritization-kuru
+    note: >-
+      Comparative linguistics links Vedic Sanskrit with Old Iranian (Avestan), Finno-Ugric loanwords,
+      Mitanni Indo-Aryan (c. 1380 BCE), and the Sintashta-Andronovo archaeological horizon (c. 2100
+      to 1500 BCE).
+  - method: archaeological-stratigraphic
+    range: { earliest: -3299, latest: -1499, precision: century, circa: true }
+    grade: E
+    label: Indigenous Indo-Aryan and Out-of-India position (Lal, Talageri)
+    sources:
+      - src.lal-2002-saraswati-flows-on
+      - src.talageri-2000-rigveda-historical-analysis
+      - src.bryant-2001-quest-origins-vedic-culture
+    note: >-
+      Proponents of the indigenous position such as B. B. Lal and Shrikant Talageri reject a second
+      millennium BCE external migration, arguing that archaeological continuity from the Harappan
+      civilization and Rigvedic river geography reflect an indigenous third- or fourth-millennium
+      BCE Vedic presence.
+claims:
+  - text: >-
+      Modern scholarship rejects the nineteenth-century colonial hypothesis of a violent "Aryan
+      invasion" that destroyed Harappan cities, framing the mainstream position instead as gradual
+      pastoralist migrations, linguistic acculturation, and genetic admixture during the second
+      millennium BCE.
+    grade: B
+    sources:
+      - src.bryant-2001-quest-origins-vedic-culture
+      - src.singh-2008-ancient-early-medieval-india
+      - src.thapar-2002-early-india
+  - text: >-
+      Ancient DNA analysis (Narasimhan et al. 2019) demonstrates that a primary ancestral source of
+      modern South Asians formed from the mixture of an Indus Periphery-related population and
+      Ancient Ancestral South Indians, followed by admixture with Steppe Middle-to-Late Bronze Age
+      populations in the second millennium BCE.
+    grade: A
+    sources:
+      - src.narasimhan-2019-formation-human-populations
+  - text: >-
+      Comparative philology establishes that Vedic Sanskrit and Avestan (Old Iranian) share systematic
+      sound laws, poetic meters, liturgical terms (soma/haoma, yajna/yasna, hotri/zaotar), and a
+      common self-designation (arya/airya) within the Indo-European language family.
+    grade: A
+    sources:
+      - src.anthony-2007-horse-wheel-language
+      - src.jamison-brereton-2014-rigveda
+      - src.bryant-2001-quest-origins-vedic-culture
+relations:
+  - { kind: related-to, target: text.rigveda }
+  - { kind: related-to, target: concept.vedic-sanskrit }
+  - { kind: related-to, target: event.mitanni-treaty }
+  - { kind: related-to, target: concept.gandhara-grave-culture }
+  - { kind: related-to, target: concept.sintashta-steppe-chariot-question }
+  - { kind: related-to, target: concept.rigvedic-sarasvati }
+wikidata: Q269145
+debate: >-
+  The mainstream scholarly synthesis integrates comparative Indo-European linguistics, Steppe MLBA
+  ancient DNA (Narasimhan et al. 2019), and the Mitanni synchronism to support a c. 2000 to 1500
+  BCE movement of Indo-Aryan speakers into northwestern South Asia. Indigenous theorists counter
+  that material culture in northwestern India shows continuity rather than intrusive disruption and
+  interpret Rigvedic Sarasvati references as pre-1900 BCE.
+tags: [indo-aryan, linguistics, archaeogenetics, migration-debate, steppe, harappan]
+review: { status: draft, author: "gemini-4-argon" }

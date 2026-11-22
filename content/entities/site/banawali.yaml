@@ -1,0 +1,81 @@
+id: site.banawali
+type: site
+kind: site
+names:
+  en: Banawali
+  iast: Banāvalī
+  native: बनावली
+summary: >-
+  A fortified Harappan town on the dry Sarasvati (Rangoi/Ghaggar) palaeochannel in Fatehabad District, Haryana,
+  excavated by R. S. Bisht (1974-1977), preserving a three-period sequence (Early, Mature, and Late Harappan)
+  featuring an internal horse-shoe or semi-elliptical citadel enclosure, a surrounding defensive moat, and a
+  complete terracotta model of a plough.
+summaries:
+  kids: >-
+    Banawali was a walled Harappan town in Haryana surrounded by a defensive ditch, where archaeologists discovered
+    a perfectly preserved clay model of a farmer's plough.
+  teen: >-
+    Excavated by R. S. Bisht in Haryana, Banawali shows all three stages of Harappan history and is known for its
+    semi-elliptical citadel wall placed inside the main town wall, a defensive moat, and wealthy merchants' houses.
+region: Fatehabad District, Haryana, India
+location:
+  name: Banawali
+  lat: 29.5978
+  lon: 75.3931
+datings:
+  - method: archaeological-stratigraphic
+    range:
+      earliest: -2999
+      latest: -1499
+      precision: century
+      circa: true
+    grade: A
+    label: Periods I (Early), II (Mature), and III (Late/Bara-related)
+    sources:
+      - src.possehl-2002-indus-civilization
+      - src.singh-2008-ancient-early-medieval-india
+      - src.wright-2010-ancient-indus
+    note: >-
+      Period I represents Early Harappan Sothi-Siswal (c. 3000-2600 BCE), Period II Mature Harappan (c. 2600-1900 BCE),
+      and Period III Late Harappan / Bara phase (c. 1900-1500 BCE).
+claims:
+  - text: >-
+      During Mature Harappan Period II, Banawali's citadel and lower town were enclosed within a single rectangular
+      outer fortification wall flanked by a V-shaped exterior moat, with a semi-elliptical inner wall separating
+      the elevated acropolis from the residential town.
+    grade: A
+    sources:
+      - src.possehl-2002-indus-civilization
+      - src.singh-2008-ancient-early-medieval-india
+  - text: >-
+      Excavations at Banawali recovered an intact terracotta model of a single-piece beam and shoe ard-plough,
+      confirming the form of the wooden ploughs used by Harappan farmers.
+    grade: A
+    sources:
+      - src.possehl-2002-indus-civilization
+      - src.singh-2008-ancient-early-medieval-india
+  - text: >-
+      Large residences in Banawali's lower town contained multiple rooms, storage jars, steatite seals, chert weights,
+      lapis lazuli beads, and a touchstone bearing gold streaks used for testing gold purity.
+    grade: A
+    sources:
+      - src.singh-2008-ancient-early-medieval-india
+      - src.wright-2010-ancient-indus
+relations:
+  - kind: part-of
+    target: tradition.harappan-civilisation
+  - kind: contemporary-of
+    target: site.kalibangan
+  - kind: contemporary-of
+    target: site.rakhigarhi
+  - kind: contemporary-of
+    target: site.bhirrana
+wikidata: Q4853984
+tags:
+  - harappan
+  - site
+  - haryana
+  - ghaggar-hakra
+review:
+  status: draft
+  author: gemini-4-argon

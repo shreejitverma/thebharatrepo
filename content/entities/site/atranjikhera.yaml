@@ -1,0 +1,72 @@
+id: site.atranjikhera
+type: site
+kind: site
+names:
+  en: Atranjikhera
+  iast: Atrañjīkheṛā
+  native: अतरंजीखेड़ा
+summary: >-
+  Atranjikhera, situated on the right bank of the Kali Nadi in Etah district, Uttar Pradesh, is a
+  key multi-period protohistoric and early historic mound in the upper Ganga basin. Excavated by R.
+  C. Gaur between 1962 and 1968, it established an unbroken stratigraphic and radiocarbon sequence
+  from Ochre Coloured Pottery and Black and Red Ware to iron-bearing Painted Grey Ware and Northern
+  Black Polished Ware.
+summaries:
+  kids: >-
+    Atranjikhera is an ancient mound in Uttar Pradesh where archaeologists found early iron furnaces,
+    farm tools, and four layers of ancient pottery stacked one above another.
+  teen: >-
+    Excavated by R. C. Gaur in the 1960s, Atranjikhera demonstrated a clear stratigraphy in the
+    Ganga-Yamuna Doab - from Ochre Coloured Pottery and Black and Red Ware to Painted Grey Ware
+    with abundant iron tools and furnaces around 1000 BCE.
+region: Upper Ganga-Yamuna Doab (Etah district, Uttar Pradesh)
+location: { name: "Atranjikhera", lat: 27.7, lon: 78.68 }
+datings:
+  - method: archaeological-radiocarbon
+    range: { earliest: -1999, latest: -49, best: -999, precision: century, circa: true }
+    grade: A
+    label: Four-period protohistoric to early historic sequence (R. C. Gaur)
+    sources:
+      - src.gaur-1983-excavations-atranjikhera
+      - src.singh-2008-ancient-early-medieval-india
+      - src.chakrabarti-1992-early-use-iron-india
+    note: >-
+      R. C. Gaur defined Period I (Ochre Coloured Pottery, c. 2000 to 1500 BCE), Period II (Black
+      and Red Ware, c. 1450 to 1200 BCE), Period III (Painted Grey Ware with iron, c. 1200 to 600
+      BCE, with a TF-191 radiocarbon date around 1025 BCE), and Period IV (Northern Black Polished
+      Ware, c. 600 to 50 BCE).
+claims:
+  - text: >-
+      R. C. Gaur's excavations at Atranjikhera first demonstrated that an independent, unpainted
+      Black and Red Ware (Period II) horizon intervened stratigraphically between Ochre Coloured
+      Pottery (Period I) and Painted Grey Ware (Period III) in the Doab.
+    grade: A
+    sources:
+      - src.gaur-1983-excavations-atranjikhera
+      - src.singh-2008-ancient-early-medieval-india
+  - text: >-
+      Period III (Painted Grey Ware) yielded 135 iron artifacts - including arrowheads, spearheads,
+      tongs, chisels, sickles, and knives - alongside iron-smelting furnaces and slag throughout
+      all sub-phases of the PGW deposit.
+    grade: A
+    sources:
+      - src.gaur-1983-excavations-atranjikhera
+      - src.chakrabarti-1992-early-use-iron-india
+  - text: >-
+      Archaeobotanical remains from Period III at Atranjikhera show multi-cropping agriculture combining
+      rice (Oryza sativa) with wheat (Triticum compactum) and barley (Hordeum vulgare), supporting
+      growing demographic density in the Doab.
+    grade: A
+    sources:
+      - src.gaur-1983-excavations-atranjikhera
+      - src.singh-2008-ancient-early-medieval-india
+relations:
+  - { kind: related-to, target: polity.panchala }
+  - { kind: related-to, target: concept.painted-grey-ware-culture }
+  - { kind: related-to, target: concept.black-and-red-ware-culture }
+  - { kind: related-to, target: concept.northern-black-polished-ware-culture }
+  - { kind: related-to, target: concept.iron-metallurgy-in-india }
+  - { kind: contemporary-of, target: site.hastinapura }
+  - { kind: contemporary-of, target: site.ahichhatra }
+tags: [atranjikhera, archaeology, rc-gaur, painted-grey-ware, black-and-red-ware, iron-age]
+review: { status: draft, author: "gemini-4-argon" }

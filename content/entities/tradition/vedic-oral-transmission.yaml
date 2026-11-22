@@ -1,0 +1,67 @@
+id: tradition.vedic-oral-transmission
+type: tradition
+kind: dharma
+names:
+  en: Oral Preservation of the Vedas and Patha Techniques
+  iast: Vedapāṭha
+  native: वेदपाठ
+summary: >-
+  The Vedic corpus was transmitted across more than three millennia primarily through disciplined
+  oral memorization rather than written manuscripts, utilizing eleven formal recitation modes
+  (pathas) that cross-check word order, sandhi junctions, and pitch accents. In 2003, UNESCO
+  proclaimed the tradition of Vedic chanting a Masterpiece of the Oral and Intangible Heritage of
+  Humanity.
+summaries:
+  kids: >-
+    For over three thousand years, teachers and students passed down the Vedas purely by memory,
+    using clever forward-and-backward word patterns (pathas) so not a single sound would change.
+  teen: >-
+    Using error-correcting recitation modes such as Padapatha, Kramapatha, Jatapatha, and
+    Ghanapatha, Vedic schools preserved the exact phonemes and tonal accents of the Samhitas across
+    millennia, earning recognition from UNESCO in 2003 as a Masterpiece of Oral Heritage.
+region: Pan-Indian
+datings:
+  - method: scholarly-consensus
+    range: { earliest: -1199, latest: 2003, precision: century, circa: true }
+    grade: B
+    label: Codification of Shakalya's Padapatha to modern UNESCO inscription
+    sources:
+      - src.jamison-brereton-2014-rigveda
+      - src.gonda-1975-vedic-literature
+      - src.unesco-2003-tradition-vedic-chanting
+    note: >-
+      The fixed canonical text of the Rigveda and its word-by-word analysis (Padapatha of Shakalya)
+      were established by the early first millennium BCE and transmitted continuously to the
+      present day, receiving UNESCO proclamation in 2003.
+claims:
+  - text: >-
+      To prevent phonetic or lexical drift, Vedic recitation employs three foundational modes
+      (prakriti-pathas: Samhita, Pada, and Krama) and eight complex combinatory permutations
+      (vikriti-pathas, including Jata, Mala, Shikha, Rekha, Dhvaja, Danda, Ratha, and Ghana).
+    grade: A
+    sources:
+      - src.unesco-2003-tradition-vedic-chanting
+      - src.gonda-1975-vedic-literature
+      - src.flood-2003-blackwell-companion-hinduism
+  - text: >-
+      In the Jatapatha (braided recitation) and Ghanapatha (bell or dense recitation), adjacent
+      words are chanted forward and backward in interlocking sequences (such as 1-2, 2-1, 1-2-3,
+      3-2-1, 1-2-3), ensuring that both isolated word forms and their sandhi combinations are
+      verified.
+    grade: A
+    sources:
+      - src.unesco-2003-tradition-vedic-chanting
+      - src.flood-2003-blackwell-companion-hinduism
+  - text: >-
+      UNESCO proclaimed the tradition of Vedic chanting a Masterpiece of the Oral and Intangible
+      Heritage of Humanity in 2003 and inscribed it on the Representative List in 2008.
+    grade: A
+    sources:
+      - src.unesco-2003-tradition-vedic-chanting
+relations:
+  - { kind: related-to, target: tradition.vedic-chanting }
+  - { kind: related-to, target: text.rigveda }
+  - { kind: related-to, target: text.vedangas }
+  - { kind: related-to, target: concept.vedic-sanskrit }
+tags: [oral-tradition, patha, ghanapatha, jatapatha, unesco, shiksha]
+review: { status: draft, author: "gemini-4-argon" }

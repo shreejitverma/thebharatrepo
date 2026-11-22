@@ -1,6 +1,7 @@
 import type { Metadata } from 'next';
 import Link from 'next/link';
 import { notFound } from 'next/navigation';
+import { preconnect } from 'react-dom';
 import GradeBadge, { LensTag } from '@/components/GradeBadge';
 import KaalchakraStrip from '@/components/KaalchakraStrip';
 import SourceCitation from '@/components/SourceCitation';
@@ -40,6 +41,7 @@ export default async function EntityPage({ params }: { params: Promise<{ type: s
   if (!e) notFound();
   const g = getGraph();
   const img = e.image ? verifiedImage(e.image.commons) : null;
+  if (img) preconnect('https://upload.wikimedia.org');
   const ordered = [...e.datings].sort((a, b) => Number(isTraditional(a.method)) - Number(isTraditional(b.method)));
   const primary = ordered[0];
   const anchor = primary.range.best ?? (primary.range.earliest + primary.range.latest) / 2;
@@ -89,7 +91,7 @@ export default async function EntityPage({ params }: { params: Promise<{ type: s
         {img && e.image ? (
           <figure>
             {/* eslint-disable-next-line @next/next/no-img-element */}
-            <img src={img.thumb} alt={e.image.alt} loading="lazy" decoding="async" />
+            <img src={img.thumb} alt={e.image.alt} width={img.width} height={img.height} decoding="async" fetchPriority="high" />
             <figcaption>
               <a href={img.pageUrl} rel="noopener noreferrer" target="_blank">Wikimedia Commons</a>, {img.license}
               {img.artist ? `, ${img.artist}` : ''}

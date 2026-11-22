@@ -1,0 +1,106 @@
+id: concept.rigvedic-sarasvati
+type: concept
+kind: civilisation
+names:
+  en: Sarasvati in the Rigveda
+  iast: Sarasvatī
+  native: सरस्वती
+summary: >-
+  In the Rigveda, Sarasvati is celebrated both as a mighty, snow-fed river flowing from the
+  mountains to the sea (or terminal lake) and as the goddess of sacred speech and ritual inspiration.
+  Its geographical identification - between the Ghaggar-Hakra paleochannel system in Haryana,
+  Rajasthan, and Cholistan and an earlier shared name with the Helmand (Haraxvaiti) in Afghanistan
+  - and the timing of its hydrological decline are central debates in South Asian archaeology.
+summaries:
+  kids: >-
+    In the Rigveda, the Sarasvati is praised as a grand river flowing from the mountains and as a
+    goddess of wisdom. Today, scientists study dried-up riverbeds between the Yamuna and Sutlej to
+    trace its ancient path.
+  teen: >-
+    Positioned explicitly between the Yamuna and the Shutudri (Sutlej) in the Nadistuti hymn
+    (Rigveda 10.75.5), the Rigvedic Sarasvati corresponds geographically to the Ghaggar-Hakra
+    system, while geologists and historians debate when it transitioned from a perennial to a
+    monsoon-fed seasonal river.
+region: Kurukshetra and Ghaggar-Hakra basin (Haryana, Punjab, northern Rajasthan, and Cholistan)
+location: { name: "Kurukshetra (Ghaggar-Sarasvati basin)", lat: 29.97, lon: 76.88 }
+datings:
+  - method: geological
+    range: { earliest: -2599, latest: -1899, best: -1999, precision: century, circa: true }
+    grade: B
+    label: Fluvial geomorphology of the Ghaggar-Hakra monsoonal decline (Giosan et al. 2012)
+    sources:
+      - src.giosan-2012-fluvial-landscapes-harappan
+    note: >-
+      Fluvial geomorphology and luminescence dating by Liviu Giosan et al. (2012) indicate that
+      during the Holocene Harappan phase the Ghaggar-Hakra was a perennial monsoon-fed system whose
+      discharges weakened after c. 2000 to 1900 BCE as the summer monsoon aridified.
+  - method: textual-internal
+    range: { earliest: -1499, latest: -899, best: -1199, precision: century, circa: true }
+    grade: C
+    label: Rigvedic to Brahmana textual hydrology (Witzel, Jamison and Brereton)
+    sources:
+      - src.jamison-brereton-2014-rigveda
+      - src.witzel-1997-early-sanskritization-kuru
+    note: >-
+      In the Rigveda (c. 1500 to 1000 BCE in mainstream chronology) the Sarasvati is described as a
+      swollen river, whereas by the Panchavimsha and Jaiminiya Brahmanas (c. 900 to 700 BCE) it is
+       explicitly described as disappearing into the desert at Vinashana.
+  - method: geological
+    range: { earliest: -3299, latest: -1899, precision: century, circa: true }
+    grade: C
+    label: Pre-1900 BCE glacial-fed Sarasvati correlation (Danino, Lal)
+    sources:
+      - src.danino-2010-lost-river-sarasvati
+      - src.lal-2002-saraswati-flows-on
+    note: >-
+      Michel Danino and B. B. Lal argue that Rigvedic descriptions of the Sarasvati breaking
+      mountain ridges and flowing from the mountains to the ocean (RV 7.95.2) must predate the late
+      Harappan drying of the Ghaggar-Hakra around 1900 BCE.
+claims:
+  - text: >-
+      The Nadistuti Sukta ("Praise of the Rivers," Rigveda 10.75.5) enumerates the rivers of northern
+      India strictly from east to west: Ganga, Yamuna, Sarasvati, Shutudri (Sutlej), Parushni
+      (Ravi), Asikni (Chenab), Marudvridha, Vitasta (Jhelum), Arjikiya, and Sushoma, placing the
+      Sarasvati directly between the Yamuna and the Sutlej.
+    grade: A
+    sources:
+      - src.jamison-brereton-2014-rigveda
+      - src.danino-2010-lost-river-sarasvati
+      - src.lal-2002-saraswati-flows-on
+  - text: >-
+      In Rigveda 2.41.16, Sarasvati is invoked as ambitame, naditame, devitame ("best of mothers,
+      best of rivers, best of goddesses"), and in Rigveda 3.23.4 the Bharata princes Devashravas
+      and Devavata kindle the sacrificial fire along the Sarasvati, Drishadvati, and Apaya.
+    grade: A
+    sources:
+      - src.jamison-brereton-2014-rigveda
+      - src.witzel-1997-early-sanskritization-kuru
+  - text: >-
+      Later Vedic prose texts, including the Panchavimsha Brahmana (25.10) and Baudhayana Dharma
+      Sutra, describe the Sarasvati as vanishing in the desert sands at a place called Vinashana
+      ("Disappearance"), from which the forty-day Sarasvata sattra pilgrimage proceeded upstream to
+      Plaksha Prasravana.
+    grade: A
+    sources:
+      - src.witzel-1997-early-sanskritization-kuru
+      - src.danino-2010-lost-river-sarasvati
+      - src.singh-2008-ancient-early-medieval-india
+relations:
+  - { kind: related-to, target: text.rigveda }
+  - { kind: related-to, target: event.dasarajna }
+  - { kind: related-to, target: polity.kuru-kingdom }
+  - { kind: related-to, target: concept.indo-aryan-migration }
+wikidata: Q177321
+image:
+  commons: "File:Sarasvati river.jpg"
+  alt: Satellite and topographic map illustrating the Ghaggar-Hakra paleochannel system between the Yamuna and Sutlej
+  credit: Joshua Jonathan
+  license: CC BY-SA 4.0
+debate: >-
+  The Nadistuti hymn (Rigveda 10.75.5) unambiguously locates the late Rigvedic Sarasvati between
+  the Yamuna and the Sutlej in the Ghaggar-Hakra basin. Scholars differ on whether early Rigvedic
+  hymns reflect a pre-1900 BCE perennial glacial-fed river (Lal, Danino), a monsoon-fed river still
+  active during the Late Bronze Age before drying at Vinashana (Giosan, Witzel), or carry older
+  memories of the Avestan Haraxvaiti (Helmand) transferred eastward.
+tags: [sarasvati, rigveda, nadistuti, ghaggar-hakra, kurukshetra, hydrology]
+review: { status: draft, author: "gemini-4-argon" }

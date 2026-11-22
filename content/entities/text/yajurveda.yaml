@@ -1,0 +1,73 @@
+id: text.yajurveda
+type: text
+kind: text
+names:
+  en: Yajurveda
+  iast: Yajurveda
+  native: यजुर्वेद
+summary: >-
+  The Yajurveda is the Veda of sacrificial formulas (yajus) recited by the Adhvaryu priest while
+  performing the physical actions of Vedic rituals. It is divided into two major branches: the
+  older Krishna (Black) Yajurveda and the younger Shukla (White) Yajurveda.
+summaries:
+  kids: >-
+    The Yajurveda is a collection of sacred formulas and instructions used by priests who built
+    altars and made offerings during Vedic fire rituals.
+  teen: >-
+    Serving as the ritual manual for the Adhvaryu priest, the Yajurveda contains verse mantras
+    and the earliest surviving Sanskrit prose. It splits into the Krishna (Black) Yajurveda, which
+    mixes mantras with prose explanations, and the Shukla (White) Yajurveda, which separates them.
+region: Kuru-Panchala and Videha (northern India)
+datings:
+  - method: linguistic
+    range: { earliest: -1199, latest: -799, best: -999, precision: century, circa: true }
+    grade: C
+    label: Mantra-period to Brahmana-period linguistic dating
+    sources:
+      - src.witzel-1997-early-sanskritization-kuru
+      - src.gonda-1975-vedic-literature
+      - src.keith-1914-veda-black-yajus-school
+    note: >-
+      Yajurvedic mantra prose represents the linguistic layer immediately following the Rigveda,
+      composed in the Kuru heartland during the early Iron Age when shyama ayas (dark metal, iron)
+      is first attested.
+  - method: traditional-puranic
+    range: { earliest: -3101, latest: -2999, precision: century, circa: true }
+    grade: D
+    label: Traditional Puranic reckoning
+    sources:
+      - src.flood-2003-blackwell-companion-hinduism
+    note: >-
+      Tradition attributes the transmission of the Yajurveda to Vaishampayana (Krishna Yajurveda)
+      and Yajnavalkya (Shukla Yajurveda) following Vyasa's division of the Vedas.
+claims:
+  - text: >-
+      The Yajurveda is divided into the Krishna (Black) tradition, in which sacrificial mantras
+      are interspersed with theological prose (brahmana), and the Shukla (White) tradition, which
+      isolates the mantras in the Vajasaneyi Samhita.
+    grade: A
+    sources:
+      - src.gonda-1975-vedic-literature
+      - src.keith-1914-veda-black-yajus-school
+  - text: >-
+      Yajurveda Samhitas contain the earliest Indo-Aryan prose and explicitly mention shyama ayas
+      or krishna ayas (black metal, iron), marking the transition into the North Indian Iron Age.
+    grade: B
+    sources:
+      - src.witzel-1997-early-sanskritization-kuru
+      - src.singh-2008-ancient-early-medieval-india
+relations:
+  - { kind: succeeded, target: text.rigveda }
+  - { kind: related-to, target: text.krishna-yajurveda }
+  - { kind: related-to, target: text.shukla-yajurveda }
+  - { kind: related-to, target: tradition.shrauta-ritual }
+  - { kind: related-to, target: tradition.agnicayana }
+  - { kind: related-to, target: polity.kuru-kingdom }
+wikidata: Q47142
+image:
+  commons: "File:1200-1000 BCE, Vajasneyi samhita sample i, Shukla Yajurveda, Sanskrit, Devanagari.jpg"
+  alt: Devanagari manuscript folio of the Vajasaneyi Samhita of the Shukla Yajurveda
+  credit: Ms Sarah Welch
+  license: CC BY-SA 4.0
+tags: [veda, samhita, yajurveda, ritual, iron-age]
+review: { status: draft, author: "gemini-4-argon" }

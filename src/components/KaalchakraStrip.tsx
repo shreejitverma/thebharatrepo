@@ -4,14 +4,36 @@ import { neighbours } from '@/lib/content/kaalchakra';
 import { formatRange, type YearRange } from '@/lib/time';
 import { SEGMENTS, SEGMENT_STARTS, yearToUnit } from '@/lib/time/scale';
 
+const W = 1000;
+
+function clamp(x: number, lo: number, hi: number): number {
+  return Math.min(hi, Math.max(lo, x));
+}
+
+/** Every entry as one tick, drawn as a single path with at most one tick per pixel. */
+function ticksPath(items: KcItem[]): string {
+  const byPixel = new Map<number, string>();
+  for (const it of items) {
+    const a = it.anchor.scholarship ?? it.anchor.tradition;
+    if (a === null) continue;
+    const x = clamp(yearToUnit(a) * W, 0.6, W - 0.6);
+    if (!byPixel.has(Math.round(x))) byPixel.set(Math.round(x), x.toFixed(1));
+  }
+  return [...byPixel.entries()]
+    .sort((p, q) => p[0] - q[0])
+    .map(([, x]) => `M${x} 18v10`)
+    .join('');
+}
+
 /**
  * Mini Kaalchakra: locates an entity or article on the full axis, with its neighbours in time.
  * Server component, no client JavaScript.
  */
 export default function KaalchakraStrip({ items, range, selfId, focusHref }: { items: KcItem[]; range: YearRange; selfId: string | null; focusHref: string }) {
-  const W = 1000;
   const u0 = yearToUnit(range.earliest);
   const u1 = yearToUnit(range.latest);
+  const markW = Math.min(Math.max((u1 - u0) * W, 4), W);
+  const markX = clamp(u0 * W, 0, W - markW);
   const anchor = range.best ?? (range.earliest + range.latest) / 2;
   const { before, after } = neighbours(items, anchor, selfId, 3);
   return (
@@ -26,12 +48,8 @@ export default function KaalchakraStrip({ items, range, selfId, focusHref }: { i
           const x = SEGMENT_STARTS[i] * W;
           return <rect key={s.id} x={x} y={14} width={s.share * W} height={18} fill={i % 2 ? 'var(--wheel-seg-b)' : 'var(--wheel-seg-a)'} stroke="var(--line)" strokeWidth={0.5} />;
         })}
-        {items.map((it) => {
-          const a = it.anchor.scholarship ?? it.anchor.tradition;
-          if (a === null) return null;
-          return <rect key={it.id} x={yearToUnit(a) * W - 0.6} y={18} width={1.2} height={10} fill="var(--ink-faint)" opacity={0.45} />;
-        })}
-        <rect x={u0 * W} y={8} width={Math.max((u1 - u0) * W, 4)} height={30} rx={2} fill="var(--accent)" opacity={0.85} />
+        <path d={ticksPath(items)} stroke="var(--ink-faint)" strokeWidth={1.2} opacity={0.45} fill="none" />
+        <rect x={markX.toFixed(1)} y={8} width={markW.toFixed(1)} height={30} rx={2} fill="var(--accent)" opacity={0.85} />
       </svg>
       {before.length || after.length ? (
         <div className="kc-strip__nb">
