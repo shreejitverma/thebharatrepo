@@ -43,7 +43,11 @@
 }
 
 .name-iast {
-  font-style: italic;
+  /*
+   * Upright, like IAST in running text: both then share Noto Serif's Latin Extended file (about 180 KB),
+   * where italic would fetch a second one (about 230 KB) on every page with a romanised name.
+   */
+  font-style: normal;
 }
 
 /* Native script and IAST share one baseline, whatever each font's ascent and line height. */

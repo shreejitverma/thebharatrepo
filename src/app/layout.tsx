@@ -12,7 +12,8 @@ import { READING_LEVEL_BOOT_SCRIPT } from '@/lib/reading-level';
 const tiro = Tiro_Devanagari_Hindi({ subsets: ['latin', 'latin-ext', 'devanagari'], weight: ['400'], variable: '--font-tiro', display: 'swap' });
 const serif = Noto_Serif({ subsets: ['latin', 'latin-ext'], weight: ['400', '700'], style: ['normal', 'italic'], variable: '--font-serif', display: 'swap' });
 // Devanagari for names and terms in running text; downloaded only when Devanagari appears on a page.
-const deva = Noto_Serif_Devanagari({ subsets: ['devanagari'], weight: ['400', '600'], variable: '--font-deva', display: 'swap', preload: false });
+// One static weight: names are never bold, and a weight range would fetch the variable font (twice the bytes).
+const deva = Noto_Serif_Devanagari({ subsets: ['devanagari'], weight: ['400'], variable: '--font-deva', display: 'swap', preload: false });
 const sans = Noto_Sans({ subsets: ['latin', 'latin-ext'], weight: ['400', '600', '700'], variable: '--font-sans', display: 'swap' });
 
 export const metadata: Metadata = {
