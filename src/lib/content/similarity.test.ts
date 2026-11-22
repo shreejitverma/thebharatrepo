@@ -30,6 +30,10 @@ describe('sameTitle', () => {
     expect(sameTitle('Epigraphia Indica, Vol. VI', 'Epigraphia Indica Vol 6')).toBe(true);
     expect(sameTitle('A History of Early Vedanta Philosophy, Part 1', 'A History of Early Vedanta Philosophy, Part I')).toBe(true);
   });
+  it('rejects a sibling work whose title differs only in its subject', () => {
+    expect(sameTitle('Ajanta Caves - UNESCO World Heritage Centre', 'Ellora Caves - UNESCO World Heritage Centre')).toBe(false);
+    expect(sameTitle('Early History of India', 'Early History of Bengal')).toBe(false);
+  });
   it('rejects an unrelated work that reuses an identifier', () => {
     expect(sameTitle('Vedic Astronomy Proves the Mahabharata War Occurred in 5561 BCE', 'The formation of human populations in South and Central Asia')).toBe(false);
     expect(titleSimilarity('', 'anything')).toBe(0);
@@ -39,6 +43,11 @@ describe('sameTitle', () => {
 describe('pageMatchesTitle', () => {
   it('accepts a page title with a site suffix', () => {
     expect(pageMatchesTitle('Tradition of Vedic chanting', 'UNESCO - Tradition of Vedic chanting - intangible heritage')).toBe(true);
+  });
+  it('rejects a page about a sibling subject with a near-identical title', () => {
+    expect(pageMatchesTitle('Group of Monuments at Mahabalipuram', 'Group of Monuments at Hampi - UNESCO World Heritage Centre')).toBe(false);
+    expect(pageMatchesTitle('Ajanta Caves', 'Ellora Caves - UNESCO World Heritage Centre')).toBe(false);
+    expect(pageMatchesTitle('Ajanta Caves', 'Ajanta Caves - UNESCO World Heritage Centre')).toBe(true);
   });
   it('rejects a page that does not carry the title', () => {
     expect(pageMatchesTitle('Tradition of Vedic chanting', 'Page not found')).toBe(false);

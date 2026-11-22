@@ -20,9 +20,9 @@ region: Indian Subcontinent (Indian Ocean coastal rim and inland river basins)
 datings:
   - method: genetic
     range:
-      earliest: "65000 BCE"
-      latest: "50000 BCE"
-      best: "60000 BCE"
+      earliest: "65 ka"
+      latest: "50 ka"
+      best: "60 ka"
       precision: ka
       circa: true
     grade: B
@@ -35,9 +35,9 @@ datings:
       between ~65 and 50 ka, supporting a single rapid coastal dispersal out of Africa after the 74 ka Toba eruption.
   - method: luminescence
     range:
-      earliest: "120000 BCE"
-      latest: "74000 BCE"
-      best: "80000 BCE"
+      earliest: "120 ka"
+      latest: "74 ka"
+      best: "80 ka"
       precision: ka
       circa: true
     grade: C

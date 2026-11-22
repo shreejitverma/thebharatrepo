@@ -112,6 +112,7 @@ describe('loader against fixtures', () => {
       const msgs = loadContentUncached().errors.map((e) => e.message);
       expect(msgs).toContain('datings[0]: unknown source src.nobody-1999-nothing');
       expect(msgs).toContain('datings[0]: endpoint is written as "7001 BCE" but the text says "7000 BCE"; check which is meant');
+      expect(msgs).toContain('datings[0].range.earliest: "74000 BCE" is a deep-time date; write it as years before present ("N ka" or "N Ma") as the cited source reports it');
       expect(msgs).toContain('relation related-to -> unknown entity person.ghost');
       expect(msgs).toContain('article body cites no sources; use [@src.id, locator]');
       expect(msgs).toContain('isbn:9780000000002 already identifies src.roe-1990-a-work; cite one source id per work');
@@ -170,6 +171,16 @@ describe('integrity checks', () => {
     expect(rawNegativeYears([{ range: { earliest: '7000 BCE', latest: '1.5 Ma' } }])).toEqual([]);
     expect(rawNegativeYears(undefined)).toEqual([]);
     expect(rawNegativeYears([null, { range: null }])).toEqual([]);
+  });
+  it('rejects deep-time dates written as calendar years, but not ka strings, round calendar figures or tradition', async () => {
+    const { deepTimeBceYears } = await import('./load');
+    const { parseYear } = await import('./schema');
+    const toba = (v: string, method = 'luminescence') => [{ method, range: { earliest: v, latest: v } }];
+    expect(deepTimeBceYears(toba('74000 BCE'))).toHaveLength(2);
+    expect(deepTimeBceYears(toba('74 ka'))).toEqual([]);
+    expect(2026 - (parseYear('74 ka') as number)).toBe(74000);
+    expect(deepTimeBceYears(toba('10000 BCE'))).toEqual([]);
+    expect(deepTimeBceYears(toba('3891102 BCE', 'traditional-puranic'))).toEqual([]);
   });
   it('finds malformed citations', async () => {
     const { findMalformedCitations } = await import('./load');

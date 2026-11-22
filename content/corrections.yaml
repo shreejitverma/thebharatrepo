@@ -1188,3 +1188,87 @@
   sources:
     - src.zvelebil-1992-companion-studies
     - src.wilden-2014-manuscript-print-memory
+- date: 2026-11-22
+  target: /archive/event/arrival-of-modern-humans-south-asia
+  before: c. 67 ka to 52 ka; c. 122 ka to 76 ka
+  after: c. 65 ka to 50 ka; c. 120 ka to 74 ka
+  reason: Dates the cited source reports in thousands or millions of years before present had been stored as BCE years, which made them about 2,025 years too old; they now match the source.
+  sources:
+    - src.macaulay-2005-coastal-settlement-asia
+    - src.mellars-2013-colonization-southern-asia
+    - src.petraglia-2007-jwalapuram-toba
+    - src.petraglia-2010-indian-ocean-rim-dispersal
+    - src.clarkson-2020-dhaba-toba
+    - src.blinkhorn-2013-thar-middle-palaeolithic
+- date: 2026-11-22
+  target: /archive/site/attirampakkam
+  before: c. 387 ka to 174 ka
+  after: c. 385 ka to 172 ka
+  reason: Dates the cited source reports in thousands or millions of years before present had been stored as BCE years, which made them about 2,025 years too old; they now match the source.
+  sources:
+    - src.akhilesh-2018-attirampakkam-middle-palaeolithic
+- date: 2026-11-22
+  target: /archive/site/bhimbetka
+  before: c. 102 ka to 3 ka
+  after: c. 100 ka to 3 ka
+  reason: Dates the cited source reports in thousands or millions of years before present had been stored as BCE years, which made them about 2,025 years too old; they now match the source.
+  sources:
+    - src.misra-2001-prehistoric-colonization-india
+    - src.unesco-2003-bhimbetka
+    - src.coningham-2015-archaeology-south-asia
+- date: 2026-11-22
+  target: /archive/site/bori
+  before: c. 742 ka to 602 ka; c. 82 ka to 72 ka
+  after: c. 740 ka to 600 ka; c. 80 ka to 70 ka
+  reason: Dates the cited source reports in thousands or millions of years before present had been stored as BCE years, which made them about 2,025 years too old; they now match the source.
+  sources:
+    - src.mishra-1995-bori-earliest-acheulian
+    - src.westgate-1998-toba-tephra-peninsular-india
+- date: 2026-11-22
+  target: /archive/site/dhaba
+  before: c. 82 ka to 26 ka
+  after: c. 80 ka to 24 ka
+  reason: Dates the cited source reports in thousands or millions of years before present had been stored as BCE years, which made them about 2,025 years too old; they now match the source.
+  sources:
+    - src.clarkson-2020-dhaba-toba
+- date: 2026-11-22
+  target: /archive/site/didwana
+  before: c. 802 ka to 27 ka
+  after: c. 800 ka to 25 ka
+  reason: Dates the cited source reports in thousands or millions of years before present had been stored as BCE years, which made them about 2,025 years too old; they now match the source.
+  sources:
+    - src.misra-2001-prehistoric-colonization-india
+    - src.blinkhorn-2013-thar-middle-palaeolithic
+- date: 2026-11-22
+  target: /archive/site/hunsgi-baichbal-valley
+  before: c. 1.2 Ma to 52 ka
+  after: c. 1.2 Ma to 50 ka
+  reason: Dates the cited source reports in thousands or millions of years before present had been stored as BCE years, which made them about 2,025 years too old; they now match the source.
+  sources:
+    - src.petraglia-1999-isampur-acheulian-quarry
+    - src.paddayya-2000-isampur-excavation
+    - src.misra-2001-prehistoric-colonization-india
+- date: 2026-11-22
+  target: /archive/site/jwalapuram
+  before: c. 79 ka to 40 ka; c. 77 ka to 73 ka
+  after: c. 77 ka to 38 ka; c. 75 ka to 71 ka
+  reason: Dates the cited source reports in thousands or millions of years before present had been stored as BCE years, which made them about 2,025 years too old; they now match the source.
+  sources:
+    - src.petraglia-2007-jwalapuram-toba
+    - src.ambrose-1998-toba-volcanic-winter
+    - src.williams-2009-toba-environmental-impact
+    - src.mellars-2013-colonization-southern-asia
+- date: 2026-11-22
+  target: /archive/event/keezhadi-excavations-begin
+  before: Parliamentary and Ministry of Culture records list ASI excavation seasons at Keezhadi in 2014-15, 2015-16 and 2016-17 (grade A).
+  after: The Tamil Nadu State Department of Archaeology's 2019 report records ASI excavation seasons at Keezhadi in 2014-15, 2015-16 and 2016-17 (grade B).
+  reason: The cited record was the state department's 2019 Keeladi report, not a Lok Sabha or Ministry of Culture record, so the attribution and grade now match the source actually cited.
+  sources:
+    - src.sivanantham-2019-keeladi-urban-settlement
+- date: 2026-11-22
+  target: /sources
+  before: Chandrayaan-1_Science
+  after: Chandrayaan-1 Science
+  reason: The bibliography showed the page's file slug instead of a readable title for the ISRO Chandrayaan-1 science page.
+  sources:
+    - src.chandrayaan1-isro-science

@@ -88,7 +88,33 @@ function exact(a: string, b: string): boolean {
  * title that is merely a subset of a much longer one (e.g. "India" vs "Early India") does not pass.
  */
 function mainTitle(t: string): string {
-  return t.replace(/\([^)]*\)/g, ' ').split(/:|\s[-–]\s|\.\s|,\s/)[0];
+  return t.replace(/\([^)]*\)|\[[^\]]*\]/g, ' ').split(/:|\s[-–]\s|\.\s|,\s/)[0];
+}
+
+const BOILERPLATE = new Set(['unesco', 'world', 'heritage', 'centre', 'center', 'list', 'site', 'official', 'website', 'home', 'page']);
+
+/** Same word, a one-letter variant, or one half of a compound ("sangita" in "sangitaratnakara"). */
+function sameWord(x: string, y: string): boolean {
+  if (x === y || nearlyEqual(x, y)) return true;
+  const [short, long] = x.length <= y.length ? [x, y] : [y, x];
+  return short.length >= 5 && long.includes(short);
+}
+
+/**
+ * Sibling titles about different subjects: the main titles share a word, and each swaps in one or two
+ * words the other lacks ("Ajanta Caves" vs "Ellora Caves", "Early History of India" vs "Early History of
+ * Bengal"). Site boilerplate and numerals (checked separately) are ignored; a looser paraphrase with
+ * more differing words falls through to the overlap test.
+ */
+function differentSubjects(a: string, b: string): boolean {
+  const words = (t: string) => normalizeTitle(mainTitle(t)).filter((w) => !BOILERPLATE.has(w) && numeral(w) === null);
+  const A = words(a);
+  const B = words(b);
+  const missing = (xs: string[], ys: string[]) => xs.filter((x) => !ys.some((y) => sameWord(x, y)));
+  const shares = A.some((x) => B.some((y) => x === y || nearlyEqual(x, y)));
+  const onlyA = missing(A, B);
+  const onlyB = missing(B, A);
+  return shares && onlyA.length >= 1 && onlyA.length <= 2 && onlyB.length >= 1 && onlyB.length <= 2;
 }
 
 export function sameTitle(cited: string, found: string): boolean {
@@ -104,6 +130,7 @@ export function sameTitle(cited: string, found: string): boolean {
   }
   // A record that only adds a series name in parentheses ("The Jains (Library of Religious Beliefs)").
   if (exact(cited.replace(/\([^)]*\)/g, ' '), found.replace(/\([^)]*\)/g, ' '))) return true;
+  if (differentSubjects(cited, found)) return false;
   const { A, B, inter } = sets(cited, found);
   if (Math.min(A.size, B.size) < 2) return false;
   return inter >= 2 && titleSimilarity(cited, found) >= 0.6 && jaccard(cited, found) >= 0.4;
@@ -116,6 +143,7 @@ export function sameTitle(cited: string, found: string): boolean {
 export function pageMatchesTitle(cited: string, pageText: string): boolean {
   if (exact(cited, pageText)) return true;
   if (!subset(numerals(cited), numerals(pageText))) return false;
+  if (differentSubjects(cited, pageText)) return false;
   const { A, inter } = sets(cited, pageText);
   if (A.size === 0) return false;
   return inter >= Math.min(2, A.size) && inter / A.size >= 0.6;

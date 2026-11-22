@@ -24,7 +24,9 @@ import {
   EntitySchema,
   SourceSchema,
   citationId,
+  isTraditional,
   type ArticleFrontmatter,
+  type DatingMethod,
   type Correction,
   type Entity,
   type Source,
@@ -150,6 +152,29 @@ export function rawNegativeYears(datings: unknown): string[] {
 }
 
 /**
+ * Scholarly deep-time dates are reported as years before present, so they must be written "385 ka" or
+ * "1.5 Ma". A string such as "385000 BCE" is read as a calendar year and lands about 2,025 years too
+ * early. Calendar figures up to "10000 BCE" stay allowed; traditional reckonings count from 3102 BCE and
+ * are exempt. Returns one message per offending endpoint.
+ */
+export function deepTimeBceYears(datings: unknown): string[] {
+  if (!Array.isArray(datings)) return [];
+  const out: string[] = [];
+  datings.forEach((d, i) => {
+    const { method, range } = (d ?? {}) as { method?: unknown; range?: Record<string, unknown> };
+    if (!range || typeof range !== 'object' || (typeof method === 'string' && isTraditional(method as DatingMethod))) return;
+    for (const key of ['earliest', 'latest', 'best']) {
+      const v = range[key];
+      const m = typeof v === 'string' ? /^(\d+(?:\.\d+)?)\s*(?:BCE|BC)$/i.exec(v.trim().replace(/,/g, '')) : null;
+      if (m && Number(m[1]) > 10000) {
+        out.push(`datings[${i}].range.${key}: "${v}" is a deep-time date; write it as years before present ("N ka" or "N Ma") as the cited source reports it`);
+      }
+    }
+  });
+  return out;
+}
+
+/**
  * Two source records describe the same work: no identifier of the same type conflicts (archive.org and
  * other URLs compare by host and first path segment pair) and the titles match.
  */
@@ -250,7 +275,8 @@ export function loadContentUncached(): ContentGraph {
   for (const file of roots.flatMap((r) => walk(path.join(r, 'entities'), '.yaml'))) {
     const raw = readYaml(file, errors);
     if (raw === undefined) continue;
-    for (const m of rawNegativeYears((raw as { datings?: unknown } | null)?.datings)) errors.push({ file: rel(file), message: m });
+    const rawDatings = (raw as { datings?: unknown } | null)?.datings;
+    for (const m of [...rawNegativeYears(rawDatings), ...deepTimeBceYears(rawDatings)]) errors.push({ file: rel(file), message: m });
     const parsed = EntitySchema.safeParse(raw);
     if (!parsed.success) {
       for (const m of formatZod(parsed.error)) errors.push({ file: rel(file), message: m });
@@ -286,7 +312,7 @@ export function loadContentUncached(): ContentGraph {
         continue;
       }
       const { data, content } = matter(fs.readFileSync(file, 'utf8'));
-      for (const m of rawNegativeYears(data.datings)) errors.push({ file: relFile, message: m });
+      for (const m of [...rawNegativeYears(data.datings), ...deepTimeBceYears(data.datings)]) errors.push({ file: relFile, message: m });
       const parsed = ArticleFrontmatterSchema.safeParse(data);
       if (!parsed.success) {
         for (const m of formatZod(parsed.error)) errors.push({ file: relFile, message: m });

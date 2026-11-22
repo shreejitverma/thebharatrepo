@@ -4,12 +4,13 @@ kind: event
 names:
   en: ASI excavations at Keezhadi begin
 summary: The Archaeological Survey of India excavated Keezhadi, Tamil Nadu, in
-  field seasons beginning in 2014-15. Parliamentary records list ASI seasons in
-  2014-15, 2015-16 and 2016-17.
+  field seasons beginning in 2014-15. The Tamil Nadu State Department of
+  Archaeology's 2019 report lists ASI seasons in 2014-15, 2015-16 and 2016-17.
 summaries:
   kids: ASI archaeological work at Keezhadi began in the 2014-15 field season.
-  teen: Government records state that ASI conducted Keezhadi excavations in the
-    2014-15, 2015-16 and 2016-17 field seasons.
+  teen: The Tamil Nadu State Department of Archaeology's 2019 report records
+    that ASI conducted Keezhadi excavations in the 2014-15, 2015-16 and 2016-17
+    field seasons.
 region: Keezhadi, Tamil Nadu
 datings:
   - method: documentary
@@ -18,15 +19,15 @@ datings:
       latest: "2017"
       precision: year
       circa: false
-    grade: A
+    grade: B
     sources:
-      - src.keeladi-lok-sabha-2024
+      - src.sivanantham-2019-keeladi-urban-settlement
 claims:
-  - text: The Ministry of Culture records ASI excavations at Keezhadi for the
-      2014-15, 2015-16 and 2016-17 seasons.
-    grade: A
+  - text: The Tamil Nadu State Department of Archaeology's 2019 report records ASI
+      excavations at Keezhadi for the 2014-15, 2015-16 and 2016-17 seasons.
+    grade: B
     sources:
-      - src.keeladi-lok-sabha-2024
+      - src.sivanantham-2019-keeladi-urban-settlement
 tags:
   - archaeology
   - tamil-nadu
