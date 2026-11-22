@@ -69,6 +69,8 @@ describe('formatting', () => {
     expect(formatRange({ earliest: kaliEpoch, latest: 2026, precision: 'cosmological', circa: false })).toBe('3102 BCE to 2026 CE');
     expect(formatRange({ earliest: 2026 - 870_000, latest: 2026 - 869_000, precision: 'cosmological', circa: true })).toBe('c. 870 ka to 869 ka');
     expect(formatRange({ earliest: 2026 - 1_972_949_000, latest: kaliEpoch, precision: 'cosmological', circa: false })).toBe('1.973 billion years ago to 3102 BCE');
+    expect(formatRange({ earliest: 2026 - 1_449_000, latest: 2026 - 1_441_000, precision: 'cosmological', circa: false })).toBe('1.45 million years ago to 1.44 million years ago');
+    expect(formatRange({ earliest: 2026 - 385_040, latest: 2026 - 385_010, precision: 'ka', circa: true })).toBe('c. 385.04 ka to 385.01 ka');
   });
 
   it('never renders a content dating as zero units or as an X to X range', async () => {
@@ -79,7 +81,9 @@ describe('formatting', () => {
     for (const r of ranges) {
       const text = formatRange(r);
       expect(text, JSON.stringify(r)).not.toMatch(/(^|[^\d.])0 (million|billion|Ma|ka)\b/);
-      if (r.earliest !== r.latest) expect(text, JSON.stringify(r)).not.toMatch(/^(?:c\. )?(.+) to \1$/);
+      if (r.earliest === r.latest) continue;
+      expect(text, JSON.stringify(r)).not.toMatch(/^(?:c\. )?(.+) to \1$/);
+      if (r.precision !== 'century' && r.precision !== 'millennium') expect(text, JSON.stringify(r)).toContain(' to ');
     }
   });
 });

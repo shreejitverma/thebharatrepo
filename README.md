@@ -26,7 +26,7 @@ The product brief is in [`docs/prompts/kaalchakra-master-prompt.md`](docs/prompt
 |---|---|
 | `content/entities/<type>/<slug>.yaml` | One entity (event, person, text, site, polity, artifact, tradition, concept, cosmology); id `<type>.<slug>` |
 | `content/sources/<slug>.yaml` | One source; id `src.<slug>` |
-| `content/verification.json` | Committed cache of registry checks (DOI, ISBN, Wikidata, Commons) |
+| `content/verification.json` | Committed cache of registry checks (DOI, ISBN, OCLC, URL, Wikidata, Commons) |
 | `content/corrections.yaml` | Public corrections log |
 | `_content/<category>/<slug>.md` | Articles, with inline citations `[@src.id, locator]` |
 
