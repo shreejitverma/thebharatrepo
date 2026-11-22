@@ -24,11 +24,16 @@ datings:
   - method: textual-internal
     range: { earliest: "788 CE", latest: "820 CE", precision: decade, circa: true }
     grade: C
-    label: Mainstream scholarly date (conventional 788 to 820 CE)
+    label: Conventional 788 to 820 CE chronology
     sources: [src.isayeva-1993-shankara-indian-philosophy, src.flood-1996-introduction-to-hinduism]
     note: >-
-      Based on his references to earlier thinkers and later authors who cite him; several scholars
-      prefer a slightly earlier date in the first half of the 8th century.
+      The conventional chronology rests on later records.
+  - method: textual-internal
+    range: { earliest: "700 CE", latest: "750 CE", precision: decade, circa: true }
+    grade: C
+    label: Hajime Nakamura's earlier eighth-century placement
+    sources: [src.nakamura-1983-early-vedanta]
+    note: Nakamura argues for an earlier placement based on the chronology of the thinkers and texts associated with Shankara.
   - method: traditional-sampradaya
     range: { earliest: "509 BCE", latest: "477 BCE", precision: year, circa: false }
     grade: D

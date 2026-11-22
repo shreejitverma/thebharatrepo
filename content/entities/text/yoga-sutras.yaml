@@ -15,8 +15,8 @@ summaries:
 region: Northern India
 datings:
   - method: textual-internal
-    range: { earliest: 325, latest: 425, best: 375, precision: decade, circa: true }
-    grade: B
+    range: { earliest: 325, latest: 425, precision: decade, circa: true }
+    grade: C
     label: Philological dating of the Patanjalayogasastra (Philipp A. Maas)
     sources:
       - src.maas-2020-patanjala-yoga-temporality

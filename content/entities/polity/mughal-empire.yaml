@@ -4,7 +4,7 @@ kind: polity
 names:
   en: Mughal Empire
 summary: The Mughal Empire was a Persianate imperial polity founded by Babur in
-  1526 and formally ended after the 1857 revolt. Its extent and governing
+  1526. British forces captured Delhi in 1857, and the dynasty ended with Bahadur Shah II’s trial and exile in 1858. Its extent and governing
   structures changed considerably over time.
 summaries:
   kids: The Mughal Empire ruled large parts of South Asia for several centuries,
@@ -15,7 +15,7 @@ datings:
   - method: scholarly-consensus
     range:
       earliest: "1526"
-      latest: "1857"
+      latest: "1858"
       precision: year
       circa: true
     grade: B
@@ -23,9 +23,10 @@ datings:
     sources: &a1
       - src.richards-1993-mughal-empire
       - src.asher-talbot-2006-india-before-europe
+      - src.metcalf-2012-concise-history-modern-india
 claims:
   - text: The Mughal Empire was a Persianate imperial polity founded by Babur in
-      1526 and formally ended after the 1857 revolt. Its extent and governing
+      1526. British forces captured Delhi in 1857, and the dynasty ended with Bahadur Shah II’s trial and exile in 1858. Its extent and governing
       structures changed considerably over time.
     grade: B
     sources: *a1

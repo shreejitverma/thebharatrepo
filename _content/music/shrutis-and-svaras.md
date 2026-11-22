@@ -5,11 +5,17 @@ date: "2026-11-21"
 tags: [music, svara, shruti, grama, natyashastra, intonation]
 datings:
   - method: textual-internal
-    range: { earliest: "200 BCE", latest: "400 CE", precision: century, circa: true }
+    range: { earliest: "200 BCE", latest: "300 CE", precision: century, circa: true }
     grade: C
-    label: "Scholarly estimates for the music chapters of the Natyashastra and Dattilam"
-    sources: [src.rowell-1992-music-musical-thought-early-india, src.nijenhuis-1970-dattilam]
-    note: "Both early treatises are undated by colophon; the range is a wide scholarly estimate, and the music chapters may be later than the rest of the Natyashastra."
+    label: "Broad compilation window of the Natyashastra"
+    sources: [src.pollock-2016-rasa-reader, src.rowell-1992-music-musical-thought-early-india]
+    note: "The compilation drew on older material. Its music chapters may belong to a later layer."
+  - method: textual-internal
+    range: { earliest: "1 CE", latest: "400 CE", precision: century, circa: true }
+    grade: C
+    label: "Dattilam and early music theory"
+    sources: [src.nijenhuis-1970-dattilam, src.widdess-1981-tala-and-melody]
+    note: "The date of the Dattilam is uncertain. Widdess places it broadly in the same period as the Natyashastra, whose compilation he dates before the fifth century CE."
 entities: [text.samaveda, tradition.vedic-chanting]
 readingLevel: adult
 review: { status: draft, author: "claude-sonnet-5-5" }

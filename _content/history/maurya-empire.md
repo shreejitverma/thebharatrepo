@@ -1,22 +1,22 @@
 ---
 title: "The Mauryan Empire"
-summary: "The Mauryan state (c. 321 to 185 BCE) brought much of the subcontinent under one government for the first time we can document. Its history is built from Ashoka's own inscriptions, Greek fragments and later texts that often disagree."
+summary: "The Mauryan state (late fourth century to about 185 BCE) brought much of the subcontinent under one government for the first time we can document. Its history is built from Ashoka's own inscriptions, Greek fragments and later texts that often disagree."
 date: "2026-01-10"
 updated: "2026-11-21"
 tags: ["ancient history", "maurya", "ashoka", "chandragupta", "arthashastra"]
 datings:
   - method: scholarly-consensus
-    range: { earliest: "321 BCE", latest: "185 BCE", best: "250 BCE", precision: decade, circa: true }
+    range: { earliest: "324 BCE", latest: "185 BCE", best: "250 BCE", precision: decade, circa: true }
     grade: B
     label: "Mainstream Indology"
     sources: [src.thapar-2002-early-india, src.singh-2008-ancient-early-medieval-india]
-    note: "Anchored by Greek synchronisms (Seleucus I, and the Hellenistic kings named in Ashoka's Rock Edict XIII) and by Puranic dynastic lists."
+    note: "Estimates for Chandragupta’s accession span about 324 to 321 BCE. The chronology is anchored by Greek synchronisms (Seleucus I, and the Hellenistic kings named in Ashoka's Rock Edict XIII) and by Puranic dynastic lists."
 entities: []
 readingLevel: adult
 review: { status: draft, author: "claude-sonnet-5-5" }
 ---
 
-Around 321 BCE a man named Chandragupta took the throne of Magadha, the powerful kingdom in the Ganges plain, and within a few decades his state reached from the Hindu Kush to the Bay of Bengal.
+Around 324 to 321 BCE Chandragupta took the throne of Magadha, the powerful kingdom in the Ganges plain, and within a few decades his state reached from the Hindu Kush to the Bay of Bengal.
 Historians call this state the Mauryan Empire.
 It is the earliest known government to rule most of the subcontinent, though "most" is the important word, as we will see [@src.thapar-2002-early-india; @src.singh-2008-ancient-early-medieval-india].
 

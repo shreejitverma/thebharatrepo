@@ -36,6 +36,7 @@ datings:
       - src.goldman-1984-ramayana-balakanda
       - src.wilson-1840-vishnu-purana
       - src.gonzalezreimann-2002-mahabharata-yugas
+      - src.plofker-2009-mathematics-in-india
     note: >-
       The epic and Puranic tradition places Rama in a Treta Yuga; this range is the Treta of the present
       (28th) mahayuga in the standard 4:3:2:1 scheme. Other reckonings place him at the Treta-Dvapara
@@ -46,7 +47,7 @@ datings:
       latest: "300 CE"
       precision: century
       circa: true
-    grade: B
+    grade: C
     label: Composition of the Valmiki Ramayana (date of the text; Goldman, Brockington)
     sources:
       - src.goldman-1984-ramayana-balakanda

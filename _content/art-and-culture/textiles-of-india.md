@@ -6,11 +6,11 @@ updated: "2026-11-21"
 tags: [art and culture, textiles, cotton, khadi, muslin, harappan]
 datings:
   - method: archaeological-stratigraphic
-    range: { earliest: "6000 BCE", latest: "5000 BCE", precision: century, circa: true }
-    grade: B
-    label: Earliest cotton thread, Mehrgarh
-    sources: [src.moulherat-2002-mehrgarh-cotton]
-    note: Mineralised cotton fibres in a copper bead from a Neolithic burial; the article continues to the twentieth century.
+    range: { earliest: "5250 BCE", latest: "4650 BCE", precision: century, circa: true }
+    grade: C
+    label: Earliest cotton thread, Mehrgarh (revised burial context)
+    sources: [src.moulherat-2002-mehrgarh-cotton, src.mutin-2025-mehrgarh-radiocarbon]
+    note: The bead came from the Period I cemetery. Radiocarbon dates from human tooth enamel give a revised chronology for that context.
   - method: documentary
     range: { earliest: "1600", latest: "1800", precision: century, circa: true }
     grade: A
@@ -26,7 +26,7 @@ For much of recorded history, India was the world's leading maker of fine cotton
 
 ## The earliest cotton
 
-The earliest known cotton thread from the Indian subcontinent was found at Mehrgarh in Balochistan. Christophe Moulherat and colleagues examined minerals preserved inside a copper bead from a Neolithic burial and found mineralised fibres they identified as cotton. The burial belongs to the sixth millennium BCE [@src.moulherat-2002-mehrgarh-cotton]. This is evidence that cotton fibre was used in this region very early, though it is a single find, and it does not by itself show that cotton cloth was being woven at scale.
+The earliest known cotton thread from the Indian subcontinent was found at Mehrgarh in Balochistan. Christophe Moulherat and colleagues examined minerals preserved inside a copper bead from a Neolithic burial and found mineralised fibres they identified as cotton. Moulherat and colleagues placed the burial in the first half of the sixth millennium BCE. A newer radiocarbon study places its cemetery context around 5250 to 4650 BCE [@src.moulherat-2002-mehrgarh-cotton; @src.mutin-2025-mehrgarh-radiocarbon]. This is evidence that cotton fibre was used in this region very early, though it is a single find, and it does not by itself show that cotton cloth was being woven at scale.
 
 A common summary dates Indus cotton to about 2500 BCE, but the Mehrgarh find shows use of cotton well before that. The Harappan cities of the third millennium BCE do provide more secure evidence of textile use: cotton cloth fragments were reported from Mohenjo-daro in the excavations directed by John Marshall, and the city's archaeology includes spindle whorls and evidence of dyeing [@src.marshall-1931-mohenjo-daro; @src.kenoyer-1998-ancient-cities-indus]. The Indus civilisation therefore appears to have had a developed cotton textile craft [@src.wright-2010-ancient-indus].
 

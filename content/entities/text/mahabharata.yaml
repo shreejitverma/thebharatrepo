@@ -23,13 +23,14 @@ datings:
       - src.hiltebeitel-2011-dharma
     note: The Pune critical edition reflects compositional growth from c. 400 BCE (or a shorter period of literary design between c. 150 BCE and Year 0 proposed by Alf Hiltebeitel) until c. 350-400 CE, preceding the fifth-century CE Gupta copper-plate reference to the "Mahabharata of 100,000 verses."
   - method: traditional-puranic
-    range: { earliest: "3138 BCE", latest: "3102 BCE", precision: decade, circa: true }
+    range: { earliest: "3102 BCE", latest: "3102 BCE", precision: year, circa: false }
     grade: D
     label: Traditional placement at the Dvapara-Kali Yuga transition
     sources:
       - src.bhatnagar-2017-date-mahabharata-war
       - src.hiltebeitel-2011-dharma
-    note: Traditional Itihasa-Purana and Siddhantic chronology attributes the epic directly to the sage Vyasa at the time of the Kurukshetra War and the onset of the Kali Yuga (3102 BCE).
+      - src.plofker-2009-mathematics-in-india
+    note: Traditional attribution places Vyasa at the close of the Dvapara Yuga. The timeline uses the traditional Kali epoch of 3102 BCE as a marker for that transition.
 claims:
   - text: Between 1919 and 1966, scholars at the Bhandarkar Oriental Research Institute in Pune led by V. S. Sukthankar collated hundreds of manuscripts across northern and southern scripts to establish the nineteen-volume Critical Edition of the Mahabharata.
     grade: A

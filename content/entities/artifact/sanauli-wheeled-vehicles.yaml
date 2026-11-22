@@ -7,14 +7,14 @@ summary: >-
   Three two-wheeled wooden vehicles with solid (non-spoked) disc wheels decorated with radiating rows of copper
   triangles, copper-sheathed D-shaped chassis frames, and long single draught poles for a yoked pair of draft
   animals, excavated in 2018 by the Archaeological Survey of India in elite warrior graves at Sanauli, western
-  Uttar Pradesh (c. 2100-1800 BCE), and subject of a lively debate over whether they were horse-drawn battle
+  Uttar Pradesh (early second millennium BCE), and subject of a lively debate over whether they were horse-drawn battle
   chariots or bull-drawn carts.
 summaries:
   kids: >-
     Buried alongside Bronze Age warriors at Sanauli in Uttar Pradesh were three two-wheeled wooden vehicles whose
     solid wheels and frames were decorated with shining copper triangles.
   teen: >-
-    Excavated at Sanauli in 2018 and dated to c. 2100-1800 BCE, these three copper-ornamented two-wheeled vehicles
+    Excavated at Sanauli in 2018 and dated to the early second millennium BCE, these three copper-ornamented two-wheeled vehicles
     are the earliest intact wheeled transport burials found in the Indian subcontinent, sparking debate over whether
     they were pulled by horses as war chariots or by bulls as solid-wheeled battle carts.
 region: Sanauli, Baghpat District, Uttar Pradesh, India
@@ -25,17 +25,17 @@ location:
 datings:
   - method: archaeological-radiocarbon
     range:
-      earliest: "2200 BCE"
-      latest: "1800 BCE"
+      earliest: "2000 BCE"
+      latest: "1500 BCE"
       precision: century
       circa: true
-    grade: A
-    label: Radiocarbon Dating of the 2018 Sanauli Royal Burials
+    grade: B
+    label: Radiocarbon and archaeological context of the 2018 vehicle burials
     sources:
+      - src.sharma-2024-sinauli-radiocarbon
       - src.parpola-2020-sanauli-chariot-burials
     note: >-
-      Calibrated radiocarbon dates from the 2018 Sanauli Trial Trench burials place the copper-sheathed vehicles
-      and wooden coffins around c. 2100-1800 BCE.
+      Samples from the burial contexts and associated finds place the vehicle burials in the early second millennium BCE. Sharma and colleagues place the site around 2000 BCE, with some calibrated burial samples reaching the middle of the millennium.
 claims:
   - text: >-
       Each vehicle features two solid wooden disc wheels clamped around a fixed or rotating axle, inlaid on both

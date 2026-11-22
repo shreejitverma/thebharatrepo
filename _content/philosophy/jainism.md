@@ -6,11 +6,11 @@ updated: "2026-11-21"
 tags: [philosophy, religion, mahavira, ahimsa]
 datings:
   - method: scholarly-consensus
-    range: { earliest: "500 BCE", latest: "380 BCE", precision: century, circa: true }
+    range: { earliest: "500 BCE", latest: "400 BCE", precision: century, circa: true }
     grade: C
     label: "Death of Mahavira: modern scholarly range"
     sources: [src.dundas-2002-the-jains, src.bronkhorst-2007-greater-magadha]
-    note: "Mahavira is placed in the same period as the Buddha, whose own dates are debated; scholars differ on the exact decades."
+    note: "Buddhist texts place Mahavira's death before the Buddha's. Dundas discusses a possible date as late as about 425 BCE."
   - method: traditional-sampradaya
     range: { earliest: "599 BCE", latest: "527 BCE", precision: year, circa: false }
     grade: D
