@@ -24,7 +24,7 @@ export default function Home() {
             machine-verified, and every page shows its editorial review status.
           </p>
           <div className="home-hero__actions">
-            <Link href="/kaalchakra" className="btn btn--primary">
+            <Link href="/kaalchakra" prefetch={false} className="btn btn--primary">
               Enter the Kaalchakra
             </Link>
             <Link href="/methodology" className="btn">
@@ -46,7 +46,7 @@ export default function Home() {
             </div>
           </div>
         </div>
-        <Link href="/kaalchakra" className="home-hero__wheel" aria-hidden="true" tabIndex={-1}>
+        <Link href="/kaalchakra" prefetch={false} className="home-hero__wheel" aria-hidden="true" tabIndex={-1}>
           <WheelSvg items={orderedItems(items, 'both').map(toPlacedItem)} kinds={KINDS} lens="both" selectedId={null} />
         </Link>
       </section>

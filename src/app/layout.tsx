@@ -6,23 +6,24 @@ import Footer from '../components/Footer';
 import DraftNotice from '../components/DraftNotice';
 import { SITE_URL } from '@/lib/content/site';
 
-const tiro = Tiro_Devanagari_Hindi({ subsets: ['latin', 'latin-ext', 'devanagari'], weight: ['400'], variable: '--font-tiro', display: 'swap' });
-const serif = Noto_Serif({ subsets: ['latin', 'latin-ext'], weight: ['400', '700'], style: ['normal', 'italic'], variable: '--font-serif', display: 'swap' });
-const sans = Noto_Sans({ subsets: ['latin', 'latin-ext'], weight: ['400', '600', '700'], variable: '--font-sans', display: 'swap' });
+// `subsets` only selects what is preloaded; every subset stays in the @font-face rules and loads on demand through unicode-range.
+// Preloading latin-ext and Devanagari as well cost about 670 KB on every page, though only IAST names and native-script names use them.
+const tiro = Tiro_Devanagari_Hindi({ subsets: ['latin'], weight: ['400'], variable: '--font-tiro', display: 'swap' });
+const serif = Noto_Serif({ subsets: ['latin'], weight: ['400', '700'], style: ['normal', 'italic'], variable: '--font-serif', display: 'swap' });
+const sans = Noto_Sans({ subsets: ['latin'], weight: ['400', '600', '700'], variable: '--font-sans', display: 'swap' });
 
 export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),
   title: { default: 'The Bharat Repo: the evidence-based archive of Bharat', template: '%s | The Bharat Repo' },
   description:
     'The history, knowledge and living traditions of Bharat and Sanatana Dharma, every entry placed in time on the Kaalchakra and backed by graded, verifiable evidence.',
-  icons: { icon: '/favicon.svg' },
   openGraph: { siteName: 'The Bharat Repo', type: 'website', locale: 'en_IN' },
 };
 
 export const viewport: Viewport = {
   themeColor: [
-    { media: '(prefers-color-scheme: light)', color: '#f7f1e6' },
-    { media: '(prefers-color-scheme: dark)', color: '#12111c' },
+    { media: '(prefers-color-scheme: light)', color: '#f6efe3' },
+    { media: '(prefers-color-scheme: dark)', color: '#15120f' },
   ],
 };
 

@@ -1,14 +1,15 @@
 /**
  * Build-time artifacts derived from validated content:
- *   public/search.json        compact search index (entities and articles)
- *   public/data/archive.json  open data export of the full entity graph and sources
+ *   public/search.json            compact search index (entities and articles)
+ *   public/data/archive.json      open data export of the full entity graph and sources
+ *   public/data/kaalchakra.json   the Kaalchakra index, fetched by the client instead of being inlined in the page
  */
 
 import fs from 'node:fs';
 import path from 'node:path';
 import { loadContentUncached } from '../src/lib/content/load';
 import { KIND_LABELS } from '../src/lib/content/labels';
-import { entityHref } from '../src/lib/content/kaalchakra';
+import { buildKaalchakraIndex, entityHref } from '../src/lib/content/kaalchakra';
 import { summarizeDatings } from '../src/lib/content/lens';
 
 const g = loadContentUncached();
@@ -48,4 +49,9 @@ const archive = {
 };
 fs.writeFileSync(path.join(pub, 'data', 'archive.json'), JSON.stringify(archive));
 
-console.log(`build-content: search.json (${docs.length} docs), data/archive.json (${archive.entities.length} entities, ${archive.sources.length} sources)`);
+const kaalchakra = buildKaalchakraIndex(g);
+fs.writeFileSync(path.join(pub, 'data', 'kaalchakra.json'), JSON.stringify(kaalchakra));
+
+console.log(
+  `build-content: search.json (${docs.length} docs), data/archive.json (${archive.entities.length} entities, ${archive.sources.length} sources), data/kaalchakra.json (${kaalchakra.length} items)`,
+);

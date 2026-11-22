@@ -3,6 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
+    "predev": "tsx scripts/build-content.ts",
     "dev": "next dev",
     "prebuild": "npm run content:validate && tsx scripts/content-verify-sources.ts --offline && tsx scripts/build-content.ts",
     "build": "next build",
@@ -15,6 +16,7 @@
     "content:verify-sources": "tsx scripts/content-verify-sources.ts",
     "content:build": "tsx scripts/build-content.ts",
     "test:e2e": "playwright test",
+    "test:lighthouse": "lhci autorun",
     "content:merge": "tsx scripts/content-merge-staging.ts"
   },
   "dependencies": {
@@ -23,7 +25,6 @@
     "next": "16.1.1",
     "react": "19.2.3",
     "react-dom": "19.2.3",
-    "react-share": "^5.2.2",
     "remark": "^15.0.1",
     "remark-gfm": "^4.0.1",
     "remark-html": "^16.0.1",
@@ -32,6 +33,7 @@
   },
   "devDependencies": {
     "@axe-core/playwright": "^4.14.0",
+    "@lhci/cli": "^0.16.1",
     "@playwright/test": "^1.65.1",
     "@tailwindcss/postcss": "^4",
     "@types/node": "^20",
