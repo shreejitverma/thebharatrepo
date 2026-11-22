@@ -135,6 +135,11 @@ The Map view is drawn in the same materials as the page: the land is the lime-wh
 `--map-grid`, the graticule, is `--ink` at 13 percent, so it follows the theme without a value of its own.
 Markers take the kind colours, extents take their entity's kind colour at low opacity with a dashed outline, and the relation graph on entity pages uses the kind, lens and ink tokens only.
 
+### Print
+
+`src/styles/print.css` has the one other token block: on paper every page is black ink on white, with the site chrome removed.
+Grades and lenses keep the light palette's values there, so a page printed from dark mode shows the same grade colours as the light screen; the palette test fails if the two drift apart.
+
 ## Contrast pairs
 
 Every pair below meets WCAG 2.2 AA in both light and dark: 4.5:1 for text, 3:1 for large text and for the graphics and borders that identify a control.
