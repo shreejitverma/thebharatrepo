@@ -170,6 +170,5 @@ A `*` stands for every matching token.
 ## Checking
 
 ```sh
-npx vitest run src/lib/design/palette.test.ts   # fails on any pair below its minimum, or a token missing from this page
-npm run design:contrast                         # prints every pair's ratio in both themes; exits 1 on a failure
+npx vitest run src/lib/design/palette.test.ts   # fails on any pair below its minimum, naming each pair and its ratio, or a token missing from this page
 ```

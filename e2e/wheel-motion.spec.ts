@@ -8,6 +8,8 @@ import AxeBuilder from '@axe-core/playwright';
 
 const ASHOKA = 'person.ashoka';
 const KALI_YUGA = 'cosmology.kali-yuga';
+const DHABA = 'site.dhaba';
+const JWALAPURAM = 'site.jwalapuram';
 
 async function openWheel(page: Page, query = '') {
   await page.goto(`/kaalchakra${query}`);
@@ -130,6 +132,34 @@ test.describe('wheel motion', () => {
     await page.mouse.up();
     await expect(page).not.toHaveURL(new RegExp(`id=${ASHOKA}`));
     await expectAtIndicator(page);
+  });
+
+  test('a drag that snaps to another entry of the same year still returns the wheel to the indicator', async ({ page, isMobile }) => {
+    // Dhaba and Jwalapuram share an anchor year and Dhaba comes first, so a release with both under the indicator picks Dhaba.
+    await openWheel(page, `?id=${JWALAPURAM}`);
+    await expectAtIndicator(page);
+    await centreWheel(page);
+    const box = (await page.locator('.kc-canvas .kc-wheel').boundingBox())!;
+    const cx = box.x + box.width / 2;
+    const cy = box.y + box.height / 2;
+    const r = box.width * 0.36;
+    const at = (deg: number) => [cx + r * Math.cos((deg * Math.PI) / 180), cy + r * Math.sin((deg * Math.PI) / 180)] as const;
+    await page.mouse.move(...at(-60));
+    await page.mouse.down();
+    for (let d = -60; d <= -30; d += 6) await page.mouse.move(...at(d), { steps: 2 });
+    await expect(page.locator('.kc-wheel__rotor')).toHaveAttribute('data-spinning', '');
+    for (let d = -30; d >= -60; d -= 6) await page.mouse.move(...at(d), { steps: 2 });
+    await page.waitForTimeout(200);
+    await page.mouse.up();
+    await expect(page).toHaveURL(new RegExp(`id=${DHABA}`));
+    await expectAtIndicator(page);
+
+    if (isMobile) return;
+    await page.locator('.kc-canvas').focus();
+    const step = await recordSpin(page, () => page.keyboard.press('ArrowRight'));
+    await expect(page).toHaveURL(new RegExp(`id=${JWALAPURAM}`));
+    await expectAtIndicator(page);
+    expect(Math.abs(step[step.length - 1] - step[0])).toBeLessThanOrEqual(180.5);
   });
 
   test('a touch swipe on the wheel spins it, and one beside the wheel scrolls the page', async ({ page, isMobile, browserName }) => {
@@ -290,6 +320,28 @@ test.describe('wheel motion', () => {
       expect(angles.length).toBeLessThanOrEqual(2);
       await expect(page.locator('.kc-wheel__rotor')).not.toHaveAttribute('data-spinning', /.*/);
       await expectAtIndicator(page);
+    });
+
+    test('the Kaalchakra link adds one history entry, so Back and Forward each take one press', async ({ page }) => {
+      await page.goto(`/kaalchakra?view=list&id=${ASHOKA}`);
+      await expect(page.locator('.kc-panel h2')).toHaveText('Ashoka');
+      const entries = await page.evaluate(() => window.history.length);
+      await page.getByRole('navigation', { name: 'Main' }).getByRole('link', { name: 'Kaalchakra' }).click();
+      // The link opens /kaalchakra; its canonical form for this reader names the List view, in place.
+      await expect(page).toHaveURL(/\/kaalchakra\?view=list$/);
+      await page.waitForTimeout(400);
+      expect(await page.evaluate(() => window.history.length)).toBe(entries + 1);
+
+      await page.goBack();
+      await expect(page).toHaveURL(new RegExp(`/kaalchakra\\?view=list&id=${ASHOKA.replace('.', '\\.')}$`));
+      await expect(page.locator('.kc-panel h2')).toHaveText('Ashoka');
+      await page.waitForTimeout(400);
+      await page.goForward();
+      await expect(page).toHaveURL(/\/kaalchakra\?view=list$/);
+      await page.waitForTimeout(400);
+      expect(await page.evaluate(() => window.history.length)).toBe(entries + 1);
+      await page.goBack();
+      await expect(page).toHaveURL(new RegExp(`id=${ASHOKA.replace('.', '\\.')}$`));
     });
   });
 });

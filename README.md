@@ -45,7 +45,7 @@ npm run content:report          # coverage: entities, grades, kinds, sources
 npm run content:verify-sources  # resolve every DOI, ISBN, OCLC, QID and Commons file, and each URL that is a source's only identifier; exit 1 on any mismatch
 npm run build                   # validate, offline verification gate, search index and open data, then next build
 npm run test:e2e                # Playwright, axe and visual snapshots against a production build (Chromium, Firefox, WebKit, Pixel 7, iPhone 14)
-npm run design:contrast         # contrast of every documented colour pair in light and dark; exit 1 below AA
+npx vitest run src/lib/design/palette.test.ts  # contrast of every documented colour pair in light and dark; fails below AA
 npm run test:lighthouse         # Lighthouse CI budgets against a production build (lighthouserc.js)
 ```
 
