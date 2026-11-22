@@ -1251,6 +1251,14 @@ a:hover {
   font-size: 0.78rem;
 }
 
+/* The date and the arrow wrap as one, so an arrow never ends up alone on a line. */
+.relgraph__meta {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  white-space: nowrap;
+}
+
 .relgraph__dir {
   flex-shrink: 0;
   fill: none;
@@ -1498,6 +1506,11 @@ a:hover {
   accent-color: var(--accent);
 }
 
+/* With All time chosen the slider marks no moment, so it is drawn at rest until it is moved. */
+.kc-map-slider[data-all-time='true'] {
+  accent-color: var(--ink-faint);
+}
+
 .kc-map-field {
   display: inline-flex;
   align-items: center;
@@ -1535,6 +1548,10 @@ a:hover {
   flex: 1 1 220px;
 }
 
+.kc-map-frame {
+  position: relative;
+}
+
 .kc-map-svg {
   display: block;
   width: 100%;
@@ -1565,6 +1582,20 @@ a:hover {
   fill: var(--ink-faint);
 }
 
+/* A soft halo keeps graticule labels legible where a river or a coast crosses them. */
+.kc-map-grid text {
+  stroke: var(--map-land);
+  stroke-opacity: 0.8;
+  stroke-width: 2.5;
+  stroke-linejoin: round;
+  paint-order: stroke;
+}
+
+.kc-map-scale rect {
+  fill: var(--map-land);
+  fill-opacity: 0.82;
+}
+
 .kc-map-waters text {
   font-size: 11.5px;
   font-style: italic;
@@ -1578,7 +1609,6 @@ a:hover {
   stroke-width: 1.5;
 }
 
-.kc-map-scale text,
 .kc-map-labels text,
 .kc-map-extent text {
   stroke: var(--map-land);
@@ -1596,7 +1626,7 @@ a:hover {
   cursor: pointer;
 }
 
-.kc-map-cluster circle:first-child {
+.kc-map-cluster__dot {
   fill: var(--map-cluster);
   stroke: var(--map-land);
   stroke-width: 2;
@@ -1609,12 +1639,79 @@ a:hover {
   pointer-events: none;
 }
 
-.kc-map-cluster:hover circle:first-child {
+.kc-map-cluster:hover .kc-map-cluster__dot {
   stroke: var(--focus);
 }
 
 .kc-map-extent {
   cursor: pointer;
+}
+
+/* Markers, clusters and extents are focusable buttons; each draws its own ring instead of a box outline. */
+.kc-map-svg [role='button']:focus {
+  outline: none;
+}
+
+.kc-map-focus {
+  fill: none;
+  stroke: var(--focus);
+  stroke-width: 2.5;
+  opacity: 0;
+}
+
+.kc-mark:focus-visible .kc-map-focus,
+.kc-map-cluster:focus-visible .kc-map-focus {
+  opacity: 1;
+}
+
+.kc-map-extent:focus-visible path {
+  stroke: var(--focus);
+  stroke-width: 3;
+  stroke-dasharray: none;
+}
+
+.kc-map-gesture {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0;
+  padding: 24px;
+  background: rgba(18, 17, 28, 0.55);
+  color: #fffaf1;
+  font-size: 1.05rem;
+  font-weight: 600;
+  text-align: center;
+  text-wrap: balance;
+  pointer-events: none;
+  opacity: 0;
+  transition: opacity 0.25s ease;
+}
+
+.kc-map-gesture[data-show='true'] {
+  opacity: 1;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .kc-map-gesture {
+    transition: none;
+  }
+}
+
+/* The hint names the gestures of the reader's own input: two-finger moves on a touch screen, drag and keys elsewhere. */
+.kc-map-hint__touch {
+  display: none;
+}
+
+@media (hover: none) and (pointer: coarse) {
+  .kc-map-hint__pointer {
+    display: none;
+  }
+
+  .kc-map-hint__touch {
+    display: inline;
+  }
 }
 
 .kc-map-extent path {
@@ -1703,7 +1800,8 @@ a:hover {
 
 @media (max-width: 560px) {
   .kc-map-hint {
-    display: none;
+    flex-basis: 100%;
+    font-size: 0.8rem;
   }
 
   .kc-map-time,

@@ -46,6 +46,9 @@ npm run build                   # validate, offline verification gate, search in
 npm run test:e2e                # Playwright and axe against a production build (desktop and mobile)
 ```
 
+The Map view has visual snapshots (`e2e/map-visual.spec.ts`) drawn from a fixed fixture (`e2e/fixtures/kaalchakra-map.json`), so they change only when rendering changes.
+Snapshots are per platform; refresh them with `npx playwright test e2e/map-visual.spec.ts --update-snapshots=all` on macOS, and in the Playwright Linux image for CI.
+
 `npm run build` refuses to build when content is invalid or when any identifier lacks a matching verified record in `content/verification.json` (`content-verify-sources.ts --offline`).
 Every cached verification is re-checked against the current title or name, so a reused or edited identifier cannot ride on an old success.
 
@@ -89,6 +92,9 @@ Example: `/kaalchakra?view=map&t=-268&zoom=century&lens=scholarship&kinds=site,e
 ## Map view
 
 - Shows every entity that has a `location`, clustered when markers would overlap, with an accessible list of the same entries below the map.
+- Every marker, numbered cluster and extent is a button: Tab reaches them in time order, Enter or Space opens one, and a cluster hands focus to its members as it splits.
+- On a touch screen one finger always scrolls the page, so the map never traps a reader scrolling past it; two fingers move and pinch the map, and a one-finger drag shows a hint saying so.
+- The map code and its basemap load only when the Map view opens (`next/dynamic`); the items load from `public/data/kaalchakra.json`, not from the page.
 - A moment shows entries whose dating overlaps the window; it does not claim that everything else had ceased to exist.
 - The basemap is physical geography only (land, lakes, rivers) and draws no modern political boundary.
 - A polity extent is drawn only where an entity carries sourced `extents` data (see `docs/editorial/STYLE.md`); none is inferred.
@@ -102,7 +108,7 @@ Every entity page draws its relations as a tree, merging both declarations of on
 
 ## Open data
 
-Each build writes `public/data/archive.json` with every entity and source.
+Each build writes `public/data/archive.json` with every entity and source, and `public/data/kaalchakra.json`, the compact index the Kaalchakra fetches.
 
 ## Licence
 

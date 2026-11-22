@@ -68,8 +68,10 @@ export default function RelationGraph({ name, groups, node }: { name: string; gr
                             <span className="chip__dot" aria-hidden="true" />
                             <span className="relgraph__text">
                               <span className="relgraph__name">{other.name}</span>
-                              <span className="relgraph__when">{other.when}</span>
-                              <DirectionMark direction={e.direction} />
+                              <span className="relgraph__meta">
+                                <span className="relgraph__when">{other.when}</span>
+                                <DirectionMark direction={e.direction} />
+                              </span>
                               <span className="visually-hidden">
                                 ({KIND_LABELS[other.kind]}, {DIRECTION_TEXT[e.direction]})
                               </span>
