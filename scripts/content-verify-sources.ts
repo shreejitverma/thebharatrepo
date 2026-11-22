@@ -21,7 +21,7 @@ import fs from 'node:fs';
 import path from 'node:path';
 import { loadContentUncached, CONTENT_DIR } from '../src/lib/content/load';
 import type { Source } from '../src/lib/content/schema';
-import { pageMatchesTitle, sameName, sameTitle } from '../src/lib/content/similarity';
+import { cachedTitleMatches, pageMatchesTitle, sameName, sameTitle } from '../src/lib/content/similarity';
 
 const CACHE_FILE = process.env.VERIFY_CACHE ? path.resolve(process.env.VERIFY_CACHE) : path.join(CONTENT_DIR, 'verification.json');
 const UA = 'TheBharatRepo-SourceVerifier/1.0 (+https://www.thebharatrepo.com)';
@@ -213,7 +213,7 @@ interface Job {
 
 function sourceJobs(s: Source): Job[] {
   const jobs: Job[] = [];
-  const titleCheck = (e: CacheEntry) => (e.matched && sameTitle(s.title, e.matched) ? null : `cached record "${e.matched ?? ''}" does not match the cited title`);
+  const titleCheck = (e: CacheEntry) => (e.matched && cachedTitleMatches('record', s.title, e.matched) ? null : `cached record "${e.matched ?? ''}" does not match the cited title`);
   if (s.doi) jobs.push({ key: `doi:${s.doi.toLowerCase()}`, where: s.id, run: () => verifyDoi(s.doi!, s.title), recheck: titleCheck });
   if (s.isbn) jobs.push({ key: `isbn:${s.isbn}`, where: s.id, run: () => verifyIsbn(s.isbn!, s.title), recheck: titleCheck });
   if (s.oclc) jobs.push({ key: `oclc:${s.oclc}`, where: s.id, run: () => verifyOclc(s.oclc!, s.title), recheck: titleCheck });
@@ -222,7 +222,7 @@ function sourceJobs(s: Source): Job[] {
       key: `url:${s.url}`,
       where: s.id,
       run: () => verifyUrl(s.url!, s.title),
-      recheck: (e) => (e.matched && (pageMatchesTitle(s.title, e.matched) || sameTitle(s.title, e.matched)) ? null : `cached page title "${e.matched ?? ''}" does not carry the cited title`),
+      recheck: (e) => (e.matched && cachedTitleMatches('page', s.title, e.matched) ? null : `cached page title "${e.matched ?? ''}" does not carry the cited title`),
     });
   }
   return jobs;

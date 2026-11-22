@@ -29,7 +29,7 @@
   reason: The edicts present dhamma as a public ethic, and later chronicles, not the edicts, describe the missions abroad.
   sources:
     - src.hultzsch-1925-inscriptions-of-asoka
-    - src.thapar-1997-asoka-decline-mauryas
+    - src.thapar-2012-asoka-decline-mauryas
     - src.lahiri-2015-ashoka-ancient-india
 - date: 2026-11-21
   target: /history/maurya-empire
@@ -1272,3 +1272,10 @@
   reason: The bibliography showed the page's file slug instead of a readable title for the ISRO Chandrayaan-1 science page.
   sources:
     - src.chandrayaan1-isro-science
+- date: 2026-11-22
+  target: /sources
+  before: Neumayer 2013, Prehistoric Rock Art of India
+  after: Neumayer 2013, Rock Art of India
+  reason: The Library of Congress and Open Library records for the cited ISBN (9780198060987, Oxford University Press 2013) give the title as Rock Art of India.
+  sources:
+    - src.neumayer-2013-prehistoric-rock-art-india

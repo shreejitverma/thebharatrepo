@@ -119,16 +119,18 @@ function containsRun(small: string[], big: string[]): boolean {
 
 /**
  * Word overlap of two titles. A title whose words are a strict subset of the other's
- * counts only with at least two words, and two or three must form one contiguous run there, so
- * "A History of India" is not "History of the Archaeological Survey of India". Four or more words
- * all present are too specific to coincide.
+ * counts only with at least two words. Two or three must form one contiguous run there (for registry
+ * records, the start of the title), so "A History of India" is not "History of the Archaeological
+ * Survey of India" and "The Mughal Empire" is not "The Princes of the Mughal Empire". Four or more
+ * words all present are too specific to coincide.
  */
-function overlap(a: string, b: string): { A: Set<string>; B: Set<string>; inter: number; subsetOk: boolean } {
+function overlap(a: string, b: string, leading: boolean): { A: Set<string>; B: Set<string>; inter: number; subsetOk: boolean } {
   const { A, B, inter } = sets(a, b);
   const dedupe = (t: string) => [...new Set(normalizeTitle(t))];
   const [small, big] = A.size <= B.size ? [dedupe(a), dedupe(b)] : [dedupe(b), dedupe(a)];
   const strictSubset = A.size !== B.size && inter === Math.min(A.size, B.size);
-  return { A, B, inter, subsetOk: !strictSubset || small.length >= 4 || (small.length >= 2 && containsRun(small, big)) };
+  const placed = leading ? small.every((w, k) => big[k] === w) : containsRun(small, big);
+  return { A, B, inter, subsetOk: !strictSubset || small.length >= 4 || (small.length >= 2 && placed) };
 }
 
 /** Same word, a one-letter variant, or one half of a compound ("sangita" in "sangitaratnakara"). */
@@ -143,16 +145,20 @@ function sameWord(x: string, y: string): boolean {
  * two words the other lacks ("Ajanta Caves" vs "Ellora Caves", "Early History of India" vs "Early
  * History of Bengal"), or the main titles are the same and each subtitle names something the other
  * lacks ("Early India: From the Origins to AD 1300" vs "Early India: A Concise History", "Sun Temple,
- * Konarak" vs "Sun Temple, Modhera"). Numbers are checked separately; a looser paraphrase falls
- * through to the overlap test.
+ * Konarak" vs "Sun Temple, Modhera"). Volume and regnal numerals are checked separately; years count
+ * in main titles ("Indian Independence Act 1947" is not "... 1935") but not in subtitles, which state
+ * date ranges inconsistently. A looser paraphrase falls through to the overlap test.
  */
 function differentSubjects(a: string, b: string): boolean {
-  const significant = (t: string) => normalizeTitle(t).filter((w) => !/^\d+$/.test(w));
+  const significant = (t: string) => normalizeTitle(t).filter((w) => numeral(w) === null);
   const missing = (xs: string[], ys: string[]) => xs.filter((x) => !ys.some((y) => sameWord(x, y)));
   const A = significant(mainTitle(a));
   const B = significant(mainTitle(b));
   if (A.length > 0 && A.join(' ') === B.join(' ')) {
-    const rest = (t: string) => significant(t.replace(/\([^)]*\)|\[[^\]]*\]/g, ' ')).slice(A.length);
+    const rest = (t: string) =>
+      significant(t.replace(/\([^)]*\)|\[[^\]]*\]/g, ' '))
+        .slice(A.length)
+        .filter((w) => !/^\d+$/.test(w));
     const subA = rest(a);
     const subB = rest(b);
     return missing(subA, subB).length >= 1 && missing(subB, subA).length >= 1;
@@ -178,7 +184,7 @@ export function sameTitle(citedTitle: string, foundTitle: string): boolean {
   // A record that only adds a series name in parentheses ("The Jains (Library of Religious Beliefs)").
   if (exact(cited.replace(/\([^)]*\)/g, ' '), found.replace(/\([^)]*\)/g, ' '))) return true;
   if (differentSubjects(cited, found)) return false;
-  const { A, B, inter, subsetOk } = overlap(cited, found);
+  const { A, B, inter, subsetOk } = overlap(cited, found, true);
   if (Math.min(A.size, B.size) < 2 || inter < 2 || !subsetOk) return false;
   return inter / Math.min(A.size, B.size) >= 0.6 && inter / (A.size + B.size - inter) >= 0.4;
 }
@@ -193,9 +199,17 @@ export function pageMatchesTitle(citedTitle: string, pageTitle: string): boolean
   if (exact(cited, pageText)) return true;
   if (!subset(numerals(cited), numerals(pageText))) return false;
   if (differentSubjects(cited, pageText)) return false;
-  const { A, inter, subsetOk } = overlap(cited, pageText);
+  const { A, inter, subsetOk } = overlap(cited, pageText, false);
   if (A.size === 0 || !subsetOk) return false;
   return inter >= Math.min(2, A.size) && inter / A.size >= 0.6;
+}
+
+/**
+ * A cached registry or page title still identifies the cited work: registry records (DOI, ISBN, OCLC)
+ * must be the same title; web pages may also carry the title among site text.
+ */
+export function cachedTitleMatches(kind: 'record' | 'page', cited: string, matched: string): boolean {
+  return kind === 'record' ? sameTitle(cited, matched) : pageMatchesTitle(cited, matched) || sameTitle(cited, matched);
 }
 
 /**

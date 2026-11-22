@@ -40,6 +40,13 @@ describe('sameTitle', () => {
     expect(sameTitle('World Religions of India', 'Folk Religions of India')).toBe(false);
     expect(pageMatchesTitle('A Cultural History of India', 'A Political History of India')).toBe(false);
   });
+  it('treats a year in a main title as part of the subject', () => {
+    expect(sameTitle('The Nobel Prize in Physics 1930', 'The Nobel Prize in Physics 1931')).toBe(false);
+    expect(pageMatchesTitle('The Nobel Prize in Physics 1930', 'The Nobel Prize in Physics 1931')).toBe(false);
+    expect(sameTitle('Indian Independence Act 1947', 'Indian Independence Act 1935')).toBe(false);
+    expect(sameTitle('Bengal 1757: The Battle', 'Bengal 1857: The Battle')).toBe(false);
+    expect(sameTitle('The Nobel Prize in Physics 1930', 'The Nobel Prize in Physics 1930')).toBe(true);
+  });
   it('rejects different works that share a main title but not a subtitle', () => {
     expect(sameTitle('Early India: From the Origins to AD 1300', 'Early India: A Concise History')).toBe(false);
     expect(sameTitle('Ancient India: Political History', 'Ancient India: Social and Cultural Life')).toBe(false);
@@ -53,6 +60,7 @@ describe('sameTitle', () => {
   });
   it('rejects a short title whose words are scattered through a different work', () => {
     expect(sameTitle('A History of India', 'History of the Archaeological Survey of India')).toBe(false);
+    expect(sameTitle('The Mughal Empire', 'The Princes of the Mughal Empire, 1504-1719')).toBe(false);
     expect(sameTitle('A History of India', 'A History of India, Fourth Edition')).toBe(true);
   });
   it('rejects an unrelated work that reuses an identifier', () => {
