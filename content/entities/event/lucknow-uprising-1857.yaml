@@ -1,0 +1,47 @@
+id: event.lucknow-uprising-1857
+type: event
+kind: event
+names:
+  en: Lucknow uprising and siege, 1857-1858
+summary: Rebel forces besieged the British Residency in Lucknow in 1857 while Begum Hazrat Mahal
+  championed the rule of her son Birjis Qadr in Awadh. British-led troops evacuated the
+  Residency in November and recaptured Lucknow in March 1858.
+summaries:
+  kids: Rebels surrounded the British Residency in Lucknow. Begum Hazrat Mahal supported her son's
+    claim to rule Awadh while fighting continued.
+  teen: The siege took place within a wider revolt over Company rule in Awadh. The evacuation of
+    the Residency in November 1857 and the British-led recapture of the city in March 1858 were
+    separate events.
+region: Lucknow, Awadh
+datings:
+  - method: scholarly-consensus
+    range:
+      earliest: "1857"
+      latest: "1858"
+      precision: year
+      circa: false
+    grade: B
+    label: Siege and recapture of Lucknow
+    sources:
+      - src.bender-2016-indian-uprising
+      - src.national-army-museum-decisive-events-indian-rebellion
+claims:
+  - text: Begum Hazrat Mahal supported her son Birjis Qadr as ruler during the Lucknow rebellion.
+    grade: B
+    sources:
+      - src.bender-2016-indian-uprising
+      - src.stokes-1986-peasant-armed-revolt-1857
+  - text: The Residency was evacuated in November 1857, and British-led forces retook Lucknow in
+      March 1858.
+    grade: B
+    sources:
+      - src.national-army-museum-decisive-events-indian-rebellion
+relations:
+  - kind: part-of
+    target: event.indian-revolt-of-1857
+tags:
+  - revolt-of-1857
+  - awadh
+review:
+  status: draft
+  author: codex-gpt-6

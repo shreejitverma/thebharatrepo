@@ -1,0 +1,55 @@
+id: person.bhagat-singh
+type: person
+kind: person
+names:
+  en: Bhagat Singh
+  native: ਭਗਤ ਸਿੰਘ
+summary: Bhagat Singh was a socialist revolutionary against British rule. He took part in the
+  1929 Central Legislative Assembly bombing and was executed in Lahore in 1931 after conviction
+  in the Lahore Conspiracy Case.
+summaries:
+  kids: Bhagat Singh joined a group that fought British rule and argued for a fairer society. The
+    colonial government executed him and two of his companions in 1931.
+  teen: Bhagat Singh and Batukeshwar Dutt used the 1929 Assembly bombing as a political protest.
+    Bhagat Singh's prison hunger strike drew public attention, and a separate trial ended with
+    his execution alongside Rajguru and Sukhdev.
+region: Punjab and Delhi, British India
+datings:
+  - method: scholarly-consensus
+    range:
+      earliest: "1907"
+      latest: "1931"
+      precision: year
+      circa: false
+    grade: B
+    label: Lifespan
+    sources:
+      - src.moffat-2019-indias-revolutionary-inheritance
+      - src.chandra-1989-indias-struggle-for-independence
+claims:
+  - text: Bhagat Singh and Batukeshwar Dutt bombed the Central Legislative Assembly in Delhi in
+      April 1929 and surrendered at the scene.
+    grade: B
+    sources:
+      - src.moffat-2019-indias-revolutionary-inheritance
+      - src.chandra-1989-indias-struggle-for-independence
+  - text: Bhagat Singh, Shivaram Rajguru and Sukhdev Thapar were executed at Lahore Central Jail on
+      23 March 1931.
+    grade: B
+    sources:
+      - src.moffat-2019-indias-revolutionary-inheritance
+      - src.sarkar-1989-modern-india
+relations:
+  - kind: related-to
+    target: event.simon-commission
+image:
+  commons: File:Portrait photograph of Bhagat Singh, 1929.jpg
+  alt: Black-and-white portrait of Bhagat Singh in a hat
+  credit: Unknown photographer
+  license: Public domain
+tags:
+  - anti-colonial-revolutionaries
+  - independence
+review:
+  status: draft
+  author: codex-gpt-6

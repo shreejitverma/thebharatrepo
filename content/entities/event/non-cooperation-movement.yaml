@@ -1,0 +1,52 @@
+id: event.non-cooperation-movement
+type: event
+kind: event
+names:
+  en: Non-Cooperation Movement
+summary: The Indian National Congress and Khilafat leaders mobilised against colonial rule
+  through boycotts and other forms of non-cooperation from 1920. The Congress leadership
+  suspended its planned mass civil disobedience in February 1922 after the violence at Chauri
+  Chaura.
+summaries:
+  kids: Many Indians stopped buying some British goods or stopped using colonial schools and
+    courts to protest British rule. Congress changed course after violence at Chauri Chaura.
+  teen: The campaign linked Congress and Khilafat mobilisation. Programmes included boycotts of
+    government schools and courts, renunciation of titles and encouragement of hand-spun cloth.
+region: British India
+datings:
+  - method: scholarly-consensus
+    range:
+      earliest: "1920"
+      latest: "1922"
+      precision: year
+      circa: false
+    grade: B
+    label: Congress adoption to suspension of mass civil disobedience
+    sources:
+      - src.sarkar-1989-modern-india
+      - src.chandra-1989-indias-struggle-for-independence
+claims:
+  - text: Congress endorsed non-cooperation in 1920, and local organisers mobilised around issues
+      that varied by region.
+    grade: B
+    sources:
+      - src.sarkar-1989-modern-india
+      - src.chandra-1989-indias-struggle-for-independence
+  - text: After Chauri Chaura, Gandhi pressed for the suspension of mass civil disobedience, and the
+      Congress Working Committee adopted that course at Bardoli.
+    grade: B
+    sources:
+      - src.amin-1995-event-metaphor-memory
+      - src.sarkar-1989-modern-india
+relations:
+  - kind: related-to
+    target: person.mahatma-gandhi
+  - kind: related-to
+    target: event.khilafat-movement
+tags:
+  - congress
+  - satyagraha
+  - anti-colonial-movements
+review:
+  status: draft
+  author: codex-gpt-6

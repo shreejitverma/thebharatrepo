@@ -1,0 +1,48 @@
+id: event.cabinet-mission-plan
+type: event
+kind: event
+names:
+  en: Cabinet Mission and its plan for India
+summary: The British Cabinet Mission and the viceroy published a constitutional plan on 16 May
+  1946. It proposed an Indian union with limited central powers, grouped provinces and a
+  Constituent Assembly, but the parties failed to agree on how the plan should work.
+summaries:
+  kids: British ministers proposed that India stay together, with many decisions left to its
+    provinces. Indian leaders disagreed over how this arrangement would work.
+  teen: The plan gave the union subjects such as defence and foreign affairs, with other powers
+    largely left to the provinces and princely states. Disputes over provincial grouping helped
+    defeat the wider political settlement.
+region: British India and Westminster
+datings:
+  - method: documentary
+    range:
+      earliest: "1946"
+      latest: "1946"
+      precision: day
+      circa: false
+    grade: A
+    label: Publication of the plan on 16 May 1946
+    sources:
+      - src.cabinet-mission-1946-plan
+claims:
+  - text: The plan assigned foreign affairs, defence and communications to a union and envisaged
+      provincial groups.
+    grade: A
+    sources:
+      - id: src.cabinet-mission-1946-plan
+        locator: Paragraph 15
+  - text: Congress and the Muslim League read the grouping arrangements differently, and the plan
+      did not secure a lasting agreement.
+    grade: B
+    sources:
+      - src.jalal-1985-sole-spokesman
+      - src.bose-jalal-2023-modern-south-asia
+relations:
+  - kind: preceded
+    target: event.independence-and-partition-1947
+tags:
+  - constitutional-reform
+  - decolonisation
+review:
+  status: draft
+  author: codex-gpt-6

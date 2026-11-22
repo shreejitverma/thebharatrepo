@@ -1,0 +1,44 @@
+id: event.permanent-settlement-1793
+type: event
+kind: event
+names:
+  en: Permanent Settlement of 1793
+summary: The East India Company fixed the land revenue owed by Bengal Presidency zamindars in
+  perpetuity in 1793. The settlement strengthened their legal position as landholders and made
+  estates liable to sale for arrears.
+summaries:
+  kids: The Company set the amount certain landholders owed it each year. Farmers on those lands
+    still had to pay rent to the landholders.
+  teen: The settlement fixed the Company's demand on zamindars while rents owed by cultivators
+    remained a separate matter. Failure to pay the assessed revenue could lead to an estate
+    being sold.
+region: Bengal Presidency
+datings:
+  - method: scholarly-consensus
+    range:
+      earliest: "1793"
+      latest: "1793"
+      precision: year
+      circa: false
+    grade: B
+    label: Permanent land revenue assessment
+    sources:
+      - src.marshall-1987-bengal-british-bridgehead
+      - src.bayly-1988-making-of-british-empire
+claims:
+  - text: Revenue obligations of zamindars to the Company were fixed in perpetuity, and estates
+      could be sold if assessed payments fell into arrears.
+    grade: B
+    sources:
+      - src.marshall-1987-bengal-british-bridgehead
+      - src.bayly-1988-making-of-british-empire
+relations:
+  - kind: related-to
+    target: event.diwani-grant-of-1765
+tags:
+  - bengal
+  - land-revenue
+  - company-rule
+review:
+  status: draft
+  author: codex-gpt-6

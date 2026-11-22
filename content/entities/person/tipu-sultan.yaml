@@ -1,0 +1,82 @@
+id: person.tipu-sultan
+type: person
+kind: person
+names:
+  en: Tipu Sultan
+  native: ಟಿಪ್ಪು ಸುಲ್ತಾನ್
+summary: >-
+  Tipu Sultan, son of Haidar Ali, ruled Mysore from 1782 until his death defending Srirangapatna in May
+  1799. He fought the East India Company and its allies, ceded about half his territory in 1792, promoted
+  state trading, sericulture and rocket-armed troops, and sent embassies to France and the Ottoman Empire.
+  His reign included grants to Hindu institutions such as the Sringeri matha and harsh campaigns in Malabar
+  and Kodagu.
+summaries:
+  kids: >-
+    Tipu Sultan took over Mysore after his father died. He fought the East India Company and was killed
+    defending his capital, Srirangapatna, in 1799.
+  teen: >-
+    Tipu inherited a war against the Company. He pursued state-led trade and military reforms, but the
+    peace of 1792 cost him much of his kingdom, and the fall of Srirangapatna in 1799 ended his rule.
+region: Mysore and southern India
+location:
+  name: Srirangapatna (capital)
+  lat: 12.42
+  lon: 76.69
+datings:
+  - method: scholarly-consensus
+    range:
+      earliest: "1782"
+      latest: "1799"
+      precision: year
+      circa: false
+    grade: B
+    label: Reign in Mysore
+    sources:
+      - src.bayly-1988-making-of-british-empire
+      - src.hasan-1971-history-of-tipu-sultan
+    note: He succeeded Haidar Ali in December 1782 and was killed on 4 May 1799. His birth is usually placed
+      in 1751, with 1750 also cited.
+claims:
+  - text: Tipu lost territory under the peace settlement of 1792 and died during the capture of
+      Srirangapatna on 4 May 1799.
+    grade: B
+    sources:
+      - src.national-army-museum-tipu-war-turban
+      - src.bayly-1988-making-of-british-empire
+  - text: Tipu established state trading depots, promoted sericulture, expanded rocket-armed units and sent
+      embassies to France and the Ottoman Empire.
+    grade: B
+    sources:
+      - src.habib-1999-confronting-colonialism
+      - src.hasan-1971-history-of-tipu-sultan
+  - text: Tipu's surviving letters to the Sringeri matha record gifts and protection after a Maratha raid in
+      1791, while contemporary records also document deportations and forced conversions during his
+      campaigns in Malabar and Kodagu.
+    grade: B
+    sources:
+      - src.brittlebank-1997-tipu-sultans-search-legitimacy
+      - src.hasan-1971-history-of-tipu-sultan
+relations:
+  - kind: succeeded
+    target: person.haidar-ali
+  - kind: ruled
+    target: polity.kingdom-of-mysore
+  - kind: related-to
+    target: polity.kingdom-of-travancore
+    note: His attack on the Travancore lines in 1789 to 1790 preceded the Third Anglo-Mysore War.
+debate: Historians weigh Tipu's resistance to the Company and his administrative and military innovations
+  against the coercion documented in his campaigns in Malabar and Kodagu. Mohibbul Hasan and the essays
+  edited by Irfan Habib emphasise resistance and modernisation, while Kate Brittlebank examines how he drew
+  on both Islamic and local Hindu idioms of kingship to legitimise his rule.
+wikidata: Q10088
+image:
+  commons: File:Tipu Sultan.jpg
+  alt: Portrait of Tipu Sultan
+  credit: Unknown artist
+  license: Public domain
+tags:
+  - mysore
+  - deccan
+review:
+  status: draft
+  author: codex-gpt-6

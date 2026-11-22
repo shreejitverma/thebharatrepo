@@ -1,0 +1,51 @@
+id: event.fourth-anglo-mysore-war
+type: event
+kind: event
+names:
+  en: Fourth Anglo-Mysore War
+summary: East India Company forces and their allies took Srirangapatna in May 1799. Tipu Sultan
+  died in the fighting, and a Wodeyar ruler was installed in a much-reduced Mysore under Company
+  influence.
+summaries:
+  kids: Tipu Sultan died when his capital was captured. A family that had ruled Mysore before
+    returned to the throne, ruling a smaller state.
+  teen: The capture of Srirangapatna brought Tipu's rule to an end. The Company and its allies
+    divided some Mysore territory and returned the remaining kingdom to the Wodeyar dynasty
+    under a subsidiary alliance.
+region: Srirangapatna and Mysore, present-day Karnataka
+datings:
+  - method: scholarly-consensus
+    range:
+      earliest: "1799"
+      latest: "1799"
+      precision: year
+      circa: false
+    grade: B
+    label: War and fall of Srirangapatna
+    sources:
+      - src.national-army-museum-tipu-war-turban
+      - src.bayly-1988-making-of-british-empire
+claims:
+  - text: Company and allied forces captured Tipu's capital on 4 May 1799, and Tipu was killed in
+      the fighting.
+    grade: B
+    sources:
+      - src.national-army-museum-tipu-war-turban
+  - text: A Wodeyar ruler was installed over a reduced Mysore after the war.
+    grade: B
+    sources:
+      - src.bayly-1988-making-of-british-empire
+      - src.bandyopadhyay-2004-from-plassey-to-partition
+  - text: The Company concluded a subsidiary treaty with the Maharaja of Mysore in July 1799.
+    grade: A
+    sources:
+      - src.aitchison-1909-mysore-treaties
+relations:
+  - kind: related-to
+    target: person.tipu-sultan
+tags:
+  - mysore
+  - company-rule
+review:
+  status: draft
+  author: codex-gpt-6

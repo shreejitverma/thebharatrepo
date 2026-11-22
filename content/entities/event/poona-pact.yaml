@@ -1,0 +1,53 @@
+id: event.poona-pact
+type: event
+kind: event
+names:
+  en: Poona Pact
+summary: On 24 September 1932, B. R. Ambedkar and other representatives reached a pact on
+  political representation for the Depressed Classes. It replaced separate electorates under the
+  Communal Award with reserved seats elected through joint electorates, after Gandhi began a
+  fast opposing separate electorates.
+summaries:
+  kids: Ambedkar and other leaders agreed to set aside seats for people oppressed by caste. The
+    agreement also changed how voters would choose the people for those seats.
+  teen: The pact reserved 148 provincial seats and gave eligible Dalit voters a primary to choose
+    candidates. The joint electorate made the final choice.
+region: Poona (Pune), Bombay Presidency
+datings:
+  - method: documentary
+    range:
+      earliest: "1932"
+      latest: "1932"
+      precision: day
+      circa: false
+    grade: A
+    label: Agreement of 24 September 1932
+    sources:
+      - src.ambedkar-1932-poona-pact
+claims:
+  - text: The agreement specified 148 reserved provincial seats and allowed registered members of
+      the Depressed Classes to select a panel of candidates for election by the joint
+      electorate.
+    grade: A
+    sources:
+      - id: src.ambedkar-1932-poona-pact
+        locator: Clauses 1 and 2
+  - text: Gandhi's prison fast opposing separate electorates put pressure on Ambedkar and other
+      negotiators to reach a settlement.
+    grade: B
+    sources:
+      - src.jaffrelot-2005-ambedkar-and-untouchability
+      - src.sarkar-1989-modern-india
+relations:
+  - kind: related-to
+    target: person.b-r-ambedkar
+  - kind: related-to
+    target: person.mahatma-gandhi
+  - kind: related-to
+    target: event.round-table-conferences
+tags:
+  - dalit-history
+  - political-representation
+review:
+  status: draft
+  author: codex-gpt-6

@@ -1,0 +1,67 @@
+id: person.haidar-ali
+type: person
+kind: person
+names:
+  en: Haidar Ali
+  iast: Haidar ʿAlī
+  native: ಹೈದರ್ ಅಲಿ
+aliases:
+  - person.hyder-ali
+summary: >-
+  Haidar Ali rose from cavalry command in Wodeyar service to become the effective ruler of Mysore in 1761,
+  while keeping the Wodeyar king on the throne. He extended Mysore's borders into Bednur, Malabar and the
+  Carnatic, reorganised its army, allied with the French, and led Mysore in the First and Second
+  Anglo-Mysore Wars, dying in camp near Chittoor in December 1782.
+summaries:
+  kids: >-
+    Haidar Ali rose from army service to govern Mysore. He fought the East India Company, and his son
+    Tipu Sultan took over after his death.
+  teen: >-
+    Haidar built authority through military command, expansion and alliances. He governed in the name of
+    the Wodeyar ruler while conducting Mysore's wars and diplomacy, and brought Company forces to terms
+    near Madras in 1769.
+region: Mysore and southern India
+location:
+  name: Srirangapatna (capital)
+  lat: 12.42
+  lon: 76.69
+datings:
+  - method: scholarly-consensus
+    range:
+      earliest: "1761"
+      latest: "1782"
+      precision: year
+      circa: false
+    grade: B
+    label: Period of effective rule
+    sources:
+      - src.bayly-1988-making-of-british-empire
+      - src.bandyopadhyay-2004-from-plassey-to-partition
+      - src.sinha-1941-haidar-ali
+    note: The range runs from his ascendancy in Mysore to his death on 7 December 1782. His birth is
+      estimated between about 1717 and 1722.
+claims:
+  - text: Haidar Ali became Mysore's effective ruler in 1761 without formally displacing the Wodeyar
+      dynasty, sidelining the minister Nanjaraja, and was succeeded by Tipu Sultan in 1782.
+    grade: B
+    sources:
+      - src.sinha-1941-haidar-ali
+      - src.bayly-1988-making-of-british-empire
+      - src.bandyopadhyay-2004-from-plassey-to-partition
+  - text: In 1769 Haidar Ali advanced near Madras and secured the treaty that ended the First Anglo-Mysore
+      War, and in 1780 his forces and Tipu's destroyed William Baillie's column at Pollilur.
+    grade: B
+    sources:
+      - src.sinha-1941-haidar-ali
+      - src.dalrymple-2019-the-anarchy
+relations:
+  - kind: ruled
+    target: polity.kingdom-of-mysore
+    note: As de facto ruler while the Wodeyars remained nominal kings.
+wikidata: Q1569078
+tags:
+  - mysore
+  - deccan
+review:
+  status: draft
+  author: codex-gpt-6

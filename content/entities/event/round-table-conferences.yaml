@@ -1,0 +1,55 @@
+id: event.round-table-conferences
+type: event
+kind: event
+names:
+  en: Indian Round Table Conferences
+summary: The British government convened three Round Table Conferences between 1930 and 1932 to
+  discuss India's constitutional future. Gandhi represented the Indian National Congress at the
+  second conference, and B. R. Ambedkar participated in the conferences as a representative of
+  the Depressed Classes.
+summaries:
+  kids: People with different views met in London to discuss how India might be governed. Gandhi
+    joined one meeting, and Ambedkar argued for political rights for people oppressed by caste.
+  teen: Delegates discussed federation, princely states and how communities should be represented.
+    Congress attended the second round after the Gandhi-Irwin Pact, and the proceedings informed
+    the 1935 legislation.
+region: London
+datings:
+  - method: documentary
+    range:
+      earliest: "1930"
+      latest: "1932"
+      precision: year
+      circa: false
+    grade: A
+    label: Three conferences, November 1930 to December 1932
+    sources:
+      - src.india-office-1931-first-round-table-proceedings
+      - src.india-office-1932-second-round-table-proceedings
+      - src.india-office-1932-third-round-table-proceedings
+claims:
+  - text: Congress was absent from the first conference and represented by Gandhi at the second in
+      1931.
+    grade: A
+    sources:
+      - src.india-office-1931-first-round-table-proceedings
+      - src.india-office-1932-second-round-table-proceedings
+  - text: Ambedkar argued for separate political representation for the Depressed Classes during the
+      London negotiations.
+    grade: B
+    sources:
+      - src.sarkar-1989-modern-india
+      - src.jaffrelot-2005-ambedkar-and-untouchability
+relations:
+  - kind: related-to
+    target: person.mahatma-gandhi
+  - kind: related-to
+    target: person.b-r-ambedkar
+  - kind: preceded
+    target: event.government-of-india-act-1935
+tags:
+  - constitutional-reform
+  - political-representation
+review:
+  status: draft
+  author: codex-gpt-6

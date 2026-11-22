@@ -1,0 +1,46 @@
+id: event.treaty-of-purandar-1665
+type: event
+kind: event
+names:
+  en: Treaty of Purandar (1665)
+summary: Shivaji negotiated with the Mughal commander Mirza Raja Jai Singh during the siege of
+  Purandar. The 1665 agreement ceded forts to the Mughals and allowed Shivaji to retain others.
+summaries:
+  kids: When a Mughal army surrounded Purandar, Shivaji made an agreement. He gave up some forts
+    and kept others.
+  teen: Jai Singh negotiated from a position of military strength. The terms reduced Shivaji's
+    control of forts and brought his son Sambhaji into Mughal service.
+region: Purandar, present-day Maharashtra
+datings:
+  - method: scholarly-consensus
+    range:
+      earliest: "1665"
+      latest: "1665"
+      precision: year
+      circa: false
+    grade: B
+    label: Mughal-Maratha agreement during the siege of Purandar
+    sources:
+      - src.gordon-1993-marathas-1600-1818
+      - src.richards-1993-mughal-empire
+claims:
+  - text: The settlement provided for Shivaji to relinquish forts and for Sambhaji to receive a
+      position in Mughal service.
+    grade: B
+    sources:
+      - src.gordon-1993-marathas-1600-1818
+      - src.richards-1993-mughal-empire
+relations:
+  - kind: related-to
+    target: person.shivaji
+  - kind: related-to
+    target: person.sambhaji
+  - kind: related-to
+    target: polity.mughal-empire
+tags:
+  - maratha
+  - mughal
+  - treaty
+review:
+  status: draft
+  author: codex-gpt-6

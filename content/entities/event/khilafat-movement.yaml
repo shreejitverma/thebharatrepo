@@ -1,0 +1,42 @@
+id: event.khilafat-movement
+type: event
+kind: event
+names:
+  en: Khilafat movement in India
+summary: Indian Khilafat organisers mobilised after the First World War to protect the standing
+  of the Ottoman caliph. They joined forces with Gandhi's Non-Cooperation Movement, and the
+  campaign lost its object when Turkey abolished the caliphate in 1924.
+summaries:
+  kids: Indian Muslims organised to defend the position of the Ottoman caliph, an important
+    religious leader. For a time they joined Gandhi's campaign against British rule.
+  teen: The Khilafat campaign joined a dispute about the postwar settlement of the Ottoman Empire
+    with Indian anti-colonial politics. Its alliance with Congress helped broaden
+    Non-Cooperation.
+region: British India and the former Ottoman Empire
+datings:
+  - method: scholarly-consensus
+    range:
+      earliest: "1919"
+      latest: "1924"
+      precision: year
+      circa: false
+    grade: B
+    label: Postwar mobilisation to abolition of the caliphate
+    sources:
+      - src.sarkar-1989-modern-india
+      - src.bose-jalal-2023-modern-south-asia
+claims:
+  - text: Khilafat leaders and Congress cooperated in the Non-Cooperation campaign beginning in 1920.
+    grade: B
+    sources:
+      - src.sarkar-1989-modern-india
+      - src.chandra-1989-indias-struggle-for-independence
+relations:
+  - kind: related-to
+    target: person.maulana-abul-kalam-azad
+tags:
+  - khilafat
+  - anti-colonial-movements
+review:
+  status: draft
+  author: codex-gpt-6

@@ -1,0 +1,41 @@
+id: event.all-india-muslim-league-founded
+type: event
+kind: event
+names:
+  en: Founding of the All-India Muslim League
+summary: Muslim political leaders founded the All-India Muslim League at Dhaka in December 1906.
+  Its initial programme sought to protect and advance Muslim political interests within British
+  India.
+summaries:
+  kids: Leaders meeting in Dhaka started a new political group. They wanted Muslims in British
+    India to have a stronger voice in government.
+  teen: The League emerged from discussions among Muslim elites about how they would be
+    represented under colonial constitutional reforms. Its aims and social base changed over
+    subsequent decades.
+region: Dhaka (then Dacca), Eastern Bengal and Assam
+datings:
+  - method: scholarly-consensus
+    range:
+      earliest: "1906"
+      latest: "1906"
+      precision: year
+      circa: false
+    grade: B
+    label: Founding meeting on 30 December 1906
+    sources:
+      - src.jalal-1985-sole-spokesman
+      - src.sarkar-1989-modern-india
+claims:
+  - text: The League began as an organisation for Muslim political interests and took shape in the
+      context of demands about political representation.
+    grade: B
+    sources:
+      - src.jalal-1985-sole-spokesman
+      - src.bose-jalal-2023-modern-south-asia
+relations: []
+tags:
+  - muslim-league
+  - political-representation
+review:
+  status: draft
+  author: codex-gpt-6

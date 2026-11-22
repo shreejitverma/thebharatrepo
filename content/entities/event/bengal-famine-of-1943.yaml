@@ -1,0 +1,59 @@
+id: event.bengal-famine-of-1943
+type: event
+kind: event
+names:
+  en: Bengal famine of 1943
+summary: Severe famine struck Bengal during the Second World War, with starvation and disease
+  continuing into 1944. Scholars disagree over the relative weight of crop losses, wartime price
+  rises, access to food and failures of relief.
+summaries:
+  kids: During the war, many people in Bengal could no longer get enough food. Hunger and illness
+    killed many, and historians still study how the crisis became so severe.
+  teen: The famine hit people whose earnings no longer bought enough rice. Researchers disagree
+    over how much of the crisis came from falling food supplies and how much from sharp changes
+    in who could afford what was available.
+region: Bengal, British India
+datings:
+  - method: scholarly-consensus
+    range:
+      earliest: "1943"
+      latest: "1944"
+      precision: year
+      circa: false
+    grade: B
+    label: Acute famine and continuing mortality
+    sources:
+      - src.famine-inquiry-commission-1945-report-on-bengal
+      - src.brennan-1988-government-famine-relief
+      - src.sen-1977-starvation-exchange-entitlements
+    note: The famine peaked in 1943, and mortality from associated disease continued into 1944.
+claims:
+  - text: The capacity to organise relief existed within the wartime administration, making the
+      timing and adequacy of relief part of the explanation for mortality.
+    grade: B
+    sources:
+      - src.brennan-1988-government-famine-relief
+  - text: Amartya Sen argued that changes in people's ability to obtain food, including through
+      wages and trade, explain the distribution of famine deaths.
+    grade: C
+    sources:
+      - src.sen-1977-starvation-exchange-entitlements
+  - text: Mark B. Tauger argued that damage to the 1942 rice harvest produced a more severe shortage
+      than Sen's analysis allowed.
+    grade: C
+    sources:
+      - src.tauger-2003-entitlement-shortage
+relations:
+  - kind: related-to
+    target: event.bengal-famine-of-1770
+debate: Amartya Sen emphasised the loss of purchasing power and access to food among vulnerable
+  groups. Mark B. Tauger placed greater weight on production losses in 1942. Lance Brennan
+  examined the administration's capacity to provide relief and the effect of its decisions.
+  These interpretations concern causes of the famine in 1943 and 1944.
+tags:
+  - bengal
+  - famine
+  - second-world-war
+review:
+  status: draft
+  author: codex-gpt-6

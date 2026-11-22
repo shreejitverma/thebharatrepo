@@ -1,0 +1,53 @@
+id: person.maulana-abul-kalam-azad
+type: person
+kind: person
+names:
+  en: Maulana Abul Kalam Azad
+  native: ابوالکلام آزاد
+summary: Abul Kalam Azad published the Urdu weekly Al-Hilal and led the Indian National Congress
+  during much of the Second World War. He opposed Partition and became independent India's
+  education minister in 1947.
+summaries:
+  kids: Azad wrote a newspaper and helped lead the campaign for freedom. After independence, he
+    became India's education minister.
+  teen: Azad used Urdu journalism to argue for anti-colonial cooperation across religious
+    communities. As Congress president from 1940 to 1946, he took part in talks on India's
+    constitutional future.
+region: Mecca, Calcutta and Delhi
+datings:
+  - method: scholarly-consensus
+    range:
+      earliest: "1888"
+      latest: "1958"
+      precision: year
+      circa: false
+    grade: B
+    label: Lifespan
+    sources:
+      - src.hameed-2014-maulana-azad
+claims:
+  - text: Azad launched Al-Hilal in 1912 and became Congress president at Ramgarh in 1940, holding
+      the position until 1946.
+    grade: B
+    sources:
+      - src.hameed-2014-maulana-azad
+      - src.sarkar-1989-modern-india
+  - text: Azad opposed Partition and entered the government of independent India as its education
+      minister.
+    grade: B
+    sources:
+      - src.hameed-2014-maulana-azad
+      - src.bose-jalal-2023-modern-south-asia
+      - src.azad-1988-india-wins-freedom
+relations:
+  - kind: related-to
+    target: event.quit-india-movement
+  - kind: related-to
+    target: event.cabinet-mission-plan
+tags:
+  - congress
+  - urdu-press
+  - independence
+review:
+  status: draft
+  author: codex-gpt-6

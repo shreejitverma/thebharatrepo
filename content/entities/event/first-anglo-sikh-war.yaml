@@ -1,0 +1,44 @@
+id: event.first-anglo-sikh-war
+type: event
+kind: event
+names:
+  en: First Anglo-Sikh War
+summary: The East India Company and the Sikh Empire fought across the Sutlej frontier in 1845
+  and 1846. After Sobraon, the Treaty of Lahore required territorial and financial concessions
+  from the Lahore state.
+summaries:
+  kids: The Company and the Sikh kingdom fought near the Sutlej River. After losing the war, the
+    kingdom had to give up land and accept new limits on its power.
+  teen: Several engagements culminated in the Sikh defeat at Sobraon. The peace reduced Lahore's
+    territory and military freedom while the young Duleep Singh remained maharaja.
+region: Punjab and the Sutlej frontier
+datings:
+  - method: scholarly-consensus
+    range:
+      earliest: "1845"
+      latest: "1846"
+      precision: year
+      circa: false
+    grade: B
+    label: War to the Treaty of Lahore
+    sources:
+      - src.grewal-1990-sikhs-of-the-punjab
+      - src.national-army-museum-first-sikh-war
+claims:
+  - text: Company forces defeated the Sikh army at Sobraon on 10 February 1846, before the Lahore
+      peace settlement.
+    grade: B
+    sources:
+      - src.national-army-museum-first-sikh-war
+      - src.grewal-1990-sikhs-of-the-punjab
+relations:
+  - kind: related-to
+    target: polity.sikh-empire
+  - kind: preceded
+    target: event.second-anglo-sikh-war
+tags:
+  - sikh-empire
+  - company-rule
+review:
+  status: draft
+  author: codex-gpt-6
