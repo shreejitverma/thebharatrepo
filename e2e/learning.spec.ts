@@ -266,3 +266,15 @@ test.describe('printable pack', () => {
     expect(ink).toBe('rgb(0, 0, 0)');
   });
 });
+
+test.describe('narrow screens', () => {
+  test.use({ viewport: { width: 360, height: 800 } });
+  // A DOI (Rock Edict XIII), a slash-joined list in a dating note (Puranas) and a claim's sources (Pashupati seal)
+  // have no break opportunities and once set the page's minimum width.
+  for (const url of ['/archive/artifact/ashoka-major-rock-edict-xiii', '/archive/text/puranas', '/archive/artifact/pashupati-seal', PATH, `${PATH}/print`]) {
+    test(`${url} fits a 360 px screen`, async ({ page }) => {
+      await page.goto(url);
+      await noHorizontalScroll(page);
+    });
+  }
+});

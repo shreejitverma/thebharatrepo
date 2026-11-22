@@ -958,6 +958,17 @@ a:hover {
   margin-top: 6px;
 }
 
+/*
+ * A DOI, URL or slash-joined list ("Nanda/Maurya/Shunga") has no break opportunities; without this it sets a
+ * 360 px screen's minimum width. Text breaks inside a word only when nothing else fits.
+ */
+.dating,
+.dating__sources,
+.references,
+.biblio {
+  overflow-wrap: anywhere;
+}
+
 .claims {
   display: grid;
   gap: 10px;

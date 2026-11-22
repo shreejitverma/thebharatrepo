@@ -477,6 +477,11 @@ html[data-reading-level='kids'] .rl[data-has-teen]:not([data-has-kids]) > [data-
   font-family: var(--font-ui);
 }
 
+.step__source,
+.quiz__sources {
+  overflow-wrap: anywhere;
+}
+
 .step__source {
   margin-top: 6px !important;
   font-size: 0.85rem;
