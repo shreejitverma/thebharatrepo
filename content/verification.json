@@ -814,6 +814,11 @@
     "checkedAt": "2026-11-22T02:49:31.075Z",
     "matched": "Middle Palaeolithic occupation in the Thar Desert during the Upper Pleistocene: the signature of a modern human exit out of Africa?"
   },
+  "doi:10.1016/j.quascirev.2024.108622": {
+    "ok": true,
+    "checkedAt": "2026-11-22T04:24:29.290Z",
+    "matched": "Landscape evolution of the NW Himalayan rivers during the late Quaternary and their non-contemporaneity to the Harappan Civilization"
+  },
   "doi:10.1016/s0010-938x(00)00046-9": {
     "ok": true,
     "checkedAt": "2026-11-22T02:49:30.086Z",
@@ -2770,6 +2775,11 @@
     "ok": false,
     "checkedAt": "2026-11-22T02:37:09.278Z",
     "detail": "OCLC number not found in Open Library; use an ISBN, DOI or archive.org URL instead"
+  },
+  "oclc:13396022": {
+    "ok": true,
+    "checkedAt": "2026-11-22T04:24:29.503Z",
+    "matched": "Excavations at Atranjīkherā: early civilization of the Upper Gaṅgā Basin"
   },
   "oclc:1392322532": {
     "ok": false,
@@ -5221,6 +5231,11 @@
     "checkedAt": "2026-11-22T02:50:17.225Z",
     "matched": "The musicological portions of the Saṅgītanārāyaṇa - ORA - Oxford University Research Archive"
   },
+  "url:https://plato.stanford.edu/entries/shankara/": {
+    "ok": true,
+    "checkedAt": "2026-11-22T04:24:29.520Z",
+    "matched": "Śaṅkara (Stanford Encyclopedia of Philosophy)"
+  },
   "url:https://royalsociety.org/blog/2018/10/revisiting-ramanujan/": {
     "ok": true,
     "checkedAt": "2026-11-22T02:51:00.605Z",
@@ -5235,6 +5250,11 @@
     "ok": true,
     "checkedAt": "2026-11-22T02:51:07.171Z",
     "matched": "The Cōḷas - நூல்"
+  },
+  "url:https://ucrisportal.univie.ac.at/en/publications/a-concise-historiography-of-classical-yoga-philosophy/": {
+    "ok": true,
+    "checkedAt": "2026-11-22T04:24:29.646Z",
+    "matched": "A Concise Historiography of Classical Yoga Philosophy - University of Vienna"
   },
   "url:https://wellcomecollection.org/works/vj72yp4x": {
     "ok": true,
@@ -5435,5 +5455,10 @@
     "ok": true,
     "checkedAt": "2026-11-22T02:49:44.733Z",
     "matched": "The Constitution of India, India, WIPO Lex"
+  },
+  "url:https://zenodo.org/records/3361563": {
+    "ok": true,
+    "checkedAt": "2026-11-22T04:24:29.707Z",
+    "matched": "Corpus Inscriptionum Indicarum 3: Inscriptions of the Early Gupta Kings (Revised Edition) | Zenodo"
   }
 }

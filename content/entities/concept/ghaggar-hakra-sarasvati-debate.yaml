@@ -37,10 +37,12 @@ datings:
     sources:
       - src.clift-2012-zircon-dating-sarasvati
       - src.singh-2017-himalayan-river-morphodynamics
+      - src.khan-2024-himalayan-rivers
     note: >-
       Clift et al. used detrital zircon provenance and sediment ages to infer that the Yamuna left
       the Indus drainage between about 49,000 and 10,000 years ago. Singh et al. used sediment provenance
       and luminescence ages to place the main Sutlej's shift between about 15,000 and 8,000 years ago.
+      Khan et al. inferred a major shift around 18,000 years ago from luminescence-dated cores.
   - method: geological
     range:
       earliest: "3500 BCE"

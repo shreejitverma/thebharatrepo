@@ -1,9 +1,12 @@
 id: src.maas-2013-concise-historiography-yoga
-type: book
-title: "Periodization and Historiography of Indian Philosophy"
+type: book-chapter
+title: "A Concise Historiography of Classical Yoga Philosophy"
 authors:
+  - Philipp A. Maas
+editors:
   - Eli Franco
 year: 2013
-publisher: Austrian Academy of Sciences / De Nobili Research Library
-isbn: "9783900271435"
-note: "Edited volume (Publications of the De Nobili Research Library 37). Cited for Philipp A. Maas, 'A Concise Historiography of Classical Yoga Philosophy', a chapter in this volume; chapter page range not independently verified."
+publisher: Sammlung de Nobili, University of Vienna
+pages: "53-90"
+url: https://ucrisportal.univie.ac.at/en/publications/a-concise-historiography-of-classical-yoga-philosophy/
+note: "In Periodization and Historiography of Indian Philosophy, Publications of the De Nobili Research Library 37. The host volume has ISBN 9783900271435."
