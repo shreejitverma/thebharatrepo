@@ -1,0 +1,59 @@
+id: person.ravidas
+type: person
+kind: person
+names:
+  en: Ravidas
+  iast: Ravidāsa
+  native: रविदास
+summary: Ravidas, also known as Raidas, is a north Indian devotional poet whose songs are preserved
+  in several manuscript traditions, including Sikh scripture. His chronology is contested.
+summaries:
+  kids: Ravidas sang about devotion and imagined a city where people could live without sorrow.
+  teen: Songs transmitted under Ravidas’s name survive in Sikh and other collections. One imagines
+    Begampura, a city without sorrow, where the speaker can move about without fear.
+datings:
+  - method: textual-internal
+    range:
+      earliest: "1376"
+      latest: "1540"
+      precision: century
+      circa: true
+    grade: C
+    label: Range of proposed dates surveyed by Peter Friedlander
+    sources:
+      - src.friedlander-2019-ravidas
+    note: Proposals summarized by Friedlander range from a birth around 1376 to a death as late as 1540.
+      The endpoints come from different proposals.
+  - method: textual-internal
+    range:
+      earliest: "1500"
+      latest: "1550"
+      precision: century
+      circa: true
+    grade: C
+    label: Callewaert and Friedlander’s early sixteenth-century estimate
+    sources:
+      - src.callewaert-1992-life-and-works-raidas
+    note: Their placement, cited in Friedlander’s Brill survey, situates Ravidas after Kabir.
+claims:
+  - text: Callewaert and Friedlander distinguish multiple manuscript traditions transmitting verse under
+      the name of Ravidas.
+    grade: B
+    sources:
+      - src.callewaert-1992-life-and-works-raidas
+      - src.friedlander-2019-ravidas
+  - text: A song attributed to Ravidas imagines a city called Begampura, free of sorrow and fear.
+    grade: A
+    sources:
+      - src.callewaert-1992-life-and-works-raidas
+relations: []
+tags:
+  - sant
+  - nirguna-bhakti
+  - caste
+  - vernacular-poetry
+review:
+  status: draft
+  author: codex-gpt-6
+debate: Friedlander surveys competing dates for the life of Ravidas. The songs were in oral
+  circulation by the mid-sixteenth century and reached several written collections.

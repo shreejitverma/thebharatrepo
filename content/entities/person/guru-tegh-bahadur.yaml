@@ -1,0 +1,63 @@
+id: person.guru-tegh-bahadur
+type: person
+kind: person
+names:
+  en: Guru Tegh Bahadur
+  native: ਗੁਰੂ ਤੇਗ ਬਹਾਦਰ
+summary: Guru Tegh Bahadur was the ninth Sikh Guru. His hymns are included in the Guru Granth Sahib,
+  and the Mughal authorities executed him in Delhi in 1675.
+summaries:
+  kids: Guru Tegh Bahadur wrote hymns that Sikhs still sing. His son became the next Sikh Guru.
+  teen: The ninth Guru traveled beyond the Punjab and contributed hymns to Sikh scripture. His
+    execution under Aurangzeb in 1675 became a central event in Sikh memory.
+region: Punjab and Delhi
+datings:
+  - method: scholarly-consensus
+    range:
+      earliest: "1621"
+      latest: "1675"
+      precision: year
+      circa: true
+    grade: B
+    label: Conventional birth and death years
+    sources:
+      - src.singh-2004-history-of-the-sikhs-vol-1
+      - id: src.grewal-1990-sikhs-of-the-punjab
+        locator: Transformation of the Sikh Panth (1606-1708)
+  - method: scholarly-consensus
+    range:
+      earliest: "1664"
+      latest: "1675"
+      precision: year
+      circa: false
+    grade: B
+    label: Years as Sikh Guru
+    sources:
+      - id: src.grewal-1990-sikhs-of-the-punjab
+        locator: Transformation of the Sikh Panth (1606-1708)
+claims:
+  - text: Guru Tegh Bahadur’s hymns are part of the Guru Granth Sahib.
+    grade: B
+    sources:
+      - src.singh-2003-guru-granth-sahib
+      - src.singh-2004-history-of-the-sikhs-vol-1
+  - text: Guru Tegh Bahadur was executed in Delhi in 1675 under Aurangzeb.
+    grade: B
+    sources:
+      - id: src.grewal-1990-sikhs-of-the-punjab
+        locator: Transformation of the Sikh Panth (1606-1708)
+      - src.singh-2004-history-of-the-sikhs-vol-1
+relations:
+  - kind: succeeded
+    target: person.guru-har-krishan
+  - kind: part-of
+    target: tradition.sikh-gurus
+  - kind: preceded
+    target: person.guru-gobind-singh
+tags:
+  - sikhism
+  - sikh-gurus
+  - mughal-period
+review:
+  status: draft
+  author: codex-gpt-6

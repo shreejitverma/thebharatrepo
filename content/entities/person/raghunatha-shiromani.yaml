@@ -1,0 +1,48 @@
+id: person.raghunatha-shiromani
+type: person
+kind: person
+names:
+  en: Raghunatha Shiromani
+  iast: Raghunātha Śiromaṇi
+  native: রঘুনাথ শিরোমণি
+summary: Raghunatha Shiromani was a Navya-Nyaya philosopher associated with Navadvipa. He wrote the
+  Didhiti on Gangesha’s Tattvachintamani and reconsidered inherited categories of what exists.
+summaries:
+  kids: Raghunatha wrote about an older book by Gangesha. He also asked which kinds of things
+    philosophers need to explain the world.
+  teen: Raghunatha’s Didhiti engages closely with Gangesha. In a separate work on categories,
+    Raghunatha asks whether existing classifications can account for such things as number, absence
+    and relationships.
+region: Bengal
+datings:
+  - method: textual-internal
+    range:
+      earliest: "1460"
+      latest: "1550"
+      precision: century
+      circa: true
+    grade: C
+    label: Late fifteenth- to mid-sixteenth-century lifespan estimate
+    sources:
+      - src.ganeri-2011-lost-age-of-reason
+      - src.carpenter-2014-indian-buddhist-philosophy
+    note: Ganeri’s estimate is about 1460 to 1540, and other reconstructions vary within this broad
+      horizon.
+claims:
+  - text: The Didhiti is a commentary on Gangesha’s Tattvachintamani.
+    grade: B
+    sources:
+      - src.ganeri-2011-lost-age-of-reason
+  - text: Raghunatha’s work on categories revises parts of the inherited Nyaya-Vaisheshika ontology.
+    grade: B
+    sources:
+      - id: src.ganeri-2017-oxford-handbook-indian-philosophy
+        locator: Raghunātha Śiromaṇi and the Examination of the Truth about the Categories
+relations: []
+tags:
+  - navya-nyaya
+  - logic
+  - metaphysics
+review:
+  status: draft
+  author: codex-gpt-6

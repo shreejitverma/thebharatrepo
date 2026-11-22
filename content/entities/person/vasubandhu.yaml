@@ -1,0 +1,76 @@
+id: person.vasubandhu
+type: person
+kind: person
+names:
+  en: Vasubandhu
+  iast: Vasubandhu
+  native: वसुबन्धु
+summary: Vasubandhu is the name associated with the Abhidharmakosha and with influential Yogacara
+  works such as the Twenty Verses. Scholars debate whether one author composed both groups of works.
+summaries:
+  kids: Books passed down under Vasubandhu’s name explain Buddhist ideas about experience and the
+    mind. Scholars ask whether all the books came from the same writer.
+  teen: Vasubandhu’s corpus spans Buddhist systematics and Yogacara. Jonathan Gold reads it as a
+    developing philosophical project, while Erich Frauwallner argued that the tradition had combined
+    two authors.
+datings:
+  - method: textual-internal
+    range:
+      earliest: "350"
+      latest: "430"
+      precision: century
+      circa: true
+    grade: C
+    label: Oxford Handbook chronology for Vasubandhu
+    sources:
+      - id: src.ganeri-2017-oxford-handbook-indian-philosophy
+        locator: "Timeline: Indian Philosophy in a Hundred Thinkers"
+      - src.gold-2014-paving-great-way
+    note: The single-author reading places both Abhidharma and Yogacara works within one broad
+      intellectual career.
+  - method: textual-internal
+    range:
+      earliest: "320"
+      latest: "380"
+      precision: decade
+      circa: true
+    grade: C
+    label: Erich Frauwallner’s earlier Vasubandhu
+    sources:
+      - src.westerhoff-2018-golden-age-indian-buddhist-philosophy
+    note: On this reading, the older Vasubandhu was Asanga’s brother and wrote Yogacara works.
+  - method: textual-internal
+    range:
+      earliest: "400"
+      latest: "480"
+      precision: decade
+      circa: true
+    grade: C
+    label: Erich Frauwallner’s later Vasubandhu
+    sources:
+      - src.westerhoff-2018-golden-age-indian-buddhist-philosophy
+    note: On this reading, a second Vasubandhu wrote the Abhidharmakosha.
+claims:
+  - text: The Abhidharmakosha and its prose commentary organize and critically examine Buddhist
+      Abhidharma teachings.
+    grade: B
+    sources:
+      - src.gold-2014-paving-great-way
+  - text: Gold argues that a single developing philosophical project can account for works across the
+      two groups.
+    grade: C
+    sources:
+      - src.gold-2014-paving-great-way
+relations:
+  - kind: related-to
+    target: person.asanga
+debate: Gold develops a single-author reading. Frauwallner proposed two authors named Vasubandhu.
+  The dispute concerns which works should be assigned to a given person as well as how to
+  reconstruct the chronology.
+tags:
+  - buddhist-philosophy
+  - abhidharma
+  - yogacara
+review:
+  status: draft
+  author: codex-gpt-6

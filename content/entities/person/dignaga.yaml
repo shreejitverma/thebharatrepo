@@ -1,0 +1,43 @@
+id: person.dignaga
+type: person
+kind: person
+names:
+  en: Dignaga
+  iast: Dignāga
+  native: दिग्नाग
+summary: Dignaga was an Indian Buddhist philosopher who set out an account of reliable knowledge
+  based on perception and inference. His Compendium on Valid Cognition shaped later debates on
+  reasoning and language.
+summaries:
+  kids: Dignaga studied how we know things. You might see smoke for yourself and then work out that
+    there is a fire. He treated seeing and working things out as two different ways to learn.
+  teen: Dignaga’s Pramanasamuccaya recognizes perception and inference as means of valid cognition.
+    His work on what makes a reason support a conclusion influenced debate across philosophical
+    schools.
+datings:
+  - method: scholarly-consensus
+    range:
+      earliest: "480"
+      latest: "550"
+      precision: century
+      circa: true
+    grade: B
+    label: Late fifth- to early sixth-century scholarly horizon
+    sources:
+      - src.arnold-2012-dignaga-dharmakirti
+      - src.szanyi-2024-yogacara
+claims:
+  - text: Dignaga treats perception and inference as the two means of valid cognition.
+    grade: B
+    sources:
+      - src.arnold-2012-dignaga-dharmakirti
+relations:
+  - kind: influenced
+    target: person.dharmakirti
+tags:
+  - buddhist-philosophy
+  - logic
+  - epistemology
+review:
+  status: draft
+  author: codex-gpt-6

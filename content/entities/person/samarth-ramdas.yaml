@@ -1,0 +1,43 @@
+id: person.samarth-ramdas
+type: person
+kind: person
+names:
+  en: Samarth Ramdas
+  iast: Samartha Rāmadāsa
+  native: समर्थ रामदास
+summary: Samarth Ramdas was a seventeenth-century Marathi teacher and poet. The Dasbodh presents
+  spiritual instruction alongside advice about conduct, study and practical judgment.
+summaries:
+  kids: Ramdas wrote a book in Marathi in which a teacher explains how to live, study and make sound
+    decisions.
+  teen: The Dasbodh uses a teacher’s instruction to a disciple to discuss religious practice and
+    everyday conduct. It even treats careful reading and writing as habits that a student should
+    learn.
+region: Maharashtra
+datings:
+  - method: textual-internal
+    range:
+      earliest: "1608"
+      latest: "1682"
+      precision: year
+      circa: true
+    grade: C
+    label: Received lifespan in Marathi literary history
+    sources:
+      - src.nadkarni-1921-short-history-marathi-literature
+      - src.deshpande-2016-writerly-self
+    note: Nadkarni gives the death year as Shaka 1603, a year spanning 1681 and 1682 CE.
+claims:
+  - text: The Dasbodh offers advice on reading, copying and checking written texts as part of a broader
+      program of conduct.
+    grade: B
+    sources:
+      - src.deshpande-2016-writerly-self
+relations: []
+tags:
+  - marathi
+  - rama-bhakti
+  - dasbodh
+review:
+  status: draft
+  author: codex-gpt-6

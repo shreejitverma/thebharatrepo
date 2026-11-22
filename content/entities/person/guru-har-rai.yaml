@@ -1,0 +1,56 @@
+id: person.guru-har-rai
+type: person
+kind: person
+names:
+  en: Guru Har Rai
+  native: ਗੁਰੂ ਹਰਿ ਰਾਇ
+summary: Guru Har Rai, the seventh Sikh Guru, succeeded his grandfather Guru Hargobind. He led the
+  community from the Punjab foothills and was succeeded by his younger son Har Krishan.
+summaries:
+  kids: Guru Har Rai became Guru after his grandfather. His young son Har Krishan later took his place.
+  teen: Guru Har Rai continued the line of Sikh leadership based at Kiratpur. The choice of his
+    younger son Har Krishan as Guru left his elder son Ram Rai outside that line of succession.
+region: Kiratpur, Punjab
+datings:
+  - method: scholarly-consensus
+    range:
+      earliest: "1630"
+      latest: "1661"
+      precision: year
+      circa: true
+    grade: B
+    label: Conventional birth and death years
+    sources:
+      - src.singh-2004-history-of-the-sikhs-vol-1
+      - id: src.grewal-1990-sikhs-of-the-punjab
+        locator: Transformation of the Sikh Panth (1606-1708)
+  - method: scholarly-consensus
+    range:
+      earliest: "1644"
+      latest: "1661"
+      precision: year
+      circa: false
+    grade: B
+    label: Years as Sikh Guru
+    sources:
+      - id: src.grewal-1990-sikhs-of-the-punjab
+        locator: Transformation of the Sikh Panth (1606-1708)
+claims:
+  - text: Guru Har Rai was Guru Hargobind’s grandson and the father of his own successor Har Krishan.
+    grade: B
+    sources:
+      - id: src.grewal-1990-sikhs-of-the-punjab
+        locator: Transformation of the Sikh Panth (1606-1708)
+      - src.singh-2004-history-of-the-sikhs-vol-1
+relations:
+  - kind: succeeded
+    target: person.guru-hargobind
+  - kind: part-of
+    target: tradition.sikh-gurus
+tags:
+  - sikhism
+  - sikh-gurus
+  - mughal-period
+review:
+  status: draft
+  author: codex-gpt-6

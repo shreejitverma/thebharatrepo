@@ -1,0 +1,44 @@
+id: person.chokhamela
+type: person
+kind: person
+names:
+  en: Chokhamela
+  iast: Cokhāmeḷā
+  native: चोखामेळा
+summary: Chokhamela was a Marathi Varkari poet associated with devotion to Vitthal at Pandharpur.
+  The songs attributed to him speak about caste exclusion and a devotee’s relationship with the
+  deity.
+summaries:
+  kids: Chokhamela’s poems say how it felt to be kept out of a temple because of his caste. He sings
+    to Vitthal about how deeply he wants to be close to him.
+  teen: The abhangs attributed to Chokhamela give voice to a Mahar devotee’s experience of exclusion.
+    Their devotion to Vitthal and their frustration with social boundaries appear side by side.
+region: Maharashtra
+datings:
+  - method: scholarly-consensus
+    range:
+      earliest: "1250"
+      latest: "1400"
+      precision: century
+      circa: true
+    grade: B
+    label: Varkari poetic milieu around the fourteenth century
+    sources:
+      - src.mokashi-punekar-2010-on-the-threshold
+      - src.barua-2024-bhakti
+      - src.eaton-2005-social-history-deccan
+claims:
+  - text: The poems collected by Mokashi-Punekar include songs that speak of being kept at the threshold
+      of a temple.
+    grade: A
+    sources:
+      - src.mokashi-punekar-2010-on-the-threshold
+relations: []
+tags:
+  - marathi
+  - varkari
+  - caste
+  - abhang
+review:
+  status: draft
+  author: codex-gpt-6

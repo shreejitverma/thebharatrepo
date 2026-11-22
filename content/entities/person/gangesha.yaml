@@ -1,0 +1,53 @@
+id: person.gangesha
+type: person
+kind: person
+names:
+  en: Gangesha Upadhyaya
+  iast: Gaṅgeśa Upādhyāya
+  native: गङ्गेश उपाध्याय
+summary: Gangesha Upadhyaya wrote the Tattvachintamani, a foundational work of Navya-Nyaya. His
+  precise dates are uncertain, with scholarly placements spanning the medieval period.
+summaries:
+  kids: Gangesha wrote a book about how to tell whether a belief is well founded. Later thinkers used
+    his book to study arguments.
+  teen: The Tattvachintamani examines the means of knowledge in four divisions. Its analyses of
+    inference and other means of knowledge shaped the vocabulary of Navya-Nyaya.
+region: Mithila
+datings:
+  - method: textual-internal
+    range:
+      earliest: "1100"
+      latest: "1300"
+      precision: century
+      circa: true
+    grade: C
+    label: Amber Carpenter’s twelfth- to thirteenth-century placement
+    sources:
+      - src.carpenter-2014-indian-buddhist-philosophy
+  - method: textual-internal
+    range:
+      earliest: "1300"
+      latest: "1350"
+      precision: century
+      circa: true
+    grade: C
+    label: Early fourteenth-century chronology in the Oxford Handbook
+    sources:
+      - id: src.ganeri-2017-oxford-handbook-indian-philosophy
+        locator: "Timeline: Indian Philosophy in a Hundred Thinkers"
+claims:
+  - text: The Tattvachintamani addresses perception, inference, comparison and testimony as distinct
+      means of knowledge.
+    grade: B
+    sources:
+      - src.ganeri-2017-oxford-handbook-indian-philosophy
+relations:
+  - kind: influenced
+    target: person.raghunatha-shiromani
+tags:
+  - navya-nyaya
+  - logic
+  - epistemology
+review:
+  status: draft
+  author: codex-gpt-6

@@ -1,0 +1,56 @@
+id: person.yajnavalkya
+type: person
+kind: person
+names:
+  en: Yajnavalkya
+  iast: Yājñavalkya
+  native: याज्ञवल्क्य
+summary: Yajnavalkya is a teacher and disputant in the Brihadaranyaka Upanishad. The dialogues
+  explore ritual, knowledge and the self. Scholars can estimate the date of the texts that portray
+  him, while his life dates are unknown.
+summaries:
+  kids: In an ancient book, Yajnavalkya answers questions from Gargi, Maitreyi and other thinkers.
+    They ask about the world and what it means to know yourself.
+  teen: Yajnavalkya’s exchanges with Gargi and Maitreyi bring different questions into a discussion of
+    what underlies experience. The texts are placed within an early Upanishadic horizon, while his
+    historical life dates remain unknown.
+region: Videha in the narrative
+datings:
+  - method: traditional-puranic
+    range:
+      earliest: 3102 BCE
+      latest: 3102 BCE
+      precision: century
+      circa: true
+    grade: D
+    label: Traditional Puranic reckoning (Dvapara-Kali transition)
+    sources:
+      - src.wilson-1840-vishnu-purana
+      - src.olivelle-1998-early-upanisads
+    note: The Vishnu Purana makes Yajnavalkya a pupil of Vaishampayana, the disciple of Vyasa,
+      which places him at the traditional transition from the Dvapara to the Kali Yuga. The calendar
+      year is the conventional epoch used for that transition.
+claims:
+  - text: The Brihadaranyaka Upanishad presents exchanges between Yajnavalkya and Gargi, and between
+      Yajnavalkya and Maitreyi.
+    grade: A
+    sources:
+      - id: src.olivelle-1998-early-upanisads
+        locator: Brihadaranyaka Upanishad 2.4, 3.6, 3.8 and 4.5
+  - text: Modern linguistic scholarship places the early prose Upanishads, including the
+      Brihadaranyaka Upanishad, broadly around 800 BCE to 400 BCE; these are dates for the texts, not
+      for Yajnavalkya.
+    grade: C
+    sources:
+      - id: src.olivelle-1998-early-upanisads
+        locator: Introduction
+relations:
+  - kind: related-to
+    target: text.brihadaranyaka-upanishad
+tags:
+  - upanishads
+  - vedic-philosophy
+  - self
+review:
+  status: draft
+  author: codex-gpt-6
