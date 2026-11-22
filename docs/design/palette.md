@@ -119,6 +119,22 @@ The same washes band the river view and the mini strip on entity pages.
 | `--wheel-tag-edge` | `#ffd18f` | `#6d2f0a` | Gerua, lit and shadowed | Tag outline |
 | `--wheel-tag-ink` | `#1c1a2c` | `#fffaf3` | Lamp-black; lime white | Tag text |
 
+### The map
+
+The Map view is drawn in the same materials as the page: the land is the lime-white ground the marks already sit on, and the sea is the nila wash of the wheel's cosmic era, a little deeper.
+
+| Token | Light | Dark | Source | Use |
+|---|---|---|---|---|
+| `--map-sea` | `#dde6ee` | `#10151f` | Nila: the ocean on which Vishnu sleeps | Sea and lakes |
+| `--map-land` | `#fffaf3` | `#1f1a15` | Chuna lime white (alias of `--bg-elev`) | Land, and the halo behind map labels |
+| `--map-coast` | `#8f7a5c` | `#7d6a52` | Panchaloha bronze (alias of `--line-strong`) | Coastlines and lake shores |
+| `--map-river` | `#6f93b8` | `#3f6088` | Lapis lazuli, thinned | Rivers |
+| `--map-cluster` | `#1c1a2c` | `#f2e7d3` | Lamp-black ink (alias of `--ink`) | Cluster discs |
+| `--map-cluster-ink` | `#fffaf3` | `#1f1a15` | Lime white (alias of `--bg-elev`) | The count on a cluster |
+
+`--map-grid`, the graticule, is `--ink` at 13 percent, so it follows the theme without a value of its own.
+Markers take the kind colours, extents take their entity's kind colour at low opacity with a dashed outline, and the relation graph on entity pages uses the kind, lens and ink tokens only.
+
 ## Contrast pairs
 
 Every pair below meets WCAG 2.2 AA in both light and dark: 4.5:1 for text, 3:1 for large text and for the graphics and borders that identify a control.
@@ -165,6 +181,14 @@ A `*` stands for every matching token.
 | `--lens-tradition` | `--era-*` | 3 | Traditional marks on every era wash |
 | `--accent` | `--era-*` | 3 | The Today line across the washes |
 | `--wheel-indicator` | `--bg-elev` | 3 | The indicator |
+| `--ink` | `--map-land` | 4.5 | Place labels on the map |
+| `--ink-faint` | `--map-land` | 4.5 | Graticule and scale labels over land |
+| `--ink-faint` | `--map-sea` | 4.5 | Sea names and graticule labels over water |
+| `--map-cluster-ink` | `--map-cluster` | 4.5 | Count on a cluster |
+| `--k-*` | `--map-land` | 3 | Map markers on land |
+| `--k-*` | `--map-sea` | 3 | Map markers on water |
+| `--focus` | `--map-sea` | 3 | Focus ring on the map |
+| `--map-cluster` | `--map-sea` | 3 | Cluster discs on water |
 | `--wheel-core-ring` | `--wheel-core` | 3 | Hub ring |
 
 ## Checking

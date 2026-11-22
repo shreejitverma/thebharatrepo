@@ -66,13 +66,14 @@
   --wheel-tag-ink: #1c1a2c;
   --shadow: 0 1px 2px rgba(28, 26, 44, 0.06), 0 6px 20px rgba(28, 26, 44, 0.06);
 
-  --map-sea: #dce6e4;
-  --map-land: #f8f1e2;
-  --map-coast: #b3a283;
-  --map-river: #7fa3b8;
-  --map-grid: rgba(30, 26, 46, 0.13);
-  --map-cluster: #1e1a2e;
-  --map-cluster-ink: #fffaf1;
+  /* The map: land is the lime-white ground, the sea a wash of nila, coasts in bronze, rivers in thinned lapis */
+  --map-sea: #dde6ee;
+  --map-land: var(--bg-elev);
+  --map-coast: var(--line-strong);
+  --map-river: #6f93b8;
+  --map-grid: color-mix(in srgb, var(--ink) 13%, transparent);
+  --map-cluster: var(--ink);
+  --map-cluster-ink: var(--bg-elev);
 
   --radius: 10px;
   --radius-sm: 6px;
@@ -137,13 +138,8 @@
     --wheel-tag-bg: #9a430f;
     --wheel-tag-edge: #6d2f0a;
     --wheel-tag-ink: #fffaf3;
-    --map-sea: #0e1422;
-    --map-land: #242232;
-    --map-coast: #4d4863;
-    --map-river: #3f6384;
-    --map-grid: rgba(239, 231, 216, 0.13);
-    --map-cluster: #efe7d8;
-    --map-cluster-ink: #12111c;
+    --map-sea: #10151f;
+    --map-river: #3f6088;
     --shadow: 0 1px 2px rgba(0, 0, 0, 0.3), 0 8px 24px rgba(0, 0, 0, 0.4);
   }
 }
@@ -200,13 +196,8 @@
   --wheel-tag-bg: #9a430f;
   --wheel-tag-edge: #6d2f0a;
   --wheel-tag-ink: #fffaf3;
-  --map-sea: #0e1422;
-  --map-land: #242232;
-  --map-coast: #4d4863;
-  --map-river: #3f6384;
-  --map-grid: rgba(239, 231, 216, 0.13);
-  --map-cluster: #efe7d8;
-  --map-cluster-ink: #12111c;
+  --map-sea: #10151f;
+  --map-river: #3f6088;
   --shadow: 0 1px 2px rgba(0, 0, 0, 0.3), 0 8px 24px rgba(0, 0, 0, 0.4);
 }
 
@@ -1839,8 +1830,8 @@ a:hover {
   justify-content: center;
   margin: 0;
   padding: 24px;
-  background: rgba(18, 17, 28, 0.55);
-  color: #fffaf1;
+  background: color-mix(in srgb, var(--ink) 72%, transparent);
+  color: var(--bg);
   font-size: 1.05rem;
   font-weight: 600;
   text-align: center;
