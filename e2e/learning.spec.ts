@@ -185,8 +185,9 @@ test.describe('learning path', () => {
     await expect(qs.nth(1)).toContainText('Correct answer');
     await expect(quiz.locator('.quiz__score')).toHaveText('1 of 2 checked answers correct so far; 3 to go.');
 
+    const correct = ['Sandrokottos', /Shakyamuni was born there/, /tied to Greek kings/];
     for (let i = 2; i < 5; i++) {
-      await qs.nth(i).getByRole('radio').first().check();
+      await qs.nth(i).getByRole('radio', { name: correct[i - 2] }).check();
       await qs.nth(i).getByRole('button', { name: 'Check answer' }).click();
     }
     await expect(quiz.locator('.quiz__score')).toHaveText('You answered 4 of 5 correctly.');
@@ -219,7 +220,7 @@ test.describe('printable pack', () => {
     await expect(page.locator('.print-card')).toHaveCount(7);
     await expect(page.locator('.print-quiz > li')).toHaveCount(5);
     await expect(page.locator('.answer-key > li')).toHaveCount(5);
-    await expect(page.locator('.answer-key > li').first()).toContainText('A. Major Rock Edict XIII');
+    await expect(page.locator('.answer-key > li').first()).toContainText('B. Major Rock Edict XIII');
     await expect(page.getByRole('button', { name: 'Print this pack' })).toBeVisible();
     await noHorizontalScroll(page);
     await noSeriousA11yViolations(page);

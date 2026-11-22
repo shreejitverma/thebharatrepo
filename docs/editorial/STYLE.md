@@ -319,6 +319,7 @@ Rules:
 - Every entity step on a `teen` or `kids` path must have that level's summary (`summaries.teen` or `summaries.kids`); the loader rejects the path otherwise.
 - Story first, then evidence: the step page shows the entity's summary at the path's level, then its first claim under "How do we know?".
 - No trick questions: no "all of the above" or "none of the above", no emphasised NOT, EXCEPT or NEVER, and no choice that is partly true.
+- Choices are shown in the order written, so vary where the correct answer sits; `content:validate` rejects a quiz of three or more questions whose correct answers all share one position.
   Ask what the evidence shows, not for a memorised date.
 - Every correct answer cites a source that supports it; add a locator when you are sure of it.
 - Progress and quiz answers stay in the viewer's browser; nothing is sent or tracked.

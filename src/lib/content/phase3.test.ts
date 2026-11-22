@@ -139,6 +139,35 @@ describe('learning path schema', () => {
     const step = { entity: 'person.someone', note: 'Look at how the person is dated.' };
     expect(LearningPathSchema.safeParse(lp({ steps: [step, step] })).success).toBe(false);
   });
+  it('rejects a quiz whose correct answer always sits in the same slot', () => {
+    const at = (id: string, slot: number) => {
+      const choices = [choice(`Wrong one for ${id}`), choice(`Wrong two for ${id}`)];
+      choices.splice(slot, 0, choice(`Right for ${id}`, true));
+      return question({ id, choices });
+    };
+    const first = LearningPathSchema.safeParse(lp({ quiz: [at('q1', 0), at('q2', 0), at('q3', 0)] }));
+    expect(first.success).toBe(false);
+    expect(first.error?.issues.map((i) => i.message)).toContain('every correct answer is choice 1; vary where the correct answer sits');
+    expect(LearningPathSchema.safeParse(lp({ quiz: [at('q1', 2), at('q2', 2), at('q3', 2)] })).success).toBe(false);
+    // Any slot is fine for the correct answer, first, middle or last, as long as the quiz varies it.
+    expect(LearningPathSchema.safeParse(lp({ quiz: [at('q1', 1), at('q2', 2), at('q3', 0)] })).success).toBe(true);
+    // Too few questions to give a pattern away.
+    expect(LearningPathSchema.safeParse(lp({ quiz: [at('q1', 0), at('q2', 0)] })).success).toBe(true);
+  });
+});
+
+describe('the seed learning path', () => {
+  it('varies where the correct answer sits and keeps each explanation with its choice', async () => {
+    const fs = await import('node:fs');
+    const YAML = (await import('yaml')).default;
+    const raw = YAML.parse(fs.readFileSync(path.join(process.cwd(), 'content/learning/how-we-date-ashoka.yaml'), 'utf8'));
+    const p = LearningPathSchema.parse(raw);
+    expect(p.quiz.map((q) => q.choices.findIndex((c) => c.correct))).toEqual([1, 2, 0, 2, 1]);
+    const right = (id: string) => p.quiz.find((q) => q.id === id)!.choices.find((c) => c.correct)!;
+    expect(right('edict-xiii').text).toBe('Major Rock Edict XIII');
+    expect(right('edict-xiii').explanation).toContain('Antiochus II');
+    expect(right('lumbini').explanation).toContain('Shakyamuni was born here');
+  });
 });
 
 describe('loader: debates and learning paths', () => {

@@ -430,6 +430,11 @@ export const LearningPathSchema = z
     for (const r of refs.filter((x, i) => refs.indexOf(x) !== i)) ctx.addIssue({ code: 'custom', path: ['steps'], message: `step ${r} appears twice` });
     const ids = p.quiz.map((q) => q.id);
     for (const id of ids.filter((x, i) => ids.indexOf(x) !== i)) ctx.addIssue({ code: 'custom', path: ['quiz'], message: `duplicate question id ${id}` });
+    // Choices are shown in the order written, so a quiz whose answer always sits in one slot gives itself away.
+    const slots = new Set(p.quiz.map((q) => q.choices.findIndex((c) => c.correct)));
+    if (p.quiz.length >= 3 && slots.size === 1) {
+      ctx.addIssue({ code: 'custom', path: ['quiz'], message: `every correct answer is choice ${[...slots][0] + 1}; vary where the correct answer sits` });
+    }
   });
 export type LearningPath = z.infer<typeof LearningPathSchema>;
 
