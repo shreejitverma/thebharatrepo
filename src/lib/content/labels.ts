@@ -91,3 +91,29 @@ export const KIND_LABELS: Record<Kind, string> = {
   event: 'Events',
 };
 
+
+/**
+ * Editorial review states. `draft` (and the legacy `machine-checked`) await a human editor; `reviewed`
+ * records the editor's sign-off; `published` is a reviewed revision that has been released.
+ */
+export const REVIEW_STATUSES = ['draft', 'machine-checked', 'reviewed', 'published'] as const;
+export type ReviewStatus = (typeof REVIEW_STATUSES)[number];
+
+/** True while a record still needs a human editor's sign-off. */
+export function awaitingReview(status: ReviewStatus): boolean {
+  return status === 'draft' || status === 'machine-checked';
+}
+
+/** The review status as one clause, for the "Review status:" line on entity and article pages. */
+export function reviewStatusText(review: { status: ReviewStatus; reviewer: string | null; lastReviewed: string | null }): string {
+  switch (review.status) {
+    case 'published':
+      return `published after review by ${review.reviewer} on ${review.lastReviewed}`;
+    case 'reviewed':
+      return `reviewed by ${review.reviewer} on ${review.lastReviewed}`;
+    case 'machine-checked':
+      return 'citations machine-checked, awaiting editor review';
+    case 'draft':
+      return 'draft, identifiers machine-verified, awaiting editor review';
+  }
+}

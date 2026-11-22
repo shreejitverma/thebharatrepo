@@ -9,7 +9,7 @@ import SourceCitation from '@/components/SourceCitation';
 import { getGraph, getIndex, issueUrl, SITE_URL } from '@/lib/content/site';
 import { entityHref } from '@/lib/content/kaalchakra';
 import { rankDatings } from '@/lib/content/lens';
-import { KIND_LABELS, isTraditional, citationId } from '@/lib/content/schema';
+import { KIND_LABELS, isTraditional, citationId, reviewStatusText } from '@/lib/content/schema';
 import { verifiedImage } from '@/lib/content/verification';
 import { yearToUnit } from '@/lib/time/scale';
 
@@ -174,7 +174,7 @@ export default async function EntityPage({ params }: { params: Promise<{ type: s
       ) : null}
 
       <p className="review-note" style={{ marginTop: 32, maxWidth: 860 }}>
-        Review status: {e.review.status === 'reviewed' ? `reviewed by ${e.review.reviewer} on ${e.review.lastReviewed}` : 'draft. Every DOI, ISBN, Wikidata and Commons identifier on this page has been machine-verified; editor review is pending'}.
+        Review status: {reviewStatusText(e.review)}.
         {e.wikidata ? (
           <>
             {' '}Wikidata: <a href={`https://www.wikidata.org/wiki/${e.wikidata}`}>{e.wikidata}</a>.

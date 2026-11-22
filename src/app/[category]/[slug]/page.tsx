@@ -9,7 +9,7 @@ import SourceCitation from '@/components/SourceCitation';
 import { CATEGORY_META, getGraph, getIndex, issueUrl } from '@/lib/content/site';
 import { renderArticle } from '@/lib/content/render';
 import { entityHref } from '@/lib/content/kaalchakra';
-import { METHOD_LABELS, isTraditional } from '@/lib/content/labels';
+import { METHOD_LABELS, isTraditional, reviewStatusText } from '@/lib/content/labels';
 import { citationId } from '@/lib/content/schema';
 import { formatRange } from '@/lib/time';
 import { rankDatings, summarizeDatings } from '@/lib/content/lens';
@@ -95,7 +95,7 @@ export default async function ArticlePage({ params }: { params: Promise<{ catego
           </ol>
         </section>
         <p className="review-note prose-wrap">
-          Review status: {a.review.status === 'reviewed' ? `reviewed by ${a.review.reviewer} on ${a.review.lastReviewed}` : a.review.status === 'machine-checked' ? 'citations machine-checked, awaiting editor review' : 'draft, identifiers machine-verified, awaiting editor review'}.
+          Review status: {reviewStatusText(a.review)}.
           {a.updated ? ` Last updated ${a.updated}.` : ''}{' '}
           <a href={issueUrl(`Correction: ${a.title}`, `Page: /${a.category}/${a.slug}\n\nWhat is wrong:\n\nEvidence (with source):\n`)}>Report an error</a>
         </p>

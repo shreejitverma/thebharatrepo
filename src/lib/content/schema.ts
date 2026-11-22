@@ -17,6 +17,7 @@ import {
   DATING_METHODS,
   ENTITY_TYPES,
   KINDS,
+  REVIEW_STATUSES,
   isTraditional,
 } from './labels';
 
@@ -136,7 +137,7 @@ export const LocationSchema = z.strictObject({
 
 export const ReviewSchema = z
   .strictObject({
-    status: z.enum(['draft', 'reviewed', 'published', 'machine-checked']),
+    status: z.enum(REVIEW_STATUSES),
     reviewer: z.string().nullable().default(null),
     lastReviewed: z.string().nullable().default(null),
     author: z.string().optional(),

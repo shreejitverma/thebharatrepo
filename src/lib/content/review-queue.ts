@@ -1,5 +1,5 @@
 import type { ContentRecords } from './load';
-import { ENTITY_TYPES, type EntityType } from './schema';
+import { ENTITY_TYPES, awaitingReview, type EntityType } from './labels';
 
 type ReviewGroup = EntityType | 'article';
 
@@ -10,7 +10,6 @@ interface ReviewItem {
 }
 
 export function reviewQueue(records: Pick<ContentRecords, 'entities' | 'articles'>): { type: ReviewGroup; items: ReviewItem[] }[] {
-  const pending = (status: string) => status === 'draft' || status === 'machine-checked';
   const groups = new Map<ReviewGroup, ReviewItem[]>();
   const add = (type: ReviewGroup, item: ReviewItem) => {
     const items = groups.get(type) ?? [];
@@ -18,12 +17,12 @@ export function reviewQueue(records: Pick<ContentRecords, 'entities' | 'articles
     groups.set(type, items);
   };
   for (const { data: entity, file } of records.entities) {
-    if (pending(entity.review.status)) {
+    if (awaitingReview(entity.review.status)) {
       add(entity.type, { id: entity.id, title: entity.names.en, file });
     }
   }
   for (const article of records.articles) {
-    if (pending(article.review.status)) {
+    if (awaitingReview(article.review.status)) {
       add('article', { id: `${article.category}/${article.slug}`, title: article.title, file: article.file });
     }
   }
@@ -43,5 +42,6 @@ export function formatReviewQueue(records: Pick<ContentRecords, 'entities' | 'ar
       `${type}[${items.length}]{id,title,file}:`,
       ...items.map(({ id, title, file }) => `  ${[id, title, file].map((field) => JSON.stringify(field)).join(',')}`),
     ]),
+    'help: After checking a record, set review.status to reviewed with reviewer and lastReviewed (docs/editorial/STYLE.md, section 10).',
   ].join('\n');
 }

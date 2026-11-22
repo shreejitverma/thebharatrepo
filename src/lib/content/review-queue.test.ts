@@ -2,7 +2,7 @@ import path from 'node:path';
 import { describe, expect, it } from 'vitest';
 import { readContentRecords } from './load';
 import { formatReviewQueue, reviewQueue } from './review-queue';
-import { ReviewSchema } from './schema';
+import { ReviewSchema, reviewStatusText } from './schema';
 
 const fixture = path.join(__dirname, '__fixtures__/ok');
 
@@ -33,5 +33,13 @@ describe('review queue', () => {
     expect(ReviewSchema.safeParse({ status, reviewer: ' ', lastReviewed: '2026-11-22' }).success).toBe(false);
     expect(ReviewSchema.safeParse({ status, reviewer: 'Test Editor', lastReviewed: '2026-02-30' }).success).toBe(false);
     expect(ReviewSchema.safeParse({ status, reviewer: 'Test Editor', lastReviewed: '2026-11-22' }).success).toBe(true);
+  });
+
+  it('describes every status on entity and article pages without calling a signed-off record a draft', () => {
+    const signedOff = { reviewer: 'Test Editor', lastReviewed: '2026-11-22' };
+    expect(reviewStatusText(ReviewSchema.parse({ status: 'published', ...signedOff }))).toBe('published after review by Test Editor on 2026-11-22');
+    expect(reviewStatusText(ReviewSchema.parse({ status: 'reviewed', ...signedOff }))).toBe('reviewed by Test Editor on 2026-11-22');
+    expect(reviewStatusText(ReviewSchema.parse({ status: 'machine-checked' }))).toContain('awaiting editor review');
+    expect(reviewStatusText(ReviewSchema.parse({ status: 'draft' }))).toMatch(/^draft, .*awaiting editor review$/);
   });
 });
