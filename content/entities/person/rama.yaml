@@ -79,11 +79,7 @@ debate: >-
   directly attests Rama as a historical individual, and confines itself to dating the stages of the text.
 relations:
   - kind: related-to
-    target: cosmology.treta-yuga
-  - kind: related-to
     target: person.vaivasvata-manu
-  - kind: related-to
-    target: concept.yuga-chronology-of-the-itihasa
 wikidata: Q160213
 image:
   commons: "File:Rama and Sita, with Lakshmana returning to Ayodhya.jpg"

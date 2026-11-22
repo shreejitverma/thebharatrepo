@@ -71,10 +71,6 @@ relations:
     target: tradition.harappan-civilisation
   - kind: contemporary-of
     target: site.mohenjo-daro
-  - kind: related-to
-    target: tradition.jhukar-phase
-  - kind: related-to
-    target: concept.harappan-carnelian-bead-making
 wikidata: Q1062208
 image:
   commons: "File:Chanhu-Daro beads.jpg"

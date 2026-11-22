@@ -61,12 +61,6 @@ claims:
       - src.gaur-1983-excavations-atranjikhera
       - src.singh-2008-ancient-early-medieval-india
 relations:
-  - { kind: related-to, target: polity.panchala }
-  - { kind: related-to, target: concept.painted-grey-ware-culture }
-  - { kind: related-to, target: concept.black-and-red-ware-culture }
-  - { kind: related-to, target: concept.northern-black-polished-ware-culture }
-  - { kind: related-to, target: concept.iron-metallurgy-in-india }
   - { kind: contemporary-of, target: site.hastinapura }
-  - { kind: contemporary-of, target: site.ahichhatra }
 tags: [atranjikhera, archaeology, rc-gaur, painted-grey-ware, black-and-red-ware, iron-age]
 review: { status: draft, author: "gemini-4-argon" }

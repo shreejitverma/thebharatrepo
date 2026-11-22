@@ -31,7 +31,6 @@ claims:
     grade: A
     sources: [src.sachau-1910-alberunis-india]
 relations:
-  - { kind: authored-by, target: person.al-biruni }
   - { kind: related-to, target: event.ghaznavid-raid-on-somnath }
   - { kind: related-to, target: text.brahmasphutasiddhanta, note: One of its Sanskrit sources }
 tags: [foreign-account, arabic, ethnography, astronomy]

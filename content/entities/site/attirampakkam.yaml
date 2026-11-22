@@ -64,8 +64,6 @@ claims:
 relations:
   - kind: contemporary-of
     target: site.isampur
-  - kind: related-to
-    target: event.arrival-of-modern-humans-south-asia
 tags:
   - palaeolithic
   - acheulian

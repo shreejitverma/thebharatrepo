@@ -80,8 +80,6 @@ claims:
 relations:
   - kind: excavated-at
     target: site.rakhigarhi
-  - kind: related-to
-    target: concept.indus-periphery-cline
   - kind: part-of
     target: tradition.harappan-civilisation
 aliases:

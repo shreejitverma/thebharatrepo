@@ -70,14 +70,6 @@ claims:
 relations:
   - kind: part-of
     target: cosmology.vaivasvata-manvantara
-  - kind: related-to
-    target: cosmology.satya-yuga
-  - kind: related-to
-    target: cosmology.treta-yuga
-  - kind: related-to
-    target: cosmology.dvapara-yuga
-  - kind: related-to
-    target: cosmology.kali-yuga
 wikidata: Q3277648
 tags:
   - cosmology

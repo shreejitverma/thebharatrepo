@@ -34,8 +34,6 @@ claims:
     sources:
       - src.stoneman-2019-greek-experience-of-india
 relations:
-  - { kind: ruled-by, target: person.menander-i }
-  - { kind: related-to, target: artifact.heliodorus-pillar }
   - { kind: influenced, target: tradition.gandhara-art }
   - { kind: contemporary-of, target: polity.shunga-dynasty }
 wikidata: Q215643

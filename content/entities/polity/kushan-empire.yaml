@@ -36,11 +36,8 @@ claims:
       - src.cribb-2023-kushan-royal-inscription
       - src.behrendt-2004-buddhist-architecture-gandhara
 relations:
-  - { kind: ruled-by, target: person.kanishka-i }
-  - { kind: related-to, target: artifact.rabatak-inscription }
   - { kind: patronised, target: tradition.gandhara-art }
   - { kind: patronised, target: tradition.mathura-art }
-  - { kind: preceded, target: polity.gupta-empire }
 wikidata: Q25979
 tags: [kushan, kanishka, mathura, gandhara, silk-road]
 review: { status: draft, author: "gemini-4-argon" }

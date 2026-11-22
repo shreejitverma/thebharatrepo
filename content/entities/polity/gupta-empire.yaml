@@ -36,11 +36,9 @@ claims:
       - src.fleet-1888-inscriptions-early-gupta-kings
       - src.kulke-2004-history-of-india
 relations:
-  - { kind: ruled-by, target: person.chandragupta-ii }
   - { kind: succeeded, target: polity.kushan-empire }
   - { kind: patronised, target: site.udayagiri-caves }
   - { kind: patronised, target: site.nalanda-mahavihara }
-  - { kind: related-to, target: event.faxian-travels }
 wikidata: Q11774
 tags: [gupta-empire, pataliputra, samudragupta, chandragupta-ii, classical-india]
 review: { status: draft, author: "gemini-4-argon" }

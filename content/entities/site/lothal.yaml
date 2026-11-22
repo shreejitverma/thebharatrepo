@@ -82,12 +82,6 @@ claims:
 relations:
   - kind: part-of
     target: tradition.harappan-civilisation
-  - kind: contemporary-of
-    target: site.dholavira
-  - kind: related-to
-    target: concept.harappan-mesopotamian-trade
-  - kind: related-to
-    target: concept.harappan-carnelian-bead-making
 wikidata: Q9443
 image:
   commons: "File:Lothal Dockyard N-GJ-60.jpg"

@@ -1,6 +1,6 @@
 import path from 'node:path';
 import { afterEach, describe, expect, it, vi } from 'vitest';
-import { DatingSchema, EntitySchema, SourceSchema } from './schema';
+import { DatingSchema, EntitySchema, SourceSchema, type Entity } from './schema';
 import { extractCitations, parseCitationGroup } from './load';
 
 const FIX = path.join(__dirname, '__fixtures__', 'ok');
@@ -112,6 +112,32 @@ describe('aliases of merged entities', () => {
   });
 });
 
+describe('duplicate relations', () => {
+  const ent = (id: string, ...relations: [Entity['relations'][number]['kind'], string][]): Pick<Entity, 'id' | 'relations'> => ({ id, relations: relations.map(([kind, target]) => ({ kind, target })) });
+  it('accepts one relation per pair of entities', async () => {
+    const { duplicateRelations } = await import('./load');
+    expect(duplicateRelations([ent('cosmology.kalpa', ['part-of', 'cosmology.brahma-lifespan'], ['related-to', 'cosmology.pralaya']), ent('cosmology.brahma-lifespan')])).toEqual([]);
+  });
+  it('rejects the same relation twice, two kinds for one pair, and the reciprocal of an existing relation', async () => {
+    const { duplicateRelations } = await import('./load');
+    expect(
+      duplicateRelations([
+        ent('cosmology.kalpa', ['part-of', 'cosmology.brahma-lifespan'], ['part-of', 'cosmology.brahma-lifespan'], ['related-to', 'cosmology.pralaya'], ['part-of', 'cosmology.pralaya']),
+        ent('cosmology.brahma-lifespan', ['related-to', 'cosmology.kalpa']),
+        ent('person.x', ['succeeded', 'person.y']),
+        ent('person.y', ['preceded', 'person.x']),
+        ent('person.z', ['related-to', 'person.z']),
+      ]),
+    ).toEqual([
+      { id: 'cosmology.kalpa', message: 'relation part-of -> cosmology.brahma-lifespan is listed twice' },
+      { id: 'cosmology.kalpa', message: 'relations related-to and part-of both link to cosmology.pralaya; keep one relation per pair of entities and put any detail in its note' },
+      { id: 'cosmology.brahma-lifespan', message: "relation related-to -> cosmology.kalpa duplicates cosmology.kalpa's relation part-of -> cosmology.brahma-lifespan; the site shows inbound relations on both pages, so keep one" },
+      { id: 'person.y', message: "relation preceded -> person.x duplicates person.x's relation succeeded -> person.y; the site shows inbound relations on both pages, so keep one" },
+      { id: 'person.z', message: 'relation related-to -> person.z points at the entity itself' },
+    ]);
+  });
+});
+
 describe('citations', () => {
   it('parses single, located and multiple citations', () => {
     expect(parseCitationGroup('@src.a-1')).toEqual([{ id: 'src.a-1' }]);
@@ -178,6 +204,9 @@ describe('loader against fixtures', () => {
       expect(msgs.filter((m) => m.startsWith('unexpected file'))).toHaveLength(1);
       expect(msgs).toContain('alias event.toba collides with a live entity id; an alias names an entity that no longer exists');
       expect(msgs).toContain('relation related-to -> unknown entity event.former-toba (merged into event.toba; link to that id)');
+      expect(msgs).toContain('relation contemporary-of -> event.toba is listed twice');
+      expect(msgs).toContain("relation related-to -> event.misdated duplicates event.misdated's relation contemporary-of -> event.toba; the site shows inbound relations on both pages, so keep one");
+      expect(msgs).toContain('relation related-to -> event.toba points at the entity itself');
     } finally {
       process.chdir(cwd);
     }

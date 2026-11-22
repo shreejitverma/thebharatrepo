@@ -67,10 +67,6 @@ relations:
   - kind: part-of
     target: tradition.harappan-civilisation
   - kind: contemporary-of
-    target: site.harappa
-  - kind: contemporary-of
-    target: site.dholavira
-  - kind: contemporary-of
     target: site.rakhigarhi
 wikidata: Q5725
 image:

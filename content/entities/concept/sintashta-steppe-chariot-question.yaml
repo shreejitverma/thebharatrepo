@@ -63,10 +63,8 @@ claims:
     sources:
       - src.narasimhan-2019-formation-human-populations
 relations:
-  - { kind: related-to, target: concept.indo-aryan-migration }
   - { kind: related-to, target: text.rigveda }
   - { kind: related-to, target: event.mitanni-treaty }
-  - { kind: related-to, target: concept.gandhara-grave-culture }
 wikidata: Q656393
 image:
   commons: "File:Artefacts - Sintashta culture - Museum of Archeology and Ethnography, Ufa.jpg"

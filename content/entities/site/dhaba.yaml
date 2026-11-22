@@ -50,8 +50,6 @@ claims:
 relations:
   - kind: contemporary-of
     target: site.jwalapuram
-  - kind: related-to
-    target: event.arrival-of-modern-humans-south-asia
 tags:
   - palaeolithic
   - middle-palaeolithic

@@ -30,7 +30,6 @@ claims:
   - text: A state publication quotes the closing verses as dating its composition to 1290 at Nevasa.
     grade: B
     sources: [src.pradhan-1987-jnaneshvari-translation]
-relations:
-  - { kind: authored-by, target: person.jnaneshwar }
+relations: []
 tags: [marathi, literature, bhagavad-gita, varkari]
 review: { status: draft, author: "codex-gpt-6" }

@@ -53,8 +53,6 @@ claims:
 relations:
   - kind: part-of
     target: cosmology.mahayuga
-  - kind: preceded
-    target: cosmology.treta-yuga
 wikidata: Q1623029
 tags:
   - cosmology

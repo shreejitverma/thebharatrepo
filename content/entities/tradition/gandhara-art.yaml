@@ -35,10 +35,7 @@ claims:
       - src.behrendt-2004-buddhist-architecture-gandhara
       - src.quintanilla-2007-sculpture-at-mathura
 relations:
-  - { kind: patronised-by, target: polity.kushan-empire }
-  - { kind: patronised-by, target: person.kanishka-i }
   - { kind: influenced, target: tradition.mathura-art }
-  - { kind: related-to, target: polity.indo-greek-kingdom }
 wikidata: Q1008014
 image:
   commons: "File:Afghanistan, Gandhara, Hadda, late Kushan Period - Seated Buddha - 1967.39 - Cleveland Museum of Art.jpg"

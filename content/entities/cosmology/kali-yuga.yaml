@@ -56,8 +56,6 @@ relations:
     target: cosmology.dvapara-yuga
   - kind: related-to
     target: event.kali-yuga-epoch
-  - kind: related-to
-    target: concept.kalki-prophecy
 wikidata: Q228409
 tags:
   - cosmology

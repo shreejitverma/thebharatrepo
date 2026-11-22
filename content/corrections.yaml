@@ -2675,3 +2675,38 @@
   sources:
     - src.mutin-2025-mehrgarh-radiocarbon
     - src.fuller-2006-agricultural-origins-south-asia
+- date: 2026-11-22
+  target: cosmology.kalpa
+  before: "The Kalpa page listed Lifespan of Brahma twice under Connections: Kalpa part of Lifespan of Brahma, and Lifespan of Brahma related to this. Pralaya and the Shveta Varaha Kalpa were also listed twice."
+  after: "Each connection is listed once. Kalpa is part of Lifespan of Brahma, and the Shveta Varaha Kalpa is part of Lifespan of Brahma; the reverse related-to entries on Lifespan of Brahma, Pralaya and the Shveta Varaha Kalpa were removed."
+  reason: "The entity page shows inbound relations automatically, so a relation authored on both entities appears twice on both pages. The validator now rejects a second relation between the same two entities."
+- date: 2026-11-22
+  target: "Relations on 146 entities: artifact.kalibangan-ploughed-field, artifact.priest-king-mohenjo-daro, concept.black-and-red-ware-culture, concept.brahmi-to-gupta-script, concept.harappan-mesopotamian-trade, concept.harappan-weights-and-measures, concept.indo-aryan-migration, concept.indus-script, concept.iron-metallurgy-in-india, concept.neolithic-of-the-vindhyas, concept.northern-black-polished-ware-culture, concept.painted-grey-ware-culture, concept.rakhigarhi-i6113-genome, concept.shaka-era, concept.sintashta-steppe-chariot-question, concept.southern-neolithic-ash-mounds, concept.vedic-sanskrit, concept.vikram-samvat, concept.yuga-chronology-of-the-itihasa, cosmology.brahma-lifespan, cosmology.dvapara-yuga, cosmology.kali-yuga, cosmology.mahayuga, cosmology.pralaya, cosmology.satya-yuga, cosmology.shveta-varaha-kalpa, cosmology.treta-yuga, cosmology.vaivasvata-manvantara, event.4-2-ka-climate-aridification, event.brahmi-decipherment-prinsep, event.kali-yuga-epoch, event.matsya-flood-narrative, event.mitanni-treaty, person.banabhatta, person.chandragupta-ii, person.chandragupta-maurya, person.gautama-buddha, person.harshavardhana, person.kalidasa, person.kanishka-i, person.kharavela, person.krishna, person.kumarila-bhatta, person.lalleshwari, person.mahavira, person.rama, person.vaivasvata-manu, person.varahamihira, polity.chalukya-dynasty-of-badami, polity.gupta-empire, polity.indo-greek-kingdom, polity.kuru-kingdom, polity.kushan-empire, polity.magadha, polity.maurya-empire, polity.nanda-dynasty, polity.pala-empire, polity.pallava-dynasty, polity.panchala, polity.satavahana-dynasty, polity.shunga-dynasty, site.ahichhatra, site.ajanta-caves, site.atranjikhera, site.attirampakkam, site.balathal, site.brihadisvara-temple-thanjavur, site.chanhudaro, site.dhaba, site.dholavira, site.didwana, site.ganweriwala, site.gilund, site.great-bath-mohenjo-daro, site.gufkral, site.hampi, site.hastinapura, site.hunsgi-baichbal-valley, site.inamgaon, site.isampur, site.jwalapuram, site.kalibangan, site.keezhadi, site.kot-diji, site.lahuradewa, site.langhnaj, site.lothal, site.mehrgarh, site.mohenjo-daro, site.nalanda-mahavihara, site.paiyampalli, site.rakhigarhi, site.sanauli, site.sanchi-stupa, site.sanganakallu, site.shortugai, site.udayagiri-caves, text.aranyakas, text.arthashastra, text.aryabhatiya, text.ashtadhyayi, text.atharvaveda, text.bhagavad-gita, text.brahmanas, text.brahmasphutasiddhanta, text.chandogya-upanishad, text.gita-govinda, text.harshacharita, text.jnaneshwari, text.kitab-al-hind, text.krishna-yajurveda, text.lilavati, text.mahabharata, text.manusmriti, text.milindapanha, text.nirukta, text.rigveda, text.samaveda, text.sangam-literature, text.shatapatha-brahmana, text.shukla-yajurveda, text.shulba-sutras, text.sushruta-samhita, text.tirukkural, text.tolkappiyam, text.upanishads, text.valmiki-ramayana, text.vedangas, text.yajurveda, text.yoga-sutras, tradition.agnicayana, tradition.ahar-banas-culture, tradition.cemetery-h-culture, tradition.gandhara-art, tradition.hakra-ware-phase, tradition.jhukar-phase, tradition.jorwe-culture, tradition.kumbha-mela, tradition.malwa-culture, tradition.mathura-art, tradition.ochre-coloured-pottery-culture, tradition.rangpur-late-harappan, tradition.shrauta-ritual, tradition.soma-ritual, tradition.vedic-chanting, tradition.vedic-oral-transmission"
+  before: "271 pairs of entities were linked by two or more relations, usually the same relation authored from both sides (for example A authored B and B authored-by A, or A related-to B and B related-to A)."
+  after: "272 redundant relations were removed so each pair is linked once. Where one relation was a generic related-to or contemporary-of and the other was specific, the specific one was kept; between inverse forms, the active form (authored, ruled, patronised, founded, succeeded) was kept."
+  reason: "Each pair is shown on both entities' pages from a single relation, so the duplicates repeated the same connection. No connection between two entities was removed."
+- date: 2026-11-22
+  target: person.chandragupta-maurya
+  before: "Chandragupta Maurya founded the Maurya Empire, ruled the Maurya Empire, and the Maurya Empire was founded by Chandragupta Maurya."
+  after: "Chandragupta Maurya founded the Maurya Empire."
+  reason: "Three relations described one link between the same two entities. Founding the empire is the most specific of them."
+- date: 2026-11-22
+  target: tradition.mathura-art and tradition.gandhara-art
+  before: "Gandhara art influenced Mathura art, and Mathura art was contemporary of Gandhara art."
+  after: "Gandhara art influenced Mathura art."
+  reason: "Two relations linked the same pair. The influence relation is the more specific statement."
+- date: 2026-11-22
+  target: site.udayagiri-caves and polity.gupta-empire
+  before: "The Gupta Empire patronised the Udayagiri Caves, and the Udayagiri Caves were part of the Gupta Empire."
+  after: "The Gupta Empire patronised the Udayagiri Caves."
+  reason: "Two relations linked the same pair, and part-of describes a component rather than a site within a polity's territory."
+- date: 2026-11-22
+  target: site.brihadisvara-temple-thanjavur and person.rajaraja-i
+  before: "Rajaraja I founded the Brihadisvara Temple, and the temple was patronised by Rajaraja I."
+  after: "Rajaraja I founded the Brihadisvara Temple."
+  reason: "Two relations linked the same pair; founding the temple is the more specific statement."
+- date: 2026-11-22
+  target: polity.chola-dynasty and polity.pallava-dynasty
+  before: "The Cholas succeeded the Pallavas as the dominant power in the Tamil country, and the Pallavas preceded the Cholas, who displaced them in the late 9th century."
+  after: "One relation: the Cholas succeeded the Pallavas as the dominant power in the Tamil country, displacing them in the late 9th century."
+  reason: "Both relations described the same succession; their notes were combined on the one kept."

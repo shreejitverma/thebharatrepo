@@ -249,6 +249,35 @@ export function resolveAliases(entities: Iterable<Pick<Entity, 'id' | 'aliases'>
   return { aliases, problems };
 }
 
+/**
+ * The entity page lists outbound relations and, automatically, inbound ones, so each pair of entities
+ * takes at most one relation: a second relation between the same two entities, in either direction and
+ * of any kind, shows the other entity twice on both pages. Also rejects an entity relating to itself.
+ * Each problem is filed against the entity that carries the redundant relation.
+ */
+export function duplicateRelations(entities: Iterable<Pick<Entity, 'id' | 'relations'>>): { id: string; message: string }[] {
+  const problems: { id: string; message: string }[] = [];
+  const first = new Map<string, { from: string; kind: string; target: string }>();
+  for (const e of entities) {
+    for (const r of e.relations) {
+      if (r.target === e.id) {
+        problems.push({ id: e.id, message: `relation ${r.kind} -> ${r.target} points at the entity itself` });
+        continue;
+      }
+      const key = [e.id, r.target].sort().join(' ');
+      const prev = first.get(key);
+      if (!prev) {
+        first.set(key, { from: e.id, kind: r.kind, target: r.target });
+        continue;
+      }
+      if (prev.from === e.id && prev.kind === r.kind) problems.push({ id: e.id, message: `relation ${r.kind} -> ${r.target} is listed twice` });
+      else if (prev.from === e.id) problems.push({ id: e.id, message: `relations ${prev.kind} and ${r.kind} both link to ${r.target}; keep one relation per pair of entities and put any detail in its note` });
+      else problems.push({ id: e.id, message: `relation ${r.kind} -> ${r.target} duplicates ${prev.from}'s relation ${prev.kind} -> ${e.id}; the site shows inbound relations on both pages, so keep one` });
+    }
+  }
+  return problems;
+}
+
 let strays: string[] = [];
 
 function walk(dir: string, ext: string): string[] {
@@ -412,7 +441,7 @@ export function loadContentUncached(): ContentGraph {
   };
 
   const { aliases, problems: aliasProblems } = resolveAliases(entities.values());
-  for (const p of aliasProblems) errors.push({ file: entityFile.get(p.id) ?? p.id, message: p.message });
+  for (const p of [...aliasProblems, ...duplicateRelations(entities.values())]) errors.push({ file: entityFile.get(p.id) ?? p.id, message: p.message });
   const unknownEntity = (id: string) => (aliases.has(id) ? `${id} (merged into ${aliases.get(id)}; link to that id)` : id);
 
   const inbound = new Map<string, { from: string; kind: string }[]>();

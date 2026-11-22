@@ -48,9 +48,7 @@ claims:
     grade: A
     sources:
       - src.blinkhorn-2013-thar-middle-palaeolithic
-relations:
-  - kind: related-to
-    target: site.bagor
+relations: []
 tags:
   - palaeolithic
   - thar-desert

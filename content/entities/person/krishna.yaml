@@ -126,13 +126,7 @@ debate: >-
   beyond what the evidence can settle.
 relations:
   - kind: related-to
-    target: cosmology.dvapara-yuga
-  - kind: related-to
     target: cosmology.kali-yuga
-  - kind: related-to
-    target: event.kali-yuga-epoch
-  - kind: related-to
-    target: concept.yuga-chronology-of-the-itihasa
   - kind: related-to
     target: text.chandogya-upanishad
   - kind: related-to

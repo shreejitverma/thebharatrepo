@@ -82,11 +82,7 @@ relations:
   - kind: part-of
     target: tradition.harappan-civilisation
   - kind: contemporary-of
-    target: site.banawali
-  - kind: contemporary-of
     target: site.rakhigarhi
-  - kind: related-to
-    target: concept.ghaggar-hakra-sarasvati-debate
 wikidata: Q1722226
 image:
   commons: "File:Kalibangan cylinder seal.jpg"

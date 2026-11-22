@@ -43,7 +43,6 @@ claims:
 debate: >-
   After R. Shamasastry published the text in 1909, many scholars read it as a description of Chandragupta Maurya's government, and R. P. Kangle defended a Mauryan date. Thomas Trautmann's statistical study (1971) showed several authors at work, and Patrick Olivelle (2013) places the earliest source material around 50 BCE, Kautilya’s recension around 50 to 125 CE, and the final redaction around 175 to 300 CE.
 relations:
-  - { kind: authored-by, target: person.kautilya }
   - { kind: related-to, target: polity.maurya-empire }
   - { kind: related-to, target: text.manusmriti }
 wikidata: Q323133

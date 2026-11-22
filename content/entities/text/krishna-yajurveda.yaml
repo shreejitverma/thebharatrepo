@@ -61,7 +61,6 @@ claims:
       - src.witzel-1997-early-sanskritization-kuru
 relations:
   - { kind: part-of, target: text.yajurveda }
-  - { kind: related-to, target: text.baudhayana-shulba-sutra }
   - { kind: related-to, target: tradition.agnicayana }
   - { kind: related-to, target: polity.kuru-kingdom }
 tags: [veda, samhita, yajurveda, taittiriya, maitrayani, kathaka]

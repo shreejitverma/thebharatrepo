@@ -33,8 +33,7 @@ claims:
   - text: The Palas took part in the three-sided struggle for Kanyakubja with the Gurjara-Pratiharas and the Rashtrakutas.
     grade: B
     sources: [src.singh-2008-ancient-early-medieval-india, src.kulke-2004-history-of-india]
-relations:
-  - { kind: related-to, target: polity.rashtrakuta-dynasty }
+relations: []
 wikidata: Q668412
 tags: [bengal, bihar, dynasty, buddhism]
 review: { status: draft, author: "claude-opus-5-5" }

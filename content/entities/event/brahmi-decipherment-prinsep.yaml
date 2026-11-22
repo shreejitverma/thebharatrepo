@@ -32,9 +32,7 @@ claims:
       - src.salomon-1998-indian-epigraphy
       - src.lahiri-2015-ashoka-ancient-india
 relations:
-  - { kind: related-to, target: concept.brahmi-to-gupta-script }
   - { kind: related-to, target: site.sanchi-stupa }
-  - { kind: related-to, target: artifact.ashoka-major-rock-edict-xiii }
   - { kind: related-to, target: person.ashoka }
 wikidata: null
 tags: [brahmi, epigraphy, james-prinsep, ashoka, sanchi]

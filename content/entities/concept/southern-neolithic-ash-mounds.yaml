@@ -53,13 +53,7 @@ claims:
       - src.fuller-2007-dating-neolithic-south-india
 relations:
   - kind: related-to
-    target: site.budihal
-  - kind: related-to
-    target: site.sanganakallu
-  - kind: related-to
     target: site.paiyampalli
-  - kind: related-to
-    target: event.domestication-of-zebu-cattle
 tags:
   - neolithic
   - southern-neolithic

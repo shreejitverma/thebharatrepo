@@ -111,9 +111,7 @@ debate: >-
   James Lochtefeld argue that bathing fairs at Prayag and the other sites are old, but that the name Kumbha
   and the twelve-year cycle belong first to Haridwar and were extended to the other three sites between the
   late 18th and 19th centuries.
-relations:
-  - kind: related-to
-    target: event.samudra-manthana
+relations: []
 aliases:
   - tradition.kumbh-mela-unesco-inscription
 wikidata: Q10283

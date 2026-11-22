@@ -54,8 +54,6 @@ relations:
     target: cosmology.mahayuga
   - kind: succeeded
     target: cosmology.treta-yuga
-  - kind: preceded
-    target: cosmology.kali-yuga
   - kind: related-to
     target: person.krishna
 wikidata: Q12928623

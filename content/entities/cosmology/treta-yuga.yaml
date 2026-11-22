@@ -53,8 +53,6 @@ relations:
     target: cosmology.mahayuga
   - kind: succeeded
     target: cosmology.satya-yuga
-  - kind: preceded
-    target: cosmology.dvapara-yuga
   - kind: related-to
     target: person.rama
 wikidata: Q1772811

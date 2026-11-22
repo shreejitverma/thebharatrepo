@@ -51,10 +51,6 @@ claims:
 relations:
   - kind: part-of
     target: cosmology.brahma-lifespan
-  - kind: related-to
-    target: cosmology.kalpa
-  - kind: related-to
-    target: cosmology.vaivasvata-manvantara
 wikidata: null
 tags:
   - cosmology

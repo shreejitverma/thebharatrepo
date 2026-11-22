@@ -127,12 +127,6 @@ claims:
 relations:
   - kind: part-of
     target: tradition.harappan-civilisation
-  - kind: related-to
-    target: artifact.harappan-steatite-seals
-  - kind: related-to
-    target: artifact.dholavira-signboard
-  - kind: related-to
-    target: artifact.pashupati-seal
 wikidata: Q601388
 debate: >-
   The Indus script is contested along two axes: (1) whether it encodes spoken language (the majority position,

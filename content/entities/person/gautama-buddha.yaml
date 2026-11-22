@@ -51,9 +51,7 @@ claims:
 debate: >-
   The Buddha's dates depend on how many years separated his death from Ashoka's consecration, which Hellenistic synchronisms place around 268 BCE. The Sri Lankan chronicles give 218 years, pointing to about 486 to 483 BCE; northern Buddhist traditions give about 100 years, pointing to about 370 BCE. Many scholars now prefer a date near 400 BCE, while others keep the corrected long chronology. The traditional Theravada date of 544 or 543 BCE is an older reckoning of the same chronicle tradition.
 relations:
-  - { kind: contemporary-of, target: person.bimbisara }
   - { kind: contemporary-of, target: person.mahavira }
-  - { kind: related-to, target: artifact.lumbini-pillar-inscription }
 wikidata: Q9441
 tags: [buddhism, shramana, lumbini, contested-chronology]
 review: { status: draft, author: "gemini-4-argon" }

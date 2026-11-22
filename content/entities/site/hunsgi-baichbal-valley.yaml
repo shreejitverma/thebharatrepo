@@ -43,9 +43,7 @@ claims:
     sources:
       - src.petraglia-1999-isampur-acheulian-quarry
       - src.misra-2001-prehistoric-colonization-india
-relations:
-  - kind: related-to
-    target: site.isampur
+relations: []
 tags:
   - palaeolithic
   - acheulian

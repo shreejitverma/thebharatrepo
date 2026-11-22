@@ -56,7 +56,6 @@ claims:
       - src.tewari-2003-origins-iron-working-india
       - src.singh-2008-ancient-early-medieval-india
 relations:
-  - { kind: preceded, target: concept.painted-grey-ware-culture }
   - { kind: excavated-at, target: site.atranjikhera }
   - { kind: related-to, target: concept.iron-metallurgy-in-india }
 wikidata: Q2525323

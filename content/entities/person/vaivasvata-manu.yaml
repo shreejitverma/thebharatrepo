@@ -65,12 +65,6 @@ claims:
       - src.rocher-1986-puranas
 relations:
   - kind: related-to
-    target: cosmology.vaivasvata-manvantara
-  - kind: related-to
-    target: cosmology.manvantara
-  - kind: related-to
-    target: event.matsya-flood-narrative
-  - kind: related-to
     target: text.rigveda
   - kind: related-to
     target: text.shatapatha-brahmana

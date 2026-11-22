@@ -40,7 +40,6 @@ claims:
     grade: B
     sources: [src.sastri-1955-the-colas]
 relations:
-  - { kind: patronised-by, target: person.rajaraja-i }
   - { kind: patronised-by, target: polity.chola-dynasty }
 tags: [unesco, chola, temple-architecture, shaiva]
 review: { status: draft, author: "claude-opus-5-5" }

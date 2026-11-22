@@ -35,7 +35,6 @@ claims:
     sources:
       - src.wujastyk-2008-body-of-knowledge-ayurvedic
 relations:
-  - { kind: related-to, target: text.charaka-samhita }
   - { kind: contemporary-of, target: polity.gupta-empire }
 wikidata: Q1995239
 tags: [sushruta-samhita, ayurveda, surgery, rhinoplasty, medicine, science]

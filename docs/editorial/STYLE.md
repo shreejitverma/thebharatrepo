@@ -165,6 +165,8 @@ Rules:
   A relation always reads as a sentence with this entity as the subject: `<this entity> <kind> <target>`.
   For example, on `text.aitareya-brahmana` write `{ kind: commented-on, target: text.rigveda }` (the Brahmana comments on the Rigveda), and on `person.ashoka` write `{ kind: ruled, target: polity.maurya-empire }`.
   Never use a kind in the reverse sense; the site shows inbound relations automatically.
+  Author each connection once, on one of the two entities: the validator rejects a second relation between the same pair, in either direction and of any kind, because the page would list the other entity twice.
+  Keep the most specific kind and put any further detail in `note`.
   Relation kinds: `part-of`, `authored`, `authored-by`, `ruled`, `ruled-by`, `patronised`, `patronised-by`, `succeeded`, `preceded`, `commented-on`, `located-at`, `excavated-at`, `issued-by`, `founded`, `founded-by`, `taught`, `student-of`, `influenced`, `contemporary-of`, `related-to`.
 - `aliases` (optional) lists former ids of entities merged into this one, for example `aliases: [concept.rigvedic-sarasvati]` on `concept.ghaggar-hakra-sarasvati-debate`.
   The build turns each alias into a permanent (308) redirect from `/archive/<type>/<slug>` and from the Kaalchakra deep link `/kaalchakra?id=<id>`, so published URLs keep working.

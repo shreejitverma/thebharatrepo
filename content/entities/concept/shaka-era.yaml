@@ -77,8 +77,6 @@ relations:
   - kind: related-to
     target: concept.vikram-samvat
   - kind: related-to
-    target: concept.kali-era-in-inscriptions
-  - kind: related-to
     target: event.kali-yuga-epoch
 wikidata: Q2358959
 tags:

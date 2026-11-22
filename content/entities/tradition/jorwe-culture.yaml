@@ -56,10 +56,6 @@ claims:
 relations:
   - kind: succeeded
     target: tradition.malwa-culture
-  - kind: related-to
-    target: site.inamgaon
-  - kind: related-to
-    target: site.daimabad
 wikidata: Q48728694
 tags:
   - chalcolithic

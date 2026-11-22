@@ -62,8 +62,6 @@ relations:
   - kind: part-of
     target: tradition.harappan-civilisation
   - kind: related-to
-    target: concept.harappan-mesopotamian-trade
-  - kind: related-to
     target: concept.harappan-carnelian-bead-making
 wikidata: Q1550221
 tags:

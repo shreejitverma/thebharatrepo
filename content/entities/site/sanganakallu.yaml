@@ -54,10 +54,6 @@ claims:
 relations:
   - kind: part-of
     target: concept.southern-neolithic-ash-mounds
-  - kind: contemporary-of
-    target: site.budihal
-  - kind: contemporary-of
-    target: site.paiyampalli
 tags:
   - neolithic
   - southern-neolithic

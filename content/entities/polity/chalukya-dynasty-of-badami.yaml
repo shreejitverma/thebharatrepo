@@ -40,8 +40,7 @@ claims:
     grade: B
     sources: [src.singh-2008-ancient-early-medieval-india, src.unesco-1987-pattadakal]
 relations:
-  - { kind: related-to, target: polity.pallava-dynasty, note: Rivals }
-  - { kind: preceded, target: polity.rashtrakuta-dynasty }
+  - { kind: related-to, target: polity.pallava-dynasty, note: Long-running rivals }
 wikidata: Q1395011
 tags: [deccan, karnataka, dynasty, badami]
 review: { status: draft, author: "claude-opus-5-5" }

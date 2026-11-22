@@ -32,8 +32,7 @@ claims:
   - text: Her verses express a Shaiva yoga of inner realisation rather than external ritual.
     grade: B
     sources: [src.grierson-1920-lalla-vakyani]
-relations:
-  - { kind: related-to, target: tradition.kashmir-shaivism }
+relations: []
 wikidata: Q2667861
 tags: [kashmiri, poetry, yogini, women-poets, bhakti]
 review: { status: draft, author: "claude-opus-5-5" }

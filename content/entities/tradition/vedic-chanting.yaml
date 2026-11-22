@@ -68,8 +68,6 @@ claims:
     sources:
       - src.unesco-2003-tradition-vedic-chanting
 relations:
-  - { kind: related-to, target: tradition.vedic-oral-transmission }
-  - { kind: related-to, target: text.samaveda }
   - { kind: related-to, target: text.rigveda }
   - { kind: related-to, target: text.vedangas }
   - { kind: related-to, target: tradition.shrauta-ritual }

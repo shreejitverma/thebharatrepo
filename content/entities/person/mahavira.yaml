@@ -40,10 +40,7 @@ claims:
     grade: B
     sources:
       - src.dundas-2002-the-jains
-relations:
-  - { kind: contemporary-of, target: person.gautama-buddha }
-  - { kind: contemporary-of, target: person.bimbisara }
-  - { kind: related-to, target: tradition.ajivika }
+relations: []
 wikidata: Q9422
 tags: [jainism, tirthankara, shramana, ahimsa]
 review: { status: draft, author: "gemini-4-argon" }

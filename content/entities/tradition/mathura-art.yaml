@@ -34,10 +34,7 @@ claims:
       - src.quintanilla-2007-sculpture-at-mathura
       - src.behrendt-2004-buddhist-architecture-gandhara
 relations:
-  - { kind: patronised-by, target: polity.kushan-empire }
-  - { kind: patronised-by, target: person.kanishka-i }
   - { kind: patronised-by, target: polity.gupta-empire }
-  - { kind: contemporary-of, target: tradition.gandhara-art }
 wikidata: Q28173968
 image:
   commons: "File:Seated Buddha with attendants, Mathura School of Art, Government Museum, Mathura.jpg"

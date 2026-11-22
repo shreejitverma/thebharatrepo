@@ -69,8 +69,6 @@ claims:
       - src.coningham-2015-archaeology-south-asia
 relations:
   - kind: related-to
-    target: site.koldihwa
-  - kind: related-to
     target: site.lahuradewa
   - kind: related-to
     target: site.dhaba
