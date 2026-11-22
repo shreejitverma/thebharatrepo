@@ -2826,3 +2826,27 @@
   before: "The link to the article on verbal roots pointed at /archive/article/language/dhatu-the-verbal-roots, which does not exist."
   after: "The link points at /language/dhatu-the-verbal-roots."
   reason: "Articles live at /<category>/<slug>; the archive only holds entities. The validator now checks internal links in article bodies."
+- date: 2026-11-22
+  target: site.rupnagar
+  before: "The summary dated Period I to c. 2100-1400 BCE while the dating gave c. 2400 to 1400 BCE."
+  after: "The summary gives c. 2400-1400 BCE, and the note records what the excavation reports say and why the broader window is kept."
+  reason: "The 1953-54 and 1954-55 ASI reviews describe a late Mature Harappan phase, a later Harappan phase, an occupation of about half a millennium and Painted Grey Ware reoccupation around 1000 BC, but give no calendar dates for Period I; the cited syntheses could not be rechecked, so the more conservative range is kept."
+  sources:
+    - src.asi-1954-indian-archaeology-1953-54
+    - src.asi-1955-indian-archaeology-1954-55
+- date: 2026-11-22
+  target: site.shortugai
+  before: "The summary gave c. 2200-1800 BCE, the dating c. 2300 to 1800 BCE, and the note assigned the colony and later levels to periods with dates reaching c. 1800/1700 BCE, while the label grouped the periods differently."
+  after: "The summary, label, note and dating all give the broader span of about 2300 to 1800 BCE for the Mature Harappan colony and its later levels, and the note says the period-by-period dates could not be checked."
+  reason: "The period dates in the note could not be confirmed in the cited syntheses, and the label and note disagreed on which periods were Harappan, so the more conservative range is kept without the unconfirmed detail."
+  sources:
+    - src.possehl-2002-indus-civilization
+    - src.kenoyer-1998-ancient-cities-indus
+- date: 2026-11-22
+  target: site.kayatha
+  before: "The summary and teen summary gave c. 2400-2000 BCE, the note cited calibrated dates of c. 2400/2350-2000 BCE, and the dating ran from 2450 to 1800 BCE with a best estimate of 2100 BCE."
+  after: "The summaries give c. 2450-1800 BCE. The note quotes Misra's 2000 to 1800 BC for the Kayatha culture and says the earlier start of about 2400 BCE could not be confirmed, and the unsupported best estimate is removed."
+  reason: "Misra (2001, p. 515) states that radiocarbon dates suggest 2000 to 1800 B.C. for the Kayatha culture, which the earlier note contradicted; Coningham and Young (2015) could not be checked, so the more conservative range is kept."
+  sources:
+    - { id: src.misra-2001-prehistoric-colonization-india, locator: "p. 515" }
+    - src.coningham-2015-archaeology-south-asia
