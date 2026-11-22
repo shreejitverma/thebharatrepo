@@ -1,6 +1,6 @@
 'use client';
 
-import { useCallback, useEffect, useId, useMemo, useRef, useState } from 'react';
+import { use, useCallback, useEffect, useId, useMemo, useRef, useState } from 'react';
 import dynamic from 'next/dynamic';
 import { useSearchParams } from 'next/navigation';
 import { KINDS, KIND_LABELS, type Kind } from '@/lib/content/labels';
@@ -13,6 +13,7 @@ import Wheel from './Wheel';
 import River from './River';
 import ListView from './ListView';
 import Panel from './Panel';
+import { loadItems } from './data';
 import { entriesAt, panRegion, resolveRegion, revealPlace, zoomRegion, type MapRegion, type TimeZoom } from './mapState';
 import { SEGMENTS, SHORT_SEGMENT_LABELS, formatDating, kindColor, orderedItems, primaryAnchor, primaryDating, segmentUnitBounds, yearToUnit } from './shared';
 import { CALENDARS, VIEWS, hrefFor, parseState, serialise, type State } from './urlState';
@@ -45,13 +46,35 @@ interface Mount {
 }
 
 /**
+ * The items arrive as a static JSON file rather than in the page, so the HTML stays small as the archive grows.
+ * Until they arrive the page's Suspense fallback (the server-rendered wheel) stays on screen.
+ * useSearchParams comes first: during static prerendering it bails out to that fallback before any fetch.
+ */
+export default function Kaalchakra() {
+  const search = useSearchParams().toString();
+  const result = use(loadItems());
+  if (!result.ok) {
+    return (
+      <div className="kc">
+        <p className="empty" role="alert">
+          The Kaalchakra data could not be loaded ({result.error}).{' '}
+          <button type="button" className="btn" onClick={() => window.location.reload()}>
+            Reload the page
+          </button>
+        </p>
+      </div>
+    );
+  }
+  return <KaalchakraMount items={result.items} search={search} />;
+}
+
+/**
  * State is initialised from useSearchParams, so deep links work on first load and on client-side
  * navigation. The inner component remounts only when the search params change to something this
  * component did not write itself: Back and Forward, or following a link such as the nav link to
  * /kaalchakra. Its own debounced replaceState writes are recognised and do not remount it.
  */
-export default function Kaalchakra({ items }: { items: KcItem[] }) {
-  const search = useSearchParams().toString();
+function KaalchakraMount({ items, search }: { items: KcItem[]; search: string }) {
   const byId = useMemo(() => new Map(items.map((i) => [i.id, i])), [items]);
   const [mount, setMount] = useState<Mount>(() => ({ seen: search, written: null, epoch: 0, initial: parseState(search, byId) }));
   if (search !== mount.seen) {

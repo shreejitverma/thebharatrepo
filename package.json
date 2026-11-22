@@ -3,6 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
+    "predev": "tsx scripts/build-content.ts",
     "dev": "next dev",
     "prebuild": "npm run content:validate && tsx scripts/content-verify-sources.ts --offline && tsx scripts/build-content.ts",
     "build": "next build",
