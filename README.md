@@ -46,8 +46,8 @@ npm run content:validate        # schemas and cross-references; exit 1 on any pr
 npm run content:report          # coverage: entities, grades, kinds, sources
 npm run content:verify-sources  # resolve every DOI, ISBN, OCLC, QID and Commons file, and each URL that is a source's only identifier; exit 1 on any mismatch
 npm run data:export             # generate JSON, CSV, JSON Schema and manifest
-npm run data:verify-export      # re-import and compare the export
-npm run build                   # validate, offline verification gate, search index and open data, then next build
+npm run data:verify-export      # check checksums, re-import through the validators, and compare byte for byte
+npm run build                   # validate, offline verification gate, search index, open data export and its round trip, then next build
 npm run test:e2e                # Playwright and axe against a production build (desktop and mobile)
 ```
 
@@ -73,18 +73,25 @@ The Kaalchakra axis is piecewise: logarithmic for deep time, linear for history,
 
 ## Open data
 
-Each build writes the download bundle to `public/data/` and serves it at `/data/`.
+`npm run data:export` writes the download bundle to `public/data/`, and the `/data` page (`src/app/data/page.tsx`) lists it with sizes and checksums.
+`npm run build` regenerates it and then runs `npm run data:verify-export`, so no build ships a bundle that fails the round trip.
+`npm run dev` regenerates it first as well.
 
 - `archive.json` includes schema version 1, entities, sources, article frontmatter and inline citation metadata, and corrections.
-- `entities.csv` covers core entity fields, and `datings.csv` has one row per entity dating with a 1-based ordinal and a JSON-encoded sources field.
+- `entities.csv` covers core entity fields plus `primaryDate`, the entity's primary dating as the site writes it.
+- `datings.csv` has one row per entity dating, with a 1-based ordinal, a `primary` flag set by the shared ranking rule (`primaryDating` in `src/lib/content/lens.ts`), and a JSON-encoded sources field.
 - `schema.json` is generated from the archive's Zod schemas and describes the exported JSON structure.
-- `manifest.json` records the version, counts, licence, and SHA-256 checksums for the bundle files.
+- `manifest.json` records the version, counts, licence, content commit date and SHA-256 checksums for the other files.
 
 Exported years use [astronomical year numbering](#time-model).
 The verifier runs the Zod refinements and the loader's integrity checks and compares the re-imported bundle to the current archive.
-The export's `generatedAt` is the UTC committer timestamp of the most recent first-parent commit that changed `content/` or `_content/`.
-Use a checkout with enough history to reach that commit and its parent.
-The bundle is generated locally and should be kept out of pull requests.
+
+The data files are a pure function of the validated content, so their bytes change only when content changes.
+Only `manifest.json` depends on git: `contentCommitDate` is the UTC committer timestamp of the most recent first-parent commit that changed `content/` or `_content/`.
+When the checkout cannot answer, because it has no `.git` or is a shallow clone (as on Vercel) whose history ends before that commit and its parent, the date is `null` and `contentCommitDateNote` says why; the build warns and continues rather than guess.
+
+The bundle is generated and gitignored, along with the rest of `public/data/`, and must be kept out of pull requests.
+Other build steps may write their own files there (for example `kaalchakra.json`); the export replaces only its own files and removes only the retired `index.html`.
 
 ## Licence
 

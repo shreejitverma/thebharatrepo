@@ -28,6 +28,7 @@ export default function Footer() {
         <div>
           <h2>Open</h2>
           <ul>
+            <li><Link href="/data">Open data</Link></li>
             <li><a href={REPO_URL}>Source code (MIT)</a></li>
             <li><a href={`${REPO_URL}/issues/new?labels=content`}>Report an error</a></li>
             <li>Content licensed CC BY-SA 4.0</li>

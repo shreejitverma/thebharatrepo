@@ -1,3 +1,4 @@
+import { createHash } from 'node:crypto';
 import { expect, test, type Page } from '@playwright/test';
 import AxeBuilder from '@axe-core/playwright';
 
@@ -20,7 +21,7 @@ async function noHorizontalScroll(page: Page) {
 }
 
 test.describe('pages render, are accessible and fit the viewport', () => {
-  for (const path of ['/', '/kaalchakra', '/archive', '/methodology', '/sources', '/corrections', '/history']) {
+  for (const path of ['/', '/kaalchakra', '/archive', '/methodology', '/sources', '/corrections', '/history', '/data']) {
     test(`page ${path}`, async ({ page }) => {
       // A full-page axe scan scales with DOM size; /corrections and /sources list the whole corpus
       // and exceed the default 30s budget under parallel load.
@@ -167,6 +168,23 @@ test.describe('Kaalchakra', () => {
     await page.getByLabel('Filter entries').fill('zzzzqqqq');
     await expect(page.getByText('0 entries match these filters.')).toBeVisible();
   });
+});
+
+test('open data page links every export file, each matching its manifest checksum', async ({ page, request }) => {
+  await page.goto('/data');
+  await expect(page.getByRole('heading', { level: 1, name: 'Download the archive' })).toBeVisible();
+  const manifest = await (await request.get('/data/manifest.json')).json();
+  const downloads = page.locator('.data-file a[download]');
+  const hrefs = await downloads.evaluateAll((links) => links.map((a) => a.getAttribute('href')));
+  expect(hrefs.sort()).toEqual([...Object.keys(manifest.sha256), 'manifest.json'].map((name) => `/data/${name}`).sort());
+  for (const [name, sha256] of Object.entries(manifest.sha256)) {
+    const response = await request.get(`/data/${name}`);
+    expect(response.status()).toBe(200);
+    expect(createHash('sha256').update(await response.body()).digest('hex')).toBe(sha256);
+    await expect(page.locator('.data-file', { hasText: `Download ${name}` }).locator('code')).toHaveText(sha256 as string);
+  }
+  await expect(page.locator('.data-counts')).toContainText(String(manifest.counts.entities));
+  await expect(page.locator('.site-footer').getByRole('link', { name: 'Open data' })).toHaveAttribute('href', '/data');
 });
 
 test('search finds entities and articles', async ({ page }) => {
