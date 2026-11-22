@@ -34,6 +34,10 @@ describe('sameTitle', () => {
     expect(sameTitle('Ajanta Caves - UNESCO World Heritage Centre', 'Ellora Caves - UNESCO World Heritage Centre')).toBe(false);
     expect(sameTitle('Early History of India', 'Early History of Bengal')).toBe(false);
   });
+  it('rejects a short title whose words are scattered through a different work', () => {
+    expect(sameTitle('A History of India', 'History of the Archaeological Survey of India')).toBe(false);
+    expect(sameTitle('A History of India', 'A History of India, Fourth Edition')).toBe(true);
+  });
   it('rejects an unrelated work that reuses an identifier', () => {
     expect(sameTitle('Vedic Astronomy Proves the Mahabharata War Occurred in 5561 BCE', 'The formation of human populations in South and Central Asia')).toBe(false);
     expect(titleSimilarity('', 'anything')).toBe(0);
@@ -48,6 +52,16 @@ describe('pageMatchesTitle', () => {
     expect(pageMatchesTitle('Group of Monuments at Mahabalipuram', 'Group of Monuments at Hampi - UNESCO World Heritage Centre')).toBe(false);
     expect(pageMatchesTitle('Ajanta Caves', 'Ellora Caves - UNESCO World Heritage Centre')).toBe(false);
     expect(pageMatchesTitle('Ajanta Caves', 'Ajanta Caves - UNESCO World Heritage Centre')).toBe(true);
+  });
+  it('does not count shared site boilerplate as evidence of the same page', () => {
+    expect(pageMatchesTitle('Ajanta Caves - UNESCO World Heritage Centre', 'Taj Mahal - UNESCO World Heritage Centre')).toBe(false);
+    expect(pageMatchesTitle('Sanchi - UNESCO World Heritage Centre', 'Ellora Caves - UNESCO World Heritage Centre')).toBe(false);
+    expect(pageMatchesTitle('Khajuraho Group of Monuments - UNESCO World Heritage Centre', 'Taj Mahal - UNESCO World Heritage Centre')).toBe(false);
+    expect(sameTitle('Ajanta Caves - UNESCO World Heritage Centre', 'Taj Mahal - UNESCO World Heritage Centre')).toBe(false);
+  });
+  it('reads HTML entities and bracketed cataloguer notes in page titles as punctuation', () => {
+    expect(pageMatchesTitle('Rabindranath Tagore - Facts', 'Rabindranath Tagore &#8211; Facts - NobelPrize.org')).toBe(true);
+    expect(pageMatchesTitle('The Invasion of India by Alexander the Great', 'The invasion of India by Alexander the Great [microform], as described by Arrian')).toBe(true);
   });
   it('rejects a page that does not carry the title', () => {
     expect(pageMatchesTitle('Tradition of Vedic chanting', 'Page not found')).toBe(false);

@@ -24,6 +24,8 @@ export function normalizeTitle(s: string): string[] {
     .replace(/[̀-ͯ]/g, '')
     .toLowerCase()
     .replace(/<[^>]+>/g, ' ')
+    .replace(/&(?:#\d+|#x[0-9a-f]+|[a-z]+);/g, ' ')
+    .replace(/\[[^\]]*\]/g, ' ')
     .replace(/[^a-z0-9\s]/g, ' ')
     .replace(/isation/g, 'ization')
     .replace(/colour/g, 'color')
@@ -55,9 +57,9 @@ function nameNumeralsAgree(a: string, b: string): boolean {
   return A.size === B.size && subset(A, B);
 }
 
-function sets(a: string, b: string) {
-  const A = new Set(normalizeTitle(a));
-  const B = new Set(normalizeTitle(b));
+function sets(a: string, b: string, words: (t: string) => string[] = normalizeTitle) {
+  const A = new Set(words(a));
+  const B = new Set(words(b));
   let inter = 0;
   for (const t of A) if (B.has(t)) inter++;
   return { A, B, inter };
@@ -91,7 +93,32 @@ function mainTitle(t: string): string {
   return t.replace(/\([^)]*\)|\[[^\]]*\]/g, ' ').split(/:|\s[-–]\s|\.\s|,\s/)[0];
 }
 
-const BOILERPLATE = new Set(['unesco', 'world', 'heritage', 'centre', 'center', 'list', 'site', 'official', 'website', 'home', 'page']);
+const BOILERPLATE = new Set(['unesco', 'world', 'heritage', 'centre', 'center', 'list', 'intangible', 'cultural', 'site', 'official', 'website', 'home', 'page']);
+
+/** Significant words that name the subject: site and list boilerplate removed. */
+function subjectWords(t: string): string[] {
+  return normalizeTitle(t).filter((w) => !BOILERPLATE.has(w));
+}
+
+/** The words of `small` appear in `big` in the same order as one contiguous run. */
+function containsRun(small: string[], big: string[]): boolean {
+  for (let i = 0; i + small.length <= big.length; i++) if (small.every((w, k) => big[i + k] === w)) return true;
+  return false;
+}
+
+/**
+ * Subject-word overlap of two titles. A title whose subject words are a strict subset of the other's
+ * counts only with at least two words, and two or three must form one contiguous run there, so
+ * "A History of India" is not "History of the Archaeological Survey of India". Four or more words
+ * all present are too specific to coincide.
+ */
+function subjectOverlap(a: string, b: string): { A: Set<string>; B: Set<string>; inter: number; subsetOk: boolean } {
+  const { A, B, inter } = sets(a, b, subjectWords);
+  const dedupe = (t: string) => [...new Set(subjectWords(t))];
+  const [small, big] = A.size <= B.size ? [dedupe(a), dedupe(b)] : [dedupe(b), dedupe(a)];
+  const strictSubset = A.size !== B.size && inter === Math.min(A.size, B.size);
+  return { A, B, inter, subsetOk: !strictSubset || small.length >= 4 || (small.length >= 2 && containsRun(small, big)) };
+}
 
 /** Same word, a one-letter variant, or one half of a compound ("sangita" in "sangitaratnakara"). */
 function sameWord(x: string, y: string): boolean {
@@ -131,9 +158,9 @@ export function sameTitle(cited: string, found: string): boolean {
   // A record that only adds a series name in parentheses ("The Jains (Library of Religious Beliefs)").
   if (exact(cited.replace(/\([^)]*\)/g, ' '), found.replace(/\([^)]*\)/g, ' '))) return true;
   if (differentSubjects(cited, found)) return false;
-  const { A, B, inter } = sets(cited, found);
-  if (Math.min(A.size, B.size) < 2) return false;
-  return inter >= 2 && titleSimilarity(cited, found) >= 0.6 && jaccard(cited, found) >= 0.4;
+  const { A, B, inter, subsetOk } = subjectOverlap(cited, found);
+  if (Math.min(A.size, B.size) < 2 || inter < 2 || !subsetOk) return false;
+  return inter / Math.min(A.size, B.size) >= 0.6 && inter / (A.size + B.size - inter) >= 0.4;
 }
 
 /**
@@ -144,8 +171,8 @@ export function pageMatchesTitle(cited: string, pageText: string): boolean {
   if (exact(cited, pageText)) return true;
   if (!subset(numerals(cited), numerals(pageText))) return false;
   if (differentSubjects(cited, pageText)) return false;
-  const { A, inter } = sets(cited, pageText);
-  if (A.size === 0) return false;
+  const { A, inter, subsetOk } = subjectOverlap(cited, pageText);
+  if (A.size === 0 || !subsetOk) return false;
   return inter >= Math.min(2, A.size) && inter / A.size >= 0.6;
 }
 
