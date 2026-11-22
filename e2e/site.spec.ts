@@ -53,6 +53,18 @@ test.describe('pages render, are accessible and fit the viewport', () => {
     await noSeriousA11yViolations(page);
   });
 
+  test('article header shows every dating with its sources', async ({ page }) => {
+    await page.goto('/philosophy/mandukya-upanishad');
+    const datings = page.locator('.article-header .dating');
+    await expect(datings).toHaveCount(2);
+    await expect(page.locator('.article-header .dating--tradition')).toContainText('Vedanta sampradaya');
+    const flood = page.locator('.article-header .dating__sources a[href="https://doi.org/10.1111/b.9780631215356.2005.00005.x"]');
+    await expect(flood).toBeVisible();
+    await expect(flood).toContainText('The Blackwell Companion to Hinduism');
+    await noHorizontalScroll(page);
+    await noSeriousA11yViolations(page);
+  });
+
   test('article page renders numbered citations and references', async ({ page }) => {
     await page.goto('/history');
     await page.locator('a.card').first().click();
