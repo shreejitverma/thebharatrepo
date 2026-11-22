@@ -1,0 +1,49 @@
+id: polity.videha
+type: polity
+kind: polity
+names:
+  en: Videha
+  iast: Videha
+  native: विदेह
+summary: >-
+  Videha (centred on Mithila in northern Bihar and adjacent southern Nepal, east of the Gandak or
+  Sadanira River) was a major late Vedic kingdom and philosophical centre featured in the Shatapatha
+  Brahmana and Brihadaranyaka Upanishad. Remembered for King Janaka and the sage Yajnavalkya, the
+  Videha monarchy later gave way to a republican clan within the Vajji confederacy.
+summaries:
+  kids: >-
+    East of the Gandak River in northern Bihar lay Videha, the kingdom of Mithila. Ancient Sanskrit
+    texts tell of debates on wisdom held at the court of King Janaka and the sage Yajnavalkya.
+  teen: >-
+    Located in Mithila in north Bihar beyond Magadha, Videha represents the eastern frontier of late
+    Vedic Brahmanical culture in the Shatapatha Brahmana and Upanishads before becoming part of the
+    Vajji republic.
+region: North Bihar (Mithila) and southeastern Nepal Terai
+location: { name: "Mithila (Darbhanga-Janakpur zone), North Bihar", lat: 26.154, lon: 85.892 }
+datings:
+  - method: textual-internal
+    range: { earliest: "900 BCE", latest: "550 BCE", precision: century, circa: true }
+    grade: C
+    label: Late Vedic Brahmana and early Upanishadic horizon
+    sources:
+      - src.witzel-1997-early-sanskritization-kuru
+      - src.singh-2008-ancient-early-medieval-india
+      - src.thapar-2002-early-india
+    note: The Shatapatha Brahmana (1.4.1) portrays Videha east of the Sadanira (Gandak) as newly Sanskritised, while the Brihadaranyaka Upanishad centres on Janaka of Videha prior to the sixth-century BCE rise of the Vajji confederacy.
+claims:
+  - text: The Shatapatha Brahmana narrates the eastward movement of sacrificial fire under Videgha Mathava across the Sadanira River (identified with the Gandak) into Videha.
+    grade: A
+    sources:
+      - src.witzel-1997-early-sanskritization-kuru
+      - src.eggeling-1882-satapatha-brahmana-part-1
+  - text: Early Buddhist texts indicate that the Videhan monarchy had dissolved by the sixth century BCE, when the Videhas functioned as a constituent clan of the Vajji confederacy.
+    grade: B
+    sources:
+      - src.singh-2008-ancient-early-medieval-india
+      - src.mishra-1962-early-history-vaisali
+relations:
+  - { kind: related-to, target: text.shatapatha-brahmana }
+  - { kind: related-to, target: text.brihadaranyaka-upanishad }
+wikidata: Q3359147
+tags: [videha, mithila, bihar, janaka, upanishads, vedic]
+review: { status: draft, author: "gemini-4-hydrogen-xhigh" }

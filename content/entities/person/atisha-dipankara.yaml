@@ -1,0 +1,53 @@
+id: person.atisha-dipankara
+type: person
+kind: person
+names:
+  en: Atisha Dipankara Shrijnana
+  iast: Atiśa Dīpaṅkara Śrījñāna
+  native: অতীশ দীপঙ্কর শ্রীজ্ঞান
+summary: >-
+  Atisha Dipankara Shrijnana (982-1054 CE) was an eastern Indian Buddhist monk-scholar born in the
+  Vikramapura region of Bengal who studied under Dharmakirti in Suvarnadvipa (Sumatra) and later
+  served as a senior master at Vikramashila, Odantapuri and Somapura. Invited to western Tibet in
+  1042 CE, he authored the Bodhipathapradipa and helped establish the Kadampa tradition.
+summaries:
+  kids: >-
+    Born in Bengal over a thousand years ago, the Buddhist scholar Atisha studied in India and
+    Sumatra before travelling across the Himalayas to teach in Tibet, where he helped shape Tibetan
+    Buddhism.
+  teen: >-
+    A leading teacher at Vikramashila and Somapura after studying in Sumatra, Atisha went to Tibet
+    in 1042 CE, where his treatise Lamp for the Path to Awakening laid foundations for Tibetan monastic
+    reform.
+region: Bengal, Bihar, Sumatra and Tibet
+location: { name: "Vikramapura (Munshiganj), Bangladesh", lat: 23.541, lon: 90.517 }
+datings:
+  - method: textual-internal
+    range: { earliest: 982, latest: 1054, precision: year, circa: true }
+    grade: B
+    label: Tibetan biographical and Kadampa chronological sources
+    sources:
+      - src.chattopadhyaya-1999-atisa-and-tibet
+      - src.davidson-2002-indian-esoteric-buddhism
+    note: Tibetan biographies (including Brom-ston's lineage records) date Atisha's birth to 982 CE, his arrival in Guge (Tibet) to 1042 CE, and his passing near Lhasa to 1054 CE.
+claims:
+  - text: Atisha served as a senior acharya at Vikramashila during the eleventh-century Pala period before accepting King Jangchub Od's invitation to Tibet in 1042 CE.
+    grade: B
+    sources:
+      - src.chattopadhyaya-1999-atisa-and-tibet
+      - src.davidson-2002-indian-esoteric-buddhism
+  - text: His Sanskrit treatise Bodhipathapradipa ("Lamp for the Path to Awakening"), composed in Tibet, systematised the stages of Buddhist practice and became foundational to Tibetan lamrim literature.
+    grade: A
+    sources:
+      - src.chattopadhyaya-1999-atisa-and-tibet
+relations:
+  - { kind: taught, target: site.vikramashila }
+  - { kind: related-to, target: site.odantapuri }
+  - { kind: related-to, target: site.somapura-mahavihara }
+image:
+  commons: "File:Atisha.jpg"
+  alt: Traditional Tibetan painted thangka portrait of Atisha Dipankara Shrijnana
+  credit: Anonymous Tibetan artist
+  license: Public domain
+tags: [atisha, buddhism, bengal, bihar, vikramashila, tibet]
+review: { status: draft, author: "gemini-4-hydrogen-xhigh" }

@@ -1,0 +1,52 @@
+id: person.ballala-sena
+type: person
+kind: person
+names:
+  en: Ballala Sena
+  iast: Ballāla Sena
+  native: বল্লাল সেন
+summary: >-
+  Ballala Sena (r. c. 1158-1179 CE) was a prominent monarch of the Sena dynasty of Bengal, son of
+  Vijayasena and father of Lakshmana Sena. Attested by the Naihati copper plate and Sanokhar
+  inscription, he consolidated Sena rule over Varendra, Radha and Magadha, authored the Sanskrit
+  compendia Danasagara and Adbhutasagara, and is credited by later Kulaji traditions with organising
+  Kulinism.
+summaries:
+  kids: >-
+    King Ballala Sena ruled Bengal in the 12th century CE. Besides winning territory from the declining
+    Palas, he was a scholar-king who compiled major Sanskrit books on gifts and omens.
+  teen: >-
+    Ruling Bengal c. 1158-1179 CE, Ballala Sena is securely documented through the Naihati plate and
+    attributed Sanskrit treatises like Danasagara, though historians separate his inscriptions from
+    much later genealogical legends about Kulinism.
+region: Bengal and eastern Bihar
+location: { name: "Vikramapura, Bengal", lat: 23.541, lon: 90.517 }
+datings:
+  - method: epigraphic
+    range: { earliest: 1158, latest: 1179, precision: decade, circa: true }
+    grade: B
+    label: Naihati plate and astronomical dates in Danasagara and Adbhutasagara
+    sources:
+      - src.majumdar-1929-inscriptions-of-bengal-vol3
+      - src.chowdhury-1967-dynastic-history-bengal
+    note: The Danasagara gives Shaka 1091 (1169 CE) for its completion and the Adbhutasagara mentions Shaka 1090 (1168 CE) as its beginning, fitting a reign of roughly 1158-1179 CE.
+claims:
+  - text: The Naihati copper-plate grant issued in Ballala Sena's 11th regnal year confirms Sena control over western and northern Bengal and records his mother Vilasadevi's solar-eclipse gift.
+    grade: A
+    sources:
+      - src.majumdar-1929-inscriptions-of-bengal-vol3
+      - src.chowdhury-1967-dynastic-history-bengal
+  - text: Historians note that the traditional attribution of Kulinism (social ranking of Bengali Brahmins and Kayasthas) to Ballala Sena derives from much later 15th-17th century Kulaji texts and is absent from contemporary Sena epigraphs.
+    grade: B
+    sources:
+      - src.majumdar-1943-history-of-bengal-vol1
+      - src.chowdhury-1967-dynastic-history-bengal
+debate: >-
+  Later medieval Kulaji genealogies depict Ballala Sena as the creator of the Kulin social hierarchy
+  in Bengal. Critical historians such as R. C. Majumdar and A. M. Chowdhury observe that contemporary
+  Sena copper plates contain no mention of Kulinism, indicating later institutional retrojection.
+relations:
+  - { kind: ruled, target: polity.sena-dynasty }
+wikidata: Q106982411
+tags: [ballala-sena, sena, bengal, sanskrit, danasagara, kulinism]
+review: { status: draft, author: "gemini-4-hydrogen-xhigh" }

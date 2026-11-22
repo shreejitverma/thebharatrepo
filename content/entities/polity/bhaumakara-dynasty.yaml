@@ -1,0 +1,61 @@
+id: polity.bhaumakara-dynasty
+type: polity
+kind: polity
+names:
+  en: Bhauma-Kara Dynasty
+  iast: Bhaumakara
+  native: ଭୌମକର ରାଜବଂଶ
+summary: >-
+  The Bhaumakara dynasty ruled coastal and northern Odisha (ancient Toshala) from their capital
+  Guhesvarapataka (near modern Jajpur) between the eighth and tenth centuries CE. Known mainly from
+  copper-plate land grants, the dynasty patronised both Mahayana-Vajrayana Buddhism and Shaiva-Shakta
+  Brahmanism, and is notable for at least six female monarchs who reigned as sovereign rulers.
+summaries:
+  kids: >-
+    Over a thousand years ago, the Bhaumakara dynasty ruled coastal Odisha from Jajpur. Unusually
+    for the time, several queens ruled the kingdom in their own right.
+  teen: >-
+    Documented through copper-plate charters from Toshala, the Bhaumakaras sponsored Buddhist centres
+    as well as Hindu shrines, and saw multiple ruling queens such as Tribhuvana Mahadevi and Dandi
+    Mahadevi govern independently.
+region: Toshala (coastal and northern Odisha)
+location: { name: "Jajpur (ancient Guhesvarapataka), Odisha", lat: 20.848, lon: 86.338 }
+datings:
+  - method: epigraphic
+    range: { earliest: 736, latest: 950, precision: decade, circa: true }
+    grade: C
+    label: Earlier Bhauma era reckoning (736 CE epoch, S. N. Rajaguru and K. C. Panigrahi)
+    sources:
+      - src.panigrahi-1961-chronology-bhauma-karas-somavamsis
+      - src.tripathy-2000-inscriptions-bhauma-karas
+    note: Based on equating year 1 of the Bhauma Samvat with 736 CE, placing over two centuries of grants into the 8th to mid-10th centuries.
+  - method: epigraphic
+    range: { earliest: 831, latest: 1030, precision: decade, circa: true }
+    grade: C
+    label: Later Bhauma era reckoning (831 CE epoch, D. C. Sircar and R. Salomon)
+    sources:
+      - src.salomon-1998-indian-epigraphy
+      - src.tripathy-2000-inscriptions-bhauma-karas
+    note: D. C. Sircar calculated an 831 CE epoch from astronomical details in the Dasapalla grant of the Bhanja feudatory Shatrubhanja II, aligning later Bhaumakara queens with Somavamshi expansion.
+claims:
+  - text: Early Bhaumakara rulers such as Kshemankara, Shivakara I and Shubhakara I styled themselves paramopasaka and paramatathagata, attesting royal patronage of Buddhism in Toshala.
+    grade: A
+    sources:
+      - src.tripathy-2000-inscriptions-bhauma-karas
+      - src.tripathy-2010-catalogue-orissan-inscriptions
+  - text: At least six Bhaumakara queens, including Tribhuvana Mahadevi I, Tribhuvana Mahadevi II, Gauri Mahadevi, Dandi Mahadevi, Vakula Mahadevi and Dharma Mahadevi, issued copper-plate grants with full imperial titles.
+    grade: A
+    sources:
+      - src.tripathy-2000-inscriptions-bhauma-karas
+      - src.singh-2008-ancient-early-medieval-india
+debate: >-
+  Bhaumakara copper plates are dated in an unnamed Bhauma Samvat spanning years 20 to 190+.
+  Odishan historians such as K. C. Panigrahi and S. N. Rajaguru placed its epoch at 736 CE, whereas
+  D. C. Sircar fixed it at 831 CE using calendrical data from a subordinate Bhanja grant, a date
+  supported by several modern epigraphists though not universally adopted.
+relations:
+  - { kind: preceded, target: polity.somavamshi-dynasty }
+  - { kind: related-to, target: polity.pala-empire }
+wikidata: Q48726514
+tags: [bhaumakara, odisha, jajpur, queens, buddhism, epigraphy]
+review: { status: draft, author: "gemini-4-hydrogen-xhigh" }

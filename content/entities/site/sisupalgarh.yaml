@@ -1,0 +1,61 @@
+id: site.sisupalgarh
+type: site
+kind: site
+names:
+  en: Sisupalgarh
+  iast: Śiśupālagarh
+  native: ଶିଶୁପାଳଗଡ଼
+summary: >-
+  Sisupalgarh, on the outskirts of Bhubaneswar in Odisha, is one of the largest and best-preserved
+  early historic fortified cities in eastern India, enclosed by a near-square rampart about 1.1 km
+  on each side with monumental gateways. Excavations by B. B. Lal and later Monica L. Smith and
+  R. K. Mohanty document urban occupation from around the mid-first millennium BCE to the fourth
+  century CE, frequently linked with ancient Tosali or Kalinganagari.
+summaries:
+  kids: >-
+    Near Bhubaneswar in Odisha lies Sisupalgarh, a giant square-walled ancient city with stone
+    gateways built over 2,000 years ago, where people lived in planned streets and wore terracotta
+    ear ornaments.
+  teen: >-
+    Surveyed and excavated in 1948 and again from 2005, Sisupalgarh reveals a planned early historic
+    square fortification with eight formal gateways, monolithic pillar clusters and dense urban housing
+    in coastal Odisha.
+region: Khordha district, Odisha
+location: { name: "Sisupalgarh, Bhubaneswar", lat: 20.227, lon: 85.853 }
+datings:
+  - method: archaeological-stratigraphic
+    range: { earliest: "500 BCE", latest: 350, precision: century, circa: true }
+    grade: B
+    label: Main urban occupational sequence (Periods I to III)
+    sources:
+      - src.lal-1949-ancient-india-no5
+      - src.smith-2005-networks-territories-ancient-states
+      - src.allchin-1995-archaeology-early-historic-south-asia
+    note: B. B. Lal's 1948 excavation and renewed UCLA-Deccan College fieldwork establish urban occupation spanning from pre-Mauryan / Early Historic layers through the fourth century CE.
+claims:
+  - text: The city is surrounded by a square earthen rampart measuring roughly 1.12 km on each side, pierced by two formal gateways on each face and surrounded by a moat.
+    grade: A
+    sources:
+      - src.lal-1949-ancient-india-no5
+      - src.smith-2015-sisupalgarh-terracotta
+  - text: Excavations recovered Northern Black Polished Ware, Rouletted Ware, punch-marked and Puri-Kushan coins, and thousands of moulded terracotta ornaments.
+    grade: A
+    sources:
+      - src.lal-1949-ancient-india-no5
+      - src.smith-2015-sisupalgarh-terracotta
+  - text: Historians have proposed identifying Sisupalgarh with Ashokan Tosali or Kharavela's Kalinganagari, though no excavated site inscription directly names the city.
+    grade: C
+    sources:
+      - src.lal-1949-ancient-india-no5
+      - src.singh-2008-ancient-early-medieval-india
+relations:
+  - { kind: related-to, target: event.kalinga-war }
+  - { kind: related-to, target: concept.northern-black-polished-ware-culture }
+wikidata: Q3485360
+image:
+  commons: "File:Ramparts of the Sisupalgarh Fort.jpg"
+  alt: Excavated stone gateway and earthen rampart remains at Sisupalgarh near Bhubaneswar, Odisha
+  credit: Rohit Agarwal
+  license: CC BY-SA 4.0
+tags: [sisupalgarh, odisha, urbanisation, kalinga, early-historic]
+review: { status: draft, author: "gemini-4-hydrogen-xhigh" }

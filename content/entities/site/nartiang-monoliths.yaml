@@ -1,0 +1,44 @@
+id: site.nartiang-monoliths
+type: site
+kind: site
+names:
+  en: Nartiang Monoliths
+  native: Mawbynna Nartiang
+summary: "The Nartiang Monoliths in West Jaintia Hills district, Meghalaya, form one of the largest standing megalithic assemblages in the Khasi-Jaintia hills, erected around the Nartiang market and former summer capital of the Jaintia kings. Comprising towering upright menhirs (moo shynrang) up to eight metres tall paired with horizontal dolmens (moo kynthai), they embody a living Khasi-Pnar commemorative stone tradition linked in local memory to Jaintia warriors around 1500-1835 CE."
+summaries:
+  kids: "At Nartiang in Meghalaya stands a forest of giant upright stones, some up to eight metres tall, and flat table-stones, raised centuries ago as memorials near the Jaintia kings' summer capital."
+  teen: >-
+    Located at the historic summer capital of the Jaintia kingdom, the Nartiang cluster pairs tall
+    menhirs and flat capstones within a living Khasi-Pnar megalithic landscape studied by ethno-
+    archaeologists.
+region: West Jaintia Hills district, Meghalaya
+location: { name: "Nartiang, West Jaintia Hills, Meghalaya", lat: 25.573, lon: 92.216 }
+datings:
+  - method: scholarly-consensus
+    range: { earliest: 1500, latest: 1835, precision: century, circa: true }
+    grade: C
+    label: Jaintia kingdom summer-capital era (ethnohistorical estimate)
+    sources:
+      - src.mitri-2019-khasi-jaintia-megaliths
+      - src.marak-2014-megaliths-jaintias
+      - src.ali-1954-history-of-jaintia
+    note: The megaliths themselves are undated by direct radiometric assay, so scholars associate the major Nartiang market group with the Jaintia kingdom's Nartiang period (c. 1500-1835 CE) alongside ongoing Khasi-Pnar commemorative practices.
+claims:
+  - text: The Nartiang cluster includes the tallest known monolith in the Khasi-Jaintia hills (roughly 8 metres high), traditionally attributed to the Jaintia general U Mar Phalyngki, alongside numerous paired menhirs and dolmen table-stones.
+    grade: B
+    sources:
+      - src.mitri-2019-khasi-jaintia-megaliths
+      - src.marak-2014-megaliths-jaintias
+  - text: Ethno-archaeological research demonstrates that Khasi-Pnar megaliths divide into commemorative and funerary forms, pairing upright stones (moo shynrang) and horizontal stones (moo kynthai) to mark clan memory and markets.
+    grade: B
+    sources:
+      - src.mitri-2019-khasi-jaintia-megaliths
+      - src.marak-2014-megaliths-jaintias
+relations: []
+image:
+  commons: "File:Nartiang Monoliths in Meghalaya are tallest in the world.jpg"
+  alt: Towering upright granite menhirs and horizontal dolmen slabs at the Nartiang Monoliths site in Meghalaya
+  credit: Iarmi Rabon
+  license: CC BY-SA 4.0
+tags: [nartiang, megaliths, khasi, jaintia, meghalaya, living-tradition]
+review: { status: draft, author: "gemini-4-hydrogen-xhigh" }

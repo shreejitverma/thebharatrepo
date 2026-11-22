@@ -1,0 +1,54 @@
+id: site.majuli-satras
+type: site
+kind: dharma
+names:
+  en: Majuli Satras
+  native: মাজুলীৰ সত্ৰসমূহ
+summary: >-
+  The satras of Majuli, a major river island in the Brahmaputra in Assam, are Neo-Vaishnavite
+  monastic and cultural institutions rooted in the Ekasarana Dharma movement of Srimanta Sankardeva
+  and Madhavdeva. From the sixteenth and seventeenth centuries onward, royal Ahom patronage helped
+  major establishments such as Auniati, Dakhinpat, Garamur, Kamalabari and Samaguri become enduring
+  centres of Sattriya dance, Borgeet music, mask-making and sanchipat manuscript preservation.
+summaries:
+  kids: >-
+    On Majuli island in Assam's Brahmaputra River, monastic centres called satras preserve centuries
+    of Assamese music, Sattriya dance, Bhaona plays, hand-painted masks and palm-bark manuscripts.
+  teen: >-
+    Established by followers of Sankardeva and patronised by 17th-century Ahom kings, Majuli's
+    satras (including Auniati, Dakhinpat, Garamur and Kamalabari) sustain a living complex of
+    monastic residences, prayer halls (namghars) and classical performing arts.
+region: Majuli district, Upper Assam
+location: { name: "Majuli Island, Assam", lat: 26.954, lon: 94.167 }
+datings:
+  - method: documentary
+    range: { earliest: 1550, latest: 1826, precision: decade, circa: true }
+    grade: B
+    label: Sixteenth-century foundations and seventeenth-century Ahom royal charters
+    sources:
+      - src.sarma-1966-neo-vaisnavite-movement
+      - src.neog-1965-sankaradeva-and-his-times
+      - src.cantlie-1984-the-assamese
+    note: "Sankardeva and Madhavdeva met at Dhuwahat-Belaguri on Majuli in the 16th century; major surviving royal satras (such as Auniati, founded in 1653, and Dakhinpat) received land charters under Ahom king Jayadhwaj Singha."
+claims:
+  - text: "Auniati Satra (founded 1653 CE) and Dakhinpat Satra received extensive land and revenue-free grants from Ahom Swargadeo Jayadhwaj Singha, integrating satra abbots into Assamese royal legitimacy."
+    grade: B
+    sources:
+      - src.sarma-1966-neo-vaisnavite-movement
+      - src.baruah-1985-comprehensive-history-assam
+  - text: Majuli satras continue to transmit Sattriya classical dance, Ankiya Bhaona theatre, Borgeet devotional music and Samaguri mask-making alongside sanchipat bark manuscripts.
+    grade: A
+    sources:
+      - src.sarma-1966-neo-vaisnavite-movement
+      - src.cantlie-1984-the-assamese
+relations:
+  - { kind: part-of, target: tradition.ekasarana-dharma }
+  - { kind: related-to, target: person.sankardev }
+  - { kind: patronised-by, target: polity.ahom-kingdom }
+image:
+  commons: "File:Sri Sri Samaguri Satra,Majuli.jpg"
+  alt: Entrance gateway and traditional prayer hall complex of Sri Sri Samaguri Satra on Majuli island, Assam
+  credit: Rumi Borah~aswiki
+  license: CC BY-SA 4.0
+tags: [majuli, satra, ekasarana, sattriya, assam, vaishnavism]
+review: { status: draft, author: "gemini-4-hydrogen-xhigh" }

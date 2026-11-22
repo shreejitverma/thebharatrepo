@@ -1,0 +1,62 @@
+id: text.krittivasi-ramayana
+type: text
+kind: text
+names:
+  en: Krittivasi Ramayana
+  iast: Kṛttivāsī Rāmāyaṇa
+  native: কৃত্তিবাসী রামায়ণ
+summary: >-
+  The Krittivasi Ramayana (originally titled Sri Rama Panchali) is the foundational fifteenth-century
+  Middle Bengali narrative adaptation of the Ramayana attributed to poet Krittibas Ojha of Phulia in
+  Nadia. Rather than a literal translation of Valmiki, it reworks the epic in payar verse with
+  domestic Bengali motifs, bhakti sensibility and episodes such as Rama's autumn worship of Durga,
+  becoming widely standardised in Jaygopal Tarkalankar's 1834 print edition.
+summaries:
+  kids: >-
+    Written in Bengali verse in the 15th century by Krittibas Ojha, the Krittivasi Ramayana retells
+    Rama's story in Bengali cultural life, including how Rama worshipped Goddess Durga in autumn.
+  teen: >-
+    Composed in the 15th century and transmitted across more than two thousand manuscripts, the
+    Krittivasi Ramayana transformed Valmiki's Sanskrit epic into a Bengali bhakti classic before its
+    1834 Serampore print standardisation.
+region: Bengal
+location: { name: "Phulia, Nadia district, West Bengal", lat: 23.241, lon: 88.493 }
+datings:
+  - method: textual-internal
+    range: { earliest: 1415, latest: 1475, precision: decade, circa: true }
+    grade: C
+    label: Composition by Krittibas Ojha in fifteenth-century Bengal
+    sources:
+      - src.sen-1992-history-of-bengali-literature
+      - src.bose-2004-ramayana-revisited
+    note: Based on autobiographical verses mentioning an unnamed Sultan of Gauda (variously identified with Raja Ganesha, Jalaluddin or Ruknuddin Barbak Shah), scholars date Krittibas's composition to the early-to-mid 15th century; no contemporary manuscript survives.
+  - method: documentary
+    range: { earliest: 1802, latest: 1834, precision: year, circa: false }
+    grade: A
+    label: Early Serampore printed editions and Jaygopal Tarkalankar recension
+    sources:
+      - src.sen-1992-history-of-bengali-literature
+      - src.bose-2004-ramayana-revisited
+    note: The earliest printed edition appeared at Serampore in 1802-1803, followed by Jaygopal Tarkalankar's heavily edited 1834 recension that shaped modern reception.
+claims:
+  - text: The Krittivasi Ramayana adapts Valmiki's plot to medieval Bengali devotional tastes, notably incorporating Rama's untimely autumn worship of Devi (Akalbodhan) prior to slaying Ravana.
+    grade: B
+    sources:
+      - src.bose-2004-ramayana-revisited
+      - src.sen-1992-history-of-bengali-literature
+  - text: "Surviving manuscripts (puthis) show extensive scribal interpolations over three centuries, so the widely read printed text reflects 19th-century editorial revisions alongside earlier oral layers."
+    grade: B
+    sources:
+      - src.bose-2004-ramayana-revisited
+      - src.richman-1991-many-ramayanas
+debate: >-
+  Scholars debate both which Gauda ruler honoured Krittibas Ojha in his autobiographical verses (with
+  proposals spanning Raja Ganesha, Jalaluddin Muhammad Shah and Ruknuddin Barbak Shah) and how much
+  of the surviving text belongs to the 15th-century poet versus centuries of oral-scribal accretion
+  and Jaygopal Tarkalankar's 1834 print redaction.
+relations:
+  - { kind: related-to, target: text.valmiki-ramayana }
+  - { kind: related-to, target: tradition.durga-puja-kolkata-unesco }
+wikidata: Q12420402
+tags: [krittivasi-ramayana, bengali, ramayana, literature, durga, bhakti]
+review: { status: draft, author: "gemini-4-hydrogen-xhigh" }

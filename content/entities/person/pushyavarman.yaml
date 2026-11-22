@@ -1,0 +1,39 @@
+id: person.pushyavarman
+type: person
+kind: person
+names:
+  en: Pushyavarman
+  iast: Puṣyavarman
+summary: Pushyavarman appears at the head of the historical Varman genealogy of Kamarupa. His dates
+  remain approximate because the best surviving genealogical records are from later reigns.
+summaries:
+  kids: Later royal documents remember Pushyavarman as an early king of Kamarupa, in the Brahmaputra
+    valley.
+  teen: The Kamarupa genealogy preserved under Bhaskaravarman looks back to Pushyavarman. It provides
+    a sequence of descent but leaves his exact accession uncertain.
+region: Brahmaputra valley
+datings:
+  - method: epigraphic
+    range:
+      earliest: "330"
+      latest: "390"
+      precision: decade
+      circa: true
+    grade: C
+    label: Reign or recorded political activity
+    sources:
+      - src.singh-2008-ancient-early-medieval-india
+    note: His fourth-century position is reconstructed from the later Varman sequence and the
+      Gupta-period attestation of Kamarupa.
+claims:
+  - text: Later Varman copperplates name Pushyavarman as the first historical ruler in the line.
+    grade: C
+    sources:
+      - src.singh-2008-ancient-early-medieval-india
+relations:
+  - kind: founded
+    target: polity.varman-dynasty-of-kamarupa
+tags: []
+review:
+  status: draft
+  author: codex-gpt-6

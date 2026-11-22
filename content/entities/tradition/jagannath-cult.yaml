@@ -1,0 +1,67 @@
+id: tradition.jagannath-cult
+type: tradition
+kind: dharma
+names:
+  en: Jagannath Tradition of Puri
+  iast: Jagannātha Sampradāya
+  native: ଜଗନ୍ନାଥ ପରମ୍ପରା
+summary: >-
+  The Jagannath tradition centres on the worship of Jagannath ("Lord of the Universe"), Balabhadra
+  and Subhadra as painted wooden images (daru-brahma) at Puri in Odisha, renewed periodically through
+  the Navakalevara rite. Scholarship traces how indigenous and tribal veneration of sacred wooden posts
+  merged with Vaishnava, Shaiva-Shakta and tantric traditions before becoming the state cult of the
+  Eastern Gangas and Gajapatis.
+summaries:
+  kids: >-
+    In Puri, Odisha, devotees worship Lord Jagannath, his brother Balabhadra and sister Subhadra
+    as brightly painted wooden statues, celebrated each year in the huge Ratha Yatra chariot festival.
+  teen: >-
+    Historians and anthropologists show how the Jagannath cult in Puri combined indigenous eastern
+    Indian wooden-deity worship with Puranic Vaishnavism and royal statecraft under the Eastern Ganga
+    and Gajapati kings.
+region: Puri and Odisha
+location: { name: "Puri, Odisha", lat: 19.805, lon: 85.818 }
+datings:
+  - method: scholarly-consensus
+    range: { earliest: 900, latest: 1250, precision: century, circa: true }
+    grade: B
+    label: Emergence as a regional and royal cult in coastal Odisha
+    sources:
+      - src.eschmann-2014-cult-of-jagannatha
+      - src.kulke-1993-kings-and-cults
+    note: While coastal worship of Purushottama existed by the tenth century CE, the iconography of the Puri triad and its royal state cult crystallised in the twelfth and thirteenth centuries under the Eastern Gangas.
+  - method: traditional-puranic
+    range: { earliest: "3102 BCE", latest: 500, precision: cosmological, circa: true }
+    grade: D
+    label: Skanda Purana (Utkala Khanda) and Madala Panji Indradyumna tradition
+    sources:
+      - src.eschmann-2014-cult-of-jagannatha
+    note: Puranic and temple chronicle accounts trace the installation of the wooden triad at Puri to the legendary King Indradyumna in primordial ages, and an earlier temple to Yayati Kesari.
+claims:
+  - text: Epigraphic and anthropological studies by Eschmann, Kulke and Tripathi trace Jagannath's wooden iconography and non-Brahmin Daitapati ritual priests to a synthesis between tribal deity traditions and Vaishnavism.
+    grade: B
+    sources:
+      - src.eschmann-2014-cult-of-jagannatha
+      - src.kulke-1993-kings-and-cults
+  - text: In 1230 CE Anangabhima III declared himself the deputy of Purushottama-Jagannath, a kingship ideology continued in the Gajapati ritual of sweeping the Ratha Yatra chariots (Chhera Pahanra).
+    grade: A
+    sources:
+      - src.kulke-1993-kings-and-cults
+      - src.eschmann-2014-cult-of-jagannatha
+  - text: Chaitanya Mahaprabhu spent his later years in Puri (c. 1510-1533 CE), linking Gaudiya Vaishnava devotion closely to the Jagannath sanctuary.
+    grade: B
+    sources:
+      - src.stewart-2010-final-word-caitanya-caritamrta
+      - src.eschmann-2014-cult-of-jagannatha
+debate: >-
+  Temple chronicles (the Madala Panji) and Puranic mahatmyas ascribe the origins of Jagannath to
+  ancient King Indradyumna and a pre-Ganga Somavamshi temple under Yayati. Historians treat these
+  accounts as sacred memory rather than literal chronology, placing the monumental integration of the
+  cult in the tenth to thirteenth centuries CE.
+relations:
+  - { kind: located-at, target: site.jagannath-temple-puri }
+  - { kind: related-to, target: person.chaitanya-mahaprabhu }
+  - { kind: related-to, target: person.jayadeva }
+  - { kind: patronised-by, target: polity.eastern-ganga-dynasty }
+tags: [jagannath, puri, odisha, vaishnavism, ratha-yatra, bhakti]
+review: { status: draft, author: "gemini-4-hydrogen-xhigh" }

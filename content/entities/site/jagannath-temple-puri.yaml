@@ -1,0 +1,63 @@
+id: site.jagannath-temple-puri
+type: site
+kind: site
+names:
+  en: Jagannath Temple, Puri
+  iast: Jagannātha Mandira, Purī
+  native: ଶ୍ରୀ ଜଗନ୍ନାଥ ମନ୍ଦିର, ପୁରୀ
+summary: >-
+  The Shri Jagannath Temple at Puri on the Odisha coast is one of India's major Vaishnava
+  pilgrimage complexes and a landmark of Kalinga-style temple architecture. Begun in the twelfth
+  century CE by the Eastern Ganga king Anantavarman Chodaganga, its 65-metre curvilinear tower
+  (rekha deul) anchors the four-hall plan and houses the wooden images of Jagannath, Balabhadra
+  and Subhadra.
+summaries:
+  kids: >-
+    Standing near the sea in Puri, Odisha, the Jagannath Temple has a towering curved stone spire
+    built about 900 years ago and welcomes pilgrims from all over India for the annual Ratha Yatra.
+  teen: >-
+    Constructed under Eastern Ganga ruler Anantavarman Chodaganga in the 12th century CE, the Puri
+    Jagannath Temple exemplifies mature Kalinga temple planning with four aligned halls and serves as
+    the ceremonial heart of Odishan Vaishnavism.
+region: Puri district, Odisha
+location: { name: "Puri, Odisha", lat: 19.805, lon: 85.818 }
+datings:
+  - method: epigraphic
+    range: { earliest: 1112, latest: 1198, best: 1135, precision: decade, circa: true }
+    grade: A
+    label: Eastern Ganga construction attested in Dasgoba and Nagari copper plates
+    sources:
+      - src.eschmann-2014-cult-of-jagannatha
+      - src.donaldson-1985-hindu-temple-art-orissa
+      - src.rao-1991-kalinga-eastern-gangas
+    note: The Dasgoba plates of Rajaraja III (1198 CE) explicitly credit Anantavarman Chodaganga with building the great temple of Purushottama at Puri, begun after his conquest of central Odisha c. 1112 CE.
+  - method: traditional-sampradaya
+    range: { earliest: 900, latest: 1050, precision: century, circa: true }
+    grade: D
+    label: Madala Panji attribution of an earlier shrine to Yayati Kesari
+    sources:
+      - src.eschmann-2014-cult-of-jagannatha
+    note: The Puri temple chronicle Madala Panji states that the Somavamshi king Yayati Kesari built a temple on the site before Chodaganga's monumental reconstruction.
+claims:
+  - text: The Dasgoba copper-plate grant of 1198 CE states that Anantavarman Chodaganga erected the palace-temple of Purushottama on the seashore after previous kings had neglected to build it.
+    grade: A
+    sources:
+      - src.eschmann-2014-cult-of-jagannatha
+      - src.kulke-1993-kings-and-cults
+  - text: The complex follows the mature four-chamber Kalinga axial layout comprising the vimana sanctum, jagamohana audience hall, natamandira dance hall and bhogamandapa offering hall.
+    grade: A
+    sources:
+      - src.donaldson-1985-hindu-temple-art-orissa
+      - src.michell-1988-hindu-temple
+relations:
+  - { kind: related-to, target: site.konark-sun-temple }
+  - { kind: related-to, target: site.lingaraja-temple }
+  - { kind: patronised-by, target: polity.eastern-ganga-dynasty }
+wikidata: Q1678260
+image:
+  commons: "File:Jagannath Temple, Puri 03.jpg"
+  alt: Curvilinear shikhara tower of the Shri Jagannath Temple rising above the temple enclosure in Puri, Odisha
+  credit: Bernard Gagnon
+  license: CC BY-SA 3.0
+tags: [jagannath, puri, odisha, kalinga-architecture, temple]
+review: { status: draft, author: "gemini-4-hydrogen-xhigh" }

@@ -1,0 +1,49 @@
+id: polity.koch-dynasty
+type: polity
+kind: polity
+names:
+  en: Koch Dynasty
+  native: কোচ ৰাজবংশ
+summary: >-
+  The Koch dynasty was founded around 1515 CE by Biswa Singha in the former Kamata region spanning
+  northern Bengal and western Assam. Reaching its zenith under Nara Narayan (r. c. 1540-1587) and his
+  general brother Chilarai, the kingdom rebuilt the Kamakhya temple (1565), sheltered Sankardeva and
+  minted Narayani silver coins before splitting into Koch Bihar and Koch Hajo.
+summaries:
+  kids: >-
+    Founded by Biswa Singha in 1515 CE, the Koch kingdom stretched across northern Bengal and Assam.
+    King Nara Narayan and general Chilarai rebuilt Kamakhya Temple and protected poet-saint Sankardev.
+  teen: >-
+    Emerging in Kamata around 1515 CE, the Koch dynasty peaked under Nara Narayan and Chilarai,
+    briefly exacting tribute across Northeast India, minting Narayani rupees and patronising both
+    Kamakhya Shaktism and Ekasarana Vaishnavism.
+region: Northern Bengal (Cooch Behar) and western Assam (Kamata / Koch Hajo)
+location: { name: "Cooch Behar, West Bengal", lat: 26.324, lon: 89.451 }
+datings:
+  - method: numismatic
+    range: { earliest: 1515, latest: 1949, precision: year, circa: true }
+    grade: B
+    label: Foundation c. 1515 CE, Nara Narayan's 1555 silver coinage through 1949 merger
+    sources:
+      - src.gait-1906-history-of-assam
+      - src.baruah-1985-comprehensive-history-assam
+      - src.shin-2010-yoni-yoginis-mahavidyas
+    note: Nara Narayan's dated Shaka 1477 (1555 CE) Narayani coins and 1565 Kamakhya inscription anchor the dynasty's 16th-century zenith; Cooch Behar state acceded to India in 1949.
+claims:
+  - text: Under Nara Narayan and general Shukladhvaja (Chilarai), Koch armies campaigned against the Ahoms (briefly occupying Garhgaon in 1563), Kacharis, Jaintias, Tripuris and Manipuris, while rebuilding Kamakhya in 1565 CE.
+    grade: A
+    sources:
+      - src.gait-1906-history-of-assam
+      - src.shin-2010-yoni-yoginis-mahavidyas
+  - text: The Koch court provided sanctuary to Srimanta Sankardeva in his final years at Patbausi and Cooch Behar and fostered Sanskrit and early Assamese-Bengali vernacular literature.
+    grade: B
+    sources:
+      - src.neog-1965-sankaradeva-and-his-times
+      - src.baruah-1985-comprehensive-history-assam
+relations:
+  - { kind: patronised, target: person.sankardev }
+  - { kind: patronised, target: site.kamakhya-temple }
+  - { kind: related-to, target: polity.ahom-kingdom }
+  - { kind: related-to, target: polity.bengal-sultanate }
+tags: [koch-dynasty, cooch-behar, kamata, nara-narayan, chilarai, assam, bengal]
+review: { status: draft, author: "gemini-4-hydrogen-xhigh" }

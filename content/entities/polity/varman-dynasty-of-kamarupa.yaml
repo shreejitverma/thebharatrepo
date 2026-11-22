@@ -1,0 +1,77 @@
+id: polity.varman-dynasty-of-kamarupa
+type: polity
+kind: polity
+names:
+  en: Varman Dynasty of Kamarupa
+  iast: Varman
+  native: বৰ্মণ বংশ
+aliases:
+  - polity.varman-dynasty-kamarupa
+summary: >-
+  The Varmans were the earliest known historical ruling house of Kamarupa in the Brahmaputra valley, from
+  about the mid-fourth to the mid-seventh century. Their copper-plate charters trace a line from Pushyavarman
+  to Bhaskaravarman, the ally of Harsha whom Xuanzang met, and Samudragupta's Allahabad inscription names
+  Kamarupa as a frontier realm in this period.
+summaries:
+  kids: >-
+    The Varman kings ruled in the Brahmaputra valley of Assam. Records on copper and a Chinese traveller's
+    account tell us about their last great king, Bhaskaravarman.
+  teen: >-
+    Samudragupta's inscription names Kamarupa as a frontier realm. Seventh-century Varman copper plates give
+    a royal genealogy of about twelve generations and record grants of land to Brahmins.
+region: Brahmaputra valley (Assam) and neighbouring areas
+location:
+  name: Guwahati (area of Pragjyotishapura)
+  lat: 26.18
+  lon: 91.74
+datings:
+  - method: epigraphic
+    range:
+      earliest: "340"
+      latest: "655"
+      precision: decade
+      circa: true
+    grade: B
+    label: Varman genealogy anchored by Gupta and seventh-century synchronisms
+    sources:
+      - src.konow-1913-epigraphia-indica-vol12
+      - src.shin-2022-bhauma-to-varaha-kamarupa
+      - src.singh-2008-ancient-early-medieval-india
+    note: The start is reconstructed from the later genealogy and the Gupta-period attestation of Kamarupa.
+      The close follows Bhaskaravarman, whose reign is fixed by his contacts with Harsha and Xuanzang in the
+      640s.
+claims:
+  - text: Samudragupta's Allahabad pillar eulogy names Kamarupa among the frontier realms.
+    grade: A
+    sources:
+      - src.fleet-1888-inscriptions-early-gupta-kings
+  - text: The Dubi and Nidhanpur copper-plate grants list Pushyavarman as the first ruler of the line and trace
+      its descent to Bhaskaravarman.
+    grade: A
+    sources:
+      - src.konow-1913-epigraphia-indica-vol12
+      - src.shin-2022-bhauma-to-varaha-kamarupa
+  - text: Bhaskaravarman's reign is attested both in copperplate records and in contemporary literary
+      accounts, including Bana's Harshacharita and Xuanzang's travels.
+    grade: B
+    sources:
+      - src.beal-1906-si-yu-ki
+      - src.cowell-1897-harsa-carita
+  - text: Varman charters record Sanskrit land grants to Brahmins, and the genealogies credit some kings with
+      performing the ashvamedha.
+    grade: B
+    sources:
+      - src.barua-1933-early-history-kamarupa
+      - src.choudhury-1985-archaeology-brahmaputra-valley
+relations:
+  - kind: related-to
+    target: polity.gupta-empire
+  - kind: contemporary-of
+    target: polity.pushyabhuti-dynasty
+wikidata: Q1109008
+tags:
+  - kamarupa
+  - assam
+review:
+  status: draft
+  author: gemini-4-hydrogen-xhigh

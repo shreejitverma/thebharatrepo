@@ -1,0 +1,53 @@
+id: text.cheitharol-kumbaba
+type: text
+kind: text
+names:
+  en: Cheitharol Kumbaba
+  native: চৈথারোল কুম্বাবা (ꯆꯩꯊꯥꯔꯣꯜ ꯀꯨꯝꯕꯥꯕꯥ)
+summary: >-
+  The Cheitharol Kumbaba (Cheitharon Kumpapa) is the official Meitei-language royal court chronicle of
+  the kings of Manipur, kept in the Meitei Mayek script by court scribes (maichous). Covering rulers
+  from the traditional accession of Nongda Lairen Pakhangba in 33 CE down to 1955 CE, it adopts a
+  yearly calendar-keeping system (cheithaba) from 1485 CE and offers dense day-by-day annals from the
+  eighteenth century onward.
+summaries:
+  kids: >-
+    Written in the Meitei script, the Cheitharol Kumbaba is Manipur's royal court diary, recording
+    kings, battles, festivals, eclipses and daily events across centuries.
+  teen: >-
+    Kept by court scribes of Manipur, the Cheitharol Kumbaba pairs traditional early regnal notices
+    from 33 CE with increasingly precise annalistic entries after King Kyamba introduced the cheithaba
+    year-keeper system in 1485 CE.
+region: Manipur
+location: { name: "Imphal, Manipur", lat: 24.807, lon: 93.941 }
+datings:
+  - method: textual-internal
+    range: { earliest: 1485, latest: 1955, precision: year, circa: false }
+    grade: B
+    label: Contemporaneous yearly chronicle entries from Kyamba's cheithaba reform (1485 CE) to 1955 CE
+    sources:
+      - src.parratt-2013-cheitharon-kumpapa
+      - src.kamei-1991-history-of-manipur
+    note: Saroj Nalini Arambam Parratt notes that King Kyamba instituted the named annual cheithaba record-keeping system in 1485 CE, with detailed contemporary day-by-day dating becoming consistent in the 18th century.
+  - method: traditional-sampradaya
+    range: { earliest: 33, latest: 1955, precision: year, circa: true }
+    grade: D
+    label: Chronicle's internal starting epoch (33 CE)
+    sources:
+      - src.parratt-2013-cheitharon-kumpapa
+    note: As edited in the royal court recension, the text opens with Pakhangba's accession in 33 CE, reconstructing early centuries from older oral and puya traditions.
+claims:
+  - text: The chronicle names the annual cheithaba official after whom each year was designated from 1485 CE onward, enabling cross-checks against Burmese chronicles and solar/lunar eclipses.
+    grade: A
+    sources:
+      - src.parratt-2013-cheitharon-kumpapa
+  - text: Written in Meitei Mayek prose, the text documents Manipur's diplomacy with Assam and Burma, military campaigns, temple foundations and eighteenth-century religious transitions under Garib Niwaz.
+    grade: A
+    sources:
+      - src.parratt-2013-cheitharon-kumpapa
+      - src.kamei-1991-history-of-manipur
+relations:
+  - { kind: part-of, target: polity.manipur-kingdom }
+wikidata: Q5089718
+tags: [cheitharol-kumbaba, manipur, chronicle, meitei-mayek, historiography]
+review: { status: draft, author: "gemini-4-hydrogen-xhigh" }
