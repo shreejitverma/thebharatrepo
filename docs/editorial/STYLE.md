@@ -180,7 +180,7 @@ updated: "2026-11-21"
 tags: [ancient history, maurya]
 datings:
   - method: scholarly-consensus
-    range: { earliest: -321, latest: -184, precision: year, circa: true }
+    range: { earliest: "322 BCE", latest: "185 BCE", precision: year, circa: true }
     grade: B
     sources: [src.thapar-2002-early-india]
 entities: [polity.maurya-empire, person.ashoka]

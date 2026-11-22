@@ -111,6 +111,7 @@ describe('loader against fixtures', () => {
       const { loadContentUncached } = await import('./load');
       const msgs = loadContentUncached().errors.map((e) => e.message);
       expect(msgs).toContain('datings[0]: unknown source src.nobody-1999-nothing');
+      expect(msgs).toContain('datings[0]: endpoint is written as "7001 BCE" but the text says "7000 BCE"; check which is meant');
       expect(msgs).toContain('relation related-to -> unknown entity person.ghost');
       expect(msgs).toContain('article body cites no sources; use [@src.id, locator]');
       expect(msgs).toContain('isbn:9780000000002 already identifies src.roe-1990-a-work; cite one source id per work');
@@ -150,9 +151,11 @@ describe('human-readable years', () => {
 describe('integrity checks', () => {
   it('flags BCE off-by-one storage', async () => {
     const { bceOffByOne } = await import('./load');
-    expect(bceOffByOne({ earliest: -7000, latest: -2599 }, 'from c. 7000 BCE to 2600 BCE')).toEqual([7000]);
-    expect(bceOffByOne({ earliest: -6999, latest: -2599 }, 'from c. 7000 BCE to 2600 BCE')).toEqual([]);
-    expect(bceOffByOne({ earliest: -7000, latest: -6999 }, 'around 7000 BCE')).toEqual([]);
+    const { parseYear } = await import('./schema');
+    const y = (s: string) => parseYear(s) as number;
+    expect(bceOffByOne({ earliest: y('7001 BCE'), latest: y('2600 BCE') }, 'from c. 7000 BCE to 2600 BCE')).toEqual([7000]);
+    expect(bceOffByOne({ earliest: y('7000 BCE'), latest: y('2600 BCE') }, 'from c. 7000 BCE to 2600 BCE')).toEqual([]);
+    expect(bceOffByOne({ earliest: y('7001 BCE'), latest: y('7000 BCE') }, 'around 7000 BCE')).toEqual([]);
   });
   it('rejects raw negative years in authored datings', async () => {
     const { rawNegativeYears } = await import('./load');

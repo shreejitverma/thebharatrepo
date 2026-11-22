@@ -115,9 +115,8 @@ export function findHiddenCitations(body: string): string[] {
 }
 
 /**
- * Detects the most common authoring error with raw astronomical years: storing -N for "N BCE"
- * (correct is 1 - N). Flags a dating when the accompanying text names "N BCE", an endpoint equals -N,
- * and no endpoint equals 1 - N.
+ * Detects a BCE endpoint one year earlier than the text says: an endpoint equal to -N (that is,
+ * "N+1 BCE") while the accompanying text names "N BCE" and no endpoint equals 1 - N. Returns each such N.
  */
 export function bceOffByOne(range: { earliest: number; latest: number; best?: number }, text: string): number[] {
   const ends = [range.earliest, range.latest, range.best].filter((x): x is number => x !== undefined);
@@ -261,7 +260,7 @@ export function loadContentUncached(): ContentGraph {
     const text = [e.summary, e.summaries?.kids, e.summaries?.teen, ...e.claims.map((c) => c.text)].join(' ');
     e.datings.forEach((d, i) => {
       for (const n of bceOffByOne(d.range, `${text} ${d.label ?? ''} ${d.note ?? ''}`)) {
-        errors.push({ file: rel(file), message: `datings[${i}]: stores -${n} for "${n} BCE"; ${n} BCE is ${1 - n} (or write "${n} BCE")` });
+        errors.push({ file: rel(file), message: `datings[${i}]: endpoint is written as "${n + 1} BCE" but the text says "${n} BCE"; check which is meant` });
       }
     });
     const expected = `${path.basename(path.dirname(file))}.${path.basename(file, '.yaml')}`;
@@ -300,7 +299,7 @@ export function loadContentUncached(): ContentGraph {
       if (inlineCitations.length === 0) errors.push({ file: relFile, message: 'article body cites no sources; use [@src.id, locator]' });
       parsed.data.datings.forEach((d, i) => {
         for (const n of bceOffByOne(d.range, `${parsed.data.summary} ${d.label ?? ''} ${d.note ?? ''}`)) {
-          errors.push({ file: relFile, message: `datings[${i}]: stores -${n} for "${n} BCE"; ${n} BCE is ${1 - n} (or write "${n} BCE")` });
+          errors.push({ file: relFile, message: `datings[${i}]: endpoint is written as "${n + 1} BCE" but the text says "${n} BCE"; check which is meant` });
         }
       });
       articles.push({ ...parsed.data, slug: path.basename(file, '.md'), file: relFile, category, body: content, inlineCitations });
