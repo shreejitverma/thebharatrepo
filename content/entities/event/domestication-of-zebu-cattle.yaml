@@ -58,10 +58,10 @@ relations:
   - kind: influenced
     target: concept.southern-neolithic-ash-mounds
 image:
-  commons: "File:Farmer in Tamil Nadu 1993.JPG"
-  alt: Domesticated humped zebu cattle (Bos indicus) ploughing a field in Tamil Nadu
-  credit: Michael Gabler
-  license: CC BY 3.0
+  commons: "File:Hump-Backed Bull LACMA AC1992.214.29.jpg"
+  alt: Early Harappan terracotta humped zebu bull figurine with traces of red pigment from the Kot Diji region, c. 2800-2600 BCE (LACMA)
+  credit: "Los Angeles County Museum of Art (Gift of Andrew Hale and Kate Fitz Gibbon)"
+  license: Public domain
 tags:
   - neolithic
   - domestication

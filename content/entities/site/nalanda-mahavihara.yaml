@@ -39,9 +39,9 @@ relations:
   - { kind: patronised-by, target: polity.pala-empire }
 wikidata: Q216243
 image:
-  commons: "File:Temple 12 - Nalanda Mahavihara (17).jpg"
-  alt: Excavated brick ruins of Temple 12 at the Archaeological Site of Nalanda Mahavihara, Bihar
-  credit: Sumitsurai
+  commons: "File:Nalanda Temple 12 ei7-23.jpg"
+  alt: Excavated brick courtyard, votive stupas, and tiered Temple 12 superstructure at Nalanda Mahavihara, Bihar
+  credit: G41rn8
   license: CC BY-SA 4.0
 tags: [nalanda, mahavihara, buddhism, gupta-empire, kumaragupta, unesco, education, bihar]
 review: { status: draft, author: "gemini-4-argon" }

@@ -75,9 +75,9 @@ relations:
   - { kind: related-to, target: tradition.shrauta-ritual }
 wikidata: Q48723594
 image:
-  commons: "File:अङ्गुलिविन्यासः4 Finger configuration.png"
-  alt: Traditional finger configurations (mudras) used to mark musical notes in Samavedic chanting
-  credit: Puranastudy
+  commons: "File:1672 CE manuscript copy, 10th century BCE Samaveda Kauthuma Samhita Veyagana, Schoyen Collection Norway.jpg"
+  alt: 1672 CE Devanagari manuscript folio of the Samaveda Kauthuma Veyagana showing supralinear numerical svara notation for Vedic chanting (Schoyen Collection)
+  credit: Ms Sarah Welch
   license: CC BY-SA 4.0
 tags: [chanting, samaveda, svara, shiksha, unesco, oral-heritage]
 review: { status: draft, author: "gemini-4-argon" }

@@ -56,8 +56,8 @@ relations:
   - { kind: related-to, target: text.aryabhatiya }
 wikidata: Q115690
 image:
-  commons: "File:Bakhshali manuscript zero detail.jpg"
-  alt: Detail of a birch-bark folio from the Bakhshali manuscript showing decimal numbers with the dot zero
+  commons: "File:Bakhshali manuscript.jpg"
+  alt: Birch-bark folio fragment of the Bakhshali manuscript in Sharada script showing tabular calculations, negative-sign crosses, and dot-zero placeholders
   credit: National Geographic
   license: Public domain
 tags: [bakhshali-manuscript, zero, mathematics, sharada, birch-bark, radiocarbon, contested-chronology]
