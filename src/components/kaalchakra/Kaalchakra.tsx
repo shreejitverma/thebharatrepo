@@ -46,7 +46,23 @@ function prefersReducedMotion(): boolean {
   return typeof window !== 'undefined' && typeof window.matchMedia === 'function' && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 }
 
-function parseState(search: string, ids: Set<string>): State {
+/** Entry nearest a year (astronomical numbering) in a lens, for a `t=` link that names a moment rather than an entry. */
+function nearestTo(items: KcItem[], year: number, lens: Lens): string | null {
+  let best: string | null = null;
+  let bestD = Infinity;
+  for (const it of items) {
+    const a = primaryAnchor(it, lens);
+    if (a === null) continue;
+    const d = Math.abs(yearToUnit(a) - yearToUnit(year));
+    if (d < bestD) {
+      best = it.id;
+      bestD = d;
+    }
+  }
+  return best;
+}
+
+function parseState(search: string, items: KcItem[], ids: Set<string>): State {
   const p = new URLSearchParams(search);
   const s: State = { ...DEFAULT, kinds: [...KINDS] };
   const v = p.get('view');
@@ -63,7 +79,9 @@ function parseState(search: string, ids: Set<string>): State {
   }
   s.q = p.get('q') ?? '';
   const sel = p.get('id');
+  const t = Number(p.get('t') ?? NaN);
   if (sel && ids.has(sel)) s.sel = sel;
+  else if (p.get('t') && Number.isFinite(t)) s.sel = nearestTo(items, t, s.lens);
   const w = p.get('win');
   if (w) {
     const [a, b] = w.split(',').map(Number);
@@ -106,10 +124,11 @@ function matches(item: KcItem, q: string): boolean {
 interface Mount {
   /** Search params last seen from the router. */
   seen: string;
-  /** Query string this component last wrote with history.replaceState, if any since the last mount. */
+  /** Query string this component last wrote to history, if any since the last outside change. */
   written: string | null;
+  /** Bumped by every outside change: Back and Forward, or a link to /kaalchakra. */
   epoch: number;
-  initial: State;
+  state: State;
 }
 
 /**
@@ -136,20 +155,26 @@ export default function Kaalchakra() {
 }
 
 /**
- * State is initialised from useSearchParams, so deep links work on first load and on client-side
- * navigation. The inner component remounts only when the search params change to something this
- * component did not write itself: Back and Forward, or following a link such as the nav link to
- * /kaalchakra. Its own debounced replaceState writes are recognised and do not remount it.
+ * The URL is the source of truth. State is initialised from useSearchParams, so deep links work on first
+ * load and on client-side navigation. When the search params change to something this component did not
+ * write itself (Back and Forward, a `t=` or `id=` edit, or a link such as the nav link to /kaalchakra),
+ * the parsed state replaces the current one in place, without a remount, so the wheel animates to it.
+ * Its own debounced history writes are recognised and change nothing.
  */
 function KaalchakraMount({ items, search }: { items: KcItem[]; search: string }) {
   const ids = useMemo(() => new Set(items.map((i) => i.id)), [items]);
-  const [mount, setMount] = useState<Mount>(() => ({ seen: search, written: null, epoch: 0, initial: parseState(search, ids) }));
+  const [mount, setMount] = useState<Mount>(() => ({ seen: search, written: null, epoch: 0, state: parseState(search, items, ids) }));
   if (search !== mount.seen) {
     if (search === mount.written) setMount({ ...mount, seen: search });
-    else setMount({ seen: search, written: null, epoch: mount.epoch + 1, initial: parseState(search, ids) });
+    else setMount({ seen: search, written: null, epoch: mount.epoch + 1, state: parseState(search, items, ids) });
   }
   const onWrite = useCallback((query: string) => setMount((m) => ({ ...m, written: query })), []);
-  return <KaalchakraInner key={mount.epoch} items={items} initial={mount.initial} onWrite={onWrite} />;
+  return <KaalchakraInner items={items} external={mount.state} epoch={mount.epoch} onWrite={onWrite} />;
+}
+
+/** Changes that are worth their own history entry, so Back returns to them; filters and pans only replace. */
+function isNavigation(a: State, b: State): boolean {
+  return a.sel !== b.sel || a.view !== b.view || a.lens !== b.lens;
 }
 
 /** Pan the window so the item's anchor is comfortably inside it; unchanged if it already is. */
@@ -162,19 +187,35 @@ function reveal(win: UnitWindow, item: KcItem, lens: Lens): UnitWindow {
   return panWindow(win, u - (win.start + win.end) / 2);
 }
 
-function KaalchakraInner({ items, initial, onWrite }: { items: KcItem[]; initial: State; onWrite: (query: string) => void }) {
-  const [s, setS] = useState<State>(initial);
+function KaalchakraInner({ items, external, epoch, onWrite }: { items: KcItem[]; external: State; epoch: number; onWrite: (query: string) => void }) {
+  const [s, setS] = useState<State>(external);
+  const [seenEpoch, setSeenEpoch] = useState(epoch);
+  if (epoch !== seenEpoch) {
+    setSeenEpoch(epoch);
+    setS(external);
+  }
   const [hover, setHover] = useState<{ id: string; x: number; y: number } | null>(null);
+  // The wheel announces a selection when its spin ends; the other views announce at once.
+  const [settledSel, setSettledSel] = useState<string | null>(external.sel);
   const canvasRef = useRef<HTMLDivElement>(null);
   const keysId = useId();
+  /** The state behind the current history entry. */
+  const committed = useRef<State>(external);
 
-  // Debounced so continuous panning never exceeds browser limits on history.replaceState.
+  // Debounced so continuous panning never exceeds browser limits on history writes. A new selection, view or
+  // lens gets its own entry, so Back and Forward step through them; everything else replaces the entry.
   useEffect(() => {
     const query = serialise(s);
     const t = setTimeout(() => {
-      if (query === new URLSearchParams(window.location.search).toString()) return;
+      if (query === new URLSearchParams(window.location.search).toString()) {
+        committed.current = s;
+        return;
+      }
       onWrite(query);
-      window.history.replaceState(null, '', hrefFor(window.location.pathname, query));
+      const href = hrefFor(window.location.pathname, query);
+      if (isNavigation(committed.current, s)) window.history.pushState(null, '', href);
+      else window.history.replaceState(null, '', href);
+      committed.current = s;
     }, 250);
     return () => clearTimeout(t);
   }, [s, onWrite]);
@@ -186,7 +227,6 @@ function KaalchakraInner({ items, initial, onWrite }: { items: KcItem[]; initial
   const ringKinds = useMemo(() => KINDS.filter((k) => kindSet.has(k)), [kindSet]);
   const selected = s.sel ? items.find((i) => i.id === s.sel) : undefined;
   const selIdx = selected ? visible.findIndex((i) => i.id === selected.id) : -1;
-  const selDating = selected ? primaryDating(selected, s.lens) : undefined;
 
   // A hovered mark can unmount without a pointerleave when the items, view or window change.
   const [hoverCtx, setHoverCtx] = useState({ visible, view: s.view, win: s.win });
@@ -201,7 +241,10 @@ function KaalchakraInner({ items, initial, onWrite }: { items: KcItem[]; initial
     const t = setTimeout(() => setAnnouncedCount(visible.length), 800);
     return () => clearTimeout(t);
   }, [visible.length]);
-  const announcement = selected ? (selDating ? `${selected.name}, ${formatDating(selDating, s.cal)}` : selected.name) : `${announcedCount} entries shown`;
+  const announcedSel = s.view === 'wheel' ? settledSel : s.sel;
+  const announced = announcedSel ? items.find((i) => i.id === announcedSel) : undefined;
+  const announcedDating = announced ? primaryDating(announced, s.lens) : undefined;
+  const announcement = announced ? (announcedDating ? `${announced.name}, ${formatDating(announcedDating, s.cal)}` : announced.name) : `${announcedCount} entries shown`;
 
   const select = useCallback((id: string) => update({ sel: id }), [update]);
   const onHover = useCallback((id: string | null, x: number, y: number) => {
@@ -219,12 +262,21 @@ function KaalchakraInner({ items, initial, onWrite }: { items: KcItem[]; initial
     [update],
   );
 
-  const step = (dir: -1 | 1) => {
-    if (!visible.length) return;
-    const i = selIdx < 0 ? (dir === 1 ? 0 : visible.length - 1) : Math.min(visible.length - 1, Math.max(0, selIdx + dir));
+  const goTo = (i: number) => {
     const item = visible[i];
+    if (!item) return;
     update(s.view === 'river' ? { sel: item.id, win: reveal(s.win, item, s.lens) } : { sel: item.id });
   };
+  const step = (dir: -1 | 1) => {
+    if (!visible.length) return;
+    goTo(selIdx < 0 ? (dir === 1 ? 0 : visible.length - 1) : Math.min(visible.length - 1, Math.max(0, selIdx + dir)));
+  };
+  // The scroll gesture on the wheel steps from the latest state, however fast the events arrive.
+  const stepRef = useRef(step);
+  useEffect(() => {
+    stepRef.current = step;
+  });
+  const onWheelStep = useCallback((dir: -1 | 1) => stepRef.current(dir), []);
 
   const onKey = (e: React.KeyboardEvent) => {
     if (s.view === 'river' && !e.altKey && !e.ctrlKey && !e.metaKey) {
@@ -247,6 +299,12 @@ function KaalchakraInner({ items, initial, onWrite }: { items: KcItem[]; initial
     } else if (e.key === 'ArrowLeft' || e.key === 'ArrowUp') {
       e.preventDefault();
       step(-1);
+    } else if (e.key === 'Home' && visible.length) {
+      e.preventDefault();
+      goTo(0);
+    } else if (e.key === 'End' && visible.length) {
+      e.preventDefault();
+      goTo(visible.length - 1);
     } else if (e.key === 'Escape') update({ sel: null });
   };
 
@@ -305,14 +363,14 @@ function KaalchakraInner({ items, initial, onWrite }: { items: KcItem[]; initial
         {announcement}
       </p>
       <p className="visually-hidden" id={keysId}>
-        Arrow keys move between entries in time order and Escape clears the selection. In the River view, Shift and the left or right arrow move the window, and + and - zoom.
+        Arrow keys move between entries in time order, Home and End go to the first and last, and Escape clears the selection. On the wheel, drag to spin it. In the River view, Shift and the left or right arrow move the window, and + and - zoom.
       </p>
 
       <div className="kc-stage">
         <div className="kc-canvas" ref={canvasRef} tabIndex={0} onKeyDown={onKey} role="group" aria-roledescription="timeline" aria-label="Kaalchakra" aria-describedby={keysId}>
           {s.view === 'wheel' ? (
             <>
-              <Wheel items={visible} kinds={ringKinds} lens={s.lens} selectedId={s.sel} cal={s.cal} onSelect={select} onHover={onHover} onSegment={onSegment} />
+              <Wheel items={visible} kinds={ringKinds} lens={s.lens} selectedId={s.sel} cal={s.cal} onSelect={select} onHover={onHover} onStep={onWheelStep} onSettled={setSettledSel} />
               <div className="kc-scale-note">
                 <div className="kc-kinds" role="group" aria-label="Zoom into an era">
                   {SEGMENTS.map((seg) => (
