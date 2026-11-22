@@ -17,10 +17,11 @@ async function noHorizontalScroll(page: Page) {
 
 function collectErrors(page: Page): string[] {
   const errors: string[] = [];
-  page.on('pageerror', (e) => errors.push(e.message));
-  // WebKit logs every prefetch that a navigation cancels as a failed load "due to access control checks"; that is
-  // the browser reporting its own cancellation, not an error on the page.
-  page.on('console', (m) => m.type() === 'error' && !/[?&]_rsc=\w+ due to access control checks\.$/.test(m.text()) && errors.push(m.text()));
+  // WebKit reports every prefetch that a navigation cancels as a failed load "due to access control checks", in the
+  // console and as a rejected fetch; that is the browser describing its own cancellation, not an error on the page.
+  const cancelledPrefetch = (text: string) => /[?&]_rsc=\w+ due to access control checks\.?\s*$/.test(text);
+  page.on('pageerror', (e) => !cancelledPrefetch(e.message) && errors.push(e.message));
+  page.on('console', (m) => m.type() === 'error' && !cancelledPrefetch(m.text()) && errors.push(m.text()));
   return errors;
 }
 

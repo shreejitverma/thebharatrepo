@@ -28,8 +28,7 @@ export default function LeveledText({
     <div className={`rl ${className ?? ''}`} data-has-teen={teen ? '' : undefined} data-has-kids={kids ? '' : undefined}>
       {versions.map(([level, text]) =>
         text ? (
-          // Search indexes the full text only; the simpler versions restate it and would repeat in excerpts.
-          <p key={level} data-rl={level} data-pagefind-ignore={level === 'adult' ? undefined : true}>
+          <p key={level} data-rl={level}>
             {tagged && level !== 'adult' ? (
               <>
                 <span className="rl__tag">{READING_LEVEL_AUDIENCE[level]}</span>
