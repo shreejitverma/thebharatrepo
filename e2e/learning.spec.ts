@@ -242,6 +242,25 @@ test.describe('learning path', () => {
   });
 });
 
+/** The clause after "Review status:" in a page's review note. */
+async function reviewClause(page: Page, path: string): Promise<string> {
+  await page.goto(path, { waitUntil: 'domcontentloaded' });
+  const text = (await page.locator('.review-note').first().textContent()) ?? '';
+  const m = /Review status: ([^.]*)\./.exec(text);
+  expect(m, `review note on ${path} reads "${text}"`).not.toBeNull();
+  return m![1];
+}
+
+test.describe('review status', () => {
+  test('a learning path and its printable pack state a review status in the same words as an entity page', async ({ page }) => {
+    // The path and the Buddha's entry are both drafts, so the entity page's wording is the expected wording.
+    const entity = await reviewClause(page, BUDDHA);
+    expect(entity).toMatch(/^draft, .*awaiting editor review$/);
+    expect(await reviewClause(page, PATH)).toBe(entity);
+    expect(await reviewClause(page, `${PATH}/print`)).toBe(entity);
+  });
+});
+
 test.describe('printable pack', () => {
   test('renders the pack with the answer key on its own printed page', async ({ page }) => {
     const errors = collectErrors(page);

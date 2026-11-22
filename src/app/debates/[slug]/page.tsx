@@ -10,7 +10,7 @@ import { getGraph, getIndex, issueUrl } from '@/lib/content/site';
 import { debatePlacement, placementLabel, visibleDebates } from '@/lib/content/debates';
 import { formatDating, primaryDating } from '@/components/kaalchakra/shared';
 import { toKcItem } from '@/lib/content/kaalchakra';
-import { citationId, type CitationRef } from '@/lib/content/schema';
+import { citationId, reviewStatusText, type CitationRef } from '@/lib/content/schema';
 import { formatRange } from '@/lib/time';
 import { yearToUnit } from '@/lib/time/scale';
 
@@ -227,7 +227,7 @@ export default async function DebatePage({ params }: { params: Promise<{ slug: s
       </section>
 
       <p className="review-note" style={{ marginTop: 32, maxWidth: 860 }}>
-        Review status: {d.review.status === 'reviewed' ? `reviewed by ${d.review.reviewer} on ${d.review.lastReviewed}` : 'draft, awaiting editor and advisory review'}.
+        Review status: {reviewStatusText(d.review)}.
         {d.approval ? ` Approved for publication by ${d.approval.by} on ${d.approval.date}.` : ' Not yet approved for publication.'}{' '}
         <a href={issueUrl(`Correction: ${d.title} (${d.id})`, `Debate: ${d.id}\n\nWhat is wrong or missing:\n\nEvidence (with source):\n`)}>Report an error</a>
       </p>

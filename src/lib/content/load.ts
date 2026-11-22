@@ -574,9 +574,9 @@ export function assembleContent<T extends ArticleMetadata>(
     }
   }
 
-  // Internal links in article bodies must reach a live entity or article.
+  // Internal links in article bodies must reach a live entity, an article or a category index.
   // Checked only where the bodies are present: a re-imported archive carries article metadata without them.
-  const articlePaths = new Set(articles.map((a) => `/${a.category}/${a.slug}`));
+  const articlePaths = new Set([...CATEGORIES.map((c) => `/${c}`), ...articles.map((a) => `/${a.category}/${a.slug}`)]);
   for (const a of articles) {
     const body = (a as { body?: unknown }).body;
     for (const href of typeof body === 'string' ? internalLinks(body) : []) {

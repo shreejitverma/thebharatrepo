@@ -107,6 +107,7 @@ export default function Search() {
     let cancelled = false;
     const key = serialise(state);
     (async () => {
+      setError(null);
       if (!isActive(state)) {
         await filtersReady;
         const counts = await pagefind.filters();
@@ -180,6 +181,7 @@ export default function Search() {
     try {
       const more = await Promise.all(outcome.results.slice(from, from + PAGE_SIZE).map((r) => r.data()));
       setOutcome((o) => (o && o.status === 'done' && o.for === outcome.for ? { ...o, items: [...o.items, ...more] } : o));
+      setError(null);
       focusResult.current = from;
     } catch (e) {
       setError((e as Error).message || 'loading more results failed');

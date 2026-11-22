@@ -40,6 +40,19 @@ test.describe('search', () => {
     expect(errors).toEqual([]);
   });
 
+  test('a failed search does not outlive the next search that succeeds', async ({ page }) => {
+    // Result fragments are fetched per search; the first search's fail, as on a brief network drop.
+    await page.route('**/pagefind/fragment/**', (route) => route.abort());
+    await page.goto('/search?q=Harappa');
+    const unavailable = page.getByText(/^Search is unavailable:/);
+    await expect(unavailable).toBeVisible();
+    await page.unroute('**/pagefind/fragment/**');
+    await page.getByLabel('Search entities, articles and sources').fill('Rigveda');
+    await expect(status(page)).toHaveText(/results? for “Rigveda”/);
+    await expect(unavailable).toHaveCount(0);
+    await expect(results(page).first()).toBeVisible();
+  });
+
   test('typing searches as you type and keeps the URL in sync', async ({ page }) => {
     await page.goto('/search');
     await expect(status(page)).toContainText('records indexed');

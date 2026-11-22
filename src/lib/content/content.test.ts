@@ -237,6 +237,8 @@ describe('loader against fixtures', () => {
       expect(msgs).toContain('relation related-to -> unknown entity event.former-toba (merged into event.toba; link to that id)');
       expect(msgs).toContain('link /archive/event/former-toba -> unknown entity event.former-toba (merged into event.toba; link to that id)');
       expect(msgs).toContain('link /history/nothing does not reach an entity or article');
+      // A category index is a real page (src/app/[category]), so a link to it is accepted.
+      expect(msgs).not.toContain('link /history does not reach an entity or article');
       expect(msgs.filter((m) => m.startsWith('link '))).toHaveLength(2);
       expect(msgs).toContain('relation contemporary-of -> event.toba is listed twice');
       expect(msgs).toContain("relation related-to -> event.misdated duplicates event.misdated's relation contemporary-of -> event.toba; the site shows inbound relations on both pages, so keep one");

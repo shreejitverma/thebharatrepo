@@ -13,7 +13,7 @@ import { placementLabel } from '@/lib/content/debates';
 import { citationViews, pathPlacement, resolveSteps, summaryAtLevel, type ResolvedStep } from '@/lib/content/learning';
 import { primaryDating } from '@/lib/content/lens';
 import { toKcItem } from '@/lib/content/kaalchakra';
-import { READING_LEVEL_AUDIENCE, READING_LEVEL_LABELS, citationId, isTraditional } from '@/lib/content/schema';
+import { READING_LEVEL_AUDIENCE, READING_LEVEL_LABELS, citationId, isTraditional, reviewStatusText } from '@/lib/content/schema';
 import { formatRange } from '@/lib/time';
 import { yearToUnit } from '@/lib/time/scale';
 
@@ -166,7 +166,7 @@ export default async function LearningPathPage({ params }: { params: Promise<{ s
       ) : null}
 
       <p className="review-note" style={{ marginTop: 32, maxWidth: 860 }}>
-        Review status: {p.review.status === 'reviewed' ? `reviewed by ${p.review.reviewer} on ${p.review.lastReviewed}` : 'draft, awaiting editor review'}.{' '}
+        Review status: {reviewStatusText(p.review)}.{' '}
         <a href={issueUrl(`Correction: ${p.title} (${p.id})`, `Learning path: ${p.id}\n\nWhat is wrong:\n\nEvidence (with source):\n`)}>Report an error</a>
       </p>
     </div>

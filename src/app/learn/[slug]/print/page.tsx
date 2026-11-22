@@ -9,7 +9,7 @@ import { SITE_URL, getGraph } from '@/lib/content/site';
 import { learnHref, resolveSteps, summaryAtLevel } from '@/lib/content/learning';
 import { datingSummary, primaryDating, summarizeDatings } from '@/lib/content/lens';
 import { toKcItem } from '@/lib/content/kaalchakra';
-import { READING_LEVEL_AUDIENCE, READING_LEVEL_LABELS, citationId, type CitationRef } from '@/lib/content/schema';
+import { READING_LEVEL_AUDIENCE, READING_LEVEL_LABELS, citationId, reviewStatusText, type CitationRef } from '@/lib/content/schema';
 
 export const dynamicParams = false;
 
@@ -179,7 +179,7 @@ export default async function PrintPackPage({ params }: { params: Promise<{ slug
 
       <p className="review-note" style={{ marginTop: 24 }}>
         {READING_LEVEL_AUDIENCE[p.level]}. From {SITE_URL}
-        {learnHref(p)}. Content licensed CC BY-SA 4.0. Review status: {p.review.status === 'reviewed' ? `reviewed by ${p.review.reviewer} on ${p.review.lastReviewed}` : 'draft, awaiting editor review'}.
+        {learnHref(p)}. Content licensed CC BY-SA 4.0. Review status: {reviewStatusText(p.review)}.
       </p>
     </div>
   );
