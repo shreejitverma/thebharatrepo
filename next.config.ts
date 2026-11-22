@@ -4,7 +4,7 @@ import type { NextConfig } from "next";
 import { loadContentUncached } from "./src/lib/content/load";
 import { aliasRedirects } from "./src/lib/content/redirects";
 
-/** Pagefind names its index, filter and fragment chunks by content hash, so a URL never changes meaning. */
+/** Pagefind names its index, filter and fragment chunks by content hash, and fonts sit in versioned directories, so a URL never changes meaning. */
 const immutable = [{ key: "Cache-Control", value: "public, max-age=31536000, immutable" }];
 
 /**
@@ -30,7 +30,8 @@ const nextConfig: NextConfig = {
     return aliasRedirects(loadContentUncached().aliases);
   },
   async headers() {
-    return ["/pagefind/fragment/:file*", "/pagefind/index/:file*", "/pagefind/filter/:file*"].map((source) => ({ source, headers: immutable }));
+    // Font files live in a versioned directory (public/fonts/v1) and are never edited in place.
+    return ["/pagefind/fragment/:file*", "/pagefind/index/:file*", "/pagefind/filter/:file*", "/fonts/:version/:file*"].map((source) => ({ source, headers: immutable }));
   },
   outputFileTracingExcludes: { "*": [...unpublishedDebateFiles(), "src/lib/content/__fixtures__/**", "e2e/**"] },
 };

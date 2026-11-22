@@ -21,6 +21,7 @@ The product brief is in [`docs/prompts/kaalchakra-master-prompt.md`](docs/prompt
 - Kaalchakra views (Wheel, River, Map, List) are hand-written SVG with no charting or mapping dependency.
 - The Map view draws an offline basemap derived from public-domain Natural Earth data (`src/data/basemap/`): no tiles, no API keys, no third-party requests.
 - The wheel's motion is a hand-rolled `requestAnimationFrame` loop (`src/components/kaalchakra/spin.ts`) with no animation library: every selection spins to the fixed indicator at the top, the rotating layer is turned with a CSS transform so frames cost no repaint, and reduced motion jumps instead.
+- Fonts are self-hosted: the woff2 subsets sit in `public/fonts/`, `src/styles/fonts.css` declares them with a `unicode-range` per subset and metric-adjusted fallbacks, and only three latin files are preloaded, so no build or page view contacts Google Fonts; licences and provenance are in [`public/fonts/README.md`](public/fonts/README.md).
 - Colour tokens are drawn from Hindu iconography and Indian pigments; every token, its source and its use is in [`docs/design/palette.md`](docs/design/palette.md), and a unit test holds every documented pair to WCAG 2.2 AA.
 
 ## Content layout
