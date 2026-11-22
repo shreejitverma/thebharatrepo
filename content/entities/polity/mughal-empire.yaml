@@ -29,7 +29,11 @@ claims:
       structures changed considerably over time.
     grade: B
     sources: *a1
-relations: []
+relations:
+  - { kind: ruled-by, target: person.akbar }
+  - { kind: related-to, target: person.dara-shikoh, note: Mughal prince and contender for the throne }
+  - { kind: related-to, target: event.first-battle-of-panipat, note: Babur's victory laid the foundation of Mughal rule }
+  - { kind: related-to, target: event.indian-revolt-of-1857, note: Rebels rallied around the last Mughal emperor Bahadur Shah II }
 tags:
   - polity
 review:

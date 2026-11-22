@@ -38,7 +38,7 @@ claims:
 relations:
   - { kind: authored-by, target: person.aryabhata }
   - { kind: influenced, target: person.varahamihira }
-  - { kind: related-to, target: event.kurukshetra-war }
+  - { kind: related-to, target: event.kali-yuga-epoch }
 wikidata: Q3518429
 tags: [aryabhatiya, aryabhata, mathematics, astronomy, kali-yuga, 499-ce, trigonometry]
 review: { status: draft, author: "gemini-4-argon" }

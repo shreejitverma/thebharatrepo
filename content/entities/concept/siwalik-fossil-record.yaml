@@ -50,8 +50,9 @@ claims:
     sources:
       - src.barry-2002-siwalik-faunal-change
 relations:
-  - kind: succeeded
+  - kind: related-to
     target: event.indian-plate-asia-collision
+    note: The fossil-bearing Siwalik sediments accumulated in the Himalayan foreland
 image:
   commons: "File:View over the Sivalik Hills 02.jpg"
   alt: Forested ridges of the Siwalik Hills in the Himalayan foothills

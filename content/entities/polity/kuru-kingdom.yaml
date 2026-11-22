@@ -69,7 +69,6 @@ relations:
   - { kind: patronised, target: tradition.shrauta-ritual }
   - { kind: related-to, target: text.atharvaveda }
   - { kind: related-to, target: text.yajurveda }
-  - { kind: succeeded, target: event.dasarajna }
 wikidata: Q1068408
 image:
   commons: "File:Map of Kuru Kingdom.jpg"

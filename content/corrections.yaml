@@ -1188,3 +1188,343 @@
   sources:
     - src.zvelebil-1992-companion-studies
     - src.wilden-2014-manuscript-print-memory
+- date: 2026-11-22
+  target: concept.ghaggar-hakra-sarasvati-debate
+  before: Two entities covered the identification of the Rigvedic Sarasvati with the Ghaggar-Hakra and repeated the same Harappan-era dating under different methods.
+  after: One entity covers the palaeochannel and the textual identification, retaining the Rigvedic and later Vedic evidence, the Helmand comparison, and the competing chronologies.
+  reason: The proposals identify the same debated river and the Lal and Danino dating is a textual correlation with archaeological and hydrological evidence.
+  sources:
+    - src.jamison-brereton-2014-rigveda
+    - src.witzel-1997-early-sanskritization-kuru
+    - src.parpola-2015-roots-of-hinduism
+    - src.danino-2010-lost-river-sarasvati
+    - src.lal-2002-saraswati-flows-on
+- date: 2026-11-22
+  target: concept.ghaggar-hakra-sarasvati-debate
+  before: A single grade A range treated the Yamuna and Sutlej as a joint river system that avulsed from about 45,000 to 8,000 years ago.
+  after: The grade B range covers separate estimates for the Yamuna capture, about 49,000 to 10,000 years ago, and the main Sutlej avulsion, about 15,000 to 8,000 years ago.
+  reason: The studies used provenance and dated sediments to infer distinct shifts in the two drainages.
+  sources:
+    - src.clift-2012-zircon-dating-sarasvati
+    - src.singh-2017-himalayan-river-morphodynamics
+- date: 2026-11-22
+  target: concept.ghaggar-hakra-sarasvati-debate
+  before: The Harappan-era Ghaggar-Hakra was a perennial monsoon-fed river that declined around 2000 to 1900 BCE.
+  after: The grade C datings distinguish the Harappan-era monsoon and seasonal flow interpretations from the proposed earlier perennial flow fed by Sutlej distributaries.
+  reason: Giosan, Singh and Chatterjee and their coauthors infer different water sources and timing for flow in the abandoned main channel.
+  sources:
+    - src.giosan-2012-fluvial-landscapes-harappan
+    - src.singh-2017-himalayan-river-morphodynamics
+    - src.chatterjee-2019-perennial-river-harappan-heartland
+- date: 2026-11-22
+  target: concept.ghaggar-hakra-sarasvati-debate
+  before: The Rigvedic to Brahmana dating ended at 900 BCE while its note placed the Brahmana descriptions between about 900 and 700 BCE.
+  after: The grade C textual range extends from about 1500 to 700 BCE and is an estimate for the textual layers that describe Sarasvati.
+  reason: The date describes the succession of textual layers, which offers no independent date for change in river flow.
+  sources:
+    - src.jamison-brereton-2014-rigveda
+    - src.witzel-1997-early-sanskritization-kuru
+- date: 2026-11-22
+  target: concept.ghaggar-hakra-sarasvati-debate
+  before: The geographical identification of the river was graded A and one entry described the Rigvedic river as snow-fed.
+  after: The grade A claim records what the hymns say about Sarasvati, including the order of the named rivers, her description as a goddess, and her association with the fire of the Bharatas.
+  reason: The hymns directly attest poetic descriptions and river names. The physical identification and source of the river are interpretations.
+  sources:
+    - src.jamison-brereton-2014-rigveda
+    - src.witzel-1997-early-sanskritization-kuru
+    - src.parpola-2015-roots-of-hinduism
+- date: 2026-11-22
+  target: concept.ghaggar-hakra-sarasvati-debate
+  before: Later Vedic accounts were summarised as a forty-day Sarasvata pilgrimage from Vinashana to Plaksha Prasravana.
+  after: The Panchavimsha and Jaiminiya Brahmanas describe the river disappearing at Vinashana, and the Sarasvata sattra follows the river upstream to Plaksha Prasravana.
+  reason: The ritual route is attested, and the distance given in the sources does not establish a forty-day duration for the rite.
+  sources:
+    - src.witzel-1997-early-sanskritization-kuru
+    - src.danino-2010-lost-river-sarasvati
+    - src.singh-2008-ancient-early-medieval-india
+- date: 2026-11-22
+  target: concept.ghaggar-hakra-sarasvati-debate
+  before: A grade A claim gave an exact settlement threshold and linked the weakening monsoon to the abandonment of individual cities.
+  after: A grade B claim records the survey evidence for many settlements and the regional shift toward the upper interfluve in the Late Harappan phase.
+  reason: The distribution is supported by survey and geomorphological studies. The causes of abandonment at individual sites are less secure.
+  sources:
+    - src.giosan-2012-fluvial-landscapes-harappan
+    - src.singh-2017-himalayan-river-morphodynamics
+    - src.possehl-2002-indus-civilization
+- date: 2026-11-22
+  target: src.jamison-brereton-2014-rigveda
+  before: The 2014 Rigveda translation was identified by the DOI for Jamison and Brereton's 2020 introductory book.
+  after: The source uses the catalogue title and set ISBN for the 2014 three-volume translation, 9780199370184.
+  reason: The cited hymns are in the 2014 translation and the Oxford University Press edition gives the set ISBN on its copyright page.
+  sources:
+    - src.jamison-brereton-2014-rigveda
+- date: 2026-11-22
+  target: tradition.vedic-chanting
+  before: A separate tradition entry combined the 2003 UNESCO proclamation and the 2008 inscription into one range, and the oral-transmission entry repeated the recognition claim.
+  after: Vedic Chanting records 2003 and 2008 as separate grade A documentary milestones. Oral Preservation of the Vedas links to that record.
+  reason: UNESCO records the Masterpiece proclamation and the Representative List inscription as distinct actions concerning the same tradition.
+  sources:
+    - src.unesco-2003-tradition-vedic-chanting
+- date: 2026-11-22
+  target: tradition.kumbha-mela
+  before: A separate tradition entry repeated the 2017 UNESCO inscription of Kumbh Mela.
+  after: The 2017 documentary dating and claim are recorded on the Kumbh Mela tradition entry.
+  reason: Both entries cited the same UNESCO record for the same inscription.
+  sources:
+    - src.unesco-2017-kumbh-mela
+- date: 2026-11-22
+  target: concept.rakhigarhi-i6113-genome
+  before: A separate event entry repeated publication of the analysis of the Rakhigarhi genome in 2019.
+  after: The genome entry records the 2019 Cell publication as a grade A documentary dating and identifies it in the claim about the recovered genome.
+  reason: The entries described the same paper and specimen. The date of publication is a separate milestone from the contextual age of the burial.
+  sources:
+    - src.shinde-2019-ancient-harappan-genome
+- date: 2026-11-22
+  target: concept.rakhigarhi-i6113-genome
+  before: The burial was dated to 2800 to 2300 BCE by a grade A genetic dating that cited direct dates for other individuals.
+  after: The range is a grade C archaeological estimate based on local grave goods and charcoal dates from the settlement.
+  reason: The researchers could not directly radiocarbon-date I6113 and dated the burial by archaeological context.
+  sources:
+    - src.shinde-2019-ancient-harappan-genome
+- date: 2026-11-22
+  target: concept.rakhigarhi-i6113-genome
+  before: I6113 was described as burial BR02.
+  after: I6113 is identified by skeletal code RGR7.3, BR-01, HS-02.
+  reason: The code is given in the paper's description of the specimen and the caption of the burial photograph.
+  sources:
+    - src.shinde-2019-ancient-harappan-genome
+- date: 2026-11-22
+  target: concept.rakhigarhi-i6113-genome
+  before: The grade A ancestry claim said I6113 confirmed a representative Harappan ancestry profile and its role in the ancestry of present-day South Asians.
+  after: I6113 fits the ancestry cline described in the wider study. The grade B claim attributes the inference about present-day ancestry to that study and states the limits of a single genome.
+  reason: Similarity to the eleven sampled individuals from other sites cannot establish the extent of variation across Harappan communities.
+  sources:
+    - src.shinde-2019-ancient-harappan-genome
+    - src.narasimhan-2019-formation-human-populations
+- date: 2026-11-22
+  target: concept.rakhigarhi-i6113-genome
+  before: A grade A claim gave a numerical date for the Iranian-related lineage split and stated the ancestry profile as categorical.
+  after: The grade A finding describes the ancestry components the study detected. A grade C claim records model-based inference about a split preceding farming in the Iranian plateau.
+  reason: The study inferred the order of lineage splits and used archaeological context to interpret when the divergence occurred.
+  sources:
+    - src.shinde-2019-ancient-harappan-genome
+- date: 2026-11-22
+  target: site.dholavira
+  before: A separate event entry repeated Dholavira's 2021 World Heritage inscription.
+  after: Dholavira's site entry carries the 2021 inscription and its grade A documentary dating.
+  reason: Both entries described the same World Heritage Committee decision using the same UNESCO record.
+  sources:
+    - src.unesco-2021-dholavira
+- date: 2026-11-22
+  target: text.rigveda and text.shukla-yajurveda
+  before: Both Samhitas had outgoing commentary edges to their Brahmanas.
+  after: The Aitareya Brahmana comments on the Rigveda and the Shatapatha Brahmana comments on the Shukla Yajurveda.
+  reason: The prose Brahmanas explain ritual material in the Samhitas. The existing Brahmana-to-Samhita edges carry that direction.
+  sources:
+    - src.keith-1920-rigveda-brahmanas
+    - src.eggeling-1882-satapatha-brahmana-part-1
+- date: 2026-11-22
+  target: text.aryabhatiya
+  before: The Aryabhatiya was linked to the Kurukshetra War.
+  after: The text is linked to the Kali Yuga epoch.
+  reason: Kalakriyapada 10 counts elapsed time used to reckon the Kali epoch and does not name the battle.
+  sources:
+    - { id: src.shukla-sarma-1976-aryabhatiya, locator: Kalakriyapada 10 }
+    - src.plofker-2009-mathematics-in-india
+- date: 2026-11-22
+  target: site.nalanda-mahavihara
+  before: The Nalanda site had a located-at relation to the ancient kingdom of Magadha and lacked links to Pala patronage, Xuanzang's visit and the site's decline.
+  after: Nalanda is linked to Magadha as a historical region, the Pala Empire as a patron, and the events recording Xuanzang's travels and Nalanda's decline.
+  reason: The kingdom and the later monastery have distinct chronologies. Archaeological and written records substantiate the other associations.
+  sources:
+    - src.unesco-2016-nalanda-mahavihara
+    - src.kulke-2004-history-of-india
+    - src.singh-2008-ancient-early-medieval-india
+    - src.beal-1906-si-yu-ki
+    - src.raverty-1881-tabakat-i-nasiri
+- date: 2026-11-22
+  target: event.dasarajna and polity.kuru-kingdom
+  before: The Kuru kingdom succeeded the Battle of the Ten Kings, and the battle preceded the Kuru kingdom.
+  after: A single link records the role of the Bharatas in reconstructions of the later Kuru state.
+  reason: The Rigvedic conflict and the later state's formation are distinct, with a historical association reconstructed from the texts.
+  sources:
+    - src.jamison-brereton-2014-rigveda
+    - src.witzel-1997-early-sanskritization-kuru
+- date: 2026-11-22
+  target: site.bhirrana and site.mehrgarh
+  before: Bhirrana was linked as the successor of Mehrgarh.
+  after: The two settlements are linked as related archaeological sites with overlapping occupation estimates.
+  reason: The sites are in different regions, and the chronologies and excavated material do not establish direct succession.
+  sources:
+    - src.sarkar-2016-bhirrana-oxygen-isotope
+    - src.fuller-2006-agricultural-origins-south-asia
+    - src.coningham-2015-archaeology-south-asia
+- date: 2026-11-22
+  target: site.kayatha and tradition.malwa-culture
+  before: The Malwa culture was represented as succeeding the entire site of Kayatha.
+  after: The Malwa culture is linked to Kayatha as a site where its ceramics occur in Period III.
+  reason: The excavated sequence distinguishes earlier Kayatha and Ahar-Banas levels from the later Malwa levels at the same site.
+  sources:
+    - src.misra-2001-prehistoric-colonization-india
+    - src.coningham-2015-archaeology-south-asia
+- date: 2026-11-22
+  target: concept.siwalik-fossil-record and event.indian-plate-asia-collision
+  before: The Siwalik fossil record was represented as the successor to the India-Asia collision.
+  after: The fossil record is linked to the collision through the Himalayan foreland in which the Siwalik sediments accumulated.
+  reason: The geological event and the later sedimentary record are linked by their tectonic setting and operate on distinct timescales.
+  sources:
+    - src.hu-2016-india-asia-collision
+    - src.barry-2002-siwalik-faunal-change
+- date: 2026-11-22
+  target: tradition.harappan-civilisation
+  before: The civilisation preceded Cemetery H and Jhukar and succeeded Kot Diji and Hakra Ware.
+  after: The four phase-to-civilisation links are expressed through their existing part-of relations.
+  reason: The archive's Harappan civilisation entry spans these early and late regional phases, as treated in the comparative archaeological literature.
+  sources:
+    - src.possehl-2002-indus-civilization
+    - src.wright-2010-ancient-indus
+- date: 2026-11-22
+  target: site.banawali and site.kunal
+  before: The two links to Bhirrana asserted contemporary occupation without specifying which levels overlap.
+  after: Banawali's link specifies Early and Mature Harappan overlap, and Kunal's specifies Early Harappan overlap.
+  reason: The comparable phases overlap on the conventional regional chronology independently of the disputed early Bhirrana dates.
+  sources:
+    - src.possehl-2002-indus-civilization
+    - src.coningham-2015-archaeology-south-asia
+    - src.sarkar-2016-bhirrana-oxygen-isotope
+- date: 2026-11-22
+  target: site.mahadaha and site.sarai-nahar-rai
+  before: Both entries linked the settlements as contemporaneous.
+  after: The sites are linked as nearby Mesolithic lakeshore sites with comparable burial evidence and uncertain occupation overlap.
+  reason: The comparable archaeology supports the connection, while the conflicting and widely spaced radiocarbon results leave exact contemporaneity uncertain.
+  sources:
+    - src.lukacs-1993-mesolithic-subsistence-north-india
+    - src.misra-2001-prehistoric-colonization-india
+    - src.coningham-2015-archaeology-south-asia
+- date: 2026-11-22
+  target: polity.mughal-empire
+  before: The Mughal Empire entry had no links to its rulers, dynastic figures or turning points named in the audit.
+  after: The empire is linked to Akbar as a ruler, Dara Shikoh as a prince, and the First Battle of Panipat and the 1857 Revolt as turning points.
+  reason: The sources substantiate Akbar's reign, Dara's place in the dynasty, and the roles of the two events in the rise and end of Mughal rule.
+  sources:
+    - src.richards-1993-mughal-empire
+    - src.gandhi-2020-emperor-who-never-was
+    - src.metcalf-2012-concise-history-modern-india
+- date: 2026-11-22
+  target: polity.maratha-empire
+  before: The Maratha Empire entry had no links to Shivaji, his coronation or Panipat.
+  after: The empire is linked to Shivaji as founder and to the events of his coronation and the Third Battle of Panipat.
+  reason: These are documented connections between the polity and the people and events that shaped it.
+  sources:
+    - src.gordon-1993-marathas-1600-1818
+    - src.eaton-2005-social-history-deccan
+- date: 2026-11-22
+  target: polity.sikh-empire
+  before: The Sikh Empire entry had no links to Ranjit Singh or the Khalsa.
+  after: The empire is linked to Ranjit Singh as its founder and to the Khalsa through the ideal of Khalsa Raj.
+  reason: The sources situate the Lahore kingdom in the political history of the Khalsa and document Ranjit Singh's role in founding it.
+  sources:
+    - src.grewal-1990-sikhs-of-the-punjab
+    - src.singh-fenech-2014-oxford-handbook-sikh-studies
+- date: 2026-11-22
+  target: polity.indian-national-army
+  before: The Indian National Army had no link to Subhas Chandra Bose.
+  after: The army is linked to Bose as the leader who reorganised it from 1943.
+  reason: His leadership of the army is documented in the historical record.
+  sources:
+    - src.bose-2011-his-majestys-opponent
+    - src.bose-jalal-2004-modern-south-asia
+- date: 2026-11-22
+  target: person.krishnadevaraya and site.hampi
+  before: Krishnadevaraya had no link to Hampi, and Hampi had no link to the Battle of Talikota.
+  after: Krishnadevaraya is linked to Hampi as a patron and Hampi is linked to Talikota through the subsequent sack of the capital.
+  reason: The monuments document Krishna Deva Raya's patronage. The battle took place decades after his reign and affected the city directly.
+  sources:
+    - src.stein-1989-vijayanagara
+    - src.unesco-1986-hampi
+- date: 2026-11-22
+  target: person.mahatma-gandhi
+  before: Gandhi's entry had no links to the Champaran Satyagraha, the Salt March, Quit India or Independence and Partition.
+  after: The entry links to all four events.
+  reason: Gandhi took a documented role in the three campaigns and in efforts to halt communal violence during Partition.
+  sources:
+    - src.brown-1989-gandhi-prisoner-of-hope
+    - src.metcalf-2012-concise-history-modern-india
+- date: 2026-11-22
+  target: person.b-r-ambedkar
+  before: Ambedkar's entry had no link to the adoption and commencement of the Constitution.
+  after: The entry links Ambedkar to the event through his role as chair of the Drafting Committee and his motion for adoption.
+  reason: The Constituent Assembly records and historical studies document Ambedkar's role in adoption.
+  sources:
+    - src.constitution-of-india
+    - src.jaffrelot-2005-ambedkar-and-untouchability
+- date: 2026-11-22
+  target: text.ramcharitmanas and text.valmiki-ramayana
+  before: The Ramcharitmanas had no authorship link to Tulsidas, and both narratives lacked links to Rama and each other.
+  after: The Ramcharitmanas is linked to Tulsidas as its author and to the Valmiki Ramayana as another telling of Rama's story. Both narratives are linked to Rama.
+  reason: The texts and their scholarship attest the authorship and the shared narrative subject.
+  sources:
+    - src.lutgendorf-1991-life-of-a-text
+    - src.goldman-1984-ramayana-balakanda
+    - src.brockington-1998-sanskrit-epics
+- date: 2026-11-22
+  target: tradition.arya-samaj and tradition.brahmo-sabha
+  before: The reform movements lacked links to Dayananda Saraswati and Raja Ram Mohan Roy.
+  after: The Arya Samaj and Brahmo Sabha link to Dayananda Saraswati and Raja Ram Mohan Roy respectively as founders.
+  reason: The historical studies identify their roles in establishing the respective movements.
+  sources:
+    - src.jones-1989-socio-religious-reform-movements
+    - src.hatcher-2008-bourgeois-hinduism
+- date: 2026-11-22
+  target: event.asiatic-society
+  before: The Asiatic Society lacked a founder link.
+  after: The Society is linked to William Jones as founder.
+  reason: Records of the founding meeting identify Jones as its initiator.
+  sources:
+    - src.asi-history-1861
+    - src.trautmann-1997-aryans-and-british-india
+- date: 2026-11-22
+  target: site.jantar-mantar-jaipur
+  before: The observatory lacked a link to Sawai Jai Singh II.
+  after: The observatory is linked to Sawai Jai Singh II as founder.
+  reason: The UNESCO record and the history of the observatory identify Jai Singh as its creator.
+  sources:
+    - src.unesco-2010-jantar-mantar-jaipur
+    - src.sharma-1995-sawai-jai-singh-astronomy
+- date: 2026-11-22
+  target: artifact.iron-pillar-of-delhi
+  before: The Iron Pillar was unlinked to the Qutb complex.
+  after: The Iron Pillar is linked by its present location in the Qutb complex.
+  reason: The UNESCO inventory places the pillar in the Quwwat-ul-Islam mosque courtyard.
+  sources:
+    - src.unesco-1993-qutb-minar
+- date: 2026-11-22
+  target: text.bhagavad-gita and artifact.heliodorus-pillar
+  before: The text and the pillar lacked connections to Krishna.
+  after: The Bhagavad Gita links to Krishna as a speaker in the dialogue, and the Heliodorus pillar links through its attestation of devotion to Vasudeva.
+  reason: The text and the inscription attest different contexts for the Krishna and Vasudeva traditions.
+  sources:
+    - src.malinar-2007-bhagavadgita-doctrines-contexts
+    - src.salomon-1998-indian-epigraphy
+- date: 2026-11-22
+  target: artifact.sanauli-wheeled-vehicles
+  before: The Sanauli vehicles were unlinked to the Sintashta chariot debate.
+  after: A related-to link connects the Sanauli vehicles and the Sintashta chariot debate as subjects of a technological comparison.
+  reason: The comparative literature discusses the solid wheels at Sanauli and the spoked wheels at Sintashta without establishing an identity between the vehicles.
+  sources:
+    - src.parpola-2020-sanauli-chariot-burials
+    - src.anthony-2007-horse-wheel-language
+- date: 2026-11-22
+  target: event.keezhadi-excavations-begin
+  before: The Keezhadi excavation event lacked a link to the excavated site.
+  after: The excavation event links to Keezhadi as its location.
+  reason: The excavation records identify Keezhadi as the site of the field seasons.
+  sources:
+    - src.keeladi-lok-sabha-2024
+- date: 2026-11-22
+  target: text.vachana-sahitya
+  before: A generic reverse edge to Basava repeated the existing authorship link.
+  after: Basava's authorship edge supplies the connection on both pages.
+  reason: The collection includes works by Basava and other authors, and the existing edge identifies him as one contributor.
+  sources:
+    - src.ramanujan-1973-speaking-of-siva

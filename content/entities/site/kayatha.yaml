@@ -52,8 +52,6 @@ claims:
       - src.misra-2001-prehistoric-colonization-india
       - src.coningham-2015-archaeology-south-asia
 relations:
-  - kind: preceded
-    target: tradition.malwa-culture
   - kind: contemporary-of
     target: tradition.ahar-banas-culture
 tags:

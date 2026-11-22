@@ -94,15 +94,6 @@ claims:
       - src.possehl-2002-indus-civilization
       - src.giosan-2012-fluvial-landscapes-harappan
       - src.singh-2017-himalayan-river-morphodynamics
-relations:
-  - kind: preceded
-    target: tradition.cemetery-h-culture
-  - kind: preceded
-    target: tradition.jhukar-phase
-  - kind: succeeded
-    target: tradition.kot-diji-phase
-  - kind: succeeded
-    target: tradition.hakra-ware-phase
 wikidata: Q42534
 image:
   commons: "File:Simple map of Indus valley civilization.png"

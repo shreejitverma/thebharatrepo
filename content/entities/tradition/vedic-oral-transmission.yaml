@@ -24,7 +24,7 @@ datings:
   - method: scholarly-consensus
     range: { earliest: "1200 BCE", latest: 2003, precision: century, circa: true }
     grade: B
-    label: Codification of Shakalya's Padapatha to modern UNESCO inscription
+    label: Codification of Shakalya's Padapatha to the UNESCO proclamation
     sources:
       - src.jamison-brereton-2014-rigveda
       - src.gonda-1975-vedic-literature
@@ -52,14 +52,8 @@ claims:
     sources:
       - src.unesco-2003-tradition-vedic-chanting
       - src.flood-2003-blackwell-companion-hinduism
-  - text: >-
-      UNESCO proclaimed the tradition of Vedic chanting a Masterpiece of the Oral and Intangible
-      Heritage of Humanity in 2003 and inscribed it on the Representative List in 2008.
-    grade: A
-    sources:
-      - src.unesco-2003-tradition-vedic-chanting
 relations:
-  - { kind: related-to, target: tradition.vedic-chanting }
+  - { kind: related-to, target: tradition.vedic-chanting, note: UNESCO recognition of the living recitation tradition }
   - { kind: related-to, target: text.rigveda }
   - { kind: related-to, target: text.vedangas }
   - { kind: related-to, target: concept.vedic-sanskrit }

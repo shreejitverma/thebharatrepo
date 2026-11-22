@@ -35,7 +35,8 @@ claims:
       - src.kulke-2004-history-of-india
 relations:
   - { kind: patronised-by, target: polity.gupta-empire }
-  - { kind: located-at, target: polity.magadha }
+  - { kind: related-to, target: polity.magadha, note: In the historical Magadha region }
+  - { kind: patronised-by, target: polity.pala-empire }
 wikidata: Q216243
 image:
   commons: "File:Temple 12 - Nalanda Mahavihara (17).jpg"

@@ -44,6 +44,7 @@ claims:
 debate: >-
   Indological scholarship led by Robert P. Goldman and John Brockington places the historical formation of the Valmiki Ramayana over several centuries (c. 700/500 BCE to 300 CE) by tracking its pre-Paninian epic Sanskrit forms, geographical horizon and socio-political institutions, while traditional Itihasa-Purana reckoning situates Valmiki as a contemporary of Rama in the Treta Yuga.
 relations:
+  - { kind: related-to, target: person.rama, note: Rama is the central figure of the epic }
   - { kind: related-to, target: text.mahabharata }
   - { kind: influenced, target: person.kalidasa }
   - { kind: related-to, target: text.puranas }

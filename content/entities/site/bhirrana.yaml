@@ -66,8 +66,9 @@ claims:
     sources:
       - src.sarkar-2016-bhirrana-oxygen-isotope
 relations:
-  - kind: succeeded
+  - kind: related-to
     target: site.mehrgarh
+    note: Settlements in different regions with overlapping occupation estimates
 debate: >-
   Charcoal radiocarbon assays and pottery OSL measurements from Period IA at Bhirrana were interpreted by
   Sarkar et al. (2016) and L. S. Rao as evidence for an 8th-7th millennium BCE pre-Harappan Hakra-ware occupation,

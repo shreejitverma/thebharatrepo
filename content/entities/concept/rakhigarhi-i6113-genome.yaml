@@ -4,65 +4,77 @@ kind: science
 names:
   en: Rakhigarhi Individual I6113 Ancient Genome
 summary: >-
-  The first ancient nuclear genome sequenced directly from an excavated Harappan Civilisation skeleton (individual
-  I6113, an adult female buried in the Mature Harappan necropolis RGR-7 at Rakhigarhi, Haryana, c. 2800-2300 BCE),
-  published by Vasant Shinde, Vagheesh Narasimhan, Niraj Rai, David Reich and colleagues in Cell (2019), demonstrating
-  a mixture of indigenous South Asian hunter-gatherer ancestry and an ancient Iranian-related lineage that diverged
-  prior to the rise of agriculture in the Zagros Mountains, with zero detectable Anatolian farmer or Steppe
-  pastoralist ancestry.
+  In 2019, Shinde and colleagues reported the first ancient nuclear genome from a Harappan site,
+  from a woman buried at Rakhigarhi, Haryana. Her genome was consistent with a mixture of South
+  Asian hunter-gatherer-related ancestry and ancestry from an ancient Iranian-related lineage,
+  with no detectable Steppe pastoralist or Anatolian farmer-related ancestry. One genome gives
+  limited evidence about the diversity of Harappan populations.
 summaries:
   kids: >-
-    Scientists studied ancient DNA from a woman buried over 4,300 years ago at Rakhigarhi in Haryana, showing
-    that Harappan people had deep roots in South Asia and are the main ancestors of most people living in South
-    Asia today.
+    Scientists studied DNA from one woman buried at Rakhigarhi in Haryana more than 4,000 years ago.
+    Her DNA gives clues about her ancestors. Researchers would need DNA from many more people to
+    learn how much Harappan communities differed from one another.
   teen: >-
-    Published in Cell in 2019 by Vasant Shinde and colleagues, the genome of Rakhigarhi individual I6113 matched
-    11 "Indus Periphery" outlier individuals found in Iran and Turkmenistan, lacked Steppe pastoralist DNA, and
-    showed that the Iranian-related ancestry in Harappans split from Zagros Highland lineages over 10,000 years
-    ago before farming began.
+    I6113's genome fit the same ancestry pattern as 11 individuals buried at sites in Iran and
+    Turkmenistan. The study detected no Steppe pastoralist ancestry in her genome. The authors
+    inferred that the Iranian-related lineage split from sampled Iranian lineages before farming.
+    How common this ancestry profile was across Harappan communities remains unresolved.
 region: Rakhigarhi (Mound RGR-7), Hisar District, Haryana, India
 location:
   name: Rakhigarhi (Cemetery RGR-7)
   lat: 29.2886
   lon: 76.1144
 datings:
-  - method: genetic
+  - method: archaeological-stratigraphic
     range:
       earliest: "2800 BCE"
       latest: "2300 BCE"
       precision: century
       circa: true
-    grade: A
+    grade: C
     label: Mature Harappan Context of Burial I6113 at Rakhigarhi RGR-7
     sources:
       - src.shinde-2019-ancient-harappan-genome
-      - src.narasimhan-2019-formation-human-populations
     note: >-
-      Dated by Mature Harappan archaeological context (typical Harappan ceramic grave goods in cemetery RGR-7) and
-      genetic co-clustering with directly radiocarbon-dated Indus Periphery individuals at Gonur and Shahr-i-Sokhta.
+      Harappan grave goods and charcoal radiocarbon dates from the main habitation area provide
+      the contextual estimate. The authors could not directly radiocarbon-date the skeleton.
+  - method: documentary
+    range:
+      earliest: "2019"
+      latest: "2019"
+      precision: year
+      circa: false
+    grade: A
+    label: Publication of the genome analysis in Cell
+    sources:
+      - src.shinde-2019-ancient-harappan-genome
 claims:
   - text: >-
-      After screening 61 skeletal samples from the Mature Harappan cemetery at Rakhigarhi, Shinde et al. (2019)
-      recovered sufficient endogenous nuclear DNA from petrous bone powder of one female burial (sample I6113, burial
-      BR02) through more than 100 DNA library preparations.
+      Shinde et al. screened 61 samples from the Rakhigarhi cemetery and recovered enough nuclear
+      DNA for analysis from one female individual (I6113, skeletal code RGR7.3, BR-01, HS-02).
+      They reported the genome in Cell in 2019.
     grade: A
     sources:
       - src.shinde-2019-ancient-harappan-genome
   - text: >-
-      The I6113 genome fell along the exact genetic cline defined by 11 contemporaneous "Indus Periphery" outlier
-      individuals from Shahr-i-Sokhta (eastern Iran) and Gonur (Turkmenistan), confirming that this profile - a
-      mixture of an ancient Iranian-related lineage and indigenous South Asian hunter-gatherer (AASI) ancestry - was
-      representative of the Harappan population and acts as the primary source of ancestry for modern South Asians.
-    grade: A
+      I6113 fit the ancestry cline defined by 11 individuals from Shahr-i-Sokhta and Gonur.
+      Narasimhan et al.'s wider study identified ancestry related to that cline as a major
+      contributor to present-day South Asians. The single genome from Rakhigarhi cannot establish
+      how representative her profile was of Harappan populations.
+    grade: B
     sources:
       - src.shinde-2019-ancient-harappan-genome
       - src.narasimhan-2019-formation-human-populations
   - text: >-
-      Phylogenetic modelling by Shinde et al. (2019) showed that the Iranian-related ancestry in I6113 lacked
-      Anatolian farmer admixture present in Iranian farmers after c. 6000 BCE and diverged from prehistoric Zagros
-      herder/hunter-gatherer lineages more than 10,000 years ago (prior to c. 8000 BCE), while carrying no detectable
-      Bronze Age Steppe pastoralist (Sintashta/Andronovo-related) ancestry.
+      Shinde et al. detected no Anatolian farmer-related or Bronze Age Steppe pastoralist ancestry
+      in I6113.
     grade: A
+    sources:
+      - src.shinde-2019-ancient-harappan-genome
+  - text: >-
+      Shinde et al.'s models suggest that the Iranian-related ancestry came from a lineage that
+      diverged before the emergence of farming in the Iranian plateau, including the Zagros.
+    grade: C
     sources:
       - src.shinde-2019-ancient-harappan-genome
 relations:
@@ -79,6 +91,8 @@ tags:
   - rakhigarhi
   - ancient-dna
   - science
+  - archaeology
+  - genetics
 review:
   status: draft
   author: gemini-4-argon

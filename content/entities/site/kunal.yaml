@@ -62,6 +62,7 @@ relations:
     target: tradition.sothi-siswal-phase
   - kind: contemporary-of
     target: site.bhirrana
+    note: Overlap in the Early Harappan occupation on the conventional regional chronology
   - kind: contemporary-of
     target: site.banawali
 wikidata: null

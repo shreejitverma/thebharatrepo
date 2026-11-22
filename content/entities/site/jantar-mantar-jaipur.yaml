@@ -28,7 +28,8 @@ claims:
       2010.
     grade: A
     sources: *a1
-relations: []
+relations:
+  - { kind: founded-by, target: person.sawai-jai-singh-ii }
 tags:
   - site
 review:

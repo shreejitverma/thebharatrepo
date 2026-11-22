@@ -65,6 +65,9 @@ relations:
     target: tradition.harappan-civilisation
   - kind: related-to
     target: site.daimabad
+  - kind: related-to
+    target: concept.sintashta-steppe-chariot-question
+    note: The solid-wheel Sanauli vehicles are compared with spoked-wheel chariots in debates about Bronze Age transport
 wikidata: null
 debate: >-
   Sanjay Kumar Manjul and colleagues at the ASI identify the three 2018 Sanauli vehicles as horse-drawn battle

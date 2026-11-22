@@ -9,7 +9,8 @@ summary: >-
   Vedic chanting is the liturgical and pedagogical recitation of Vedic mantras according to strict
   phonetic rules of pitch accent (svara), syllable duration (matra), and articulation codified in
   the Pratishakhyas and Shiksha texts. It encompasses the three-tone recitation of the Rigveda and
-  Yajurveda as well as the multi-note musical chant (samagana) of the Samaveda.
+  Yajurveda as well as the multi-note musical chant (samagana) of the Samaveda. UNESCO proclaimed
+  it a Masterpiece in 2003 and inscribed it on the Representative List in 2008.
 summaries:
   kids: >-
     Vedic chanting is the ancient art of reciting Sanskrit hymns with exact musical pitch, rhythm,
@@ -31,6 +32,16 @@ datings:
     note: >-
       Rooted in the composition of the Vedic Samhitas (c. 1500 to 1000 BCE) and still practiced by
       surviving Vedic shakhas across India, recognized by UNESCO in 2003.
+  - method: documentary
+    range: { earliest: "2003", latest: "2003", precision: year, circa: false }
+    grade: A
+    label: UNESCO Masterpiece proclamation
+    sources: [src.unesco-2003-tradition-vedic-chanting]
+  - method: documentary
+    range: { earliest: "2008", latest: "2008", precision: year, circa: false }
+    grade: A
+    label: UNESCO Representative List inscription
+    sources: [src.unesco-2003-tradition-vedic-chanting]
 claims:
   - text: >-
       Vedic recitation distinguishes three primary pitch accents - udatta (raised tone), anudatta
@@ -49,6 +60,12 @@ claims:
     sources:
       - src.gonda-1975-vedic-literature
       - src.staal-1983-agni-fire-altar
+      - src.unesco-2003-tradition-vedic-chanting
+  - text: >-
+      UNESCO proclaimed the tradition of Vedic chanting a Masterpiece of the Oral and Intangible
+      Heritage of Humanity in 2003 and inscribed it on the Representative List in 2008.
+    grade: A
+    sources:
       - src.unesco-2003-tradition-vedic-chanting
 relations:
   - { kind: related-to, target: tradition.vedic-oral-transmission }
