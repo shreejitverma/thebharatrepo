@@ -69,7 +69,9 @@ The loader rejects raw negative years in datings; write BCE years as `"N BCE"` s
 
 - Debate pages (`/debates`) are validated whether or not they are published, but a debate is rendered, linked from entity pages, indexed for search or listed only when `published: true`, which the schema accepts only with an `approval { by, date }` record.
   `npm run dev:debates-preview` (or `DEBATES_PREVIEW=1` at build time) renders drafts with an "Unpublished draft" banner and `noindex`; never deploy such a build.
+  `next.config.ts` also keeps every debate file not marked `published: true` out of the traced server bundles, and until a debate is published the `/debates` index is `noindex` and absent from the footer.
 - Learning paths (`/learn`) have ordered steps, a quiz scored in the browser, per-viewer progress in `localStorage`, and a printable pack at `/learn/<slug>/print` with the answer key on its own page.
+  Choices show in the order written; `content:validate` rejects a quiz of three or more questions whose correct answers all share one position.
 - The reading level (Full, Teen, Kids) is chosen with the switcher on entity pages and in the Kaalchakra panel; it is read from `?level=` first, then `localStorage`, and applied before paint by an inline script in the root layout (`src/lib/reading-level.ts`).
 - Native-script names carry `lang` tags derived from their script (`src/lib/content/script.ts`); `content:validate` prints a warning with the count of entities missing `names.iast` or `names.native`.
 
