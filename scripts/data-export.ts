@@ -3,17 +3,19 @@ import fs from 'node:fs';
 import path from 'node:path';
 import { stringify as csv } from 'csv-stringify/sync';
 import { z } from 'zod';
+import { primaryDating, summarizeDatings } from '../src/lib/content/lens';
 import {
   CONTENT_DIR, ROOT, assembleContent, readContentRecords,
   type ArticleMetadata, type ContentGraph,
 } from '../src/lib/content/load';
 import {
+  DATA_FILES, DATA_LICENSE, DATA_LICENSE_URL, DATA_SCHEMA_VERSION, ManifestSchema, RETIRED_DATA_FILES,
+  type DataFile, type Manifest,
+} from '../src/lib/content/open-data';
+import {
   ArticleFrontmatterSchema, CATEGORIES, CorrectionSchema, EntitySchema, SLUG, SOURCE_ID, SourceSchema,
 } from '../src/lib/content/schema';
-
-const SCHEMA_VERSION = 1;
-const DATA_LICENSE = 'CC BY-SA 4.0';
-const LICENSE_URL = 'https://creativecommons.org/licenses/by-sa/4.0/';
+import type { ContentCommitDate } from './content-commit-date';
 
 const ArticleMetadataSchema = ArticleFrontmatterSchema.extend({
   category: z.enum(CATEGORIES),
@@ -25,48 +27,18 @@ const ArticleMetadataSchema = ArticleFrontmatterSchema.extend({
   message: 'article file must match its category and slug',
 });
 
+/**
+ * archive.json is a pure function of the validated content, so its bytes change only when content does.
+ * The content commit date, which depends on the checkout's git history, lives in manifest.json alone.
+ */
 const ArchiveSchema = z.strictObject({
-  schemaVersion: z.literal(SCHEMA_VERSION),
-  generatedAt: z.iso.datetime(),
+  schemaVersion: z.literal(DATA_SCHEMA_VERSION),
   license: z.literal(DATA_LICENSE),
   entities: z.array(EntitySchema),
   sources: z.array(SourceSchema),
   articles: z.array(ArticleMetadataSchema),
   corrections: z.array(CorrectionSchema),
 });
-
-const downloads = {
-  'archive.json': 'Archive JSON',
-  'entities.csv': 'Entities CSV',
-  'datings.csv': 'Datings CSV',
-  'schema.json': 'JSON Schema',
-} as const;
-
-const index = `<!doctype html>
-<html lang="en">
-<head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Open data | The Bharat Repo</title>
-  <style>
-    html { color-scheme: light dark }
-    body { font: 1rem/1.6 system-ui, sans-serif; max-width: 42rem; margin: 3rem auto; padding: 0 1.25rem }
-  </style>
-</head>
-<body>
-  <nav><a href="/">The Bharat Repo</a></nav>
-  <main>
-    <h1>Open data</h1>
-    <p>Download the archive's entities, sources, article metadata and corrections.</p>
-    <ul>
-      ${Object.entries(downloads).map(([file, label]) => `<li><a href="/data/${file}">${label}</a></li>`).join('\n      ')}
-      <li><a href="/data/manifest.json">Manifest and checksums</a></li>
-    </ul>
-    <p>Archive data is available under <a href="${LICENSE_URL}">${DATA_LICENSE}</a>.</p>
-  </main>
-</body>
-</html>
-`;
 
 function json(value: unknown): string {
   return JSON.stringify(value, (_key, item) =>
@@ -90,7 +62,7 @@ export function loadPublicContent(): ContentGraph {
   return assembleContent(records, errors);
 }
 
-function artifactContents(graph: ContentGraph<ArticleMetadata>, generatedAt: string) {
+function artifactContents(graph: ContentGraph<ArticleMetadata>, commit: ContentCommitDate) {
   assertValid(graph, 'Archive');
   const entities = [...graph.entities.values()].sort(byId);
   const sources = [...graph.sources.values()].sort(byId);
@@ -100,57 +72,72 @@ function artifactContents(graph: ContentGraph<ArticleMetadata>, generatedAt: str
     return metadata;
   }).sort((a, b) => compare(a.file, b.file));
   const corrections = graph.corrections;
-  const datings = entities.flatMap((entity) => entity.datings.map((dating, index) => ({
-    entityId: entity.id,
-    ordinal: index + 1,
-    method: dating.method,
-    grade: dating.grade,
-    earliest: dating.range.earliest,
-    latest: dating.range.latest,
-    best: dating.range.best,
-    precision: dating.range.precision,
-    circa: String(dating.range.circa),
-    label: dating.label,
-    note: dating.note,
-    sources: JSON.stringify(dating.sources),
-  })));
+  const datings = entities.flatMap((entity) => {
+    const primary = primaryDating(entity.datings);
+    return entity.datings.map((dating, index) => ({
+      entityId: entity.id,
+      ordinal: index + 1,
+      primary: String(dating === primary),
+      method: dating.method,
+      grade: dating.grade,
+      earliest: dating.range.earliest,
+      latest: dating.range.latest,
+      best: dating.range.best,
+      precision: dating.range.precision,
+      circa: String(dating.range.circa),
+      label: dating.label,
+      note: dating.note,
+      sources: JSON.stringify(dating.sources),
+    }));
+  });
   const counts = {
     entities: entities.length, sources: sources.length, articles: articles.length,
     corrections: corrections.length, datings: datings.length,
   };
-  const header = { schemaVersion: SCHEMA_VERSION, generatedAt, license: DATA_LICENSE };
-  const files = {
-    'archive.json': json(ArchiveSchema.parse({ ...header, entities, sources, articles, corrections })),
+  const csvOptions = { header: true, record_delimiter: 'windows' } as const;
+  const files: Record<DataFile, string> = {
+    'archive.json': json(ArchiveSchema.parse({
+      schemaVersion: DATA_SCHEMA_VERSION, license: DATA_LICENSE, entities, sources, articles, corrections,
+    })),
     'entities.csv': csv(entities.map((entity) => ({
-      id: entity.id, type: entity.type, kind: entity.kind, name: entity.names.en,
+      id: entity.id, type: entity.type, kind: entity.kind, name: entity.names.en, primaryDate: summarizeDatings(entity.datings),
       summary: entity.summary, region: entity.region, reviewStatus: entity.review.status,
-    })), { header: true, columns: ['id', 'type', 'kind', 'name', 'summary', 'region', 'reviewStatus'], record_delimiter: 'windows' }),
+    })), { ...csvOptions, columns: ['id', 'type', 'kind', 'name', 'primaryDate', 'summary', 'region', 'reviewStatus'] }),
     'datings.csv': csv(datings, {
-      header: true,
-      columns: ['entityId', 'ordinal', 'method', 'grade', 'earliest', 'latest', 'best', 'precision', 'circa', 'label', 'note', 'sources'],
-      record_delimiter: 'windows',
+      ...csvOptions,
+      columns: ['entityId', 'ordinal', 'primary', 'method', 'grade', 'earliest', 'latest', 'best', 'precision', 'circa', 'label', 'note', 'sources'],
     }),
     'schema.json': json(z.toJSONSchema(ArchiveSchema, { io: 'output' })),
-    'index.html': index,
   };
-  const manifest = { ...header, licenseUrl: LICENSE_URL, counts, sha256: Object.fromEntries(
-    Object.entries(files).map(([name, contents]) => [name, sha256(contents)]),
-  ) };
+  const manifest: Manifest = ManifestSchema.parse({
+    schemaVersion: DATA_SCHEMA_VERSION,
+    license: DATA_LICENSE,
+    licenseUrl: DATA_LICENSE_URL,
+    contentCommitDate: commit.date,
+    contentCommitDateNote: commit.note,
+    counts,
+    sha256: Object.fromEntries(Object.entries(files).map(([name, contents]) => [name, sha256(contents)])),
+  });
   return { manifest, files: { ...files, 'manifest.json': json(manifest) } };
 }
 
-export function writeDataExport(dir: string, graph: ContentGraph<ArticleMetadata>, generatedAt: string) {
-  const { files, manifest } = artifactContents(graph, generatedAt);
+/**
+ * Writes the bundle into `dir`, replacing only the files the export owns. Rerunning with the same content
+ * and commit date rewrites identical bytes.
+ */
+export function writeDataExport(dir: string, graph: ContentGraph<ArticleMetadata>, commit: ContentCommitDate) {
+  const { files, manifest } = artifactContents(graph, commit);
   fs.mkdirSync(dir, { recursive: true });
   const staging = fs.mkdtempSync(path.join(path.dirname(dir), '.data-export-'));
   try {
     for (const [name, contents] of Object.entries(files)) fs.writeFileSync(path.join(staging, name), contents);
-    // Publish the checksums last so an interrupted write cannot advertise a complete new export.
+    // manifest.json is the last key, so an interrupted write cannot advertise checksums for files not yet in place.
     for (const name of Object.keys(files)) fs.renameSync(path.join(staging, name), path.join(dir, name));
   } finally {
     fs.rmSync(staging, { recursive: true, force: true });
   }
-  return manifest.counts;
+  for (const name of RETIRED_DATA_FILES) fs.rmSync(path.join(dir, name), { force: true });
+  return manifest;
 }
 
 function parseJson(contents: Buffer, name: string): unknown {
@@ -161,14 +148,26 @@ function parseJson(contents: Buffer, name: string): unknown {
   }
 }
 
-export function verifyDataExport(dir: string, current: ContentGraph<ArticleMetadata>, generatedAt: string) {
-  const expected = artifactContents(current, generatedAt);
-  const manifestFile = fs.readFileSync(path.join(dir, 'manifest.json'));
-  const manifest = z.object({ sha256: z.record(z.string(), z.string().regex(/^[a-f0-9]{64}$/)) })
-    .parse(parseJson(manifestFile, 'manifest.json'));
-  const actual = new Map<string, Buffer>();
-  for (const name of Object.keys(expected.manifest.sha256)) {
-    const contents = fs.readFileSync(path.join(dir, name));
+function readExportFile(dir: string, name: string): Buffer {
+  try {
+    return fs.readFileSync(path.join(dir, name));
+  } catch (error) {
+    throw new Error(`${name} is missing from ${dir}. Run npm run data:export to regenerate it.`, { cause: error });
+  }
+}
+
+/**
+ * Proves the published bundle round-trips: checksums match the manifest, archive.json re-imports through
+ * the Zod schemas and the loader's integrity checks, the re-import regenerates every file byte for byte,
+ * and the bundle equals what the current content and commit date produce.
+ */
+export function verifyDataExport(dir: string, current: ContentGraph<ArticleMetadata>, commit: ContentCommitDate) {
+  const expected = artifactContents(current, commit);
+  const manifestFile = readExportFile(dir, 'manifest.json');
+  const manifest = ManifestSchema.parse(parseJson(manifestFile, 'manifest.json'));
+  const actual = new Map<string, Buffer>([['manifest.json', manifestFile]]);
+  for (const name of Object.keys(DATA_FILES) as DataFile[]) {
+    const contents = readExportFile(dir, name);
     if (sha256(contents) !== manifest.sha256[name]) throw new Error(`${name} does not match the manifest SHA-256`);
     actual.set(name, contents);
   }
@@ -181,9 +180,11 @@ export function verifyDataExport(dir: string, current: ContentGraph<ArticleMetad
     corrections: imported.corrections.map((data) => ({ data, file: 'content/corrections.yaml' })),
   });
   assertValid(reloaded, 'Export re-import');
-  const roundTrip = artifactContents(reloaded, imported.generatedAt);
+  const roundTrip = artifactContents(reloaded, {
+    date: manifest.contentCommitDate, note: manifest.contentCommitDateNote,
+  } as ContentCommitDate);
   for (const [name, contents] of Object.entries(expected.files)) {
-    const actualFile = name === 'manifest.json' ? manifestFile : actual.get(name)!;
+    const actualFile = actual.get(name)!;
     if (!actualFile.equals(Buffer.from(roundTrip.files[name as keyof typeof roundTrip.files]))) {
       throw new Error(`${name} changed during re-import. Run npm run data:export to regenerate it.`);
     }
@@ -191,5 +192,5 @@ export function verifyDataExport(dir: string, current: ContentGraph<ArticleMetad
       throw new Error(`${name} differs from the current validated content. Run npm run data:export to regenerate it.`);
     }
   }
-  return expected.manifest.counts;
+  return expected.manifest;
 }

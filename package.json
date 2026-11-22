@@ -3,8 +3,9 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
+    "predev": "npm run content:build",
     "dev": "next dev",
-    "prebuild": "npm run content:validate && tsx scripts/content-verify-sources.ts --offline && tsx scripts/build-content.ts && npm run data:export",
+    "prebuild": "npm run content:validate && tsx scripts/content-verify-sources.ts --offline && npm run content:build && npm run data:verify-export",
     "build": "next build",
     "start": "next start",
     "lint": "eslint .",

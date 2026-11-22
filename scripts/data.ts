@@ -1,6 +1,6 @@
 import path from 'node:path';
 import { ROOT } from '../src/lib/content/load';
-import { latestContentCommitDate } from './content-commit-date';
+import { contentCommitDate } from './content-commit-date';
 import { loadPublicContent, verifyDataExport, writeDataExport } from './data-export';
 
 async function main() {
@@ -15,11 +15,13 @@ async function main() {
     process.exitCode = 2;
     return;
   }
-  const generatedAt = await latestContentCommitDate(ROOT);
+  const commit = await contentCommitDate(ROOT);
   const graph = loadPublicContent();
   const dir = path.join(ROOT, 'public', 'data');
-  const counts = mode === 'verify' ? verifyDataExport(dir, graph, generatedAt) : writeDataExport(dir, graph, generatedAt);
-  console.log(`${command} ok: ${Object.entries(counts).map(([name, count]) => `${count} ${name}`).join(', ')} (content commit ${generatedAt})`);
+  const manifest = mode === 'verify' ? verifyDataExport(dir, graph, commit) : writeDataExport(dir, graph, commit);
+  const counts = Object.entries(manifest.counts).map(([name, count]) => `${count} ${name}`).join(', ');
+  console.log(`${command} ok: ${counts} (content commit date ${commit.date ?? 'unknown'})`);
+  if (commit.note) console.log(`warning: ${commit.note} The manifest records the date as null with this note.`);
 }
 
 main().catch((error: Error) => {
