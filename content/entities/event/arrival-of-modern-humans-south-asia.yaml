@@ -31,8 +31,8 @@ datings:
       - src.macaulay-2005-coastal-settlement-asia
       - src.mellars-2013-colonization-southern-asia
     note: >-
-      Mitochondrial DNA macrohaplogroups M, N and R and Y-chromosome lineages in living South Asians coalesce
-      between ~65 and 50 ka, supporting a single rapid coastal dispersal out of Africa after the 74 ka Toba eruption.
+      Estimates from mitochondrial DNA in present-day populations are consistent with a rapid dispersal
+      out of Africa along a southern route after the Toba eruption.
   - method: luminescence
     range:
       earliest: "120000 BCE"
@@ -48,20 +48,21 @@ datings:
       - src.clarkson-2020-dhaba-toba
       - src.blinkhorn-2013-thar-middle-palaeolithic
     note: >-
-      Based on Middle Palaeolithic prepared-core assemblages in the Thar Desert, Jwalapuram and Dhaba that
-      resemble African Middle Stone Age industries and continue uninterrupted across the 74 ka Toba ash layer.
+      The proposed dispersal draws on dated Middle Palaeolithic assemblages from the Thar Desert, Jwalapuram
+      and Dhaba. The sites preserve different sequences. The species that made these tools remains uncertain.
 claims:
   - text: >-
-      Autosomal and uniparental (mtDNA M and N; Y-chromosome C, D and F) diversity in contemporary South Asian
-      populations derives overwhelmingly from a Late Pleistocene dispersal episode dated genetically to roughly 65-50 ka.
-    grade: A
+      Mitochondrial DNA lineages in living populations, together with archaeological comparisons, support a model
+      in which modern humans dispersed along the southern Asian coast roughly 65,000 to 50,000 years ago.
+    grade: B
     sources:
       - src.macaulay-2005-coastal-settlement-asia
       - src.mellars-2013-colonization-southern-asia
   - text: >-
-      Stratified Middle Palaeolithic sites at Jwalapuram (Andhra Pradesh), Dhaba (Madhya Pradesh) and the Thar
-      Desert preserve continuous prepared-core lithic industries spanning c. 115-80 ka through the 74 ka Toba tephra.
-    grade: A
+      Jwalapuram and Dhaba preserve similar Middle Palaeolithic stone-tool assemblages in levels dated before and
+      after the Toba eruption. Earlier tools from the Thar Desert also inform the proposed pre-Toba dispersal.
+      Attributing these tools to Homo sapiens remains tentative.
+    grade: C
     sources:
       - src.petraglia-2007-jwalapuram-toba
       - src.clarkson-2020-dhaba-toba

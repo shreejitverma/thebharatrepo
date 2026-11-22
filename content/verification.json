@@ -869,6 +869,11 @@
     "checkedAt": "2026-11-22T02:49:51.736Z",
     "matched": "The Princes of the Mughal Empire, 1504–1719"
   },
+  "doi:10.1017/cbo9781139506922.005": {
+    "ok": true,
+    "checkedAt": "2026-11-22T04:22:06.391Z",
+    "matched": "The Third Anniversary Discourse, on the Hindus, delivered 2d of February, 1786"
+  },
   "doi:10.1017/chol9780521226929": {
     "ok": true,
     "checkedAt": "2026-11-22T02:50:54.202Z",
@@ -5131,6 +5136,11 @@
     "matched": "Log in to your account",
     "detail": "page does not carry the cited title"
   },
+  "url:https://ci.nii.ac.jp/ncid/BD04701272?l=en": {
+    "ok": true,
+    "checkedAt": "2026-11-22T04:22:06.803Z",
+    "matched": "CiNii Books - Excavations at Burzahom (1960-71)"
+  },
   "url:https://courtsandcases.com/case/2019_18_1_867": {
     "ok": true,
     "checkedAt": "2026-11-22T02:49:29.537Z",
@@ -5205,6 +5215,16 @@
     "ok": true,
     "checkedAt": "2026-11-22T02:51:07.669Z",
     "matched": "A history of ancient and early medieval India: from the Stone Age to the 12th century"
+  },
+  "url:https://openlibrary.org/books/OL3007165M": {
+    "ok": true,
+    "checkedAt": "2026-11-22T04:22:06.481Z",
+    "matched": "Excavations at Atranjīkherā: early civilization of the Upper Gaṅgā Basin"
+  },
+  "url:https://openlibrary.org/books/OL43066044M": {
+    "ok": true,
+    "checkedAt": "2026-11-22T04:22:06.553Z",
+    "matched": "The neo-Vaiṣṇavite movement and the satra institution of Assam"
   },
   "url:https://ora.ox.ac.uk/objects/uuid:14ee1fc0-dcae-4183-9481-0add2a7d42f3": {
     "ok": true,
@@ -5386,6 +5406,11 @@
     "checkedAt": "2026-11-22T02:50:10.201Z",
     "matched": "Indian Independence Act 1947"
   },
+  "url:https://www.legislation.gov.uk/ukpga/Vict/21-22/106/enacted": {
+    "ok": true,
+    "checkedAt": "2026-11-22T04:22:07.115Z",
+    "matched": "The Government of India Act 1858"
+  },
   "url:https://www.nobelprize.org/prizes/literature/1913/summary/": {
     "ok": true,
     "checkedAt": "2026-11-22T02:50:42.446Z",
@@ -5410,6 +5435,11 @@
     "ok": true,
     "checkedAt": "2026-11-22T02:49:28.353Z",
     "matched": "The 95th Academy Awards | 2023"
+  },
+  "url:https://www.pib.gov.in/PressReleasePage.aspx?PRID=2147792&lang=2&reg=3": {
+    "ok": false,
+    "checkedAt": "2026-11-22T04:22:06.588Z",
+    "detail": "URL HTTP 403; use an identifier the verifier can check (DOI, ISBN, OCLC, archive.org)"
   },
   "url:https://www.repository.cam.ac.uk/items/50535a1c-f264-40bd-9198-08693d3ac325": {
     "ok": true,

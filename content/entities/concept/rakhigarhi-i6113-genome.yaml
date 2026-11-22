@@ -4,22 +4,20 @@ kind: science
 names:
   en: Rakhigarhi Individual I6113 Ancient Genome
 summary: >-
-  The first ancient nuclear genome sequenced directly from an excavated Harappan Civilisation skeleton (individual
-  I6113, an adult female buried in the Mature Harappan necropolis RGR-7 at Rakhigarhi, Haryana, c. 2800-2300 BCE),
-  published by Vasant Shinde, Vagheesh Narasimhan, Niraj Rai, David Reich and colleagues in Cell (2019), demonstrating
-  a mixture of indigenous South Asian hunter-gatherer ancestry and an ancient Iranian-related lineage that diverged
-  prior to the rise of agriculture in the Zagros Mountains, with zero detectable Anatolian farmer or Steppe
-  pastoralist ancestry.
+  In 2019, Shinde and colleagues reported the first ancient nuclear genome from a Harappan burial, an adult
+  woman (I6113) from Rakhigarhi, Haryana, dated to c. 2800-2300 BCE. Her DNA indicates South Asian hunter-gatherer
+  and ancient Iranian-related ancestry, with no detectable Anatolian farmer or Steppe pastoralist ancestry.
+  One genome gives a limited view of Harappan populations. Genetic models suggest people with similar ancestry
+  later mixed with other groups in South Asia.
 summaries:
   kids: >-
-    Scientists studied ancient DNA from a woman buried over 4,300 years ago at Rakhigarhi in Haryana, showing
-    that Harappan people had deep roots in South Asia and are the main ancestors of most people living in South
-    Asia today.
+    Scientists studied DNA from one woman buried at Rakhigarhi in Haryana more than 4,000 years ago. Her DNA
+    resembled that of some ancient people buried in what are now Iran and Turkmenistan. Scientists think
+    people with similar ancestry later mixed with other groups in South Asia.
   teen: >-
-    Published in Cell in 2019 by Vasant Shinde and colleagues, the genome of Rakhigarhi individual I6113 matched
-    11 "Indus Periphery" outlier individuals found in Iran and Turkmenistan, lacked Steppe pastoralist DNA, and
-    showed that the Iranian-related ancestry in Harappans split from Zagros Highland lineages over 10,000 years
-    ago before farming began.
+    In 2019, researchers reported that I6113's DNA fell within a range of ancestry profiles seen in 11 ancient
+    individuals buried in Iran and Turkmenistan. They detected no Steppe pastoralist ancestry in I6113. Their
+    models suggest that her Iranian-related lineage branched off before farming began in the Zagros.
 region: Rakhigarhi (Mound RGR-7), Hisar District, Haryana, India
 location:
   name: Rakhigarhi (Cemetery RGR-7)
@@ -49,11 +47,11 @@ claims:
     sources:
       - src.shinde-2019-ancient-harappan-genome
   - text: >-
-      The I6113 genome fell along the exact genetic cline defined by 11 contemporaneous "Indus Periphery" outlier
-      individuals from Shahr-i-Sokhta (eastern Iran) and Gonur (Turkmenistan), confirming that this profile - a
-      mixture of an ancient Iranian-related lineage and indigenous South Asian hunter-gatherer (AASI) ancestry - was
-      representative of the Harappan population and acts as the primary source of ancestry for modern South Asians.
-    grade: A
+      I6113 falls on the ancestry gradient observed in 11 "Indus Periphery" individuals from Shahr-i-Sokhta and
+      Gonur. Population models suggest that groups with related ancestry contributed substantially to present-day
+      South Asian populations. The available samples give a limited view of genetic diversity within the Harappan
+      Civilisation.
+    grade: B
     sources:
       - src.shinde-2019-ancient-harappan-genome
       - src.narasimhan-2019-formation-human-populations

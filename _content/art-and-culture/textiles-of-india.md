@@ -13,7 +13,7 @@ datings:
     note: Mineralised cotton fibres in a copper bead from a Neolithic burial; the article continues to the twentieth century.
   - method: documentary
     range: { earliest: "1600", latest: "1800", precision: century, circa: true }
-    grade: A
+    grade: B
     label: Indian cottons in world trade
     sources: [src.riello-2009-how-india-clothed-the-world]
     note: The period in which Indian printed and painted cottons were exported to Southeast Asia, Africa, the Middle East and Europe.

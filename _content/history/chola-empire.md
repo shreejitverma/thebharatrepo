@@ -7,7 +7,7 @@ tags: ["medieval history", "south india", "chola", "temples", "inscriptions"]
 datings:
   - method: epigraphic
     range: { earliest: "848 CE", latest: "1279 CE", best: "1000 CE", precision: decade, circa: true }
-    grade: A
+    grade: B
     label: "Medieval Chola dynasty"
     sources: [src.sastri-1955-the-colas, src.subbarayalu-2012-south-india-under-cholas]
     note: "Regnal-year dated Tamil inscriptions give a close chronology; the start is usually put near the middle of the 9th century and the end in the 1270s."
