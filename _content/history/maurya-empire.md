@@ -29,7 +29,7 @@ That story is told in sources written long after the events, so the details are 
 What we can say with more confidence comes from outside India.
 Greek writers record that Chandragupta (their "Sandrokottos") met Seleucus I, one of Alexander's successors, around 305 to 303 BCE.
 The two made a settlement under which Chandragupta received territory west of the Indus and Seleucus received 500 elephants.
-The original article called this a "defeat of Seleucus"; the Greek accounts describe a negotiated treaty, and the territorial detail is debated [@src.thapar-2002-early-india; @src.singh-2008-ancient-early-medieval-india].
+The Greek accounts describe a negotiated treaty between Chandragupta and Seleucus, and the territorial detail is debated [@src.thapar-2002-early-india; @src.singh-2008-ancient-early-medieval-india].
 Because Seleucus's dates are known, this encounter helps fix the Mauryan calendar.
 
 The Greek ambassador Megasthenes lived at Chandragupta's court at Pataliputra (modern Patna) and wrote a book on India.
@@ -63,7 +63,6 @@ The safest approach is to use it for the ideas of Indian political thought and t
 The empire was also not a uniform block.
 Monica Smith has argued that early Indian states controlled strings of nodes (cities, mines, ports) linked by corridors, rather than a solid mapped territory [@src.smith-2005-networks-territories-ancient-states].
 Ashoka's edicts fit that picture: they are found from Kandahar and the northwest frontier to Girnar in Gujarat, Dhauli in Odisha and Karnataka in the south, but they are thin across the far south, where the edicts themselves name independent neighbours such as the Cholas and Pandyas [@src.hultzsch-1925-inscriptions-of-asoka; @src.thapar-2002-early-india].
-So "pan-Indian" in the original article overstated the case.
 A royal road from the northwest to Pataliputra is described by Greek writers, though it should not be equated with the later Grand Trunk Road [@src.thapar-2002-early-india].
 
 ## Decline and end

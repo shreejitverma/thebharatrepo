@@ -1,0 +1,33 @@
+id: event.aditya-l1-launched
+type: event
+kind: event
+names:
+  en: Aditya-L1 launched
+summary: ISRO launched Aditya-L1, India’s solar observatory mission, on 2
+  September 2023 aboard PSLV-C57.
+summaries:
+  kids: Aditya-L1, India’s spacecraft for studying the Sun, launched in 2023.
+  teen: Aditya-L1 launched from Sriharikota on 2 September 2023 aboard PSLV-C57
+    for observations of the Sun from the Sun-Earth L1 region.
+region: Sriharikota, Andhra Pradesh
+datings:
+  - method: documentary
+    range:
+      earliest: "2023"
+      latest: "2023"
+      precision: year
+      circa: false
+    grade: A
+    sources:
+      - src.aditya-l1-aug-summary
+claims:
+  - text: PSLV-C57 launched the Aditya-L1 spacecraft on 2 September 2023.
+    grade: A
+    sources:
+      - src.aditya-l1-aug-summary
+tags:
+  - space
+  - solar-science
+review:
+  status: draft
+  author: codex-gpt-6

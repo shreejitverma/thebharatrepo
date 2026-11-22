@@ -26,6 +26,6 @@ function load() {
 export function verifiedImage(commonsFile: string): VerifiedImage | null {
   const hit = load()[`commons:${commonsFile}`];
   if (!hit?.ok || !hit.thumb || !hit.pageUrl || !hit.thumbWidth || !hit.thumbHeight) return null;
-  if (!hit.thumb.startsWith('https://upload.wikimedia.org/') || !hit.pageUrl.startsWith('https://commons.wikimedia.org/')) return null;
-  return { thumb: hit.thumb, width: hit.thumbWidth, height: hit.thumbHeight, pageUrl: hit.pageUrl, license: hit.license ?? 'unknown', artist: hit.artist ?? '' };
+  if (!/^https:\/\/(upload|thumb)\.wikimedia\.org\//.test(hit.thumb) || !hit.pageUrl.startsWith('https://commons.wikimedia.org/')) return null;
+  return { thumb: hit.thumb.split('?')[0], width: hit.thumbWidth, height: hit.thumbHeight, pageUrl: hit.pageUrl, license: hit.license ?? 'unknown', artist: hit.artist ?? '' };
 }

@@ -1,0 +1,36 @@
+id: event.national-manuscripts-mission-launched
+type: event
+kind: event
+names:
+  en: National Mission for Manuscripts launched
+summary: The Ministry of Culture’s annual report records that the National
+  Mission for Manuscripts was established in 2003 to document, preserve and
+  improve access to manuscripts.
+summaries:
+  kids: India’s National Mission for Manuscripts began in 2003 to help document,
+    preserve and share manuscripts.
+  teen: The Ministry of Culture reports that the National Mission for Manuscripts
+    was established in 2003 to document, preserve and improve access to
+    manuscript collections.
+datings:
+  - method: documentary
+    range:
+      earliest: "2003"
+      latest: "2003"
+      precision: year
+      circa: false
+    grade: A
+    sources:
+      - src.national-mission-manuscripts
+claims:
+  - text: The Ministry of Culture records the National Mission for Manuscripts as
+      established in 2003.
+    grade: A
+    sources:
+      - src.national-mission-manuscripts
+tags:
+  - manuscripts
+  - culture
+review:
+  status: draft
+  author: codex-gpt-6

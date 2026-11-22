@@ -71,8 +71,7 @@ Gerald Larson reads classical Samkhya as an atheistic, rationalising system [@sr
 
 The Yoga Sutras are attributed to Patanjali and set out a path of eight limbs, from ethical restraints and bodily posture to meditative absorption (samadhi).
 The metaphysics is Samkhyan, with the addition of a special kind of being, Ishvara, as an object of meditation [@src.bryant-2009-yoga-sutras-patanjali].
-The original page dated the work to "c. 200 CE".
-That is one possibility among several: scholars have proposed dates from the last centuries BCE to the 5th century CE, and the tradition that the author is also the grammarian Patanjali is not accepted by all. Edwin Bryant's edition surveys the question [@src.bryant-2009-yoga-sutras-patanjali].
+Scholars have proposed dates from the last centuries BCE to the 5th century CE, and not all accept the tradition that the author is also the grammarian Patanjali. Edwin Bryant's edition surveys the question [@src.bryant-2009-yoga-sutras-patanjali].
 Modern postural yoga is a later development and is not described in the sutras.
 
 ### Mimamsa: ritual and the interpretation of the Veda
@@ -92,8 +91,6 @@ The earlier article on the Upanishads covers their own content.
 
 ## How we date the sutras
 
-The original article gave "c. 600 to 200 BCE" for the formation of the sutras of all schools.
-That is too early for the texts as we have them.
 Most scholarship puts the surviving foundational sutras of Nyaya, Vaisheshika, Mimamsa, Vedanta and Yoga somewhere between roughly the 2nd century BCE and the 5th century CE, with the Samkhya Karika at the later end of that range and with considerable disagreement about individual texts [@src.perrett-2016-introduction-indian-philosophy; @src.king-1999-indian-philosophy; @src.larson-1979-classical-samkhya].
 The schools' ideas and debates are older than their texts, and several of the sutras were revised by later hands, so a single date for each would be false precision.
 Traditional accounts regard the founders as ancient sages, and this site treats those accounts as tradition [@src.nicholson-2010-unifying-hinduism].

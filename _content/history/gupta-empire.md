@@ -24,7 +24,7 @@ We know their story unusually well, because they left dated inscriptions, a rich
 The dynasty's early rulers, Gupta and Ghatotkacha, are known mostly by name.
 The first major figure was Chandragupta I, who married Kumaradevi of the Licchavi family, a connection his son stressed in his inscriptions.
 A new calendar, the Gupta era, begins in 319 or 320 CE, and later Gupta records are dated in it.
-That date marks the start of the era, and probably the start of the dynasty's rise, not (as the original article said) the beginning of an imperial "zenith" [@src.fleet-1888-inscriptions-early-gupta-kings; @src.thapar-2002-early-india].
+That date marks the start of the era, and probably the start of the dynasty's rise; the imperial "zenith" came later [@src.fleet-1888-inscriptions-early-gupta-kings; @src.thapar-2002-early-india].
 
 ## Samudragupta and Chandragupta II
 

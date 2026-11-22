@@ -30,17 +30,15 @@ He also describes regional styles, usually grouped as northern, southern and cen
 
 ### How old is it?
 
-The original article called Kalaripayattu the "Mother of all Martial Arts".
-This is a slogan, not a finding of historical research.
+The claim that Kalaripayattu is the "Mother of all Martial Arts" is a slogan, not a finding of historical research.
 The scholarly account of the art by Zarrilli is built on documented practice and does not rest on such a claim, and no source checked for this article demonstrates it [@src.zarrilli-1998-when-the-body-becomes-all-eyes].
 A related popular story, that the art travelled to China and gave rise to other martial arts, is likewise not demonstrated by documented sources.
 
 What can be said is more limited.
 The Tamil Sangam poems, usually placed in the early centuries CE, describe warriors, weapons and battle, and the word *kalari* appears there in the sense of a battlefield, not a school [@src.thapar-2002-early-india].
-The original article placed such references in the 3rd century BCE, which is earlier than the usual dating of those poems.
 Later, Kerala's own oral ballads, the Vadakkan Pattukal, celebrate warrior heroes trained in kalaris, and training manuals are written in Malayalam.
 Many accounts link the rise of organised martial schools in Kerala to the long wars of the eleventh and twelfth centuries, and treat Kalaripayattu as clearly established by the later medieval period [@src.zarrilli-1998-when-the-body-becomes-all-eyes].
-The original article's "golden age during the Chola-Chera wars" is an interpretation of this setting, not a documented event, and it is better described as a reasoned estimate (grade C) than as established fact.
+The proposed "golden age during the Chola-Chera wars" is an interpretation of this setting, not a documented event, and is better described as a reasoned estimate (grade C) than as established fact.
 
 ### Colonial decline and revival
 
@@ -66,8 +64,7 @@ The training form called Gatka, and the broader practice of *shastar vidya* (wea
 ## Mallakhamb (Maharashtra)
 
 Mallakhamb is a discipline in which gymnasts perform holds and turns on a vertical wooden pole, or on a hanging rope.
-The original article called it "traditional aerial yoga".
-That is a modern comparison, since the art is better described as athletic training for wrestlers.
+The phrase "traditional aerial yoga" is a modern comparison, since Mallakhamb is better described as athletic training for wrestlers.
 The best-known account says it was revived in the early nineteenth century by a trainer named Balambhatta Deodhar at the court of the Peshwa Bajirao II (r. 1796 to 1818).
 That story is repeated in popular and institutional sources, and the details vary; I could not verify it in scholarly literature, so it should be read as tradition.
 

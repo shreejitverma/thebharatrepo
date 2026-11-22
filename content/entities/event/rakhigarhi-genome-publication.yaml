@@ -1,0 +1,40 @@
+id: event.rakhigarhi-genome-publication
+type: event
+kind: event
+names:
+  en: Publication of the Rakhigarhi ancient genome study
+summary: A 2019 Cell paper reported analysis of one ancient genome from
+  Rakhigarhi. The authors emphasized the limited ancient DNA sample and
+  described that individual’s ancestry profile; it cannot represent every Indus
+  population.
+summaries:
+  kids: In 2019, researchers published a study of DNA from one person buried at
+    Rakhigarhi. One person’s DNA cannot describe everyone who lived in the Indus
+    civilization.
+  teen: The 2019 Cell study reported one genome from an individual excavated at
+    Rakhigarhi. Its authors interpret that individual’s ancestry in a regional
+    context; the sample is too limited to stand for all Harappan communities.
+region: Rakhigarhi, Haryana
+datings:
+  - method: documentary
+    range:
+      earliest: "2019"
+      latest: "2019"
+      precision: year
+      circa: false
+    grade: A
+    sources:
+      - src.shinde-2019-harappan-genome
+claims:
+  - text: The Cell paper published in 2019 reports a genome from one ancient
+      individual excavated at Rakhigarhi.
+    grade: A
+    sources:
+      - src.shinde-2019-harappan-genome
+tags:
+  - archaeology
+  - genetics
+  - harappan
+review:
+  status: draft
+  author: codex-gpt-6

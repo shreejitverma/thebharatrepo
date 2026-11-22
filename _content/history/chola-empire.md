@@ -35,7 +35,7 @@ George Spencer argued that these campaigns were driven largely by plunder and th
 
 Rajendra also sent an army north to the Ganges region (c. 1021 to 1025) and founded a new capital, Gangaikonda Cholapuram, to commemorate it [@src.sastri-1955-the-colas].
 Around 1025 CE Chola ships raided the Srivijaya kingdom in Sumatra and the Malay peninsula.
-The original article said the navy "dominated the Indian Ocean"; the record shows a famous, daring expedition rather than lasting rule.
+The record shows a famous, daring naval expedition rather than lasting rule over the Indian Ocean.
 Scholars debate why it happened, with explanations ranging from protecting trade interests to a show of royal prestige, and most agree that it did not lead to permanent Chola territory in Southeast Asia [@src.kulke-2009-nagapattinam-to-suvarnadwipa].
 Chola merchant guilds were nevertheless active across the region, and trade links were close [@src.kulke-2009-nagapattinam-to-suvarnadwipa; @src.karashima-2014-concise-history-south-india].
 

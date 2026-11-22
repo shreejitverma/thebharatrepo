@@ -196,7 +196,7 @@ async function verifyCommons(file: string): Promise<CacheEntry> {
     checkedAt: now(),
     license: stripHtml(meta.LicenseShortName?.value ?? 'unknown'),
     artist: stripHtml(meta.Artist?.value ?? '').slice(0, 200),
-    thumb: info.thumburl,
+    thumb: info.thumburl?.split('?')[0],
     thumbWidth: info.thumbwidth,
     thumbHeight: info.thumbheight,
     pageUrl: info.descriptionurl,
@@ -276,7 +276,7 @@ async function main() {
         where: e.id,
         run: () => verifyCommons(e.image!.commons),
         recheck: (c) =>
-          c.thumb?.startsWith('https://upload.wikimedia.org/') && c.pageUrl?.startsWith('https://commons.wikimedia.org/') && c.thumbWidth && c.thumbHeight
+          /^https:\/\/(upload|thumb)\.wikimedia\.org\//.test(c.thumb ?? '') && c.pageUrl?.startsWith('https://commons.wikimedia.org/') && c.thumbWidth && c.thumbHeight
             ? null
             : 'cached image record is incomplete or not from Wikimedia',
       });

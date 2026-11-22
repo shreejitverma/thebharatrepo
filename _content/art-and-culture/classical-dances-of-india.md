@@ -44,8 +44,7 @@ The figure shows a confident standing pose, not a documented dance, and it canno
 ## The eight forms
 
 **Bharatanatyam (Tamil Nadu).**
-The original article called this the "oldest" form.
-That cannot be shown.
+The evidence does not establish Bharatanatyam as the oldest classical dance form.
 The dance it draws on, practised by hereditary devadasi performers, is older than its name, but the name and the modern concert form date from the 1930s [@src.allen-1997-rewriting-script-south-indian-dance; @src.soneji-2012-unfinished-gestures].
 It is known for its bent-knee stance, strong footwork and expressive hand gestures.
 See the separate article on Bharatanatyam.

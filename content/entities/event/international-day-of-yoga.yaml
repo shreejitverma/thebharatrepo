@@ -1,0 +1,35 @@
+id: event.international-day-of-yoga
+type: event
+kind: event
+names:
+  en: International Day of Yoga established
+summary: The UN General Assembly proclaimed 21 June as the International Day of
+  Yoga in resolution 69/131, adopted on 11 December 2014. The first observance
+  took place in 2015.
+summaries:
+  kids: The United Nations chose 21 June as the International Day of Yoga in 2014.
+    The first observance was in 2015.
+  teen: UN General Assembly resolution 69/131 proclaimed 21 June as the
+    International Day of Yoga in December 2014; the first global observance
+    followed on 21 June 2015.
+datings:
+  - method: documentary
+    range:
+      earliest: "2014"
+      latest: "2015"
+      precision: year
+      circa: false
+    grade: A
+    sources:
+      - src.un-yoga-resolution
+claims:
+  - text: Resolution 69/131 proclaimed 21 June as the International Day of Yoga.
+    grade: A
+    sources:
+      - src.un-yoga-resolution
+tags:
+  - yoga
+  - united-nations
+review:
+  status: draft
+  author: codex-gpt-6

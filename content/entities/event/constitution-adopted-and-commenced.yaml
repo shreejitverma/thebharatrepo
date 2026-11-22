@@ -1,0 +1,34 @@
+id: event.constitution-adopted-and-commenced
+type: event
+kind: event
+names:
+  en: Constitution of India adopted and brought into force
+summary: The Constituent Assembly adopted the Constitution on 26 November 1949.
+  Article 394 states that most provisions came into force on 26 January 1950.
+summaries:
+  kids: India’s Constitution was approved in 1949 and most of it began to apply on
+    26 January 1950.
+  teen: The Constituent Assembly adopted the Constitution on 26 November 1949. Its
+    commencement clause made most provisions effective on 26 January 1950.
+datings:
+  - method: documentary
+    range:
+      earliest: "1949"
+      latest: "1950"
+      precision: year
+      circa: false
+    grade: A
+    sources:
+      - src.constitution-of-india
+claims:
+  - text: The Constitution was adopted on 26 November 1949 and most provisions
+      commenced on 26 January 1950.
+    grade: A
+    sources:
+      - src.constitution-of-india
+tags:
+  - constitution
+  - republic
+review:
+  status: draft
+  author: codex-gpt-6

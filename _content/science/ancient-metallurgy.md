@@ -31,7 +31,7 @@ Their metalworking is one strand of a wider craft economy that also included bea
 Iron smelting appears in the subcontinent in the later second and early first millennium BCE.
 The standard scholarly position, set out by Dilip Chakrabarti, is that ironworking is securely attested across northern and peninsular India by about 1200 to 1000 BCE, in several regions at once [@src.chakrabarti-1992-early-use-iron-india].
 Rakesh Tewari has argued from radiocarbon dates at sites in the central Ganga plain and the eastern Vindhyas that iron was being worked there even earlier, in the early second millennium BCE [@src.tewari-2003-origins-iron-working-india].
-That position is a live debate, not a settled result, and the original version of this article's flat statement that "the Iron Age begins c. 1200 BCE" hid it.
+The early date proposed for ironworking in the Ganga plain remains a live debate, not a settled result; the standard date of about 1200 to 1000 BCE does not capture the full range of evidence.
 Whichever view prevails, the evidence points to local development of ironworking in more than one region, rather than a single point of origin.
 
 ## Wootz: crucible steel
@@ -44,7 +44,7 @@ Why the pattern appears has been studied experimentally.
 J. D. Verhoeven and A. H. Pendray, working with blacksmith-made reconstructions, found that the bands are produced by the clustering of carbide particles during the forging cycle, and that the process depends on the ingot's composition and on repeated forging at carefully controlled temperatures [@src.verhoeven-1996-wootz-damascus-steel-blades].
 The craft was demanding, which helps explain why it was lost in some places and survived in others.
 
-How early the technique began is not securely fixed, and the original article's date of "c. 300 BCE" is not one this article can support from the sources consulted.
+How early the technique began is not securely fixed, and the sources consulted here do not support assigning it to about 300 BCE.
 Archaeometallurgists have documented a late, regionally organised form of the technology, the "Mysore process", at Ghattihosahalli in Karnataka [@src.rao-2021-mysore-process-crucible-steel].
 Even the word is debated: one proposal derives "wootz" from a mistaken rendering of Sanskrit *utsa* [@src.dube-2014-wootz-utsa].
 
@@ -69,7 +69,7 @@ At Zawar the smelters packed ore into sealed clay retorts, heated them, and cond
 The mines themselves were worked in antiquity, but the large-scale distillation industry is dated to the medieval period [@src.willies-1984-lead-zinc-mining-rajasthan; @src.craddock-1983-zinc-production-medieval-india].
 
 The popular claim that India was "the first to master zinc distillation" is better phrased this way: Zawar is among the earliest known sites of large-scale zinc production by distillation, and the best-documented.
-Whether other regions developed distillation independently earlier is a question the original article did not address, and which this article does not try to settle.
+Whether other regions developed distillation independently earlier remains unresolved by the evidence considered here.
 
 ## What we can say
 

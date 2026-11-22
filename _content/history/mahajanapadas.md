@@ -26,8 +26,7 @@ The Anguttara Nikaya, a Buddhist collection, repeatedly lists sixteen great coun
 Jain texts give a somewhat different list, which shows that "sixteen" is a literary convention rather than a census, and that the lists reflect the perspective of the community that composed them [@src.thapar-2002-early-india].
 The Vajji and Malla are usually described as ruled by councils of clan leaders, not by hereditary kings; the others are generally monarchies [@src.thapar-2002-early-india; @src.singh-2008-ancient-early-medieval-india].
 
-The original article called republics "oligarchic assemblies" and treated monarchy and republic as the only two forms.
-Historians do describe the republican states (gana-sangha) as governed by assemblies of clan elites, but the sources are thin and later, and scholars disagree on how democratic or how stable these bodies were [@src.thapar-2002-early-india].
+The sources do not support reducing political forms to a simple monarchy-republic binary: historians describe the republican states (gana-sangha) as governed by assemblies of clan elites, but the sources are thin and later, and scholars disagree on how democratic or how stable these bodies were [@src.thapar-2002-early-india].
 
 ## Why now: the second urbanisation
 
@@ -49,7 +48,7 @@ This is a minority view of the cultural world that produced Buddhism and Jainism
 
 ## Dating the age
 
-The dates in the original article for Bimbisara (c. 544 to 492 BCE), the Buddha (563 to 483 BCE) and Mahavira are not secure.
+The dates of Bimbisara, the Buddha and Mahavira are not secure.
 They derive from one reading of the Sri Lankan chronicles, known as the "long chronology".
 Many historians now place the Buddha's death later, around 400 BCE, and some move it by a decade or two either way [@src.cousins-1996-dating-historical-buddha].
 Consequently, the regnal dates of Bimbisara and Ajatashatru move with it, and the article's dates should be read as one position, not as the standard dating [@src.thapar-2002-early-india; @src.cousins-1996-dating-historical-buddha].

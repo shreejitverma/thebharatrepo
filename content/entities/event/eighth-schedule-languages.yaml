@@ -1,0 +1,35 @@
+id: event.eighth-schedule-languages
+type: event
+kind: event
+names:
+  en: Languages in the Eighth Schedule
+summary: The Constitution’s Eighth Schedule names languages recognized for
+  specified constitutional purposes. Sanskrit is among the listed languages; the
+  schedule has also changed through constitutional amendments.
+summaries:
+  kids: The Constitution lists Sanskrit and other languages in its Eighth
+    Schedule. The list has changed over time.
+  teen: The Eighth Schedule lists languages for constitutional purposes. Sanskrit
+    is included, alongside languages added or renamed through later amendments.
+datings:
+  - method: documentary
+    range:
+      earliest: "1950"
+      latest: "1950"
+      precision: year
+      circa: false
+    grade: A
+    sources:
+      - src.constitution-of-india
+claims:
+  - text: The Constitution’s Eighth Schedule includes Sanskrit and has been amended
+      to add and rename languages.
+    grade: A
+    sources:
+      - src.constitution-of-india
+tags:
+  - constitution
+  - language
+review:
+  status: draft
+  author: codex-gpt-6

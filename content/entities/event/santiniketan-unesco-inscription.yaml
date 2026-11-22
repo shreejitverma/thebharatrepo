@@ -1,0 +1,34 @@
+id: event.santiniketan-unesco-inscription
+type: event
+kind: event
+names:
+  en: Santiniketan inscribed on the World Heritage List
+summary: UNESCO inscribed Santiniketan, in West Bengal, on the World Heritage
+  List in 2023.
+summaries:
+  kids: Santiniketan, founded as an educational and cultural centre by
+    Rabindranath Tagore, became a UNESCO World Heritage site in 2023.
+  teen: The World Heritage Committee inscribed Santiniketan on the World Heritage
+    List in 2023.
+region: West Bengal
+datings:
+  - method: documentary
+    range:
+      earliest: "2023"
+      latest: "2023"
+      precision: year
+      circa: false
+    grade: A
+    sources:
+      - src.santiniketan-unesco-2023
+claims:
+  - text: Santiniketan was inscribed on the World Heritage List in 2023.
+    grade: A
+    sources:
+      - src.santiniketan-unesco-2023
+tags:
+  - education
+  - unesco
+review:
+  status: draft
+  author: codex-gpt-6

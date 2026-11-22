@@ -52,8 +52,7 @@ Some of his rules are correct, and some are not: his treatment of division by ze
 He also treated what we now call quadratic indeterminate equations, using a composition method for equations of the form N x squared plus 1 equals y squared [@src.plofker-2009-mathematics-in-india].
 Bhaskara II, who wrote the *Lilavati* and *Bijaganita* in the 12th century, continued this algebra and set out the cyclic (chakravala) method for such equations [@src.plofker-2009-mathematics-in-india].
 
-The original article credited Brahmagupta with the "first" rules for zero and negative numbers.
-The accurate form is "earliest surviving"; earlier lost works cannot be ruled out, and the history of zero itself is covered in [Zero and the Decimal System](/science/zero-and-the-decimal-system).
+Earlier lost works cannot be ruled out, and the history of zero itself is covered in [Zero and the Decimal System](/science/zero-and-the-decimal-system).
 
 ## The Kerala school and the series for pi
 

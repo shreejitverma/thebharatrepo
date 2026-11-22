@@ -13,7 +13,6 @@ const LINKS = [
   { href: '/art-and-culture', label: 'Art and Culture' },
   { href: '/music', label: 'Music' },
   { href: '/language', label: 'Language' },
-  { href: '/methodology', label: 'Methodology' },
 ];
 
 export default function NavLinks() {

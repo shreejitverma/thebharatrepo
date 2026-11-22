@@ -35,7 +35,6 @@ The *Natyashastra*, a Sanskrit treatise on drama, dance and music, gives a four-
 3. **Sushira vadya (hollow, wind):** wind instruments. Examples: the *bansuri* flute, *shehnai*, *nadaswaram*.
 4. **Ghana vadya (solid):** instruments whose body is struck or shaken, such as the *ghatam* (clay pot), *manjira* (cymbals) and *jal tarang* (tuned bowls).
 
-An earlier version of this article put the *Natyashastra* at about 200 BCE.
 Its date is debated: it is a composite text, and scholars give a wide range running from about the last centuries BCE to the early centuries CE [@src.rowell-1992-music-and-musical-thought-early-india].
 This fourfold system is close to the modern Hornbostel-Sachs scheme used by museums worldwide, which is why scholars often call it a remarkable early classification [@src.arnold-2000-garland-south-asia].
 
@@ -69,8 +68,7 @@ Ghana instruments such as the *ghatam* and *manjira* are among the simplest and 
 
 ## How we know, and a correction
 
-The original version of this article said that Persian instruments, including the sitar and the tabla, were introduced in the 13th century by Amir Khusrau.
-This popular attribution is not supported by early evidence.
+The popular attribution that Persian instruments, including the sitar and the tabla, were introduced in the 13th century by Amir Khusrau is not supported by early evidence.
 Allyn Miner finds that the sitar is documented from the 18th century and developed from earlier instruments, and James Kippen shows that the story about Khusrau and the tabla is a later legend rather than a documented fact [@src.miner-1993-sitar-and-sarod; @src.kippen-1988-tabla-of-lucknow].
 Scholars disagree about the real origins of the tabla.
 Some look to Indian drums depicted in earlier sculpture, others to West Asian influence, and the tradition itself tells several stories [@src.kippen-1988-tabla-of-lucknow].

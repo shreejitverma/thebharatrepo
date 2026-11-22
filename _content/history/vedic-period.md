@@ -50,9 +50,7 @@ The elaborate srauta rituals, among them the fire-altar ritual described in the 
 
 ## Varna and jati
 
-The original version of this article said the period saw "the crystallization of the caste system".
-That is too compressed.
-The word varna (literally "colour" or "class") first appears in the Rigveda in other senses; the fourfold scheme of Brahmana, Rajanya (later Kshatriya), Vaishya and Shudra appears in a late hymn, the Purusha Sukta (RV 10.90), and not in the earlier layers [@src.jamison-brereton-2014-rigveda].
+The Rigveda uses varna (literally "colour" or "class") first in other senses; its fourfold scheme of Brahmana, Rajanya (later Kshatriya), Vaishya and Shudra appears in a late hymn, the Purusha Sukta (RV 10.90), not in the earlier layers [@src.jamison-brereton-2014-rigveda].
 In the later Vedic texts the fourfold ideal is elaborated by priests, who stand at its head [@src.thapar-2002-early-india].
 Varna is a theoretical scheme of four classes; jati, the many endogamous birth-groups that people actually belong to, is a different and much more complex social reality that is documented later, and scholars debate how closely the two relate and how much colonial-era scholarship fixed what had been fluid [@src.bayly-1999-caste-society-politics; @src.olivelle-2005-manus-code-of-law].
 For this period, it is safest to say that a hierarchical fourfold ideal was being articulated in priestly literature, not that a caste system as later known was already in place.

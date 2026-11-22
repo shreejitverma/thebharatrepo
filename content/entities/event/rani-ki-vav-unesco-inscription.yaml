@@ -1,0 +1,34 @@
+id: event.rani-ki-vav-unesco-inscription
+type: event
+kind: event
+names:
+  en: Rani-ki-Vav inscribed on the World Heritage List
+summary: The World Heritage Committee inscribed Rani-ki-Vav at Patan, Gujarat, in 2014.
+summaries:
+  kids: Rani-ki-Vav, a stepwell in Gujarat, became a UNESCO World Heritage site in
+    2014.
+  teen: The World Heritage Committee inscribed Rani-ki-Vav, the Queen’s Stepwell
+    at Patan, on the World Heritage List in 2014.
+region: Patan, Gujarat
+datings:
+  - method: documentary
+    range:
+      earliest: "2014"
+      latest: "2014"
+      precision: year
+      circa: false
+    grade: A
+    sources:
+      - src.rani-ki-vav-unesco
+claims:
+  - text: The World Heritage Committee inscribed Rani-ki-Vav on the World Heritage
+      List in 2014.
+    grade: A
+    sources:
+      - src.rani-ki-vav-unesco
+tags:
+  - architecture
+  - unesco
+review:
+  status: draft
+  author: codex-gpt-6
