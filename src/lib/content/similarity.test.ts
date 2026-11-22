@@ -1,5 +1,5 @@
 import { describe, expect, it } from 'vitest';
-import { pageMatchesTitle, sameName, sameTitle, titleSimilarity } from './similarity';
+import { cachedTitleMatches, urlMatchKind, pageMatchesTitle, sameName, sameTitle, titleSimilarity } from './similarity';
 
 describe('sameTitle', () => {
   it('accepts a title without its subtitle', () => {
@@ -90,6 +90,20 @@ describe('pageMatchesTitle', () => {
   });
   it('rejects a page that does not carry the title', () => {
     expect(pageMatchesTitle('Tradition of Vedic chanting', 'Page not found')).toBe(false);
+  });
+});
+
+describe('cached title rechecks', () => {
+  it('judges catalogue URLs as registry records and other URLs as web pages', () => {
+    expect(urlMatchKind('https://archive.org/details/invasionofindiab00mccr')).toBe('record');
+    expect(urlMatchKind('https://openlibrary.org/works/OL123W')).toBe('record');
+    expect(urlMatchKind('https://whc.unesco.org/en/list/242/')).toBe('page');
+    expect(urlMatchKind('not a url')).toBe('page');
+  });
+  it('rejects a shorter cited title for a catalogue item about a different work', () => {
+    const url = 'https://archive.org/details/princesofmughalem0000faru';
+    expect(cachedTitleMatches(urlMatchKind(url), 'The Mughal Empire', 'The Princes of the Mughal Empire, 1504-1719')).toBe(false);
+    expect(cachedTitleMatches(urlMatchKind(url), 'The Princes of the Mughal Empire', 'The Princes of the Mughal Empire, 1504-1719')).toBe(true);
   });
 });
 

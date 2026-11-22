@@ -2,7 +2,7 @@ import fs from 'node:fs';
 import path from 'node:path';
 import { describe, expect, it } from 'vitest';
 import { loadContentUncached, sameWork } from './load';
-import { cachedTitleMatches } from './similarity';
+import { cachedTitleMatches, normalizeTitle, urlMatchKind } from './similarity';
 
 /**
  * Regression guards over the real bibliography. The committed verification cache (content/verification.json)
@@ -28,7 +28,7 @@ describe('real bibliography', () => {
         [s.doi && `doi:${s.doi.toLowerCase()}`, 'record'],
         [s.isbn && `isbn:${s.isbn}`, 'record'],
         [s.oclc && `oclc:${s.oclc}`, 'record'],
-        [s.url && `url:${s.url}`, 'page'],
+        [s.url && `url:${s.url}`, s.url ? urlMatchKind(s.url) : 'page'],
       ];
       for (const [key, kind] of keys) {
         const hit = key ? cache[key] : undefined;
@@ -40,12 +40,17 @@ describe('real bibliography', () => {
 
   it('never treats two distinct source records as the same work', () => {
     const allowed = new Set(SAME_WORK_ALLOWED.map(([a, b]) => `${a}|${b}`));
+    // Titles with no normalised word in common can never match, so only pairs sharing a word are compared.
+    const byWord = new Map<string, number[]>();
+    sources.forEach((s, i) => {
+      for (const w of new Set(normalizeTitle(s.title))) byWord.set(w, [...(byWord.get(w) ?? []), i]);
+    });
+    const candidates = new Set<string>();
+    for (const ids of byWord.values()) for (const i of ids) for (const j of ids) if (i < j) candidates.add(`${i}|${j}`);
     const merged: string[] = [];
-    for (let i = 0; i < sources.length; i++) {
-      for (let j = i + 1; j < sources.length; j++) {
-        const [a, b] = [sources[i], sources[j]].sort((x, y) => x.id.localeCompare(y.id));
-        if (!allowed.has(`${a.id}|${b.id}`) && sameWork(a, b)) merged.push(`${a.id} ~ ${b.id}`);
-      }
+    for (const pair of candidates) {
+      const [a, b] = pair.split('|').map((k) => sources[Number(k)]).sort((x, y) => x.id.localeCompare(y.id));
+      if (!allowed.has(`${a.id}|${b.id}`) && sameWork(a, b)) merged.push(`${a.id} ~ ${b.id}`);
     }
     expect(merged).toEqual([]);
   });

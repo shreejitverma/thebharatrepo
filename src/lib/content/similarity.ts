@@ -204,9 +204,30 @@ export function pageMatchesTitle(citedTitle: string, pageTitle: string): boolean
   return inter >= Math.min(2, A.size) && inter / A.size >= 0.6;
 }
 
+/** A URL that names a catalogue record (an archive.org item or an Open Library edition or work), or null. */
+export function registryRecord(url: string): { site: 'archive.org'; id: string } | { site: 'openlibrary.org'; path: string } | null {
+  let u: URL;
+  try {
+    u = new URL(url);
+  } catch {
+    return null;
+  }
+  const ia = /^\/details\/([^/?#]+)/.exec(u.pathname);
+  if (u.hostname.endsWith('archive.org') && ia) return { site: 'archive.org', id: ia[1] };
+  const ol = /^\/(works|books)\/(OL\w+)/.exec(u.pathname);
+  if (u.hostname.endsWith('openlibrary.org') && ol) return { site: 'openlibrary.org', path: `${ol[1]}/${ol[2]}` };
+  return null;
+}
+
+/** How a URL's title is judged: catalogue records as registry titles, anything else as a web page. */
+export function urlMatchKind(url: string): 'record' | 'page' {
+  return registryRecord(url) ? 'record' : 'page';
+}
+
 /**
- * A cached registry or page title still identifies the cited work: registry records (DOI, ISBN, OCLC)
- * must be the same title; web pages may also carry the title among site text.
+ * A registry or page title identifies the cited work. One rule for the live check and the offline
+ * recheck: registry records (DOI, ISBN, OCLC, catalogue URLs) must be the same title; a web page must
+ * carry the cited title among its site text or be titled with the cited main title.
  */
 export function cachedTitleMatches(kind: 'record' | 'page', cited: string, matched: string): boolean {
   return kind === 'record' ? sameTitle(cited, matched) : pageMatchesTitle(cited, matched) || sameTitle(cited, matched);
