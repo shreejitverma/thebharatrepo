@@ -6,7 +6,8 @@ import GradeBadge, { LensTag } from '@/components/GradeBadge';
 import KaalchakraStrip from '@/components/KaalchakraStrip';
 import SourceCitation from '@/components/SourceCitation';
 import { getGraph, getIndex, issueUrl } from '@/lib/content/site';
-import { debateRange, visibleDebates } from '@/lib/content/debates';
+import { debatePlacement, visibleDebates } from '@/lib/content/debates';
+import { formatDating, primaryDating } from '@/components/kaalchakra/shared';
 import { toKcItem } from '@/lib/content/kaalchakra';
 import { citationId, type CitationRef } from '@/lib/content/schema';
 import { formatRange } from '@/lib/time';
@@ -52,7 +53,7 @@ export default async function DebatePage({ params }: { params: Promise<{ slug: s
   const d = find(slug);
   if (!d) notFound();
   const g = getGraph();
-  const range = debateRange(g, d);
+  const place = debatePlacement(g, d);
   const ranged = d.positions.filter((p) => p.range);
   const lo = Math.min(...ranged.map((p) => p.range!.earliest));
   const hi = Math.max(...ranged.map((p) => p.range!.latest));
@@ -60,7 +61,7 @@ export default async function DebatePage({ params }: { params: Promise<{ slug: s
   const x = (year: number) => ((year - (lo - pad)) / (hi - lo + 2 * pad)) * 100;
   const related = d.relatedEntities.map((id) => toKcItem(g.entities.get(id)!));
   const articles = d.relatedArticles.map((ref) => g.articles.find((a) => `${a.category}/${a.slug}` === ref)!);
-  const u = range ? yearToUnit(range.best ?? (range.earliest + range.latest) / 2) : 0;
+  const u = place ? yearToUnit(place.range.best ?? (place.range.earliest + place.range.latest) / 2) : 0;
 
   return (
     <div className="main-content">
@@ -113,10 +114,10 @@ export default async function DebatePage({ params }: { params: Promise<{ slug: s
         </section>
       ) : null}
 
-      {range ? (
+      {place ? (
         <KaalchakraStrip
           items={getIndex()}
-          range={range}
+          dating={place}
           selfId={null}
           focusHref={`/kaalchakra?id=${encodeURIComponent(d.relatedEntities[0])}&view=river&win=${Math.max(0, u - 0.02).toFixed(5)},${Math.min(1, u + 0.02).toFixed(5)}`}
         />
@@ -205,7 +206,7 @@ export default async function DebatePage({ params }: { params: Promise<{ slug: s
             <Link key={i.id} href={i.href} className="card">
               <h3>{i.name}</h3>
               <EntityNames native={i.native} iast={i.iast} nativeLang={i.nativeLang} iastLang={i.iastLang} className="card__names" />
-              <p className="card__meta">{formatRange(i.datings.find((x) => x.lens === 'scholarship') ?? i.datings[0])}</p>
+              {primaryDating(i, 'both') ? <p className="card__meta">{formatDating(primaryDating(i, 'both')!, 'ce')}</p> : null}
             </Link>
           ))}
         </div>

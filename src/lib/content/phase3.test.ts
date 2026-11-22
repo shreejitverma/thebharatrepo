@@ -190,13 +190,13 @@ describe('loader: debates and learning paths', () => {
     await inFixture('phase3', async () => {
       vi.stubEnv('DEBATES_PREVIEW', '');
       const { loadContentUncached } = await import('./load');
-      const { visibleDebates, debatesForEntity, debateSearchDocs, debateRange } = await import('./debates');
+      const { visibleDebates, debatesForEntity, debateSearchDocs, debatePlacement } = await import('./debates');
       const g = loadContentUncached();
       expect(visibleDebates(g.debates).map((d) => d.slug)).toEqual(['approved-one']);
       expect(debatesForEntity(g, 'person.someone').map((d) => d.slug)).toEqual(['approved-one']);
       expect(debateSearchDocs(g).map((d) => d.href)).toEqual(['/debates/approved-one']);
       // Placement in time comes from the scholarship positions' ranges.
-      expect(debateRange(g, g.debates[0])).toMatchObject({ earliest: -299, latest: -249 });
+      expect(debatePlacement(g, g.debates[0])).toMatchObject({ range: { earliest: -299, latest: -249 }, lens: 'scholarship' });
 
       // The static params Next.js builds from: drafts produce no page.
       const page = await import('../../app/debates/[slug]/page');
@@ -338,5 +338,31 @@ describe('source locators', () => {
     expect(bindLocator('p. 4, fig. 2')).toBe('p.\u00a04, fig.\u00a02');
     expect(bindLocator('Rock Edict XIII')).toBe('Rock Edict XIII');
     expect(bindLocator('Rummindei pillar inscription')).toBe('Rummindei pillar inscription');
+  });
+});
+
+describe('placing debates and learning paths in time', () => {
+  const r = (earliest: number, latest: number) => ({ earliest, latest, precision: 'decade' as const, circa: true });
+  it('spans scholarly datings and never mixes in traditional ones', async () => {
+    const { datingsSpan, placementLabel } = await import('./debates');
+    const span = datingsSpan([
+      { method: 'traditional-puranic', range: r(-3101, -3101) },
+      { method: 'epigraphic', range: r(-268, -232) },
+      { method: 'textual-internal', range: r(-300, -250) },
+    ]);
+    expect(span).toEqual({ range: { earliest: -300, latest: -232, precision: 'decade', circa: true }, lens: 'scholarship' });
+    const traditional = datingsSpan([{ method: 'traditional-puranic', range: r(-3101, -3101) }]);
+    expect(traditional?.lens).toBe('tradition');
+    expect(placementLabel(traditional!)).toMatch(/\(tradition\)$/);
+    expect(placementLabel(span!)).not.toMatch(/tradition/);
+    expect(datingsSpan([])).toBeNull();
+  });
+  it('prefers scholarship placements when combining several', async () => {
+    const { spanOf } = await import('./debates');
+    const s = { range: r(-300, -250), lens: 'scholarship' as const };
+    const t = { range: r(-3101, -3101), lens: 'tradition' as const };
+    expect(spanOf([t, s, null])).toEqual(s);
+    expect(spanOf([t, null])?.lens).toBe('tradition');
+    expect(spanOf([null])).toBeNull();
   });
 });

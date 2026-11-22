@@ -6,7 +6,7 @@ tags: [sanskrit, grammar, compounds, samasa, panini]
 datings:
   - method: linguistic
     range: { earliest: "600 BCE", latest: "350 BCE", best: "400 BCE", precision: century, circa: true }
-    grade: B
+    grade: C
     label: "Panini's Ashtadhyayi, mainstream Indological dating"
     note: "The grammar that names and defines the compound types; dated from the state of the language it describes."
     sources: [src.cardona-1988-panini-work-traditions, src.katre-1987-astadhyayi-panini]

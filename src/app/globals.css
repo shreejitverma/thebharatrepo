@@ -739,6 +739,14 @@ a:hover {
   max-width: var(--measure);
 }
 
+.article-datings {
+  margin: 0 0 16px;
+}
+
+.article-datings h2 {
+  margin: 16px 0 10px;
+}
+
 .article-meta {
   display: flex;
   flex-wrap: wrap;

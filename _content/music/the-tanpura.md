@@ -41,7 +41,7 @@ The standard Hindustani tuning in a Pa-based raga is [@src.ghosh-2017-tanpura-dr
 | 4 (thick, inner) | Sa, one octave lower |
 
 When a raga omits or avoids Pa, performers often replace the first string with Madhyama (Ma) or a lower Ni, so that the drone does not clash with the mode.
-Which note is chosen for which raga is a matter of performance practice and varies by teacher and school, so I do not give a rigid list here.
+Which note is chosen for which raga is a matter of performance practice and varies by teacher and school, so no rigid list is given here.
 Carnatic practice uses the same idea, with the instrument called tambura.
 The overall pitch of the Sa is chosen to suit the singer or the instrument: lower for many male voices, higher for many female voices.
 
@@ -72,7 +72,7 @@ Claims that tanpura sound calms the nervous system and aids concentration are co
 There is some research on this.
 Groups studying EEG responses to tanpura recordings report measurable changes in brain activity during listening [@src.ghosh-2017-tanpura-drone-brain-response].
 Treat that as preliminary: the studies are small, come largely from one network of researchers, and have not established a mechanism.
-Specific claims about "alpha and theta entrainment" and "millisecond self-correction of intonation" are not well supported by the sources I could verify, and I leave them out.
+Specific claims about "alpha and theta entrainment" and "millisecond self-correction of intonation" are not well supported by the sources that could be verified, so they are left out here.
 
 ## Sound as spiritual practice
 

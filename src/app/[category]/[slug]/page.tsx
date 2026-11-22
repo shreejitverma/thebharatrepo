@@ -3,13 +3,16 @@ import Link from 'next/link';
 import { notFound } from 'next/navigation';
 import SocialShare from '@/components/SocialShare';
 import GradeBadge, { LensTag } from '@/components/GradeBadge';
+import DatingList from '@/components/DatingList';
 import KaalchakraStrip from '@/components/KaalchakraStrip';
 import SourceCitation from '@/components/SourceCitation';
 import { CATEGORY_META, getGraph, getIndex, issueUrl } from '@/lib/content/site';
 import { renderArticle } from '@/lib/content/render';
 import { entityHref } from '@/lib/content/kaalchakra';
 import { METHOD_LABELS, isTraditional } from '@/lib/content/labels';
+import { citationId } from '@/lib/content/schema';
 import { formatRange } from '@/lib/time';
+import { rankDatings, summarizeDatings } from '@/lib/content/lens';
 import { yearToUnit } from '@/lib/time/scale';
 
 export const dynamicParams = false;
@@ -34,7 +37,9 @@ export default async function ArticlePage({ params }: { params: Promise<{ catego
   if (!a) notFound();
   const g = getGraph();
   const { html, references } = await renderArticle(a.body, g.sources);
-  const primary = a.datings[0];
+  const ordered = rankDatings(a.datings, (d) => isTraditional(d.method));
+  const primary = ordered[0];
+  const cited = new Set([...references.map((r) => r.source.id), ...a.datings.flatMap((d) => d.sources.map(citationId))]);
   const u = yearToUnit(primary.range.best ?? (primary.range.earliest + primary.range.latest) / 2);
   const focus = `/kaalchakra?view=river&win=${Math.max(0, u - 0.02).toFixed(5)},${Math.min(1, u + 0.02).toFixed(5)}`;
   const linked = a.entities.map((id) => g.entities.get(id)).filter((e) => e !== undefined);
@@ -54,9 +59,13 @@ export default async function ArticlePage({ params }: { params: Promise<{ catego
             <GradeBadge grade={primary.grade} />
             <LensTag lens={isTraditional(primary.method) ? 'tradition' : 'scholarship'} />
             <span>{METHOD_LABELS[primary.method]}</span>
-            <span>{references.length} sources cited</span>
+            <span>{cited.size} sources cited</span>
           </div>
-          <KaalchakraStrip items={getIndex()} range={primary.range} selfId={null} focusHref={focus} />
+          <KaalchakraStrip items={getIndex()} dating={primary} selfId={null} focusHref={focus} />
+          <section className="article-datings" aria-labelledby="when">
+            <h2 id="when">When, and how we know</h2>
+            <DatingList datings={ordered} sources={g.sources} />
+          </section>
         </header>
         <div className="article-content" dangerouslySetInnerHTML={{ __html: html }} />
         {linked.length ? (
@@ -67,7 +76,7 @@ export default async function ArticlePage({ params }: { params: Promise<{ catego
                 <li key={e.id}>
                   <Link href={entityHref(e.id)}>
                     {e.names.en}
-                    <span>{formatRange(e.datings[0].range)}</span>
+                    <span>{summarizeDatings(e.datings)}</span>
                   </Link>
                 </li>
               ))}

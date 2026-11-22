@@ -2,9 +2,9 @@ import type { Metadata } from 'next';
 import Link from 'next/link';
 import { ProgressSummary } from '@/components/learn/Progress';
 import { getGraph } from '@/lib/content/site';
-import { learnHref, pathRange } from '@/lib/content/learning';
+import { learnHref, pathPlacement } from '@/lib/content/learning';
+import { placementLabel } from '@/lib/content/debates';
 import { READING_LEVEL_AUDIENCE, READING_LEVEL_LABELS } from '@/lib/content/labels';
-import { formatRange } from '@/lib/time';
 
 export const metadata: Metadata = {
   title: 'Learn',
@@ -28,7 +28,7 @@ export default function LearnPage() {
       ) : (
         <div className="category-grid" style={{ marginTop: 16 }}>
           {paths.map((p) => {
-            const r = pathRange(g, p);
+            const r = pathPlacement(g, p);
             const steps = p.steps.map((s) => (s.entity ?? s.article)!);
             return (
               <Link key={p.id} href={learnHref(p)} className="card">
@@ -42,7 +42,7 @@ export default function LearnPage() {
                   {p.quiz.length ? `, ${p.quiz.length}-question quiz` : ''}
                   {r ? (
                     <>
-                      . <span className="nowrap">{formatRange(r)}</span>
+                      . <span className="nowrap">{placementLabel(r)}</span>
                     </>
                   ) : null}
                 </p>

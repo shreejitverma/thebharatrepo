@@ -1,6 +1,8 @@
 import Link from 'next/link';
 import type { KcItem } from '@/lib/content/kaalchakra';
 import { neighbours } from '@/lib/content/kaalchakra';
+import { withTraditionMark } from '@/lib/content/lens';
+import { isTraditional, type DatingMethod } from '@/lib/content/labels';
 import { formatRange, type YearRange } from '@/lib/time';
 import { SEGMENTS, SEGMENT_STARTS, yearToUnit } from '@/lib/time/scale';
 
@@ -26,21 +28,34 @@ function ticksPath(items: KcItem[]): string {
 }
 
 /**
- * Mini Kaalchakra: locates an entity or article on the full axis, with its neighbours in time.
+ * Mini Kaalchakra: locates an entity or article (by its primary dating) or a debate or learning path (by a
+ * lens-tagged span) on the full axis, with its neighbours in time.
  * Server component, no client JavaScript.
  */
-export default function KaalchakraStrip({ items, range, selfId, focusHref }: { items: KcItem[]; range: YearRange; selfId: string | null; focusHref: string }) {
+export default function KaalchakraStrip({
+  items,
+  dating,
+  selfId,
+  focusHref,
+}: {
+  items: KcItem[];
+  dating: { range: YearRange; method: DatingMethod } | { range: YearRange; lens: 'scholarship' | 'tradition' };
+  selfId: string | null;
+  focusHref: string;
+}) {
+  const { range } = dating;
+  const traditional = 'method' in dating ? isTraditional(dating.method) : dating.lens === 'tradition';
   const u0 = yearToUnit(range.earliest);
   const u1 = yearToUnit(range.latest);
   const markW = Math.min(Math.max((u1 - u0) * W, 4), W);
   const markX = clamp(u0 * W, 0, W - markW);
   const anchor = range.best ?? (range.earliest + range.latest) / 2;
-  const { before, after } = neighbours(items, anchor, selfId, 3);
+  const { before, after } = neighbours(items, anchor, traditional ? 'tradition' : 'scholarship', selfId, 3);
   return (
     <section className="kc-strip" aria-label="Place in the Kaalchakra">
       <div className="kc-strip__head">
         <strong>Place in the Kaalchakra</strong>
-        <span className="muted">{formatRange(range)}</span>
+        <span className="muted">{withTraditionMark(formatRange(range), traditional)}</span>
         <Link href={focusHref}>Open in the Kaalchakra</Link>
       </div>
       <svg viewBox={`0 0 ${W} 46`} preserveAspectRatio="none" aria-hidden="true">

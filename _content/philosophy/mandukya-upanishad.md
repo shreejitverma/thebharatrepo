@@ -11,7 +11,7 @@ datings:
     sources: [src.olivelle-1998-early-upanisads]
     note: "The text is generally counted among the later principal Upanishads; there is no firm external anchor, and the width of the range reflects that. Gaudapada's commentary-poem gives a latest bound."
   - method: traditional-sampradaya
-    range: { earliest: "3101 BCE", latest: "2499 BCE", precision: century, circa: true }
+    range: { earliest: "3102 BCE", latest: "2500 BCE", precision: century, circa: true }
     grade: D
     label: "Vedanta sampradaya"
     sources: [src.flood-2003-blackwell-companion-hinduism]

@@ -9,7 +9,7 @@ import path from 'node:path';
 import { loadContentUncached } from '../src/lib/content/load';
 import { KIND_LABELS } from '../src/lib/content/labels';
 import { entityHref } from '../src/lib/content/kaalchakra';
-import { formatRange } from '../src/lib/time';
+import { summarizeDatings } from '../src/lib/content/lens';
 import { debateSearchDocs } from '../src/lib/content/debates';
 import { learningSearchDocs } from '../src/lib/content/learning';
 
@@ -28,7 +28,7 @@ const docs = [
     title: e.names.en,
     summary: e.summary,
     kind: KIND_LABELS[e.kind],
-    when: formatRange(e.datings[0].range),
+    when: summarizeDatings(e.datings),
     text: [e.names.iast, e.names.native, e.region, ...e.tags].filter(Boolean).join(' '),
   })),
   ...g.articles.map((a) => ({
@@ -36,7 +36,7 @@ const docs = [
     title: a.title,
     summary: a.summary,
     kind: 'Article',
-    when: formatRange(a.datings[0].range),
+    when: summarizeDatings(a.datings),
     text: [a.tags.join(' '), a.body.replace(/\[@[^\]]+\]/g, '').replace(/[#*_>`]/g, ' ').slice(0, 1500)].join(' '),
   })),
   // Published debates only: drafts awaiting owner approval never reach the index.

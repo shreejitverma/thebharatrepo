@@ -6,33 +6,34 @@ names:
   iast: Kālidāsa
   native: कालिदास
 summary: >-
-  Kalidasa is the pre-eminent poet and dramatist of classical Sanskrit literature, celebrated for his three surviving plays (Abhijnanashakuntala, Vikramorvashiya and Malavikagnimitra), two mahakavyas (Raghuvamsha and Kumarasambhava), and the lyric poem Meghaduta. His exact dates are contested because his works contain no autobiographical colophon: mainstream scholarship places him in the fourth to fifth century CE at the court of the Gupta emperors Chandragupta II Vikramaditya and Kumaragupta I, while an alternative tradition links him to a first-century BCE Vikramaditya of Ujjain.
+  Kalidasa is the pre-eminent poet and dramatist of classical Sanskrit literature, celebrated for his three surviving plays (Abhijnanashakuntala, Vikramorvashiya and Malavikagnimitra), two mahakavyas (Raghuvamsha and Kumarasambhava), and the lyric poem Meghaduta. His exact dates are contested because his works contain no autobiographical colophon: mainstream scholarship places him in the fourth to fifth century CE possibly at the Gupta court, while an alternative tradition links him to a first-century BCE Vikramaditya of Ujjain.
 summaries:
   kids: >-
     Kalidasa was ancient India's most famous Sanskrit poet and playwright, who wrote the play Shakuntala and the poem Meghaduta ("The Cloud Messenger").
   teen: >-
-    Author of the dramas Abhijnanashakuntala and Vikramorvashiya and the epic poem Raghuvamsha, Kalidasa set the standard for classical Sanskrit kavya; most historians place him in the Gupta period under Chandragupta II Vikramaditya (c. 375-450 CE), though his exact date remains debated.
+    Author of the dramas Abhijnanashakuntala and Vikramorvashiya and the epic poem Raghuvamsha, Kalidasa set the standard for classical Sanskrit kavya; most historians place him in the Gupta period (about 350 to 475 CE), though his exact date remains debated.
 region: Ujjain (Malwa) and Northern India
 location: { name: "Ujjain, Madhya Pradesh", lat: 23.176, lon: 75.788 }
 datings:
   - method: textual-internal
-    range: { earliest: 375, latest: 455, best: 400, precision: decade, circa: true }
-    grade: B
-    label: Gupta-era synchronism with Chandragupta II Vikramaditya and Vakataka alliance
-    sources:
-      - src.kulke-2004-history-of-india
-      - src.pollock-2016-rasa-reader
-    note: Supported by Kalidasa's play on the names Vikrama and Mahendra (titles of Chandragupta II and Kumaragupta I), the geography of Raghu's digvijaya echoing Samudragupta's Allahabad pillar campaign and Chandragupta II's Vahlika/Huna Oxus frontier, his deep intimacy with Ujjain and Ramagiri (Vakataka court), and his terminus ante quem in Vatsabhatti's 473 CE Mandasor inscription and the 634 CE Aihole inscription.
-  - method: textual-internal
-    range: { earliest: "100 BCE", latest: 50, precision: century, circa: true }
+    range: { earliest: "350 CE", latest: "475 CE", precision: century, circa: true }
     grade: C
-    label: First century BCE dating associated with the Vikrama Samvat epoch (57 BCE) or late Shunga context
+    label: Proposed Gupta-era placement
     sources:
-      - src.kulke-2004-history-of-india
-    note: Proposed by some scholars who connect the legendary "Nine Gems" (Navaratna) of King Vikramaditya of Ujjain with the 57 BCE Vikrama era or highlight Kalidasa's choice of Agnimitra Shunga (second century BCE) as the hero of Malavikagnimitra.
+      - src.lienhard-1984-history-classical-poetry
+      - src.pollock-2006-language-of-the-gods
+      - src.kielhorn-1900-aihole-inscription
+    note: The proposed Gupta-era placement draws on literary allusions and possible echoes of Kalidasa in the Mandasor inscription dated about 473 CE. His name is securely attested in the Aihole inscription of 634 CE.
+  - method: traditional-sampradaya
+    range: { earliest: "100 BCE", latest: "1 BCE", precision: century, circa: true }
+    grade: D
+    label: Tradition of the court of Vikramaditya
+    sources:
+      - src.lienhard-1984-history-classical-poetry
+    note: Later tradition names Kalidasa among the Nine Gems of a Vikramaditya associated with the era beginning in 57 BCE.
 claims:
-  - text: The 634 CE Aihole inscription of the Chalukya king Pulakeshin II (composed by Ravikirti) explicitly names Kalidasa and Bharavi as the supreme masters of Sanskrit poetic fame, and Vatsabhatti's 473 CE Mandasor silk-weavers' inscription imitates verses from Kalidasa's Meghaduta and Ritusamhara, providing a firm fifth- to seventh-century CE terminus ante quem.
-    grade: A
+  - text: The 634 CE Aihole inscription of the Chalukya king Pulakeshin II (composed by Ravikirti) explicitly names Kalidasa and Bharavi as the supreme masters of Sanskrit poetic fame, and proposed echoes of his poetry in the 473 CE Mandasor inscription suggest an earlier upper bound.
+    grade: C
     sources:
       - src.fleet-1888-inscriptions-early-gupta-kings
       - src.salomon-1998-indian-epigraphy
@@ -42,7 +43,7 @@ claims:
       - src.pollock-2016-rasa-reader
       - src.brockington-1998-sanskrit-epics
 debate: >-
-  Because Kalidasa states in the prologue of Malavikagnimitra that he is a contemporary successor to older playwrights like Bhasa, Saumilla and Kaviputra without giving a calendar date, scholars reconstruct his era from external termini and internal allusions. The 473 CE Mandasor inscription (which echoes Meghaduta) and the 634 CE Aihole inscription fix his latest possible date to the fifth century CE; most historians identify his patron Vikramaditya with the Gupta emperor Chandragupta II Vikramaditya (c. 375-415 CE), while a minority of scholars favour a first-century BCE date tied to the 57 BCE Vikrama Samvat tradition of Ujjain.
+  Because Kalidasa states in the prologue of Malavikagnimitra that he is a contemporary successor to older playwrights like Bhasa, Saumilla and Kaviputra without giving a calendar date, scholars reconstruct his era from external termini and internal allusions. The possible echoes of Kalidasa in the 473 CE Mandasor inscription and the 634 CE Aihole inscription provide possible fifth-century and secure seventh-century upper bounds, respectively. The Gupta court is a common scholarly identification, while the Nine Gems tradition links Kalidasa to a Vikramaditya of Ujjain and the era beginning in 57 BCE.
 relations:
   - { kind: contemporary-of, target: person.chandragupta-ii }
   - { kind: related-to, target: polity.gupta-empire }

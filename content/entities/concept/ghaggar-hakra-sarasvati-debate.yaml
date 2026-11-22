@@ -28,8 +28,8 @@ location:
 datings:
   - method: geological
     range:
-      earliest: "47000 BCE"
-      latest: "6000 BCE"
+      earliest: "49 ka"
+      latest: "8 ka"
       precision: ka
       circa: true
     grade: B

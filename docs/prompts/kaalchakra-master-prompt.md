@@ -118,6 +118,7 @@ That is the tone: every position present, every position graded, nothing hidden,
 ### 8.1 Time model
 
 - Store all years internally in **astronomical year numbering** (1 BCE = 0, 2 BCE = -1) as integers or decimal years, with explicit precision (`day`, `year`, `decade`, `century`, `millennium`, `ka`, `Ma`, `cosmological`).
+- Authored files write BCE years as `"N BCE"` strings (and deep time as `"385 ka"`, `"1.5 Ma"`); the loader converts them and rejects raw negative numbers.
 - Every dating is a range `{ earliest, latest, best?, precision, circa }`; a point is a range of width zero.
 - Display in CE/BCE by default, with toggles for Vikram Samvat, Shaka Samvat, Kali Yuga era (epoch 18 February 3102 BCE, Julian, per the Surya Siddhanta reckoning) and years-ago (ka/Ma) for prehistory.
 - Calendar conversion lives in one pure, fully unit-tested module; no ad hoc arithmetic anywhere else.
@@ -163,7 +164,7 @@ names:
 summary: Ashoka records remorse over the Kalinga war and names five Hellenistic kings.
 datings:
   - method: foreign-synchronism
-    range: { earliest: -261, latest: -255, precision: decade, circa: true }
+    range: { earliest: "262 BCE", latest: "256 BCE", precision: decade, circa: true }
     grade: A
     sources: [src.hultzsch-1925-cii-1, src.thapar-1961-asoka]
     note: Anchored by the regnal dates of Antiochus II and Ptolemy II.

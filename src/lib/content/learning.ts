@@ -4,9 +4,7 @@ import type { Article, ContentGraph, LearningPathDoc } from './load';
 import type { Entity, LearningStep, QuizQuestion, Source } from './schema';
 import { citationId } from './schema';
 import { READING_LEVEL_AUDIENCE } from './labels';
-import type { YearRange } from '../time';
-import { formatRange } from '../time';
-import { entityRanges, type SearchDoc } from './debates';
+import { datingsSpan, placementLabel, spanOf, type Placement, type SearchDoc } from './debates';
 import { entityHref, formatSource, sourceLink } from './kaalchakra';
 
 export function learnHref(p: Pick<LearningPathDoc, 'slug'>): string {
@@ -34,19 +32,17 @@ export function pathsForEntity(g: Pick<ContentGraph, 'learningPaths'>, entityId:
   return g.learningPaths.filter((p) => p.steps.some((s) => s.entity === entityId));
 }
 
-/** Where a path sits in time: its `focus` when set, else the span of its entity steps' scholarly datings, else its articles' datings. */
-export function pathRange(g: Pick<ContentGraph, 'entities' | 'articles'>, p: LearningPathDoc): YearRange | null {
-  if (p.focus) return p.focus;
+/**
+ * Where a path sits in time: its `focus` when set (a scholarship-lens span, see STYLE.md section 12), else
+ * the span of its entity steps' datings, else of its articles' datings, scholarship before tradition.
+ */
+export function pathPlacement(g: Pick<ContentGraph, 'entities' | 'articles'>, p: LearningPathDoc): Placement | null {
+  if (p.focus) return { range: p.focus, lens: 'scholarship' };
   const steps = resolveSteps(g, p);
-  let ranges = steps.flatMap((s) => (s.kind === 'entity' ? entityRanges(s.entity) : []));
-  if (!ranges.length) ranges = steps.flatMap((s) => (s.kind === 'article' ? s.article.datings.map((d) => d.range) : []));
-  if (!ranges.length) return null;
-  return {
-    earliest: Math.min(...ranges.map((r) => r.earliest)),
-    latest: Math.max(...ranges.map((r) => r.latest)),
-    precision: ranges[0].precision,
-    circa: ranges.some((r) => r.circa),
-  };
+  return (
+    spanOf(steps.map((s) => (s.kind === 'entity' ? datingsSpan(s.entity.datings) : null))) ??
+    spanOf(steps.map((s) => (s.kind === 'article' ? datingsSpan(s.article.datings) : null)))
+  );
 }
 
 /** The summary of an entity at a path's level; the loader guarantees it exists for teen and kids paths. */
@@ -73,13 +69,13 @@ export function citationViews(sources: Map<string, Source>, refs: QuizQuestion['
 
 export function learningSearchDocs(g: Pick<ContentGraph, 'learningPaths' | 'entities' | 'articles'>): SearchDoc[] {
   return g.learningPaths.map((p) => {
-    const r = pathRange(g, p);
+    const r = pathPlacement(g, p);
     return {
       href: learnHref(p),
       title: p.title,
       summary: p.summary,
       kind: 'Learning path',
-      when: r ? formatRange(r) : '',
+      when: r ? placementLabel(r) : '',
       text: [READING_LEVEL_AUDIENCE[p.level], p.audience, ...p.goals, ...p.tags].join(' '),
     };
   });

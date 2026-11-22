@@ -45,10 +45,37 @@ test.describe('pages render, are accessible and fit the viewport', () => {
     await noSeriousA11yViolations(page);
   });
 
+  test('a tradition-only entity is marked as tradition in its Kaalchakra strip, among traditional neighbours', async ({ page }) => {
+    await page.goto('/archive/cosmology/kali-yuga');
+    await expect(page.locator('.kc-strip__head')).toContainText('(tradition)');
+    await page.goto('/archive/cosmology/kalpa');
+    const strip = page.locator('.kc-strip');
+    await expect(strip.locator('.kc-strip__head')).toContainText('(tradition)');
+    await expect(strip.locator('a[href="/archive/event/indian-plate-asia-collision"]')).toHaveCount(0);
+    await expect(strip.locator('a[href="/archive/concept/siwalik-fossil-record"]')).toHaveCount(0);
+    expect(await strip.locator('.kc-strip__nb a[href^="/archive/cosmology/"]').count()).toBeGreaterThan(0);
+    await noHorizontalScroll(page);
+    await noSeriousA11yViolations(page);
+  });
+
   test('article tables render as tables', async ({ page }) => {
     await page.goto('/music/the-72-melakartas');
     await expect(page.locator('.article-content table th').first()).toBeVisible();
     await expect(page.locator('.article-content')).not.toContainText('| ---');
+    await noHorizontalScroll(page);
+    await noSeriousA11yViolations(page);
+  });
+
+  test('article header shows every dating with its sources', async ({ page }) => {
+    await page.goto('/philosophy/mandukya-upanishad');
+    const datings = page.locator('.article-header .dating');
+    await expect(datings).toHaveCount(2);
+    await expect(page.locator('.article-header .dating--tradition')).toContainText('Vedanta sampradaya');
+    const flood = page.locator('.article-header .dating__sources a[href="https://doi.org/10.1111/b.9780631215356.2005.00005.x"]');
+    await expect(flood).toBeVisible();
+    await expect(flood).toContainText('The Blackwell Companion to Hinduism');
+    await expect(page.locator('.article-meta')).toContainText('3 sources cited');
+    await expect(page.locator('.references li')).toHaveCount(2);
     await noHorizontalScroll(page);
     await noSeriousA11yViolations(page);
   });
@@ -84,6 +111,13 @@ test.describe('Kaalchakra', () => {
     await expect(page.locator('.kc-list')).toBeVisible();
     await expect(page.locator('.kc-list button[aria-current="true"]')).toHaveCount(1);
     await expect(page.locator('.kc-panel .btn--primary')).toHaveAttribute('href', href);
+  });
+
+  test('list rows mark traditional reckonings in the default lens', async ({ page }) => {
+    await page.goto('/kaalchakra?view=list&id=cosmology.kali-yuga');
+    await expect(page.locator('.kc-list button[aria-current="true"] .kc-list__date')).toHaveText('3102 BCE to 2026 CE (tradition)');
+    await page.goto('/kaalchakra?view=list&id=person.ashoka');
+    await expect(page.locator('.kc-list button[aria-current="true"] .kc-list__date')).not.toContainText('(tradition)');
   });
 
   test('lens switching filters to traditional datings only', async ({ page }) => {

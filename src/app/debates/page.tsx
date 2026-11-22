@@ -2,8 +2,7 @@ import type { Metadata } from 'next';
 import Link from 'next/link';
 import GradeBadge from '@/components/GradeBadge';
 import { getGraph } from '@/lib/content/site';
-import { debateHref, debateRange, debatesPreview, visibleDebates } from '@/lib/content/debates';
-import { formatRange } from '@/lib/time';
+import { debateHref, debatePlacement, debatesPreview, placementLabel, visibleDebates } from '@/lib/content/debates';
 
 export function generateMetadata(): Metadata {
   return {
@@ -39,13 +38,13 @@ export default function DebatesPage() {
       ) : (
         <div className="category-grid" style={{ marginTop: 16 }}>
           {debates.map((d) => {
-            const r = debateRange(g, d);
+            const r = debatePlacement(g, d);
             return (
               <Link key={d.id} href={debateHref(d)} className="card">
                 <h3>{d.title}</h3>
                 <p>{d.question}</p>
                 <p className="card__meta">
-                  {d.positions.length} positions{r ? `, ${formatRange(r)}` : ''}
+                  {d.positions.length} positions{r ? `, ${placementLabel(r)}` : ''}
                   {d.published ? '' : ', unpublished draft'}
                 </p>
                 <p className="card__meta" style={{ display: 'flex', gap: 6, flexWrap: 'wrap' }}>

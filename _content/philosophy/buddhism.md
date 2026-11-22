@@ -6,11 +6,17 @@ updated: "2026-11-21"
 tags: [philosophy, religion, buddha, ancient india]
 datings:
   - method: scholarly-consensus
-    range: { earliest: "420 BCE", latest: "350 BCE", precision: decade, circa: true }
+    range: { earliest: "420 BCE", latest: "380 BCE", best: "400 BCE", precision: decade, circa: true }
     grade: C
     label: "Death of the Buddha: recent scholarly estimate (L. S. Cousins; R. F. Gombrich and others)"
     sources: [src.cousins-1996-dating-historical-buddha, src.gombrich-2006-theravada-buddhism]
-    note: "Debated since a 1988 symposium reopened the question; the older 'corrected long chronology' placed the death at about 483 BCE."
+    note: "Cousins favours a death near 400 BCE, with loose margins. The range is an approximate window for the Parinirvana."
+  - method: textual-internal
+    range: { earliest: "486 BCE", latest: "483 BCE", precision: decade, circa: true }
+    grade: C
+    label: "Corrected long chronology (Parinirvana)"
+    sources: [src.cousins-1996-dating-historical-buddha, src.kulke-2004-history-of-india]
+    note: "The longer interval from the Sri Lankan chronicles, counted back from the independently reconstructed date of Ashoka's consecration, places the death around 486 to 483 BCE."
   - method: traditional-sampradaya
     range: { earliest: "544 BCE", latest: "543 BCE", precision: year, circa: false }
     grade: D
@@ -31,7 +37,7 @@ Older books give 563 to 483 BCE.
 That date is not an ancient record: it is a modern adjustment of Sri Lankan Buddhist chronology, which places the Buddha's death in 544 or 543 BCE [@src.cousins-1996-dating-historical-buddha; @src.gombrich-2006-theravada-buddhism].
 A 1988 symposium in Germany, published by Heinz Bechert in 1991 and 1992, tested these chronologies against other evidence, and many contributors concluded that the death fell later, in the decades around 400 BCE [@src.cousins-1996-dating-historical-buddha].
 Gombrich, for example, argued from the lists of teachers in the monastic tradition and from other synchronisms for a date within a few decades of 400 BCE [@src.gombrich-2006-theravada-buddhism].
-Some scholars still defend earlier dates, so this article treats the death as "about 420 to 350 BCE" and keeps the traditional date as a separate entry [@src.cousins-1996-dating-historical-buddha].
+The later scholarly estimate places the Parinirvana roughly between 420 and 380 BCE. The corrected long chronology places it around 486 to 483 BCE, while the traditional Theravada era counts from 544 or 543 BCE [@src.cousins-1996-dating-historical-buddha].
 
 ## What we can show, and what is tradition
 

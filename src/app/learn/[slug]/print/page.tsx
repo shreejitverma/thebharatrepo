@@ -7,9 +7,9 @@ import SourceCitation from '@/components/SourceCitation';
 import { PrintButton } from '@/components/learn/Progress';
 import { SITE_URL, getGraph } from '@/lib/content/site';
 import { learnHref, resolveSteps, summaryAtLevel } from '@/lib/content/learning';
+import { datingSummary, primaryDating, summarizeDatings } from '@/lib/content/lens';
 import { toKcItem } from '@/lib/content/kaalchakra';
-import { READING_LEVEL_AUDIENCE, READING_LEVEL_LABELS, citationId, isTraditional, type CitationRef } from '@/lib/content/schema';
-import { formatRange } from '@/lib/time';
+import { READING_LEVEL_AUDIENCE, READING_LEVEL_LABELS, citationId, type CitationRef } from '@/lib/content/schema';
 
 export const dynamicParams = false;
 
@@ -81,7 +81,7 @@ export default async function PrintPackPage({ params }: { params: Promise<{ slug
               <h3>
                 {i + 1}. {s.title}
               </h3>
-              <p className="muted">Article: {s.article.title}. {formatRange(s.article.datings[0].range)}</p>
+              <p className="muted">Article: {s.article.title}. {summarizeDatings(s.article.datings)}</p>
               <p>
                 <strong>{s.step.note}</strong>
               </p>
@@ -95,7 +95,7 @@ export default async function PrintPackPage({ params }: { params: Promise<{ slug
         }
         const e = s.entity;
         const item = toKcItem(e);
-        const d = [...e.datings].sort((a, b) => Number(isTraditional(a.method)) - Number(isTraditional(b.method)))[0];
+        const d = primaryDating(e.datings);
         const claim = e.claims[0];
         return (
           <section key={i} className="print-card">
@@ -105,7 +105,7 @@ export default async function PrintPackPage({ params }: { params: Promise<{ slug
             {s.title !== e.names.en ? <p className="muted">{e.names.en}</p> : null}
             <EntityNames native={item.native} iast={item.iast} nativeLang={item.nativeLang} iastLang={item.iastLang} />
             <p>
-              {formatRange(d.range)} <GradeBadge grade={d.grade} />
+              {datingSummary(d.range, d.method)} <GradeBadge grade={d.grade} />
             </p>
             <p>
               <strong>{s.step.note}</strong>

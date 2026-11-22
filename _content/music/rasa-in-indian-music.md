@@ -5,7 +5,7 @@ date: "2026-11-21"
 tags: [music, rasa, natyashastra, abhinavagupta, aesthetics, raga, ragamala]
 datings:
   - method: scholarly-consensus
-    range: { earliest: "200 BCE", latest: "200 CE", precision: century, circa: true }
+    range: { earliest: "200 BCE", latest: "300 CE", precision: century, circa: true }
     grade: C
     label: Date of the Natyashastra (mainstream estimate)
     sources: [src.pollock-2016-rasa-reader, src.rowell-1992-music-musical-thought-early-india]
@@ -31,7 +31,7 @@ Indian thinkers asked this question more than two thousand years ago, and their 
 Rasa literally means "juice", "sap" or "taste".
 In aesthetics it names the savour that a spectator or listener relishes when a work of art succeeds. [@src.pollock-2016-rasa-reader]
 The theory comes from the Natyashastra, a Sanskrit treatise on theatre attributed to the sage Bharata, which also has chapters on music, instruments, and rhythm. [@src.rowell-1992-music-musical-thought-early-india; @src.pollock-2016-rasa-reader]
-Scholars date the text within a wide window, commonly placing it somewhere between about 200 BCE and 200 CE, and many regard it as a composite work built up over time. [@src.pollock-2016-rasa-reader]
+Scholars date the text within a wide window, commonly placing it somewhere between about 200 BCE and 300 CE, and many regard it as a composite work built up over time. [@src.pollock-2016-rasa-reader]
 
 ## Bharata's formula
 

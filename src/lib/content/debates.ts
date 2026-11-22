@@ -8,7 +8,8 @@
  */
 
 import type { ContentGraph, DebateDoc } from './load';
-import { isTraditional, type Entity } from './schema';
+import { isTraditional, type DatingMethod } from './schema';
+import { withTraditionMark } from './lens';
 import type { YearRange } from '../time';
 import { formatRange } from '../time';
 
@@ -35,30 +36,54 @@ export function debatesForEntity(g: Pick<ContentGraph, 'debates'>, entityId: str
   return visibleDebates(g.debates, preview).filter((d) => d.relatedEntities.includes(entityId));
 }
 
-function union(ranges: YearRange[]): YearRange | null {
+/** A span of time and the lens it belongs to, for placing a debate or a learning path on the Kaalchakra. */
+export interface Placement {
+  range: YearRange;
+  lens: 'scholarship' | 'tradition';
+}
+
+function union(ranges: YearRange[], lens: Placement['lens']): Placement | null {
   if (!ranges.length) return null;
   return {
-    earliest: Math.min(...ranges.map((r) => r.earliest)),
-    latest: Math.max(...ranges.map((r) => r.latest)),
-    precision: ranges[0].precision,
-    circa: ranges.some((r) => r.circa),
+    range: {
+      earliest: Math.min(...ranges.map((r) => r.earliest)),
+      latest: Math.max(...ranges.map((r) => r.latest)),
+      precision: ranges[0].precision,
+      circa: ranges.some((r) => r.circa),
+    },
+    lens,
   };
 }
 
-/** Scholarly datings of an entity, or its traditional ones when it has no scholarly dating. */
-export function entityRanges(e: Entity): YearRange[] {
-  const scholarly = e.datings.filter((d) => !isTraditional(d.method));
-  return (scholarly.length ? scholarly : e.datings).map((d) => d.range);
+/**
+ * The span of a set of datings by the archive's ordering rule (rankDatings in lens.ts): the scholarly
+ * datings when there are any, else the traditional ones, never the two mixed.
+ */
+export function datingsSpan(datings: readonly { method: DatingMethod; range: YearRange }[]): Placement | null {
+  const scholarly = datings.filter((d) => !isTraditional(d.method));
+  return scholarly.length ? union(scholarly.map((d) => d.range), 'scholarship') : union(datings.map((d) => d.range), 'tradition');
+}
+
+/** The span of several placements under the same rule: scholarship placements when there are any. */
+export function spanOf(placements: readonly (Placement | null)[]): Placement | null {
+  const all = placements.filter((p): p is Placement => p !== null);
+  const scholarly = all.filter((p) => p.lens === 'scholarship');
+  return scholarly.length ? union(scholarly.map((p) => p.range), 'scholarship') : union(all.map((p) => p.range), 'tradition');
+}
+
+/** One-line label for a placement, marked when it is a traditional reckoning (as datingSummary does). */
+export function placementLabel(p: Placement): string {
+  return withTraditionMark(formatRange(p.range), p.lens === 'tradition');
 }
 
 /**
  * Where a debate sits on the Kaalchakra: the span of the scholarship-lens ranges its positions
- * propose, else the span of its related entities' scholarly datings.
+ * propose, else the span of its related entities' datings.
  */
-export function debateRange(g: Pick<ContentGraph, 'entities'>, d: DebateDoc): YearRange | null {
+export function debatePlacement(g: Pick<ContentGraph, 'entities'>, d: DebateDoc): Placement | null {
   const proposed = d.positions.filter((p) => p.lens === 'scholarship' && p.range).map((p) => p.range!);
-  if (proposed.length) return union(proposed);
-  return union(d.relatedEntities.flatMap((id) => (g.entities.get(id) ? entityRanges(g.entities.get(id)!) : [])));
+  if (proposed.length) return union(proposed, 'scholarship');
+  return spanOf(d.relatedEntities.map((id) => (g.entities.get(id) ? datingsSpan(g.entities.get(id)!.datings) : null)));
 }
 
 export interface SearchDoc {
@@ -73,13 +98,13 @@ export interface SearchDoc {
 /** Search documents for published debates only; drafts never reach the index, even in a preview build. */
 export function debateSearchDocs(g: Pick<ContentGraph, 'debates' | 'entities'>): SearchDoc[] {
   return publishedDebates(g.debates).map((d) => {
-    const r = debateRange(g, d);
+    const r = debatePlacement(g, d);
     return {
       href: debateHref(d),
       title: d.title,
       summary: d.summary,
       kind: 'Debate',
-      when: r ? formatRange(r) : '',
+      when: r ? placementLabel(r) : '',
       text: [d.question, ...d.positions.map((p) => `${p.label} ${p.proponents.map((x) => x.name).join(' ')}`), ...d.tags].join(' '),
     };
   });

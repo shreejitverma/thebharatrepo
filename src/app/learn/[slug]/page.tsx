@@ -8,7 +8,8 @@ import SourceCitation from '@/components/SourceCitation';
 import Quiz, { type QuizQuestionView } from '@/components/learn/Quiz';
 import { PathProgress, StepCard } from '@/components/learn/Progress';
 import { getGraph, getIndex, issueUrl } from '@/lib/content/site';
-import { citationViews, pathRange, resolveSteps, summaryAtLevel, type ResolvedStep } from '@/lib/content/learning';
+import { citationViews, pathPlacement, resolveSteps, summaryAtLevel, type ResolvedStep } from '@/lib/content/learning';
+import { primaryDating } from '@/lib/content/lens';
 import { toKcItem } from '@/lib/content/kaalchakra';
 import { READING_LEVEL_AUDIENCE, READING_LEVEL_LABELS, citationId, isTraditional } from '@/lib/content/schema';
 import { formatRange } from '@/lib/time';
@@ -33,7 +34,7 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
 function StepBody({ s, level }: { s: ResolvedStep; level: 'adult' | 'teen' | 'kids' }) {
   const g = getGraph();
   if (s.kind === 'article') {
-    const d = s.article.datings[0];
+    const d = primaryDating(s.article.datings);
     return (
       <>
         <h3>{s.title}</h3>
@@ -41,6 +42,7 @@ function StepBody({ s, level }: { s: ResolvedStep; level: 'adult' | 'teen' | 'ki
           <span>Article: {s.article.title}</span>
           <span>{formatRange(d.range)}</span>
           <GradeBadge grade={d.grade} />
+          <LensTag lens={isTraditional(d.method) ? 'tradition' : 'scholarship'} />
         </p>
         <p className="step__note">{s.step.note}</p>
         <p className="step__summary">{s.article.summary}</p>
@@ -52,7 +54,7 @@ function StepBody({ s, level }: { s: ResolvedStep; level: 'adult' | 'teen' | 'ki
   }
   const e = s.entity;
   const item = toKcItem(e);
-  const d = [...e.datings].sort((a, b) => Number(isTraditional(a.method)) - Number(isTraditional(b.method)))[0];
+  const d = primaryDating(e.datings);
   const claim = e.claims[0];
   const src = claim ? g.sources.get(citationId(claim.sources[0])) : undefined;
   const ref = claim?.sources[0];
@@ -95,8 +97,8 @@ export default async function LearningPathPage({ params }: { params: Promise<{ s
   const g = getGraph();
   const steps = resolveSteps(g, p);
   const keys = p.steps.map((s) => (s.entity ?? s.article)!);
-  const range = pathRange(g, p);
-  const u = range ? yearToUnit(range.best ?? (range.earliest + range.latest) / 2) : 0;
+  const place = pathPlacement(g, p);
+  const u = place ? yearToUnit(place.range.best ?? (place.range.earliest + place.range.latest) / 2) : 0;
   const quiz: QuizQuestionView[] = p.quiz.map((q) => ({
     id: q.id,
     question: q.question,
@@ -139,7 +141,7 @@ export default async function LearningPathPage({ params }: { params: Promise<{ s
         ))}
       </ul>
 
-      {range ? <KaalchakraStrip items={getIndex()} range={range} selfId={null} focusHref={`/kaalchakra?view=river&win=${Math.max(0, u - 0.02).toFixed(5)},${Math.min(1, u + 0.02).toFixed(5)}`} /> : null}
+      {place ? <KaalchakraStrip items={getIndex()} dating={place} selfId={null} focusHref={`/kaalchakra?view=river&win=${Math.max(0, u - 0.02).toFixed(5)},${Math.min(1, u + 0.02).toFixed(5)}`} /> : null}
 
       <h2>The steps</h2>
       <p className="section-note">Summaries on this path are written for {READING_LEVEL_AUDIENCE[p.level].toLowerCase()}. Tick each step when you have finished it.</p>

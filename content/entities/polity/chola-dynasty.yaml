@@ -22,7 +22,7 @@ region: Tamil Nadu (Kaveri delta), with wider south Indian and overseas reach
 location: { name: Thanjavur, lat: 10.78, lon: 79.13 }
 datings:
   - method: epigraphic
-    range: { earliest: "848 CE", latest: "1279 CE", precision: decade, circa: true }
+    range: { earliest: "850 CE", latest: "1279 CE", precision: decade, circa: true }
     grade: B
     label: Vijayalaya to Rajendra III
     sources: [src.sastri-1955-the-colas, src.singh-2008-ancient-early-medieval-india]

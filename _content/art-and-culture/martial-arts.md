@@ -51,7 +51,7 @@ Kerala's dance-drama Kathakali also draws on its exercises, which shows how clos
 
 Silambam is a Tamil staff-fighting art, practised with a long bamboo staff, and also with other weapons.
 Its traditional lineage is Tamil and the name is Tamil.
-Popular accounts date it to remote antiquity, but I could not find a scholarly source that can support a specific early date, so none is given here.
+Popular accounts date it to remote antiquity, but no scholarly source was found that can support a specific early date, so none is given here.
 The staff is among the oldest and most widespread of fighting tools anywhere, which makes any claim about the origin of a particular style hard to prove.
 
 ## Gatka (Punjab)
@@ -66,7 +66,7 @@ The training form called Gatka, and the broader practice of *shastar vidya* (wea
 Mallakhamb is a discipline in which gymnasts perform holds and turns on a vertical wooden pole, or on a hanging rope.
 The phrase "traditional aerial yoga" is a modern comparison, since Mallakhamb is better described as athletic training for wrestlers.
 The best-known account says it was revived in the early nineteenth century by a trainer named Balambhatta Deodhar at the court of the Peshwa Bajirao II (r. 1796 to 1818).
-That story is repeated in popular and institutional sources, and the details vary; I could not verify it in scholarly literature, so it should be read as tradition.
+That story is repeated in popular and institutional sources, and the details vary; it could not be verified in scholarly literature, so it should be read as tradition.
 
 ## What the evidence allows
 

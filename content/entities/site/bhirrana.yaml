@@ -34,8 +34,7 @@ datings:
     sources:
       - src.sarkar-2016-bhirrana-oxygen-isotope
     note: >-
-      Charcoal radiocarbon dates from Period IA Hakra-ware levels and OSL dates on pottery published by
-      Sarkar et al. (2016) range from c. 7500 to 5000 BCE (9.5-7 ka BP).
+      Sarkar and colleagues reconstruct the pre-Harappan Hakra horizon at about 9.5 to 8 ka BP. Their reported mean radiocarbon age for the earliest level is about 8.35 ka BP.
   - method: scholarly-consensus
     range:
       earliest: "3800 BCE"

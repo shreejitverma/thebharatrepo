@@ -23,9 +23,9 @@ location:
 datings:
   - method: geological
     range:
-      earliest: "740000 BCE"
-      latest: "600000 BCE"
-      best: "670000 BCE"
+      earliest: "740 ka"
+      latest: "600 ka"
+      best: "670 ka"
       precision: ka
       circa: true
     grade: C
@@ -37,9 +37,9 @@ datings:
       0.67 +/- 0.03 Ma for the associated early Acheulian industry.
   - method: geological
     range:
-      earliest: "80000 BCE"
-      latest: "70000 BCE"
-      best: "75000 BCE"
+      earliest: "80 ka"
+      latest: "70 ka"
+      best: "75 ka"
       precision: ka
       circa: true
     grade: B

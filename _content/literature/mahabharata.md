@@ -15,8 +15,14 @@ datings:
     range: { earliest: "3102 BCE", latest: "3102 BCE", precision: cosmological, circa: false }
     grade: D
     label: "Traditional placement of the war at the Dvapara-Kali junction"
-    sources: [src.plofker-2009-mathematics-in-india, src.pingree-1981-jyotihsastra]
-    note: "Aryabhata's Kali Yuga epoch of 3102 BCE is the most widely used traditional date for the war and Krishna's death."
+    sources: [src.plofker-2009-mathematics-in-india, src.kielhorn-1900-aihole-inscription]
+    note: "The Aihole inscription counts the time since the war in a way that matches Aryabhata's Kali Yuga epoch of 3102 BCE."
+  - method: traditional-puranic
+    range: { earliest: "3138 BCE", latest: "3138 BCE", precision: cosmological, circa: false }
+    grade: D
+    label: "War 36 years before the Kali Yuga epoch"
+    sources: [src.bhatnagar-2017-date-mahabharata-war, src.plofker-2009-mathematics-in-india]
+    note: "Counting back 36 years from Krishna's death at the Kali epoch in this reckoning puts the war in 3138 BCE."
   - method: traditional-siddhantic
     range: { earliest: "2449 BCE", latest: "2449 BCE", precision: cosmological, circa: false }
     grade: D
@@ -86,7 +92,8 @@ Many historians therefore suppose a smaller conflict among Kuru-Panchala peoples
 ### Tradition: the turn of the yugas
 
 In the traditional reckoning the war falls at the junction of the Dvapara and Kali yugas.
-The astronomer Aryabhata, writing in 499 CE, fixed the beginning of the Kali Yuga at what we call 3102 BCE, and this became the usual traditional date for the war and the death of Krishna [@src.plofker-2009-mathematics-in-india; @src.pingree-1981-jyotihsastra].
+The astronomer Aryabhata, writing in 499 CE, fixed the beginning of the Kali Yuga at what we call 3102 BCE, and the Aihole inscription uses a reckoning that places the war at the same epoch [@src.plofker-2009-mathematics-in-india; @src.kielhorn-1900-aihole-inscription].
+Another traditional reckoning puts Krishna’s death at the Kali epoch and counts back 36 years to the war, giving 3138 BCE [@src.bhatnagar-2017-date-mahabharata-war].
 A second astronomical tradition, that of Varahamihira, counts 2526 years from King Yudhishthira to the Shaka era and so reaches about 2449 BCE [@src.pingree-1981-jyotihsastra].
 These dates are part of a cosmological scheme and they are presented here as tradition, graded D, not as results of archaeology or text criticism.
 

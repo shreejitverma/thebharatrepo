@@ -41,9 +41,10 @@ datings:
       - src.anthony-2007-horse-wheel-language
       - src.kuzmina-2007-origin-indo-iranians
       - src.witzel-1997-early-sanskritization-kuru
+      - src.bryce-2005-kingdom-of-the-hittites
     note: >-
       Comparative linguistics links Vedic Sanskrit with Old Iranian (Avestan), Finno-Ugric loanwords,
-      Mitanni Indo-Aryan (c. 1380 BCE), and the Sintashta-Andronovo archaeological horizon (c. 2100
+      Mitanni Indo-Aryan (later 14th century BCE), and the Sintashta-Andronovo archaeological horizon (c. 2100
       to 1500 BCE).
   - method: archaeological-stratigraphic
     range: { earliest: "3300 BCE", latest: "1500 BCE", precision: century, circa: true }

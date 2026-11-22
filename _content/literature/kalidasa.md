@@ -6,7 +6,7 @@ updated: "2026-11-21"
 tags: [poet, literature, sanskrit, drama, kavya]
 datings:
   - method: scholarly-consensus
-    range: { earliest: "350 CE", latest: "450 CE", precision: century, circa: true }
+    range: { earliest: "350 CE", latest: "475 CE", precision: century, circa: true }
     grade: C
     label: "Gupta-era dating (the view of many, not all, scholars)"
     sources: [src.lienhard-1984-history-classical-poetry, src.pollock-2006-language-of-the-gods]
