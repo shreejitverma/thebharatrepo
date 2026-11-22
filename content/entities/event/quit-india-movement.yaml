@@ -3,6 +3,8 @@ type: event
 kind: event
 names:
   en: Quit India Movement
+  iast: Bhārat Choṛo Āndolan
+  native: भारत छोड़ो आन्दोलन
 summary: The Indian National Congress launched the Quit India movement in August
   1942, demanding an end to British rule. British authorities arrested major
   leaders and suppressed protests across the country.
