@@ -31,15 +31,23 @@ export default function CorrectionsPage() {
             <p style={{ margin: '6px 0' }} className="muted">
               Why: {c.reason}
             </p>
-            <p style={{ margin: '6px 0 0' }}>
-              <strong>Sources:</strong>
-            </p>
-            <ul className="correction-sources">
-              {c.sources.map((ref, j) => {
-                const s = g.sources.get(citationId(ref));
-                return <li key={j}>{s ? <SourceCitation source={s} locator={typeof ref === 'string' ? undefined : ref.locator} /> : citationId(ref)}</li>;
-              })}
-            </ul>
+            {c.sources.length > 0 ? (
+              <>
+                <p style={{ margin: '6px 0 0' }}>
+                  <strong>Sources:</strong>
+                </p>
+                <ul className="correction-sources">
+                  {c.sources.map((ref, j) => {
+                    const s = g.sources.get(citationId(ref));
+                    return <li key={j}>{s ? <SourceCitation source={s} locator={typeof ref === 'string' ? undefined : ref.locator} /> : citationId(ref)}</li>;
+                  })}
+                </ul>
+              </>
+            ) : (
+              <p style={{ margin: '6px 0 0' }} className="muted">
+                No source cited for this correction.
+              </p>
+            )}
           </section>
         ))}
       </div>
