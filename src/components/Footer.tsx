@@ -14,6 +14,8 @@ export default function Footer() {
           <ul>
             <li><Link href="/kaalchakra">Kaalchakra</Link></li>
             <li><Link href="/archive">Archive</Link></li>
+            <li><Link href="/learn">Learn</Link></li>
+            <li><Link href="/debates">Debates</Link></li>
             <li><Link href="/search">Search</Link></li>
           </ul>
         </div>

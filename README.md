@@ -28,6 +28,8 @@ The product brief is in [`docs/prompts/kaalchakra-master-prompt.md`](docs/prompt
 | `content/sources/<slug>.yaml` | One source; id `src.<slug>` |
 | `content/verification.json` | Committed cache of registry checks (DOI, ISBN, Wikidata, Commons) |
 | `content/corrections.yaml` | Public corrections log |
+| `content/debates/<slug>.yaml` | One debate page; id `debate.<slug>`; built only when `published: true` (owner approval required) |
+| `content/learning/<slug>.yaml` | One learning path with its quiz; id `learn.<slug>` |
 | `_content/<category>/<slug>.md` | Articles, with inline citations `[@src.id, locator]` |
 
 ## Commands
@@ -42,7 +44,8 @@ npm run content:validate        # schemas and cross-references; exit 1 on any pr
 npm run content:report          # coverage: entities, grades, kinds, sources
 npm run content:verify-sources  # resolve every DOI, ISBN, OCLC, QID and Commons file, and each URL that is a source's only identifier; exit 1 on any mismatch
 npm run build                   # validate, offline verification gate, search index and open data, then next build
-npm run test:e2e                # Playwright and axe against a production build (desktop and mobile)
+npm run test:e2e                # Playwright and axe against a production build (desktop and mobile), plus a DEBATES_PREVIEW dev server for draft debates
+npm run dev:debates-preview     # local preview that renders unpublished debate drafts, for owner review
 ```
 
 `npm run build` refuses to build when content is invalid or when any identifier lacks a matching verified record in `content/verification.json` (`content-verify-sources.ts --offline`).
@@ -60,6 +63,16 @@ Large batches are written to `staging/<batch>/` (gitignored), validated in isola
 and merged with `npm run content:merge -- staging/<batch>`, which re-validates the combined content, aborts on any conflict before writing, and never copies the staging verification cache.
 Run `npm run content:verify-sources` after every merge.
 `npx tsx scripts/content-fix-bce.ts content/entities` mechanically repairs ranges that store `-N` for "N BCE".
+
+## Debates, learning paths and reading levels
+
+- Debate pages (`/debates`) are validated whether or not they are published, but a debate is rendered, linked from entity pages, indexed for search or listed only when `published: true`, which the schema accepts only with an `approval { by, date }` record.
+  `npm run dev:debates-preview` (or `DEBATES_PREVIEW=1` at build time) renders drafts with an "Unpublished draft" banner and `noindex`; never deploy such a build.
+- Learning paths (`/learn`) have ordered steps, a quiz scored in the browser, per-viewer progress in `localStorage`, and a printable pack at `/learn/<slug>/print` with the answer key on its own page.
+- The reading level (Full, Teen, Kids) is chosen with the switcher on entity pages and in the Kaalchakra panel; it is read from `?level=` first, then `localStorage`, and applied before paint by an inline script in the root layout (`src/lib/reading-level.ts`).
+- Native-script names carry `lang` tags derived from their script (`src/lib/content/script.ts`); `content:validate` prints a warning with the count of entities missing `names.iast` or `names.native`.
+
+The content formats are specified in `docs/editorial/STYLE.md`, sections 11 to 13.
 
 ## Time model
 

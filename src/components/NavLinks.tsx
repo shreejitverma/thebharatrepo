@@ -6,6 +6,7 @@ import { usePathname } from 'next/navigation';
 const LINKS = [
   { href: '/kaalchakra', label: 'Kaalchakra', primary: true },
   { href: '/archive', label: 'Archive' },
+  { href: '/learn', label: 'Learn' },
   { href: '/history', label: 'History' },
   { href: '/philosophy', label: 'Philosophy' },
   { href: '/science', label: 'Science' },
