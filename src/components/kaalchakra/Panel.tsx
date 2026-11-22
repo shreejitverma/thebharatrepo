@@ -3,6 +3,7 @@
 import Link from 'next/link';
 import { useState } from 'react';
 import DraftNotice from '@/components/DraftNotice';
+import EntityNames from '@/components/EntityNames';
 import GradeBadge, { LensTag } from '@/components/GradeBadge';
 import { KIND_LABELS, METHOD_LABELS } from '@/lib/content/labels';
 import type { KcItem } from '@/lib/content/kaalchakra';
@@ -99,12 +100,7 @@ export default function Panel({ item, lens, cal, level, onLevel, onPrev, onNext,
           Hidden by the current filters or lens, so it is not drawn in the view.
         </p>
       ) : null}
-      {item.iast || item.native ? (
-        <div className="names">
-          {item.native ? <span lang="sa">{item.native}</span> : null}
-          {item.iast ? <span>{item.iast}</span> : null}
-        </div>
-      ) : null}
+      <EntityNames native={item.native} iast={item.iast} nativeLang={item.nativeLang} iastLang={item.iastLang} />
       <div className="segmented level-tabs" role="group" aria-label="Reading level">
         {(['adult', 'teen', 'kids'] as Level[]).map((l) => (
           <button key={l} type="button" aria-pressed={level === l} onClick={() => onLevel(l)}>

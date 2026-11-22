@@ -1,0 +1,734 @@
+/*
+ * Phase 3: names in native script and IAST, reading levels, debates, learning paths and quizzes.
+ * Uses the design tokens from globals.css only, so light and dark themes follow automatically.
+ */
+
+:root {
+  /* Devanagari for names and terms: Noto Serif Devanagari (loaded on demand), then the display face, then system faces. */
+  --font-deva-stack: var(--font-deva), 'Noto Serif Devanagari', var(--font-tiro), 'Noto Sans Devanagari', 'Kohinoor Devanagari', 'Devanagari Sangam MN', 'Mangal', serif;
+}
+
+/* ---------- Names: native script and IAST ---------- */
+
+[lang$='-Deva'],
+[lang='hi'],
+[lang='mr'],
+[lang='ne'],
+[lang='kok'],
+[lang='mai'] {
+  font-family: var(--font-deva-stack);
+  font-style: normal;
+  line-height: 1.6;
+}
+
+[lang='ta'] { font-family: 'Noto Serif Tamil', 'Noto Sans Tamil', 'Tamil Sangam MN', 'Latha', serif; }
+[lang='te'] { font-family: 'Noto Serif Telugu', 'Noto Sans Telugu', 'Telugu Sangam MN', 'Gautami', serif; }
+[lang='kn'] { font-family: 'Noto Serif Kannada', 'Noto Sans Kannada', 'Kannada Sangam MN', 'Tunga', serif; }
+[lang='ml'] { font-family: 'Noto Serif Malayalam', 'Noto Sans Malayalam', 'Malayalam Sangam MN', 'Kartika', serif; }
+[lang='bn'] { font-family: 'Noto Serif Bengali', 'Noto Sans Bengali', 'Bangla Sangam MN', 'Vrinda', serif; }
+[lang='or'] { font-family: 'Noto Sans Oriya', 'Oriya Sangam MN', 'Kalinga', serif; }
+[lang='pa'] { font-family: 'Noto Sans Gurmukhi', 'Gurmukhi Sangam MN', 'Raavi', serif; }
+[lang='gu'] { font-family: 'Noto Serif Gujarati', 'Noto Sans Gujarati', 'Gujarati Sangam MN', 'Shruti', serif; }
+[lang='fa'],
+[lang='ar'] { font-family: 'Noto Naskh Arabic', 'Geeza Pro', 'Times New Roman', serif; }
+
+/* IAST and other romanisations: the reading serif carries the full Latin Extended Additional range (ā ṛ ṭ ḍ ṇ ś ṣ ḥ ṃ). */
+[lang$='-Latn'] {
+  font-family: var(--font-read);
+}
+
+.name-iast {
+  font-style: italic;
+}
+
+.card__names {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2px 10px;
+  margin: -2px 0 6px;
+  font-size: 0.92rem;
+  color: var(--ink-soft);
+}
+
+/* ---------- Reading levels ---------- */
+
+.rl > [data-rl='teen'],
+.rl > [data-rl='kids'] {
+  display: none;
+}
+
+html[data-reading-level='teen'] .rl[data-has-teen] > [data-rl='adult'],
+html[data-reading-level='kids'] .rl[data-has-kids] > [data-rl='adult'],
+html[data-reading-level='kids'] .rl[data-has-kids] > [data-rl='teen'],
+html[data-reading-level='kids'] .rl[data-has-teen]:not([data-has-kids]) > [data-rl='adult'] {
+  display: none;
+}
+
+html[data-reading-level='teen'] .rl[data-has-teen] > [data-rl='teen'],
+html[data-reading-level='kids'] .rl[data-has-kids] > [data-rl='kids'],
+html[data-reading-level='kids'] .rl[data-has-teen]:not([data-has-kids]) > [data-rl='teen'] {
+  display: block;
+}
+
+.rl__tag {
+  display: inline-block;
+  margin-right: 8px;
+  padding: 1px 8px;
+  border-radius: 999px;
+  border: 1px solid var(--line-strong);
+  font-family: var(--font-ui);
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: var(--ink-soft);
+  vertical-align: 0.15em;
+}
+
+.reading-level {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 6px 12px;
+  margin: 0 0 12px;
+}
+
+.reading-level__status {
+  margin: 0;
+  font-size: 0.85rem;
+  color: var(--ink-faint);
+}
+
+.entity-lede .rl p {
+  margin: 0 0 12px;
+}
+
+/* ---------- Shared blocks ---------- */
+
+.unpublished-banner {
+  margin: 0 0 18px;
+  padding: 12px 16px;
+  border: 2px dashed var(--accent);
+  border-radius: var(--radius);
+  background: var(--bg-elev);
+  color: var(--ink);
+  max-width: 860px;
+}
+
+.unpublished-banner strong {
+  color: var(--accent);
+}
+
+.section-note {
+  max-width: 860px;
+  color: var(--ink-soft);
+  font-size: 0.95rem;
+}
+
+.evidence-list {
+  display: grid;
+  gap: 10px;
+  max-width: 860px;
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+.evidence-list > li {
+  border-left: 3px solid var(--line-strong);
+  padding: 4px 0 4px 14px;
+}
+
+.evidence-list p {
+  margin: 0 0 4px;
+  font-family: var(--font-read);
+  line-height: 1.6;
+}
+
+/* ---------- Debates ---------- */
+
+.debate-question {
+  font-family: var(--font-display);
+  font-size: clamp(1.15rem, 1rem + 0.6vw, 1.4rem);
+  color: var(--ink);
+  margin: 0 0 10px;
+  max-width: var(--measure);
+}
+
+.position-chart {
+  max-width: 860px;
+  margin: 8px 0 24px;
+  padding: 14px 16px 10px;
+  background: var(--bg-elev);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+}
+
+.position-chart ol {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  gap: 12px;
+}
+
+.position-chart__row {
+  display: grid;
+  gap: 4px;
+}
+
+.position-chart__label {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4px 10px;
+  align-items: center;
+  font-size: 0.9rem;
+}
+
+.position-chart__label a {
+  color: var(--ink);
+  font-weight: 600;
+}
+
+.position-chart__track {
+  position: relative;
+  height: 14px;
+  border-radius: 999px;
+  background: var(--bg-sunk);
+  border: 1px solid var(--line);
+}
+
+.position-chart__bar {
+  position: absolute;
+  top: 2px;
+  bottom: 2px;
+  min-width: 8px;
+  border-radius: 999px;
+  background: var(--k-text);
+}
+
+.position-chart__bar--tradition {
+  background: transparent;
+  border: 2px dashed var(--gold);
+  top: 1px;
+  bottom: 1px;
+}
+
+.position-chart__axis {
+  position: relative;
+  height: 1.4em;
+  margin-top: 8px;
+  font-size: 0.78rem;
+  color: var(--ink-faint);
+}
+
+/* Labels sit under the year they name: the first left-aligned, the last right-aligned. */
+.position-chart__axis span {
+  position: absolute;
+  top: 0;
+  white-space: nowrap;
+}
+
+.position-chart__axis span:last-child {
+  transform: translateX(-100%);
+}
+
+.position {
+  max-width: 860px;
+  margin: 0 0 28px;
+  padding: 18px 20px;
+  background: var(--bg-elev);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+}
+
+.position--tradition {
+  border-style: dashed;
+  border-color: var(--gold);
+}
+
+.position h2 {
+  margin-top: 0;
+}
+
+.position h3 {
+  font-size: 1rem;
+  margin: 18px 0 8px;
+}
+
+.position__meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px 12px;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.position__statement {
+  font-family: var(--font-read);
+  line-height: 1.65;
+  margin: 0;
+}
+
+.proponents {
+  margin: 0;
+  padding-left: 1.2em;
+}
+
+.proponents li {
+  margin-bottom: 4px;
+}
+
+.objections {
+  margin: 0;
+  padding-left: 1.2em;
+  font-family: var(--font-read);
+  line-height: 1.6;
+}
+
+/* ---------- Learning paths ---------- */
+
+.path-meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px 14px;
+  align-items: center;
+  margin: 0 0 14px;
+  color: var(--ink-soft);
+  font-size: 0.9rem;
+}
+
+.level-badge {
+  display: inline-block;
+  padding: 2px 10px;
+  border-radius: 999px;
+  background: var(--indigo);
+  color: var(--bg);
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+
+.goals {
+  max-width: 860px;
+  padding-left: 1.2em;
+  font-family: var(--font-read);
+  line-height: 1.6;
+}
+
+.progress {
+  max-width: 860px;
+  margin: 8px 0 20px;
+}
+
+.progress__head {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  gap: 6px 12px;
+  margin-bottom: 6px;
+  font-size: 0.92rem;
+}
+
+.progress progress {
+  width: 100%;
+  height: 10px;
+  appearance: none;
+  border: 1px solid var(--line-strong);
+  border-radius: 999px;
+  background: var(--bg-sunk);
+  overflow: hidden;
+}
+
+.progress progress::-webkit-progress-bar {
+  background: var(--bg-sunk);
+}
+
+.progress progress::-webkit-progress-value {
+  background: var(--grade-a);
+}
+
+.progress progress::-moz-progress-bar {
+  background: var(--grade-a);
+}
+
+.link-button {
+  border: 0;
+  background: none;
+  padding: 4px 0;
+  font: inherit;
+  font-size: 0.88rem;
+  color: var(--accent);
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+.steps {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  gap: 16px;
+  max-width: 860px;
+  counter-reset: step;
+}
+
+.step {
+  min-width: 0;
+  overflow-wrap: break-word;
+  position: relative;
+  padding: 16px 18px 16px 58px;
+  background: var(--bg-elev);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  counter-increment: step;
+}
+
+.step::before {
+  content: counter(step);
+  position: absolute;
+  left: 16px;
+  top: 16px;
+  width: 28px;
+  height: 28px;
+  display: grid;
+  place-items: center;
+  border-radius: 50%;
+  background: var(--ink);
+  color: var(--bg);
+  font-family: var(--font-ui);
+  font-weight: 700;
+  font-size: 0.9rem;
+}
+
+.step[data-done='true'] {
+  border-color: var(--grade-a);
+}
+
+.step[data-done='true']::before {
+  background: var(--grade-a);
+}
+
+.step h3 {
+  margin: 0 0 4px;
+  font-size: 1.15rem;
+}
+
+.step .names {
+  margin-bottom: 6px;
+  font-size: 0.95rem;
+}
+
+.step__when {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px 10px;
+  align-items: center;
+  margin: 0 0 8px;
+  font-size: 0.88rem;
+  color: var(--ink-soft);
+}
+
+.step__note {
+  margin: 0 0 8px;
+  font-weight: 600;
+  color: var(--ink);
+}
+
+.step__summary {
+  margin: 0 0 10px;
+  font-family: var(--font-read);
+  line-height: 1.6;
+  color: var(--ink-soft);
+}
+
+.step__evidence {
+  margin: 0 0 10px;
+  padding: 10px 12px;
+  border-radius: var(--radius-sm);
+  background: var(--bg-sunk);
+  font-size: 0.92rem;
+}
+
+.step__evidence p {
+  margin: 0 0 6px;
+  font-family: var(--font-read);
+}
+
+.step__evidence strong {
+  font-family: var(--font-ui);
+}
+
+.step__source {
+  margin-top: 6px !important;
+  font-size: 0.85rem;
+  color: var(--ink-soft);
+}
+
+.step__source a {
+  display: inline-block;
+  padding: 3px 0;
+}
+
+.step__actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px 16px;
+  align-items: center;
+}
+
+.step__check {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  min-height: 32px;
+  font-size: 0.92rem;
+  cursor: pointer;
+}
+
+.step__check input {
+  width: 18px;
+  height: 18px;
+  accent-color: var(--grade-a);
+}
+
+/* ---------- Quiz ---------- */
+
+.quiz {
+  max-width: 860px;
+}
+
+.quiz__list > li {
+  min-width: 0;
+}
+
+.quiz__list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  gap: 16px;
+}
+
+.quiz__q {
+  overflow-wrap: break-word;
+  margin: 0;
+  padding: 16px 18px;
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  background: var(--bg-elev);
+  min-width: 0;
+}
+
+.quiz__q legend {
+  padding: 0;
+  font-weight: 600;
+  font-size: 1.02rem;
+  line-height: 1.45;
+  margin-bottom: 10px;
+}
+
+.quiz__choices {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  gap: 8px;
+}
+
+.quiz__choice {
+  display: grid;
+  grid-template-columns: 18px minmax(0, 1fr);
+  column-gap: 10px;
+  row-gap: 2px;
+  align-items: start;
+  padding: 8px 10px;
+  border: 1px solid var(--line);
+  border-radius: var(--radius-sm);
+  cursor: pointer;
+  line-height: 1.45;
+}
+
+.quiz__choice input {
+  margin-top: 3px;
+  width: 18px;
+  height: 18px;
+  flex: none;
+  accent-color: var(--ink);
+}
+
+.quiz__choice:has(input:focus-visible) {
+  outline: 2px solid var(--focus);
+  outline-offset: 2px;
+}
+
+.quiz__choice[data-state='correct'] {
+  border-color: var(--grade-a);
+  border-width: 2px;
+}
+
+.quiz__choice[data-state='wrong'] {
+  border-color: var(--accent);
+  border-width: 2px;
+  border-style: dashed;
+}
+
+.quiz__mark {
+  grid-column: 2;
+  font-size: 0.8rem;
+  font-weight: 700;
+}
+
+.quiz__choice[data-state='correct'] .quiz__mark {
+  color: var(--grade-a);
+}
+
+.quiz__choice[data-state='wrong'] .quiz__mark {
+  color: var(--accent);
+}
+
+.quiz__feedback {
+  margin-top: 12px;
+  font-size: 0.95rem;
+}
+
+.quiz__feedback p {
+  margin: 0 0 6px;
+  font-family: var(--font-read);
+  line-height: 1.55;
+}
+
+.quiz__sources {
+  margin: 6px 0 0;
+  padding-left: 1.2em;
+  font-size: 0.85rem;
+  color: var(--ink-soft);
+}
+
+/* Each source link is its own touch target (WCAG 2.5.8). */
+.quiz__sources a {
+  display: inline-block;
+  padding: 3px 0;
+  vertical-align: top;
+}
+
+.quiz__actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px 16px;
+  align-items: center;
+  margin-top: 16px;
+}
+
+.quiz__score {
+  margin: 0;
+  font-weight: 600;
+}
+
+.learn-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin: 0 0 20px;
+}
+
+/* ---------- Print pack (screen view) ---------- */
+
+.print-pack {
+  max-width: 820px;
+  overflow-wrap: break-word;
+}
+
+.print-toolbar {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  align-items: center;
+  margin: 0 0 20px;
+}
+
+.print-card {
+  padding: 14px 16px;
+  margin: 0 0 12px;
+  border: 1px solid var(--line-strong);
+  border-radius: var(--radius-sm);
+  background: var(--bg-elev);
+}
+
+.print-card h3 {
+  margin: 0 0 2px;
+}
+
+.print-card p {
+  margin: 4px 0;
+  line-height: 1.55;
+}
+
+.print-card .names {
+  margin-bottom: 4px;
+}
+
+.print-quiz {
+  padding-left: 1.4em;
+}
+
+.print-quiz > li {
+  margin-bottom: 14px;
+}
+
+.print-quiz ol {
+  list-style: upper-alpha;
+  padding-left: 1.6em;
+}
+
+.answer-key > li {
+  margin-bottom: 12px;
+}
+
+.answer-key p {
+  margin: 2px 0;
+}
+
+/* Source identifiers inside the sunk evidence panel need the stronger ink for AA contrast. */
+.step__evidence .muted {
+  color: var(--ink-soft);
+}
+
+/* Keep the legend inside the question card instead of straddling its border. */
+.quiz__q legend {
+  float: left;
+  width: 100%;
+}
+
+.quiz__q legend + * {
+  clear: both;
+}
+
+/* In-page targets clear the sticky site header. */
+#quiz,
+.position,
+.step {
+  scroll-margin-top: 120px;
+}
+
+.name-native {
+  font-size: 1.06em;
+}
+
+@media (max-width: 560px) {
+  .step {
+    padding: 14px 14px 14px;
+  }
+
+  .step::before {
+    position: static;
+    margin-bottom: 8px;
+  }
+
+  .position {
+    padding: 16px 14px;
+  }
+}

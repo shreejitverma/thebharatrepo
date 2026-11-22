@@ -11,6 +11,7 @@ import Wheel from './Wheel';
 import River from './River';
 import ListView from './ListView';
 import Panel from './Panel';
+import { setReadingLevel, useReadingLevel } from '@/components/ReadingLevel';
 import { SEGMENTS, SHORT_SEGMENT_LABELS, formatDating, kindColor, orderedItems, primaryAnchor, primaryDating, segmentUnitBounds, yearToUnit, type Level, type View } from './shared';
 
 const VIEWS: { id: View; label: string }[] = [
@@ -150,6 +151,9 @@ function KaalchakraInner({ items, initial, onWrite }: { items: KcItem[]; initial
   }, [s, onWrite]);
 
   const update = useCallback((patch: Partial<State>) => setS((prev) => ({ ...prev, ...patch })), []);
+  // A level in the URL wins; otherwise the viewer's site-wide reading level applies.
+  const siteLevel = useReadingLevel();
+  const level = s.level !== 'adult' ? s.level : siteLevel;
 
   const kindSet = useMemo(() => new Set(s.kinds), [s.kinds]);
   const visible = useMemo(() => orderedItems(items.filter((i) => kindSet.has(i.kind) && matches(i, s.q)), s.lens), [items, kindSet, s.q, s.lens]);
@@ -310,8 +314,12 @@ function KaalchakraInner({ items, initial, onWrite }: { items: KcItem[]; initial
           item={selected}
           lens={s.lens}
           cal={s.cal}
-          level={s.level}
-          onLevel={(level) => update({ level })}
+          level={level}
+          onLevel={(l) => {
+            update({ level: l });
+            // Shares the choice with the rest of the site; this component writes its own URL.
+            setReadingLevel(l, { url: false });
+          }}
           onPrev={selIdx > 0 ? () => step(-1) : undefined}
           onNext={selIdx >= 0 && selIdx < visible.length - 1 ? () => step(1) : undefined}
           total={visible.length}
