@@ -15,7 +15,7 @@ summaries:
 region: Pan-Indian (narrative setting at Kurukshetra, Haryana)
 datings:
   - method: textual-internal
-    range: { earliest: -200, latest: 100, precision: century, circa: true }
+    range: { earliest: "200 BCE", latest: 100, precision: century, circa: true }
     grade: C
     label: Mainstream philological dating within the Mahabharata's composition (Brockington and Malinar)
     sources:
@@ -23,7 +23,7 @@ datings:
       - src.brockington-1998-sanskrit-epics
     note: Dated by John Brockington, J. A. B. van Buitenen and Angelika Malinar between the second century BCE and first century CE on the basis of its epic Sanskrit meter, engagement with Upanishadic, early Samkhya-Yoga and Buddhist concepts, and early Bhagavata monotheism.
   - method: traditional-puranic
-    range: { earliest: -3137, latest: -3101, precision: decade, circa: true }
+    range: { earliest: "3138 BCE", latest: "3102 BCE", precision: decade, circa: true }
     grade: D
     label: Traditional placement at the Kurukshetra War before the Kali Yuga
     sources:

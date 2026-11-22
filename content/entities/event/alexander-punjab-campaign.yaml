@@ -14,7 +14,7 @@ region: Gandhara, Punjab and Sindh (Indus river basin)
 location: { name: "Jhelum River (ancient Hydaspes)", lat: 32.828, lon: 73.631 }
 datings:
   - method: documentary
-    range: { earliest: -326, latest: -324, best: -325, precision: year, circa: false }
+    range: { earliest: "327 BCE", latest: "325 BCE", best: "326 BCE", precision: year, circa: false }
     grade: A
     label: Arrian's Athenian archon dating and Hellenistic chronology
     sources:

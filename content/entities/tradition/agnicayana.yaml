@@ -23,7 +23,7 @@ summaries:
 region: Northern Indian subcontinent (preserved in Kerala, Andhra Pradesh, and Maharashtra)
 datings:
   - method: linguistic
-    range: { earliest: -1099, latest: 1975, best: -799, precision: century, circa: true }
+    range: { earliest: "1100 BCE", latest: 1975, best: "800 BCE", precision: century, circa: true }
     grade: B
     label: Yajurveda Samhita codification through modern Nambudiri performance (Staal)
     sources:

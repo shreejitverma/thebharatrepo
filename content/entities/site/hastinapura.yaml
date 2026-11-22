@@ -24,7 +24,7 @@ region: Upper Ganga-Yamuna Doab (Meerut district, western Uttar Pradesh)
 location: { name: "Hastinapura", lat: 29.17, lon: 78.02 }
 datings:
   - method: archaeological-stratigraphic
-    range: { earliest: -1499, latest: -199, best: -999, precision: century, circa: true }
+    range: { earliest: "1500 BCE", latest: "200 BCE", best: "1000 BCE", precision: century, circa: true }
     grade: A
     label: Stratified protohistoric and early historic sequence (Periods I to III, B. B. Lal)
     sources:

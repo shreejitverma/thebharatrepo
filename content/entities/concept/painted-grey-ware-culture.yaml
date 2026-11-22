@@ -21,7 +21,7 @@ summaries:
 region: Upper Ganga-Yamuna Doab, Haryana, Punjab, and northern Rajasthan
 datings:
   - method: archaeological-radiocarbon
-    range: { earliest: -1199, latest: -599, best: -899, precision: century, circa: true }
+    range: { earliest: "1200 BCE", latest: "600 BCE", best: "900 BCE", precision: century, circa: true }
     grade: A
     label: Stratified radiocarbon chronology (Hastinapura, Atranjikhera, Noh)
     sources:

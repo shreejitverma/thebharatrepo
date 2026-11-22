@@ -24,7 +24,7 @@ region: Kurukshetra and upper Ganga-Yamuna Doab (Haryana, Delhi, and western Utt
 location: { name: "Hastinapura", lat: 29.17, lon: 78.02 }
 datings:
   - method: textual-internal
-    range: { earliest: -1199, latest: -499, best: -999, precision: century, circa: true }
+    range: { earliest: "1200 BCE", latest: "500 BCE", best: "1000 BCE", precision: century, circa: true }
     grade: B
     label: Mainstream historical and Indological dating (Witzel, Thapar, Singh)
     sources:

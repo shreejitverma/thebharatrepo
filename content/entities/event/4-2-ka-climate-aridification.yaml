@@ -25,8 +25,8 @@ location:
 datings:
   - method: geological
     range:
-      earliest: -2299
-      latest: -1899
+      earliest: "2300 BCE"
+      latest: "1900 BCE"
       precision: century
       circa: true
     grade: A

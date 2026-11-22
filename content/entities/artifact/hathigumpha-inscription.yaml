@@ -16,7 +16,7 @@ region: Kalinga (Udayagiri Hills near Bhubaneswar, Odisha)
 location: { name: "Hathigumpha, Udayagiri, Odisha", lat: 20.263, lon: 85.786 }
 datings:
   - method: epigraphic
-    range: { earliest: -99, latest: -1, precision: century, circa: true }
+    range: { earliest: "100 BCE", latest: "2 BCE", precision: century, circa: true }
     grade: B
     label: Palaeographic dating of post-Mauryan Brahmi script (first century BCE)
     sources:
@@ -24,7 +24,7 @@ datings:
       - src.kulke-2004-history-of-india
     note: Dated palaeographically to the mid-to-late first century BCE by comparison with Sanchi gateway and early Satavahana inscriptions.
   - method: epigraphic
-    range: { earliest: -175, latest: -130, precision: decade, circa: true }
+    range: { earliest: "176 BCE", latest: "130 BCE", precision: decade, circa: true }
     grade: C
     label: Second century BCE dating from contested reading of Mauriya-kala and Dimita
     sources:

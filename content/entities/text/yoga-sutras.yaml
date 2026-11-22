@@ -22,7 +22,7 @@ datings:
       - src.maas-2020-patanjala-yoga-temporality
     note: Based on manuscript colophons, textual criticism and philosophical engagement with Sarvastivada and early Yogachara Buddhist theories of temporality (parinama), Philipp Maas dates the compilation of the Patanjalayogasastra (sutras together with the bhashya) to c. 325-425 CE, while the sutra materials draw on older traditions from the early centuries CE.
   - method: traditional-sampradaya
-    range: { earliest: -199, latest: -100, precision: century, circa: true }
+    range: { earliest: "200 BCE", latest: "100 BCE", precision: century, circa: true }
     grade: D
     label: Traditional identification of Patanjali with the second-century BCE grammarian
     sources:

@@ -23,8 +23,8 @@ location:
 datings:
   - method: archaeological-stratigraphic
     range:
-      earliest: -6000
-      latest: -5000
+      earliest: "6000 BCE"
+      latest: "5000 BCE"
       best: "5500 BCE"
       precision: century
       circa: true

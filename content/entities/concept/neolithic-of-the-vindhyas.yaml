@@ -24,9 +24,9 @@ location:
 datings:
   - method: archaeological-radiocarbon
     range:
-      earliest: -2500
+      earliest: "2500 BCE"
       latest: "1400 BCE"
-      best: -1850
+      best: "1850 BCE"
       precision: century
       circa: true
     grade: B
@@ -40,8 +40,8 @@ datings:
       Neolithic villages between c. 2500 and 1400 BCE.
   - method: archaeological-radiocarbon
     range:
-      earliest: -6500
-      latest: -4500
+      earliest: "6500 BCE"
+      latest: "4500 BCE"
       precision: millennium
       circa: true
     grade: C

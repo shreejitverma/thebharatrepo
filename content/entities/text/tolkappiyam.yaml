@@ -15,7 +15,7 @@ summaries:
 region: Tamilakam (Tamil Nadu)
 datings:
   - method: linguistic
-    range: { earliest: -200, latest: 499, precision: century, circa: true }
+    range: { earliest: "200 BCE", latest: 499, precision: century, circa: true }
     grade: C
     label: Stratified linguistic dating (archaic core Books 1-2 vs expanded Book 3)
     sources:
@@ -23,7 +23,7 @@ datings:
       - src.wilden-2014-manuscript-print-memory
     note: Kamil Zvelebil and Eva Wilden distinguish an older grammatical core in the Eluttatikaram and Collatikaram (c. second/first century BCE to second century CE, reflecting pulli usage akin to Tamil-Brahmi) from later expansions in the Porulatikaram (up to the fifth century CE) that draw on Sanskrit aesthetic concepts such as meypatu (bhava/rasa).
   - method: traditional-sampradaya
-    range: { earliest: -3000, latest: -500, precision: millennium, circa: true }
+    range: { earliest: "3000 BCE", latest: "500 BCE", precision: millennium, circa: true }
     grade: D
     label: Traditional attribution to Tolkappiyar of the Second Sangam
     sources:

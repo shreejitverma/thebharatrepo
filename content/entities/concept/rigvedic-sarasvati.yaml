@@ -25,7 +25,7 @@ region: Kurukshetra and Ghaggar-Hakra basin (Haryana, Punjab, northern Rajasthan
 location: { name: "Kurukshetra (Ghaggar-Sarasvati basin)", lat: 29.97, lon: 76.88 }
 datings:
   - method: geological
-    range: { earliest: -2599, latest: -1899, best: -1999, precision: century, circa: true }
+    range: { earliest: "2600 BCE", latest: "1900 BCE", best: "2000 BCE", precision: century, circa: true }
     grade: B
     label: Fluvial geomorphology of the Ghaggar-Hakra monsoonal decline (Giosan et al. 2012)
     sources:
@@ -35,7 +35,7 @@ datings:
       during the Holocene Harappan phase the Ghaggar-Hakra was a perennial monsoon-fed system whose
       discharges weakened after c. 2000 to 1900 BCE as the summer monsoon aridified.
   - method: textual-internal
-    range: { earliest: -1499, latest: -899, best: -1199, precision: century, circa: true }
+    range: { earliest: "1500 BCE", latest: "900 BCE", best: "1200 BCE", precision: century, circa: true }
     grade: C
     label: Rigvedic to Brahmana textual hydrology (Witzel, Jamison and Brereton)
     sources:
@@ -46,7 +46,7 @@ datings:
       swollen river, whereas by the Panchavimsha and Jaiminiya Brahmanas (c. 900 to 700 BCE) it is
        explicitly described as disappearing into the desert at Vinashana.
   - method: geological
-    range: { earliest: -3299, latest: -1899, precision: century, circa: true }
+    range: { earliest: "3300 BCE", latest: "1900 BCE", precision: century, circa: true }
     grade: C
     label: Pre-1900 BCE glacial-fed Sarasvati correlation (Danino, Lal)
     sources:

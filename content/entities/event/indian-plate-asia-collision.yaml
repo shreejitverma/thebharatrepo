@@ -23,9 +23,9 @@ location:
 datings:
   - method: geological
     range:
-      earliest: -59000000
-      latest: -50000000
-      best: -55000000
+      earliest: "59000000 BCE"
+      latest: "50000000 BCE"
+      best: "55000000 BCE"
       precision: Ma
       circa: true
     grade: B
@@ -37,8 +37,8 @@ datings:
       initial contact of Indian continental crust with Asian margin units at c. 59-50 Ma.
   - method: geological
     range:
-      earliest: -52000000
-      latest: -20000000
+      earliest: "52000000 BCE"
+      latest: "20000000 BCE"
       precision: Ma
       circa: true
     grade: C

@@ -24,9 +24,9 @@ location:
 datings:
   - method: archaeological-radiocarbon
     range:
-      earliest: -7500
-      latest: -6000
-      best: -6600
+      earliest: "7500 BCE"
+      latest: "6000 BCE"
+      best: "6600 BCE"
       precision: century
       circa: true
     grade: C
@@ -38,9 +38,9 @@ datings:
       Sarkar et al. (2016) range from c. 7500 to 5000 BCE (9.5-7 ka BP).
   - method: scholarly-consensus
     range:
-      earliest: -3800
+      earliest: "3800 BCE"
       latest: "1900 BCE"
-      best: -3000
+      best: "3000 BCE"
       precision: century
       circa: true
     grade: B

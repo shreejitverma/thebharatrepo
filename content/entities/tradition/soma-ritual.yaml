@@ -22,7 +22,7 @@ summaries:
 region: Northwestern and northern Indian subcontinent (later Pan-Indian)
 datings:
   - method: linguistic
-    range: { earliest: -1999, latest: -499, best: -1199, precision: century, circa: true }
+    range: { earliest: "2000 BCE", latest: "500 BCE", best: "1200 BCE", precision: century, circa: true }
     grade: B
     label: Common Indo-Iranian origin (*sauma) through classical Vedic Shrauta codification
     sources:

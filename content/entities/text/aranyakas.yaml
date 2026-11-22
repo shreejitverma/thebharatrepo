@@ -20,7 +20,7 @@ summaries:
 region: Kuru-Panchala and middle Ganga plain (northern India)
 datings:
   - method: linguistic
-    range: { earliest: -799, latest: -499, best: -699, precision: century, circa: true }
+    range: { earliest: "800 BCE", latest: "500 BCE", best: "700 BCE", precision: century, circa: true }
     grade: C
     label: Late Brahmana to Early Upanishadic prose period
     sources:
@@ -31,7 +31,7 @@ datings:
       Linguistically continuous with late Brahmana prose and the earliest Upanishads, which are
       directly embedded within or appended to Aranyaka collections.
   - method: traditional-puranic
-    range: { earliest: -3101, latest: -2499, precision: century, circa: true }
+    range: { earliest: "3102 BCE", latest: "2500 BCE", precision: century, circa: true }
     grade: D
     label: Traditional sampradaya reckoning
     sources:

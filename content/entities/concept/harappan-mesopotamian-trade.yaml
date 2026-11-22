@@ -22,8 +22,8 @@ region: Indus Basin, Arabian Sea, Persian Gulf (Magan and Dilmun), and Mesopotam
 datings:
   - method: foreign-synchronism
     range:
-      earliest: -2499
-      latest: -1899
+      earliest: "2500 BCE"
+      latest: "1900 BCE"
       precision: century
       circa: true
     grade: A

@@ -21,7 +21,7 @@ summaries:
 region: Gandhara (northwestern Indian subcontinent)
 datings:
   - method: linguistic
-    range: { earliest: -599, latest: -349, best: -399, precision: century, circa: true }
+    range: { earliest: "600 BCE", latest: "350 BCE", best: "400 BCE", precision: century, circa: true }
     grade: B
     label: Mainstream Indological and linguistic consensus (Cardona, Katre)
     sources:

@@ -26,8 +26,8 @@ location:
 datings:
   - method: archaeological-radiocarbon
     range:
-      earliest: -2399
-      latest: -1899
+      earliest: "2400 BCE"
+      latest: "1900 BCE"
       precision: century
       circa: true
     grade: A
@@ -40,8 +40,8 @@ datings:
       Calibrated radiocarbon dates place the planned urban trading settlement of Lothal A between c. 2400 and 1900 BCE.
   - method: archaeological-radiocarbon
     range:
-      earliest: -1899
-      latest: -1599
+      earliest: "1900 BCE"
+      latest: "1600 BCE"
       precision: century
       circa: true
     grade: A

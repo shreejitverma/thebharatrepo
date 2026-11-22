@@ -20,7 +20,7 @@ summaries:
 region: Ganga-Yamuna Doab, central and eastern Ganga plain, Rajasthan, and western India
 datings:
   - method: archaeological-stratigraphic
-    range: { earliest: -1449, latest: -799, best: -1199, precision: century, circa: true }
+    range: { earliest: "1450 BCE", latest: "800 BCE", best: "1200 BCE", precision: century, circa: true }
     grade: B
     label: Upper and Middle Gangetic BRW horizon (Gaur, Singh)
     sources:

@@ -22,7 +22,7 @@ summaries:
 region: Pan-Indian (codified in Kuru-Panchala)
 datings:
   - method: linguistic
-    range: { earliest: -1199, latest: -399, best: -899, precision: century, circa: true }
+    range: { earliest: "1200 BCE", latest: "400 BCE", best: "900 BCE", precision: century, circa: true }
     grade: B
     label: Kuru ritual reform through Shrauta Sutra codification (Witzel, Gonda, Staal)
     sources:

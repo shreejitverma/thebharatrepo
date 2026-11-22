@@ -25,7 +25,7 @@ summaries:
 region: Southern Ural steppes and northern Indian subcontinent (Comparative Indo-Iranian context)
 datings:
   - method: archaeological-radiocarbon
-    range: { earliest: -2099, latest: -1799, best: -1999, precision: century, circa: true }
+    range: { earliest: "2100 BCE", latest: "1800 BCE", best: "2000 BCE", precision: century, circa: true }
     grade: A
     label: Calibrated radiocarbon chronology of Sintashta-Petrovka chariot burials (Anthony, Kuzmina)
     sources:

@@ -20,7 +20,7 @@ summaries:
 region: Kuru-Panchala (Haryana and western Uttar Pradesh)
 datings:
   - method: linguistic
-    range: { earliest: -1199, latest: -899, best: -999, precision: century, circa: true }
+    range: { earliest: "1200 BCE", latest: "900 BCE", best: "1000 BCE", precision: century, circa: true }
     grade: C
     label: Post-Rigvedic Kuru-period compilation
     sources:
@@ -31,7 +31,7 @@ datings:
       Linguistically and textually presupposes the completed Rigveda Samhita and belongs to the
       early Kuru reorganization of the Shrauta liturgy.
   - method: traditional-puranic
-    range: { earliest: -3101, latest: -2999, precision: century, circa: true }
+    range: { earliest: "3102 BCE", latest: "3000 BCE", precision: century, circa: true }
     grade: D
     label: Traditional Puranic reckoning
     sources:

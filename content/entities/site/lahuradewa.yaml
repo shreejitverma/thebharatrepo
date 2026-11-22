@@ -22,9 +22,9 @@ location:
 datings:
   - method: archaeological-radiocarbon
     range:
-      earliest: -7000
-      latest: -5000
-      best: -6408
+      earliest: "7000 BCE"
+      latest: "5000 BCE"
+      best: "6409 BCE"
       precision: century
       circa: true
     grade: A
@@ -37,8 +37,8 @@ datings:
       (calibrated c. 6409 BCE), alongside wood charcoal and lake-core dates extending to c. 7000-5300 BCE.
   - method: scholarly-consensus
     range:
-      earliest: -2500
-      latest: -2000
+      earliest: "2500 BCE"
+      latest: "2000 BCE"
       precision: century
       circa: true
     grade: C

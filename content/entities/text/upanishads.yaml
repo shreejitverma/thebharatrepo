@@ -20,7 +20,7 @@ summaries:
 region: Kuru-Panchala, Kosala, and Videha (northern India)
 datings:
   - method: linguistic
-    range: { earliest: -699, latest: -199, best: -499, precision: century, circa: true }
+    range: { earliest: "700 BCE", latest: "200 BCE", best: "500 BCE", precision: century, circa: true }
     grade: B
     label: Chronological strata of the early Upanishads (Olivelle)
     sources:
@@ -33,7 +33,7 @@ datings:
       (Taittiriya, Aitareya, Kaushitaki, Kena) to c. 6th to 5th century BCE, and early verse
       Upanishads (Katha, Isha, Shvetashvatara, Mundaka) to the 5th to 2nd centuries BCE.
   - method: traditional-puranic
-    range: { earliest: -3101, latest: -2499, precision: century, circa: true }
+    range: { earliest: "3102 BCE", latest: "2500 BCE", precision: century, circa: true }
     grade: D
     label: Traditional Vedanta sampradaya reckoning
     sources:

@@ -22,7 +22,7 @@ region: Rohilkhand and central Ganga-Yamuna Doab (western and central Uttar Prad
 location: { name: "Ahichhatra (Ramnagar, Bareilly)", lat: 28.374, lon: 79.136 }
 datings:
   - method: textual-internal
-    range: { earliest: -1099, latest: -349, best: -799, precision: century, circa: true }
+    range: { earliest: "1100 BCE", latest: "350 BCE", best: "800 BCE", precision: century, circa: true }
     grade: B
     label: Middle Vedic Kuru-Panchala to Mahajanapada period
     sources:

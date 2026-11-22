@@ -16,7 +16,7 @@ region: Malwa, Madhya Pradesh (ancient Vidisha / Besnagar)
 location: { name: "Besnagar, Vidisha", lat: 23.541, lon: 77.801 }
 datings:
   - method: epigraphic
-    range: { earliest: -120, latest: -100, best: -112, precision: decade, circa: true }
+    range: { earliest: "120 BCE", latest: "100 BCE", best: "113 BCE", precision: decade, circa: true }
     grade: A
     label: Fourteenth regnal year of Bhagabhadra and reign of Antialcidas (c. 113 BCE)
     sources:

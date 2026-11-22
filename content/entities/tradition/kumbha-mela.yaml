@@ -27,8 +27,8 @@ location:
 datings:
   - method: traditional-puranic
     range:
-      earliest: -428979101
-      latest: -120531101
+      earliest: "428979102 BCE"
+      latest: "120531102 BCE"
       precision: cosmological
       circa: true
     grade: D

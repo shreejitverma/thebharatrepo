@@ -130,6 +130,27 @@ export function bceOffByOne(range: { earliest: number; latest: number; best?: nu
 }
 
 /**
+ * Authored datings must write BCE years as strings ("7000 BCE"), never as raw negative numbers.
+ * A raw -7000 is the astronomical year 7001 BCE, and authors repeatedly wrote -N meaning N BCE,
+ * which no text heuristic can catch reliably. Returns one message per offending endpoint.
+ */
+export function rawNegativeYears(datings: unknown): string[] {
+  if (!Array.isArray(datings)) return [];
+  const out: string[] = [];
+  datings.forEach((d, i) => {
+    const range = (d as { range?: Record<string, unknown> } | null)?.range;
+    if (!range || typeof range !== 'object') return;
+    for (const key of ['earliest', 'latest', 'best']) {
+      const v = range[key];
+      if (typeof v === 'number' && v < 0) {
+        out.push(`datings[${i}].range.${key}: write "${-v} BCE" or "${1 - v} BCE" as a string, not the raw astronomical year ${v} (${1 - v} BCE)`);
+      }
+    }
+  });
+  return out;
+}
+
+/**
  * Two source records describe the same work: no identifier of the same type conflicts (archive.org and
  * other URLs compare by host and first path segment pair) and the titles match.
  */
@@ -230,6 +251,7 @@ export function loadContentUncached(): ContentGraph {
   for (const file of roots.flatMap((r) => walk(path.join(r, 'entities'), '.yaml'))) {
     const raw = readYaml(file, errors);
     if (raw === undefined) continue;
+    for (const m of rawNegativeYears((raw as { datings?: unknown } | null)?.datings)) errors.push({ file: rel(file), message: m });
     const parsed = EntitySchema.safeParse(raw);
     if (!parsed.success) {
       for (const m of formatZod(parsed.error)) errors.push({ file: rel(file), message: m });
@@ -265,6 +287,7 @@ export function loadContentUncached(): ContentGraph {
         continue;
       }
       const { data, content } = matter(fs.readFileSync(file, 'utf8'));
+      for (const m of rawNegativeYears(data.datings)) errors.push({ file: relFile, message: m });
       const parsed = ArticleFrontmatterSchema.safeParse(data);
       if (!parsed.success) {
         for (const m of formatZod(parsed.error)) errors.push({ file: relFile, message: m });

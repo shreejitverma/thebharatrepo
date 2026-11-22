@@ -23,9 +23,9 @@ location:
 datings:
   - method: geological
     range:
-      earliest: -1770000
-      latest: -1070000
-      best: -1510000
+      earliest: "1770000 BCE"
+      latest: "1070000 BCE"
+      best: "1510000 BCE"
       precision: Ma
       circa: true
     grade: A
@@ -37,8 +37,8 @@ datings:
       pooled average age of 1.51 +/- 0.07 Ma within the Matuyama reversed chron (>1.07 Ma).
   - method: luminescence
     range:
-      earliest: -385000
-      latest: -172000
+      earliest: "385000 BCE"
+      latest: "172000 BCE"
       precision: ka
       circa: true
     grade: A

@@ -22,9 +22,9 @@ location:
 datings:
   - method: archaeological-radiocarbon
     range:
-      earliest: -8500
-      latest: -8000
-      best: -8394
+      earliest: "8500 BCE"
+      latest: "8000 BCE"
+      best: "8395 BCE"
       precision: century
       circa: true
     grade: C
@@ -37,8 +37,8 @@ datings:
       bone sample gave c. 990 BCE; uncharred bone carbonate dates are widely regarded as unreliable.
   - method: scholarly-consensus
     range:
-      earliest: -6000
-      latest: -2000
+      earliest: "6000 BCE"
+      latest: "2000 BCE"
       precision: millennium
       circa: true
     grade: B

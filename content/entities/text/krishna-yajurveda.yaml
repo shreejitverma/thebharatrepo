@@ -21,7 +21,7 @@ summaries:
 region: Kurukshetra and Kuru-Panchala (Haryana, Punjab, and western Uttar Pradesh)
 datings:
   - method: linguistic
-    range: { earliest: -1199, latest: -799, best: -999, precision: century, circa: true }
+    range: { earliest: "1200 BCE", latest: "800 BCE", best: "1000 BCE", precision: century, circa: true }
     grade: C
     label: Early Kuru mantra and prose linguistic stratum
     sources:
@@ -33,7 +33,7 @@ datings:
       Kuru state formation (c. 1200 to 1000 BCE), while their embedded Brahmana prose belongs to
       c. 1000 to 800 BCE.
   - method: traditional-puranic
-    range: { earliest: -3101, latest: -2999, precision: century, circa: true }
+    range: { earliest: "3102 BCE", latest: "3000 BCE", precision: century, circa: true }
     grade: D
     label: Traditional Puranic reckoning
     sources:

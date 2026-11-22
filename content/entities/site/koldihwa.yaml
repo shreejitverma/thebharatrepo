@@ -22,9 +22,9 @@ location:
 datings:
   - method: archaeological-radiocarbon
     range:
-      earliest: -6600
-      latest: -4500
-      best: -5440
+      earliest: "6600 BCE"
+      latest: "4500 BCE"
+      best: "5440 BCE"
       precision: century
       circa: true
     grade: C
@@ -37,9 +37,9 @@ datings:
       BCE (6570, 5440 and 4530 BCE), though their stratigraphic association with the Neolithic levels is disputed.
   - method: archaeological-radiocarbon
     range:
-      earliest: -2500
+      earliest: "2500 BCE"
       latest: "1400 BCE"
-      best: -1800
+      best: "1800 BCE"
       precision: century
       circa: true
     grade: B

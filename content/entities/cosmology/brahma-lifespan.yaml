@@ -20,8 +20,8 @@ summaries:
 datings:
   - method: traditional-puranic
     range:
-      earliest: -155521972947101
-      latest: -3101
+      earliest: "155521972947102 BCE"
+      latest: "3102 BCE"
       precision: cosmological
       circa: false
     grade: D

@@ -16,7 +16,7 @@ region: Kurukshetra (Haryana) and the Kuru-Panchala Doab
 location: { name: "Kurukshetra, Haryana", lat: 29.969, lon: 76.878 }
 datings:
   - method: archaeological-stratigraphic
-    range: { earliest: -1199, latest: -799, precision: century, circa: true }
+    range: { earliest: "1200 BCE", latest: "800 BCE", precision: century, circa: true }
     grade: C
     label: Early Iron Age Kuru-Panchala and Painted Grey Ware horizon (B. B. Lal and mainstream historians)
     sources:
@@ -24,7 +24,7 @@ datings:
       - src.kulke-2004-history-of-india
     note: Associates a possible historical kernel of an intra-Kuru conflict with the Vedic Kuru-Panchala polity and Painted Grey Ware sites (Hastinapura, Indraprastha, Ahichchhatra, Kurukshetra) of c. 1200-800 BCE, while noting that archaeology cannot verify the epic war itself.
   - method: traditional-siddhantic
-    range: { earliest: -3101, latest: -3101, precision: year, circa: false }
+    range: { earliest: "3102 BCE", latest: "3102 BCE", precision: year, circa: false }
     grade: D
     label: Aryabhata and Aihole inscription Kali Yuga epoch (3102 BCE)
     sources:
@@ -32,7 +32,7 @@ datings:
       - src.bhatnagar-2017-date-mahabharata-war
     note: The 634 CE Aihole inscription of Pulakeshin II equates Saka 556 with 3,735 years elapsed since the Bharata war, matching Aryabhata's 3102 BCE Kali Yuga epoch.
   - method: traditional-puranic
-    range: { earliest: -3138, latest: -2448, best: -3137, precision: year, circa: true }
+    range: { earliest: "3139 BCE", latest: "2449 BCE", best: "3138 BCE", precision: year, circa: true }
     grade: D
     label: Puranic and Brihat Samhita traditional reckonings (3138 BCE and 2449 BCE)
     sources:
@@ -40,7 +40,7 @@ datings:
       - src.plofker-2009-mathematics-in-india
     note: One traditional reckoning places the war 36 years before the 3102 BCE Kali Yuga onset (3138/3139 BCE), while another preserved by Varahamihira (Brihat Samhita 13.3) and Kalhana places Yudhishthira 653 years into the Kali Yuga (2449 BCE).
   - method: astronomical-reference
-    range: { earliest: -3066, latest: -1477, best: -3066, precision: year, circa: true }
+    range: { earliest: "3067 BCE", latest: "1478 BCE", best: "3067 BCE", precision: year, circa: true }
     grade: E
     label: Planetarium-software reconstructions (B. N. Narahari Achar 3067 BCE; competing 1793 and 1478 BCE models)
     sources:

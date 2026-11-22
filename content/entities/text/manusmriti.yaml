@@ -23,7 +23,7 @@ datings:
       - src.hiltebeitel-2011-dharma
     note: Patrick Olivelle's 2005 critical edition dates the composition of the Manava-Dharmasastra to between the second century BCE and second century CE (most probably the first to second century CE), based on its structural reliance on early Arthashastra legal categories, coin weight standards, and mentions of Yavanas, Shakas, Pahlavas and Chinas.
   - method: traditional-puranic
-    range: { earliest: -3101, latest: -1000, precision: millennium, circa: true }
+    range: { earliest: "3102 BCE", latest: "1000 BCE", precision: millennium, circa: true }
     grade: D
     label: Traditional attribution to Svayambhuva Manu and Bhrigu
     sources:

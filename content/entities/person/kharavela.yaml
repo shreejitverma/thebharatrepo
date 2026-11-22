@@ -16,7 +16,7 @@ region: Kalinga (Odisha)
 location: { name: "Udayagiri Hills, Bhubaneswar", lat: 20.263, lon: 85.786 }
 datings:
   - method: epigraphic
-    range: { earliest: -99, latest: -1, precision: century, circa: true }
+    range: { earliest: "100 BCE", latest: "2 BCE", precision: century, circa: true }
     grade: B
     label: First century BCE palaeographic and Satakarni synchronism
     sources:
@@ -25,7 +25,7 @@ datings:
       - src.dundas-2002-the-jains
     note: Most epigraphists date Kharavela to the first century BCE based on the developed post-Mauryan Brahmi paleography of the Hathigumpha inscription and his synchronism with an early Satavahana king named Satakarni.
   - method: epigraphic
-    range: { earliest: -180, latest: -130, precision: decade, circa: true }
+    range: { earliest: "180 BCE", latest: "130 BCE", precision: decade, circa: true }
     grade: C
     label: Second century BCE dating based on proposed reading of Demetrius and Nanda era
     sources:

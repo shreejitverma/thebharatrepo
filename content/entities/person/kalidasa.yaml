@@ -24,7 +24,7 @@ datings:
       - src.pollock-2016-rasa-reader
     note: Supported by Kalidasa's play on the names Vikrama and Mahendra (titles of Chandragupta II and Kumaragupta I), the geography of Raghu's digvijaya echoing Samudragupta's Allahabad pillar campaign and Chandragupta II's Vahlika/Huna Oxus frontier, his deep intimacy with Ujjain and Ramagiri (Vakataka court), and his terminus ante quem in Vatsabhatti's 473 CE Mandasor inscription and the 634 CE Aihole inscription.
   - method: textual-internal
-    range: { earliest: -100, latest: 50, precision: century, circa: true }
+    range: { earliest: "100 BCE", latest: 50, precision: century, circa: true }
     grade: C
     label: First century BCE dating associated with the Vikrama Samvat epoch (57 BCE) or late Shunga context
     sources:

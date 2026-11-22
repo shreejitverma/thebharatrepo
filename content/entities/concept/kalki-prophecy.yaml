@@ -21,7 +21,7 @@ summaries:
 datings:
   - method: textual-internal
     range:
-      earliest: -199
+      earliest: "200 BCE"
       latest: 400
       precision: century
       circa: true

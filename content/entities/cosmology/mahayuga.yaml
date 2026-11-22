@@ -20,8 +20,8 @@ summaries:
 datings:
   - method: traditional-puranic
     range:
-      earliest: -3891101
-      latest: -3101
+      earliest: "3891102 BCE"
+      latest: "3102 BCE"
       precision: cosmological
       circa: false
     grade: D
@@ -36,8 +36,8 @@ datings:
       Kali Yuga epoch of 3102 BCE (-3101).
   - method: traditional-siddhantic
     range:
-      earliest: -3243101
-      latest: -3101
+      earliest: "3243102 BCE"
+      latest: "3102 BCE"
       precision: cosmological
       circa: false
     grade: D

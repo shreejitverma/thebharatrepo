@@ -24,8 +24,8 @@ location:
 datings:
   - method: archaeological-stratigraphic
     range:
-      earliest: -100000
-      latest: -1000
+      earliest: "100000 BCE"
+      latest: "1000 BCE"
       precision: ka
       circa: true
     grade: A

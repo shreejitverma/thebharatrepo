@@ -23,7 +23,7 @@ datings:
       - src.blackburn-2000-legend-of-valluvar
     note: Dated by Kamil Zvelebil and most modern scholars to c. 450-550 CE on the basis of its post-early-Sangam Tamil morphology, Sanskrit loanwords, engagement with Kautilyan and Dharmashastric concepts, and citations in the sixth-century CE epics Cilappatikaram and Manimekalai.
   - method: traditional-sampradaya
-    range: { earliest: -30, latest: -30, precision: year, circa: false }
+    range: { earliest: "31 BCE", latest: "31 BCE", precision: year, circa: false }
     grade: D
     label: Tiruvalluvar Year (31 BCE) commemorative reckoning
     sources:

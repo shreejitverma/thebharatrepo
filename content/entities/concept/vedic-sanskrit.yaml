@@ -22,7 +22,7 @@ summaries:
 region: Northwestern and northern Indian subcontinent
 datings:
   - method: linguistic
-    range: { earliest: -1499, latest: -399, best: -999, precision: century, circa: true }
+    range: { earliest: "1500 BCE", latest: "400 BCE", best: "1000 BCE", precision: century, circa: true }
     grade: B
     label: Five linguistic strata of Vedic Sanskrit (Witzel, Jamison, Cardona)
     sources:

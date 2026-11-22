@@ -21,7 +21,7 @@ summaries:
 region: Northwestern or northern Indian subcontinent
 datings:
   - method: linguistic
-    range: { earliest: -699, latest: -399, best: -499, precision: century, circa: true }
+    range: { earliest: "700 BCE", latest: "400 BCE", best: "500 BCE", precision: century, circa: true }
     grade: C
     label: Late Vedic linguistic dating (Sarup, Cardona)
     sources:
@@ -32,7 +32,7 @@ datings:
       Dated by Lakshman Sarup and George Cardona to around the 6th to 5th century BCE, generally
       placed slightly before Panini's Ashtadhyayi on the basis of linguistic and technical usage.
   - method: traditional-puranic
-    range: { earliest: -3101, latest: -1499, precision: century, circa: true }
+    range: { earliest: "3102 BCE", latest: "1500 BCE", precision: century, circa: true }
     grade: D
     label: Traditional sampradaya reckoning
     sources:

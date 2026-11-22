@@ -22,7 +22,7 @@ region: Shalatura, Gandhara (near the confluence of the Indus and Kabul rivers)
 location: { name: "Shalatura (Chota Lahor, Gandhara)", lat: 34.04, lon: 72.37 }
 datings:
   - method: linguistic
-    range: { earliest: -599, latest: -349, best: -399, precision: century, circa: true }
+    range: { earliest: "600 BCE", latest: "350 BCE", best: "400 BCE", precision: century, circa: true }
     grade: B
     label: Mainstream scholarly dating (Cardona, Katre)
     sources:

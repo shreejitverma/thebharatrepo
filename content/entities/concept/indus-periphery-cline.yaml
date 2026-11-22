@@ -22,8 +22,8 @@ region: Indus Basin, Eastern Iran (Shahr-i-Sokhta), and Southern Central Asia (G
 datings:
   - method: archaeological-radiocarbon
     range:
-      earliest: -3099
-      latest: -1999
+      earliest: "3100 BCE"
+      latest: "2000 BCE"
       precision: century
       circa: true
     grade: A

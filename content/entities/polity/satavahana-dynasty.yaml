@@ -16,7 +16,7 @@ region: Deccan plateau (Maharashtra, Telangana, Andhra Pradesh and parts of Madh
 location: { name: "Paithan (ancient Pratishthana)", lat: 19.476, lon: 75.386 }
 datings:
   - method: epigraphic
-    range: { earliest: -99, latest: 225, precision: decade, circa: true }
+    range: { earliest: "100 BCE", latest: 225, precision: decade, circa: true }
     grade: B
     label: Short chronology from Naneghat epigraphy and Nahapana synchronism
     sources:

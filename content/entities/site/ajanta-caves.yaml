@@ -16,14 +16,14 @@ region: Northern Deccan (Chhatrapati Sambhajinagar / Aurangabad District, Mahara
 location: { name: "Ajanta, Maharashtra", lat: 20.552, lon: 75.703 }
 datings:
   - method: art-historical
-    range: { earliest: -150, latest: 480, precision: decade, circa: true }
+    range: { earliest: "150 BCE", latest: 480, precision: decade, circa: true }
     grade: B
     label: Two-phase chronology with Walter M. Spink's short Vakataka chronology (c. 100 BCE and c. 462-480 CE)
     sources:
       - src.spink-2005-ajanta-end-of-golden-age
     note: Everyone agrees that Caves 9, 10, 12, 13 and 15A date to c. 100 BCE-100 CE; for the second phase, Walter Spink argues from epigraphic, architectural and stratigraphic clues that the entire Mahayana excavation program took place in a compressed nineteen-year burst (c. 462-480 CE) during the reign of the Vakataka emperor Harishena, collapsing abruptly after Harishena's death.
   - method: art-historical
-    range: { earliest: -150, latest: 550, precision: century, circa: true }
+    range: { earliest: "150 BCE", latest: 550, precision: century, circa: true }
     grade: C
     label: Extended second-phase chronology (fifth to mid-sixth century CE)
     sources:

@@ -23,7 +23,7 @@ region: Swat, Dir, Buner, and Peshawar valleys (Khyber Pakhtunkhwa, northwestern
 location: { name: "Swat Valley (Loebanr and Katelai, Mingora)", lat: 34.77, lon: 72.36 }
 datings:
   - method: archaeological-radiocarbon
-    range: { earliest: -1599, latest: -499, best: -1199, precision: century, circa: true }
+    range: { earliest: "1600 BCE", latest: "500 BCE", best: "1200 BCE", precision: century, circa: true }
     grade: A
     label: Radiocarbon and ancient DNA series from Swat protohistoric cemeteries (Narasimhan et al. 2019)
     sources:
