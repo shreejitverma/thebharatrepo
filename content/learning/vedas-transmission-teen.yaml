@@ -1,0 +1,147 @@
+id: learn.vedas-transmission-teen
+title: "The Vedas: how were they kept, and how old are they?"
+level: teen
+audience: Ages 13 to 17, in class or at home
+summary: >-
+  The Vedas were passed down by memory for many centuries, using recitation methods so exact that a single
+  wrong syllable would be noticed. This path looks at how the texts were kept, how historians estimate
+  their age from language and outside records, and how the traditional reckoning differs, with each shown
+  for what it is.
+focus: { earliest: "1500 BCE", latest: "400 BCE", precision: century, circa: true }
+goals:
+  - Explain how recitation patterns protected the Vedas from change.
+  - Describe how the four Vedas and the Upanishads relate to one another.
+  - Explain why historians date the Rigveda with a wide range and grade C.
+  - Tell the difference between a traditional reckoning and a date inferred from evidence.
+steps:
+  - entity: text.rigveda
+    title: The oldest collection
+    note: >-
+      The Rigveda has 1,028 hymns in ten books. Look at the different datings listed: one from linguistics,
+      one from an outside record, one from a minority reconstruction, and one from tradition. Notice that
+      each comes with its own grade.
+  - entity: tradition.vedic-oral-transmission
+    title: Memory with a checksum
+    note: >-
+      Pupils learned each verse in several patterns, word by word and then in braided forward-and-backward
+      orders. Think about why a mistake in one pattern would show up when it is compared with the others.
+  - entity: tradition.vedic-chanting
+    title: Sound, pitch and gesture
+    note: >-
+      Vedic chanting keeps three pitch accents and exact syllable lengths, often with hand gestures. UNESCO
+      recognised the tradition in 2003. Notice how pitch adds one more check on the text.
+  - entity: text.samaveda
+    title: The Veda of songs
+    note: >-
+      Almost all the Samaveda's verses come from the Rigveda, set to melodies for singing priests. Ask what
+      that borrowing tells us about which collection came first.
+  - entity: concept.vedic-sanskrit
+    title: A language with layers
+    note: >-
+      Vedic Sanskrit changes from the Rigveda to the later prose texts. Look at how linguists use these
+      layers to put the texts in order, even when they cannot give exact years.
+  - entity: event.mitanni-treaty
+    title: Vedic gods in a Hittite treaty
+    note: >-
+      A treaty of about 1380 BCE from the Hittite capital names Mitra, Varuna, Indra and the Nasatyas. Think
+      about what this outside record proves, and what it does not tell us about the Rigveda's own date.
+  - entity: text.upanishads
+    title: The philosophical end of the Veda
+    note: >-
+      The Upanishads turn from ritual to questions about Brahman, the self, karma and rebirth. Notice that
+      scholars place the oldest of them before the rise of Buddhism, using language and content.
+  - article: philosophy/the-vedas
+    title: Going further, the Vedas
+    note: >-
+      Read the full article to see how the texts were kept, the evidence for their dating, and the views on
+      which scholars and tradition differ.
+quiz:
+  - id: patterns
+    question: Why did Vedic students learn each verse in several different recitation patterns?
+    choices:
+      - text: Because comparing the patterns makes any changed word or sound easy to spot
+        correct: true
+        explanation: >-
+          Patterns such as the jatapatha and ghanapatha repeat neighbouring words forwards and backwards, so
+          the same words are checked in many combinations.
+      - text: Because each pattern was a different hymn
+        explanation: >-
+          The patterns rearrange the words of the same verse; they do not add new hymns.
+      - text: Because the hymns were too long to recite in one day
+        explanation: >-
+          The patterns make recitation longer, not shorter; their purpose is accuracy.
+    sources:
+      - src.unesco-2003-tradition-vedic-chanting
+      - src.flood-2003-blackwell-companion-hinduism
+  - id: samaveda
+    question: What does the fact that most Samaveda verses come from the Rigveda suggest?
+    choices:
+      - text: That the Rigveda was copied from the Samaveda
+        explanation: >-
+          The Samaveda draws mainly on Rigveda Mandalas 8 and 9 and adds melodies; the borrowing runs from the
+          Rigveda to the Samaveda.
+      - text: That the Samaveda was compiled after the Rigveda, by setting existing verses to melodies
+        correct: true
+        explanation: >-
+          All but about 75 of its roughly 1,875 verses are taken from the Rigveda, so the Samaveda
+          presupposes the completed Rigveda collection.
+      - text: That the two are the same book with different names
+        explanation: >-
+          They are different collections with different purposes: the Samaveda is a songbook for the singing
+          priests of the Soma ritual.
+    sources:
+      - src.gonda-1975-vedic-literature
+      - src.singh-2008-ancient-early-medieval-india
+  - id: mitanni
+    question: What does the treaty of about 1380 BCE between the Hittite king and Mitanni show?
+    choices:
+      - text: That the Rigveda was written on clay tablets
+        explanation: >-
+          The treaty is a Hittite document that mentions the gods; the Rigveda was passed down orally.
+      - text: The exact year the Rigveda was finished
+        explanation: >-
+          It helps place the vocabulary in time but gives no year for the Rigveda itself.
+      - text: That Vedic god-names were already in use in the Near East by then
+        correct: true
+        explanation: >-
+          The treaty calls on Mitra, Varuna, Indra and the Nasatyas as witnesses, giving an outside reference
+          point for early Indo-Aryan religion.
+    sources:
+      - src.thieme-1960-aryan-gods-mitanni-treaties
+      - src.beckman-1999-hittite-diplomatic-texts
+  - id: grades
+    question: The Rigveda's mainstream dating is graded C, and its traditional reckoning is graded D. What does that difference mean?
+    choices:
+      - text: Grade C is a reasoned scholarly estimate that is still debated; grade D marks a traditional reckoning, shown in the Tradition lens.
+        correct: true
+        explanation: >-
+          The grades say what kind of evidence stands behind each date. Tradition is presented faithfully as
+          tradition, and scholarship as scholarship.
+      - text: Grade C means the date has been proved by an inscription.
+        explanation: >-
+          A date fixed by an inscription would be grade A. No inscription carries a Vedic text.
+      - text: Grade D means the date was made up by modern historians.
+        explanation: >-
+          The traditional reckoning comes from Puranic and sampradaya chronology, not from modern historians.
+    sources:
+      - src.jamison-brereton-2014-rigveda
+      - src.flood-2003-blackwell-companion-hinduism
+  - id: upanishads
+    question: Which questions are at the centre of the Upanishads?
+    choices:
+      - text: Rules for building city walls and drains
+        explanation: >-
+          The Upanishads are philosophical texts; they are not building manuals.
+      - text: The histories of the Maurya emperors
+        explanation: >-
+          The oldest Upanishads are placed before the rise of Buddhism, earlier than the Mauryas.
+      - text: The nature of Brahman and the self, karma, rebirth and liberation
+        correct: true
+        explanation: >-
+          The Upanishads move Vedic inquiry from the details of sacrifice to philosophical dialogue on
+          ultimate reality and the self.
+    sources:
+      - src.olivelle-1998-early-upanisads
+      - src.flood-2003-blackwell-companion-hinduism
+tags: [vedas, oral-tradition, dating]
+review: { status: draft, author: "claude-opus-5-5" }

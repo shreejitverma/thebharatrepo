@@ -1,0 +1,180 @@
+id: learn.vedas-transmission-adult
+title: "The Vedas: texts, transmission and dating"
+level: adult
+audience: Adult readers, for self-study or a seminar
+summary: >-
+  The Vedas were composed and handed down by mouth, and no inscription or excavated document carries a
+  Vedic text, so every date for them is an inference. This path follows the four collections and their
+  later layers, the recitation techniques that kept them stable, and the evidence behind each dating,
+  setting the scholarly estimates and the traditional reckoning side by side without merging them.
+focus: { earliest: "1500 BCE", latest: "400 BCE", precision: century, circa: true }
+goals:
+  - Describe the layers of Vedic literature, from the Rigveda's family books to the early Upanishads.
+  - Explain how the patha recitation modes guard the text against change.
+  - Explain the linguistic, material and external evidence behind the mainstream dating, and why it is graded C.
+  - Distinguish the traditional reckoning of the Vedas, shown in the Tradition lens, from scholarly dating.
+steps:
+  - entity: text.rigveda
+    title: The Rigveda and its datings
+    note: >-
+      Start with the 1,028 hymns in ten mandalas and the family books, Mandalas 2 to 7, which form the
+      oldest core. Then read the datings side by side: a mainstream linguistic estimate graded C, an
+      Out-of-India reconstruction graded E, and the traditional reckoning graded D in the Tradition lens.
+  - entity: tradition.vedic-oral-transmission
+    title: Keeping a text without writing
+    note: >-
+      Look at how the word-by-word padapatha and the interlocking krama, jata and ghana patterns re-weave
+      each verse in fixed orders. Notice why this makes a slip easy to detect, and why a stable text still
+      cannot tell us how old it is.
+  - entity: text.vedangas
+    title: Sciences built to protect the Veda
+    note: >-
+      The six Vedangas, phonetics, ritual, grammar, etymology, metre and astronomy, grew up to keep the texts
+      exact and the rituals on time. Notice that their sutra literature is itself dated late in the Vedic
+      period.
+  - entity: concept.vedic-sanskrit
+    title: A language that changes in layers
+    note: >-
+      Linguists see five strata, from Rigvedic verse through mantra language and Samhita prose to the
+      Brahmanas and the Sutras. Notice how this relative order, and the dialect shift from the Punjab towards
+      the eastern Ganga plain, is the backbone of the mainstream chronology.
+  - entity: text.yajurveda
+    title: Prose and the first iron
+    note: >-
+      The Yajurveda contains the earliest Sanskrit prose and names a dark metal, shyama ayas, usually taken
+      as iron. Ask why a word for iron in a later text, and its absence from the Rigveda, helps order the
+      layers in time.
+  - entity: text.upanishads
+    title: The latest layer
+    note: >-
+      Patrick Olivelle places the oldest prose Upanishads, the Brihadaranyaka and Chandogya, before the rise
+      of Buddhism. Notice that this too is a relative date, built from language and content rather than from
+      a dated record.
+  - entity: event.mitanni-treaty
+    title: An outside anchor
+    note: >-
+      A Hittite treaty of about 1380 BCE, dated within Near Eastern chronology, calls Mitra, Varuna, Indra
+      and the Nasatyas to witness. Consider what this proves about Indo-Aryan religious vocabulary, and what
+      it leaves open about the Rigveda itself.
+  - entity: concept.indo-aryan-migration
+    title: Where the dating debate meets the origins debate
+    note: >-
+      The date of the Rigveda is tied to the question of how Indo-Aryan speech reached South Asia. Compare
+      the linguistic and ancient DNA models with the indigenist position, and note the grade each one is
+      given and why.
+  - article: philosophy/the-vedas
+    title: Going further, the Vedas
+    note: >-
+      Read the full article for how the texts were kept, how they are dated and where scholars disagree,
+      including the traditional view that the Vedas are eternal and not composed by any person.
+quiz:
+  - id: recitation
+    question: How did Vedic reciters guard the texts against changes over many centuries?
+    choices:
+      - text: By writing the hymns down in the Brahmi script during the Rigvedic period
+        explanation: >-
+          Brahmi is first attested in Ashoka's inscriptions of the 3rd century BCE, centuries after the
+          mainstream date for the Rigveda, and Vedic learning was passed on by ear from teacher to pupil.
+      - text: By carving each hymn on a temple wall so it could be checked
+        explanation: >-
+          No inscription carries a Vedic text from the Vedic period; the safeguard was memory and recitation.
+      - text: By learning set recitation patterns, such as the padapatha and the jata and ghana modes, that repeat the words of each verse in fixed orders
+        correct: true
+        explanation: >-
+          Because each pattern recombines the same words forwards and backwards, a changed word or sound
+          breaks the pattern and is noticed, which is why the method is often compared to a checksum.
+    sources:
+      - src.unesco-2003-tradition-vedic-chanting
+      - src.flood-2003-blackwell-companion-hinduism
+      - src.staal-2008-discovering-the-vedas
+  - id: mitanni
+    question: What does the Hittite-Mitanni treaty of about 1380 BCE show?
+    choices:
+      - text: That the Rigveda was composed in northern Syria
+        explanation: >-
+          The treaty shows contact with Indo-Aryan religious terms in the Mitanni kingdom; the geography of the
+          Rigveda itself is the northwest of South Asia.
+      - text: That the Indo-Aryan divine names Mitra, Varuna, Indra and the Nasatyas were in use in the Near East by that time
+        correct: true
+        explanation: >-
+          The treaty is dated by the reign of Suppiluliuma I of Hatti, and Paul Thieme showed that the forms of
+          the names are specifically Indo-Aryan. It dates the vocabulary, not any particular hymn.
+      - text: The exact year in which the Rigveda was completed
+        explanation: >-
+          The treaty gives an outside reference point for early Indo-Aryan religion, but no year for the
+          composition of the Rigveda.
+    sources:
+      - src.thieme-1960-aryan-gods-mitanni-treaties
+      - src.beckman-1999-hittite-diplomatic-texts
+  - id: layers
+    question: What evidence leads linguists to place the Yajurveda after the Rigveda?
+    choices:
+      - text: Its language belongs to a later stratum of Vedic Sanskrit, and it mentions a dark metal usually taken as iron, which the Rigveda does not clearly mention.
+        correct: true
+        explanation: >-
+          Relative chronology rests on such internal evidence: the Yajurveda's prose and grammar follow the
+          Rigvedic layer, and shyama ayas fits the beginning of the Iron Age in north India.
+      - text: A dated inscription records when it was compiled.
+        explanation: >-
+          No inscription records the compilation of any Vedic text; all Vedic dates are inferred.
+      - text: It names the Maurya emperors.
+        explanation: >-
+          The Vedic Samhitas are far older than the Mauryas and do not mention them.
+    sources:
+      - src.witzel-1997-early-sanskritization-kuru
+      - src.gonda-1975-vedic-literature
+  - id: upanishads
+    question: How do scholars such as Patrick Olivelle date the oldest Upanishads?
+    choices:
+      - text: By dates written in the colophons of the earliest manuscripts
+        explanation: >-
+          The Upanishads were transmitted orally; manuscripts are much later copies and do not date the
+          composition.
+      - text: By their language and content, which place the Brihadaranyaka and Chandogya in a prose layer earlier than the rise of Buddhism
+        correct: true
+        explanation: >-
+          The result is a relative date, about the 7th to 6th centuries BCE, consistent with the Upanishads
+          following the Brahmanas and preceding Buddhist literature.
+      - text: By radiocarbon dating of the original palm leaves
+        explanation: >-
+          No original written copy from the time of composition survives to be tested.
+    sources:
+      - src.olivelle-1998-early-upanisads
+  - id: tradition-lens
+    question: Why is the traditional date of about 3102 BCE for Vyasa's arrangement of the Vedas shown in the Tradition lens with grade D?
+    choices:
+      - text: Because radiocarbon dating of Vedic manuscripts has shown it to be too early
+        explanation: >-
+          No such test exists. The grade describes the kind of reckoning, not the result of a laboratory test.
+      - text: Because it comes from Greek historians
+        explanation: >-
+          The date comes from Indian traditional chronology, not from Greek sources.
+      - text: It is a reckoning from Puranic and sampradaya chronology, presented faithfully as tradition and kept separate from dates inferred from evidence.
+        correct: true
+        explanation: >-
+          Grade D marks traditional reckoning. It records what the tradition holds, that the Vedas are eternal
+          and were arranged by Vyasa at the start of Kali Yuga, without presenting it as a dated historical
+          event.
+    sources:
+      - src.flood-2003-blackwell-companion-hinduism
+      - src.bryant-2001-quest-origins-vedic-culture
+  - id: mainstream-basis
+    question: What is the basis of the mainstream estimate that the Rigveda dates to roughly 1500 to 1000 BCE?
+    choices:
+      - text: Converging indirect evidence, including its closeness to Avestan, the internal layering of the corpus, the absence of iron, and the Mitanni treaty
+        correct: true
+        explanation: >-
+          No single line fixes a year, which is why the estimate is wide and graded C, a reasoned estimate
+          that is still debated.
+      - text: A copy of the Rigveda found in a dated archaeological layer
+        explanation: >-
+          No excavated document carries a Vedic text; the dating is entirely inferential.
+      - text: An astronomical statement in the Rigveda that fixes the year exactly
+        explanation: >-
+          Astronomical datings of Vedic and epic texts have been proposed, but none has wide acceptance or
+          fixes an exact year.
+    sources:
+      - src.witzel-1997-early-sanskritization-kuru
+      - src.jamison-brereton-2014-rigveda
+tags: [vedas, oral-tradition, dating, evidence]
+review: { status: draft, author: "claude-opus-5-5" }

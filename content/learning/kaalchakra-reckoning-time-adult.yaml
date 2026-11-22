@@ -1,0 +1,181 @@
+id: learn.kaalchakra-reckoning-time-adult
+title: "Kaalchakra: how Indian traditions reckon time, and how historians date the past"
+level: adult
+audience: Adult readers, for self-study or a seminar
+summary: >-
+  Indian traditions measure time on a vast scale, from the blink of an eye to the kalpa of 4.32 billion
+  years, while historians date the past with radiocarbon, inscriptions and synchronisms. This path sets
+  the two side by side: the yugas in the Tradition lens, the Kali epoch and the historical eras, and the
+  scientific and documentary methods behind the dated timeline, with the strengths and limits of each.
+# The yuga and kalpa steps are cosmological; this span covers the historical evidence the path examines.
+focus: { earliest: "3300 BCE", latest: "1150 CE", precision: century, circa: true }
+goals:
+  - Describe the traditional ladder of time units and the 4:3:2:1 yuga scheme, and explain why they appear in the Tradition lens with grade D.
+  - Explain how the Kali epoch of 3102 BCE is first attested and why historians of astronomy regard it as computed backward.
+  - Explain how a double-dated inscription links eras, and how a synchronism ties Indian history to independently dated records.
+  - Explain what radiocarbon dating measures and why its results must be interpreted.
+steps:
+  - entity: concept.hindu-time-units
+    title: A ladder of time
+    note: >-
+      Manusmriti, the Vishnu Purana and the Surya Siddhanta set out units from the nimesha and truti up to
+      the kalpa. Notice that the small units are working measures of civil and astronomical time, while the
+      largest belong to cosmology.
+  - entity: cosmology.mahayuga
+    title: The four yugas in the Tradition lens
+    note: >-
+      A mahayuga of 4,320,000 years divides 4:3:2:1 into Satya, Treta, Dvapara and Kali, while Aryabhata
+      used four equal quarters. Read this as traditional cosmology, graded D and shown in the Tradition lens,
+      and notice that two schemes coexisted within the tradition itself.
+  - entity: event.kali-yuga-epoch
+    title: The Kali epoch, 3102 BCE
+    note: >-
+      The epoch is first stated in Aryabhata's work of 499 CE. Look at why historians of astronomy regard it
+      as computed backward: it was defined as a mean conjunction of the planets that modern calculation does
+      not find at that date.
+  - entity: concept.kali-era-in-inscriptions
+    title: An era in use, attested by inscriptions
+    note: >-
+      The Kali era first appears in an inscription at Aihole in 634 to 635 CE, dated both in Kali and in Shaka
+      years. Notice how that double date fixes the 3,179-year gap between the two epochs, and what it shows
+      about how the Bharata war was placed by then.
+  - entity: concept.shaka-era
+    title: A continuous historical era
+    note: >-
+      The Shaka era counts from 78 CE, is fixed by dated inscriptions, and became the working era of Sanskrit
+      astronomy. Compare an era whose epoch is attested by early records with one extrapolated backward long
+      after its nominal start.
+  - entity: artifact.ashoka-major-rock-edict-xiii
+    title: A synchronism with Greek kings
+    note: >-
+      Ashoka named five Hellenistic kings whose reigns are dated in Greek records. Notice why this gives a
+      grade A anchor for Indian chronology, and why the result is still a range of a few years.
+  - entity: event.mitanni-treaty
+    title: A synchronism from cuneiform
+    note: >-
+      A Hittite treaty of about 1380 BCE, dated by the reign of Suppiluliuma I, names Vedic gods. Ask what a
+      synchronism of this kind can date, the use of a vocabulary, and what it cannot, the composition of a
+      particular text.
+  - entity: tradition.harappan-civilisation
+    title: Radiocarbon and stratigraphy
+    note: >-
+      The Early, Mature and Late Harappan phases are dated by calibrated radiocarbon sequences from stratified
+      excavations. Notice that these dates come with ranges and are cross-checked against Mesopotamian
+      contexts.
+  - entity: artifact.bakhshali-manuscript
+    title: When radiocarbon needs interpreting
+    note: >-
+      Three bark samples from one manuscript gave three ranges centuries apart. Ask what a radiocarbon date
+      measures, the age of the material, and why specialists weighed it against script and layout before
+      dating the writing.
+quiz:
+  - id: kali-epoch
+    question: Why do historians of astronomy regard the Kali epoch of 3102 BCE as computed backward rather than observed?
+    choices:
+      - text: A radiocarbon date has shown that it is wrong.
+        explanation: >-
+          The epoch is an astronomical reckoning; radiocarbon dating plays no part in assessing it.
+      - text: The Aihole inscription gives a different epoch for Kali Yuga.
+        explanation: >-
+          The Aihole inscription's double date agrees with the 3102 BCE epoch; it is one of the reasons the
+          3,179-year gap to the Shaka era is known.
+      - text: It was defined as a mean conjunction of the planets that modern calculation does not find at that date, and it is first stated in a work of 499 CE.
+        correct: true
+        explanation: >-
+          Aryabhata's Aryabhatiya is the earliest known statement of the epoch, and the Calendar Reform
+          Committee and later historians found that the planets were not in such a conjunction in 3102 BCE.
+    sources:
+      - src.saha-1955-calendar-reform-committee-report
+      - src.plofker-2009-mathematics-in-india
+      - { id: src.shukla-sarma-1976-aryabhatiya, locator: "Kalakriyapada 10" }
+  - id: aihole
+    question: How does the Aihole inscription of 634 to 635 CE link two eras?
+    choices:
+      - text: It converts Vikram Samvat years into years of the Common Era.
+        explanation: >-
+          The Common Era was not used in India at the time; the inscription uses the Bharata war era and the
+          Shaka era.
+      - text: It dates itself both as 3,735 years after the Bharata war and as Shaka 556, a gap of 3,179 years that matches the gap between the Kali and Shaka epochs.
+        correct: true
+        explanation: >-
+          The double date shows that by 634 CE the Bharata war was placed at the Kali epoch, and it lets
+          historians convert between the two eras.
+      - text: It counts its years from the consecration of Ashoka.
+        explanation: >-
+          The inscription uses the Bharata war era and the Shaka era; Ashoka dated his own records by his
+          regnal years.
+    sources:
+      - { id: src.kielhorn-1900-aihole-inscription, locator: "verses 33-34" }
+      - src.salomon-1998-indian-epigraphy
+  - id: tradition-lens
+    question: Why does this site show the mahayuga of 4,320,000 years in the Tradition lens with grade D?
+    choices:
+      - text: It is a cosmological reckoning from the Puranas, Dharmashastra and Siddhantas, presented faithfully as tradition and not as a dated span of history.
+        correct: true
+        explanation: >-
+          Grade D marks traditional reckoning. It describes the kind of source, without dismissing it and
+          without placing it on the timeline of dated events.
+      - text: Geologists have measured its length.
+        explanation: >-
+          The mahayuga is defined in Sanskrit texts; it is not a geological measurement.
+      - text: It was invented by modern scholars.
+        explanation: >-
+          The scheme is set out in Manusmriti, the Vishnu Purana and the Surya Siddhanta.
+    sources:
+      - src.olivelle-2005-manus-code-of-law
+      - src.wilson-1840-vishnu-purana
+      - src.burgess-1860-surya-siddhanta
+  - id: synchronism
+    question: What makes a synchronism, such as the five Greek kings in Rock Edict XIII, strong dating evidence?
+    choices:
+      - text: It gives the date in the modern calendar.
+        explanation: >-
+          The edict gives no year in any calendar; the date comes from the reigns of the kings it names.
+      - text: It ties an Indian ruler to people whose reigns are dated independently in another historical record.
+        correct: true
+        explanation: >-
+          Because the Greek reigns are known from Greek sources, Ashoka's edict can be placed between about 261
+          and 250 BCE without relying on later Indian chronicles.
+      - text: It is confirmed by radiocarbon dating of the rock.
+        explanation: >-
+          The edict is dated by the reigns of the kings it names, not by any laboratory test.
+    sources:
+      - { id: src.hultzsch-1925-inscriptions-of-asoka, locator: "Rock Edict XIII" }
+      - src.thapar-2012-asoka-decline-mauryas
+  - id: radiocarbon-phases
+    question: How are the phases of the Harappan civilisation dated?
+    choices:
+      - text: By dates written in the Indus script
+        explanation: >-
+          The Indus script is undeciphered, so it cannot supply dates.
+      - text: By counting back with the Puranic king lists
+        explanation: >-
+          The Puranic king lists are traditional reckoning and do not mention the Harappan cities.
+      - text: By calibrated radiocarbon dates from stratified excavations, cross-checked by Harappan objects in dated Mesopotamian contexts
+        correct: true
+        explanation: >-
+          Sequences from sites such as Harappa, Mohenjo-daro and Dholavira give the Early, Mature and Late
+          phases, each as a range with a stated uncertainty.
+    sources:
+      - src.kenoyer-1998-ancient-cities-indus
+      - src.possehl-2002-indus-civilization
+      - src.wright-2010-ancient-indus
+  - id: radiocarbon-limits
+    question: What does the Bakhshali manuscript show about radiocarbon dating?
+    choices:
+      - text: A radiocarbon test dates the birch bark itself, which need not be when the text was written or copied, so the result must be weighed against other evidence.
+        correct: true
+        explanation: >-
+          Three samples gave three ranges centuries apart, while the uniform script and layout suggest a
+          single copy; specialists argue the latest range best fits the copying.
+      - text: That radiocarbon dating cannot be used on manuscripts
+        explanation: >-
+          Bark and other organic materials can be radiocarbon dated; the question is how the result relates to
+          the writing.
+      - text: That the whole manuscript must date to the 3rd century CE
+        explanation: >-
+          Only one of the three samples gave a 3rd to 4th century range; the others are centuries later.
+    sources:
+      - src.plofker-2017-bakhshali-radiocarbon
+tags: [kaalchakra, time, chronology, evidence, tradition]
+review: { status: draft, author: "claude-opus-5-5" }

@@ -1,0 +1,179 @@
+id: learn.zero-and-indian-mathematics-adult
+title: Zero, numerals and Indian mathematics
+level: adult
+audience: Adult readers, for self-study or a seminar
+summary: >-
+  Indian mathematics is better attested than its popular legends suggest, and also more modest in the
+  places where the evidence is thin. This path moves from altar geometry to Aryabhata's place value,
+  Brahmagupta's rules for zero, the disputed Bakhshali manuscript, the dated zeros at Gwalior, Bhaskara II
+  and the Kerala school, asking each time what kind of evidence dates the claim.
+focus: { earliest: "200 CE", latest: "1600 CE", precision: century, circa: true }
+goals:
+  - Distinguish a placeholder zero from zero treated as a number, and say where each is first attested.
+  - Explain why self-dated texts and dated inscriptions are stronger evidence than undated manuscripts.
+  - Explain why the 2017 radiocarbon dating of the Bakhshali manuscript did not settle its date.
+  - Describe how results attributed to Madhava are known through later Kerala authors.
+steps:
+  - entity: text.baudhayana-shulba-sutra
+    title: Geometry for fire altars
+    note: >-
+      The Baudhayana Shulba Sutra states the diagonal rule for rectangles in the course of laying out
+      Agnicayana altars. Notice that its date of about 800 to 500 BCE is a linguistic estimate graded C,
+      much less certain than the self-dated texts that follow.
+  - entity: text.aryabhatiya
+    title: A self-dated treatise of 499 CE
+    note: >-
+      Aryabhata dates his own work by his age when 3,600 years of Kali Yuga had elapsed. Look at his
+      approximation of pi, explicitly called approximate, his sine table and the kuttaka, and at how he
+      states that each place is ten times the one before.
+  - entity: text.brahmasphutasiddhanta
+    title: Zero becomes a number
+    note: >-
+      In 628 CE Brahmagupta gave rules for sums, differences and products with zero and with negative
+      quantities. Notice which of his rules later mathematics keeps and which it rejects, and why "earliest
+      surviving" is the accurate description.
+  - entity: artifact.bakhshali-manuscript
+    title: A manuscript with a disputed date
+    note: >-
+      The birch-bark Bakhshali manuscript uses a dot for zero throughout. Compare the three widely separated
+      radiocarbon ranges announced in 2017 with the palaeographic argument for a single copy of the 8th to
+      12th centuries, and ask which date matters for the history of zero.
+  - entity: artifact.gwalior-chaturbhuj-zero-inscription
+    title: Zeros carved with a date
+    note: >-
+      Two inscriptions dated Vikrama Samvat 932 and 933 write 270 and 50 with a round zero. Notice why a
+      dated inscription is firm evidence for when the symbol was in everyday use, and why it cannot say when
+      the symbol first appeared.
+  - entity: person.bhaskara-ii
+    title: Bhaskara II and the Siddhanta Shiromani
+    note: >-
+      Bhaskara II completed the Siddhanta Shiromani in 1150, including the Lilavati and Bijaganita. Look at
+      how his works were studied and commented on for centuries, and at the cautious treatment of the story
+      behind the Lilavati's title.
+  - entity: tradition.kerala-school-of-mathematics
+    title: The Kerala school
+    note: >-
+      From about the 14th to the 16th century a lineage of Kerala scholars developed series methods. Notice
+      that the results credited to Madhava survive mainly in the works of later members who name him.
+  - entity: person.nilakantha-somayaji
+    title: Nilakantha and the Tantrasangraha
+    note: >-
+      Nilakantha's Tantrasangraha, completed around 1500, is one of the works through which earlier Kerala
+      results reach us. Ask what it means for a result to be known by attribution rather than from the
+      discoverer's own text.
+  - article: science/zero-and-the-decimal-system
+    title: Going further, zero and the decimal system
+    note: >-
+      Read the full article on what was new in India and what was not, the earliest dated written zeros,
+      including the Khmer stele K-127 of 683 CE, and the Bakhshali dispute.
+quiz:
+  - id: zero-as-number
+    question: Why is Brahmagupta's Brahmasphutasiddhanta of 628 CE important in the history of zero?
+    choices:
+      - text: It is the earliest known use of any place-value system.
+        explanation: >-
+          Babylonian scribes used base-60 place value much earlier, and the Maya developed their own system
+          independently.
+      - text: It is the earliest surviving text to state rules for calculating with zero and with negative quantities.
+        correct: true
+        explanation: >-
+          Brahmagupta explains how zero behaves in sums, differences and products, treating it as a number
+          and not only as a mark for an empty place. Earlier works may be lost, so "earliest surviving" is the
+          accurate claim.
+      - text: It introduced the dot used as zero in the Bakhshali manuscript.
+        explanation: >-
+          Brahmagupta's verse treatise states rules for computing with zero; it is not the source of the
+          Bakhshali dot, and the manuscript's own date is disputed.
+    sources:
+      - src.plofker-2009-mathematics-in-india
+  - id: zero-by-zero
+    question: Which of Brahmagupta's rules for zero does later mathematics reject?
+    choices:
+      - text: That a number plus zero is that number
+        explanation: >-
+          This rule is still accepted.
+      - text: That a number multiplied by zero is zero
+        explanation: >-
+          This rule is still accepted.
+      - text: That zero divided by zero equals zero
+        correct: true
+        explanation: >-
+          Modern mathematics leaves zero divided by zero undefined, and later Indian authors such as Bhaskara
+          II discussed division by zero differently.
+    sources:
+      - src.plofker-2009-mathematics-in-india
+      - src.colebrooke-1817-algebra-brahmegupta-bhascara
+  - id: bakhshali
+    question: Why did the 2017 radiocarbon dating leave the date of the Bakhshali manuscript unsettled?
+    choices:
+      - text: Three samples gave three widely separated ranges, while the uniform script and layout point to a single copy, so specialists argue the latest range best fits the copying.
+        correct: true
+        explanation: >-
+          Plofker, Keller, Hayashi, Montelle and Wujastyk argued that the earliest dated leaf cannot date the
+          whole text, and that the copying fits the 8th to 12th century palaeographic estimate.
+      - text: Radiocarbon dating cannot be used on birch bark.
+        explanation: >-
+          Birch bark is organic and can be radiocarbon dated; the question is how the results relate to the
+          writing.
+      - text: The samples came from modern repairs.
+        explanation: >-
+          The samples were small bark fragments from different folios; the dispute is about interpretation,
+          not contamination by repairs.
+    sources:
+      - src.plofker-2017-bakhshali-radiocarbon
+      - src.bodleian-2017-bakhshali-carbon-dating
+  - id: gwalior
+    question: What makes the Gwalior Chaturbhuj temple inscriptions strong evidence for the written zero?
+    choices:
+      - text: They are the earliest dated zeros anywhere in the world.
+        explanation: >-
+          The Khmer stele K-127 from Cambodia, dated Shaka 605 (683 CE), uses a dot for zero about two
+          centuries earlier.
+      - text: They were dated by radiocarbon testing of the stone.
+        explanation: >-
+          Stone inscriptions are dated by the dates they state, here in the Vikrama era, not by radiocarbon.
+      - text: They carry their own dates, Vikrama Samvat 932 and 933 (875 to 877 CE), and write numbers such as 270 and 50 with a round zero.
+        correct: true
+        explanation: >-
+          A dated inscription shows the symbol in use at a known time. It does not show when zero first
+          appeared, because a symbol must exist before it is carved.
+    sources:
+      - src.burgess-1892-epigraphia-indica-vol-1
+      - src.plofker-2009-mathematics-in-india
+  - id: madhava
+    question: Why do historians describe the infinite series of Madhava as attributed to him?
+    choices:
+      - text: He published them under another mathematician's name.
+        explanation: >-
+          There is no evidence of this; the issue is that his own texts are mostly lost.
+      - text: Most of his own writings are lost, and the results survive in later Kerala works, such as those of Nilakantha and Jyeshthadeva, that name him.
+        correct: true
+        explanation: >-
+          The attribution is credible because it comes from his own scholarly lineage, but the evidence is
+          second-hand, so the wording reflects it.
+      - text: They were first recorded in European books and later credited to him.
+        explanation: >-
+          The attributions come from Sanskrit and Malayalam works of the Kerala school itself.
+    sources:
+      - src.plofker-2009-mathematics-in-india
+      - src.ramasubramanian-2011-tantrasangraha
+  - id: shulba
+    question: What does the Baudhayana Shulba Sutra state about the diagonal of a rectangle?
+    choices:
+      - text: That the cord stretched along the diagonal produces both areas that the two sides produce separately
+        correct: true
+        explanation: >-
+          This is a general statement of the relation now called the Pythagorean theorem, given as a rule for
+          laying out altars, together with integer examples such as 3, 4, 5.
+      - text: That the diagonal is equal to the sum of the two sides
+        explanation: >-
+          The rule concerns the areas of the squares on the sides and the diagonal, not the lengths added
+          together.
+      - text: That the diagonal is used to measure the distance to the Moon
+        explanation: >-
+          The Shulba Sutras are manuals for building ritual fire altars, not works of astronomy.
+    sources:
+      - src.plofker-2009-mathematics-in-india
+      - src.seidenberg-1961-ritual-origin-geometry
+tags: [mathematics, zero, science, evidence]
+review: { status: draft, author: "claude-opus-5-5" }
