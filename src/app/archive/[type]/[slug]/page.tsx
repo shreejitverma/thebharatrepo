@@ -68,7 +68,7 @@ export default async function EntityPage({ params }: { params: Promise<{ type: s
     <div className="main-content">
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
       <nav className="breadcrumbs" aria-label="Breadcrumb">
-        <Link href="/archive">Archive</Link> / <Link href={`/archive#${e.kind}`}>{KIND_LABELS[e.kind]}</Link>
+        <Link href="/archive" prefetch={false}>Archive</Link> / <Link href={`/archive#${e.kind}`} prefetch={false}>{KIND_LABELS[e.kind]}</Link>
       </nav>
       <div className="entity-head">
         <div>
@@ -91,8 +91,10 @@ export default async function EntityPage({ params }: { params: Promise<{ type: s
         </div>
         {img && e.image ? (
           <figure>
+            {/* Anonymous CORS keeps Wikimedia from reading or setting third-party cookies. Lazy, because React turns an eager image
+                into a preload hint in this page's RSC payload, and every prefetched link to this entity would then download it. */}
             {/* eslint-disable-next-line @next/next/no-img-element */}
-            <img src={img.thumb} alt={e.image.alt} width={img.width} height={img.height} decoding="async" fetchPriority="high" />
+            <img src={img.thumb} alt={e.image.alt} width={img.width} height={img.height} loading="lazy" decoding="async" crossOrigin="anonymous" />
             <figcaption>
               <a href={img.pageUrl} rel="noopener noreferrer" target="_blank">Wikimedia Commons</a>, {img.license}
               {img.artist ? `, ${img.artist}` : ''}

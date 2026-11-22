@@ -44,7 +44,9 @@ export default function KaalchakraStrip({ items, dating, selfId, focusHref }: { 
       <div className="kc-strip__head">
         <strong>Place in the Kaalchakra</strong>
         <span className="muted">{datingSummary(range, method)}</span>
-        <Link href={focusHref}>Open in the Kaalchakra</Link>
+        <Link href={focusHref} prefetch={false}>
+          Open in the Kaalchakra
+        </Link>
       </div>
       <svg viewBox={`0 0 ${W} 46`} preserveAspectRatio="none" aria-hidden="true">
         {SEGMENTS.map((s, i) => {
