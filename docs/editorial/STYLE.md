@@ -213,6 +213,23 @@ Never dismiss a traditional position with mockery, and never present it as estab
 - "First", "oldest", "earliest" and "greatest" each need a citation and a qualifier ("earliest known", "among the earliest").
 - No emojis, no em dashes.
 
-## 10. Corrections
+## 10. Editorial review
+
+New entities and articles use `review.status: draft`.
+After reviewing the claims, citations, dating methods, and grades, the subject editor sets `reviewed` and records their name and the calendar date.
+When releasing the approved revision, editors may change the status to `published` and keep the sign-off details.
+Return a record to `draft` if substantive changes require a fresh sign-off.
+
+```yaml
+review:
+  status: reviewed
+  reviewer: Reviewer Name
+  lastReviewed: "2026-11-22"
+```
+
+`npm run content:review-queue` groups entities and articles awaiting human review.
+Legacy `machine-checked` records also appear in the queue.
+
+## 11. Corrections
 
 Every substantive change to an existing published claim is recorded in `content/corrections.yaml` with the date, the target, the text before and after, the reason, and sources.

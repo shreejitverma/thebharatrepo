@@ -38,9 +38,15 @@ npm run dev                     # local site at http://localhost:3000
 npm test                        # unit tests (time engine, scale, schemas, loader, citations)
 npm run typecheck
 npm run lint
+npm run content:new -- <type> <slug>
+npm run content:new-source -- <slug>
+npm run content:check -- <file...> [--write-cache]
+npm run content:review-queue    # draft entities and articles awaiting human review
 npm run content:validate        # schemas and cross-references; exit 1 on any problem
 npm run content:report          # coverage: entities, grades, kinds, sources
 npm run content:verify-sources  # resolve every DOI, ISBN, OCLC, QID and Commons file, and each URL that is a source's only identifier; exit 1 on any mismatch
+npm run data:export             # generate JSON, CSV, JSON Schema and manifest
+npm run data:verify-export      # re-import and compare the export
 npm run build                   # validate, offline verification gate, search index and open data, then next build
 npm run test:e2e                # Playwright and axe against a production build (desktop and mobile)
 ```
@@ -50,10 +56,7 @@ Every cached verification is re-checked against the current title or name, so a 
 
 ## Adding content
 
-1. Read `docs/editorial/STYLE.md`.
-2. Add sources and entities as YAML, or edit an article.
-3. Run `npm run content:validate` and `npm run content:verify-sources` until both pass.
-4. Open a pull request; a subject editor reviews before `review.status` moves past `draft`.
+Follow the [contributor guide](CONTRIBUTING.md) to scaffold, cite, check, and submit a record for editor review.
 
 Large batches are written to `staging/<batch>/` (gitignored), validated in isolation with
 `CONTENT_ROOTS=content:staging/<batch> ARTICLES_ROOT= npm run content:validate -- --scope staging/<batch>`,
@@ -69,9 +72,22 @@ The Kaalchakra axis is piecewise: logarithmic for deep time, linear for history,
 
 ## Open data
 
-Each build writes `public/data/archive.json` with every entity and source.
+Each build writes the download bundle to `public/data/` and serves it at `/data/`.
+
+- `archive.json` includes schema version 1, entities, sources, article frontmatter and inline citation metadata, and corrections.
+- `entities.csv` covers core entity fields, and `datings.csv` has one row per entity dating with a 1-based ordinal and a JSON-encoded sources field.
+- `schema.json` is generated from the archive's Zod schemas and describes the exported JSON structure.
+- `manifest.json` records the version, counts, licence, and SHA-256 checksums for the bundle files.
+
+Exported years use [astronomical year numbering](#time-model).
+The verifier runs the Zod refinements and the loader's integrity checks and compares the re-imported bundle to the current archive.
+The export's `generatedAt` is the UTC committer timestamp of the most recent first-parent commit that changed `content/` or `_content/`.
+Use a checkout with enough history to reach that commit and its parent.
+The bundle is generated locally and should be kept out of pull requests.
 
 ## Licence
 
 Code: MIT (see `LICENSE`).
-Content: CC BY-SA 4.0.
+Archive content and open data are licensed under [Creative Commons Attribution-ShareAlike 4.0 International](https://creativecommons.org/licenses/by-sa/4.0/).
+When redistributing, attribute The Bharat Repo, link to the licence, and indicate changes.
+Wikimedia images retain their individual licences and credits.

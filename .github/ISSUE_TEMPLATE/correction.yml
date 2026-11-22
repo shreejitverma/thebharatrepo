@@ -1,0 +1,30 @@
+name: Request a correction
+description: Report a factual, citation, or dating problem with supporting sources.
+title: "[Correction] "
+body:
+  - type: input
+    id: target
+    attributes:
+      label: Affected page or entity ID
+    validations:
+      required: true
+  - type: textarea
+    id: current
+    attributes:
+      label: Current wording or date
+      description: Quote the passage or identify the citation or dating that needs correction.
+    validations:
+      required: true
+  - type: textarea
+    id: proposed
+    attributes:
+      label: Proposed correction and reason
+    validations:
+      required: true
+  - type: textarea
+    id: sources
+    attributes:
+      label: Sources
+      description: Provide source links or identifiers and locators when known.
+    validations:
+      required: true

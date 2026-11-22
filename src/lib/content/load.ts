@@ -15,6 +15,7 @@ import fs from 'node:fs';
 import path from 'node:path';
 import matter from 'gray-matter';
 import YAML from 'yaml';
+import { unfinishedFields } from './scaffold-markers';
 import { sameTitle } from './similarity';
 import type { z } from 'zod';
 import {
@@ -30,14 +31,17 @@ import {
   type Source,
 } from './schema';
 
-export interface Article extends ArticleFrontmatter {
+export interface ArticleMetadata extends ArticleFrontmatter {
   slug: string;
   /** Repo-relative path of the source file. */
   file: string;
   category: (typeof CATEGORIES)[number];
-  body: string;
   /** Source ids cited inline in the body, in first-use order. */
   inlineCitations: { id: string; locator?: string }[];
+}
+
+export interface Article extends ArticleMetadata {
+  body: string;
 }
 
 export interface ContentProblem {
@@ -45,13 +49,25 @@ export interface ContentProblem {
   message: string;
 }
 
-export interface ContentGraph {
+export interface ContentRecord<T> {
+  file: string;
+  data: T;
+}
+
+export interface ContentRecords<T extends ArticleMetadata = Article> {
+  entities: ContentRecord<Entity>[];
+  sources: ContentRecord<Source>[];
+  articles: T[];
+  corrections: ContentRecord<Correction>[];
+}
+
+export interface ContentGraph<T extends ArticleMetadata = Article> {
   entities: Map<string, Entity>;
   sources: Map<string, Source>;
-  articles: Article[];
+  articles: T[];
   corrections: Correction[];
   /** entity id -> articles about it */
-  articlesByEntity: Map<string, Article[]>;
+  articlesByEntity: Map<string, T[]>;
   /** entity id -> entities pointing at it */
   inbound: Map<string, { from: string; kind: string }[]>;
   errors: ContentProblem[];
@@ -179,14 +195,12 @@ function identifierKeys(s: Source): string[] {
   return [s.doi && `doi:${s.doi.toLowerCase()}`, s.isbn && `isbn:${s.isbn}`, s.oclc && `oclc:${s.oclc}`, s.url && `url:${s.url.replace(/\/+$/, '')}`].filter((k): k is string => Boolean(k));
 }
 
-let strays: string[] = [];
-
-function walk(dir: string, ext: string): string[] {
+function walk(dir: string, ext: string, strays: string[]): string[] {
   if (!fs.existsSync(dir)) return [];
   const out: string[] = [];
   for (const entry of fs.readdirSync(dir, { withFileTypes: true })) {
     const p = path.join(dir, entry.name);
-    if (entry.isDirectory()) out.push(...walk(p, ext));
+    if (entry.isDirectory()) out.push(...walk(p, ext, strays));
     else if (entry.isFile() && entry.name.endsWith(ext)) out.push(p);
     else if (!entry.name.startsWith('.')) strays.push(p);
   }
@@ -210,65 +224,31 @@ function readYaml(file: string, errors: ContentProblem[]): unknown {
   }
 }
 
-export function loadContentUncached(): ContentGraph {
+export function readContentRecords(
+  roots = contentRoots(),
+  artDir = articlesDir(),
+): { records: ContentRecords; errors: ContentProblem[] } {
   const errors: ContentProblem[] = [];
-  const entities = new Map<string, Entity>();
-  const sources = new Map<string, Source>();
-  const articles: Article[] = [];
-  let corrections: Correction[] = [];
+  const records: ContentRecords = { entities: [], sources: [], articles: [], corrections: [] };
+  const strays: string[] = [];
 
-  const roots = contentRoots();
-  const artDir = articlesDir();
-  strays = [];
-  const workIds = new Map<string, string>();
-
-  for (const file of roots.flatMap((r) => walk(path.join(r, 'sources'), '.yaml'))) {
+  for (const file of roots.flatMap((r) => walk(path.join(r, 'sources'), '.yaml', strays))) {
     const raw = readYaml(file, errors);
     if (raw === undefined) continue;
     const parsed = SourceSchema.safeParse(raw);
-    if (!parsed.success) {
-      for (const m of formatZod(parsed.error)) errors.push({ file: rel(file), message: m });
-      continue;
-    }
-    const expected = `src.${path.basename(file, '.yaml')}`;
-    if (parsed.data.id !== expected) errors.push({ file: rel(file), message: `id ${parsed.data.id} must match filename (${expected})` });
-    const prev = sources.get(parsed.data.id);
-    if (prev) {
-      // The same work cited independently by two roots (published and staging) is not an error;
-      // a different work under the same id is.
-      if (!sameWork(prev, parsed.data)) errors.push({ file: rel(file), message: `source id ${parsed.data.id} already names a different work (identifiers or title differ)` });
-      continue;
-    }
-    sources.set(parsed.data.id, parsed.data);
-    for (const key of identifierKeys(parsed.data)) {
-      const other = workIds.get(key);
-      if (other) errors.push({ file: rel(file), message: `${key} already identifies ${other}; cite one source id per work` });
-      else workIds.set(key, parsed.data.id);
-    }
+    if (parsed.success) records.sources.push({ file: rel(file), data: parsed.data });
+    else for (const message of formatZod(parsed.error)) errors.push({ file: rel(file), message });
   }
 
-  const entityFile = new Map<string, string>();
-  for (const file of roots.flatMap((r) => walk(path.join(r, 'entities'), '.yaml'))) {
+  for (const file of roots.flatMap((r) => walk(path.join(r, 'entities'), '.yaml', strays))) {
     const raw = readYaml(file, errors);
     if (raw === undefined) continue;
-    for (const m of rawNegativeYears((raw as { datings?: unknown } | null)?.datings)) errors.push({ file: rel(file), message: m });
-    const parsed = EntitySchema.safeParse(raw);
-    if (!parsed.success) {
-      for (const m of formatZod(parsed.error)) errors.push({ file: rel(file), message: m });
-      continue;
+    for (const message of rawNegativeYears((raw as { datings?: unknown } | null)?.datings)) {
+      errors.push({ file: rel(file), message });
     }
-    const e = parsed.data;
-    const text = [e.summary, e.summaries?.kids, e.summaries?.teen, ...e.claims.map((c) => c.text)].join(' ');
-    e.datings.forEach((d, i) => {
-      for (const n of bceOffByOne(d.range, `${text} ${d.label ?? ''} ${d.note ?? ''}`)) {
-        errors.push({ file: rel(file), message: `datings[${i}]: stores -${n} for "${n} BCE"; ${n} BCE is ${1 - n} (or write "${n} BCE")` });
-      }
-    });
-    const expected = `${path.basename(path.dirname(file))}.${path.basename(file, '.yaml')}`;
-    if (e.id !== expected) errors.push({ file: rel(file), message: `id ${e.id} must match path (${expected})` });
-    if (entities.has(e.id)) errors.push({ file: rel(file), message: `duplicate entity id ${e.id}` });
-    entities.set(e.id, e);
-    entityFile.set(e.id, rel(file));
+    const parsed = EntitySchema.safeParse(raw);
+    if (parsed.success) records.entities.push({ file: rel(file), data: parsed.data });
+    else for (const message of formatZod(parsed.error)) errors.push({ file: rel(file), message });
   }
 
   if (artDir && fs.existsSync(artDir)) {
@@ -280,13 +260,20 @@ export function loadContentUncached(): ContentGraph {
     }
   }
   for (const category of artDir ? CATEGORIES : []) {
-    for (const file of walk(path.join(artDir!, category), '.md')) {
+    for (const file of walk(path.join(artDir!, category), '.md', strays)) {
       const relFile = rel(file);
       if (path.dirname(file) !== path.join(artDir!, category)) {
         errors.push({ file: relFile, message: 'articles must sit directly in their category directory' });
         continue;
       }
-      const { data, content } = matter(fs.readFileSync(file, 'utf8'));
+      let article: ReturnType<typeof matter>;
+      try {
+        article = matter(fs.readFileSync(file, 'utf8'));
+      } catch (error) {
+        errors.push({ file: relFile, message: `cannot read Markdown frontmatter: ${(error as Error).message}` });
+        continue;
+      }
+      const { data, content } = article;
       for (const m of rawNegativeYears(data.datings)) errors.push({ file: relFile, message: m });
       const parsed = ArticleFrontmatterSchema.safeParse(data);
       if (!parsed.success) {
@@ -297,17 +284,10 @@ export function loadContentUncached(): ContentGraph {
       const visible = content.replace(/<!--[\s\S]*?-->|```[\s\S]*?```|`[^`\n]*`/g, '');
       for (const m of findMalformedCitations(visible)) errors.push({ file: relFile, message: `malformed citation "${m}"; use [@src.id] or [@src.id, locator]` });
       const inlineCitations = extractCitations(visible);
-      if (inlineCitations.length === 0) errors.push({ file: relFile, message: 'article body cites no sources; use [@src.id, locator]' });
-      parsed.data.datings.forEach((d, i) => {
-        for (const n of bceOffByOne(d.range, `${parsed.data.summary} ${d.label ?? ''} ${d.note ?? ''}`)) {
-          errors.push({ file: relFile, message: `datings[${i}]: stores -${n} for "${n} BCE"; ${n} BCE is ${1 - n} (or write "${n} BCE")` });
-        }
-      });
-      articles.push({ ...parsed.data, slug: path.basename(file, '.md'), file: relFile, category, body: content, inlineCitations });
+      records.articles.push({ ...parsed.data, slug: path.basename(file, '.md'), file: relFile, category, body: content, inlineCitations });
     }
   }
 
-  const correctionFiles: string[] = [];
   for (const correctionsFile of roots.map((r) => path.join(r, 'corrections.yaml')).filter((f) => fs.existsSync(f))) {
     const raw = readYaml(correctionsFile, errors);
     if (raw === undefined || raw === null) continue;
@@ -317,16 +297,82 @@ export function loadContentUncached(): ContentGraph {
     }
     raw.forEach((c, i) => {
       const parsed = CorrectionSchema.safeParse(c);
-      if (parsed.success) {
-        corrections.push(parsed.data);
-        correctionFiles.push(rel(correctionsFile));
-      }
+      if (parsed.success) records.corrections.push({ file: rel(correctionsFile), data: parsed.data });
       else for (const m of formatZod(parsed.error)) errors.push({ file: rel(correctionsFile), message: `[${i}] ${m}` });
     });
   }
-  // Check sources before sorting so each correction keeps its file.
-  const correctionSourceChecks = corrections.map((c, i) => ({ c, file: correctionFiles[i] }));
-  corrections = [...corrections].sort((a, b) => b.date.localeCompare(a.date));
+
+  for (const p of strays) errors.push({ file: rel(p), message: 'unexpected file: entities and sources must be .yaml, articles must be .md' });
+  return { records, errors };
+}
+
+/** Apply the shared integrity checks to parsed authoring files or re-imported archive records. */
+export function assembleContent<T extends ArticleMetadata>(
+  records: ContentRecords<T>,
+  errors: ContentProblem[] = [],
+  focus?: ReadonlySet<string>,
+): ContentGraph<T> {
+  const entities = new Map<string, Entity>();
+  const sources = new Map<string, Source>();
+  const entityFile = new Map<string, string>();
+  const sourceFile = new Map<string, string>();
+  const workIds = new Map<string, string>();
+  const articles = records.articles;
+  const corrections = records.corrections.map(({ data }) => data).sort((a, b) => b.date.localeCompare(a.date));
+
+  function reportConflict(file: string, otherFile: string, message: string) {
+    errors.push({ file, message });
+    if (otherFile !== file && focus?.has(otherFile)) errors.push({ file: otherFile, message: `${message} (conflicts with ${file})` });
+  }
+
+  for (const { file, data: source } of records.sources) {
+    for (const message of unfinishedFields(source)) errors.push({ file, message });
+    const expected = `src.${path.basename(file, '.yaml')}`;
+    if (source.id !== expected) errors.push({ file, message: `id ${source.id} must match filename (${expected})` });
+    const prev = sources.get(source.id);
+    if (prev) {
+      // A staging root may independently register the same work under the same id.
+      if (!sameWork(prev, source)) {
+        reportConflict(file, sourceFile.get(source.id)!, `source id ${source.id} already names a different work (identifiers or title differ)`);
+      }
+      continue;
+    }
+    sources.set(source.id, source);
+    sourceFile.set(source.id, file);
+    for (const key of identifierKeys(source)) {
+      const other = workIds.get(key);
+      if (other) reportConflict(file, sourceFile.get(other)!, `${key} already identifies ${other}; cite one source id per work`);
+      else workIds.set(key, source.id);
+    }
+  }
+
+  for (const { file, data: entity } of records.entities) {
+    for (const message of unfinishedFields(entity)) errors.push({ file, message });
+    const text = [entity.summary, entity.summaries?.kids, entity.summaries?.teen, ...entity.claims.map((c) => c.text)].join(' ');
+    checkDatingYears(file, entity.datings, text);
+    const expected = `${path.basename(path.dirname(file))}.${path.basename(file, '.yaml')}`;
+    if (entity.id !== expected) errors.push({ file, message: `id ${entity.id} must match path (${expected})` });
+    const previous = entityFile.get(entity.id);
+    if (previous) reportConflict(file, previous, `duplicate entity id ${entity.id}`);
+    entities.set(entity.id, entity);
+    entityFile.set(entity.id, file);
+  }
+
+  function checkDatingYears(file: string, datings: Entity['datings'], text: string) {
+    datings.forEach((d, i) => {
+      for (const n of bceOffByOne(d.range, `${text} ${d.label ?? ''} ${d.note ?? ''}`)) {
+        errors.push({ file, message: `datings[${i}]: stores -${n} for "${n} BCE"; ${n} BCE is ${1 - n} (or write "${n} BCE")` });
+      }
+    });
+  }
+
+  const articleFiles = new Set<string>();
+  for (const article of articles) {
+    if (articleFiles.has(article.file)) errors.push({ file: article.file, message: 'duplicate article path' });
+    articleFiles.add(article.file);
+    if (article.inlineCitations.length === 0) errors.push({ file: article.file, message: 'article body cites no sources; use [@src.id, locator]' });
+    checkDatingYears(article.file, article.datings, article.summary);
+  }
 
   // Cross-reference checks.
   const checkSource = (file: string, where: string, id: string) => {
@@ -349,7 +395,7 @@ export function loadContentUncached(): ContentGraph {
     }
   }
 
-  const articlesByEntity = new Map<string, Article[]>();
+  const articlesByEntity = new Map<string, T[]>();
   for (const a of articles) {
     const file = a.file;
     a.datings.forEach((d, i) => d.sources.forEach((s) => checkSource(file, `datings[${i}]`, citationId(s))));
@@ -362,11 +408,16 @@ export function loadContentUncached(): ContentGraph {
     }
   }
 
-  correctionSourceChecks.forEach(({ c, file }) => c.sources.forEach((s) => checkSource(file, c.target, citationId(s))));
-
-  for (const p of strays) errors.push({ file: rel(p), message: 'unexpected file: entities and sources must be .yaml, articles must be .md' });
+  for (const { file, data } of records.corrections) {
+    data.sources.forEach((s) => checkSource(file, data.target, citationId(s)));
+  }
 
   return { entities, sources, articles, corrections, articlesByEntity, inbound, errors };
+}
+
+export function loadContentUncached(): ContentGraph {
+  const { records, errors } = readContentRecords();
+  return assembleContent(records, errors);
 }
 
 let cache: ContentGraph | undefined;

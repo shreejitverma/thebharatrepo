@@ -136,14 +136,19 @@ export const LocationSchema = z.strictObject({
 
 export const ReviewSchema = z
   .strictObject({
-    status: z.enum(['draft', 'machine-checked', 'reviewed']),
+    status: z.enum(['draft', 'reviewed', 'published', 'machine-checked']),
     reviewer: z.string().nullable().default(null),
     lastReviewed: z.string().nullable().default(null),
     author: z.string().optional(),
   })
   .superRefine((r, ctx) => {
-    if (r.status === 'reviewed' && (!r.reviewer || !r.lastReviewed)) {
-      ctx.addIssue({ code: 'custom', message: 'status reviewed requires reviewer and lastReviewed' });
+    if (r.status === 'reviewed' || r.status === 'published') {
+      if (!r.reviewer?.trim()) {
+        ctx.addIssue({ code: 'custom', path: ['reviewer'], message: `status ${r.status} requires the human reviewer's name` });
+      }
+      if (!z.iso.date().safeParse(r.lastReviewed).success) {
+        ctx.addIssue({ code: 'custom', path: ['lastReviewed'], message: `status ${r.status} requires a review date in YYYY-MM-DD format` });
+      }
     }
   });
 
