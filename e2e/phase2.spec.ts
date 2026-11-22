@@ -224,6 +224,100 @@ test.describe('Map view', () => {
     await expect(page.getByLabel('Region')).toHaveValue('custom');
   });
 
+  test('markers and clusters are buttons that open from the keyboard, and focus is never lost', async ({ page, isMobile }) => {
+    test.skip(isMobile, 'keyboard access is covered on desktop');
+    await page.goto('/kaalchakra?view=map');
+    const marks = page.locator('.kc-map-svg .kc-mark');
+    await expect(marks.first()).toBeVisible();
+    const focused = () => page.evaluate(() => ({ key: (document.activeElement as HTMLElement | null)?.dataset.key ?? null, visible: document.activeElement?.matches(':focus-visible') ?? false }));
+
+    // Tab reaches the markers from the controls above the map.
+    await page.getByRole('button', { name: 'Zoom out' }).focus();
+    await page.keyboard.press('Tab');
+    await page.keyboard.press('Tab');
+    const first = await focused();
+    expect(first.key).not.toBeNull();
+    expect(first.visible).toBe(true);
+    await expect(page.locator('.kc-map-svg [role="button"]:focus .kc-map-focus')).toHaveCSS('opacity', '1');
+
+    // Enter opens a marker; focus stays on it, and the arrow keys carry focus along with the selection.
+    const marker = marks.first();
+    const id = await marker.getAttribute('data-id');
+    const label = await marker.getAttribute('aria-label');
+    await marker.focus();
+    await expect(page.locator('.kc-tooltip')).toContainText(label!.split(',')[0]);
+    await page.keyboard.press('Enter');
+    await expect(page).toHaveURL(new RegExp(`id=${id!.replace('.', '\\.')}`));
+    await expect(page.locator('.kc-panel h2')).not.toHaveText('Places in time');
+    expect((await focused()).key).toBe(id);
+    await page.keyboard.press('ArrowRight');
+    await expect.poll(async () => (await focused()).key).not.toBe(id);
+    const next = (await focused()).key;
+    await expect(page.locator(`.kc-map-svg .kc-mark[data-key="${next}"]`)).toHaveAttribute('data-active', 'true');
+
+    // Space on a cluster zooms in and hands focus to one of its members, or opens its list of members.
+    const cluster = page.locator('.kc-map-svg .kc-map-cluster').first();
+    await cluster.focus();
+    await page.keyboard.press(' ');
+    const open = page.locator('.kc-map-open');
+    await expect.poll(async () => (await open.count()) > 0 || /region=/.test(page.url())).toBe(true);
+    if (await open.count()) await expect(open.locator('li button').first()).toBeFocused();
+    else await expect.poll(async () => (await focused()).key).not.toBeNull();
+  });
+
+  test('on a touch screen one finger scrolls the page and two fingers move the map', async ({ page, isMobile, context }) => {
+    test.skip(!isMobile, 'touch gestures are covered on the mobile project');
+    await page.goto('/kaalchakra?view=map');
+    const svg = page.locator('.kc-map-svg');
+    await expect(svg).toBeVisible();
+    await expect(page.locator('.kc-map-hint__touch')).toBeVisible();
+    await svg.evaluate((el) => el.scrollIntoView({ block: 'center' }));
+    const cdp = await context.newCDPSession(page);
+    const touch = (type: 'touchStart' | 'touchMove' | 'touchEnd', points: [number, number][]) =>
+      cdp.send('Input.dispatchTouchEvent', { type, touchPoints: points.map(([x, y], id) => ({ x, y, id })) });
+    const centre = async () => {
+      const b = (await svg.boundingBox())!;
+      return [b.x + b.width / 2, b.y + b.height / 2] as const;
+    };
+    const drag = async (from: [number, number][], dx: number, dy: number) => {
+      await touch('touchStart', from);
+      for (let i = 1; i <= 10; i++) {
+        await touch('touchMove', from.map(([x, y]) => [x + (dx * i) / 10, y + (dy * i) / 10]));
+        await page.waitForTimeout(16);
+      }
+      await touch('touchEnd', []);
+    };
+
+    // One finger upward scrolls the page and leaves the map where it was.
+    const scrolled = await page.evaluate(() => window.scrollY);
+    let [x, y] = await centre();
+    await drag([[x, y]], 0, -200);
+    await expect.poll(() => page.evaluate(() => window.scrollY)).toBeGreaterThan(scrolled + 50);
+    await page.waitForTimeout(400);
+    expect(page.url()).not.toMatch(/region=/);
+
+    // One finger sideways does not move the map either; the hint says how to.
+    [x, y] = await centre();
+    await touch('touchStart', [[x, y]]);
+    for (let i = 1; i <= 8; i++) await touch('touchMove', [[x - i * 20, y]]);
+    await expect(page.locator('.kc-map-gesture')).toHaveAttribute('data-show', 'true');
+    await touch('touchEnd', []);
+    await page.waitForTimeout(400);
+    expect(page.url()).not.toMatch(/region=/);
+
+    // Two fingers pan the map without scrolling the page, and spreading them zooms in.
+    const still = await page.evaluate(() => window.scrollY);
+    [x, y] = await centre();
+    await drag([[x - 40, y], [x + 40, y]], 60, 60);
+    await expect(page).toHaveURL(/region=/);
+    expect(await page.evaluate(() => window.scrollY)).toBe(still);
+    const panned = new URL(page.url()).searchParams.get('region')!;
+    await touch('touchStart', [[x - 30, y], [x + 30, y]]);
+    for (let i = 1; i <= 8; i++) await touch('touchMove', [[x - 30 - i * 10, y], [x + 30 + i * 10, y]]);
+    await touch('touchEnd', []);
+    await expect.poll(() => Number(new URL(page.url()).searchParams.get('region')!.split(',')[2])).toBeLessThan(Number(panned.split(',')[2]));
+  });
+
   for (const scheme of ['light', 'dark'] as const) {
     test(`is accessible and fits the viewport in the ${scheme} theme with reduced motion`, async ({ page }) => {
       await page.emulateMedia({ colorScheme: scheme, reducedMotion: 'reduce' });
