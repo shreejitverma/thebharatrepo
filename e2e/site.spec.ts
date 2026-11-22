@@ -309,9 +309,15 @@ test.describe('Kaalchakra', () => {
       await page.getByRole('button', { name: 'Zoom in' }).click();
       await page.getByRole('button', { name: 'Zoom in' }).click();
       await expect(range).not.toHaveText(whole);
-      const zoomed = await settledUrl(page, /win=/);
-      const [a, b] = zoomed.searchParams.get('win')!.split(',').map(Number);
-      expect(b - a).toBeCloseTo(0.25, 2);
+      // The window is written after a debounce, so the URL may show one zoom before it shows both.
+      await expect
+        .poll(() => {
+          const win = new URL(page.url()).searchParams.get('win');
+          if (!win) return null;
+          const [a, b] = win.split(',').map(Number);
+          return b - a;
+        })
+        .toBeCloseTo(0.25, 2);
       await page.getByRole('button', { name: 'Zoom out' }).click();
       await page.getByRole('button', { name: 'Zoom out' }).click();
       await expect(range).toHaveText(whole);
