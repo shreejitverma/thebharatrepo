@@ -45,19 +45,25 @@ export function scaffoldContent(
     ? path.join('content', 'entities', type!, `${slug}.yaml`)
     : path.join('content', 'sources', `${slug}.yaml`);
   const fullPath = path.join(root, file);
-  const document = mode === 'entity' ? entityScaffold(type as EntityType, slug) : sourceScaffold(slug);
+  const scaffold = (mode === 'entity' ? entityScaffold(type as EntityType, slug) : sourceScaffold(slug)).toString();
+  const next = `help: Fill the scaffold fields, then run npm run content:check -- ${file}`;
   try {
     fs.mkdirSync(path.dirname(fullPath), { recursive: true });
-    fs.writeFileSync(fullPath, document.toString(), { flag: 'wx' });
+    fs.writeFileSync(fullPath, scaffold, { flag: 'wx' });
   } catch (error) {
     const errno = error as NodeJS.ErrnoException;
+    // Rerunning the same command is a no-op while the scaffold is untouched; edited work is never replaced.
+    if (errno.code === 'EEXIST' && fs.readFileSync(fullPath, 'utf8') === scaffold) {
+      console.log(`unchanged: ${file} already holds this scaffold\n${next}`);
+      return 0;
+    }
     const message = errno.code === 'EEXIST'
       ? `${file} already exists. Edit that file or choose a new slug.`
       : `Could not write ${file}: ${errno.message}`;
     console.log(`error: ${JSON.stringify(message)}`);
     return 1;
   }
-  console.log(`created: ${file}\nhelp: Fill the scaffold fields, then run npm run content:check -- ${file}`);
+  console.log(`created: ${file}\n${next}`);
   return 0;
 }
 

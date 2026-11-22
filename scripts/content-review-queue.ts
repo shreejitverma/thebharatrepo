@@ -9,8 +9,9 @@ if (args.length === 1 && args[0] === '--help') {
   process.exitCode = 2;
 } else {
   const { records, errors } = readContentRecords();
-  if (assembleContent(records, errors).errors.length) {
-    console.log('error: Fix validation problems before using the review queue. Run npm run content:validate.');
+  const problems = assembleContent(records, errors).errors.length;
+  if (problems) {
+    console.log(`error: Fix ${problems} validation problem(s) before using the review queue. Run npm run content:validate.`);
     process.exitCode = 1;
   } else {
     console.log(formatReviewQueue(records));

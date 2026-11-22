@@ -53,13 +53,17 @@ describe('content scaffolds', () => {
     ]);
   });
 
-  it('rejects bad inputs without creating files or replacing an existing record', () => {
+  it('rejects bad inputs without creating files, is a no-op on rerun, and never replaces an edited record', () => {
     for (const args of [[], ['wrong-type', 'example'], ['event', '../example'], ['event', 'a--b'], ['event', 'example', '--force']]) {
       expect(scaffoldContent('entity', args, root)).toBe(2);
     }
     expect(fs.readdirSync(root)).toEqual([]);
     expect(scaffoldContent('source', ['existing'], root)).toBe(0);
     const file = path.join(root, 'content/sources/existing.yaml');
+    const scaffold = fs.readFileSync(file, 'utf8');
+    expect(scaffoldContent('source', ['existing'], root)).toBe(0);
+    expect(fs.readFileSync(file, 'utf8')).toBe(scaffold);
+    expect(console.log).toHaveBeenLastCalledWith(expect.stringContaining('unchanged: content/sources/existing.yaml'));
     fs.writeFileSync(file, '# existing content\n');
     expect(scaffoldContent('source', ['existing'], root)).toBe(1);
     expect(fs.readFileSync(file, 'utf8')).toBe('# existing content\n');
