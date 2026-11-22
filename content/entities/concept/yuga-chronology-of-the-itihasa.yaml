@@ -1,0 +1,158 @@
+id: concept.yuga-chronology-of-the-itihasa
+type: concept
+kind: cosmology
+names:
+  en: Yuga Chronology of the Itihasa
+  iast: Itihāsa-yuga-kālagaṇanā
+  native: इतिहास-युग-कालगणना
+summary: >-
+  This entry describes how tradition places the Ramayana and the Mahabharata within the cycle of yugas,
+  and the competing pre-modern dates for the Bharata (Kurukshetra) war: 3102 BCE at the start of Kali
+  Yuga, 2449 BCE in the school of Vriddha Garga, Varahamihira and Kalhana, and a Puranic king-list
+  interval pointing to the 2nd millennium BCE. The dating of the war is contested; these are traditional
+  reckonings, not established history.
+summaries:
+  kids: >-
+    Traditional Indian scholars did not agree on when the Mahabharata war happened. Some said 3102 BCE,
+    some 2449 BCE, and the Purana king-lists point to a time much later. Historians today mostly study when
+    the epic poems themselves were composed.
+  teen: >-
+    Pre-modern India kept at least three dates for the Bharata war: the Kali epoch of 3102 BCE (used in the
+    634 CE Aihole inscription), 2449 BCE (Varahamihira and Kalhana), and the Puranic count of about 1,000
+    to 1,500 years before the Nanda kings. Textual scholars show the yuga frame itself grew into the epics
+    over centuries.
+datings:
+  - method: traditional-siddhantic
+    range:
+      earliest: "3138 BCE"
+      latest: "3102 BCE"
+      best: "3102 BCE"
+      precision: year
+      circa: false
+    grade: D
+    label: War at the start of Kali Yuga (Aihole inscription and later reckonings)
+    sources:
+      - src.kielhorn-1900-aihole-inscription
+      - src.shukla-sarma-1976-aryabhatiya
+      - src.bhatnagar-2017-date-mahabharata-war
+    note: >-
+      The 634-35 CE Aihole inscription counts 3,735 years from the Bharata war to Shaka 556, placing the war
+      at the 3102 BCE Kali epoch; other reckonings put the war 36 years before Krishna's passing and the
+      start of Kali, in 3138 BCE.
+  - method: traditional-siddhantic
+    range:
+      earliest: "2449 BCE"
+      latest: "2449 BCE"
+      precision: year
+      circa: false
+    grade: D
+    label: Vriddha Garga, Varahamihira and Kalhana (Yudhishthira 2,526 years before Shaka)
+    sources:
+      - src.stein-1900-rajatarangini
+      - src.saha-1955-calendar-reform-committee-report
+    note: >-
+      Kalhana (Rajatarangini 1.48-56) rejects placing the Pandavas at the end of Dvapara, puts the Kurus and
+      Pandavas 653 years into Kali Yuga, and quotes the Brihat Samhita that Yudhishthira reigned 2,526 years
+      before the Shaka era, that is, 2449 BCE.
+  - method: traditional-puranic
+    range:
+      earliest: "1850 BCE"
+      latest: "1350 BCE"
+      precision: century
+      circa: true
+    grade: D
+    label: Puranic interval from the birth of Parikshit to Mahapadma Nanda
+    sources:
+      - src.pargiter-1913-dynasties-kali-age
+      - src.wilson-1840-vishnu-purana
+    note: >-
+      Most Puranas give 1,050 years from Parikshit's birth (just after the war) to the inauguration of
+      Mahapadma Nanda, the Vishnu and Bhagavata 1,015, and some manuscripts 1,500; counted back from the
+      Nandas of the 4th century BCE this points to roughly the 19th to 14th centuries BCE.
+  - method: scholarly-consensus
+    range:
+      earliest: "400 BCE"
+      latest: "400 CE"
+      precision: century
+      circa: true
+    grade: B
+    label: Composition of the Sanskrit Mahabharata and its yuga frame (Brockington; Gonzalez-Reimann)
+    sources:
+      - src.brockington-1998-sanskrit-epics
+      - src.gonzalezreimann-2002-mahabharata-yugas
+      - src.thapar-2002-early-india
+    note: >-
+      Mainstream scholarship dates the composition of the Sanskrit Mahabharata to roughly 400 BCE to 400 CE
+      and treats the placement of the war at the Dvapara-Kali junction as part of that growth, while the
+      Kuru polity in which the story is set belongs to the early first millennium BCE.
+  - method: astronomical-reference
+    range:
+      earliest: "3140 BCE"
+      latest: "1478 BCE"
+      precision: century
+      circa: true
+    grade: E
+    label: Modern astronomical reconstructions (Achar 3067 BCE; Bhatnagar 1793 BCE; Iyengar 1478 BCE)
+    sources:
+      - src.bhatnagar-2017-date-mahabharata-war
+    note: >-
+      Modern attempts compute a war year from the epic's eclipse and planetary verses and disagree widely;
+      Bhatnagar (2017) surveys proposals from 5600 to 400 BCE, cites B. N. Narahari Achar's 3067 BCE and R. N.
+      Iyengar's 1478 BCE, and argues for 1793 BCE. None has wide scholarly acceptance.
+claims:
+  - text: >-
+      Pre-modern Indian tradition preserved at least three distinct dates for the Bharata war: the Kali
+      epoch of 3102 BCE, 2449 BCE in the school of Vriddha Garga and Varahamihira followed by Kalhana, and an
+      interval of 1,015 to 1,500 years before Mahapadma Nanda in the Puranic king-lists.
+    grade: A
+    sources:
+      - src.kielhorn-1900-aihole-inscription
+      - src.stein-1900-rajatarangini
+      - src.pargiter-1913-dynasties-kali-age
+  - text: >-
+      Luis Gonzalez-Reimann argues that in the older layers of the Mahabharata krita and kali refer mainly to
+      throws of the dice, and that the fully developed system of world ages and the placement of the war at
+      the Dvapara-Kali junction belong to later layers of the epic.
+    grade: C
+    sources:
+      - src.gonzalezreimann-2002-mahabharata-yugas
+  - text: >-
+      The 1955 Calendar Reform Committee concluded that the Kali and Yudhishthira eras are reckonings
+      extrapolated backward long after their nominal epochs: neither occurs in early inscriptions, and the
+      Kali era is first mentioned by Aryabhata in 499 CE.
+    grade: B
+    sources:
+      - src.saha-1955-calendar-reform-committee-report
+debate: >-
+  Already in the 12th century Kalhana rejected the 3102 BCE dating of the war in favour of the 2449 BCE
+  reckoning. Modern discussion divides between astronomical reconstructions, which produce dates from the
+  4th to the 2nd millennium BCE and disagree with one another, and philological and archaeological
+  scholarship, which treats the yuga framework as a later layer of the epic and Puranic tradition set
+  against an early Iron Age Kuru background.
+relations:
+  - kind: related-to
+    target: event.kali-yuga-epoch
+  - kind: related-to
+    target: cosmology.dvapara-yuga
+  - kind: related-to
+    target: cosmology.kali-yuga
+  - kind: related-to
+    target: cosmology.treta-yuga
+  - kind: related-to
+    target: person.krishna
+  - kind: related-to
+    target: person.rama
+  - kind: related-to
+    target: concept.kali-era-in-inscriptions
+  - kind: related-to
+    target: polity.kuru-kingdom
+wikidata: null
+tags:
+  - itihasa
+  - mahabharata
+  - yuga-chronology
+  - kurukshetra
+  - varahamihira
+review:
+  status: draft
+  author: gemini-4-argon

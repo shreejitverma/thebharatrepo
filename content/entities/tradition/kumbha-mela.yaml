@@ -1,0 +1,132 @@
+id: tradition.kumbha-mela
+type: tradition
+kind: dharma
+names:
+  en: Kumbh Mela
+  iast: Kumbhamelā
+  native: कुम्भमेला
+summary: >-
+  The Kumbha (Kumbh) Mela is a Hindu bathing festival held in a roughly twelve-year cycle, timed by the
+  positions of Jupiter, the Sun and the Moon, at Haridwar, Prayagraj, Nashik-Trimbakeshwar and Ujjain.
+  Tradition traces it to drops of amrita spilled from the pot (kumbha) won at the Churning of the Ocean;
+  historians trace the four-city Kumbha cycle through records of the 17th to 19th centuries. UNESCO
+  inscribed it as intangible heritage in 2017.
+summaries:
+  kids: >-
+    Kumbh Mela is a huge river-bathing festival held in turn at Haridwar, Prayagraj, Nashik and Ujjain.
+    Traditional stories link it to drops of the nectar of immortality falling from a heavenly pot.
+  teen: >-
+    Timed by Jupiter's position among the zodiac signs, Kumbh Mela draws millions of pilgrims to four river
+    cities. Tradition ties it to the Churning of the Ocean; historians debate whether Xuanzang's 7th-century
+    account of Prayag describes an early form, and UNESCO inscribed the festival in 2017.
+region: Haridwar, Prayagraj, Nashik and Ujjain
+location:
+  name: Prayagraj (Triveni Sangam)
+  lat: 25.43
+  lon: 81.89
+datings:
+  - method: traditional-puranic
+    range:
+      earliest: -428979101
+      latest: -120531101
+      precision: cosmological
+      circa: true
+    grade: D
+    label: Traditional origin in the Churning of the Ocean (Chakshusha manvantara)
+    sources:
+      - src.maclean-2008-pilgrimage-and-power
+      - src.lochtefeld-2004-construction-kumbha-mela
+      - src.wilson-1840-vishnu-purana
+    note: >-
+      Traditional accounts derive the festival from the struggle over the amrita pot after the churning,
+      whose drops are said to have sanctified four earthly sites; the churning itself is placed in the
+      Chakshusha manvantara before the present one.
+  - method: foreign-synchronism
+    range:
+      earliest: 643
+      latest: 644
+      precision: year
+      circa: true
+    grade: C
+    label: Xuanzang's account of Harsha's assembly at Prayag (debated antecedent)
+    sources:
+      - src.maclean-2008-pilgrimage-and-power
+      - src.lochtefeld-2004-construction-kumbha-mela
+    note: >-
+      Popular histories cite the Chinese pilgrim Xuanzang's description of a great gift-giving assembly held
+      by King Harsha at the Prayag confluence as an early Kumbha Mela; Maclean and Lochtefeld point out that
+      he describes a royal five-yearly assembly and mentions neither a kumbha nor a twelve-year cycle.
+  - method: documentary
+    range:
+      earliest: 1650
+      latest: 1900
+      precision: century
+      circa: true
+    grade: B
+    label: Documented emergence of the twelve-year Kumbha cycle at Haridwar and its spread
+    sources:
+      - src.lochtefeld-2004-construction-kumbha-mela
+      - src.maclean-2008-pilgrimage-and-power
+    note: >-
+      Lochtefeld traces the twelve-year Kumbha at Haridwar, timed by Jupiter in Aquarius, through records
+      from the late 17th century; Maclean documents how the Prayag Magh Mela came to be called a Kumbh Mela
+      during the 19th century under colonial administration.
+  - method: documentary
+    range:
+      earliest: 2017
+      latest: 2017
+      precision: year
+      circa: false
+    grade: A
+    label: UNESCO inscription on the Representative List of Intangible Cultural Heritage
+    sources:
+      - src.unesco-2017-kumbh-mela
+    note: >-
+      Inscribed by the UNESCO Intergovernmental Committee for the Safeguarding of the Intangible Cultural
+      Heritage in 2017.
+claims:
+  - text: >-
+      At Haridwar the festival is timed by Jupiter (Brihaspati) in the sign Kumbha (Aquarius) with the Sun in
+      Mesha (Aries); the name was later extended to the twelve-year fairs at Prayag, Nashik and Ujjain.
+    grade: B
+    sources:
+      - src.lochtefeld-2004-construction-kumbha-mela
+      - src.maclean-2008-pilgrimage-and-power
+  - text: >-
+      Bathing at the Prayag confluence in the month of Magha is praised in the Mahabharata and the Puranas,
+      but the early Puranic accounts of the churning do not mention amrita falling at the four Kumbha cities.
+    grade: B
+    sources:
+      - src.maclean-2008-pilgrimage-and-power
+      - src.lochtefeld-2004-construction-kumbha-mela
+  - text: >-
+      In 2017 UNESCO inscribed the Kumbh Mela on its Representative List of the Intangible Cultural Heritage
+      of Humanity, describing it as the largest peaceful congregation of pilgrims on earth.
+    grade: A
+    sources:
+      - src.unesco-2017-kumbh-mela
+debate: >-
+  Popular and devotional accounts trace the four-city Kumbha Mela directly to Puranic antiquity and read
+  Xuanzang's 7th-century account of Prayag as an early Kumbha Mela. Historians such as Kama Maclean and
+  James Lochtefeld argue that bathing fairs at Prayag and the other sites are old, but that the name Kumbha
+  and the twelve-year cycle belong first to Haridwar and were extended to the other three sites between the
+  late 18th and 19th centuries.
+relations:
+  - kind: related-to
+    target: event.samudra-manthana
+wikidata: Q10283
+image:
+  commons: "File:Kumbh Mela 2019, Prayagraj, India.jpg"
+  alt: Pilgrim encampments and pontoon bridges at the 2019 Kumbh Mela in Prayagraj
+  credit: Purva Goel
+  license: CC BY 4.0
+tags:
+  - kumbha-mela
+  - prayagraj
+  - haridwar
+  - ujjain
+  - nashik
+  - unesco
+review:
+  status: draft
+  author: gemini-4-argon

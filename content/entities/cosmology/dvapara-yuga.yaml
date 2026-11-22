@@ -1,0 +1,69 @@
+id: cosmology.dvapara-yuga
+type: cosmology
+kind: cosmology
+names:
+  en: Dvapara Yuga
+  iast: Dvāparayuga
+  native: द्वापरयुग
+summary: >-
+  In traditional Hindu cosmology, Dvapara Yuga is the third of the four world ages in a mahayuga, when
+  dharma stands on two of its four legs and the age lasts 2,400 divine years or 864,000 human solar years,
+  concluding traditionally with the Kurukshetra war and the passing of Krishna.
+summaries:
+  kids: >-
+    In traditional Hindu cosmology, Dvapara Yuga is the third of the four world ages, lasting 864,000 human
+    years and ending with the stories of Krishna and the Mahabharata war.
+  teen: >-
+    Named after the two-pip throw of the Indian die, Dvapara Yuga spans two-tenths of a mahayuga (2,000
+    divine years plus 200-year dawn and 200-year twilight, or 864,000 human years) and ends in Puranic and
+    Siddhantic tradition at the onset of Kali Yuga in 3102 BCE.
+datings:
+  - method: traditional-puranic
+    range:
+      earliest: -867101
+      latest: -3101
+      precision: cosmological
+      circa: false
+    grade: D
+    label: Dvapara Yuga of the 28th Mahayuga
+    sources:
+      - src.olivelle-2005-manus-code-of-law
+      - src.wilson-1840-vishnu-purana
+      - src.burgess-1860-surya-siddhanta
+    note: >-
+      In the 4:3:2:1 yuga scheme, the Dvapara Yuga of the present 28th mahayuga lasted 864,000 human solar
+      years and terminated at the Kali Yuga epoch on 18 February 3102 BCE (-3101).
+claims:
+  - text: >-
+      Dvapara Yuga lasts 2,000 divine years with a dawn (sandhya) of 200 divine years and a twilight
+      (sandhyamsha) of 200 divine years, making 2,400 divine years or 864,000 human solar years.
+    grade: D
+    sources:
+      - src.olivelle-2005-manus-code-of-law
+      - src.burgess-1860-surya-siddhanta
+  - text: >-
+      The Vishnu Purana (3.3) states that in every Dvapara Yuga a Vyasa divides the Veda, naming Krishna
+      Dvaipayana as the Vyasa of the present one, and the later layers of the Mahabharata place the
+      Kurukshetra war at the junction (sandhi) between Dvapara and Kali.
+    grade: D
+    sources:
+      - src.wilson-1840-vishnu-purana
+      - src.gonzalezreimann-2002-mahabharata-yugas
+relations:
+  - kind: part-of
+    target: cosmology.mahayuga
+  - kind: succeeded
+    target: cosmology.treta-yuga
+  - kind: preceded
+    target: cosmology.kali-yuga
+  - kind: related-to
+    target: person.krishna
+wikidata: Q12928623
+tags:
+  - cosmology
+  - dvapara-yuga
+  - yuga
+  - mahabharata
+review:
+  status: draft
+  author: gemini-4-argon

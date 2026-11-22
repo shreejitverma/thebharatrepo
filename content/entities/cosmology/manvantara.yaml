@@ -1,0 +1,71 @@
+id: cosmology.manvantara
+type: cosmology
+kind: cosmology
+names:
+  en: Manvantara and the Fourteen Manus
+  iast: Manvantara
+  native: मन्वन्तर
+summary: >-
+  In traditional Hindu cosmology, a manvantara (age of a Manu) is one of fourteen major subdivisions of a
+  kalpa, each presided over by its own progenitor Manu, an Indra, the Seven Sages (Saptarishis), and sets
+  of gods, and lasting 71 mahayugas (306,720,000 human years).
+summaries:
+  kids: >-
+    In traditional Hindu cosmology, each giant day of Brahma is divided into fourteen chapters called
+    manvantaras, and each chapter is led by a first ancestor of humanity named Manu.
+  teen: >-
+    Traditional Puranic and Siddhantic cosmology divides a 1,000-mahayuga kalpa into fourteen manvantaras
+    of 71 mahayugas (306,720,000 solar years) apiece, framed by fifteen flood-like junction periods
+    (sandhis) of 1,728,000 years each.
+datings:
+  - method: traditional-puranic
+    range:
+      earliest: -1972947101
+      latest: -3101
+      precision: cosmological
+      circa: false
+    grade: D
+    label: Sequence of fourteen manvantaras within the present kalpa
+    sources:
+      - src.wilson-1840-vishnu-purana
+      - src.burgess-1860-surya-siddhanta
+      - src.rocher-1986-puranas
+    note: >-
+      Six complete manvantaras (Svayambhuva, Svarochisha, Auttami, Tamasa, Raivata and Chakshusha) and part
+      of the seventh (Vaivasvata) are traditionally counted as elapsed since the start of the present kalpa
+      1,972,944,000 years before 3102 BCE, with seven future Savarni manvantaras remaining.
+claims:
+  - text: >-
+      In classical Puranic classification, manvantara is one of the five defining subjects (panchalakshana)
+      of a Purana, alongside creation (sarga), secondary creation (pratisarga), genealogies (vamsha) and
+      dynastic histories (vamshanucharita).
+    grade: B
+    sources:
+      - src.rocher-1986-puranas
+      - src.thapar-2002-early-india
+  - text: >-
+      Each of the fourteen manvantaras in a kalpa lasts 71 mahayugas (306,720,000 human years, or 852,000
+      divine years), while a transitional twilight (sandhi) equal to one Satya Yuga (1,728,000 years)
+      separates consecutive manvantaras.
+    grade: D
+    sources:
+      - src.wilson-1840-vishnu-purana
+      - src.burgess-1860-surya-siddhanta
+      - src.olivelle-2005-manus-code-of-law
+relations:
+  - kind: part-of
+    target: cosmology.kalpa
+  - kind: related-to
+    target: cosmology.vaivasvata-manvantara
+  - kind: related-to
+    target: person.vaivasvata-manu
+wikidata: Q2353363
+tags:
+  - cosmology
+  - manvantara
+  - manu
+  - panchalakshana
+  - purana
+review:
+  status: draft
+  author: gemini-4-argon

@@ -1,0 +1,90 @@
+id: event.matsya-flood-narrative
+type: event
+kind: dharma
+names:
+  en: Matsya Flood Narrative (Manu and the Great Deluge)
+  iast: Matsya-kathā
+  native: मत्स्यकथा
+summary: >-
+  The story of Manu and the fish that saves him from a great flood is first known from the Vedic prose of
+  the Shatapatha Brahmana (1.8.1.1-10). The Mahabharata (3.185) retells it with the fish revealed as
+  Brahma Prajapati, and the Puranas make the fish Matsya, the first avatar of Vishnu. Its Puranic placement
+  at the start of the present manvantara is traditional cosmology.
+summaries:
+  kids: >-
+    In one of India's oldest stories, Manu looks after a tiny fish that grows huge, warns him of a great
+    flood, and pulls his boat to safety on a northern mountain. Later stories say the fish was Vishnu.
+  teen: >-
+    The Shatapatha Brahmana, a Vedic prose text of roughly the 8th to 6th centuries BCE, gives the earliest
+    known Indian flood story. The Mahabharata and Puranas retell it, and in the Puranas the fish becomes
+    Matsya, Vishnu's first avatar, saving Manu, the Seven Sages and the seeds of life.
+datings:
+  - method: linguistic
+    range:
+      earliest: "800 BCE"
+      latest: "600 BCE"
+      precision: century
+      circa: true
+    grade: C
+    label: Earliest known attestation, Shatapatha Brahmana 1.8.1.1-10 (date of the text)
+    sources:
+      - src.eggeling-1882-satapatha-brahmana-part-1
+      - src.flood-2003-blackwell-companion-hinduism
+    note: >-
+      This dates the text, not any event: the late Brahmana prose of the Shatapatha Brahmana, which contains
+      the flood episode, is usually placed in roughly the 8th to 6th centuries BCE.
+  - method: traditional-puranic
+    range:
+      earliest: -120531101
+      latest: -120531101
+      precision: cosmological
+      circa: false
+    grade: D
+    label: Puranic placement at the opening of the Vaivasvata manvantara
+    sources:
+      - src.dimmitt-vanbuitenen-1978-classical-hindu-mythology
+      - src.rocher-1986-puranas
+    note: >-
+      Puranic retellings set the deluge at the junction before the present (Vaivasvata) manvantara, from
+      which Manu emerges as its progenitor; counted back from the Kali epoch this is 120,528,000 years before
+      3102 BCE. Some retellings instead tie it to the dissolution at the end of the previous kalpa.
+claims:
+  - text: >-
+      Shatapatha Brahmana 1.8.1.1-10 tells how Manu rears a small fish that warns him of a flood; Manu builds
+      a ship, which the grown fish draws to the northern mountain, and after the waters recede he
+      regenerates his line through sacrifice and his daughter Ida.
+    grade: A
+    sources:
+      - src.eggeling-1882-satapatha-brahmana-part-1
+  - text: >-
+      In the Mahabharata (3.185) the rescuing fish reveals itself as Brahma Prajapati, whereas in the Matsya,
+      Agni and Bhagavata Puranas it is Matsya, the first avatar of Vishnu.
+    grade: B
+    sources:
+      - src.brockington-1998-sanskrit-epics
+      - src.dimmitt-vanbuitenen-1978-classical-hindu-mythology
+      - src.rocher-1986-puranas
+relations:
+  - kind: related-to
+    target: person.vaivasvata-manu
+  - kind: related-to
+    target: cosmology.vaivasvata-manvantara
+  - kind: related-to
+    target: cosmology.pralaya
+  - kind: related-to
+    target: text.shatapatha-brahmana
+wikidata: null
+image:
+  commons: "File:Matsya and Manu.jpg"
+  alt: Mewar painting of about 1840 showing Matsya, the fish avatar of Vishnu, guiding the boat of Manu and the Seven Sages
+  credit: Unknown artist, Mewar
+  license: Public domain
+tags:
+  - matsya
+  - flood-narrative
+  - shatapatha-brahmana
+  - vaivasvata-manu
+  - dashavatara
+review:
+  status: draft
+  author: gemini-4-argon

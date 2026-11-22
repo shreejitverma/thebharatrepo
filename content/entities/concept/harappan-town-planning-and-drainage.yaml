@@ -59,10 +59,10 @@ claims:
   - text: >-
       Harappan hydraulic engineering adapted systematically to local hydrology: alluvial Indus cities such as
       Mohenjo-daro sunk hundreds of deep brick-lined cylindrical wells, whereas semi-arid Kutch cities such as
-      Dholavira constructed stone check-dams and rock-cut rainwater reservoirs around the city perimeter.
+      Dholavira dammed seasonal streams and built stone-lined and rock-cut reservoirs within its city walls.
     grade: A
     sources:
-      - src.bisht-2015-excavations-at-dholavira
+      - src.asi-2020-dholavira-nomination-dossier
       - src.kenoyer-1998-ancient-cities-indus
       - src.possehl-2002-indus-civilization
 relations:

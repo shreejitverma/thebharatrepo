@@ -31,7 +31,8 @@ async function main() {
   // 1. Validate published content plus this batch.
   process.env.CONTENT_ROOTS = `content:${path.relative(ROOT, batch)}`;
   process.env.ARTICLES_ROOT = fs.existsSync(batchArticles) ? path.relative(ROOT, batchArticles) : '';
-  const { loadContentUncached } = await import('../src/lib/content/load');
+  const { loadContentUncached, sameWork } = await import('../src/lib/content/load');
+  const { SourceSchema } = await import('../src/lib/content/schema');
   const g = loadContentUncached();
   if (g.errors.length) {
     console.log(`merge ${batch}: aborted, ${g.errors.length} validation problem(s):`);
@@ -52,7 +53,9 @@ async function main() {
     if (fs.existsSync(target)) {
       const a = YAML.parse(fs.readFileSync(file, 'utf8'));
       const b = YAML.parse(fs.readFileSync(target, 'utf8'));
-      if (key(a) === key(b)) skipped++;
+      const pa = SourceSchema.safeParse(a);
+      const pb = SourceSchema.safeParse(b);
+      if (key(a) === key(b) || (pa.success && pb.success && sameWork(pb.data, pa.data))) skipped++;
       else conflicts.push(`source ${a.id}: staging and published versions differ (identifiers or title)`);
     } else writes.push({ from: file, to: target });
   }

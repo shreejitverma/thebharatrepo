@@ -1,0 +1,90 @@
+id: cosmology.mahayuga
+type: cosmology
+kind: cosmology
+names:
+  en: Mahayuga (Chaturyuga)
+  iast: Mahāyuga
+  native: महायुग
+summary: >-
+  In traditional Hindu cosmology, a mahayuga or chaturyuga is a complete cycle of the four world ages
+  (Satya, Treta, Dvapara and Kali), proportioned in the descending 4:3:2:1 ratio and totalling 12,000
+  divine years or 4,320,000 human solar years.
+summaries:
+  kids: >-
+    In traditional Hindu cosmology, a mahayuga is a great cycle of four ages - Satya, Treta, Dvapara and
+    Kali - that follow a 4:3:2:1 length pattern and add up to 4,320,000 human years.
+  teen: >-
+    Traditional Puranic and Dharmashastra cosmology defines a mahayuga as 12,000 divine years (each equal
+    to 360 human years, or 4,320,000 human years in total), split across Satya (1,728,000), Treta
+    (1,296,000), Dvapara (864,000) and Kali (432,000) in a 4:3:2:1 ratio.
+datings:
+  - method: traditional-puranic
+    range:
+      earliest: -3891101
+      latest: -3101
+      precision: cosmological
+      circa: false
+    grade: D
+    label: Pre-Kali span of the 28th Mahayuga (4:3:2:1 system)
+    sources:
+      - src.olivelle-2005-manus-code-of-law
+      - src.wilson-1840-vishnu-purana
+      - src.burgess-1860-surya-siddhanta
+    note: >-
+      In the standard 4,320,000-year mahayuga of Manusmriti 1.68-71, Vishnu Purana 1.3 and Surya Siddhanta
+      1.15-17, the first three yugas of the present 28th mahayuga span 3,888,000 human years ending at the
+      Kali Yuga epoch of 3102 BCE (-3101).
+  - method: traditional-siddhantic
+    range:
+      earliest: -3243101
+      latest: -3101
+      precision: cosmological
+      circa: false
+    grade: D
+    label: Aryabhata's equal-quarter mahayuga (1:1:1:1 system)
+    sources:
+      - src.shukla-sarma-1976-aryabhatiya
+      - src.plofker-2009-mathematics-in-india
+    note: >-
+      Aryabhata also assigns 4,320,000 years to a yuga (mahayuga) but divides it into four equal quarters
+      (yugapadas) of 1,080,000 years each; by his count (Dashagitika 5, Kalakriyapada 10) three quarters
+      (3,240,000 years) of the current yuga had elapsed at the Kali epoch of 3102 BCE (-3101).
+claims:
+  - text: >-
+      In Manusmriti 1.69-71, the Mahabharata, the Puranas and the Surya Siddhanta, the four yugas are
+      proportioned 4:3:2:1 after the throws of the Indian four-sided die (krita, treta, dvapara, kali),
+      including a dawn (sandhya) and twilight (sandhyamsha) each equal to one-tenth of the main age.
+    grade: B
+    sources:
+      - src.gonzalezreimann-2002-mahabharata-yugas
+      - src.olivelle-2005-manus-code-of-law
+      - src.plofker-2009-mathematics-in-india
+  - text: >-
+      Multiplying 12,000 divine years by 360 human years per divine year converts the earlier epic and
+      Dharmashastra 12,000-year cycle into the classical Puranic and Siddhantic mahayuga of 4,320,000
+      human solar years.
+    grade: B
+    sources:
+      - src.gonzalezreimann-2002-mahabharata-yugas
+      - src.plofker-2009-mathematics-in-india
+relations:
+  - kind: part-of
+    target: cosmology.vaivasvata-manvantara
+  - kind: related-to
+    target: cosmology.satya-yuga
+  - kind: related-to
+    target: cosmology.treta-yuga
+  - kind: related-to
+    target: cosmology.dvapara-yuga
+  - kind: related-to
+    target: cosmology.kali-yuga
+wikidata: Q3277648
+tags:
+  - cosmology
+  - mahayuga
+  - chaturyuga
+  - yuga
+  - siddhanta
+review:
+  status: draft
+  author: gemini-4-argon

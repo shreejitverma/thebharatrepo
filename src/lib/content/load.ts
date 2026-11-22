@@ -15,6 +15,7 @@ import fs from 'node:fs';
 import path from 'node:path';
 import matter from 'gray-matter';
 import YAML from 'yaml';
+import { sameTitle } from './similarity';
 import type { z } from 'zod';
 import {
   ArticleFrontmatterSchema,
@@ -128,6 +129,30 @@ export function bceOffByOne(range: { earliest: number; latest: number; best?: nu
   return [...flagged];
 }
 
+/**
+ * Two source records describe the same work: no identifier of the same type conflicts (archive.org and
+ * other URLs compare by host and first path segment pair) and the titles match.
+ */
+export function sameWork(a: Source, b: Source): boolean {
+  const urlKey = (u?: string) => {
+    if (!u) return '';
+    try {
+      const x = new URL(u);
+      return `${x.hostname}/${x.pathname.split('/').filter(Boolean).slice(0, 2).join('/')}`.toLowerCase();
+    } catch {
+      return u;
+    }
+  };
+  const pairs: [string, string][] = [
+    [a.doi?.toLowerCase() ?? '', b.doi?.toLowerCase() ?? ''],
+    [a.isbn ?? '', b.isbn ?? ''],
+    [a.oclc ?? '', b.oclc ?? ''],
+    [urlKey(a.url), urlKey(b.url)],
+  ];
+  if (pairs.some(([x, y]) => x && y && x !== y)) return false;
+  return sameTitle(a.title, b.title);
+}
+
 let strays: string[] = [];
 
 function walk(dir: string, ext: string): string[] {
@@ -180,7 +205,13 @@ export function loadContentUncached(): ContentGraph {
     }
     const expected = `src.${path.basename(file, '.yaml')}`;
     if (parsed.data.id !== expected) errors.push({ file: rel(file), message: `id ${parsed.data.id} must match filename (${expected})` });
-    if (sources.has(parsed.data.id)) errors.push({ file: rel(file), message: `duplicate source id ${parsed.data.id}` });
+    const prev = sources.get(parsed.data.id);
+    if (prev) {
+      // The same work cited independently by two roots (published and staging) is not an error;
+      // a different work under the same id is.
+      if (!sameWork(prev, parsed.data)) errors.push({ file: rel(file), message: `source id ${parsed.data.id} already names a different work (identifiers or title differ)` });
+      continue;
+    }
     sources.set(parsed.data.id, parsed.data);
   }
 

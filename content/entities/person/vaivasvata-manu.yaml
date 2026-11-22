@@ -1,0 +1,86 @@
+id: person.vaivasvata-manu
+type: person
+kind: person
+names:
+  en: Vaivasvata Manu
+  iast: Vaivasvata Manu
+  native: वैवस्वत मनु
+summary: >-
+  In Vedic and Itihasa-Purana tradition, Vaivasvata Manu (also Shraddhadeva), son of Vivasvat the Sun, is
+  the seventh Manu, who presides over the present manvantara, survives the flood with the help of a great
+  fish, and becomes the ancestor of humanity and of the Solar and Lunar royal lines. His place in time is
+  traditional cosmology; the texts that tell of him can be dated.
+summaries:
+  kids: >-
+    In Hindu tradition, Vaivasvata Manu is the first ancestor of people in our present cosmic age. A giant
+    fish warned him of a great flood and pulled his boat to safety.
+  teen: >-
+    Manu appears in the Rigveda as an ancestral sacrificer and in the Shatapatha Brahmana's flood story. The
+    Puranas make Vaivasvata Manu the head of the present manvantara and the ancestor of both the Solar
+    (Suryavamsha) and Lunar (Chandravamsha) dynasties.
+datings:
+  - method: traditional-puranic
+    range:
+      earliest: -120531101
+      latest: -120531101
+      precision: cosmological
+      circa: true
+    grade: D
+    label: Progenitor at the opening of the seventh (Vaivasvata) manvantara
+    sources:
+      - src.wilson-1840-vishnu-purana
+      - src.burgess-1860-surya-siddhanta
+    note: >-
+      Puranic and Siddhantic reckoning places the start of the Vaivasvata manvantara 27 mahayugas and three
+      yugas (120,528,000 years) before the Kali Yuga epoch of 3102 BCE.
+  - method: linguistic
+    range:
+      earliest: "1500 BCE"
+      latest: "600 BCE"
+      precision: century
+      circa: true
+    grade: B
+    label: Earliest Vedic attestations, Rigveda to Shatapatha Brahmana (date of the texts)
+    sources:
+      - src.jamison-brereton-2014-rigveda
+      - src.eggeling-1882-satapatha-brahmana-part-1
+      - src.flood-2003-blackwell-companion-hinduism
+    note: >-
+      Manu appears as an ancestral sacrificer in the Rigveda (c. 1500-1000 BCE) and as the hero of the flood
+      story in Shatapatha Brahmana 1.8.1 (c. 8th to 6th centuries BCE).
+claims:
+  - text: >-
+      In Shatapatha Brahmana 1.8.1.1-10, Manu rears a small fish that warns him of a flood and draws his ship
+      to the northern mountain, after which he regenerates his line through sacrifice and his daughter Ida.
+    grade: A
+    sources:
+      - src.eggeling-1882-satapatha-brahmana-part-1
+  - text: >-
+      In Puranic genealogies Vaivasvata Manu's son Ikshvaku founds the Solar dynasty of Ayodhya, while Ila
+      becomes the mother of Pururavas, founder of the Lunar dynasty.
+    grade: D
+    sources:
+      - src.wilson-1840-vishnu-purana
+      - src.thapar-2002-early-india
+      - src.rocher-1986-puranas
+relations:
+  - kind: related-to
+    target: cosmology.vaivasvata-manvantara
+  - kind: related-to
+    target: cosmology.manvantara
+  - kind: related-to
+    target: event.matsya-flood-narrative
+  - kind: related-to
+    target: text.rigveda
+  - kind: related-to
+    target: text.shatapatha-brahmana
+wikidata: Q2563319
+tags:
+  - manu
+  - vaivasvata-manu
+  - manvantara
+  - suryavamsha
+  - shatapatha-brahmana
+review:
+  status: draft
+  author: gemini-4-argon

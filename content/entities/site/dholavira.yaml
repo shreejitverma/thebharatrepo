@@ -33,13 +33,14 @@ datings:
     grade: A
     label: Seven-Stage Occupational Sequence (Stages I to VII)
     sources:
-      - src.bisht-2015-excavations-at-dholavira
+      - src.asi-2020-dholavira-nomination-dossier
       - src.unesco-2021-dholavira
       - src.possehl-2002-indus-civilization
     note: >-
-      R. S. Bisht documented seven cultural stages spanning Early to Mature transition (Stages I-III, c. 3000-2500 BCE),
-      classic Mature Harappan urbanism (Stages IV-V, c. 2500-2000 BCE), Late Harappan contraction (Stage VI,
-      c. 1950-1800 BCE), and post-urban reoccupation (Stage VII, c. 1550-1450 BCE).
+      The ASI excavations directed by R. S. Bisht (1989-2005) identified seven cultural stages spanning about 1,500
+      years, from the beginning of the third millennium BCE: Early Harappan (Stages I-II), Mature Harappan (Stages
+      III-V), Late Harappan (Stage VI) and a deurbanised final occupation (Stage VII), after which the site was
+      not reoccupied.
   - method: documentary
     range:
       earliest: 2021
@@ -55,13 +56,12 @@ datings:
       Harappan City".
 claims:
   - text: >-
-      To survive in an arid zone receiving less than 300 mm of annual rainfall without a perennial river, Dholavira's
-      engineers dammed the seasonal Manhar and Mansar streams and excavated at least 16 interconnected stone-lined
-      and rock-cut reservoirs surrounding the city walls, dedicating roughly 10 hectares (nearly a fifth of the
-      walled area) to water storage.
+      On Khadir island, which receives only about 260 mm of rain a year and has no perennial river, Dholavira's
+      builders dammed the seasonal Mansar and Manhar streams and laid out sixteen or more reservoirs of varying
+      sizes within the city walls, together estimated to cover about 10 hectares.
     grade: A
     sources:
-      - src.bisht-2015-excavations-at-dholavira
+      - src.asi-2020-dholavira-nomination-dossier
       - src.unesco-2021-dholavira
       - src.agrawal-2018-dholavira-gpr
   - text: >-
@@ -70,7 +70,7 @@ claims:
       built extensively with dressed sandstone blocks alongside mud-bricks.
     grade: A
     sources:
-      - src.bisht-2015-excavations-at-dholavira
+      - src.asi-2020-dholavira-nomination-dossier
       - src.possehl-2002-indus-civilization
       - src.singh-2008-ancient-early-medieval-india
   - text: >-

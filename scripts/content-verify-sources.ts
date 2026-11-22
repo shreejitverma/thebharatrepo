@@ -21,7 +21,7 @@ import fs from 'node:fs';
 import path from 'node:path';
 import { loadContentUncached, CONTENT_DIR } from '../src/lib/content/load';
 import type { Source } from '../src/lib/content/schema';
-import { pageMatchesTitle, sameName, sameTitle } from './lib/similarity';
+import { pageMatchesTitle, sameName, sameTitle } from '../src/lib/content/similarity';
 
 const CACHE_FILE = process.env.VERIFY_CACHE ? path.resolve(process.env.VERIFY_CACHE) : path.join(CONTENT_DIR, 'verification.json');
 const UA = 'TheBharatRepo-SourceVerifier/1.0 (+https://www.thebharatrepo.com)';
@@ -60,7 +60,16 @@ function saveCache(cache: Cache) {
 const now = () => new Date().toISOString();
 
 async function get(url: string, accept: string, attempt = 0): Promise<{ status: number; text: string | null }> {
-  const res = await fetch(url, { headers: { 'User-Agent': UA, Accept: accept }, redirect: 'follow', signal: AbortSignal.timeout(20_000) });
+  let res: Response;
+  try {
+    res = await fetch(url, { headers: { 'User-Agent': UA, Accept: accept }, redirect: 'follow', signal: AbortSignal.timeout(45_000) });
+  } catch (e) {
+    if (attempt < 2) {
+      await new Promise((r) => setTimeout(r, 2000 * (attempt + 1)));
+      return get(url, accept, attempt + 1);
+    }
+    throw e;
+  }
   if ((res.status === 429 || res.status >= 500) && attempt < 3) {
     await new Promise((r) => setTimeout(r, 1500 * (attempt + 1)));
     return get(url, accept, attempt + 1);
@@ -156,14 +165,14 @@ async function verifyUrl(url: string, title: string): Promise<CacheEntry> {
   return hit ? { ok: true, checkedAt: now(), matched: hit } : { ok: false, checkedAt: now(), matched: bits[0], detail: 'page does not carry the cited title' };
 }
 
-async function verifyQid(qid: string, names: string[]): Promise<CacheEntry> {
+async function verifyQid(qid: string, names: string[], namedThing: boolean): Promise<CacheEntry> {
   const { status, body } = await getJson<{ entities: Record<string, { labels?: Record<string, { value: string }>; aliases?: Record<string, { value: string }[]> }> }>(
     `https://www.wikidata.org/wiki/Special:EntityData/${qid}.json`,
   );
   if (!body) return { ok: false, checkedAt: now(), detail: `Wikidata HTTP ${status}` };
   const ent = Object.values(body.entities)[0];
   const labels = [ent.labels?.en?.value ?? '', ...(ent.aliases?.en ?? []).map((a) => a.value)].filter(Boolean);
-  const ok = sameName(names, labels);
+  const ok = sameName(names, labels, { namedThing });
   return {
     ok,
     checkedAt: now(),
@@ -221,6 +230,11 @@ function sourceJobs(s: Source): Job[] {
 
 async function main() {
   const g = loadContentUncached();
+  // A staging run (CONTENT_ROOTS=content:staging/<batch>) is blocked only by problems in its own files,
+  // so known issues in published content do not stop a batch from verifying its sources.
+  const stagingRoots = (process.env.CONTENT_ROOTS ?? '').split(':').filter((r) => r && r !== 'content');
+  const blocking = stagingRoots.length ? g.errors.filter((e) => stagingRoots.some((r) => e.file.startsWith(r))) : g.errors;
+  g.errors = blocking;
   if (g.errors.length > 0) {
     console.error(`content:validate reports ${g.errors.length} problem(s); fix those first:`);
     for (const e of g.errors.slice(0, 40)) console.error(`  ${e.file}: ${e.message}`);
@@ -232,16 +246,28 @@ async function main() {
   const shared = path.join(CONTENT_DIR, 'verification.json');
   if (CACHE_FILE !== shared) for (const [k, v] of Object.entries(loadCache(shared))) if (!cache[k] && v.ok) cache[k] = v;
 
+  // Staging runs verify only the sources and entities defined in their own roots.
+  const own = new Set<string>();
+  for (const r of stagingRoots) {
+    for (const sub of ['sources', 'entities']) {
+      const walk = (d: string): string[] =>
+        !fs.existsSync(d) ? [] : fs.readdirSync(d, { withFileTypes: true }).flatMap((x) => (x.isDirectory() ? walk(path.join(d, x.name)) : x.name.endsWith('.yaml') ? [path.join(d, x.name)] : []));
+      for (const f of walk(path.join(process.cwd(), r, sub))) own.add(sub === 'sources' ? `src.${path.basename(f, '.yaml')}` : `${path.basename(path.dirname(f))}.${path.basename(f, '.yaml')}`);
+    }
+  }
+  const inScope = (id: string) => stagingRoots.length === 0 || own.has(id);
+
   const jobs: Job[] = [];
-  for (const s of g.sources.values()) jobs.push(...sourceJobs(s));
-  for (const e of g.entities.values()) {
+  for (const s of g.sources.values()) if (inScope(s.id)) jobs.push(...sourceJobs(s));
+  for (const e of [...g.entities.values()].filter((x) => inScope(x.id))) {
     if (e.wikidata) {
-      const names = [e.names.en, e.names.iast ?? ''].filter(Boolean);
+      const names = [e.names.en, e.names.iast ?? '', e.id.split('.')[1].replace(/-/g, ' ')].filter(Boolean);
+      const namedThing = ['site', 'person', 'polity', 'text'].includes(e.type);
       jobs.push({
         key: `qid:${e.wikidata}:${e.id}`,
         where: e.id,
-        run: () => verifyQid(e.wikidata!, names),
-        recheck: (c) => (c.labels && sameName(names, c.labels) ? null : 'cached Wikidata labels do not identify this entity'),
+        run: () => verifyQid(e.wikidata!, names, namedThing),
+        recheck: (c) => (c.labels && sameName(names, c.labels, { namedThing }) ? null : 'cached Wikidata labels do not identify this entity'),
       });
     }
     if (e.image) {

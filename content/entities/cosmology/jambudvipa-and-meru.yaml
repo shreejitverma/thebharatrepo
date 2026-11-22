@@ -1,0 +1,75 @@
+id: cosmology.jambudvipa-and-meru
+type: cosmology
+kind: cosmology
+names:
+  en: Jambudvipa and Mount Meru
+  iast: Jambūdvīpa
+  native: जम्बूद्वीप
+summary: >-
+  In traditional Hindu cosmology and Puranic cosmography (bhuvanakosha), the terrestrial plane consists of
+  seven concentric island-continents (sapta-dvipa) and seven oceans surrounding the central continent of
+  Jambudvipa, at whose hub rises the golden axis mundi Mount Meru, with Bharatavarsha lying south of the
+  Himalaya.
+summaries:
+  kids: >-
+    In traditional Hindu cosmology, the earth is pictured as seven rings of land and seven oceans around a
+    central continent called Jambudvipa, with the golden mountain Meru at the middle and Bharatavarsha to
+    the south.
+  teen: >-
+    Puranic cosmography depicts Jambudvipa as a 100,000-yojana central continent divided into nine varshas
+    around Mount Meru, while Siddhantic astronomers from Aryabhata onward reinterpreted Meru as the north
+    polar axis of a spherical earth.
+datings:
+  - method: traditional-puranic
+    range:
+      earliest: -1972947101
+      latest: -3101
+      precision: cosmological
+      circa: false
+    grade: D
+    label: Puranic bhuvanakosha cosmography within the present Kalpa
+    sources:
+      - src.wilson-1840-vishnu-purana
+      - src.dimmitt-vanbuitenen-1978-classical-hindu-mythology
+      - src.flood-2003-blackwell-companion-hinduism
+    note: >-
+      In Vishnu Purana 2.1-4, the seven dvipas centred on Jambudvipa and Mount Meru endure throughout the
+      present day of Brahma (Shveta-Varaha Kalpa).
+claims:
+  - text: >-
+      In Vishnu Purana 2.2-3, Jambudvipa is the innermost of seven concentric continents separated by seven
+      oceans, with Mount Meru rising 84,000 yojanas above its centre and Bharatavarsha forming the
+      southernmost of its nine divisions (varshas).
+    grade: D
+    sources:
+      - src.wilson-1840-vishnu-purana
+      - src.dimmitt-vanbuitenen-1978-classical-hindu-mythology
+  - text: >-
+      While Puranic cosmography describes a flat circular earth (bhumandala) whose continents and oceans
+      extend 500 million yojanas (Vishnu Purana 2.4), Siddhantic astronomers from Aryabhata onward modelled
+      the earth as a sphere (bhugola) suspended in space and placed Meru at the North Pole.
+    grade: B
+    sources:
+      - src.plofker-2009-mathematics-in-india
+      - src.shukla-sarma-1976-aryabhatiya
+      - src.burgess-1860-surya-siddhanta
+relations:
+  - kind: related-to
+    target: cosmology.shveta-varaha-kalpa
+  - kind: related-to
+    target: cosmology.vaivasvata-manvantara
+wikidata: Q1586228
+image:
+  commons: "File:Map of Jambudvipa Indian Hindu Cosmology.jpg"
+  alt: Diagram of Jambudvipa and the surrounding continents and oceans of Puranic cosmography, from a history of India printed around 1900
+  credit: "Henry Beveridge, A Comprehensive History of India (scan: Internet Archive Book Images)"
+  license: No restrictions
+tags:
+  - cosmology
+  - jambudvipa
+  - mount-meru
+  - bhuvanakosha
+  - bharatavarsha
+review:
+  status: draft
+  author: gemini-4-argon

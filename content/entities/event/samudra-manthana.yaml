@@ -1,0 +1,91 @@
+id: event.samudra-manthana
+type: event
+kind: dharma
+names:
+  en: Churning of the Ocean of Milk (Samudra Manthana)
+  iast: Samudramanthana
+  native: समुद्रमन्थन
+summary: >-
+  In the Itihasa-Purana tradition the devas and asuras churn the Ocean of Milk, using Mount Mandara as the
+  churning rod and the serpent Vasuki as the rope, with Vishnu as the tortoise Kurma supporting the
+  mountain, to win the nectar of immortality (amrita). Its placement in a past manvantara is traditional
+  cosmology; historians date the narrative by its appearance in the epics and Puranas.
+summaries:
+  kids: >-
+    In traditional Hindu stories, the gods and the asuras worked together to churn the Ocean of Milk, using
+    a mountain as a stick and a giant snake as a rope. Out came treasures, a deadly poison, and the nectar
+    of immortality.
+  teen: >-
+    Told in the Mahabharata (1.15-17), the Valmiki Ramayana and many Puranas, the churning explains the
+    origin of the amrita pot (kumbha) carried by Dhanvantari, of Lakshmi and other treasures, and of the
+    halahala poison that Shiva drinks. Traditional chronology places it in the sixth (Chakshusha)
+    manvantara.
+datings:
+  - method: traditional-puranic
+    range:
+      earliest: -428979101
+      latest: -120531101
+      precision: cosmological
+      circa: true
+    grade: D
+    label: Puranic placement in the sixth (Chakshusha) manvantara
+    sources:
+      - src.wilson-1840-vishnu-purana
+      - src.dimmitt-vanbuitenen-1978-classical-hindu-mythology
+    note: >-
+      Puranic tradition, summarised in Wilson's notes to the Vishnu Purana, sets the churning in the
+      Chakshusha manvantara, the one before the present; in the standard scheme that manvantara (71
+      mahayugas plus a junction) ran from about 428.98 million to 120.53 million years before 3102 BCE.
+  - method: textual-internal
+    range:
+      earliest: "300 BCE"
+      latest: "400 CE"
+      precision: century
+      circa: true
+    grade: B
+    label: Attestation in the Sanskrit epics and early Puranas (date of the texts)
+    sources:
+      - src.brockington-1998-sanskrit-epics
+      - src.goldman-1984-ramayana-balakanda
+      - src.rocher-1986-puranas
+    note: >-
+      The full narrative appears in the Adiparvan of the Mahabharata (1.15-17) and in the Balakanda of the
+      Ramayana, both of which reached their present form in roughly the last centuries BCE and the first
+      centuries CE.
+claims:
+  - text: >-
+      In the Mahabharata (1.15-17) and the Vishnu Purana (1.9), the devas and asuras churn the ocean with
+      Mount Mandara and the serpent Vasuki, a tortoise supports the mountain (in the Vishnu Purana, Vishnu
+      himself in that form), and Dhanvantari rises bearing the amrita.
+    grade: A
+    sources:
+      - src.brockington-1998-sanskrit-epics
+      - src.wilson-1840-vishnu-purana
+      - src.dimmitt-vanbuitenen-1978-classical-hindu-mythology
+  - text: >-
+      The story of drops of amrita falling at the four Kumbha Mela cities is not found in the early epic and
+      Puranic accounts of the churning and is a later elaboration.
+    grade: B
+    sources:
+      - src.maclean-2008-pilgrimage-and-power
+      - src.lochtefeld-2004-construction-kumbha-mela
+relations:
+  - kind: related-to
+    target: tradition.kumbha-mela
+  - kind: related-to
+    target: cosmology.manvantara
+wikidata: Q606110
+image:
+  commons: "File:Churning of the Ocean of Milk at Tonle Bati.jpg"
+  alt: Stone relief at Tonle Bati in Cambodia showing devas and asuras churning the Ocean of Milk with the serpent as the rope
+  credit: Anilakeo
+  license: CC BY-SA 3.0
+tags:
+  - samudra-manthana
+  - kurma
+  - amrita
+  - purana
+  - mahabharata
+review:
+  status: draft
+  author: gemini-4-argon

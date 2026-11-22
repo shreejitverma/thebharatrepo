@@ -1,0 +1,74 @@
+id: concept.kalki-prophecy
+type: concept
+kind: dharma
+names:
+  en: Kalki Prophecy (Puranic Eschatology)
+  iast: Kalki
+  native: कल्कि
+summary: >-
+  In traditional Epic and Puranic eschatology, Kalki is the future avatar of Vishnu, born in the village of
+  Sambhala at the close of Kali Yuga to end adharma and restore the Krita (Satya) Yuga. The prophecy refers
+  to the end of a 432,000-year age, so this entry dates only the idea itself, by its earliest known
+  appearances in the Mahabharata and the Puranas.
+summaries:
+  kids: >-
+    In traditional Hindu stories, Kalki is a future avatar of Vishnu who will appear at the very end of Kali
+    Yuga to restore goodness and begin a new golden age. Historians study when this story was first told.
+  teen: >-
+    The earliest known account of Kalki is Markandeya's discourse on the end of the ages in the
+    Aranyakaparvan of the Mahabharata; the Vishnu and Bhagavata Puranas and the later Kalki Purana expand
+    it, and Kalki became the tenth figure in standard lists of Vishnu's ten avatars.
+datings:
+  - method: textual-internal
+    range:
+      earliest: -199
+      latest: 400
+      precision: century
+      circa: true
+    grade: B
+    label: Earliest textual formulation in Mahabharata 3.188-189 and early Puranas
+    sources:
+      - src.gonzalezreimann-2002-mahabharata-yugas
+      - src.brockington-1998-sanskrit-epics
+      - src.wilson-1840-vishnu-purana
+    note: >-
+      The earliest known narrative of Kalki occurs in Markandeya's discourse on the end of the yuga in the
+      Aranyakaparvan of the Mahabharata (3.188-189), whose composition is placed between roughly the 2nd
+      century BCE and the 4th century CE, and in Vishnu Purana 4.24.
+claims:
+  - text: >-
+      In the Mahabharata's Aranyakaparvan (3.188-189), Markandeya prophesies that at the close of Kali Yuga
+      a Brahmin named Kalki Vishnuyashas will be born in the village of Sambhala and restore the Krita Yuga.
+    grade: A
+    sources:
+      - src.gonzalezreimann-2002-mahabharata-yugas
+      - src.brockington-1998-sanskrit-epics
+  - text: >-
+      Vishnu Purana 4.24 describes Vishnu descending as Kalki in the family of Vishnuyashas, a Brahmin of
+      Sambhala, to destroy the wicked at the end of the Kali age, after which the Krita age returns.
+    grade: A
+    sources:
+      - src.wilson-1840-vishnu-purana
+      - src.gonzalezreimann-2002-mahabharata-yugas
+relations:
+  - kind: related-to
+    target: cosmology.kali-yuga
+  - kind: related-to
+    target: cosmology.satya-yuga
+  - kind: related-to
+    target: cosmology.mahayuga
+wikidata: Q476824
+image:
+  commons: "File:Kalki1790s.jpg"
+  alt: Indian painting of Kalki, the future avatar of Vishnu, with a white horse
+  credit: Unknown artist
+  license: Public domain
+tags:
+  - eschatology
+  - kalki
+  - dashavatara
+  - kali-yuga
+  - purana
+review:
+  status: draft
+  author: gemini-4-argon
