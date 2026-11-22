@@ -40,6 +40,17 @@ describe('sameTitle', () => {
     expect(sameTitle('World Religions of India', 'Folk Religions of India')).toBe(false);
     expect(pageMatchesTitle('A Cultural History of India', 'A Political History of India')).toBe(false);
   });
+  it('rejects different works that share a main title but not a subtitle', () => {
+    expect(sameTitle('Early India: From the Origins to AD 1300', 'Early India: A Concise History')).toBe(false);
+    expect(sameTitle('Ancient India: Political History', 'Ancient India: Social and Cultural Life')).toBe(false);
+    expect(sameTitle('Sun Temple, Konarak', 'Sun Temple, Modhera')).toBe(false);
+    expect(pageMatchesTitle('Sun Temple, Konarak', 'Sun Temple, Modhera')).toBe(false);
+  });
+  it('accepts a record that drops the subtitle or misspells a word by one swapped pair of letters', () => {
+    expect(sameTitle('Early India: From the Origins to AD 1300', 'Early India')).toBe(true);
+    expect(sameTitle('Classical Hindu Mythology: A Reader in the Sanskrit Puranas', 'Classical Hindu Mythology: A Reader in the Sanskirt Puranas')).toBe(true);
+    expect(sameTitle("Gandhi's Rise to Power: Indian Politics 1915-1922", "Gandhi's Rise to Power: Indian Politics 1915-1922 (Cambridge South Asian Studies)")).toBe(true);
+  });
   it('rejects a short title whose words are scattered through a different work', () => {
     expect(sameTitle('A History of India', 'History of the Archaeological Survey of India')).toBe(false);
     expect(sameTitle('A History of India', 'A History of India, Fourth Edition')).toBe(true);

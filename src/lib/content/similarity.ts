@@ -26,6 +26,7 @@ export function normalizeTitle(s: string): string[] {
     .replace(/<[^>]+>/g, ' ')
     .replace(/&(?:#\d+|#x[0-9a-f]+|[a-z]+);/g, ' ')
     .replace(/[^a-z0-9\s]/g, ' ')
+    .replace(/([a-z])(\d)|(\d)([a-z])/g, '$1$3 $2$4')
     .replace(/isation/g, 'ization')
     .replace(/colour/g, 'color')
     .split(/\s+/)
@@ -138,16 +139,24 @@ function sameWord(x: string, y: string): boolean {
 }
 
 /**
- * Sibling titles about different subjects: the main titles share a word, and each swaps in one or two
- * words the other lacks ("Ajanta Caves" vs "Ellora Caves", "Early History of India" vs "Early History of
- * Bengal"). Numerals are checked separately; a looser paraphrase with more differing words falls
+ * Sibling titles about different subjects. Either the main titles share a word and each swaps in one or
+ * two words the other lacks ("Ajanta Caves" vs "Ellora Caves", "Early History of India" vs "Early
+ * History of Bengal"), or the main titles are the same and each subtitle names something the other
+ * lacks ("Early India: From the Origins to AD 1300" vs "Early India: A Concise History", "Sun Temple,
+ * Konarak" vs "Sun Temple, Modhera"). Numbers are checked separately; a looser paraphrase falls
  * through to the overlap test.
  */
 function differentSubjects(a: string, b: string): boolean {
-  const words = (t: string) => normalizeTitle(mainTitle(t)).filter((w) => numeral(w) === null);
-  const A = words(a);
-  const B = words(b);
+  const significant = (t: string) => normalizeTitle(t).filter((w) => !/^\d+$/.test(w));
   const missing = (xs: string[], ys: string[]) => xs.filter((x) => !ys.some((y) => sameWord(x, y)));
+  const A = significant(mainTitle(a));
+  const B = significant(mainTitle(b));
+  if (A.length > 0 && A.join(' ') === B.join(' ')) {
+    const rest = (t: string) => significant(t.replace(/\([^)]*\)|\[[^\]]*\]/g, ' ')).slice(A.length);
+    const subA = rest(a);
+    const subB = rest(b);
+    return missing(subA, subB).length >= 1 && missing(subB, subA).length >= 1;
+  }
   const shares = A.some((x) => B.some((y) => x === y || nearlyEqual(x, y)));
   const onlyA = missing(A, B);
   const onlyB = missing(B, A);
@@ -163,7 +172,6 @@ export function sameTitle(citedTitle: string, foundTitle: string): boolean {
   for (const [x, y] of [
     [mainTitle(cited), found],
     [cited, mainTitle(found)],
-    [mainTitle(cited), mainTitle(found)],
   ]) {
     if (normalizeTitle(x).length >= 2 && exact(x, y)) return true;
   }
@@ -215,9 +223,16 @@ export function sameName(names: string[], labels: string[], opts: { namedThing?:
   );
 }
 
-/** Levenshtein distance <= 1 for words of six or more letters (Hastinapur vs Hastinapura). */
+/**
+ * One edit or one adjacent transposition apart, for words of six or more letters (Hastinapur vs
+ * Hastinapura, Sanskirt vs Sanskrit).
+ */
 function nearlyEqual(a: string, b: string): boolean {
   if (Math.min(a.length, b.length) < 6 || Math.abs(a.length - b.length) > 1) return false;
+  if (a.length === b.length) {
+    const diff = [...a].flatMap((c, k) => (c === b[k] ? [] : [k]));
+    if (diff.length === 2 && diff[1] === diff[0] + 1 && a[diff[0]] === b[diff[1]] && a[diff[1]] === b[diff[0]]) return true;
+  }
   let i = 0;
   let j = 0;
   let edits = 0;

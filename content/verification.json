@@ -2180,6 +2180,11 @@
     "checkedAt": "2026-11-22T02:49:51.681Z",
     "matched": "Rabindranath Tagore: the myriad-minded man"
   },
+  "isbn:9780415240352": {
+    "ok": true,
+    "checkedAt": "2026-11-22T05:35:46.610Z",
+    "matched": "Philosophy in classical India: the proper work of reason"
+  },
   "isbn:9780415266062": {
     "ok": false,
     "checkedAt": "2026-11-22T02:37:18.800Z",
