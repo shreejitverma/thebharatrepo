@@ -1187,4 +1187,140 @@
   reason: The assemblies are a medieval tradition, not evidence from the poems.
   sources:
     - src.zvelebil-1992-companion-studies
+- date: 2026-11-22
+  target: src.maas-2013-concise-historiography-yoga
+  before: Eli Franco was listed as the author of the volume cited for the Yoga Sutras.
+  after: Philipp A. Maas authored the chapter on pages 53-90 of the volume edited by Eli Franco.
+  reason: The University of Vienna identifies Maas as the chapter author. His deposited preprint verifies the print pagination.
+  sources:
+    - src.maas-2013-concise-historiography-yoga
+- date: 2026-11-22
+  target: src.gaur-1983-excavations-atranjikhera
+  before: The 1983 excavation monograph was identified by DOI 10.2307/3631855.
+  after: The monograph is identified by OCLC 13396022.
+  reason: The DOI resolves to Gérard Fussman's journal review of Gaur's monograph. The OCLC record identifies the 1983 book.
+  sources:
+    - src.gaur-1983-excavations-atranjikhera
+- date: 2026-11-22
+  target: /science/zero-and-the-decimal-system
+  before: The Bakhshali response was listed with Wujastyk first, and the Bodleian source note pointed to the duplicate Wujastyk record.
+  after: The article and Bodleian source note identify the response under Plofker and colleagues in the published author order.
+  reason: The journal byline starts with Kim Plofker and ends with Dominik Wujastyk. The response has a single DOI.
+  sources:
+    - src.plofker-2017-bakhshali-radiocarbon
+- date: 2026-11-22
+  target: event.keezhadi-excavations-begin
+  before: The three ASI seasons were attributed to Parliament through a source record pointing to a Tamil Nadu booklet.
+  after: The event cites the Tamil Nadu Department of Archaeology's 2019 excavation report for the 2014-15 through 2016-17 ASI seasons.
+  reason: The report explicitly lists all three ASI field seasons. The archive item under the purported Lok Sabha ID duplicated that report.
+  sources:
+    - src.sivanantham-2019-keeladi-urban-settlement
+- date: 2026-11-22
+  target: polity.mughal-empire
+  before: The dating ended in 1857, and the text described an unspecified formal end after the revolt.
+  after: The dating and claim give 1858 as the formal end, following the trial and exile of Bahadur Shah II.
+  reason: The British captured the last emperor in 1857 and tried and exiled him in 1858.
+  sources:
+    - src.metcalf-2012-concise-history-modern-india
+- date: 2026-11-22
+  target: /literature/kalidasa
+  before: Chandragupta II reigned about 380 to 415 CE.
+  after: Chandragupta II's reign is often dated to about 375 to 415 CE.
+  reason: The Mathura pillar attests his rule about 380 CE. Sircar's restoration of its damaged regnal year supports an earlier accession.
+  sources:
+    - src.singh-2008-ancient-early-medieval-india
+    - { id: src.bhandarkar-1981-inscriptions-early-gupta-kings, locator: "inscription 6" }
+- date: 2026-11-22
+  target: person.chandragupta-ii
+  before: The reign was grade A and the Mathura pillar was said to record the fifth regnal year.
+  after: The estimated reign is grade C, with the fifth regnal year attributed to Sircar's reconstruction.
+  reason: The pillar's regnal year is damaged. Bhandarkar leaves it unrestored, and the dated inscriptions establish a span of attested rule within the estimated reign.
+  sources:
+    - src.singh-2008-ancient-early-medieval-india
+    - { id: src.bhandarkar-1981-inscriptions-early-gupta-kings, locator: "inscriptions 6, 9 and 16" }
+- date: 2026-11-22
+  target: person.adi-shankara
+  before: The main scholarly dating was labelled conventional 788 to 820 CE, and the teen summary gave about 800 CE.
+  after: The grade C dating gives Hajime Nakamura's estimate of about 700 to 750 CE. The discussion also gives Karl Potter's estimate and the conventional 788 to 820 CE dating.
+  reason: Nakamura's relative chronology is influential, and scholars continue to differ on the dates.
+  sources:
+    - src.nakamura-1983-early-vedanta
+    - src.dalal-2021-shankara
+- date: 2026-11-22
+  target: concept.rigvedic-sarasvati
+  before: The summary described the Rigvedic river as snow-fed and the teen summary presented its identification as settled.
+  after: The summaries distinguish the hymns' description from the geographical identification it supports and the separate evidence for river flow.
+  reason: Rigveda 7.95.2 describes flow from mountains to sea, while 10.75.5 places the Sarasvati between the Yamuna and Sutlej. Neither verse specifies the water source.
+  sources:
+    - { id: src.jamison-brereton-2014-rigveda, locator: "Rigveda 7.95.2 and 10.75.5" }
+    - src.singh-2017-himalayan-river-morphodynamics
+- date: 2026-11-22
+  target: concept.rigvedic-sarasvati
+  before: The Danino and Lal dating was classified as geological evidence for a glacial-fed river from 3300 to 1900 BCE.
+  after: The same grade C range is classified as a textual interpretation that correlates the Rigvedic Sarasvati with the Harappan-era Ghaggar-Hakra.
+  reason: The dating is a reading of the hymns in relation to the palaeochannel, whose deep sediment record has its own chronology.
+  sources:
+    - src.danino-2010-lost-river-sarasvati
+    - src.lal-2002-saraswati-flows-on
+    - src.clift-2012-zircon-dating-sarasvati
+    - src.singh-2017-himalayan-river-morphodynamics
+- date: 2026-11-22
+  target: concept.rigvedic-sarasvati
+  before: The geological dating described a perennial monsoon-fed river that weakened around 2000 to 1900 BCE.
+  after: The dating explains the evidence for local monsoon-fed flow and the debated possibility of later supply from Sutlej distributaries.
+  reason: Studies date the departure of the main rivers before urbanisation. Chatterjee and colleagues propose subsequent input from smaller Sutlej branches.
+  sources:
+    - src.giosan-2012-fluvial-landscapes-harappan
+    - src.singh-2017-himalayan-river-morphodynamics
+    - src.khan-2024-himalayan-rivers
+    - src.chatterjee-2019-perennial-ghaggar
+- date: 2026-11-22
+  target: concept.ghaggar-hakra-sarasvati-debate
+  before: A single Himalayan river system was assigned a grade A diversion interval of about 45,000 to 8,000 years ago.
+  after: The approximate grade B range covers estimates for two distinct shifts, from the earliest proposed Yamuna diversion to the completion of the Sutlej diversion.
+  reason: Sediment provenance and luminescence studies give different constraints for the two rivers. Clift and colleagues allow a Yamuna diversion as early as about 49,000 years ago.
+  sources:
+    - src.clift-2012-zircon-dating-sarasvati
+    - src.singh-2017-himalayan-river-morphodynamics
+    - src.khan-2024-himalayan-rivers
+- date: 2026-11-22
+  target: concept.ghaggar-hakra-sarasvati-debate
+  before: The Harappan flow dating and claim were grade A and presented a flood-safe, monsoon-fed valley as settled.
+  after: The grade B dating and claim describe local flow and qualify the proposed contribution of smaller Sutlej branches.
+  reason: Sediment cores support the departure of the main rivers, while studies differ on the source and persistence of local flows.
+  sources:
+    - src.giosan-2012-fluvial-landscapes-harappan
+    - src.singh-2017-himalayan-river-morphodynamics
+    - src.khan-2024-himalayan-rivers
+    - src.chatterjee-2019-perennial-ghaggar
+- date: 2026-11-22
+  target: concept.ghaggar-hakra-sarasvati-debate
+  before: The location of the later Vedic Sarasvati was grade A, and the Harappan correlation tied the accounts of Vinasana to drying around 1900 BCE.
+  after: The geographical identification is grade B. The proposed Harappan correlation stays grade C and cites Lal and Danino.
+  reason: The textual descriptions support the geographical identification. Synchronising the later accounts of Vinasana with a specific hydrological event remains interpretive.
+  sources:
+    - src.singh-2008-ancient-early-medieval-india
+    - src.danino-2010-lost-river-sarasvati
+    - src.lal-2002-saraswati-flows-on
+- date: 2026-11-22
+  target: artifact.dancing-girl-mohenjo-daro
+  before: The summary credited Mackay alone in 1926, and the dating note credited Sahni and Mackay together.
+  after: The statuette was recovered in House LV in the HR Area during the 1926-27 season, when Sahni directed work there.
+  reason: Sahni's field account identifies the findspot. Marshall assigns Mackay to the L Area and does not name the individual who lifted the object.
+  sources:
+    - { id: src.marshall-1931-mohenjo-daro, locator: "vol. I, ch. II and pp. 209-210" }
+- date: 2026-11-22
+  target: src.pargiter-1913-dynasties-kali-age
+  before: The surviving Pargiter entry was classified as a primary text.
+  after: The single entry is classified as a translation and describes Pargiter's collation and discussion of Prakrit forms and Sanskritisation.
+  reason: The 1913 edition presents an edited text and a separate English translation.
+  sources:
+    - src.pargiter-1913-dynasties-kali-age
+- date: 2026-11-22
+  target: src.asi-history-1861
+  before: The ASI history page was listed as published in 2026.
+  after: The page is listed as undated, with 1861 identified as the year of Cunningham's appointment.
+  reason: The page dates the historical events it describes and gives no publication date.
+  sources:
+    - src.asi-history-1861
     - src.wilden-2014-manuscript-print-memory

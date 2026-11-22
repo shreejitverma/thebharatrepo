@@ -6,34 +6,38 @@ names:
   iast: Sarasvatī
   native: सरस्वती
 summary: >-
-  In the Rigveda, Sarasvati is celebrated both as a mighty, snow-fed river flowing from the
-  mountains to the sea (or terminal lake) and as the goddess of sacred speech and ritual inspiration.
-  Its geographical identification - between the Ghaggar-Hakra paleochannel system in Haryana,
-  Rajasthan, and Cholistan and an earlier shared name with the Helmand (Haraxvaiti) in Afghanistan
-  - and the timing of its hydrological decline are central debates in South Asian archaeology.
+  The Rigveda celebrates Sarasvati as a mighty river and as a goddess. One hymn describes her
+  flowing from the mountains to the sea. The river list in Rigveda 10.75 supports an identification
+  with the Ghaggar-Hakra, while the geography of earlier hymns and their relation to the history
+  of the river remain debated.
 summaries:
   kids: >-
     In the Rigveda, the Sarasvati is praised as a grand river flowing from the mountains and as a
-    goddess of wisdom. Today, scientists study dried-up riverbeds between the Yamuna and Sutlej to
-    trace its ancient path.
+    goddess. Scholars compare the hymns with what scientists find in old riverbeds between the
+    Yamuna and Sutlej.
   teen: >-
-    Positioned explicitly between the Yamuna and the Shutudri (Sutlej) in the Nadistuti hymn
-    (Rigveda 10.75.5), the Rigvedic Sarasvati corresponds geographically to the Ghaggar-Hakra
-    system, while geologists and historians debate when it transitioned from a perennial to a
-    monsoon-fed seasonal river.
+    The Nadistuti hymn (Rigveda 10.75.5) lists the Sarasvati between the Yamuna and the Sutlej,
+    supporting a link with the Ghaggar-Hakra. Sediment studies indicate that the main Sutlej and
+    Yamuna had shifted away before the Harappan cities developed. Researchers disagree about
+    whether smaller Sutlej branches later supplied the Ghaggar.
 region: Kurukshetra and Ghaggar-Hakra basin (Haryana, Punjab, northern Rajasthan, and Cholistan)
 location: { name: "Kurukshetra (Ghaggar-Sarasvati basin)", lat: 29.97, lon: 76.88 }
 datings:
   - method: geological
     range: { earliest: "2600 BCE", latest: "1900 BCE", best: "2000 BCE", precision: century, circa: true }
     grade: B
-    label: Fluvial geomorphology of the Ghaggar-Hakra monsoonal decline (Giosan et al. 2012)
+    label: Harappan-era flow in the Ghaggar-Hakra (Giosan et al. 2012)
     sources:
       - src.giosan-2012-fluvial-landscapes-harappan
+      - src.clift-2012-zircon-dating-sarasvati
+      - src.singh-2017-himalayan-river-morphodynamics
+      - src.khan-2024-himalayan-rivers
+      - src.chatterjee-2019-perennial-ghaggar
     note: >-
-      Fluvial geomorphology and luminescence dating by Liviu Giosan et al. (2012) indicate that
-      during the Holocene Harappan phase the Ghaggar-Hakra was a perennial monsoon-fed system whose
-      discharges weakened after c. 2000 to 1900 BCE as the summer monsoon aridified.
+      Giosan and colleagues infer monsoon-fed flow and weakening floods. Sediment provenance and
+      luminescence studies place the diversion of the main Yamuna and Sutlej well before Mature
+      Harappan urbanisation. Chatterjee and colleagues infer later supply from Sutlej distributaries
+      in parts of the Ghaggar until about 4,500 years ago.
   - method: textual-internal
     range: { earliest: "1500 BCE", latest: "900 BCE", best: "1200 BCE", precision: century, circa: true }
     grade: C
@@ -45,17 +49,16 @@ datings:
       In the Rigveda (c. 1500 to 1000 BCE in mainstream chronology) the Sarasvati is described as a
       swollen river, whereas by the Panchavimsha and Jaiminiya Brahmanas (c. 900 to 700 BCE) it is
        explicitly described as disappearing into the desert at Vinashana.
-  - method: geological
+  - method: textual-internal
     range: { earliest: "3300 BCE", latest: "1900 BCE", precision: century, circa: true }
     grade: C
-    label: Pre-1900 BCE glacial-fed Sarasvati correlation (Danino, Lal)
+    label: Harappan-era identification of the Rigvedic Sarasvati (Danino, Lal)
     sources:
       - src.danino-2010-lost-river-sarasvati
       - src.lal-2002-saraswati-flows-on
     note: >-
-      Michel Danino and B. B. Lal argue that Rigvedic descriptions of the Sarasvati breaking
-      mountain ridges and flowing from the mountains to the ocean (RV 7.95.2) must predate the late
-      Harappan drying of the Ghaggar-Hakra around 1900 BCE.
+      Michel Danino and B. B. Lal link descriptions of a powerful river in the Rigveda to the
+      Harappan-era Ghaggar-Hakra. The range represents the period proposed for that correlation.
 claims:
   - text: >-
       The Nadistuti Sukta ("Praise of the Rivers," Rigveda 10.75.5) enumerates the rivers of northern
@@ -86,6 +89,7 @@ claims:
       - src.danino-2010-lost-river-sarasvati
       - src.singh-2008-ancient-early-medieval-india
 relations:
+  - { kind: related-to, target: concept.ghaggar-hakra-sarasvati-debate }
   - { kind: related-to, target: text.rigveda }
   - { kind: related-to, target: event.dasarajna }
   - { kind: related-to, target: polity.kuru-kingdom }
@@ -96,10 +100,10 @@ image:
   credit: Joshua Jonathan
   license: CC BY-SA 4.0
 debate: >-
-  The Nadistuti hymn (Rigveda 10.75.5) unambiguously locates the late Rigvedic Sarasvati between
-  the Yamuna and the Sutlej in the Ghaggar-Hakra basin. Scholars differ on whether early Rigvedic
-  hymns reflect a pre-1900 BCE perennial glacial-fed river (Lal, Danino), a monsoon-fed river still
-  active during the Late Bronze Age before drying at Vinashana (Giosan, Witzel), or carry older
-  memories of the Avestan Haraxvaiti (Helmand) transferred eastward.
+  The location named in Rigveda 10.75.5 supports identifying the Sarasvati of that hymn with the
+  Ghaggar-Hakra. Interpretations of the earlier hymns include a Harappan-era river, a later river
+  swollen by monsoon floods, and a river name carried eastward from the Helmand basin. The sediment
+  studies constrain the history of river flow. The age and geography of the hymns are questions
+  scholars address with textual and linguistic evidence.
 tags: [sarasvati, rigveda, nadistuti, ghaggar-hakra, kurukshetra, hydrology]
 review: { status: draft, author: "gemini-4-argon" }

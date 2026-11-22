@@ -11,19 +11,23 @@ summaries:
   kids: >-
     Emperor Chandragupta II Vikramaditya ruled the Gupta Empire at its height, defeated the Western Shaka rulers to reach the Arabian Sea, and supported poets, scholars and artists.
   teen: >-
-    Reigning c. 375 to 415 CE, Chandragupta II Vikramaditya expanded Gupta rule to the western coast by conquering the Western Kshatrapas, allied by marriage with the Vakatakas of the Deccan, and commissioned monuments at Udayagiri and the Iron Pillar of King Chandra.
+    Chandragupta II Vikramaditya, whose reign is often dated to about 375 to 415 CE, expanded Gupta rule to the western coast by conquering the Western Kshatrapas, allied by marriage with the Vakatakas of the Deccan, and commissioned monuments at Udayagiri and the Iron Pillar of King Chandra.
 region: Northern, Central and Western India (capitals at Pataliputra and Ujjain)
 location: { name: "Ujjain, Madhya Pradesh", lat: 23.176, lon: 75.788 }
 datings:
   - method: epigraphic
     range: { earliest: 375, latest: 415, precision: year, circa: true }
-    grade: A
-    label: Dated Gupta-era inscriptions from Year 61 (380 CE Mathura pillar) to Year 93 (412/413 CE Sanchi railing)
+    grade: C
+    label: Estimated reign from Gupta-era inscriptions
     sources:
-      - src.fleet-1888-inscriptions-early-gupta-kings
-      - src.willis-2002-lion-capital-udayagiri
-      - src.kulke-2004-history-of-india
-    note: The Mathura pillar inscription of Gupta Year 61 (380 CE), recorded in his fifth regnal year, places his accession in 375/376 CE; his latest dated inscription is the Sanchi railing record of Gupta Year 93 (412/413 CE), and his son Kumaragupta I is attested by Year 96 (415/416 CE).
+      - { id: src.bhandarkar-1981-inscriptions-early-gupta-kings, locator: "inscriptions 6, 9 and 16" }
+      - src.singh-2008-ancient-early-medieval-india
+    note: >-
+      The Mathura pillar attests Chandragupta II in Gupta Year 61 (about 380 CE). D. C. Sircar's
+      reconstruction of the damaged regnal year as the fifth places his accession around 375 or
+      376 CE. Bhandarkar's edition leaves the regnal year unrestored. The Sanchi railing attests
+      Chandragupta in Gupta Year 93 (412/413 CE), and the Bilsad pillar attests Kumaragupta I in
+      Gupta Year 96 (415/416 CE).
 claims:
   - text: An inscription of Chandragupta II's minister Virasena in Cave 6 at Udayagiri states that the emperor came to eastern Malwa in person "seeking to conquer the whole world" (kritsna-prithvi-jayarthena), coinciding with the overthrow of the Western Kshatrapas and the introduction of Gupta silver coinage after 409 CE.
     grade: A

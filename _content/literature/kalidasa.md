@@ -78,9 +78,9 @@ If those echoes are real, Kalidasa was earlier than 473.
 Not every scholar accepts that the verbal parallels prove borrowing.
 [@src.pollock-2006-language-of-the-gods]
 
-On the basis of these brackets and the style of his work, many scholars place him in the 4th to 5th century CE, in the time of Chandragupta II (reigned about 380 to 415 CE) or of his immediate successors.
+On the basis of these brackets and the style of his work, many scholars place him in the 4th to 5th century CE, in the time of Chandragupta II (whose reign is often dated to about 375 to 415 CE) or of his immediate successors.
 Others argue for different dates, and the identification with a particular Gupta patron has no contemporary documentary support.
-[@src.lienhard-1984-history-classical-poetry]
+[@src.lienhard-1984-history-classical-poetry; @src.singh-2008-ancient-early-medieval-india; @src.bhandarkar-1981-inscriptions-early-gupta-kings, inscription 6]
 
 ## The tradition of Vikramaditya
 
