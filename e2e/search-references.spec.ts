@@ -145,6 +145,16 @@ test.describe('search', () => {
     await expect(page).toHaveURL(new RegExp(`${href}$`));
   });
 
+  test('the reading-level audience labels are not indexed, so "ages" never matches them', async ({ page }) => {
+    await page.goto('/search?q=ages');
+    await expect(status(page)).toHaveText(/results? for “ages”/);
+    await expect(results(page).first()).toBeVisible();
+    // Every leveled entity page carries the labels "Ages 13 to 17" and "Ages 8 to 12"; an indexed label shows in its excerpt.
+    const excerpts = await page.locator('.search-result__excerpt').allTextContents();
+    expect(excerpts.length).toBeGreaterThan(0);
+    for (const text of excerpts) expect(text).not.toMatch(/Ages (13 to 17|8 to 12)/);
+  });
+
   test('a name query puts the record with that exact title first', async ({ page }) => {
     for (const [q, title] of [
       ['ashoka', 'Ashoka'],

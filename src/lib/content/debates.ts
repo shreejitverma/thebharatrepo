@@ -3,8 +3,8 @@
  *
  * Owner rule: a debate page is published only with owner approval. `published: false` debates are
  * validated by content:validate but are excluded from the static build, sitemap, search and every link.
- * DEBATES_PREVIEW=1 at build time renders them for the owner's review, marked as unpublished drafts and
- * set to noindex; that build is local only and never deployed.
+ * DEBATES_PREVIEW=1 renders them for the owner's review, marked as unpublished drafts and set to noindex,
+ * in `npm run dev:debates-preview` or a local build; next.config.ts refuses it in a deployment build.
  */
 
 import type { ContentGraph, DebateDoc } from './load';
@@ -17,11 +17,16 @@ export function debatesPreview(): boolean {
   return process.env.DEBATES_PREVIEW === '1';
 }
 
-/** A preview build renders unpublished drafts, so it must never be a production or Vercel build. Throws if it would be. */
+/**
+ * A preview renders unpublished drafts, so it must never be built for a deployment: a Vercel build, or a
+ * production build in CI. A local preview build (`DEBATES_PREVIEW=1 npm run build && npm start`) and the dev
+ * server CI's preview tests run are allowed. Throws if a deployment build would include drafts.
+ */
 export function assertPreviewNotDeployed(env: Readonly<Record<string, string | undefined>> = process.env): void {
   if (env.DEBATES_PREVIEW !== '1') return;
-  if (env.VERCEL || env.NODE_ENV === 'production') {
-    throw new Error('DEBATES_PREVIEW=1 renders unpublished debate drafts and must never be deployed: unset it for a production or Vercel build, and use `npm run dev:debates-preview` to review drafts locally.');
+  const ci = !!env.CI && env.CI !== 'false';
+  if (env.VERCEL || env.VERCEL_ENV || (ci && env.NODE_ENV === 'production')) {
+    throw new Error('DEBATES_PREVIEW=1 renders unpublished debate drafts and must never be deployed: unset it for a Vercel or CI build, and review drafts locally with `npm run dev:debates-preview` or a local build.');
   }
 }
 

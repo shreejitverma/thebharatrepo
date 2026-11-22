@@ -230,10 +230,16 @@ describe('loader: debates and learning paths', () => {
 
   it('refuses a preview build that would be deployed, through the real next.config', async () => {
     const { assertPreviewNotDeployed } = await import('./debates');
+    // Allowed: the owner's local preview build and dev server, CI's preview dev server, and any build without the flag.
+    expect(() => assertPreviewNotDeployed({ DEBATES_PREVIEW: '1', NODE_ENV: 'production' })).not.toThrow();
     expect(() => assertPreviewNotDeployed({ DEBATES_PREVIEW: '1', NODE_ENV: 'development' })).not.toThrow();
+    expect(() => assertPreviewNotDeployed({ DEBATES_PREVIEW: '1', NODE_ENV: 'development', CI: 'true' })).not.toThrow();
+    expect(() => assertPreviewNotDeployed({ DEBATES_PREVIEW: '1', NODE_ENV: 'production', CI: 'false' })).not.toThrow();
     expect(() => assertPreviewNotDeployed({ NODE_ENV: 'production', VERCEL: '1' })).not.toThrow();
-    expect(() => assertPreviewNotDeployed({ DEBATES_PREVIEW: '1', NODE_ENV: 'production' })).toThrow(/must never be deployed/);
+    // Refused: a Vercel build, whatever its environment, and a production build in CI.
     expect(() => assertPreviewNotDeployed({ DEBATES_PREVIEW: '1', VERCEL: '1', NODE_ENV: 'development' })).toThrow(/must never be deployed/);
+    expect(() => assertPreviewNotDeployed({ DEBATES_PREVIEW: '1', VERCEL_ENV: 'preview', NODE_ENV: 'production' })).toThrow(/must never be deployed/);
+    expect(() => assertPreviewNotDeployed({ DEBATES_PREVIEW: '1', CI: 'true', NODE_ENV: 'production' })).toThrow(/must never be deployed/);
     // Next.js evaluates next.config.ts on every build, so loading it is what stops a deployed preview build.
     vi.stubEnv('DEBATES_PREVIEW', '1');
     vi.stubEnv('VERCEL', '1');

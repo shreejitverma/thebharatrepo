@@ -2,7 +2,7 @@ import { defineConfig, devices } from '@playwright/test';
 
 const PORT = Number(process.env.E2E_PORT ?? 3107);
 const CI = !!process.env.CI;
-/** A dev server with DEBATES_PREVIEW=1, the owner's review build: renders unpublished debate drafts. */
+/** A dev server with DEBATES_PREVIEW=1, the owner's preview: renders unpublished debate drafts. */
 const PREVIEW_PORT = Number(process.env.E2E_PREVIEW_PORT ?? PORT + 20);
 const PREVIEW = /\.preview\.spec\.ts$/;
 

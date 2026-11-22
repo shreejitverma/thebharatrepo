@@ -141,7 +141,8 @@ Identifiers are linked only when verified: DOI, ISBN and OCLC always, a URL only
 ## Debates, learning paths and reading levels
 
 - Debate pages (`/debates`) are validated whether or not they are published, but a debate is rendered, linked from entity pages, indexed for search or listed only when `published: true`, which the schema accepts only with an `approval { by, date }` record.
-  `npm run dev:debates-preview` (or `DEBATES_PREVIEW=1` at build time) renders drafts with an "Unpublished draft" banner and `noindex`; never deploy such a build.
+  `npm run dev:debates-preview`, or a local `DEBATES_PREVIEW=1 npm run build && npm start`, renders drafts with an "Unpublished draft" banner and `noindex`.
+  `next.config.ts` refuses `DEBATES_PREVIEW=1` in a deployment build (on Vercel, where `VERCEL` or `VERCEL_ENV` is set, or a production build in CI), so drafts cannot be deployed.
   `next.config.ts` also keeps every debate file not marked `published: true` out of the traced server bundles, and until a debate is published the `/debates` index is `noindex` and absent from the footer.
 - Learning paths (`/learn`) have ordered steps, a quiz scored in the browser, per-viewer progress in `localStorage`, and a printable pack at `/learn/<slug>/print` with the answer key on its own page.
   Choices show in the order written; `content:validate` rejects a quiz of three or more questions whose correct answers all share one position.

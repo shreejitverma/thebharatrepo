@@ -114,7 +114,7 @@ export default async function EntityPage({ params }: { params: Promise<{ type: s
       </nav>
       <div className="entity-head">
         <div>
-          <h1 data-pagefind-weight="10">{e.names.en}</h1>
+          <h1>{e.names.en}</h1>
           <EntityNames native={item.native} iast={item.iast} nativeLang={item.nativeLang} iastLang={item.iastLang} />
           {levels.length > 1 ? <ReadingLevelSwitcher available={levels} /> : null}
           <LeveledText className="lede entity-lede" adult={e.summary} teen={e.summaries?.teen} kids={e.summaries?.kids} tagged />
