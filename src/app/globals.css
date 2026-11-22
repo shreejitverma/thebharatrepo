@@ -42,6 +42,16 @@
   --wheel-seg-b: #ebdcc2;
   --wheel-core: #1e1a2e;
   --wheel-core-ink: #f7f1e6;
+  --era-a: var(--wheel-seg-a);
+  --era-b: var(--wheel-seg-b);
+  --lens-tradition: var(--gold);
+  --wheel-trad-fill: var(--bg-elev);
+  --wheel-mark-edge: var(--bg-elev);
+  --wheel-core-ring: var(--gold);
+  --wheel-tag-bg: var(--gold);
+  --wheel-tag-edge: var(--gold);
+  --wheel-tag-ink: var(--wheel-core);
+  --wheel-indicator: var(--accent);
 
   --radius: 10px;
   --radius-sm: 6px;
@@ -1151,19 +1161,83 @@ a:hover {
   min-width: 0;
 }
 
+/*
+ * The wheel is two stacked SVGs: the rotor turns (as one composited layer while it moves), the overlay keeps
+ * labels upright and the hub and indicator still. Only the painted disc takes pointer events, so a touch on
+ * the square's corners, or anywhere off the wheel, scrolls the page as usual.
+ */
 .kc-wheel {
+  position: relative;
   display: block;
   width: 100%;
   max-width: 820px;
+  aspect-ratio: 1;
   margin: 0 auto;
-  height: auto;
-  touch-action: manipulation;
+  overflow: hidden;
+  container-type: inline-size;
   user-select: none;
   -webkit-user-select: none;
+  -webkit-tap-highlight-color: transparent;
+}
+
+.kc-wheel__rotor,
+.kc-wheel__overlay {
+  position: absolute;
+  inset: 0;
+  display: block;
+  width: 100%;
+  height: 100%;
+  overflow: visible;
+}
+
+.kc-wheel__rotor {
+  pointer-events: none;
+  transform-origin: 50% 50%;
+}
+
+.kc-wheel__rotor > * {
+  pointer-events: visiblePainted;
+}
+
+.kc-wheel[data-interactive] .kc-wheel__rotor {
+  touch-action: none;
+}
+
+.kc-wheel[data-interactive] .kc-wheel__disc,
+.kc-wheel[data-interactive] .kc-wheel__era {
+  cursor: grab;
+}
+
+.kc-wheel__rotor[data-dragging],
+.kc-wheel__rotor[data-dragging] * {
+  cursor: grabbing !important;
+}
+
+/* Promoted only while it moves: at rest the rotor paints in place, so its shapes stay crisp. */
+.kc-wheel__rotor[data-spinning] {
+  will-change: transform;
+}
+
+.kc-wheel__overlay {
+  pointer-events: none;
 }
 
 .kc-wheel text {
   font-family: var(--font-ui);
+}
+
+.kc-hub--compact {
+  display: none;
+}
+
+/* On a small wheel the panel below names the entry; the hub keeps the date and tag, at a size that can be read. */
+@container (max-width: 520px) {
+  .kc-hub--full {
+    display: none;
+  }
+  .kc-hub--compact {
+    display: inline;
+  }
 }
 
 .kc-mark {

@@ -1,34 +1,31 @@
-import type { ReactNode } from 'react';
+import type { CSSProperties, MouseEventHandler, PointerEventHandler, ReactNode, Ref, SVGProps } from 'react';
 import type { Kind } from '@/lib/content/labels';
 import type { Lens } from '@/lib/content/lens';
 import { PRESENT_YEAR, formatYear } from '@/lib/time';
 import { SEGMENT_STARTS } from '@/lib/time/scale';
 import { BOUNDARY_LABELS, SEGMENTS, SHORT_SEGMENT_LABELS, anchorIn, hash, kindColor, visibleDatings, wrapText, yearToUnit, type PlacedItem } from './shared';
+import { C, R_INNER, R_OUTER, VB, angleOf, polarXY, radialLabel, tangentLabel } from './wheelGeometry';
 
 /*
  * Pure wheel renderer shared by the interactive client Wheel and static server renders (home page,
- * Kaalchakra fallback). No hooks and no client directive; handlers are optional and absent on the server.
+ * Kaalchakra fallback). No hooks and no client directive; handlers and refs are optional and absent on the server.
+ *
+ * Two stacked SVGs share one viewBox:
+ *   - the rotor holds everything that turns with time (eras, rings, marks, scale breaks). The client spins it
+ *     with a CSS transform on the element itself, so the browser can move it as one composited layer without
+ *     repainting a thousand shapes per frame;
+ *   - the overlay holds what must stay upright or fixed: era and year labels (re-placed each frame from their
+ *     data attributes by placeLabels), the hub and the indicator. It never takes pointer events.
  * Every emitted coordinate is rounded to two decimals so server and client output match exactly.
  */
-
-const VB = 1000;
-const C = VB / 2;
-const R_INNER = 150;
-const R_OUTER = 430;
-/** Fraction of the circle left open at the top, where the end of time meets its beginning. */
-const GAP = 0.035;
 
 function f(n: number): string {
   return n.toFixed(2);
 }
 
-function angleOf(u: number): number {
-  const start = -Math.PI / 2 + GAP * Math.PI;
-  return start + u * (2 * Math.PI * (1 - GAP));
-}
-
 function polar(r: number, a: number): [string, string] {
-  return [f(C + r * Math.cos(a)), f(C + r * Math.sin(a))];
+  const { x, y } = polarXY(r, a);
+  return [f(x), f(y)];
 }
 
 function arcPath(r: number, a0: number, a1: number): string {
@@ -53,11 +50,70 @@ function lineProps(r0: number, r1: number, a: number) {
   return { x1, y1, x2, y2 };
 }
 
-function rotate(a: number, x: string, y: string): string {
-  return `rotate(${f(a)} ${x} ${y})`;
+export const SEGMENT_ANGLES = SEGMENTS.map((seg, i) => ({ seg, i, a0: angleOf(SEGMENT_STARTS[i]), a1: angleOf(SEGMENT_STARTS[i] + seg.share) }));
+
+const TODAY_A = angleOf(yearToUnit(PRESENT_YEAR));
+const START_A = angleOf(0);
+const RADIAL_R = R_INNER + 18;
+
+/** A label in the overlay: where it sits on the unrotated wheel and how it turns. */
+type LabelMode = 'tangent' | 'upright' | 'radial';
+
+/**
+ * Attributes of an overlay label for a wheel rotation (rad) and angular speed (rad/ms).
+ * The renderer uses it for the first paint; placeLabels applies the same rule on every frame.
+ */
+type Anchor = 'start' | 'middle' | 'end';
+
+function labelAttrs(mode: LabelMode, a: number, r: number, side: number, rotation: number, speed: number): { x: string; y: string; transform?: string; anchor: Anchor; opacity: string } {
+  const at = a + rotation;
+  if (mode === 'upright') {
+    const { x, y } = polarXY(r, at);
+    return { x: f(x), y: f(y), anchor: 'middle', opacity: '1.00' };
+  }
+  if (mode === 'tangent') {
+    const { x, y } = polarXY(r, at);
+    const { deg, opacity } = tangentLabel(at, speed);
+    return { x: f(x), y: f(y), transform: `rotate(${f(deg)} ${f(x)} ${f(y)})`, anchor: 'middle', opacity: f(opacity) };
+  }
+  const { x, y } = polarXY(r, at + (side * 9) / r);
+  const { deg, flipped, opacity } = radialLabel(at, speed);
+  return { x: f(x), y: f(y), transform: `rotate(${f(deg)} ${f(x)} ${f(y)})`, anchor: flipped ? 'end' : 'start', opacity: f(opacity) };
 }
 
-const SEGMENT_ANGLES = SEGMENTS.map((seg, i) => ({ seg, i, a0: angleOf(SEGMENT_STARTS[i]), a1: angleOf(SEGMENT_STARTS[i] + seg.share) }));
+/** Re-place every overlay label for a rotation; called once per animation frame, with no React render. */
+export function placeLabels(labels: readonly SVGTextElement[], rotation: number, speed: number): void {
+  for (const el of labels) {
+    const d = el.dataset;
+    const at = labelAttrs(d.mode as LabelMode, Number(d.a), Number(d.r), Number(d.side ?? 0), rotation, speed);
+    el.setAttribute('x', at.x);
+    el.setAttribute('y', at.y);
+    if (at.transform) el.setAttribute('transform', at.transform);
+    el.setAttribute('text-anchor', at.anchor);
+    el.setAttribute('opacity', at.opacity);
+  }
+}
+
+function OverlayLabel({ mode, a, r, side = 0, rotation, children, ...rest }: { mode: LabelMode; a: number; r: number; side?: number; rotation: number; children: ReactNode } & SVGProps<SVGTextElement>) {
+  const at = labelAttrs(mode, a, r, side, rotation, 0);
+  return (
+    <text
+      data-mode={mode}
+      data-a={a}
+      data-r={r}
+      data-side={side}
+      x={at.x}
+      y={at.y}
+      transform={at.transform}
+      textAnchor={at.anchor}
+      opacity={at.opacity}
+      dominantBaseline="middle"
+      {...rest}
+    >
+      {children}
+    </text>
+  );
+}
 
 function markElements(item: PlacedItem, r: number, ringW: number, lens: Lens): ReactNode[] {
   const ds = visibleDatings(item, lens);
@@ -72,7 +128,15 @@ function markElements(item: PlacedItem, r: number, ringW: number, lens: Lens): R
     if ((a1 - a0) * r < 7) {
       const [x, y] = polar(r, (a0 + a1) / 2);
       els.push(
-        <circle key={k} cx={x} cy={y} r={trad ? 4.6 : 5.2} fill={trad ? 'var(--bg-elev)' : color} stroke={trad ? 'var(--gold)' : 'var(--bg-elev)'} strokeWidth={trad ? 2.4 : 1.2} />,
+        <circle
+          key={k}
+          cx={x}
+          cy={y}
+          r={trad ? 4.6 : 5.2}
+          fill={trad ? 'var(--wheel-trad-fill)' : color}
+          stroke={trad ? 'var(--lens-tradition)' : 'var(--wheel-mark-edge)'}
+          strokeWidth={trad ? 2.4 : 1.2}
+        />,
       );
     } else {
       // Very long spans (living traditions, long-occupied sites) recede so point events stay legible.
@@ -82,7 +146,7 @@ function markElements(item: PlacedItem, r: number, ringW: number, lens: Lens): R
           key={k}
           d={arcPath(r, a0, a1)}
           fill="none"
-          stroke={trad ? 'var(--gold)' : color}
+          stroke={trad ? 'var(--lens-tradition)' : color}
           strokeWidth={trad ? 4 : long ? 4 : 7}
           strokeLinecap="round"
           strokeDasharray={trad ? '2 5' : undefined}
@@ -95,7 +159,7 @@ function markElements(item: PlacedItem, r: number, ringW: number, lens: Lens): R
     const lo = Math.min(...anchors);
     const hi = Math.max(...anchors);
     if ((hi - lo) * r > 10) {
-      els.unshift(<path key="bridge" d={arcPath(r - ringW * 0.42, lo, hi)} fill="none" stroke="var(--gold)" strokeWidth={1} strokeDasharray="1 4" opacity={0.7} />);
+      els.unshift(<path key="bridge" d={arcPath(r - ringW * 0.42, lo, hi)} fill="none" stroke="var(--lens-tradition)" strokeWidth={1} strokeDasharray="1 4" opacity={0.7} />);
     }
   }
   // Generous invisible hit target at the primary anchor for touch.
@@ -110,7 +174,15 @@ function markElements(item: PlacedItem, r: number, ringW: number, lens: Lens): R
 export interface WheelCore {
   lines: string[];
   sub: string;
+  /** Shown as its own tag under the date, so a long date can never push it out of the hub. */
+  tag?: string;
   kind?: string;
+}
+
+export interface WheelRefs {
+  container?: Ref<HTMLDivElement>;
+  rotor?: Ref<SVGSVGElement>;
+  overlay?: Ref<SVGSVGElement>;
 }
 
 export interface WheelSvgProps {
@@ -121,20 +193,96 @@ export interface WheelSvgProps {
   /** Text in the hub; defaults to the wheel name and entry count. */
   core?: WheelCore;
   title?: string;
+  /** Rotation in radians for the first paint; the client turns the wheel from here without re-rendering. */
+  rotation?: number;
+  /** Draw the fixed indicator at the top that a selection spins to. */
+  indicator?: boolean;
+  refs?: WheelRefs;
   onSelect?: (id: string) => void;
   onHover?: (id: string | null, clientX: number, clientY: number) => void;
-  onSegment?: (segmentId: string) => void;
+  onRotorPointerDown?: PointerEventHandler<SVGSVGElement>;
+  onRotorClick?: MouseEventHandler<SVGSVGElement>;
 }
 
-export default function WheelSvg({ items, kinds, lens, selectedId, core, title, onSelect, onHover, onSegment }: WheelSvgProps) {
+function Hub({ core, count }: { core?: WheelCore; count: number }) {
+  const hub = core ?? { lines: ['Kaalchakra'], sub: `${count} moments` };
+  const sub = wrapText(hub.sub, 24, 2);
+  // Full hub: name, date, tag and kind, stacked about the centre.
+  const rows: { h: number; el: (y: number) => ReactNode }[] = [];
+  hub.lines.forEach((l, i) =>
+    rows.push({
+      h: core ? 28 : 38,
+      el: (y) => (
+        <text key={`n${i}`} x={C} y={y} textAnchor="middle" dominantBaseline="middle" fontSize={core ? 24 : 32} fill="var(--wheel-core-ink)" style={{ fontFamily: 'var(--font-display)' }}>
+          {l}
+        </text>
+      ),
+    }),
+  );
+  sub.forEach((l, i) =>
+    rows.push({
+      h: 21,
+      el: (y) => (
+        <text key={`s${i}`} x={C} y={y + (i === 0 ? 4 : 0)} textAnchor="middle" dominantBaseline="middle" fontSize={16} fill="var(--wheel-core-ink)" opacity={0.85}>
+          {l}
+        </text>
+      ),
+    }),
+  );
+  if (hub.tag) rows.push({ h: 34, el: (y) => <HubTag key="tag" y={y + 4} text={hub.tag!} size={13} /> });
+  if (hub.kind) {
+    rows.push({
+      h: 22,
+      el: (y) => (
+        <text key="kind" x={C} y={y + 4} textAnchor="middle" dominantBaseline="middle" fontSize={13} fill="var(--wheel-core-ink)" opacity={0.7}>
+          {hub.kind}
+        </text>
+      ),
+    });
+  }
+  const total = rows.reduce((sum, r) => sum + r.h, 0);
+  const tops = rows.map((_, i) => C - total / 2 + rows.slice(0, i).reduce((sum, r) => sum + r.h, 0));
+  const full = rows.map((r, i) => r.el(tops[i] + r.h / 2));
+
+  // Compact hub for small wheels, where the panel below already names the entry: the date and tag, larger.
+  const date = wrapText(hub.sub, 13, 3);
+  const compactRows = date.length + (hub.tag ? 1.3 : 0);
+  const cy0 = C - (compactRows * 38) / 2 + 19;
+  const compact: ReactNode[] = date.map((l, i) => (
+    <text key={`c${i}`} x={C} y={f(cy0 + i * 38)} textAnchor="middle" dominantBaseline="middle" fontSize={34} fill="var(--wheel-core-ink)" style={{ fontFamily: 'var(--font-display)' }}>
+      {l}
+    </text>
+  ));
+  if (hub.tag) compact.push(<HubTag key="ctag" y={cy0 + date.length * 38 + 6} text={hub.tag} size={26} />);
+
+  return (
+    <>
+      <g className="kc-hub kc-hub--full">{full}</g>
+      {core ? <g className="kc-hub kc-hub--compact">{compact}</g> : null}
+    </>
+  );
+}
+
+/** A small pill, sized from its text so the whole word always shows. */
+function HubTag({ y, text, size }: { y: number; text: string; size: number }) {
+  const w = text.length * size * 0.66 + size * 1.4;
+  const h = size * 1.75;
+  return (
+    <g className="kc-hub__tag">
+      <rect x={f(C - w / 2)} y={f(y - h / 2)} width={f(w)} height={f(h)} rx={f(h / 2)} fill="var(--wheel-tag-bg)" stroke="var(--wheel-tag-edge)" strokeWidth={1.5} />
+      <text x={C} y={f(y)} textAnchor="middle" dominantBaseline="central" fontSize={size} fontWeight={700} letterSpacing={size * 0.06} fill="var(--wheel-tag-ink)">
+        {text}
+      </text>
+    </g>
+  );
+}
+
+export default function WheelSvg({ items, kinds, lens, selectedId, core, title, rotation = 0, indicator = false, refs, onSelect, onHover, onRotorPointerDown, onRotorClick }: WheelSvgProps) {
   const ringW = (R_OUTER - R_INNER) / Math.max(kinds.length, 1);
   const ringIndex = new Map(kinds.map((k, i) => [k, i]));
   const selected = selectedId ? items.find((i) => i.id === selectedId) : undefined;
   const selAnchor = selected ? anchorIn(selected, lens) : null;
   const selRing = selected ? ringIndex.get(selected.kind) : undefined;
-  const todayA = angleOf(yearToUnit(PRESENT_YEAR));
-  const startA = angleOf(0);
-  const hub = core ?? { lines: ['Kaalchakra'], sub: `${items.length} moments` };
   // Kept independent of selection so selecting an entry does not rebuild every mark.
   const marks = items.flatMap((item) => {
     const ri = ringIndex.get(item.kind);
@@ -143,133 +291,112 @@ export default function WheelSvg({ items, kinds, lens, selectedId, core, title, 
     const r = R_INNER + (ri + 0.5) * ringW + lane * ringW * 0.27;
     return [{ id: item.id, els: markElements(item, r, ringW, lens) }];
   });
+  const rotorStyle: CSSProperties = { transform: `rotate(${f((rotation * 180) / Math.PI)}deg)` };
+  const interactive = Boolean(onSelect);
 
   return (
-    <svg className="kc-wheel" viewBox={`0 0 ${VB} ${VB}`} role="img" aria-label={title ?? `Kaalchakra wheel showing ${items.length} entries from the start of the kalpa to the present`}>
-      <defs>
-        <radialGradient id="kc-core" cx="50%" cy="45%" r="60%">
-          <stop offset="0%" stopColor="var(--wheel-core)" stopOpacity="0.92" />
-          <stop offset="100%" stopColor="var(--wheel-core)" />
-        </radialGradient>
-      </defs>
+    <div
+      className="kc-wheel"
+      ref={refs?.container}
+      role="img"
+      aria-label={title ?? `Kaalchakra wheel showing ${items.length} entries from the start of the kalpa to the present`}
+      data-interactive={interactive || undefined}
+    >
+      <svg className="kc-wheel__rotor" viewBox={`0 0 ${VB} ${VB}`} ref={refs?.rotor} style={rotorStyle} onPointerDown={onRotorPointerDown} onClick={onRotorClick} aria-hidden="true" focusable="false">
+        {/* The drag surface: the whole disc, so a drag can start anywhere on it but a touch outside it still scrolls the page. */}
+        <circle className="kc-wheel__disc" cx={C} cy={C} r={R_OUTER + 16} fill="transparent" />
 
-      {SEGMENT_ANGLES.map(({ seg, a0, a1, i }) => (
-        <path
-          key={seg.id}
-          d={sectorPath(R_INNER, R_OUTER, a0, a1)}
-          fill={i % 2 === 0 ? 'var(--wheel-seg-a)' : 'var(--wheel-seg-b)'}
-          stroke="var(--line)"
-          strokeWidth={1}
-          onClick={onSegment ? () => onSegment(seg.id) : undefined}
-          style={onSegment ? { cursor: 'zoom-in' } : undefined}
-        >
-          <title>{`${seg.label}: ${formatYear(seg.from, seg.interp === 'log' ? 'Ma' : 'year')} to ${formatYear(seg.to)}${seg.interp === 'log' ? ' (logarithmic scale)' : ' (linear scale)'}`}</title>
-        </path>
-      ))}
+        {SEGMENT_ANGLES.map(({ seg, a0, a1, i }) => (
+          <path key={seg.id} className="kc-wheel__era" data-era={seg.id} d={sectorPath(R_INNER, R_OUTER, a0, a1)} fill={`var(--era-${i % 2 === 0 ? 'a' : 'b'})`} stroke="var(--line)" strokeWidth={1}>
+            <title>{`${seg.label}: ${formatYear(seg.from, seg.interp === 'log' ? 'Ma' : 'year')} to ${formatYear(seg.to)}${seg.interp === 'log' ? ' (logarithmic scale)' : ' (linear scale)'}`}</title>
+          </path>
+        ))}
 
-      {kinds.map((k, i) => (
-        <circle key={k} cx={C} cy={C} r={f(R_INNER + i * ringW)} fill="none" stroke="var(--line)" strokeWidth={0.6} opacity={0.7} />
-      ))}
+        {kinds.map((k, i) => (
+          <circle key={k} cx={C} cy={C} r={f(R_INNER + i * ringW)} fill="none" stroke="var(--line)" strokeWidth={0.6} opacity={0.7} />
+        ))}
 
-      {/* Scale breaks with their years */}
-      {SEGMENT_ANGLES.map(({ seg, a0 }, i) => {
-        if (i === 0) return null;
-        const [tx, ty] = polar(R_OUTER + 30, a0);
-        return (
-          <g key={`b-${seg.id}`} className="kc-wheel__break">
-            <line {...lineProps(R_INNER - 4, R_OUTER + 12, a0)} stroke="var(--line-strong)" strokeWidth={1.2} strokeDasharray="4 3" />
-            <text x={tx} y={ty} fontSize={17} textAnchor="middle" dominantBaseline="middle" fill="var(--ink-faint)" className="kc-wheel__label">
+        {/* Scale breaks */}
+        {SEGMENT_ANGLES.map(({ seg, a0 }, i) =>
+          i === 0 ? null : <line key={`b-${seg.id}`} {...lineProps(R_INNER - 4, R_OUTER + 12, a0)} stroke="var(--line-strong)" strokeWidth={1.2} strokeDasharray="4 3" />,
+        )}
+
+        {/* Today and the start of the present kalpa (traditional) */}
+        <line {...lineProps(R_INNER - 6, R_OUTER + 10, TODAY_A)} stroke="var(--accent)" strokeWidth={2.5} />
+        <line {...lineProps(R_INNER - 6, R_OUTER + 10, START_A)} stroke="var(--lens-tradition)" strokeWidth={2} strokeDasharray="3 3" />
+
+        {selected && selAnchor !== null && selRing !== undefined ? (
+          <line {...lineProps(R_INNER - 10, R_OUTER, angleOf(yearToUnit(selAnchor)))} stroke="var(--ink)" strokeWidth={1.2} opacity={0.6} />
+        ) : null}
+
+        <g>
+          {marks.map(({ id, els }) => (
+            <g
+              key={id}
+              className="kc-mark"
+              data-id={id}
+              data-active={id === selectedId}
+              onClick={onSelect ? () => onSelect(id) : undefined}
+              onPointerEnter={onHover ? (e) => onHover(id, e.clientX, e.clientY) : undefined}
+              onPointerLeave={onHover ? (e) => onHover(null, e.clientX, e.clientY) : undefined}
+            >
+              {els}
+            </g>
+          ))}
+        </g>
+      </svg>
+
+      <svg className="kc-wheel__overlay" viewBox={`0 0 ${VB} ${VB}`} ref={refs?.overlay} aria-hidden="true" focusable="false">
+        {SEGMENT_ANGLES.map(({ seg, a0 }, i) =>
+          i === 0 ? null : (
+            <OverlayLabel key={`b-${seg.id}`} mode="upright" a={a0} r={R_OUTER + 30} rotation={rotation} fontSize={17} fill="var(--ink-faint)" className="kc-wheel__label">
               {BOUNDARY_LABELS[seg.id]}
-            </text>
-          </g>
-        );
-      })}
-
-      {/* Era names on the outer rim */}
-      {SEGMENT_ANGLES.map(({ seg, a0, a1 }) => {
-        const mid = (a0 + a1) / 2;
-        const [x, y] = polar(R_OUTER + 58, mid);
-        let deg = (mid * 180) / Math.PI + 90;
-        if (deg > 90 && deg < 270) deg += 180;
-        return (
-          <text
-            key={`l-${seg.id}`}
-            x={x}
-            y={y}
-            fontSize={18}
-            fontWeight={600}
-            textAnchor="middle"
-            dominantBaseline="middle"
-            fill="var(--ink-soft)"
-            transform={rotate(deg, x, y)}
-            className="kc-wheel__label"
-          >
+            </OverlayLabel>
+          ),
+        )}
+        {SEGMENT_ANGLES.map(({ seg, a0, a1 }) => (
+          <OverlayLabel key={`l-${seg.id}`} mode="tangent" a={(a0 + a1) / 2} r={R_OUTER + 58} rotation={rotation} fontSize={18} fontWeight={600} fill="var(--ink-soft)" className="kc-wheel__label">
             {SHORT_SEGMENT_LABELS[seg.id]}
-          </text>
-        );
-      })}
+          </OverlayLabel>
+        ))}
+        <OverlayLabel mode="radial" a={TODAY_A} r={RADIAL_R} side={1} rotation={rotation} fontSize={15} fontWeight={700} fill="var(--accent)">
+          Today
+        </OverlayLabel>
+        <OverlayLabel mode="radial" a={START_A} r={RADIAL_R} side={-1} rotation={rotation} fontSize={15} fontWeight={700} fill="var(--lens-tradition)">
+          Kalpa begins
+        </OverlayLabel>
 
-      {/* Today and the start of the present kalpa (traditional), labelled along their own radial lines inside the gap */}
-      <line {...lineProps(R_INNER - 6, R_OUTER + 10, todayA)} stroke="var(--accent)" strokeWidth={2.5} />
-      <RadialLabel a={todayA} side={1} text="Today" color="var(--accent)" />
-      <line {...lineProps(R_INNER - 6, R_OUTER + 10, startA)} stroke="var(--gold)" strokeWidth={2} strokeDasharray="3 3" />
-      <RadialLabel a={startA} side={-1} text="Kalpa begins" color="var(--gold)" />
-
-      {selected && selAnchor !== null && selRing !== undefined ? (
-        <line {...lineProps(R_INNER - 10, R_OUTER, angleOf(yearToUnit(selAnchor)))} stroke="var(--ink)" strokeWidth={1.2} opacity={0.6} />
-      ) : null}
-
-      <g>
-        {marks.map(({ id, els }) => (
-          <g
-            key={id}
-            className="kc-mark"
-            data-active={id === selectedId}
-            onClick={onSelect ? () => onSelect(id) : undefined}
-            onPointerEnter={onHover ? (e) => onHover(id, e.clientX, e.clientY) : undefined}
-            onPointerLeave={onHover ? (e) => onHover(null, e.clientX, e.clientY) : undefined}
-          >
-            {els}
+        {indicator ? (
+          <g className="kc-wheel__indicator">
+            <path d={`M${C} ${C - R_OUTER + 2}L${C - 11} ${C - R_OUTER - 17}A12.5 12.5 0 1 1 ${C + 11} ${C - R_OUTER - 17}Z`} fill="var(--wheel-indicator)" stroke="var(--bg-elev)" strokeWidth={2} />
+            <circle cx={C} cy={C - R_OUTER - 25} r={3.2} fill="var(--bg-elev)" />
           </g>
-        ))}
-      </g>
+        ) : null}
 
-      <circle cx={C} cy={C} r={R_INNER - 14} fill="url(#kc-core)" />
-      <circle cx={C} cy={C} r={R_INNER - 24} fill="none" stroke="var(--gold)" strokeWidth={1} opacity={0.6} />
-      {Array.from({ length: 24 }, (_, i) => (
-        <line key={i} {...lineProps(R_INNER - 24, R_INNER - 14, (i / 24) * 2 * Math.PI)} stroke="var(--gold)" strokeWidth={1} opacity={0.6} />
-      ))}
-      <text x={C} y={C - (hub.lines.length - 1) * 14 - 6} textAnchor="middle" fill="var(--wheel-core-ink)" style={{ fontFamily: 'var(--font-display)' }}>
-        {hub.lines.map((l, i) => (
-          <tspan key={i} x={C} dy={i === 0 ? 0 : 28} fontSize={core ? 24 : 32}>
-            {l}
-          </tspan>
-        ))}
-      </text>
-      <text x={C} y={C + (hub.lines.length - 1) * 14 + 30} textAnchor="middle" fontSize={16} fill="var(--wheel-core-ink)" opacity={0.8}>
-        {wrapText(hub.sub, 24, 2).map((l, i) => (
-          <tspan key={i} x={C} dy={i === 0 ? 0 : 20}>
-            {l}
-          </tspan>
-        ))}
-      </text>
-      {hub.kind ? (
-        <text x={C} y={C + (hub.lines.length - 1) * 14 + 74} textAnchor="middle" fontSize={13} fill="var(--wheel-core-ink)" opacity={0.65}>
-          {hub.kind}
-        </text>
-      ) : null}
-    </svg>
+        <circle cx={C} cy={C} r={R_INNER - 14} fill="var(--wheel-core)" />
+        <circle cx={C} cy={C} r={R_INNER - 24} fill="none" stroke="var(--wheel-core-ring)" strokeWidth={1} opacity={0.7} />
+        <HubLotus />
+        <Hub core={core} count={items.length} />
+      </svg>
+    </div>
   );
 }
 
-/** Text running outward along a radial line, offset into the gap on the given side. */
-function RadialLabel({ a, side, text, color }: { a: number; side: 1 | -1; text: string; color: string }) {
-  const r = R_INNER + 18;
-  const off = (side * 9) / r;
-  const [x, y] = polar(r, a + off);
+/** A faint eight-petalled lotus behind the hub text, drawn from arcs; original geometry, no imagery. */
+function HubLotus() {
+  const petals = Array.from({ length: 8 }, (_, i) => {
+    const a = (i / 8) * 2 * Math.PI;
+    const tip = polarXY(R_INNER - 30, a);
+    const l = polarXY(40, a - 0.5);
+    const r = polarXY(40, a + 0.5);
+    return `M${f(l.x)} ${f(l.y)}Q${f(polarXY(R_INNER - 56, a - 0.32).x)} ${f(polarXY(R_INNER - 56, a - 0.32).y)} ${f(tip.x)} ${f(tip.y)}Q${f(polarXY(R_INNER - 56, a + 0.32).x)} ${f(polarXY(R_INNER - 56, a + 0.32).y)} ${f(r.x)} ${f(r.y)}`;
+  });
   return (
-    <text x={x} y={y} fontSize={15} fontWeight={700} fill={color} dominantBaseline="middle" transform={rotate((a * 180) / Math.PI, x, y)}>
-      {text}
-    </text>
+    <g className="kc-hub__lotus" fill="none" stroke="var(--wheel-core-ring)" strokeWidth={1} opacity={0.28}>
+      {petals.map((d, i) => (
+        <path key={i} d={d} />
+      ))}
+      <circle cx={C} cy={C} r={40} />
+    </g>
   );
 }
