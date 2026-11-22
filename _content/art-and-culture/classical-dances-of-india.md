@@ -6,11 +6,11 @@ updated: "2026-11-21"
 tags: [art, culture, dance, performance, natyashastra]
 datings:
   - method: textual-internal
-    range: { earliest: "200 BCE", latest: "200 CE", precision: century, circa: true }
+    range: { earliest: "200 BCE", latest: "300 CE", precision: century, circa: true }
     grade: C
     label: Date of the Natyashastra, the shared theoretical source
-    sources: [src.ghosh-1951-natyasastra]
-    note: "The Sanskrit treatise on theatre that the dance traditions cite is dated on internal evidence to a window of roughly 200 BCE to 200 CE. Its date is debated and some scholars propose earlier or later dates."
+    sources: [src.ghosh-1951-natyasastra, src.pollock-2016-rasa-reader]
+    note: "The Sanskrit treatise on theatre that the dance traditions cite is dated on internal evidence to a window of roughly 200 BCE to 300 CE. Its date is debated and some scholars propose earlier or later dates."
   - method: scholarly-consensus
     range: { earliest: "1900 CE", latest: "2000 CE", precision: century, circa: true }
     grade: B
@@ -31,7 +31,7 @@ This article tells where each came from, and what is known and not known about h
 
 All eight forms use ideas that go back to the *Natyashastra*, a Sanskrit treatise attributed to Bharata, which covers drama, dance and music.
 It describes expressive hand gestures, postures, the pure dance called *nritta*, and the theory of *rasa*, the emotional flavour a performance is meant to awaken [@src.ghosh-1951-natyasastra; @src.pollock-2016-rasa-reader].
-Scholars date the work, on internal evidence, to somewhere between about 200 BCE and 200 CE, though the date is debated [@src.ghosh-1951-natyasastra].
+Scholars date the work, on internal evidence, to somewhere between about 200 BCE and 300 CE, though the date is debated [@src.ghosh-1951-natyasastra; @src.pollock-2016-rasa-reader].
 
 The *Natyashastra* was written long before any of the eight forms existed in their present shape.
 So saying that they are "all rooted" in it is true as a statement about vocabulary and theory, and misleading if it suggests a direct line of descent.
@@ -100,7 +100,7 @@ Others, including many practitioners, stress the continuity of teaching lineages
 
 ## Timeline
 
-- **About 200 BCE to 200 CE:** Likely window for the compilation of the *Natyashastra*, a debated date [@src.ghosh-1951-natyasastra].
+- **About 200 BCE to 300 CE:** Likely window for the compilation of the *Natyashastra*, a debated date [@src.ghosh-1951-natyasastra; @src.pollock-2016-rasa-reader].
 - **1600s to 1700s:** Kathakali and Manipuri take shape in forms close to today's [@src.zarrilli-2000-kathakali-dance-drama].
 - **1930s:** Bharatanatyam is named and reshaped in Madras [@src.allen-1997-rewriting-script-south-indian-dance].
 - **1950s onward:** Odissi is reconstructed and standardised.

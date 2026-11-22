@@ -19,7 +19,7 @@ summaries:
   teen: >-
     Spanning roughly twenty orders of magnitude, Sanskrit time metrology links microscopic intervals
     (truti, prana, nimesha, kashtha, kala) to observational water-clock units (nadika/ghatika of 24 minutes,
-    muhurta of 48 minutes) and astronomical cycles from the solar year to the 4.32-billion-year kalpa.
+    muhurta of 48 minutes), the solar year and the 4.32-billion-year kalpa of traditional Hindu cosmology.
 datings:
   - method: textual-internal
     range:
@@ -56,13 +56,13 @@ claims:
       - src.burgess-1860-surya-siddhanta
       - src.plofker-2009-mathematics-in-india
   - text: >-
-      At the macrocosmic end of the scale, one human solar year equals one day and night of the gods
-      (divya-ahoratra), 360 human years equal one divine year, 12,000 divine years equal one mahayuga
-      (4,320,000 human years), and 1,000 mahayugas equal one kalpa (4,320,000,000 human years).
-    grade: A
+      In the Manusmriti's traditional reckoning, a human year corresponds to a day and night of the gods.
+      The Surya Siddhanta counts 360 human years to a divine year, 12,000 divine years to a mahayuga
+      (4,320,000 human years), and 1,000 mahayugas to a kalpa (4,320,000,000 human years).
+    grade: D
     sources:
-      - src.olivelle-2005-manus-code-of-law
-      - src.burgess-1860-surya-siddhanta
+      - { id: src.olivelle-2005-manus-code-of-law, locator: "1.67" }
+      - { id: src.burgess-1860-surya-siddhanta, locator: "1.13-20" }
       - src.plofker-2009-mathematics-in-india
 relations:
   - kind: related-to

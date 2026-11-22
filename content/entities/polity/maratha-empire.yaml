@@ -29,7 +29,10 @@ claims:
       its political dominance.
     grade: B
     sources: *a1
-relations: []
+relations:
+  - { kind: founded-by, target: person.shivaji }
+  - { kind: related-to, target: event.shivaji-coronation }
+  - { kind: related-to, target: event.third-battle-of-panipat }
 tags:
   - polity
 review:

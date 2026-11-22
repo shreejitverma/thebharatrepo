@@ -17,13 +17,13 @@ location: { name: "Besnagar, Vidisha", lat: 23.541, lon: 77.801 }
 datings:
   - method: epigraphic
     range: { earliest: "120 BCE", latest: "100 BCE", best: "113 BCE", precision: decade, circa: true }
-    grade: A
-    label: Fourteenth regnal year of Bhagabhadra and reign of Antialcidas (c. 113 BCE)
+    grade: B
+    label: Fourteenth regnal year of Bhagabhadra, placed in the late second century BCE
     sources:
       - src.salomon-1998-indian-epigraphy
       - src.stoneman-2019-greek-experience-of-india
       - src.shaw-2016-buddhist-landscapes-sanchi
-    note: The inscription dates the pillar to the fourteenth regnal year of King Kasiputra Bhagabhadra during the reign of the Indo-Greek king Antialcidas of Taxila (c. 115-95 BCE).
+    note: The inscription dates the pillar to the fourteenth regnal year of King Kasiputra Bhagabhadra during the reign of the Indo-Greek king Antialcidas of Taxila. The BCE placement is an estimate based on the synchronism.
 claims:
   - text: Part A of the inscription identifies Heliodorus (Heliodora), son of Dion of Taxila and envoy of Maharaja Amtalikita (Antialcidas), as a Bhagavata (devotee of the Supreme Lord) who erected this Garudadhvaja in honour of Vasudeva, the God of Gods (devadeva).
     grade: A
@@ -36,6 +36,7 @@ claims:
       - src.salomon-1998-indian-epigraphy
       - src.brockington-1998-sanskrit-epics
 relations:
+  - { kind: related-to, target: person.krishna, note: The inscription attests devotion to Vasudeva }
   - { kind: related-to, target: polity.indo-greek-kingdom }
   - { kind: related-to, target: polity.shunga-dynasty }
   - { kind: related-to, target: text.mahabharata }

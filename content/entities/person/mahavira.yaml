@@ -16,13 +16,13 @@ region: Middle Gangetic plain (Vaishali and Pava, Bihar)
 location: { name: "Pawapuri", lat: 25.092, lon: 85.539 }
 datings:
   - method: textual-internal
-    range: { earliest: "510 BCE", latest: "390 BCE", precision: decade, circa: true }
+    range: { earliest: "500 BCE", latest: "400 BCE", precision: decade, circa: true }
     grade: C
-    label: Scholarly dating as a contemporary of the Buddha (lifespan)
+    label: Scholarly dating as a contemporary of the Buddha (death window)
     sources:
       - src.dundas-2002-the-jains
       - src.bronkhorst-2007-greater-magadha
-    note: Pali texts say that Nigantha Nataputta (Mahavira) died at Pava while the Buddha was still alive, so his dates follow the Buddha's; with the now widely preferred later date for the Buddha, his death falls in the 5th century BCE.
+    note: Pali texts say that Nigantha Nataputta (Mahavira) died at Pava while the Buddha was still alive, so his death is placed approximately in the fifth century BCE under the later chronology. Dundas discusses a possible date as late as about 425 BCE.
   - method: traditional-sampradaya
     range: { earliest: "599 BCE", latest: "527 BCE", precision: year, circa: false }
     grade: D

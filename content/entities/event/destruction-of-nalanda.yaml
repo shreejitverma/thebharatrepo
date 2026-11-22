@@ -34,5 +34,7 @@ debate: >-
   The raid described by Minhaj-i-Siraj is commonly associated with the destruction of Nalanda, but the
   passage itself names a monastery in Bihar rather than Nalanda. Archaeological and Tibetan evidence
   indicate a more complex pattern of damage, decline, and continued monastic activity.
+relations:
+  - { kind: located-at, target: site.nalanda-mahavihara }
 tags: [nalanda, buddhism, bihar, medieval]
 review: { status: draft, author: "codex-gpt-6" }

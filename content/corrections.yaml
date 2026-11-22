@@ -1189,6 +1189,1338 @@
     - src.zvelebil-1992-companion-studies
     - src.wilden-2014-manuscript-print-memory
 - date: 2026-11-22
+  target: src.maas-2013-concise-historiography-yoga
+  before: Eli Franco was listed as the author of the volume cited for the Yoga Sutras.
+  after: Philipp A. Maas authored the chapter on pages 53-90 of the volume edited by Eli Franco.
+  reason: The University of Vienna identifies Maas as the chapter author. His deposited preprint verifies the print pagination.
+  sources:
+    - src.maas-2013-concise-historiography-yoga
+- date: 2026-11-22
+  target: src.gaur-1983-excavations-atranjikhera
+  before: The 1983 excavation monograph was identified by DOI 10.2307/3631855.
+  after: The monograph is identified by OCLC 13396022.
+  reason: The DOI resolves to Gérard Fussman's journal review of Gaur's monograph. The OCLC record identifies the 1983 book.
+  sources:
+    - src.gaur-1983-excavations-atranjikhera
+- date: 2026-11-22
+  target: /science/zero-and-the-decimal-system
+  before: The Bakhshali response was listed with Wujastyk first, and the Bodleian source note pointed to the duplicate Wujastyk record.
+  after: The article and Bodleian source note identify the response under Plofker and colleagues in the published author order.
+  reason: The journal byline starts with Kim Plofker and ends with Dominik Wujastyk. The response has a single DOI.
+  sources:
+    - src.plofker-2017-bakhshali-radiocarbon
+- date: 2026-11-22
+  target: event.keezhadi-excavations-begin
+  before: The three ASI seasons were attributed to Parliament through a source record pointing to a Tamil Nadu booklet.
+  after: The event cites the Tamil Nadu Department of Archaeology's 2019 excavation report for the 2014-15 through 2016-17 ASI seasons.
+  reason: The report explicitly lists all three ASI field seasons. The archive item under the purported Lok Sabha ID duplicated that report.
+  sources:
+    - src.sivanantham-2019-keeladi-urban-settlement
+- date: 2026-11-22
+  target: polity.mughal-empire
+  before: The dating ended in 1857, and the text described an unspecified formal end after the revolt.
+  after: The dating and claim give 1858 as the formal end, following the trial and exile of Bahadur Shah II.
+  reason: The British captured the last emperor in 1857 and tried and exiled him in 1858.
+  sources:
+    - src.metcalf-2012-concise-history-modern-india
+- date: 2026-11-22
+  target: /literature/kalidasa
+  before: Chandragupta II reigned about 380 to 415 CE.
+  after: Chandragupta II's reign is often dated to about 375 to 415 CE.
+  reason: The Mathura pillar attests his rule about 380 CE. Sircar's restoration of its damaged regnal year supports an earlier accession.
+  sources:
+    - src.singh-2008-ancient-early-medieval-india
+    - { id: src.bhandarkar-1981-inscriptions-early-gupta-kings, locator: "inscription 6" }
+- date: 2026-11-22
+  target: person.chandragupta-ii
+  before: The reign was grade A and the Mathura pillar was said to record the fifth regnal year.
+  after: The estimated reign is grade C, with the fifth regnal year attributed to Sircar's reconstruction.
+  reason: The pillar's regnal year is damaged. Bhandarkar leaves it unrestored, and the dated inscriptions establish a span of attested rule within the estimated reign.
+  sources:
+    - src.singh-2008-ancient-early-medieval-india
+    - { id: src.bhandarkar-1981-inscriptions-early-gupta-kings, locator: "inscriptions 6, 9 and 16" }
+- date: 2026-11-22
+  target: person.adi-shankara
+  before: The main scholarly dating was labelled conventional 788 to 820 CE, and the teen summary gave about 800 CE.
+  after: The grade C dating gives Hajime Nakamura's estimate of about 700 to 750 CE. The discussion also gives Karl Potter's estimate and the conventional 788 to 820 CE dating.
+  reason: Nakamura's relative chronology is influential, and scholars continue to differ on the dates.
+  sources:
+    - src.nakamura-1983-early-vedanta
+    - src.dalal-2021-shankara
+- date: 2026-11-22
+  target: concept.rigvedic-sarasvati
+  before: The summary described the Rigvedic river as snow-fed and the teen summary presented its identification as settled.
+  after: The summaries distinguish the hymns' description from the geographical identification it supports and the separate evidence for river flow.
+  reason: Rigveda 7.95.2 describes flow from mountains to sea, while 10.75.5 places the Sarasvati between the Yamuna and Sutlej. Neither verse specifies the water source.
+  sources:
+    - { id: src.jamison-brereton-2014-rigveda, locator: "Rigveda 7.95.2 and 10.75.5" }
+    - src.singh-2017-himalayan-river-morphodynamics
+- date: 2026-11-22
+  target: concept.rigvedic-sarasvati
+  before: The Danino and Lal dating was classified as geological evidence for a glacial-fed river from 3300 to 1900 BCE.
+  after: The same grade C range is classified as a textual interpretation that correlates the Rigvedic Sarasvati with the Harappan-era Ghaggar-Hakra.
+  reason: The dating is a reading of the hymns in relation to the palaeochannel, whose deep sediment record has its own chronology.
+  sources:
+    - src.danino-2010-lost-river-sarasvati
+    - src.lal-2002-saraswati-flows-on
+    - src.clift-2012-zircon-dating-sarasvati
+    - src.singh-2017-himalayan-river-morphodynamics
+- date: 2026-11-22
+  target: concept.rigvedic-sarasvati
+  before: The geological dating described a perennial monsoon-fed river that weakened around 2000 to 1900 BCE.
+  after: The dating explains the evidence for local monsoon-fed flow and the debated possibility of later supply from Sutlej distributaries.
+  reason: Studies date the departure of the main rivers before urbanisation. Chatterjee and colleagues propose subsequent input from smaller Sutlej branches.
+  sources:
+    - src.giosan-2012-fluvial-landscapes-harappan
+    - src.singh-2017-himalayan-river-morphodynamics
+    - src.khan-2024-himalayan-rivers
+    - src.chatterjee-2019-perennial-river-harappan-heartland
+- date: 2026-11-22
+  target: concept.ghaggar-hakra-sarasvati-debate
+  before: A single Himalayan river system was assigned a grade A diversion interval of about 45,000 to 8,000 years ago.
+  after: The approximate grade B range covers estimates for two distinct shifts, from the earliest proposed Yamuna diversion to the completion of the Sutlej diversion.
+  reason: Sediment provenance and luminescence studies give different constraints for the two rivers. Clift and colleagues allow a Yamuna diversion as early as about 49,000 years ago.
+  sources:
+    - src.clift-2012-zircon-dating-sarasvati
+    - src.singh-2017-himalayan-river-morphodynamics
+    - src.khan-2024-himalayan-rivers
+- date: 2026-11-22
+  target: concept.ghaggar-hakra-sarasvati-debate
+  before: The Harappan flow dating and claim were grade A and presented a flood-safe, monsoon-fed valley as settled.
+  after: The grade B dating and claim describe local flow and qualify the proposed contribution of smaller Sutlej branches.
+  reason: Sediment cores support the departure of the main rivers, while studies differ on the source and persistence of local flows.
+  sources:
+    - src.giosan-2012-fluvial-landscapes-harappan
+    - src.singh-2017-himalayan-river-morphodynamics
+    - src.khan-2024-himalayan-rivers
+    - src.chatterjee-2019-perennial-river-harappan-heartland
+- date: 2026-11-22
+  target: concept.ghaggar-hakra-sarasvati-debate
+  before: The location of the later Vedic Sarasvati was grade A, and the Harappan correlation tied the accounts of Vinasana to drying around 1900 BCE.
+  after: The geographical identification is grade B. The proposed Harappan correlation stays grade C and cites Lal and Danino.
+  reason: The textual descriptions support the geographical identification. Synchronising the later accounts of Vinasana with a specific hydrological event remains interpretive.
+  sources:
+    - src.singh-2008-ancient-early-medieval-india
+    - src.danino-2010-lost-river-sarasvati
+    - src.lal-2002-saraswati-flows-on
+- date: 2026-11-22
+  target: artifact.dancing-girl-mohenjo-daro
+  before: The summary credited Mackay alone in 1926, and the dating note credited Sahni and Mackay together.
+  after: The statuette was recovered in House LV in the HR Area during the 1926-27 season, when Sahni directed work there.
+  reason: Sahni's field account identifies the findspot. Marshall assigns Mackay to the L Area and does not name the individual who lifted the object.
+  sources:
+    - { id: src.marshall-1931-mohenjo-daro, locator: "vol. I, ch. II and pp. 209-210" }
+- date: 2026-11-22
+  target: src.pargiter-1913-dynasties-kali-age
+  before: The surviving Pargiter entry was classified as a primary text.
+  after: The single entry is classified as a translation and describes Pargiter's collation and discussion of Prakrit forms and Sanskritisation.
+  reason: The 1913 edition presents an edited text and a separate English translation.
+  sources:
+    - src.pargiter-1913-dynasties-kali-age
+- date: 2026-11-22
+  target: src.asi-history-1861
+  before: The ASI history page was listed as published in 2026.
+  after: The page is listed as undated, with 1861 identified as the year of Cunningham's appointment.
+  reason: The page dates the historical events it describes and gives no publication date.
+  sources:
+    - src.asi-history-1861
+- date: 2026-11-22
+  target: concept.ghaggar-hakra-sarasvati-debate
+  before: Two entities covered the identification of the Rigvedic Sarasvati with the Ghaggar-Hakra and repeated the same Harappan-era dating under different methods.
+  after: One entity covers the palaeochannel and the textual identification, retaining the Rigvedic and later Vedic evidence, the Helmand comparison, and the competing chronologies.
+  reason: The proposals identify the same debated river and the Lal and Danino dating is a textual correlation with archaeological and hydrological evidence.
+  sources:
+    - src.jamison-brereton-2014-rigveda
+    - src.witzel-1997-early-sanskritization-kuru
+    - src.parpola-2015-roots-of-hinduism
+    - src.danino-2010-lost-river-sarasvati
+    - src.lal-2002-saraswati-flows-on
+- date: 2026-11-22
+  target: concept.ghaggar-hakra-sarasvati-debate
+  before: A single grade A range treated the Yamuna and Sutlej as a joint river system that avulsed from about 45,000 to 8,000 years ago.
+  after: The grade B range covers separate estimates for the Yamuna capture, about 49,000 to 10,000 years ago, and the main Sutlej avulsion, about 15,000 to 8,000 years ago.
+  reason: The studies used provenance and dated sediments to infer distinct shifts in the two drainages.
+  sources:
+    - src.clift-2012-zircon-dating-sarasvati
+    - src.singh-2017-himalayan-river-morphodynamics
+- date: 2026-11-22
+  target: concept.ghaggar-hakra-sarasvati-debate
+  before: The Harappan-era Ghaggar-Hakra was a perennial monsoon-fed river that declined around 2000 to 1900 BCE.
+  after: The grade C datings distinguish the Harappan-era monsoon and seasonal flow interpretations from the proposed earlier perennial flow fed by Sutlej distributaries.
+  reason: Giosan, Singh and Chatterjee and their coauthors infer different water sources and timing for flow in the abandoned main channel.
+  sources:
+    - src.giosan-2012-fluvial-landscapes-harappan
+    - src.singh-2017-himalayan-river-morphodynamics
+    - src.chatterjee-2019-perennial-river-harappan-heartland
+- date: 2026-11-22
+  target: concept.ghaggar-hakra-sarasvati-debate
+  before: The Rigvedic to Brahmana dating ended at 900 BCE while its note placed the Brahmana descriptions between about 900 and 700 BCE.
+  after: The grade C textual range extends from about 1500 to 700 BCE and is an estimate for the textual layers that describe Sarasvati.
+  reason: The date describes the succession of textual layers, which offers no independent date for change in river flow.
+  sources:
+    - src.jamison-brereton-2014-rigveda
+    - src.witzel-1997-early-sanskritization-kuru
+- date: 2026-11-22
+  target: concept.ghaggar-hakra-sarasvati-debate
+  before: The geographical identification of the river was graded A and one entry described the Rigvedic river as snow-fed.
+  after: The grade A claim records what the hymns say about Sarasvati, including the order of the named rivers, her description as a goddess, and her association with the fire of the Bharatas.
+  reason: The hymns directly attest poetic descriptions and river names. The physical identification and source of the river are interpretations.
+  sources:
+    - src.jamison-brereton-2014-rigveda
+    - src.witzel-1997-early-sanskritization-kuru
+    - src.parpola-2015-roots-of-hinduism
+- date: 2026-11-22
+  target: concept.ghaggar-hakra-sarasvati-debate
+  before: Later Vedic accounts were summarised as a forty-day Sarasvata pilgrimage from Vinashana to Plaksha Prasravana.
+  after: The Panchavimsha and Jaiminiya Brahmanas describe the river disappearing at Vinashana, and the Sarasvata sattra follows the river upstream to Plaksha Prasravana.
+  reason: The ritual route is attested, and the distance given in the sources does not establish a forty-day duration for the rite.
+  sources:
+    - src.witzel-1997-early-sanskritization-kuru
+    - src.danino-2010-lost-river-sarasvati
+    - src.singh-2008-ancient-early-medieval-india
+- date: 2026-11-22
+  target: concept.ghaggar-hakra-sarasvati-debate
+  before: A grade A claim gave an exact settlement threshold and linked the weakening monsoon to the abandonment of individual cities.
+  after: A grade B claim records the survey evidence for many settlements and the regional shift toward the upper interfluve in the Late Harappan phase.
+  reason: The distribution is supported by survey and geomorphological studies. The causes of abandonment at individual sites are less secure.
+  sources:
+    - src.giosan-2012-fluvial-landscapes-harappan
+    - src.singh-2017-himalayan-river-morphodynamics
+    - src.possehl-2002-indus-civilization
+- date: 2026-11-22
+  target: src.jamison-brereton-2014-rigveda
+  before: The 2014 Rigveda translation was identified by the DOI for Jamison and Brereton's 2020 introductory book.
+  after: "The source gives the translation's full title, The Rigveda: The Earliest Religious Poetry of India, and the set ISBN for the 2014 three-volume translation, 9780199370184."
+  reason: The cited hymns are in the 2014 translation and the Oxford University Press edition gives the set ISBN on its copyright page.
+  sources:
+    - src.jamison-brereton-2014-rigveda
+- date: 2026-11-22
+  target: tradition.vedic-chanting
+  before: A separate tradition entry combined the 2003 UNESCO proclamation and the 2008 inscription into one range, and the oral-transmission entry repeated the recognition claim.
+  after: Vedic Chanting records 2003 and 2008 as separate grade A documentary milestones. Oral Preservation of the Vedas links to that record.
+  reason: UNESCO records the Masterpiece proclamation and the Representative List inscription as distinct actions concerning the same tradition.
+  sources:
+    - src.unesco-2003-tradition-vedic-chanting
+- date: 2026-11-22
+  target: tradition.kumbha-mela
+  before: A separate tradition entry repeated the 2017 UNESCO inscription of Kumbh Mela.
+  after: The 2017 documentary dating and claim are recorded on the Kumbh Mela tradition entry.
+  reason: Both entries cited the same UNESCO record for the same inscription.
+  sources:
+    - src.unesco-2017-kumbh-mela
+- date: 2026-11-22
+  target: concept.rakhigarhi-i6113-genome
+  before: A separate event entry repeated publication of the analysis of the Rakhigarhi genome in 2019.
+  after: The genome entry records the 2019 Cell publication as a grade A documentary dating and identifies it in the claim about the recovered genome.
+  reason: The entries described the same paper and specimen. The date of publication is a separate milestone from the contextual age of the burial.
+  sources:
+    - src.shinde-2019-ancient-harappan-genome
+- date: 2026-11-22
+  target: concept.rakhigarhi-i6113-genome
+  before: The burial was dated to 2800 to 2300 BCE by a grade A genetic dating that cited direct dates for other individuals.
+  after: The range is a grade C archaeological estimate based on local grave goods and charcoal dates from the settlement.
+  reason: The researchers could not directly radiocarbon-date I6113 and dated the burial by archaeological context.
+  sources:
+    - src.shinde-2019-ancient-harappan-genome
+- date: 2026-11-22
+  target: concept.rakhigarhi-i6113-genome
+  before: I6113 was described as burial BR02.
+  after: I6113 is identified by skeletal code RGR7.3, BR-01, HS-02.
+  reason: The code is given in the paper's description of the specimen and the caption of the burial photograph.
+  sources:
+    - src.shinde-2019-ancient-harappan-genome
+- date: 2026-11-22
+  target: concept.rakhigarhi-i6113-genome
+  before: The grade A ancestry claim said I6113 confirmed a representative Harappan ancestry profile and its role in the ancestry of present-day South Asians.
+  after: I6113 fits the ancestry cline described in the wider study. The grade B claim attributes the inference about present-day ancestry to that study and states the limits of a single genome.
+  reason: Similarity to the eleven sampled individuals from other sites cannot establish the extent of variation across Harappan communities.
+  sources:
+    - src.shinde-2019-ancient-harappan-genome
+    - src.narasimhan-2019-formation-human-populations
+- date: 2026-11-22
+  target: concept.rakhigarhi-i6113-genome
+  before: A grade A claim gave a numerical date for the Iranian-related lineage split and stated the ancestry profile as categorical.
+  after: The grade A finding describes the ancestry components the study detected. A grade C claim records model-based inference about a split preceding farming in the Iranian plateau.
+  reason: The study inferred the order of lineage splits and used archaeological context to interpret when the divergence occurred.
+  sources:
+    - src.shinde-2019-ancient-harappan-genome
+- date: 2026-11-22
+  target: site.dholavira
+  before: A separate event entry repeated Dholavira's 2021 World Heritage inscription.
+  after: Dholavira's site entry carries the 2021 inscription and its grade A documentary dating.
+  reason: Both entries described the same World Heritage Committee decision using the same UNESCO record.
+  sources:
+    - src.unesco-2021-dholavira
+- date: 2026-11-22
+  target: text.rigveda and text.shukla-yajurveda
+  before: Both Samhitas had outgoing commentary edges to their Brahmanas.
+  after: The Aitareya Brahmana comments on the Rigveda and the Shatapatha Brahmana comments on the Shukla Yajurveda.
+  reason: The prose Brahmanas explain ritual material in the Samhitas. The existing Brahmana-to-Samhita edges carry that direction.
+  sources:
+    - src.keith-1920-rigveda-brahmanas
+    - src.eggeling-1882-satapatha-brahmana-part-1
+- date: 2026-11-22
+  target: text.aryabhatiya
+  before: The Aryabhatiya was linked to the Kurukshetra War.
+  after: The text is linked to the Kali Yuga epoch.
+  reason: Kalakriyapada 10 counts elapsed time used to reckon the Kali epoch and does not name the battle.
+  sources:
+    - { id: src.shukla-sarma-1976-aryabhatiya, locator: Kalakriyapada 10 }
+    - src.plofker-2009-mathematics-in-india
+- date: 2026-11-22
+  target: site.nalanda-mahavihara
+  before: The Nalanda site had a located-at relation to the ancient kingdom of Magadha and lacked links to Pala patronage, Xuanzang's visit and the site's decline.
+  after: Nalanda is linked to Magadha as a historical region, the Pala Empire as a patron, and the events recording Xuanzang's travels and Nalanda's decline.
+  reason: The kingdom and the later monastery have distinct chronologies. Archaeological and written records substantiate the other associations.
+  sources:
+    - src.unesco-2016-nalanda-mahavihara
+    - src.kulke-2004-history-of-india
+    - src.singh-2008-ancient-early-medieval-india
+    - src.beal-1906-si-yu-ki
+    - src.raverty-1881-tabakat-i-nasiri
+- date: 2026-11-22
+  target: event.dasarajna and polity.kuru-kingdom
+  before: The Kuru kingdom succeeded the Battle of the Ten Kings, and the battle preceded the Kuru kingdom.
+  after: A single link records the role of the Bharatas in reconstructions of the later Kuru state.
+  reason: The Rigvedic conflict and the later state's formation are distinct, with a historical association reconstructed from the texts.
+  sources:
+    - src.jamison-brereton-2014-rigveda
+    - src.witzel-1997-early-sanskritization-kuru
+- date: 2026-11-22
+  target: site.bhirrana and site.mehrgarh
+  before: Bhirrana was linked as the successor of Mehrgarh.
+  after: The two settlements are linked as related archaeological sites with overlapping occupation estimates.
+  reason: The sites are in different regions, and the chronologies and excavated material do not establish direct succession.
+  sources:
+    - src.sarkar-2016-bhirrana-oxygen-isotope
+    - src.fuller-2006-agricultural-origins-south-asia
+    - src.coningham-2015-archaeology-south-asia
+- date: 2026-11-22
+  target: site.kayatha and tradition.malwa-culture
+  before: The Malwa culture was represented as succeeding the entire site of Kayatha.
+  after: The Malwa culture is linked to Kayatha as a site where its ceramics occur in Period III.
+  reason: The excavated sequence distinguishes earlier Kayatha and Ahar-Banas levels from the later Malwa levels at the same site.
+  sources:
+    - src.misra-2001-prehistoric-colonization-india
+    - src.coningham-2015-archaeology-south-asia
+- date: 2026-11-22
+  target: concept.siwalik-fossil-record and event.indian-plate-asia-collision
+  before: The Siwalik fossil record was represented as the successor to the India-Asia collision.
+  after: The fossil record is linked to the collision through the Himalayan foreland in which the Siwalik sediments accumulated.
+  reason: The geological event and the later sedimentary record are linked by their tectonic setting and operate on distinct timescales.
+  sources:
+    - src.hu-2016-india-asia-collision
+    - src.barry-2002-siwalik-faunal-change
+- date: 2026-11-22
+  target: tradition.harappan-civilisation
+  before: The civilisation preceded Cemetery H and Jhukar and succeeded Kot Diji and Hakra Ware.
+  after: The four phase-to-civilisation links are expressed through their existing part-of relations.
+  reason: The archive's Harappan civilisation entry spans these early and late regional phases, as treated in the comparative archaeological literature.
+  sources:
+    - src.possehl-2002-indus-civilization
+    - src.wright-2010-ancient-indus
+- date: 2026-11-22
+  target: site.banawali and site.kunal
+  before: The two links to Bhirrana asserted contemporary occupation without specifying which levels overlap.
+  after: Banawali's link specifies Early and Mature Harappan overlap, and Kunal's specifies Early Harappan overlap.
+  reason: The comparable phases overlap on the conventional regional chronology independently of the disputed early Bhirrana dates.
+  sources:
+    - src.possehl-2002-indus-civilization
+    - src.coningham-2015-archaeology-south-asia
+    - src.sarkar-2016-bhirrana-oxygen-isotope
+- date: 2026-11-22
+  target: site.mahadaha and site.sarai-nahar-rai
+  before: Both entries linked the settlements as contemporaneous.
+  after: The sites are linked as nearby Mesolithic lakeshore sites with comparable burial evidence and uncertain occupation overlap.
+  reason: The comparable archaeology supports the connection, while the conflicting and widely spaced radiocarbon results leave exact contemporaneity uncertain.
+  sources:
+    - src.lukacs-1993-mesolithic-subsistence-north-india
+    - src.misra-2001-prehistoric-colonization-india
+    - src.coningham-2015-archaeology-south-asia
+- date: 2026-11-22
+  target: polity.mughal-empire
+  before: The Mughal Empire entry had no links to its rulers, dynastic figures or turning points named in the audit.
+  after: The empire is linked to Akbar as a ruler, Dara Shikoh as a prince, and the First Battle of Panipat and the 1857 Revolt as turning points.
+  reason: The sources substantiate Akbar's reign, Dara's place in the dynasty, and the roles of the two events in the rise and end of Mughal rule.
+  sources:
+    - src.richards-1993-mughal-empire
+    - src.gandhi-2020-emperor-who-never-was
+    - src.metcalf-2012-concise-history-modern-india
+- date: 2026-11-22
+  target: polity.maratha-empire
+  before: The Maratha Empire entry had no links to Shivaji, his coronation or Panipat.
+  after: The empire is linked to Shivaji as founder and to the events of his coronation and the Third Battle of Panipat.
+  reason: These are documented connections between the polity and the people and events that shaped it.
+  sources:
+    - src.gordon-1993-marathas-1600-1818
+    - src.eaton-2005-social-history-deccan
+- date: 2026-11-22
+  target: polity.sikh-empire
+  before: The Sikh Empire entry had no links to Ranjit Singh or the Khalsa.
+  after: The empire is linked to Ranjit Singh as its founder and to the Khalsa through the ideal of Khalsa Raj.
+  reason: The sources situate the Lahore kingdom in the political history of the Khalsa and document Ranjit Singh's role in founding it.
+  sources:
+    - src.grewal-1990-sikhs-of-the-punjab
+    - src.singh-fenech-2014-oxford-handbook-sikh-studies
+- date: 2026-11-22
+  target: polity.indian-national-army
+  before: The Indian National Army had no link to Subhas Chandra Bose.
+  after: The army is linked to Bose as the leader who reorganised it from 1943.
+  reason: His leadership of the army is documented in the historical record.
+  sources:
+    - src.bose-2011-his-majestys-opponent
+    - src.bose-jalal-2004-modern-south-asia
+- date: 2026-11-22
+  target: person.krishnadevaraya and site.hampi
+  before: Krishnadevaraya had no link to Hampi, and Hampi had no link to the Battle of Talikota.
+  after: Krishnadevaraya is linked to Hampi as a patron and Hampi is linked to Talikota through the subsequent sack of the capital.
+  reason: The monuments document Krishna Deva Raya's patronage. The battle took place decades after his reign and affected the city directly.
+  sources:
+    - src.stein-1989-vijayanagara
+    - src.unesco-1986-hampi
+- date: 2026-11-22
+  target: person.mahatma-gandhi
+  before: Gandhi's entry had no links to the Champaran Satyagraha, the Salt March, Quit India or Independence and Partition.
+  after: The entry links to all four events.
+  reason: Gandhi took a documented role in the three campaigns and in efforts to halt communal violence during Partition.
+  sources:
+    - src.brown-1989-gandhi-prisoner-of-hope
+    - src.metcalf-2012-concise-history-modern-india
+- date: 2026-11-22
+  target: person.b-r-ambedkar
+  before: Ambedkar's entry had no link to the adoption and commencement of the Constitution.
+  after: The entry links Ambedkar to the event through his role as chair of the Drafting Committee and his motion for adoption.
+  reason: The Constituent Assembly records and historical studies document Ambedkar's role in adoption.
+  sources:
+    - src.constitution-of-india
+    - src.jaffrelot-2005-ambedkar-and-untouchability
+- date: 2026-11-22
+  target: text.ramcharitmanas and text.valmiki-ramayana
+  before: The Ramcharitmanas had no authorship link to Tulsidas, and both narratives lacked links to Rama and each other.
+  after: The Ramcharitmanas is linked to Tulsidas as its author and to the Valmiki Ramayana as another telling of Rama's story. Both narratives are linked to Rama.
+  reason: The texts and their scholarship attest the authorship and the shared narrative subject.
+  sources:
+    - src.lutgendorf-1991-life-of-a-text
+    - src.goldman-1984-ramayana-balakanda
+    - src.brockington-1998-sanskrit-epics
+- date: 2026-11-22
+  target: tradition.arya-samaj and tradition.brahmo-sabha
+  before: The reform movements lacked links to Dayananda Saraswati and Raja Ram Mohan Roy.
+  after: The Arya Samaj and Brahmo Sabha link to Dayananda Saraswati and Raja Ram Mohan Roy respectively as founders.
+  reason: The historical studies identify their roles in establishing the respective movements.
+  sources:
+    - src.jones-1989-socio-religious-reform-movements
+    - src.hatcher-2008-bourgeois-hinduism
+- date: 2026-11-22
+  target: event.asiatic-society
+  before: The Asiatic Society lacked a founder link.
+  after: The Society is linked to William Jones as founder.
+  reason: Records of the founding meeting identify Jones as its initiator.
+  sources:
+    - src.asi-history-1861
+    - src.trautmann-1997-aryans-and-british-india
+- date: 2026-11-22
+  target: site.jantar-mantar-jaipur
+  before: The observatory lacked a link to Sawai Jai Singh II.
+  after: The observatory is linked to Sawai Jai Singh II as founder.
+  reason: The UNESCO record and the history of the observatory identify Jai Singh as its creator.
+  sources:
+    - src.unesco-2010-jantar-mantar-jaipur
+    - src.sharma-1995-sawai-jai-singh-astronomy
+- date: 2026-11-22
+  target: artifact.iron-pillar-of-delhi
+  before: The Iron Pillar was unlinked to the Qutb complex.
+  after: The Iron Pillar is linked by its present location in the Qutb complex.
+  reason: The UNESCO inventory places the pillar in the Quwwat-ul-Islam mosque courtyard.
+  sources:
+    - src.unesco-1993-qutb-minar
+- date: 2026-11-22
+  target: text.bhagavad-gita and artifact.heliodorus-pillar
+  before: The text and the pillar lacked connections to Krishna.
+  after: The Bhagavad Gita links to Krishna as a speaker in the dialogue, and the Heliodorus pillar links through its attestation of devotion to Vasudeva.
+  reason: The text and the inscription attest different contexts for the Krishna and Vasudeva traditions.
+  sources:
+    - src.malinar-2007-bhagavadgita-doctrines-contexts
+    - src.salomon-1998-indian-epigraphy
+- date: 2026-11-22
+  target: artifact.sanauli-wheeled-vehicles
+  before: The Sanauli vehicles were unlinked to the Sintashta chariot debate.
+  after: A related-to link connects the Sanauli vehicles and the Sintashta chariot debate as subjects of a technological comparison.
+  reason: The comparative literature discusses the solid wheels at Sanauli and the spoked wheels at Sintashta without establishing an identity between the vehicles.
+  sources:
+    - src.parpola-2020-sanauli-chariot-burials
+    - src.anthony-2007-horse-wheel-language
+- date: 2026-11-22
+  target: event.keezhadi-excavations-begin
+  before: The Keezhadi excavation event lacked a link to the excavated site.
+  after: The excavation event links to Keezhadi as its location.
+  reason: The excavation records identify Keezhadi as the site of the field seasons.
+  sources:
+    - src.sivanantham-2019-keeladi-urban-settlement
+- date: 2026-11-22
+  target: text.vachana-sahitya
+  before: A generic reverse edge to Basava repeated the existing authorship link.
+  after: Basava's authorship edge supplies the connection on both pages.
+  reason: The collection includes works by Basava and other authors, and the existing edge identifies him as one contributor.
+  sources:
+    - src.ramanujan-1973-speaking-of-siva
+- date: 2026-11-22
+  target: /archive/concept/indus-script
+  before: "Mature Harappan Logo-Syllabic / Proto-Dravidian Hypothesis: 2600 to 1900 BCE, archaeological-radiocarbon, grade A."
+  after: "Mature Harappan inscriptions: 2600 to 1900 BCE, archaeological-radiocarbon, grade B. Parpola and Mahadevan's language proposal: the same period, linguistic, grade C."
+  reason: "Archaeological contexts support the period of use. The proposed readings remain unconfirmed, and sign-sequence statistics do not identify the language."
+  sources:
+    - src.kenoyer-1998-ancient-cities-indus
+    - src.wright-2010-ancient-indus
+    - src.parpola-1994-deciphering-indus-script
+    - src.rao-2009-entropic-evidence-indus-script
+    - src.sproat-2014-statistical-comparison-symbol-systems
+- date: 2026-11-22
+  target: /archive/concept/indus-script
+  before: "Predominantly right-to-left reading direction with occasional boustrophedon: grade A."
+  after: "Predominantly right-to-left reading direction with occasional boustrophedon: grade B."
+  reason: "The cited studies infer the general reading direction from the layout of inscriptions."
+  sources:
+    - src.parpola-1994-deciphering-indus-script
+    - src.kenoyer-1998-ancient-cities-indus
+    - src.possehl-2002-indus-civilization
+- date: 2026-11-22
+  target: /archive/concept/indus-script
+  before: "Corpus and sign counts called typical of a logo-syllabic system: grade A."
+  after: "Approximately 4,000 to 5,000 short texts, averaging about five signs, with an estimated core inventory of 400 to 450 signs: grade B."
+  reason: "Sign counts depend on how researchers group variants and do not establish the type of sign system."
+  sources:
+    - src.parpola-1994-deciphering-indus-script
+    - src.possehl-2002-indus-civilization
+    - src.singh-2008-ancient-early-medieval-india
+- date: 2026-11-22
+  target: /archive/concept/indus-script
+  before: "Scholarly consensus that the script remains undeciphered due to short texts and lack of bilinguals: grade A."
+  after: "The signs remain undeciphered. Short texts and the lack of a verified bilingual make readings difficult to test: grade B."
+  reason: "The status of decipherment is a scholarly consensus about the surviving corpus."
+  sources:
+    - src.possehl-2002-indus-civilization
+    - src.kenoyer-1998-ancient-cities-indus
+    - src.singh-2008-ancient-early-medieval-india
+- date: 2026-11-22
+  target: /archive/concept/rakhigarhi-i6113-genome
+  before: "I6113 confirmed a profile representative of the Harappan population and the primary source of modern South Asian ancestry: grade A."
+  after: "I6113 falls on the Indus Periphery ancestry gradient. Population models suggest related groups contributed substantially to present-day South Asian ancestry. The Harappan sample is limited: grade B."
+  reason: "The Cell study explicitly limits what the Rakhigarhi genome and its comparison samples can establish about an entire civilisation."
+  sources:
+    - src.shinde-2019-ancient-harappan-genome
+    - src.narasimhan-2019-formation-human-populations
+- date: 2026-11-22
+  target: /archive/concept/rakhigarhi-i6113-genome
+  before: "Adult summary described an ancestry mixture and zero detectable Anatolian farmer or Steppe pastoralist ancestry without a sampling caveat."
+  after: "The adult summary describes this individual's ancestry, the limited sample and the evidence for later mixing among groups in South Asia."
+  reason: "The study reports an individual genome and cautions against generalisation."
+  sources:
+    - src.shinde-2019-ancient-harappan-genome
+- date: 2026-11-22
+  target: /archive/concept/rakhigarhi-i6113-genome
+  before: "Children's summary said the Harappans are the main ancestors of most people living in South Asia today."
+  after: "The children's summary describes the DNA of one woman, its resemblance to DNA from some ancient individuals in Iran and Turkmenistan, and the researchers' inference about later mixing."
+  reason: "A single excavated genome provides a glimpse of Harappan ancestry."
+  sources:
+    - src.shinde-2019-ancient-harappan-genome
+    - src.narasimhan-2019-formation-human-populations
+- date: 2026-11-22
+  target: /archive/concept/rakhigarhi-i6113-genome
+  before: "Teen summary said I6113 matched 11 individuals and showed when Iranian-related ancestry in Harappans split."
+  after: "The teen summary describes a range of related ancestry profiles, the absence of detectable Steppe ancestry in I6113 and a modelled pre-farming split."
+  reason: "The studies report a statistical comparison and a modelled divergence for the ancestry in I6113."
+  sources:
+    - src.shinde-2019-ancient-harappan-genome
+    - src.narasimhan-2019-formation-human-populations
+- date: 2026-11-22
+  target: /archive/event/arrival-of-modern-humans-south-asia
+  before: "Present-day autosomal and uniparental diversity derives overwhelmingly from a 65,000 to 50,000-year-old dispersal: grade A."
+  after: "Mitochondrial lineages and archaeological comparisons support a coastal dispersal model roughly 65,000 to 50,000 years ago: grade B."
+  reason: "The cited papers infer dispersal from genetic lineages and compare an archaeological record. The dating note and claim now describe this model without attributing a specific share of modern South Asian ancestry to it."
+  sources:
+    - src.macaulay-2005-coastal-settlement-asia
+    - src.mellars-2013-colonization-southern-asia
+- date: 2026-11-22
+  target: /archive/event/arrival-of-modern-humans-south-asia
+  before: "Three regions preserve continuous prepared-core industries from roughly 115,000 to 80,000 years ago through the Toba tephra: grade A."
+  after: "Jwalapuram and Dhaba preserve similar assemblages before and after Toba. Earlier Thar tools also inform the pre-Toba model. Their makers' species remains uncertain: grade C."
+  reason: "The sites preserve different dated sequences, as the dating note now reflects. Tools alone do not establish that Homo sapiens made them."
+  sources:
+    - src.petraglia-2007-jwalapuram-toba
+    - src.clarkson-2020-dhaba-toba
+    - src.blinkhorn-2013-thar-middle-palaeolithic
+- date: 2026-11-22
+  target: /archive/concept/hindu-time-units
+  before: "The divine year, mahayuga and kalpa equivalences were stated as facts at grade A."
+  after: "The same equivalences are attributed to the traditional reckoning described in the Manusmriti and Surya Siddhanta, at grade D."
+  reason: "The equations express traditional cosmological chronology. The teen summary now identifies the kalpa the same way."
+  sources:
+    - src.olivelle-2005-manus-code-of-law
+    - src.burgess-1860-surya-siddhanta
+    - src.plofker-2009-mathematics-in-india
+- date: 2026-11-22
+  target: /archive/site/nalanda-mahavihara
+  before: "415 to 1200 CE with a best estimate of 427 CE, epigraphic, grade A."
+  after: "Fifth century to thirteenth century CE, scholarly-consensus, grade B."
+  reason: "The seals and Xuanzang inform the monastery's early history. Evidence of continued use extends into the thirteenth century."
+  sources:
+    - src.unesco-2016-nalanda-mahavihara
+    - src.kulke-2004-history-of-india
+- date: 2026-11-22
+  target: /archive/site/nalanda-mahavihara
+  before: "The adult and younger summaries treated the founding under Kumaragupta I as established."
+  after: "The summaries describe Gupta-era development. The adult and teen summaries attribute the founding to Xuanzang and qualify the identification of Shakraditya with Kumaragupta I."
+  reason: "Xuanzang names Shakraditya, whose identification with Kumaragupta I is a historical inference."
+  sources:
+    - src.unesco-2016-nalanda-mahavihara
+    - src.kulke-2004-history-of-india
+- date: 2026-11-22
+  target: /archive/site/nalanda-mahavihara
+  before: "Eleven monasteries with detailed facilities and a seven-phase chronology of Temple 3: grade A."
+  after: "The excavated complex includes residential monasteries, stupas and temples along a north-south axis: grade B."
+  reason: "The general site description supports the broad layout. The earlier claim added details beyond what the cited source establishes."
+  sources:
+    - src.unesco-2016-nalanda-mahavihara
+- date: 2026-11-22
+  target: /archive/site/nalanda-mahavihara
+  before: "Monastic and royal seals prove organized institutional administration began in the fifth century CE: grade A."
+  after: "Gupta-period finds and Xuanzang's account support a fifth-century phase of monastic development: grade B."
+  reason: "The evidence supports Gupta patronage and early development. It does not establish the precise start of the institution's administration."
+  sources:
+    - src.unesco-2016-nalanda-mahavihara
+    - src.kulke-2004-history-of-india
+- date: 2026-11-22
+  target: /archive/event/keezhadi-excavations-begin
+  before: "Grade A field seasons and Ministry of Culture claim cited src.keeladi-lok-sabha-2024, a 2019 Tamil Nadu archaeology booklet."
+  after: "The 2014-15, 2015-16 and 2016-17 ASI seasons are graded B and cite the 2019 Tamil Nadu Department of Archaeology report under its correct identity."
+  reason: "The introduction to the Tamil Nadu report explicitly lists all three ASI seasons, as does the 2017 Lok Sabha reply."
+  sources:
+    - { id: src.sivanantham-2019-keeladi-urban-settlement, locator: "Introduction" }
+- date: 2026-11-22
+  target: /art-and-culture/indian-cinema
+  before: "1896 to 2023, from the first Bombay screenings to the present: grade A, citing only the 1999 encyclopaedia."
+  after: "1896 to 2023, from the first Bombay screenings to the 2023 Academy Awards: grade B, with a 2023 Academy source."
+  reason: "The encyclopaedia supports the early screening date. The Academy record documents the later milestone."
+  sources:
+    - src.rajadhyaksha-1999-encyclopaedia-indian-cinema
+    - src.academy-2023-95th-awards
+- date: 2026-11-22
+  target: /history/chola-empire
+  before: "848 to 1279 CE: grade A."
+  after: "848 to 1279 CE: grade B."
+  reason: "The period is a scholarly reconstruction with an approximate beginning in the mid-ninth century."
+  sources:
+    - src.sastri-1955-the-colas
+    - src.subbarayalu-2012-south-india-under-cholas
+- date: 2026-11-22
+  target: /history/british-raj
+  before: "1858 to 1947 Crown rule: grade A, citing a modern history alone."
+  after: "1858 to 1947 Crown rule: grade A, citing both statutes and the modern history."
+  reason: "The enacted statutes directly document the transfer to the Crown and the transition to the independent dominions."
+  sources:
+    - src.uk-parliament-1858-government-of-india-act
+    - src.india-independence-act-1947
+    - src.metcalf-2012-concise-history-modern-india
+- date: 2026-11-22
+  target: /history/indian-independence-movement
+  before: "1885 to 1947, documentary, grade A."
+  after: "1885 to 1947, scholarly-consensus, grade B."
+  reason: "The range is the conventional periodisation of the organised national movement in the cited historical survey."
+  sources:
+    - src.chandra-1989-indias-struggle-for-independence
+- date: 2026-11-22
+  target: /history/modern-india
+  before: "1947 to 2026, from independence to the date of writing: grade A with a 2007 source."
+  after: "1947 to 2023, from independence to the Chandrayaan-3 landing: grade A with primary records at both ends."
+  reason: "The article's latest dated event is the 2023 landing, which ISRO documents. The Independence Act documents the start."
+  sources:
+    - src.india-independence-act-1947
+    - src.chandrayaan3-isro
+    - src.chandrayaan1-isro-science
+    - src.guha-2007-india-after-gandhi
+- date: 2026-11-22
+  target: /history/mughal-empire
+  before: "1526 to 1858 CE: grade A."
+  after: "1526 to 1858 CE: grade B."
+  reason: "The cited modern histories support the dynastic period, while the entry cites no direct records for the endpoints."
+  sources:
+    - src.richards-1993-mughal-empire
+    - src.metcalf-2012-concise-history-modern-india
+- date: 2026-11-22
+  target: /art-and-culture/textiles-of-india
+  before: "Indian cottons in world trade, c. 1600 to 1800: grade A."
+  after: "Indian cottons in world trade, c. 1600 to 1800: grade B."
+  reason: "The dates summarise an approximate period of trade in the cited historical synthesis."
+  sources:
+    - src.riello-2009-how-india-clothed-the-world
+- date: 2026-11-22
+  target: /archive/polity/panchala
+  before: "Northern and Southern Panchala with capitals at Ahichhatra and Kampilya: grade A."
+  after: "Northern and Southern Panchala with capitals at Ahichhatra and Kampilya: grade B."
+  reason: "The division and capital identifications are supported here by historical syntheses."
+  sources:
+    - src.singh-2008-ancient-early-medieval-india
+    - src.thapar-2002-early-india
+- date: 2026-11-22
+  target: /archive/concept/northern-black-polished-ware-culture
+  before: "Gaur's excavation report cited through DOI 10.2307/3631855."
+  after: "Gaur's 1983 excavation report cited through OCLC 13396022."
+  reason: "The DOI resolves to Gérard Fussman's review of the report. The library record identifies Gaur's original edition."
+  sources:
+    - src.gaur-1983-excavations-atranjikhera
+- date: 2026-11-22
+  target: /archive/concept/northern-black-polished-ware-culture
+  before: "Regional range of 700 to 200 BCE labelled a stratified radiocarbon chronology at grade A."
+  after: "Regional range of 700 to 200 BCE labelled a regional chronology at grade B."
+  reason: "The range synthesises multiple local contexts and distributions into a regional periodisation."
+  sources:
+    - src.allchin-1995-archaeology-early-historic-south-asia
+    - src.singh-2008-ancient-early-medieval-india
+    - src.gaur-1983-excavations-atranjikhera
+- date: 2026-11-22
+  target: /archive/concept/northern-black-polished-ware-culture
+  before: "Fabric, finish and firing description: grade A."
+  after: "Fabric, finish and firing description: grade B."
+  reason: "The cited sources are syntheses of ceramic evidence and production techniques."
+  sources:
+    - src.allchin-1995-archaeology-early-historic-south-asia
+    - src.singh-2008-ancient-early-medieval-india
+- date: 2026-11-22
+  target: /archive/concept/northern-black-polished-ware-culture
+  before: "Association of the ceramic phase with Second Urbanisation: grade A."
+  after: "Association of the ceramic phase with Second Urbanisation: grade B."
+  reason: "The association draws on comparative archaeological interpretation across many sites."
+  sources:
+    - src.allchin-1995-archaeology-early-historic-south-asia
+    - src.singh-2008-ancient-early-medieval-india
+    - src.thapar-2002-early-india
+- date: 2026-11-22
+  target: /archive/site/ahichhatra
+  before: "1200 BCE to 1099 CE described as a continuous sequence: grade A."
+  after: "1200 BCE to 1099 CE described as an approximate stratigraphic sequence: grade B."
+  reason: "The overall placement combines phases and date estimates. The cited excavation report is centred on Hastinapura."
+  sources:
+    - src.lal-1955-excavation-hastinapura
+    - src.singh-2008-ancient-early-medieval-india
+    - src.allchin-1995-archaeology-early-historic-south-asia
+- date: 2026-11-22
+  target: /archive/site/ahichhatra
+  before: "Four-fold early stratigraphic sequence in the 1960s excavations: grade A."
+  after: "Four-fold early stratigraphic sequence in the 1960s excavations: grade B."
+  reason: "The entry cites archaeological syntheses for the later excavation sequence."
+  sources:
+    - src.singh-2008-ancient-early-medieval-india
+    - src.allchin-1995-archaeology-early-historic-south-asia
+- date: 2026-11-22
+  target: /archive/site/burzahom
+  before: "Neolithic to Megalithic range of 2800 to 1000 BCE: grade A."
+  after: "Approximate Neolithic to Megalithic range of 3000 to 700 BCE: grade B, citing the ASI excavation report."
+  reason: "The report places the early Neolithic phase around 3000 BCE and includes a Megalithic sample at about 800 BCE with roughly a century of uncertainty. The teen summary describes the sequence without narrower endpoints."
+  sources:
+    - src.fonia-2022-excavations-burzahom
+- date: 2026-11-22
+  target: /archive/site/burzahom
+  before: "Bell-shaped pits with plaster, step-ladders, storage pits and hearths: grade A from secondary sources."
+  after: "Pits in the karewa terrace, some with traces of mud plaster, steps or hearths: grade A from the excavation report."
+  reason: "The primary report documents the individual structural features. The children's summary also drops the inferred purpose of the dwellings."
+  sources:
+    - src.fonia-2022-excavations-burzahom
+- date: 2026-11-22
+  target: /archive/site/burzahom
+  before: "Ceremonial burials of domesticated dogs, wolves and ibex near human graves, along with red ochre and trepanation: grade A."
+  after: "Burials with traces of red ochre, a skull with evidence of trepanation and burials containing animal remains: grade A from the excavation report."
+  reason: "The excavation report directly documents these remains. The claim and children's summary avoid inferences about ownership or ceremonial purpose."
+  sources:
+    - src.fonia-2022-excavations-burzahom
+- date: 2026-11-22
+  target: /archive/site/burzahom
+  before: "Perforated rectangular harvesters and a carved stag hunt with twin suns: grade A citing a secondary survey."
+  after: "Neolithic stone and bone tools identified as harvesters and an engraved stag hunt: grade A citing the excavation report."
+  reason: "The primary report describes the artifacts and the context in which they were found."
+  sources:
+    - src.fonia-2022-excavations-burzahom
+- date: 2026-11-22
+  target: /archive/site/paiyampalli
+  before: "1800 to 300 BCE as a calibrated radiocarbon span for both periods: grade A."
+  after: "1800 to 300 BCE as the approximate chronology of the Neolithic and Megalithic layers: grade B."
+  reason: "The period boundaries are an estimate based on dates and stratigraphy."
+  sources:
+    - src.fuller-2006-agricultural-origins-south-asia
+    - src.fuller-2007-dating-neolithic-south-india
+    - src.coningham-2015-archaeology-south-asia
+- date: 2026-11-22
+  target: /archive/site/paiyampalli
+  before: "Period I material and plant remains and Period II wares and iron finds: grade A."
+  after: "Period I material and plant remains and Period II wares and iron finds: grade B."
+  reason: "The cited sources report these findings in archaeological syntheses."
+  sources:
+    - src.fuller-2006-agricultural-origins-south-asia
+    - src.coningham-2015-archaeology-south-asia
+- date: 2026-11-22
+  target: /archive/tradition/ochre-coloured-pottery-culture
+  before: "A spearhead and a harpoon were recovered in a single undisturbed deposit at Saipai: grade A."
+  after: "A hooked spearhead was recovered in a trial trench and a harpoon with the pottery in a subsequent excavation: grade B."
+  reason: "The field account distinguishes the two episodes. The entity cites scholarly syntheses of the finds."
+  sources:
+    - src.misra-2001-prehistoric-colonization-india
+    - src.coningham-2015-archaeology-south-asia
+- date: 2026-11-22
+  target: /archive/tradition/ochre-coloured-pottery-culture
+  before: "The worn surfaces of pottery at other Doab sites resulted from prolonged waterlogging: grade A."
+  after: "The Lal Qila pottery includes decorated red-slipped vessels, and examples from some other sites have worn surfaces: grade B."
+  reason: "The archaeological synthesis supports the description. The cause of wear is an interpretation."
+  sources:
+    - src.coningham-2015-archaeology-south-asia
+- date: 2026-11-22
+  target: /archive/text/puranas
+  before: "Amarakosha's fivefold definition of a Purana: grade A."
+  after: "Amarakosha's fivefold definition of a Purana: grade B."
+  reason: "The statement is supported by the cited scholarship and review."
+  sources:
+    - src.brockington-1987-puranas-rocher-review
+    - src.hiltebeitel-2011-dharma
+- date: 2026-11-22
+  target: /archive/text/puranas
+  before: "Five Puranas preserve the primary dynastic king-lists for a long series of dynasties: grade A."
+  after: "The five Puranas preserve differing lists that historians compare with other sources for early dynasties: grade B."
+  reason: "The textual witnesses differ. A critical collation documents the lists, and their use for political history requires comparison with other evidence."
+  sources:
+    - src.pargiter-1913-dynasties-kali-age
+    - src.kulke-2004-history-of-india
+    - src.thapar-2012-asoka-decline-mauryas
+- date: 2026-11-22
+  target: /archive/text/vedangas
+  before: "The grouping of Shrauta, Grihya, Dharma and Shulba Sutras under Kalpa: grade A."
+  after: "The grouping of Shrauta, Grihya, Dharma and Shulba Sutras under Kalpa: grade B."
+  reason: "The cited works are scholarly syntheses of the textual classification."
+  sources:
+    - src.flood-2003-blackwell-companion-hinduism
+    - src.plofker-2009-mathematics-in-india
+- date: 2026-11-22
+  target: /archive/concept/indo-european-language-discourse
+  before: "The 1786 date and the claim about Jones's discourse cited only Trautmann's account at grade A."
+  after: "The date and the claim retain grade A with Jones's discourse cited alongside Trautmann."
+  reason: "The discourse directly attests its delivery date and Jones's argument. Trautmann provides context for its influence."
+  sources:
+    - src.jones-2013-third-anniversary-discourse
+    - src.trautmann-1997-aryans-and-british-india
+- date: 2026-11-22
+  target: /archive/person/sankardev
+  before: "1449 to 1568, labelled historical scholarship, grade B."
+  after: "1449 to 1568, conventional Ekasarana lifespan, traditional-sampradaya, grade D."
+  reason: "The early biographer Daityari gives 1568 for Sankardev's death. Later biographies differ on the year of his birth."
+  sources:
+    - src.sarma-1966-neo-vaisnavite-movement
+- date: 2026-11-22
+  target: /archive/person/sankardev
+  before: "His historical dates are conventionally given as 1449 to 1568."
+  after: "The traditional account places his life from 1449 to 1568. His birth year varies across the biographies."
+  reason: "The teen summary distinguishes the conventional lifespan from the evidence for a precise birth date."
+  sources:
+    - src.sarma-1966-neo-vaisnavite-movement
+- date: 2026-11-22
+  target: /archive/concept/saptarishi-calendar
+  before: "The children's summary says the calendar counts its years from 3076 BCE."
+  after: "The children's summary identifies 3076 BCE as the calendar's traditional starting point."
+  reason: "The epoch is a calendrical reckoning in the Kashmiri tradition."
+  sources:
+    - src.stein-1900-rajatarangini
+    - src.saha-1955-calendar-reform-committee-report
+- date: 2026-11-22
+  target: /archive/text/mahabharata
+  before: "The Mahabharata is the longest epic poem in the world."
+  after: "The Mahabharata is a vast Sanskrit poem about the Pandava and Kaurava cousins."
+  reason: "The cited scholarship describes the Sanskrit epic and its scale. A worldwide ranking depends on which recensions and oral traditions are counted."
+  sources:
+    - src.brockington-1998-sanskrit-epics
+- date: 2026-11-22
+  target: /archive/tradition/vedic-chanting
+  before: "Every syllable sounds just as it did thousands of years ago. Vedic chanting is the oldest continuously practised liturgical vocal tradition in South Asia."
+  after: "The summaries describe rules for pitch, syllable length and pronunciation, and distinguish the Rigveda and Yajurveda accents from Samaveda melodies."
+  reason: "Recitation rules support faithful transmission. The sources do not attest the exact sound of ancient performances or establish the regional superlative."
+  sources:
+    - src.unesco-2003-tradition-vedic-chanting
+    - src.gonda-1975-vedic-literature
+    - src.jamison-brereton-2014-rigveda
+- date: 2026-11-22
+  target: /archive/tradition/vedic-oral-transmission
+  before: "The Vedas were transmitted purely by memory without a single sound changing, preserving exact phonemes and accents across millennia."
+  after: "Oral transmission relied mainly on memorisation and recitation patterns that checked word order, pronunciation and pitch."
+  reason: "The techniques helped preserve the text with high fidelity. The evidence also documents changes during its early transmission."
+  sources:
+    - src.jamison-brereton-2014-rigveda
+    - src.unesco-2003-tradition-vedic-chanting
+    - src.gonda-1975-vedic-literature
+- date: 2026-11-22
+  target: /archive/artifact/banawali-terracotta-plough
+  before: "The clay model showed the exact shape of Harappan ploughs and matched the furrow profiles at Kalibangan."
+  after: "The model offers a clue to the design of wooden ploughs, including the shape of the beam and share."
+  reason: "A model preserves features of a design and cannot establish that actual ploughs had the same exact profile."
+  sources:
+    - src.possehl-2002-indus-civilization
+    - src.singh-2008-ancient-early-medieval-india
+    - src.wright-2010-ancient-indus
+- date: 2026-11-22
+  target: /archive/concept/harappan-weights-and-measures
+  before: "Traders used identical weights and rulers to keep trade fair everywhere; smaller and larger weights are assigned to specific kinds of goods."
+  after: "The summaries describe similar stone weights, shared ratios and examples of graduated scales."
+  reason: "The excavated objects support shared measurement practices. They do not establish uniform use, particular classes of goods or traders' motives."
+  sources:
+    - src.marshall-1931-mohenjo-daro
+    - src.kenoyer-1998-ancient-cities-indus
+    - src.possehl-2002-indus-civilization
+- date: 2026-11-22
+  target: /archive/tradition/harappan-civilisation
+  before: "South Asia's first urban culture."
+  after: "The Harappan or Indus Valley Civilisation developed some of South Asia's earliest known cities."
+  reason: "The qualification reflects the archaeological record and distinguishes the earlier rural phase from the mature urban phase."
+  sources:
+    - src.kenoyer-1998-ancient-cities-indus
+    - src.wright-2010-ancient-indus
+- date: 2026-11-22
+  target: /archive/artifact/tamil-brahmi-inscriptions
+  before: "The oldest written Tamil."
+  after: "The earliest known examples of written Tamil."
+  reason: "Surviving cave and pottery inscriptions attest early Tamil writing. The beginning of the practice remains debated."
+  sources:
+    - src.salomon-1998-indian-epigraphy
+    - src.sivanantham-2019-keeladi-urban-settlement
+- date: 2026-11-22
+  target: /archive/artifact/hathigumpha-inscription
+  before: "The earliest surviving year-by-year royal biography in Indian epigraphy and the earliest epigraphic Jain salutation."
+  after: "The inscription recounts Kharavela's deeds through his thirteenth regnal year and opens with a Jain salutation."
+  reason: "The inscription directly supports both descriptions without requiring comparative superlatives."
+  sources:
+    - src.fleet-1910-hathigumpha-inscription
+    - src.salomon-1998-indian-epigraphy
+    - src.dundas-2002-the-jains
+- date: 2026-11-22
+  target: /archive/text/valmiki-ramayana
+  before: "The poem's compositional growth spanned about 500 BCE to 300 CE."
+  after: "Scholars think the poem took shape in stages, from around 750 BCE to about 300 CE."
+  reason: "The broader formulation reflects estimates for the early layers and distinguishes them from traditional authorship and dating."
+  sources:
+    - src.goldman-1984-ramayana-balakanda
+    - src.brockington-1998-sanskrit-epics
+- date: 2026-11-22
+  target: /archive/artifact/sanauli-wheeled-vehicles
+  before: "The earliest intact wheeled transport burials in the subcontinent, with copper triangles on the wheels and frames."
+  after: "The summaries describe three vehicles with copper-decorated solid wheels and acknowledge the debate over the animals that drew them."
+  reason: "The source describes the excavated vehicles and competing identifications. It does not establish the regional ranking."
+  sources:
+    - src.parpola-2020-sanauli-chariot-burials
+- date: 2026-11-22
+  target: /archive/event/founding-of-vijayanagara
+  before: "In the 1300s, brothers Harihara and Bukka established a kingdom near the Tungabhadra River."
+  after: "In the 1300s, a kingdom grew near the Tungabhadra River under Harihara and Bukka. Historians are still piecing together how it began."
+  reason: "State formation was gradual, and the sequence is a historical reconstruction."
+  sources:
+    - src.stein-1989-vijayanagara
+    - src.unesco-1986-hampi
+- date: 2026-11-22
+  target: "/philosophy/the-vedas, /philosophy/the-upanishads, /philosophy/katha-upanishad, /philosophy/mandukya-upanishad, /philosophy/the-great-upanishadic-dialogues"
+  before: "Grade D ranges beginning in 3101 BCE and ending in 2999 or 2499 BCE."
+  after: "Grade D ranges beginning in 3102 BCE and ending in 3000 or 2500 BCE, respectively."
+  reason: "The explicit BCE strings recover the archive’s traditional placements and the standard Kali epoch."
+  sources:
+    - src.flood-2003-blackwell-companion-hinduism
+    - src.plofker-2009-mathematics-in-india
+- date: 2026-11-22
+  target: "/philosophy/buddhism"
+  before: "Later Parinirvana window of 420 to 350 BCE and a Theravada entry."
+  after: "Approximate later Parinirvana window of 420 to 380 BCE, centred near 400 BCE, and distinct corrected long and Theravada death dates."
+  reason: "The article dates the Parinirvana. The person record covers possible lifespans."
+  sources:
+    - src.cousins-1996-dating-historical-buddha
+    - src.gombrich-2006-theravada-buddhism
+    - src.kulke-2004-history-of-india
+- date: 2026-11-22
+  target: "person.gautama-buddha"
+  before: "Possible short-chronology lifespan window of 490 to 380 BCE."
+  after: "Possible short-chronology lifespan window of 500 to 380 BCE, with 400 BCE marking the estimated death."
+  reason: "The lifespan window allows for an 80-year life before a Parinirvana as early as approximately 420 BCE. The Theravada entry now identifies birth and death."
+  sources:
+    - src.cousins-1996-dating-historical-buddha
+    - src.gombrich-2006-theravada-buddhism
+- date: 2026-11-22
+  target: "/philosophy/jainism"
+  before: "Mahavira’s death placed between 500 and 380 BCE."
+  after: "Mahavira’s death placed approximately in the fifth century BCE, with Dundas’s estimate of about 425 BCE identified."
+  reason: "The synchronism supports a broad fifth-century estimate and does not establish a precise lifespan."
+  sources:
+    - src.dundas-2002-the-jains
+    - src.bronkhorst-2007-greater-magadha
+- date: 2026-11-22
+  target: "person.mahavira"
+  before: "Estimated lifespan window of 510 to 390 BCE."
+  after: "Estimated fifth-century BCE death window, 500 to 400 BCE."
+  reason: "The Buddhist synchronism constrains the approximate time of death. It provides no independent birth date."
+  sources:
+    - src.dundas-2002-the-jains
+    - src.bronkhorst-2007-greater-magadha
+- date: 2026-11-22
+  target: "/literature/the-ramayana"
+  before: "Composition placed at 500 BCE to 300 CE. Rama placed near the end of Treta."
+  after: "Composition window of 750 BCE to 300 CE. Traditional placement spans the full Treta of the current cycle."
+  reason: "Goldman and Brockington differ on the earliest stage of the epic. The traditional yuga placement describes the setting of Rama’s story."
+  sources:
+    - src.goldman-1984-ramayana-balakanda
+    - src.brockington-1998-sanskrit-epics
+    - src.wilson-1840-vishnu-purana
+    - src.plofker-2009-mathematics-in-india
+- date: 2026-11-22
+  target: "text.valmiki-ramayana"
+  before: "Composition starts at 700 BCE in the timeline and 500 BCE in the teen summary. Traditional placement at 869000 BCE."
+  after: "Composition window of 750 BCE to 300 CE throughout. Traditional placement spans the full Treta of the current cycle."
+  reason: "Goldman and Brockington differ on the earliest stage of the epic. The traditional yuga placement describes the setting of Rama’s story."
+  sources:
+    - src.goldman-1984-ramayana-balakanda
+    - src.brockington-1998-sanskrit-epics
+    - src.wilson-1840-vishnu-purana
+    - src.plofker-2009-mathematics-in-india
+- date: 2026-11-22
+  target: "person.rama"
+  before: "The textual composition window is grade B."
+  after: "The textual composition window is grade C."
+  reason: "Goldman and Brockington differ on the earliest stage of the epic. The traditional yuga placement describes the setting of Rama’s story."
+  sources:
+    - src.goldman-1984-ramayana-balakanda
+    - src.brockington-1998-sanskrit-epics
+    - src.wilson-1840-vishnu-purana
+    - src.plofker-2009-mathematics-in-india
+- date: 2026-11-22
+  target: "/history/maurya-empire, polity.maurya-empire, person.chandragupta-maurya"
+  before: "The founding was placed variously at 324, 322 or 321 BCE."
+  after: "Accession estimates span about 324 to 321 BCE. The empire’s end remains approximately 185 BCE."
+  reason: "Singh allows the earlier accession and Thapar uses about 321 BCE. Both fit the broad historical chronology."
+  sources:
+    - src.thapar-2002-early-india
+    - src.singh-2008-ancient-early-medieval-india
+- date: 2026-11-22
+  target: "person.panini, text.ashtadhyayi and companion language articles"
+  before: "Ranges of 500 to 350 BCE or 600 to 350 BCE, with grades B and C."
+  after: "Grade C window of about 600 to 350 BCE, with the fifth and fourth centuries the usual placement."
+  reason: "The dating depends on linguistic and textual interpretation, and the envelope includes earlier proposals."
+  sources:
+    - src.cardona-1988-panini-work-traditions
+    - src.katre-1987-astadhyayi-panini
+- date: 2026-11-22
+  target: "/philosophy/yoga-sutras-of-patanjali, text.yoga-sutras"
+  before: "Maas’s dating given as 325 to 500 CE (C) or 325 to 425 CE (B), with different best years."
+  after: "Maas’s 325 to 425 CE window at grade C in both records, with no best year. The article also lists the traditional identification at grade D."
+  reason: "Maas gives a conditional textual estimate for the combined work. The earlier placement is based on the separate traditional identity claim."
+  sources:
+    - src.maas-2013-concise-historiography-yoga
+    - src.maas-2020-patanjala-yoga-temporality
+- date: 2026-11-22
+  target: "polity.mughal-empire"
+  before: "The timeline ended in 1857."
+  after: "The timeline ends in 1858. The capture of Delhi is dated to 1857."
+  reason: "The 1857 capture ended Mughal power in Delhi. The trial and exile of the last emperor followed in 1858."
+  sources:
+    - src.metcalf-2012-concise-history-modern-india
+    - src.richards-1993-mughal-empire
+- date: 2026-11-22
+  target: "/art-and-culture/bharatanatyam"
+  before: "The Natyashastra compilation was dated to about 200 BCE to 200 CE."
+  after: "The Natyashastra compilation is dated to about 200 BCE to 300 CE."
+  reason: "The broad grade C window includes Pollock’s estimate of about 300 CE for the compiled treatise."
+  sources:
+    - src.pollock-2016-rasa-reader
+    - src.ghosh-1951-natyasastra
+- date: 2026-11-22
+  target: "/art-and-culture/classical-dances-of-india"
+  before: "The Natyashastra compilation was dated to about 200 BCE to 200 CE."
+  after: "The Natyashastra compilation is dated to about 200 BCE to 300 CE."
+  reason: "The broad grade C window includes Pollock’s estimate of about 300 CE for the compiled treatise."
+  sources:
+    - src.pollock-2016-rasa-reader
+    - src.ghosh-1951-natyasastra
+- date: 2026-11-22
+  target: "/music/05-musical-instruments"
+  before: "The Natyashastra compilation was dated to about 200 BCE to 200 CE."
+  after: "The Natyashastra compilation is dated to about 200 BCE to 300 CE."
+  reason: "The broad grade C window includes Pollock’s estimate of about 300 CE for the compiled treatise."
+  sources:
+    - src.pollock-2016-rasa-reader
+    - src.ghosh-1951-natyasastra
+- date: 2026-11-22
+  target: "/music/rasa-in-indian-music"
+  before: "The Natyashastra compilation was dated to about 200 BCE to 200 CE."
+  after: "The Natyashastra compilation is dated to about 200 BCE to 300 CE."
+  reason: "The broad grade C window includes Pollock’s estimate of about 300 CE for the compiled treatise."
+  sources:
+    - src.pollock-2016-rasa-reader
+    - src.ghosh-1951-natyasastra
+- date: 2026-11-22
+  target: "/music/shrutis-and-svaras"
+  before: "One combined range of 200 BCE to 400 CE for the Natyashastra and Dattilam."
+  after: "A 200 BCE to 300 CE compilation estimate for the Natyashastra and a separate early centuries CE placement for the Dattilam."
+  reason: "The compilation of Bharata’s treatise and the dating of early music material have distinct evidentiary bases."
+  sources:
+    - src.pollock-2016-rasa-reader
+    - src.rowell-1992-music-musical-thought-early-india
+    - src.widdess-1981-tala-and-melody
+    - src.nijenhuis-1970-dattilam
+- date: 2026-11-22
+  target: "/music/marga-talas-and-the-ten-pranas"
+  before: "One combined range of 200 BCE to 500 CE for the Natyashastra and Dattilam."
+  after: "A 200 BCE to 300 CE compilation estimate for the Natyashastra and a separate early centuries CE placement for the Dattilam."
+  reason: "The compilation of Bharata’s treatise and the dating of early music material have distinct evidentiary bases."
+  sources:
+    - src.pollock-2016-rasa-reader
+    - src.rowell-1992-music-musical-thought-early-india
+    - src.widdess-1981-tala-and-melody
+    - src.nijenhuis-1970-dattilam
+- date: 2026-11-22
+  target: "text.natyashastra"
+  before: "A 200 BCE to 300 CE range labelled as Pollock’s estimate."
+  after: "A broad compilation range of 200 BCE to 300 CE with Pollock’s estimate near its upper end."
+  reason: "Lidova places the compiled form around 200 BCE to 200 CE. Pollock places the foundational text around 300 CE."
+  sources:
+    - src.pollock-2016-rasa-reader
+    - src.lidova-2014-natyashastra
+- date: 2026-11-22
+  target: "person.kalidasa, /literature/kalidasa"
+  before: "Different Gupta-era ranges and grades, and a textual grade C entity entry extending the Vikramaditya tradition to 50 CE."
+  after: "A grade C Gupta-era estimate of 350 to 475 CE and a grade D first-century BCE Vikramaditya tradition. The Mandasor echoes are presented as a possible earlier bound."
+  reason: "Proposed allusions and literary parallels give an indirect Gupta-era placement. The Nine Gems association is a traditional attribution."
+  sources:
+    - src.lienhard-1984-history-classical-poetry
+    - src.pollock-2006-language-of-the-gods
+    - src.kielhorn-1900-aihole-inscription
+- date: 2026-11-22
+  target: "person.adi-shankara"
+  before: "Only the conventional 788 to 820 CE chronology was listed in the scholarly lens."
+  after: "Nakamura’s estimate of 700 to 750 CE is listed separately at grade C."
+  reason: "The source proposes a distinct early eighth-century chronology."
+  sources:
+    - src.nakamura-1983-early-vedanta
+    - src.isayeva-1993-shankara-indian-philosophy
+- date: 2026-11-22
+  target: "person.mirabai, /philosophy/bhakti-movement"
+  before: "Approximate birth and death years of 1498 and 1546 or 1547."
+  after: "Mirabai is placed broadly in the first half of the sixteenth century."
+  reason: "The documented evidence and the biographical traditions do not establish her exact birth and death years."
+  sources:
+    - src.martin-2023-mirabai
+    - src.hawley-2005-three-bhakti-voices
+- date: 2026-11-22
+  target: "/philosophy/bhakti-movement"
+  before: "Only Ramanuja’s traditional dates, 1017 to 1137 CE, were given."
+  after: "Carman’s estimate of about 1077 to 1157 CE is identified alongside the traditional chronology."
+  reason: "The traditional and scholarly estimates represent distinct accounts."
+  sources:
+    - src.carman-1974-theology-of-ramanuja
+- date: 2026-11-22
+  target: "text.vedanga-jyotisha"
+  before: "The solstice reference was the lead dating."
+  after: "The 500 to 300 BCE textual dating leads, followed by the possible older solstice epoch."
+  reason: "The date of the surviving text and the possible epoch of its astronomical parameters answer different questions."
+  sources:
+    - src.plofker-2009-mathematics-in-india
+    - src.pingree-1981-jyotihsastra
+- date: 2026-11-22
+  target: "person.kautilya, text.arthashastra"
+  before: "Kautilya’s Olivelle entry followed the Mauryan identification and began in 50 BCE. The text conflated source material and the first recension."
+  after: "Olivelle’s 50 to 125 CE recension leads the author record. The text retains its 50 BCE to 300 CE window and identifies source material, Kautilya’s recension, and the final redaction."
+  reason: "Olivelle assigns the mid-first-century BCE material to earlier sources. The author’s inferred period of activity ends before the later redaction."
+  sources:
+    - src.olivelle-2013-king-governance-law
+    - src.trautmann-1971-kautilya-arthasastra
+- date: 2026-11-22
+  target: "event.kurukshetra-war"
+  before: "One grade D interval from 3139 to 2449 BCE with 3138 BCE as a best estimate."
+  after: "Separate grade D datings of 3138 BCE and 2449 BCE alongside the 3102 BCE reckoning."
+  reason: "Subtracting 36 years from the Kali epoch gives 3138 BCE. Varahamihira’s chronology uses a different era and yields a distinct date."
+  sources:
+    - src.bhatnagar-2017-date-mahabharata-war
+    - src.plofker-2009-mathematics-in-india
+    - src.pingree-1981-jyotihsastra
+    - src.kielhorn-1900-aihole-inscription
+- date: 2026-11-22
+  target: "/literature/mahabharata"
+  before: "The article used 3102 BCE for the war and Krishna’s death in the same reckoning."
+  after: "The Aihole war epoch is distinguished from the tradition placing the war 36 years before Krishna’s death in 3102 BCE."
+  reason: "The epic interval and the epigraphic era support separately labelled traditional placements."
+  sources:
+    - src.bhatnagar-2017-date-mahabharata-war
+    - src.plofker-2009-mathematics-in-india
+    - src.kielhorn-1900-aihole-inscription
+- date: 2026-11-22
+  target: "text.bhagavad-gita"
+  before: "A traditional interval of 3138 to 3102 BCE."
+  after: "Separate grade D placements in 3138 BCE and 3102 BCE for the competing reckonings of the war."
+  reason: "The 3138 BCE date belongs to a separate reckoning of the war. The Kali epoch remains 3102 BCE."
+  sources:
+    - src.bhatnagar-2017-date-mahabharata-war
+    - src.kielhorn-1900-aihole-inscription
+    - src.malinar-2007-bhagavadgita-doctrines-contexts
+- date: 2026-11-22
+  target: "text.mahabharata"
+  before: "A traditional interval of 3138 to 3102 BCE."
+  after: "Grade D marker at 3102 BCE for the traditional placement of Vyasa at the yuga transition."
+  reason: "The 3138 BCE date belongs to a separate reckoning of the war. The Kali epoch remains 3102 BCE."
+  sources:
+    - src.brockington-1998-sanskrit-epics
+    - src.plofker-2009-mathematics-in-india
+    - src.bhatnagar-2017-date-mahabharata-war
+- date: 2026-11-22
+  target: "/philosophy/the-bhagavad-gita"
+  before: "The traditional entry used only 3102 BCE."
+  after: "Both 3102 BCE and 3138 BCE appear as distinct grade D settings for the dialogue."
+  reason: "The dialogue opens the war, and the sources preserve distinct traditional reckonings for that event."
+  sources:
+    - src.bhatnagar-2017-date-mahabharata-war
+    - src.brockington-1998-sanskrit-epics
+- date: 2026-11-22
+  target: "artifact.heliodorus-pillar, person.krishna"
+  before: "Besnagar dating of 120 to 100 BCE (A) or 120 to 90 BCE (B)."
+  after: "Both use the approximate 120 to 100 BCE late-second-century placement at grade B."
+  reason: "Bhagabhadra’s regnal year is directly attested. The BCE range is inferred from the approximate chronology of Antialcidas."
+  sources:
+    - src.salomon-1998-indian-epigraphy
+    - src.shaw-2016-buddhist-landscapes-sanchi
+    - src.stoneman-2019-greek-experience-of-india
+- date: 2026-11-22
+  target: "artifact.sanauli-wheeled-vehicles"
+  before: "The dating was 2200 to 1800 BCE at grade A, while the prose gave 2100 to 1800 BCE."
+  after: "The site and vehicles are placed approximately in the early second millennium BCE at grade B."
+  reason: "The published Sanauli study estimates the site’s horizon around 2000 BCE and includes dated burial samples reaching about the middle of the millennium. The timeline is a contextual synthesis."
+  sources:
+    - src.sharma-2024-sinauli-radiocarbon
+    - src.parpola-2020-sanauli-chariot-burials
+- date: 2026-11-22
+  target: "site.sanauli"
+  before: "The dating was 2200 to 1800 BCE at grade A, while the prose gave 2100 to 1800 BCE."
+  after: "The site and vehicles are placed approximately in the early second millennium BCE at grade B."
+  reason: "The published Sanauli study estimates the site’s horizon around 2000 BCE and includes dated burial samples reaching about the middle of the millennium. The timeline is a contextual synthesis."
+  sources:
+    - src.sharma-2024-sinauli-radiocarbon
+    - src.parpola-2020-sanauli-chariot-burials
+- date: 2026-11-22
+  target: "concept.sintashta-steppe-chariot-question"
+  before: "The comparison gave a Sanauli interval of 2000 to 1800 BCE."
+  after: "The comparison places Sanauli in the early second millennium BCE."
+  reason: "The text now reflects the contextual burial chronology. The Sintashta range independently dates the steppe burials."
+  sources:
+    - src.sharma-2024-sinauli-radiocarbon
+    - src.parpola-2020-sanauli-chariot-burials
+- date: 2026-11-22
+  target: "/history/chola-empire, polity.chola-dynasty"
+  before: "A timeline start of approximately 848 CE, with prose giving around 850 CE."
+  after: "The article and polity use about 850 CE for the rise of the medieval line. The article’s dynasty range is grade B."
+  reason: "The start is a mid-ninth-century estimate based on the reconstruction of Vijayalaya’s career."
+  sources:
+    - src.sastri-1955-the-colas
+    - src.subbarayalu-2012-south-india-under-cholas
+- date: 2026-11-22
+  target: "artifact.hathigumpha-inscription"
+  before: "The first-century BCE entry ended in 2 BCE. The earlier proposal was represented as 176 to 130 BCE."
+  after: "The first-century entry extends through 1 BCE. The earlier proposal is labelled as the first half of the second century BCE."
+  reason: "The 1 BCE endpoint defines the century. Jayaswal and Banerji’s early alternative depends on a disputed synchronism and does not supply an exact accession year."
+  sources:
+    - src.salomon-1998-indian-epigraphy
+    - src.stewart-2025-classical-art-and-ancient-india
+- date: 2026-11-22
+  target: "person.kharavela"
+  before: "The first-century BCE entry ended in 2 BCE. The earlier proposal was represented as 180 to 130 BCE."
+  after: "The first-century entry extends through 1 BCE. The earlier proposal is labelled as the first half of the second century BCE."
+  reason: "The 1 BCE endpoint defines the century. Jayaswal and Banerji’s early alternative depends on a disputed synchronism and does not supply an exact accession year."
+  sources:
+    - src.salomon-1998-indian-epigraphy
+    - src.stewart-2025-classical-art-and-ancient-india
+- date: 2026-11-22
+  target: "concept.brahmi-to-gupta-script"
+  before: "The Ashokan-to-Gupta sequence began in 268 BCE and ended in 599 CE."
+  after: "The Ashokan-to-Gupta sequence begins about 260 BCE and spans the sixth century CE."
+  reason: "The Ashokan anchor is the mid-third-century BCE series of inscriptions. Ashoka’s accession precedes the surviving edicts. The date range describes this epigraphic sequence."
+  sources:
+    - src.salomon-1998-indian-epigraphy
+    - src.hultzsch-1925-inscriptions-of-asoka
+    - src.coningham-1996-early-brahmi-script
+- date: 2026-11-22
+  target: "event.mitanni-treaty"
+  before: "Treaty assigned to 1386 to 1340 BCE, with 1380 BCE as the best estimate (A)."
+  after: "Treaty assigned to the reign of Suppiluliuma I, about 1350 to 1322 BCE in Bryce’s chronology (B)."
+  reason: "The treaty directly names the parties. Its absolute date depends on the reconstructed chronology of their reigns."
+  sources:
+    - src.bryce-2005-kingdom-of-the-hittites
+    - src.beckman-1999-hittite-diplomatic-texts
+- date: 2026-11-22
+  target: "/philosophy/the-vedas"
+  before: "The Mitanni treaty or its Indo-Aryan evidence was placed about 1380 BCE."
+  after: "The treaty evidence is placed in the later 14th century BCE."
+  reason: "The prose now follows the reconstructed reign of Suppiluliuma I."
+  sources:
+    - src.bryce-2005-kingdom-of-the-hittites
+    - src.beckman-1999-hittite-diplomatic-texts
+- date: 2026-11-22
+  target: "/language/sanskrit-and-the-indo-european-family"
+  before: "The Mitanni treaty or its Indo-Aryan evidence was placed about 1380 BCE."
+  after: "The treaty evidence is placed in the later 14th century BCE."
+  reason: "The prose now follows the reconstructed reign of Suppiluliuma I."
+  sources:
+    - src.bryce-2005-kingdom-of-the-hittites
+    - src.beckman-1999-hittite-diplomatic-texts
+- date: 2026-11-22
+  target: "concept.indo-aryan-migration"
+  before: "The Mitanni treaty or its Indo-Aryan evidence was placed about 1380 BCE."
+  after: "The treaty evidence is placed in the later 14th century BCE."
+  reason: "The prose now follows the reconstructed reign of Suppiluliuma I."
+  sources:
+    - src.bryce-2005-kingdom-of-the-hittites
+    - src.beckman-1999-hittite-diplomatic-texts
+- date: 2026-11-22
+  target: "text.rigveda"
+  before: "A Mitanni synchronism of 1400 to 1350 BCE with 1380 BCE as a best estimate."
+  after: "A treaty window of about 1350 to 1322 BCE, following Bryce’s reign chronology."
+  reason: "This dating refers to the external attestation of divine names. The chronology of the Rigveda hymns is independently estimated."
+  sources:
+    - src.bryce-2005-kingdom-of-the-hittites
+    - src.beckman-1999-hittite-diplomatic-texts
+- date: 2026-11-22
+  target: "site.bhirrana"
+  before: "The early Hakra note gave 7500 to 5000 BCE despite a 6000 BCE timeline endpoint."
+  after: "The note distinguishes Sarkar’s approximate 9.5 to 8 ka BP phase from the reported mean age for the earliest level."
+  reason: "The 7 ka BP figure is outside Sarkar’s pre-Harappan Hakra phase."
+  sources:
+    - src.sarkar-2016-bhirrana-oxygen-isotope
+- date: 2026-11-22
+  target: "tradition.malwa-culture"
+  before: "The endpoint was 1350 BCE, while the notes and summaries gave about 1400 BCE."
+  after: "The endpoint is approximately 1400 BCE."
+  reason: "The cited regional sequence places the Malwa to Jorwe transition about 1400 BCE. The Navdatoli chronology also ends around that time."
+  sources:
+    - src.misra-2001-prehistoric-colonization-india
+    - src.coningham-2015-archaeology-south-asia
+- date: 2026-11-22
+  target: "event.earliest-cotton-mehrgarh"
+  before: "Period II, grave 153, dated 6000 to 5000 BCE at grade A."
+  after: "Period I, grave MR.84.03.158. Grade C placements show the original 6000 to 5500 BCE estimate and the revised 5250 to 4650 BCE Period I context."
+  reason: "The original fibres paper identifies the burial and gives an approximate period. The later study dates the cemetery using a radiocarbon series."
+  sources:
+    - src.moulherat-2002-mehrgarh-cotton
+    - src.mutin-2025-mehrgarh-radiocarbon
+- date: 2026-11-22
+  target: "/art-and-culture/textiles-of-india"
+  before: "The Mehrgarh burial was placed in the sixth millennium BCE."
+  after: "The prose gives the original estimate and the revised Period I cemetery context. The timeline uses the revised context at grade C."
+  reason: "The dated tooth enamel samples revise the cemetery chronology and provide an indirect date for the bead."
+  sources:
+    - src.moulherat-2002-mehrgarh-cotton
+    - src.mutin-2025-mehrgarh-radiocarbon
+- date: 2026-11-22
+  target: "event.domestication-of-zebu-cattle"
+  before: "The grade A timeline treated Mehrgarh Period I around 7000 to 5500 BCE as a secure anchor."
+  after: "The regional domestication estimate is grade B. The note identifies the uncertainty in the Mehrgarh chronology."
+  reason: "The zooarchaeological and genetic evidence supports a South Asian origin. The 2025 cemetery chronology revises the dates previously assigned to Period I."
+  sources:
+    - src.chen-2010-zebu-cattle-south-asia-neolithic
+    - src.fuller-2006-agricultural-origins-south-asia
+    - src.mutin-2025-mehrgarh-radiocarbon
+- date: 2026-11-22
   target: /archive/event/arrival-of-modern-humans-south-asia
   before: c. 67 ka to 52 ka; c. 122 ka to 76 ka
   after: c. 65 ka to 50 ka; c. 120 ka to 74 ka
@@ -1335,3 +2667,11 @@
   sources:
     - src.plofker-2009-mathematics-in-india
     - src.plofker-2017-bakhshali-radiocarbon
+- date: 2026-11-22
+  target: /archive/event/domestication-of-zebu-cattle
+  before: "c. 7000 to 5000 BCE regional domestication estimate at grade B."
+  after: "c. 7000 to 5000 BCE regional domestication estimate at grade C, noting the later Mehrgarh radiocarbon chronology."
+  reason: "Mutin 2025 dates the Period I cemetery to about 5250 to 4650 BCE and argues for a later start of farming at Mehrgarh, so the earlier range is a debated reasoned estimate."
+  sources:
+    - src.mutin-2025-mehrgarh-radiocarbon
+    - src.fuller-2006-agricultural-origins-south-asia

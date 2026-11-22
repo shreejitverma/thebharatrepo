@@ -6,21 +6,20 @@ names:
   iast: Sarasvatī-Ghaggara-Hākrā
   native: सरस्वती (घग्गर-हाकरा)
 summary: >-
-  The major wide dry riverbed and palaeochannel network running from the Siwalik foothills through Punjab, Haryana,
-  northern Rajasthan, and Cholistan toward the Rann of Kutch - along which hundreds of Early, Mature, and Late
-  Harappan settlements (including Rakhigarhi, Kalibangan, Banawali, Bhirrana, Kunal, and Ganweriwala) are clustered - and
-  the focus of a multidisciplinary geological, archaeological, and Indological debate regarding when the channel ceased
-  carrying perennial Himalayan glacier-fed water and how it relates to the river Sarasvati celebrated in the Rigveda
-  and Mahabharata.
+  Many Harappan settlements stood along the Ghaggar-Hakra palaeochannel in present-day India and Pakistan.
+  The Rigveda celebrates Sarasvati as both a river and a goddess. The river list in Rigveda 10.75.5
+  is one reason scholars have identified it with the Ghaggar-Hakra, but the geography of the earlier
+  hymns and the nature of the river's flow during the Harappan period remain debated.
 summaries:
   kids: >-
-    Hundreds of Harappan towns were built along the wide dry bed of the Ghaggar-Hakra river, which many scholars
-    connect to the ancient Sarasvati River, while geologists study how its waters changed thousands of years ago.
+    The Rigveda praises Sarasvati as a powerful river and as a goddess. Many Harappan towns stood
+    near an old riverbed called the Ghaggar-Hakra. Researchers use poems and layers of sand and mud
+    to ask whether the poems describe that river and how its waters changed.
   teen: >-
-    The Ghaggar-Hakra palaeochannel hosts the densest concentration of Harappan sites; geological studies (Giosan
-    et al. 2012; Clift et al. 2012; Singh et al. 2017) indicate that the glacier-fed Himalayan Sutlej and Yamuna
-    shifted away in the Late Pleistocene (c. 45,000-8,000 years ago), leaving a wide, stable monsoon-fed valley
-    during the Harappan era, while scholars debate how the Harappan river relates to the Rigvedic Sarasvati.
+    Rigveda 10.75.5 names Sarasvati between the Yamuna and the Sutlej, suggesting a link with the
+    Ghaggar-Hakra. Dated sediments show that the main Sutlej had shifted course before the Harappan
+    cities arose. Researchers disagree on how much water still reached the valley and whether
+    older hymns describe the same river.
 region: Haryana, Punjab, northern Rajasthan (India) and Cholistan, Sindh (Pakistan)
 location:
   name: Kalibangan (Ghaggar Palaeochannel)
@@ -29,36 +28,49 @@ location:
 datings:
   - method: geological
     range:
-      earliest: "45 ka"
+      earliest: "49 ka"
       latest: "8 ka"
       precision: ka
       circa: true
-    grade: A
-    label: Late Pleistocene to Early Holocene Avulsion of the Himalayan Sutlej and Yamuna (Clift et al. 2012; Singh et al. 2017)
+    grade: B
+    label: Yamuna capture and Sutlej avulsion (Clift et al. 2012; Singh et al. 2017)
     sources:
       - src.clift-2012-zircon-dating-sarasvati
       - src.singh-2017-himalayan-river-morphodynamics
-      - src.giosan-2012-fluvial-landscapes-harappan
+      - src.khan-2024-himalayan-rivers
     note: >-
-      U-Pb detrital zircon provenance (Clift et al. 2012) and optically stimulated luminescence (OSL) plus K-feldspar
-      pIRIR dating of coarse Himalayan channel sands beneath Kalibangan and across the Ghaggar-Hakra (Singh et al. 2017)
-      demonstrate that a glacier-fed Himalayan Sutlej-Yamuna system flowed through the channel until its capture/avulsion
-      between ~45 ka and ~15-8 ka BP, millennia before Mature Harappan urbanisation.
+      Clift et al. used detrital zircon provenance and sediment ages to infer that the Yamuna left
+      the Indus drainage between about 49,000 and 10,000 years ago. Singh et al. used sediment provenance
+      and luminescence ages to place the main Sutlej's shift between about 15,000 and 8,000 years ago.
+      Khan et al. inferred a major shift around 18,000 years ago from luminescence-dated cores.
   - method: geological
     range:
       earliest: "3500 BCE"
       latest: "1900 BCE"
       precision: century
       circa: true
-    grade: A
-    label: Mid-Holocene Monsoon-Fed Fluvial Phase and Relict Underfit Valley (Giosan et al. 2012; Singh et al. 2017)
+    grade: C
+    label: Harappan-era flow in the abandoned Sutlej valley (Giosan et al. 2012; Singh et al. 2017)
     sources:
       - src.giosan-2012-fluvial-landscapes-harappan
       - src.singh-2017-himalayan-river-morphodynamics
     note: >-
-      During the Early and Mature Harappan phases (c. 3500-1900 BCE), the incised relic Sutlej palaeovalley acted
-      as a topographically stable, monsoon-fed and groundwater-sustained river corridor protected from the devastating
-      mega-floods of active Himalayan rivers, before drying further after the 4.2 ka monsoon weakening.
+      Giosan et al. proposed that monsoon-fed rivers sustained Harappan settlements and became seasonal
+      or dried as the monsoon weakened. Singh et al. inferred that seasonal streams and ponded water
+      occupied the abandoned valley, with a decline in fluvial activity preceding urban settlement.
+  - method: geological
+    range:
+      earliest: "7000 BCE"
+      latest: "2500 BCE"
+      precision: ka
+      circa: true
+    grade: C
+    label: Proposed Holocene perennial flow fed by Sutlej distributaries (Chatterjee et al. 2019)
+    sources:
+      - src.chatterjee-2019-perennial-river-harappan-heartland
+    note: >-
+      From sediment ages and provenance, Chatterjee et al. inferred that Sutlej distributaries supplied
+      parts of the Ghaggar about 9,000 to 4,500 years ago, into the early Harappan period.
   - method: textual-internal
     range:
       earliest: "3300 BCE"
@@ -66,15 +78,15 @@ datings:
       precision: century
       circa: true
     grade: C
-    label: Holistic / Indigenous Continuity Identification of the Harappan Ghaggar-Hakra with the Rigvedic Sarasvati (B. B. Lal, Michel Danino)
+    label: Harappan-era identification of the Rigvedic Sarasvati (B. B. Lal; Michel Danino)
     sources:
       - src.danino-2010-lost-river-sarasvati
+      - src.lal-2002-saraswati-flows-on
       - src.possehl-2002-indus-civilization
     note: >-
-      Position advocated by B. B. Lal, V. N. Misra, and Michel Danino identifying the Harappan-era Ghaggar-Hakra
-      directly with the mighty river Sarasvati flowing "from the mountains to the sea" (giribhyah a samudrat, RV 7.95.2)
-      between the Yamuna and Sutlej (RV 10.75.5), and arguing that the river's drying c. 1900 BCE recorded in the
-      Panchavimsha Brahmana and Mahabharata (Vinasana) correlates with Harappan de-urbanisation.
+      Lal and Danino identify the river described in Rigveda 7.95.2 and 10.75.5 with the Harappan-era
+      Ghaggar-Hakra and read the later accounts of its disappearance at Vinashana alongside evidence
+      for declining river flow and Harappan de-urbanisation.
   - method: linguistic
     range:
       earliest: "1500 BCE"
@@ -82,45 +94,62 @@ datings:
       precision: century
       circa: true
     grade: B
-    label: Mainstream Indological Chronology of the Rigvedic Sarasvati and Later Vedic Vinasana (Parpola, Witzel, Thapar)
+    label: Mainstream philological chronology of the Rigveda
     sources:
+      - src.jamison-brereton-2014-rigveda
       - src.parpola-2015-roots-of-hinduism
       - src.thapar-2002-early-india
       - src.singh-2008-ancient-early-medieval-india
     note: >-
-      Mainstream philological position accepting the geographical identification of the middle-to-late Vedic Sarasvati
-      (rising in the Siwaliks between Yamuna and Sutlej and disappearing in the desert at Vinasana) with the Ghaggar-Hakra,
-      while dating the composition of the Rigveda to c. 1500-1000 BCE after Mature Harappan urban collapse and proposing
-      that early Rigvedic hymns may preserve either memories of the Helmand (Avestan Haraxvaiti) or monsoon-swollen
-      Ghaggar floods.
+      The usual philological chronology places the Rigvedic hymns in the second millennium BCE
+      after Mature Harappan urbanism. The geographical identification of the river in the late
+      river hymn does not settle what the earlier hymns describe.
+  - method: textual-internal
+    range:
+      earliest: "1500 BCE"
+      latest: "700 BCE"
+      precision: century
+      circa: true
+    grade: C
+    label: Sarasvati in the Rigveda and later Brahmanas
+    sources:
+      - src.jamison-brereton-2014-rigveda
+      - src.witzel-1997-early-sanskritization-kuru
+    note: >-
+      The Rigveda describes a mighty river, while the later Panchavimsha and Jaiminiya Brahmanas
+      describe its disappearance at Vinashana. The range is an approximate chronology for these
+      textual layers and supplies no independent date for hydrological change.
 claims:
   - text: >-
-      Since the 19th-century surveys of C. F. Oldham and Marc Aurel Stein, most geographers, archaeologists, and
-      Indologists have agreed that the geographical position of the Sarasvati in Rigveda 10.75.5 (Nadisukta) - listed
-      in east-to-west order between the Yamuna and the Shutudri (Sutlej) - and its disappearance in the desert at
-      Vinasana in the Brahmanas and Mahabharata correspond to the modern Ghaggar-Hakra river course.
+      Rigveda 10.75.5 names Sarasvati between the Yamuna and Shutudri (the Sutlej). Rigveda 2.41.16
+      praises her as mother, river and goddess, and Rigveda 3.23.2-4 associates the fire of the
+      Bharatas with the Sarasvati, Drishadvati and Apaya.
     grade: A
     sources:
-      - src.possehl-2002-indus-civilization
+      - src.jamison-brereton-2014-rigveda
+  - text: >-
+      The Panchavimsha and Jaiminiya Brahmanas describe the Sarasvati disappearing at Vinashana.
+      The Sarasvata sattra follows the river upstream from Vinashana to Plaksha Prasravana.
+    grade: A
+    sources:
+      - src.witzel-1997-early-sanskritization-kuru
       - src.danino-2010-lost-river-sarasvati
       - src.singh-2008-ancient-early-medieval-india
   - text: >-
-      U-Pb zircon dating (Clift et al. 2012) and luminescence dating of subsurface fluvial cores at Kalibangan
-      (Singh et al. 2017) confirmed that the ancient Himalayan Sutlej and Yamuna once flowed down the Ghaggar-Hakra
-      channel, but showed that the Sutlej avulsed into its present northern course between ~15,000 and 8,000 years
-      ago, meaning that Harappan cities flourished along an already abandoned, flood-safe Himalayan palaeovalley
-      fed by monsoonal tributaries rather than an active glacier-fed mega-river.
-    grade: A
+      Zircon provenance and dated sediment cores indicate that the Yamuna formerly supplied parts of the
+      drainage and the main Sutlej occupied the Ghaggar-Hakra valley before Harappan urbanisation.
+      Research differs on the sources and persistence of later flow.
+    grade: B
     sources:
       - src.clift-2012-zircon-dating-sarasvati
       - src.singh-2017-himalayan-river-morphodynamics
       - src.giosan-2012-fluvial-landscapes-harappan
+      - src.chatterjee-2019-perennial-river-harappan-heartland
   - text: >-
-      Over 500 Early, Mature, and Late Harappan settlements have been mapped along the Ghaggar-Hakra and Chautang
-      (Drishadvati) channels in India and Pakistan; as the summer monsoon weakened after c. 2100-1900 BCE, Mature
-      Harappan cities in the middle and lower channel (Kalibangan, Ganweriwala) were abandoned while Late Harappan
-      villages concentrated in the wetter upper reaches near the Siwalik foothills.
-    grade: A
+      Archaeological surveys record many Early, Mature and Late Harappan settlements along the
+      Ghaggar-Hakra and adjacent channels. Giosan et al. found fewer sites along the lower
+      Sutlej-Yamuna interfluve in the Late Harappan phase and a shift toward the upper interfluve.
+    grade: B
     sources:
       - src.giosan-2012-fluvial-landscapes-harappan
       - src.singh-2017-himalayan-river-morphodynamics
@@ -140,21 +169,31 @@ relations:
     target: site.ganweriwala
   - kind: related-to
     target: event.4-2-ka-climate-aridification
+  - kind: related-to
+    target: polity.kuru-kingdom
+image:
+  commons: "File:Sarasvati river.jpg"
+  alt: Schematic river diagram comparing pre-Harappan, Harappan, and modern courses of the Indus, Sutlej, Ghaggar-Hakra, and Yamuna rivers
+  credit: Joshua Jonathan
+  license: CC BY-SA 4.0
 debate: >-
-  While nearly all scholars agree that the Ghaggar-Hakra corresponds to the Sarasvati of middle/late Vedic and
-  Epic geography (between the Yamuna and Sutlej), two core questions remain contested: (1) Geologically, whether
-  any perennial Himalayan glacial water reached the channel during the 3rd millennium BCE or whether Himalayan
-  avulsion was complete by ~8,000 years ago leaving a monsoon-fed system during the Harappan period (Giosan et al.
-  2012; Clift et al. 2012; Singh et al. 2017); and (2) Chronologically, whether the Rigvedic hymns praising a
-  mighty Sarasvati reflect 3rd-millennium BCE Harappan contemporaneity (B. B. Lal, Michel Danino) or 2nd-millennium
-  BCE Indo-Aryan compositions transferring the name Haraxvaiti/Sarasvati to the monsoon-fed Ghaggar (Asko Parpola,
-  Michael Witzel, Romila Thapar).
+  The position of Sarasvati between the Yamuna and Sutlej in Rigveda 10.75.5 supports the
+  Ghaggar-Hakra identification for that hymn. Lal and Danino read the earlier description
+  of the river running from the mountains to the sea (7.95.2) as evidence of a Harappan-era river.
+  Other readings allow for floods in a monsoon-fed system or a name shared with the Helmand
+  region in Afghanistan (Avestan Haraxvaiti), a connection discussed by Asko Parpola.
+  The hymns and the sediment record address different questions, and neither establishes the
+  precise river or flow regime behind every mention of Sarasvati.
 tags:
   - harappan
   - ghaggar-hakra
   - sarasvati
   - geology
   - contested
+  - rigveda
+  - nadistuti
+  - kurukshetra
+  - hydrology
 review:
   status: draft
   author: gemini-4-argon

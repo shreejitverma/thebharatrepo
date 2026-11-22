@@ -66,7 +66,7 @@ The reasons are:
 
 - **Language.** Rigvedic Sanskrit is very close to the oldest Iranian (Avestan), and the Vedic corpus shows steady grammatical change from Rigveda to Brahmana to Sutra [@src.witzel-1997-early-sanskritization-kuru].
 - **Material culture.** The Rigveda has no clear mention of iron, which appears in later Vedic texts, and the geography moves from the northwest to the Ganga plain [@src.witzel-1997-early-sanskritization-kuru].
-- **External evidence.** A treaty of about 1380 BCE between the Hittite king Suppiluliuma I and Shattiwaza of Mitanni in Syria calls on Mitra, Varuna, Indra and the Nasatyas as witnesses. Those are Vedic god-names, which shows Indo-Aryan religious vocabulary was in use in the Near East by then [@src.thieme-1960-aryan-gods-mitanni-treaties; @src.beckman-1999-hittite-diplomatic-texts].
+- **External evidence.** A treaty from the later 14th century BCE between the Hittite king Suppiluliuma I and Shattiwaza of Mitanni in Syria calls on Mitra, Varuna, Indra and the Nasatyas as witnesses. Those are Vedic god-names, which shows Indo-Aryan religious vocabulary was in use in the Near East by then [@src.thieme-1960-aryan-gods-mitanni-treaties; @src.beckman-1999-hittite-diplomatic-texts; @src.bryce-2005-kingdom-of-the-hittites].
 
 This is a reasoned estimate with a wide margin, not a measurement.
 

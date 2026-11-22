@@ -5,11 +5,11 @@ date: "2026-11-21"
 tags: [sanskrit, grammar, panini, ashtadhyayi, vyakarana, linguistics]
 datings:
   - method: linguistic
-    range: { earliest: "500 BCE", latest: "350 BCE", best: "400 BCE", precision: century, circa: true }
+    range: { earliest: "600 BCE", latest: "350 BCE", best: "400 BCE", precision: century, circa: true }
     grade: C
     label: Mainstream scholarly dating of the Aṣṭādhyāyī
     sources: [src.cardona-1988-panini-work-traditions, src.katre-1987-astadhyayi-panini]
-    note: Placed in the 5th or 4th century BCE from the state of the language described and from its place before the later grammatical commentators.
+    note: Usually placed in the 5th or 4th century BCE, with some estimates reaching back to the 6th century from the state of the language described and from its place before the later grammatical commentators.
 entities: [person.panini, text.ashtadhyayi, concept.vedic-sanskrit, text.vedangas]
 readingLevel: adult
 review: { status: draft, author: "codex-gpt-6" }

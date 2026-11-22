@@ -13,7 +13,8 @@ summary: >-
 summaries:
   kids: >-
     Built on an island in the dry Rann of Kutch, Dholavira captured seasonal rainwater in giant stone-lined
-    reservoirs and had a huge ten-letter signboard above its castle gate.
+    reservoirs and had a huge ten-letter signboard above its castle gate. It became a UNESCO
+    World Heritage Site in 2021.
   teen: >-
     Excavated by R. S. Bisht for the Archaeological Survey of India and designated a UNESCO World Heritage Site
     in 2021, Dholavira features three walled urban divisions and an extensive network of dams, stormwater channels,
@@ -90,10 +91,10 @@ relations:
     target: concept.harappan-town-planning-and-drainage
 wikidata: Q9468
 image:
-  commons: "File:Dholavira gujarat.jpg"
-  alt: Stone-lined water reservoir and stepped masonry at Dholavira, Kutch
-  credit: Himalyan
-  license: CC BY-SA 3.0
+  commons: "File:Water reservoir at Dholavira site.jpg"
+  alt: Excavated rectangular stone-lined stepped water reservoir and distant citadel mound at Dholavira, Kutch
+  credit: Bhajish Bharathan
+  license: CC BY-SA 4.0
 tags:
   - harappan
   - site

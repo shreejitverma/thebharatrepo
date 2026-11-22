@@ -68,9 +68,9 @@ relations:
   - { kind: related-to, target: concept.sintashta-steppe-chariot-question }
 wikidata: Q2625916
 image:
-  commons: "File:Rigvedic geography.jpg"
-  alt: Map of Rigvedic rivers showing the Suvastu (Swat) and Kubha (Kabul) valleys in the northwest
-  credit: Avantiputra7
-  license: CC BY-SA 3.0
+  commons: "File:Cremation Urn with Lid LACMA AC1994.234.8a-b.jpg"
+  alt: Gandhara Grave Culture terracotta anthropomorphic face-urn cremation vessel with lid from the Swat Valley, c. 1200 BCE (LACMA)
+  credit: "Los Angeles County Museum of Art (Gift of Marilyn Walter Grounds)"
+  license: Public domain
 tags: [gandhara-grave-culture, swat, suvastu, archaeology, archaeogenetics, narasimhan-2019]
 review: { status: draft, author: "gemini-4-argon" }

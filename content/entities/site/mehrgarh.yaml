@@ -65,8 +65,6 @@ relations:
     target: event.domestication-of-zebu-cattle
   - kind: related-to
     target: event.earliest-cotton-mehrgarh
-  - kind: preceded
-    target: site.bhirrana
 image:
   commons: "File:Mehrgarh ruins.jpg"
   alt: Excavated mud-brick cellular compartments and walls at Neolithic Mehrgarh

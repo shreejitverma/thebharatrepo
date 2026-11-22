@@ -70,6 +70,7 @@ relations:
     target: site.rakhigarhi
   - kind: contemporary-of
     target: site.bhirrana
+    note: Overlapping Early and Mature Harappan occupations
 wikidata: Q4853984
 tags:
   - harappan

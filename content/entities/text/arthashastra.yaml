@@ -6,7 +6,7 @@ names:
   iast: Arthaśāstra
   native: अर्थशास्त्र
 summary: >-
-  The Arthashastra is a Sanskrit treatise in fifteen books on statecraft, administration, revenue, law, diplomacy and war, attributed to Kautilya. Its date is contested: tradition assigns it to Chandragupta Maurya's minister in the late 4th century BCE, while Patrick Olivelle dates its composition to about 50 BCE to 125 CE and its final redaction to about 175 to 300 CE.
+  The Arthashastra is a Sanskrit treatise in fifteen books on statecraft, administration, revenue, law, diplomacy and war, attributed to Kautilya. Its date is contested: tradition assigns it to Chandragupta Maurya's minister in the late 4th century BCE, while Patrick Olivelle places its earliest sources around 50 BCE, Kautilya’s recension around 50 to 125 CE, and the final redaction around 175 to 300 CE.
 summaries:
   kids: >-
     The Arthashastra is an old Sanskrit book that tells kings how to run a country: how to collect taxes, make laws, choose ministers and deal with other kingdoms.
@@ -21,7 +21,7 @@ datings:
     sources:
       - src.olivelle-2013-king-governance-law
       - src.trautmann-1971-kautilya-arthasastra
-    note: Olivelle distinguishes Kautilya's recension of about 50 to 125 CE, built on earlier treatises, from a later redaction of about 175 to 300 CE that gave the text its present shape. Trautmann's statistical study had earlier shown that the text combines the work of several authors.
+    note: Olivelle places the earliest source material around the mid-first century BCE, Kautilya's recension around 50 to 125 CE, and the surviving redaction around 175 to 300 CE. Trautmann's statistical study had earlier shown that the text combines the work of several authors.
   - method: textual-internal
     range: { earliest: "321 BCE", latest: "290 BCE", precision: decade, circa: true }
     grade: C
@@ -41,7 +41,7 @@ claims:
       - src.trautmann-1971-kautilya-arthasastra
       - src.olivelle-2013-king-governance-law
 debate: >-
-  After R. Shamasastry published the text in 1909, many scholars read it as a description of Chandragupta Maurya's government, and R. P. Kangle defended a Mauryan date. Thomas Trautmann's statistical study (1971) showed several authors at work, and Patrick Olivelle (2013) dates the composition to about 50 BCE to 125 CE and the final redaction to about 175 to 300 CE, while allowing that it draws on older traditions of statecraft.
+  After R. Shamasastry published the text in 1909, many scholars read it as a description of Chandragupta Maurya's government, and R. P. Kangle defended a Mauryan date. Thomas Trautmann's statistical study (1971) showed several authors at work, and Patrick Olivelle (2013) places the earliest source material around 50 BCE, Kautilya’s recension around 50 to 125 CE, and the final redaction around 175 to 300 CE.
 relations:
   - { kind: authored-by, target: person.kautilya }
   - { kind: related-to, target: polity.maurya-empire }

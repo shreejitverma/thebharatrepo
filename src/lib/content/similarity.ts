@@ -169,11 +169,60 @@ function differentSubjects(a: string, b: string): boolean {
   return shares && onlyA.length >= 1 && onlyA.length <= 2 && onlyB.length >= 1 && onlyB.length <= 2;
 }
 
+/**
+ * One main title is the other's words with a qualifier put in front, so shared subtitle words cannot lift
+ * the narrower title into a match: "The Art of Ancient India: Buddhist, Hindu, Jain" is not "Classical Art
+ * and Ancient India". Words added after the first one still pass, since catalogues drop the colon before a
+ * subtitle ("Dholavira" and "Dholavira A Harappan City") and carry typos or split formulae inside titles.
+ */
+function qualifiedMainTitle(a: string, b: string): boolean {
+  const A = [...new Set(normalizeTitle(mainTitle(a)))];
+  const B = [...new Set(normalizeTitle(mainTitle(b)))];
+  if (A.length === 0 || B.length === 0 || A.length === B.length) return false;
+  const [small, big] = A.length < B.length ? [A, B] : [B, A];
+  return small.every((w) => big.includes(w)) && !small.includes(big[0]);
+}
+
+const PACKAGING_WORDS = new Set(['set', 'vols', 'box', 'boxed', 'paperback', 'hardcover', 'hardback', 'edition', 'revised', 'first', 'second', 'third', 'fourth', 'fifth', 'sixth', 'seventh', 'eighth', 'ninth', 'tenth']);
+const VOLUME_WORDS = new Set(['volume', 'vol', 'part', 'book']);
+
+/**
+ * What everything after the main title names, when it is only a retail packaging or an edition: "packaging"
+ * for a set, binding or edition ("The Rigveda: 3-Volume Set", "Hampi (Paperback)", "Third Revised Edition",
+ * "Vols. 1-3"), "volume" for a single volume ("The Rigveda, Volume 1", "Part II"), otherwise null.
+ */
+function editionSubtitle(t: string): 'packaging' | 'volume' | null {
+  const words = normalizeTitle(t);
+  const main = normalizeTitle(mainTitle(t));
+  const sub = words.slice(main.length);
+  const named = sub.filter((w) => numeral(w) === null);
+  if (main.length === 0 || named.length === 0 || words.slice(0, main.length).join(' ') !== main.join(' ')) return null;
+  if (!named.every((w) => PACKAGING_WORDS.has(w) || VOLUME_WORDS.has(w))) return null;
+  return named.some((w) => VOLUME_WORDS.has(w)) && !named.some((w) => w === 'set' || w === 'vols') ? 'volume' : 'packaging';
+}
+
+/**
+ * Two titles with the same main title, one of which only adds a packaging, edition or volume subtitle. A
+ * packaging or edition subtitle matches any subtitle on the other side, even under a one-word main title
+ * ("India: A History" and "India: Box Set"): the identifier is the primary evidence and this is a sanity
+ * check that it resolves to the work. A single-volume subtitle matches only a title that carries the same
+ * volume number, so neither an unnumbered work nor another volume matches it.
+ */
+function sameWorkOtherEdition(cited: string, found: string): boolean {
+  const kinds = [editionSubtitle(cited), editionSubtitle(found)];
+  if (kinds.every((k) => k === null) || !exact(mainTitle(cited), mainTitle(found))) return false;
+  if (!kinds.includes('volume')) return true;
+  const A = numerals(cited);
+  const B = numerals(found);
+  return A.size > 0 && A.size === B.size && subset(A, B);
+}
+
 export function sameTitle(citedTitle: string, foundTitle: string): boolean {
   const cited = withoutSiteSegments(citedTitle);
   const found = withoutSiteSegments(foundTitle);
   if (!titleNumeralsAgree(cited, found)) return false;
   if (exact(cited, found)) return true;
+  if (sameWorkOtherEdition(cited, found)) return true;
   // A cited main title matches a record that adds a subtitle (and vice versa), if it is at least two words.
   for (const [x, y] of [
     [mainTitle(cited), found],
@@ -184,6 +233,7 @@ export function sameTitle(citedTitle: string, foundTitle: string): boolean {
   // A record that only adds a series name in parentheses ("The Jains (Library of Religious Beliefs)").
   if (exact(cited.replace(/\([^)]*\)/g, ' '), found.replace(/\([^)]*\)/g, ' '))) return true;
   if (differentSubjects(cited, found)) return false;
+  if (qualifiedMainTitle(cited, found)) return false;
   const { A, B, inter, subsetOk } = overlap(cited, found, true);
   if (Math.min(A.size, B.size) < 2 || inter < 2 || !subsetOk) return false;
   return inter / Math.min(A.size, B.size) >= 0.6 && inter / (A.size + B.size - inter) >= 0.4;

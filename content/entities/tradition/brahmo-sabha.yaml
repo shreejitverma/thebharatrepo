@@ -29,7 +29,8 @@ claims:
       worship and social reform.
     grade: A
     sources: *a1
-relations: []
+relations:
+  - { kind: founded-by, target: person.raja-ram-mohan-roy }
 tags:
   - dharma
 review:

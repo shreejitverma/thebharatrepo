@@ -8,27 +8,32 @@ names:
 summary: >-
   Shankara (Shankaracharya) is the most influential teacher of Advaita Vedanta, known through his
   commentaries on the Brahmasutras, the principal Upanishads and the Bhagavad Gita. His date is
-  contested: most scholars place him in the 8th century CE, conventionally 788 to 820 CE, while the
-  Kanchi and Dwaraka matha traditions place him in 509 to 477 BCE.
+  contested. Hajime Nakamura estimates about 700 to 750 CE, and 788 to 820 CE is a widely cited
+  conventional dating. The Kanchi and Dwaraka matha traditions place him in 509 to 477 BCE.
 summaries:
   kids: >-
     Shankara was a teacher from Kerala who taught that the deepest self in every person is the same as
     Brahman, the one reality behind everything. Historians and traditions disagree about when he lived.
   teen: >-
     Shankara's commentaries explain Advaita, non-dualism: the self (atman) is identical with Brahman,
-    and the world of many things is not ultimately real. Most historians date him to about 800 CE;
-    some monastic traditions date him over a thousand years earlier.
+    and the world of many things is not ultimately real. Scholars disagree about his dates.
+    Hajime Nakamura places him around 700 to 750 CE, and some monastic traditions date him much earlier.
 region: Born at Kalady, Kerala, according to tradition; active across India
 location: { name: Kalady, lat: 10.17, lon: 76.44 }
 datings:
   - method: textual-internal
     range: { earliest: "788 CE", latest: "820 CE", precision: decade, circa: true }
     grade: C
-    label: Mainstream scholarly date (conventional 788 to 820 CE)
+    label: Conventional 788 to 820 CE chronology
     sources: [src.isayeva-1993-shankara-indian-philosophy, src.flood-1996-introduction-to-hinduism]
     note: >-
-      Based on his references to earlier thinkers and later authors who cite him; several scholars
-      prefer a slightly earlier date in the first half of the 8th century.
+      The conventional chronology rests on later records.
+  - method: textual-internal
+    range: { earliest: "700 CE", latest: "750 CE", precision: decade, circa: true }
+    grade: C
+    label: Hajime Nakamura's earlier eighth-century placement
+    sources: [src.nakamura-1983-early-vedanta, src.dalal-2021-shankara]
+    note: Nakamura argues for an earlier placement based on the chronology of the thinkers and texts associated with Shankara.
   - method: traditional-sampradaya
     range: { earliest: "509 BCE", latest: "477 BCE", precision: year, circa: false }
     grade: D
@@ -47,10 +52,10 @@ claims:
     grade: C
     sources: [src.flood-1996-introduction-to-hinduism]
 debate: >-
-  Historians date Shankara from internal evidence, mainly the authors he responds to and the earliest
-  writers who quote him, which points to the 8th century CE; the conventional 788 to 820 CE comes from
-  a later tradition that many scholars accept as approximate. The Kanchi Kamakoti and Dwaraka matha
-  lineages hold that he lived from 509 to 477 BCE, counting back through their lists of successors.
+  Nakamura estimates about 700 to 750 CE. Karl Potter places Shankara near the turn of the eighth
+  century, drawing on work on the chronology of Mandana Mishra. The conventional 788 to 820 CE dates
+  appear in earlier scholarship. The Kanchi Kamakoti and Dwaraka matha lineages place his life in
+  509 to 477 BCE, counting back through their lists of successors.
 relations:
   - { kind: related-to, target: person.kumarila-bhatta, note: Both engaged with Mimamsa exegesis of the Veda }
 wikidata: Q180967

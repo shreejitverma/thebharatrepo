@@ -62,9 +62,6 @@ claims:
     sources:
       - src.hu-2016-india-asia-collision
       - src.vanhinsbergen-2012-greater-india-basin
-relations:
-  - kind: preceded
-    target: concept.siwalik-fossil-record
 debate: >-
   Geologists debate whether India-Asia collision occurred in a single Paleocene-Early Eocene event (c. 59-50 Ma)
   or a two-stage process involving an intervening oceanic basin or intraoceanic arc before Oligocene-Miocene

@@ -21,6 +21,33 @@ describe('sameTitle', () => {
     expect(sameTitle('Early India: From the Origins to AD 1300', 'India')).toBe(false);
     expect(sameTitle('The Rigveda', 'Rigveda and Avesta: a comparative grammar of sacrifice')).toBe(false);
   });
+  it('rejects a narrower main title even when its subtitle adds shared words', () => {
+    expect(sameTitle('The Art of Ancient India: Buddhist, Hindu, Jain', 'Classical Art and Ancient India')).toBe(false);
+    expect(sameTitle('Classical Art and Ancient India', 'The Art of Ancient India: Buddhist, Hindu, Jain')).toBe(false);
+  });
+  it('accepts a record whose subtitle only names a retail packaging or an edition', () => {
+    expect(sameTitle('The Rigveda: The Earliest Religious Poetry of India', 'The Rigveda: 3-Volume Set')).toBe(true);
+    expect(sameTitle('The Mahabharata: A Modern Rendering', 'The Mahabharata: Box Set')).toBe(true);
+    expect(sameTitle('Hampi: A Story in Stone', 'Hampi (Paperback)')).toBe(true);
+    expect(sameTitle('A Sanskrit Grammar for Students', 'A Sanskrit Grammar for Students: Third Revised Edition')).toBe(true);
+    expect(sameTitle('The Upanishads: A New Translation', 'The Upanishads, Vols. 1-3')).toBe(true);
+    expect(sameTitle('The Bhagavad Gita, 2nd edition', 'The Bhagavad Gita: A New Translation')).toBe(true);
+  });
+  it('still tells apart real subtitles, other works and single volumes next to a packaging subtitle', () => {
+    expect(sameTitle('The Rigveda: The Earliest Religious Poetry of India', 'The Rigveda: A Guide')).toBe(false);
+    expect(sameTitle('The Rigveda: The Earliest Religious Poetry of India', 'The Atharvaveda: 2-Volume Set')).toBe(false);
+    expect(sameTitle('The Rigveda, Volume 1', 'The Rigveda: 3-Volume Set')).toBe(false);
+    expect(sameTitle('India: The First Millennium', 'India: A History')).toBe(false);
+  });
+  it('matches a single-volume record only to a title that names the same volume', () => {
+    expect(sameTitle('The Rigveda: The Earliest Religious Poetry of India', 'The Rigveda, Volume 1')).toBe(false);
+    expect(sameTitle('The Rigveda', 'The Rigveda, Volume 1')).toBe(false);
+    expect(sameTitle('The Mahabharata: A Modern Rendering', 'The Mahabharata (Volume 2)')).toBe(false);
+    expect(sameTitle('The Ramayana: A New Translation', 'The Ramayana, Book II')).toBe(false);
+    expect(sameTitle('The Rigveda, Volume 1', 'The Rigveda, Vol. 1')).toBe(true);
+    expect(sameTitle('The Ramayana, Part 2', 'The Ramayana: Part II')).toBe(true);
+    expect(sameTitle('The Rigveda, Volume 1', 'The Rigveda, Volume 2')).toBe(false);
+  });
   it('rejects a different volume of the same work', () => {
     expect(sameTitle('History of Indian Medical Literature, Vol. 1', 'History of Indian Medical Literature, Vol. 2')).toBe(false);
     expect(sameTitle('Epigraphia Indica Vol 1', 'Epigraphia Indica Vol 6')).toBe(false);

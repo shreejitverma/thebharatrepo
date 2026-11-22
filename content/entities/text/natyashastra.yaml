@@ -17,10 +17,11 @@ datings:
   - method: textual-internal
     range: { earliest: "200 BCE", latest: 300, precision: century, circa: true }
     grade: C
-    label: Compositional range of the extant Sanskrit text (Sheldon Pollock)
+    label: Broad compilation window of the Natyashastra
     sources:
       - src.pollock-2016-rasa-reader
-    note: Scholars date the compilation of the surviving Natyashastra between roughly 200 BCE and 300 CE, noting that it incorporates older dramatic aphorisms (nata-sutras mentioned by Panini) and precedes Kalidasa's explicit citation of Bharata as the director of celestial drama.
+      - src.lidova-2014-natyashastra
+    note: The text incorporates older material. Estimates for its compiled form vary, reaching about 300 CE in Pollock’s account.
 claims:
   - text: >-
       Chapter 6 of the Natyashastra states the famous rasa-sutra ("vibhavanubhava-vyabhichari-samyogad rasa-nishpattih") - aesthetic flavour (rasa) arises from the combination of determinants (vibhava), consequents (anubhava) and transitory emotional states (vyabhicharibhava).

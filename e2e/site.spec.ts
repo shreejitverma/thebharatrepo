@@ -22,6 +22,9 @@ async function noHorizontalScroll(page: Page) {
 test.describe('pages render, are accessible and fit the viewport', () => {
   for (const path of ['/', '/kaalchakra', '/archive', '/methodology', '/sources', '/corrections', '/history']) {
     test(`page ${path}`, async ({ page }) => {
+      // A full-page axe scan scales with DOM size; /corrections and /sources list the whole corpus
+      // and exceed the default 30s budget under parallel load.
+      test.slow();
       const errors: string[] = [];
       page.on('pageerror', (e) => errors.push(e.message));
       page.on('console', (m) => m.type() === 'error' && errors.push(m.text()));
@@ -122,12 +125,14 @@ test.describe('Kaalchakra', () => {
 
   test('lens switching filters to traditional datings only', async ({ page }) => {
     await page.goto('/kaalchakra?view=list');
-    const all = await page.locator('.kc-list li').count();
+    // The list renders on the client; count() does not wait, so wait for rows before counting.
+    const rows = page.locator('.kc-list li');
+    await expect(rows.first()).toBeVisible();
+    const all = await rows.count();
     await page.getByRole('group', { name: 'Lens' }).getByRole('button', { name: 'Tradition' }).click();
-    const trad = await page.locator('.kc-list li').count();
-    expect(trad).toBeGreaterThan(0);
-    expect(trad).toBeLessThan(all);
     await expect(page).toHaveURL(/lens=tradition/);
+    await expect.poll(() => rows.count()).toBeLessThan(all);
+    expect(await rows.count()).toBeGreaterThan(0);
   });
 
   test('river view zooms and pans', async ({ page }) => {

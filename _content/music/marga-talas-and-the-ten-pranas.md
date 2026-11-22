@@ -4,12 +4,18 @@ summary: "Before the Carnatic 35 and the Hindustani thekas there was a Sanskrit 
 date: "2026-11-21"
 tags: [music, tala, marga, desi, natyashastra, sangita-ratnakara, tala-dasa-prana]
 datings:
-  - method: scholarly-consensus
-    range: { earliest: "200 BCE", latest: "500 CE", precision: century, circa: true }
+  - method: textual-internal
+    range: { earliest: "200 BCE", latest: "300 CE", precision: century, circa: true }
     grade: C
-    label: "Natyashastra and Dattilam (marga tala)"
-    sources: [src.rowell-1992-music-musical-thought-early-india]
-    note: "The Natyashastra is a composite text of uncertain date, and its tala chapter may belong to a later layer. The range is a wide estimate."
+    label: "Broad compilation window of the Natyashastra"
+    sources: [src.pollock-2016-rasa-reader, src.rowell-1992-music-musical-thought-early-india]
+    note: "The compilation drew on older material. Its music chapters may belong to a later layer."
+  - method: textual-internal
+    range: { earliest: "1 CE", latest: "400 CE", precision: century, circa: true }
+    grade: C
+    label: "Dattilam and early music theory"
+    sources: [src.nijenhuis-1970-dattilam, src.widdess-1981-tala-and-melody]
+    note: "The date of the Dattilam is uncertain. Widdess places it broadly in the same period as the Natyashastra, whose compilation he dates before the fifth century CE."
   - method: scholarly-consensus
     range: { earliest: "1200 CE", latest: "1300 CE", precision: century, circa: true }
     grade: B

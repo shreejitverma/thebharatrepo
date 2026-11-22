@@ -17,6 +17,12 @@ datings:
     label: "Traditional reckoning (spoken at the start of the Mahabharata war)"
     sources: [src.brockington-1998-sanskrit-epics, src.davis-2015-bhagavad-gita-biography]
     note: "Tradition places the war, and so the dialogue, at the turn of the Dvapara and Kali yugas. This is tradition, not an attested date."
+  - method: traditional-puranic
+    range: { earliest: "3138 BCE", latest: "3138 BCE", precision: year, circa: false }
+    grade: D
+    label: "Traditional setting in the war reckoning 36 years before Kali"
+    sources: [src.bhatnagar-2017-date-mahabharata-war, src.malinar-2007-bhagavadgita-doctrines-contexts]
+    note: "On this reckoning, the war and its opening dialogue precede Krishna's death and the Kali epoch by 36 years."
 entities: [text.upanishads]
 readingLevel: adult
 review: { status: draft, author: "claude-sonnet-5-5" }
@@ -58,7 +64,7 @@ Other scholars still accept that the text as we have it contains older and young
 
 ## The traditional dating
 
-Tradition holds that Krishna spoke these words at the start of the great war, and places that war at the turn from the Dvapara to the Kali age, which the usual reckoning puts at 3102 BCE [@src.brockington-1998-sanskrit-epics].
+Tradition holds that Krishna spoke these words at the start of the great war, and places that war at the turn from the Dvapara to the Kali age, which one reckoning puts at 3102 BCE. Another places the war and the dialogue 36 years before that epoch, in 3138 BCE [@src.brockington-1998-sanskrit-epics; @src.bhatnagar-2017-date-mahabharata-war].
 This is the framework of the traditional calendar and of devotional history.
 It is not supported by archaeological evidence for a single war on that date, and it is treated here as tradition, a separate question from the composition of the text [@src.brockington-1998-sanskrit-epics; @src.davis-2015-bhagavad-gita-biography].
 Attempts to fix the war astronomically from epic references give widely different results and have not won general acceptance among historians [@src.brockington-1998-sanskrit-epics].
