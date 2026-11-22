@@ -273,8 +273,8 @@ test.describe('Map view', () => {
     else await expect.poll(async () => (await focused()).key).not.toBeNull();
   });
 
-  test('on a touch screen one finger scrolls the page and two fingers move the map', async ({ page, isMobile, context }) => {
-    test.skip(!isMobile, 'touch gestures are covered on the mobile project');
+  test('on a touch screen one finger scrolls the page and two fingers move the map', async ({ page, isMobile, context, browserName }) => {
+    test.skip(!isMobile || browserName !== 'chromium', 'touch input is driven through the Chromium DevTools protocol');
     await page.goto('/kaalchakra?view=map');
     const svg = page.locator('.kc-map-svg');
     await expect(svg).toBeVisible();
@@ -427,7 +427,9 @@ test.describe('Entity pages', () => {
       await expect(page.getByRole('heading', { name: 'Connections' })).toBeVisible();
       await expect(page.getByRole('heading', { name: 'Sources', exact: true })).toBeVisible();
       expect(await page.locator('.entity-sources li').count()).toBeGreaterThan(0);
-      const strip = page.getByRole('region', { name: 'Place in the Kaalchakra' });
+      // A labelled section is a region. Matched by its attributes, not with getByRole('region'): Playwright's Firefox
+      // crashes the page ("Page crashed") when axe runs after a region role query, on any page with labelled sections.
+      const strip = page.locator('section.kc-strip[aria-label="Place in the Kaalchakra"]');
       await expect(strip).toBeVisible();
       for (const group of ['before', 'during', 'after']) await expect(strip.locator(`[data-neighbours="${group}"]`)).toBeVisible();
       await expect(strip.getByRole('link', { name: 'Open in the Kaalchakra' })).toBeVisible();
@@ -447,7 +449,7 @@ test.describe('Entity pages', () => {
     const required: [string, RegExp][] = [
       ['datings', /class="dating dating--(scholarship|tradition)"/],
       ['grade', /class="grade grade--[A-E]"/],
-      ['dating sources', /class="dating__sources"><li>/],
+      ['dating sources', /class="dating__sources"[^>]*><li>/],
       ['relations', /<section class="relgraph"[^>]*>[\s\S]*?(class="relgraph__tree"|class="relgraph__none")/],
       ['sources', /<h2 id="sources">Sources<\/h2>/],
       ['strip', /class="kc-strip"/],

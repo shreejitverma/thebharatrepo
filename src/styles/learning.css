@@ -623,9 +623,11 @@ html[data-reading-level='kids'] .rl[data-has-teen]:not([data-has-kids]) > [data-
   color: var(--ink-soft);
 }
 
-/* Inline like every source link (see globals.css), with stacked items spaced for WCAG 2.5.8. */
-.quiz__sources li + li {
-  margin-top: 6px;
+/* Like every source link (see globals.css): inline-block with the padding below the text, for a 24 px target in every engine (WCAG 2.5.8). */
+.quiz__sources a {
+  display: inline-block;
+  padding: 0 0 6px;
+  vertical-align: top;
 }
 
 .quiz__actions {

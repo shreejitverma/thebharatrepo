@@ -160,6 +160,19 @@ export default function Search() {
     };
   }, [handle, state]);
 
+  // After "Show more", focus moves to the first new result. It is applied once React has committed the new
+  // rows: an animation frame can run before that commit (it does in Firefox and Safari), finding nothing to focus.
+  const focusResult = useRef<number | null>(null);
+  const shownCount = outcome?.status === 'done' ? outcome.items.length : 0;
+  useEffect(() => {
+    const index = focusResult.current;
+    if (index === null) return;
+    const link = listRef.current?.querySelectorAll<HTMLAnchorElement>('a[data-result]')[index];
+    if (!link) return;
+    focusResult.current = null;
+    link.focus();
+  }, [shownCount]);
+
   const loadMore = useCallback(async () => {
     if (!outcome || outcome.status !== 'done') return;
     setLoadingMore(true);
@@ -167,7 +180,7 @@ export default function Search() {
     try {
       const more = await Promise.all(outcome.results.slice(from, from + PAGE_SIZE).map((r) => r.data()));
       setOutcome((o) => (o && o.status === 'done' && o.for === outcome.for ? { ...o, items: [...o.items, ...more] } : o));
-      requestAnimationFrame(() => listRef.current?.querySelectorAll<HTMLAnchorElement>('a[data-result]')[from]?.focus());
+      focusResult.current = from;
     } catch (e) {
       setError((e as Error).message || 'loading more results failed');
     } finally {

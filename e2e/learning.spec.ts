@@ -18,7 +18,9 @@ async function noHorizontalScroll(page: Page) {
 function collectErrors(page: Page): string[] {
   const errors: string[] = [];
   page.on('pageerror', (e) => errors.push(e.message));
-  page.on('console', (m) => m.type() === 'error' && errors.push(m.text()));
+  // WebKit logs every prefetch that a navigation cancels as a failed load "due to access control checks"; that is
+  // the browser reporting its own cancellation, not an error on the page.
+  page.on('console', (m) => m.type() === 'error' && !/[?&]_rsc=\w+ due to access control checks\.$/.test(m.text()) && errors.push(m.text()));
   return errors;
 }
 
@@ -219,8 +221,9 @@ test.describe('learning path', () => {
     expect(new Set(slots).size).toBeGreaterThan(1);
   });
 
-  test('keyboard users can answer a question', async ({ page, isMobile }) => {
+  test('keyboard users can answer a question', async ({ page, isMobile, browserName }) => {
     test.skip(isMobile, 'keyboard flow is a desktop concern');
+    test.skip(browserName === 'webkit', 'WebKit moves Tab focus to links only, by default, as Safari does');
     await page.goto(PATH);
     const q = page.locator('fieldset.quiz__q').nth(2);
     const answer = q.getByRole('radio', { name: 'Sandrokottos' });

@@ -14,6 +14,9 @@ const FIXTURE = fs.readFileSync(path.join(__dirname, 'fixtures', 'kaalchakra-map
 
 const SNAPSHOT = { animations: 'disabled', caret: 'hide', scale: 'css', maxDiffPixelRatio: 0.002 } as const;
 
+// Each engine rasterises text its own way; one baseline per Chromium project keeps the set reviewable (as in visual.spec.ts).
+test.skip(({ browserName }) => browserName !== 'chromium', 'visual baselines are kept for Chromium');
+
 async function openMap(page: Page, query: string, entries: number) {
   await page.route(`**${KC_ITEMS_URL}`, (route) => route.fulfill({ contentType: 'application/json', body: FIXTURE }));
   await page.goto(`/kaalchakra?view=map${query}`);
