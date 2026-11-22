@@ -1,0 +1,48 @@
+id: person.rudrama-devi
+type: person
+kind: person
+names:
+  en: Rudrama Devi
+  iast: Rudramadevī
+  native: రుద్రమదేవి
+summary: >-
+  Rudrama Devi (r. 1262 to 1289 CE) was a regnant queen of the Kakatiya dynasty of Warangal and one of the few women to rule a major medieval South Asian kingdom in her own right. Designated heir by her father Ganapatideva and styled in inscriptions with masculine royal titles as Rudradeva Maharaja, she suppressed internal rebellions, repelled Seuna Yadava invasions, strengthened Warangal Fort, and drew praise from the Venetian traveller Marco Polo for her justice and peaceful governance.
+summaries:
+  kids: >-
+    Rudrama Devi was a brave queen who ruled the Kakatiya kingdom of Warangal for nearly thirty years, defending her people from rival armies and earning praise from the traveller Marco Polo.
+  teen: >-
+    Succeeding her father Ganapatideva in 1262 CE, Queen Rudrama Devi used masculine titles in official inscriptions, defeated Seuna and Pandya pressures, built up Warangal's fortifications, and died fighting a rebel chieftain in 1289 CE.
+region: Telangana and Andhra Pradesh (capital Orugallu / Warangal)
+location: { name: "Warangal, Telangana", lat: 17.95, lon: 79.61 }
+datings:
+  - method: epigraphic
+    range: { earliest: "1262 CE", latest: "1289 CE", precision: year, circa: false }
+    grade: B
+    label: Regnal span attested by Kakatiya and Chandupatla inscriptions
+    sources:
+      - src.talbot-2001-precolonial-india-in-practice
+      - src.parabrahmasastry-1978-kakatiyas-of-warangal
+      - src.eaton-2005-social-history-deccan
+    note: Acting as co-regent from c. 1259-1262 CE before full accession, her reign and death in November 1289 CE are fixed by the 1289 CE Chandupatla inscription in Nalgonda district recording grants for her religious merit.
+claims:
+  - text: The Bidar fort and Kakatiya inscriptions record that Ganapatideva designated Rudrama Devi as heir and she ruled openly under royal titles such as Rudradeva Maharaja and Rayagajakesari.
+    grade: A
+    sources:
+      - src.talbot-2001-precolonial-india-in-practice
+      - src.parabrahmasastry-1978-kakatiyas-of-warangal
+  - text: "The Chandupatla stone inscription of November 1289 CE records her death together with her general Mallikarjuna Nayaka, which historians connect with the campaign against the rebellious Kayastha chief Ambadeva."
+    grade: B
+    sources:
+      - src.parabrahmasastry-1978-kakatiyas-of-warangal
+      - src.eaton-2005-social-history-deccan
+  - text: Visiting coastal Andhra soon after her reign, Marco Polo described the kingdom of Mutfili (Motupalli) as governed wisely by a queen who ruled for forty years in justice and equity.
+    grade: B
+    sources:
+      - src.talbot-2001-precolonial-india-in-practice
+      - src.asher-talbot-2006-india-before-europe
+relations:
+  - { kind: ruled, target: polity.kakatiya-dynasty }
+  - { kind: patronised, target: site.warangal-fort }
+wikidata: Q7376917
+tags: [rudrama-devi, kakatiya, telangana, queen, warangal, epigraphy]
+review: { status: draft, author: "gemini-4-hydrogen-xhigh" }

@@ -1,0 +1,44 @@
+id: person.adikavi-pampa
+type: person
+kind: person
+names:
+  en: Adikavi Pampa
+  iast: Pampa
+  native: ಆದಿಕವಿ ಪಂಪ
+summary: >-
+  Pampa (born c. 902 CE), honoured as the Adikavi ("first poet") of Kannada literature, composed the foundational classical works of Old Kannada (Halegannada) around 941-942 CE at the court of the Vemulavada Chalukya king Arikesari II, a Rashtrakuta feudatory. His two surviving champu masterpieces - the Jain Adipurana (life of the first Tirthankara Rishabhanatha) and the secular Vikramarjuna Vijaya or Pampa Bharata (retelling the Mahabharata with Arjuna mapped onto Arikesari II) - set the literary canon for subsequent Kannada poetry.
+summaries:
+  kids: >-
+    Pampa was a tenth-century Kannada poet honoured as "Adikavi" (first great poet). He wrote two classic poems: one about the first Jain Tirthankara and another retelling the Mahabharata around Arjuna.
+  teen: >-
+    Working under Arikesari II of Vemulavada in 941-942 CE, Adikavi Pampa forged classical Kannada champu poetry in his Adipurana and Vikramarjuna Vijaya, linking royal heroism with epic Mahabharata narrative.
+region: Vemulavada (Telangana) and Banavasi / Dharwad cultural sphere (Karnataka)
+location: { name: "Vemulavada, Telangana", lat: 18.46, lon: 78.87 }
+datings:
+  - method: textual-internal
+    range: { earliest: "902 CE", latest: "955 CE", best: "941 CE", precision: year, circa: true }
+    grade: B
+    label: Self-dated Adipurana (941 CE) and patron Arikesari II's inscriptions
+    sources:
+      - src.pollock-2003-literary-cultures-in-history
+      - src.narasimhacharya-1988-history-of-kannada-literature
+      - src.rice-1921-history-of-kanarese-literature
+    note: Pampa records in the Adipurana that he completed it in Shaka 863 (941 CE) at age thirty-nine, placing his birth at 902 CE; his brother Jinavallabha's Kurkyala rock inscription near Karimnagar independently corroborates his parentage and grants under Arikesari II.
+claims:
+  - text: Pampa composed the Adipurana (completed in 941 CE) and the Vikramarjuna Vijaya (Pampa Bharata), fusing Sanskrit marga poetics with native Kannada desi idioms in the champu genre.
+    grade: A
+    sources:
+      - src.pollock-2003-literary-cultures-in-history
+      - src.pollock-2006-language-of-the-gods
+  - text: The Kurkyala inscription in Karimnagar district, erected by Pampa's younger brother Jinavallabha, confirms Pampa's Vengi Brahmin-to-Jain family background and his patronage by Arikesari II.
+    grade: A
+    sources:
+      - src.narasimhacharya-1988-history-of-kannada-literature
+      - src.pollock-2003-literary-cultures-in-history
+relations:
+  - { kind: influenced, target: person.ranna }
+  - { kind: related-to, target: polity.rashtrakuta-dynasty, note: Patron Arikesari II was a prominent Rashtrakuta feudatory }
+  - { kind: related-to, target: text.mahabharata, note: Reimagined the Mahabharata in Kannada as Vikramarjuna Vijaya }
+wikidata: Q1611385
+tags: [pampa, adikavi, kannada-literature, jainism, champu, karnataka]
+review: { status: draft, author: "gemini-4-hydrogen-xhigh" }

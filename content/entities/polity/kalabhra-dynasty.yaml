@@ -1,0 +1,48 @@
+id: polity.kalabhra-dynasty
+type: polity
+kind: polity
+names:
+  en: Kalabhras (Kalabhra Interregnum)
+  iast: Kaḷabhra
+  native: களப்பிரர்
+summary: >-
+  The Kalabhras (Kalappirar) were a poorly documented ruling power or coalition that displaced the early Chera, Chola, and Pandya kings across much of Tamilakam between roughly the late 3rd and late 6th centuries CE. Later Pallava and Pandya grants (notably the Velvikudi grant) cast them as hostile "Kali kings" who overturned earlier brahmadeya land grants, whereas modern scholarship stresses that Jainism, Buddhism, and didactic Tamil literature such as the Tirukkural and epics flourished during this period.
+summaries:
+  kids: >-
+    Between about 300 and 600 CE, rulers called the Kalabhras took over much of Tamil Nadu from the early Cholas and Pandyas. Few of their own records survive, though Jain and Buddhist learning thrived in their time.
+  teen: >-
+    Often labelled a "dark age" by older histories based on hostile Pandya and Pallava charters, the Kalabhra period (c. 300 to 600 CE) is now understood as an era of social transition when non-Vedic religions and classical Tamil ethics flourished.
+region: Tamilakam (Tamil Nadu)
+datings:
+  - method: epigraphic
+    range: { earliest: "250 CE", latest: "600 CE", precision: century, circa: true }
+    grade: C
+    label: Post-Sangam interregnum between Sangam polities and Kadungon/Simhavishnu
+    sources:
+      - src.krishnasastri-1924-epigraphia-indica-vol-17
+      - src.karashima-2014-concise-history-south-india
+      - src.singh-2008-ancient-early-medieval-india
+    note: Dated broadly between the decline of Sangam chiefs in the 3rd century CE and the late 6th-century victories of Kadungon (Pandya), Simhavishnu (Pallava), and Chalukya kings; few contemporary Kalabhra inscriptions survive aside from the Pulankurichi inscription of Ko Centan Kurran.
+claims:
+  - text: The 8th-century Velvikudi copper-plate grant of Pandya Nedunjadaiyan states that a Kalabhran "Kali king" confiscated the brahmadeya village of Velvikudi until Kadungon overthrew Kalabhra rule.
+    grade: A
+    sources:
+      - src.krishnasastri-1924-epigraphia-indica-vol-17
+      - src.sastri-1929-pandyan-kingdom
+  - text: The 5th-century Pulankurichi Tamil rock inscription in Sivaganga district records a ruler named Centan Kurran, widely connected by epigraphists to the Kalabhra milieu and showing continuity of Tamil administrative and temple institutions.
+    grade: B
+    sources:
+      - src.subbarayalu-2012-south-india-under-cholas
+      - src.mahadevan-2003-early-tamil-epigraphy
+  - text: Buddhadatta's Pali Vinayavinicchaya praises an Accutavikkanta of the Kalabbha/Kalamba family who ruled from Kaveripattinam and patronised Buddhist monasteries.
+    grade: B
+    sources:
+      - src.sastri-1976-history-of-south-india
+      - src.singh-2008-ancient-early-medieval-india
+debate: >-
+  Earlier historians following K. A. Nilakanta Sastri read hostile Pallava, Pandya, and Shaiva descriptions of the Kalabhras literally as a destructive interregnum. Historians since Burton Stein, R. Champakalakshmi, and Y. Subbarayalu interpret the "Kalabhra interregnum" instead as an ideological and agrarian shift marked by Jain and Buddhist patronage before the rise of Brahmanical temple-centred kingdoms.
+relations:
+  - { kind: related-to, target: polity.pallava-dynasty }
+wikidata: Q2572901
+tags: [kalabhra, tamilakam, post-sangam, pulankurichi, velvikkudi, historiography]
+review: { status: draft, author: "gemini-4-hydrogen-xhigh" }

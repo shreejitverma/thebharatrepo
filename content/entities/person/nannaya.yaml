@@ -1,0 +1,43 @@
+id: person.nannaya
+type: person
+kind: person
+names:
+  en: Nannaya Bhattaraka
+  iast: Nannaya Bhaṭṭāraka
+  native: నన్నయ భట్టారకుడు
+summary: >-
+  Nannaya Bhattaraka (fl. c. 1020 to 1060 CE), revered as the Adikavi ("first poet") of Telugu literature, was the court scholar and royal purohit of the Eastern Chalukya king Rajaraja Narendra at Rajamahendravaram (Rajahmundry). Commissioned by his king, Nannaya composed the opening Adi Parva, Sabha Parva, and part of the Aranya Parva of the Andhra Mahabharatamu in refined Sanskritized champu verse-and-prose style, establishing the foundational literary register of classical Telugu alongside the Telugu grammar tradition.
+summaries:
+  kids: >-
+    Nannaya was the eleventh-century poet celebrated as the "first poet" of Telugu, who began retelling the Mahabharata in beautiful Telugu poetry for King Rajaraja Narendra.
+  teen: >-
+    Working at the Eastern Chalukya court of Rajaraja Narendra in the mid-11th century CE, Nannaya Bhattaraka created the foundational marga style of Telugu poetry in his Andhra Mahabharatamu, later completed by Tikkana and Errapragada.
+region: Rajamahendravaram (Rajahmundry), coastal Andhra Pradesh
+location: { name: "Rajahmundry, Andhra Pradesh", lat: 17.00, lon: 81.78 }
+datings:
+  - method: textual-internal
+    range: { earliest: "1022 CE", latest: "1061 CE", precision: decade, circa: true }
+    grade: B
+    label: Reign of Eastern Chalukya patron Rajaraja Narendra
+    sources:
+      - src.narayanarao-2002-classical-telugu-poetry
+      - src.pollock-2003-literary-cultures-in-history
+      - src.pollock-2006-language-of-the-gods
+    note: Nannaya explicitly names his patron Rajaraja Narendra (r. 1019/1022 to 1061 CE) at Rajamahendravaram and is mentioned in the 1053 CE Nandampudi copper-plate grant.
+claims:
+  - text: Nannaya translated and adapted the first two-and-a-half books (Adi, Sabha, and half of Aranya Parva) of the Sanskrit Mahabharata into Telugu champu verse and prose, a work later completed by Tikkana (13th c.) and Errapragada (14th c.).
+    grade: A
+    sources:
+      - src.narayanarao-2002-classical-telugu-poetry
+      - src.pollock-2003-literary-cultures-in-history
+  - text: Although Telugu verse appeared earlier in inscriptions such as Addanki and Kandukur, Nannaya's Andhra Mahabharatamu is the earliest surviving full-scale Telugu literary work, blending Sanskrit marga aesthetics with local metre.
+    grade: B
+    sources:
+      - src.pollock-2006-language-of-the-gods
+      - src.narayanarao-2002-classical-telugu-poetry
+relations:
+  - { kind: patronised-by, target: polity.eastern-chalukya-dynasty-of-vengi }
+  - { kind: related-to, target: text.mahabharata, note: Adapted the Sanskrit Mahabharata into Telugu }
+wikidata: Q3595179
+tags: [nannaya, telugu-literature, adikavi, eastern-chalukya, mahabharata, andhra]
+review: { status: draft, author: "gemini-4-hydrogen-xhigh" }

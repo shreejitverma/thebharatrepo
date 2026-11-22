@@ -1,0 +1,54 @@
+id: site.arikamedu
+type: site
+kind: site
+names:
+  en: Arikamedu
+  iast: Arikamēṭu
+  native: அரிக்கமேடு
+summary: >-
+  Arikamedu, on the Ariyankuppam River near Puducherry on the Coromandel Coast, was a major Early Historic port and craft-manufacturing centre linked to Indo-Roman maritime trade (widely identified with Poduke of the Periplus and Ptolemy). First systematically excavated by Mortimer Wheeler in 1945 and restudied by Vimala Begley (1989-1992), it yielded Mediterranean amphorae, Italian terra sigillata (Arretine ware), glass and stone beads, and Tamil-Brahmi potsherds, anchoring South Indian early historic stratigraphy.
+summaries:
+  kids: >-
+    Arikamedu was a busy ancient port near Puducherry where traders from South India met ships from the Roman Empire, leaving behind Roman wine jars, red pottery, glass beads, and Tamil writing on pots.
+  teen: >-
+    Wheeler's 1945 dig and Begley's 1989-1992 excavations at Arikamedu uncovered Roman amphorae and terra sigillata alongside local rouletted ware and Tamil-Brahmi graffiti, providing the first firm chronological anchor for South Indian archaeology.
+region: Coromandel Coast, Puducherry
+location: { name: "Arikamedu, Puducherry", lat: 11.90, lon: 79.82 }
+datings:
+  - method: archaeological-stratigraphic
+    range: { earliest: "200 BCE", latest: "200 CE", precision: century, circa: true }
+    grade: B
+    label: Stratigraphic chronology anchored by dated Mediterranean ceramic imports
+    sources:
+      - src.wheeler-1946-arikamedu-ancient-india
+      - src.begley-1996-ancient-port-of-arikamedu
+      - src.tomber-2008-indo-roman-trade
+    note: Begley's renewed excavations showed settlement starting in the 2nd century BCE before Roman contact, peaking from the late 1st century BCE to 1st century CE (with Arretine terra sigillata datable to c. 10 BCE-30 CE) and continuing into the 2nd century CE and medieval Chola reuse.
+claims:
+  - text: Excavations uncovered Mediterranean amphorae, Arretine (terra sigillata) stamped pottery, and Roman glassware alongside brick warehouses and dyeing vats.
+    grade: A
+    sources:
+      - src.wheeler-1946-arikamedu-ancient-india
+      - src.begley-1996-ancient-port-of-arikamedu
+  - text: Mortimer Wheeler's 1945 correlation of Mediterranean imports with South Indian Black-and-Red Ware and Rouletted Ware established the baseline chronological sequence for Early Historic South India.
+    grade: B
+    sources:
+      - src.wheeler-1946-arikamedu-ancient-india
+      - src.coningham-2015-archaeology-south-asia
+  - text: Potsherds from Arikamedu carry Prakrit and Tamil-Brahmi inscriptions as well as evidence of large-scale Indo-Pacific glass and stone bead production.
+    grade: A
+    sources:
+      - src.mahadevan-2003-early-tamil-epigraphy
+      - src.begley-1996-ancient-port-of-arikamedu
+relations:
+  - { kind: related-to, target: site.pattanam }
+  - { kind: related-to, target: artifact.tamil-brahmi-inscriptions }
+  - { kind: related-to, target: site.poompuhar }
+wikidata: Q2861278
+image:
+  commons: "File:Arikamedu, Early Historic Site 03.jpg"
+  alt: Excavated fired-brick walls of the Early Historic port settlement at Arikamedu near Puducherry
+  credit: Jayaseerlourdhuraj
+  license: CC BY-SA 3.0
+tags: [arikamedu, indo-roman-trade, puducherry, archaeology, rouletted-ware, poduke]
+review: { status: draft, author: "gemini-4-hydrogen-xhigh" }

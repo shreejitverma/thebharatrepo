@@ -1,0 +1,42 @@
+id: polity.thanjavur-nayak-kingdom
+type: polity
+kind: polity
+names:
+  en: Thanjavur Nayak Kingdom
+  iast: Tañcāvūr Nāyakkar
+  native: தஞ்சாவூர் நாயக்கர்கள்
+summary: >-
+  The Thanjavur Nayak kingdom ruled the fertile Kaveri delta from c. 1532 to 1673 CE under Sevappa, Achutappa, Raghunatha, and Vijayaraghava Nayaka. Originally installed by Vijayanagara emperor Achyuta Deva Raya, the Thanjavur Nayaks stayed loyal to the Aravidu kings longer than Madurai, fostered an extraordinary multilingual renaissance of Telugu yakshagana, Tamil, and Sanskrit literature (with scholar-minister Govinda Dikshita and Venkatamakhin's Carnatic music theory), and founded the Sarasvati Mahal library before Ekoji established Maratha rule in 1676 CE.
+summaries:
+  kids: >-
+    The Thanjavur Nayaks ruled the rich Kaveri delta in Tamil Nadu for 140 years, turning their court into a lively centre of Carnatic music, dance dramas, and the great Sarasvati Mahal library.
+  teen: >-
+    Appointed by Vijayanagara in 1532 CE, the Thanjavur Nayaks combined delta agrarian wealth and European coastal trade with brilliant patronage of Telugu, Tamil, and Sanskrit arts, culminating in Raghunatha Nayaka's court and Venkatamakhin's 72-melakarta music system.
+region: Kaveri delta (Thanjavur and Nagapattinam districts), Tamil Nadu
+location: { name: "Thanjavur, Tamil Nadu", lat: 10.78, lon: 79.13 }
+datings:
+  - method: documentary
+    range: { earliest: "1532 CE", latest: "1673 CE", precision: year, circa: true }
+    grade: B
+    label: Sevappa Nayaka's installation (1532 CE) to Vijayaraghava's death (1673 CE)
+    sources:
+      - src.vriddhagirisan-1942-nayaks-of-tanjore
+      - src.narayanarao-1992-symbols-of-substance
+      - src.karashima-2014-concise-history-south-india
+    note: Dated from Telugu chronicles, Nayaka inscriptions, and European factory records at Nagapattinam and Tranquebar; after Madurai troops killed Vijayaraghava in 1673 CE, Maratha general Ekoji (Venkoji) took Thanjavur in 1676 CE.
+claims:
+  - text: Under Raghunatha Nayaka (r. 1600-1634 CE) and his minister Govinda Dikshita, the Thanjavur court nurtured Telugu yakshagana drama, Sanskrit poetics, female scholar-poets such as Ramabhadramba and Madhuravani, and early Carnatic music theory codified by Venkatamakhin.
+    grade: B
+    sources:
+      - src.vriddhagirisan-1942-nayaks-of-tanjore
+      - src.narayanarao-1992-symbols-of-substance
+  - text: The Thanjavur Nayaks assembled the core Sanskrit and regional manuscript collection that evolved into the Thanjavur Maharaja Serfoji's Sarasvati Mahal Library, and granted coastal trading privileges to the Portuguese, Danes (at Tranquebar, 1620), and Dutch.
+    grade: B
+    sources:
+      - src.vriddhagirisan-1942-nayaks-of-tanjore
+      - src.michell-1995-architecture-art-southern-india
+relations:
+  - { kind: preceded, target: polity.maratha-empire, note: Ekoji Bhonsle established the Thanjavur Maratha branch in 1676 CE }
+  - { kind: succeeded, target: polity.vijayanagara-empire }
+tags: [thanjavur-nayaks, tamil-nadu, thanjavur, carnatic-music, sarasvati-mahal]
+review: { status: draft, author: "gemini-4-hydrogen-xhigh" }

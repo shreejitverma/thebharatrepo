@@ -1,0 +1,46 @@
+id: site.mahmud-gawan-madrasa
+type: site
+kind: site
+names:
+  en: Mahmud Gawan Madrasa, Bidar
+  iast: Madrasa-yi Maḥmūd Gāwān
+  native: ಮಹಮೂದ್ ಗವಾನ್ ಮದರಸಾ
+summary: >-
+  The Madrasa of Mahmud Gawan in Bidar, northern Karnataka, was built in 1472 CE by the Bahmani chief minister Mahmud Gawan as a residential college of Islamic and rational sciences (kalam, jurisprudence, philosophy, astronomy, and mathematics). Designed on a four-iwan courtyard plan derived from Timurid Khurasan - with glazed polychrome tile mosaics, three storeys of student and teacher chambers, a mosque, and a large library - it suffered gunpowder explosion damage in 1696 CE but remains a landmark of Deccan architecture.
+summaries:
+  kids: >-
+    Built in 1472 CE in Bidar, Karnataka, Mahmud Gawan's Madrasa was a three-storey college decorated with bright blue, yellow, and green glazed tiles and filled with a famous library.
+  teen: >-
+    Completed in 1472 CE by Bahmani vizier Mahmud Gawan, this Timurid-style four-iwan residential college at Bidar housed lecture halls, a mosque, a grand library, and student quarters covered in Persian-style glazed tilework.
+region: Bidar, Karnataka
+location: { name: "Bidar, Karnataka", lat: 17.913, lon: 77.523 }
+datings:
+  - method: epigraphic
+    range: { earliest: "1472 CE", latest: "1472 CE", precision: year, circa: false }
+    grade: A
+    label: Foundation chronogram and Persian mosaic inscription (877 AH / 1472 CE)
+    sources:
+      - src.michell-zebrowski-1999-architecture-art-deccan-sultanates
+      - src.sherwani-1942-mahmud-gawan
+      - src.philon-2010-silent-splendour
+    note: The facade mosaic inscription gives the Hijri chronogram 877 AH (1472 CE) for completion.
+claims:
+  - text: Constructed around a central courtyard with four monumental iwans, three tiers of arched galleries, corner cylindrical minarets, and glazed kashi tilework, the Bidar Madrasa introduced Timurid Khurasanian college architecture directly into the Deccan.
+    grade: B
+    sources:
+      - src.michell-zebrowski-1999-architecture-art-deccan-sultanates
+      - src.philon-2010-silent-splendour
+  - text: Following Aurangzeb's capture of Bidar, an accidental explosion of gunpowder stored inside the building in 1696 CE destroyed much of the eastern facade and one corner minaret.
+    grade: B
+    sources:
+      - src.michell-zebrowski-1999-architecture-art-deccan-sultanates
+      - src.eaton-2005-social-history-deccan
+relations:
+  - { kind: patronised-by, target: polity.bahmani-sultanate }
+image:
+  commons: "File:Mahmud Gawan Madrasa 55.jpg"
+  alt: Remaining glazed-tile corner minaret and arched three-storey facade of the 1472 Mahmud Gawan Madrasa at Bidar
+  credit: Tarunsamanta
+  license: CC BY-SA 4.0
+tags: [madrasa, bidar, mahmud-gawan, bahmani, architecture, karnataka]
+review: { status: draft, author: "gemini-4-hydrogen-xhigh" }

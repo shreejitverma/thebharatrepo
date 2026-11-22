@@ -1,0 +1,42 @@
+id: person.bilhana
+type: person
+kind: person
+names:
+  en: Bilhana
+  iast: Bilhaṇa
+  native: बिल्हण
+summary: >-
+  Bilhana was an 11th-century Kashmiri Sanskrit poet and playwright who travelled across northern and western India before becoming vidyapati (chief court poet) under the Western Chalukya emperor Vikramaditya VI at Kalyani. His eighteen-canto mahakavya Vikramankadevacharita celebrates Vikramaditya VI's career and provides key historical testimony on 11th-century Deccan politics alongside his autobiographical verse, while he is also famed for the lyric poem Caurapancasika and the play Karnasundari.
+summaries:
+  kids: >-
+    Bilhana was a travelling Sanskrit poet from Kashmir who became chief poet at King Vikramaditya VI's court in Karnataka and wrote a poetic biography of the king.
+  teen: >-
+    Born in Kashmir and honoured as chief poet at Kalyani by Vikramaditya VI, Bilhana composed the Vikramankadevacharita - a rare historical Sanskrit mahakavya on a reigning Deccan king - as well as the lyric Caurapancasika.
+region: Kashmir and Kalyani (Deccan)
+location: { name: "Basavakalyan, Karnataka", lat: 17.87, lon: 76.95 }
+datings:
+  - method: textual-internal
+    range: { earliest: "1050 CE", latest: "1100 CE", best: "1085 CE", precision: decade, circa: true }
+    grade: B
+    label: "Active at Kalyani under Vikramaditya VI"
+    sources:
+      - src.buhler-1875-vikramankadevacharita
+      - src.pollock-2006-language-of-the-gods
+      - src.yazdani-1960-early-history-deccan-part1
+    note: The final canto of the Vikramankadevacharita details Bilhana's journey from Khonamusha in Kashmir through Mathura, Kannauj, Somnath, and Anhilwara to Vikramaditya VI's court after 1076 CE.
+claims:
+  - text: Bilhana's Vikramankadevacharita narrates the genealogy of the Kalyani Chalukyas and the rise of Vikramaditya VI up to his early campaigns and conflicts with his brother Someshvara II and the Cholas.
+    grade: A
+    sources:
+      - src.buhler-1875-vikramankadevacharita
+      - src.yazdani-1960-early-history-deccan-part1
+  - text: In Canto 18 of the Vikramankadevacharita, Bilhana records an unusually detailed personal itinerary tracing his travels across Indian royal courts from Kashmir to the Deccan.
+    grade: A
+    sources:
+      - src.buhler-1875-vikramankadevacharita
+      - src.pollock-2006-language-of-the-gods
+relations:
+  - { kind: patronised-by, target: person.vikramaditya-vi }
+  - { kind: related-to, target: polity.chalukya-dynasty-of-kalyani }
+tags: [bilhana, sanskrit, kavya, kalyani-chalukya, kashmir, vikramankadevacharita]
+review: { status: draft, author: "gemini-4-hydrogen-xhigh" }

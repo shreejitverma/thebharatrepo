@@ -1,0 +1,51 @@
+id: site.shravanabelagola
+type: site
+kind: site
+names:
+  en: Shravanabelagola
+  iast: Śravaṇabeḷagoḷa
+  native: ಶ್ರವಣಬೆಳಗೊಳ
+summary: >-
+  Shravanabelagola, in Hassan district, Karnataka, is one of South India's foremost Digambara Jain pilgrimage and epigraphic centres, set between two granite hills: Chandragiri (Chikkabetta) and Vindhyagiri (Indragiri). Over 500 inscriptions in Kannada, Sanskrit, Marathi, and Tamil record centuries of Jain ascetic sallekhana vows from the 7th century CE onward and Chavundaraya's consecration of the Gommateshwara colossus in c. 981 CE, while Jain tradition remembers Bhadrabahu and Chandragupta Maurya migrating here in the 3rd century BCE.
+summaries:
+  kids: >-
+    Shravanabelagola is a sacred Jain hill town in Karnataka famous for hundreds of carved stone inscriptions and the giant statue of Bahubali standing atop Vindhyagiri hill.
+  teen: >-
+    Between Chandragiri and Vindhyagiri hills, Shravanabelagola preserves more than 500 inscriptions documenting Jain ascetic vows (sallekhana) since the 7th century CE, alongside traditions of Bhadrabahu and Chandragupta Maurya.
+region: Hassan District, Karnataka
+location: { name: "Shravanabelagola, Karnataka", lat: 12.86, lon: 76.49 }
+datings:
+  - method: epigraphic
+    range: { earliest: "600 CE", latest: "1800 CE", precision: century, circa: true }
+    grade: B
+    label: Surviving Nishidhi memorial inscriptions on Chandragiri through medieval records
+    sources:
+      - src.rice-1889-inscriptions-sravana-belgola
+      - src.settar-1989-inviting-death
+    note: The earliest surviving inscriptions at Shravanabelagola date palaeographically to c. 600 CE, recording the Bhadrabahu-Chandragupta tradition and nishidhi memorials of Digambara monks and nuns taking sallekhana.
+  - method: traditional-sampradaya
+    range: { earliest: "300 BCE", latest: "280 BCE", precision: decade, circa: true }
+    grade: D
+    label: Digambara Jain tradition of Bhadrabahu and Chandragupta Maurya's migration
+    sources:
+      - src.settar-1989-inviting-death
+      - src.dundas-2002-the-jains
+    note: Digambara accounts from the 7th century CE onward link Chandragiri hill to the migration of the Jain acharya Bhadrabahu and his royal disciple Chandragupta Maurya around 300 BCE; no contemporary 3rd-century BCE Mauryan inscription has been found at the site.
+claims:
+  - text: Over 500 inscriptions documented in Epigraphia Carnatica Vol. II record sallekhana (ritual fasting to death) memorials on Chandragiri hill and royal endowments by Western Ganga, Rashtrakuta, Hoysala, and Vijayanagara patrons.
+    grade: A
+    sources:
+      - src.rice-1889-inscriptions-sravana-belgola
+      - src.settar-1989-inviting-death
+  - text: S. Settar notes that while the 7th-century CE Bhadrabahu cave inscription attests the antiquity of the Bhadrabahu-Chandragupta memory in Karnataka, historians debate whether the migration itself occurred historically in the early 3rd century BCE.
+    grade: B
+    sources:
+      - src.settar-1989-inviting-death
+      - src.singh-2008-ancient-early-medieval-india
+relations:
+  - { kind: related-to, target: person.chandragupta-maurya, note: Digambara tradition associates Chandragiri with Chandragupta Maurya's final years }
+  - { kind: patronised-by, target: polity.hoysala-dynasty }
+  - { kind: patronised-by, target: polity.western-ganga-dynasty }
+wikidata: Q1026193
+tags: [shravanabelagola, jainism, sallekhana, epigraphy, karnataka, western-ganga]
+review: { status: draft, author: "gemini-4-hydrogen-xhigh" }

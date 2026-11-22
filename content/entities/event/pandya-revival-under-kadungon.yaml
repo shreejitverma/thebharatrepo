@@ -1,0 +1,41 @@
+id: event.pandya-revival-under-kadungon
+type: event
+kind: event
+names:
+  en: Pandya Revival under Kadungon
+  iast: Kaṭuṅkōṉ
+  native: கடுங்கோன் பாண்டியன் எழுச்சி
+summary: "In the late 6th or early 7th century CE (c. 560 to 620 CE), the Pandya king Kadungon overthrew Kalabhra power in southern Tamil Nadu and re-established Pandya rule from Madurai, inaugurating the First Pandya Empire. His restoration is principally recorded in the 8th-century Velvikudi copper-plate grant of his descendant Parantaka Nedunjadaiyan, which contrasts Kadungon's renewal of dharma and Brahmanical land grants with earlier Kalabhra confiscation."
+summaries:
+  kids: "Around 600 CE, a Pandya king named Kadungon defeated the Kalabhras and brought the Pandya kingdom back to power in Madurai."
+  teen: >-
+    Documented in the Velvikudi copper-plate charter, Kadungon's late-6th-century victory over the Kalabhras restored Pandya rule at Madurai alongside the contemporary Pallava rise under Simhavishnu.
+region: Madurai and southern Tamil Nadu
+location: { name: "Madurai, Tamil Nadu", lat: 9.92, lon: 78.12 }
+datings:
+  - method: epigraphic
+    range: { earliest: "560 CE", latest: "620 CE", best: "590 CE", precision: decade, circa: true }
+    grade: C
+    label: Genealogical reckoning backward from dated 8th-century Pandya charters
+    sources:
+      - src.krishnasastri-1924-epigraphia-indica-vol-17
+      - src.sastri-1929-pandyan-kingdom
+      - src.karashima-2014-concise-history-south-india
+    note: No contemporary inscription of Kadungon has been found; his reign (c. 560-590 CE or 590-620 CE) is reconstructed by counting six generations before Parantaka Nedunjadaiyan's dated 769-770 CE Anaimalai and Velvikudi records.
+claims:
+  - text: The Velvikudi copper-plate grant of Parantaka Nedunjadaiyan credits Kadungon with defeating the Kalabhras ("uprooting the Kali kings") and restoring Pandya sovereignty.
+    grade: A
+    sources:
+      - src.krishnasastri-1924-epigraphia-indica-vol-17
+      - src.sastri-1929-pandyan-kingdom
+  - text: Kadungon's revival inaugurated a nearly three-century First Pandya dynasty in southern Tamil Nadu, parallel to Simhavishnu's Pallava consolidation at Kanchipuram.
+    grade: B
+    sources:
+      - src.sastri-1976-history-of-south-india
+      - src.karashima-2014-concise-history-south-india
+relations:
+  - { kind: succeeded, target: polity.kalabhra-dynasty, note: Restored Pandya rule after the Kalabhra interregnum }
+  - { kind: related-to, target: polity.early-pandyas }
+  - { kind: contemporary-of, target: polity.pallava-dynasty }
+tags: [pandya, kadungon, velvikkudi, kalabhra, madurai, epigraphy]
+review: { status: draft, author: "gemini-4-hydrogen-xhigh" }
