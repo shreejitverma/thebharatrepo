@@ -1156,7 +1156,7 @@
   sources:
     - src.brockington-1998-sanskrit-epics
     - src.jamison-brereton-2014-rigveda
-    - src.eggeling-1882-shatapatha-brahmana
+    - src.eggeling-1900-satapatha-brahmana-part-5
 - date: 2026-11-21
   target: /literature/kalidasa
   before: widely regarded as the greatest poet and dramatist in the Sanskrit language of India

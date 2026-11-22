@@ -50,7 +50,7 @@ claims:
     grade: A
     sources:
       - src.olivelle-1998-early-upanisads
-      - src.eggeling-1882-shatapatha-brahmana
+      - { id: src.eggeling-1900-satapatha-brahmana-part-5, locator: "Kanda XIV" }
   - text: >-
       In Book 3, the philosopher Gargi Vachaknavi publicly questions Yajnavalkya at the assembly
       (brahmodya) convened by King Janaka of Videha regarding the warp and weft of the cosmos

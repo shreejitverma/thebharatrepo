@@ -45,7 +45,7 @@ Because the Upanishads come at the end of this sequence they are also called Ved
 The hymns do not describe a city civilisation.
 They describe a pastoral and ritual society of clans led by chieftains and priests, with cattle, horses and chariots central to its imagery, and with a ritual religion built around fire offerings and the pressing of the soma plant [@src.jamison-brereton-2014-rigveda; @src.witzel-1997-early-sanskritization-kuru].
 Later Vedic texts show the centre of gravity shifting east to the Kuru and Panchala lands of the upper Ganga plain, where the Samhitas were collected and the elaborate "shrauta" rituals took shape [@src.witzel-1997-early-sanskritization-kuru].
-The Shatapatha Brahmana, for instance, describes the building of the great fire altar in detail, and Frits Staal's fieldwork recorded this ritual still being performed in Kerala in 1975 [@src.eggeling-1882-shatapatha-brahmana; @src.staal-1983-agni-fire-altar].
+The Shatapatha Brahmana, for instance, describes the building of the great fire altar in detail, and Frits Staal's fieldwork recorded this ritual still being performed in Kerala in 1975 [@src.eggeling-1894-satapatha-brahmana-part-3, Kandas VI and VII; @src.eggeling-1897-satapatha-brahmana-part-4, Kandas VIII to X; @src.staal-1983-agni-fire-altar].
 
 ## How the texts were kept
 

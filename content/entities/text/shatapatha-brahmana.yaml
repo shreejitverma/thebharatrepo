@@ -24,7 +24,7 @@ datings:
     grade: C
     label: Late Brahmana prose dating
     sources:
-      - src.eggeling-1882-shatapatha-brahmana
+      - { id: src.eggeling-1882-satapatha-brahmana-part-1, locator: "Introduction" }
       - src.gonda-1975-vedic-literature
       - src.flood-2003-blackwell-companion-hinduism
     note: >-
@@ -46,7 +46,7 @@ claims:
       grouped into 14 books (kandas), while the Kanva recension contains 104 chapters in 17 books.
     grade: A
     sources:
-      - src.eggeling-1882-shatapatha-brahmana
+      - { id: src.eggeling-1882-satapatha-brahmana-part-1, locator: "Introduction" }
       - src.gonda-1975-vedic-literature
   - text: >-
       In Shatapatha Brahmana 1.4.1, the narrative of Videgha Mathava carrying the sacrificial fire
@@ -54,14 +54,16 @@ claims:
       Brahmanical ritual geography.
     grade: A
     sources:
-      - src.eggeling-1882-shatapatha-brahmana
+      - { id: src.eggeling-1882-satapatha-brahmana-part-1, locator: "1.4.1" }
       - src.thapar-2002-early-india
   - text: >-
       Books 6 through 10 provide an extensive theological and geometric account of the Agnicayana
       fire altar, while the final chapters of Book 14 constitute the Brihadaranyaka Upanishad.
     grade: A
     sources:
-      - src.eggeling-1882-shatapatha-brahmana
+      - { id: src.eggeling-1894-satapatha-brahmana-part-3, locator: "Kandas VI and VII" }
+      - { id: src.eggeling-1897-satapatha-brahmana-part-4, locator: "Kandas VIII to X" }
+      - { id: src.eggeling-1900-satapatha-brahmana-part-5, locator: "Kanda XIV" }
       - src.staal-1983-agni-fire-altar
       - src.olivelle-1998-early-upanisads
 relations:

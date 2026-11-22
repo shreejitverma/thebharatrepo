@@ -26,7 +26,7 @@ datings:
     sources:
       - src.gonda-1975-vedic-literature
       - src.flood-2003-blackwell-companion-hinduism
-      - src.eggeling-1882-shatapatha-brahmana
+      - { id: src.eggeling-1882-satapatha-brahmana-part-1, locator: "Introduction" }
     note: >-
       Linguistic and geographical markers place the redaction of the Vajasaneyi Samhita after the
       older Krishna Yajurveda Samhitas, reflecting the eastward expansion of Vedic culture toward
@@ -47,7 +47,7 @@ claims:
     grade: A
     sources:
       - src.gonda-1975-vedic-literature
-      - src.eggeling-1882-shatapatha-brahmana
+      - { id: src.eggeling-1882-satapatha-brahmana-part-1, locator: "Introduction" }
   - text: >-
       The fortieth and final chapter of the Vajasaneyi Samhita is the Isha Upanishad, making it
       the only Principal Upanishad embedded directly inside a Vedic mantra Samhita.

@@ -28,7 +28,8 @@ datings:
     label: Yajurveda Samhita codification through modern Nambudiri performance (Staal)
     sources:
       - src.staal-1983-agni-fire-altar
-      - src.eggeling-1882-shatapatha-brahmana
+      - { id: src.eggeling-1894-satapatha-brahmana-part-3, locator: "Kandas VI and VII" }
+      - { id: src.eggeling-1897-satapatha-brahmana-part-4, locator: "Kandas VIII to X" }
       - src.keith-1914-veda-black-yajus-school
     note: >-
       First codified in the Krishna Yajurveda Samhitas (Taittiriya Samhita Book 4 and 5, c. 1000
@@ -43,7 +44,8 @@ claims:
     grade: A
     sources:
       - src.staal-1983-agni-fire-altar
-      - src.eggeling-1882-shatapatha-brahmana
+      - { id: src.eggeling-1894-satapatha-brahmana-part-3, locator: "Kandas VI and VII" }
+      - { id: src.eggeling-1897-satapatha-brahmana-part-4, locator: "Kandas VIII to X" }
       - src.plofker-2009-mathematics-in-india
   - text: >-
       Geometric rules requiring that the seams of bricks in odd-numbered layers never align

@@ -46,7 +46,7 @@ Whether Painted Grey Ware should be equated with the Vedic people is a matter of
 
 Iron appears in the later texts as "dark metal" (shyama ayas or krishna ayas), and in the archaeology of the Ganga plain in the early first millennium BCE, with some excavators proposing considerably earlier dates for ironworking in the region [@src.chakrabarti-1992-early-use-iron-india; @src.tewari-2003-origins-iron-working-india].
 Agriculture intensifies, and larger kingdoms form, among them Kuru and Panchala [@src.witzel-1997-early-sanskritization-kuru].
-The elaborate srauta rituals, among them the fire-altar ritual described in the Shatapatha Brahmana, belong to this stage [@src.staal-1983-agni-fire-altar; @src.eggeling-1882-shatapatha-brahmana].
+The elaborate srauta rituals, among them the fire-altar ritual described in the Shatapatha Brahmana, belong to this stage [@src.staal-1983-agni-fire-altar; @src.eggeling-1894-satapatha-brahmana-part-3, Kandas VI and VII; @src.eggeling-1897-satapatha-brahmana-part-4, Kandas VIII to X].
 
 ## Varna and jati
 

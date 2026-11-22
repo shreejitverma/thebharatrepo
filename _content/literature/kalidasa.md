@@ -48,7 +48,7 @@ The story of *Shakuntala* is taken from the *Mahabharata*, where it is told much
 *Raghuvamsha* retells the family of Rama and draws on the *Ramayana*.
 *Vikramorvashiya* develops the old tale of the king Pururavas and the nymph Urvashi, which is already told in a dialogue hymn of the *Rigveda* and again in the *Shatapatha Brahmana*.
 *Malavikagnimitra*, however, is a court comedy built around a historical king, Agnimitra of the Shunga dynasty, and has no epic source.
-[@src.brockington-1998-sanskrit-epics; @src.jamison-brereton-2014-rigveda; @src.eggeling-1882-shatapatha-brahmana]
+[@src.brockington-1998-sanskrit-epics; @src.jamison-brereton-2014-rigveda; @src.eggeling-1900-satapatha-brahmana-part-5, 11.5.1]
 
 ## Style and reputation
 
