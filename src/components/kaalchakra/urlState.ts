@@ -24,7 +24,7 @@ import { LENSES, type Lens } from '@/lib/content/lens';
 import { yearToUnit } from '@/lib/time/scale';
 import type { CalendarSystem } from '@/lib/time';
 import type { UnitWindow } from '@/lib/time/scale';
-import { DEFAULT_REGION, DEFAULT_TIME_ZOOM, TIME_ZOOMS, clampTime, isPreset, parseRegion, regionFor, serialiseRegion, type MapRegion, type TimeZoom } from './mapState';
+import { DEFAULT_REGION, DEFAULT_TIME_ZOOM, TIME_ZOOMS, clampTime, isPreset, parseRegion, regionFor, serialiseRegion, type MapRegion, type RegionId, type TimeZoom } from './mapState';
 import type { Level, View } from './shared';
 
 export const VIEWS: { id: View; label: string }[] = [
@@ -96,6 +96,11 @@ function nearestTo(items: ReadonlyMap<string, StateItem>, year: number, lens: Le
   return best;
 }
 
+/** The region a link without `region` opens on: the default, or the wide one when the selected place lies outside it. */
+function inferredRegion(sel: string | null, items: ReadonlyMap<string, StateItem>): RegionId {
+  return regionFor(sel ? items.get(sel)?.place : undefined);
+}
+
 const NO_ALIASES: Readonly<Record<string, string>> = {};
 
 /**
@@ -136,13 +141,12 @@ export function parseState(search: string, items: ReadonlyMap<string, StateItem>
   if (s.sel === null && s.t !== null && s.view !== 'map') s.sel = nearestTo(items, s.t, s.lens);
   const z = p.get('zoom');
   if (z && (TIME_ZOOMS as readonly string[]).includes(z)) s.zoom = z as TimeZoom;
-  // Without an explicit region, a deep link to a place outside the default region opens on the wide one.
-  s.region = parseRegion(p.get('region')) ?? { preset: regionFor(s.sel ? items.get(s.sel)?.place : undefined) };
+  s.region = parseRegion(p.get('region')) ?? { preset: inferredRegion(s.sel, items) };
   return s;
 }
 
-/** Query string for a state, without the leading "?", in URLSearchParams encoding. */
-export function serialise(s: State): string {
+/** Query string for a state, without the leading "?", in URLSearchParams encoding. `items` is the map parseState reads. */
+export function serialise(s: State, items: ReadonlyMap<string, StateItem>): string {
   const p = new URLSearchParams();
   // Reduced motion changes the default view, so its readers always get an explicit view: their links then open the same view for everyone.
   if (s.view !== DEFAULT.view || prefersReducedMotion()) p.set('view', s.view);
@@ -159,7 +163,8 @@ export function serialise(s: State): string {
       p.set('t', String(s.t));
       if (s.zoom !== DEFAULT_TIME_ZOOM) p.set('zoom', s.zoom);
     }
-    if (!isPreset(s.region) || s.region.preset !== DEFAULT_REGION) p.set('region', serialiseRegion(s.region));
+    // The region is left out only when parsing would infer the same one, so a link always reopens the view it was made from.
+    if (!isPreset(s.region) || s.region.preset !== inferredRegion(s.sel, items)) p.set('region', serialiseRegion(s.region));
   }
   return p.toString();
 }

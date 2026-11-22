@@ -13,6 +13,9 @@
  * used by src/lib/geo/projection.ts, so the client only applies one transform. The output is committed;
  * this script is run by hand only when the basemap extent or detail changes.
  *
+ * Land and lakes are clipped to the bounds, so their filled rings run along the bounds where they are cut.
+ * Those cuts are not coastlines: the stroked `coast` and `shores` paths are the same rings without them.
+ *
  * Only physical features are kept: land, large lakes and rivers. No political boundary is read or
  * drawn, because modern borders are anachronistic for most of the archive and contested in places.
  */
@@ -74,6 +77,34 @@ function clipRing(ring: Pt[]): Pt[] {
     if (out.length === 0) return [];
   }
   return out;
+}
+
+/** True for a ring edge that the clip laid along one side of the basemap rectangle. */
+function onBoundary(a: Pt, b: Pt): boolean {
+  return (
+    (a[0] === BOUNDS.west && b[0] === BOUNDS.west) ||
+    (a[0] === BOUNDS.east && b[0] === BOUNDS.east) ||
+    (a[1] === BOUNDS.south && b[1] === BOUNDS.south) ||
+    (a[1] === BOUNDS.north && b[1] === BOUNDS.north)
+  );
+}
+
+/** The shoreline of a clipped ring as an SVG path: the whole ring, or the open runs between its boundary edges. */
+function shorePath(ring: Pt[]): string {
+  const n = ring.length;
+  const cut = ring.findIndex((p, i) => onBoundary(p, ring[(i + 1) % n]));
+  if (cut < 0) return pathOf(ring, true);
+  let d = '';
+  let run: Pt[] = [ring[(cut + 1) % n]];
+  for (let k = 1; k <= n; k++) {
+    const a = ring[(cut + k) % n];
+    const b = ring[(cut + k + 1) % n];
+    if (onBoundary(a, b)) {
+      d += pathOf(run, false);
+      run = [b];
+    } else run.push(b);
+  }
+  return d;
 }
 
 /** Splits a line into the runs that lie inside the basemap rectangle. */
@@ -166,8 +197,9 @@ function lines(f: Feature): Pt[][] {
   return [];
 }
 
-function ringPaths(features: Feature[]): { d: string; rings: number; points: number } {
+function ringPaths(features: Feature[]): { d: string; shore: string; rings: number; points: number } {
   let d = '';
+  let shore = '';
   let rings = 0;
   let points = 0;
   for (const f of features) {
@@ -183,12 +215,13 @@ function ringPaths(features: Feature[]): { d: string; rings: number; points: num
         const p = pathOf(simple, true);
         if (!p) continue;
         d += p;
+        shore += shorePath(simple);
         rings++;
         points += simple.length;
       }
     }
   }
-  return { d, rings, points };
+  return { d, shore, rings, points };
 }
 
 const land = ringPaths(read('ne_50m_land.geojson'));
@@ -220,7 +253,9 @@ const out = {
   scale: SCALE,
   bounds: BOUNDS,
   land: land.d,
+  coast: land.shore,
   lakes: lakes.d,
+  shores: lakes.shore,
   riversMajor: major.join(''),
   riversMinor: minor.join(''),
 };

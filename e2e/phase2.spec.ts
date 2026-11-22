@@ -326,6 +326,154 @@ test.describe('Map view', () => {
     await expect.poll(() => Number(new URL(page.url()).searchParams.get('region')!.split(',')[2])).toBeLessThan(Number(panned.split(',')[2]));
   });
 
+  test('keyboard zoom and pan never drop focus from the map, and a closed cluster list hands focus back', async ({ page, isMobile }) => {
+    test.skip(isMobile, 'keyboard access is covered on desktop');
+    const region = () => new URL(page.url()).searchParams.get('region');
+    const focusedInMap = () =>
+      page.evaluate(() => {
+        const el = document.activeElement;
+        return { inMap: !!el && el !== document.body && !!el.closest('.kc-canvas'), key: (el as HTMLElement | null)?.dataset.key ?? null, cluster: !!el?.matches('.kc-map-cluster') };
+      });
+    /** A marker picked in the page: the one farthest from the map's centre, or the one nearest another marker or cluster. */
+    const pick = (how: 'farthest' | 'crowded') =>
+      page.locator('.kc-map-svg').evaluate((svg, how) => {
+        const centre = (el: Element) => {
+          const b = el.getBoundingClientRect();
+          return [b.left + b.width / 2, b.top + b.height / 2];
+        };
+        const [cx, cy] = centre(svg);
+        const nodes = [...svg.querySelectorAll('[data-key]')];
+        let best: string | null = null;
+        let bestScore = -Infinity;
+        for (const m of svg.querySelectorAll<SVGGElement>('.kc-mark')) {
+          const [x, y] = centre(m);
+          const score =
+            how === 'farthest'
+              ? Math.hypot(x - cx, y - cy)
+              : -Math.min(...nodes.filter((n) => n !== m).map((n) => Math.hypot(centre(n)[0] - x, centre(n)[1] - y)));
+          if (score > bestScore) {
+            bestScore = score;
+            best = m.dataset.key ?? null;
+          }
+        }
+        return best;
+      }, how);
+
+    // Zooming in carries the focused marker out of the view: focus stays with the map, and the keys still move it.
+    await page.goto('/kaalchakra?view=map');
+    await expect(page.locator('.kc-map-svg .kc-mark').first()).toBeVisible();
+    const far = await pick('farthest');
+    await page.locator(`.kc-map-svg .kc-mark[data-key="${far}"]`).focus();
+    for (let i = 0; i < 5 && (await page.locator(`.kc-map-svg [data-key="${far}"]`).count()); i++) await page.keyboard.press('+');
+    await expect(page.locator(`.kc-map-svg [data-key="${far}"]`)).toHaveCount(0);
+    expect((await focusedInMap()).inMap).toBe(true);
+    const zoomed = region();
+    await page.keyboard.press('-');
+    await expect.poll(region).not.toBe(zoomed);
+
+    // Zooming out merges the focused marker into a cluster, which takes focus.
+    await page.goto('/kaalchakra?view=map');
+    await expect(page.locator('.kc-map-svg .kc-mark').first()).toBeVisible();
+    const crowded = await pick('crowded');
+    await page.locator(`.kc-map-svg .kc-mark[data-key="${crowded}"]`).focus();
+    for (let i = 0; i < 3 && (await page.locator(`.kc-map-svg [data-key="${crowded}"]`).count()); i++) await page.keyboard.press('-');
+    await expect(page.locator(`.kc-map-svg [data-key="${crowded}"]`)).toHaveCount(0);
+    expect(await focusedInMap()).toMatchObject({ inMap: true, cluster: true });
+
+    // Entries a few hundred metres apart never separate, so their cluster opens a list; Escape or Close returns to it.
+    await page.goto('/kaalchakra?view=map&region=68.14,27.33,1.5');
+    const cluster = page.locator('.kc-map-svg .kc-map-cluster').first();
+    await expect(cluster).toBeVisible();
+    const key = await cluster.getAttribute('data-key');
+    const list = page.locator('.kc-map-open');
+    await cluster.focus();
+    await page.keyboard.press('Enter');
+    await expect(list.locator('li button').first()).toBeFocused();
+    await page.keyboard.press('Escape');
+    await expect(list).toHaveCount(0);
+    expect((await focusedInMap()).key).toBe(key);
+    await page.keyboard.press('Enter');
+    await expect(list.locator('li button').first()).toBeFocused();
+    // WebKit does not Tab to buttons by default, so focus moves to Close directly.
+    await list.getByRole('button', { name: 'Close' }).focus();
+    await page.keyboard.press('Enter');
+    await expect(list).toHaveCount(0);
+    expect((await focusedInMap()).key).toBe(key);
+  });
+
+  test('on a touch screen a finger that lifts off the map leaves one-finger scrolling and taps working', async ({ page, isMobile, context, browserName }) => {
+    test.skip(!isMobile || browserName !== 'chromium', 'touch input is driven through the Chromium DevTools protocol');
+    await page.goto('/kaalchakra?view=map');
+    const svg = page.locator('.kc-map-svg');
+    await expect(svg.locator('.kc-mark').first()).toBeVisible();
+    await svg.evaluate((el) => el.scrollIntoView({ block: 'center' }));
+    const cdp = await context.newCDPSession(page);
+    const touch = (type: 'touchStart' | 'touchMove' | 'touchEnd', points: [number, number][]) =>
+      cdp.send('Input.dispatchTouchEvent', { type, touchPoints: points.map(([x, y], id) => ({ x, y, id })) });
+    /** A marker whose centre is not covered by another marker or cluster, so a tap there reaches it. */
+    const tappable = () =>
+      svg.evaluate((el) => {
+        for (const m of el.querySelectorAll<SVGGElement>('.kc-mark:not([data-active="true"])')) {
+          const b = m.getBoundingClientRect();
+          const [x, y] = [b.left + b.width / 2, b.top + b.height / 2];
+          if (document.elementFromPoint(x, y)?.closest('.kc-mark') === m) return { id: m.dataset.id!, x, y };
+        }
+        return null;
+      });
+    const selected = (id: string) => expect(page).toHaveURL(new RegExp(`id=${id.replace('.', '\\.')}`));
+
+    // One finger lands on the map, slides sideways off its left edge and lifts there, outside the map.
+    const b = (await svg.boundingBox())!;
+    const y = b.y + b.height / 2;
+    const [from, to] = [b.x + 30, Math.max(1, b.x - 6)];
+    expect(to).toBeLessThan(b.x);
+    await touch('touchStart', [[from, y]]);
+    for (let i = 1; i <= 8; i++) await touch('touchMove', [[from + ((to - from) * i) / 8, y]]);
+    await touch('touchEnd', []);
+    await page.waitForTimeout(300);
+
+    // The next single finger is still one finger: a sideways drag leaves the map where it was.
+    const x = b.x + b.width / 2;
+    await touch('touchStart', [[x, y]]);
+    for (let i = 1; i <= 8; i++) await touch('touchMove', [[x - i * 20, y]]);
+    await touch('touchEnd', []);
+    await page.waitForTimeout(400);
+    expect(page.url()).not.toMatch(/region=/);
+
+    // A tap still opens a marker.
+    const m = (await tappable())!;
+    expect(m).not.toBeNull();
+    await page.touchscreen.tap(m.x, m.y);
+    await selected(m.id);
+  });
+
+  test('on a touch screen a tap that drifts a few pixels, as a finger does, still opens the marker', async ({ page, isMobile }) => {
+    test.skip(!isMobile, 'finger taps are a phone concern');
+    await page.goto('/kaalchakra?view=map');
+    const svg = page.locator('.kc-map-svg');
+    await expect(svg.locator('.kc-mark').first()).toBeVisible();
+    await svg.evaluate((el) => el.scrollIntoView({ block: 'center' }));
+    // WebKit reports every small finger movement, while Chromium holds back moves inside its own tap slop, so the
+    // events a drifting tap produces are dispatched as the browser sends them: pointerdown, small moves, pointerup, click.
+    const id = await svg.evaluate((el) => {
+      for (const m of el.querySelectorAll<SVGGElement>('.kc-mark:not([data-active="true"])')) {
+        const b = m.getBoundingClientRect();
+        const [x, y] = [b.left + b.width / 2, b.top + b.height / 2];
+        const target = document.elementFromPoint(x, y);
+        if (target?.closest('.kc-mark') !== m) continue;
+        const at = (dx: number, buttons: number): PointerEventInit => ({ bubbles: true, cancelable: true, composed: true, pointerId: 41, pointerType: 'touch', isPrimary: true, clientX: x + dx, clientY: y, buttons });
+        target.dispatchEvent(new PointerEvent('pointerdown', at(0, 1)));
+        for (const dx of [3, 5, 7]) target.dispatchEvent(new PointerEvent('pointermove', at(dx, 1)));
+        target.dispatchEvent(new PointerEvent('pointerup', at(7, 0)));
+        target.dispatchEvent(new MouseEvent('click', { bubbles: true, cancelable: true, composed: true, clientX: x + 7, clientY: y }));
+        return m.dataset.id!;
+      }
+      return null;
+    });
+    expect(id).not.toBeNull();
+    await expect(page).toHaveURL(new RegExp(`id=${id!.replace('.', '\\.')}`));
+  });
+
   for (const scheme of ['light', 'dark'] as const) {
     test(`is accessible and fits the viewport in the ${scheme} theme with reduced motion`, async ({ page }) => {
       await page.emulateMedia({ colorScheme: scheme, reducedMotion: 'reduce' });

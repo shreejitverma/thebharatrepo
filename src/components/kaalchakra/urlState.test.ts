@@ -1,7 +1,7 @@
 import { describe, expect, it } from 'vitest';
 import { KINDS } from '@/lib/content/labels';
 import { PRESENT_YEAR } from '@/lib/time';
-import { DEFAULT, hrefFor, parseState, serialise, type State } from './urlState';
+import { DEFAULT, hrefFor, parseState, serialise as serialiseWith, type State } from './urlState';
 
 const items = new Map([
   ['site.sanchi', { place: { name: 'Sanchi', lat: 23.48, lon: 77.74 } }],
@@ -10,6 +10,7 @@ const items = new Map([
 ]);
 
 const parse = (q: string) => parseState(q, items);
+const serialise = (s: State) => serialiseWith(s, items);
 
 describe('parseState', () => {
   it('returns the defaults for an empty query', () => {
@@ -83,6 +84,21 @@ describe('serialise', () => {
       { ...DEFAULT, view: 'map', t: 0, region: { lon: 80.25, lat: 13.5, span: 12.5 } },
       { ...DEFAULT, view: 'river', lens: 'scholarship', win: { start: 0.4, end: 0.6 }, sel: 'text.rigveda' },
       { ...DEFAULT, view: 'list', kinds: KINDS.slice(0, 3) as State['kinds'], level: 'teen' },
+    ];
+    for (const s of states) expect(parse(serialise(s))).toEqual(s);
+  });
+  it('writes the region whenever a link would otherwise reopen on a different one', () => {
+    // Hattusa lies outside the subcontinent, so a link naming it with no region opens on the wide view.
+    expect(new URLSearchParams(serialise({ ...DEFAULT, view: 'map', sel: 'event.mitanni-treaty' })).get('region')).toBe('subcontinent');
+    expect(new URLSearchParams(serialise({ ...DEFAULT, view: 'map', sel: 'event.mitanni-treaty', region: { preset: 'wide' } })).get('region')).toBeNull();
+    expect(new URLSearchParams(serialise({ ...DEFAULT, view: 'map', sel: 'site.sanchi' })).get('region')).toBeNull();
+  });
+  it('round-trips the region with a selection outside the default region', () => {
+    const states: State[] = [
+      { ...DEFAULT, view: 'map', sel: 'event.mitanni-treaty' },
+      { ...DEFAULT, view: 'map', sel: 'event.mitanni-treaty', region: { preset: 'wide' } },
+      { ...DEFAULT, view: 'map', sel: 'event.mitanni-treaty', region: { preset: 'ganga' } },
+      { ...DEFAULT, view: 'map', sel: 'site.sanchi', region: { preset: 'wide' } },
     ];
     for (const s of states) expect(parse(serialise(s))).toEqual(s);
   });

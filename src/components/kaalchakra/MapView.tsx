@@ -1,6 +1,6 @@
 'use client';
 
-import { useEffect, useId, useLayoutEffect, useMemo, useRef, useState } from 'react';
+import { useCallback, useEffect, useId, useLayoutEffect, useMemo, useRef, useState } from 'react';
 import basemap from '@/data/basemap/south-asia.json';
 import GradeBadge from '@/components/GradeBadge';
 import { KIND_LABELS } from '@/lib/content/labels';
@@ -33,8 +33,10 @@ import { niceStep } from './ticks';
 
 /** Markers closer than this, in pixels, are drawn as one numbered cluster. */
 const CLUSTER_RADIUS = 26;
-/** Movement in pixels before a press becomes a drag. */
+/** Movement in pixels before a mouse or pen press becomes a drag. */
 const DRAG_PX = 4;
+/** Movement in pixels before a finger press stops being a tap; a finger drifts further than a mouse. */
+const TAP_SLOP_PX = 10;
 /** Slider resolution along the piecewise time axis. */
 const SLIDER_MAX = 2000;
 const LABEL_CHAR_PX = 6.3;
@@ -100,7 +102,8 @@ interface Box {
 /**
  * One focusable thing on the map: a single marker or a numbered cluster. Both are kept in one list in time
  * order (a cluster by its earliest member) with stable keys, so selecting, panning or zooming never moves
- * the focused element in the DOM and focus is never lost to a re-render.
+ * the focused element in the DOM. When panning or zooming does unmount it (it joins or leaves a cluster, or
+ * leaves the view), focus moves to the node that now holds its entries, or to the map's keyboard owner.
  */
 type MapNode = { kind: 'one'; key: string; p: Placed } | { kind: 'many'; key: string; c: Cluster };
 
@@ -108,6 +111,12 @@ const overlaps = (a: Box, b: Box) => a.x0 < b.x1 && a.x1 > b.x0 && a.y0 < b.y1 &
 
 function graticuleStep(span: number): number {
   return span > 50 ? 10 : span > 20 ? 5 : span > 8 ? 2 : 1;
+}
+
+/** Midpoint and spread of the first two tracked pointers. */
+function pinchOf(points: ReadonlyMap<number, { x: number; y: number }>) {
+  const [p, q] = [...points.values()];
+  return { x: (p.x + q.x) / 2, y: (p.y + q.y) / 2, dist: Math.max(10, Math.hypot(p.x - q.x, p.y - q.y)) };
 }
 
 /** At most half the clustering radius, so two cluster markers can never overlap. */
@@ -133,8 +142,8 @@ export default function MapView({ items, extentItems, unplaced, lens, cal, selec
   const drag = useRef<{ x: number; y: number; sx: number; sy: number; moved: boolean; touch: boolean; pinch?: number } | null>(null);
   /** Members of a cluster that zooming cannot separate, with the context they were opened in. */
   const [open, setOpen] = useState<{ ids: string[]; key: string; viaKeyboard: boolean } | null>(null);
-  /** Entries whose marker or cluster should take focus after a cluster was zoomed into. */
-  const pendingFocus = useRef<string[] | null>(null);
+  /** The marker, cluster or cluster-list entry that has focus, and the entries it stands for. */
+  const lastFocus = useRef<{ el: Element; ids: readonly string[] } | null>(null);
   const openListRef = useRef<HTMLUListElement>(null);
   /** The "use two fingers" hint, shown briefly when one finger drags across the map on a touch screen. */
   const [gestureHint, setGestureHint] = useState(false);
@@ -184,11 +193,11 @@ export default function MapView({ items, extentItems, unplaced, lens, cal, selec
 
   useEffect(() => () => clearTimeout(hintTimer.current), []);
 
-  const flashGestureHint = () => {
+  const flashGestureHint = useCallback(() => {
     setGestureHint(true);
     clearTimeout(hintTimer.current);
     hintTimer.current = setTimeout(() => setGestureHint(false), GESTURE_HINT_MS);
-  };
+  }, []);
 
   const { width, height } = size;
   const k = width / view.span;
@@ -265,17 +274,6 @@ export default function MapView({ items, extentItems, unplaced, lens, cal, selec
     [extentItems, lens, t, zoom, view, size],
   );
 
-  // After a cluster splits, focus its first member that is now drawn, on its own or in a smaller cluster.
-  useEffect(() => {
-    const ids = pendingFocus.current;
-    const svg = svgRef.current;
-    if (!ids || !svg) return;
-    pendingFocus.current = null;
-    const want = new Set(ids);
-    const node = layout.nodes.find((n) => (n.kind === 'one' ? want.has(n.p.item.id) : n.c.ids.some((id) => want.has(id))));
-    if (node) svg.querySelector<SVGGElement>(`[data-key="${CSS.escape(node.key)}"]`)?.focus();
-  }, [layout]);
-
   // When the arrow keys step the selection while a marker has focus, focus follows the selected marker.
   useEffect(() => {
     const svg = svgRef.current;
@@ -328,11 +326,6 @@ export default function MapView({ items, extentItems, unplaced, lens, cal, selec
     }
   };
 
-  const pinchState = () => {
-    const [p, q] = [...pointers.current.values()];
-    return { x: (p.x + q.x) / 2, y: (p.y + q.y) / 2, dist: Math.max(10, Math.hypot(p.x - q.x, p.y - q.y)) };
-  };
-
   const onPointerDown = (e: React.PointerEvent<SVGSVGElement>) => {
     if (e.pointerType === 'mouse' && e.button !== 0) return;
     // Touch captures implicitly to the marker under the finger, which can unmount while panning.
@@ -341,18 +334,18 @@ export default function MapView({ items, extentItems, unplaced, lens, cal, selec
     const touch = e.pointerType === 'touch';
     pointers.current.set(e.pointerId, { x: e.clientX, y: e.clientY, touch });
     if (pointers.current.size >= 2) {
-      const m = pinchState();
+      const m = pinchOf(pointers.current);
       drag.current = { x: m.x, y: m.y, sx: m.x, sy: m.y, moved: true, touch: false, pinch: m.dist };
       setGestureHint(false);
       for (const id of pointers.current.keys()) capture(e.currentTarget, id);
     } else drag.current = { x: e.clientX, y: e.clientY, sx: e.clientX, sy: e.clientY, moved: false, touch };
   };
 
-  const endPointer = (id: number) => {
+  const endPointer = useCallback((id: number) => {
     if (!pointers.current.delete(id)) return;
     const rest = [...pointers.current.values()];
     if (rest.length >= 2) {
-      const m = pinchState();
+      const m = pinchOf(pointers.current);
       drag.current = { x: m.x, y: m.y, sx: m.x, sy: m.y, moved: true, touch: false, pinch: m.dist };
     } else if (rest.length === 1) {
       // The finger left after a pinch stays still: one finger never pans.
@@ -364,7 +357,25 @@ export default function MapView({ items, extentItems, unplaced, lens, cal, selec
         if (drag.current === d) drag.current = null;
       }, 0);
     }
-  };
+  }, []);
+
+  // A finger that lands on a marker or the basemap is not captured (see onPointerDown), so it can lift outside the
+  // map, where the SVG never sees its pointerup. Every pointer therefore ends here, wherever it ends; otherwise it
+  // would stay tracked and every later touch would count as a second finger.
+  useEffect(() => {
+    const onUp = (e: PointerEvent) => endPointer(e.pointerId);
+    const onCancel = (e: PointerEvent) => {
+      // The browser took a one-finger touch to scroll the page, which is what it is for; remind how to move the map.
+      if (drag.current?.touch && pointers.current.size === 1 && pointers.current.has(e.pointerId)) flashGestureHint();
+      endPointer(e.pointerId);
+    };
+    window.addEventListener('pointerup', onUp);
+    window.addEventListener('pointercancel', onCancel);
+    return () => {
+      window.removeEventListener('pointerup', onUp);
+      window.removeEventListener('pointercancel', onCancel);
+    };
+  }, [endPointer, flashGestureHint]);
 
   const onPointerMove = (e: React.PointerEvent<SVGSVGElement>) => {
     const d = drag.current;
@@ -373,7 +384,7 @@ export default function MapView({ items, extentItems, unplaced, lens, cal, selec
     pointers.current.set(e.pointerId, { x: e.clientX, y: e.clientY, touch: e.pointerType === 'touch' });
     const rect = e.currentTarget.getBoundingClientRect();
     if (pointers.current.size >= 2 && d.pinch !== undefined) {
-      const m = pinchState();
+      const m = pinchOf(pointers.current);
       const zoomed = zoomRegion(regionRef.current, sizeRef.current, d.pinch / m.dist, { x: m.x - rect.left, y: m.y - rect.top });
       commit(panRegion(zoomed, sizeRef.current, m.x - d.x, m.y - d.y));
       d.pinch = m.dist;
@@ -383,7 +394,7 @@ export default function MapView({ items, extentItems, unplaced, lens, cal, selec
     }
     if (d.touch) {
       // A sideways one-finger drag, which the page does not scroll: say how to move the map instead.
-      if (!d.moved && Math.hypot(e.clientX - d.sx, e.clientY - d.sy) > DRAG_PX) {
+      if (!d.moved && Math.hypot(e.clientX - d.sx, e.clientY - d.sy) > TAP_SLOP_PX) {
         d.moved = true;
         flashGestureHint();
       }
@@ -399,14 +410,6 @@ export default function MapView({ items, extentItems, unplaced, lens, cal, selec
     d.x = e.clientX;
     d.y = e.clientY;
     if (dx || dy) commit(panRegion(regionRef.current, sizeRef.current, dx, dy));
-  };
-
-  const onPointerUp = (e: React.PointerEvent<SVGSVGElement>) => endPointer(e.pointerId);
-
-  const onPointerCancel = (e: React.PointerEvent<SVGSVGElement>) => {
-    // The browser took a one-finger touch to scroll the page, which is what it is for; remind how to move the map.
-    if (drag.current?.touch && pointers.current.size === 1 && pointers.current.has(e.pointerId)) flashGestureHint();
-    endPointer(e.pointerId);
   };
 
   const onLostPointerCapture = (e: React.PointerEvent<SVGSVGElement>) => {
@@ -427,11 +430,7 @@ export default function MapView({ items, extentItems, unplaced, lens, cal, selec
       const p = project(fitted, size, b.west, b.south);
       const q = project(fitted, size, b.east, b.north);
       // Zoom in only when that would pull the members apart; places a few hundred metres apart never separate.
-      if (fitted.span < view.span * 0.95 && Math.hypot(p.x - q.x, p.y - q.y) > CLUSTER_RADIUS * 1.5) {
-        // The cluster unmounts as it splits; focus moves on to its first member instead of being lost.
-        pendingFocus.current = c.ids;
-        return commit(fitted);
-      }
+      if (fitted.span < view.span * 0.95 && Math.hypot(p.x - q.x, p.y - q.y) > CLUSTER_RADIUS * 1.5) return commit(fitted);
     }
     setOpen({ ids: c.ids, key: contextKey, viaKeyboard });
   };
@@ -450,6 +449,18 @@ export default function MapView({ items, extentItems, unplaced, lens, cal, selec
     onHover(id, r.left + r.width / 2, r.top + r.height / 2 - 6);
   };
 
+  const noteFocus = (el: Element, ids: readonly string[]) => {
+    lastFocus.current = { el, ids };
+  };
+
+  /** Focus that moves on, or a click elsewhere, forgets the record; an element that blurs because it unmounted keeps it. */
+  const noteBlur = (e: React.FocusEvent) => {
+    const el = e.target;
+    queueMicrotask(() => {
+      if (lastFocus.current?.el === el && el.isConnected) lastFocus.current = null;
+    });
+  };
+
   const moment = t === null ? null : formatInCalendar(t, cal);
   const win = t === null ? null : timeWindow(t, zoom);
   const windowText =
@@ -463,6 +474,20 @@ export default function MapView({ items, extentItems, unplaced, lens, cal, selec
   const regionValue: RegionId | 'custom' = isPreset(region) ? region.preset : 'custom';
   const openIds = open && open.key === contextKey ? open.ids : null;
   const shownInView = items.length - layout.outside;
+
+  // When the focused marker, cluster or cluster-list entry unmounts (it joined or left a cluster, left the view, or
+  // the list closed), focus moves to the node that now holds its entries, or to the map's keyboard owner.
+  useEffect(() => {
+    const f = lastFocus.current;
+    const svg = svgRef.current;
+    if (!f || f.el.isConnected || !svg) return;
+    lastFocus.current = null;
+    if (document.activeElement && document.activeElement !== document.body) return;
+    const want = new Set(f.ids);
+    const node = layout.nodes.find((n) => (n.kind === 'one' ? want.has(n.p.item.id) : n.c.ids.some((id) => want.has(id))));
+    const target = node ? svg.querySelector<SVGGElement>(`[data-key="${CSS.escape(node.key)}"]`) : wrapRef.current?.closest<HTMLElement>('[tabindex]');
+    target?.focus();
+  }, [layout, openIds]);
 
   const markerLabel = (p: Placed, active: boolean) => {
     const d = primaryDating(p.item, lens);
@@ -486,8 +511,14 @@ export default function MapView({ items, extentItems, unplaced, lens, cal, selec
         data-key={p.item.id}
         onClick={() => click(p.item.id)}
         onKeyDown={(e) => activateKey(e, () => onSelect(p.item.id))}
-        onFocus={(e) => focusTip(e, p.item.id)}
-        onBlur={() => onHover(null, 0, 0)}
+        onFocus={(e) => {
+          noteFocus(e.currentTarget, [p.item.id]);
+          focusTip(e, p.item.id);
+        }}
+        onBlur={(e) => {
+          noteBlur(e);
+          onHover(null, 0, 0);
+        }}
         onPointerEnter={(e) => onHover(p.item.id, e.clientX, e.clientY)}
         onPointerLeave={(e) => onHover(null, e.clientX, e.clientY)}
       >
@@ -513,6 +544,8 @@ export default function MapView({ items, extentItems, unplaced, lens, cal, selec
         data-key={key}
         onClick={() => clickCluster(c)}
         onKeyDown={(e) => activateKey(e, () => clickCluster(c, true))}
+        onFocus={(e) => noteFocus(e.currentTarget, c.ids)}
+        onBlur={noteBlur}
       >
         <circle className="kc-map-focus" cx={c.x} cy={c.y} r={Math.max(r, 14) + 3} />
         <circle className="kc-map-cluster__dot" cx={c.x} cy={c.y} r={r} />
@@ -606,14 +639,14 @@ export default function MapView({ items, extentItems, unplaced, lens, cal, selec
           aria-label={`Map of South Asia and its neighbours. ${status} Each marker and numbered cluster is a button; the list below the map gives the same entries.`}
           onPointerDown={onPointerDown}
           onPointerMove={onPointerMove}
-          onPointerUp={onPointerUp}
-          onPointerCancel={onPointerCancel}
           onLostPointerCapture={onLostPointerCapture}
         >
           <rect width={width} height={height} fill="var(--map-sea)" />
           <g aria-hidden="true" transform={`translate(${(width / 2 - view.lon * k).toFixed(2)} ${(height / 2 + mercatorY(view.lat) * k).toFixed(2)}) scale(${(k / basemap.scale).toFixed(6)})`}>
-            <path d={basemap.land} fill="var(--map-land)" stroke="var(--map-coast)" strokeWidth={1} vectorEffect="non-scaling-stroke" strokeLinejoin="round" />
-            <path d={basemap.lakes} fill="var(--map-sea)" stroke="var(--map-coast)" strokeWidth={0.8} vectorEffect="non-scaling-stroke" />
+            <path d={basemap.land} fill="var(--map-land)" />
+            <path d={basemap.coast} fill="none" stroke="var(--map-coast)" strokeWidth={1} vectorEffect="non-scaling-stroke" strokeLinejoin="round" />
+            <path d={basemap.lakes} fill="var(--map-sea)" />
+            <path d={basemap.shores} fill="none" stroke="var(--map-coast)" strokeWidth={0.8} vectorEffect="non-scaling-stroke" />
             <path d={basemap.riversMinor} fill="none" stroke="var(--map-river)" strokeWidth={0.7} vectorEffect="non-scaling-stroke" strokeLinejoin="round" opacity={k < 12 ? 0.3 : k < 30 ? 0.6 : 0.9} />
             <path d={basemap.riversMajor} fill="none" stroke="var(--map-river)" strokeWidth={k < 12 ? 1 : 1.5} vectorEffect="non-scaling-stroke" strokeLinejoin="round" />
           </g>
@@ -695,6 +728,8 @@ export default function MapView({ items, extentItems, unplaced, lens, cal, selec
           className="kc-map-open"
           role="group"
           aria-label={`${openIds.length} entries at this place`}
+          onFocus={(e) => noteFocus(e.target, openIds)}
+          onBlur={noteBlur}
           onKeyDown={(e) => {
             if (e.key !== 'Escape') return;
             e.stopPropagation();

@@ -44,6 +44,8 @@ next-env.d.ts
 /staging/
 /public/pagefind/
 /public/data/
+# staging directories of the open data export, left behind only if the export is killed
+/public/.data-export-*/
 /test-results/
 /playwright-report/
 /.lighthouseci/

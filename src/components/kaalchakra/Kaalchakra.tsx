@@ -87,7 +87,7 @@ function KaalchakraMount({ items, search, aliases }: { items: KcItem[]; search: 
     else setMount({ seen: search, written: null, epoch: mount.epoch + 1, state: parseState(search, byId, aliases) });
   }
   const onWrite = useCallback((query: string) => setMount((m) => ({ ...m, written: query })), []);
-  return <KaalchakraInner items={items} external={mount.state} epoch={mount.epoch} onWrite={onWrite} />;
+  return <KaalchakraInner items={items} byId={byId} external={mount.state} epoch={mount.epoch} onWrite={onWrite} />;
 }
 
 /** Changes that are worth their own history entry, so Back returns to them; filters and pans only replace. */
@@ -105,7 +105,7 @@ function reveal(win: UnitWindow, item: KcItem, lens: Lens): UnitWindow {
   return panWindow(win, u - (win.start + win.end) / 2);
 }
 
-function KaalchakraInner({ items, external, epoch, onWrite }: { items: KcItem[]; external: State; epoch: number; onWrite: (query: string) => void }) {
+function KaalchakraInner({ items, byId, external, epoch, onWrite }: { items: KcItem[]; byId: ReadonlyMap<string, KcItem>; external: State; epoch: number; onWrite: (query: string) => void }) {
   const [s, setS] = useState<State>(external);
   const [seenEpoch, setSeenEpoch] = useState(epoch);
   if (epoch !== seenEpoch) {
@@ -131,7 +131,7 @@ function KaalchakraInner({ items, external, epoch, onWrite }: { items: KcItem[];
   const lastPush = useRef(-Infinity);
   const pendingWrite = useRef<ReturnType<typeof setTimeout> | null>(null);
   useEffect(() => {
-    const query = serialise(s);
+    const query = serialise(s, byId);
     const navigation = isNavigation(committed.current, s);
     const write = () => {
       pendingWrite.current = null;
@@ -156,7 +156,7 @@ function KaalchakraInner({ items, external, epoch, onWrite }: { items: KcItem[];
     const t = setTimeout(write, 250);
     pendingWrite.current = t;
     return () => clearTimeout(t);
-  }, [s, onWrite]);
+  }, [s, byId, onWrite]);
 
   // Following a link away drops a pending debounced write, which would otherwise land on the next page's entry.
   useEffect(() => {
@@ -180,7 +180,6 @@ function KaalchakraInner({ items, external, epoch, onWrite }: { items: KcItem[];
   const kindSet = useMemo(() => new Set(s.kinds), [s.kinds]);
   const visible = useMemo(() => orderedItems(items.filter((i) => kindSet.has(i.kind) && matches(i, s.q)), s.lens), [items, kindSet, s.q, s.lens]);
   const ringKinds = useMemo(() => KINDS.filter((k) => kindSet.has(k)), [kindSet]);
-  const byId = useMemo(() => new Map(items.map((i) => [i.id, i])), [items]);
   const selected = s.sel ? byId.get(s.sel) : undefined;
 
   // Map view: the same filtered entries, narrowed to the scrubber's moment and to those with a place.
@@ -425,7 +424,7 @@ function KaalchakraInner({ items, external, epoch, onWrite }: { items: KcItem[];
           view={s.view}
           filteredOut={selected !== undefined && selIdx < 0}
           filteredNote={isMap && selected && !selected.place ? 'This entry has no recorded place, so it is not on the map.' : isMap ? 'Not on the map for the current filters, lens or moment.' : undefined}
-          shareUrl={() => `${window.location.origin}${hrefFor(window.location.pathname, serialise(s))}`}
+          shareUrl={() => `${window.location.origin}${hrefFor(window.location.pathname, serialise(s, byId))}`}
         />
       </div>
     </div>

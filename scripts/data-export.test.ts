@@ -4,7 +4,7 @@ import fs from 'node:fs';
 import os from 'node:os';
 import path from 'node:path';
 import { add, commit, init } from 'isomorphic-git';
-import { afterEach, beforeEach, describe, expect, it } from 'vitest';
+import { afterEach, beforeEach, describe, expect, it, vi } from 'vitest';
 import { assembleContent, readContentRecords } from '../src/lib/content/load';
 import { readManifest } from '../src/lib/content/open-data';
 import { NO_GIT_NOTE, SHALLOW_NOTE, contentCommitDate, type ContentCommitDate } from './content-commit-date';
@@ -141,6 +141,25 @@ describe('open data export', () => {
     expect(contents('kaalchakra.json')).toBe(kaalchakra);
     expect(fs.existsSync(path.join(temp, 'index.html'))).toBe(false);
     expect(verifyDataExport(temp, graph, known).counts.entities).toBe(2);
+  });
+
+  it('stages the real export where git ignores it, so a killed export leaves nothing to commit', () => {
+    const repoRoot = path.join(__dirname, '..');
+    const mkdtemp = vi.spyOn(fs, 'mkdtempSync');
+    // Stop the export at its first staged file, as a kill would; only the staging directory exists by then.
+    const write = vi.spyOn(fs, 'writeFileSync').mockImplementationOnce(() => {
+      throw new Error('killed');
+    });
+    try {
+      expect(() => writeDataExport(path.join(repoRoot, 'public', 'data'), fixtureGraph(), known)).toThrow('killed');
+      const staging = mkdtemp.mock.results[0].value as string;
+      expect(fs.existsSync(staging)).toBe(false);
+      // git check-ignore exits 0 only for an ignored path, and throws here otherwise.
+      for (const name of DATA_FILES) execFileSync('git', ['check-ignore', '--quiet', '--no-index', path.relative(repoRoot, path.join(staging, name))], { cwd: repoRoot, stdio: 'pipe' });
+    } finally {
+      mkdtemp.mockRestore();
+      write.mockRestore();
+    }
   });
 
   it('rejects changed bytes and missing files before import', () => {

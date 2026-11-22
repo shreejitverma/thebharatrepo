@@ -28,6 +28,10 @@ Polity extents are drawn only from sourced `extents` data on an entity, never fr
 Each layer is one SVG path string, already projected with the spherical Mercator in `src/lib/geo/projection.ts`: `x = lon * scale` and `y = -mercatorY(lat) * scale`, with `scale` 100 and integer coordinates.
 The client draws the paths under a single transform, so no geometry is processed in the browser.
 
+`land` and `lakes` are filled rings, clipped to the bounds, so a ring cut by the bounds runs straight along them.
+Those cuts are not shorelines, so the outlines are separate stroked paths: `coast` and `shores` are the same rings without the edges that lie along the bounds.
+The map fills `land` and `lakes` without a stroke and strokes only `coast` and `shores`.
+
 ## Rebuilding
 
 The file is committed and is rebuilt by hand only when the extent or the level of detail changes.
@@ -40,4 +44,4 @@ done
 cd - && npx tsx scripts/build-basemap.ts /tmp/natural-earth
 ```
 
-The script clips each layer to the bounds, simplifies it (Douglas-Peucker, 0.02 degrees inside the subcontinent and 0.1 degrees outside), drops very small islands and lakes, and writes about 35 KB of JSON (about 16 KB gzipped).
+The script clips each layer to the bounds, simplifies it (Douglas-Peucker, 0.02 degrees inside the subcontinent and 0.1 degrees outside), drops very small islands and lakes, and writes about 47 KB of JSON (about 16 KB gzipped, since the outlines repeat the rings).

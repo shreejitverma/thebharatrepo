@@ -1,4 +1,5 @@
 import { describe, expect, it } from 'vitest';
+import basemap from '@/data/basemap/south-asia.json';
 import {
   boundsOf,
   clampView,
@@ -205,5 +206,38 @@ describe('clusterPoints', () => {
   it('does not cluster with a zero radius and returns nothing for no points', () => {
     expect(clusterPoints(pts, 0)).toHaveLength(5);
     expect(clusterPoints([], 30)).toEqual([]);
+  });
+});
+
+describe('basemap', () => {
+  /** Absolute segments of a basemap path: `M x y` then relative `l` pairs, with `z` closing the ring. */
+  function segments(d: string): [number, number, number, number][] {
+    const out: [number, number, number, number][] = [];
+    for (const sub of d.split(/(?=M)/).filter(Boolean)) {
+      const [x0, y0, ...rel] = (sub.match(/-?\d+/g) ?? []).map(Number);
+      let [x, y] = [x0, y0];
+      for (let i = 0; i < rel.length; i += 2) {
+        out.push([x, y, x + rel[i], y + rel[i + 1]]);
+        x += rel[i];
+        y += rel[i + 1];
+      }
+      if (sub.endsWith('z')) out.push([x, y, x0, y0]);
+    }
+    return out;
+  }
+  // The file's own bounds and scale, under the projection it documents: x = lon * scale, y = -mercatorY(lat) * scale.
+  const { bounds, scale } = basemap;
+  const west = Math.round(bounds.west * scale);
+  const east = Math.round(bounds.east * scale);
+  const north = Math.round(-mercatorY(bounds.north) * scale);
+  const south = Math.round(-mercatorY(bounds.south) * scale);
+  const alongBounds = ([ax, ay, bx, by]: [number, number, number, number]) =>
+    (ax === west && bx === west) || (ax === east && bx === east) || (ay === north && by === north) || (ay === south && by === south);
+
+  it('fills land clipped at the bounds, but never strokes the cut as a coast or shore', () => {
+    expect(segments(basemap.land).filter(alongBounds).length).toBeGreaterThan(0);
+    expect(segments(basemap.coast).length).toBeGreaterThan(segments(basemap.land).length * 0.9);
+    expect(segments(basemap.coast).filter(alongBounds)).toEqual([]);
+    expect(segments(basemap.shores).filter(alongBounds)).toEqual([]);
   });
 });
