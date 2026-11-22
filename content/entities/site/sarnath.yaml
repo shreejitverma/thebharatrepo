@@ -1,0 +1,75 @@
+id: site.sarnath
+type: site
+kind: site
+names:
+  en: Sarnath
+  iast: Sārnāth
+  native: सारनाथ
+summary: >-
+  Sarnath near Varanasi, Uttar Pradesh, is revered in Buddhist tradition as the place of the Buddha's
+  first sermon. Its archaeological remains include the Ashokan pillar, the Dhamek and Dharmarajika
+  stupas, and several monasteries. UNESCO inscribed the ancient Buddhist site in 2026.
+summaries:
+  kids: >-
+    Buddhists remember Sarnath near Varanasi as the place where the Buddha first taught. Visitors can
+    see the Dhamek Stupa and the remains of Ashoka's stone pillar.
+  teen: >-
+    The Buddhist site of Sarnath preserves remains from several building phases, including Ashoka's
+    inscribed pillar and the carved stone casing of the Dhamek Stupa. A later inscription records a
+    monastery founded by Queen Kumaradevi.
+region: Middle Ganga Plain (Varanasi district, Uttar Pradesh)
+location: { name: "Sarnath, Varanasi, Uttar Pradesh", lat: 25.381, lon: 83.021 }
+datings:
+  - method: epigraphic
+    range: { earliest: "270 BCE", latest: "230 BCE", precision: decade, circa: true }
+    grade: A
+    label: "Ashokan pillar and Schism Edict"
+    sources:
+      - src.hultzsch-1925-inscriptions-of-asoka
+      - src.falk-2006-asokan-sites-and-artefacts
+    note: >-
+      The pillar carries Ashoka's Schism Edict. The third-century BCE range is based on his reign.
+  - method: scholarly-consensus
+    range: { earliest: "300 BCE", latest: "1200 CE", precision: century, circa: true }
+    grade: B
+    label: "Major ancient and medieval monumental phases"
+    sources:
+      - src.asher-2020-sarnath
+      - src.sahni-1933-guide-buddhist-ruins-sarnath
+      - src.unesco-2026-sarnath-inscription
+    note: >-
+      The site preserves remains from distinct Mauryan, Kushan, Gupta and later phases. A
+      twelfth-century inscription records a foundation of Queen Kumaradevi.
+claims:
+  - text: >-
+      Ashoka's pillar bears a Brahmi edict warning against division of the Buddhist monastic community.
+    grade: A
+    sources:
+      - src.hultzsch-1925-inscriptions-of-asoka
+      - src.falk-2006-asokan-sites-and-artefacts
+  - text: >-
+      The four-lion capital from Ashoka's pillar is preserved in the Sarnath museum. The cylindrical
+      Dhamek Stupa has carved stonework on its lower exterior.
+    grade: B
+    sources:
+      - src.asher-2020-sarnath
+      - src.sahni-1933-guide-buddhist-ruins-sarnath
+  - text: >-
+      UNESCO inscribed the ancient Buddhist site of Sarnath, including the Chaukhandi Stupa and the
+      archaeological remains of Sarnath, in 2026.
+    grade: A
+    sources:
+      - src.unesco-2026-sarnath-inscription
+relations:
+  - { kind: patronised-by, target: person.ashoka }
+  - { kind: related-to, target: person.gautama-buddha }
+  - { kind: related-to, target: artifact.sarnath-lion-capital }
+  - { kind: related-to, target: event.xuanzang-travels-in-india }
+wikidata: Q324394
+image:
+  commons: "File:Dhamek stupa, Sarnath.jpg"
+  alt: Cylindrical brick upper drum and carved sandstone lower casing of the Dhamek Stupa at Sarnath, Uttar Pradesh
+  credit: Varun Shiv Kapur from Berkeley, United States
+  license: CC BY 2.0
+tags: [sarnath, buddhism, ashoka, maurya, gupta, stupa, uttar-pradesh]
+review: { status: draft, author: "gemini-4-hydrogen-xhigh" }

@@ -1,0 +1,71 @@
+id: site.virupaksha-temple-hampi
+type: site
+kind: site
+names:
+  en: Virupaksha Temple, Hampi
+  iast: Virūpākṣa Mandira, Hampi
+  native: ವಿರೂಪಾಕ್ಷ ದೇವಸ್ಥಾನ, ಹಂಪಿ
+summary: >-
+  The Virupaksha Temple at Hampi, Karnataka, is an active Shiva shrine that predates Vijayanagara's rise
+  as a capital. It was enlarged under Vijayanagara rulers, and an inscription from 1509 to 1510 CE
+  records work commissioned by Krishnadevaraya, including a pillared hall.
+summaries:
+  kids: >-
+    At Hampi in Karnataka, a tall gateway leads into the Virupaksha Temple. A Vijayanagara king named
+    Krishnadevaraya added a pillared hall more than five hundred years ago.
+  teen: >-
+    Virupaksha was a shrine before Vijayanagara became a capital. A dated inscription links a pillared
+    hall and work on a gateway to Krishnadevaraya. Worship continues in the temple today.
+region: Tungabhadra Valley (Vijayanagara district, Karnataka)
+location: { name: "Hampi, Karnataka", lat: 15.335, lon: 76.459 }
+datings:
+  - method: art-historical
+    range: { earliest: "1300 CE", latest: "1600 CE", precision: century, circa: true }
+    grade: B
+    label: "Main Vijayanagara-period enlargement"
+    sources:
+      - src.fritz-michell-2014-hampi-vijayanagara
+      - src.michell-1995-architecture-art-southern-india
+    note: >-
+      The principal surviving expansion belongs to the Vijayanagara period. The site has earlier
+      evidence of worship and later repairs.
+  - method: epigraphic
+    range: { earliest: "1509 CE", latest: "1510 CE", precision: year, circa: false }
+    grade: A
+    label: "Krishnadevaraya's accession-period building works"
+    sources:
+      - src.fritz-michell-2014-hampi-vijayanagara
+      - src.michell-1995-architecture-art-southern-india
+    note: >-
+      An inscription of Shaka 1431 records work under Krishnadevaraya, including his pillared hall.
+claims:
+  - text: >-
+      The inscription of Shaka 1431 records Krishnadevaraya's construction of a pillared hall and work
+      on a gateway at the temple.
+    grade: A
+    sources:
+      - src.fritz-michell-2014-hampi-vijayanagara
+      - src.michell-1995-architecture-art-southern-india
+  - text: >-
+      Virupaksha Temple continued to serve as a place of Shiva worship after the Vijayanagara capital
+      declined.
+    grade: B
+    sources:
+      - src.fritz-michell-2014-hampi-vijayanagara
+      - src.unesco-1986-hampi
+  - text: >-
+      Virupaksha Temple is part of the Group of Monuments at Hampi inscribed by UNESCO in 1986.
+    grade: A
+    sources:
+      - src.unesco-1986-hampi
+relations:
+  - { kind: part-of, target: site.hampi }
+  - { kind: patronised-by, target: person.krishnadevaraya }
+wikidata: Q2502406
+image:
+  commons: "File:Inner Courtyard of Virupaksha Temple at Hampi.jpg"
+  alt: Inner courtyard of the Virupaksha Temple at Hampi looking toward the towering stepped gopuram and colonnaded mandapas
+  credit: AMITABHA GUPTA
+  license: CC BY 4.0
+tags: [virupaksha, hampi, vijayanagara, unesco, shaiva, karnataka]
+review: { status: draft, author: "gemini-4-hydrogen-xhigh" }

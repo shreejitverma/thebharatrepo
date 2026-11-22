@@ -1,0 +1,56 @@
+id: site.bhitargaon-temple
+type: site
+kind: site
+names:
+  en: Bhitargaon Brick Temple
+  iast: Bhītaragāṃva Mandira
+  native: भीतरगाँव मंदिर
+summary: >-
+  The Gupta-period temple at Bhitargaon in Uttar Pradesh is built of brick and decorated with moulded
+  terracotta panels. Its surviving brick tower and entrance arch illustrate the use of fired clay for
+  both structure and sculpture.
+summaries:
+  kids: >-
+    At Bhitargaon in Uttar Pradesh, builders made a tall temple out of fired bricks. They decorated its
+    walls with figures made of baked clay.
+  teen: >-
+    Usually dated to around the fifth century CE, Bhitargaon has a tall brick tower, a brick arch and
+    moulded terracotta reliefs of Hindu deities and narrative scenes.
+region: Middle Ganga Doab (Kanpur Nagar district, Uttar Pradesh)
+location: { name: "Bhitargaon, Uttar Pradesh", lat: 26.210, lon: 80.276 }
+datings:
+  - method: art-historical
+    range: { earliest: "400 CE", latest: "525 CE", precision: century, circa: true }
+    grade: B
+    label: "Gupta-period dating from architectural and sculptural style"
+    sources:
+      - src.willis-2003-bhitargaon
+      - src.williams-1982-art-of-gupta-india
+      - src.meister-1988-encyclopaedia-indian-temple-architecture-north-1
+    note: >-
+      The brickwork, tower form and terracotta sculpture place the temple around the fifth century CE.
+      There is no dated foundation inscription.
+claims:
+  - text: >-
+      Radiating brickwork in the entrance arch illustrates Gupta-period structural use of fired brick.
+    grade: B
+    sources:
+      - src.cunningham-1880-tours-gangetic-provinces
+      - src.willis-2003-bhitargaon
+  - text: >-
+      The exterior has registers of moulded terracotta plaques with Hindu deities and narrative scenes.
+    grade: B
+    sources:
+      - src.williams-1982-art-of-gupta-india
+      - src.meister-1988-encyclopaedia-indian-temple-architecture-north-1
+relations:
+  - { kind: part-of, target: polity.gupta-empire }
+  - { kind: contemporary-of, target: site.dashavatara-temple-deogarh }
+wikidata: Q97705494
+image:
+  commons: "File:Brick Temple, Bhitargaon, Kanpur, Uttar Pradesh, India circa 4th-5th century.jpg"
+  alt: Stepped Gupta-era brick shikhara of the Bhitargaon Temple showing horizontal cornices, niches, and terracotta relief panels
+  credit: SpeakingArch
+  license: CC BY-SA 4.0
+tags: [bhitargaon, gupta, brick-temple, terracotta, temple-architecture, uttar-pradesh]
+review: { status: draft, author: "gemini-4-hydrogen-xhigh" }

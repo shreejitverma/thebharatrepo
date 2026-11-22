@@ -1,0 +1,62 @@
+id: site.hill-forts-of-rajasthan
+type: site
+kind: site
+names:
+  en: Hill Forts of Rajasthan
+  native: राजस्थान के पहाड़ी दुर्ग
+summary: >-
+  UNESCO's Hill Forts of Rajasthan comprise Chittorgarh, Kumbhalgarh, Ranthambore, Gagron, Amber and
+  Jaisalmer. Built and enlarged over centuries, the forts use rocky ridges, rivers and desert terrain
+  for defence and enclose buildings and waterworks developed under Rajput rule.
+summaries:
+  kids: >-
+    Six forts across Rajasthan are grouped together on UNESCO's World Heritage List. Builders used the
+    rocky hills, rivers and desert around them to help defend their walls.
+  teen: >-
+    The six Hill Forts of Rajasthan became a single UNESCO property in 2013. Their setting and design
+    vary widely, from the river defences at Gagron to the desert fort at Jaisalmer.
+region: Rajasthan (Chittorgarh, Rajsamand, Sawai Madhopur, Jhalawar, Jaipur, and Jaisalmer)
+location: { name: "Chittorgarh Fort, Rajasthan", lat: 24.883, lon: 74.646 }
+datings:
+  - method: scholarly-consensus
+    range: { earliest: "700 CE", latest: "1800 CE", precision: century, circa: true }
+    grade: B
+    label: "Medieval and early modern building phases"
+    sources:
+      - src.unesco-2013-hill-forts-rajasthan
+      - src.tillotson-1987-rajput-palaces
+      - src.hooja-2006-history-of-rajasthan
+    note: >-
+      The forts have different histories. The group includes early medieval remains and palaces and
+      fortifications added over subsequent centuries.
+  - method: documentary
+    range: { earliest: "2013 CE", latest: "2013 CE", precision: year, circa: false }
+    grade: A
+    label: "UNESCO World Heritage inscription"
+    sources:
+      - src.unesco-2013-hill-forts-rajasthan
+    note: >-
+      The World Heritage Committee inscribed the six forts as one property.
+claims:
+  - text: >-
+      The six forts on the UNESCO listing are Chittorgarh, Kumbhalgarh, Ranthambore, Gagron, Amber and
+      Jaisalmer.
+    grade: A
+    sources:
+      - src.unesco-2013-hill-forts-rajasthan
+  - text: >-
+      The forts enclose temples, palaces and waterworks, including reservoirs that supported settlement
+      within the walls.
+    grade: B
+    sources:
+      - src.tillotson-1987-rajput-palaces
+      - src.unesco-2013-hill-forts-rajasthan
+relations: []
+wikidata: Q10428494
+image:
+  commons: "File:Kumbhalgarh Fort, Rajasthan 02.jpg"
+  alt: Stone ramparts, bastions, and temple roofs winding across the Aravalli ridges at Kumbhalgarh Fort, one of the six Hill Forts of Rajasthan
+  credit: Varada Phadkay
+  license: CC BY-SA 4.0
+tags: [hill-forts-of-rajasthan, rajasthan, rajput, fort, unesco, architecture]
+review: { status: draft, author: "gemini-4-hydrogen-xhigh" }

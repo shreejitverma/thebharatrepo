@@ -1,0 +1,58 @@
+id: site.fatehpur-sikri
+type: site
+kind: site
+names:
+  en: Fatehpur Sikri
+  native: फ़तेहपुर सीकरी
+summary: >-
+  Fatehpur Sikri near Agra was developed by Akbar as a Mughal capital in the 1570s CE. Its sandstone
+  buildings include courtyards and palace pavilions, the congregational mosque, and the tomb of the
+  Chishti Sufi teacher Salim Chishti. UNESCO inscribed the site in 1986.
+summaries:
+  kids: >-
+    Akbar built a royal city at Fatehpur Sikri near Agra. Its red sandstone buildings include palaces, a
+    five-storey pavilion and a towering gateway to the mosque courtyard.
+  teen: >-
+    Fatehpur Sikri was Akbar's principal court seat until he moved to Lahore in 1585 CE. A palace
+    precinct of courtyards and pavilions stands next to the congregational mosque and Salim Chishti's
+    tomb.
+region: Agra district, Uttar Pradesh
+location: { name: "Fatehpur Sikri, Uttar Pradesh", lat: 27.091, lon: 77.661 }
+datings:
+  - method: documentary
+    range: { earliest: "1571 CE", latest: "1585 CE", precision: year, circa: false }
+    grade: B
+    label: "Akbar's principal court at Fatehpur Sikri"
+    sources:
+      - src.brand-lowry-1985-fatehpur-sikri
+      - src.asher-1992-architecture-of-mughal-india
+      - src.unesco-1986-fatehpur-sikri
+    note: >-
+      Akbar developed the city as his principal court seat in the 1570s and shifted the court to Lahore
+      in 1585 CE. Work on the monuments continued outside this interval.
+claims:
+  - text: >-
+      The palace precinct includes the Panch Mahal and buildings conventionally called the Diwan-i-Am
+      and Diwan-i-Khas. The Jami Masjid and the tomb of Salim Chishti form a separate adjoining
+      religious precinct.
+    grade: B
+    sources:
+      - src.brand-lowry-1985-fatehpur-sikri
+      - src.koch-1991-mughal-architecture
+      - src.unesco-1986-fatehpur-sikri
+  - text: >-
+      Fatehpur Sikri was inscribed on the UNESCO World Heritage List in 1986.
+    grade: A
+    sources:
+      - src.unesco-1986-fatehpur-sikri
+relations:
+  - { kind: founded-by, target: person.akbar }
+  - { kind: part-of, target: polity.mughal-empire }
+wikidata: Q179046
+image:
+  commons: "File:Fatehput Sikiri Buland Darwaza gate 2010.jpg"
+  alt: Monumental red sandstone and marble-trimmed Buland Darwaza gateway topped by chhatri domes at Fatehpur Sikri
+  credit: Marcin Białek
+  license: CC BY-SA 3.0
+tags: [fatehpur-sikri, mughal, akbar, unesco, uttar-pradesh, architecture]
+review: { status: draft, author: "gemini-4-hydrogen-xhigh" }

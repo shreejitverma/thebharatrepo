@@ -1,0 +1,58 @@
+id: site.hoysaleswara-temple-halebidu
+type: site
+kind: site
+names:
+  en: Hoysaleswara Temple, Halebidu
+  iast: Hoyasaleśvara Mandira, Haḷēbīḍu
+  native: ಹೊಯ್ಸಳೇಶ್ವರ ದೇವಸ್ಥಾನ, ಹಳೇಬೀಡು
+summary: >-
+  The Hoysaleswara Temple at Halebidu in Karnataka is a twelfth-century CE Shiva temple with two
+  sanctuaries. Its stone walls carry bands of carving, including animals and scenes from the Ramayana,
+  Mahabharata and Bhagavata Purana. It forms part of UNESCO's Sacred Ensembles of the Hoysalas.
+summaries:
+  kids: >-
+    In the old Hoysala capital of Halebidu, the twin-shrine Hoysaleswara Temple is wrapped in band after
+    band of soapstone carvings showing elephants, horses, dancers, and stories from the Ramayana and
+    Mahabharata.
+  teen: >-
+    Construction of the Hoysaleswara Temple began in the early twelfth century CE in the Hoysala
+    capital, Dwarasamudra. Its two Shiva sanctuaries share a platform, and bands of sculpture wrap
+    around the exterior.
+region: Hassan district, Karnataka
+location: { name: "Halebidu, Karnataka", lat: 13.213, lon: 75.995 }
+datings:
+  - method: scholarly-consensus
+    range: { earliest: "1120 CE", latest: "1200 CE", precision: century, circa: true }
+    grade: B
+    label: "Twelfth-century foundation and carving"
+    sources:
+      - src.foekema-1996-complete-guide-hoysala-temples
+      - src.evans-1997-epic-narratives-hoysala-temples
+      - src.unesco-2023-hoysala-sacred-ensembles
+    note: >-
+      An inscription associates the foundation with Ketamalla in the reign of Vishnuvardhana. The
+      extensive program of carving proceeded in phases.
+claims:
+  - text: >-
+      The two shrines stand on a shared platform. Exterior friezes depict scenes from the Ramayana,
+      Mahabharata and Bhagavata Purana.
+    grade: B
+    sources:
+      - src.evans-1997-epic-narratives-hoysala-temples
+      - src.foekema-1996-complete-guide-hoysala-temples
+  - text: >-
+      The temple was inscribed on the UNESCO World Heritage List in 2023 as part of the Sacred Ensembles
+      of the Hoysalas.
+    grade: A
+    sources:
+      - src.unesco-2023-hoysala-sacred-ensembles
+relations:
+  - { kind: part-of, target: site.hoysala-sacred-ensembles }
+wikidata: Q3517561
+image:
+  commons: "File:Hoysaleswara Temple at Halebidu.jpg"
+  alt: The entrance stairs and carved stone walls of the Hoysaleswara Temple at Halebidu
+  credit: Rohit Sharma
+  license: CC BY-SA 4.0
+tags: [halebidu, hoysaleswara, hoysala, unesco, soapstone, shaiva, karnataka]
+review: { status: draft, author: "gemini-4-hydrogen-xhigh" }

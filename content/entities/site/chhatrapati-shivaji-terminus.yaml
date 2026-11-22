@@ -1,0 +1,56 @@
+id: site.chhatrapati-shivaji-terminus
+type: site
+kind: site
+names:
+  en: Chhatrapati Shivaji Maharaj Terminus
+  native: छत्रपती शिवाजी महाराज टर्मिनस
+summary: >-
+  Chhatrapati Shivaji Maharaj Terminus, originally Victoria Terminus, was built in Mumbai between 1878
+  and 1888 CE to designs by Frederick William Stevens. The railway station and headquarters combine
+  Victorian Gothic Revival architecture with local stone carving. UNESCO inscribed the building in 2004.
+summaries:
+  kids: >-
+    Mumbai's Chhatrapati Shivaji Maharaj Terminus is a railway station with pointed stone arches, a
+    large dome and carved animals. It was originally called Victoria Terminus.
+  teen: >-
+    Designed by Frederick William Stevens and completed in 1888 CE as the Great Indian Peninsula Railway
+    headquarters, Victoria Terminus fused Victorian Gothic Revival engineering with Indian carved
+    stonework and earned UNESCO World Heritage status in 2004.
+region: Konkan Coast (Mumbai, Maharashtra)
+location: { name: "Mumbai, Maharashtra", lat: 18.940, lon: 72.835 }
+datings:
+  - method: documentary
+    range: { earliest: "1878 CE", latest: "1888 CE", precision: year, circa: false }
+    grade: B
+    label: "Construction of the railway station and headquarters"
+    sources:
+      - src.london-2002-bombay-gothic
+      - src.unesco-2004-chhatrapati-shivaji-terminus
+      - src.metcalf-1989-imperial-vision
+    note: >-
+      UNESCO records that work began in 1878 CE and took ten years. The building served as the
+      headquarters of the Great Indian Peninsula Railway.
+claims:
+  - text: >-
+      The station combines Victorian Gothic Revival forms and Indian architectural details. Its stone
+      dome and turrets rise over richly carved façades.
+    grade: B
+    sources:
+      - src.london-2002-bombay-gothic
+      - src.metcalf-1989-imperial-vision
+      - src.unesco-2004-chhatrapati-shivaji-terminus
+  - text: >-
+      UNESCO inscribed the station in 2004 under the name Chhatrapati Shivaji Terminus (formerly
+      Victoria Terminus).
+    grade: A
+    sources:
+      - src.unesco-2004-chhatrapati-shivaji-terminus
+relations: []
+wikidata: Q235884
+image:
+  commons: "File:Chhatrapati Shivaji Terminus (Victoria Terminus).jpg"
+  alt: The Gothic Revival facade and turrets of Chhatrapati Shivaji Maharaj Terminus in Mumbai
+  credit: Joe Ravi
+  license: CC BY-SA 3.0
+tags: [victoria-terminus, chhatrapati-shivaji-terminus, mumbai, indo-gothic, railway, unesco]
+review: { status: draft, author: "gemini-4-hydrogen-xhigh" }

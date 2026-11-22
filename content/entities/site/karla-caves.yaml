@@ -1,0 +1,59 @@
+id: site.karla-caves
+type: site
+kind: site
+names:
+  en: Karla Caves
+  iast: Kārle Guhāḥ
+  native: कार्ला लेणी
+summary: >-
+  The Karla Caves near Lonavala in Maharashtra are a group of rock-cut Buddhist monuments. The Great
+  Chaitya is an apsidal worship hall with a stupa, rows of carved pillars and surviving timber ribs.
+  Inscriptions name merchants and other donors and record grants associated with Western Kshatrapa and
+  Satavahana rulers.
+summaries:
+  kids: >-
+    At Karla in Maharashtra, a large worship hall is cut into a hillside. Carved elephants and their
+    riders top some of its pillars, and wooden ribs still line the stone ceiling.
+  teen: >-
+    The Great Chaitya at Karla preserves an apsidal hall, a stupa and timber ceiling ribs. Inscriptions
+    record gifts from merchants and other donors and grants linked to the Western Kshatrapas and
+    Satavahanas.
+region: Sahyadri / Western Ghats (Pune district, Maharashtra)
+location: { name: "Karla, Maharashtra", lat: 18.783, lon: 73.471 }
+datings:
+  - method: epigraphic
+    range: { earliest: "50 BCE", latest: "200 CE", precision: century, circa: true }
+    grade: B
+    label: "Main early Buddhist excavation and recorded gifts"
+    sources:
+      - src.dehejia-1972-early-buddhist-rock-temples
+      - src.fergusson-burgess-1880-cave-temples-india
+    note: >-
+      Architectural comparisons and inscriptions place the main work around the first century CE or
+      early second century CE, with earlier work and later endowments possible within the wider range.
+claims:
+  - text: >-
+      An inscription in the Great Chaitya's veranda names the merchant Bhutapala of Vaijayanti. Other
+      inscriptions record gifts associated with Ushavadata and the Satavahana king Vasishthiputra
+      Pulumavi.
+    grade: A
+    sources:
+      - src.dehejia-1972-early-buddhist-rock-temples
+      - src.fergusson-burgess-1880-cave-temples-india
+  - text: >-
+      Inside the Great Chaitya, pillars with carved capitals separate the central hall from the side
+      aisles. Timber ribs line the rock-cut vault.
+    grade: B
+    sources:
+      - src.fergusson-burgess-1880-cave-temples-india
+      - src.huntington-1985-art-ancient-india
+relations:
+  - { kind: patronised-by, target: polity.satavahana-dynasty }
+wikidata: Q6372431
+image:
+  commons: "File:Entrance of Karla Caves.jpg"
+  alt: The rock-cut entrance of the Great Chaitya at Karla Caves
+  credit: Riffythomas
+  license: CC BY-SA 4.0
+tags: [karla, caves, rock-cut, buddhism, satavahana, maharashtra]
+review: { status: draft, author: "gemini-4-hydrogen-xhigh" }

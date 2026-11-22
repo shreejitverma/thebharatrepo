@@ -1,0 +1,79 @@
+id: site.badami-caves
+type: site
+kind: site
+names:
+  en: Badami Cave Temples
+  iast: Bādāmi Guhā Mandira
+  native: ಬಾದಾಮಿ ಗುಹಾಲಯಗಳು
+summary: >-
+  Four principal cave temples were cut into the sandstone cliff at Badami, the Early Chalukya capital of
+  Vatapi. Three contain Hindu sculptures and the fourth is Jain. An inscription in Cave 3 dates its
+  dedication by the Chalukya prince Mangalesha to 578 CE. The date of the Jain cave is debated.
+summaries:
+  kids: >-
+    Carvers cut four temples into a sandstone cliff above a lake at Badami. Their large stone sculptures
+    show Shiva, Vishnu and Jain teachers.
+  teen: >-
+    The four principal cave temples at Badami have Hindu and Jain reliefs. Cave 3 has an inscription
+    dated 578 CE from the reign of Kirtivarman I, when his brother Mangalesha dedicated the cave to
+    Vishnu.
+region: Malaprabha Basin (Bagalkot district, Karnataka)
+location: { name: "Badami, Karnataka", lat: 15.918, lon: 75.685 }
+datings:
+  - method: epigraphic
+    range: { earliest: "578 CE", latest: "578 CE", precision: year, circa: false }
+    grade: A
+    label: "Dedication of Cave 3 in Shaka 500"
+    sources:
+      - src.tartakov-2003-badami
+      - src.fergusson-burgess-1880-cave-temples-india
+    note: >-
+      The inscription records Mangalesha's dedication in the twelfth regnal year of Kirtivarman I.
+  - method: art-historical
+    range: { earliest: "550 CE", latest: "700 CE", precision: century, circa: true }
+    grade: B
+    label: "Principal Early Chalukya Hindu cave excavation"
+    sources:
+      - src.tartakov-2003-badami
+      - src.michell-2014-badami-aihole-pattadakal
+    note: >-
+      The Cave 3 inscription provides a fixed point. The first two caves are dated by comparing
+      their architecture and sculpture with other Early Chalukya works.
+  - method: art-historical
+    range: { earliest: "550 CE", latest: "750 CE", precision: century, circa: true }
+    grade: C
+    label: Debated chronology of the Jain cave
+    sources:
+      - src.hegewald-2025-jaina-architecture-karnataka
+    note: >-
+      Julia Hegewald reviews proposed dates from the sixth to the early eighth century CE and suggests
+      that they may apply to different phases of carving. Cave 4 has no dated foundation inscription.
+claims:
+  - text: >-
+      The Sanskrit inscription in Cave 3 records the dedication of a cave temple to Vishnu by
+      Mangalesha.
+    grade: A
+    sources:
+      - src.tartakov-2003-badami
+      - src.fergusson-burgess-1880-cave-temples-india
+  - text: >-
+      The caves include a many-armed dancing Shiva in Cave 1 and reliefs of Jain figures such as
+      Bahubali in Cave 4.
+    grade: B
+    sources:
+      - src.michell-2014-badami-aihole-pattadakal
+      - src.fergusson-burgess-1880-cave-temples-india
+debate: >-
+  The date of Jain Cave 4 is debated. Julia Hegewald considers a late sixth-century start plausible and
+  argues that later dates proposed for the cave may refer to subsequent work.
+relations:
+  - { kind: patronised-by, target: polity.chalukya-dynasty-of-badami }
+  - { kind: related-to, target: site.pattadakal }
+wikidata: Q825236
+image:
+  commons: "File:Cave Temple 3, Badami.JPG"
+  alt: The carved sandstone veranda and columns of Cave 3 at Badami
+  credit: Dey.sandip
+  license: CC BY 3.0
+tags: [badami, chalukya, rock-cut, cave-temples, karnataka, shaiva, vaishnava, jain]
+review: { status: draft, author: "gemini-4-hydrogen-xhigh" }

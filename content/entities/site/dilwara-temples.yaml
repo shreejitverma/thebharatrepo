@@ -1,0 +1,75 @@
+id: site.dilwara-temples
+type: site
+kind: site
+names:
+  en: Dilwara Temples
+  iast: Delavāḍā Jaina Mandira
+  native: दिलवाड़ा जैन मंदिर
+summary: >-
+  The Dilwara Temples at Mount Abu, Rajasthan, comprise five Svetambara Jain temples. The marble halls
+  and carved ceilings of the Vimala Vasahi and Luna Vasahi temples belong to several phases of work
+  beginning in the eleventh and thirteenth centuries CE.
+summaries:
+  kids: >-
+    At Mount Abu in Rajasthan, the Dilwara Jain temples have white marble halls. Their pillars, arches
+    and round ceilings are covered in intricate carvings.
+  teen: >-
+    The five Dilwara temples include Vimala Vasahi, founded in 1031 CE, and Luna Vasahi, built in the
+    thirteenth century. Their columns and carved marble ceilings reflect several phases of Jain
+    patronage.
+region: Aravalli Range (Mount Abu, Sirohi district, Rajasthan)
+location: { name: "Mount Abu, Rajasthan", lat: 24.609, lon: 72.723 }
+datings:
+  - method: epigraphic
+    range: { earliest: "1031 CE", latest: "1031 CE", precision: year, circa: true }
+    grade: B
+    label: "Vimala Vasahi foundation"
+    sources:
+      - src.kumar-2001-thousand-petalled-lotus
+      - src.hegewald-2009-jaina-temple-architecture
+    note: >-
+      Jain inscriptional and literary accounts date the foundation of the Adinatha temple by Vimala Shah
+      to 1031 CE. Its present halls include later additions and restorations.
+  - method: epigraphic
+    range: { earliest: "1230 CE", latest: "1230 CE", precision: year, circa: false }
+    grade: A
+    label: "Luna Vasahi dedication"
+    sources:
+      - src.hegewald-2009-jaina-temple-architecture
+      - src.kumar-2001-thousand-petalled-lotus
+    note: >-
+      The dated dedication belongs to the Neminatha temple associated with Tejapala and Vastupala.
+  - method: scholarly-consensus
+    range: { earliest: "1000 CE", latest: "1600 CE", precision: century, circa: true }
+    grade: B
+    label: "Main phases of the five-temple complex"
+    sources:
+      - src.hegewald-2009-jaina-temple-architecture
+      - src.kumar-2001-thousand-petalled-lotus
+    note: >-
+      The two Vasahi temples were followed by later Jain foundations and additions.
+claims:
+  - text: >-
+      Jain inscriptional and literary accounts record Vimala Shah's foundation of the Adinatha temple in
+      1031 CE.
+    grade: B
+    sources:
+      - src.kumar-2001-thousand-petalled-lotus
+      - src.hegewald-2009-jaina-temple-architecture
+  - text: >-
+      The Luna Vasahi temple is dedicated to Neminatha and has a carved ceiling pendant and subsidiary
+      shrines around its courtyard.
+    grade: B
+    sources:
+      - src.hegewald-2009-jaina-temple-architecture
+      - src.kumar-2001-thousand-petalled-lotus
+relations:
+  - { kind: related-to, target: site.ranakpur-jain-temple }
+wikidata: Q2712405
+image:
+  commons: "File:DILWADA TEMPLE.JPG"
+  alt: Concentric carved white-marble corbelled lotus ceiling dome with central hanging pendant inside the Dilwara Jain Temples at Mount Abu
+  credit: Surohit
+  license: CC BY-SA 3.0
+tags: [dilwara, mount-abu, jainism, marble, rajasthan, maru-gurjara]
+review: { status: draft, author: "gemini-4-hydrogen-xhigh" }

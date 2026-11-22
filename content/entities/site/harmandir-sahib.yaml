@@ -1,0 +1,71 @@
+id: site.harmandir-sahib
+type: site
+kind: site
+names:
+  en: Harmandir Sahib
+  iast: Srī Harimandir Sāhib
+  native: ਸ੍ਰੀ ਹਰਿਮੰਦਰ ਸਾਹਿਬ
+summary: >-
+  Harmandir Sahib, also called the Golden Temple, is a Sikh shrine in the Amrit Sarovar pool in
+  Amritsar. Guru Arjan oversaw the early shrine and installed the Adi Granth in 1604 CE. The sanctuary
+  was rebuilt in the eighteenth century, and much of its marble work and gilding dates from the
+  patronage of Maharaja Ranjit Singh.
+summaries:
+  kids: >-
+    In Amritsar, a causeway leads across a pool to the Golden Temple. It is a Sikh place of worship with
+    four entrances and a dome covered in gleaming gilded metal.
+  teen: >-
+    Guru Arjan installed the Adi Granth at Harmandir Sahib in 1604 CE. The shrine was rebuilt in the
+    eighteenth century. Under Maharaja Ranjit Singh it received the gilded exterior that gave rise to
+    the name Golden Temple.
+region: Majha (Amritsar district, Punjab)
+location: { name: "Amritsar, Punjab", lat: 31.620, lon: 74.877 }
+datings:
+  - method: documentary
+    range: { earliest: "1580 CE", latest: "1604 CE", precision: decade, circa: true }
+    grade: B
+    label: "Early sanctuary under Guru Arjan"
+    sources:
+      - src.grewal-1990-sikhs-of-the-punjab
+      - src.singh-2004-history-of-the-sikhs-vol-1
+      - src.singh-fenech-2014-oxford-handbook-sikh-studies
+    note: >-
+      The early construction under Guru Arjan followed the establishment of the pool associated with
+      Guru Ram Das. The Adi Granth was installed in 1604 CE.
+  - method: documentary
+    range: { earliest: "1760 CE", latest: "1840 CE", precision: decade, circa: true }
+    grade: B
+    label: "Rebuilding and later marble work and gilding"
+    sources:
+      - src.grewal-1990-sikhs-of-the-punjab
+      - src.singh-1988-golden-temple
+      - src.singh-2004-history-of-the-sikhs-vol-1
+    note: >-
+      After attacks in the mid-eighteenth century, Sikh patrons rebuilt the shrine. Marble cladding and
+      gilding followed under Ranjit Singh in the early nineteenth century.
+claims:
+  - text: >-
+      Guru Arjan installed the Adi Granth in the shrine in 1604 CE. Baba Buddha served as its first
+      granthi, or reader of scripture.
+    grade: B
+    sources:
+      - src.grewal-1990-sikhs-of-the-punjab
+      - src.singh-fenech-2014-oxford-handbook-sikh-studies
+  - text: >-
+      Maharaja Ranjit Singh patronised the marble cladding and gilding of the shrine in the early
+      nineteenth century.
+    grade: B
+    sources:
+      - src.singh-1988-golden-temple
+      - src.singh-2004-history-of-the-sikhs-vol-1
+relations:
+  - { kind: patronised-by, target: person.ranjit-singh, note: Early nineteenth-century marble work and gilding }
+  - { kind: related-to, target: polity.sikh-empire }
+wikidata: Q180422
+image:
+  commons: "File:Akal Takht and Harmandir Sahib, Amritsar, Punjab, India.jpg"
+  alt: Gilded Harmandir Sahib in the Amrit Sarovar reflecting pool alongside the white Akal Takht complex in Amritsar
+  credit: Jasleen Kaur
+  license: CC BY-SA 2.0
+tags: [harmandir-sahib, golden-temple, amritsar, sikhism, punjab, ranjit-singh]
+review: { status: draft, author: "gemini-4-hydrogen-xhigh" }
