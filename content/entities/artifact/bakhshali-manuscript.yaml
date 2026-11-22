@@ -16,7 +16,7 @@ region: Gandhara (discovered at Bakhshali near Mardan, Pakistan; housed at the B
 location: { name: "Bakhshali, Mardan District, Pakistan", lat: 34.287, lon: 72.142 }
 datings:
   - method: linguistic
-    range: { earliest: 600, latest: 1199, best: 800, precision: century, circa: true }
+    range: { earliest: 600, latest: 1200, best: 800, precision: century, circa: true }
     grade: B
     label: Palaeographic (Sharada script) and codicological dating of the manuscript (Takao Hayashi and Kim Plofker et al.)
     sources:

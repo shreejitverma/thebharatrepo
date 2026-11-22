@@ -29,7 +29,7 @@
   reason: The edicts present dhamma as a public ethic, and later chronicles, not the edicts, describe the missions abroad.
   sources:
     - src.hultzsch-1925-inscriptions-of-asoka
-    - src.thapar-1997-asoka-decline-mauryas
+    - src.thapar-2012-asoka-decline-mauryas
     - src.lahiri-2015-ashoka-ancient-india
 - date: 2026-11-21
   target: /history/maurya-empire
@@ -1187,6 +1187,7 @@
   reason: The assemblies are a medieval tradition, not evidence from the poems.
   sources:
     - src.zvelebil-1992-companion-studies
+    - src.wilden-2014-manuscript-print-memory
 - date: 2026-11-22
   target: src.maas-2013-concise-historiography-yoga
   before: Eli Franco was listed as the author of the volume cited for the Yoga Sutras.
@@ -1323,7 +1324,6 @@
   reason: The page dates the historical events it describes and gives no publication date.
   sources:
     - src.asi-history-1861
-    - src.wilden-2014-manuscript-print-memory
 - date: 2026-11-22
   target: concept.ghaggar-hakra-sarasvati-debate
   before: Two entities covered the identification of the Rigvedic Sarasvati with the Ghaggar-Hakra and repeated the same Harappan-era dating under different methods.
@@ -1390,7 +1390,7 @@
 - date: 2026-11-22
   target: src.jamison-brereton-2014-rigveda
   before: The 2014 Rigveda translation was identified by the DOI for Jamison and Brereton's 2020 introductory book.
-  after: The source uses the catalogue title and set ISBN for the 2014 three-volume translation, 9780199370184.
+  after: "The source gives the translation's full title, The Rigveda: The Earliest Religious Poetry of India, and the set ISBN for the 2014 three-volume translation, 9780199370184."
   reason: The cited hymns are in the 2014 translation and the Oxford University Press edition gives the set ISBN on its copyright page.
   sources:
     - src.jamison-brereton-2014-rigveda
@@ -1793,7 +1793,7 @@
 - date: 2026-11-22
   target: /archive/event/keezhadi-excavations-begin
   before: "Grade A field seasons and Ministry of Culture claim cited src.keeladi-lok-sabha-2024, a 2019 Tamil Nadu archaeology booklet."
-  after: "The 2014-15, 2015-16 and 2016-17 ASI seasons retain grade A and cite the 2019 Tamil Nadu Department of Archaeology report under its correct identity."
+  after: "The 2014-15, 2015-16 and 2016-17 ASI seasons are graded B and cite the 2019 Tamil Nadu Department of Archaeology report under its correct identity."
   reason: "The introduction to the Tamil Nadu report explicitly lists all three ASI seasons, as does the 2017 Lok Sabha reply."
   sources:
     - { id: src.sivanantham-2019-keeladi-urban-settlement, locator: "Introduction" }
@@ -1865,7 +1865,7 @@
 - date: 2026-11-22
   target: /archive/concept/northern-black-polished-ware-culture
   before: "Gaur's excavation report cited through DOI 10.2307/3631855."
-  after: "Gaur's 1983 excavation report cited through Open Library edition OL3007165M."
+  after: "Gaur's 1983 excavation report cited through OCLC 13396022."
   reason: "The DOI resolves to Gérard Fussman's review of the report. The library record identifies Gaur's original edition."
   sources:
     - src.gaur-1983-excavations-atranjikhera
@@ -2098,7 +2098,7 @@
 - date: 2026-11-22
   target: /archive/text/valmiki-ramayana
   before: "The poem's compositional growth spanned about 500 BCE to 300 CE."
-  after: "Scholars think the poem took shape in stages starting around the seventh or fifth century BCE and continuing into the third century CE."
+  after: "Scholars think the poem took shape in stages, from around 750 BCE to about 300 CE."
   reason: "The broader formulation reflects estimates for the early layers and distinguishes them from traditional authorship and dating."
   sources:
     - src.goldman-1984-ramayana-balakanda
@@ -2520,3 +2520,158 @@
     - src.chen-2010-zebu-cattle-south-asia-neolithic
     - src.fuller-2006-agricultural-origins-south-asia
     - src.mutin-2025-mehrgarh-radiocarbon
+- date: 2026-11-22
+  target: /archive/event/arrival-of-modern-humans-south-asia
+  before: c. 67 ka to 52 ka; c. 122 ka to 76 ka
+  after: c. 65 ka to 50 ka; c. 120 ka to 74 ka
+  reason: Dates the cited source reports in thousands or millions of years before present had been stored as BCE years, which made them about 2,025 years too old; they now match the source.
+  sources:
+    - src.macaulay-2005-coastal-settlement-asia
+    - src.mellars-2013-colonization-southern-asia
+    - src.petraglia-2007-jwalapuram-toba
+    - src.petraglia-2010-indian-ocean-rim-dispersal
+    - src.clarkson-2020-dhaba-toba
+    - src.blinkhorn-2013-thar-middle-palaeolithic
+- date: 2026-11-22
+  target: /archive/site/attirampakkam
+  before: c. 387 ka to 174 ka
+  after: c. 385 ka to 172 ka
+  reason: Dates the cited source reports in thousands or millions of years before present had been stored as BCE years, which made them about 2,025 years too old; they now match the source.
+  sources:
+    - src.akhilesh-2018-attirampakkam-middle-palaeolithic
+- date: 2026-11-22
+  target: /archive/site/bhimbetka
+  before: c. 102 ka to 3 ka
+  after: c. 100 ka to 3 ka
+  reason: Dates the cited source reports in thousands or millions of years before present had been stored as BCE years, which made them about 2,025 years too old; they now match the source.
+  sources:
+    - src.misra-2001-prehistoric-colonization-india
+    - src.unesco-2003-bhimbetka
+    - src.coningham-2015-archaeology-south-asia
+- date: 2026-11-22
+  target: /archive/site/bori
+  before: c. 742 ka to 602 ka; c. 82 ka to 72 ka
+  after: c. 740 ka to 600 ka; c. 80 ka to 70 ka
+  reason: Dates the cited source reports in thousands or millions of years before present had been stored as BCE years, which made them about 2,025 years too old; they now match the source.
+  sources:
+    - src.mishra-1995-bori-earliest-acheulian
+    - src.westgate-1998-toba-tephra-peninsular-india
+- date: 2026-11-22
+  target: /archive/site/dhaba
+  before: c. 82 ka to 26 ka
+  after: c. 80 ka to 24 ka
+  reason: Dates the cited source reports in thousands or millions of years before present had been stored as BCE years, which made them about 2,025 years too old; they now match the source.
+  sources:
+    - src.clarkson-2020-dhaba-toba
+- date: 2026-11-22
+  target: /archive/site/didwana
+  before: c. 802 ka to 27 ka
+  after: c. 800 ka to 25 ka
+  reason: Dates the cited source reports in thousands or millions of years before present had been stored as BCE years, which made them about 2,025 years too old; they now match the source.
+  sources:
+    - src.misra-2001-prehistoric-colonization-india
+    - src.blinkhorn-2013-thar-middle-palaeolithic
+- date: 2026-11-22
+  target: /archive/site/hunsgi-baichbal-valley
+  before: c. 1.2 Ma to 52 ka
+  after: c. 1.2 Ma to 50 ka
+  reason: Dates the cited source reports in thousands or millions of years before present had been stored as BCE years, which made them about 2,025 years too old; they now match the source.
+  sources:
+    - src.petraglia-1999-isampur-acheulian-quarry
+    - src.paddayya-2000-isampur-excavation
+    - src.misra-2001-prehistoric-colonization-india
+- date: 2026-11-22
+  target: /archive/site/jwalapuram
+  before: c. 79 ka to 40 ka; c. 77 ka to 73 ka
+  after: c. 77 ka to 38 ka; c. 75 ka to 71 ka
+  reason: Dates the cited source reports in thousands or millions of years before present had been stored as BCE years, which made them about 2,025 years too old; they now match the source.
+  sources:
+    - src.petraglia-2007-jwalapuram-toba
+    - src.ambrose-1998-toba-volcanic-winter
+    - src.williams-2009-toba-environmental-impact
+    - src.mellars-2013-colonization-southern-asia
+- date: 2026-11-22
+  target: /archive/event/keezhadi-excavations-begin
+  before: Parliamentary and Ministry of Culture records list ASI excavation seasons at Keezhadi in 2014-15, 2015-16 and 2016-17 (grade A).
+  after: The Tamil Nadu State Department of Archaeology's 2019 report records ASI excavation seasons at Keezhadi in 2014-15, 2015-16 and 2016-17 (grade B).
+  reason: The cited record was the state department's 2019 Keeladi report, not a Lok Sabha or Ministry of Culture record, so the attribution and grade now match the source actually cited.
+  sources:
+    - src.sivanantham-2019-keeladi-urban-settlement
+- date: 2026-11-22
+  target: /sources
+  before: Chandrayaan-1_Science
+  after: Chandrayaan-1 Science
+  reason: The bibliography showed the page's file slug instead of a readable title for the ISRO Chandrayaan-1 science page.
+  sources:
+    - src.chandrayaan1-isro-science
+- date: 2026-11-22
+  target: /sources
+  before: Neumayer 2013, Prehistoric Rock Art of India
+  after: Neumayer 2013, Rock Art of India
+  reason: The Library of Congress and Open Library records for the cited ISBN (9780198060987, Oxford University Press 2013) give the title as Rock Art of India.
+  sources:
+    - src.neumayer-2013-prehistoric-rock-art-india
+- date: 2026-11-22
+  target: /archive/text/charaka-samhita
+  before: c. 100 BCE to 499 CE
+  after: c. 100 BCE to 500 CE
+  reason: The end year was one short of the round CE year the text gives, as if a BCE-style shift had been applied to a CE year; the dating's own label places Dridhabala's completion at c. 300-500 CE.
+  sources:
+    - src.wujastyk-2008-body-of-knowledge-ayurvedic
+- date: 2026-11-22
+  target: /archive/text/tolkappiyam
+  before: c. 200 BCE to 499 CE
+  after: c. 200 BCE to 500 CE
+  reason: The end year was one short of the round CE year the text gives, as if a BCE-style shift had been applied to a CE year; the dating's note places the later Porulatikaram expansions up to the fifth century CE.
+  sources:
+    - src.zvelebil-1973-smile-of-murugan
+    - src.wilden-2014-manuscript-print-memory
+- date: 2026-11-22
+  target: /archive/site/sanchi-stupa
+  before: c. 260 BCE to 499 CE
+  after: c. 260 BCE to 500 CE
+  reason: The end year was one short of the round CE year the text gives, as if a BCE-style shift had been applied to a CE year; the dating's note ends the sequence with Gupta-era shrines of the fifth century CE.
+  sources:
+    - src.shaw-2016-buddhist-landscapes-sanchi
+    - src.lahiri-2015-ashoka-ancient-india
+- date: 2026-11-22
+  target: /archive/tradition/gandhara-art
+  before: c. 50 BCE to 499 CE
+  after: c. 50 BCE to 500 CE
+  reason: The end year was one short of the round CE year the text gives, as if a BCE-style shift had been applied to a CE year; the entry's summary says the school flourished to the fifth century CE.
+  sources:
+    - src.behrendt-2004-buddhist-architecture-gandhara
+    - src.stoneman-2019-greek-experience-of-india
+- date: 2026-11-22
+  target: /archive/concept/brahmi-to-gupta-script
+  before: c. 268 BCE to 599 CE
+  after: c. 268 BCE to 600 CE
+  reason: The end year was one short of the round CE year the text gives, as if a BCE-style shift had been applied to a CE year; the entry traces the script to the sixth century CE.
+  sources:
+    - src.salomon-1998-indian-epigraphy
+    - src.coningham-1996-early-brahmi-script
+- date: 2026-11-22
+  target: /archive/site/ahichhatra
+  before: c. 1200 BCE to 1099 CE
+  after: c. 1200 BCE to 1100 CE
+  reason: The end year 1099 was an artefact of the same BCE-style shift; a century-precision early medieval end is written as the round year 1100.
+  sources:
+    - src.lal-1955-excavation-hastinapura
+    - src.singh-2008-ancient-early-medieval-india
+    - src.allchin-1995-archaeology-early-historic-south-asia
+- date: 2026-11-22
+  target: /archive/artifact/bakhshali-manuscript
+  before: c. 600 to 1199 CE
+  after: c. 600 to 1200 CE
+  reason: The end year was one short of the round CE year the text gives, as if a BCE-style shift had been applied to a CE year; the palaeographic dating places the manuscript in the eighth to twelfth centuries CE.
+  sources:
+    - src.plofker-2009-mathematics-in-india
+    - src.plofker-2017-bakhshali-radiocarbon
+- date: 2026-11-22
+  target: /archive/event/domestication-of-zebu-cattle
+  before: "c. 7000 to 5000 BCE regional domestication estimate at grade B."
+  after: "c. 7000 to 5000 BCE regional domestication estimate at grade C, noting the later Mehrgarh radiocarbon chronology."
+  reason: "Mutin 2025 dates the Period I cemetery to about 5250 to 4650 BCE and argues for a later start of farming at Mehrgarh, so the earlier range is a debated reasoned estimate."
+  sources:
+    - src.mutin-2025-mehrgarh-radiocarbon
+    - src.fuller-2006-agricultural-origins-south-asia

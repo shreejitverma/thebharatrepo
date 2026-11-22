@@ -62,6 +62,30 @@ describe('formatting', () => {
     expect(formatRange({ earliest: -6999, latest: -2599, precision: 'century', circa: true })).toBe('c. 7000 to 2600 BCE');
     expect(formatRange({ earliest: -299, latest: -200, precision: 'century', circa: true })).toBe('c. 3rd century BCE');
   });
+
+  it('formats recent cosmological endpoints in BCE/CE or ka, not as fractions of a million years', () => {
+    const kaliEpoch = toAstronomical(3102, 'BCE');
+    expect(formatYear(kaliEpoch, 'cosmological')).toBe('3102 BCE');
+    expect(formatRange({ earliest: kaliEpoch, latest: 2026, precision: 'cosmological', circa: false })).toBe('3102 BCE to 2026 CE');
+    expect(formatRange({ earliest: 2026 - 870_000, latest: 2026 - 869_000, precision: 'cosmological', circa: true })).toBe('c. 870 ka to 869 ka');
+    expect(formatRange({ earliest: 2026 - 1_972_949_000, latest: kaliEpoch, precision: 'cosmological', circa: false })).toBe('1.973 billion years ago to 3102 BCE');
+    expect(formatRange({ earliest: 2026 - 1_449_000, latest: 2026 - 1_441_000, precision: 'cosmological', circa: false })).toBe('1.45 million years ago to 1.44 million years ago');
+    expect(formatRange({ earliest: 2026 - 385_040, latest: 2026 - 385_010, precision: 'ka', circa: true })).toBe('c. 385.04 ka to 385.01 ka');
+  });
+
+  it('never renders a content dating as zero units or as an X to X range', async () => {
+    const { loadContentUncached } = await import('../content/load');
+    const graph = loadContentUncached();
+    const ranges = [...[...graph.entities.values()].flatMap((e) => e.datings), ...graph.articles.flatMap((a) => a.datings ?? [])].map((d) => d.range);
+    expect(ranges.length).toBeGreaterThan(0);
+    for (const r of ranges) {
+      const text = formatRange(r);
+      expect(text, JSON.stringify(r)).not.toMatch(/(^|[^\d.])0 (million|billion|Ma|ka)\b/);
+      if (r.earliest === r.latest) continue;
+      expect(text, JSON.stringify(r)).not.toMatch(/^(?:c\. )?(.+) to \1$/);
+      if (r.precision !== 'century' && r.precision !== 'millennium') expect(text, JSON.stringify(r)).toContain(' to ');
+    }
+  });
 });
 
 describe('Indian era systems', () => {

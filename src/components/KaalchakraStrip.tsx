@@ -1,7 +1,9 @@
 import Link from 'next/link';
 import type { KcItem } from '@/lib/content/kaalchakra';
 import { neighbours } from '@/lib/content/kaalchakra';
-import { formatRange, type YearRange } from '@/lib/time';
+import { datingSummary } from '@/lib/content/lens';
+import { isTraditional, type DatingMethod } from '@/lib/content/labels';
+import type { YearRange } from '@/lib/time';
 import { SEGMENTS, SEGMENT_STARTS, yearToUnit } from '@/lib/time/scale';
 
 const W = 1000;
@@ -29,18 +31,19 @@ function ticksPath(items: KcItem[]): string {
  * Mini Kaalchakra: locates an entity or article on the full axis, with its neighbours in time.
  * Server component, no client JavaScript.
  */
-export default function KaalchakraStrip({ items, range, selfId, focusHref }: { items: KcItem[]; range: YearRange; selfId: string | null; focusHref: string }) {
+export default function KaalchakraStrip({ items, dating, selfId, focusHref }: { items: KcItem[]; dating: { range: YearRange; method: DatingMethod }; selfId: string | null; focusHref: string }) {
+  const { range, method } = dating;
   const u0 = yearToUnit(range.earliest);
   const u1 = yearToUnit(range.latest);
   const markW = Math.min(Math.max((u1 - u0) * W, 4), W);
   const markX = clamp(u0 * W, 0, W - markW);
   const anchor = range.best ?? (range.earliest + range.latest) / 2;
-  const { before, after } = neighbours(items, anchor, selfId, 3);
+  const { before, after } = neighbours(items, anchor, isTraditional(method) ? 'tradition' : 'scholarship', selfId, 3);
   return (
     <section className="kc-strip" aria-label="Place in the Kaalchakra">
       <div className="kc-strip__head">
         <strong>Place in the Kaalchakra</strong>
-        <span className="muted">{formatRange(range)}</span>
+        <span className="muted">{datingSummary(range, method)}</span>
         <Link href={focusHref}>Open in the Kaalchakra</Link>
       </div>
       <svg viewBox={`0 0 ${W} 46`} preserveAspectRatio="none" aria-hidden="true">

@@ -94,7 +94,7 @@ Katyāyana's *vārttikas* and Patañjali's *Mahābhāṣya* (the "Great Commenta
 ## How formal was it? Separating claims from evidence
 
 Pāṇini's grammar is widely admired by modern linguists, and that admiration sometimes grows into claims no source supports.
-Popular summaries call it the first "Turing-complete" grammar or credit particular modern scientists with saying so; we found no scholarly source making that claim in a checkable form, so it is not repeated here.
+Popular summaries call it the first "Turing-complete" grammar or credit particular modern scientists with saying so; no scholarly source making that claim in a checkable form was found, so it is not repeated here.
 What is documented is narrower and still remarkable:
 
 - The grammar is explicit, ordered and economical enough that scholars compare its architecture with modern generative frameworks, with each part of the derivation (meaning-to-relation, relation-to-form, form-to-sound) handled by distinct rule blocks [@src.kiparsky-2009-architecture-paninis-grammar; @src.staal-1988-universals].

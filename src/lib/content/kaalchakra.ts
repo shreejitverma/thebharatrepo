@@ -7,7 +7,7 @@ import { isTraditional, type Entity, type Kind, type Grade, type DatingMethod, t
 import { rangeAnchor, type Precision } from '../time';
 import { yearToUnit } from '../time/scale';
 import type { ContentGraph } from './load';
-import { primaryAnchor, type Lens } from './lens';
+import { primaryAnchor, rankDatings, type Lens } from './lens';
 export { primaryAnchor };
 
 export interface KcDating {
@@ -47,10 +47,7 @@ export function entityHref(id: string): string {
 
 function anchorFor(datings: KcDating[]): number | null {
   if (datings.length === 0) return null;
-  // Prefer the best-graded dating; ties keep the author's order.
-  const order: Grade[] = ['A', 'B', 'C', 'D', 'E'];
-  const best = [...datings].sort((a, b) => order.indexOf(a.grade) - order.indexOf(b.grade))[0];
-  return rangeAnchor(best);
+  return rangeAnchor(rankDatings(datings, (d) => d.lens === 'tradition')[0]);
 }
 
 export function toKcItem(e: Entity): KcItem {
@@ -93,12 +90,12 @@ export function buildKaalchakraIndex(g: ContentGraph): KcItem[] {
 }
 
 /** Neighbours in time for the mini strip on entity and article pages. */
-export function neighbours(items: KcItem[], year: number, excludeId: string | null, count = 3): { before: KcItem[]; after: KcItem[] } {
+export function neighbours(items: KcItem[], year: number, lens: 'scholarship' | 'tradition', excludeId: string | null, count = 3): { before: KcItem[]; after: KcItem[] } {
   const sorted = items
-    .filter((i) => i.id !== excludeId && primaryAnchor(i, 'scholarship') !== null)
-    .sort((a, b) => primaryAnchor(a, 'scholarship')! - primaryAnchor(b, 'scholarship')!);
-  const before = sorted.filter((i) => primaryAnchor(i, 'scholarship')! <= year).slice(-count);
-  const after = sorted.filter((i) => primaryAnchor(i, 'scholarship')! > year).slice(0, count);
+    .filter((i) => i.id !== excludeId && primaryAnchor(i, lens) !== null)
+    .sort((a, b) => primaryAnchor(a, lens)! - primaryAnchor(b, lens)!);
+  const before = sorted.filter((i) => primaryAnchor(i, lens)! <= year).slice(-count);
+  const after = sorted.filter((i) => primaryAnchor(i, lens)! > year).slice(0, count);
   return { before, after };
 }
 
