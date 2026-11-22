@@ -6,11 +6,11 @@ updated: "2026-11-21"
 tags: [modern history, democracy, constitution, green revolution, economic reforms, isro]
 datings:
   - method: documentary
-    range: { earliest: "1947", latest: "2026", precision: decade, circa: false }
+    range: { earliest: "1947", latest: "2023", precision: year, circa: false }
     grade: A
-    label: From independence to the present
-    sources: [src.guha-2007-india-after-gandhi]
-    note: An open-ended span; the end date is the date of writing.
+    label: From independence to the Chandrayaan-3 landing
+    sources: [src.india-independence-act-1947, src.guha-2007-india-after-gandhi, src.chandrayaan3-isro]
+    note: The range ends with the latest dated event discussed in the article.
 entities: []
 readingLevel: adult
 review: { status: draft, author: "claude-sonnet-5-5" }
@@ -55,7 +55,7 @@ In the following decades, politics became more competitive, with regional partie
 
 India carried out an underground nuclear test at Pokhran in May 1974, which the government called a peaceful nuclear explosion, and conducted a series of tests there in May 1998, after which it declared itself a nuclear-weapon state [@src.perkovich-1999-indias-nuclear-bomb].
 The Indian Space Research Organisation (ISRO) launched its first satellite, Aryabhata, in 1975.
-Chandrayaan-1 was launched in 2008, and Chandrayaan-3 landed on 23 August 2023 in the Moon's south polar region, at roughly 69 degrees south latitude and not at the pole itself.
+Chandrayaan-1 was launched in 2008, and Chandrayaan-3 landed on 23 August 2023 in the Moon's south polar region, at roughly 69 degrees south latitude and not at the pole itself [@src.chandrayaan1-isro-science; @src.chandrayaan3-isro].
 
 ## Economic reform
 

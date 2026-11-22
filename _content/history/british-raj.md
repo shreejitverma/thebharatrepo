@@ -9,7 +9,7 @@ datings:
     range: { earliest: "1858", latest: "1947", precision: year, circa: false }
     grade: A
     label: Crown rule (the Raj proper)
-    sources: [src.metcalf-2012-concise-history-modern-india]
+    sources: [src.uk-parliament-1858-government-of-india-act, src.india-independence-act-1947, src.metcalf-2012-concise-history-modern-india]
     note: From the Government of India Act of 1858 to the Indian Independence Act of 1947.
   - method: scholarly-consensus
     range: { earliest: "1757", latest: "1947", precision: year, circa: false }

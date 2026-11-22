@@ -1664,3 +1664,456 @@
   reason: The collection includes works by Basava and other authors, and the existing edge identifies him as one contributor.
   sources:
     - src.ramanujan-1973-speaking-of-siva
+  target: /archive/concept/indus-script
+  before: "Mature Harappan Logo-Syllabic / Proto-Dravidian Hypothesis: 2600 to 1900 BCE, archaeological-radiocarbon, grade A."
+  after: "Mature Harappan inscriptions: 2600 to 1900 BCE, archaeological-radiocarbon, grade B. Parpola and Mahadevan's language proposal: the same period, linguistic, grade C."
+  reason: "Archaeological contexts support the period of use. The proposed readings remain unconfirmed, and sign-sequence statistics do not identify the language."
+  sources:
+    - src.kenoyer-1998-ancient-cities-indus
+    - src.wright-2010-ancient-indus
+    - src.parpola-1994-deciphering-indus-script
+    - src.rao-2009-entropic-evidence-indus-script
+    - src.sproat-2014-statistical-comparison-symbol-systems
+- date: 2026-11-22
+  target: /archive/concept/indus-script
+  before: "Predominantly right-to-left reading direction with occasional boustrophedon: grade A."
+  after: "Predominantly right-to-left reading direction with occasional boustrophedon: grade B."
+  reason: "The cited studies infer the general reading direction from the layout of inscriptions."
+  sources:
+    - src.parpola-1994-deciphering-indus-script
+    - src.kenoyer-1998-ancient-cities-indus
+    - src.possehl-2002-indus-civilization
+- date: 2026-11-22
+  target: /archive/concept/indus-script
+  before: "Corpus and sign counts called typical of a logo-syllabic system: grade A."
+  after: "Approximately 4,000 to 5,000 short texts, averaging about five signs, with an estimated core inventory of 400 to 450 signs: grade B."
+  reason: "Sign counts depend on how researchers group variants and do not establish the type of sign system."
+  sources:
+    - src.parpola-1994-deciphering-indus-script
+    - src.possehl-2002-indus-civilization
+    - src.singh-2008-ancient-early-medieval-india
+- date: 2026-11-22
+  target: /archive/concept/indus-script
+  before: "Scholarly consensus that the script remains undeciphered due to short texts and lack of bilinguals: grade A."
+  after: "The signs remain undeciphered. Short texts and the lack of a verified bilingual make readings difficult to test: grade B."
+  reason: "The status of decipherment is a scholarly consensus about the surviving corpus."
+  sources:
+    - src.possehl-2002-indus-civilization
+    - src.kenoyer-1998-ancient-cities-indus
+    - src.singh-2008-ancient-early-medieval-india
+- date: 2026-11-22
+  target: /archive/concept/rakhigarhi-i6113-genome
+  before: "I6113 confirmed a profile representative of the Harappan population and the primary source of modern South Asian ancestry: grade A."
+  after: "I6113 falls on the Indus Periphery ancestry gradient. Population models suggest related groups contributed substantially to present-day South Asian ancestry. The Harappan sample is limited: grade B."
+  reason: "The Cell study explicitly limits what the Rakhigarhi genome and its comparison samples can establish about an entire civilisation."
+  sources:
+    - src.shinde-2019-ancient-harappan-genome
+    - src.narasimhan-2019-formation-human-populations
+- date: 2026-11-22
+  target: /archive/concept/rakhigarhi-i6113-genome
+  before: "Adult summary described an ancestry mixture and zero detectable Anatolian farmer or Steppe pastoralist ancestry without a sampling caveat."
+  after: "The adult summary describes this individual's ancestry, the limited sample and the evidence for later mixing among groups in South Asia."
+  reason: "The study reports an individual genome and cautions against generalisation."
+  sources:
+    - src.shinde-2019-ancient-harappan-genome
+- date: 2026-11-22
+  target: /archive/concept/rakhigarhi-i6113-genome
+  before: "Children's summary said the Harappans are the main ancestors of most people living in South Asia today."
+  after: "The children's summary describes the DNA of one woman, its resemblance to DNA from some ancient individuals in Iran and Turkmenistan, and the researchers' inference about later mixing."
+  reason: "A single excavated genome provides a glimpse of Harappan ancestry."
+  sources:
+    - src.shinde-2019-ancient-harappan-genome
+    - src.narasimhan-2019-formation-human-populations
+- date: 2026-11-22
+  target: /archive/concept/rakhigarhi-i6113-genome
+  before: "Teen summary said I6113 matched 11 individuals and showed when Iranian-related ancestry in Harappans split."
+  after: "The teen summary describes a range of related ancestry profiles, the absence of detectable Steppe ancestry in I6113 and a modelled pre-farming split."
+  reason: "The studies report a statistical comparison and a modelled divergence for the ancestry in I6113."
+  sources:
+    - src.shinde-2019-ancient-harappan-genome
+    - src.narasimhan-2019-formation-human-populations
+- date: 2026-11-22
+  target: /archive/event/arrival-of-modern-humans-south-asia
+  before: "Present-day autosomal and uniparental diversity derives overwhelmingly from a 65,000 to 50,000-year-old dispersal: grade A."
+  after: "Mitochondrial lineages and archaeological comparisons support a coastal dispersal model roughly 65,000 to 50,000 years ago: grade B."
+  reason: "The cited papers infer dispersal from genetic lineages and compare an archaeological record. The dating note and claim now describe this model without attributing a specific share of modern South Asian ancestry to it."
+  sources:
+    - src.macaulay-2005-coastal-settlement-asia
+    - src.mellars-2013-colonization-southern-asia
+- date: 2026-11-22
+  target: /archive/event/arrival-of-modern-humans-south-asia
+  before: "Three regions preserve continuous prepared-core industries from roughly 115,000 to 80,000 years ago through the Toba tephra: grade A."
+  after: "Jwalapuram and Dhaba preserve similar assemblages before and after Toba. Earlier Thar tools also inform the pre-Toba model. Their makers' species remains uncertain: grade C."
+  reason: "The sites preserve different dated sequences, as the dating note now reflects. Tools alone do not establish that Homo sapiens made them."
+  sources:
+    - src.petraglia-2007-jwalapuram-toba
+    - src.clarkson-2020-dhaba-toba
+    - src.blinkhorn-2013-thar-middle-palaeolithic
+- date: 2026-11-22
+  target: /archive/concept/hindu-time-units
+  before: "The divine year, mahayuga and kalpa equivalences were stated as facts at grade A."
+  after: "The same equivalences are attributed to the traditional reckoning described in the Manusmriti and Surya Siddhanta, at grade D."
+  reason: "The equations express traditional cosmological chronology. The teen summary now identifies the kalpa the same way."
+  sources:
+    - src.olivelle-2005-manus-code-of-law
+    - src.burgess-1860-surya-siddhanta
+    - src.plofker-2009-mathematics-in-india
+- date: 2026-11-22
+  target: /archive/site/nalanda-mahavihara
+  before: "415 to 1200 CE with a best estimate of 427 CE, epigraphic, grade A."
+  after: "Fifth century to thirteenth century CE, scholarly-consensus, grade B."
+  reason: "The seals and Xuanzang inform the monastery's early history. Evidence of continued use extends into the thirteenth century."
+  sources:
+    - src.unesco-2016-nalanda-mahavihara
+    - src.kulke-2004-history-of-india
+- date: 2026-11-22
+  target: /archive/site/nalanda-mahavihara
+  before: "The adult and younger summaries treated the founding under Kumaragupta I as established."
+  after: "The summaries describe Gupta-era development. The adult and teen summaries attribute the founding to Xuanzang and qualify the identification of Shakraditya with Kumaragupta I."
+  reason: "Xuanzang names Shakraditya, whose identification with Kumaragupta I is a historical inference."
+  sources:
+    - src.unesco-2016-nalanda-mahavihara
+    - src.kulke-2004-history-of-india
+- date: 2026-11-22
+  target: /archive/site/nalanda-mahavihara
+  before: "Eleven monasteries with detailed facilities and a seven-phase chronology of Temple 3: grade A."
+  after: "The excavated complex includes residential monasteries, stupas and temples along a north-south axis: grade B."
+  reason: "The general site description supports the broad layout. The earlier claim added details beyond what the cited source establishes."
+  sources:
+    - src.unesco-2016-nalanda-mahavihara
+- date: 2026-11-22
+  target: /archive/site/nalanda-mahavihara
+  before: "Monastic and royal seals prove organized institutional administration began in the fifth century CE: grade A."
+  after: "Gupta-period finds and Xuanzang's account support a fifth-century phase of monastic development: grade B."
+  reason: "The evidence supports Gupta patronage and early development. It does not establish the precise start of the institution's administration."
+  sources:
+    - src.unesco-2016-nalanda-mahavihara
+    - src.kulke-2004-history-of-india
+- date: 2026-11-22
+  target: /archive/event/keezhadi-excavations-begin
+  before: "Grade A field seasons and Ministry of Culture claim cited src.keeladi-lok-sabha-2024, a 2019 Tamil Nadu archaeology booklet."
+  after: "The 2014-15, 2015-16 and 2016-17 ASI seasons retain grade A and cite the 2019 Tamil Nadu Department of Archaeology report under its correct identity."
+  reason: "The introduction to the Tamil Nadu report explicitly lists all three ASI seasons, as does the 2017 Lok Sabha reply."
+  sources:
+    - { id: src.sivanantham-2019-keeladi-urban-settlement, locator: "Introduction" }
+- date: 2026-11-22
+  target: /art-and-culture/indian-cinema
+  before: "1896 to 2023, from the first Bombay screenings to the present: grade A, citing only the 1999 encyclopaedia."
+  after: "1896 to 2023, from the first Bombay screenings to the 2023 Academy Awards: grade B, with a 2023 Academy source."
+  reason: "The encyclopaedia supports the early screening date. The Academy record documents the later milestone."
+  sources:
+    - src.rajadhyaksha-1999-encyclopaedia-indian-cinema
+    - src.academy-2023-95th-awards
+- date: 2026-11-22
+  target: /history/chola-empire
+  before: "848 to 1279 CE: grade A."
+  after: "848 to 1279 CE: grade B."
+  reason: "The period is a scholarly reconstruction with an approximate beginning in the mid-ninth century."
+  sources:
+    - src.sastri-1955-the-colas
+    - src.subbarayalu-2012-south-india-under-cholas
+- date: 2026-11-22
+  target: /history/british-raj
+  before: "1858 to 1947 Crown rule: grade A, citing a modern history alone."
+  after: "1858 to 1947 Crown rule: grade A, citing both statutes and the modern history."
+  reason: "The enacted statutes directly document the transfer to the Crown and the transition to the independent dominions."
+  sources:
+    - src.uk-parliament-1858-government-of-india-act
+    - src.india-independence-act-1947
+    - src.metcalf-2012-concise-history-modern-india
+- date: 2026-11-22
+  target: /history/indian-independence-movement
+  before: "1885 to 1947, documentary, grade A."
+  after: "1885 to 1947, scholarly-consensus, grade B."
+  reason: "The range is the conventional periodisation of the organised national movement in the cited historical survey."
+  sources:
+    - src.chandra-1989-indias-struggle-for-independence
+- date: 2026-11-22
+  target: /history/modern-india
+  before: "1947 to 2026, from independence to the date of writing: grade A with a 2007 source."
+  after: "1947 to 2023, from independence to the Chandrayaan-3 landing: grade A with primary records at both ends."
+  reason: "The article's latest dated event is the 2023 landing, which ISRO documents. The Independence Act documents the start."
+  sources:
+    - src.india-independence-act-1947
+    - src.chandrayaan3-isro
+    - src.chandrayaan1-isro-science
+    - src.guha-2007-india-after-gandhi
+- date: 2026-11-22
+  target: /history/mughal-empire
+  before: "1526 to 1858 CE: grade A."
+  after: "1526 to 1858 CE: grade B."
+  reason: "The cited modern histories support the dynastic period, while the entry cites no direct records for the endpoints."
+  sources:
+    - src.richards-1993-mughal-empire
+    - src.metcalf-2012-concise-history-modern-india
+- date: 2026-11-22
+  target: /art-and-culture/textiles-of-india
+  before: "Indian cottons in world trade, c. 1600 to 1800: grade A."
+  after: "Indian cottons in world trade, c. 1600 to 1800: grade B."
+  reason: "The dates summarise an approximate period of trade in the cited historical synthesis."
+  sources:
+    - src.riello-2009-how-india-clothed-the-world
+- date: 2026-11-22
+  target: /archive/polity/panchala
+  before: "Northern and Southern Panchala with capitals at Ahichhatra and Kampilya: grade A."
+  after: "Northern and Southern Panchala with capitals at Ahichhatra and Kampilya: grade B."
+  reason: "The division and capital identifications are supported here by historical syntheses."
+  sources:
+    - src.singh-2008-ancient-early-medieval-india
+    - src.thapar-2002-early-india
+- date: 2026-11-22
+  target: /archive/concept/northern-black-polished-ware-culture
+  before: "Gaur's excavation report cited through DOI 10.2307/3631855."
+  after: "Gaur's 1983 excavation report cited through Open Library edition OL3007165M."
+  reason: "The DOI resolves to Gérard Fussman's review of the report. The library record identifies Gaur's original edition."
+  sources:
+    - src.gaur-1983-excavations-atranjikhera
+- date: 2026-11-22
+  target: /archive/concept/northern-black-polished-ware-culture
+  before: "Regional range of 700 to 200 BCE labelled a stratified radiocarbon chronology at grade A."
+  after: "Regional range of 700 to 200 BCE labelled a regional chronology at grade B."
+  reason: "The range synthesises multiple local contexts and distributions into a regional periodisation."
+  sources:
+    - src.allchin-1995-archaeology-early-historic-south-asia
+    - src.singh-2008-ancient-early-medieval-india
+    - src.gaur-1983-excavations-atranjikhera
+- date: 2026-11-22
+  target: /archive/concept/northern-black-polished-ware-culture
+  before: "Fabric, finish and firing description: grade A."
+  after: "Fabric, finish and firing description: grade B."
+  reason: "The cited sources are syntheses of ceramic evidence and production techniques."
+  sources:
+    - src.allchin-1995-archaeology-early-historic-south-asia
+    - src.singh-2008-ancient-early-medieval-india
+- date: 2026-11-22
+  target: /archive/concept/northern-black-polished-ware-culture
+  before: "Association of the ceramic phase with Second Urbanisation: grade A."
+  after: "Association of the ceramic phase with Second Urbanisation: grade B."
+  reason: "The association draws on comparative archaeological interpretation across many sites."
+  sources:
+    - src.allchin-1995-archaeology-early-historic-south-asia
+    - src.singh-2008-ancient-early-medieval-india
+    - src.thapar-2002-early-india
+- date: 2026-11-22
+  target: /archive/site/ahichhatra
+  before: "1200 BCE to 1099 CE described as a continuous sequence: grade A."
+  after: "1200 BCE to 1099 CE described as an approximate stratigraphic sequence: grade B."
+  reason: "The overall placement combines phases and date estimates. The cited excavation report is centred on Hastinapura."
+  sources:
+    - src.lal-1955-excavation-hastinapura
+    - src.singh-2008-ancient-early-medieval-india
+    - src.allchin-1995-archaeology-early-historic-south-asia
+- date: 2026-11-22
+  target: /archive/site/ahichhatra
+  before: "Four-fold early stratigraphic sequence in the 1960s excavations: grade A."
+  after: "Four-fold early stratigraphic sequence in the 1960s excavations: grade B."
+  reason: "The entry cites archaeological syntheses for the later excavation sequence."
+  sources:
+    - src.singh-2008-ancient-early-medieval-india
+    - src.allchin-1995-archaeology-early-historic-south-asia
+- date: 2026-11-22
+  target: /archive/site/burzahom
+  before: "Neolithic to Megalithic range of 2800 to 1000 BCE: grade A."
+  after: "Approximate Neolithic to Megalithic range of 3000 to 700 BCE: grade B, citing the ASI excavation report."
+  reason: "The report places the early Neolithic phase around 3000 BCE and includes a Megalithic sample at about 800 BCE with roughly a century of uncertainty. The teen summary describes the sequence without narrower endpoints."
+  sources:
+    - src.fonia-2022-excavations-burzahom
+- date: 2026-11-22
+  target: /archive/site/burzahom
+  before: "Bell-shaped pits with plaster, step-ladders, storage pits and hearths: grade A from secondary sources."
+  after: "Pits in the karewa terrace, some with traces of mud plaster, steps or hearths: grade A from the excavation report."
+  reason: "The primary report documents the individual structural features. The children's summary also drops the inferred purpose of the dwellings."
+  sources:
+    - src.fonia-2022-excavations-burzahom
+- date: 2026-11-22
+  target: /archive/site/burzahom
+  before: "Ceremonial burials of domesticated dogs, wolves and ibex near human graves, along with red ochre and trepanation: grade A."
+  after: "Burials with traces of red ochre, a skull with evidence of trepanation and burials containing animal remains: grade A from the excavation report."
+  reason: "The excavation report directly documents these remains. The claim and children's summary avoid inferences about ownership or ceremonial purpose."
+  sources:
+    - src.fonia-2022-excavations-burzahom
+- date: 2026-11-22
+  target: /archive/site/burzahom
+  before: "Perforated rectangular harvesters and a carved stag hunt with twin suns: grade A citing a secondary survey."
+  after: "Neolithic stone and bone tools identified as harvesters and an engraved stag hunt: grade A citing the excavation report."
+  reason: "The primary report describes the artifacts and the context in which they were found."
+  sources:
+    - src.fonia-2022-excavations-burzahom
+- date: 2026-11-22
+  target: /archive/site/paiyampalli
+  before: "1800 to 300 BCE as a calibrated radiocarbon span for both periods: grade A."
+  after: "1800 to 300 BCE as the approximate chronology of the Neolithic and Megalithic layers: grade B."
+  reason: "The period boundaries are an estimate based on dates and stratigraphy."
+  sources:
+    - src.fuller-2006-agricultural-origins-south-asia
+    - src.fuller-2007-dating-neolithic-south-india
+    - src.coningham-2015-archaeology-south-asia
+- date: 2026-11-22
+  target: /archive/site/paiyampalli
+  before: "Period I material and plant remains and Period II wares and iron finds: grade A."
+  after: "Period I material and plant remains and Period II wares and iron finds: grade B."
+  reason: "The cited sources report these findings in archaeological syntheses."
+  sources:
+    - src.fuller-2006-agricultural-origins-south-asia
+    - src.coningham-2015-archaeology-south-asia
+- date: 2026-11-22
+  target: /archive/tradition/ochre-coloured-pottery-culture
+  before: "A spearhead and a harpoon were recovered in a single undisturbed deposit at Saipai: grade A."
+  after: "A hooked spearhead was recovered in a trial trench and a harpoon with the pottery in a subsequent excavation: grade B."
+  reason: "The field account distinguishes the two episodes. The entity cites scholarly syntheses of the finds."
+  sources:
+    - src.misra-2001-prehistoric-colonization-india
+    - src.coningham-2015-archaeology-south-asia
+- date: 2026-11-22
+  target: /archive/tradition/ochre-coloured-pottery-culture
+  before: "The worn surfaces of pottery at other Doab sites resulted from prolonged waterlogging: grade A."
+  after: "The Lal Qila pottery includes decorated red-slipped vessels, and examples from some other sites have worn surfaces: grade B."
+  reason: "The archaeological synthesis supports the description. The cause of wear is an interpretation."
+  sources:
+    - src.coningham-2015-archaeology-south-asia
+- date: 2026-11-22
+  target: /archive/text/puranas
+  before: "Amarakosha's fivefold definition of a Purana: grade A."
+  after: "Amarakosha's fivefold definition of a Purana: grade B."
+  reason: "The statement is supported by the cited scholarship and review."
+  sources:
+    - src.brockington-1987-puranas-rocher-review
+    - src.hiltebeitel-2011-dharma
+- date: 2026-11-22
+  target: /archive/text/puranas
+  before: "Five Puranas preserve the primary dynastic king-lists for a long series of dynasties: grade A."
+  after: "The five Puranas preserve differing lists that historians compare with other sources for early dynasties: grade B."
+  reason: "The textual witnesses differ. A critical collation documents the lists, and their use for political history requires comparison with other evidence."
+  sources:
+    - src.pargiter-1913-dynasties-kali-age
+    - src.kulke-2004-history-of-india
+    - src.thapar-2012-asoka-decline-mauryas
+- date: 2026-11-22
+  target: /archive/text/vedangas
+  before: "The grouping of Shrauta, Grihya, Dharma and Shulba Sutras under Kalpa: grade A."
+  after: "The grouping of Shrauta, Grihya, Dharma and Shulba Sutras under Kalpa: grade B."
+  reason: "The cited works are scholarly syntheses of the textual classification."
+  sources:
+    - src.flood-2003-blackwell-companion-hinduism
+    - src.plofker-2009-mathematics-in-india
+- date: 2026-11-22
+  target: /archive/concept/indo-european-language-discourse
+  before: "The 1786 date and the claim about Jones's discourse cited only Trautmann's account at grade A."
+  after: "The date and the claim retain grade A with Jones's discourse cited alongside Trautmann."
+  reason: "The discourse directly attests its delivery date and Jones's argument. Trautmann provides context for its influence."
+  sources:
+    - src.jones-2013-third-anniversary-discourse
+    - src.trautmann-1997-aryans-and-british-india
+- date: 2026-11-22
+  target: /archive/person/sankardev
+  before: "1449 to 1568, labelled historical scholarship, grade B."
+  after: "1449 to 1568, conventional Ekasarana lifespan, traditional-sampradaya, grade D."
+  reason: "The early biographer Daityari gives 1568 for Sankardev's death. Later biographies differ on the year of his birth."
+  sources:
+    - src.sarma-1966-neo-vaisnavite-movement
+- date: 2026-11-22
+  target: /archive/person/sankardev
+  before: "His historical dates are conventionally given as 1449 to 1568."
+  after: "The traditional account places his life from 1449 to 1568. His birth year varies across the biographies."
+  reason: "The teen summary distinguishes the conventional lifespan from the evidence for a precise birth date."
+  sources:
+    - src.sarma-1966-neo-vaisnavite-movement
+- date: 2026-11-22
+  target: /archive/concept/saptarishi-calendar
+  before: "The children's summary says the calendar counts its years from 3076 BCE."
+  after: "The children's summary identifies 3076 BCE as the calendar's traditional starting point."
+  reason: "The epoch is a calendrical reckoning in the Kashmiri tradition."
+  sources:
+    - src.stein-1900-rajatarangini
+    - src.saha-1955-calendar-reform-committee-report
+- date: 2026-11-22
+  target: /archive/text/mahabharata
+  before: "The Mahabharata is the longest epic poem in the world."
+  after: "The Mahabharata is a vast Sanskrit poem about the Pandava and Kaurava cousins."
+  reason: "The cited scholarship describes the Sanskrit epic and its scale. A worldwide ranking depends on which recensions and oral traditions are counted."
+  sources:
+    - src.brockington-1998-sanskrit-epics
+- date: 2026-11-22
+  target: /archive/tradition/vedic-chanting
+  before: "Every syllable sounds just as it did thousands of years ago. Vedic chanting is the oldest continuously practised liturgical vocal tradition in South Asia."
+  after: "The summaries describe rules for pitch, syllable length and pronunciation, and distinguish the Rigveda and Yajurveda accents from Samaveda melodies."
+  reason: "Recitation rules support faithful transmission. The sources do not attest the exact sound of ancient performances or establish the regional superlative."
+  sources:
+    - src.unesco-2003-tradition-vedic-chanting
+    - src.gonda-1975-vedic-literature
+    - src.jamison-brereton-2014-rigveda
+- date: 2026-11-22
+  target: /archive/tradition/vedic-oral-transmission
+  before: "The Vedas were transmitted purely by memory without a single sound changing, preserving exact phonemes and accents across millennia."
+  after: "Oral transmission relied mainly on memorisation and recitation patterns that checked word order, pronunciation and pitch."
+  reason: "The techniques helped preserve the text with high fidelity. The evidence also documents changes during its early transmission."
+  sources:
+    - src.jamison-brereton-2014-rigveda
+    - src.unesco-2003-tradition-vedic-chanting
+    - src.gonda-1975-vedic-literature
+- date: 2026-11-22
+  target: /archive/artifact/banawali-terracotta-plough
+  before: "The clay model showed the exact shape of Harappan ploughs and matched the furrow profiles at Kalibangan."
+  after: "The model offers a clue to the design of wooden ploughs, including the shape of the beam and share."
+  reason: "A model preserves features of a design and cannot establish that actual ploughs had the same exact profile."
+  sources:
+    - src.possehl-2002-indus-civilization
+    - src.singh-2008-ancient-early-medieval-india
+    - src.wright-2010-ancient-indus
+- date: 2026-11-22
+  target: /archive/concept/harappan-weights-and-measures
+  before: "Traders used identical weights and rulers to keep trade fair everywhere; smaller and larger weights are assigned to specific kinds of goods."
+  after: "The summaries describe similar stone weights, shared ratios and examples of graduated scales."
+  reason: "The excavated objects support shared measurement practices. They do not establish uniform use, particular classes of goods or traders' motives."
+  sources:
+    - src.marshall-1931-mohenjo-daro
+    - src.kenoyer-1998-ancient-cities-indus
+    - src.possehl-2002-indus-civilization
+- date: 2026-11-22
+  target: /archive/tradition/harappan-civilisation
+  before: "South Asia's first urban culture."
+  after: "The Harappan or Indus Valley Civilisation developed some of South Asia's earliest known cities."
+  reason: "The qualification reflects the archaeological record and distinguishes the earlier rural phase from the mature urban phase."
+  sources:
+    - src.kenoyer-1998-ancient-cities-indus
+    - src.wright-2010-ancient-indus
+- date: 2026-11-22
+  target: /archive/artifact/tamil-brahmi-inscriptions
+  before: "The oldest written Tamil."
+  after: "The earliest known examples of written Tamil."
+  reason: "Surviving cave and pottery inscriptions attest early Tamil writing. The beginning of the practice remains debated."
+  sources:
+    - src.salomon-1998-indian-epigraphy
+    - src.sivanantham-2019-keeladi-urban-settlement
+- date: 2026-11-22
+  target: /archive/artifact/hathigumpha-inscription
+  before: "The earliest surviving year-by-year royal biography in Indian epigraphy and the earliest epigraphic Jain salutation."
+  after: "The inscription recounts Kharavela's deeds through his thirteenth regnal year and opens with a Jain salutation."
+  reason: "The inscription directly supports both descriptions without requiring comparative superlatives."
+  sources:
+    - src.fleet-1910-hathigumpha-inscription
+    - src.salomon-1998-indian-epigraphy
+    - src.dundas-2002-the-jains
+- date: 2026-11-22
+  target: /archive/text/valmiki-ramayana
+  before: "The poem's compositional growth spanned about 500 BCE to 300 CE."
+  after: "Scholars think the poem took shape in stages starting around the seventh or fifth century BCE and continuing into the third century CE."
+  reason: "The broader formulation reflects estimates for the early layers and distinguishes them from traditional authorship and dating."
+  sources:
+    - src.goldman-1984-ramayana-balakanda
+    - src.brockington-1998-sanskrit-epics
+- date: 2026-11-22
+  target: /archive/artifact/sanauli-wheeled-vehicles
+  before: "The earliest intact wheeled transport burials in the subcontinent, with copper triangles on the wheels and frames."
+  after: "The summaries describe three vehicles with copper-decorated solid wheels and acknowledge the debate over the animals that drew them."
+  reason: "The source describes the excavated vehicles and competing identifications. It does not establish the regional ranking."
+  sources:
+    - src.parpola-2020-sanauli-chariot-burials
+- date: 2026-11-22
+  target: /archive/event/founding-of-vijayanagara
+  before: "In the 1300s, brothers Harihara and Bukka established a kingdom near the Tungabhadra River."
+  after: "In the 1300s, a kingdom grew near the Tungabhadra River under Harihara and Bukka. Historians are still piecing together how it began."
+  reason: "State formation was gradual, and the sequence is a historical reconstruction."
+  sources:
+    - src.stein-1989-vijayanagara
+    - src.unesco-1986-hampi

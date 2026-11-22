@@ -21,6 +21,7 @@ datings:
     grade: A
     label: Documentary record
     sources: &a1
+      - src.jones-2013-third-anniversary-discourse
       - src.trautmann-1997-aryans-and-british-india
 claims:
   - text: In his 1786 third anniversary discourse, William Jones argued that
