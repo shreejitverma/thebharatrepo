@@ -31,9 +31,14 @@ export function primaryDating<D extends { method: DatingMethod; grade: Grade }>(
   return rankDatings(datings, (d) => isTraditional(d.method))[0];
 }
 
-/** One-line date label; a traditional reckoning is marked so it never reads as dated history. */
+/** Marks a one-line date label as a traditional reckoning so it never reads as dated history. */
+export function withTraditionMark(label: string, traditional: boolean): string {
+  return traditional ? `${label} (tradition)` : label;
+}
+
+/** One-line date label for a dating, marked when it is a traditional reckoning. */
 export function datingSummary(range: YearRange, method: DatingMethod): string {
-  return isTraditional(method) ? `${formatRange(range)} (tradition)` : formatRange(range);
+  return withTraditionMark(formatRange(range), isTraditional(method));
 }
 
 /** Summary label for an entity or article: its primary dating, marked when it is a traditional reckoning. */

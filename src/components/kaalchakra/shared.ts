@@ -1,6 +1,6 @@
 import { formatInCalendar, formatRange, type CalendarSystem } from '@/lib/time';
 import { yearToUnit, unitToYear, SEGMENTS, type Segment } from '@/lib/time/scale';
-import { primaryAnchor, rankDatings, type Lens } from '@/lib/content/lens';
+import { primaryAnchor, rankDatings, withTraditionMark, type Lens } from '@/lib/content/lens';
 import type { KcDating, KcItem } from '@/lib/content/kaalchakra';
 import type { Kind } from '@/lib/content/labels';
 
@@ -67,10 +67,16 @@ export function visibleDatings<D extends PlacedDating>(item: { datings: D[] }, l
   );
 }
 
-export function formatDating(d: KcDating, cal: CalendarSystem): string {
+/** The bare range in a calendar, for places that show the lens beside it. */
+export function formatDatingRange(d: KcDating, cal: CalendarSystem): string {
   if (cal === 'ce') return formatRange(d);
   if (d.earliest === d.latest) return formatInCalendar(d.earliest, cal, d.precision, d.circa);
   return `${formatInCalendar(d.earliest, cal, d.precision, d.circa)} to ${formatInCalendar(d.latest, cal, d.precision)}`;
+}
+
+/** One-line date label in a calendar, marked when the dating is a traditional reckoning. */
+export function formatDating(d: KcDating, cal: CalendarSystem): string {
+  return withTraditionMark(formatDatingRange(d, cal), d.lens === 'tradition');
 }
 
 export function primaryDating(item: KcItem, lens: Lens): KcDating | undefined {

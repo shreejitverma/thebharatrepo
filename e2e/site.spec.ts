@@ -113,6 +113,13 @@ test.describe('Kaalchakra', () => {
     await expect(page.locator('.kc-panel .btn--primary')).toHaveAttribute('href', href);
   });
 
+  test('list rows mark traditional reckonings in the default lens', async ({ page }) => {
+    await page.goto('/kaalchakra?view=list&id=cosmology.kali-yuga');
+    await expect(page.locator('.kc-list button[aria-current="true"] .kc-list__date')).toHaveText('3102 BCE to 2026 CE (tradition)');
+    await page.goto('/kaalchakra?view=list&id=person.ashoka');
+    await expect(page.locator('.kc-list button[aria-current="true"] .kc-list__date')).not.toContainText('(tradition)');
+  });
+
   test('lens switching filters to traditional datings only', async ({ page }) => {
     await page.goto('/kaalchakra?view=list');
     const all = await page.locator('.kc-list li').count();

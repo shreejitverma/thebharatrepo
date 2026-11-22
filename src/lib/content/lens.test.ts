@@ -34,6 +34,13 @@ describe('primary dating for one-line summaries', () => {
     expect(primaryDating([linguistic, { ...epigraphic, grade: 'C' as const }])).toBe(linguistic);
   });
 
+  it('marks a traditional reckoning in Kaalchakra one-line dates, and only that', async () => {
+    const { formatDating } = await import('../../components/kaalchakra/shared');
+    const kc = (lens: 'scholarship' | 'tradition', d: typeof kaliEpoch | typeof ashokaEdict) => ({ method: d.method, grade: d.grade, lens, earliest: d.range.earliest, latest: d.range.latest, precision: d.range.precision, circa: d.range.circa });
+    expect(formatDating(kc('tradition', kaliEpoch), 'ce')).toBe('3102 BCE (tradition)');
+    expect(formatDating(kc('scholarship', ashokaEdict), 'ce')).toBe('268 to 233 BCE');
+  });
+
   it('gives person.krishna one date on cards, in search and on the Kaalchakra', async () => {
     const { loadContentUncached } = await import('./load');
     const { toKcItem } = await import('./kaalchakra');
