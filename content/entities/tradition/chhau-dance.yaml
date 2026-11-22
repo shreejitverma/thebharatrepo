@@ -34,17 +34,6 @@ datings:
       - src.chakravorty-2025-adivasi-chhau
     note: Historical accounts trace patronage by regional estates in Seraikella and Mayurbhanj alongside village ritual
       traditions across Purulia, Singhbhum and northern Odisha from the 18th-20th centuries.
-  - method: documentary
-    range:
-      earliest: 2010
-      latest: 2010
-      precision: year
-      circa: false
-    grade: A
-    label: UNESCO Representative List inscription
-    sources:
-      - src.unesco-2010-chhau-dance
-    note: Inscribed by UNESCO on the Representative List of the Intangible Cultural Heritage of Humanity in 2010.
 claims:
   - text: UNESCO inscribed Chhau dance in 2010, highlighting its three regional branches in Seraikella, Purulia and
       Mayurbhanj.

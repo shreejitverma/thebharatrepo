@@ -37,7 +37,7 @@ claims:
     grade: B
     sources:
       - src.hameed-2014-maulana-azad
-      - src.bose-jalal-2023-modern-south-asia
+      - src.bose-jalal-2004-modern-south-asia
       - src.azad-1988-india-wins-freedom
 relations:
   - kind: related-to

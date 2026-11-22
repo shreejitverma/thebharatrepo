@@ -33,18 +33,6 @@ datings:
       - src.gopalakrishnan-2011-kutiyattam
     note: Theatre historians place the structural consolidation of Koodiyattam in the second Chera (Kulasekhara) era of
       Kerala (c. 9th-11th centuries CE), while noting older Sangam and temple koothu antecedents.
-  - method: documentary
-    range:
-      earliest: 2001
-      latest: 2008
-      precision: year
-      circa: false
-    grade: A
-    label: UNESCO Masterpiece proclamation (2001) and ICH inscription (2008)
-    sources:
-      - src.unesco-2008-kutiyattam
-    note: Proclaimed a UNESCO Masterpiece of the Oral and Intangible Heritage of Humanity in May 2001 and incorporated into
-      the Representative List in 2008.
 claims:
   - text: UNESCO proclaimed Koodiyattam (Kutiyattam, Sanskrit theatre) a Masterpiece in 2001 and inscribed it on the
       Representative List of Intangible Cultural Heritage in 2008.

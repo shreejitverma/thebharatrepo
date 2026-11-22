@@ -36,7 +36,7 @@ claims:
     grade: B
     sources:
       - src.gandhi-1991-patel-a-life
-      - src.bose-jalal-2023-modern-south-asia
+      - src.bose-jalal-2004-modern-south-asia
 relations:
   - kind: related-to
     target: event.independence-and-partition-1947
