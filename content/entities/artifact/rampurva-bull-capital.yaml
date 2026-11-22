@@ -1,0 +1,85 @@
+id: artifact.rampurva-bull-capital
+type: artifact
+kind: art
+names:
+  en: Rampurva Bull Capital
+  iast: Rāmapūrvā Vṛṣabha Śīrṣa
+summary: >-
+  One of two Mauryan Chunar sandstone pillar capitals excavated by A. C. L. Carlleyle in 1876 and Daya Ram
+  Sahni in 1907 at Rampurva in West Champaran, Bihar. Crowned by a naturalistic standing zebu bull above a
+  honeysuckle-and-palmette abacus and inverted lotus base, the capital now stands in the forecourt of
+  Rashtrapati Bhavan, New Delhi.
+summaries:
+  kids: >-
+    Dug out of muddy ground in northern Bihar, this finely carved sandstone bull stood atop a huge stone
+    pillar more than 2,200 years ago and now welcomes visitors at the President's House in New Delhi.
+  teen: >-
+    At Rampurva in Bihar, archaeologists found two Ashokan columns: one inscribed with Pillar Edicts I-VI
+    topped by a lion, and this uninscribed companion topped by a lifelike humped zebu bull standing atop a
+    West Asian-inspired floral abacus, now installed at Rashtrapati Bhavan.
+region: Rampurva, West Champaran District, Bihar (housed at Rashtrapati Bhavan, New Delhi)
+location:
+  name: Rampurva pillar site, West Champaran
+  lat: 27.2699
+  lon: 84.4995
+datings:
+  - method: art-historical
+    range:
+      earliest: 265 BCE
+      latest: 225 BCE
+      best: 245 BCE
+      precision: decade
+      circa: true
+    grade: B
+    label: Mauryan period (paired with the dated Rampurva Lion Pillar of Ashoka)
+    sources:
+      - src.falk-2006-asokan-sites-and-artefacts
+      - src.huntington-1985-art-ancient-india
+    note: >-
+      Uninscribed shaft; dated by Mauryan mirror polish, Chunar sandstone facture, and direct pairing with the
+      inscribed Rampurva lion pillar (Year 26 of Ashoka).
+claims:
+  - text: >-
+      The Rampurva site yielded two Mauryan sandstone columns: a northern pillar bearing Pillar Edicts I-VI
+      topped by a single seated lion (now in the Indian Museum, Kolkata) and a southern uninscribed pillar
+      crowned by this standing humped bull.
+    grade: A
+    sources:
+      - src.falk-2006-asokan-sites-and-artefacts
+      - src.harle-1994-art-architecture-indian-subcontinent
+  - text: >-
+      Unlike the stylised heraldry of Sarnath, the Rampurva zebu bull exhibits taut anatomical realism,
+      prominent dewlap folds, and muscular modelling over a circular abacus carved with rosettes, acanthus
+      leaves, and honeysuckle palmettes.
+    grade: B
+    sources:
+      - src.huntington-1985-art-ancient-india
+      - src.harle-1994-art-architecture-indian-subcontinent
+  - text: "The bull capital, formerly in the Indian Museum, Kolkata, is now displayed at Rashtrapati Bhavan, New Delhi."
+    grade: B
+    sources:
+      - src.falk-2006-asokan-sites-and-artefacts
+      - src.singh-2008-ancient-early-medieval-india
+relations:
+  - kind: patronised-by
+    target: person.ashoka
+  - kind: part-of
+    target: polity.maurya-empire
+  - kind: contemporary-of
+    target: artifact.sarnath-lion-capital
+wikidata: Q112608801
+image:
+  commons: File:Rampurva bull in Presidential Palace.jpg
+  alt: Mauryan polished sandstone zebu bull capital from Rampurva installed at Rashtrapati Bhavan in New Delhi
+  credit: M. Amitav Ghosh
+  license: CC BY-SA 2.0
+tags:
+  - maurya
+  - sculpture
+  - ashoka
+  - bull
+  - rampurva
+  - chunar-sandstone
+review:
+  status: draft
+  author: gemini-4-hydrogen-xhigh

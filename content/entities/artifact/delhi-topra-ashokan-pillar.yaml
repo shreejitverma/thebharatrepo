@@ -1,0 +1,109 @@
+id: artifact.delhi-topra-ashokan-pillar
+type: artifact
+kind: polity
+names:
+  en: Delhi-Topra Ashokan Pillar
+  iast: Dillī-Ṭoparā Aśoka Stambha
+summary: >-
+  A c. 13-metre monolithic Chunar sandstone column originally erected by Emperor Ashoka at Topra Kalan
+  (Yamunanagar district, Haryana) and transported to Delhi in 1356 CE by Sultan Firuz Shah Tughluq to stand
+  atop a stepped stone pyramid at Firoz Shah Kotla. It is the sole Ashokan column to carry all seven Major
+  Pillar Edicts (Pillar Edict VII exists nowhere else) and served as the key stone in James Prinsep's 1837
+  decipherment of Brahmi, alongside 1164 CE Chahamana inscriptions of Visaladeva.
+summaries:
+  kids: >-
+    Dragged all the way from Haryana to Delhi on a massive 42-wheel cart in 1356, this tall Mauryan pillar is
+    the only Ashoka column in the world holding all seven of his Great Pillar Edicts.
+  teen: >-
+    Standing in Firoz Shah Kotla, the Delhi-Topra Pillar preserves Ashoka's sole surviving copy of Pillar
+    Edict VII alongside Edicts I-VI and 12th-century victory records of Chahamana ruler Vigraharaja IV; in
+    1837 it supplied James Prinsep with the complete alphabet needed to decipher Ashokan Brahmi.
+region: Firoz Shah Kotla, New Delhi (originally erected at Topra Kalan, Yamunanagar District, Haryana)
+location:
+  name: Ashokan Pillar at Firoz Shah Kotla, New Delhi
+  lat: 28.6364
+  lon: 77.2429
+datings:
+  - method: epigraphic
+    range:
+      earliest: 245 BCE
+      latest: 240 BCE
+      best: 242 BCE
+      precision: year
+      circa: true
+    grade: B
+    label: Regnal Years 26 and 27 of Ashoka (Pillar Edicts I-VII)
+    sources:
+      - src.hultzsch-1925-inscriptions-of-asoka
+      - src.falk-2006-asokan-sites-and-artefacts
+      - src.lahiri-2015-ashoka-ancient-india
+    note: >-
+      Internal text explicitly dates Pillar Edicts I-VI to the 26th year after Ashoka's consecration and
+      Pillar Edict VII to his 27th year.
+  - method: epigraphic
+    range:
+      earliest: 1164
+      latest: 1164
+      best: 1164
+      precision: year
+      circa: false
+    grade: A
+    label: Vikrama Samvat 1220 inscriptions of Chahamana Vigraharaja IV (Visaladeva)
+    sources:
+      - src.hultzsch-1925-inscriptions-of-asoka
+      - src.falk-2006-asokan-sites-and-artefacts
+    note: >-
+      Three Nagari-script Sanskrit inscriptions carved onto the same column explicitly carry the date Vaisakha
+      sudi 15, Vikrama Samvat 1220 (9 April 1164 CE).
+claims:
+  - text: >-
+      Measured at roughly 13 m above its Firozabad masonry base, the Delhi-Topra shaft bears Ashoka's Major
+      Pillar Edicts I-VI (dated Regnal Year 26) around the four cardinal faces and the unique Pillar Edict VII
+      (Regnal Year 27) running continuously below, giving a retrospective summary of Ashoka's welfare and
+      dhamma institutions.
+    grade: A
+    sources:
+      - src.hultzsch-1925-inscriptions-of-asoka
+      - src.falk-2006-asokan-sites-and-artefacts
+  - text: >-
+      Shams-i Siraj Afif's Tarikh-i-Firuz Shahi recounts how Firuz Shah Tughluq had the pillar carefully
+      padded in raw hides and silk-cotton and transported by 42-wheel carriage and river barges from Topra to
+      Delhi in 1356 CE, where it was erected atop a three-tiered vaulted stone structure.
+    grade: A
+    sources:
+      - src.lahiri-2015-ashoka-ancient-india
+      - src.falk-2006-asokan-sites-and-artefacts
+  - text: "Three Nagari inscriptions dated Vikrama Samvat 1220 (1164 CE) honour Chahamana king Vigraharaja IV (Visaladeva) of Shakambhari for sweeping northern India free of Turushka/Mleccha invaders, while copies of this pillar's Ashokan text were central to James Prinsep's work on Brahmi in 1837."
+    grade: A
+    sources:
+      - src.hultzsch-1925-inscriptions-of-asoka
+      - src.lahiri-2015-ashoka-ancient-india
+relations:
+  - kind: patronised-by
+    target: person.ashoka
+  - kind: part-of
+    target: polity.maurya-empire
+  - kind: related-to
+    target: event.brahmi-decipherment-prinsep
+    note: Supplied the primary impressions for Prinsep's 1837 Brahmi key
+  - kind: contemporary-of
+    target: artifact.sarnath-lion-capital
+wikidata: null
+image:
+  commons: File:Ashoka's Pillar inside Feroz Shah Kotla, Delhi.JPG
+  alt: >-
+    Monolithic Delhi-Topra Ashokan sandstone column standing atop the stepped pyramid of Firoz Shah Kotla in
+    New Delhi
+  credit: Dhamijalok
+  license: CC BY-SA 3.0
+tags:
+  - inscription
+  - ashoka
+  - pillar-edict
+  - delhi
+  - brahmi
+  - maurya
+  - vigraharaja
+review:
+  status: draft
+  author: gemini-4-hydrogen-xhigh

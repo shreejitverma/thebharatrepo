@@ -1,0 +1,86 @@
+id: artifact.punch-marked-coins
+type: artifact
+kind: polity
+names:
+  en: Punch-Marked Silver Coins (Karshapanas)
+  iast: Āhata Rajata Kārṣāpaṇa
+summary: "The earliest known coinage of the Indian subcontinent, consisting of cut silver flans stamped individually with geometric, floral, animal, and solar punches between the 6th-5th century BCE and the 2nd century BCE. Evolving from local janapada bent-bars and four-symbol issues into the vast five-punch Imperial Magadhan-Mauryan karshapana series (~3.4 g, 32-ratti standard), they bear no written inscriptions."
+summaries:
+  kids: >-
+    Long before kings put their names or portraits on coins, Indian merchants and kingdoms clipped flat pieces
+    of silver to an exact weight and stamped them with little sun, animal, and geometric punches.
+  teen: >-
+    Spanning the sixteen Mahajanapadas and the Maurya Empire, uninscribed silver punch-marked coins
+    (karshapanas) were cut from sheet or globule silver to a ~3.4-gram ratti standard and punched with
+    standardized symbols linking Magadhan state minting with long-distance trade.
+region: Across South Asia (Gandhara and Magadha to the Deccan and Tamilakam)
+datings:
+  - method: numismatic
+    range:
+      earliest: 550 BCE
+      latest: 100 BCE
+      best: 300 BCE
+      precision: century
+      circa: true
+    grade: B
+    label: Pre-Mauryan Mahajanapada to post-Mauryan circulation
+    sources:
+      - src.gupta-hardaker-2014-punchmarked-coinage
+      - src.allan-1936-coins-of-ancient-india
+      - src.allchin-1995-archaeology-early-historic-south-asia
+    note: >-
+      Taxila Bhir Mound and Chaman Huzuri hoards date early Taxilan bent-bars and pre-Mauryan issues to the
+      late 5th-4th century BCE (paired with Achaemenid sigloi and Greek tetradrachms); the Magadha-Maurya
+      imperial series peaks c. 350-200 BCE.
+claims:
+  - text: >-
+      Using single-symbol metal punches hammered individually into cold or heated silver flans (ahata), early
+      regional series of Kosala, Avanti, Kashi, and Gandhara (bent-bar shatamanas) carried one to four
+      distinct obverse marks, whereas the Imperial Magadha-Maurya karshapana standardized five obverse punches
+      (constantly including a sun and six-armed symbol) and a ~3.4 g (32-ratti) weight.
+    grade: A
+    sources:
+      - src.gupta-hardaker-2014-punchmarked-coinage
+      - src.allan-1936-coins-of-ancient-india
+  - text: >-
+      Hoards such as Chaman Huzuri (Kabul) and Bhir Mound (Taxila) associate early punch-marked silver
+      directly with late Achaemenid and early Hellenistic coinage of the 4th century BCE, anchoring an origin
+      at least in the 5th-4th century BCE and possibly the 6th century BCE.
+    grade: B
+    sources:
+      - src.gupta-hardaker-2014-punchmarked-coinage
+      - src.allchin-1995-archaeology-early-historic-south-asia
+  - text: >-
+      Patanjali and the Arthashastra refer to panavara/pana/karshapana monetary officials (rupudarshaka),
+      matching the small banker's inspection marks stamped onto the reverses of worn punch-marked coins.
+    grade: B
+    sources:
+      - src.singh-2008-ancient-early-medieval-india
+      - src.gupta-hardaker-2014-punchmarked-coinage
+relations:
+  - kind: part-of
+    target: polity.sixteen-mahajanapadas
+  - kind: part-of
+    target: polity.magadha
+  - kind: part-of
+    target: polity.maurya-empire
+  - kind: related-to
+    target: concept.northern-black-polished-ware-culture
+    note: Co-occurs in Early Historic urban layers
+wikidata: Q7259957
+image:
+  commons: File:Magadha kingdom Circa 430-320s BC AR Karshapana.jpg
+  alt: Silver punch-marked karshapana coin of Magadha showing multiple stamped solar and geometric symbols
+  credit: Classical Numismatic Group
+  license: CC BY-SA 3.0
+tags:
+  - coins
+  - numismatics
+  - punch-marked
+  - karshapana
+  - silver
+  - magadha
+  - maurya
+review:
+  status: draft
+  author: gemini-4-hydrogen-xhigh

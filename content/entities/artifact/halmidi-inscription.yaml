@@ -1,0 +1,89 @@
+id: artifact.halmidi-inscription
+type: artifact
+kind: text
+names:
+  en: Halmidi Inscription
+  iast: Halmiḍi Śilāśāsana
+summary: >-
+  A sixteen-line sandstone pillar inscription discovered in 1936 by M. H. Krishna at Halmidi in Hassan
+  district, Karnataka (now in the Government Museum, Bengaluru), generally recognised as the earliest
+  surviving full-length epigraph in Old Kannada (Halegannada). Dating palaeographically to the mid-5th century
+  CE during the reign of Kadamba king Kakusthavarman, it begins with a Sanskrit invocation to Vishnu before
+  recording a land grant in Kannada prose.
+summaries:
+  kids: >-
+    Found in a Karnataka village in 1936, this sandstone pillar carries the oldest known long inscription
+    written in the Kannada language, praising a warrior named Vija Arasa under the Kadamba kings.
+  teen: >-
+    Housed in the Government Museum, Bengaluru, the 5th-century Halmidi stone tablet marks the beginning of
+    documented Kannada epigraphy: following an opening Sanskrit verse to Vishnu, it shifts into pre-Old
+    Kannada prose to grant two villages for bravery in battle.
+region: Halmidi, Belur Taluk, Hassan District, Karnataka (housed in Government Museum, Bengaluru)
+location:
+  name: Halmidi village findspot, Hassan district
+  lat: 13.2448
+  lon: 75.8207
+datings:
+  - method: epigraphic
+    range:
+      earliest: 430
+      latest: 500
+      best: 450
+      precision: decade
+      circa: true
+    grade: B
+    label: Early Kadamba / pre-Old Kannada palaeography (Kakusthavarman)
+    sources:
+      - src.gai-1996-inscriptions-early-kadambas
+      - src.salomon-1998-indian-epigraphy
+    note: >-
+      Dated to c. 450 CE (or slightly later under Kadamba rule, c. 450-500 CE) on Kadamba-script letterforms
+      and reference to Kakustha-bhattaraka; G. S. Gai notes slightly later palaeographic variants exist
+      alongside mid-5th-century attribution.
+claims:
+  - text: >-
+      Discovered by Mysore Archaeological Director M. H. Krishna in 1936 outside a Veerabhadra shrine at
+      Halmidi, the pillar measures roughly 16 lines in early Kadamba script and opens with a Sanskrit shloka
+      invoking Vishnu ("Jayati sri-parishvanga...") before switching to early Old Kannada.
+    grade: A
+    sources:
+      - src.gai-1996-inscriptions-early-kadambas
+      - src.salomon-1998-indian-epigraphy
+  - text: >-
+      Under Kadamba Kakusthavarman (Kakustha-bhattaraka) and his subordinates Mrigesha and Naga, the grant
+      bestows the villages of Palmadi (Halmidi) and Mulivalli as balgalchu (sword-reward) to Vija Arasa for
+      valor in battle against the Kekayas and Pallavas.
+    grade: A
+    sources:
+      - src.gai-1996-inscriptions-early-kadambas
+      - src.moraes-1931-kadamba-kula
+  - text: >-
+      Though isolated Kannada place-names and words appear earlier in Prakrit records and Greek farces,
+      Halmidi is widely treated as the foundational milestone of connected Kannada epigraphy.
+    grade: B
+    sources:
+      - src.salomon-1998-indian-epigraphy
+      - src.singh-2008-ancient-early-medieval-india
+relations:
+  - kind: contemporary-of
+    target: artifact.talagunda-pillar-inscription
+    note: Contemporary Kadamba epigraph mentioning Kakusthavarman
+  - kind: related-to
+    target: concept.brahmi-to-gupta-script
+    note: Early southern Kadamba script transition toward Kannada-Telugu script
+wikidata: Q5643272
+image:
+  commons: File:Halmidi OldKannada inscription.JPG
+  alt: Old Kannada and Sanskrit inscription engraved on the Halmidi sandstone pillar in Karnataka
+  credit: Dineshkannambadi
+  license: CC BY-SA 3.0
+tags:
+  - inscription
+  - kannada
+  - halmidi
+  - kadamba
+  - karnataka
+  - epigraphy
+review:
+  status: draft
+  author: gemini-4-hydrogen-xhigh

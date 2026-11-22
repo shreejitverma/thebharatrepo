@@ -1,0 +1,91 @@
+id: artifact.gilgit-manuscripts
+type: artifact
+kind: text
+names:
+  en: Gilgit Buddhist Manuscripts
+  iast: Gilgiṭa Bauddha Pāṇḍulipi
+summary: >-
+  A major corpus of 5th-6th century CE Sanskrit and Buddhist Hybrid Sanskrit birch-bark manuscripts discovered
+  in 1931 inside a stone chambered stupa at Naupur near Gilgit, preserved today in the National Archives of
+  India, New Delhi and Sri Pratap Singh Museum, Srinagar. Written in Upright Gupta (Gilgit/Bamiyan Type I) and
+  early Proto-Sharada scripts, they include the Mulasarvastivada Vinaya and early Mahayana sutras, earning
+  UNESCO Memory of the World inscription in 2017.
+summaries:
+  kids: >-
+    Found inside an underground stupa chamber near Gilgit in 1931, these 1,500-year-old birch-bark pages
+    preserve Sanskrit Buddhist scriptures and monastic rules in New Delhi and Srinagar.
+  teen: >-
+    Dated to the 5th-6th century CE (Patola Shahi patronage), the Gilgit Manuscripts are the oldest surviving
+    Sanskrit Buddhist manuscript corpus found on Indian subcontinent soil, preserving the Mulasarvastivada
+    Vinaya, Lotus Sutra, and Bhaiṣajyaguru Sutra.
+region: >-
+  Naupur near Gilgit, Gilgit-Baltistan (housed in National Archives of India, New Delhi and SPS Museum,
+  Srinagar)
+location:
+  name: Naupur stupa findspot near Gilgit
+  lat: 35.9187
+  lon: 74.3125
+datings:
+  - method: epigraphic
+    range:
+      earliest: 450
+      latest: 650
+      best: 550
+      precision: century
+      circa: true
+    grade: B
+    label: 5th-6th century CE Gupta / Proto-Sharada palaeography and Patola Shahi colophons
+    sources:
+      - src.dutt-1941-gilgit-manuscripts-vol-2
+      - src.ruegg-hinuber-1986-gilgit-saddharmapundarika
+    note: >-
+      Colophons naming Patola Shahi rulers (e.g. Navasurendraditya Nandin) and Upright Gupta / early
+      Proto-Sharada script hands place the main deposit in the 5th-7th century CE (especially c. 500-630 CE).
+claims:
+  - text: >-
+      Discovered by cowherds in 1931 in a wooden box inside a stupa mound at Naupur near Gilgit and first
+      published in multi-volume critical editions by Nalinaksha Dutt, the manuscripts are split primarily
+      between the National Archives of India, New Delhi and the Sri Pratap Singh Museum, Srinagar.
+    grade: A
+    sources:
+      - src.dutt-1941-gilgit-manuscripts-vol-2
+      - src.ruegg-hinuber-1986-gilgit-saddharmapundarika
+  - text: >-
+      The corpus preserves major canonical texts in Sanskrit and Buddhist Hybrid Sanskrit, including extensive
+      sections of the Mulasarvastivada Vinaya, Saddharmapundarika (Lotus Sutra), Samadhiraja Sutra,
+      Bhaiṣajyaguru Sutra, and Avadanas, written in Upright Gupta and early Gilgit-Bamiyan / Proto-Sharada
+      hands.
+    grade: A
+    sources:
+      - src.dutt-1941-gilgit-manuscripts-vol-2
+      - src.ruegg-hinuber-1986-gilgit-saddharmapundarika
+  - text: >-
+      UNESCO inscribed the Gilgit Manuscripts on the Memory of the World International Register in 2017 in
+      recognition of their antiquity and role in transmitting Indian Buddhist Sanskrit texts to Central Asia
+      and Tibet.
+    grade: A
+    sources:
+      - src.ruegg-hinuber-1986-gilgit-saddharmapundarika
+relations:
+  - kind: related-to
+    target: artifact.gandhari-birch-bark-manuscripts
+    note: Demonstrates continuity of northwest birch-bark Buddhist libraries from Gandhari to Sanskrit
+wikidata: Q135028525
+image:
+  commons: File:Gilgitmanuscript.jpg
+  alt: >-
+    Birch-bark Sanskrit folio of the 5th-6th century CE Gilgit Buddhist Manuscripts preserved in the National
+    Archives of India
+  credit: National Archives of India
+  license: Public domain
+tags:
+  - manuscript
+  - birch-bark
+  - gilgit
+  - sanskrit
+  - vinaya
+  - buddhism
+  - unesco
+review:
+  status: draft
+  author: gemini-4-hydrogen-xhigh

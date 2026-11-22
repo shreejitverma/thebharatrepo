@@ -1,0 +1,86 @@
+id: artifact.naneghat-cave-inscription
+type: artifact
+kind: polity
+names:
+  en: Naneghat Cave Inscription of Naganika
+  iast: Nāṇeghāṭa Guhā Abhilekha
+summary: >-
+  A monumental twenty-line Prakrit Brahmi inscription carved on the side walls of a rock-cut pass chamber at
+  Naneghat in Pune district, Maharashtra, connecting Konkan ports to Junnar. Commissioned by Queen Naganika,
+  widow of the early Satavahana king Satakarni I, it enumerates major Vedic sacrifices performed by the
+  dynasty and labels eight accompanying royal portrait reliefs.
+summaries:
+  kids: "Inside a resting cave high in a mountain trade pass near Pune, an ancient Prakrit inscription put up by Queen Naganika lists grand Vedic ceremonies and gifts of cattle, horses, and thousands of coins."
+  teen: >-
+    Carved at the top of the Naneghat trade pass in the Western Ghats, Queen Naganika's early Satavahana
+    inscription uniquely invokes Vedic and Puranic deities alongside Buddhist-era Brahmi numerals, documenting
+    Ashvamedha and Rajasuya sacrifices and damaged portrait label plaques of the royal family.
+region: Naneghat Pass near Junnar, Pune District, Maharashtra, India
+location:
+  name: Naneghat rock-cut inscription chamber
+  lat: 19.2919
+  lon: 73.7597
+datings:
+  - method: epigraphic
+    range:
+      earliest: "200 BCE"
+      latest: 1 BCE
+      best: 50 BCE
+      precision: century
+      circa: true
+    grade: C
+    label: Early Satavahana Brahmi palaeography (Satakarni I / Queen Naganika)
+    sources:
+      - src.mirashi-1981-history-inscriptions-satavahanas
+      - src.burgess-1883-buddhist-cave-temples-aswi-4
+      - src.salomon-1998-indian-epigraphy
+    note: "Dated on early Satavahana Brahmi letterforms (closely comparable to Sanchi gateway I and Hathigumpha); the shorter Satavahana chronology places Satakarni I in the mid-to-late 1st century BCE, while longer chronologies place him in the 2nd century BCE."
+claims:
+  - text: >-
+      Published by Georg Buhler in ASWI Vol. 4 and edited by V. V. Mirashi, the cave inscription opens with
+      homage to Dharma, Indra, Samkarshana, Vasudeva, the Sun, Moon, and the four Lokapalas before detailing
+      Queen Naganika's lineage.
+    grade: A
+    sources:
+      - src.burgess-1883-buddhist-cave-temples-aswi-4
+      - src.mirashi-1981-history-inscriptions-satavahanas
+  - text: >-
+      The text records numerous Vedic sacrifices - including Agnyadheya, Rajasuya, two Ashvamedhas, and
+      Gavayamana - alongside exact dakshina fees in cows, horses, elephants, silver pots, and thousands of
+      karshapana coins written in early Brahmi numerical symbols.
+    grade: A
+    sources:
+      - src.mirashi-1981-history-inscriptions-satavahanas
+      - src.singh-2008-ancient-early-medieval-india
+  - text: >-
+      On the back wall, six surviving short Prakrit label inscriptions identify eroded portrait reliefs
+      starting with "Raya Simuka Satavahano sirimato" followed by Devi Naganika, King Satakarni, and princes.
+    grade: A
+    sources:
+      - src.mirashi-1981-history-inscriptions-satavahanas
+      - src.salomon-1998-indian-epigraphy
+relations:
+  - kind: part-of
+    target: polity.satavahana-dynasty
+  - kind: related-to
+    target: artifact.nasik-cave-inscriptions-gautamiputra-satakarni
+    note: Earlier Satavahana epigraphic milestone
+  - kind: contemporary-of
+    target: artifact.hathigumpha-inscription
+    note: Contemporary 1st-century BCE Prakrit dynastic record
+wikidata: Q97309018
+image:
+  commons: File:Inscription in cave at Naneghat.jpg
+  alt: Prakrit Brahmi inscription wall inside the rock-cut cave chamber at Naneghat Pass, Maharashtra
+  credit: Chetan Karkhanis
+  license: CC BY-SA 3.0
+tags:
+  - inscription
+  - satavahana
+  - naneghat
+  - brahmi
+  - numerals
+  - vedic-sacrifice
+review:
+  status: draft
+  author: gemini-4-hydrogen-xhigh

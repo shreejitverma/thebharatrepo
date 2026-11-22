@@ -1,0 +1,94 @@
+id: artifact.ain-i-akbari-manuscript
+type: artifact
+kind: text
+names:
+  en: Ain-i-Akbari Manuscripts of Abu'l Fazl
+  iast: Āīn-i-Akbarī Pāṇḍulipi
+summary: >-
+  Manuscript copies of the third and concluding volume of Abu'l Fazl ibn Mubarak's official Akbarnama
+  (completed in the 42nd-43rd Ilahi year, c. 1597-1598 CE), comprising a detailed Persian statistical,
+  administrative, geographical, and cultural survey of Akbar's empire. Important manuscript witnesses survive
+  in the British Library (such as Add. 7652 and Royal Library copies) and later illustrated transcripts like
+  Victoria Memorial Hall, Kolkata Acc. No. R6-C215.
+summaries:
+  kids: >-
+    Written by Emperor Akbar's scholar-minister Abu'l Fazl around 1598, the Ain-i-Akbari manuscripts work like
+    a massive encyclopaedia recording everything from imperial kitchens, coin mints, and province tax tables
+    to Indian astronomy and philosophies.
+  teen: >-
+    Forming Volume 3 of the Akbarnama (c. 1597-1598 CE), surviving Persian manuscripts of the Ain-i-Akbari
+    (including British Library Add. 7652) preserve detailed tables of Mughal revenue administration,
+    provinces, army pay, coinage, and a major survey of Hindu sciences and schools of thought.
+region: >-
+  Mughal court (Agra/Lahore; major manuscripts in British Library Add. 7652 and Victoria Memorial Hall,
+  Kolkata R6-C215)
+datings:
+  - method: documentary
+    range:
+      earliest: 1595
+      latest: 1602
+      best: 1598
+      precision: year
+      circa: false
+    grade: A
+    label: Composition completed in Akbar's 42nd-43rd regnal year (c. 1597-1598 CE)
+    sources:
+      - src.abulfazl-1873-ain-i-akbari
+      - src.abulfazl-1949-ain-i-akbari-vol-2
+      - src.losty-roy-2012-mughal-india-british-library
+    note: >-
+      Internal colophon and narrative stop in the 42nd-43rd Ilahi year (1597-1598 CE); later scribal and
+      illustrated copies (such as Victoria Memorial Hall R6-C215, c. 1800) continued to reproduce the
+      administrative tables and diagrams.
+claims:
+  - text: >-
+      Translated into English by H. Blochmann (Vol. 1) and H. S. Jarrett (Vols. 2-3, revised by Jadunath
+      Sarkar), Abu'l Fazl's Ain-i-Akbari forms the five-book administrative appendix of the Akbarnama,
+      transmitted in early British Library manuscripts such as Add. 7652 and later copies including Victoria
+      Memorial Hall R6-C215.
+    grade: A
+    sources:
+      - src.abulfazl-1873-ain-i-akbari
+      - src.abulfazl-1949-ain-i-akbari-vol-2
+      - src.losty-roy-2012-mughal-india-british-library
+  - text: >-
+      Books 1-3 systematically tabulate the imperial household, mint metallurgy, imperial painting atelier,
+      mansabdari military ranks, land measurement, crop yield rates, and revenue accounts for twelve (later
+      fifteen) Mughal subas.
+    grade: A
+    sources:
+      - src.abulfazl-1873-ain-i-akbari
+      - src.abulfazl-1949-ain-i-akbari-vol-2
+  - text: >-
+      Book 4 presents an extensive Persian account of classical Indian learning - covering the six darsanas,
+      grammar, astronomy, dharma rules, castes, and regional customs - ending with Book 5's collection of
+      Akbar's sayings.
+    grade: A
+    sources:
+      - src.abulfazl-1949-ain-i-akbari-vol-2
+      - src.kulke-2004-history-of-india
+relations:
+  - kind: patronised-by
+    target: person.akbar
+  - kind: part-of
+    target: polity.mughal-empire
+  - kind: contemporary-of
+    target: artifact.baburnama-illustrated-manuscripts
+wikidata: null
+image:
+  commons: File:Ain-i Akbari, Victoria Memorial Hall, Acc.-No. R6-C215. Ca. 1800.png
+  alt: >-
+    Persian manuscript folio of the Ain-i-Akbari preserved at Victoria Memorial Hall, Kolkata (Acc. No.
+    R6-C215)
+  credit: Victoria Memorial Hall, Kolkata
+  license: Public domain
+tags:
+  - manuscript
+  - mughal
+  - ain-i-akbari
+  - akbar
+  - persian
+  - administration
+review:
+  status: draft
+  author: gemini-4-hydrogen-xhigh

@@ -1,0 +1,103 @@
+id: artifact.shinkot-bajaur-reliquary-casket
+type: artifact
+kind: dharma
+names:
+  en: Shinkot (Bajaur) Reliquary Casket
+  iast: Śinakoṭa (Bājaura) Dhātu Mañjūṣā
+summary: "A steatite Buddhist relic casket excavated in 1927 at Shinkot in the Bajaur region of Khyber Pakhtunkhwa, Pakistan, inscribed with two sequential strata of Kharoshthi epigraphy on its lid and bowl. An earlier text mentions the Indo-Greek king Menander I (\"Maharaja Minadra\", 14th day of Karttika), while a second inscription records the Apraca ruler Vijayamitra re-enshrining the relics in his 5th regnal year."
+summaries:
+  kids: >-
+    Dug up in northwestern Pakistan in 1927, this carved soapstone relic box carries two different ancient
+    Kharoshthi inscriptions: one naming the Indo-Greek king Menander and a later one recording a local ruler
+    who repaired and re-honoured the sacred relics.
+  teen: >-
+    Discovered at Shinkot in Bajaur, this two-phase inscribed steatite reliquary links the Indo-Greek King
+    Menander I (c. 2nd century BCE) with later Apraca royal relic patronage (1st century BCE/CE), supplying
+    rare epigraphic confirmation of Menander's rule and Buddhist devotion in Gandhara.
+region: Shinkot, Bajaur District, Khyber Pakhtunkhwa, Pakistan
+location:
+  name: Shinkot archaeological findspot, Bajaur
+  lat: 34.66
+  lon: 71.5
+datings:
+  - method: epigraphic
+    range:
+      earliest: 165 BCE
+      latest: 125 BCE
+      best: 145 BCE
+      precision: decade
+      circa: true
+    grade: B
+    label: Primary inscription mentioning Indo-Greek King Menander I
+    sources:
+      - src.desai-1938-epigraphia-indica-vol-24
+      - src.stoneman-2019-greek-experience-of-india
+    note: >-
+      First stratigraphic Kharoshthi hand invokes the reign of Maharaja Minadra (Menander I, c. 155-130 BCE)
+      on the 14th day of Karttika.
+  - method: epigraphic
+    range:
+      earliest: 20 BCE
+      latest: 50
+      best: 1
+      precision: decade
+      circa: true
+    grade: C
+    label: Secondary Apraca re-consecration inscription (5th regnal year of Vijayamitra)
+    sources:
+      - src.desai-1938-epigraphia-indica-vol-24
+      - src.salomon-1998-indian-epigraphy
+    note: >-
+      Later epigraphs on the bowl/lid record re-establishment by Apracaraja Vijayamitra in Year 5 (25th day of
+      Vaisakha), showing two generations of relic worship across more than a century.
+claims:
+  - text: >-
+      Published by N. G. Majumdar in Epigraphia Indica Vol. 24 (1938) and re-examined by Sten Konow and
+      Richard Salomon, the Shinkot steatite casket bears two distinct layers of Kharoshthi inscriptions.
+    grade: A
+    sources:
+      - src.desai-1938-epigraphia-indica-vol-24
+      - src.salomon-1998-indian-epigraphy
+  - text: >-
+      The earlier epigraphic stratum refers to "Maharajasa Minadrasa" (King Menander I) on the 14th day of
+      Karttika and records the establishment of the corporal relic (pranena sameta sarira) of Shakyamuni
+      Buddha by Viyakamitra.
+    grade: A
+    sources:
+      - src.desai-1938-epigraphia-indica-vol-24
+      - src.stoneman-2019-greek-experience-of-india
+  - text: >-
+      The later Apraca inscription in the 5th regnal year of Vijayamitra (on the 25th day of Vaisakha) states
+      that the relics had fallen into neglect without pindodaka rites and were solemnly re-consecrated,
+      proving ongoing Buddhist relic cults from Indo-Greek into Indo-Scythian times.
+    grade: B
+    sources:
+      - src.desai-1938-epigraphia-indica-vol-24
+      - src.salomon-1998-indian-epigraphy
+relations:
+  - kind: related-to
+    target: person.menander-i
+    note: Directly names Maharaja Minadra (Menander I) in Kharoshthi
+  - kind: part-of
+    target: polity.indo-greek-kingdom
+  - kind: related-to
+    target: text.milindapanha
+    note: Epigraphic evidence of Menander's historical prestige in Gandharan Buddhism
+wikidata: Q85800843
+image:
+  commons: File:Shinkot relic casket.jpg
+  alt: >-
+    ASI photograph of the inscribed steatite Shinkot reliquary casket from Bajaur mentioning Menander and
+    Vijayamitra
+  credit: Archaeological Survey of India
+  license: Public domain
+tags:
+  - reliquary
+  - kharoshthi
+  - menander
+  - indo-greek
+  - bajaur
+  - buddhism
+review:
+  status: draft
+  author: gemini-4-hydrogen-xhigh

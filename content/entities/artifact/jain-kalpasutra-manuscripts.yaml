@@ -1,0 +1,91 @@
+id: artifact.jain-kalpasutra-manuscripts
+type: artifact
+kind: art
+names:
+  en: Western Indian Illustrated Jain Kalpasutra Manuscripts
+  iast: Paścima Bhāratīya Citrāṅkita Kalpasūtra
+summary: >-
+  Richly illuminated Svetambara Jain paper manuscripts of the Kalpasutra (traditionally attributed to
+  Bhadrabahu) produced in Gujarat, Rajasthan, and Malwa between the late 14th and 16th centuries CE,
+  succeeding earlier palm-leaf copies. Preserved in collections such as Devasano Pado (Ahmedabad), the Royal
+  Ontario Museum, and Smithsonian/Freer, they depict episodes from the lives of Mahavira, Parshva, Nemi, and
+  Rishabha in brilliant red, ultramarine, and gold leaf.
+summaries:
+  kids: >-
+    Painted on oblong sheets of paper in shimmering gold, deep lapis blue, and bright red, 15th-century Jain
+    Kalpasutra books from Gujarat tell illustrated stories of the birth and life of Lord Mahavira and earlier
+    Jinas.
+  teen: >-
+    Transitioning from palm-leaf to imported rag paper in the 14th-15th centuries, Western Indian Kalpasutra
+    manuscripts (such as the famous Devasano Pado copy) pioneered dazzling gold-and-ultramarine marginal
+    illuminations and iconic stylized faces with the "projecting further eye."
+region: >-
+  Gujarat, southern Rajasthan, and Malwa (e.g. Ahmedabad, Patan, Mandu; leaves in ROM, Devasano Pado,
+  Smithsonian)
+datings:
+  - method: epigraphic
+    range:
+      earliest: 1350
+      latest: 1550
+      best: 1475
+      precision: century
+      circa: true
+    grade: A
+    label: Dated Svetambara paper Kalpasutra colophons (e.g. Mandu 1439, Jaunpur 1465, Devasano Pado c. 1475)
+    sources:
+      - src.brown-1934-miniature-paintings-jaina-kalpasutra
+      - src.pal-1994-jain-art-from-india
+      - src.losty-1982-art-of-the-book
+    note: >-
+      Colophons carry explicit Vikrama Samvat years, scribe names, and merchant-patron genealogies documenting
+      religious book-donations (jnanapuja).
+claims:
+  - text: >-
+      W. Norman Brown (1934), J. P. Losty, and Pratapaditya Pal trace how Western Indian Jain pothi
+      manuscripts shifted from palm leaf to rag paper in the late 14th century while preserving wide oblong
+      dimensions and red string-hole medallions.
+    grade: B
+    sources:
+      - src.brown-1934-miniature-paintings-jaina-kalpasutra
+      - src.losty-1982-art-of-the-book
+      - src.pal-1994-jain-art-from-india
+  - text: >-
+      Iconic visual conventions include three-quarter profile faces with a projecting "further eye" extending
+      beyond the cheek contour, gold-leaf and lapis-lazuli grounds, and architectural scenes illustrating the
+      Fourteen Auspicious Dreams of Queen Trishala, the nativity of Mahavira, and the Kalakacharya-katha
+      appendix.
+    grade: A
+    sources:
+      - src.brown-1934-miniature-paintings-jaina-kalpasutra
+      - src.pal-1994-jain-art-from-india
+  - text: >-
+      Commissioning richly gilt Kalpasutra manuscripts for bhandara monastery libraries constituted a high
+      form of lay merit (danapuja) among Gujarati merchants and bankers.
+    grade: B
+    sources:
+      - src.dundas-2002-the-jains
+      - src.pal-1994-jain-art-from-india
+relations:
+  - kind: related-to
+    target: person.mahavira
+    note: Narrates the biography of the 24th Tirthankara Mahavira
+wikidata: null
+image:
+  commons: >-
+    File:Kalpasutra (legends of the Jain saviors), Gujarat, India, late 15th century - Royal Ontario Museum -
+    DSC09634.JPG
+  alt: >-
+    Late 15th-century Western Indian illuminated Jain Kalpasutra folio on gold and blue ground in the Royal
+    Ontario Museum
+  credit: Daderot
+  license: CC0
+tags:
+  - manuscript
+  - jainism
+  - kalpasutra
+  - gujarat
+  - miniature
+  - painting
+review:
+  status: draft
+  author: gemini-4-hydrogen-xhigh

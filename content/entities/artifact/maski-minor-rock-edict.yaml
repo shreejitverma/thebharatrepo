@@ -1,0 +1,85 @@
+id: artifact.maski-minor-rock-edict
+type: artifact
+kind: polity
+names:
+  en: Maski Minor Rock Edict I of Ashoka
+  iast: Maskī Laghu Śilālekha
+summary: >-
+  An eight-line Ashokan Minor Rock Edict carved on a granite boulder inside a cavern at Maski in Raichur
+  district, Karnataka, discovered in January 1915 by C. Beadon. It was the first inscription ever found to
+  name "Devanampiyasa Asokasa", confirming decisively that the "Devanampiya Piyadassi" of earlier known edicts
+  was Emperor Ashoka Maurya.
+summaries:
+  kids: >-
+    For nearly eighty years after scholars learned to read Ashoka's edicts, they were not completely sure who
+    "Beloved of the Gods" was - until a rock inscription found at Maski in 1915 wrote the name "Asoka" right
+    on the stone.
+  teen: >-
+    Discovered by mining engineer C. Beadon in Karnataka in 1915, the Maski Minor Rock Edict provided the
+    smoking-gun epigraphic proof linking "Devanampiya Piyadassi" across India directly to the historical
+    Mauryan emperor Ashoka.
+region: Maski, Raichur District, Karnataka, India
+location:
+  name: Maski boulder cavern site, Raichur district
+  lat: 15.9586
+  lon: 76.6574
+datings:
+  - method: epigraphic
+    range:
+      earliest: 262 BCE
+      latest: 250 BCE
+      best: 258 BCE
+      precision: year
+      circa: true
+    grade: B
+    label: Early phase of Ashoka's dhamma edicts (c. 12th regnal year)
+    sources:
+      - src.hultzsch-1925-inscriptions-of-asoka
+      - src.rice-1916-new-asoka-edict-maski
+      - src.falk-2006-asokan-sites-and-artefacts
+    note: >-
+      Minor Rock Edict I belongs to the opening cycle of Ashokan proclamations written after his conversion as
+      an upasaka over two and a half years earlier.
+claims:
+  - text: >-
+      Published by Rao Sahib H. Krishna Sastri in 1915 and E. Hultzsch in Corpus Inscriptionum Indicarum Vol.
+      I, the Maski rock inscription opens with the Prakrit genitive "Devanampiyasa Asokasa" in eight weathered
+      lines of southern Ashokan Brahmi.
+    grade: A
+    sources:
+      - src.hultzsch-1925-inscriptions-of-asoka
+      - src.rice-1916-new-asoka-edict-maski
+  - text: >-
+      Maski solved the long-standing identification problem left after James Prinsep's 1837 decipherment (when
+      George Turnour had matched Piyadassi to Ashoka via Sri Lankan Pali chronicles), later corroborated at
+      Gujarra, Nittur, and Udegolam.
+    grade: A
+    sources:
+      - src.rice-1916-new-asoka-edict-maski
+      - src.falk-2006-asokan-sites-and-artefacts
+  - text: >-
+      Its placement in the gold-bearing Maski region of northern Karnataka underscores active Mauryan
+      administrative reach into the southern Deccan plateau.
+    grade: B
+    sources:
+      - src.falk-2006-asokan-sites-and-artefacts
+      - src.thapar-2012-asoka-decline-mauryas
+relations:
+  - kind: patronised-by
+    target: person.ashoka
+  - kind: part-of
+    target: polity.maurya-empire
+  - kind: related-to
+    target: event.brahmi-decipherment-prinsep
+    note: Confirmed epigraphically Prinsep and Turnour's identification of Piyadassi as Ashoka
+wikidata: null
+tags:
+  - inscription
+  - ashoka
+  - brahmi
+  - maurya
+  - karnataka
+  - minor-rock-edict
+review:
+  status: draft
+  author: gemini-4-hydrogen-xhigh

@@ -1,0 +1,67 @@
+id: artifact.shah-jahan-padshahnama
+type: artifact
+kind: art
+names:
+  en: Windsor Castle Padshahnama of Shah Jahan
+  iast: Pādśāhanāmā (Śāha Jahāna)
+summary: "The imperial illustrated chronicle of the first ten years of Emperor Shah Jahan's reign written by Abd al-Hamid Lahori and housed in the Royal Library at Windsor Castle (RCIN 1005025). Copied in fine Nastaliq by Muhammad Amin of Mashhad in 1656-1657 CE (with paintings executed between c. 1630 and 1657 by court masters such as Bichitr, Payag, Balchand, Abid, and Murar), its 44 miniatures are among the finest examples of formal Shah Jahani painting."
+summaries:
+  kids: >-
+    Kept today in Windsor Castle, this royal chronicle of Emperor Shah Jahan's court was painted by master
+    Mughal artists between 1630 and 1657 with forty-four ultra-detailed scenes of royal audiences, weddings,
+    sieges, and elephant fights.
+  teen: >-
+    Windsor Castle RCIN 1005025 is the premier surviving imperial manuscript of Shah Jahan's reign: combining
+    Lahori's Persian court history with 44 luminous miniatures by Bichitr, Payag, and Balchand, it codifies
+    strict imperial symmetry, jewel-like architecture, and meticulous group portraiture.
+region: Agra and Shahjahanabad (Delhi) imperial workshop (housed in Royal Library, Windsor Castle, RCIN 1005025)
+datings:
+  - method: documentary
+    range:
+      earliest: 1630
+      latest: 1658
+      best: 1657
+      precision: year
+      circa: false
+    grade: A
+    label: Colophon dated 1067 AH (1656-1657 CE); paintings c. 1630-1657 CE
+    sources:
+      - src.beach-koch-1997-king-of-the-world-padshahnama
+      - src.beach-1992-mughal-rajput-painting
+    note: >-
+      Royal scribe Muhammad Amin dated his Nastaliq transcript 1067 AH (1656-1657 CE), while stylistic
+      analysis and event dates show the 44 paintings were created over roughly two decades under Shah Jahan.
+claims:
+  - text: >-
+      Milo C. Beach and Ebba Koch's study (King of the World, 1997) documents Royal Collection RCIN 1005025:
+      239 Persian text folios plus 44 large paintings mounted within gilt margins, presented to King George
+      III in 1799 by the Nawab of Awadh, while a handful of detached or related folios entered collections
+      such as the Metropolitan Museum of Art.
+    grade: A
+    sources:
+      - src.beach-koch-1997-king-of-the-world-padshahnama
+  - text: >-
+      Signed attributions preserve works by premier Shah Jahani artists - Bichitr, Payag, Balchand, Abid,
+      La'lchand, and Murar - depicting ceremonial jharokha audiences, Prince Dara Shikoh's wedding procession,
+      battles in the Deccan and Qandahar, and courtly elephant fights.
+    grade: A
+    sources:
+      - src.beach-koch-1997-king-of-the-world-padshahnama
+      - src.beach-1992-mughal-rajput-painting
+relations:
+  - kind: part-of
+    target: polity.mughal-empire
+  - kind: related-to
+    target: artifact.hamzanama-folios
+    note: Culmination of the imperial Mughal illustrated chronicle tradition begun under Akbar
+wikidata: null
+tags:
+  - manuscript
+  - mughal
+  - padshahnama
+  - shah-jahan
+  - miniature
+  - windsor
+review:
+  status: draft
+  author: gemini-4-hydrogen-xhigh

@@ -1,0 +1,88 @@
+id: artifact.bharhut-stupa-railings-and-torana
+type: artifact
+kind: art
+names:
+  en: Bharhut Stupa Railings and Torana
+  iast: Bhārahuta Stūpa Vedikā evaṃ Toraṇa
+summary: >-
+  Red sandstone carved vedika railings and Eastern Gateway (torana) recovered from the Bharhut Stupa in Satna
+  district, Madhya Pradesh by Alexander Cunningham in 1873-1876 and reconstructed in the Indian Museum,
+  Kolkata. Inscribed Brahmi labels identify Jataka tales and royal visits, while the Shunga-period gateway
+  inscription names the patron Dhanabhuti under the Shunga kings.
+summaries:
+  kids: >-
+    Carved sandstone fences and a towering arched gateway from an ancient Buddhist stupa in central India tell
+    Jataka animal stories and label scenes from the Buddha's life in early Indian writing.
+  teen: >-
+    Reassembled in the Indian Museum, Kolkata after Cunningham's 1870s excavations, the Bharhut railings and
+    Eastern Torana preserve vital Shunga-period narrative reliefs where the Buddha is shown aniconically and
+    dozens of Jatakas are explicitly captioned in Brahmi.
+region: Bharhut, Satna District, Madhya Pradesh (housed in Indian Museum, Kolkata)
+location:
+  name: Bharhut stupa site, Satna district
+  lat: 24.4469
+  lon: 80.846
+datings:
+  - method: epigraphic
+    range:
+      earliest: 150 BCE
+      latest: 75 BCE
+      best: 100 BCE
+      precision: century
+      circa: true
+    grade: B
+    label: Shunga period ("Suganam raje" gateway donor inscription)
+    sources:
+      - src.luders-1963-bharhut-inscriptions
+      - src.cunningham-1879-stupa-of-bharhut
+      - src.huntington-1985-art-ancient-india
+    note: >-
+      Donor inscription on the Eastern Gateway explicitly places the work "during the reign of the Shungas"
+      (Suganam raje) by Vatsiputra Dhanabhuti; railing pillars show both collective monastic/lay donations and
+      Shunga Brahmi letterforms.
+claims:
+  - text: "More than two hundred short Brahmi donative and caption inscriptions published by Cunningham and H. Luders record gifts by monks, nuns, townsfolk, and royal donors across central India, while the Eastern Gateway inscription records its gift by Vatsiputra Dhanabhuti \"during the reign of the Shungas\" (Suganam raje)."
+    grade: A
+    sources:
+      - src.luders-1963-bharhut-inscriptions
+      - src.cunningham-1879-stupa-of-bharhut
+  - text: >-
+      Relief medallions and pillar panels represent scenes from the Buddha's life (such as Queen Maya's dream,
+      the Jetavana purchase, and King Prasenajit's wheel procession) aniconically via symbols like the Bodhi
+      tree, wheel, empty throne, and footprints.
+    grade: A
+    sources:
+      - src.cunningham-1879-stupa-of-bharhut
+      - src.huntington-1985-art-ancient-india
+  - text: "Bharhut supplies one of the earliest surviving explicitly titled sculptural canon of Buddhist Jataka narratives, including captioned medallions of the Ruru, Mugapakkha, Chaddanta, and Vidhurapandita Jatakas."
+    grade: B
+    sources:
+      - src.luders-1963-bharhut-inscriptions
+      - src.harle-1994-art-architecture-indian-subcontinent
+relations:
+  - kind: part-of
+    target: polity.shunga-dynasty
+  - kind: contemporary-of
+    target: site.sanchi-stupa
+    note: Contemporary Shunga-Satavahana stupa vedika sculpture
+  - kind: contemporary-of
+    target: artifact.parkham-yaksha-manibhadra
+wikidata: null
+image:
+  commons: File:East Gateway and Railings Bharhut Stupa.jpg
+  alt: >-
+    Reconstructed red sandstone Eastern Gateway (torana) and carved railings from Bharhut Stupa in the Indian
+    Museum, Kolkata
+  credit: Biswarup Ganguly
+  license: CC BY 3.0
+tags:
+  - stupa
+  - shunga
+  - sculpture
+  - buddhism
+  - jataka
+  - brahmi
+  - bharhut
+review:
+  status: draft
+  author: gemini-4-hydrogen-xhigh

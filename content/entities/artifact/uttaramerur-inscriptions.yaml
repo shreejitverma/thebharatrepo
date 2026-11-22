@@ -1,0 +1,92 @@
+id: artifact.uttaramerur-inscriptions
+type: artifact
+kind: polity
+names:
+  en: Uttaramerur Chola Assembly Inscriptions
+  iast: Uttiramērūr Cōḻa Sabhā Kalveṭṭukaḷ
+summary: >-
+  Two detailed Tamil and Grantha inscriptions of Parantaka Chola I (regnal Years 12 and 14, corresponding to
+  919 and 921 CE) engraved on the adhishthana plinth walls of the Vaikuntha Perumal temple mandapa at
+  Uttaramerur in Kanchipuram district, Tamil Nadu. Together they record the written electoral constitution of
+  the brahmadeya village assembly (sabha) using the kudavolai (pot-ticket lot) committee system.
+summaries:
+  kids: >-
+    Carved onto the stone walls of a temple hall in Tamil Nadu in 919 and 921 CE, these Chola inscriptions
+    explain a remarkable system where village council committees were chosen by drawing palm-leaf name tickets
+    from a pot.
+  teen: >-
+    Dated to 919 and 921 CE under Parantaka Chola I, the Uttaramerur wall inscriptions codify local governance
+    rules for a self-administering brahmadeya sabha: candidates were nominated by wards, vetted for property,
+    education, and honesty, and selected by lot (kudavolai) for annual committees.
+region: Uttaramerur, Kanchipuram District, Tamil Nadu, India
+location:
+  name: Vaikuntha Perumal Temple mandapa walls, Uttaramerur
+  lat: 12.616
+  lon: 79.753
+datings:
+  - method: epigraphic
+    range:
+      earliest: 919
+      latest: 922
+      best: 921
+      precision: year
+      circa: false
+    grade: A
+    label: Regnal Years 12 (919 CE) and 14 (921 CE) of Parantaka Chola I
+    sources:
+      - src.asi-1906-annual-report-1904-05
+      - src.sastri-1955-the-colas
+      - src.karashima-2014-concise-history-south-india
+    note: >-
+      Both royal-witnessed resolutions carry explicit regnal years of Madiraikonda Parakesarivarman (Parantaka
+      I, r. 907-955 CE), corresponding to 919 CE and its revised 921 CE constitution.
+claims:
+  - text: >-
+      Published in the Archaeological Survey of India Annual Report 1904-1905 by V. Venkayya and analysed by
+      K. A. Nilakanta Sastri, the two Tamil-Grantha inscriptions occupy the exterior plinth of the Vaikuntha
+      Perumal sabha hall at Uttaramerur-chaturvedimangalam.
+    grade: A
+    sources:
+      - src.asi-1906-annual-report-1904-05
+      - src.sastri-1955-the-colas
+  - text: >-
+      The Year 14 (921 CE) ordinance divides the village into 30 wards (kudumbu), sets strict age (35-70
+      years), taxpaying property, Vedic-administrative learning, and account-keeping integrity qualifications,
+      and bars former defaulters or their kin from standing.
+    grade: A
+    sources:
+      - src.asi-1906-annual-report-1904-05
+      - src.sastri-1955-the-colas
+  - text: >-
+      Qualified names written on palm-leaf tickets (olai) were placed in a sealed pot (kudam) and drawn by a
+      young boy in public assembly (kudavolai) to staff annual garden, tank, gold, and annual supervision
+      committees (variyams).
+    grade: A
+    sources:
+      - src.asi-1906-annual-report-1904-05
+      - src.karashima-2014-concise-history-south-india
+relations:
+  - kind: part-of
+    target: polity.chola-dynasty
+  - kind: related-to
+    target: artifact.tiruvalangadu-copper-plates
+    note: Major Chola institutional and dynastic epigraphy
+wikidata: null
+image:
+  commons: File:Uthiramerur temple.jpg
+  alt: >-
+    Vaikuntha Perumal Temple mandapa at Uttaramerur whose stone walls bear Parantaka Chola I's 919 and 921 CE
+    assembly inscriptions
+  credit: sowri
+  license: CC BY 2.0
+tags:
+  - inscription
+  - chola
+  - uttaramerur
+  - kudavolai
+  - sabha
+  - tamil
+  - governance
+review:
+  status: draft
+  author: gemini-4-hydrogen-xhigh
