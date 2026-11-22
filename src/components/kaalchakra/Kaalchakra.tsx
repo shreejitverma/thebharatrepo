@@ -202,23 +202,53 @@ function KaalchakraInner({ items, external, epoch, onWrite }: { items: KcItem[];
   /** The state behind the current history entry. */
   const committed = useRef<State>(external);
 
-  // Debounced so continuous panning never exceeds browser limits on history writes. A new selection, view or
-  // lens gets its own entry, so Back and Forward step through them; everything else replaces the entry.
+  // A new selection, view or lens is written at once as its own history entry, so Back and Forward step through
+  // them and a link clicked straight afterwards is never overtaken by a late write. A burst of such changes (an
+  // arrow key held down, a scroll gesture) coalesces into one entry. Everything else (typing, panning) replaces
+  // the entry after a debounce, so continuous changes never exceed browser limits on history writes.
+  const lastPush = useRef(-Infinity);
+  const pendingWrite = useRef<ReturnType<typeof setTimeout> | null>(null);
   useEffect(() => {
     const query = serialise(s);
-    const t = setTimeout(() => {
+    const navigation = isNavigation(committed.current, s);
+    const write = () => {
+      pendingWrite.current = null;
+      if (!window.location.pathname.startsWith('/kaalchakra')) return;
       if (query === new URLSearchParams(window.location.search).toString()) {
         committed.current = s;
         return;
       }
       onWrite(query);
       const href = hrefFor(window.location.pathname, query);
-      if (isNavigation(committed.current, s)) window.history.pushState(null, '', href);
-      else window.history.replaceState(null, '', href);
+      const now = performance.now();
+      if (navigation && now - lastPush.current > 700) {
+        window.history.pushState(null, '', href);
+        lastPush.current = now;
+      } else window.history.replaceState(null, '', href);
       committed.current = s;
-    }, 250);
+    };
+    if (navigation) {
+      write();
+      return;
+    }
+    const t = setTimeout(write, 250);
+    pendingWrite.current = t;
     return () => clearTimeout(t);
   }, [s, onWrite]);
+
+  // Following a link away drops a pending debounced write, which would otherwise land on the next page's entry.
+  useEffect(() => {
+    const onClick = (e: MouseEvent) => {
+      const a = (e.target as Element | null)?.closest?.('a[href]');
+      if (!a || !pendingWrite.current) return;
+      if (new URL((a as HTMLAnchorElement).href, window.location.href).pathname !== window.location.pathname) {
+        clearTimeout(pendingWrite.current);
+        pendingWrite.current = null;
+      }
+    };
+    document.addEventListener('click', onClick, true);
+    return () => document.removeEventListener('click', onClick, true);
+  }, []);
 
   const update = useCallback((patch: Partial<State>) => setS((prev) => ({ ...prev, ...patch })), []);
 

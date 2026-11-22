@@ -264,7 +264,8 @@ function Hub({ core, count }: { core?: WheelCore; count: number }) {
 
   return (
     <>
-      <g className="kc-hub kc-hub--full">{full}</g>
+      {/* Without a selection there is no compact form: the wheel's name shows at every size. */}
+      <g className={core ? 'kc-hub kc-hub--full' : 'kc-hub'}>{full}</g>
       {core ? <g className="kc-hub kc-hub--compact">{compact}</g> : null}
     </>
   );
