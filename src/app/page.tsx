@@ -20,8 +20,8 @@ export default function Home() {
           <p className="eyebrow">The evidence-based archive of Bharat</p>
           <h1>Our whole history, on one wheel of time</h1>
           <p className="lede">
-            The history, knowledge and living traditions of Bharat and Sanatana Dharma. Every entry is placed on the Kaalchakra, every claim is graded, and every source is verified, so you can
-            share it with anyone and it will stand.
+            The history, knowledge and living traditions of Bharat and Sanatana Dharma. Every entry is placed on the Kaalchakra and every claim is graded. Every source identifier is
+            machine-verified, and every page shows its editorial review status.
           </p>
           <div className="home-hero__actions">
             <Link href="/kaalchakra" className="btn btn--primary">

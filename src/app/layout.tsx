@@ -3,6 +3,7 @@ import { Tiro_Devanagari_Hindi, Noto_Serif, Noto_Sans } from 'next/font/google';
 import './globals.css';
 import Header from '../components/Header';
 import Footer from '../components/Footer';
+import DraftNotice from '../components/DraftNotice';
 import { SITE_URL } from '@/lib/content/site';
 
 const tiro = Tiro_Devanagari_Hindi({ subsets: ['latin', 'latin-ext', 'devanagari'], weight: ['400'], variable: '--font-tiro', display: 'swap' });
@@ -33,7 +34,10 @@ export default function RootLayout({ children }: Readonly<{ children: React.Reac
           Skip to content
         </a>
         <Header />
-        <main id="main">{children}</main>
+        <main id="main">
+          <DraftNotice className="draft-notice" />
+          {children}
+        </main>
         <Footer />
       </body>
     </html>

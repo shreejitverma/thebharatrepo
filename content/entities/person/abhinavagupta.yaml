@@ -25,14 +25,14 @@ datings:
     range: { earliest: "950 CE", latest: "1025 CE", precision: decade, circa: true }
     grade: B
     label: Lifetime
-    sources: [src.pollock-2016-rasa-reader-medieval, src.flood-1996-introduction-to-hinduism]
+    sources: [src.pollock-2016-rasa-reader, src.flood-1996-introduction-to-hinduism]
     note: His dated works in the Kashmiri Laukika era correspond to about 991 and 1015 CE.
 claims:
   - text: >-
       His Abhinavabharati on the Natyashastra and Locana on the Dhvanyaloka are the classic statements of
       the theory of rasa as aesthetic experience.
     grade: B
-    sources: [src.pollock-2016-rasa-reader-medieval]
+    sources: [src.pollock-2016-rasa-reader]
   - text: His Tantraloka is an encyclopaedic exposition of the Trika form of non-dual Shaiva tantra.
     grade: B
     sources: [src.flood-1996-introduction-to-hinduism]

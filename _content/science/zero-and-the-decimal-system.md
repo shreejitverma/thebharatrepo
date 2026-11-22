@@ -15,7 +15,7 @@ datings:
     range: { earliest: "200 CE", latest: "1200 CE", precision: century, circa: true }
     grade: C
     label: "Bakhshali manuscript: Bodleian radiocarbon (3rd or 4th century at the earliest) versus palaeographic estimates (8th to 12th century)"
-    sources: [src.bodleian-2017-bakhshali-carbon-dating, src.wujastyk-2017-bakhshali-response]
+    sources: [src.bodleian-2017-bakhshali-carbon-dating, src.plofker-2017-bakhshali-radiocarbon]
     note: "The Bodleian team reported birch-bark folios from at least three periods, the earliest 3rd or 4th century; Wujastyk, Hayashi, Keller, Montelle and Plofker argue that the latest dated folio better marks the scribal date and that this agrees with earlier estimates."
 entities: []
 readingLevel: adult
@@ -67,9 +67,9 @@ In September 2017 the Bodleian Libraries announced the first radiocarbon dating 
 It found that the leaves come from at least three different periods, with the earliest as early as the 3rd or 4th century, and presented this as the world's oldest recorded origin of the zero symbol [@src.bodleian-2017-bakhshali-carbon-dating].
 
 That reading was challenged within weeks by a group of historians of Indian mathematics: Dominik Wujastyk, Takao Hayashi, Agathe Keller, Clemency Montelle and Kim Plofker.
-They argue that the earliest dated folio is unlikely to be the date of the whole text, and that the latest dateable folio is logically the date of the scribal activity, which fits the earlier estimates [@src.wujastyk-2017-bakhshali-response].
-They also argue that the manuscript uses written zeros as arithmetical operators, meaning as numbers in their own right, and not just as placeholders, which is another point of disagreement with the Bodleian announcement [@src.wujastyk-2017-bakhshali-response].
-They regret that the results were announced by press release, without peer review [@src.wujastyk-2017-bakhshali-response].
+They argue that the earliest dated folio is unlikely to be the date of the whole text, and that the latest dateable folio is logically the date of the scribal activity, which fits the earlier estimates [@src.plofker-2017-bakhshali-radiocarbon].
+They also argue that the manuscript uses written zeros as arithmetical operators, meaning as numbers in their own right, and not just as placeholders, which is another point of disagreement with the Bodleian announcement [@src.plofker-2017-bakhshali-radiocarbon].
+They regret that the results were announced by press release, without peer review [@src.plofker-2017-bakhshali-radiocarbon].
 
 A careful summary is therefore:
 the Bakhshali leaves contain some material that is old, but how and when the text as a whole was composed and copied is unsettled, and the manuscript cannot yet serve as a firm date for the origin of zero.

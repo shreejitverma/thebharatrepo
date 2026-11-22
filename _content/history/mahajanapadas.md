@@ -52,7 +52,7 @@ The dates of Bimbisara, the Buddha and Mahavira are not secure.
 They derive from one reading of the Sri Lankan chronicles, known as the "long chronology".
 Many historians now place the Buddha's death later, around 400 BCE, and some move it by a decade or two either way [@src.cousins-1996-dating-historical-buddha].
 Consequently, the regnal dates of Bimbisara and Ajatashatru move with it, and the article's dates should be read as one position, not as the standard dating [@src.thapar-2002-early-india; @src.cousins-1996-dating-historical-buddha].
-The earliest firmly dated anchors in this region come later, with Alexander's campaign in the northwest in 327 to 325 BCE and the Maurya dynasty [@src.kulke-rothermund-2004-history-of-india].
+The earliest firmly dated anchors in this region come later, with Alexander's campaign in the northwest in 327 to 325 BCE and the Maurya dynasty [@src.kulke-2004-history-of-india].
 
 ## The northwest
 

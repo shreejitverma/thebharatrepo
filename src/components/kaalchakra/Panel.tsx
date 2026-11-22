@@ -2,6 +2,7 @@
 
 import Link from 'next/link';
 import { useState } from 'react';
+import DraftNotice from '@/components/DraftNotice';
 import GradeBadge, { LensTag } from '@/components/GradeBadge';
 import { KIND_LABELS, METHOD_LABELS } from '@/lib/content/labels';
 import type { KcItem } from '@/lib/content/kaalchakra';
@@ -144,6 +145,7 @@ export default function Panel({ item, lens, cal, level, onLevel, onPrev, onNext,
           {copied ? 'Link copied' : 'Copy link'}
         </button>
       </p>
+      <DraftNotice className="review-note" />
       <div className="kc-panel__nav">
         <button type="button" className="btn" onClick={onPrev} disabled={!onPrev}>
           Earlier

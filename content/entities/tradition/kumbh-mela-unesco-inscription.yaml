@@ -18,12 +18,12 @@ datings:
       circa: false
     grade: A
     sources:
-      - src.kumbh-mela-unesco-2017
+      - src.unesco-2017-kumbh-mela
 claims:
   - text: UNESCO inscribed Kumbh Mela on the Representative List in 2017.
     grade: A
     sources:
-      - src.kumbh-mela-unesco-2017
+      - src.unesco-2017-kumbh-mela
 tags:
   - kumbh
   - unesco

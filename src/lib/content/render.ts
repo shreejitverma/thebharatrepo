@@ -1,10 +1,11 @@
 /**
- * Markdown rendering for articles, with numbered inline citations.
+ * Markdown (GitHub Flavored, for tables) rendering for articles, with numbered inline citations.
  * [@src.id, locator] groups become superscript links to a generated references list.
  */
 
 import { remark } from 'remark';
 import html from 'remark-html';
+import remarkGfm from 'remark-gfm';
 import type { Source } from './schema';
 import { CITATION_GROUP, parseCitationGroup } from './load';
 import { formatSource } from './kaalchakra';
@@ -33,8 +34,10 @@ export async function renderArticle(markdown: string, sources: Map<string, Sourc
     groups.push(inner);
     return `CITEGROUP${groups.length - 1}X`;
   });
-  const file = await remark().use(html, { sanitize: true }).process(protectedMd);
-  let out = String(file);
+  const file = await remark().use(remarkGfm).use(html, { sanitize: true }).process(protectedMd);
+  let out = String(file)
+    .replace(/<table>/g, '<div class="table-scroll" tabindex="0" role="region" aria-label="Scrollable table"><table>')
+    .replace(/<\/table>/g, '</table></div>');
   let useCount = 0;
   out = out.replace(/CITEGROUP(\d+)X/g, (_all, idx: string) => {
     const cites = parseCitationGroup(groups[Number(idx)]);

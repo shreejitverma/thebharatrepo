@@ -24,12 +24,12 @@ What makes it distinctive is the way a performer combines a fixed, composed repe
 ## Old roots, modern form
 
 The ideas behind Carnatic music are old, but the music you hear in a concert hall today is not an unbroken survival from antiquity.
-Sanskrit treatises on music and drama, above all the *Natyashastra*, discuss scales, the division of the octave into small intervals (*shruti*) and the grammar of melody, and they are the common ancestor of both North and South Indian practice [@src.rowell-1992-music-and-musical-thought-early-india].
-The chanting of the Samaveda, which sets verses to a small set of tones, is another very early layer of Indian musical thought, preserved by oral transmission [@src.rowell-1992-music-and-musical-thought-early-india; @src.unesco-2003-tradition-vedic-chanting].
+Sanskrit treatises on music and drama, above all the *Natyashastra*, discuss scales, the division of the octave into small intervals (*shruti*) and the grammar of melody, and they are the common ancestor of both North and South Indian practice [@src.rowell-1992-music-musical-thought-early-india].
+The chanting of the Samaveda, which sets verses to a small set of tones, is another very early layer of Indian musical thought, preserved by oral transmission [@src.rowell-1992-music-musical-thought-early-india; @src.unesco-2003-tradition-vedic-chanting].
 
 The idea of the *raga* as a named melodic type, with its own characteristic phrases and mood, emerges in the first millennium CE.
-Richard Widdess traces how older "modes" (*jati*) gave way to ragas in texts and inscriptions between the Gupta period and about 1250 CE, a story that ends with Sarngadeva's *Sangitaratnakara*, a 13th-century work that both North and South Indian traditions claim as their own [@src.widdess-1995-ragas-of-early-indian-music].
-Inscriptions that record musical notation, such as the one at Kudumiyanmalai in Tamil Nadu (roughly 7th to 8th century), show that raga practice was already a written art in the south [@src.widdess-1995-ragas-of-early-indian-music].
+Richard Widdess traces how older "modes" (*jati*) gave way to ragas in texts and inscriptions between the Gupta period and about 1250 CE, a story that ends with Sarngadeva's *Sangitaratnakara*, a 13th-century work that both North and South Indian traditions claim as their own [@src.widdess-1995-ragas-early-indian-music].
+Inscriptions that record musical notation, such as the one at Kudumiyanmalai in Tamil Nadu (roughly 7th to 8th century), show that raga practice was already a written art in the south [@src.widdess-1995-ragas-early-indian-music].
 
 ### When did North and South diverge?
 

@@ -8,7 +8,7 @@ datings:
     range: { earliest: "500 BCE", latest: "700 CE", precision: century, circa: true }
     grade: C
     label: "From early grammatical and legal uses to classical school classifications"
-    sources: [src.katre-1987-astadhyayi-panini, src.olivelle-2005-manus-code-of-law, src.dundas-2003-the-jains]
+    sources: [src.katre-1987-astadhyayi-panini, src.olivelle-2005-manus-code-of-law, src.dundas-2002-the-jains]
     note: "The terms and later school groupings appear in different textual settings over many centuries; the range is a broad orientation, not a single date for a settled taxonomy."
 entities: [person.panini, text.ashtadhyayi, text.upanishads]
 readingLevel: adult
@@ -25,7 +25,7 @@ The distinction is not simply between people who believe in a deity and people w
 
 Pāṇini’s *Aṣṭādhyāyī* includes a grammatical rule, 4.4.60, that forms words from *asti* (“it is” or “it exists”) and *nāsti* (“it is not” or “it does not exist”) for a person whose view is marked by one of those statements. Later grammatical commentators connect the contrast to belief in another world and the consequences of action. This gives an older semantic setting for the terms, but it does not by itself prove that every early use carried one fixed philosophical definition. [@src.katre-1987-astadhyayi-panini, A 4.4.60]
 
-That older sense matters because Buddhists and Jains affirm forms of karma and rebirth. Under the interpretation centered on whether another world exists, they would not neatly fit the picture of nāstikas as people who deny post-mortem existence. The terms must therefore be read in their particular textual context rather than translated mechanically as “believer” and “unbeliever.” [@src.katre-1987-astadhyayi-panini; @src.dundas-2003-the-jains; @src.collins-1982-selfless-persons]
+That older sense matters because Buddhists and Jains affirm forms of karma and rebirth. Under the interpretation centered on whether another world exists, they would not neatly fit the picture of nāstikas as people who deny post-mortem existence. The terms must therefore be read in their particular textual context rather than translated mechanically as “believer” and “unbeliever.” [@src.katre-1987-astadhyayi-panini; @src.dundas-2002-the-jains; @src.collins-1982-selfless-persons]
 
 ## The Veda as a line of classification
 
@@ -37,7 +37,7 @@ The differences within the six are substantial. Mīmāṃsā develops an account
 
 The labels can obscure how much debate crossed their boundary. Upanishadic authors ask what the self is and how release from ordinary existence might be possible. Buddhist analysis rejects a permanent self, while explaining continuity through conditioned processes rather than an enduring soul. Steven Collins emphasizes that early Buddhist teaching on not-self is at once an analysis of personhood and a practice aimed at loosening attachment; it should not be reduced to the slogan “nothing exists.” [@src.olivelle-1998-early-upanisads; @src.collins-1982-selfless-persons]
 
-Jain philosophy offers a different account. It treats living beings as enduring *jīvas* (souls) bound by karma, and develops *anekāntavāda*, the view that reality has many aspects, alongside qualified forms of predication. Jain thinkers used these ideas to make claims sensitive to standpoint; critics in other schools questioned whether apparently conflicting predicates could be reconciled. The dispute was philosophical, not merely a clash between groups that had no shared vocabulary. [@src.dundas-2003-the-jains]
+Jain philosophy offers a different account. It treats living beings as enduring *jīvas* (souls) bound by karma, and develops *anekāntavāda*, the view that reality has many aspects, alongside qualified forms of predication. Jain thinkers used these ideas to make claims sensitive to standpoint; critics in other schools questioned whether apparently conflicting predicates could be reconciled. The dispute was philosophical, not merely a clash between groups that had no shared vocabulary. [@src.dundas-2002-the-jains]
 
 Cārvāka or Lokāyata presents a special evidentiary problem. No complete early Cārvāka treatise survives, so much of the record comes through quotations and summaries by opponents. Those accounts associate the school with materialism and skepticism about inference, ritual authority, and life after death, but the surviving evidence does not warrant treating every hostile portrait as a transparent self-description. Pradeep Gokhale’s study stresses the need to separate recoverable arguments from polemical caricature. [@src.gokhale-2015-lokayata-carvaka]
 

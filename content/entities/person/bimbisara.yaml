@@ -40,7 +40,7 @@ claims:
     grade: B
     sources:
       - src.singh-2008-ancient-early-medieval-india
-      - src.dundas-2002-the-jains-doi
+      - src.dundas-2002-the-jains
 relations:
   - { kind: ruled, target: polity.magadha }
   - { kind: part-of, target: polity.haryanka-dynasty }

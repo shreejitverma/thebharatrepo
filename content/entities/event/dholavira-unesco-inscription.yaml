@@ -20,12 +20,12 @@ datings:
       circa: false
     grade: A
     sources:
-      - src.dholavira-unesco
+      - src.unesco-2021-dholavira
 claims:
   - text: Dholavira was inscribed on the World Heritage List in 2021.
     grade: A
     sources:
-      - src.dholavira-unesco
+      - src.unesco-2021-dholavira
 tags:
   - archaeology
   - unesco

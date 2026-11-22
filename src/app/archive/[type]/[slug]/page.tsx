@@ -41,7 +41,7 @@ export default async function EntityPage({ params }: { params: Promise<{ type: s
   if (!e) notFound();
   const g = getGraph();
   const img = e.image ? verifiedImage(e.image.commons) : null;
-  if (img) preconnect('https://upload.wikimedia.org');
+  if (img) preconnect(new URL(img.thumb).origin);
   const ordered = [...e.datings].sort((a, b) => Number(isTraditional(a.method)) - Number(isTraditional(b.method)));
   const primary = ordered[0];
   const anchor = primary.range.best ?? (primary.range.earliest + primary.range.latest) / 2;

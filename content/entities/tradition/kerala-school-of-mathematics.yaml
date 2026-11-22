@@ -23,13 +23,13 @@ datings:
     range: { earliest: "1340 CE", latest: "1600 CE", precision: century, circa: true }
     grade: B
     label: Attested scholarly lineage
-    sources: [src.plofker-2009-mathematics-in-india-medieval, src.ramasubramanian-2011-tantrasangraha]
+    sources: [src.plofker-2009-mathematics-in-india, src.ramasubramanian-2011-tantrasangraha]
 claims:
   - text: Later Kerala mathematicians attribute infinite series for trigonometric functions and pi to Madhava.
     grade: B
-    sources: [src.plofker-2009-mathematics-in-india-medieval, src.ramasubramanian-2011-tantrasangraha]
+    sources: [src.plofker-2009-mathematics-in-india, src.ramasubramanian-2011-tantrasangraha]
   - text: The surviving evidence for some of Madhava's results comes from later authors who quote or name him.
     grade: B
-    sources: [src.plofker-2009-mathematics-in-india-medieval]
+    sources: [src.plofker-2009-mathematics-in-india]
 tags: [mathematics, astronomy, kerala, sanskrit]
 review: { status: draft, author: "codex-gpt-6" }

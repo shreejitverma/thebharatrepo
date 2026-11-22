@@ -19,13 +19,13 @@ datings:
       circa: false
     grade: A
     sources:
-      - src.vedic-chanting-unesco
+      - src.unesco-2003-tradition-vedic-chanting
 claims:
   - text: UNESCO records the tradition as originally proclaimed in 2003 and
       inscribed in 2008.
     grade: A
     sources:
-      - src.vedic-chanting-unesco
+      - src.unesco-2003-tradition-vedic-chanting
 tags:
   - vedic
   - oral-tradition

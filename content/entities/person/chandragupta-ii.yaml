@@ -33,7 +33,7 @@ claims:
   - text: Numismatic and palaeographic evidence identifies Chandragupta II with the "King Chandra" of the Mehrauli Iron Pillar inscription, who worshipped Vishnu, crossed the seven mouths of the Indus to defeat the Vahlikas, and established a Vishnupadagiri standard.
     grade: B
     sources:
-      - src.balasubramaniam-2000-delhi-iron-pillar
+      - src.balasubramaniam-2000-corrosion-delhi-iron-pillar
       - src.fleet-1888-inscriptions-early-gupta-kings
 relations:
   - { kind: ruled, target: polity.gupta-empire }

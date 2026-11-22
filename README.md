@@ -40,7 +40,7 @@ npm run typecheck
 npm run lint
 npm run content:validate        # schemas and cross-references; exit 1 on any problem
 npm run content:report          # coverage: entities, grades, kinds, sources
-npm run content:verify-sources  # resolve every DOI, ISBN, OCLC, URL, QID and Commons file; exit 1 on any mismatch
+npm run content:verify-sources  # resolve every DOI, ISBN, OCLC, QID and Commons file, and each URL that is a source's only identifier; exit 1 on any mismatch
 npm run build                   # validate, offline verification gate, search index and open data, then next build
 npm run test:e2e                # Playwright and axe against a production build (desktop and mobile)
 ```

@@ -22,13 +22,13 @@ datings:
     range: { earliest: "1469 CE", latest: "1539 CE", precision: year, circa: true }
     grade: B
     label: Conventional dates
-    sources: [src.mcleod-1968-guru-nanak-sikh-religion, src.grewal-1990-sikhs-of-the-punjab]
+    sources: [src.mcleod-1968-guru-nanak, src.grewal-1990-sikhs-of-the-punjab]
 claims:
   - text: Guru Nanak was born in 1469 and died in 1539 according to the conventional Sikh chronology.
     grade: B
-    sources: [src.mcleod-1968-guru-nanak-sikh-religion, src.grewal-1990-sikhs-of-the-punjab]
+    sources: [src.mcleod-1968-guru-nanak, src.grewal-1990-sikhs-of-the-punjab]
   - text: His hymns are preserved in the Guru Granth Sahib.
     grade: B
-    sources: [src.mcleod-1968-guru-nanak-sikh-religion]
+    sources: [src.mcleod-1968-guru-nanak]
 tags: [sikhism, punjab, poetry]
 review: { status: draft, author: "codex-gpt-6" }

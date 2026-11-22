@@ -22,14 +22,14 @@ datings:
     range: { earliest: "1150 CE", latest: "1150 CE", precision: year, circa: false }
     grade: A
     label: Completion within the Siddhanta Shiromani
-    sources: [src.plofker-2009-mathematics-in-india-medieval]
+    sources: [src.plofker-2009-mathematics-in-india]
 claims:
   - text: Lilavati is the arithmetic and mensuration section of Bhaskara II's Siddhanta Shiromani.
     grade: B
-    sources: [src.plofker-2009-mathematics-in-india-medieval]
+    sources: [src.plofker-2009-mathematics-in-india]
   - text: The Siddhanta Shiromani was completed in 1150 according to Bhaskara II's own dating.
     grade: A
-    sources: [src.plofker-2009-mathematics-in-india-medieval]
+    sources: [src.plofker-2009-mathematics-in-india]
 relations:
   - { kind: authored-by, target: person.bhaskara-ii }
 tags: [mathematics, arithmetic, sanskrit]

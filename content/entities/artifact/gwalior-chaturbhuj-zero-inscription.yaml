@@ -35,7 +35,7 @@ claims:
       It is among the earliest securely dated epigraphic uses of zero in Indian decimal place-value
       numerals; zero is attested earlier in mathematical texts.
     grade: B
-    sources: [src.plofker-2009-mathematics-in-india, src.salomon-1998-indian-epigraphy-medieval]
+    sources: [src.plofker-2009-mathematics-in-india, src.salomon-1998-indian-epigraphy]
 relations:
   - { kind: related-to, target: text.brahmasphutasiddhanta, note: Earlier textual rules for zero }
 tags: [inscription, zero, numerals, mathematics]

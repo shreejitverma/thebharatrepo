@@ -21,6 +21,15 @@ describe('sameTitle', () => {
     expect(sameTitle('Early India: From the Origins to AD 1300', 'India')).toBe(false);
     expect(sameTitle('The Rigveda', 'Rigveda and Avesta: a comparative grammar of sacrifice')).toBe(false);
   });
+  it('rejects a different volume of the same work', () => {
+    expect(sameTitle('History of Indian Medical Literature, Vol. 1', 'History of Indian Medical Literature, Vol. 2')).toBe(false);
+    expect(sameTitle('Epigraphia Indica Vol 1', 'Epigraphia Indica Vol 6')).toBe(false);
+    expect(sameTitle('A History of Early Vedanta Philosophy, Volume 2', 'A History of Early Vedanta Philosophy, Part I')).toBe(false);
+  });
+  it('reads Roman and Arabic volume numbers as the same number', () => {
+    expect(sameTitle('Epigraphia Indica, Vol. VI', 'Epigraphia Indica Vol 6')).toBe(true);
+    expect(sameTitle('A History of Early Vedanta Philosophy, Part 1', 'A History of Early Vedanta Philosophy, Part I')).toBe(true);
+  });
   it('rejects an unrelated work that reuses an identifier', () => {
     expect(sameTitle('Vedic Astronomy Proves the Mahabharata War Occurred in 5561 BCE', 'The formation of human populations in South and Central Asia')).toBe(false);
     expect(titleSimilarity('', 'anything')).toBe(0);
@@ -50,6 +59,13 @@ describe('sameName', () => {
     expect(sameName(['Hastinapura Excavations', 'hastinapura'], ['Hastinapur'], { namedThing: true })).toBe(true);
     expect(sameName(['Burzahom Neolithic Site', 'burzahom'], ['Burzahom archaeological site'], { namedThing: true })).toBe(true);
     expect(sameName(['Domestication of Zebu Cattle (Bos indicus)'], ['zebu'], { namedThing: false })).toBe(false);
+  });
+  it('tells apart rulers and scholars that differ only by a regnal number', () => {
+    expect(sameName(['Chandragupta II'], ['Chandragupta I'], { namedThing: true })).toBe(false);
+    expect(sameName(['Bhaskara II'], ['Bhaskara I'], { namedThing: true })).toBe(false);
+    expect(sameName(['Chandragupta II'], ['Chandragupta'], { namedThing: true })).toBe(false);
+    expect(sameName(['Bhaskara II', 'Bhāskara II'], ['Bhāskara II'], { namedThing: true })).toBe(true);
+    expect(sameName(['Rajaraja I'], ['Rajaraja 1'], { namedThing: true })).toBe(true);
   });
   it('rejects a related but different thing', () => {
     expect(sameName(['Soma Ritual'], ['Soma'])).toBe(false);

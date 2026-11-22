@@ -20,7 +20,7 @@ datings:
     label: Majority philological dating of the older anthologies and long poems (Kamil Zvelebil and others)
     sources:
       - src.zvelebil-1973-smile-of-murugan
-      - src.wilden-2014-manuscript-print-memory-cankam
+      - src.wilden-2014-manuscript-print-memory
     note: The older anthologies are placed in the early centuries around the turn of the era on internal evidence such as their language, their political world of Chera, Chola and Pandya kings, and their references to Yavana (Mediterranean) traders.
   - method: textual-internal
     range: { earliest: "300 CE", latest: "550 CE", precision: century, circa: true }
@@ -28,14 +28,14 @@ datings:
     label: Later layer (Kalittokai, Paripatal, Tirumurukarruppatai) and the compilation of the anthologies
     sources:
       - src.zvelebil-1973-smile-of-murugan
-      - src.wilden-2014-manuscript-print-memory-cankam
+      - src.wilden-2014-manuscript-print-memory
     note: Language, metre and religious content set Kalittokai, Paripatal and the Tirumurukarruppatai apart as a later stratum, and the anthologies were compiled later still.
   - method: textual-internal
     range: { earliest: "750 CE", latest: "950 CE", precision: century, circa: true }
     grade: C
     label: Late-dating minority position (Herman Tieken)
     sources:
-      - src.tieken-2001-kavya-in-south-india
+      - src.tieken-2001-kavya-south-india
     note: Herman Tieken argues that the poems are a deliberately archaising literary product of the Pandya court around the 9th century CE, rather than the work of early bards. Most Tamil specialists reject this view.
   - method: archaeological-radiocarbon
     range: { earliest: "600 BCE", latest: "300 CE", precision: century, circa: true }
@@ -56,7 +56,7 @@ claims:
     grade: A
     sources:
       - src.zvelebil-1973-smile-of-murugan
-      - src.wilden-2014-manuscript-print-memory-cankam
+      - src.wilden-2014-manuscript-print-memory
   - text: The surviving corpus amounts to about 2,381 poems attributed to roughly 473 named poets, including women such as Auvaiyar, with some poems anonymous.
     grade: B
     sources:
@@ -64,7 +64,7 @@ claims:
   - text: The Sangam texts survived in palm-leaf manuscripts and commentaries and reached print only in the late 19th and early 20th centuries, through editors such as C. W. Damodaram Pillai and U. V. Swaminatha Iyer.
     grade: B
     sources:
-      - src.wilden-2014-manuscript-print-memory-cankam
+      - src.wilden-2014-manuscript-print-memory
 debate: >-
   Most philologists, following Kamil Zvelebil, date the older anthologies to roughly the 1st century BCE to the 3rd century CE and treat Kalittokai, Paripatal and the compilation of the anthologies as later. Herman Tieken argues instead for a 9th-century Pandya court origin, a view most specialists reject. The Tamil Nadu Department of Archaeology argues, from Keezhadi's 6th-century BCE dates for Tamil-Brahmi writing, that the Sangam age began earlier than usually thought. The medieval legend of three academies spanning nearly ten thousand years is a traditional account, not a historical chronology.
 relations:

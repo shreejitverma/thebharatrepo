@@ -24,22 +24,22 @@ datings:
     range: { earliest: "634 CE", latest: "635 CE", precision: year, circa: false }
     grade: A
     label: Dated Shaka 556
-    sources: [src.kielhorn-1900-aihole-inscription-medieval, src.salomon-1998-indian-epigraphy-medieval]
+    sources: [src.kielhorn-1900-aihole-inscription, src.salomon-1998-indian-epigraphy]
     note: The inscription gives both Shaka 556 and 3,735 years after the Bharata war.
 claims:
   - text: >-
       The poet Ravikirti invokes Kalidasa and Bharavi as literary comparators, showing their reputations
       were known by the inscription's date without establishing their exact life dates.
     grade: A
-    sources: [src.kielhorn-1900-aihole-inscription-medieval, src.salomon-1998-indian-epigraphy-medieval]
+    sources: [src.kielhorn-1900-aihole-inscription, src.salomon-1998-indian-epigraphy]
   - text: The inscription states that Harsha lost his joy (harsha) when he was defeated by Pulakeshin II.
     grade: A
-    sources: [src.kielhorn-1900-aihole-inscription-medieval]
+    sources: [src.kielhorn-1900-aihole-inscription]
   - text: >-
       It dates itself by two eras, Shaka 556 and 3,735 years after the Bharata war, a rare early
       epigraphic use of an era counted from the Bharata war.
     grade: A
-    sources: [src.kielhorn-1900-aihole-inscription-medieval, src.salomon-1998-indian-epigraphy-medieval]
+    sources: [src.kielhorn-1900-aihole-inscription, src.salomon-1998-indian-epigraphy]
 relations:
   - { kind: issued-by, target: polity.chalukya-dynasty-of-badami }
   - { kind: related-to, target: person.harshavardhana }

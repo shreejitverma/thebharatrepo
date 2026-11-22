@@ -22,14 +22,14 @@ datings:
     range: { earliest: "1340 CE", latest: "1425 CE", precision: decade, circa: true }
     grade: C
     label: Approximate scholarly life range
-    sources: [src.plofker-2009-mathematics-in-india-medieval, src.ramasubramanian-2011-tantrasangraha]
+    sources: [src.plofker-2009-mathematics-in-india, src.ramasubramanian-2011-tantrasangraha]
 claims:
   - text: Later Kerala mathematicians credit Madhava with series for pi and trigonometric functions.
     grade: B
-    sources: [src.plofker-2009-mathematics-in-india-medieval, src.ramasubramanian-2011-tantrasangraha]
+    sources: [src.plofker-2009-mathematics-in-india, src.ramasubramanian-2011-tantrasangraha]
   - text: The surviving attributions to Madhava occur primarily in the works of later scholars.
     grade: B
-    sources: [src.plofker-2009-mathematics-in-india-medieval]
+    sources: [src.plofker-2009-mathematics-in-india]
 relations:
   - { kind: part-of, target: tradition.kerala-school-of-mathematics }
   - { kind: influenced, target: person.nilakantha-somayaji }

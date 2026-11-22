@@ -22,14 +22,14 @@ datings:
     grade: A
     label: Documentary record
     sources:
-      - src.mani-1998-contentious-traditions-sati
+      - src.mani-1998-contentious-traditions
 claims:
   - text: Bengal Regulation XVII of 1829 prohibited sati in the Bengal Presidency
       and classified participation in the practice as criminal. The measure
       followed sustained public and administrative debate.
     grade: A
     sources:
-      - src.mani-1998-contentious-traditions-sati
+      - src.mani-1998-contentious-traditions
 relations: []
 tags:
   - event

@@ -584,6 +584,19 @@ a:hover {
   color: var(--gold);
 }
 
+.draft-notice {
+  margin: 0;
+  padding: 6px var(--gutter);
+  background: var(--bg-sunk);
+  border-bottom: 1px solid var(--line);
+  color: var(--ink-soft);
+  font-family: var(--font-ui);
+  font-size: 0.85rem;
+  line-height: 1.45;
+  text-align: center;
+  text-wrap: pretty;
+}
+
 .review-note {
   font-size: 0.85rem;
   color: var(--ink-faint);
@@ -756,13 +769,16 @@ a:hover {
   font-style: italic;
 }
 
+.article-content .table-scroll {
+  overflow-x: auto;
+  margin: 1em 0;
+}
+
 .article-content table {
   border-collapse: collapse;
   width: 100%;
   font-family: var(--font-ui);
   font-size: 0.95rem;
-  display: block;
-  overflow-x: auto;
 }
 
 .article-content th,

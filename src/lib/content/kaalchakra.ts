@@ -117,10 +117,10 @@ export function formatSource(s: Source): string {
   return parts.filter(Boolean).join('. ').replace(/\.\./g, '.');
 }
 
+/** Links the identifier the verification gate checked: DOI, then ISBN, then OCLC; a URL only when it is the sole identifier. */
 export function sourceLink(s: Source): string | undefined {
   if (s.doi) return `https://doi.org/${s.doi}`;
-  if (s.url) return s.url;
   if (s.isbn) return `https://openlibrary.org/isbn/${s.isbn}`;
   if (s.oclc) return `https://search.worldcat.org/title/${s.oclc}`;
-  return undefined;
+  return s.url;
 }

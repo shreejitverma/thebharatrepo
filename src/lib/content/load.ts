@@ -153,6 +153,11 @@ export function sameWork(a: Source, b: Source): boolean {
   return sameTitle(a.title, b.title);
 }
 
+/** Registry identifiers of a source; two source ids sharing one are the same work registered twice. */
+function identifierKeys(s: Source): string[] {
+  return [s.doi && `doi:${s.doi.toLowerCase()}`, s.isbn && `isbn:${s.isbn}`, s.oclc && `oclc:${s.oclc}`, s.url && `url:${s.url.replace(/\/+$/, '')}`].filter((k): k is string => Boolean(k));
+}
+
 let strays: string[] = [];
 
 function walk(dir: string, ext: string): string[] {
@@ -194,6 +199,7 @@ export function loadContentUncached(): ContentGraph {
   const roots = contentRoots();
   const artDir = articlesDir();
   strays = [];
+  const workIds = new Map<string, string>();
 
   for (const file of roots.flatMap((r) => walk(path.join(r, 'sources'), '.yaml'))) {
     const raw = readYaml(file, errors);
@@ -213,8 +219,14 @@ export function loadContentUncached(): ContentGraph {
       continue;
     }
     sources.set(parsed.data.id, parsed.data);
+    for (const key of identifierKeys(parsed.data)) {
+      const other = workIds.get(key);
+      if (other) errors.push({ file: rel(file), message: `${key} already identifies ${other}; cite one source id per work` });
+      else workIds.set(key, parsed.data.id);
+    }
   }
 
+  const entityFile = new Map<string, string>();
   for (const file of roots.flatMap((r) => walk(path.join(r, 'entities'), '.yaml'))) {
     const raw = readYaml(file, errors);
     if (raw === undefined) continue;
@@ -234,6 +246,7 @@ export function loadContentUncached(): ContentGraph {
     if (e.id !== expected) errors.push({ file: rel(file), message: `id ${e.id} must match path (${expected})` });
     if (entities.has(e.id)) errors.push({ file: rel(file), message: `duplicate entity id ${e.id}` });
     entities.set(e.id, e);
+    entityFile.set(e.id, rel(file));
   }
 
   if (artDir && fs.existsSync(artDir)) {
@@ -298,10 +311,6 @@ export function loadContentUncached(): ContentGraph {
     else if (!sources.has(id)) errors.push({ file, message: `${where}: unknown source ${id}` });
   };
 
-  const entityFile = new Map<string, string>();
-  for (const file of roots.flatMap((r) => walk(path.join(r, 'entities'), '.yaml'))) {
-    entityFile.set(`${path.basename(path.dirname(file))}.${path.basename(file, '.yaml')}`, rel(file));
-  }
   const inbound = new Map<string, { from: string; kind: string }[]>();
   for (const e of entities.values()) {
     const file = entityFile.get(e.id) ?? e.id;

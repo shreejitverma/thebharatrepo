@@ -27,6 +27,7 @@ test.describe('pages render, are accessible and fit the viewport', () => {
       page.on('console', (m) => m.type() === 'error' && errors.push(m.text()));
       await page.goto(path);
       await expect(page.locator('h1').first()).toBeVisible();
+      await expect(page.locator('.draft-notice')).toContainText('awaiting human editorial review');
       await noHorizontalScroll(page);
       await noSeriousA11yViolations(page);
       expect(errors).toEqual([]);
@@ -40,6 +41,14 @@ test.describe('pages render, are accessible and fit the viewport', () => {
     await expect(page.locator('.dating').first()).toBeVisible();
     await expect(page.locator('.dating__sources li').first()).toBeVisible();
     await expect(page.locator('.kc-strip')).toBeVisible();
+    await noHorizontalScroll(page);
+    await noSeriousA11yViolations(page);
+  });
+
+  test('article tables render as tables', async ({ page }) => {
+    await page.goto('/music/the-72-melakartas');
+    await expect(page.locator('.article-content table th').first()).toBeVisible();
+    await expect(page.locator('.article-content')).not.toContainText('| ---');
     await noHorizontalScroll(page);
     await noSeriousA11yViolations(page);
   });

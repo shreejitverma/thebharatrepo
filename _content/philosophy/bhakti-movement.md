@@ -22,7 +22,7 @@ From about the sixth century CE a body of devotional poetry in the regional lang
 ## Earlier roots
 
 The word and the idea are older than the poets.
-The Bhagavad Gita presents loving devotion to Krishna as a way to liberation [@src.malinar-2007-bhagavadgita].
+The Bhagavad Gita presents loving devotion to Krishna as a way to liberation [@src.malinar-2007-bhagavadgita-doctrines-contexts].
 What is new in the early medieval period is the large body of vernacular song composed by individuals who describe their own experience of the god [@src.hawley-2015-storm-of-songs].
 
 ## The Tamil saints

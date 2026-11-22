@@ -8,7 +8,7 @@ datings:
     range: { earliest: "200 BCE", latest: "500 CE", precision: century, circa: true }
     grade: C
     label: "Natyashastra and Dattilam (marga tala)"
-    sources: [src.rowell-1992-music-and-musical-thought]
+    sources: [src.rowell-1992-music-musical-thought-early-india]
     note: "The Natyashastra is a composite text of uncertain date, and its tala chapter may belong to a later layer. The range is a wide estimate."
   - method: scholarly-consensus
     range: { earliest: "1200 CE", latest: "1300 CE", precision: century, circa: true }

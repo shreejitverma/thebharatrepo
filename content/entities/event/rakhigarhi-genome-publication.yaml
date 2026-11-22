@@ -24,13 +24,13 @@ datings:
       circa: false
     grade: A
     sources:
-      - src.shinde-2019-harappan-genome
+      - src.shinde-2019-ancient-harappan-genome
 claims:
   - text: The Cell paper published in 2019 reports a genome from one ancient
       individual excavated at Rakhigarhi.
     grade: A
     sources:
-      - src.shinde-2019-harappan-genome
+      - src.shinde-2019-ancient-harappan-genome
 tags:
   - archaeology
   - genetics

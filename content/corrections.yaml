@@ -13,7 +13,7 @@
   after: The Arthashastra, in its surviving form, is argued to have been composed and edited over several centuries and cannot be used directly as a description of Mauryan government.
   reason: Olivelle dates the text as we have it to the first centuries CE, so it is not straightforward Mauryan evidence.
   sources:
-    - src.olivelle-2013-king-governance-law-arthasastra
+    - src.olivelle-2013-king-governance-law
 - date: 2026-11-21
   target: /history/maurya-empire
   before: "305 BCE: Defeat of Seleucus Nicator; Mauryan territory expands to Afghanistan."
@@ -30,7 +30,7 @@
   sources:
     - src.hultzsch-1925-inscriptions-of-asoka
     - src.thapar-1997-asoka-decline-mauryas
-    - src.lahiri-2015-ashoka-in-ancient-india
+    - src.lahiri-2015-ashoka-ancient-india
 - date: 2026-11-21
   target: /history/maurya-empire
   before: Trade flourished via the Grand Trunk Road.
@@ -85,14 +85,14 @@
   after: The Marathas survived a long Mughal war and gained large revenue claims in the 18th century; 'paramount power' is a contested judgement, since Hyderabad, Mysore and the East India Company were also strong.
   reason: The original overstated Maratha supremacy and attributed the end of Mughal power to one actor; the Mughal decline had several causes.
   sources:
-    - src.gordon-1993-the-marathas
+    - src.gordon-1993-marathas-1600-1818
 - date: 2026-11-21
   target: /history/maratha-empire
   before: Founded by Chhatrapati Shivaji Maharaj in 1674
   after: Shivaji built a fortified kingdom from the 1640s; 1674 is the date of his formal coronation as chhatrapati, which was itself a contested claim to status.
   reason: 1674 marks a coronation, not the founding of the state, and the ritual was disputed.
   sources:
-    - src.gordon-1993-the-marathas
+    - src.gordon-1993-marathas-1600-1818
     - src.laine-2003-shivaji
 - date: 2026-11-21
   target: /history/maratha-empire
@@ -100,7 +100,7 @@
   after: The Peshwa-led system was a confederacy in which Sindhia, Holkar, Gaekwad and Bhonsle leaders held large, partly autonomous territories; it was not a centrally governed empire.
   reason: The original implied a single expanding empire under the Peshwas, which the structure of Maratha power does not support.
   sources:
-    - src.gordon-1993-the-marathas
+    - src.gordon-1993-marathas-1600-1818
     - src.wink-1986-land-and-sovereignty
 - date: 2026-11-21
   target: /history/maratha-empire
@@ -108,7 +108,7 @@
   after: Maratha armies used mobile cavalry and raiding but also fought pitched battles and sieges, and adapted Deccan methods of war.
   reason: "'Guerrilla warfare' alone is an oversimplification of the Maratha military record."
   sources:
-    - src.gordon-1993-the-marathas
+    - src.gordon-1993-marathas-1600-1818
 - date: 2026-11-21
   target: /history/british-raj
   before: "1857: The First War of Independence (Sepoy Mutiny)"
@@ -204,7 +204,7 @@
   reason: An unqualified 'earliest' claim cannot be supported; the evidence only shows that chant is the earliest well-documented tradition.
   sources:
     - src.howard-1977-samavedic-chant
-    - src.rowell-1992-music-early-india
+    - src.rowell-1992-music-musical-thought-early-india
 - date: 2026-11-21
   target: /music/01-origin-and-evolution
   before: Vedic Period (c. 1500-500 BCE) ... The origins of Indian music can be traced back to the Vedic period.
@@ -219,7 +219,7 @@
   after: The Natyashastra organises seven named pitches into grama scales, murchana and jati; the jati system is a precursor of raga, and raga as a defined concept is first treated systematically in the Brhaddesi attributed to Matanga.
   reason: Swara predates the Natyashastra, and raga as a technical concept is not found there in its later sense.
   sources:
-    - src.rowell-1992-music-early-india
+    - src.rowell-1992-music-musical-thought-early-india
     - src.sharma-1992-brhaddesi-matanga
     - src.widdess-1995-ragas-early-indian-music
 - date: 2026-11-21
@@ -239,7 +239,7 @@
   reason: The original definition is not what the texts say.
   sources:
     - src.rangacharya-1996-natyasastra
-    - src.rowell-1992-music-early-india
+    - src.rowell-1992-music-musical-thought-early-india
 - date: 2026-11-21
   target: /music/02-core-concepts
   before: Indian music uses a system of just intonation.
@@ -616,7 +616,7 @@
   sources:
     - src.plofker-2009-mathematics-in-india
     - src.bodleian-2017-bakhshali-carbon-dating
-    - src.wujastyk-2017-bakhshali-response
+    - src.plofker-2017-bakhshali-radiocarbon
 - date: 2026-11-21
   target: /science/ancient-astronomy
   before: "Heliocentrism: Aryabhata proposed the earth rotates on its axis."
@@ -700,7 +700,7 @@
   reason: The original implied arches and domes were wholly new; the new element was the structural method.
   sources:
     - src.harle-1994-art-architecture-indian-subcontinent
-    - src.asher-1992-architecture-mughal-india
+    - src.asher-1992-architecture-of-mughal-india
 - date: 2026-11-21
   target: /art-and-culture/indian-architecture
   before: "Vesara Style (Deccan): A hybrid of Nagara and Dravida."
@@ -1079,7 +1079,7 @@
   after: The two traditions diverged gradually over the second millennium CE; there is no single date.
   reason: The 13th-century date is too precise; the Sangitaratnakara of that century is claimed by both traditions.
   sources:
-    - src.widdess-1995-ragas-of-early-indian-music
+    - src.widdess-1995-ragas-early-indian-music
     - src.arnold-2000-garland-south-asia
 - date: 2026-11-21
   target: /music/04-carnatic-music
@@ -1116,7 +1116,7 @@
   after: The Natyashastra is dated to a wide, debated range from the last centuries BCE to the early centuries CE.
   reason: A single date overstates what the composite text allows.
   sources:
-    - src.rowell-1992-music-and-musical-thought-early-india
+    - src.rowell-1992-music-musical-thought-early-india
 - date: 2026-11-21
   target: /music/05-musical-instruments
   before: "c. 13th Century: Introduction of Persian instruments (Sitar, Tabla evolution) by Amir Khusrau."

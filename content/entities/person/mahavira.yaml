@@ -20,7 +20,7 @@ datings:
     grade: C
     label: Scholarly dating as a contemporary of the Buddha (lifespan)
     sources:
-      - src.dundas-2002-the-jains-doi
+      - src.dundas-2002-the-jains
       - src.bronkhorst-2007-greater-magadha
     note: Pali texts say that Nigantha Nataputta (Mahavira) died at Pava while the Buddha was still alive, so his dates follow the Buddha's; with the now widely preferred later date for the Buddha, his death falls in the 5th century BCE.
   - method: traditional-sampradaya
@@ -28,18 +28,18 @@ datings:
     grade: D
     label: Traditional Vira Nirvana era
     sources:
-      - src.dundas-2002-the-jains-doi
+      - src.dundas-2002-the-jains
     note: The Vira Nirvana Samvat, the era counted from Mahavira's liberation, places his death in 527 BCE after a life of 72 years.
 claims:
   - text: Early Buddhist texts refer to Mahavira as Nigantha Nataputta and describe him teaching in the Gangetic cities in the time of Bimbisara and Ajatashatru.
     grade: B
     sources:
-      - src.dundas-2002-the-jains-doi
+      - src.dundas-2002-the-jains
       - src.bronkhorst-2007-greater-magadha
   - text: Jain ascetics take five great vows (mahavratas), attributed to Mahavira's teaching - non-violence (ahimsa), truthfulness (satya), not stealing (asteya), celibacy (brahmacharya) and non-possession (aparigraha).
     grade: B
     sources:
-      - src.dundas-2002-the-jains-doi
+      - src.dundas-2002-the-jains
 relations:
   - { kind: contemporary-of, target: person.gautama-buddha }
   - { kind: contemporary-of, target: person.bimbisara }

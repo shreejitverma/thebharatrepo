@@ -24,7 +24,7 @@ datings:
     range: { earliest: "1010 CE", latest: "1010 CE", precision: year, circa: false }
     grade: A
     label: Completion in Rajaraja I's 25th regnal year
-    sources: [src.sastri-1955-the-colas-medieval, src.unesco-1987-great-living-chola-temples-medieval]
+    sources: [src.sastri-1955-the-colas, src.unesco-1987-great-living-chola-temples]
   - method: scholarly-consensus
     range: { earliest: "1003 CE", latest: "1010 CE", precision: year, circa: true }
     grade: B
@@ -35,10 +35,10 @@ claims:
       The Great Living Chola Temples (Thanjavur, with Gangaikondacholapuram and Darasuram added in
       2004) were inscribed on the UNESCO World Heritage List in 1987.
     grade: A
-    sources: [src.unesco-1987-great-living-chola-temples-medieval]
+    sources: [src.unesco-1987-great-living-chola-temples]
   - text: Inscriptions on the temple record its endowments, including villages assigned to it and hundreds of temple dancers and other staff.
     grade: B
-    sources: [src.sastri-1955-the-colas-medieval]
+    sources: [src.sastri-1955-the-colas]
 relations:
   - { kind: patronised-by, target: person.rajaraja-i }
   - { kind: patronised-by, target: polity.chola-dynasty }

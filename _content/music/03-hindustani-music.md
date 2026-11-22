@@ -23,7 +23,7 @@ Both inherit the same body of theory (see the articles on origins and core conce
 
 Older summaries say it is "born from Vedic chants" combined with an ancient *gandharva* tradition and a Persian one.
 The truth is more careful.
-The musical theory goes back to the treatises discussed elsewhere on this site, and Vedic chant is one of the oldest traditions from which later thinkers drew vocabulary, but a straight line from Samavedic chant to a present-day khyal cannot be demonstrated [@src.rowell-1992-music-early-india; @src.widdess-1995-ragas-early-indian-music].
+The musical theory goes back to the treatises discussed elsewhere on this site, and Vedic chant is one of the oldest traditions from which later thinkers drew vocabulary, but a straight line from Samavedic chant to a present-day khyal cannot be demonstrated [@src.rowell-1992-music-musical-thought-early-india; @src.widdess-1995-ragas-early-indian-music].
 From the thirteenth century, the courts of the Delhi Sultanate and then the Mughals and regional rulers brought new patrons, instruments and aesthetic ideas, and the exchange ran in both directions [@src.neuman-1990-life-of-music; @src.sanyal-widdess-2004-dhrupad].
 Stories crediting a single figure with inventing a form or instrument deserve caution unless they are backed by early evidence.
 
@@ -61,7 +61,7 @@ The most common instruments are:
 
 - **Sitar:** a long-necked plucked lute with frets and sympathetic strings.
 - **Sarod:** a fretless plucked lute with a metal-covered fingerboard.
-- **Tabla:** a pair of hand drums for rhythmic accompaniment, which keeps the tala [@src.clayton-2000-time-indian-music].
+- **Tabla:** a pair of hand drums for rhythmic accompaniment, which keeps the tala [@src.clayton-2000-time-in-indian-music].
 - **Sarangi:** a bowed instrument whose sound is closely associated with the voice and the accompaniment of khyal and thumri [@src.manuel-1989-thumri].
 - **Bansuri:** a transverse bamboo flute.
 

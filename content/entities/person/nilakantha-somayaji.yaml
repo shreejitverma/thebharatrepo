@@ -30,7 +30,7 @@ claims:
     sources: [src.ramasubramanian-2011-tantrasangraha]
   - text: His works transmit Kerala mathematical astronomy and results attributed to Madhava.
     grade: B
-    sources: [src.ramasubramanian-2011-tantrasangraha, src.plofker-2009-mathematics-in-india-medieval]
+    sources: [src.ramasubramanian-2011-tantrasangraha, src.plofker-2009-mathematics-in-india]
 relations:
   - { kind: part-of, target: tradition.kerala-school-of-mathematics }
 tags: [mathematics, astronomy, kerala, sanskrit]

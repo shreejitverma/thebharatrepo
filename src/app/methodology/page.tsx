@@ -94,7 +94,7 @@ export default function MethodologyPage() {
           Primary sources come first: the text with its verse, the inscription with its corpus number, the excavation report, the coin, the genome. Encyclopaedias such as Wikipedia are finding aids, never citations. Before anything is published, an automated check resolves every DOI against Crossref and every ISBN against Open Library and Google Books, and confirms that the resolved title matches the work cited. Wikidata identifiers and Wikimedia Commons images are checked the same way. A source that cannot be verified is not used.
         </p>
         <p>
-          Machine verification proves a source exists and is the work named. It does not prove that the source says what we claim, which is why every page also shows its editorial review status. Entries marked draft await review by a subject editor.
+          Machine verification proves a source exists and is the work named. It does not prove that the source says what we claim, which is why every page also shows its editorial review status. Entries and articles are currently drafted by AI models and marked draft until a subject editor reviews them; a notice on every page says so, and each entry and article page shows its own status.
         </p>
 
         <h2>Corrections</h2>

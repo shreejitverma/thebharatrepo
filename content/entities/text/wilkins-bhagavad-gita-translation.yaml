@@ -21,7 +21,7 @@ datings:
     label: Documentary record
     sources: &a1
       - src.wilkins-1785-bhagvat-geeta
-      - src.davis-2014-bhagavad-gita-biography
+      - src.davis-2015-bhagavad-gita-biography
 claims:
   - text: Charles Wilkins published the first English translation of the Bhagavad
       Gita in 1785, under the title The Bhagvat-Geeta.

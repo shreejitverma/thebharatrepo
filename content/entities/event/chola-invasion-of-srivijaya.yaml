@@ -23,17 +23,17 @@ datings:
     range: { earliest: "1024 CE", latest: "1026 CE", best: "1025 CE", precision: year, circa: true }
     grade: B
     label: Inferred from Rajendra I's inscriptions
-    sources: [src.sastri-1955-the-colas-medieval, src.kulke-2009-nagapattinam-to-suvarnadwipa-medieval]
+    sources: [src.sastri-1955-the-colas, src.kulke-2009-nagapattinam-to-suvarnadwipa]
     note: The conquest first appears in the royal eulogy of inscriptions from Rajendra's later regnal years.
 claims:
   - text: >-
       Rajendra I's inscriptions name Srivijaya, Kadaram and a series of other ports and record the
       capture of the Srivijaya king Sangrama Vijayottungavarman.
     grade: A
-    sources: [src.sastri-1955-the-colas-medieval, src.kulke-2009-nagapattinam-to-suvarnadwipa-medieval]
+    sources: [src.sastri-1955-the-colas, src.kulke-2009-nagapattinam-to-suvarnadwipa]
   - text: The motives for the expedition, commercial or political, are debated.
     grade: C
-    sources: [src.kulke-2009-nagapattinam-to-suvarnadwipa-medieval]
+    sources: [src.kulke-2009-nagapattinam-to-suvarnadwipa]
 debate: >-
   Some historians see the raid as an effort to protect Tamil merchant guilds and Chola access to the
   China trade from Srivijaya's control of the straits; others stress diplomatic rivalry and the

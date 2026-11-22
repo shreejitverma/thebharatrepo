@@ -27,7 +27,7 @@ datings:
     range: { earliest: "3067 BCE", latest: "3067 BCE", precision: year, circa: true }
     grade: E
     label: "B. N. Narahari Achar (planetarium-software reconstruction)"
-    sources: [src.achar-2018-correspondence-bhatnagar, src.bhatnagar-2017-date-mahabharata-war]
+    sources: [src.achar-2018-date-mahabharata-war-correspondence, src.bhatnagar-2017-date-mahabharata-war]
     note: "Based on matching sky descriptions in Books 3, 5 and 18, notably Saturn near Rohini."
   - method: astronomical-reference
     range: { earliest: "1793 BCE", latest: "1793 BCE", precision: year, circa: true }
@@ -93,7 +93,7 @@ These dates are part of a cosmological scheme and they are presented here as tra
 ### Astronomical reconstructions
 
 Since the late 20th century several authors have tried to fix the war by matching the planetary and eclipse observations scattered through the epic against computer sky models.
-B. N. Narahari Achar used planetarium software and, stressing Saturn's position near Rohini and the pair of eclipses before the war, argued for 3067 BCE [@src.achar-2018-correspondence-bhatnagar].
+B. N. Narahari Achar used planetarium software and, stressing Saturn's position near Rohini and the pair of eclipses before the war, argued for 3067 BCE [@src.achar-2018-date-mahabharata-war-correspondence].
 Ashok K. Bhatnagar, an astronomer formerly of the India Meteorological Department, reassessed the same references in the *Indian Journal of History of Science* and concluded that the war began on 14 October 1793 BCE [@src.bhatnagar-2017-date-mahabharata-war].
 These two results are about 1,300 years apart, and other authors have published still other dates.
 The method assumes that the observations in the poem are precise, that they reflect real sightings and not later poetic or ritual composition, and that the text has not been altered, which are the very points at issue.

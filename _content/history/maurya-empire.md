@@ -22,7 +22,7 @@ It is the earliest known government to rule most of the subcontinent, though "mo
 
 ## Rise of Chandragupta
 
-The Puranas, the Buddhist chronicles and the Jain tradition all agree that Chandragupta replaced the Nanda dynasty of Magadha, but they disagree about his origins and how he did it [@src.pargiter-1913-purana-text-dynasties-kali-age; @src.thapar-2002-early-india].
+The Puranas, the Buddhist chronicles and the Jain tradition all agree that Chandragupta replaced the Nanda dynasty of Magadha, but they disagree about his origins and how he did it [@src.pargiter-1913-dynasties-kali-age; @src.thapar-2002-early-india].
 Later Sanskrit tradition gives a large part of the credit to a brahmana minister, Chanakya or Kautilya.
 That story is told in sources written long after the events, so the details are best treated as tradition rather than record [@src.thapar-2002-early-india].
 
@@ -38,7 +38,7 @@ It is lost and survives only in quotations by later authors, who describe a larg
 ## Ashoka and his inscriptions
 
 Ashoka, Chandragupta's grandson, ruled from roughly 268 to 232 BCE.
-He is the one ancient Indian ruler we can hear speaking for himself, because he had messages carved on rocks and polished stone pillars across his realm, in Prakrit (written in Brahmi, and in Kharoshthi and Greek in the northwest) [@src.hultzsch-1925-inscriptions-of-asoka; @src.lahiri-2015-ashoka-in-ancient-india].
+He is the one ancient Indian ruler we can hear speaking for himself, because he had messages carved on rocks and polished stone pillars across his realm, in Prakrit (written in Brahmi, and in Kharoshthi and Greek in the northwest) [@src.hultzsch-1925-inscriptions-of-asoka; @src.lahiri-2015-ashoka-ancient-india].
 
 In Major Rock Edict XIII he describes the conquest of Kalinga (roughly modern Odisha), in his eighth regnal year, c. 261 BCE.
 He says that about 150,000 people were deported, about 100,000 were killed and many more died, and that he felt deep remorse [@src.hultzsch-1925-inscriptions-of-asoka; @src.thapar-1997-asoka-decline-mauryas].
@@ -47,16 +47,16 @@ Their reigns overlapped only briefly, which is why this edict anchors Ashoka's d
 
 What did Ashoka change?
 His edicts promote *dhamma*, a code of ethical conduct: respect for elders, generosity to ascetics and brahmanas, restraint in killing animals and tolerance among sects.
-Ashoka also says he became a lay follower of the Buddha, and later Buddhist chronicles credit him with sending missions abroad, including to Sri Lanka [@src.hultzsch-1925-inscriptions-of-asoka; @src.lahiri-2015-ashoka-in-ancient-india].
+Ashoka also says he became a lay follower of the Buddha, and later Buddhist chronicles credit him with sending missions abroad, including to Sri Lanka [@src.hultzsch-1925-inscriptions-of-asoka; @src.lahiri-2015-ashoka-ancient-india].
 Scholars debate how far *dhamma* was a Buddhist programme and how far it was a broad public ethic meant for a diverse empire; Romila Thapar emphasises the second reading [@src.thapar-1997-asoka-decline-mauryas].
 The old claim that Ashoka "spread Buddhism across Asia" goes beyond what his own inscriptions say.
-He claims "victory by dhamma" and sends envoys to Hellenistic kings, but the later spread of Buddhism owed much to many other patrons and communities [@src.lahiri-2015-ashoka-in-ancient-india].
+He claims "victory by dhamma" and sends envoys to Hellenistic kings, but the later spread of Buddhism owed much to many other patrons and communities [@src.lahiri-2015-ashoka-ancient-india].
 
 ## How the empire worked
 
 The *Arthashastra*, a manual of statecraft attributed to Kautilya, describes spies, taxation, state-run industries and a standing army.
 It was long read as a portrait of Mauryan government.
-Patrick Olivelle, who made a new critical translation, argues instead that the text as we have it was composed and edited over several centuries and reached its present form in the first centuries CE, so it cannot be used straightforwardly as a Mauryan document [@src.olivelle-2013-king-governance-law-arthasastra].
+Patrick Olivelle, who made a new critical translation, argues instead that the text as we have it was composed and edited over several centuries and reached its present form in the first centuries CE, so it cannot be used straightforwardly as a Mauryan document [@src.olivelle-2013-king-governance-law].
 Other scholars still see an early core.
 The safest approach is to use it for the ideas of Indian political thought and to rely on inscriptions and archaeology for actual Mauryan practice.
 
@@ -68,11 +68,11 @@ A royal road from the northwest to Pataliputra is described by Greek writers, th
 ## Decline and end
 
 After Ashoka the line continued under his successors for about fifty years.
-The Puranas and later Sanskrit literature say the last Mauryan king, Brihadratha, was killed by his general Pushyamitra Shunga around 185 BCE [@src.pargiter-1913-purana-text-dynasties-kali-age; @src.thapar-2002-early-india].
+The Puranas and later Sanskrit literature say the last Mauryan king, Brihadratha, was killed by his general Pushyamitra Shunga around 185 BCE [@src.pargiter-1913-dynasties-kali-age; @src.thapar-2002-early-india].
 Older textbooks blamed a "brahmanical reaction" against Ashoka's policies for the fall.
 Thapar argues that this does not hold up, and points instead to a heavy dependence on a strong king, a costly army and bureaucracy, difficulty in controlling distant regions and the pull of regional powers [@src.thapar-1997-asoka-decline-mauryas].
 
 ## Dating and the traditional account
 
 The 321 and 185 BCE limits are circa dates, resting on Greek synchronisms for the start and on the Puranic lists for the end.
-The Puranas give lengths of reign and a total duration for the dynasty but no absolute calendar year, and Buddhist and Jain traditions differ in detail, so we treat their figures as a framework tested against the Greek anchor rather than as independent dates [@src.pargiter-1913-purana-text-dynasties-kali-age; @src.thapar-2002-early-india].
+The Puranas give lengths of reign and a total duration for the dynasty but no absolute calendar year, and Buddhist and Jain traditions differ in detail, so we treat their figures as a framework tested against the Greek anchor rather than as independent dates [@src.pargiter-1913-dynasties-kali-age; @src.thapar-2002-early-india].

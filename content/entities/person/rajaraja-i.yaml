@@ -24,15 +24,15 @@ datings:
     range: { earliest: "985 CE", latest: "1014 CE", precision: year, circa: false }
     grade: A
     label: Reign
-    sources: [src.sastri-1955-the-colas-medieval, src.singh-2008-ancient-early-medieval-india]
+    sources: [src.sastri-1955-the-colas, src.singh-2008-ancient-early-medieval-india]
     note: Fixed by regnal-year dates in his inscriptions combined with astronomical details.
 claims:
   - text: The Thanjavur temple was completed in Rajaraja's 25th regnal year, 1010 CE.
     grade: A
-    sources: [src.sastri-1955-the-colas-medieval, src.unesco-1987-great-living-chola-temples-medieval]
+    sources: [src.sastri-1955-the-colas, src.unesco-1987-great-living-chola-temples]
   - text: His campaigns brought northern Sri Lanka under Chola rule, with Polonnaruva as the Chola centre there.
     grade: B
-    sources: [src.sastri-1955-the-colas-medieval, src.thapar-2002-early-india]
+    sources: [src.sastri-1955-the-colas, src.thapar-2002-early-india]
 relations:
   - { kind: ruled, target: polity.chola-dynasty }
   - { kind: founded, target: site.brihadisvara-temple-thanjavur }

@@ -9,7 +9,7 @@ datings:
     range: { earliest: "2600 BCE", latest: "1700 CE", precision: century, circa: true }
     grade: B
     label: "From Mature Harappan cities to the high Mughal period"
-    sources: [src.possehl-2002-indus-civilization, src.harle-1994-art-architecture-indian-subcontinent, src.asher-1992-architecture-mughal-india]
+    sources: [src.possehl-2002-indus-civilization, src.harle-1994-art-architecture-indian-subcontinent, src.asher-1992-architecture-of-mughal-india]
     note: "The span covered here; later colonial and modern architecture is outside this article."
 entities: [tradition.harappan-civilisation, concept.harappan-town-planning-and-drainage, site.mohenjo-daro, site.great-bath-mohenjo-daro, site.dholavira]
 readingLevel: adult
@@ -46,7 +46,7 @@ These are modern, regional labels that overlap in practice; they are useful shor
 
 In the Nagara tradition the tower, called a shikhara, curves inward as it rises, ending in a rounded crown.
 The temples of Khajuraho, built under the Chandela dynasty between about 950 and 1050 CE, are a famous example, with clustered towers rising in steps toward the main summit [@src.unesco-1986-khajuraho].
-In Odisha the tradition took its own form, and the Sun Temple at Konark, of the thirteenth century, was designed as a colossal chariot of the sun god [@src.unesco-1984-konark].
+In Odisha the tradition took its own form, and the Sun Temple at Konark, of the thirteenth century, was designed as a colossal chariot of the sun god [@src.unesco-1984-konark-sun-temple].
 
 ### Dravida
 
@@ -68,7 +68,7 @@ Indian builders already knew arches and domes made of corbelled courses, which a
 The Qutb Minar complex in Delhi, begun in about 1199, is among the earliest major monuments of the new order, and its carving shows Indian craft skills at work within it [@src.unesco-1993-qutb-minar].
 
 The Mughal period brought a further blending of Persian and Indian traditions.
-Under Akbar (reigned 1556 to 1605), red sandstone forts and palaces drew on regional building habits, and under Shah Jahan (reigned 1628 to 1658) white marble, precise geometry and garden settings reached their most refined form [@src.asher-1992-architecture-mughal-india].
+Under Akbar (reigned 1556 to 1605), red sandstone forts and palaces drew on regional building habits, and under Shah Jahan (reigned 1628 to 1658) white marble, precise geometry and garden settings reached their most refined form [@src.asher-1992-architecture-of-mughal-india].
 The Taj Mahal at Agra, begun in the early 1630s as a tomb for Mumtaz Mahal and finished by the early 1650s, belongs to this tradition, and is a mausoleum within a walled garden [@src.unesco-1983-taj-mahal; @src.koch-2006-complete-taj-mahal].
 In the Deccan, the sultanates of Bijapur and Golconda developed their own tomb and mosque architecture, including the domed mausoleum known as the Gol Gumbaz at Bijapur, built in the seventeenth century [@src.harle-1994-art-architecture-indian-subcontinent].
 

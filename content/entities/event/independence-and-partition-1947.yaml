@@ -23,7 +23,7 @@ datings:
     label: Documentary record
     sources: &a1
       - src.india-independence-act-1947
-      - src.khan-2007-great-partition
+      - src.khan-2007-the-great-partition
       - src.chatterji-2007-spoils-of-partition
 claims:
   - text: British India was partitioned into India and Pakistan in August 1947.

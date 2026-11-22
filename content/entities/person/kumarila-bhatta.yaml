@@ -24,17 +24,17 @@ datings:
     range: { earliest: "560 CE", latest: "700 CE", precision: decade, circa: true }
     grade: C
     label: Relative chronology with Buddhist philosophers
-    sources: [src.taber-2004-hindu-critique-buddhist-epistemology]
+    sources: [src.taber-2005-hindu-critique-buddhist-epistemology]
     note: He responds to Dignaga and is answered by later Buddhist authors, which places him in about the 7th century.
 claims:
   - text: Kumarila wrote the Shlokavarttika, Tantravarttika and Tuptika on Shabara's commentary to the Mimamsa Sutras.
     grade: B
-    sources: [src.taber-2004-hindu-critique-buddhist-epistemology]
+    sources: [src.taber-2005-hindu-critique-buddhist-epistemology]
   - text: >-
       The perception chapter of the Shlokavarttika argues against the Buddhist epistemology of Dignaga
       and his followers.
     grade: A
-    sources: [src.taber-2004-hindu-critique-buddhist-epistemology]
+    sources: [src.taber-2005-hindu-critique-buddhist-epistemology]
 relations:
   - { kind: related-to, target: person.adi-shankara }
 tags: [mimamsa, philosophy, epistemology]

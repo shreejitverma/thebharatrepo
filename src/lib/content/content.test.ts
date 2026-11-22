@@ -66,6 +66,20 @@ describe('citations', () => {
   });
 });
 
+describe('article rendering', () => {
+  it('renders GFM pipe tables as HTML tables, with citations inside cells', async () => {
+    const { renderArticle } = await import('./render');
+    const source = SourceSchema.parse({ id: 'src.a-2000-b', type: 'book', title: 'A Book About Things', authors: ['A B'], isbn: '9780520242258' });
+    const md = ['| Raga | Thaat |', '| --- | --- |', '| Yaman | Kalyan [@src.a-2000-b, p. 4] |', ''].join('\n');
+    const r = await renderArticle(md, new Map([[source.id, source]]));
+    expect(r.html).toContain('<div class="table-scroll" tabindex="0" role="region" aria-label="Scrollable table"><table>');
+    expect(r.html).toContain('<th>Raga</th>');
+    expect(r.html).toMatch(/<td>Kalyan <sup class="cite">\[<a href="#ref-1"[^>]*>1<\/a>\]<\/sup><\/td>/);
+    expect(r.html).not.toContain('| Raga |');
+    expect(r.references.map((x) => x.locators)).toEqual([['p. 4']]);
+  });
+});
+
 describe('loader against fixtures', () => {
   afterEach(() => vi.unstubAllEnvs());
   it('loads a valid graph with inbound relations and article links', async () => {
@@ -99,6 +113,8 @@ describe('loader against fixtures', () => {
       expect(msgs).toContain('datings[0]: unknown source src.nobody-1999-nothing');
       expect(msgs).toContain('relation related-to -> unknown entity person.ghost');
       expect(msgs).toContain('article body cites no sources; use [@src.id, locator]');
+      expect(msgs).toContain('isbn:9780000000002 already identifies src.roe-1990-a-work; cite one source id per work');
+      expect(msgs.filter((m) => m.startsWith('unexpected file'))).toHaveLength(1);
     } finally {
       process.chdir(cwd);
     }

@@ -68,7 +68,7 @@ datings:
     grade: C
     label: Holistic / Indigenous Continuity Identification of the Harappan Ghaggar-Hakra with the Rigvedic Sarasvati (B. B. Lal, Michel Danino)
     sources:
-      - src.danino-2010-lost-river
+      - src.danino-2010-lost-river-sarasvati
       - src.possehl-2002-indus-civilization
     note: >-
       Position advocated by B. B. Lal, V. N. Misra, and Michel Danino identifying the Harappan-era Ghaggar-Hakra
@@ -102,7 +102,7 @@ claims:
     grade: A
     sources:
       - src.possehl-2002-indus-civilization
-      - src.danino-2010-lost-river
+      - src.danino-2010-lost-river-sarasvati
       - src.singh-2008-ancient-early-medieval-india
   - text: >-
       U-Pb zircon dating (Clift et al. 2012) and luminescence dating of subsurface fluvial cores at Kalibangan

@@ -22,7 +22,7 @@ datings:
     sources:
       - src.salomon-1998-indian-epigraphy
       - src.kulke-2004-history-of-india
-      - src.dundas-2002-the-jains-doi
+      - src.dundas-2002-the-jains
     note: Most epigraphists date Kharavela to the first century BCE based on the developed post-Mauryan Brahmi paleography of the Hathigumpha inscription and his synchronism with an early Satavahana king named Satakarni.
   - method: epigraphic
     range: { earliest: -180, latest: -130, precision: decade, circa: true }
@@ -37,13 +37,13 @@ claims:
     grade: B
     sources:
       - src.salomon-1998-indian-epigraphy
-      - src.dundas-2002-the-jains-doi
+      - src.dundas-2002-the-jains
       - src.kulke-2004-history-of-india
   - text: Although opening his inscription with a Jain salutation to the Arhats and Siddhas, Kharavela calls himself "the worshipper of all religious orders" (sava-pasanda-pujako) and "the repairer of all shrines of the gods" (sava-devayatana-sankhara-karako).
     grade: A
     sources:
       - src.salomon-1998-indian-epigraphy
-      - src.dundas-2002-the-jains-doi
+      - src.dundas-2002-the-jains
 relations:
   - { kind: contemporary-of, target: polity.satavahana-dynasty }
   - { kind: related-to, target: artifact.hathigumpha-inscription }

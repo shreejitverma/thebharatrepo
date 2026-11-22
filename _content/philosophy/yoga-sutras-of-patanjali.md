@@ -21,7 +21,7 @@ The Yoga Sutras (Yogasūtra, योगसूत्र) are a few pages of terse 
 
 ## A manual in four chapters
 
-The text is a collection of about 195 sutras (some editions count 196), grouped in four chapters, or *pādas* [@src.bryant-2009-yoga-sutras-of-patanjali, introduction; @src.maas-2006-samadhipada].
+The text is a collection of about 195 sutras (some editions count 196), grouped in four chapters, or *pādas* [@src.bryant-2009-yoga-sutras-patanjali, introduction; @src.maas-2006-samadhipada].
 Each chapter has its own job:
 
 | Chapter | Name | What it does |
@@ -32,12 +32,12 @@ Each chapter has its own job:
 | 4 | Kaivalya Pāda | Discusses liberation as "isolation" (*kaivalya*) of the seer |
 
 A sutra is meant to be memorised and unpacked by a teacher, so the text was always read together with commentary.
-The oldest surviving commentary, the Yogabhāṣya, is traditionally attributed to Vyāsa [@src.bryant-2009-yoga-sutras-of-patanjali, introduction].
+The oldest surviving commentary, the Yogabhāṣya, is traditionally attributed to Vyāsa [@src.bryant-2009-yoga-sutras-patanjali, introduction].
 
 ## Who wrote it, and when?
 
 Tradition names the author as Patañjali, and the name is often identified with the grammarian of the same name.
-Whether those are one person is uncertain, and the dating of the text is genuinely contested [@src.bryant-2009-yoga-sutras-of-patanjali, introduction; @src.maas-2013-concise-historiography-yoga].
+Whether those are one person is uncertain, and the dating of the text is genuinely contested [@src.bryant-2009-yoga-sutras-patanjali, introduction; @src.maas-2013-concise-historiography-yoga].
 
 - **Earlier-date position.** Older scholarship often placed the sutras several centuries before the Common Era, sometimes by identifying the author with the grammarian Patañjali, with the Bhāṣya added later [@src.maas-2013-concise-historiography-yoga].
 - **Later-date position.** Philipp Maas argues from textual history that the sutras and the Bhāṣya were composed and transmitted as one work, the *Pātañjalayogaśāstra*, with Patañjali as its author-compiler, and dates it to about 400 CE [@src.maas-2013-concise-historiography-yoga; @src.maas-2006-samadhipada].
@@ -50,9 +50,9 @@ No inscription or dated manuscript fixes it.
 
 Yoga is one of the six classical viewpoints (*darśana*) and is usually paired with Samkhya.
 Both describe reality as two kinds of thing: *puruṣa*, the conscious "seer", and *prakṛti*, the changing material world, which includes the mind.
-Suffering arises from a mistaken union of the two, and liberation is their disentanglement [@src.bryant-2009-yoga-sutras-of-patanjali, introduction].
+Suffering arises from a mistaken union of the two, and liberation is their disentanglement [@src.bryant-2009-yoga-sutras-patanjali, introduction].
 
-Yoga differs on one visible point: it names a special *puruṣa* called Īśvara, untouched by affliction and action, who can be a focus of devotion (YS 1.23-24) [@src.bryant-2009-yoga-sutras-of-patanjali].
+Yoga differs on one visible point: it names a special *puruṣa* called Īśvara, untouched by affliction and action, who can be a focus of devotion (YS 1.23-24) [@src.bryant-2009-yoga-sutras-patanjali].
 Samkhya, in its classical form, is usually read as lacking such a figure.
 That is why Yoga is often called "Samkhya with a God", though the label oversimplifies both schools.
 
@@ -62,11 +62,11 @@ The definition of yoga is two short lines:
 
 > *yogaś citta-vṛtti-nirodhaḥ. tadā draṣṭuḥ svarūpe 'vasthānam* (YS 1.2-3)
 
-Roughly: yoga is the stilling of the fluctuations of the mind; then the seer rests in its own nature [@src.bryant-2009-yoga-sutras-of-patanjali].
+Roughly: yoga is the stilling of the fluctuations of the mind; then the seer rests in its own nature [@src.bryant-2009-yoga-sutras-patanjali].
 *Citta* is the mind-stuff, a part of *prakṛti*.
 A *vṛtti* is one of its fluctuations.
 
-Patañjali sorts all fluctuations into five types (YS 1.5-11) [@src.bryant-2009-yoga-sutras-of-patanjali]:
+Patañjali sorts all fluctuations into five types (YS 1.5-11) [@src.bryant-2009-yoga-sutras-patanjali]:
 
 1. *Pramāṇa*: valid knowledge, by perception, inference or reliable testimony.
 2. *Viparyaya*: error, such as seeing a rope as a snake.
@@ -74,12 +74,12 @@ Patañjali sorts all fluctuations into five types (YS 1.5-11) [@src.bryant-2009-
 4. *Nidrā*: sleep, a mental state based on the absence of content.
 5. *Smṛti*: memory.
 
-The text offers its own image for the goal: a clear crystal takes on the colour of whatever is placed near it, and a mind whose fluctuations have subsided is like that crystal, taking the shape only of what it contemplates (YS 1.41) [@src.bryant-2009-yoga-sutras-of-patanjali].
+The text offers its own image for the goal: a clear crystal takes on the colour of whatever is placed near it, and a mind whose fluctuations have subsided is like that crystal, taking the shape only of what it contemplates (YS 1.41) [@src.bryant-2009-yoga-sutras-patanjali].
 The popular picture of the mind as a lake whose ripples must settle is a later, modern way of explaining the idea, not a sutra.
 
 ## Why we suffer: the five afflictions
 
-The second chapter lists five *kleśa*, or afflictions, that colour the mind (YS 2.3) [@src.bryant-2009-yoga-sutras-of-patanjali]:
+The second chapter lists five *kleśa*, or afflictions, that colour the mind (YS 2.3) [@src.bryant-2009-yoga-sutras-patanjali]:
 
 - *Avidyā*, ignorance: taking the impermanent, impure, painful and not-self to be permanent, pure, pleasant and self.
 - *Asmitā*, "I-am-ness": treating the seer and the instrument of seeing as one (YS 2.6).
@@ -88,11 +88,11 @@ The second chapter lists five *kleśa*, or afflictions, that colour the mind (YS
 - *Abhiniveśa*, the clinging to life, which Patañjali says even the learned feel.
 
 They are not a chain of steps.
-Patañjali says ignorance is the field in which the other four grow (YS 2.4) [@src.bryant-2009-yoga-sutras-of-patanjali].
+Patañjali says ignorance is the field in which the other four grow (YS 2.4) [@src.bryant-2009-yoga-sutras-patanjali].
 
 ## The eight limbs
 
-The list that made the text famous comes at YS 2.29 [@src.bryant-2009-yoga-sutras-of-patanjali]:
+The list that made the text famous comes at YS 2.29 [@src.bryant-2009-yoga-sutras-patanjali]:
 
 | Limb | Meaning | Sutra |
 |---|---|---|
@@ -107,16 +107,16 @@ The list that made the text famous comes at YS 2.29 [@src.bryant-2009-yoga-sutra
 
 Notice the proportions.
 Posture gets a handful of verses and a one-line definition.
-The last three limbs are called "inner" relative to the first five (YS 3.7) [@src.bryant-2009-yoga-sutras-of-patanjali].
+The last three limbs are called "inner" relative to the first five (YS 3.7) [@src.bryant-2009-yoga-sutras-patanjali].
 When the three are practised together on one object, the text calls them *saṃyama*, the basis of the powers described in the third chapter.
 
 ## Practice and non-attachment
 
 How is stillness reached?
-Patañjali's answer is a pair: *abhyāsa*, sustained practice, and *vairāgya*, non-attachment (YS 1.12) [@src.bryant-2009-yoga-sutras-of-patanjali].
+Patañjali's answer is a pair: *abhyāsa*, sustained practice, and *vairāgya*, non-attachment (YS 1.12) [@src.bryant-2009-yoga-sutras-patanjali].
 Practice becomes firmly rooted when it is kept up for a long time, without interruption, and with devotion (YS 1.14).
 Absorption itself has stages, ending in *nirbīja samādhi*, "seedless" absorption, where even the latent impressions that would restart the mind's activity are stilled (YS 1.51).
-The final aim is *kaivalya*, the seer abiding in its own nature, which the last sutra describes (YS 4.34) [@src.bryant-2009-yoga-sutras-of-patanjali].
+The final aim is *kaivalya*, the seer abiding in its own nature, which the last sutra describes (YS 4.34) [@src.bryant-2009-yoga-sutras-patanjali].
 
 ## How the text lived on
 
@@ -129,5 +129,5 @@ Both are good reasons to read the sutras on their own terms: as a discipline of 
 
 ## Where to go next
 
-- Read a few sutras with a modern edition and translation, such as Bryant's, which prints the Sanskrit alongside traditional commentary [@src.bryant-2009-yoga-sutras-of-patanjali].
+- Read a few sutras with a modern edition and translation, such as Bryant's, which prints the Sanskrit alongside traditional commentary [@src.bryant-2009-yoga-sutras-patanjali].
 - For the textual-historical argument about the text's date and unity, see Maas [@src.maas-2013-concise-historiography-yoga].

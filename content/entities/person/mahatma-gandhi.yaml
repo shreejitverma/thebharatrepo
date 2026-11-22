@@ -21,7 +21,7 @@ datings:
     grade: B
     label: Historical scholarship
     sources:
-      - src.brown-1989-gandhi-prisoner-of-hope-yale
+      - src.brown-1989-gandhi-prisoner-of-hope
       - src.metcalf-2012-concise-history-modern-india
 claims:
   - text: Mohandas Karamchand Gandhi was a political leader whose satyagraha
@@ -29,7 +29,7 @@ claims:
       politics remain subjects of historical debate.
     grade: B
     sources:
-      - src.brown-1989-gandhi-prisoner-of-hope-yale
+      - src.brown-1989-gandhi-prisoner-of-hope
       - src.metcalf-2012-concise-history-modern-india
 relations: []
 tags:

@@ -37,7 +37,7 @@ claims:
   - text: Later Jain tradition says Chandragupta became a disciple of the monk Bhadrabahu, abdicated, and fasted to death at Shravanabelagola in Karnataka.
     grade: C
     sources:
-      - src.dundas-2002-the-jains-doi
+      - src.dundas-2002-the-jains
 relations:
   - { kind: founded, target: polity.maurya-empire }
   - { kind: ruled, target: polity.maurya-empire }

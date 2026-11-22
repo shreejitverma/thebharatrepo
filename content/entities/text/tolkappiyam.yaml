@@ -20,7 +20,7 @@ datings:
     label: Stratified linguistic dating (archaic core Books 1-2 vs expanded Book 3)
     sources:
       - src.zvelebil-1973-smile-of-murugan
-      - src.wilden-2014-manuscript-print-memory-cankam
+      - src.wilden-2014-manuscript-print-memory
     note: Kamil Zvelebil and Eva Wilden distinguish an older grammatical core in the Eluttatikaram and Collatikaram (c. second/first century BCE to second century CE, reflecting pulli usage akin to Tamil-Brahmi) from later expansions in the Porulatikaram (up to the fifth century CE) that draw on Sanskrit aesthetic concepts such as meypatu (bhava/rasa).
   - method: traditional-sampradaya
     range: { earliest: -3000, latest: -500, precision: millennium, circa: true }
@@ -35,12 +35,12 @@ claims:
     grade: A
     sources:
       - src.zvelebil-1973-smile-of-murugan
-      - src.wilden-2014-manuscript-print-memory-cankam
+      - src.wilden-2014-manuscript-print-memory
   - text: The Porulatikaram codifies the classical Tamil system of five ecological landscapes (aintinai - kurinji hills, mullai forest pastures, marutam river plains, neytal seacoast and palai arid waste), correlating each with a season, hour, flora, deity and emotional phase of love or warfare.
     grade: A
     sources:
       - src.zvelebil-1973-smile-of-murugan
-      - src.wilden-2014-manuscript-print-memory-cankam
+      - src.wilden-2014-manuscript-print-memory
 relations:
   - { kind: part-of, target: text.sangam-literature }
   - { kind: related-to, target: artifact.tamil-brahmi-inscriptions }
