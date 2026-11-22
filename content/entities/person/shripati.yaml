@@ -1,0 +1,42 @@
+id: person.shripati
+type: person
+kind: science
+names:
+  en: Shripati
+  iast: Śrīpati
+  native: श्रीपति
+summary: Shripati was an eleventh-century mathematician and astronomer whose works include the
+  Siddhantashekhara and Ganitatilaka. His dated astronomical manuals anchor his scholarly activity.
+summaries:
+  kids: Shripati wrote about arithmetic and ways of working out where the Sun and Moon would appear.
+  teen: Shripati wrote a full astronomical treatise and shorter computational works. The dates 1039 and 1056 are
+    anchors from his texts.
+region: Maharashtra
+datings:
+  - method: textual-internal
+    range:
+      earliest: "1001 CE"
+      latest: "1100 CE"
+      precision: century
+      circa: true
+    grade: B
+    label: Eleventh-century activity (Plofker)
+    sources:
+      - id: src.plofker-2009-mathematics-in-india
+        locator: Appendix B
+    note: Dated astronomical works place his active writing in 1039 and 1056 CE within the eleventh century; his exact birth and death years are unrecorded.
+claims:
+  - text: The Siddhantashekhara treats mathematical astronomy, and the Ganitatilaka is an arithmetic work.
+    grade: A
+    sources:
+      - id: src.plofker-2009-mathematics-in-india
+        locator: Appendix B
+relations:
+  - kind: authored
+    target: text.siddhantashekhara
+tags:
+  - astronomy
+  - arithmetic
+review:
+  status: draft
+  author: codex-gpt-6

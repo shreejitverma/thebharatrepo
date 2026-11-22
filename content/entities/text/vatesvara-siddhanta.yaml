@@ -1,0 +1,47 @@
+id: text.vatesvara-siddhanta
+type: text
+kind: science
+names:
+  en: Vatesvara Siddhanta
+  iast: Vaṭeśvarasiddhānta
+  native: वटेश्वरसिद्धान्त
+summary: >-
+  Vatesvara completed this Sanskrit astronomy treatise in 904 CE according to its internal dating.
+  It combines features of Aryabhata’s astronomical school with those of other schools.
+  Historians have debated whether some of its numerical parameters reflect later revision.
+summaries:
+  kids: >-
+    Vatesvara wrote a book about calculating the movements of the sky.
+    His book gives clues to when he wrote it, and researchers study its numbers for signs of later changes.
+  teen: >-
+    Vatesvara combined elements of different traditions of mathematical astronomy.
+    One historian argued that figures in the surviving text fit planetary motions around 1100 better than
+    they fit the author’s own date of 904.
+datings:
+  - method: textual-internal
+    range: { earliest: 904, latest: 904, precision: year, circa: false }
+    grade: A
+    label: Author’s date of composition
+    sources: [src.plofker-2009-mathematics-in-india]
+    note: Vatesvara gives his birth in Shaka 802 and his age at composition as twenty-four.
+  - method: astronomical-reference
+    range: { earliest: 1050, latest: 1150, precision: century, circa: true }
+    grade: C
+    label: Later revision of the parameters (Billard)
+    sources: [src.billard-1971-astronomie-indienne, src.plofker-2009-mathematics-in-india]
+    note: Billard proposed that a later editor replaced some of the parameters after finding a best fit around 1100.
+claims:
+  - text: The treatise combines features of the Arya-paksha, the school associated with Aryabhata, and other astronomical schools.
+    grade: B
+    sources: [src.plofker-2009-mathematics-in-india]
+  - text: Plofker notes that the additional manuscript used in Shukla’s edition agrees with the first manuscript in its parameter values.
+    grade: B
+    sources: [src.plofker-2009-mathematics-in-india]
+relations:
+  - { kind: related-to, target: text.aryabhatiya }
+debate: >-
+  The date of 904 is the author’s own date for composition.
+  Billard proposed a later intervention to explain the fit of the surviving parameters to about 1100.
+  Plofker questions how securely a numerical fit dates a revision.
+tags: [sanskrit, astronomy, siddhanta]
+review: { status: draft, author: codex-gpt-6 }

@@ -1,0 +1,54 @@
+id: site.jantar-mantar-delhi
+type: site
+kind: science
+names:
+  en: Jantar Mantar, Delhi
+  native: जंतर मंतर
+summary: Jai Singh II’s Jantar Mantar at Delhi was the first observatory in his network. Its instruments
+  include the Samrat Yantra, a large equinoctial sundial.
+summaries:
+  kids: A huge sloping wall at Delhi’s Jantar Mantar casts a shadow. The shadow helps tell the time.
+  teen: Delhi’s instruments show how fixed masonry structures could measure the sky. The Samrat Yantra is
+    aligned with the celestial pole, with scales that register its shadow.
+region: New Delhi
+datings:
+  - method: documentary
+    range:
+      earliest: 1720
+      latest: 1727
+      precision: decade
+      circa: true
+    grade: B
+    label: Early Delhi observatory
+    sources:
+      - src.perlus-2020-celestial-mirror
+      - src.macdougall-1996-jantar-mantar
+    note: Architectural histories usually place construction near 1724.
+claims:
+  - text: The Delhi observatory was built before the one at Jaipur as part of Jai Singh II’s program.
+    grade: B
+    sources:
+      - src.macdougall-1996-jantar-mantar
+      - src.perlus-2020-celestial-mirror
+  - text: Its Samrat Yantra uses a polar-aligned gnomon and graduated arcs to measure solar time.
+    grade: B
+    sources:
+      - src.macdougall-1996-jantar-mantar
+      - src.perlus-2020-celestial-mirror
+relations:
+  - kind: patronised-by
+    target: person.sawai-jai-singh-ii
+  - kind: part-of
+    target: concept.jai-singh-observatory-network
+image:
+  commons: File:Jantar Mantar Samrat Yantra.jpg
+  alt: The masonry Samrat Yantra at the Delhi observatory
+  credit: Pallav.journo
+  license: CC BY-SA 4.0
+tags:
+  - observatories
+  - sundials
+  - masonry-instruments
+review:
+  status: draft
+  author: codex-gpt-6

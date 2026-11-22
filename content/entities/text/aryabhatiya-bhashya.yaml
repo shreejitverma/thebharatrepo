@@ -1,0 +1,42 @@
+id: text.aryabhatiya-bhashya
+type: text
+kind: science
+names:
+  en: Bhaskara I’s Aryabhatiya Commentary
+  iast: Āryabhaṭīyabhāṣya
+  native: आर्यभटीयभाष्य
+summary: Bhaskara I’s 629 CE commentary on Aryabhata’s Aryabhatiya is an extended record of how mathematical
+  rules in Sanskrit verse were read, applied and debated.
+summaries:
+  kids: Aryabhata wrote short math rules in verse. Bhaskara used examples to show readers how those rules worked.
+  teen: This commentary is a source for the practice of mathematical explanation. Its problems and worked
+    solutions reveal how Bhaskara read Aryabhata’s concise procedures.
+datings:
+  - method: textual-internal
+    range:
+      earliest: 629
+      latest: 629
+      precision: year
+      circa: false
+    grade: A
+    label: Date given in the commentary
+    sources:
+      - id: src.plofker-2009-mathematics-in-india
+        locator: Appendix B
+      - src.keller-2006-mathematical-seed
+claims:
+  - text: The mathematical commentary gives examples of operations and of the pulverizer, an algorithm for
+      equations with integer solutions.
+    grade: A
+    sources:
+      - src.keller-2006-mathematical-seed
+relations:
+  - kind: commented-on
+    target: text.aryabhatiya
+tags:
+  - mathematics
+  - commentary
+  - algorithms
+review:
+  status: draft
+  author: codex-gpt-6

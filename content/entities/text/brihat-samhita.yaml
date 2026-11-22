@@ -1,0 +1,52 @@
+id: text.brihat-samhita
+type: text
+kind: science
+names:
+  en: Brihat Samhita
+  iast: Bṛhatsaṃhitā
+  native: बृहत्संहिता
+summary: Varahamihira’s Brihat Samhita brings together astral omens, weather lore, perfumery and other
+  specialized knowledge. Its discussion of perfume mixtures also illustrates the use of combinatorics in a
+  practical craft.
+summaries:
+  kids: This book gathers many kinds of knowledge, from signs in the sky to ways of mixing perfumes.
+  teen: The Brihat Samhita shows how technical knowledge could sit alongside divination in a Sanskrit
+    compendium. A perfume chapter uses a numbered arrangement to illustrate possible blends.
+region: Central India
+datings:
+  - method: scholarly-consensus
+    range:
+      earliest: 500
+      latest: "600 CE"
+      precision: century
+      circa: true
+    grade: B
+    label: Sixth-century work of Varahamihira
+    sources:
+      - id: src.plofker-2009-mathematics-in-india
+        locator: Section 3.3
+      - src.hayashi-1987-varahamihira-magic-square
+claims:
+  - text: Varahamihira treats combinations of perfume ingredients as a mathematical counting problem.
+    grade: A
+    sources:
+      - src.hayashi-1987-varahamihira-magic-square
+      - id: src.plofker-2009-mathematics-in-india
+        locator: Section 3.3
+  - text: Hayashi shows how the sixteen-cell array in the perfume chapter can be reconstructed as a pandiagonal
+      magic square.
+    grade: B
+    sources:
+      - src.hayashi-1987-varahamihira-magic-square
+relations:
+  - kind: authored-by
+    target: person.varahamihira
+  - kind: related-to
+    target: text.panchasiddhantika
+tags:
+  - astral-science
+  - combinatorics
+  - perfumery
+review:
+  status: draft
+  author: codex-gpt-6

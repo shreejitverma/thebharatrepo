@@ -1,0 +1,63 @@
+id: text.ashtanga-hridaya
+type: text
+kind: science
+names:
+  en: Ashtanga Hridaya
+  iast: Aṣṭāṅgahṛdaya
+  native: अष्टाङ्गहृदय
+summary: The Ashtanga Hridaya is a Sanskrit verse compendium of Ayurveda attributed to Vagbhata. Its compact
+  treatment of medical knowledge draws on earlier works, and the date and authorship of the compilation remain
+  debated.
+summaries:
+  kids: This old book puts many parts of Ayurvedic medicine into verses that students could learn and remember.
+  teen: The Ashtanga Hridaya condenses earlier medical material into verse. Comparing it with the Ashtanga
+    Samgraha and other works helps historians study how it was compiled.
+datings:
+  - method: textual-internal
+    range:
+      earliest: 400
+      latest: 800
+      precision: century
+      circa: true
+    grade: C
+    label: Broad intertextual window (Meulenbeld)
+    sources:
+      - id: src.meulenbeld-1999-history-indian-medical-literature
+        locator: Volume IA, section on the Aṣṭāṅgahṛdayasaṃhitā
+    note: The limits depend on the chronology of earlier sources and later references.
+  - method: textual-internal
+    range:
+      earliest: 600
+      latest: 650
+      precision: decade
+      circa: true
+    grade: C
+    label: Early seventh-century placement (Dagmar Wujastyk)
+    sources:
+      - src.wujastyk-2013-perfect-medicine
+    note: Wujastyk dates the two texts ascribed to Vagbhata approximately to the early seventh century.
+claims:
+  - text: The Ashtanga Hridaya presents knowledge from the traditional eight branches of Ayurveda in a verse
+      compendium.
+    grade: A
+    sources:
+      - id: src.meulenbeld-1999-history-indian-medical-literature
+        locator: Volume IA, section on the Aṣṭāṅgahṛdayasaṃhitā
+  - text: Its materia medica contains evidence for the early use of mercury in Sanskrit medical literature.
+    grade: B
+    sources:
+      - src.wujastyk-2013-perfect-medicine
+relations:
+  - kind: related-to
+    target: text.charaka-samhita
+  - kind: related-to
+    target: text.sushruta-samhita
+debate: Meulenbeld brackets the text through its relationship to other medical treatises. Dagmar Wujastyk
+  favors an early seventh-century placement. The relation between the named authors of the Ashtanga Hridaya
+  and Ashtanga Samgraha remains uncertain.
+tags:
+  - ayurveda
+  - medical-literature
+review:
+  status: draft
+  author: codex-gpt-6

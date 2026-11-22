@@ -1,0 +1,51 @@
+id: person.vikram-sarabhai
+type: person
+kind: science
+names:
+  en: Vikram Sarabhai
+  native: વિક્રમ સારાભાઈ
+summary: Vikram Sarabhai studied cosmic rays and founded the Physical Research Laboratory in Ahmedabad. He
+  went on to lead the development of India’s space research programme.
+summaries:
+  kids: Sarabhai studied particles from space and helped India start a space research programme.
+  teen: Sarabhai’s early research concerned cosmic rays in tropical latitudes. He built research institutions
+    and helped develop a space programme aimed at scientific and practical uses.
+region: Ahmedabad
+datings:
+  - method: documentary
+    range:
+      earliest: 1919
+      latest: 1971
+      precision: year
+      circa: false
+    grade: A
+    label: Institutional biographical record
+    sources:
+      - src.prl-vikram-sarabhai
+      - src.nrsc-vikram-sarabhai
+claims:
+  - text: Sarabhai received a Cambridge doctorate in 1947 for research on cosmic rays in tropical latitudes.
+    grade: A
+    sources:
+      - src.prl-vikram-sarabhai
+      - src.nrsc-vikram-sarabhai
+  - text: He founded the Physical Research Laboratory and helped establish India’s space programme.
+    grade: B
+    sources:
+      - src.prl-vikram-sarabhai
+      - src.nrsc-vikram-sarabhai
+relations:
+  - kind: related-to
+    target: event.isro-founded
+image:
+  commons: File:Vikram Sarabhai.jpg
+  alt: Vikram Sarabhai in a photograph taken in 1969
+  credit: NASA
+  license: Public domain
+tags:
+  - cosmic-rays
+  - space-research
+  - research-institutions
+review:
+  status: draft
+  author: codex-gpt-6

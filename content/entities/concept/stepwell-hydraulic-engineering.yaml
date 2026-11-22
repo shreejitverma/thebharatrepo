@@ -1,0 +1,48 @@
+id: concept.stepwell-hydraulic-engineering
+type: concept
+kind: science
+names:
+  en: Stepwell Hydraulic Engineering
+summary: Stepwells combine a water source with a descending route that keeps water accessible as its level
+  changes. Surviving examples in western India also show how builders supported deep masonry passages and
+  incorporated pavilions and sculpture.
+summaries:
+  kids: When water in a stepwell fell, people could walk down more steps to reach it.
+  teen: A stepwell may combine a well shaft, a stair passage, retaining walls and landings at successive levels.
+    This layout accommodates varying water levels while creating a public space.
+region: Western and northern India
+datings:
+  - method: art-historical
+    range:
+      earliest: 1000
+      latest: 1600
+      precision: century
+      circa: true
+    grade: B
+    label: Medieval examples documented in western India
+    sources:
+      - src.livingston-2002-steps-to-water
+      - src.rani-ki-vav-unesco
+    note: The range covers examples such as Rani-ki-Vav and later western Indian wells. The building type has a
+      longer history.
+claims:
+  - text: Flights of steps allow access to water at different levels, while masonry walls retain the sides of the
+      excavation.
+    grade: B
+    sources:
+      - src.livingston-2002-steps-to-water
+  - text: At Patan, Rani-ki-Vav combines access to water with tiered architectural and sculptural features.
+    grade: B
+    sources:
+      - src.livingston-2002-steps-to-water
+      - src.rani-ki-vav-unesco
+relations:
+  - kind: related-to
+    target: event.rani-ki-vav-unesco-inscription
+tags:
+  - hydraulic-engineering
+  - stepwells
+  - water-access
+review:
+  status: draft
+  author: codex-gpt-6

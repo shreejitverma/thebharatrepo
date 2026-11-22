@@ -1,0 +1,58 @@
+id: person.vagbhata
+type: person
+kind: science
+names:
+  en: Vagbhata
+  iast: Vāgbhaṭa
+  native: वाग्भट
+summary: Vagbhata is the name associated with two influential Sanskrit compendia of Ayurveda, the Ashtanga
+  Samgraha and the Ashtanga Hridaya. Their dates and whether they had the same author remain uncertain.
+summaries:
+  kids: Two old books on medicine are linked to the name Vagbhata. Historians compare the books for clues about
+    who wrote them.
+  teen: Vagbhata’s name is attached to two works that organize earlier Ayurvedic learning. Scholars date the
+    works through textual relationships and continue to debate the authorship.
+datings:
+  - method: textual-internal
+    range:
+      earliest: 400
+      latest: 800
+      precision: century
+      circa: true
+    grade: C
+    label: Broad intertextual window (Meulenbeld)
+    sources:
+      - id: src.meulenbeld-1999-history-indian-medical-literature
+        locator: Volume IA, sections on Vāgbhaṭa and the Aṣṭāṅgahṛdayasaṃhitā
+    note: The author is placed in relation to earlier medical texts and later authors who knew this tradition.
+  - method: textual-internal
+    range:
+      earliest: 600
+      latest: 650
+      precision: decade
+      circa: true
+    grade: C
+    label: Early seventh-century placement (Dagmar Wujastyk)
+    sources:
+      - src.wujastyk-2013-perfect-medicine
+    note: Placed around the early seventh century on the basis of internal medical and alchemical evidence in the compendia ascribed to Vagbhata.
+claims:
+  - text: Both the Ashtanga Samgraha and the Ashtanga Hridaya circulate under Vagbhata’s name in the Sanskrit
+      medical tradition.
+    grade: A
+    sources:
+      - src.meulenbeld-1999-history-indian-medical-literature
+      - src.wujastyk-2013-perfect-medicine
+relations:
+  - kind: authored
+    target: text.ashtanga-hridaya
+    note: Traditional attribution of the work.
+debate: Meulenbeld’s broad textual window allows for uncertainty about the relative dates of the two
+  compendia. Dagmar Wujastyk places both around the early seventh century. Whether the two works come from a
+  single author remains debated.
+tags:
+  - ayurveda
+  - medical-literature
+review:
+  status: draft
+  author: codex-gpt-6

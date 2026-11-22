@@ -1,0 +1,48 @@
+id: concept.wootz-steel
+type: concept
+kind: science
+names:
+  en: Wootz Steel
+summary: Wootz was a high-carbon steel made in crucibles in parts of southern India and the Deccan. Historical
+  accounts and the remains of crucibles document regional production, while the date when the process began
+  remains uncertain.
+summaries:
+  kids: Metalworkers used clay containers called crucibles to make a kind of steel called wootz. Tiny bits of
+    steel can still be found inside some broken containers.
+  teen: Researchers compare historical descriptions of wootz with traces of steel trapped in crucibles. Finds
+    from different production sites point to more than one way of making crucible steel.
+region: Southern India and the Deccan
+datings:
+  - method: documentary
+    range:
+      earliest: 1600
+      latest: 1850
+      precision: century
+      circa: true
+    grade: B
+    label: Documented production in the early modern period
+    sources:
+      - src.srinivasan-1997-crucible-steel-south-india
+      - src.rao-2021-mysore-process-crucible-steel
+    note: European accounts from the seventeenth century onward describe the material. The range anchors
+      documented production and leaves its earlier history open.
+claims:
+  - text: Analysis of crucible fragments from Mel-Siruvalur found small particles of high-carbon steel embedded in
+      the ceramic.
+    grade: A
+    sources:
+      - src.srinivasan-1997-crucible-steel-south-india
+  - text: The Ghattihosahalli study combines an account of local crucible steelmaking with analysis of material
+      from the production site.
+    grade: B
+    sources:
+      - src.rao-2021-mysore-process-crucible-steel
+relations:
+  - kind: related-to
+    target: concept.iron-metallurgy-in-india
+tags:
+  - metallurgy
+  - crucible-steel
+review:
+  status: draft
+  author: codex-gpt-6

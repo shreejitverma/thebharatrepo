@@ -1,0 +1,44 @@
+id: person.pingala
+type: person
+kind: science
+names:
+  en: Pingala
+  iast: Piṅgala
+  native: पिङ्गल
+summary: Pingala is the author to whom the Sanskrit Chhandahsutra is attributed. The treatise’s rules for
+  arranging heavy and light syllables are an early example of combinatorial reasoning. His period is estimated
+  from the work.
+summaries:
+  kids: Pingala’s rules helped readers work out all the ways heavy and light syllables can make a line of verse.
+  teen: Pingala’s prosody links poetry to combinatorics. A fixed number of syllables, each heavy or light, leads
+    to a systematic list of possible patterns.
+datings:
+  - method: textual-internal
+    range:
+      earliest: 300 BCE
+      latest: 100 BCE
+      precision: century
+      circa: true
+    grade: C
+    label: Estimated floruit from textual evidence (Plofker)
+    sources:
+      - id: src.plofker-2009-mathematics-in-india
+        locator: Section 3.3
+    note: Inferred from the linguistic and mathematical evidence of the Chhandahsutra attributed to him; no independent biographical records survive.
+claims:
+  - text: The Chhandahsutra preserves rules for listing metrical patterns and recovering a pattern from its
+      position in the list.
+    grade: A
+    sources:
+      - id: src.plofker-2009-mathematics-in-india
+        locator: Section 3.3
+      - src.van-nooten-1993-binary-numbers
+relations:
+  - kind: authored
+    target: text.chhandahsutra
+tags:
+  - prosody
+  - combinatorics
+review:
+  status: draft
+  author: codex-gpt-6
