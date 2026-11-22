@@ -155,7 +155,7 @@ test.describe('content pages', () => {
   test('search finds entities and articles, and says so when nothing matches', async ({ page }) => {
     await page.goto('/search?q=Harappa');
     await expect(page.locator('.card').first()).toBeVisible();
-    await expect(page.getByText(/^\d+ results$/)).toBeVisible();
+    await expect(page.getByText(/^(?:Showing \d+ of )?\d+ results?$/)).toBeVisible();
     await page.goto('/search?q=zzzzqqqq');
     await expect(page.getByText('0 results for')).toBeVisible();
   });
