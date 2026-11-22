@@ -1,0 +1,44 @@
+id: text.buddhacarita
+type: text
+kind: text
+names:
+  en: Buddhacarita
+  iast: Buddhacarita
+  native: बुद्धचरित
+summary: Ashvaghosha’s Buddhacarita is a Sanskrit courtly poem on the Buddha’s life and awakening.
+  Only part of the original Sanskrit survives, while Chinese and Tibetan translations preserve the
+  later narrative.
+summaries:
+  kids: A poet tells how Prince Siddhartha leaves his palace, searches for answers and becomes the
+    Buddha.
+  teen: Ashvaghosha uses the techniques of Sanskrit court poetry to narrate Siddhartha’s renunciation
+    and awakening. Translations into Chinese and Tibetan help recover parts lost in Sanskrit.
+datings:
+  - method: linguistic
+    range:
+      earliest: 1
+      latest: 200
+      precision: century
+      circa: true
+    grade: B
+    label: "Patrick Olivelle: early centuries CE"
+    sources:
+      - src.olivelle-2008-life-of-the-buddha
+    note: The Sanskrit poem and Ashvaghosha’s relative chronology support a first- or second-century
+      placement.
+claims:
+  - text: The first fourteen cantos survive partially in Sanskrit through the Buddha’s awakening, while
+      the full twenty-eight-canto poem survives in Chinese and Tibetan translations.
+    grade: B
+    sources:
+      - src.olivelle-2008-life-of-the-buddha
+relations:
+  - kind: related-to
+    target: person.gautama-buddha
+tags:
+  - buddhism
+  - sanskrit
+  - kavya
+review:
+  status: draft
+  author: codex-gpt-6

@@ -1,0 +1,80 @@
+id: text.vishnu-purana
+type: text
+kind: text
+names:
+  en: Vishnu Purana
+  iast: Viṣṇu Purāṇa
+  native: विष्णुपुराण
+summary: The Vishnu Purana combines accounts of creation, cosmic ages and royal lineages with
+  stories of Vishnu and his incarnations. Its layers and principal compilation are dated differently
+  by scholars.
+summaries:
+  kids: The sage Parashara tells a student how the world begins, how kings are related, and how Vishnu
+    appears in different forms.
+  teen: A dialogue between Parashara and Maitreya links cosmology and dynasties with devotional
+    stories, including the childhood exploits of Krishna. Historians compare its royal lists with
+    other records.
+datings:
+  - method: textual-internal
+    range:
+      earliest: 100
+      latest: 350
+      precision: century
+      circa: true
+    grade: C
+    label: "R. C. Hazra: earlier compilation"
+    sources:
+      - src.hazra-1940-puranic-records
+    note: Hazra compares the dynastic account with other Puranas and favours the late third or early
+      fourth century.
+  - method: textual-internal
+    range:
+      earliest: 350
+      latest: 650
+      precision: century
+      circa: true
+    grade: C
+    label: "McComas Taylor: late ancient layers"
+    sources:
+      - src.taylor-2021-visnu-purana
+    note: A dynastic passage naming rulers who continued into the sixth century contributes to a later
+      placement for that passage; the full collection has no single securely established date.
+  - method: traditional-puranic
+    range:
+      earliest: "3102 BCE"
+      latest: "3102 BCE"
+      precision: year
+      circa: true
+    grade: D
+    label: Traditional Vyasa attribution and Kali Yuga epoch
+    sources:
+      - src.rocher-1986-puranas
+      - src.gonzalezreimann-2002-mahabharata-yugas
+    note: The traditional chronology associates Vyasa’s transmission of the great Puranas with the
+      transition to the Kali Yuga. The calendar year is the conventional epoch used for that
+      transition.
+claims:
+  - text: The six books include a royal genealogical book and a separate book principally devoted to
+      Krishna’s life.
+    grade: A
+    sources:
+      - src.taylor-2021-visnu-purana
+  - text: Parashara narrates the text in response to questions from Maitreya.
+    grade: A
+    sources:
+      - id: src.taylor-2021-visnu-purana
+        locator: Book One
+relations:
+  - kind: part-of
+    target: text.puranas
+debate: Hazra’s earlier estimate concerns a reconstruction of the main compilation. Taylor allows
+  for late ancient passages, aided by a royal list that includes dynasties extending beyond Hazra’s
+  preferred date.
+tags:
+  - purana
+  - vaishnava
+  - vishnu
+  - krishna
+review:
+  status: draft
+  author: codex-gpt-6

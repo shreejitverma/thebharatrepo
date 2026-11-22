@@ -1,0 +1,86 @@
+id: text.dasam-granth
+type: text
+kind: text
+names:
+  en: Dasam Granth
+  native: ਦਸਮ ਗ੍ਰੰਥ
+summary: The Dasam Granth is a collection of prayers, narratives and other compositions associated
+  with Guru Gobind Singh. The authorship of individual works, including the Charitropakhian, and the
+  formation of the collection are contested.
+summaries:
+  kids: This Sikh collection contains prayers and stories. Readers and historians ask how the writings
+    were brought together and who wrote each part.
+  teen: The Dasam Granth brings together several genres and survives in differing manuscript
+    arrangements. Sikh communities and scholars differ on how much of the collection to attribute to
+    Guru Gobind Singh.
+datings:
+  - method: textual-internal
+    range:
+      earliest: 1685
+      latest: 1708
+      precision: decade
+      circa: true
+    grade: C
+    label: "Kamalroop Singh Birk: compilation in Guru Gobind Singh’s lifetime"
+    sources:
+      - src.birk-2013-dasam-granth-reexamined
+    note: Birk interprets early manuscript witnesses, including the Anandpuri recension that he dates to
+      1696, as evidence for compilation in the Guru’s court.
+  - method: textual-internal
+    range:
+      earliest: 1708
+      latest: 1750
+      precision: decade
+      circa: true
+    grade: C
+    label: "Robin Rinehart: early to mid-eighteenth-century manuscript compilation"
+    sources:
+      - src.rinehart-2011-debating-the-dasam-granth
+    note: Rinehart notes that surviving complete and partial manuscripts cluster from the early
+      eighteenth century onward with varying orders of works, indicating gradual compilation after
+      Guru Gobind Singh’s death.
+  - method: traditional-sampradaya
+    range:
+      earliest: 1710
+      latest: 1735
+      best: 1721
+      precision: decade
+      circa: true
+    grade: D
+    label: Sikh account of Bhai Mani Singh’s posthumous compilation
+    sources:
+      - src.rinehart-2011-debating-the-dasam-granth
+      - src.birk-2013-dasam-granth-reexamined
+    note: One Sikh tradition credits Bhai Mani Singh with gathering the compositions after the Guru’s
+      death. Birk records 1721 CE as the date given by Giani Gian Singh’s Navin Panth Prakash.
+claims:
+  - text: The collection contains works in several genres, including prayer, narratives of the Goddess
+      and the framed tales of the Charitropakhian.
+    grade: B
+    sources:
+      - src.rinehart-2011-debating-the-dasam-granth
+  - text: One line of Sikh tradition attributes the collection’s compositions to Guru Gobind Singh.
+    grade: D
+    sources:
+      - src.rinehart-2011-debating-the-dasam-granth
+      - src.birk-2013-dasam-granth-reexamined
+relations:
+  - kind: related-to
+    target: person.guru-gobind-singh
+  - kind: related-to
+    target: text.guru-granth-sahib
+  - kind: related-to
+    target: text.devi-mahatmya
+    note: Includes Chandi Charitra compositions retelling the Devi Mahatmya.
+region: Punjab
+debate: Some readers attribute all the compositions to Guru Gobind Singh. Rattan Singh Jaggi and
+  others have argued for more than one author. Birk’s court compilation proposal and the posthumous
+  account concern how earlier compositions were assembled. The evidence for authorship varies by
+  composition.
+tags:
+  - sikh
+  - manuscript
+  - gurmukhi
+review:
+  status: draft
+  author: codex-gpt-6

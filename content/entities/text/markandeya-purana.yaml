@@ -1,0 +1,66 @@
+id: text.markandeya-purana
+type: text
+kind: text
+names:
+  en: Markandeya Purana
+  iast: Mārkaṇḍeya Purāṇa
+  native: मार्कण्डेयपुराण
+summary: The Markandeya Purana opens with questions about the Mahabharata and includes accounts of
+  cosmic cycles, kings and sages. The Devi Mahatmya is embedded within it. The dates of the
+  collection’s layers are uncertain.
+summaries:
+  kids: The sage Jaimini asks four wise birds to help him understand puzzles from the Mahabharata.
+    Their answers lead into more stories, including tales of the Goddess.
+  teen: The Purana moves between narrative frames and combines reflections on conduct, cosmic cycles
+    and stories. Its chapters on the Goddess also circulated as a separate scripture.
+datings:
+  - method: textual-internal
+    range:
+      earliest: 250
+      latest: 550
+      precision: century
+      circa: true
+    grade: C
+    label: "R. C. Hazra: formation of early strata"
+    sources:
+      - src.hazra-1940-puranic-records
+      - src.rocher-1986-puranas
+    note: Hazra compares the sections on conduct and yoga with the Mahabharata and other texts. The
+      range concerns early strata of a collection that continued to develop.
+  - method: traditional-puranic
+    range:
+      earliest: "3102 BCE"
+      latest: "3102 BCE"
+      precision: year
+      circa: true
+    grade: D
+    label: Traditional Vyasa attribution and Kali Yuga epoch
+    sources:
+      - src.rocher-1986-puranas
+      - src.gonzalezreimann-2002-mahabharata-yugas
+    note: The narrative transmits the work through named sages within the broader traditional account of
+      the great Puranas. The calendar year is the conventional epoch used for that transition.
+claims:
+  - text: The opening dialogue sends Jaimini to learned birds to answer questions raised by the
+      Mahabharata.
+    grade: A
+    sources:
+      - id: src.pargiter-1904-markandeya-purana
+        locator: Opening cantos
+  - text: The story of the Goddess is embedded in the account of the eighth Manu.
+    grade: A
+    sources:
+      - src.pargiter-1904-markandeya-purana
+      - src.coburn-1991-encountering-the-goddess
+relations:
+  - kind: part-of
+    target: text.puranas
+  - kind: related-to
+    target: text.mahabharata
+tags:
+  - purana
+  - devi
+  - cosmology
+review:
+  status: draft
+  author: codex-gpt-6

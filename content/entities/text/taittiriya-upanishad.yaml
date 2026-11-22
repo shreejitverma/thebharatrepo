@@ -1,0 +1,66 @@
+id: text.taittiriya-upanishad
+type: text
+kind: text
+names:
+  en: Taittiriya Upanishad
+  iast: Taittirīya Upaniṣad
+  native: तैत्तिरीयोपनिषद्
+summary: The Taittiriya Upanishad belongs to the Black Yajurveda. Its three sections move from
+  recitation and duties to inquiries into brahman through food, breath, mind, understanding and
+  bliss. Scholars differ on the dating of its prose layers.
+summaries:
+  kids: A teacher gives students advice for life after their studies. Later, a young man named Bhrigu
+    asks his father what everything comes from.
+  teen: The text places a teacher’s instructions on conduct beside a study of brahman. Bhrigu revisits
+    his answers about ultimate reality as he moves from food and breath towards bliss.
+datings:
+  - method: linguistic
+    range:
+      earliest: "600 BCE"
+      latest: "401 BCE"
+      precision: century
+      circa: true
+    grade: C
+    label: "Patrick Olivelle: early prose stratum"
+    sources:
+      - id: src.olivelle-1998-early-upanisads
+        locator: Introduction, Chronology
+      - id: src.cohen-2024-classical-upanisads
+        locator: Dating and Authorship
+    note: The Taittiriya Upanishad belongs to the prose group Olivelle places after the Brihadaranyaka
+      and Chandogya, probably before the emergence of Buddhism.
+  - method: textual-internal
+    range: { earliest: "800 BCE", latest: "601 BCE", precision: century, circa: true }
+    grade: C
+    label: "Sarvepalli Radhakrishnan and Charles A. Moore: earlier pre-Buddhist placement"
+    sources:
+      - id: src.radhakrishnan-1957-source-book-indian-philosophy
+        locator: "Chapter II, The Upaniṣads"
+    note: Their source book assigns this text to the eighth or seventh century BCE in its
+      chronology of the principal Upanishads.
+claims:
+  - text: The Upanishad constitutes chapters 7 to 9 of the Taittiriya Aranyaka.
+    grade: A
+    sources:
+      - id: src.olivelle-1998-early-upanisads
+        locator: Taittiriya Upanisad, introduction
+  - text: In the third section, Varuna tells his son Bhrigu to investigate brahman through disciplined
+      inquiry.
+    grade: A
+    sources:
+      - id: src.olivelle-1998-early-upanisads
+        locator: Taittiriya Upanisad 3.1
+relations:
+  - kind: part-of
+    target: text.upanishads
+  - kind: related-to
+    target: text.krishna-yajurveda
+debate: Olivelle places the text after the earliest prose Upanishads. Cohen identifies the first
+  section as likely older than the other two.
+tags:
+  - upanishad
+  - veda
+  - vedanta
+review:
+  status: draft
+  author: codex-gpt-6

@@ -1,0 +1,64 @@
+id: text.rajatarangini
+type: text
+kind: text
+names:
+  en: Rajatarangini of Kalhana
+  iast: Rājataraṅgiṇī
+  native: राजतरङ्गिणी
+summary: Kalhana began the Rajatarangini, a Sanskrit verse chronicle of Kashmir’s rulers, around
+  1148 CE. Its eight books range from legendary dynasties to the time of King Jayasimha, Kalhana’s
+  contemporary.
+summaries:
+  kids: Kalhana wrote about the kings of Kashmir in a long poem. He explains that he checked older
+    books and records before writing his account.
+  teen: Kalhana calls his eight books waves in a river of kings. The opening names sources he
+    consulted, while the later narrative reaches rulers and conflicts of his own time.
+datings:
+  - method: textual-internal
+    range:
+      earliest: 1148
+      latest: 1150
+      precision: year
+      circa: true
+    grade: B
+    label: Kalhana’s own dates for the chronicle
+    sources:
+      - id: src.stein-1900-rajatarangini
+        locator: "Introduction, chapter III, section 41"
+      - src.slaje-2014-kingship-in-kasmir
+    note: Stein converts the dates in Kalhana’s opening and closing passages to 1148-1149 CE
+      and 1149-1150 CE, respectively.
+claims:
+  - text: Kalhana says he examined earlier accounts, inscriptions and records of grants in preparing his
+      work.
+    grade: A
+    sources:
+      - id: src.stein-1900-rajatarangini
+        locator: Book I
+  - text: The evidence for rulers is uneven across the eight books, with legendary accounts especially
+      prominent early in the narrative.
+    grade: B
+    sources:
+      - src.stein-1900-rajatarangini
+      - src.singh-2008-ancient-early-medieval-india
+  - text: Jonaraja later composed a continuation of the chronicle commissioned by Zain-ul-Abidin.
+    grade: B
+    sources:
+      - src.slaje-2014-kingship-in-kasmir
+relations: []
+aliases:
+  - text.rajatarangini-of-kalhana
+region: Kashmir
+wikidata: Q1761336
+image:
+  commons: "File:Folio of a manuscript of the Rajatarangini by Kalhana, written in Sharada script.jpg"
+  alt: Manuscript folio of Kalhana’s chronicle in Sharada script
+  credit: Kalhana (text), unknown scribe (manuscript)
+  license: Public domain (PD-scan)
+tags:
+  - chronicle
+  - sanskrit
+  - kashmir
+review:
+  status: draft
+  author: codex-gpt-6

@@ -1,0 +1,61 @@
+id: text.nisvasatattvasamhita
+type: text
+kind: text
+names:
+  en: Nisvasatattvasamhita
+  iast: Niśvāsatattvasaṃhitā
+  native: निःश्वासतत्त्वसंहिता
+summary: The Nisvasatattvasamhita is an early Sanskrit Shaiva tantra. It survives in a Nepalese
+  palm-leaf manuscript and contains several layers on initiation, ritual, cosmology and yoga.
+summaries:
+  kids: A very old manuscript from Nepal preserves a book about worship of Shiva and the duties of
+    people who enter that tradition.
+  teen: The text offers evidence for the early Shaiva tradition known as the Mantramarga. Editors
+    distinguish its oldest book from later material and from the date of the surviving manuscript.
+datings:
+  - method: textual-internal
+    range:
+      earliest: 450
+      latest: 550
+      precision: century
+      circa: true
+    grade: C
+    label: "Dominic Goodall, Alexis Sanderson and Harunaga Isaacson: early core"
+    sources:
+      - src.goodall-2015-nisvasatattvasamhita
+      - src.simini-2016-of-gods-and-books
+    note: The editors compare archaic language, religious institutions and other textual evidence. This
+      estimate applies to the earliest layer.
+  - method: documentary
+    range:
+      earliest: 800
+      latest: 900
+      precision: century
+      circa: true
+    grade: B
+    label: Nepalese palm-leaf manuscript
+    sources:
+      - src.goodall-2015-nisvasatattvasamhita
+    note: The surviving early manuscript is assigned to the ninth century. Its date provides a separate
+      limit for the text that it transmits.
+claims:
+  - text: The critical edition distinguishes the Mulasutra from the other layers of the collection.
+    grade: B
+    sources:
+      - src.goodall-2015-nisvasatattvasamhita
+      - src.simini-2016-of-gods-and-books
+  - text: The early Nepalese manuscript is a principal witness to the text’s transmission.
+    grade: B
+    sources:
+      - src.goodall-2015-nisvasatattvasamhita
+relations:
+  - kind: related-to
+    target: text.shaiva-agamas
+tags:
+  - tantra
+  - shaiva
+  - manuscript
+  - mantramarga
+review:
+  status: draft
+  author: codex-gpt-6

@@ -1,0 +1,58 @@
+id: text.pancatantra
+type: text
+kind: text
+names:
+  en: Pancatantra
+  iast: Pañcatantra
+  native: पञ्चतन्त्र
+summary: The Pancatantra is a Sanskrit collection of interlocking stories that teach practical
+  judgment through fables and courtly dilemmas. Many versions survive, and the date of their common
+  antecedent is disputed.
+summaries:
+  kids: A teacher uses stories about talking animals to show three princes how to make friends, spot
+    tricks and think before they act.
+  teen: The Pancatantra places tales inside other tales to examine friendship, strategy and the
+    exercise of power. Authors and translators reshaped it as it travelled across languages.
+datings:
+  - method: textual-internal
+    range:
+      earliest: 100
+      latest: 500
+      precision: century
+      circa: true
+    grade: C
+    label: "Patrick Olivelle: early Sanskrit collection"
+    sources:
+      - src.olivelle-2009-pancatantra
+    note: Olivelle reports an approximate placement around 300 CE, with substantial uncertainty and a
+      distinct later history for individual recensions.
+  - method: textual-internal
+    range: { earliest: "300 BCE", latest: "100 BCE", precision: century, circa: true }
+    grade: C
+    label: "Johannes Hertel: earlier Kashmiri compilation"
+    sources:
+      - id: src.ryder-1925-panchatantra
+        locator: Translator’s Introduction
+    note: Ryder reports Hertel’s proposal of an original compilation in Kashmir around 200 BCE.
+      Hertel also allowed an older history for individual stories.
+claims:
+  - text: The frame credits Vishnusharman with teaching the sons of a king through stories arranged in
+      five books.
+    grade: A
+    sources:
+      - src.olivelle-2009-pancatantra
+  - text: Franklin Edgerton reconstructed an early form by comparing different versions and translations
+      of the collection.
+    grade: B
+    sources:
+      - src.olivelle-2009-pancatantra
+relations: []
+debate: Hertel placed the original collection several centuries earlier than the estimate
+  Olivelle reports. Both dates concern a reconstructed predecessor of the transmitted versions.
+tags:
+  - sanskrit
+  - fable
+  - niti
+review:
+  status: draft
+  author: codex-gpt-6

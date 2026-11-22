@@ -1,0 +1,42 @@
+id: text.tantraloka
+type: text
+kind: text
+names:
+  en: Tantraloka
+  iast: Tantrāloka
+  native: तन्त्रालोक
+summary: >-
+  The Tantraloka is Abhinavagupta's Sanskrit exposition of Trika Shaivism, composed in Kashmir
+  around the turn of the eleventh century.
+  It interprets earlier tantric scriptures through a nondual philosophy and explains practices
+  such as initiation and worship.
+summaries:
+  kids: >-
+    A Kashmiri teacher named Abhinavagupta explains older teachings about Shiva.
+    His book brings together ideas about the world and descriptions of worship.
+  teen: >-
+    Abhinavagupta draws on several earlier Shaiva scriptures to explain how Trika teachings
+    connect ritual, philosophy and liberation.
+    Jayaratha's commentary helps readers trace some of those sources.
+region: Kashmir
+datings:
+  - method: textual-internal
+    range: { earliest: 975, latest: 1025, precision: decade, circa: true }
+    grade: B
+    label: Abhinavagupta's period of activity in Kashmir
+    sources: [src.sanderson-2009-saiva-age]
+    note: Sanderson places Abhinavagupta's known activity around 975 to 1025 CE.
+      The interval uses this authorial horizon for the exposition.
+claims:
+  - text: Abhinavagupta takes the Malinivijayottara Tantra as a principal authority for his exposition of Trika.
+    grade: B
+    sources: [src.abhinavagupta-1918-tantraloka, src.sanderson-2009-saiva-age]
+  - text: The Sanskrit edition in the Kashmir Series of Texts and Studies transmits the work alongside Jayaratha's commentary.
+    grade: A
+    sources: [src.abhinavagupta-1918-tantraloka]
+relations:
+  - { kind: authored-by, target: person.abhinavagupta }
+  - { kind: related-to, target: tradition.kashmir-shaivism }
+  - { kind: related-to, target: text.shaiva-agamas }
+tags: [tantra, trika, shaiva, sanskrit, kashmir]
+review: { status: draft, author: codex-gpt-6 }

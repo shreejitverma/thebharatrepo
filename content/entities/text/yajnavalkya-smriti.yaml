@@ -1,0 +1,54 @@
+id: text.yajnavalkya-smriti
+type: text
+kind: text
+names:
+  en: Yajnavalkya Smriti
+  iast: Yājñavalkyasmṛti
+  native: याज्ञवल्क्यस्मृति
+summary: The Yajnavalkya Smriti is a Sanskrit treatise on dharma. Its three books address conduct,
+  judicial procedure and penance. Later jurists, including the author of the Mitakshara, interpreted
+  it in influential commentaries.
+summaries:
+  kids: This old book describes duties, what should happen when people bring a quarrel to court, and
+    how people might make amends.
+  teen: The text treats dispute resolution as a distinct subject, including evidence and court
+    procedure. Over centuries, commentaries developed its rules on inheritance and other matters.
+datings:
+  - method: textual-internal
+    range:
+      earliest: 300
+      latest: 500
+      precision: century
+      circa: true
+    grade: C
+    label: "Patrick Olivelle: fourth- or fifth-century composition"
+    sources:
+      - src.olivelle-2019-treatise-on-dharma
+    note: Olivelle compares its structure and treatment of legal procedure with older works, including
+      the Manusmriti.
+claims:
+  - text: The work divides its treatment into conduct, adjudication and penance.
+    grade: A
+    sources:
+      - src.olivelle-2019-treatise-on-dharma
+  - text: Vijnaneshvara’s Mitakshara interprets the Yajnavalkya Smriti and became an influential text on
+      inheritance.
+    grade: B
+    sources:
+      - src.olivelle-2019-treatise-on-dharma
+  - text: The work is traditionally ascribed to Yajnavalkya, the sage prominent in the Brihadaranyaka
+      Upanishad.
+    grade: D
+    sources: [src.olivelle-2019-treatise-on-dharma]
+relations:
+  - kind: related-to
+    target: text.manusmriti
+  - kind: related-to
+    target: text.brihadaranyaka-upanishad
+tags:
+  - dharmashastra
+  - sanskrit
+  - jurisprudence
+review:
+  status: draft
+  author: codex-gpt-6

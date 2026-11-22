@@ -1,0 +1,65 @@
+id: text.devi-mahatmya
+type: text
+kind: text
+names:
+  en: Devi Mahatmya
+  iast: Devīmāhātmya
+  native: देवीमाहात्म्य
+summary: The Devi Mahatmya presents the Goddess as supreme through accounts of her battles and hymns
+  in her praise. It survives within the Markandeya Purana and as an independent scripture. Its
+  composition date is disputed.
+summaries:
+  kids: A sage tells a king and a merchant how the Goddess defeats powerful demons. The stories are
+    read aloud at festivals such as Navaratri.
+  teen: Three linked episodes portray the Goddess through different manifestations, including her
+    defeat of the buffalo demon. Later traditions read the work both as a story and as a text for
+    ritual recitation.
+datings:
+  - method: textual-internal
+    range:
+      earliest: 400
+      latest: 650
+      precision: century
+      circa: true
+    grade: C
+    label: "Thomas B. Coburn: fifth- or sixth-century composition"
+    sources:
+      - src.coburn-1991-encountering-the-goddess
+    note: Coburn places the crystallization of the Goddess tradition in a late ancient setting.
+  - method: art-historical
+    range:
+      earliest: 750
+      latest: 825
+      precision: century
+      circa: true
+    grade: C
+    label: "Yuko Yokochi: late eighth or early ninth century"
+    sources:
+      - src.yokochi-2004-warrior-goddess
+    note: Yokochi weighs the changing images of the warrior Goddess and questions whether the
+      inscription at Dadhimati proves dependence on the complete text.
+claims:
+  - text: The hymn and battle narratives form thirteen chapters within the Markandeya Purana.
+    grade: A
+    sources:
+      - src.coburn-1991-encountering-the-goddess
+      - src.pargiter-1904-markandeya-purana
+  - text: The text also circulates independently under names including Chandi and Durga Saptashati.
+    grade: B
+    sources:
+      - src.coburn-1991-encountering-the-goddess
+      - src.yokochi-2004-warrior-goddess
+relations:
+  - kind: part-of
+    target: text.markandeya-purana
+debate: Coburn and Yokochi differ on when the transmitted poem took shape. A verse parallel in the
+  Dadhimati inscription is hard to use as a firm limit because both the inscription’s date and the
+  direction of borrowing are disputed.
+tags:
+  - purana
+  - shakta
+  - devi
+  - navaratri
+review:
+  status: draft
+  author: codex-gpt-6

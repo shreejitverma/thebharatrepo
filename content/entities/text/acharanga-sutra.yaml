@@ -1,0 +1,53 @@
+id: text.acharanga-sutra
+type: text
+kind: text
+names:
+  en: Acharanga Sutra
+  iast: Ācārāṅgasūtra
+  native: आचाराङ्गसूत्र
+summary: The Acharanga Sutra is the first Anga of the Shvetambara Jain canon. Its early Prakrit
+  material treats nonviolence and ascetic conduct, including an account of Mahavira’s practice. Its
+  two books preserve material of different ages.
+summaries:
+  kids: This Jain text asks monks and nuns to take great care around living things. It also tells how
+    Mahavira lived as a wandering ascetic.
+  teen: The opening book presents nonviolence as a discipline that shapes daily movement, possessions
+    and speech. A later book gives more detailed rules for mendicants.
+datings:
+  - method: linguistic
+    range:
+      earliest: "450 BCE"
+      latest: "200 BCE"
+      precision: century
+      circa: true
+    grade: C
+    label: "Hermann Jacobi: early stratum of the first Anga"
+    sources:
+      - src.jacobi-1884-jaina-sutras-part-1
+      - src.dundas-2002-the-jains
+    note: Jacobi used language and metre to estimate the age of early materials. The transmitted
+      collection includes subsequent sections.
+claims:
+  - text: The first book contains a section on Mahavira’s ascetic conduct and endurance.
+    grade: A
+    sources:
+      - id: src.jacobi-1884-jaina-sutras-part-1
+        locator: Akaranga Sutra, First Book
+  - text: The Shvetambara canon lists this work as its first Anga.
+    grade: B
+    sources:
+      - src.dundas-2002-the-jains
+      - src.jaini-1979-jaina-path-of-purification
+relations:
+  - kind: part-of
+    target: text.jain-agamas
+  - kind: related-to
+    target: person.mahavira
+tags:
+  - jainism
+  - shvetambara
+  - prakrit
+  - ahimsa
+review:
+  status: draft
+  author: codex-gpt-6

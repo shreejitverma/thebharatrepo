@@ -1,0 +1,63 @@
+id: text.brahmanda-purana
+type: text
+kind: text
+names:
+  en: Brahmanda Purana
+  iast: Brahmāṇḍapurāṇa
+  native: ब्रह्माण्डपुराण
+summary: The Brahmanda Purana takes its title from the cosmic egg and contains cosmology,
+  genealogies and material shared with the Vayu Purana. Other texts circulated with it, including
+  the Lalitopakhyana. Its layers have different and uncertain dates.
+summaries:
+  kids: This Purana describes the universe and tells how gods and royal families are related. One part
+    celebrates the Goddess Lalita.
+  teen: Close parallels between the Brahmanda and Vayu Puranas point to shared textual history. The
+    Brahmanda also carries devotional material whose transmission must be studied separately.
+datings:
+  - method: textual-internal
+    range:
+      earliest: 350
+      latest: 550
+      precision: century
+      circa: true
+    grade: C
+    label: "R. C. Hazra: differentiation of the early Brahmanda text"
+    sources:
+      - src.hazra-1940-puranic-records
+      - src.rocher-1986-puranas
+    note: Hazra estimates the separation of the Brahmanda and Vayu textual lines around 400 CE.
+      Individual sections may be considerably later.
+  - method: traditional-puranic
+    range:
+      earliest: "3102 BCE"
+      latest: "3102 BCE"
+      precision: year
+      circa: true
+    grade: D
+    label: Traditional Vyasa attribution and Kali Yuga epoch
+    sources:
+      - src.rocher-1986-puranas
+      - src.gonzalezreimann-2002-mahabharata-yugas
+    note: Brahmanda Purana is traditionally classed among the great Puranas associated with Vyasa. The
+      calendar year is the conventional epoch used for that transition.
+claims:
+  - text: The Brahmanda and Vayu Purana dynastic accounts share significant wording and sequence.
+    grade: B
+    sources:
+      - src.pargiter-1913-dynasties-kali-age
+      - src.hazra-1940-puranic-records
+  - text: The Lalitopakhyana circulates in association with the Brahmanda Purana.
+    grade: B
+    sources:
+      - src.rocher-1986-puranas
+relations:
+  - kind: part-of
+    target: text.puranas
+tags:
+  - purana
+  - cosmology
+  - genealogy
+  - lalita
+review:
+  status: draft
+  author: codex-gpt-6
