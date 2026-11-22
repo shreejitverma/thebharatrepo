@@ -15,6 +15,7 @@ import fs from 'node:fs';
 import path from 'node:path';
 import matter from 'gray-matter';
 import YAML from 'yaml';
+import { checkRelations, type RelationStats } from './relations';
 import { sameTitle } from './similarity';
 import type { z } from 'zod';
 import {
@@ -59,6 +60,9 @@ export interface ContentGraph {
   /** former entity id (alias) -> the live entity it was merged into */
   aliases: Map<string, string>;
   errors: ContentProblem[];
+  /** Advisory findings that do not fail the build, such as inconsistent relation pairs. */
+  warnings: ContentProblem[];
+  relationStats: RelationStats;
 }
 
 export const ROOT = process.cwd();
@@ -478,6 +482,7 @@ export function loadContentUncached(): ContentGraph {
     const file = entityFile.get(e.id) ?? e.id;
     e.datings.forEach((d, i) => d.sources.forEach((s) => checkSource(file, `datings[${i}]`, citationId(s))));
     e.claims.forEach((c, i) => c.sources.forEach((s) => checkSource(file, `claims[${i}]`, citationId(s))));
+    e.extents?.forEach((x, i) => x.sources.forEach((s) => checkSource(file, `extents[${i}]`, citationId(s))));
     for (const r of e.relations) {
       if (!entities.has(r.target)) errors.push({ file, message: `relation ${r.kind} -> unknown entity ${unknownEntity(r.target)}` });
       else {
@@ -519,7 +524,10 @@ export function loadContentUncached(): ContentGraph {
 
   for (const p of strays) errors.push({ file: rel(p), message: 'unexpected file: entities and sources must be .yaml, articles must be .md' });
 
-  return { entities, sources, articles, corrections, articlesByEntity, inbound, aliases, errors };
+  const relations = checkRelations(entities.values());
+  const warnings = relations.warnings.map((w) => ({ file: entityFile.get(w.id) ?? w.id, message: w.message }));
+
+  return { entities, sources, articles, corrections, articlesByEntity, inbound, aliases, errors, warnings, relationStats: relations.stats };
 }
 
 let cache: ContentGraph | undefined;

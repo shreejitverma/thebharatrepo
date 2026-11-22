@@ -1,10 +1,12 @@
 'use client';
 
 import { use, useCallback, useEffect, useId, useMemo, useRef, useState } from 'react';
+import dynamic from 'next/dynamic';
 import { useSearchParams } from 'next/navigation';
 import { KINDS, KIND_LABELS, type Kind } from '@/lib/content/labels';
 import type { KcItem } from '@/lib/content/kaalchakra';
 import { LENSES, LENS_LABELS, type Lens } from '@/lib/content/lens';
+import type { Size } from '@/lib/geo/projection';
 import type { CalendarSystem } from '@/lib/time';
 import { panWindow, zoomWindow, type UnitWindow } from '@/lib/time/scale';
 import Wheel from './Wheel';
@@ -12,111 +14,19 @@ import River from './River';
 import ListView from './ListView';
 import Panel from './Panel';
 import { loadItems } from './data';
-import { SEGMENTS, SHORT_SEGMENT_LABELS, formatDating, kindColor, orderedItems, primaryAnchor, primaryDating, segmentUnitBounds, yearToUnit, type Level, type View } from './shared';
+import { entriesAt, panRegion, resolveRegion, revealPlace, zoomRegion, type MapRegion, type TimeZoom } from './mapState';
+import { SEGMENTS, SHORT_SEGMENT_LABELS, formatDating, kindColor, orderedItems, primaryAnchor, primaryDating, segmentUnitBounds, yearToUnit } from './shared';
+import { CALENDARS, VIEWS, hrefFor, parseState, serialise, type State } from './urlState';
 
-const VIEWS: { id: View; label: string }[] = [
-  { id: 'wheel', label: 'Wheel' },
-  { id: 'river', label: 'River' },
-  { id: 'list', label: 'List' },
-];
+// The map and its basemap load only when the Map view is opened, so the other views do not pay for them.
+const MapView = dynamic(() => import('./MapView'), { ssr: false, loading: () => <p className="empty">Loading the map.</p> });
 
-const CALENDARS: { id: CalendarSystem; label: string }[] = [
-  { id: 'ce', label: 'CE / BCE' },
-  { id: 'ago', label: 'Years ago' },
-  { id: 'vs', label: 'Vikram Samvat' },
-  { id: 'shaka', label: 'Shaka Samvat' },
-  { id: 'kali', label: 'Kali Yuga era' },
-];
-
-interface State {
-  view: View;
-  lens: Lens;
-  cal: CalendarSystem;
-  kinds: Kind[];
-  q: string;
-  sel: string | null;
-  win: UnitWindow;
-  level: Level;
-}
-
-const DEFAULT: State = { view: 'wheel', lens: 'both', cal: 'ce', kinds: [...KINDS], q: '', sel: null, win: { start: 0, end: 1 }, level: 'adult' };
+/** Canvas size assumed until the map has measured itself. */
+const INITIAL_MAP_SIZE: Size = { width: 900, height: 580 };
+/** Pixels moved by one Shift and arrow key press in the Map view. */
+const MAP_KEY_PAN = 80;
 
 const NO_ALIASES: Readonly<Record<string, string>> = {};
-
-/** The List view is the default for readers who ask for reduced motion; an explicit view in the URL still wins. */
-function prefersReducedMotion(): boolean {
-  return typeof window !== 'undefined' && typeof window.matchMedia === 'function' && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-}
-
-/** Entry nearest a year (astronomical numbering) in a lens, for a `t=` link that names a moment rather than an entry. */
-function nearestTo(items: KcItem[], year: number, lens: Lens): string | null {
-  let best: string | null = null;
-  let bestD = Infinity;
-  for (const it of items) {
-    const a = primaryAnchor(it, lens);
-    if (a === null) continue;
-    const d = Math.abs(yearToUnit(a) - yearToUnit(year));
-    if (d < bestD) {
-      best = it.id;
-      bestD = d;
-    }
-  }
-  return best;
-}
-
-/**
- * `aliases` maps the former id of a merged entity to the entity it was merged into, so an old ?id= deep link
- * selects the surviving entry (the server also redirects it; this covers client-side navigation).
- */
-function parseState(search: string, items: KcItem[], ids: Set<string>, aliases: Readonly<Record<string, string>>): State {
-  const p = new URLSearchParams(search);
-  const s: State = { ...DEFAULT, kinds: [...KINDS] };
-  const v = p.get('view');
-  if (v === 'wheel' || v === 'river' || v === 'list') s.view = v;
-  else if (prefersReducedMotion()) s.view = 'list';
-  const l = p.get('lens');
-  if (l && (LENSES as readonly string[]).includes(l)) s.lens = l as Lens;
-  const c = p.get('cal');
-  if (c && CALENDARS.some((x) => x.id === c)) s.cal = c as CalendarSystem;
-  const k = p.get('kinds');
-  if (k) {
-    const ks = k.split(',').filter((x): x is Kind => (KINDS as readonly string[]).includes(x));
-    if (ks.length) s.kinds = ks;
-  }
-  s.q = p.get('q') ?? '';
-  const sel = p.get('id');
-  const t = Number(p.get('t') ?? NaN);
-  const live = sel && !ids.has(sel) && Object.hasOwn(aliases, sel) ? aliases[sel] : sel;
-  if (live && ids.has(live)) s.sel = live;
-  else if (p.get('t') && Number.isFinite(t)) s.sel = nearestTo(items, t, s.lens);
-  const w = p.get('win');
-  if (w) {
-    const [a, b] = w.split(',').map(Number);
-    if (Number.isFinite(a) && Number.isFinite(b) && a >= 0 && b <= 1 && b - a > 0.0004) s.win = { start: a, end: b };
-  }
-  const lv = p.get('level');
-  if (lv === 'teen' || lv === 'kids') s.level = lv;
-  return s;
-}
-
-/** Query string for a state, without the leading "?", in URLSearchParams encoding. */
-function serialise(s: State): string {
-  const p = new URLSearchParams();
-  // Reduced motion changes the default view, so its readers always get an explicit view: their links then open the same view for everyone.
-  if (s.view !== DEFAULT.view || prefersReducedMotion()) p.set('view', s.view);
-  if (s.lens !== DEFAULT.lens) p.set('lens', s.lens);
-  if (s.cal !== DEFAULT.cal) p.set('cal', s.cal);
-  if (s.kinds.length !== KINDS.length) p.set('kinds', s.kinds.join(','));
-  if (s.q) p.set('q', s.q);
-  if (s.sel) p.set('id', s.sel);
-  if (s.view === 'river' && (s.win.start > 0 || s.win.end < 1)) p.set('win', `${s.win.start.toFixed(5)},${s.win.end.toFixed(5)}`);
-  if (s.level !== 'adult') p.set('level', s.level);
-  return p.toString();
-}
-
-function hrefFor(pathname: string, query: string): string {
-  return query ? `${pathname}?${query}` : pathname;
-}
 
 function matches(item: KcItem, q: string): boolean {
   if (!q) return true;
@@ -169,11 +79,11 @@ export default function Kaalchakra({ aliases = NO_ALIASES }: { aliases?: Readonl
  * Its own debounced history writes are recognised and change nothing.
  */
 function KaalchakraMount({ items, search, aliases }: { items: KcItem[]; search: string; aliases: Readonly<Record<string, string>> }) {
-  const ids = useMemo(() => new Set(items.map((i) => i.id)), [items]);
-  const [mount, setMount] = useState<Mount>(() => ({ seen: search, written: null, epoch: 0, state: parseState(search, items, ids, aliases) }));
+  const byId = useMemo(() => new Map(items.map((i) => [i.id, i])), [items]);
+  const [mount, setMount] = useState<Mount>(() => ({ seen: search, written: null, epoch: 0, state: parseState(search, byId, aliases) }));
   if (search !== mount.seen) {
     if (search === mount.written) setMount({ ...mount, seen: search });
-    else setMount({ seen: search, written: null, epoch: mount.epoch + 1, state: parseState(search, items, ids, aliases) });
+    else setMount({ seen: search, written: null, epoch: mount.epoch + 1, state: parseState(search, byId, aliases) });
   }
   const onWrite = useCallback((query: string) => setMount((m) => ({ ...m, written: query })), []);
   return <KaalchakraInner items={items} external={mount.state} epoch={mount.epoch} onWrite={onWrite} />;
@@ -266,28 +176,50 @@ function KaalchakraInner({ items, external, epoch, onWrite }: { items: KcItem[];
   const kindSet = useMemo(() => new Set(s.kinds), [s.kinds]);
   const visible = useMemo(() => orderedItems(items.filter((i) => kindSet.has(i.kind) && matches(i, s.q)), s.lens), [items, kindSet, s.q, s.lens]);
   const ringKinds = useMemo(() => KINDS.filter((k) => kindSet.has(k)), [kindSet]);
-  const selected = s.sel ? items.find((i) => i.id === s.sel) : undefined;
-  const selIdx = selected ? visible.findIndex((i) => i.id === selected.id) : -1;
+  const byId = useMemo(() => new Map(items.map((i) => [i.id, i])), [items]);
+  const selected = s.sel ? byId.get(s.sel) : undefined;
+
+  // Map view: the same filtered entries, narrowed to the scrubber's moment and to those with a place.
+  const [mapSize, setMapSize] = useState<Size>(INITIAL_MAP_SIZE);
+  const atMoment = useMemo(() => entriesAt(visible, s.lens, s.t, s.zoom), [visible, s.lens, s.t, s.zoom]);
+  const mapItems = useMemo(() => atMoment.filter((i) => i.place), [atMoment]);
+  const extentItems = useMemo(() => atMoment.filter((i) => i.extents?.length), [atMoment]);
+  const mapView = useMemo(() => resolveRegion(s.region, mapSize), [s.region, mapSize]);
+  const isMap = s.view === 'map';
+  /** The entries the current view draws, in time order: what the arrow keys and Earlier and Later step through. */
+  const shown = isMap ? mapItems : visible;
+  const selIdx = selected ? shown.findIndex((i) => i.id === selected.id) : -1;
 
   // A hovered mark can unmount without a pointerleave when the items, view or window change.
-  const [hoverCtx, setHoverCtx] = useState({ visible, view: s.view, win: s.win });
-  if (hoverCtx.visible !== visible || hoverCtx.view !== s.view || hoverCtx.win !== s.win) {
-    setHoverCtx({ visible, view: s.view, win: s.win });
+  const [hoverCtx, setHoverCtx] = useState({ shown, view: s.view, win: s.win, region: s.region });
+  if (hoverCtx.shown !== shown || hoverCtx.view !== s.view || hoverCtx.win !== s.win || hoverCtx.region !== s.region) {
+    setHoverCtx({ shown, view: s.view, win: s.win, region: s.region });
     if (hover) setHover(null);
   }
 
   // Count announcements wait for typing and toggling to settle.
-  const [announcedCount, setAnnouncedCount] = useState(visible.length);
+  const [announcedCount, setAnnouncedCount] = useState(shown.length);
   useEffect(() => {
-    const t = setTimeout(() => setAnnouncedCount(visible.length), 800);
+    const t = setTimeout(() => setAnnouncedCount(shown.length), 800);
     return () => clearTimeout(t);
-  }, [visible.length]);
+  }, [shown.length]);
   const announcedSel = s.view === 'wheel' ? settledSel : s.sel;
-  const announced = announcedSel ? items.find((i) => i.id === announcedSel) : undefined;
+  const announced = announcedSel ? byId.get(announcedSel) : undefined;
   const announcedDating = announced ? primaryDating(announced, s.lens) : undefined;
   const announcement = announced ? (announcedDating ? `${announced.name}, ${formatDating(announcedDating, s.cal)}` : announced.name) : `${announcedCount} entries shown`;
 
   const select = useCallback((id: string) => update({ sel: id }), [update]);
+  /** Select from the map or its list, moving the map only if the place is not comfortably in view. */
+  const selectOnMap = useCallback(
+    (id: string) => {
+      const place = byId.get(id)?.place;
+      setS((prev) => ({ ...prev, sel: id, region: place ? revealPlace(prev.region, mapSize, place) : prev.region }));
+    },
+    [byId, mapSize],
+  );
+  const onTime = useCallback((t: number | null) => update({ t }), [update]);
+  const onTimeZoom = useCallback((zoom: TimeZoom) => update({ zoom }), [update]);
+  const onRegion = useCallback((region: MapRegion) => update({ region }), [update]);
   const onHover = useCallback((id: string | null, x: number, y: number) => {
     if (!id) return setHover(null);
     const rect = canvasRef.current?.getBoundingClientRect();
@@ -304,13 +236,14 @@ function KaalchakraInner({ items, external, epoch, onWrite }: { items: KcItem[];
   );
 
   const goTo = (i: number) => {
-    const item = visible[i];
+    const item = shown[i];
     if (!item) return;
-    update(s.view === 'river' ? { sel: item.id, win: reveal(s.win, item, s.lens) } : { sel: item.id });
+    if (isMap) selectOnMap(item.id);
+    else update(s.view === 'river' ? { sel: item.id, win: reveal(s.win, item, s.lens) } : { sel: item.id });
   };
   const step = (dir: -1 | 1) => {
-    if (!visible.length) return;
-    goTo(selIdx < 0 ? (dir === 1 ? 0 : visible.length - 1) : Math.min(visible.length - 1, Math.max(0, selIdx + dir)));
+    if (!shown.length) return;
+    goTo(selIdx < 0 ? (dir === 1 ? 0 : shown.length - 1) : Math.min(shown.length - 1, Math.max(0, selIdx + dir)));
   };
   // The scroll gesture on the wheel steps from the latest state, however fast the events arrive.
   const stepRef = useRef(step);
@@ -320,6 +253,22 @@ function KaalchakraInner({ items, external, epoch, onWrite }: { items: KcItem[];
   const onWheelStep = useCallback((dir: -1 | 1) => stepRef.current(dir), []);
 
   const onKey = (e: React.KeyboardEvent) => {
+    // Keys typed into the map's own controls (the scrubber, the selects) belong to those controls.
+    if (e.target !== e.currentTarget && (e.target as HTMLElement).closest('input, select, textarea, summary')) return;
+    if (isMap && !e.altKey && !e.ctrlKey && !e.metaKey) {
+      let region: MapRegion | null = null;
+      if (e.key === '+' || e.key === '=') region = zoomRegion(s.region, mapSize, 0.5);
+      else if (e.key === '-' || e.key === '_') region = zoomRegion(s.region, mapSize, 2);
+      else if (e.shiftKey && e.key === 'ArrowLeft') region = panRegion(s.region, mapSize, MAP_KEY_PAN, 0);
+      else if (e.shiftKey && e.key === 'ArrowRight') region = panRegion(s.region, mapSize, -MAP_KEY_PAN, 0);
+      else if (e.shiftKey && e.key === 'ArrowUp') region = panRegion(s.region, mapSize, 0, MAP_KEY_PAN);
+      else if (e.shiftKey && e.key === 'ArrowDown') region = panRegion(s.region, mapSize, 0, -MAP_KEY_PAN);
+      if (region) {
+        e.preventDefault();
+        update({ region });
+        return;
+      }
+    }
     if (s.view === 'river' && !e.altKey && !e.ctrlKey && !e.metaKey) {
       const span = s.win.end - s.win.start;
       const mid = (s.win.start + s.win.end) / 2;
@@ -340,12 +289,12 @@ function KaalchakraInner({ items, external, epoch, onWrite }: { items: KcItem[];
     } else if (e.key === 'ArrowLeft' || e.key === 'ArrowUp') {
       e.preventDefault();
       step(-1);
-    } else if (e.key === 'Home' && visible.length) {
+    } else if (e.key === 'Home' && shown.length) {
       e.preventDefault();
       goTo(0);
-    } else if (e.key === 'End' && visible.length) {
+    } else if (e.key === 'End' && shown.length) {
       e.preventDefault();
-      goTo(visible.length - 1);
+      goTo(shown.length - 1);
     } else if (e.key === 'Escape') update({ sel: null });
   };
 
@@ -404,7 +353,8 @@ function KaalchakraInner({ items, external, epoch, onWrite }: { items: KcItem[];
         {announcement}
       </p>
       <p className="visually-hidden" id={keysId}>
-        Arrow keys move between entries in time order, Home and End go to the first and last, and Escape clears the selection. On the wheel, drag to spin it. In the River view, Shift and the left or right arrow move the window, and + and - zoom.
+        Arrow keys move between entries in time order, Home and End go to the first and last, and Escape clears the selection. On the wheel, drag to spin it. In the River view, Shift and the left or right arrow move the window, and + and - zoom. In the Map view,
+        Shift and the arrow keys move the map, + and - zoom, and the list below the map gives every entry on it.
       </p>
 
       <div className="kc-stage">
@@ -425,6 +375,26 @@ function KaalchakraInner({ items, external, epoch, onWrite }: { items: KcItem[];
             </>
           ) : s.view === 'river' ? (
             <River items={visible} kinds={ringKinds} lens={s.lens} selectedId={s.sel} win={s.win} onWindow={onWindow} onSelect={select} onHover={onHover} />
+          ) : isMap ? (
+            <MapView
+              items={mapItems}
+              extentItems={extentItems}
+              unplaced={atMoment.length - mapItems.length}
+              lens={s.lens}
+              cal={s.cal}
+              selectedId={s.sel}
+              t={s.t}
+              zoom={s.zoom}
+              region={s.region}
+              view={mapView}
+              size={mapSize}
+              onSize={setMapSize}
+              onTime={onTime}
+              onZoom={onTimeZoom}
+              onRegion={onRegion}
+              onSelect={selectOnMap}
+              onHover={onHover}
+            />
           ) : (
             <ListView items={visible} lens={s.lens} cal={s.cal} selectedId={s.sel} onSelect={select} />
           )}
@@ -442,9 +412,11 @@ function KaalchakraInner({ items, external, epoch, onWrite }: { items: KcItem[];
           level={s.level}
           onLevel={(level) => update({ level })}
           onPrev={selIdx > 0 ? () => step(-1) : undefined}
-          onNext={selIdx >= 0 && selIdx < visible.length - 1 ? () => step(1) : undefined}
-          total={visible.length}
+          onNext={selIdx >= 0 && selIdx < shown.length - 1 ? () => step(1) : undefined}
+          total={shown.length}
+          view={s.view}
           filteredOut={selected !== undefined && selIdx < 0}
+          filteredNote={isMap && selected && !selected.place ? 'This entry has no recorded place, so it is not on the map.' : isMap ? 'Not on the map for the current filters, lens or moment.' : undefined}
           shareUrl={() => `${window.location.origin}${hrefFor(window.location.pathname, serialise(s))}`}
         />
       </div>
