@@ -61,7 +61,7 @@ export default async function ArticlePage({ params }: { params: Promise<{ catego
             <span>{METHOD_LABELS[primary.method]}</span>
             <span>{cited.size} sources cited</span>
           </div>
-          <KaalchakraStrip items={getIndex()} range={primary.range} selfId={null} focusHref={focus} />
+          <KaalchakraStrip items={getIndex()} dating={primary} selfId={null} focusHref={focus} />
           <section className="article-datings" aria-labelledby="when">
             <h2 id="when">When, and how we know</h2>
             <DatingList datings={ordered} sources={g.sources} />

@@ -90,12 +90,12 @@ export function buildKaalchakraIndex(g: ContentGraph): KcItem[] {
 }
 
 /** Neighbours in time for the mini strip on entity and article pages. */
-export function neighbours(items: KcItem[], year: number, excludeId: string | null, count = 3): { before: KcItem[]; after: KcItem[] } {
+export function neighbours(items: KcItem[], year: number, lens: 'scholarship' | 'tradition', excludeId: string | null, count = 3): { before: KcItem[]; after: KcItem[] } {
   const sorted = items
-    .filter((i) => i.id !== excludeId && primaryAnchor(i, 'scholarship') !== null)
-    .sort((a, b) => primaryAnchor(a, 'scholarship')! - primaryAnchor(b, 'scholarship')!);
-  const before = sorted.filter((i) => primaryAnchor(i, 'scholarship')! <= year).slice(-count);
-  const after = sorted.filter((i) => primaryAnchor(i, 'scholarship')! > year).slice(0, count);
+    .filter((i) => i.id !== excludeId && primaryAnchor(i, lens) !== null)
+    .sort((a, b) => primaryAnchor(a, lens)! - primaryAnchor(b, lens)!);
+  const before = sorted.filter((i) => primaryAnchor(i, lens)! <= year).slice(-count);
+  const after = sorted.filter((i) => primaryAnchor(i, lens)! > year).slice(0, count);
   return { before, after };
 }
 

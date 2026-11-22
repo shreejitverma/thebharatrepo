@@ -45,6 +45,19 @@ test.describe('pages render, are accessible and fit the viewport', () => {
     await noSeriousA11yViolations(page);
   });
 
+  test('a tradition-only entity is marked as tradition in its Kaalchakra strip, among traditional neighbours', async ({ page }) => {
+    await page.goto('/archive/cosmology/kali-yuga');
+    await expect(page.locator('.kc-strip__head')).toContainText('(tradition)');
+    await page.goto('/archive/cosmology/kalpa');
+    const strip = page.locator('.kc-strip');
+    await expect(strip.locator('.kc-strip__head')).toContainText('(tradition)');
+    await expect(strip.locator('a[href="/archive/event/indian-plate-asia-collision"]')).toHaveCount(0);
+    await expect(strip.locator('a[href="/archive/concept/siwalik-fossil-record"]')).toHaveCount(0);
+    expect(await strip.locator('.kc-strip__nb a[href^="/archive/cosmology/"]').count()).toBeGreaterThan(0);
+    await noHorizontalScroll(page);
+    await noSeriousA11yViolations(page);
+  });
+
   test('article tables render as tables', async ({ page }) => {
     await page.goto('/music/the-72-melakartas');
     await expect(page.locator('.article-content table th').first()).toBeVisible();

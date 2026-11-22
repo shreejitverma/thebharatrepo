@@ -101,7 +101,7 @@ export default async function EntityPage({ params }: { params: Promise<{ type: s
         ) : null}
       </div>
 
-      <KaalchakraStrip items={getIndex()} range={primary.range} selfId={e.id} focusHref={`${focus}&view=river&win=${Math.max(0, u - 0.02).toFixed(5)},${Math.min(1, u + 0.02).toFixed(5)}`} />
+      <KaalchakraStrip items={getIndex()} dating={primary} selfId={e.id} focusHref={`${focus}&view=river&win=${Math.max(0, u - 0.02).toFixed(5)},${Math.min(1, u + 0.02).toFixed(5)}`} />
 
       <h2>When, and how we know</h2>
       <DatingList datings={ordered} sources={g.sources} />

@@ -1322,7 +1322,7 @@
   target: /archive/site/ahichhatra
   before: c. 1200 BCE to 1099 CE
   after: c. 1200 BCE to 1100 CE
-  reason: The end year was one short of the round CE year the text gives, as if a BCE-style shift had been applied to a CE year; the stratigraphic sequence is dated to the century, and its early medieval end is a round century.
+  reason: The end year 1099 was an artefact of the same BCE-style shift; a century-precision early medieval end is written as the round year 1100.
   sources:
     - src.lal-1955-excavation-hastinapura
     - src.singh-2008-ancient-early-medieval-india
