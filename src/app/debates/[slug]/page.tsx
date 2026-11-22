@@ -4,9 +4,10 @@ import { notFound } from 'next/navigation';
 import EntityNames from '@/components/EntityNames';
 import GradeBadge, { LensTag } from '@/components/GradeBadge';
 import KaalchakraStrip from '@/components/KaalchakraStrip';
+import SearchIndexMeta from '@/components/SearchIndexMeta';
 import SourceCitation from '@/components/SourceCitation';
 import { getGraph, getIndex, issueUrl } from '@/lib/content/site';
-import { debatePlacement, visibleDebates } from '@/lib/content/debates';
+import { debatePlacement, placementLabel, visibleDebates } from '@/lib/content/debates';
 import { formatDating, primaryDating } from '@/components/kaalchakra/shared';
 import { toKcItem } from '@/lib/content/kaalchakra';
 import { citationId, type CitationRef } from '@/lib/content/schema';
@@ -64,8 +65,10 @@ export default async function DebatePage({ params }: { params: Promise<{ slug: s
   const u = place ? yearToUnit(place.range.best ?? (place.range.earliest + place.range.latest) / 2) : 0;
 
   return (
-    <div className="main-content">
-      <nav className="breadcrumbs" aria-label="Breadcrumb">
+    // Only a published debate is marked for the search index; the indexer also lists published debates only.
+    <div className="main-content" data-pagefind-body={d.published ? true : undefined}>
+      {d.published ? <SearchIndexMeta title={d.title} kind="debate" when={place ? placementLabel(place) : undefined} filters={{ kind: ['debate'] }} /> : null}
+      <nav className="breadcrumbs" aria-label="Breadcrumb" data-pagefind-ignore>
         <Link href="/debates">Debates</Link>
       </nav>
       {d.published ? null : (

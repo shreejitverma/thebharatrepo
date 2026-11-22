@@ -190,11 +190,11 @@ describe('loader: debates and learning paths', () => {
     await inFixture('phase3', async () => {
       vi.stubEnv('DEBATES_PREVIEW', '');
       const { loadContentUncached } = await import('./load');
-      const { visibleDebates, debatesForEntity, debateSearchDocs, debatePlacement } = await import('./debates');
+      const { visibleDebates, debatesForEntity, debateSearchHrefs, debatePlacement } = await import('./debates');
       const g = loadContentUncached();
       expect(visibleDebates(g.debates).map((d) => d.slug)).toEqual(['approved-one']);
       expect(debatesForEntity(g, 'person.someone').map((d) => d.slug)).toEqual(['approved-one']);
-      expect(debateSearchDocs(g).map((d) => d.href)).toEqual(['/debates/approved-one']);
+      expect(debateSearchHrefs(g)).toEqual(['/debates/approved-one']);
       // Placement in time comes from the scholarship positions' ranges.
       expect(debatePlacement(g, g.debates[0])).toMatchObject({ range: { earliest: -299, latest: -249 }, lens: 'scholarship' });
 
@@ -208,10 +208,10 @@ describe('loader: debates and learning paths', () => {
     await inFixture('phase3', async () => {
       vi.stubEnv('DEBATES_PREVIEW', '1');
       const { loadContentUncached } = await import('./load');
-      const { visibleDebates, debateSearchDocs } = await import('./debates');
+      const { visibleDebates, debateSearchHrefs } = await import('./debates');
       const g = loadContentUncached();
       expect(visibleDebates(g.debates).map((d) => d.slug)).toEqual(['approved-one', 'draft-one']);
-      expect(debateSearchDocs(g)).toHaveLength(1);
+      expect(debateSearchHrefs(g)).toEqual(['/debates/approved-one']);
       const page = await import('../../app/debates/[slug]/page');
       expect(page.generateStaticParams()).toEqual([{ slug: 'approved-one' }, { slug: 'draft-one' }]);
     });
@@ -220,7 +220,7 @@ describe('loader: debates and learning paths', () => {
   it('resolves learning path steps and search documents', async () => {
     await inFixture('phase3', async () => {
       const { loadContentUncached } = await import('./load');
-      const { resolveSteps, pathsForEntity, learningSearchDocs, summaryAtLevel } = await import('./learning');
+      const { resolveSteps, pathsForEntity, learningSearchHrefs, summaryAtLevel } = await import('./learning');
       const g = loadContentUncached();
       const p = g.learningPaths[0];
       expect(resolveSteps(g, p).map((s) => [s.kind, s.href])).toEqual([
@@ -228,7 +228,7 @@ describe('loader: debates and learning paths', () => {
         ['article', '/history/fixture'],
       ]);
       expect(pathsForEntity(g, 'person.someone').map((x) => x.id)).toEqual(['learn.a-path']);
-      expect(learningSearchDocs(g)[0].href).toBe('/learn/a-path');
+      expect(learningSearchHrefs(g)).toEqual(['/learn/a-path']);
       expect(summaryAtLevel(g.entities.get('person.someone')!, 'teen')).toContain('teenage readers');
     });
   });

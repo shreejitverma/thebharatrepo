@@ -3,8 +3,7 @@
 import type { Article, ContentGraph, LearningPathDoc } from './load';
 import type { Entity, LearningStep, QuizQuestion, Source } from './schema';
 import { citationId } from './schema';
-import { READING_LEVEL_AUDIENCE } from './labels';
-import { datingsSpan, placementLabel, spanOf, type Placement, type SearchDoc } from './debates';
+import { datingsSpan, spanOf, type Placement } from './debates';
 import { entityHref, formatSource, sourceLink } from './kaalchakra';
 
 export function learnHref(p: Pick<LearningPathDoc, 'slug'>): string {
@@ -67,16 +66,7 @@ export function citationViews(sources: Map<string, Source>, refs: QuizQuestion['
   });
 }
 
-export function learningSearchDocs(g: Pick<ContentGraph, 'learningPaths' | 'entities' | 'articles'>): SearchDoc[] {
-  return g.learningPaths.map((p) => {
-    const r = pathPlacement(g, p);
-    return {
-      href: learnHref(p),
-      title: p.title,
-      summary: p.summary,
-      kind: 'Learning path',
-      when: r ? placementLabel(r) : '',
-      text: [READING_LEVEL_AUDIENCE[p.level], p.audience, ...p.goals, ...p.tags].join(' '),
-    };
-  });
+/** Pages of learning paths for the search index. */
+export function learningSearchHrefs(g: Pick<ContentGraph, 'learningPaths'>): string[] {
+  return g.learningPaths.map(learnHref);
 }

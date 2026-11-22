@@ -86,26 +86,7 @@ export function debatePlacement(g: Pick<ContentGraph, 'entities'>, d: DebateDoc)
   return spanOf(d.relatedEntities.map((id) => (g.entities.get(id) ? datingsSpan(g.entities.get(id)!.datings) : null)));
 }
 
-export interface SearchDoc {
-  href: string;
-  title: string;
-  summary: string;
-  kind: string;
-  when: string;
-  text: string;
-}
-
-/** Search documents for published debates only; drafts never reach the index, even in a preview build. */
-export function debateSearchDocs(g: Pick<ContentGraph, 'debates' | 'entities'>): SearchDoc[] {
-  return publishedDebates(g.debates).map((d) => {
-    const r = debatePlacement(g, d);
-    return {
-      href: debateHref(d),
-      title: d.title,
-      summary: d.summary,
-      kind: 'Debate',
-      when: r ? placementLabel(r) : '',
-      text: [d.question, ...d.positions.map((p) => `${p.label} ${p.proponents.map((x) => x.name).join(' ')}`), ...d.tags].join(' '),
-    };
-  });
+/** Pages of published debates for the search index; drafts never reach the index, even in a preview build. */
+export function debateSearchHrefs(g: Pick<ContentGraph, 'debates'>): string[] {
+  return publishedDebates(g.debates).map(debateHref);
 }

@@ -4,10 +4,12 @@ import { notFound } from 'next/navigation';
 import EntityNames from '@/components/EntityNames';
 import GradeBadge, { LensTag } from '@/components/GradeBadge';
 import KaalchakraStrip from '@/components/KaalchakraStrip';
+import SearchIndexMeta from '@/components/SearchIndexMeta';
 import SourceCitation from '@/components/SourceCitation';
 import Quiz, { type QuizQuestionView } from '@/components/learn/Quiz';
 import { PathProgress, StepCard } from '@/components/learn/Progress';
 import { getGraph, getIndex, issueUrl } from '@/lib/content/site';
+import { placementLabel } from '@/lib/content/debates';
 import { citationViews, pathPlacement, resolveSteps, summaryAtLevel, type ResolvedStep } from '@/lib/content/learning';
 import { primaryDating } from '@/lib/content/lens';
 import { toKcItem } from '@/lib/content/kaalchakra';
@@ -107,8 +109,9 @@ export default async function LearningPathPage({ params }: { params: Promise<{ s
   }));
 
   return (
-    <div className="main-content">
-      <nav className="breadcrumbs" aria-label="Breadcrumb">
+    <div className="main-content" data-pagefind-body>
+      <SearchIndexMeta title={p.title} kind="learning-path" when={place ? placementLabel(place) : undefined} filters={{ kind: ['learning-path'] }} />
+      <nav className="breadcrumbs" aria-label="Breadcrumb" data-pagefind-ignore>
         <Link href="/learn">Learn</Link>
       </nav>
       <p className="eyebrow">Learning path</p>

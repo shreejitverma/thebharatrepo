@@ -2,8 +2,8 @@
  * Pagefind index, built by `npm run build` right after `next build` (part of the build script itself, not a
  * lifecycle hook, so no package manager setting can skip it).
  *
- * Reads the prerendered HTML that `next build` writes to .next/server/app, indexes every entity, article
- * and source page under its real route (Next serves /archive/event/x, not /archive/event/x.html), and
+ * Reads the prerendered HTML that `next build` writes to .next/server/app, indexes every entity, article,
+ * source, learning path and published debate page under its real route (Next serves /archive/event/x, not /archive/event/x.html), and
  * writes the browser index to public/pagefind. The Vercel Next.js builder collects public/ after the build
  * command exits (vercel.json pins that command to `npm run build`), and `next start` serves it, so the
  * index ships with the deployment without a static export.
@@ -16,7 +16,9 @@
 import fs from 'node:fs';
 import path from 'node:path';
 import { loadContentUncached } from '../src/lib/content/load';
+import { debateSearchHrefs } from '../src/lib/content/debates';
 import { entityHref, sourceHref } from '../src/lib/content/kaalchakra';
+import { learningSearchHrefs } from '../src/lib/content/learning';
 
 const ROOT = process.cwd();
 const APP_DIR = path.join(ROOT, '.next', 'server', 'app');
@@ -54,15 +56,19 @@ async function main() {
   const g = loadContentUncached();
   if (g.errors.length) fail(`${g.errors.length} content problem(s); run npm run content:validate`);
 
-  const expected = new Map<string, 'entity' | 'article' | 'source'>();
+  type PageType = 'entity' | 'article' | 'source' | 'learning' | 'debate';
+  const expected = new Map<string, PageType>();
   for (const id of g.entities.keys()) expected.set(entityHref(id), 'entity');
   for (const a of g.articles) expected.set(`/${a.category}/${a.slug}`, 'article');
   for (const id of g.sources.keys()) expected.set(sourceHref(id), 'source');
+  for (const href of learningSearchHrefs(g)) expected.set(href, 'learning');
+  // Published debates only: a draft is never indexed, even when a DEBATES_PREVIEW build has rendered it.
+  for (const href of debateSearchHrefs(g)) expected.set(href, 'debate');
 
   const { index, errors } = await pagefind.createIndex({ forceLanguage: 'en' });
   if (!index || errors.length) fail(`could not create the index: ${errors.join('; ')}`);
 
-  const counts = { entity: 0, article: 0, source: 0 };
+  const counts: Record<PageType, number> = { entity: 0, article: 0, source: 0, learning: 0, debate: 0 };
   const problems: string[] = [];
   for (const [url, type] of expected) {
     const file = path.join(APP_DIR, `${url.slice(1)}.html`);
@@ -93,7 +99,7 @@ async function main() {
 
   const size = dirSize(OUT_DIR);
   console.log(
-    `build-search: indexed ${counts.entity} entities, ${counts.article} articles, ${counts.source} sources; ` +
+    `build-search: indexed ${counts.entity} entities, ${counts.article} articles, ${counts.source} sources, ${counts.learning} learning paths, ${counts.debate} published debates; ` +
       `${path.relative(ROOT, OUT_DIR)} has ${size.files} files, ${(size.bytes / 1024).toFixed(0)} KiB total`,
   );
 }

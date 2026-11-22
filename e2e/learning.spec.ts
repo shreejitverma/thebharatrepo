@@ -42,13 +42,16 @@ test.describe('debates: unpublished drafts stay out of the public build', () => 
     expect(res?.status()).toBe(404);
   });
 
-  test('related entity pages and search do not link the draft', async ({ page, request }) => {
+  test('related entity pages and search do not link the draft', async ({ page }) => {
     await page.goto(BUDDHA);
     await expect(page.getByRole('heading', { name: 'Debates' })).toHaveCount(0);
     await expect(page.locator('a[href^="/debates/"]')).toHaveCount(0);
-    const search = await (await request.get('/search.json')).text();
-    expect(search).not.toContain('/debates/');
-    expect(search).toContain('/learn/how-we-date-ashoka');
+    // The Pagefind index holds the learning path and no debate: searching the draft's subject finds no debate page.
+    await page.goto('/search?q=How%20we%20date%20Ashoka');
+    await expect(page.locator('.search-results a[data-result][href="/learn/how-we-date-ashoka"]')).toBeVisible();
+    await page.goto('/search?q=date%20of%20the%20Buddha');
+    await expect(page.locator('.search-status')).toContainText('for');
+    await expect(page.locator('.search-results a[data-result][href^="/debates/"]')).toHaveCount(0);
   });
 });
 
