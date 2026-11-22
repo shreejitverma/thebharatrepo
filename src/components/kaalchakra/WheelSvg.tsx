@@ -4,7 +4,7 @@ import type { Lens } from '@/lib/content/lens';
 import { PRESENT_YEAR, formatYear } from '@/lib/time';
 import { SEGMENT_STARTS } from '@/lib/time/scale';
 import { BOUNDARY_LABELS, SEGMENTS, SHORT_SEGMENT_LABELS, anchorIn, hash, kindColor, visibleDatings, wrapText, yearToUnit, type PlacedItem } from './shared';
-import { C, R_INNER, R_OUTER, VB, angleOf, polarXY, radialLabel, tangentLabel } from './wheelGeometry';
+import { C, INDICATOR, R_INNER, R_OUTER, VB, angleOf, polarXY, radialLabel, shortestDelta, tangentLabel } from './wheelGeometry';
 
 /*
  * Pure wheel renderer shared by the interactive client Wheel and static server renders (home page,
@@ -56,8 +56,18 @@ const TODAY_A = angleOf(yearToUnit(PRESENT_YEAR));
 const START_A = angleOf(0);
 const RADIAL_R = R_INNER + 18;
 
-/** A label in the overlay: where it sits on the unrotated wheel and how it turns. */
-type LabelMode = 'tangent' | 'upright' | 'radial';
+/**
+ * A label in the overlay: where it sits on the unrotated wheel and how it turns.
+ * `year` labels are set along the rim like era names, just inside them, and give way to the indicator.
+ */
+type LabelMode = 'tangent' | 'year' | 'radial';
+
+/** 0 when a label sits under the indicator, rising to 1 once it is clear of it. */
+function clearOfIndicator(at: number): number {
+  const deg = (Math.abs(shortestDelta(at, INDICATOR)) * 180) / Math.PI;
+  const t = Math.min(1, Math.max(0, (deg - 6) / 4));
+  return t * t * (3 - 2 * t);
+}
 
 /**
  * Attributes of an overlay label for a wheel rotation (rad) and angular speed (rad/ms).
@@ -67,14 +77,11 @@ type Anchor = 'start' | 'middle' | 'end';
 
 function labelAttrs(mode: LabelMode, a: number, r: number, side: number, rotation: number, speed: number): { x: string; y: string; transform?: string; anchor: Anchor; opacity: string } {
   const at = a + rotation;
-  if (mode === 'upright') {
-    const { x, y } = polarXY(r, at);
-    return { x: f(x), y: f(y), anchor: 'middle', opacity: '1.00' };
-  }
-  if (mode === 'tangent') {
+  if (mode === 'tangent' || mode === 'year') {
     const { x, y } = polarXY(r, at);
     const { deg, opacity } = tangentLabel(at, speed);
-    return { x: f(x), y: f(y), transform: `rotate(${f(deg)} ${f(x)} ${f(y)})`, anchor: 'middle', opacity: f(opacity) };
+    const o = mode === 'year' ? opacity * clearOfIndicator(at) : opacity;
+    return { x: f(x), y: f(y), transform: `rotate(${f(deg)} ${f(x)} ${f(y)})`, anchor: 'middle', opacity: f(o) };
   }
   const { x, y } = polarXY(r, at + (side * 9) / r);
   const { deg, flipped, opacity } = radialLabel(at, speed);
@@ -307,7 +314,7 @@ export default function WheelSvg({ items, kinds, lens, selectedId, core, title, 
         <circle className="kc-wheel__disc" cx={C} cy={C} r={R_OUTER + 16} fill="transparent" />
 
         {SEGMENT_ANGLES.map(({ seg, a0, a1, i }) => (
-          <path key={seg.id} className="kc-wheel__era" data-era={seg.id} d={sectorPath(R_INNER, R_OUTER, a0, a1)} fill={`var(--era-${i % 2 === 0 ? 'a' : 'b'})`} stroke="var(--line)" strokeWidth={1}>
+          <path key={seg.id} className="kc-wheel__era" data-era={seg.id} d={sectorPath(R_INNER, R_OUTER, a0, a1)} fill={`var(--era-${i + 1})`} stroke="var(--line)" strokeWidth={1}>
             <title>{`${seg.label}: ${formatYear(seg.from, seg.interp === 'log' ? 'Ma' : 'year')} to ${formatYear(seg.to)}${seg.interp === 'log' ? ' (logarithmic scale)' : ' (linear scale)'}`}</title>
           </path>
         ))}
@@ -349,7 +356,7 @@ export default function WheelSvg({ items, kinds, lens, selectedId, core, title, 
       <svg className="kc-wheel__overlay" viewBox={`0 0 ${VB} ${VB}`} ref={refs?.overlay} aria-hidden="true" focusable="false">
         {SEGMENT_ANGLES.map(({ seg, a0 }, i) =>
           i === 0 ? null : (
-            <OverlayLabel key={`b-${seg.id}`} mode="upright" a={a0} r={R_OUTER + 30} rotation={rotation} fontSize={17} fill="var(--ink-faint)" className="kc-wheel__label">
+            <OverlayLabel key={`b-${seg.id}`} mode="year" a={a0} r={R_OUTER + 27} rotation={rotation} fontSize={15} fill="var(--ink-faint)" className="kc-wheel__label">
               {BOUNDARY_LABELS[seg.id]}
             </OverlayLabel>
           ),

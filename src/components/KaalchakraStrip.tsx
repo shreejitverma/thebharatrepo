@@ -51,7 +51,7 @@ export default function KaalchakraStrip({ items, dating, selfId, focusHref }: { 
       <svg viewBox={`0 0 ${W} 46`} preserveAspectRatio="none" aria-hidden="true">
         {SEGMENTS.map((s, i) => {
           const x = SEGMENT_STARTS[i] * W;
-          return <rect key={s.id} x={x} y={14} width={s.share * W} height={18} fill={i % 2 ? 'var(--wheel-seg-b)' : 'var(--wheel-seg-a)'} stroke="var(--line)" strokeWidth={0.5} />;
+          return <rect key={s.id} x={x} y={14} width={s.share * W} height={18} fill={`var(--era-${i + 1})`} stroke="var(--line)" strokeWidth={0.5} />;
         })}
         <path d={ticksPath(items)} stroke="var(--ink-faint)" strokeWidth={1.2} opacity={0.45} fill="none" />
         <rect x={markX.toFixed(1)} y={8} width={markW.toFixed(1)} height={30} rx={2} fill="var(--accent)" opacity={0.85} />

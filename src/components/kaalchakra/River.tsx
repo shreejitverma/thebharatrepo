@@ -234,7 +234,7 @@ export default function River({ items, kinds, lens, selectedId, win, onWindow, o
       >
         {segLabels.map(({ s, i, a, b, label }) => (
           <g key={s.id}>
-            <rect x={a} y={0} width={b - a} height={height - AXIS_H} fill={i % 2 ? 'var(--wheel-seg-b)' : 'var(--wheel-seg-a)'} opacity={0.6} />
+            <rect x={a} y={0} width={b - a} height={height - AXIS_H} fill={`var(--era-${i + 1})`} opacity={0.75} />
             {label ? (
               <text x={(a + b) / 2} y={18} textAnchor="middle" fontSize={12} fontWeight={600} fill="var(--ink-faint)">
                 {label}
@@ -281,7 +281,7 @@ export default function River({ items, kinds, lens, selectedId, win, onWindow, o
                     labelEnd = labelX + lw;
                     labels.push({ key, x: labelX, y: isPoint ? y + 4 : y - 8, text: item.name, active });
                   }
-                  const color = trad ? 'var(--gold)' : kindColor(item.kind);
+                  const color = trad ? 'var(--lens-tradition)' : kindColor(item.kind);
                   const hitLeft = isPoint ? cx - 10 : left;
                   const hitRight = isPoint ? cx + 10 : Math.max(right, left + 20);
                   return (
