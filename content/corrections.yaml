@@ -2118,3 +2118,405 @@
   sources:
     - src.stein-1989-vijayanagara
     - src.unesco-1986-hampi
+- date: 2026-11-22
+  target: "/philosophy/the-vedas, /philosophy/the-upanishads, /philosophy/katha-upanishad, /philosophy/mandukya-upanishad, /philosophy/the-great-upanishadic-dialogues"
+  before: "Grade D ranges beginning in 3101 BCE and ending in 2999 or 2499 BCE."
+  after: "Grade D ranges beginning in 3102 BCE and ending in 3000 or 2500 BCE, respectively."
+  reason: "The explicit BCE strings recover the archive’s traditional placements and the standard Kali epoch."
+  sources:
+    - src.flood-2003-blackwell-companion-hinduism
+    - src.plofker-2009-mathematics-in-india
+- date: 2026-11-22
+  target: "/philosophy/buddhism"
+  before: "Later Parinirvana window of 420 to 350 BCE and a Theravada entry."
+  after: "Approximate later Parinirvana window of 420 to 380 BCE, centred near 400 BCE, and distinct corrected long and Theravada death dates."
+  reason: "The article dates the Parinirvana. The person record covers possible lifespans."
+  sources:
+    - src.cousins-1996-dating-historical-buddha
+    - src.gombrich-2006-theravada-buddhism
+    - src.kulke-2004-history-of-india
+- date: 2026-11-22
+  target: "person.gautama-buddha"
+  before: "Possible short-chronology lifespan window of 490 to 380 BCE."
+  after: "Possible short-chronology lifespan window of 500 to 380 BCE, with 400 BCE marking the estimated death."
+  reason: "The lifespan window allows for an 80-year life before a Parinirvana as early as approximately 420 BCE. The Theravada entry now identifies birth and death."
+  sources:
+    - src.cousins-1996-dating-historical-buddha
+    - src.gombrich-2006-theravada-buddhism
+- date: 2026-11-22
+  target: "/philosophy/jainism"
+  before: "Mahavira’s death placed between 500 and 380 BCE."
+  after: "Mahavira’s death placed approximately in the fifth century BCE, with Dundas’s estimate of about 425 BCE identified."
+  reason: "The synchronism supports a broad fifth-century estimate and does not establish a precise lifespan."
+  sources:
+    - src.dundas-2002-the-jains
+    - src.bronkhorst-2007-greater-magadha
+- date: 2026-11-22
+  target: "person.mahavira"
+  before: "Estimated lifespan window of 510 to 390 BCE."
+  after: "Estimated fifth-century BCE death window, 500 to 400 BCE."
+  reason: "The Buddhist synchronism constrains the approximate time of death. It provides no independent birth date."
+  sources:
+    - src.dundas-2002-the-jains
+    - src.bronkhorst-2007-greater-magadha
+- date: 2026-11-22
+  target: "/literature/the-ramayana"
+  before: "Composition placed at 500 BCE to 300 CE. Rama placed near the end of Treta."
+  after: "Composition window of 750 BCE to 300 CE. Traditional placement spans the full Treta of the current cycle."
+  reason: "Goldman and Brockington differ on the earliest stage of the epic. The traditional yuga placement describes the setting of Rama’s story."
+  sources:
+    - src.goldman-1984-ramayana-balakanda
+    - src.brockington-1998-sanskrit-epics
+    - src.wilson-1840-vishnu-purana
+    - src.plofker-2009-mathematics-in-india
+- date: 2026-11-22
+  target: "text.valmiki-ramayana"
+  before: "Composition starts at 700 BCE in the timeline and 500 BCE in the teen summary. Traditional placement at 869000 BCE."
+  after: "Composition window of 750 BCE to 300 CE throughout. Traditional placement spans the full Treta of the current cycle."
+  reason: "Goldman and Brockington differ on the earliest stage of the epic. The traditional yuga placement describes the setting of Rama’s story."
+  sources:
+    - src.goldman-1984-ramayana-balakanda
+    - src.brockington-1998-sanskrit-epics
+    - src.wilson-1840-vishnu-purana
+    - src.plofker-2009-mathematics-in-india
+- date: 2026-11-22
+  target: "person.rama"
+  before: "The textual composition window is grade B."
+  after: "The textual composition window is grade C."
+  reason: "Goldman and Brockington differ on the earliest stage of the epic. The traditional yuga placement describes the setting of Rama’s story."
+  sources:
+    - src.goldman-1984-ramayana-balakanda
+    - src.brockington-1998-sanskrit-epics
+    - src.wilson-1840-vishnu-purana
+    - src.plofker-2009-mathematics-in-india
+- date: 2026-11-22
+  target: "/history/maurya-empire, polity.maurya-empire, person.chandragupta-maurya"
+  before: "The founding was placed variously at 324, 322 or 321 BCE."
+  after: "Accession estimates span about 324 to 321 BCE. The empire’s end remains approximately 185 BCE."
+  reason: "Singh allows the earlier accession and Thapar uses about 321 BCE. Both fit the broad historical chronology."
+  sources:
+    - src.thapar-2002-early-india
+    - src.singh-2008-ancient-early-medieval-india
+- date: 2026-11-22
+  target: "person.panini, text.ashtadhyayi and companion language articles"
+  before: "Ranges of 500 to 350 BCE or 600 to 350 BCE, with grades B and C."
+  after: "Grade C window of about 600 to 350 BCE, with the fifth and fourth centuries the usual placement."
+  reason: "The dating depends on linguistic and textual interpretation, and the envelope includes earlier proposals."
+  sources:
+    - src.cardona-1988-panini-work-traditions
+    - src.katre-1987-astadhyayi-panini
+- date: 2026-11-22
+  target: "/philosophy/yoga-sutras-of-patanjali, text.yoga-sutras"
+  before: "Maas’s dating given as 325 to 500 CE (C) or 325 to 425 CE (B), with different best years."
+  after: "Maas’s 325 to 425 CE window at grade C in both records, with no best year. The article also lists the traditional identification at grade D."
+  reason: "Maas gives a conditional textual estimate for the combined work. The earlier placement is based on the separate traditional identity claim."
+  sources:
+    - src.maas-2013-concise-historiography-yoga
+    - src.maas-2020-patanjala-yoga-temporality
+- date: 2026-11-22
+  target: "polity.mughal-empire"
+  before: "The timeline ended in 1857."
+  after: "The timeline ends in 1858. The capture of Delhi is dated to 1857."
+  reason: "The 1857 capture ended Mughal power in Delhi. The trial and exile of the last emperor followed in 1858."
+  sources:
+    - src.metcalf-2012-concise-history-modern-india
+    - src.richards-1993-mughal-empire
+- date: 2026-11-22
+  target: "/art-and-culture/bharatanatyam"
+  before: "The Natyashastra compilation was dated to about 200 BCE to 200 CE."
+  after: "The Natyashastra compilation is dated to about 200 BCE to 300 CE."
+  reason: "The broad grade C window includes Pollock’s estimate of about 300 CE for the compiled treatise."
+  sources:
+    - src.pollock-2016-rasa-reader
+    - src.ghosh-1951-natyasastra
+- date: 2026-11-22
+  target: "/art-and-culture/classical-dances-of-india"
+  before: "The Natyashastra compilation was dated to about 200 BCE to 200 CE."
+  after: "The Natyashastra compilation is dated to about 200 BCE to 300 CE."
+  reason: "The broad grade C window includes Pollock’s estimate of about 300 CE for the compiled treatise."
+  sources:
+    - src.pollock-2016-rasa-reader
+    - src.ghosh-1951-natyasastra
+- date: 2026-11-22
+  target: "/music/05-musical-instruments"
+  before: "The Natyashastra compilation was dated to about 200 BCE to 200 CE."
+  after: "The Natyashastra compilation is dated to about 200 BCE to 300 CE."
+  reason: "The broad grade C window includes Pollock’s estimate of about 300 CE for the compiled treatise."
+  sources:
+    - src.pollock-2016-rasa-reader
+    - src.ghosh-1951-natyasastra
+- date: 2026-11-22
+  target: "/music/rasa-in-indian-music"
+  before: "The Natyashastra compilation was dated to about 200 BCE to 200 CE."
+  after: "The Natyashastra compilation is dated to about 200 BCE to 300 CE."
+  reason: "The broad grade C window includes Pollock’s estimate of about 300 CE for the compiled treatise."
+  sources:
+    - src.pollock-2016-rasa-reader
+    - src.ghosh-1951-natyasastra
+- date: 2026-11-22
+  target: "/music/shrutis-and-svaras"
+  before: "One combined range of 200 BCE to 400 CE for the Natyashastra and Dattilam."
+  after: "A 200 BCE to 300 CE compilation estimate for the Natyashastra and a separate early centuries CE placement for the Dattilam."
+  reason: "The compilation of Bharata’s treatise and the dating of early music material have distinct evidentiary bases."
+  sources:
+    - src.pollock-2016-rasa-reader
+    - src.rowell-1992-music-musical-thought-early-india
+    - src.widdess-1981-tala-and-melody
+    - src.nijenhuis-1970-dattilam
+- date: 2026-11-22
+  target: "/music/marga-talas-and-the-ten-pranas"
+  before: "One combined range of 200 BCE to 500 CE for the Natyashastra and Dattilam."
+  after: "A 200 BCE to 300 CE compilation estimate for the Natyashastra and a separate early centuries CE placement for the Dattilam."
+  reason: "The compilation of Bharata’s treatise and the dating of early music material have distinct evidentiary bases."
+  sources:
+    - src.pollock-2016-rasa-reader
+    - src.rowell-1992-music-musical-thought-early-india
+    - src.widdess-1981-tala-and-melody
+    - src.nijenhuis-1970-dattilam
+- date: 2026-11-22
+  target: "text.natyashastra"
+  before: "A 200 BCE to 300 CE range labelled as Pollock’s estimate."
+  after: "A broad compilation range of 200 BCE to 300 CE with Pollock’s estimate near its upper end."
+  reason: "Lidova places the compiled form around 200 BCE to 200 CE. Pollock places the foundational text around 300 CE."
+  sources:
+    - src.pollock-2016-rasa-reader
+    - src.lidova-2014-natyashastra
+- date: 2026-11-22
+  target: "person.kalidasa, /literature/kalidasa"
+  before: "Different Gupta-era ranges and grades, and a textual grade C entity entry extending the Vikramaditya tradition to 50 CE."
+  after: "A grade C Gupta-era estimate of 350 to 475 CE and a grade D first-century BCE Vikramaditya tradition. The Mandasor echoes are presented as a possible earlier bound."
+  reason: "Proposed allusions and literary parallels give an indirect Gupta-era placement. The Nine Gems association is a traditional attribution."
+  sources:
+    - src.lienhard-1984-history-classical-poetry
+    - src.pollock-2006-language-of-the-gods
+    - src.kielhorn-1900-aihole-inscription
+- date: 2026-11-22
+  target: "person.adi-shankara"
+  before: "Only the conventional 788 to 820 CE chronology was listed in the scholarly lens."
+  after: "Nakamura’s estimate of 700 to 750 CE is listed separately at grade C."
+  reason: "The source proposes a distinct early eighth-century chronology."
+  sources:
+    - src.nakamura-1983-early-vedanta
+    - src.isayeva-1993-shankara-indian-philosophy
+- date: 2026-11-22
+  target: "person.mirabai, /philosophy/bhakti-movement"
+  before: "Approximate birth and death years of 1498 and 1546 or 1547."
+  after: "Mirabai is placed broadly in the first half of the sixteenth century."
+  reason: "The documented evidence and the biographical traditions do not establish her exact birth and death years."
+  sources:
+    - src.martin-2023-mirabai
+    - src.hawley-2005-three-bhakti-voices
+- date: 2026-11-22
+  target: "/philosophy/bhakti-movement"
+  before: "Only Ramanuja’s traditional dates, 1017 to 1137 CE, were given."
+  after: "Carman’s estimate of about 1077 to 1157 CE is identified alongside the traditional chronology."
+  reason: "The traditional and scholarly estimates represent distinct accounts."
+  sources:
+    - src.carman-1974-theology-of-ramanuja
+- date: 2026-11-22
+  target: "text.vedanga-jyotisha"
+  before: "The solstice reference was the lead dating."
+  after: "The 500 to 300 BCE textual dating leads, followed by the possible older solstice epoch."
+  reason: "The date of the surviving text and the possible epoch of its astronomical parameters answer different questions."
+  sources:
+    - src.plofker-2009-mathematics-in-india
+    - src.pingree-1981-jyotihsastra
+- date: 2026-11-22
+  target: "person.kautilya, text.arthashastra"
+  before: "Kautilya’s Olivelle entry followed the Mauryan identification and began in 50 BCE. The text conflated source material and the first recension."
+  after: "Olivelle’s 50 to 125 CE recension leads the author record. The text retains its 50 BCE to 300 CE window and identifies source material, Kautilya’s recension, and the final redaction."
+  reason: "Olivelle assigns the mid-first-century BCE material to earlier sources. The author’s inferred period of activity ends before the later redaction."
+  sources:
+    - src.olivelle-2013-king-governance-law
+    - src.trautmann-1971-kautilya-arthasastra
+- date: 2026-11-22
+  target: "event.kurukshetra-war"
+  before: "One grade D interval from 3139 to 2449 BCE with 3138 BCE as a best estimate."
+  after: "Separate grade D datings of 3138 BCE and 2449 BCE alongside the 3102 BCE reckoning."
+  reason: "Subtracting 36 years from the Kali epoch gives 3138 BCE. Varahamihira’s chronology uses a different era and yields a distinct date."
+  sources:
+    - src.bhatnagar-2017-date-mahabharata-war
+    - src.plofker-2009-mathematics-in-india
+    - src.pingree-1981-jyotihsastra
+    - src.kielhorn-1900-aihole-inscription
+- date: 2026-11-22
+  target: "/literature/mahabharata"
+  before: "The article used 3102 BCE for the war and Krishna’s death in the same reckoning."
+  after: "The Aihole war epoch is distinguished from the tradition placing the war 36 years before Krishna’s death in 3102 BCE."
+  reason: "The epic interval and the epigraphic era support separately labelled traditional placements."
+  sources:
+    - src.bhatnagar-2017-date-mahabharata-war
+    - src.plofker-2009-mathematics-in-india
+    - src.kielhorn-1900-aihole-inscription
+- date: 2026-11-22
+  target: "text.bhagavad-gita"
+  before: "A traditional interval of 3138 to 3102 BCE."
+  after: "Separate grade D placements in 3138 BCE and 3102 BCE for the competing reckonings of the war."
+  reason: "The 3138 BCE date belongs to a separate reckoning of the war. The Kali epoch remains 3102 BCE."
+  sources:
+    - src.bhatnagar-2017-date-mahabharata-war
+    - src.kielhorn-1900-aihole-inscription
+    - src.malinar-2007-bhagavadgita-doctrines-contexts
+- date: 2026-11-22
+  target: "text.mahabharata"
+  before: "A traditional interval of 3138 to 3102 BCE."
+  after: "Grade D marker at 3102 BCE for the traditional placement of Vyasa at the yuga transition."
+  reason: "The 3138 BCE date belongs to a separate reckoning of the war. The Kali epoch remains 3102 BCE."
+  sources:
+    - src.brockington-1998-sanskrit-epics
+    - src.plofker-2009-mathematics-in-india
+    - src.bhatnagar-2017-date-mahabharata-war
+- date: 2026-11-22
+  target: "/philosophy/the-bhagavad-gita"
+  before: "The traditional entry used only 3102 BCE."
+  after: "Both 3102 BCE and 3138 BCE appear as distinct grade D settings for the dialogue."
+  reason: "The dialogue opens the war, and the sources preserve distinct traditional reckonings for that event."
+  sources:
+    - src.bhatnagar-2017-date-mahabharata-war
+    - src.brockington-1998-sanskrit-epics
+- date: 2026-11-22
+  target: "artifact.heliodorus-pillar, person.krishna"
+  before: "Besnagar dating of 120 to 100 BCE (A) or 120 to 90 BCE (B)."
+  after: "Both use the approximate 120 to 100 BCE late-second-century placement at grade B."
+  reason: "Bhagabhadra’s regnal year is directly attested. The BCE range is inferred from the approximate chronology of Antialcidas."
+  sources:
+    - src.salomon-1998-indian-epigraphy
+    - src.shaw-2016-buddhist-landscapes-sanchi
+    - src.stoneman-2019-greek-experience-of-india
+- date: 2026-11-22
+  target: "artifact.sanauli-wheeled-vehicles"
+  before: "The dating was 2200 to 1800 BCE at grade A, while the prose gave 2100 to 1800 BCE."
+  after: "The site and vehicles are placed approximately in the early second millennium BCE at grade B."
+  reason: "The published Sanauli study estimates the site’s horizon around 2000 BCE and includes dated burial samples reaching about the middle of the millennium. The timeline is a contextual synthesis."
+  sources:
+    - src.sharma-2024-sinauli-radiocarbon
+    - src.parpola-2020-sanauli-chariot-burials
+- date: 2026-11-22
+  target: "site.sanauli"
+  before: "The dating was 2200 to 1800 BCE at grade A, while the prose gave 2100 to 1800 BCE."
+  after: "The site and vehicles are placed approximately in the early second millennium BCE at grade B."
+  reason: "The published Sanauli study estimates the site’s horizon around 2000 BCE and includes dated burial samples reaching about the middle of the millennium. The timeline is a contextual synthesis."
+  sources:
+    - src.sharma-2024-sinauli-radiocarbon
+    - src.parpola-2020-sanauli-chariot-burials
+- date: 2026-11-22
+  target: "concept.sintashta-steppe-chariot-question"
+  before: "The comparison gave a Sanauli interval of 2000 to 1800 BCE."
+  after: "The comparison places Sanauli in the early second millennium BCE."
+  reason: "The text now reflects the contextual burial chronology. The Sintashta range independently dates the steppe burials."
+  sources:
+    - src.sharma-2024-sinauli-radiocarbon
+    - src.parpola-2020-sanauli-chariot-burials
+- date: 2026-11-22
+  target: "/history/chola-empire, polity.chola-dynasty"
+  before: "A timeline start of approximately 848 CE, with prose giving around 850 CE."
+  after: "The article and polity use about 850 CE for the rise of the medieval line. The article’s dynasty range is grade B."
+  reason: "The start is a mid-ninth-century estimate based on the reconstruction of Vijayalaya’s career."
+  sources:
+    - src.sastri-1955-the-colas
+    - src.subbarayalu-2012-south-india-under-cholas
+- date: 2026-11-22
+  target: "artifact.hathigumpha-inscription"
+  before: "The first-century BCE entry ended in 2 BCE. The earlier proposal was represented as 176 to 130 BCE."
+  after: "The first-century entry extends through 1 BCE. The earlier proposal is labelled as the first half of the second century BCE."
+  reason: "The 1 BCE endpoint defines the century. Jayaswal and Banerji’s early alternative depends on a disputed synchronism and does not supply an exact accession year."
+  sources:
+    - src.salomon-1998-indian-epigraphy
+    - src.stewart-2025-classical-art-and-ancient-india
+- date: 2026-11-22
+  target: "person.kharavela"
+  before: "The first-century BCE entry ended in 2 BCE. The earlier proposal was represented as 180 to 130 BCE."
+  after: "The first-century entry extends through 1 BCE. The earlier proposal is labelled as the first half of the second century BCE."
+  reason: "The 1 BCE endpoint defines the century. Jayaswal and Banerji’s early alternative depends on a disputed synchronism and does not supply an exact accession year."
+  sources:
+    - src.salomon-1998-indian-epigraphy
+    - src.stewart-2025-classical-art-and-ancient-india
+- date: 2026-11-22
+  target: "concept.brahmi-to-gupta-script"
+  before: "The Ashokan-to-Gupta sequence began in 268 BCE and ended in 599 CE."
+  after: "The Ashokan-to-Gupta sequence begins about 260 BCE and spans the sixth century CE."
+  reason: "The Ashokan anchor is the mid-third-century BCE series of inscriptions. Ashoka’s accession precedes the surviving edicts. The date range describes this epigraphic sequence."
+  sources:
+    - src.salomon-1998-indian-epigraphy
+    - src.hultzsch-1925-inscriptions-of-asoka
+    - src.coningham-1996-early-brahmi-script
+- date: 2026-11-22
+  target: "event.mitanni-treaty"
+  before: "Treaty assigned to 1386 to 1340 BCE, with 1380 BCE as the best estimate (A)."
+  after: "Treaty assigned to the reign of Suppiluliuma I, about 1350 to 1322 BCE in Bryce’s chronology (B)."
+  reason: "The treaty directly names the parties. Its absolute date depends on the reconstructed chronology of their reigns."
+  sources:
+    - src.bryce-2005-kingdom-of-the-hittites
+    - src.beckman-1999-hittite-diplomatic-texts
+- date: 2026-11-22
+  target: "/philosophy/the-vedas"
+  before: "The Mitanni treaty or its Indo-Aryan evidence was placed about 1380 BCE."
+  after: "The treaty evidence is placed in the later 14th century BCE."
+  reason: "The prose now follows the reconstructed reign of Suppiluliuma I."
+  sources:
+    - src.bryce-2005-kingdom-of-the-hittites
+    - src.beckman-1999-hittite-diplomatic-texts
+- date: 2026-11-22
+  target: "/language/sanskrit-and-the-indo-european-family"
+  before: "The Mitanni treaty or its Indo-Aryan evidence was placed about 1380 BCE."
+  after: "The treaty evidence is placed in the later 14th century BCE."
+  reason: "The prose now follows the reconstructed reign of Suppiluliuma I."
+  sources:
+    - src.bryce-2005-kingdom-of-the-hittites
+    - src.beckman-1999-hittite-diplomatic-texts
+- date: 2026-11-22
+  target: "concept.indo-aryan-migration"
+  before: "The Mitanni treaty or its Indo-Aryan evidence was placed about 1380 BCE."
+  after: "The treaty evidence is placed in the later 14th century BCE."
+  reason: "The prose now follows the reconstructed reign of Suppiluliuma I."
+  sources:
+    - src.bryce-2005-kingdom-of-the-hittites
+    - src.beckman-1999-hittite-diplomatic-texts
+- date: 2026-11-22
+  target: "text.rigveda"
+  before: "A Mitanni synchronism of 1400 to 1350 BCE with 1380 BCE as a best estimate."
+  after: "A treaty window of about 1350 to 1322 BCE, following Bryce’s reign chronology."
+  reason: "This dating refers to the external attestation of divine names. The chronology of the Rigveda hymns is independently estimated."
+  sources:
+    - src.bryce-2005-kingdom-of-the-hittites
+    - src.beckman-1999-hittite-diplomatic-texts
+- date: 2026-11-22
+  target: "site.bhirrana"
+  before: "The early Hakra note gave 7500 to 5000 BCE despite a 6000 BCE timeline endpoint."
+  after: "The note distinguishes Sarkar’s approximate 9.5 to 8 ka BP phase from the reported mean age for the earliest level."
+  reason: "The 7 ka BP figure is outside Sarkar’s pre-Harappan Hakra phase."
+  sources:
+    - src.sarkar-2016-bhirrana-oxygen-isotope
+- date: 2026-11-22
+  target: "tradition.malwa-culture"
+  before: "The endpoint was 1350 BCE, while the notes and summaries gave about 1400 BCE."
+  after: "The endpoint is approximately 1400 BCE."
+  reason: "The cited regional sequence places the Malwa to Jorwe transition about 1400 BCE. The Navdatoli chronology also ends around that time."
+  sources:
+    - src.misra-2001-prehistoric-colonization-india
+    - src.coningham-2015-archaeology-south-asia
+- date: 2026-11-22
+  target: "event.earliest-cotton-mehrgarh"
+  before: "Period II, grave 153, dated 6000 to 5000 BCE at grade A."
+  after: "Period I, grave MR.84.03.158. Grade C placements show the original 6000 to 5500 BCE estimate and the revised 5250 to 4650 BCE Period I context."
+  reason: "The original fibres paper identifies the burial and gives an approximate period. The later study dates the cemetery using a radiocarbon series."
+  sources:
+    - src.moulherat-2002-mehrgarh-cotton
+    - src.mutin-2025-mehrgarh-radiocarbon
+- date: 2026-11-22
+  target: "/art-and-culture/textiles-of-india"
+  before: "The Mehrgarh burial was placed in the sixth millennium BCE."
+  after: "The prose gives the original estimate and the revised Period I cemetery context. The timeline uses the revised context at grade C."
+  reason: "The dated tooth enamel samples revise the cemetery chronology and provide an indirect date for the bead."
+  sources:
+    - src.moulherat-2002-mehrgarh-cotton
+    - src.mutin-2025-mehrgarh-radiocarbon
+- date: 2026-11-22
+  target: "event.domestication-of-zebu-cattle"
+  before: "The grade A timeline treated Mehrgarh Period I around 7000 to 5500 BCE as a secure anchor."
+  after: "The regional domestication estimate is grade B. The note identifies the uncertainty in the Mehrgarh chronology."
+  reason: "The zooarchaeological and genetic evidence supports a South Asian origin. The 2025 cemetery chronology revises the dates previously assigned to Period I."
+  sources:
+    - src.chen-2010-zebu-cattle-south-asia-neolithic
+    - src.fuller-2006-agricultural-origins-south-asia
+    - src.mutin-2025-mehrgarh-radiocarbon

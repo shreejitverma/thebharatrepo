@@ -15,13 +15,14 @@ summaries:
 region: Pan-Indian, with extensions into Central, East and Southeast Asia
 datings:
   - method: epigraphic
-    range: { earliest: "268 BCE", latest: 599, precision: century, circa: true }
+    range: { earliest: "260 BCE", latest: 600, precision: century, circa: true }
     grade: A
     label: Dated epigraphic trajectory from Early (Ashokan) Brahmi to Late (Gupta) Brahmi
     sources:
       - src.salomon-1998-indian-epigraphy
       - src.coningham-1996-early-brahmi-script
-    note: Directly attested by a continuous sequence of dated inscriptions from Ashoka's third-century BCE edicts through Kushan-era Mathura records to fourth- through sixth-century CE Gupta stone and copper-plate inscriptions.
+      - src.hultzsch-1925-inscriptions-of-asoka
+    note: The sequence begins with Ashoka's surviving edicts around the middle of the third century BCE and continues through Kushan-era Mathura records to fourth- through sixth-century CE Gupta inscriptions. Finds at Anuradhapura suggest earlier use of Brahmi.
 claims:
   - text: Between the first and fourth centuries CE, reed-pen and ink manuscript writing influenced stone epigraphy, introducing flat serif head-marks (matras), Equalized letter heights and more cursive medial vowel flourishes that distinguish the Kushan and Gupta scripts from rectilinear Ashokan Brahmi.
     grade: A

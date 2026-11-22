@@ -11,7 +11,7 @@ datings:
     sources: [src.olivelle-1998-early-upanisads]
     note: "Placed after Brihadaranyaka and Chandogya on grounds of verse form, vocabulary and doctrine; the range is debated and the text may be layered."
   - method: traditional-sampradaya
-    range: { earliest: "3101 BCE", latest: "2499 BCE", precision: century, circa: true }
+    range: { earliest: "3102 BCE", latest: "2500 BCE", precision: century, circa: true }
     grade: D
     label: "Vedanta sampradaya"
     sources: [src.flood-2003-blackwell-companion-hinduism]

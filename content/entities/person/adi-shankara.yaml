@@ -22,13 +22,18 @@ region: Born at Kalady, Kerala, according to tradition; active across India
 location: { name: Kalady, lat: 10.17, lon: 76.44 }
 datings:
   - method: textual-internal
+    range: { earliest: "788 CE", latest: "820 CE", precision: decade, circa: true }
+    grade: C
+    label: Conventional 788 to 820 CE chronology
+    sources: [src.isayeva-1993-shankara-indian-philosophy, src.flood-1996-introduction-to-hinduism]
+    note: >-
+      The conventional chronology rests on later records.
+  - method: textual-internal
     range: { earliest: "700 CE", latest: "750 CE", precision: decade, circa: true }
     grade: C
-    label: First half of the eighth century (Hajime Nakamura)
+    label: Hajime Nakamura's earlier eighth-century placement
     sources: [src.nakamura-1983-early-vedanta, src.dalal-2021-shankara]
-    note: >-
-      Nakamura estimates Shankara's dates from the relative chronology of philosophers and commentators
-      including Kumarila Bhatta, Mandana Mishra and Sureshvara.
+    note: Nakamura argues for an earlier placement based on the chronology of the thinkers and texts associated with Shankara.
   - method: traditional-sampradaya
     range: { earliest: "509 BCE", latest: "477 BCE", precision: year, circa: false }
     grade: D

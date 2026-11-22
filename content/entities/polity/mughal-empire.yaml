@@ -22,6 +22,7 @@ datings:
     label: Historical scholarship
     sources: &a1
       - src.richards-1993-mughal-empire
+      - src.asher-talbot-2006-india-before-europe
       - src.metcalf-2012-concise-history-modern-india
 claims:
   - text: Babur founded the Mughal Empire in 1526. Mughal rule formally ended in

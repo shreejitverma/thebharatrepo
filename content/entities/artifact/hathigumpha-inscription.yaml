@@ -16,21 +16,22 @@ region: Kalinga (Udayagiri Hills near Bhubaneswar, Odisha)
 location: { name: "Hathigumpha, Udayagiri, Odisha", lat: 20.263, lon: 85.786 }
 datings:
   - method: epigraphic
-    range: { earliest: "100 BCE", latest: "2 BCE", precision: century, circa: true }
+    range: { earliest: "100 BCE", latest: "1 BCE", precision: century, circa: true }
     grade: B
     label: Palaeographic dating of post-Mauryan Brahmi script (first century BCE)
     sources:
       - src.salomon-1998-indian-epigraphy
       - src.kulke-2004-history-of-india
+      - { id: src.stewart-2025-classical-art-and-ancient-india, locator: "Upinder Singh, Yavanas in Early Indian Inscriptions" }
     note: Dated palaeographically to the mid-to-late first century BCE by comparison with Sanchi gateway and early Satavahana inscriptions.
   - method: epigraphic
-    range: { earliest: "176 BCE", latest: "130 BCE", precision: decade, circa: true }
+    range: { earliest: "200 BCE", latest: "151 BCE", precision: century, circa: true }
     grade: C
-    label: Second century BCE dating from contested reading of Mauriya-kala and Dimita
+    label: Jayaswal and Banerji's early second-century BCE interpretation
     sources:
-      - src.fleet-1910-hathigumpha-inscription
+      - { id: src.stewart-2025-classical-art-and-ancient-india, locator: "Upinder Singh, Yavanas in Early Indian Inscriptions" }
       - src.salomon-1998-indian-epigraphy
-    note: Early readings interpreted a weathered compound in line 16 as the 165th year of the Maurya era; Fleet and later epigraphists showed the passage refers instead to canonical Jain texts (Mukhiya-kala), invalidating the Maurya-era date.
+    note: Jayaswal and Banerji linked the damaged name they read as Dimita to Demetrius and proposed the first half of the second century BCE. The reading and identification are disputed.
 claims:
   - text: The inscription begins with the Prakrit Jain invocation "Namo arrahantanam namo sava-sidhanam" ("Salutation to the Arhats, salutation to all the Siddhas"), the earliest known epigraphic attestation of the Jain Pancha-Namaskara formula.
     grade: A

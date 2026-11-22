@@ -6,7 +6,7 @@ updated: "2026-11-21"
 tags: ["medieval history", "south india", "chola", "temples", "inscriptions"]
 datings:
   - method: epigraphic
-    range: { earliest: "848 CE", latest: "1279 CE", best: "1000 CE", precision: decade, circa: true }
+    range: { earliest: "850 CE", latest: "1279 CE", best: "1000 CE", precision: decade, circa: true }
     grade: B
     label: "Medieval Chola dynasty"
     sources: [src.sastri-1955-the-colas, src.subbarayalu-2012-south-india-under-cholas]

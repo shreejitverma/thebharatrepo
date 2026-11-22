@@ -23,13 +23,21 @@ datings:
       - src.brockington-1998-sanskrit-epics
     note: Dated by John Brockington, J. A. B. van Buitenen and Angelika Malinar between the second century BCE and first century CE on the basis of its epic Sanskrit meter, engagement with Upanishadic, early Samkhya-Yoga and Buddhist concepts, and early Bhagavata monotheism.
   - method: traditional-puranic
-    range: { earliest: "3138 BCE", latest: "3102 BCE", precision: decade, circa: true }
+    range: { earliest: "3138 BCE", latest: "3138 BCE", precision: year, circa: false }
     grade: D
-    label: Traditional placement at the Kurukshetra War before the Kali Yuga
+    label: Traditional setting at the start of the Kurukshetra War
     sources:
       - src.bhatnagar-2017-date-mahabharata-war
       - src.malinar-2007-bhagavadgita-doctrines-contexts
-    note: In Hindu tradition, the Gita was spoken directly by Krishna to Arjuna on the opening day of the Kurukshetra War at the transition from Dvapara to Kali Yuga.
+    note: The dialogue takes place when the war begins. In the reckoning that places Krishna's death at the Kali epoch and the war 36 years earlier, the dialogue is set in 3138 BCE.
+  - method: traditional-puranic
+    range: { earliest: "3102 BCE", latest: "3102 BCE", precision: year, circa: false }
+    grade: D
+    label: Traditional setting in the Kali-epoch reckoning of the war
+    sources:
+      - src.kielhorn-1900-aihole-inscription
+      - src.malinar-2007-bhagavadgita-doctrines-contexts
+    note: In the reckoning that places the war at the Kali epoch, the dialogue is set in 3102 BCE.
 claims:
   - text: The Bhagavad Gita resolves the tension between worldly social obligation (svadharma) and ascetic renunciation (sannyasa) through the doctrine of nishkama karma - performing one's duty while relinquishing attachment to the fruits of action (karmaphala-tyaga).
     grade: A
