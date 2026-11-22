@@ -940,13 +940,14 @@ a:hover {
   overflow-wrap: anywhere;
 }
 
-.dating__sources a,
-.correction-sources a,
-.references a,
-.biblio a {
-  display: inline-block;
-  padding: 3px 0;
-  vertical-align: top;
+/*
+ * Source links stay inline, so a locator or DOI after a link continues on the same line and shares its
+ * baseline. One link per item, and items spaced so the centres of stacked links are more than 24px apart
+ * (WCAG 2.5.8, spacing).
+ */
+.dating__sources li + li,
+.correction-sources li + li {
+  margin-top: 6px;
 }
 
 .claims {

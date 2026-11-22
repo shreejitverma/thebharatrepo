@@ -40,7 +40,11 @@ export default function LearnPage() {
                 <p className="card__meta">
                   {READING_LEVEL_AUDIENCE[p.level]}. <ProgressSummary pathId={p.id} steps={steps} />
                   {p.quiz.length ? `, ${p.quiz.length}-question quiz` : ''}
-                  {r ? `. ${formatRange(r)}` : ''}
+                  {r ? (
+                    <>
+                      . <span className="nowrap">{formatRange(r)}</span>
+                    </>
+                  ) : null}
                 </p>
               </Link>
             );

@@ -41,6 +41,12 @@
   font-style: italic;
 }
 
+/* Native script and IAST share one baseline, whatever each font's ascent and line height. */
+.names,
+.card__names {
+  align-items: baseline;
+}
+
 .card__names {
   display: flex;
   flex-wrap: wrap;
@@ -468,11 +474,6 @@ html[data-reading-level='kids'] .rl[data-has-teen]:not([data-has-kids]) > [data-
   color: var(--ink-soft);
 }
 
-.step__source a {
-  display: inline-block;
-  padding: 3px 0;
-}
-
 .step__actions {
   display: flex;
   flex-wrap: wrap;
@@ -608,11 +609,9 @@ html[data-reading-level='kids'] .rl[data-has-teen]:not([data-has-kids]) > [data-
   color: var(--ink-soft);
 }
 
-/* Each source link is its own touch target (WCAG 2.5.8). */
-.quiz__sources a {
-  display: inline-block;
-  padding: 3px 0;
-  vertical-align: top;
+/* Inline like every source link (see globals.css), with stacked items spaced for WCAG 2.5.8. */
+.quiz__sources li + li {
+  margin-top: 6px;
 }
 
 .quiz__actions {
@@ -710,12 +709,16 @@ html[data-reading-level='kids'] .rl[data-has-teen]:not([data-has-kids]) > [data-
 /* In-page targets clear the sticky site header. */
 #quiz,
 .position,
-.step {
+.step,
+.quiz__q,
+.quiz__result,
+.progress__status {
   scroll-margin-top: 120px;
 }
 
+/* Devanagari and the other Indic scripts have a smaller apparent size than Latin at the same em. */
 .name-native {
-  font-size: 1.06em;
+  font-size: 1.1em;
 }
 
 @media (max-width: 560px) {
@@ -731,4 +734,34 @@ html[data-reading-level='kids'] .rl[data-has-teen]:not([data-has-kids]) > [data-
   .position {
     padding: 16px 14px;
   }
+}
+
+/* The hint region is always present for screen readers; it takes no space until it has something to say. */
+.quiz__feedback:empty {
+  margin: 0;
+}
+
+/* The result receives focus after "Check answer"; outline it only for keyboard users. */
+.quiz__result:focus {
+  outline: none;
+}
+
+.quiz__result:focus-visible {
+  outline: 2px solid var(--focus);
+  outline-offset: 4px;
+  border-radius: var(--radius-sm);
+}
+
+.progress__status:focus {
+  outline: none;
+}
+
+.progress__status:focus-visible {
+  outline: 2px solid var(--focus);
+  outline-offset: 2px;
+}
+
+/* A date range reads as one unit: "c. 324 to 232 BCE" never breaks inside. */
+.nowrap {
+  white-space: nowrap;
 }

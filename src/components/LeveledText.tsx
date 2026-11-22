@@ -29,7 +29,12 @@ export default function LeveledText({
       {versions.map(([level, text]) =>
         text ? (
           <p key={level} data-rl={level}>
-            {tagged && level !== 'adult' ? <span className="rl__tag">{READING_LEVEL_AUDIENCE[level]}</span> : null}
+            {tagged && level !== 'adult' ? (
+              <>
+                <span className="rl__tag">{READING_LEVEL_AUDIENCE[level]}</span>
+                <span className="visually-hidden">: </span>
+              </>
+            ) : null}
             {text}
           </p>
         ) : null,

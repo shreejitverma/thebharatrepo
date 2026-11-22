@@ -330,3 +330,13 @@ describe('reading level', () => {
     expect(runBoot('?level=teen', blocked)).toBe('teen');
   });
 });
+
+describe('source locators', () => {
+  it('binds an abbreviation to its number with a no-break space', async () => {
+    const { bindLocator } = await import('../../components/SourceCitation');
+    expect(bindLocator('pp. 163-167')).toBe('pp.\u00a0163-167');
+    expect(bindLocator('p. 4, fig. 2')).toBe('p.\u00a04, fig.\u00a02');
+    expect(bindLocator('Rock Edict XIII')).toBe('Rock Edict XIII');
+    expect(bindLocator('Rummindei pillar inscription')).toBe('Rummindei pillar inscription');
+  });
+});

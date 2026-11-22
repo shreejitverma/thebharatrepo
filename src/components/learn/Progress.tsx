@@ -1,6 +1,6 @@
 'use client';
 
-import { useSyncExternalStore, type ReactNode } from 'react';
+import { useRef, useSyncExternalStore, type ReactNode } from 'react';
 
 /**
  * Per-viewer progress through a learning path, kept only in this browser's localStorage (no account,
@@ -22,7 +22,10 @@ function readRaw(pathId: string): string | null {
   }
 }
 
-/** In-memory fallback so ticking a step still works for this page view when storage is blocked. */
+/**
+ * In-memory fallback so ticking a step still works for this page view when storage is blocked. Holds a
+ * value only while storage writes fail, so it never shadows changes made in another tab.
+ */
 const memory = new Map<string, string>();
 
 function parse(raw: string | null): Set<string> {
@@ -37,12 +40,13 @@ function parse(raw: string | null): Set<string> {
 
 function write(pathId: string, done: Set<string>): void {
   const raw = JSON.stringify([...done]);
-  memory.set(pathId, raw);
   try {
     if (done.size) window.localStorage.setItem(key(pathId), raw);
     else window.localStorage.removeItem(key(pathId));
+    memory.delete(pathId);
   } catch {
     // Storage unavailable: progress lasts for this page view only.
+    memory.set(pathId, raw);
   }
   window.dispatchEvent(new Event(EVENT));
 }
@@ -59,7 +63,7 @@ function subscribe(cb: () => void): () => void {
 function useDone(pathId: string): Set<string> {
   const raw = useSyncExternalStore(
     subscribe,
-    () => memory.get(pathId) ?? readRaw(pathId),
+    () => (memory.has(pathId) ? memory.get(pathId)! : readRaw(pathId)),
     () => null,
   );
   return parse(raw);
@@ -68,14 +72,23 @@ function useDone(pathId: string): Set<string> {
 export function PathProgress({ pathId, steps }: { pathId: string; steps: string[] }) {
   const done = useDone(pathId);
   const n = steps.filter((s) => done.has(s)).length;
+  const status = useRef<HTMLSpanElement>(null);
   return (
     <div className="progress">
       <div className="progress__head">
-        <span role="status" aria-live="polite">
+        <span role="status" aria-live="polite" ref={status} tabIndex={-1} className="progress__status">
           {n === steps.length ? `All ${steps.length} steps done.` : `${n} of ${steps.length} steps done.`}
         </span>
         {n > 0 ? (
-          <button type="button" className="link-button" onClick={() => write(pathId, new Set())}>
+          <button
+            type="button"
+            className="link-button"
+            onClick={() => {
+              write(pathId, new Set());
+              // The button disappears with the progress; keep keyboard focus on the count it changed.
+              status.current?.focus();
+            }}
+          >
             Reset progress
           </button>
         ) : null}

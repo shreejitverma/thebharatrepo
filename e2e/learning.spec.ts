@@ -156,6 +156,8 @@ test.describe('learning path', () => {
     await expect(page.getByText('2 of 7 steps done.')).toBeVisible();
     await page.getByRole('button', { name: 'Reset progress' }).click();
     await expect(page.getByText('0 of 7 steps done.')).toBeVisible();
+    // The reset button goes away; focus stays on the count it changed instead of falling to the page.
+    await expect(page.locator('.progress__status')).toBeFocused();
     await noHorizontalScroll(page);
     await noSeriousA11yViolations(page);
     expect(errors).toEqual([]);
@@ -174,6 +176,7 @@ test.describe('learning path', () => {
     await qs.nth(0).getByRole('radio', { name: 'Major Rock Edict XIII' }).check();
     await qs.nth(0).getByRole('button', { name: 'Check answer' }).click();
     await expect(qs.nth(0)).toContainText('Correct.');
+    await expect(qs.nth(0).locator('.quiz__result')).toBeFocused();
     await expect(qs.nth(0)).toContainText('Your answer: correct');
     await expect(qs.nth(0).locator('.quiz__sources li').first()).toContainText('Hultzsch');
     await expect(qs.nth(0).getByRole('radio').first()).toBeDisabled();
@@ -197,18 +200,38 @@ test.describe('learning path', () => {
     await expect(quiz.locator('.quiz__score')).toHaveText('5 questions. Choose an answer, then check it.');
     await expect(qs.nth(0).getByRole('radio').first()).toBeEnabled();
     await expect(qs.nth(0).getByRole('radio').first()).not.toBeChecked();
+    await expect(qs.nth(0).getByRole('radio').first()).toBeFocused();
+  });
+
+  test('choices are not listed with the correct answer always first', async ({ page }) => {
+    await page.goto(PATH);
+    const qs = page.locator('fieldset.quiz__q');
+    const slots: number[] = [];
+    for (let i = 0; i < 5; i++) {
+      const labels = await qs.nth(i).locator('.quiz__choice > span:first-of-type').allTextContents();
+      const name = ['Major Rock Edict XIII', 'He noticed', 'Sandrokottos', 'That the Buddha Shakyamuni', 'The edict is tied'][i];
+      slots.push(labels.findIndex((t) => t.startsWith(name)));
+    }
+    expect(slots).not.toContain(-1);
+    expect(new Set(slots).size).toBeGreaterThan(1);
   });
 
   test('keyboard users can answer a question', async ({ page, isMobile }) => {
     test.skip(isMobile, 'keyboard flow is a desktop concern');
     await page.goto(PATH);
     const q = page.locator('fieldset.quiz__q').nth(2);
-    await q.getByRole('radio').first().focus();
+    const answer = q.getByRole('radio', { name: 'Sandrokottos' });
+    await answer.focus();
     await page.keyboard.press('Space');
-    await expect(q.getByRole('radio').first()).toBeChecked();
-    await q.getByRole('button', { name: 'Check answer' }).focus();
+    await expect(answer).toBeChecked();
+    await page.keyboard.press('Tab');
+    await expect(q.getByRole('button', { name: 'Check answer' })).toBeFocused();
     await page.keyboard.press('Enter');
     await expect(q).toContainText('Correct.');
+    // The button is gone; focus lands on the verdict, and Tab continues to the sources that back it.
+    await expect(q.locator('.quiz__result')).toBeFocused();
+    await page.keyboard.press('Tab');
+    await expect(page.locator('fieldset.quiz__q').nth(2).locator('.quiz__sources a').first()).toBeFocused();
   });
 });
 

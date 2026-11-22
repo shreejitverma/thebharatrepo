@@ -36,12 +36,10 @@ export default async function PrintPackPage({ params }: { params: Promise<{ slug
   const g = getGraph();
   const steps = resolveSteps(g, p);
 
-  // Every source the pack cites, in first-use order, for the reference list.
-  const cited = new Map<string, string | undefined>();
-  const note = (ref: CitationRef) => {
-    const id = citationId(ref);
-    if (!cited.has(id)) cited.set(id, typeof ref === 'string' ? undefined : ref.locator);
-  };
+  // Every source the pack cites, in first-use order, for the reference list. Locators belong to each
+  // citation, so the list itself carries none.
+  const cited = new Set<string>();
+  const note = (ref: CitationRef) => cited.add(citationId(ref));
   for (const s of steps) if (s.kind === 'entity' && s.entity.claims[0]) note(s.entity.claims[0].sources[0]);
   for (const q of p.quiz) q.sources.forEach(note);
   const cite = (ref: CitationRef) => {
@@ -172,9 +170,9 @@ export default async function PrintPackPage({ params }: { params: Promise<{ slug
       <section aria-labelledby="pack-sources">
         <h2 id="pack-sources">Sources</h2>
         <ol className="references">
-          {[...cited.entries()].map(([id, locator]) => {
+          {[...cited].map((id) => {
             const src = g.sources.get(id);
-            return <li key={id}>{src ? <SourceCitation source={src} locator={locator} /> : id}</li>;
+            return <li key={id}>{src ? <SourceCitation source={src} /> : id}</li>;
           })}
         </ol>
       </section>
