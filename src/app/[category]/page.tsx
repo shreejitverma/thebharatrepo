@@ -37,7 +37,7 @@ export default async function CategoryPage({ params }: { params: Promise<{ categ
         <div className="category-grid" style={{ marginTop: 24 }}>
           {articles.map((a) => (
             <Link key={a.slug} href={`/${category}/${a.slug}`} className="card">
-              <h3>{a.title}</h3>
+              <h2>{a.title}</h2>
               <p>{a.summary}</p>
               <p className="card__meta">{summarizeDatings(a.datings)}</p>
             </Link>
