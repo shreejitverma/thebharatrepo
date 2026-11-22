@@ -1,0 +1,38 @@
+id: text.arctic-home-in-the-vedas
+type: text
+kind: text
+names:
+  en: The Arctic Home in the Vedas
+summary: Bal Gangadhar Tilak published The Arctic Home in the Vedas in 1903. It
+  proposed a polar homeland for Vedic ancestors; this is a historical record of
+  Tilak’s argument, not an accepted account of Indo-Aryan origins.
+summaries:
+  kids: Tilak’s 1903 book argued that Vedic ancestors once lived near the Arctic.
+    This proposal is not accepted as established history.
+  teen: The book is important for the history of Indian intellectual and
+    nationalist thought, but its Arctic migration thesis is not supported as a
+    scholarly consensus.
+datings:
+  - method: documentary
+    range:
+      earliest: "1903"
+      latest: "1903"
+      precision: year
+      circa: false
+    grade: A
+    label: Documentary record
+    sources: &a1
+      - src.tilak-1925-arctic-home-in-the-vedas
+      - src.trautmann-1997-aryans-and-british-india
+claims:
+  - text: Bal Gangadhar Tilak published The Arctic Home in the Vedas in 1903. It
+      proposed a polar homeland for Vedic ancestors; this is a historical record
+      of Tilak’s argument, not an accepted account of Indo-Aryan origins.
+    grade: A
+    sources: *a1
+relations: []
+tags:
+  - text
+review:
+  status: draft
+  author: codex-gpt-6

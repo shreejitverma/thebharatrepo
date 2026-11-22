@@ -1,0 +1,48 @@
+id: person.brahmagupta
+type: person
+kind: science
+names:
+  en: Brahmagupta
+  iast: Brahmagupta
+  native: ब्रह्मगुप्त
+summary: >-
+  Brahmagupta was an astronomer and mathematician from Bhillamala (Bhinmal) in western India. He
+  states that he composed the Brahmasphutasiddhanta in Shaka 550 (628 CE) at the age of thirty, and he
+  wrote the handbook Khandakhadyaka in 665 CE. His rules for computing with zero and negative
+  quantities are among the earliest known.
+summaries:
+  kids: >-
+    Brahmagupta was a mathematician who lived about 1,400 years ago in Rajasthan. He wrote rules for how
+    to add, subtract and multiply with zero and with negative numbers.
+  teen: >-
+    Brahmagupta treated zero as a number in its own right and gave rules for working with "debts"
+    (negative numbers) and "fortunes" (positive numbers). His astronomy book was later translated into
+    Arabic in Baghdad.
+region: Bhillamala, western Rajasthan
+location: { name: Bhinmal, lat: 25.00, lon: 72.27 }
+datings:
+  - method: textual-internal
+    range: { earliest: "598 CE", latest: "670 CE", precision: decade, circa: true }
+    grade: B
+    label: Lifetime
+    sources: [src.plofker-2009-mathematics-in-india, src.pingree-1981-jyotihsastra]
+    note: Birth in 598 CE follows from his own statement of his age in 628 CE; the Khandakhadyaka has an epoch of 665 CE.
+  - method: textual-internal
+    range: { earliest: "628 CE", latest: "628 CE", precision: year, circa: false }
+    grade: A
+    label: Brahmasphutasiddhanta composed
+    sources: [src.plofker-2009-mathematics-in-india, src.colebrooke-1817-algebra-brahmegupta-bhascara]
+claims:
+  - text: >-
+      Brahmagupta gives explicit rules for addition, subtraction, multiplication and division involving
+      zero and negative quantities.
+    grade: A
+    sources: [src.plofker-2009-mathematics-in-india, src.colebrooke-1817-algebra-brahmegupta-bhascara]
+  - text: He wrote the Brahmasphutasiddhanta under the Chapa king Vyaghramukha.
+    grade: A
+    sources: [src.plofker-2009-mathematics-in-india]
+relations:
+  - { kind: authored, target: text.brahmasphutasiddhanta }
+wikidata: Q202943
+tags: [mathematics, astronomy, zero, jyotisha]
+review: { status: draft, author: "claude-opus-5-5" }

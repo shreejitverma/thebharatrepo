@@ -1,0 +1,35 @@
+id: event.champaran-satyagraha
+type: event
+kind: event
+names:
+  en: Champaran Satyagraha
+summary: Gandhi’s 1917 intervention in Champaran supported indigo cultivators
+  challenging planter practices and brought him into wider Indian politics.
+summaries:
+  kids: In 1917, Gandhi supported farmers in Champaran who were protesting unfair
+    indigo-growing arrangements.
+  teen: The Champaran campaign combined inquiry, legal pressure and public
+    mobilization, and marked an early phase of Gandhi’s Indian political career.
+datings:
+  - method: documentary
+    range:
+      earliest: "1917"
+      latest: "1917"
+      precision: year
+      circa: false
+    grade: A
+    label: Documentary record
+    sources: &a1
+      - src.brown-1972-gandhis-rise-to-power
+      - src.brown-1989-gandhi-prisoner-of-hope
+claims:
+  - text: Gandhi’s 1917 intervention in Champaran supported indigo cultivators
+      challenging planter practices and brought him into wider Indian politics.
+    grade: A
+    sources: *a1
+relations: []
+tags:
+  - event
+review:
+  status: draft
+  author: codex-gpt-6

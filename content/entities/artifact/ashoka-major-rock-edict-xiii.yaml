@@ -1,0 +1,48 @@
+id: artifact.ashoka-major-rock-edict-xiii
+type: artifact
+kind: event
+names:
+  en: Major Rock Edict XIII of Ashoka
+  iast: Aśokasya Trayodaśaḥ Mahāśilālekhaḥ
+  native: अशोकस्य त्रयोदशः महाशिलालेखः
+summary: >-
+  Major Rock Edict XIII is Ashoka's inscription on the conquest of Kalinga in his eighth regnal year and his remorse for its suffering, with a Greek adaptation at Kandahar. It names five Hellenistic kings to whom he sent envoys of dhamma, and their independently known reigns make it the main anchor of Mauryan chronology.
+summaries:
+  kids: >-
+    After a terrible war in Kalinga, Emperor Ashoka carved a message in stone saying he was deeply sorry for the suffering and would now try to win people over through dharma instead of war.
+  teen: >-
+    Edict XIII records Ashoka's remorse over the Kalinga war and names five Greek kings whose dates are known from Greek records. That lets historians date Ashoka himself to the mid-3rd century BCE.
+region: Pan-Indian (versions at Kalsi, Shahbazgarhi, Mansehra, Girnar, Erragudi and elsewhere; Greek adaptation at Kandahar)
+location: { name: "Kalsi, Uttarakhand", lat: 30.523, lon: 77.846 }
+datings:
+  - method: foreign-synchronism
+    range: { earliest: "261 BCE", latest: "250 BCE", precision: decade, circa: true }
+    grade: A
+    label: Synchronism with five Hellenistic kings
+    sources:
+      - src.hultzsch-1925-inscriptions-of-asoka
+      - src.thapar-2012-asoka-decline-mauryas
+      - src.salomon-1998-indian-epigraphy
+    note: All five kings were reigning together only between the accession of Antiochus II (261 BCE) and the death of Magas of Cyrene, placed by different scholars around 258 or 250 BCE; the identity of Alikasudara (Alexander of Epirus or of Corinth) also affects the lower limit.
+claims:
+  - text: The edict says that in the conquest of Kalinga, eight years after Ashoka's consecration, 150,000 people were deported, 100,000 were killed and many times that number died, and that the king felt deep remorse.
+    grade: A
+    sources:
+      - src.hultzsch-1925-inscriptions-of-asoka
+      - src.lahiri-2015-ashoka-ancient-india
+  - text: The inscription names five western kings - Antiyoka (Antiochus II of Syria), Turamaya (Ptolemy II of Egypt), Antekina (Antigonus II Gonatas of Macedon), Maka (Magas of Cyrene) and Alikasudara (Alexander of Epirus or of Corinth).
+    grade: A
+    sources:
+      - src.hultzsch-1925-inscriptions-of-asoka
+      - src.thapar-2012-asoka-decline-mauryas
+relations:
+  - { kind: issued-by, target: person.ashoka }
+  - { kind: part-of, target: polity.maurya-empire }
+  - { kind: related-to, target: event.brahmi-decipherment-prinsep }
+image:
+  commons: "File:0051823 Major rock edict of Asoka, Kalsi Uttarakhand 017.jpg"
+  alt: Inscribed rock face of Ashoka's Major Rock Edicts at Kalsi, Uttarakhand
+  credit: Ms Sarah Welch
+  license: CC0
+tags: [ashoka, inscription, kalinga, foreign-synchronism, maurya]
+review: { status: draft, author: "gemini-4-argon" }

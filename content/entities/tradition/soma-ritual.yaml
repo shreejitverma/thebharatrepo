@@ -66,6 +66,5 @@ relations:
   - { kind: related-to, target: text.samaveda }
   - { kind: related-to, target: text.aitareya-brahmana }
   - { kind: related-to, target: tradition.agnicayana }
-wikidata: Q64897
 tags: [soma, somayaga, agnishtoma, rigveda, samaveda, shrauta, ephedra]
 review: { status: draft, author: "gemini-4-argon" }

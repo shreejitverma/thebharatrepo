@@ -90,7 +90,6 @@ relations:
   - { kind: related-to, target: event.dasarajna }
   - { kind: related-to, target: polity.kuru-kingdom }
   - { kind: related-to, target: concept.indo-aryan-migration }
-wikidata: Q177321
 image:
   commons: "File:Sarasvati river.jpg"
   alt: Satellite and topographic map illustrating the Ghaggar-Hakra paleochannel system between the Yamuna and Sutlej

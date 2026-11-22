@@ -1,0 +1,57 @@
+id: artifact.tamil-brahmi-inscriptions
+type: artifact
+kind: text
+names:
+  en: Tamil-Brahmi Inscriptions
+  iast: Tamiḻ-Brāhmī
+  native: தமிழி
+summary: >-
+  Tamil-Brahmi (also called Tamili) inscriptions are the earliest known inscriptions in Tamil, and among the earliest in any Dravidian language, adapted from the Brahmi script with special graphemes (ḻ, ṟ, ṇ, ṉ) and orthographical conventions for Tamil phonology. They survive as rock-shelter donative records carved for Jain (and occasionally Buddhist or Ajivika) ascetics across Tamil Nadu (such as Mangulam, Jambai and Pugalur) and on hundreds of inscribed potsherds from settlements including Keezhadi, Kodumanal, Porunthal, Arikamedu and overseas ports in Egypt and Thailand.
+summaries:
+  kids: >-
+    Tamil-Brahmi (Tamili) inscriptions are ancient Tamil writings carved into rock caves and scratched onto clay pots, showing that people in South India were writing Tamil more than 2,000 years ago.
+  teen: >-
+    Adapted from Brahmi by adding letters unique to Tamil speech, Tamil-Brahmi cave inscriptions and inscribed potsherds are the oldest written Tamil. Scholars still debate whether this writing began in the 3rd century BCE or several centuries earlier.
+region: Tamilakam (Tamil Nadu and Kerala), with trade finds at Anuradhapura, Berenike and Quseir al-Qadim
+location: { name: "Mangulam, Madurai District, Tamil Nadu", lat: 10.023, lon: 78.234 }
+datings:
+  - method: epigraphic
+    range: { earliest: "300 BCE", latest: "400 CE", precision: century, circa: true }
+    grade: B
+    label: Palaeographic chronology (mainstream epigraphy)
+    sources:
+      - src.salomon-1998-indian-epigraphy
+      - src.coningham-1996-early-brahmi-script
+      - src.wilden-2014-manuscript-print-memory-cankam
+    note: On letter forms, the cave inscriptions are usually dated from the late 3rd or 2nd century BCE, after Ashokan Brahmi, to the 3rd or 4th century CE, when Vatteluttu replaces them. Coningham and colleagues' pre-Ashokan Brahmi dates from Anuradhapura in Sri Lanka are the main challenge to a purely Mauryan origin for southern Brahmi.
+  - method: archaeological-radiocarbon
+    range: { earliest: "600 BCE", latest: "300 BCE", precision: century, circa: true }
+    grade: C
+    label: Pre-Ashokan potsherd radiocarbon dates proposed from Kodumanal, Porunthal and Keezhadi
+    sources:
+      - src.sivanantham-2019-keeladi-urban-settlement
+      - src.manivannan-2020-keeladi-potteries
+      - src.coningham-1996-early-brahmi-script
+    note: Radiocarbon dates from charcoal and paddy in strata yielding Tamil-Brahmi inscribed potsherds at Porunthal, Kodumanal and Keezhadi (down to c. 580 BCE) have prompted K. Rajan and the Tamil Nadu State Department of Archaeology to argue for a pre-Ashokan fifth- or sixth-century BCE origin, while other epigraphists await direct AMS dating of the inscribed sherds and scrutinize stratigraphic mixing.
+claims:
+  - text: About 110 Tamil-Brahmi cave inscriptions are documented from 32 sites in Tamil Nadu, deciphered and published by Iravatham Mahadevan.
+    grade: A
+    sources:
+      - src.sivanantham-2019-keeladi-urban-settlement
+  - text: At Keezhadi alone the Tamil Nadu excavations recovered 56 potsherds inscribed in Tamil-Brahmi, several bearing personal names.
+    grade: A
+    sources:
+      - src.sivanantham-2019-keeladi-urban-settlement
+  - text: Tamil-Brahmi adapts the Brahmi script to Tamil by adding letters for sounds absent from Prakrit, notably the consonants written in transliteration as ḻ, ṟ and ṉ.
+    grade: B
+    sources:
+      - src.salomon-1998-indian-epigraphy
+debate: >-
+  Epigraphists led by Iravatham Mahadevan and Richard Salomon derive Tamil-Brahmi from Ashokan Brahmi introduced into Tamilakam in the third or second century BCE. Excavators including K. Rajan and R. Sivanantham argue on the basis of AMS radiocarbon dates from charcoal and grain found in levels containing Tamil-Brahmi graffiti at Porunthal, Kodumanal and Keezhadi (ranging from the fifth to sixth centuries BCE) that Tamili was already in widespread domestic use before the Mauryan period.
+relations:
+  - { kind: excavated-at, target: site.keezhadi }
+  - { kind: related-to, target: text.sangam-literature }
+  - { kind: related-to, target: concept.brahmi-to-gupta-script }
+wikidata: Q3534666
+tags: [tamil-brahmi, tamili, epigraphy, sangam, keezhadi, jainism]
+review: { status: draft, author: "gemini-4-argon" }

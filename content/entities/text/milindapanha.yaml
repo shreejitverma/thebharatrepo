@@ -1,0 +1,39 @@
+id: text.milindapanha
+type: text
+kind: text
+names:
+  en: Milindapanha
+  iast: Milindapañha
+  native: मिलिन्दपञ्ह
+summary: >-
+  The Milindapanha ("Questions of King Milinda") is a Buddhist philosophical dialogue between the Indo-Greek king Milinda (Menander I) and the Buddhist monk Nagasena at Sagala. Preserved in an expanded Pali recension (included in the Burmese Pali canon) and a shorter Chinese translation (Nagasenabhikshusutra, matching Books 1-3), it expounds core Buddhist doctrines such as no-self (anatta) through vivid analogies including the famous simile of the chariot.
+summaries:
+  kids: >-
+    The Milindapanha is an ancient book of questions and answers in which King Milinda asks the Buddhist teacher Nagasena how a person can exist without a permanent soul, and Nagasena explains it using the parts of a chariot.
+  teen: >-
+    Composed originally in northwestern India between roughly 100 BCE and 200 CE, the Milindapanha stages a dialogue between the Indo-Greek king Menander I and the monk Nagasena to resolve philosophical puzzles about karma, rebirth and non-self.
+region: Northwestern India (Gandhara and Punjab), preserved in Sri Lanka, Myanmar and China
+datings:
+  - method: textual-internal
+    range: { earliest: -99, latest: 200, precision: century, circa: true }
+    grade: C
+    label: Core dialogue composition (Books 1-3) before Chinese translation
+    sources:
+      - src.stoneman-2019-greek-experience-of-india
+      - src.bronkhorst-2007-greater-magadha
+    note: The core dialogue matching the Chinese Nagasenabhikshusutra (translated under the Eastern Jin dynasty between 317 and 420 CE) was composed in northwestern Prakrit or Sanskrit between c. 100 BCE and 200 CE, while Books 4-7 were added later in Pali.
+claims:
+  - text: In the opening philosophical exchange of the Milindapanha, Nagasena uses the analogy of a disassembled chariot to demonstrate that "person" or "self" is a conventional designation for the five aggregates (skandhas) rather than an unchanging essence.
+    grade: A
+    sources:
+      - src.stoneman-2019-greek-experience-of-india
+  - text: Comparative study of the Pali Milindapanha and the fourth-century CE Chinese Nagasenabhikshusutra shows that Books 1 to 3 form the older northwestern core of the text, whereas Books 4 to 7 represent later Sri Lankan Pali expansions.
+    grade: B
+    sources:
+      - src.stoneman-2019-greek-experience-of-india
+relations:
+  - { kind: related-to, target: person.menander-i }
+  - { kind: related-to, target: polity.indo-greek-kingdom }
+wikidata: Q497089
+tags: [milindapanha, menander, nagasena, buddhism, philosophy]
+review: { status: draft, author: "gemini-4-argon" }

@@ -1,0 +1,40 @@
+id: site.vikramashila
+type: site
+kind: site
+names:
+  en: Vikramashila
+  iast: Vikramaśīla
+  native: विक्रमशिला
+summary: >-
+  Vikramashila was a Buddhist monastic university founded under the Pala king Dharmapala around 800 CE,
+  identified with the excavated remains at Antichak in Bhagalpur district, Bihar. It was a leading
+  centre of tantric (Vajrayana) Buddhism, and the teacher Atisha Dipankara worked there before going to
+  Tibet.
+summaries:
+  kids: >-
+    Vikramashila was a big Buddhist school in Bihar, built about 1,200 years ago. Its teachers were so
+    famous that the kings of Tibet invited them to come and teach.
+  teen: >-
+    Excavations at Antichak uncovered a huge square monastery with a cross-shaped stupa in the middle.
+    Its scholars translated and taught tantric Buddhist texts that shaped Tibetan Buddhism.
+region: Bhagalpur district, Bihar
+location: { name: Antichak, lat: 25.32, lon: 87.28 }
+datings:
+  - method: scholarly-consensus
+    range: { earliest: "775 CE", latest: "1200 CE", precision: century, circa: true }
+    grade: B
+    label: Foundation to abandonment
+    sources: [src.scharfe-2002-education-in-ancient-india, src.davidson-2002-indian-esoteric-buddhism]
+    note: Its foundation by Dharmapala comes from Tibetan historical tradition; its end is linked to Turkic raids in Bihar around 1200.
+claims:
+  - text: Tibetan sources credit the foundation of Vikramashila to the Pala king Dharmapala.
+    grade: C
+    sources: [src.davidson-2002-indian-esoteric-buddhism, src.scharfe-2002-education-in-ancient-india]
+  - text: Atisha Dipankara Shrijnana taught at Vikramashila before travelling to Tibet in the 1040s.
+    grade: B
+    sources: [src.davidson-2002-indian-esoteric-buddhism]
+relations:
+  - { kind: patronised-by, target: polity.pala-empire }
+  - { kind: related-to, target: event.destruction-of-nalanda, note: Monasteries of Bihar affected by raids around 1200 }
+tags: [buddhism, monastery, education, bihar]
+review: { status: draft, author: "claude-opus-5-5" }

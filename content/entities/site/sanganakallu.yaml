@@ -58,7 +58,6 @@ relations:
     target: site.budihal
   - kind: contemporary-of
     target: site.paiyampalli
-wikidata: Q7417832
 tags:
   - neolithic
   - southern-neolithic

@@ -1,0 +1,38 @@
+id: event.destruction-of-nalanda
+type: event
+kind: event
+names:
+  en: Destruction and decline of Nalanda
+summary: >-
+  Nalanda's monastic complex suffered damage during late twelfth-century Turkic campaigns in Bihar, but
+  the chronology and specific attackers are not fully established. Minhaj-i-Siraj's account of a raid on
+  a Buddhist monastery in Bihar is often connected to the episode, although it does not name Nalanda.
+summaries:
+  kids: >-
+    Nalanda was an important Buddhist learning centre. It was damaged during wars in Bihar around 1200,
+    but historians still discuss exactly what happened and when.
+  teen: >-
+    A Persian chronicle describes a raid on a Buddhist monastery in Bihar by forces under Bakhtiyar
+    Khalji. The account does not name Nalanda, so historians distinguish this evidence from later claims
+    about the site's destruction and library.
+region: Bihar, eastern India
+datings:
+  - method: textual-internal
+    range: { earliest: "1193 CE", latest: "1200 CE", precision: year, circa: true }
+    grade: C
+    label: Scholarly reconstruction of late twelfth-century raids
+    sources: [src.raverty-1881-tabakat-i-nasiri, src.unesco-2016-nalanda-mahavihara]
+    note: The chronicle describes a monastery raid in Bihar but does not identify Nalanda by name; the site's damage and continued activity complicate a single-date narrative.
+claims:
+  - text: Minhaj-i-Siraj's chronicle describes a raid on a Buddhist monastery in Bihar under Bakhtiyar Khalji.
+    grade: A
+    sources: [src.raverty-1881-tabakat-i-nasiri]
+  - text: The chronicle passage does not name Nalanda, and the timing and extent of damage at Nalanda remain debated.
+    grade: C
+    sources: [src.raverty-1881-tabakat-i-nasiri, src.unesco-2016-nalanda-mahavihara]
+debate: >-
+  The raid described by Minhaj-i-Siraj is commonly associated with the destruction of Nalanda, but the
+  passage itself names a monastery in Bihar rather than Nalanda. Archaeological and Tibetan evidence
+  indicate a more complex pattern of damage, decline, and continued monastic activity.
+tags: [nalanda, buddhism, bihar, medieval]
+review: { status: draft, author: "codex-gpt-6" }

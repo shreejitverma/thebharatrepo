@@ -1,0 +1,56 @@
+id: artifact.hathigumpha-inscription
+type: artifact
+kind: text
+names:
+  en: Hathigumpha Inscription
+  iast: Hāthīgumphā Śilālekhaḥ
+  native: हाथीगुम्फा शिलालेखः
+summary: >-
+  The Hathigumpha ("Elephant Cave") inscription is a seventeen-line Prakrit inscription in post-Mauryan Brahmi script incised on the overhanging rock brow of a natural cavern at Udayagiri near Bhubaneswar, Odisha. Issued by King Kharavela of Kalinga, it chronicles his boyhood, coronation and public works, military campaigns and religious patronage year by year through his thirteenth regnal year, and contains the earliest known epigraphic form of the Jain Namokar Mantra.
+summaries:
+  kids: >-
+    Carved above the "Elephant Cave" in Odisha, the Hathigumpha inscription tells the year-by-year story of King Kharavela's first thirteen years on the throne.
+  teen: >-
+    Incised in seventeen lines of Prakrit Brahmi at Udayagiri in Odisha, the Hathigumpha inscription is the earliest surviving year-by-year royal biography (prashasti) in Indian epigraphy and preserves the earliest epigraphic Jain salutation.
+region: Kalinga (Udayagiri Hills near Bhubaneswar, Odisha)
+location: { name: "Hathigumpha, Udayagiri, Odisha", lat: 20.263, lon: 85.786 }
+datings:
+  - method: epigraphic
+    range: { earliest: -99, latest: -1, precision: century, circa: true }
+    grade: B
+    label: Palaeographic dating of post-Mauryan Brahmi script (first century BCE)
+    sources:
+      - src.salomon-1998-indian-epigraphy
+      - src.kulke-2004-history-of-india
+    note: Dated palaeographically to the mid-to-late first century BCE by comparison with Sanchi gateway and early Satavahana inscriptions.
+  - method: epigraphic
+    range: { earliest: -175, latest: -130, precision: decade, circa: true }
+    grade: C
+    label: Second century BCE dating from contested reading of Mauriya-kala and Dimita
+    sources:
+      - src.fleet-1910-hathigumpha-inscription
+      - src.salomon-1998-indian-epigraphy
+    note: Early readings interpreted a weathered compound in line 16 as the 165th year of the Maurya era; Fleet and later epigraphists showed the passage refers instead to canonical Jain texts (Mukhiya-kala), invalidating the Maurya-era date.
+claims:
+  - text: The inscription begins with the Prakrit Jain invocation "Namo arrahantanam namo sava-sidhanam" ("Salutation to the Arhats, salutation to all the Siddhas"), the earliest known epigraphic attestation of the Jain Pancha-Namaskara formula.
+    grade: A
+    sources:
+      - src.salomon-1998-indian-epigraphy
+      - src.dundas-2002-the-jains-doi
+  - text: In his fifth regnal year, Kharavela extended into his capital Kalinganagari an aqueduct that had been excavated by a Nanda king (Nanda-raja-tivasasata-oghatitam), providing epigraphic evidence of earlier Nanda rule in Kalinga.
+    grade: B
+    sources:
+      - src.fleet-1910-hathigumpha-inscription
+      - src.salomon-1998-indian-epigraphy
+relations:
+  - { kind: issued-by, target: person.kharavela }
+  - { kind: related-to, target: polity.satavahana-dynasty }
+  - { kind: related-to, target: polity.nanda-dynasty }
+wikidata: Q3151502
+image:
+  commons: "File:Hathigumpha inscription rubbing.jpg"
+  alt: Estampage rubbing of the Hathigumpha inscription of King Kharavela
+  credit: Kashi Prasad Jayaswal
+  license: Public domain
+tags: [hathigumpha, kharavela, inscription, jainism, brahmi, odisha]
+review: { status: draft, author: "gemini-4-argon" }

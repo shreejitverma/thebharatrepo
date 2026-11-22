@@ -48,7 +48,6 @@ relations:
     target: site.hunsgi-baichbal-valley
   - kind: contemporary-of
     target: site.attirampakkam
-wikidata: Q10773159
 tags:
   - palaeolithic
   - acheulian

@@ -1,0 +1,37 @@
+id: polity.indian-national-army
+type: polity
+kind: polity
+names:
+  en: Indian National Army
+summary: The Indian National Army fought alongside Japan against British forces
+  during the Second World War. Subhas Chandra Bose reorganized and led it from
+  1943.
+summaries:
+  kids: The Indian National Army was a force of Indian soldiers that fought the
+    British during World War II with Japanese support.
+  teen: The INA’s recruitment, military role and political significance are
+    subjects of scholarship; it did not by itself end British rule.
+datings:
+  - method: scholarly-consensus
+    range:
+      earliest: "1942"
+      latest: "1945"
+      precision: year
+      circa: true
+    grade: B
+    label: Historical scholarship
+    sources: &a1
+      - src.bose-2011-his-majestys-opponent
+      - src.bose-jalal-2004-modern-south-asia
+claims:
+  - text: The Indian National Army fought alongside Japan against British forces
+      during the Second World War. Subhas Chandra Bose reorganized and led it
+      from 1943.
+    grade: B
+    sources: *a1
+relations: []
+tags:
+  - polity
+review:
+  status: draft
+  author: codex-gpt-6

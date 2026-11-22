@@ -1,0 +1,34 @@
+id: event.founding-of-vijayanagara
+type: event
+kind: event
+names:
+  en: Foundation of the Vijayanagara kingdom
+summary: >-
+  The kingdom centred on Vijayanagara emerged in the fourteenth century under the Sangama brothers
+  Harihara and Bukka. The year 1336 is a conventional foundation date, while the precise sequence by
+  which the polity formed remains a matter of historical reconstruction.
+summaries:
+  kids: >-
+    In the 1300s, brothers Harihara and Bukka established a kingdom near the Tungabhadra River. Its
+    capital became the city now called Hampi.
+  teen: >-
+    Vijayanagara took shape under the Sangama dynasty in the fourteenth century. The often-used date
+    1336 is a useful convention, not a date established by a single foundation document.
+region: Tungabhadra basin, Karnataka
+datings:
+  - method: scholarly-consensus
+    range: { earliest: "1336 CE", latest: "1346 CE", precision: decade, circa: true }
+    grade: B
+    label: Conventional foundation period
+    sources: [src.stein-1989-vijayanagara, src.unesco-1986-hampi]
+claims:
+  - text: The Vijayanagara polity emerged under the Sangama dynasty in the fourteenth century.
+    grade: B
+    sources: [src.stein-1989-vijayanagara]
+  - text: 1336 is conventionally given as the foundation date, although the process of state formation was gradual.
+    grade: B
+    sources: [src.stein-1989-vijayanagara, src.unesco-1986-hampi]
+relations:
+  - { kind: related-to, target: site.hampi }
+tags: [vijayanagara, sangama, medieval]
+review: { status: draft, author: "codex-gpt-6" }

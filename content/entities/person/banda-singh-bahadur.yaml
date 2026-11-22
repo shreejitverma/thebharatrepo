@@ -1,0 +1,38 @@
+id: person.banda-singh-bahadur
+type: person
+kind: person
+names:
+  en: Banda Singh Bahadur
+summary: Banda Singh Bahadur led Sikh forces against Mughal officials in the
+  Punjab in the early 18th century and established a short-lived Sikh-led
+  administration.
+summaries:
+  kids: Banda Singh Bahadur led Sikh forces in the Punjab in the early 1700s.
+  teen: His campaigns challenged Mughal authority in parts of the Punjab and
+    became an important episode in Sikh political history.
+datings:
+  - method: scholarly-consensus
+    range:
+      earliest: "1670"
+      latest: "1716"
+      precision: year
+      circa: true
+    grade: B
+    label: Historical scholarship
+    sources:
+      - src.grewal-1990-sikhs-of-the-punjab
+      - src.singh-fenech-2014-oxford-handbook-sikh-studies
+claims:
+  - text: Banda Singh Bahadur led Sikh forces against Mughal officials in the Punjab
+      in the early 18th century and established a short-lived Sikh-led
+      administration.
+    grade: B
+    sources:
+      - src.grewal-1990-sikhs-of-the-punjab
+      - src.singh-fenech-2014-oxford-handbook-sikh-studies
+relations: []
+tags:
+  - person
+review:
+  status: draft
+  author: codex-gpt-6

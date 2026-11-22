@@ -55,7 +55,6 @@ relations:
     target: concept.southern-neolithic-ash-mounds
   - kind: contemporary-of
     target: site.sanganakallu
-wikidata: Q16896353
 tags:
   - neolithic
   - southern-neolithic

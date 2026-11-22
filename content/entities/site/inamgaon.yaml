@@ -61,7 +61,6 @@ relations:
     target: tradition.malwa-culture
   - kind: contemporary-of
     target: site.daimabad
-wikidata: Q6013487
 tags:
   - chalcolithic
   - jorwe-culture

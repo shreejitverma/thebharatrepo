@@ -1,0 +1,41 @@
+id: event.brahmi-decipherment-prinsep
+type: event
+kind: event
+names:
+  en: Decipherment of Brahmi Script by James Prinsep
+summary: >-
+  In May and June 1837, James Prinsep, assay master of the Calcutta Mint and secretary of the Asiatic Society of Bengal, completed the decipherment of the ancient Brahmi script by identifying the recurring Prakrit votive formula danam ("gift of") on short railing inscriptions from Sanchi. This breakthrough allowed him to read the pillar and rock edicts of Devanampiya Piyadasi (Ashoka) and unlocked early Indian epigraphy.
+summaries:
+  kids: >-
+    In 1837, scholar James Prinsep figured out how to read the forgotten ancient Brahmi alphabet by studying short gift inscriptions from Sanchi Stupa, allowing historians to read Emperor Ashoka's stone edicts again.
+  teen: >-
+    Building on earlier work by Christian Lassen and Alexander Cunningham, James Prinsep cracked the Brahmi script in 1837 by recognizing the Prakrit word danam ("gift") on Sanchi votive railings, transforming the study of ancient Indian history.
+region: Kolkata (Calcutta), Bengal
+location: { name: "Asiatic Society, Kolkata", lat: 22.556, lon: 88.352 }
+datings:
+  - method: documentary
+    range: { earliest: 1837, latest: 1837, best: 1837, precision: year, circa: false }
+    grade: A
+    label: Published in the Journal of the Asiatic Society of Bengal (May-July 1837)
+    sources:
+      - src.salomon-1998-indian-epigraphy
+      - src.lahiri-2015-ashoka-ancient-india
+    note: Directly documented in James Prinsep's papers in Volume 6 of the Journal of the Asiatic Society of Bengal in 1837.
+claims:
+  - text: Prinsep identified the final two characters appearing at the end of numerous short votive inscriptions on the Sanchi stupa railings as da-nam ("gift"), preceded by the genitive suffix -sa, supplying the phonetic values needed to read the Ashokan pillar edicts.
+    grade: A
+    sources:
+      - src.salomon-1998-indian-epigraphy
+  - text: In 1837 George Turnour connected the title Piyadasi in the newly deciphered Brahmi edicts with the Mauryan emperor Ashoka of the Sri Lankan Pali chronicles, and in 1838 Prinsep identified the names of the Hellenistic kings in Major Rock Edict XIII.
+    grade: A
+    sources:
+      - src.salomon-1998-indian-epigraphy
+      - src.lahiri-2015-ashoka-ancient-india
+relations:
+  - { kind: related-to, target: concept.brahmi-to-gupta-script }
+  - { kind: related-to, target: site.sanchi-stupa }
+  - { kind: related-to, target: artifact.ashoka-major-rock-edict-xiii }
+  - { kind: related-to, target: person.ashoka }
+wikidata: null
+tags: [brahmi, epigraphy, james-prinsep, ashoka, sanchi]
+review: { status: draft, author: "gemini-4-argon" }

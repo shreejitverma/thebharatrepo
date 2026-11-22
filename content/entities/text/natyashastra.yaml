@@ -1,0 +1,39 @@
+id: text.natyashastra
+type: text
+kind: art
+names:
+  en: Natyashastra
+  iast: Nāṭyaśāstra
+  native: नाट्यशास्त्र
+summary: >-
+  The Natyashastra, attributed to the sage Bharata Muni, is the foundational Sanskrit encyclopaedic treatise on dramaturgy, stagecraft, acting (abhinaya), dance, prosody and music in thirty-six (or thirty-seven) chapters of about 6,000 verses and prose passages. Its sixth and seventh chapters formulate the classical theory of aesthetic experience (rasa) and emotional states (bhava), which became the cornerstone of Indian literary and performing arts theory.
+summaries:
+  kids: >-
+    The Natyashastra of Bharata Muni is an ancient Indian handbook on theatre, dance and music that explains how actors use expressions, gestures and music to create feelings called rasa.
+  teen: >-
+    Compiled in thirty-six chapters between roughly 200 BCE and 300 CE, Bharata's Natyashastra codifies classical Indian theatre design, fourfold acting (abhinaya), musical scales (gramas and jatis) and the rasa theory of aesthetic emotion.
+region: Pan-Indian
+datings:
+  - method: textual-internal
+    range: { earliest: "200 BCE", latest: 300, precision: century, circa: true }
+    grade: C
+    label: Compositional range of the extant Sanskrit text (Sheldon Pollock)
+    sources:
+      - src.pollock-2016-rasa-reader
+    note: Scholars date the compilation of the surviving Natyashastra between roughly 200 BCE and 300 CE, noting that it incorporates older dramatic aphorisms (nata-sutras mentioned by Panini) and precedes Kalidasa's explicit citation of Bharata as the director of celestial drama.
+claims:
+  - text: >-
+      Chapter 6 of the Natyashastra states the famous rasa-sutra ("vibhavanubhava-vyabhichari-samyogad rasa-nishpattih") - aesthetic flavour (rasa) arises from the combination of determinants (vibhava), consequents (anubhava) and transitory emotional states (vyabhicharibhava).
+    grade: A
+    sources:
+      - src.pollock-2016-rasa-reader
+  - text: The treatise classifies eight classical rasas - erotic (shringara), comic (hasya), compassionate/tragic (karuna), furious (raudra), heroic (vira), fearful (bhayanaka), odious (bibhatsa) and marvellous (adbhuta) - paired with eight enduring emotional dispositions (sthayibhavas), to which later theorists added shanta (peace).
+    grade: A
+    sources:
+      - src.pollock-2016-rasa-reader
+relations:
+  - { kind: influenced, target: person.kalidasa }
+  - { kind: related-to, target: text.tolkappiyam }
+wikidata: Q550599
+tags: [natyashastra, bharata-muni, rasa, drama, aesthetics, music, dance]
+review: { status: draft, author: "gemini-4-argon" }

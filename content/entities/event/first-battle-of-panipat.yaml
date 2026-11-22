@@ -1,0 +1,36 @@
+id: event.first-battle-of-panipat
+type: event
+kind: event
+names:
+  en: First Battle of Panipat
+summary: Babur defeated Ibrahim Lodi at Panipat in 1526, ending Lodi rule in
+  Delhi and establishing the political basis for Mughal rule in northern India.
+summaries:
+  kids: Babur defeated Ibrahim Lodi at Panipat in 1526. This battle helped Babur
+    establish a kingdom in northern India.
+  teen: The battle joined Babur’s Central Asian forces and Lodi’s Delhi Sultanate
+    army. Its outcome created the foundation for Mughal rule, though the empire
+    took time to consolidate.
+datings:
+  - method: documentary
+    range:
+      earliest: "1526"
+      latest: "1526"
+      precision: year
+      circa: false
+    grade: B
+    label: Documentary record
+    sources: &a1
+      - src.dale-2004-garden-of-the-eight-paradises
+      - src.richards-1993-mughal-empire
+claims:
+  - text: Babur defeated Ibrahim Lodi at Panipat in 1526, ending Lodi rule in Delhi
+      and establishing the political basis for Mughal rule in northern India.
+    grade: B
+    sources: *a1
+relations: []
+tags:
+  - event
+review:
+  status: draft
+  author: codex-gpt-6

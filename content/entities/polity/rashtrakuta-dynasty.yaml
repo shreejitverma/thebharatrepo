@@ -1,0 +1,43 @@
+id: polity.rashtrakuta-dynasty
+type: polity
+kind: polity
+names:
+  en: Rashtrakuta dynasty
+  iast: Rāṣṭrakūṭa
+  native: ರಾಷ್ಟ್ರಕೂಟ
+summary: >-
+  The Rashtrakutas displaced the Chalukyas of Badami in the mid-8th century and ruled the Deccan until
+  the 970s, from Manyakheta (Malkhed) after the reign of Amoghavarsha I. They contested control of
+  Kanyakubja with the Gurjara-Pratiharas and the Palas, and sponsored the Kailasa temple at Ellora.
+summaries:
+  kids: >-
+    The Rashtrakutas were powerful kings of the Deccan. One of them, Krishna I, had the giant Kailasa
+    temple at Ellora carved down into a hillside.
+  teen: >-
+    For two centuries the Rashtrakutas were one of the three great powers of India, fighting the
+    Pratiharas and Palas for the city of Kannauj. Their court supported Sanskrit, Kannada and Jain
+    learning as well as monumental art.
+region: Deccan, Maharashtra and Karnataka
+location: { name: Manyakheta (Malkhed), lat: 17.19, lon: 77.16 }
+datings:
+  - method: epigraphic
+    range: { earliest: "753 CE", latest: "982 CE", precision: decade, circa: true }
+    grade: B
+    label: Dantidurga to the fall of Manyakheta
+    sources: [src.singh-2008-ancient-early-medieval-india, src.thapar-2002-early-india]
+    note: Dantidurga's rise is placed in the 750s; the Western Chalukya Taila II ended Rashtrakuta rule in about 973, with a short survival afterwards.
+claims:
+  - text: >-
+      The Rashtrakutas, Gurjara-Pratiharas and Palas fought a long three-sided contest for Kanyakubja in
+      the 8th to 10th centuries.
+    grade: B
+    sources: [src.singh-2008-ancient-early-medieval-india, src.kulke-2004-history-of-india]
+  - text: The monolithic Kailasa temple at Ellora is attributed to the Rashtrakuta king Krishna I.
+    grade: B
+    sources: [src.unesco-1983-ellora-caves, src.michell-1988-hindu-temple]
+relations:
+  - { kind: succeeded, target: polity.chalukya-dynasty-of-badami }
+  - { kind: related-to, target: polity.pala-empire, note: Rivals in the contest for Kanyakubja }
+wikidata: Q856691
+tags: [deccan, dynasty, manyakheta]
+review: { status: draft, author: "claude-opus-5-5" }

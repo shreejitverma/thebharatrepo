@@ -1,0 +1,53 @@
+id: polity.satavahana-dynasty
+type: polity
+kind: polity
+names:
+  en: Satavahana Dynasty
+  iast: Sātavāhana
+  native: सातवाहन
+summary: >-
+  The Satavahana dynasty (called the Andhras in the Puranas) ruled large parts of the Deccan from capitals at Pratishthana (Paithan in Maharashtra) and Dharanikota (Amaravati in Andhra Pradesh) between the late second or first century BCE and the early third century CE. They connected Indo-Roman maritime trade with internal Deccan routes, issued the earliest Indian inscriptions recording tax-free land grants to Brahmanas and Buddhist monasteries, and patronised rock-cut chaityas in the Western Ghats and the Great Stupa at Amaravati.
+summaries:
+  kids: >-
+    The Satavahana dynasty ruled the Deccan plateau for centuries, trading across the Indian Ocean and supporting famous Buddhist monuments at Sanchi, Karle and Amaravati.
+  teen: >-
+    Ruling from Paithan and Amaravati, the Satavahanas bridged northern and southern India, fought the Western Kshatrapas for control of western ports, and pioneered royal tax-exempt land grants to Buddhist and Brahmanical institutions.
+region: Deccan plateau (Maharashtra, Telangana, Andhra Pradesh and parts of Madhya Pradesh and Karnataka)
+location: { name: "Paithan (ancient Pratishthana)", lat: 19.476, lon: 75.386 }
+datings:
+  - method: epigraphic
+    range: { earliest: -99, latest: 225, precision: decade, circa: true }
+    grade: B
+    label: Short chronology from Naneghat epigraphy and Nahapana synchronism
+    sources:
+      - src.shimada-2013-amaravati-stupa
+      - src.kulke-2004-history-of-india
+      - src.salomon-1998-indian-epigraphy
+    note: Palaeography of the Naneghat and Nashik inscriptions, numismatic stratigraphy and the synchronism between Gautamiputra Satakarni and the Western Kshatrapa Nahapana place historical Satavahana rule from the first century BCE to c. 225 CE.
+  - method: textual-internal
+    range: { earliest: "230 BCE", latest: 225, precision: decade, circa: true }
+    grade: C
+    label: Long chronology based on the Matsya Purana 450-year duration
+    sources:
+      - src.shimada-2013-amaravati-stupa
+      - src.kulke-2004-history-of-india
+    note: The Matsya Purana lists thirty Andhra kings reigning for about 450 years, which some historians reconcile by placing the founder Simuka immediately after Ashoka's death around 230 BCE.
+claims:
+  - text: Inscriptions of Gautamiputra Satakarni and Vasishthiputra Pulumavi at Nashik and Karle record the earliest known royal grants of land with explicit administrative and fiscal immunities (pariharas) to Buddhist monks and Brahmanas.
+    grade: A
+    sources:
+      - src.salomon-1998-indian-epigraphy
+      - src.kulke-2004-history-of-india
+  - text: Under second-century CE rulers such as Gautamiputra Satakarni, Vasishthiputra Pulumavi and Yajna Sri Satakarni, the Satavahanas defeated the Kshaharata ruler Nahapana and presided over the expansion of the Amaravati stupa in the Krishna delta.
+    grade: A
+    sources:
+      - src.shimada-2013-amaravati-stupa
+      - src.kulke-2004-history-of-india
+relations:
+  - { kind: patronised, target: site.sanchi-stupa }
+  - { kind: contemporary-of, target: person.kharavela }
+  - { kind: contemporary-of, target: polity.kushan-empire }
+  - { kind: patronised, target: site.ajanta-caves }
+wikidata: Q5257
+tags: [satavahana, deccan, amaravati, pratishthana, land-grants]
+review: { status: draft, author: "gemini-4-argon" }

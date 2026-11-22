@@ -1,0 +1,37 @@
+id: polity.mughal-empire
+type: polity
+kind: polity
+names:
+  en: Mughal Empire
+summary: The Mughal Empire was a Persianate imperial polity founded by Babur in
+  1526 and formally ended after the 1857 revolt. Its extent and governing
+  structures changed considerably over time.
+summaries:
+  kids: The Mughal Empire ruled large parts of South Asia for several centuries,
+    but its borders and strength changed over time.
+  teen: Mughal rule began under Babur and expanded under later emperors. Regional
+    powers and changing imperial authority shaped its long history.
+datings:
+  - method: scholarly-consensus
+    range:
+      earliest: "1526"
+      latest: "1857"
+      precision: year
+      circa: true
+    grade: B
+    label: Historical scholarship
+    sources: &a1
+      - src.richards-1993-mughal-empire
+      - src.asher-talbot-2006-india-before-europe
+claims:
+  - text: The Mughal Empire was a Persianate imperial polity founded by Babur in
+      1526 and formally ended after the 1857 revolt. Its extent and governing
+      structures changed considerably over time.
+    grade: B
+    sources: *a1
+relations: []
+tags:
+  - polity
+review:
+  status: draft
+  author: codex-gpt-6

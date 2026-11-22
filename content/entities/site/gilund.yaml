@@ -52,7 +52,6 @@ relations:
     target: site.ahar
   - kind: contemporary-of
     target: site.balathal
-wikidata: Q5562638
 tags:
   - chalcolithic
   - ahar-banas

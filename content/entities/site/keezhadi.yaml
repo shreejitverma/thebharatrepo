@@ -1,0 +1,50 @@
+id: site.keezhadi
+type: site
+kind: site
+names:
+  en: Keezhadi Excavations
+  iast: Kīḻaṭi
+  native: கீழடி
+summary: >-
+  Keezhadi (Keeladi) is an early historic urban archaeological site on the southern bank of the Vaigai River in Sivaganga district, Tamil Nadu, excavated by the Archaeological Survey of India from 2014 and by the Tamil Nadu Department of Archaeology from 2017-18. It has yielded fired-brick structures, terracotta ring wells and dozens of potsherds inscribed in Tamil-Brahmi (Tamili), with AMS dates reaching back to the 6th century BCE.
+summaries:
+  kids: >-
+    Keezhadi is an ancient riverside town near Madurai where archaeologists found brick houses, ring wells, weaving tools and clay pots with Tamil-Brahmi names scratched on them.
+  teen: >-
+    Located on the Vaigai River near Madurai, the Keezhadi excavations revealed an early historic brick-built craft and trading settlement with Tamil-Brahmi inscribed pottery and radiocarbon dates from the 6th to the 3rd century BCE. How early its writing began is still debated.
+region: Vaigai River basin, Sivaganga District, Tamil Nadu (12 km southeast of Madurai)
+location: { name: "Keezhadi, Tamil Nadu", lat: 9.854, lon: 78.198 }
+datings:
+  - method: archaeological-radiocarbon
+    range: { earliest: "600 BCE", latest: "100 CE", precision: century, circa: true }
+    grade: B
+    label: AMS radiocarbon dates from the Tamil Nadu fourth season (2018)
+    sources:
+      - src.sivanantham-2019-keeladi-urban-settlement
+      - src.manivannan-2020-keeladi-potteries
+    note: Six charcoal samples from the 2018 season, dated by Beta Analytic, fall between the 6th and 3rd centuries BCE (the deepest, at 353 cm, near the end of the 6th century BCE; one at 200 cm in the early 3rd century BCE). The excavators extend the occupation to the 1st century CE from the deposits above and below the dated layers; that extension is their interpretation rather than a dated result.
+claims:
+  - text: Excavations at Keezhadi uncovered fired-brick structures, terracotta ring wells, roof tiles and craft debris belonging to an early historic settlement in the Vaigai valley.
+    grade: A
+    sources:
+      - src.sivanantham-2019-keeladi-urban-settlement
+  - text: The six AMS dates from the fourth season (2018) range from the end of the 6th century BCE (353 cm depth) to the early 3rd century BCE (200 cm depth).
+    grade: A
+    sources:
+      - src.sivanantham-2019-keeladi-urban-settlement
+  - text: The Tamil Nadu excavations recovered 56 potsherds inscribed in Tamil-Brahmi (Tamili), some bearing personal names such as Kuviran-atan and Atan.
+    grade: A
+    sources:
+      - src.sivanantham-2019-keeladi-urban-settlement
+  - text: Archaeometric studies of Keezhadi pottery estimate firing temperatures of about 600 to 900 degrees Celsius and, in one study, report carbon nanotube structures in black coatings on the inner walls of sherds.
+    grade: B
+    sources:
+      - src.vijay-2025-ancient-potteries-keeladi
+      - src.manivannan-2020-keeladi-potteries
+debate: >-
+  The 2019 report of the Tamil Nadu Department of Archaeology argues from its AMS dates that Tamil-Brahmi writing and a second urbanisation in the Vaigai valley go back to the 6th century BCE, earlier than the 3rd century BCE start usually given for the early historic period in Tamil Nadu. The radiocarbon dates themselves are not in dispute; what remains debated is how closely the inscribed sherds are tied to the dated charcoal layers, which a full stratigraphic publication would settle.
+relations:
+  - { kind: related-to, target: artifact.tamil-brahmi-inscriptions }
+  - { kind: related-to, target: text.sangam-literature }
+tags: [keezhadi, keeladi, vaigai, sangam, tamil-brahmi, archaeology]
+review: { status: draft, author: "gemini-4-argon" }

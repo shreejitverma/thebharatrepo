@@ -1,0 +1,43 @@
+id: polity.magadha
+type: polity
+kind: polity
+names:
+  en: Magadha
+  iast: Magadha
+  native: मगध
+summary: >-
+  Magadha was a kingdom in southern Bihar that grew from one of the Sixteen Mahajanapadas into the core of the Nanda and Maurya empires, and later of the Guptas. Its capital moved from Rajagriha (Rajgir) to Pataliputra (Patna). Historians link its rise to fertile Gangetic land, river routes, forests that supplied elephants, and nearby iron ore.
+summaries:
+  kids: >-
+    Magadha was a kingdom in present-day Bihar. Its rich farmland, rivers and iron helped it grow into the heart of some of India's earliest large empires.
+  teen: >-
+    Ruled first from Rajagriha and later from Pataliputra, Magadha absorbed rival kingdoms between the 6th and 4th centuries BCE and became the territorial base of the Nanda and Maurya empires.
+region: Southern Bihar (Gangetic plain south of the Ganga)
+location: { name: "Rajgir (ancient Rajagriha)", lat: 25.028, lon: 85.419 }
+datings:
+  - method: scholarly-consensus
+    range: { earliest: "600 BCE", latest: "321 BCE", precision: century, circa: true }
+    grade: B
+    label: Magadha before the Maurya Empire
+    sources:
+      - src.singh-2008-ancient-early-medieval-india
+      - src.kulke-2004-history-of-india
+    note: Covers the kingdom from the Haryanka kings named in early Buddhist texts to the overthrow of the Nandas by Chandragupta Maurya around 322 to 321 BCE.
+claims:
+  - text: Historians attribute Magadha's rise to its fertile alluvial soils, its position on the Ganga and its tributaries, forests that supplied elephants for war, and access to the iron ores of south Bihar.
+    grade: B
+    sources:
+      - src.singh-2008-ancient-early-medieval-india
+      - src.thapar-2002-early-india
+  - text: Johannes Bronkhorst argues that the region he calls Greater Magadha had a culture distinct from the Vedic heartland, from which Jainism, Buddhism and the Ajivikas emerged; the thesis is influential but debated.
+    grade: C
+    sources:
+      - src.bronkhorst-2007-greater-magadha
+relations:
+  - { kind: part-of, target: polity.sixteen-mahajanapadas }
+  - { kind: ruled-by, target: polity.haryanka-dynasty }
+  - { kind: ruled-by, target: polity.nanda-dynasty }
+  - { kind: related-to, target: polity.maurya-empire, note: Heartland of the Maurya Empire }
+wikidata: Q234009
+tags: [magadha, mahajanapadas, rajagriha, pataliputra]
+review: { status: draft, author: "gemini-4-argon" }

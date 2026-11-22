@@ -1,0 +1,48 @@
+id: person.ramanuja
+type: person
+kind: dharma
+names:
+  en: Ramanuja
+  iast: Rāmānuja
+  native: रामानुज
+summary: >-
+  Ramanuja was the principal teacher of Vishishtadvaita Vedanta and of the Shrivaishnava community
+  centred on the Srirangam temple. His Shribhashya on the Brahmasutras holds that the world and selves
+  are real and form the body of a personal God, Vishnu-Narayana. Tradition gives his dates as 1017 to
+  1137 CE.
+summaries:
+  kids: >-
+    Ramanuja was a teacher who said that God is like a soul and the whole world is like God's body. He
+    taught at the great temple of Srirangam in Tamil Nadu.
+  teen: >-
+    Against Shankara's view that the world of many things is not ultimately real, Ramanuja argued that
+    souls and matter are real but depend on God, as a body depends on its self. He joined Sanskrit
+    Vedanta with the Tamil devotion of the Alvars.
+region: Tamil Nadu (born at Sriperumbudur by tradition; active at Srirangam)
+location: { name: Srirangam, lat: 10.86, lon: 78.69 }
+datings:
+  - method: textual-internal
+    range: { earliest: "1017 CE", latest: "1157 CE", precision: decade, circa: true }
+    grade: C
+    label: Scholarly placement in the 11th to 12th centuries
+    sources: [src.carman-1974-theology-of-ramanuja, src.lipner-1986-face-of-truth]
+    note: Scholars accept the 11th to 12th century setting; some regard the traditional 120-year life as idealised.
+  - method: traditional-sampradaya
+    range: { earliest: "1017 CE", latest: "1137 CE", precision: year, circa: false }
+    grade: D
+    label: Shrivaishnava tradition
+    sources: [src.carman-1974-theology-of-ramanuja]
+    note: The hagiographies give a lifespan of 120 years.
+claims:
+  - text: >-
+      His major works include the Shribhashya on the Brahmasutras, the Vedarthasangraha and a
+      commentary on the Bhagavad Gita.
+    grade: B
+    sources: [src.carman-1974-theology-of-ramanuja, src.lipner-1986-face-of-truth]
+  - text: He taught that selves and the material world are real and related to Brahman as body to soul (sharira-shariri relation).
+    grade: B
+    sources: [src.lipner-1986-face-of-truth]
+relations:
+  - { kind: related-to, target: person.adi-shankara, note: Critic of Advaita }
+tags: [vishishtadvaita, vedanta, shrivaishnava, philosophy]
+review: { status: draft, author: "claude-opus-5-5" }

@@ -58,7 +58,6 @@ relations:
   - { kind: related-to, target: concept.northern-black-polished-ware-culture }
   - { kind: contemporary-of, target: site.hastinapura }
   - { kind: contemporary-of, target: site.atranjikhera }
-wikidata: Q2827417
 image:
   commons: "File:Ahichchhatra Fort Temple Bareilly.jpg"
   alt: Excavated brick terraced monument and fortification remains at Ahichhatra, Bareilly district

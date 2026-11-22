@@ -1,0 +1,36 @@
+id: text.megasthenes-indica
+type: text
+kind: text
+names:
+  en: Megasthenes' Indica
+summary: >-
+  The Indica was a Greek account of India in several books by Megasthenes, who went as envoy of Seleucus I Nicator to Chandragupta Maurya around 300 BCE. The work is lost and survives only as fragments and paraphrases in later authors, chiefly Diodorus, Strabo, Arrian and Pliny the Elder, so it is known at second hand.
+summaries:
+  kids: >-
+    Megasthenes was a Greek ambassador who visited Emperor Chandragupta Maurya and wrote a book about India called the Indica. The book is lost, but later writers copied parts of it.
+  teen: >-
+    Megasthenes' Indica is lost, but later Greek and Roman writers quoted it. The fragments describe Pataliputra, Mauryan officials and Indian ascetics, though Megasthenes also repeated tall tales.
+region: Pataliputra (Magadha) and northwestern India
+datings:
+  - method: foreign-synchronism
+    range: { earliest: "305 BCE", latest: "280 BCE", precision: decade, circa: true }
+    grade: B
+    label: Written after Megasthenes' embassy under Seleucus I
+    sources:
+      - src.stoneman-2019-greek-experience-of-india
+      - src.thapar-2012-asoka-decline-mauryas
+    note: Megasthenes travelled to Chandragupta's court after the treaty of about 305 to 303 BCE between Seleucus I and Chandragupta, and wrote the Indica afterwards.
+claims:
+  - text: Fragments preserved by Strabo and Arrian describe Palibothra (Pataliputra), at the meeting of the Ganga and the Erannoboas (Son), as a long city enclosed by a timber wall with 64 gates and 570 towers.
+    grade: B
+    sources:
+      - src.stoneman-2019-greek-experience-of-india
+  - text: Megasthenes divided Indian society into seven classes (philosophers, farmers, herders, artisans, soldiers, overseers and councillors), and distinguished Brachmanes (brahmanas) from Sarmanes (shramanas).
+    grade: B
+    sources:
+      - src.stoneman-2019-greek-experience-of-india
+relations:
+  - { kind: related-to, target: person.chandragupta-maurya }
+  - { kind: related-to, target: polity.maurya-empire }
+tags: [megasthenes, indica, maurya, foreign-account, pataliputra, fragments]
+review: { status: draft, author: "gemini-4-argon" }

@@ -1073,3 +1073,118 @@
   reason: The exile and the formal end took place in 1858.
   sources:
     - src.metcalf-2012-concise-history-modern-india
+- date: 2026-11-21
+  target: /music/04-carnatic-music
+  before: Hindustani music, which evolved as a distinct form around the 13th century.
+  after: The two traditions diverged gradually over the second millennium CE; there is no single date.
+  reason: The 13th-century date is too precise; the Sangitaratnakara of that century is claimed by both traditions.
+  sources:
+    - src.widdess-1995-ragas-of-early-indian-music
+    - src.arnold-2000-garland-south-asia
+- date: 2026-11-21
+  target: /music/04-carnatic-music
+  before: Tyagaraja composed thousands of devotional compositions.
+  after: Large traditional figures are undocumented; a few hundred compositions survive in printed editions.
+  reason: The very large numbers are traditional claims without documentary support.
+  sources:
+    - src.viswanathan-2004-music-in-south-india
+- date: 2026-11-21
+  target: /music/04-carnatic-music
+  before: Shyama Sastri's kritis are known for emphasis on kalpana swara.
+  after: Shyama Sastri is remembered for subtle rhythmic structure and the swarajati form.
+  reason: Kalpanaswara is a performance practice of the concert, not a hallmark of his compositions.
+  sources:
+    - src.viswanathan-2004-music-in-south-india
+- date: 2026-11-21
+  target: /music/04-carnatic-music
+  before: "Violin: it often plays in unison with the vocalist."
+  after: The violin, a European import of the 18th and 19th centuries, follows and answers the voice.
+  reason: The violin is a later adoption and accompanies rather than doubles the singer.
+  sources:
+    - src.weidman-2006-singing-the-classical
+- date: 2026-11-21
+  target: /music/04-carnatic-music
+  before: The 18th century is considered the golden age of Carnatic music.
+  after: The Trinity's canonical status is a retrospective, largely 20th-century construction.
+  reason: The golden-age framing is a judgement made later, not a documented fact of the period.
+  sources:
+    - src.subramanian-2006-tanjore-court-madras-music-academy
+    - src.weidman-2006-singing-the-classical
+- date: 2026-11-21
+  target: /music/05-musical-instruments
+  before: "c. 200 BCE: Classification in Natya Shastra."
+  after: The Natyashastra is dated to a wide, debated range from the last centuries BCE to the early centuries CE.
+  reason: A single date overstates what the composite text allows.
+  sources:
+    - src.rowell-1992-music-and-musical-thought-early-india
+- date: 2026-11-21
+  target: /music/05-musical-instruments
+  before: "c. 13th Century: Introduction of Persian instruments (Sitar, Tabla evolution) by Amir Khusrau."
+  after: The attribution to Amir Khusrau is a later legend; the sitar and tabla are documented from about the 18th century.
+  reason: No early evidence ties Khusrau to either instrument.
+  sources:
+    - src.miner-1993-sitar-and-sarod
+    - src.kippen-1988-tabla-of-lucknow
+- date: 2026-11-21
+  target: /literature/ancient-sanskrit-literature
+  before: Bhasa (c. 2nd-3rd Century CE)
+  after: Bhasa's date is uncertain, placed between the last centuries BCE and the 4th century CE, and certainly before Kalidasa; whether one author wrote all thirteen Trivandrum plays is disputed.
+  reason: The original gave a single narrow date as if settled. Both the date and the authorship of the plays ascribed to Bhasa are debated.
+  sources:
+    - src.lienhard-1984-history-classical-poetry
+- date: 2026-11-21
+  target: /literature/ancient-sanskrit-literature
+  before: "c. 4th-7th Century CE: Golden Age of Sanskrit Literature (Gupta Period)"
+  after: The 'golden age' label is contested; the Gupta period is roughly the 4th to mid-6th century CE, and the literature in question begins before it and continues after it at many courts.
+  reason: The Gupta dynasty ended well before the 7th century, and the label ties a broad literary culture to one dynasty.
+  sources:
+    - src.pollock-2006-language-of-the-gods
+    - src.thapar-2002-early-india
+- date: 2026-11-21
+  target: /literature/ancient-sanskrit-literature
+  before: Mudrarakshasa (political drama about Chanakya)
+  after: The play dramatises Mauryan politics many centuries after the events, and its own date is disputed; it is a later literary imagining, not a contemporary record.
+  reason: The original gave no date or caveat, which could be read as treating the play as evidence for Mauryan history.
+  sources:
+    - src.lienhard-1984-history-classical-poetry
+    - src.thapar-2002-early-india
+- date: 2026-11-21
+  target: /literature/kalidasa
+  before: His plays and poetry are primarily based on the Vedas, the Ramayana, the Mahabharata and the Puranas.
+  after: Shakuntala draws on the Mahabharata, Raghuvamsha on the Ramayana, and Vikramorvashiya on the Pururavas-Urvashi tale of the Rigveda and Shatapatha Brahmana; Malavikagnimitra is built on a historical Shunga king and has no epic source.
+  reason: "The blanket statement was too broad: one play has a historical, non-epic subject, and the Vedic link is specific to a single story."
+  sources:
+    - src.brockington-1998-sanskrit-epics
+    - src.jamison-brereton-2014-rigveda
+    - src.eggeling-1882-shatapatha-brahmana
+- date: 2026-11-21
+  target: /literature/kalidasa
+  before: widely regarded as the greatest poet and dramatist in the Sanskrit language of India
+  after: regarded by many as the finest classical Sanskrit poet and dramatist; his date is bracketed between the 2nd century BCE and 634 CE, with a 4th to 5th century CE placement favoured by many scholars.
+  reason: An unqualified superlative needs a qualifier, and the article now states the evidence for his date.
+  sources:
+    - src.lienhard-1984-history-classical-poetry
+    - src.pollock-2006-language-of-the-gods
+- date: 2026-11-21
+  target: /literature/sangam-literature
+  before: "c. 300 BCE - 300 CE: The Sangam Age."
+  after: A commonly cited range for the core poems is about 100 BCE to 250 CE (Zvelebil); some scholars, such as Tieken, argue for a much later date.
+  reason: The original range is wider than the evidence directly supports and does not note the live dispute.
+  sources:
+    - src.zvelebil-1992-companion-studies
+    - src.tieken-2001-kavya-south-india
+- date: 2026-11-21
+  target: /literature/sangam-literature
+  before: "Tolkappiyam: The oldest extant Tamil grammar text. / c. 2nd Century BCE: Composition of Tolkappiyam (early layers)."
+  after: The earliest surviving Tamil grammar, a layered text whose date is debated, with some strata thought older than others.
+  reason: "'Oldest' needs a qualifier and the single date was presented as settled."
+  sources:
+    - src.zvelebil-1992-companion-studies
+- date: 2026-11-21
+  target: /literature/sangam-literature
+  before: ancient Tamil literature composed by poets in assemblies called 'Sangams'
+  after: The 'Sangam' name comes from later tradition about three assemblies at Madurai; the poems themselves do not describe such assemblies.
+  reason: The assemblies are a medieval tradition, not evidence from the poems.
+  sources:
+    - src.zvelebil-1992-companion-studies
+    - src.wilden-2014-manuscript-print-memory

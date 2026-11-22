@@ -54,7 +54,6 @@ claims:
 relations:
   - kind: contemporary-of
     target: site.burzahom
-wikidata: Q105393686
 tags:
   - neolithic
   - aceramic-neolithic

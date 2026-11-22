@@ -1,0 +1,47 @@
+id: text.brahmasphutasiddhanta
+type: text
+kind: science
+names:
+  en: Brahmasphutasiddhanta
+  iast: Brāhmasphuṭasiddhānta
+  native: ब्राह्मस्फुटसिद्धान्त
+summary: >-
+  The Brahmasphutasiddhanta (628 CE) is Brahmagupta's Sanskrit treatise on astronomy, with chapters on
+  arithmetic, algebra and geometry. It contains among the earliest known explicit rules for
+  calculating with zero and negative numbers, methods for indeterminate equations, and a formula for
+  the area of a cyclic quadrilateral.
+summaries:
+  kids: >-
+    This big book of astronomy by Brahmagupta also teaches maths. It explains what happens when you
+    add zero to a number, take zero away, or multiply by zero.
+  teen: >-
+    Written in verse in 628 CE, the Brahmasphutasiddhanta covers planets and eclipses, but its maths
+    chapters are famous: rules for zero and negative numbers, solving quadratic equations, and a
+    formula for the area of a four-sided figure drawn inside a circle.
+region: Western India
+datings:
+  - method: textual-internal
+    range: { earliest: "628 CE", latest: "628 CE", precision: year, circa: false }
+    grade: A
+    label: Date stated by the author
+    sources: [src.plofker-2009-mathematics-in-india, src.pingree-1981-jyotihsastra]
+    note: Brahmagupta states that he wrote it 550 years after the Shaka kings, at the age of thirty.
+claims:
+  - text: >-
+      It states rules such as: a number plus zero is that number, and a number multiplied by zero is
+      zero; it also defines zero divided by zero as zero, which later mathematics does not accept.
+    grade: A
+    sources: [src.plofker-2009-mathematics-in-india, src.colebrooke-1817-algebra-brahmegupta-bhascara]
+  - text: >-
+      It gives the area of a cyclic quadrilateral in terms of its four sides (Brahmagupta's formula)
+      and a method (bhavana) for composing solutions of quadratic indeterminate equations.
+    grade: A
+    sources: [src.plofker-2009-mathematics-in-india]
+  - text: An Arabic version associated with the Sindhind tradition was made in Baghdad in the 8th century.
+    grade: B
+    sources: [src.plofker-2009-mathematics-in-india, src.pingree-1981-jyotihsastra]
+relations:
+  - { kind: authored-by, target: person.brahmagupta }
+wikidata: Q1290001
+tags: [mathematics, astronomy, zero, siddhanta]
+review: { status: draft, author: "claude-opus-5-5" }

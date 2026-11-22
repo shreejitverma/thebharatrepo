@@ -1,0 +1,48 @@
+id: artifact.aihole-inscription
+type: artifact
+kind: text
+names:
+  en: Aihole inscription
+  native: ಐಹೊಳೆ ಶಾಸನ
+summary: >-
+  The Aihole inscription is a Sanskrit praise-poem (prashasti) by the Jain poet Ravikirti, carved on
+  the Meguti temple at Aihole and dated Shaka 556 (634 to 635 CE). It records the deeds of the
+  Chalukya king Pulakeshin II, including his victory over Harsha, and is one of the earliest dated records
+  to name the poets Kalidasa and Bharavi.
+summaries:
+  kids: >-
+    On a temple wall at Aihole in Karnataka, a poet carved a long poem in Sanskrit praising King
+    Pulakeshin II. It even tells us the exact year it was written.
+  teen: >-
+    The Aihole inscription is a historian's gift: it is dated, it describes real wars, including
+    Pulakeshin II's defeat of Harsha, and its poet invokes Kalidasa and Bharavi as literary comparators.
+    This shows their reputations were known by the inscription's date, without establishing their exact lives.
+region: Bagalkot district, Karnataka
+location: { name: "Meguti temple, Aihole", lat: 16.02, lon: 75.88 }
+datings:
+  - method: epigraphic
+    range: { earliest: "634 CE", latest: "635 CE", precision: year, circa: false }
+    grade: A
+    label: Dated Shaka 556
+    sources: [src.kielhorn-1900-aihole-inscription-medieval, src.salomon-1998-indian-epigraphy-medieval]
+    note: The inscription gives both Shaka 556 and 3,735 years after the Bharata war.
+claims:
+  - text: >-
+      The poet Ravikirti invokes Kalidasa and Bharavi as literary comparators, showing their reputations
+      were known by the inscription's date without establishing their exact life dates.
+    grade: A
+    sources: [src.kielhorn-1900-aihole-inscription-medieval, src.salomon-1998-indian-epigraphy-medieval]
+  - text: The inscription states that Harsha lost his joy (harsha) when he was defeated by Pulakeshin II.
+    grade: A
+    sources: [src.kielhorn-1900-aihole-inscription-medieval]
+  - text: >-
+      It dates itself by two eras, Shaka 556 and 3,735 years after the Bharata war, a rare early
+      epigraphic use of an era counted from the Bharata war.
+    grade: A
+    sources: [src.kielhorn-1900-aihole-inscription-medieval, src.salomon-1998-indian-epigraphy-medieval]
+relations:
+  - { kind: issued-by, target: polity.chalukya-dynasty-of-badami }
+  - { kind: related-to, target: person.harshavardhana }
+wikidata: Q4696876
+tags: [inscription, prashasti, chalukya, sanskrit]
+review: { status: draft, author: "claude-opus-5-5" }

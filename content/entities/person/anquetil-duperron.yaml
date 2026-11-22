@@ -1,0 +1,40 @@
+id: person.anquetil-duperron
+type: person
+kind: person
+names:
+  en: Abraham Hyacinthe Anquetil-Duperron
+summary: Anquetil-Duperron translated a Persian version of the Upanishads into
+  Latin as Oupnek’hat, publishing it in 1801-1802. The text’s route to Europe
+  passed through Dara Shikoh’s 17th-century translation.
+summaries:
+  kids: Anquetil-Duperron translated Dara Shikoh’s Persian Upanishads into Latin,
+    helping introduce them to European readers.
+  teen: The Oupnek’hat derives from Dara Shikoh’s Persian translation rather than
+    a direct translation from Sanskrit, a fact central to its intellectual
+    history.
+datings:
+  - method: scholarly-consensus
+    range:
+      earliest: "1731"
+      latest: "1805"
+      precision: year
+      circa: true
+    grade: B
+    label: Historical scholarship
+    sources:
+      - src.truschke-2016-culture-of-encounters
+      - src.asher-talbot-2006-india-before-europe
+claims:
+  - text: Anquetil-Duperron translated a Persian version of the Upanishads into
+      Latin as Oupnek’hat, publishing it in 1801-1802. The text’s route to
+      Europe passed through Dara Shikoh’s 17th-century translation.
+    grade: B
+    sources:
+      - src.truschke-2016-culture-of-encounters
+      - src.asher-talbot-2006-india-before-europe
+relations: []
+tags:
+  - person
+review:
+  status: draft
+  author: codex-gpt-6

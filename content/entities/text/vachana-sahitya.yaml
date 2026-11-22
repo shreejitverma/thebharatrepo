@@ -1,0 +1,39 @@
+id: text.vachana-sahitya
+type: text
+kind: text
+names:
+  en: Vachana sahitya
+  iast: Vacana sāhitya
+  native: ವಚನ ಸಾಹಿತ್ಯ
+summary: >-
+  Vachanas ("sayings") are short free-verse Kannada poems composed by Virashaiva saints, chiefly in
+  the 12th century CE, among them Basavanna, Allama Prabhu, Akka Mahadevi and Devara Dasimayya. They
+  use everyday speech to address Shiva and criticise ritualism and social hierarchy.
+summaries:
+  kids: >-
+    Vachanas are short poems in the Kannada language. They speak to Shiva in simple, everyday words,
+    like talking to a friend.
+  teen: >-
+    The vachana poets wrote without fixed metre, in the Kannada people actually spoke. Women such as
+    Akka Mahadevi were among the most powerful voices, and the poems question caste, wealth and empty
+    ritual.
+region: Karnataka
+datings:
+  - method: textual-internal
+    range: { earliest: "1100 CE", latest: "1200 CE", precision: century, circa: true }
+    grade: C
+    label: Main vachana period
+    sources: [src.ramanujan-1973-speaking-of-siva]
+    note: Devara Dasimayya is sometimes placed earlier, in the 10th or 11th century; the collections were compiled later.
+claims:
+  - text: The major vachana poets include Basavanna, Allama Prabhu, Mahadeviyakka and Devara Dasimayya.
+    grade: B
+    sources: [src.ramanujan-1973-speaking-of-siva]
+  - text: Each poet signs the vachanas with a personal name of Shiva (ankita), such as Kudalasangama for Basavanna.
+    grade: A
+    sources: [src.ramanujan-1973-speaking-of-siva]
+relations:
+  - { kind: related-to, target: person.basava }
+wikidata: Q7907990
+tags: [kannada, lingayat, poetry, bhakti]
+review: { status: draft, author: "claude-opus-5-5" }

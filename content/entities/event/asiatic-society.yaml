@@ -1,0 +1,39 @@
+id: event.asiatic-society
+type: event
+kind: event
+names:
+  en: Asiatic Society of Bengal
+summary: The Asiatic Society was founded in Calcutta on 15 January 1784 at the
+  initiative of William Jones. It became a center for the study of Asian
+  history, languages and natural knowledge.
+summaries:
+  kids: William Jones helped found the Asiatic Society in Calcutta in 1784 so
+    scholars could study Asia.
+  teen: The Society supported research and publication in history, philology,
+    antiquities and natural sciences in colonial Bengal.
+datings:
+  - method: documentary
+    range:
+      earliest: "1784"
+      latest: "1784"
+      precision: year
+      circa: false
+    grade: A
+    label: Documentary record
+    sources:
+      - src.asi-history-1861
+      - src.trautmann-1997-aryans-and-british-india
+claims:
+  - text: The Asiatic Society was founded in Calcutta on 15 January 1784 at the
+      initiative of William Jones. It became a center for the study of Asian
+      history, languages and natural knowledge.
+    grade: A
+    sources:
+      - src.asi-history-1861
+      - src.trautmann-1997-aryans-and-british-india
+relations: []
+tags:
+  - event
+review:
+  status: draft
+  author: codex-gpt-6

@@ -1,0 +1,48 @@
+id: site.sanchi-stupa
+type: site
+kind: art
+names:
+  en: Sanchi Stupa
+  iast: Sāñcī Stūpa
+  native: साञ्ची स्तूप
+summary: >-
+  The Buddhist monuments at Sanchi in Madhya Pradesh form one of the best-preserved early Buddhist monastic complexes in India, centred on the Great Stupa (Stupa 1). Founded as a brick stupa with a polished sandstone pillar by Emperor Ashoka in the third century BCE, it was enlarged, encased in stone and surrounded by a balustrade under the Shunga period and adorned with four richly carved gateways (toranas) under Satavahana-era patronage in the first century BCE to first century CE.
+summaries:
+  kids: >-
+    The Great Stupa at Sanchi is a dome-shaped Buddhist monument started by Emperor Ashoka over 2,200 years ago and later decorated with four stone gateways carved with stories from the Buddha's life.
+  teen: >-
+    Built on a hilltop near ancient Vidisha, Sanchi's Great Stupa evolved from an Ashokan brick core in the third century BCE through Shunga stone expansion and Satavahana carved toranas, with continued additions into the Gupta period.
+region: Malwa plateau, Madhya Pradesh (near Vidisha)
+location: { name: "Sanchi, Madhya Pradesh", lat: 23.479, lon: 77.739 }
+datings:
+  - method: archaeological-stratigraphic
+    range: { earliest: -259, latest: 499, precision: century, circa: true }
+    grade: A
+    label: Multi-phase monumental construction from Ashoka to the Gupta era
+    sources:
+      - src.shaw-2016-buddhist-landscapes-sanchi
+      - src.lahiri-2015-ashoka-ancient-india
+    note: Anchored by Ashoka's schism edict pillar on site (third century BCE), Shunga-era stone enlargement and railings (second century BCE), Satavahana-era gateway inscriptions (first century BCE/CE) and Gupta-era shrines (fifth century CE).
+claims:
+  - text: Over six hundred short Brahmi donative inscriptions on the railings and gateways of Sanchi show that the enlargement of the stupas was funded collectively by monks, nuns, merchants, artisans and householders from across central India.
+    grade: A
+    sources:
+      - src.shaw-2016-buddhist-landscapes-sanchi
+      - src.salomon-1998-indian-epigraphy
+  - text: An inscription on the southern gateway (torana) of Stupa 1 records the gift of Vasishthiputra Ananda, the foreman of the artisans of King Siri Satakarni, attesting Satavahana-period artistic patronage.
+    grade: A
+    sources:
+      - src.shaw-2016-buddhist-landscapes-sanchi
+relations:
+  - { kind: patronised-by, target: person.ashoka }
+  - { kind: related-to, target: polity.shunga-dynasty }
+  - { kind: patronised-by, target: polity.satavahana-dynasty }
+  - { kind: related-to, target: event.brahmi-decipherment-prinsep }
+wikidata: Q181123
+image:
+  commons: "File:Stupa 1, Sanchi 02.jpg"
+  alt: The Great Stupa (Stupa 1) at Sanchi with its stone balustrade and northern gateway
+  credit: Bernard Gagnon
+  license: CC BY-SA 3.0
+tags: [sanchi, stupa, buddhism, maurya, shunga, satavahana]
+review: { status: draft, author: "gemini-4-argon" }

@@ -51,7 +51,6 @@ claims:
 relations:
   - kind: related-to
     target: site.bagor
-wikidata: Q1264589
 tags:
   - palaeolithic
   - thar-desert

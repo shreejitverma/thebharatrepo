@@ -67,7 +67,6 @@ relations:
     target: event.earliest-cotton-mehrgarh
   - kind: preceded
     target: site.bhirrana
-wikidata: Q242148
 image:
   commons: "File:Mehrgarh ruins.jpg"
   alt: Excavated mud-brick cellular compartments and walls at Neolithic Mehrgarh

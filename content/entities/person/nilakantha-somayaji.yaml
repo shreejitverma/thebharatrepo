@@ -1,0 +1,37 @@
+id: person.nilakantha-somayaji
+type: person
+kind: person
+names:
+  en: Nilakantha Somayaji
+  iast: Nīlakaṇṭha Somayājī
+  native: നീലകണ്ഠ സോമയാജി
+summary: >-
+  Nilakantha Somayaji was a Kerala astronomer and mathematician whose works include the Tantrasangraha,
+  completed around 1500. He discussed mathematical astronomy and transmitted results attributed to
+  Madhava within the Kerala scholarly lineage.
+summaries:
+  kids: >-
+    Nilakantha Somayaji was a Kerala scholar who wrote about astronomy and mathematics. His book
+    Tantrasangraha helped preserve ideas associated with Madhava.
+  teen: >-
+    Nilakantha's Tantrasangraha is a major work in Kerala mathematical astronomy. It records a
+    tradition of computational methods and cites earlier mathematical knowledge associated with
+    Madhava.
+region: Kerala, southwestern India
+datings:
+  - method: textual-internal
+    range: { earliest: "1444 CE", latest: "1545 CE", precision: century, circa: true }
+    grade: C
+    label: Conventional life span and period of activity
+    sources: [src.ramasubramanian-2011-tantrasangraha]
+claims:
+  - text: Nilakantha composed the astronomical treatise Tantrasangraha around 1500.
+    grade: B
+    sources: [src.ramasubramanian-2011-tantrasangraha]
+  - text: His works transmit Kerala mathematical astronomy and results attributed to Madhava.
+    grade: B
+    sources: [src.ramasubramanian-2011-tantrasangraha, src.plofker-2009-mathematics-in-india-medieval]
+relations:
+  - { kind: part-of, target: tradition.kerala-school-of-mathematics }
+tags: [mathematics, astronomy, kerala, sanskrit]
+review: { status: draft, author: "codex-gpt-6" }

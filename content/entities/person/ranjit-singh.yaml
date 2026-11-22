@@ -1,0 +1,36 @@
+id: person.ranjit-singh
+type: person
+kind: person
+names:
+  en: Maharaja Ranjit Singh
+summary: Ranjit Singh unified Sikh misls and founded a kingdom centered at
+  Lahore, ruling from 1799 until his death in 1839.
+summaries:
+  kids: Ranjit Singh united several Sikh-led territories and ruled from Lahore.
+  teen: Ranjit Singh’s kingdom developed a centralized court and army and became a
+    major power in northwestern South Asia.
+datings:
+  - method: scholarly-consensus
+    range:
+      earliest: "1780"
+      latest: "1839"
+      precision: year
+      circa: true
+    grade: B
+    label: Historical scholarship
+    sources:
+      - src.grewal-1990-sikhs-of-the-punjab
+      - src.singh-fenech-2014-oxford-handbook-sikh-studies
+claims:
+  - text: Ranjit Singh unified Sikh misls and founded a kingdom centered at Lahore,
+      ruling from 1799 until his death in 1839.
+    grade: B
+    sources:
+      - src.grewal-1990-sikhs-of-the-punjab
+      - src.singh-fenech-2014-oxford-handbook-sikh-studies
+relations: []
+tags:
+  - person
+review:
+  status: draft
+  author: codex-gpt-6

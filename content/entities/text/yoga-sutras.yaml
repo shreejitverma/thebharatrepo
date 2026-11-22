@@ -1,0 +1,50 @@
+id: text.yoga-sutras
+type: text
+kind: dharma
+names:
+  en: Yoga Sutras of Patanjali
+  iast: Pātañjala Yogasūtra
+  native: पातञ्जल योगसूत्र
+summary: >-
+  The Yoga Sutras of Patanjali is the foundational text of the classical Yoga school (darshana) of Hindu philosophy, comprising 195 or 196 concise Sanskrit aphorisms organized into four chapters: Samadhipada (concentration), Sadhanapada (practice and the eight limbs of ashtanga yoga), Vibhutipada (extraordinary powers) and Kaivalyapada (liberation). Modern manuscript and philological research by Philipp Maas shows that the sutras and their oldest commentary, the Yogabhashya, were transmitted together as a unified treatise titled the Patanjalayogasastra around 325-425 CE.
+summaries:
+  kids: >-
+    The Yoga Sutras of Patanjali is a classic Sanskrit collection of 196 short sayings that explains how to calm the mind through the eight steps (ashtanga) of yoga.
+  teen: >-
+    Organized into four chapters defining yoga as the stilling of fluctuations of consciousness (chitta-vritti-nirodha) and teaching the eightfold path (ashtanga yoga), Patanjali's Yoga Sutras was compiled into its classical form with the Yogabhashya during the Gupta period.
+region: Northern India
+datings:
+  - method: textual-internal
+    range: { earliest: 325, latest: 425, best: 375, precision: decade, circa: true }
+    grade: B
+    label: Philological dating of the Patanjalayogasastra (Philipp A. Maas)
+    sources:
+      - src.maas-2020-patanjala-yoga-temporality
+    note: Based on manuscript colophons, textual criticism and philosophical engagement with Sarvastivada and early Yogachara Buddhist theories of temporality (parinama), Philipp Maas dates the compilation of the Patanjalayogasastra (sutras together with the bhashya) to c. 325-425 CE, while the sutra materials draw on older traditions from the early centuries CE.
+  - method: traditional-sampradaya
+    range: { earliest: -199, latest: -100, precision: century, circa: true }
+    grade: D
+    label: Traditional identification of Patanjali with the second-century BCE grammarian
+    sources:
+      - src.maas-2020-patanjala-yoga-temporality
+    note: Later Sanskrit tradition (attested from the tenth/eleventh century CE in King Bhoja's Rajamartanda) identifies Patanjali the author of the Yoga Sutras with Patanjali the author of the grammatical Mahabhashya (c. 150 BCE) and with a medical author on Charaka.
+claims:
+  - text: The second aphorism (Yogasutra 1.2) defines yoga as "yogash chitta-vritti-nirodhah" ("yoga is the cessation of the fluctuations of the mind/awareness"), so that pure consciousness (purusha) abides in its own true nature apart from primordial matter (prakriti).
+    grade: A
+    sources:
+      - src.maas-2020-patanjala-yoga-temporality
+  - text: >-
+      Books 2 and 3 codify the eight limbs (ashtanga) of yoga practice - moral restraints (yama), observances (niyama), posture (asana), breath regulation (pranayama), sensory withdrawal (pratyahara), fixation (dharana), meditation (dhyana) and absorptive concentration (samadhi).
+    grade: A
+    sources:
+      - src.maas-2020-patanjala-yoga-temporality
+  - text: Early manuscript colophons and commentators up to the tenth century CE treat the Yoga Sutras and the prose Yogabhashya (later attributed separately to Vyasa) as a single continuous work called the Patanjalayogasastra.
+    grade: B
+    sources:
+      - src.maas-2020-patanjala-yoga-temporality
+relations:
+  - { kind: related-to, target: text.bhagavad-gita }
+  - { kind: contemporary-of, target: polity.gupta-empire }
+wikidata: Q1068646
+tags: [yoga-sutras, patanjali, ashtanga-yoga, samkhya, philosophy, gupta]
+review: { status: draft, author: "gemini-4-argon" }

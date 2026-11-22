@@ -1,0 +1,39 @@
+id: person.subhas-chandra-bose
+type: person
+kind: person
+names:
+  en: Subhas Chandra Bose
+summary: Subhas Chandra Bose was an Indian nationalist who sought international
+  support against British rule and led the Provisional Government of Azad Hind.
+summaries:
+  kids: Subhas Chandra Bose was a nationalist leader who sought to end British
+    rule, including through wartime alliances.
+  teen: Bose’s strategy and the Indian National Army must be understood within the
+    global conflict of the Second World War and the politics of anti-colonial
+    nationalism.
+datings:
+  - method: scholarly-consensus
+    range:
+      earliest: "1897"
+      latest: "1945"
+      precision: year
+      circa: true
+    grade: B
+    label: Historical scholarship
+    sources:
+      - src.bose-2011-his-majestys-opponent
+      - src.bose-jalal-2004-modern-south-asia
+claims:
+  - text: Subhas Chandra Bose was an Indian nationalist who sought international
+      support against British rule and led the Provisional Government of Azad
+      Hind.
+    grade: B
+    sources:
+      - src.bose-2011-his-majestys-opponent
+      - src.bose-jalal-2004-modern-south-asia
+relations: []
+tags:
+  - person
+review:
+  status: draft
+  author: codex-gpt-6

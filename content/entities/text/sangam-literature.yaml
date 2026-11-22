@@ -1,0 +1,77 @@
+id: text.sangam-literature
+type: text
+kind: text
+names:
+  en: Sangam Literature
+  iast: Caṅka Ilakkiyam
+  native: சங்க இலக்கியம்
+summary: >-
+  Sangam (Cankam) literature is the classical corpus of early Tamil poetry: the Eight Anthologies (Ettuthokai) and the Ten Long Poems (Pattuppattu), read together with the grammar Tolkappiyam. Its poems of inner love (akam) and public life (puram) are attributed to hundreds of named poets, women among them. The dating is contested: most specialists place the older poems in roughly the 1st century BCE to the 3rd century CE, with later layers to about 550 CE, while some argue for earlier origins and others for a much later date.
+summaries:
+  kids: >-
+    Sangam literature is a large collection of very old Tamil poems about love, nature, kings, war and everyday life in ancient South India. Scholars still debate exactly when the poems were composed.
+  teen: >-
+    The Eight Anthologies (Ettuthokai) and Ten Long Poems (Pattuppattu), together with the grammar Tolkappiyam, are the oldest Tamil literature. Most scholars date the early poems to around 100 BCE to 300 CE, but some push them earlier and one school argues they are centuries later.
+region: Tamilakam (Tamil Nadu and Kerala)
+datings:
+  - method: textual-internal
+    range: { earliest: "100 BCE", latest: "300 CE", precision: century, circa: true }
+    grade: C
+    label: Majority philological dating of the older anthologies and long poems (Kamil Zvelebil and others)
+    sources:
+      - src.zvelebil-1973-smile-of-murugan
+      - src.wilden-2014-manuscript-print-memory-cankam
+    note: The older anthologies are placed in the early centuries around the turn of the era on internal evidence such as their language, their political world of Chera, Chola and Pandya kings, and their references to Yavana (Mediterranean) traders.
+  - method: textual-internal
+    range: { earliest: "300 CE", latest: "550 CE", precision: century, circa: true }
+    grade: C
+    label: Later layer (Kalittokai, Paripatal, Tirumurukarruppatai) and the compilation of the anthologies
+    sources:
+      - src.zvelebil-1973-smile-of-murugan
+      - src.wilden-2014-manuscript-print-memory-cankam
+    note: Language, metre and religious content set Kalittokai, Paripatal and the Tirumurukarruppatai apart as a later stratum, and the anthologies were compiled later still.
+  - method: textual-internal
+    range: { earliest: "750 CE", latest: "950 CE", precision: century, circa: true }
+    grade: C
+    label: Late-dating minority position (Herman Tieken)
+    sources:
+      - src.tieken-2001-kavya-in-south-india
+    note: Herman Tieken argues that the poems are a deliberately archaising literary product of the Pandya court around the 9th century CE, rather than the work of early bards. Most Tamil specialists reject this view.
+  - method: archaeological-radiocarbon
+    range: { earliest: "600 BCE", latest: "300 CE", precision: century, circa: true }
+    grade: C
+    label: Earlier start proposed by the Tamil Nadu Department of Archaeology after Keezhadi
+    sources:
+      - src.sivanantham-2019-keeladi-urban-settlement
+    note: The 2019 Keeladi report argues that AMS dates going back to the 6th century BCE for layers with Tamil-Brahmi inscribed sherds force a re-assessment of the Sangam age, usually placed between the 3rd century BCE and the 3rd century CE. The radiocarbon dates the site and its writing, not the poems themselves, so the link to the poetry is an inference.
+  - method: traditional-sampradaya
+    range: { earliest: "10000 BCE", latest: "200 CE", precision: millennium, circa: true }
+    grade: D
+    label: Medieval legend of the Three Sangams (academies) of the Pandya kings
+    sources:
+      - src.zvelebil-1973-smile-of-murugan
+    note: The commentary on the Iraiyanar Akapporul, of about the 8th century CE, describes three successive academies lasting 4,440, 3,700 and 1,850 years, about 9,990 years in all. The legend gives durations, not absolute dates; the range shown assumes that the last academy ended in the early centuries CE.
+claims:
+  - text: The Eight Anthologies are Natrinai, Kuruntokai, Ainkurunuru, Patirruppattu, Paripatal, Kalittokai, Akananuru and Purananuru; with the Ten Long Poems (Pattuppattu) they make up the classical Sangam corpus.
+    grade: A
+    sources:
+      - src.zvelebil-1973-smile-of-murugan
+      - src.wilden-2014-manuscript-print-memory-cankam
+  - text: The surviving corpus amounts to about 2,381 poems attributed to roughly 473 named poets, including women such as Auvaiyar, with some poems anonymous.
+    grade: B
+    sources:
+      - src.zvelebil-1973-smile-of-murugan
+  - text: The Sangam texts survived in palm-leaf manuscripts and commentaries and reached print only in the late 19th and early 20th centuries, through editors such as C. W. Damodaram Pillai and U. V. Swaminatha Iyer.
+    grade: B
+    sources:
+      - src.wilden-2014-manuscript-print-memory-cankam
+debate: >-
+  Most philologists, following Kamil Zvelebil, date the older anthologies to roughly the 1st century BCE to the 3rd century CE and treat Kalittokai, Paripatal and the compilation of the anthologies as later. Herman Tieken argues instead for a 9th-century Pandya court origin, a view most specialists reject. The Tamil Nadu Department of Archaeology argues, from Keezhadi's 6th-century BCE dates for Tamil-Brahmi writing, that the Sangam age began earlier than usually thought. The medieval legend of three academies spanning nearly ten thousand years is a traditional account, not a historical chronology.
+relations:
+  - { kind: related-to, target: text.tolkappiyam }
+  - { kind: related-to, target: text.tirukkural }
+  - { kind: related-to, target: artifact.tamil-brahmi-inscriptions }
+  - { kind: related-to, target: site.keezhadi }
+wikidata: Q3219940
+tags: [sangam, tamil-literature, ettuthokai, pattuppattu, akam, puram, contested-chronology]
+review: { status: draft, author: "gemini-4-argon" }

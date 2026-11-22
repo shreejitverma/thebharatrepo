@@ -1,0 +1,44 @@
+id: person.aryabhata
+type: person
+kind: science
+names:
+  en: Aryabhata
+  iast: Āryabhaṭa
+  native: आर्यभट
+summary: >-
+  Aryabhata (born 476 CE) was the pioneering classical Indian mathematician and astronomer who worked at Kusumapura (Pataliputra) during the late Gupta period and authored the Aryabhatiya in 499 CE as well as the lost Aryabhata-siddhanta. He introduced an alphasyllabic place-value notation, trigonometric sine-difference tables, the general integer solution of linear indeterminate equations (kuttaka), an approximation of pi to four decimal places (3.1416), and the model that the apparent daily westward motion of the stars results from the eastward axial rotation of the Earth.
+summaries:
+  kids: >-
+    Born in 476 CE, Aryabhata was a brilliant Indian mathematician and astronomer at Pataliputra who calculated pi to 3.1416, explained eclipses scientifically, and stated that the Earth spins on its own axis.
+  teen: >-
+    Working at Kusumapura (Pataliputra) and writing the Aryabhatiya at age 23 in 499 CE, Aryabhata founded the classical Siddhantic mathematical-astronomical school with his sine tables, kuttaka indeterminate solver, and axial-rotation model of the Earth.
+region: Kusumapura (Pataliputra, Magadha) and Asmaka
+location: { name: "Patna (ancient Kusumapura / Pataliputra)", lat: 25.611, lon: 85.144 }
+datings:
+  - method: astronomical-reference
+    range: { earliest: 476, latest: 550, best: 499, precision: year, circa: true }
+    grade: A
+    label: Self-dated birth year (476 CE) and composition of the Aryabhatiya (499 CE)
+    sources:
+      - src.plofker-2009-mathematics-in-india
+    note: In Kalakriyapada verse 10 of the Aryabhatiya, Aryabhata states that when sixty times sixty (3,600) years of the Kali Yuga had elapsed, twenty-three years had passed since his birth, fixing his birth to 476 CE and the treatise to 499 CE.
+claims:
+  - text: Aryabhata explicitly dates his own birth to 476 CE by stating in Aryabhatiya 3.10 that he was 23 years old when 3,600 solar years of the Kali Yuga had elapsed on March 21, 499 CE.
+    grade: A
+    sources:
+      - src.plofker-2009-mathematics-in-india
+  - text: In Golapada verse 9, Aryabhata compares the apparent westward movement of the fixed stars to a person in a moving boat seeing stationary objects on the river bank move backward, attributing diurnal motion to the Earth's rotation on its axis.
+    grade: A
+    sources:
+      - src.plofker-2009-mathematics-in-india
+  - text: Aryabhata explained solar and lunar eclipses physically as shadows cast by the Moon and the Earth rather than the mythical demon Rahu swallowing the luminaries.
+    grade: A
+    sources:
+      - src.plofker-2009-mathematics-in-india
+relations:
+  - { kind: authored, target: text.aryabhatiya }
+  - { kind: influenced, target: person.varahamihira }
+  - { kind: contemporary-of, target: polity.gupta-empire }
+wikidata: Q11359
+tags: [aryabhata, mathematics, astronomy, gupta, pataliputra, trigonometry]
+review: { status: draft, author: "gemini-4-argon" }

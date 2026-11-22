@@ -1,0 +1,37 @@
+id: tradition.brahmo-sabha
+type: tradition
+kind: dharma
+names:
+  en: Brahmo Sabha
+summary: Raja Ram Mohan Roy established the Brahmo Sabha in Calcutta in 1828.
+  The organization developed into the Brahmo Samaj and promoted monotheistic
+  worship and social reform.
+summaries:
+  kids: The Brahmo Sabha began in Calcutta in 1828 as a group for worship and
+    discussion associated with Raja Ram Mohan Roy.
+  teen: The Sabha became the institutional starting point for the Brahmo movement,
+    whose theology and reform programs changed over time.
+datings:
+  - method: documentary
+    range:
+      earliest: "1828"
+      latest: "1828"
+      precision: year
+      circa: false
+    grade: A
+    label: Documentary record
+    sources: &a1
+      - src.jones-1989-socio-religious-reform-movements
+      - src.hatcher-2008-bourgeois-hinduism
+claims:
+  - text: Raja Ram Mohan Roy established the Brahmo Sabha in Calcutta in 1828. The
+      organization developed into the Brahmo Samaj and promoted monotheistic
+      worship and social reform.
+    grade: A
+    sources: *a1
+relations: []
+tags:
+  - dharma
+review:
+  status: draft
+  author: codex-gpt-6

@@ -1,0 +1,40 @@
+id: artifact.rabatak-inscription
+type: artifact
+kind: text
+names:
+  en: Rabatak Inscription
+summary: >-
+  The Rabatak inscription is a twenty-three-line limestone rock inscription in the Bactrian language written in Greek script, discovered in 1993 at Rabatak in Baghlan Province, Afghanistan. Issued in Year 1 of the Kushan emperor Kanishka I (127 CE), it records the foundation of a dynastic sanctuary, states Kanishka's four-generation royal genealogy, notes the replacement of Greek with Bactrian ("Aryan"), and lists cities across northern India under his rule.
+summaries:
+  kids: >-
+    Found in Afghanistan in 1993, the Rabatak stone inscription was carved in the first year of Emperor Kanishka's reign and lists his royal ancestors and the Indian cities he ruled.
+  teen: >-
+    Deciphered by Nicholas Sims-Williams and Joe Cribb, the Rabatak inscription of Year 1 of Kanishka I (127 CE) resolved the early Kushan family tree by naming Kujula Kadphises, Vima Taktu, Vima Kadphises and Kanishka in sequence.
+region: Bactria (Baghlan Province, northern Afghanistan)
+location: { name: "Rabatak, Baghlan Province, Afghanistan", lat: 36.155, lon: 68.395 }
+datings:
+  - method: epigraphic
+    range: { earliest: 127, latest: 130, best: 127, precision: year, circa: true }
+    grade: A
+    label: Inauguration of Year 1 of Kanishka I (127 CE)
+    sources:
+      - src.cribb-2023-kushan-royal-inscription
+      - src.salomon-1998-indian-epigraphy
+    note: The inscription explicitly refers to Kanishka's proclamation of Year 1 of the new royal era, dated by Harry Falk and Joe Cribb to 127 CE.
+claims:
+  - text: >-
+      Lines 11 to 14 of the Rabatak inscription command the manufacture of images for four sequential Kushan kings - Kujula Kadphises (great-grandfather), Vima Taktu (grandfather), Vima Kadphises (father) and Kanishka himself.
+    grade: A
+    sources:
+      - src.cribb-2023-kushan-royal-inscription
+  - text: >-
+      Lines 4 to 7 state that Kanishka discontinued the use of the Ionian (Greek) language in favour of the Aryan (Bactrian) language and claim his authority over Indian cities in the realm of the Kshatriyas, including Saketa, Kausambi, Pataliputra and Sri-Champa.
+    grade: A
+    sources:
+      - src.cribb-2023-kushan-royal-inscription
+relations:
+  - { kind: issued-by, target: person.kanishka-i }
+  - { kind: part-of, target: polity.kushan-empire }
+wikidata: Q2382049
+tags: [rabatak, kanishka, kushan, bactrian, epigraphy]
+review: { status: draft, author: "gemini-4-argon" }

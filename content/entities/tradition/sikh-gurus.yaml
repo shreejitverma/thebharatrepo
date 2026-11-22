@@ -1,0 +1,37 @@
+id: tradition.sikh-gurus
+type: tradition
+kind: dharma
+names:
+  en: Sikh Gurus
+summary: The Sikh Guru tradition comprises ten historical human Gurus, from Guru
+  Nanak to Guru Gobind Singh, followed by the Guru Granth Sahib as the enduring
+  Guru.
+summaries:
+  kids: Sikh tradition honors ten human Gurus, from Guru Nanak to Guru Gobind
+    Singh, and recognizes the Guru Granth Sahib as the continuing Guru.
+  teen: The succession of Sikh Gurus shaped Sikh teachings, institutions and
+    community formation from the 15th through the early 18th century.
+datings:
+  - method: scholarly-consensus
+    range:
+      earliest: "1469"
+      latest: "1708"
+      precision: year
+      circa: true
+    grade: B
+    label: Historical scholarship
+    sources: &a1
+      - src.singh-fenech-2014-oxford-handbook-sikh-studies
+      - src.grewal-1990-sikhs-of-the-punjab
+claims:
+  - text: The Sikh Guru tradition comprises ten historical human Gurus, from Guru
+      Nanak to Guru Gobind Singh, followed by the Guru Granth Sahib as the
+      enduring Guru.
+    grade: B
+    sources: *a1
+relations: []
+tags:
+  - dharma
+review:
+  status: draft
+  author: codex-gpt-6

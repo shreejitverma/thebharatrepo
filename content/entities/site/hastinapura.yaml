@@ -67,7 +67,6 @@ relations:
   - { kind: related-to, target: concept.northern-black-polished-ware-culture }
   - { kind: contemporary-of, target: site.ahichhatra }
   - { kind: contemporary-of, target: site.atranjikhera }
-wikidata: Q459714
 image:
   commons: "File:Hastinapur-Vidur ka Teela-Plaque.jpg"
   alt: Archaeological Survey of India plaque at the Vidur ka Teela mound in Hastinapura

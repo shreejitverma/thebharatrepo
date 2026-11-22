@@ -1,0 +1,34 @@
+id: event.delhi-sultanate-mongol-defence
+type: event
+kind: event
+names:
+  en: Delhi Sultanate defence against Mongol incursions
+summary: >-
+  Mongol forces made several incursions into the northwestern frontier of the Delhi Sultanate during
+  Alauddin Khalji's reign. Sultanate armies repelled major incursions, including campaigns in 1299 and
+  1303; the details and scale of individual expeditions vary among the chronicles.
+summaries:
+  kids: >-
+    During Alauddin Khalji's rule, Mongol armies tried several times to enter the Delhi Sultanate.
+    Sultanate forces fought them back in major campaigns.
+  teen: >-
+    The Delhi Sultanate faced repeated Mongol incursions while Alauddin Khalji ruled. The campaigns of
+    1299 and 1303 are among the best-known, though chroniclers differ in their details.
+region: Northwestern frontier of the Delhi Sultanate
+datings:
+  - method: documentary
+    range: { earliest: "1297 CE", latest: "1306 CE", precision: year, circa: true }
+    grade: B
+    label: Major campaigns during Alauddin Khalji's reign
+    sources: [src.jackson-1999-delhi-sultanate]
+claims:
+  - text: Mongol forces launched repeated incursions against the Delhi Sultanate during Alauddin Khalji's reign.
+    grade: B
+    sources: [src.jackson-1999-delhi-sultanate]
+  - text: Delhi Sultanate forces repelled major Mongol campaigns, including incursions in 1299 and 1303.
+    grade: B
+    sources: [src.jackson-1999-delhi-sultanate]
+relations:
+  - { kind: related-to, target: person.alauddin-khalji }
+tags: [delhi-sultanate, mongols, warfare]
+review: { status: draft, author: "codex-gpt-6" }

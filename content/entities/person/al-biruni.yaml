@@ -1,0 +1,40 @@
+id: person.al-biruni
+type: person
+kind: science
+names:
+  en: Al-Biruni
+  native: أبو الريحان البيروني
+summary: >-
+  Abu Rayhan al-Biruni (973 to after 1048 CE) was a Khwarazmian scholar of astronomy, mathematics and
+  history who lived at the Ghaznavid court. Having learned Sanskrit, he wrote the Kitab al-Hind (about
+  1030 CE), a systematic account of Indian religion, philosophy, astronomy and customs based on Sanskrit
+  sources and informants.
+summaries:
+  kids: >-
+    Al-Biruni was a scholar from Central Asia who learned Sanskrit to understand India. He wrote a huge
+    book explaining Indian science and religion to readers of Arabic.
+  teen: >-
+    Al-Biruni came to India with Mahmud of Ghazni's court but behaved like a researcher. He read
+    Sanskrit books, compared Indian and Greek science, and wrote down Indian ideas as carefully as he
+    could, while also criticising them.
+region: Khwarazm, Ghazni and the Punjab
+location: { name: Ghazni, lat: 33.55, lon: 68.42 }
+datings:
+  - method: documentary
+    range: { earliest: "973 CE", latest: "1050 CE", precision: year, circa: true }
+    grade: B
+    label: Lifetime
+    sources: [src.sachau-1910-alberunis-india]
+    note: Born in 973 CE; the date of death is uncertain, after 1048 CE.
+claims:
+  - text: He wrote the Kitab al-Hind (Tahqiq ma li-l-Hind), completed about 1030 CE.
+    grade: A
+    sources: [src.sachau-1910-alberunis-india]
+  - text: He used Sanskrit works including those of Brahmagupta for his account of Indian astronomy.
+    grade: A
+    sources: [src.sachau-1910-alberunis-india, src.plofker-2009-mathematics-in-india]
+relations:
+  - { kind: authored, target: text.kitab-al-hind }
+wikidata: Q11826
+tags: [foreign-account, astronomy, ghaznavid, scholarship]
+review: { status: draft, author: "claude-opus-5-5" }

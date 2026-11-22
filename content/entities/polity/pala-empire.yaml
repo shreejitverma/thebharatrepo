@@ -1,0 +1,40 @@
+id: polity.pala-empire
+type: polity
+kind: polity
+names:
+  en: Pala Empire (Pala dynasty)
+  iast: Pāla
+  native: পাল সাম্রাজ্য
+summary: >-
+  The Pala dynasty ruled Bengal and Bihar from the mid-8th to the 12th century CE. Beginning with
+  Gopala, who according to a Pala copper plate was chosen as king to end anarchy, its rulers were
+  major patrons of Buddhist monasteries such as Nalanda, Vikramashila and Somapura, and contested
+  Kanyakubja with the Pratiharas and Rashtrakutas.
+summaries:
+  kids: >-
+    The Palas were kings of Bengal and Bihar who supported Buddhist monks and their great
+    monastery-universities, where students came from as far as Tibet.
+  teen: >-
+    Under the Palas, eastern India became the last great centre of Indian Buddhism. Kings such as
+    Dharmapala and Devapala funded monasteries and fought for control of north India, and Pala art
+    influenced Buddhist art in Tibet, Nepal and Southeast Asia.
+region: Bengal and Bihar
+datings:
+  - method: epigraphic
+    range: { earliest: "750 CE", latest: "1170 CE", precision: decade, circa: true }
+    grade: B
+    label: Gopala to the last Palas
+    sources: [src.singh-2008-ancient-early-medieval-india, src.thapar-2002-early-india]
+    note: Reign lengths come from copper-plate grants dated in regnal years, so absolute dates carry uncertainty of a decade or more.
+claims:
+  - text: Pala kings were major patrons of Buddhist monasteries including Vikramashila, founded under Dharmapala.
+    grade: B
+    sources: [src.davidson-2002-indian-esoteric-buddhism, src.scharfe-2002-education-in-ancient-india]
+  - text: The Palas took part in the three-sided struggle for Kanyakubja with the Gurjara-Pratiharas and the Rashtrakutas.
+    grade: B
+    sources: [src.singh-2008-ancient-early-medieval-india, src.kulke-2004-history-of-india]
+relations:
+  - { kind: related-to, target: polity.rashtrakuta-dynasty }
+wikidata: Q668412
+tags: [bengal, bihar, dynasty, buddhism]
+review: { status: draft, author: "claude-opus-5-5" }

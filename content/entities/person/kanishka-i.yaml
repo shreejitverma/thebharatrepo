@@ -1,0 +1,50 @@
+id: person.kanishka-i
+type: person
+kind: person
+names:
+  en: Kanishka I
+  iast: Kaniṣka
+  native: कनिष्क
+summary: >-
+  Kanishka I (reigned c. 127-150 CE) was the fourth emperor of the Kushan dynasty, under whom the empire spanned from Sogdiana and Bactria across Gandhara and Kashmir to Mathura and the middle Gangetic plain. He inaugurated a new royal reckoning (the Kanishka era, whose Year 1 is fixed to 127 CE), replaced Greek with Bactrian on imperial coinage and administration, built the monumental stupa at Purushapura (Peshawar), and is celebrated in Buddhist tradition for convening a great Sarvastivada council.
+summaries:
+  kids: >-
+    Emperor Kanishka I ruled the Kushan Empire starting in 127 CE, built a giant stupa at Peshawar, and minted coins featuring the Buddha as well as Hindu, Iranian and Greek gods.
+  teen: >-
+    Kanishka I's accession in 127 CE launched a century-long Kushan calendar era; the Rabatak inscription and his multilingual coinage document his rule from Central Asia to the Gangetic basin and his patronage of Buddhism.
+region: Bactria, Gandhara, Kashmir and Northern India (capitals at Purushapura and Mathura)
+location: { name: "Peshawar (ancient Purushapura)", lat: 34.004, lon: 71.568 }
+datings:
+  - method: astronomical-reference
+    range: { earliest: 127, latest: 151, best: 127, precision: year, circa: true }
+    grade: A
+    label: Kanishka era Year 1 = 127 CE (Harry Falk's Yavanajataka equation and epigraphic series)
+    sources:
+      - src.cribb-2023-kushan-royal-inscription
+      - src.behrendt-2004-buddhist-architecture-gandhara
+      - src.plofker-2009-mathematics-in-india
+    note: Harry Falk (2001) showed from Sphujiddhvaja's Yavanajataka (79.14-15) that the second Kushan century began 149 years after the Shaka era of 78 CE (i.e. 227 CE), fixing Year 1 of Kanishka I to 127 CE; inscriptions of Kanishka I run from Year 1 to Year 23.
+claims:
+  - text: Sphujiddhvaja's astronomical-astrological treatise Yavanajataka correlates the Kushan reckoning with the Shaka era of 78 CE, establishing that Kanishka I inaugurated his regnal era in 127 CE.
+    grade: A
+    sources:
+      - src.cribb-2023-kushan-royal-inscription
+      - src.behrendt-2004-buddhist-architecture-gandhara
+  - text: Kanishka I issued some of the earliest dated coins bearing an anthropomorphic figure of the Buddha labelled BODDO in Greek script, alongside issues depicting Oesho (Shiva) and Iranian deities such as Miiro, Mao and Nana.
+    grade: A
+    sources:
+      - src.cribb-2023-kushan-royal-inscription
+      - src.behrendt-2004-buddhist-architecture-gandhara
+relations:
+  - { kind: ruled, target: polity.kushan-empire }
+  - { kind: related-to, target: artifact.rabatak-inscription }
+  - { kind: patronised, target: tradition.gandhara-art }
+  - { kind: patronised, target: tradition.mathura-art }
+wikidata: Q312544
+image:
+  commons: "File:Coin of Kanishka I, with Iranian solar deity Mithra (Miiro) on the reverse, National Museum, New Delhi.jpg"
+  alt: Gold dinara of Emperor Kanishka I in the National Museum, New Delhi
+  credit: SpeakingArch
+  license: CC BY-SA 4.0
+tags: [kanishka, kushan, 127-ce, rabatak, buddhism, numismatics]
+review: { status: draft, author: "gemini-4-argon" }

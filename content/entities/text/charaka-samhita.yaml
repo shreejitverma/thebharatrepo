@@ -1,0 +1,40 @@
+id: text.charaka-samhita
+type: text
+kind: science
+names:
+  en: Charaka Samhita
+  iast: Carakasaṃhitā
+  native: चरकसंहिता
+summary: >-
+  The Charaka Samhita is one of the two foundational Sanskrit compendia of classical Indian medicine (Ayurveda), organized in 120 chapters across eight sections (sthanas) covering internal medicine (kayachikitsa), pathology, pharmacology, dietetics, embryology and medical ethics. The text records a three-stage transmission: the medical teachings of Punarvasu Atreya were codified by his pupil Agnivesha, redacted by Charaka between roughly 100 BCE and 200 CE, and completed in the final chapters by Dridhabala in the fourth or fifth century CE.
+summaries:
+  kids: >-
+    The Charaka Samhita is one of the oldest and most important Sanskrit books of Ayurvedic medicine, teaching how good diet, herbal medicines and balanced bodily energies keep people healthy.
+  teen: >-
+    Divided into 120 chapters across eight sections, the Charaka Samhita sets out the classical Ayurvedic system of three humours (tridosha - vata, pitta, kapha), clinical diagnosis, pharmacology and a detailed oath of medical ethics for student physicians.
+region: Northwestern India and Kashmir
+datings:
+  - method: textual-internal
+    range: { earliest: "100 BCE", latest: 499, precision: century, circa: true }
+    grade: B
+    label: Layered composition from Charaka's revision (c. 100 BCE-200 CE) to Dridhabala's completion (c. 300-500 CE)
+    sources:
+      - src.wujastyk-2008-body-of-knowledge-ayurvedic
+    note: Internal colophons distinguish Charaka's redaction of the older Agniveshatantra (commonly placed between the first century BCE and the second century CE, with Chinese Buddhist sources associating a physician Charaka with King Kanishka) from the explicit fourth- or fifth-century CE completion of the missing final chapters by Dridhabala.
+claims:
+  - text: The Charaka Samhita is divided into eight sections (Sutrasthana, Nidanasthana, Vimanasthana, Sharirasthana, Indriyasthana, Chikitsasthana, Kalpasthana and Siddhisthana) totalling 120 chapters, of which Dridhabala explicitly states in the text that he supplied the final sections using multiple treatises.
+    grade: A
+    sources:
+      - src.wujastyk-2008-body-of-knowledge-ayurvedic
+  - text: Alongside its tridosha physiology (vata, pitta and kapha) and classification of hundreds of medicinal plants, the Vimanasthana includes a formal oath of initiation committing medical students to patient welfare, confidentiality and lifelong learning, and outlines rules of rational debate (vada) and empirical observation (pratyaksha) for physicians.
+    grade: A
+    sources:
+      - src.wujastyk-2008-body-of-knowledge-ayurvedic
+relations:
+  - { kind: related-to, target: text.sushruta-samhita }
+  - { kind: related-to, target: person.kanishka-i }
+  - { kind: contemporary-of, target: polity.kushan-empire }
+  - { kind: contemporary-of, target: polity.gupta-empire }
+wikidata: Q2723566
+tags: [charaka-samhita, ayurveda, medicine, science, tridosha]
+review: { status: draft, author: "gemini-4-argon" }

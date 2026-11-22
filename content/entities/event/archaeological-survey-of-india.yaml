@@ -1,0 +1,39 @@
+id: event.archaeological-survey-of-india
+type: event
+kind: event
+names:
+  en: Archaeological Survey of India
+summary: The Archaeological Survey of India traces its founding to 1861, when
+  Alexander Cunningham was appointed the first Archaeological Surveyor. The
+  institution was discontinued and revived before becoming a continuing
+  department.
+summaries:
+  kids: The ASI began in 1861 with Alexander Cunningham appointed to survey
+    archaeological remains. Its organization changed in later years.
+  teen: The institution’s history includes a pause after 1866 and a revival as a
+    department in 1871, so “founded” refers to the initial survey scheme.
+datings:
+  - method: documentary
+    range:
+      earliest: "1861"
+      latest: "1861"
+      precision: year
+      circa: false
+    grade: A
+    label: Documentary record
+    sources: &a1
+      - src.asi-history-1861
+      - src.singh-2004-discovery-of-ancient-india
+claims:
+  - text: The Archaeological Survey of India traces its founding to 1861, when
+      Alexander Cunningham was appointed the first Archaeological Surveyor. The
+      institution was discontinued and revived before becoming a continuing
+      department.
+    grade: A
+    sources: *a1
+relations: []
+tags:
+  - event
+review:
+  status: draft
+  author: codex-gpt-6

@@ -1,0 +1,44 @@
+id: polity.shunga-dynasty
+type: polity
+kind: polity
+names:
+  en: Shunga Dynasty
+  iast: Śuṅga
+  native: शुङ्ग
+summary: >-
+  The Shunga dynasty (c. 185-73 BCE) succeeded the Mauryas in northern and central India after the Mauryan commander-in-chief Pushyamitra Shunga assassinated the last Maurya ruler, Brihadratha. Ruling from Pataliputra and maintaining a major western court at Vidisha, the Shungas revived royal Vedic sacrifices such as the ashvamedha while monumental Buddhist complexes at Bharhut and Sanchi expanded within their realm.
+summaries:
+  kids: >-
+    After the Maurya Empire ended around 185 BCE, the Shunga dynasty ruled northern and central India from Pataliputra and Vidisha for over a century.
+  teen: >-
+    Founded by Pushyamitra Shunga around 185 BCE, the Shunga dynasty defended the Gangetic plain against Indo-Greek incursions, patronised Vedic ritual, and oversaw the stone expansion of Buddhist stupas at Bharhut and Sanchi.
+region: Gangetic plain and Malwa (Pataliputra and Vidisha)
+location: { name: "Vidisha, Madhya Pradesh", lat: 23.525, lon: 77.808 }
+datings:
+  - method: scholarly-consensus
+    range: { earliest: -184, latest: -72, precision: decade, circa: true }
+    grade: B
+    label: Post-Mauryan Shunga rule (c. 185-73 BCE)
+    sources:
+      - src.thapar-2012-asoka-decline-mauryas
+      - src.kulke-2004-history-of-india
+      - src.shaw-2016-buddhist-landscapes-sanchi
+    note: Anchored by the end of the Maurya dynasty c. 185 BCE, Puranic king lists assigning ten Shunga kings 112 years before the Kanva coup, and the c. 113 BCE Heliodorus pillar synchronism at Vidisha.
+claims:
+  - text: The Ayodhya stone inscription of Dhanadeva credits Pushyamitra Shunga with performing two ashvamedha (horse sacrifices), marking a royal revival of Vedic ritual after Mauryan rule.
+    grade: A
+    sources:
+      - src.salomon-1998-indian-epigraphy
+      - src.kulke-2004-history-of-india
+  - text: A gateway inscription at the Bharhut stupa dates its construction "during the rule of the Shungas" (Suganam raje), showing that major Buddhist architectural projects flourished during the Shunga period.
+    grade: A
+    sources:
+      - src.salomon-1998-indian-epigraphy
+      - src.shaw-2016-buddhist-landscapes-sanchi
+relations:
+  - { kind: succeeded, target: polity.maurya-empire }
+  - { kind: related-to, target: site.sanchi-stupa }
+  - { kind: related-to, target: artifact.heliodorus-pillar }
+  - { kind: contemporary-of, target: polity.indo-greek-kingdom }
+tags: [shunga, pushyamitra, vidisha, bharhut, sanchi]
+review: { status: draft, author: "gemini-4-argon" }

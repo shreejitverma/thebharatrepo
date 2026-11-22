@@ -1,0 +1,43 @@
+id: site.khajuraho
+type: site
+kind: site
+names:
+  en: Khajuraho Group of Monuments
+  native: खजुराहो
+summary: >-
+  Khajuraho in Madhya Pradesh preserves Hindu and Jain temples built under the Chandela dynasty,
+  mostly between about 950 and 1050 CE. The temples are high points of the nagara style, with
+  sculpture covering their walls, including a small share of celebrated erotic scenes. UNESCO listed
+  the group in 1986.
+summaries:
+  kids: >-
+    Khajuraho has stone temples covered in carvings of gods, dancers, animals and everyday people. They
+    were built about a thousand years ago by the Chandela kings.
+  teen: >-
+    The Khajuraho temples rise like mountain peaks, with towers stacked one above another. An
+    inscription in the Lakshmana temple dates it to 954 CE, and the Kandariya Mahadeva temple is the
+    largest of the group.
+region: Chhatarpur district, Madhya Pradesh
+location: { name: Khajuraho, lat: 24.85, lon: 79.93 }
+datings:
+  - method: art-historical
+    range: { earliest: "950 CE", latest: "1050 CE", precision: decade, circa: true }
+    grade: B
+    label: Main Chandela building phase
+    sources: [src.unesco-1986-khajuraho, src.michell-1988-hindu-temple]
+  - method: epigraphic
+    range: { earliest: "954 CE", latest: "954 CE", precision: year, circa: false }
+    grade: A
+    label: Lakshmana temple inscription (Vikrama Samvat 1011)
+    sources: [src.burgess-1892-epigraphia-indica-vol-1]
+claims:
+  - text: The Khajuraho Group of Monuments was inscribed on the UNESCO World Heritage List in 1986.
+    grade: A
+    sources: [src.unesco-1986-khajuraho]
+  - text: The group includes both Hindu and Jain temples built under Chandela rule.
+    grade: A
+    sources: [src.unesco-1986-khajuraho]
+relations: []
+wikidata: Q167298
+tags: [unesco, chandela, nagara, temple-architecture]
+review: { status: draft, author: "claude-opus-5-5" }

@@ -57,7 +57,6 @@ relations:
     target: site.mehrgarh
   - kind: influenced
     target: concept.southern-neolithic-ash-mounds
-wikidata: Q46889
 image:
   commons: "File:Farmer in Tamil Nadu 1993.JPG"
   alt: Domesticated humped zebu cattle (Bos indicus) ploughing a field in Tamil Nadu

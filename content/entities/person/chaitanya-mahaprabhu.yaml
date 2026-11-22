@@ -1,0 +1,40 @@
+id: person.chaitanya-mahaprabhu
+type: person
+kind: person
+names:
+  en: Chaitanya Mahaprabhu
+summary: Chaitanya was a Bengali Vaishnava teacher whose devotional practice and
+  followers shaped Gaudiya Vaishnavism. Dates for his life rely on hagiographic
+  traditions and historical reconstruction.
+summaries:
+  kids: Chaitanya was a teacher whose songs, worship and teachings helped form a
+    devotional community in Bengal and Odisha.
+  teen: Chaitanya taught devotion to Krishna and became the central figure in
+    Gaudiya Vaishnavism. Historians distinguish devotional biographies from
+    independently datable evidence.
+datings:
+  - method: scholarly-consensus
+    range:
+      earliest: "1486"
+      latest: "1533"
+      precision: year
+      circa: true
+    grade: C
+    label: Historical scholarship
+    sources:
+      - src.stewart-2010-final-word-caitanya-caritamrta
+      - src.hawley-2015-storm-of-songs
+claims:
+  - text: Chaitanya was a Bengali Vaishnava teacher whose devotional practice and
+      followers shaped Gaudiya Vaishnavism. Dates for his life rely on
+      hagiographic traditions and historical reconstruction.
+    grade: C
+    sources:
+      - src.stewart-2010-final-word-caitanya-caritamrta
+      - src.hawley-2015-storm-of-songs
+relations: []
+tags:
+  - person
+review:
+  status: draft
+  author: codex-gpt-6

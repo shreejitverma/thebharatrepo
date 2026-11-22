@@ -1,0 +1,37 @@
+id: event.indian-national-congress
+type: event
+kind: event
+names:
+  en: Indian National Congress
+summary: The Indian National Congress held its first session in Bombay in
+  December 1885. It developed from an elite political forum into a mass
+  organization central to the independence movement.
+summaries:
+  kids: The Indian National Congress began meeting in 1885 and later became a
+    major part of the independence movement.
+  teen: Congress changed substantially over time, from constitutional petitioning
+    to mass mobilization and negotiations over independence.
+datings:
+  - method: documentary
+    range:
+      earliest: "1885"
+      latest: "1885"
+      precision: year
+      circa: false
+    grade: A
+    label: Documentary record
+    sources: &a1
+      - src.bandyopadhyay-2004-from-plassey-to-partition
+      - src.metcalf-2012-concise-history-modern-india
+claims:
+  - text: The Indian National Congress held its first session in Bombay in December
+      1885. It developed from an elite political forum into a mass organization
+      central to the independence movement.
+    grade: A
+    sources: *a1
+relations: []
+tags:
+  - event
+review:
+  status: draft
+  author: codex-gpt-6

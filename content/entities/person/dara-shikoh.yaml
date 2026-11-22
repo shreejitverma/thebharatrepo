@@ -1,0 +1,37 @@
+id: person.dara-shikoh
+type: person
+kind: person
+names:
+  en: Dara Shikoh
+summary: Dara Shikoh was a Mughal prince and writer, known for Persian works on
+  Sufi thought and his engagement with Sanskrit texts.
+summaries:
+  kids: Dara Shikoh was a Mughal prince who supported discussions between Muslim
+    and Hindu scholars.
+  teen: Dara’s writings document a Mughal courtly interest in Sufi and Sanskrit
+    intellectual traditions, especially through translation.
+datings:
+  - method: scholarly-consensus
+    range:
+      earliest: "1615"
+      latest: "1659"
+      precision: year
+      circa: true
+    grade: B
+    label: Historical scholarship
+    sources:
+      - src.gandhi-2020-emperor-who-never-was
+      - src.truschke-2016-culture-of-encounters
+claims:
+  - text: Dara Shikoh was a Mughal prince and writer, known for Persian works on
+      Sufi thought and his engagement with Sanskrit texts.
+    grade: B
+    sources:
+      - src.gandhi-2020-emperor-who-never-was
+      - src.truschke-2016-culture-of-encounters
+relations: []
+tags:
+  - person
+review:
+  status: draft
+  author: codex-gpt-6

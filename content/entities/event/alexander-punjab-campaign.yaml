@@ -1,0 +1,40 @@
+id: event.alexander-punjab-campaign
+type: event
+kind: event
+names:
+  en: Alexander's Campaign in the Punjab
+summary: >-
+  Between 327 and 325 BCE, Alexander III of Macedon invaded the Indus basin and the Punjab, crossing the Indus, allying with Ambhi (Omphis) of Taxila, and fighting King Porus at the Battle of the Hydaspes (Jhelum) in 326 BCE. When his exhausted troops refused to march east across the Hyphasis (Beas) toward the Nanda Empire, Alexander turned south down the Indus valley and withdrew in 325 BCE.
+summaries:
+  kids: >-
+    In 326 BCE, the Greek king Alexander the Great marched into the Punjab and fought King Porus by the Jhelum River, before his tired soldiers refused to go any further east.
+  teen: >-
+    Alexander's 327 to 325 BCE campaign in northwestern India, recorded primarily by Arrian, created a fixed chronological anchor for ancient Indian history and opened direct Greco-Indian political and cultural contact.
+region: Gandhara, Punjab and Sindh (Indus river basin)
+location: { name: "Jhelum River (ancient Hydaspes)", lat: 32.828, lon: 73.631 }
+datings:
+  - method: documentary
+    range: { earliest: -326, latest: -324, best: -325, precision: year, circa: false }
+    grade: A
+    label: Arrian's Athenian archon dating and Hellenistic chronology
+    sources:
+      - src.mccrindle-1896-invasion-of-india-alexander
+      - src.bosworth-1996-alexander-and-the-east
+    note: Arrian, writing in the 2nd century CE from the lost accounts of Ptolemy and Aristobulus, dates the Hydaspes battle to the Athenian archonship of Hegemon (326 BCE); the entry into India in 327 BCE and the withdrawal down the Indus in 325 BCE follow from the same narrative chronology.
+claims:
+  - text: Arrian's Anabasis of Alexander, drawing on the lost eyewitness narratives of Ptolemy and Aristobulus, records Alexander's hard-fought battle against King Porus (Paurava) at the Hydaspes (Jhelum) River in 326 BCE and Porus's reinstatement as an allied ruler.
+    grade: A
+    sources:
+      - src.mccrindle-1896-invasion-of-india-alexander
+      - src.bosworth-1996-alexander-and-the-east
+  - text: Alexander's advance halted at the Hyphasis (Beas) River when his soldiers refused to cross into the Gangetic plain, after which he campaigned down the Indus against the Malloi and exited through Gedrosia.
+    grade: A
+    sources:
+      - src.mccrindle-1896-invasion-of-india-alexander
+      - src.bosworth-1996-alexander-and-the-east
+relations:
+  - { kind: contemporary-of, target: polity.nanda-dynasty }
+  - { kind: contemporary-of, target: person.chandragupta-maurya }
+  - { kind: influenced, target: polity.indo-greek-kingdom }
+tags: [alexander, punjab, hydaspes, arrian, chronology]
+review: { status: draft, author: "gemini-4-argon" }

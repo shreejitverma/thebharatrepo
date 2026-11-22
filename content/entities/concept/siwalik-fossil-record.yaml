@@ -52,7 +52,6 @@ claims:
 relations:
   - kind: succeeded
     target: event.indian-plate-asia-collision
-wikidata: Q613624
 image:
   commons: "File:View over the Sivalik Hills 02.jpg"
   alt: Forested ridges of the Siwalik Hills in the Himalayan foothills

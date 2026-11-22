@@ -1,0 +1,42 @@
+id: event.faxian-travels
+type: event
+kind: event
+names:
+  en: Faxian's Travels in India
+  native: 法顯西行
+summary: >-
+  Between 399 and 414 CE, the Chinese Buddhist monk Faxian (Fa-hsien) journeyed overland from Chang'an across Central Asia into India, residing in the Gupta Empire from c. 400 to 411 CE to collect Sanskrit Vinaya manuscripts before returning by sea via Sri Lanka. His travelogue, the Foguoji ("A Record of Buddhistic Kingdoms"), provides an eyewitness description of Indian society, mild administration, cities and Buddhist monasteries during the reign of Chandragupta II.
+summaries:
+  kids: >-
+    Around the year 400 CE, the Chinese Buddhist monk Faxian walked across deserts and mountains to India during the Gupta Empire, studied Sanskrit books in Pataliputra, and wrote a famous travel diary about how peaceful and prosperous the country was.
+  teen: >-
+    Travelling across India between c. 400 and 411 CE during the reign of Chandragupta II, the Chinese pilgrim Faxian recorded in his Foguoji that the Gupta heartland (Madhyadesha) enjoyed mild laws without capital punishment, free movement without household registration, and charitable hospitals in Pataliputra.
+region: Gandhara, Mathura, Madhyadesha, Magadha (Pataliputra) and Tamralipti
+location: { name: "Patna (ancient Pataliputra)", lat: 25.611, lon: 85.144 }
+datings:
+  - method: documentary
+    range: { earliest: 399, latest: 414, best: 405, precision: year, circa: false }
+    grade: A
+    label: Dated Chinese imperial chronology of Faxian's journey (399-414 CE)
+    sources:
+      - src.legge-1886-record-buddhistic-kingdoms
+      - src.kulke-2004-history-of-india
+    note: Faxian explicitly records his departure from Chang'an in the third year of the Hongshi era of Later Qin (399 CE), his three-year stay copying Sanskrit manuscripts at Pataliputra and two years at Tamralipti, and his return to Qingzhou in 412/414 CE.
+claims:
+  - text: >-
+      Faxian describes the Middle Kingdom (Madhyadesha, the Gupta heartland) as prosperous and lightly governed, noting that people did not have to register their households or obtain travel permits, criminals were fined rather than executed, and market transactions used cowrie shells.
+    grade: A
+    sources:
+      - src.legge-1886-record-buddhistic-kingdoms
+      - src.kulke-2004-history-of-india
+  - text: >-
+      At Pataliputra, Faxian admired the stone palace and inscribed pillars attributed to Emperor Ashoka, witnessed annual Buddhist image-chariot processions, and described free charitable medical houses funded by wealthy elders where poor and disabled patients received shelter, doctors, food and medicine.
+    grade: A
+    sources:
+      - src.legge-1886-record-buddhistic-kingdoms
+relations:
+  - { kind: contemporary-of, target: person.chandragupta-ii }
+  - { kind: related-to, target: polity.gupta-empire }
+  - { kind: related-to, target: person.ashoka }
+tags: [faxian, fa-hsien, foguoji, gupta-empire, chandragupta-ii, buddhism, pataliputra]
+review: { status: draft, author: "gemini-4-argon" }

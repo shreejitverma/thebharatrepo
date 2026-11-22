@@ -54,7 +54,6 @@ claims:
 relations:
   - kind: related-to
     target: site.lahuradewa
-wikidata: Q19672252
 tags:
   - neolithic
   - chalcolithic

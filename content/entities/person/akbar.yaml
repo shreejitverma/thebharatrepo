@@ -1,0 +1,39 @@
+id: person.akbar
+type: person
+kind: person
+names:
+  en: Akbar
+summary: Akbar ruled the Mughal Empire from 1556 to 1605. His court expanded
+  imperial power and supported exchanges among Persianate, Indic and other
+  intellectual traditions.
+summaries:
+  kids: Akbar was a Mughal emperor who expanded his empire and brought scholars
+    and artists to his court.
+  teen: Akbar’s reign saw military expansion, administrative consolidation and
+    court debates across religious and literary traditions.
+datings:
+  - method: scholarly-consensus
+    range:
+      earliest: "1542"
+      latest: "1605"
+      precision: year
+      circa: true
+    grade: B
+    label: Historical scholarship
+    sources:
+      - src.richards-1993-mughal-empire
+      - src.truschke-2016-culture-of-encounters
+claims:
+  - text: Akbar ruled the Mughal Empire from 1556 to 1605. His court expanded
+      imperial power and supported exchanges among Persianate, Indic and other
+      intellectual traditions.
+    grade: B
+    sources:
+      - src.richards-1993-mughal-empire
+      - src.truschke-2016-culture-of-encounters
+relations: []
+tags:
+  - person
+review:
+  status: draft
+  author: codex-gpt-6

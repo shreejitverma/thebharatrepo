@@ -1,0 +1,46 @@
+id: event.chola-invasion-of-srivijaya
+type: event
+kind: event
+names:
+  en: Chola invasion of Srivijaya
+summary: >-
+  In about 1025 CE the Chola king Rajendra I sent a naval expedition against Srivijaya, the
+  trading empire of Sumatra and the Malay peninsula. Chola inscriptions list the ports that were
+  attacked and the capture of the Srivijaya king; historians still debate whether the motive was trade,
+  diplomacy or royal prestige.
+summaries:
+  kids: >-
+    About a thousand years ago, Chola ships sailed from south India to attack the ports of a rich
+    kingdom in what is now Indonesia and Malaysia.
+  teen: >-
+    Rajendra's fleet raided a chain of ports along the Strait of Malacca, then sailed home. The raid did
+    not create a lasting empire, so scholars argue about why it happened: to protect Tamil merchants,
+    to control the sea route to China, or to win glory.
+region: Strait of Malacca (Sumatra and the Malay peninsula)
+location: { name: Kadaram (Kedah), lat: 5.73, lon: 100.42 }
+datings:
+  - method: epigraphic
+    range: { earliest: "1024 CE", latest: "1026 CE", best: "1025 CE", precision: year, circa: true }
+    grade: B
+    label: Inferred from Rajendra I's inscriptions
+    sources: [src.sastri-1955-the-colas-medieval, src.kulke-2009-nagapattinam-to-suvarnadwipa-medieval]
+    note: The conquest first appears in the royal eulogy of inscriptions from Rajendra's later regnal years.
+claims:
+  - text: >-
+      Rajendra I's inscriptions name Srivijaya, Kadaram and a series of other ports and record the
+      capture of the Srivijaya king Sangrama Vijayottungavarman.
+    grade: A
+    sources: [src.sastri-1955-the-colas-medieval, src.kulke-2009-nagapattinam-to-suvarnadwipa-medieval]
+  - text: The motives for the expedition, commercial or political, are debated.
+    grade: C
+    sources: [src.kulke-2009-nagapattinam-to-suvarnadwipa-medieval]
+debate: >-
+  Some historians see the raid as an effort to protect Tamil merchant guilds and Chola access to the
+  China trade from Srivijaya's control of the straits; others stress diplomatic rivalry and the
+  royal ideology of digvijaya, conquest of the quarters, since no lasting occupation followed.
+relations:
+  - { kind: related-to, target: person.rajendra-chola-i }
+  - { kind: related-to, target: polity.chola-dynasty }
+wikidata: Q16957926
+tags: [chola, maritime, southeast-asia, naval]
+review: { status: draft, author: "claude-opus-5-5" }

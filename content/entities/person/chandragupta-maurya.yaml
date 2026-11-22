@@ -1,0 +1,48 @@
+id: person.chandragupta-maurya
+type: person
+kind: person
+names:
+  en: Chandragupta Maurya
+  iast: Candragupta Maurya
+  native: चन्द्रगुप्त मौर्य
+summary: >-
+  Chandragupta Maurya founded the Maurya Empire around 322 to 321 BCE by overthrowing the Nanda dynasty of Magadha and taking over the northwest after Alexander's withdrawal. He is the Sandrokottos of Greek sources, and around 305 to 303 BCE he made a treaty with Seleucus I Nicator that gave him lands west of the Indus in exchange for 500 war elephants.
+summaries:
+  kids: >-
+    Chandragupta Maurya founded the Maurya Empire about 2,300 years ago. He united a large part of northern India, from Magadha in the east to the Indus in the northwest.
+  teen: >-
+    Known to Greek writers as Sandrokottos, Chandragupta Maurya overthrew the Nandas, made peace with Seleucus I, and, according to later Jain tradition, gave up his throne to become a Jain monk.
+region: Northern India and the Indus borderlands (capital at Pataliputra)
+location: { name: "Patna (ancient Pataliputra)", lat: 25.611, lon: 85.144 }
+datings:
+  - method: foreign-synchronism
+    range: { earliest: "324 BCE", latest: "297 BCE", precision: decade, circa: true }
+    grade: B
+    label: Reign, from Greek synchronisms and Indian regnal lengths
+    sources:
+      - src.thapar-2012-asoka-decline-mauryas
+      - src.stoneman-2019-greek-experience-of-india
+    note: His accession follows Alexander's departure from India (325 BCE) and his treaty with Seleucus I falls around 305 to 303 BCE; the 24-year reign given in Indian sources puts his death or abdication around 298 to 297 BCE.
+claims:
+  - text: In 1793 William Jones identified the Sandrokottos of Greek writers with Chandragupta, creating the first fixed synchronism between Indian and Mediterranean chronology.
+    grade: A
+    sources:
+      - src.thapar-2012-asoka-decline-mauryas
+      - src.stoneman-2019-greek-experience-of-india
+  - text: Around 305 to 303 BCE Chandragupta made a treaty with Seleucus I Nicator, gaining territory west of the Indus (probably including Arachosia and the Paropamisadae; the exact extent is debated) and giving 500 war elephants; Seleucus later sent Megasthenes as envoy.
+    grade: B
+    sources:
+      - src.thapar-2012-asoka-decline-mauryas
+      - src.stoneman-2019-greek-experience-of-india
+  - text: Later Jain tradition says Chandragupta became a disciple of the monk Bhadrabahu, abdicated, and fasted to death at Shravanabelagola in Karnataka.
+    grade: C
+    sources:
+      - src.dundas-2002-the-jains-doi
+relations:
+  - { kind: founded, target: polity.maurya-empire }
+  - { kind: ruled, target: polity.maurya-empire }
+  - { kind: contemporary-of, target: person.kautilya }
+  - { kind: related-to, target: person.ashoka, note: Grandfather of Ashoka }
+wikidata: Q188541
+tags: [maurya, chandragupta-maurya, sandrokottos, pataliputra]
+review: { status: draft, author: "gemini-4-argon" }

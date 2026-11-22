@@ -1,0 +1,43 @@
+id: polity.indo-greek-kingdom
+type: polity
+kind: polity
+names:
+  en: Indo-Greek Kingdom
+  iast: Yavana Rājya
+  native: यवन राज्य
+summary: >-
+  The Indo-Greek kingdoms were a group of Hellenistic successor states ruled by Graeco-Bactrian kings and their descendants across the Hindu Kush, Gandhara, the Punjab and parts of Sindh from roughly 190 BCE to 10 CE. Known in Indian texts as Yavanas, they minted bilingual coins bearing Greek legends on the obverse and Prakrit in Kharosthi (or occasionally Brahmi) script on the reverse, which provided the key to deciphering Kharosthi.
+summaries:
+  kids: >-
+    The Indo-Greek kingdoms were ruled by Greek kings in northwestern India who minted coins written in both Greek on one side and ancient Indian scripts on the other.
+  teen: >-
+    Expanding south of the Hindu Kush from Bactria around 190 BCE, the Indo-Greek rulers blended Hellenistic and Indian political, religious and artistic traditions until their absorption by Indo-Scythian (Shaka) rulers around 10 CE.
+region: Eastern Afghanistan, Gandhara and Punjab (capitals at Taxila, Pushkalavati and Sagala)
+location: { name: "Sialkot (ancient Sagala)", lat: 32.494, lon: 74.522 }
+datings:
+  - method: numismatic
+    range: { earliest: -189, latest: 10, precision: decade, circa: true }
+    grade: A
+    label: Numismatic and epigraphic chronology from Demetrius I to Strato II
+    sources:
+      - src.stoneman-2019-greek-experience-of-india
+      - src.salomon-1998-indian-epigraphy
+    note: Reconstructed from hoard sequences, overstrikes and Attic- and Indian-standard bilingual silver and bronze coinage spanning Demetrius I's crossing of the Hindu Kush (c. 190 BCE) to the last eastern Punjab issues of Strato II/III (c. 10 CE).
+claims:
+  - text: Bilingual coins issued by Indo-Greek monarchs with Greek legends on one face and Prakrit in Kharosthi (or on Agathocles' and Pantaleon's bronzes, Brahmi) on the other enabled nineteenth-century scholars including James Prinsep and Christian Lassen to decipher the Kharosthi script.
+    grade: A
+    sources:
+      - src.salomon-1998-indian-epigraphy
+      - src.stoneman-2019-greek-experience-of-india
+  - text: Bronze coins of the early Indo-Greek king Agathocles (c. 190-180 BCE) excavated at Ai-Khanoum bear some of the earliest surviving iconic images of the Bhagavata deities Vasudeva-Krishna and Samkarshana-Balarama.
+    grade: A
+    sources:
+      - src.stoneman-2019-greek-experience-of-india
+relations:
+  - { kind: ruled-by, target: person.menander-i }
+  - { kind: related-to, target: artifact.heliodorus-pillar }
+  - { kind: influenced, target: tradition.gandhara-art }
+  - { kind: contemporary-of, target: polity.shunga-dynasty }
+wikidata: Q215643
+tags: [indo-greek, yavana, numismatics, kharosthi, gandhara]
+review: { status: draft, author: "gemini-4-argon" }

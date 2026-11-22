@@ -1,0 +1,35 @@
+id: site.qutb-minar
+type: site
+kind: site
+names:
+  en: Qutb Minar and its Monuments
+summary: >-
+  The Qutb complex in Delhi includes the Qutb Minar, the Quwwat-ul-Islam mosque, the tomb of Iltutmish,
+  and later structures. Construction of the minar began under Qutb al-Din Aibak and continued under
+  Iltutmish; UNESCO inscribed the complex as a World Heritage Site in 1993.
+summaries:
+  kids: >-
+    The Qutb complex in Delhi has a tall stone minaret and several other historic buildings. Different
+    rulers added to it over time.
+  teen: >-
+    The Qutb Minar is part of a larger architectural complex built and expanded under early Delhi
+    Sultanate rulers. Its buildings preserve evidence of changing political power and craftsmanship.
+region: Delhi, India
+location: { name: "Mehrauli, Delhi, India", lat: 28.5245, lon: 77.1855 }
+datings:
+  - method: art-historical
+    range: { earliest: "1192 CE", latest: "1311 CE", precision: decade, circa: true }
+    grade: B
+    label: Early Delhi Sultanate construction phases
+    sources: [src.unesco-1993-qutb-minar]
+claims:
+  - text: UNESCO lists the Qutb Minar complex as including the minar, mosque, tomb of Iltutmish, and Alai Darwaza.
+    grade: A
+    sources: [src.unesco-1993-qutb-minar]
+  - text: The minar was begun by Qutb al-Din Aibak and completed or substantially extended by Iltutmish.
+    grade: B
+    sources: [src.jackson-1999-delhi-sultanate, src.unesco-1993-qutb-minar]
+relations:
+  - { kind: related-to, target: event.founding-of-delhi-sultanate }
+tags: [delhi, architecture, unesco, sultanate]
+review: { status: draft, author: "codex-gpt-6" }

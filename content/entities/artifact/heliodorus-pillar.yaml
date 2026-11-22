@@ -1,0 +1,49 @@
+id: artifact.heliodorus-pillar
+type: artifact
+kind: dharma
+names:
+  en: Heliodorus Pillar at Vidisha
+  iast: Heliodora Garuḍadhvaja
+  native: हेलिओडोरस गरुड़ध्वज
+summary: >-
+  The Heliodorus pillar (locally known as Khamb Baba) is a monolithic sandstone Garuda-standard (Garudadhvaja) erected at Besnagar (ancient Vidisha) in Madhya Pradesh around 113 BCE by Heliodorus, son of Dion, a Greek inhabitant of Taxila and ambassador of the Indo-Greek king Antialcidas to the court of King Kasiputra Bhagabhadra. Its Prakrit Brahmi inscription is among the earliest known epigraphic records of Bhagavata (Vaishnava) devotion to Vasudeva.
+summaries:
+  kids: >-
+    Over 2,100 years ago, a Greek ambassador named Heliodorus from Taxila put up a tall stone pillar at Vidisha to honour the god Vasudeva (Vishnu).
+  teen: >-
+    Dated to c. 113 BCE, the Heliodorus pillar at Besnagar (Vidisha) bears a Prakrit Brahmi inscription in which an Indo-Greek ambassador calls himself a Bhagavata (devotee of Vasudeva) and quotes an ethical verse parallel to the Mahabharata.
+region: Malwa, Madhya Pradesh (ancient Vidisha / Besnagar)
+location: { name: "Besnagar, Vidisha", lat: 23.541, lon: 77.801 }
+datings:
+  - method: epigraphic
+    range: { earliest: -120, latest: -100, best: -112, precision: decade, circa: true }
+    grade: A
+    label: Fourteenth regnal year of Bhagabhadra and reign of Antialcidas (c. 113 BCE)
+    sources:
+      - src.salomon-1998-indian-epigraphy
+      - src.stoneman-2019-greek-experience-of-india
+      - src.shaw-2016-buddhist-landscapes-sanchi
+    note: The inscription dates the pillar to the fourteenth regnal year of King Kasiputra Bhagabhadra during the reign of the Indo-Greek king Antialcidas of Taxila (c. 115-95 BCE).
+claims:
+  - text: Part A of the inscription identifies Heliodorus (Heliodora), son of Dion of Taxila and envoy of Maharaja Amtalikita (Antialcidas), as a Bhagavata (devotee of the Supreme Lord) who erected this Garudadhvaja in honour of Vasudeva, the God of Gods (devadeva).
+    grade: A
+    sources:
+      - src.salomon-1998-indian-epigraphy
+      - src.stoneman-2019-greek-experience-of-india
+  - text: Part B of the inscription declares that three immortal steps - self-restraint (dama), generosity or renunciation (caga) and vigilance (apramada) - when practised lead to heaven, echoing a verse found in the Striparvan and Udyogaparvan of the Mahabharata.
+    grade: A
+    sources:
+      - src.salomon-1998-indian-epigraphy
+      - src.brockington-1998-sanskrit-epics
+relations:
+  - { kind: related-to, target: polity.indo-greek-kingdom }
+  - { kind: related-to, target: polity.shunga-dynasty }
+  - { kind: related-to, target: text.mahabharata }
+wikidata: Q1854330
+image:
+  commons: "File:Heliodorus-Pillar2.jpg"
+  alt: The Heliodorus Garuda pillar at Besnagar near Vidisha, Madhya Pradesh
+  credit: Asitjain
+  license: CC BY-SA 3.0
+tags: [heliodorus-pillar, vidisha, bhagavata, vaishnavism, indo-greek, brahmi]
+review: { status: draft, author: "gemini-4-argon" }

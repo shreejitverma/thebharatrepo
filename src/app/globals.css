@@ -16,7 +16,7 @@
   --line-strong: #c4b394;
   --accent: #a3262a;        /* kumkum */
   --accent-ink: #fff8ef;
-  --gold: #a86b00;          /* turmeric, darkened for AA on light */
+  --gold: #8a5600;          /* turmeric, darkened for AA text contrast on light surfaces */
   --indigo: #2b2d6e;
   --focus: #1f5fbf;
 
@@ -814,6 +814,8 @@ a:hover {
 
 .tag-list a,
 .tag-list span {
+  display: inline-block;
+  min-height: 26px;
   font-size: 0.82rem;
   padding: 3px 10px;
   border: 1px solid var(--line);
@@ -914,6 +916,13 @@ a:hover {
   color: var(--ink-soft);
 }
 
+.dating__sources a,
+.references a,
+.biblio a {
+  display: inline-block;
+  padding: 3px 0;
+}
+
 .claims {
   display: grid;
   gap: 10px;
@@ -941,6 +950,7 @@ a:hover {
 }
 
 .relations li a {
+  min-height: 32px;
   display: inline-flex;
   gap: 6px;
   align-items: baseline;
@@ -1005,6 +1015,8 @@ a:hover {
 
 .kc-strip__nb a {
   color: var(--ink-soft);
+  display: inline-block;
+  padding: 3px 0;
 }
 
 .kc-strip__nb > div:last-child {

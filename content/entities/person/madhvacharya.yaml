@@ -1,0 +1,46 @@
+id: person.madhvacharya
+type: person
+kind: dharma
+names:
+  en: Madhvacharya
+  iast: Madhvācārya
+  native: ಮಧ್ವಾಚಾರ್ಯ
+summary: >-
+  Madhvacharya (also Anandatirtha) of the Udupi region founded the Dvaita or Tattvavada school of
+  Vedanta, which teaches the real and permanent difference between God (Vishnu), selves and matter. Most
+  scholars date him to 1238 to 1317 CE; a tradition within the Madhva community gives 1199 to 1278 CE.
+summaries:
+  kids: >-
+    Madhvacharya was a teacher from coastal Karnataka. He taught that God and people are truly
+    different, and that people should love and serve God.
+  teen: >-
+    Madhva's Dvaita Vedanta disagrees with both Shankara and Ramanuja: God, souls and matter are
+    eternally distinct. He set up the worship of Krishna at Udupi, which is still run by monasteries
+    linked to him.
+region: Tulu Nadu, coastal Karnataka
+location: { name: Udupi, lat: 13.34, lon: 74.75 }
+datings:
+  - method: textual-internal
+    range: { earliest: "1238 CE", latest: "1317 CE", precision: year, circa: true }
+    grade: C
+    label: Dating favoured by most scholars
+    sources: [src.sarma-2003-introduction-madhva-vedanta]
+  - method: traditional-sampradaya
+    range: { earliest: "1199 CE", latest: "1278 CE", precision: year, circa: false }
+    grade: D
+    label: Madhva tradition
+    sources: [src.sarma-2003-introduction-madhva-vedanta]
+claims:
+  - text: >-
+      Madhva taught a fivefold difference: between God and selves, God and matter, selves and selves,
+      selves and matter, and matter and matter.
+    grade: B
+    sources: [src.sarma-2003-introduction-madhva-vedanta]
+  - text: The Krishna temple at Udupi and its eight monasteries trace their foundation to Madhva.
+    grade: C
+    sources: [src.sarma-2003-introduction-madhva-vedanta]
+relations:
+  - { kind: related-to, target: person.ramanuja, note: Later Vaishnava Vedanta }
+wikidata: Q335371
+tags: [dvaita, vedanta, vaishnava, philosophy]
+review: { status: draft, author: "claude-opus-5-5" }

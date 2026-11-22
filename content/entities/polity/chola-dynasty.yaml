@@ -1,0 +1,45 @@
+id: polity.chola-dynasty
+type: polity
+kind: polity
+names:
+  en: Chola dynasty (Imperial Cholas)
+  iast: Cōḻa
+  native: சோழர்
+summary: >-
+  The Imperial Cholas ruled from Thanjavur and later Gangaikondacholapuram from the mid-9th to the late
+  13th century CE. Beginning with Vijayalaya, and at their height under Rajaraja I and Rajendra I, they
+  controlled most of south India and Sri Lanka's north, sent naval expeditions to Southeast Asia, and
+  built monumental temples documented by thousands of inscriptions.
+summaries:
+  kids: >-
+    The Cholas were kings of Tamil Nadu who built huge stone temples and sent ships across the sea to
+    Sri Lanka and Southeast Asia.
+  teen: >-
+    Chola kings left thousands of inscriptions on temple walls, recording land gifts, village
+    assemblies and wars, so historians know their state in unusual detail. Their bronze images of gods
+    are among the finest metal sculptures of medieval India.
+region: Tamil Nadu (Kaveri delta), with wider south Indian and overseas reach
+location: { name: Thanjavur, lat: 10.78, lon: 79.13 }
+datings:
+  - method: epigraphic
+    range: { earliest: "848 CE", latest: "1279 CE", precision: decade, circa: true }
+    grade: B
+    label: Vijayalaya to Rajendra III
+    sources: [src.sastri-1955-the-colas-medieval, src.singh-2008-ancient-early-medieval-india]
+    note: Early Cholas are known from Sangam literature centuries earlier; this entity covers the imperial line.
+claims:
+  - text: Vijayalaya captured Thanjavur in the mid-9th century, founding the imperial Chola line.
+    grade: B
+    sources: [src.sastri-1955-the-colas-medieval, src.thapar-2002-early-india]
+  - text: >-
+      The Uttaramerur inscriptions of Parantaka I describe how a village assembly was chosen by drawing
+      lots (kudavolai) from qualified candidates.
+    grade: B
+    sources: [src.sastri-1955-the-colas-medieval, src.singh-2008-ancient-early-medieval-india]
+  - text: Under Rajendra I the Cholas launched a naval expedition against Srivijaya in about 1025 CE.
+    grade: B
+    sources: [src.kulke-2009-nagapattinam-to-suvarnadwipa-medieval]
+relations:
+  - { kind: succeeded, target: polity.pallava-dynasty, note: As the dominant power in the Tamil country }
+tags: [tamil-nadu, dynasty, maritime, temple-architecture]
+review: { status: draft, author: "claude-opus-5-5" }

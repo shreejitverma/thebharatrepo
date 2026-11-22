@@ -1,0 +1,36 @@
+id: event.vivekananda-parliament-1893
+type: event
+kind: event
+names:
+  en: Vivekananda at the 1893 Parliament of Religions
+summary: Swami Vivekananda addressed the World’s Parliament of Religions in
+  Chicago in 1893, presenting Hindu ideas to an international audience.
+summaries:
+  kids: Vivekananda spoke at a religious gathering in Chicago in 1893 and
+    introduced Hindu ideas to many listeners.
+  teen: The Chicago appearance became an important episode in the global
+    presentation of Hindu traditions and the development of the Ramakrishna
+    movement.
+datings:
+  - method: documentary
+    range:
+      earliest: "1893"
+      latest: "1893"
+      precision: year
+      circa: false
+    grade: A
+    label: Documentary record
+    sources: &a1
+      - src.beckerlegge-2000-ramakrishna-mission
+      - src.fort-1998-jivanmukti-in-transformation
+claims:
+  - text: Swami Vivekananda addressed the World’s Parliament of Religions in Chicago
+      in 1893, presenting Hindu ideas to an international audience.
+    grade: A
+    sources: *a1
+relations: []
+tags:
+  - event
+review:
+  status: draft
+  author: codex-gpt-6

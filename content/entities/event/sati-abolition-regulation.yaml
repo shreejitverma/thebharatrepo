@@ -1,0 +1,38 @@
+id: event.sati-abolition-regulation
+type: event
+kind: event
+names:
+  en: Bengal Sati Regulation
+summary: Bengal Regulation XVII of 1829 prohibited sati in the Bengal Presidency
+  and classified participation in the practice as criminal. The measure followed
+  sustained public and administrative debate.
+summaries:
+  kids: A regulation in 1829 made sati illegal in the Bengal Presidency. The
+    debate involved Indian reformers and colonial officials.
+  teen: The regulation was issued under Governor-General William Bentinck;
+    scholarship examines both Indian reform arguments and colonial policy in its
+    passage and implementation.
+datings:
+  - method: documentary
+    range:
+      earliest: "1829"
+      latest: "1829"
+      precision: year
+      circa: false
+    grade: A
+    label: Documentary record
+    sources:
+      - src.mani-1998-contentious-traditions-sati
+claims:
+  - text: Bengal Regulation XVII of 1829 prohibited sati in the Bengal Presidency
+      and classified participation in the practice as criminal. The measure
+      followed sustained public and administrative debate.
+    grade: A
+    sources:
+      - src.mani-1998-contentious-traditions-sati
+relations: []
+tags:
+  - event
+review:
+  status: draft
+  author: codex-gpt-6

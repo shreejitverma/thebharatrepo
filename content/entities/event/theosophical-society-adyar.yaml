@@ -1,0 +1,37 @@
+id: event.theosophical-society-adyar
+type: event
+kind: event
+names:
+  en: Theosophical Society at Adyar
+summary: The Theosophical Society established its international headquarters at
+  Adyar, Madras, in 1882. The Society promoted comparative study of religion and
+  became active in Indian public life.
+summaries:
+  kids: The Theosophical Society moved its headquarters to Adyar in 1882 and
+    studied religions and philosophy.
+  teen: The Society’s Indian branch connected transnational esoteric interests
+    with educational and political activity, especially under later leadership.
+datings:
+  - method: scholarly-consensus
+    range:
+      earliest: "1882"
+      latest: "1882"
+      precision: year
+      circa: true
+    grade: A
+    label: Historical scholarship
+    sources: &a1
+      - src.metcalf-2012-concise-history-modern-india
+      - src.trautmann-1997-aryans-and-british-india
+claims:
+  - text: The Theosophical Society established its international headquarters at
+      Adyar, Madras, in 1882. The Society promoted comparative study of religion
+      and became active in Indian public life.
+    grade: A
+    sources: *a1
+relations: []
+tags:
+  - event
+review:
+  status: draft
+  author: codex-gpt-6

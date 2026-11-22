@@ -60,7 +60,6 @@ relations:
     target: tradition.malwa-culture
   - kind: contemporary-of
     target: site.inamgaon
-wikidata: Q5209403
 image:
   commons: "File:Coach driver Indus 01.jpg"
   alt: Solid-cast bronze ox-drawn chariot and driver from the Daimabad Chalcolithic hoard

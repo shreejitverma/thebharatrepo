@@ -1,0 +1,36 @@
+id: text.lilavati
+type: text
+kind: text
+names:
+  en: Lilavati
+  iast: Līlāvatī
+  native: लीलावती
+summary: >-
+  Lilavati is Bhaskara II's Sanskrit work on arithmetic and mensuration, composed as part of the
+  Siddhanta Shiromani around 1150. It presents mathematical rules and problems in verse; the familiar
+  story that it was written specifically for his daughter is not established by the text itself.
+summaries:
+  kids: >-
+    Lilavati is a Sanskrit book of math problems by Bhaskara II. It uses verses to explain arithmetic,
+    measurement, and ways to solve problems.
+  teen: >-
+    Bhaskara II's Lilavati teaches arithmetic and mensuration through concise rules and poetic problems.
+    A later popular story about its title and the author's daughter should be treated cautiously.
+region: Deccan, India
+datings:
+  - method: textual-internal
+    range: { earliest: "1150 CE", latest: "1150 CE", precision: year, circa: false }
+    grade: A
+    label: Completion within the Siddhanta Shiromani
+    sources: [src.plofker-2009-mathematics-in-india-medieval]
+claims:
+  - text: Lilavati is the arithmetic and mensuration section of Bhaskara II's Siddhanta Shiromani.
+    grade: B
+    sources: [src.plofker-2009-mathematics-in-india-medieval]
+  - text: The Siddhanta Shiromani was completed in 1150 according to Bhaskara II's own dating.
+    grade: A
+    sources: [src.plofker-2009-mathematics-in-india-medieval]
+relations:
+  - { kind: authored-by, target: person.bhaskara-ii }
+tags: [mathematics, arithmetic, sanskrit]
+review: { status: draft, author: "codex-gpt-6" }

@@ -1,0 +1,37 @@
+id: person.srinivasa-ramanujan
+type: person
+kind: person
+names:
+  en: Srinivasa Ramanujan
+summary: Srinivasa Ramanujan was an Indian mathematician elected a Fellow of the
+  Royal Society in 1918 for his work in mathematics.
+summaries:
+  kids: Ramanujan was a mathematician whose work led to his election to the Royal
+    Society in 1918.
+  teen: Ramanujan developed original results in number theory and related fields,
+    often in collaboration with G. H. Hardy after moving to Cambridge.
+datings:
+  - method: scholarly-consensus
+    range:
+      earliest: "1887"
+      latest: "1920"
+      precision: year
+      circa: true
+    grade: B
+    label: Historical scholarship
+    sources:
+      - src.kanigel-1991-man-who-knew-infinity
+      - src.royalsociety-2018-ramanujan-fellowship
+claims:
+  - text: Srinivasa Ramanujan was an Indian mathematician elected a Fellow of the
+      Royal Society in 1918 for his work in mathematics.
+    grade: B
+    sources:
+      - src.kanigel-1991-man-who-knew-infinity
+      - src.royalsociety-2018-ramanujan-fellowship
+relations: []
+tags:
+  - person
+review:
+  status: draft
+  author: codex-gpt-6

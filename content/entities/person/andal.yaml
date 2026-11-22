@@ -1,0 +1,39 @@
+id: person.andal
+type: person
+kind: dharma
+names:
+  en: Andal
+  iast: Āṇṭāḷ
+  native: ஆண்டாள்
+summary: >-
+  Andal (Kotai) of Srivilliputhur is the only woman among the twelve Alvars. Her two works, the
+  Tiruppavai and the Nacciyar Tirumoli, express devotion to Vishnu as bridal love, and the Tiruppavai
+  is sung across south India in the month of Margazhi. She is usually dated to the 8th or 9th century
+  CE.
+summaries:
+  kids: >-
+    Andal was a girl-poet of Tamil Nadu who loved Vishnu so much that she wanted to marry him. Her
+    thirty songs, the Tiruppavai, are sung every winter morning in many temples and homes.
+  teen: >-
+    Andal's poems turn devotion into the language of love and longing. Tradition says she was found as
+    a baby in a garden by the Alvar Periyalvar and that she wore the garlands meant for the god before
+    they were offered.
+region: Srivilliputhur, Tamil Nadu
+location: { name: Srivilliputhur, lat: 9.51, lon: 77.63 }
+datings:
+  - method: linguistic
+    range: { earliest: "700 CE", latest: "900 CE", precision: century, circa: true }
+    grade: C
+    label: Scholarly dating
+    sources: [src.hardy-1983-viraha-bhakti, src.zvelebil-1973-smile-of-murugan]
+claims:
+  - text: Andal composed the Tiruppavai (thirty verses) and the Nacciyar Tirumoli.
+    grade: B
+    sources: [src.hardy-1983-viraha-bhakti, src.zvelebil-1973-smile-of-murugan]
+  - text: Tradition holds that she was the foster daughter of the Alvar Periyalvar (Vishnuchittar).
+    grade: C
+    sources: [src.hardy-1983-viraha-bhakti]
+relations:
+  - { kind: part-of, target: tradition.alvars }
+tags: [alvar, bhakti, tamil, women-poets]
+review: { status: draft, author: "claude-opus-5-5" }

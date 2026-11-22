@@ -1,0 +1,52 @@
+id: artifact.iron-pillar-of-delhi
+type: artifact
+kind: science
+names:
+  en: Iron Pillar of Delhi
+  iast: Lauhastambha (Viṣṇupadagiri Dhvaja)
+  native: दिल्ली लौहस्तम्भ
+summary: >-
+  The Iron Pillar of Delhi is a 7.21-metre, six-tonne forge-welded wrought-iron column standing in the courtyard of the Quwwat-ul-Islam mosque in the Qutb complex at Mehrauli, Delhi. Bearing a six-line Sanskrit inscription in Gupta Brahmi script recording its original erection on Vishnupadagiri as a flagstaff (dhvaja) of Lord Vishnu in memory of King Chandra (widely identified with the Gupta emperor Chandragupta II, c. 375-415 CE), the pillar is renowned in materials science for resisting severe atmospheric corrosion for over 1,600 years.
+summaries:
+  kids: >-
+    Standing over seven metres tall in Delhi, the 1,600-year-old Gupta Iron Pillar weighs more than six tonnes and has barely rusted because of its special high-phosphorus iron composition.
+  teen: >-
+    Forge-welded during the Gupta period (c. 400 CE) and inscribed in honour of King Chandra (Chandragupta II), the Iron Pillar of Delhi owes its famous corrosion resistance to a high-phosphorus wrought-iron composition that forms a protective crystalline phosphate film, as explained by metallurgist R. Balasubramaniam.
+region: Delhi (originally erected at Vishnupadagiri, often identified with Udayagiri in Madhya Pradesh, and relocated to Delhi in the medieval era)
+location: { name: "Qutb Complex, Mehrauli, New Delhi", lat: 28.524, lon: 77.185 }
+datings:
+  - method: epigraphic
+    range: { earliest: 375, latest: 415, best: 402, precision: decade, circa: true }
+    grade: A
+    label: Gupta Brahmi Sanskrit inscription of King Chandra (Chandragupta II)
+    sources:
+      - src.balasubramaniam-2000-delhi-iron-pillar
+      - src.fleet-1888-inscriptions-early-gupta-kings
+      - src.salomon-1998-indian-epigraphy
+    note: The six-line Gupta Brahmi Sanskrit poem on the pillar commemorates the deceased or late-reign monarch Chandra, whose Vaishnava devotion, imperial sovereignty and western/eastern victories match the coinage and epigraphy of Chandragupta II Vikramaditya (c. 375-415 CE).
+claims:
+  - text: Metallurgical studies led by R. Balasubramaniam show that the pillar was manufactured by horizontally and vertically forge-welding lumps (20-30 kg) of wrought iron reduced directly using charcoal without limestone flux, leaving a high phosphorus content (average 0.25 wt%), very low sulphur (0.005 wt%) and very low manganese (0.05 wt%).
+    grade: A
+    sources:
+      - src.balasubramaniam-2000-delhi-iron-pillar
+  - text: Balasubramaniam demonstrated that the pillar's corrosion resistance is governed by the alternate wetting and drying formation of a thin, adherent passive layer of crystalline iron hydrogen phosphate hydrate (FePO4.H3PO4.4H2O) over amorphous delta-FeOOH (misawite) at the metal-scale interface, which drastically lowers the corrosion rate.
+    grade: A
+    sources:
+      - src.balasubramaniam-2000-delhi-iron-pillar
+  - text: The oldest inscription on the pillar, a six-line Sanskrit verse in three shardulavikridita stanzas engraved in Gupta Brahmi, states that the lofty standard (dhvaja) of Lord Vishnu was set up on the hill called Vishnupada in memory of King Chandra, who defeated a confederacy of enemies in Vanga (Bengal) and conquered the Vahlikas after crossing the seven mouths of the Sindhu (Indus).
+    grade: A
+    sources:
+      - src.fleet-1888-inscriptions-early-gupta-kings
+      - src.balasubramaniam-2000-delhi-iron-pillar
+relations:
+  - { kind: related-to, target: person.chandragupta-ii }
+  - { kind: part-of, target: polity.gupta-empire }
+  - { kind: related-to, target: site.udayagiri-caves }
+wikidata: Q543419
+image:
+  commons: "File:Delhi Iron pillar, 2010-09-27.jpg"
+  alt: The Gupta-period Iron Pillar in the Qutb complex at Mehrauli, Delhi
+  credit: Aiwok
+  license: CC BY-SA 3.0
+tags: [iron-pillar, metallurgy, chandragupta-ii, gupta-empire, balasubramaniam, epigraphy, science]
+review: { status: draft, author: "gemini-4-argon" }

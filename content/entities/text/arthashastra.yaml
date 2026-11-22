@@ -1,0 +1,51 @@
+id: text.arthashastra
+type: text
+kind: text
+names:
+  en: Arthashastra
+  iast: Arthaśāstra
+  native: अर्थशास्त्र
+summary: >-
+  The Arthashastra is a Sanskrit treatise in fifteen books on statecraft, administration, revenue, law, diplomacy and war, attributed to Kautilya. Its date is contested: tradition assigns it to Chandragupta Maurya's minister in the late 4th century BCE, while Patrick Olivelle dates its composition to about 50 BCE to 125 CE and its final redaction to about 175 to 300 CE.
+summaries:
+  kids: >-
+    The Arthashastra is an old Sanskrit book that tells kings how to run a country: how to collect taxes, make laws, choose ministers and deal with other kingdoms.
+  teen: >-
+    Tradition credits the Arthashastra to Chandragupta Maurya's adviser Kautilya in the 4th century BCE. Modern scholars such as Patrick Olivelle see a text built up in stages between about 50 BCE and 300 CE.
+region: Northern India
+datings:
+  - method: textual-internal
+    range: { earliest: "50 BCE", latest: "300 CE", precision: century, circa: true }
+    grade: C
+    label: Patrick Olivelle (composition and redaction)
+    sources:
+      - src.olivelle-2013-king-governance-law
+      - src.trautmann-1971-kautilya-arthasastra
+    note: Olivelle distinguishes Kautilya's recension of about 50 to 125 CE, built on earlier treatises, from a later redaction of about 175 to 300 CE that gave the text its present shape. Trautmann's statistical study had earlier shown that the text combines the work of several authors.
+  - method: textual-internal
+    range: { earliest: "321 BCE", latest: "290 BCE", precision: decade, circa: true }
+    grade: C
+    label: Traditional Mauryan attribution (R. P. Kangle; Romila Thapar for a Mauryan core)
+    sources:
+      - src.thapar-2012-asoka-decline-mauryas
+      - src.trautmann-1971-kautilya-arthasastra
+    note: Takes the closing verse, which names the author as the one who rescued the earth from the Nandas, at face value and treats the treatise, or at least its core, as a work of Chandragupta Maurya's reign.
+claims:
+  - text: The Arthashastra sets out the seven constituents (prakriti) of the state - the king, minister, territory with its people, fort, treasury, army and ally - and the circle (mandala) theory of relations between neighbouring kingdoms.
+    grade: A
+    sources:
+      - src.olivelle-2013-king-governance-law
+  - text: Thomas Trautmann's statistical analysis of word frequencies found that Books 2, 3 and 7 differ in style, and concluded that the text was compiled from several earlier works.
+    grade: B
+    sources:
+      - src.trautmann-1971-kautilya-arthasastra
+      - src.olivelle-2013-king-governance-law
+debate: >-
+  After R. Shamasastry published the text in 1909, many scholars read it as a description of Chandragupta Maurya's government, and R. P. Kangle defended a Mauryan date. Thomas Trautmann's statistical study (1971) showed several authors at work, and Patrick Olivelle (2013) dates the composition to about 50 BCE to 125 CE and the final redaction to about 175 to 300 CE, while allowing that it draws on older traditions of statecraft.
+relations:
+  - { kind: authored-by, target: person.kautilya }
+  - { kind: related-to, target: polity.maurya-empire }
+  - { kind: related-to, target: text.manusmriti }
+wikidata: Q323133
+tags: [arthashastra, kautilya, statecraft, shastra, contested-chronology]
+review: { status: draft, author: "gemini-4-argon" }

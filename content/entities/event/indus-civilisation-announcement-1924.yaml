@@ -1,0 +1,38 @@
+id: event.indus-civilisation-announcement-1924
+type: event
+kind: event
+names:
+  en: Announcement of the Indus Civilisation
+summary: John Marshall’s Illustrated London News article of 20 September 1924
+  announced that excavations at Harappa and Mohenjo-daro revealed a previously
+  unknown ancient civilisation.
+summaries:
+  kids: In 1924, John Marshall announced that finds from Harappa and Mohenjo-daro
+    belonged to an ancient civilisation.
+  teen: The announcement drew together discoveries by multiple archaeologists;
+    subsequent excavation and comparison established the civilization’s
+    archaeological chronology.
+datings:
+  - method: documentary
+    range:
+      earliest: "1924"
+      latest: "1924"
+      precision: year
+      circa: false
+    grade: A
+    label: Documentary record
+    sources: &a1
+      - src.lahiri-2006-finding-forgotten-cities
+      - src.singh-2004-discovery-of-ancient-india
+claims:
+  - text: John Marshall’s Illustrated London News article of 20 September 1924
+      announced that excavations at Harappa and Mohenjo-daro revealed a
+      previously unknown ancient civilisation.
+    grade: A
+    sources: *a1
+relations: []
+tags:
+  - event
+review:
+  status: draft
+  author: codex-gpt-6

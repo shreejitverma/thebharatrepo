@@ -62,7 +62,6 @@ relations:
     target: site.harappa
   - kind: contemporary-of
     target: site.banawali
-wikidata: Q2341875
 tags:
   - harappan
   - site

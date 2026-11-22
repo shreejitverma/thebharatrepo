@@ -29,16 +29,16 @@ export default function SocialShare({ title, category, slug, tags }: SocialShare
     <div className="social-share">
       <h2 style={{ fontSize: '1.1rem', marginTop: 0 }}>Share this article</h2>
       <div className="share-buttons">
-        <FacebookShareButton url={shareUrl} hashtag={hashtag}>
+        <FacebookShareButton aria-label="Share on Facebook" url={shareUrl} hashtag={hashtag}>
           <FacebookIcon size={32} round />
         </FacebookShareButton>
-        <TwitterShareButton url={shareUrl} title={title}>
+        <TwitterShareButton aria-label="Share on X" url={shareUrl} title={title}>
           <TwitterIcon size={32} round />
         </TwitterShareButton>
-        <LinkedinShareButton url={shareUrl} title={title}>
+        <LinkedinShareButton aria-label="Share on LinkedIn" url={shareUrl} title={title}>
           <LinkedinIcon size={32} round />
         </LinkedinShareButton>
-        <WhatsappShareButton url={shareUrl} title={title}>
+        <WhatsappShareButton aria-label="Share on WhatsApp" url={shareUrl} title={title}>
           <WhatsappIcon size={32} round />
         </WhatsappShareButton>
         <button

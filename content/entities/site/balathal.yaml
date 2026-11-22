@@ -58,7 +58,6 @@ relations:
     target: site.ahar
   - kind: contemporary-of
     target: site.gilund
-wikidata: Q4850125
 tags:
   - chalcolithic
   - ahar-banas

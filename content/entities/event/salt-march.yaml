@@ -1,0 +1,37 @@
+id: event.salt-march
+type: event
+kind: event
+names:
+  en: Salt March
+summary: Gandhi led a march from Sabarmati to Dandi in March and April 1930 to
+  protest the British salt laws. The action helped launch a nationwide civil
+  disobedience campaign.
+summaries:
+  kids: Gandhi and his followers walked to the sea in 1930 and made salt to
+    protest British salt laws.
+  teen: The march turned the salt tax into a focus for civil disobedience, drawing
+    participants and attention well beyond the route itself.
+datings:
+  - method: documentary
+    range:
+      earliest: "1930"
+      latest: "1930"
+      precision: year
+      circa: false
+    grade: A
+    label: Documentary record
+    sources: &a1
+      - src.brown-1989-gandhi-prisoner-of-hope
+      - src.metcalf-2012-concise-history-modern-india
+claims:
+  - text: Gandhi led a march from Sabarmati to Dandi in March and April 1930 to
+      protest the British salt laws. The action helped launch a nationwide civil
+      disobedience campaign.
+    grade: A
+    sources: *a1
+relations: []
+tags:
+  - event
+review:
+  status: draft
+  author: codex-gpt-6

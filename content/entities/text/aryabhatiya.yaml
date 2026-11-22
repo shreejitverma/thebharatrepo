@@ -1,0 +1,44 @@
+id: text.aryabhatiya
+type: text
+kind: science
+names:
+  en: Aryabhatiya
+  iast: Āryabhaṭīya
+  native: आर्यभटीय
+summary: >-
+  The Aryabhatiya is a concise 121-verse Sanskrit mathematical and astronomical treatise composed in 499 CE by Aryabhata at Kusumapura (Pataliputra), structured in four chapters: Gitikapada (astronomical parameters and sine-difference table), Ganitapada (arithmetic, algebra, geometry and trigonometry), Kalakriyapada (time reckoning and planetary models) and Golapada (spherical astronomy and eclipses). It is the earliest surviving self-dated treatise by a named author in classical Indian mathematics and explicitly anchors the 3102 BCE Kali Yuga epoch.
+summaries:
+  kids: >-
+    Written in 499 CE by the 23-year-old Aryabhata, the Aryabhatiya is a 121-verse Sanskrit book of mathematics and astronomy that explains square and cube roots, pi, sine tables and how the Earth rotates.
+  teen: >-
+    Composed at Kusumapura in 499 CE (3,600 years after the 3102 BCE Kali Yuga epoch), the four-chapter Aryabhatiya preserves algorithms for decimal square and cube roots, pi = 3.1416, half-chord (jya/sine) tables, and the kuttaka algorithm for linear Diophantine equations.
+region: Kusumapura (Pataliputra, Bihar), with widespread commentarial transmission in Kerala and South India
+location: { name: "Patna (ancient Kusumapura / Pataliputra)", lat: 25.611, lon: 85.144 }
+datings:
+  - method: astronomical-reference
+    range: { earliest: 499, latest: 499, best: 499, precision: year, circa: false }
+    grade: A
+    label: Explicit Kali Yuga 3,600-year elapsed statement (March 21, 499 CE)
+    sources:
+      - src.plofker-2009-mathematics-in-india
+    note: Kalakriyapada 10 states that 60 x 60 = 3,600 years of the fourth yuga (Kali Yuga) had elapsed when Aryabhata was 23 years old, fixing the epoch of composition to 499 CE and establishing the midnight/sunrise epoch of Kali Yuga on February 17/18, 3102 BCE.
+claims:
+  - text: Ganitapada verse 10 gives the rule that for a circle of diameter 20,000, the circumference is approximately (asanna) 62,832, yielding pi = 3.1416 and explicitly qualifying the ratio as an approximation.
+    grade: A
+    sources:
+      - src.plofker-2009-mathematics-in-india
+  - text: The Gitikapada encodes 24 tabular sine differences (ardha-jya, half-chords at intervals of 3 degrees 45 minutes for radius R = 3,438) in a compact alphasyllabic number system, replacing the Greek full chord with the modern trigonometric half-chord function.
+    grade: A
+    sources:
+      - src.plofker-2009-mathematics-in-india
+  - text: Ganitapada verses 32-33 formulate the kuttaka ("pulverizer") Euclidean-type recursive division algorithm for solving first-degree indeterminate equations (ax + c = by) arising in planetary conjunction problems.
+    grade: A
+    sources:
+      - src.plofker-2009-mathematics-in-india
+relations:
+  - { kind: authored-by, target: person.aryabhata }
+  - { kind: influenced, target: person.varahamihira }
+  - { kind: related-to, target: event.kurukshetra-war }
+wikidata: Q3518429
+tags: [aryabhatiya, aryabhata, mathematics, astronomy, kali-yuga, 499-ce, trigonometry]
+review: { status: draft, author: "gemini-4-argon" }

@@ -1,0 +1,51 @@
+id: person.bimbisara
+type: person
+kind: person
+names:
+  en: Bimbisara
+  iast: Bimbisāra
+  native: बिम्बिसार
+summary: >-
+  Bimbisara (Shrenika in Jain sources) was the Haryanka king of Magadha who began its expansion by annexing Anga and making marriage alliances with Kosala, the Licchavis of Vaishali and Madra. Buddhist and Jain texts both remember him as a contemporary and patron of the Buddha and of Mahavira. His dates depend on the contested date of the Buddha.
+summaries:
+  kids: >-
+    King Bimbisara ruled Magadha from the city of Rajagriha. He made friends with nearby kingdoms through marriages and welcomed teachers such as the Buddha and Mahavira.
+  teen: >-
+    Bimbisara made Magadha a major regional power by annexing Anga and marrying into the royal houses of Kosala and Vaishali. Buddhist and Jain texts say his son Ajatashatru later overthrew him.
+region: Magadha (Bihar)
+location: { name: "Rajgir", lat: 25.028, lon: 85.419 }
+datings:
+  - method: textual-internal
+    range: { earliest: "546 BCE", latest: "490 BCE", precision: decade, circa: true }
+    grade: C
+    label: Reign by the long chronology
+    sources:
+      - src.cousins-1996-dating-historical-buddha
+      - src.singh-2008-ancient-early-medieval-india
+    note: The Mahavamsa gives Bimbisara a reign of 52 years and places the Buddha's death in the eighth year of his son Ajatashatru; counted back from a Parinirvana of about 486 to 483 BCE, this gives a reign of about 544 to 492 BCE.
+  - method: textual-internal
+    range: { earliest: "470 BCE", latest: "405 BCE", precision: decade, circa: true }
+    grade: C
+    label: Reign by the short chronology
+    sources:
+      - src.cousins-1996-dating-historical-buddha
+    note: The same regnal lengths counted back from a Parinirvana of about 400 BCE place Bimbisara's reign roughly 80 years later.
+claims:
+  - text: Bimbisara annexed the neighbouring kingdom of Anga, with its capital at Champa, which gave Magadha access to the lower Gangetic trade routes.
+    grade: B
+    sources:
+      - src.singh-2008-ancient-early-medieval-india
+      - src.kulke-2004-history-of-india
+  - text: Buddhist and Jain texts both present Bimbisara as an older contemporary of the Buddha and of Mahavira, and both say he was deposed by his son Ajatashatru.
+    grade: B
+    sources:
+      - src.singh-2008-ancient-early-medieval-india
+      - src.dundas-2002-the-jains-doi
+relations:
+  - { kind: ruled, target: polity.magadha }
+  - { kind: part-of, target: polity.haryanka-dynasty }
+  - { kind: contemporary-of, target: person.gautama-buddha }
+  - { kind: contemporary-of, target: person.mahavira }
+wikidata: Q317765
+tags: [magadha, haryanka, buddhism, jainism]
+review: { status: draft, author: "gemini-4-argon" }

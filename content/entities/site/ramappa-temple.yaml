@@ -1,0 +1,37 @@
+id: site.ramappa-temple
+type: site
+kind: site
+names:
+  en: Ramappa Temple
+  native: రామప్ప దేవాలయం
+summary: >-
+  The Rudreshvara temple at Palampet in Telangana, popularly called the Ramappa temple, was built in
+  1213 CE by Recharla Rudra, a general of the Kakatiya king Ganapatideva. It is known for its carved
+  basalt brackets and pillars and for a vimana built of light bricks. UNESCO listed it in 2021 as the
+  Kakatiya Rudreshwara (Ramappa) Temple.
+summaries:
+  kids: >-
+    The Ramappa temple in Telangana is about 800 years old. Its roof tower is made of special bricks so
+    light that, people say, they can float on water.
+  teen: >-
+    Built under the Kakatiya kings of Warangal, the Ramappa temple combines granite, basalt carving and
+    lightweight bricks. Its graceful bracket figures of dancers are among the finest Kakatiya sculptures.
+region: Mulugu district, Telangana
+location: { name: Palampet, lat: 18.26, lon: 79.94 }
+datings:
+  - method: epigraphic
+    range: { earliest: "1213 CE", latest: "1213 CE", precision: year, circa: false }
+    grade: A
+    label: Foundation inscription
+    sources: [src.unesco-2021-ramappa-temple]
+claims:
+  - text: The temple was inscribed on the UNESCO World Heritage List in 2021.
+    grade: A
+    sources: [src.unesco-2021-ramappa-temple]
+  - text: It was built by Recharla Rudra during the reign of the Kakatiya ruler Ganapatideva.
+    grade: A
+    sources: [src.unesco-2021-ramappa-temple, src.talbot-2001-precolonial-india-in-practice]
+relations: []
+wikidata: Q3380656
+tags: [unesco, kakatiya, telangana, temple-architecture]
+review: { status: draft, author: "claude-opus-5-5" }

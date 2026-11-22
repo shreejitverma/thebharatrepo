@@ -1,0 +1,40 @@
+id: person.sri-aurobindo
+type: person
+kind: person
+names:
+  en: Sri Aurobindo
+summary: Sri Aurobindo was a political activist, writer and spiritual teacher.
+  After early involvement in anti-colonial politics, he developed a
+  philosophical and spiritual community in Pondicherry.
+summaries:
+  kids: Sri Aurobindo was first active in Indian politics and later became a
+    spiritual teacher and writer.
+  teen: Aurobindo’s life crossed colonial politics, literature and modern
+    spiritual movements; biographies assess the changing phases of his public
+    work.
+datings:
+  - method: scholarly-consensus
+    range:
+      earliest: "1872"
+      latest: "1950"
+      precision: year
+      circa: true
+    grade: B
+    label: Historical scholarship
+    sources:
+      - src.heehs-2008-lives-of-sri-aurobindo
+      - src.metcalf-2012-concise-history-modern-india
+claims:
+  - text: Sri Aurobindo was a political activist, writer and spiritual teacher.
+      After early involvement in anti-colonial politics, he developed a
+      philosophical and spiritual community in Pondicherry.
+    grade: B
+    sources:
+      - src.heehs-2008-lives-of-sri-aurobindo
+      - src.metcalf-2012-concise-history-modern-india
+relations: []
+tags:
+  - person
+review:
+  status: draft
+  author: codex-gpt-6

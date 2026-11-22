@@ -1,0 +1,52 @@
+id: text.puranas
+type: text
+kind: dharma
+names:
+  en: Puranas
+  iast: Purāṇa
+  native: पुराण
+summary: >-
+  The Puranas ("Ancient Lore") are a vast genre of encyclopaedic Sanskrit texts - canonically grouped into eighteen Mahapuranas and eighteen Upapuranas - that transmit Hindu cosmology, mythology, royal genealogies, pilgrimage geography (mahatmyas), ritual and devotional theology centred on Vishnu, Shiva, Devi, Brahma and Surya. While tradition attributes all eighteen Mahapuranas to Vyasa at the start of the Kali Yuga, philologists date the compilation of the earliest extant Mahapuranas (such as Vayu, Brahmanda, Matsya, Vishnu and Markandeya) from the Gupta period (c. 300-600 CE) onward.
+summaries:
+  kids: >-
+    The Puranas are eighteen major Sanskrit encyclopaedias of stories about the creation of the universe, the adventures of gods and goddesses like Vishnu, Shiva and Devi, ancient royal families and sacred pilgrimage places.
+  teen: >-
+    Defined classically by five core subjects (panchalakshana - creation, re-creation, divine genealogies, cosmic manvantara cycles and royal dynasties), the eighteen Mahapuranas began taking their surviving written form in the Gupta period (c. 300-600 CE) while drawing on much older oral lore.
+region: Pan-Indian
+datings:
+  - method: textual-internal
+    range: { earliest: 250, latest: 1000, best: 450, precision: century, circa: true }
+    grade: B
+    label: Core Mahapurana compilation from the Gupta period onward (Ludo Rocher and R. C. Hazra)
+    sources:
+      - src.brockington-1987-puranas-rocher-review
+      - src.kulke-2004-history-of-india
+      - src.hiltebeitel-2011-dharma
+    note: The dynastic "prophecies" of the Kali age (Brihadratha/Nanda/Maurya/Shunga/Satavahana/Gupta lists) in the Vayu, Brahmanda and Matsya Puranas terminate with early fourth-century CE Gupta holdings in Prayaga, Saketa and Magadha, anchoring the core compilation of the early Mahapuranas to c. 300-600 CE, while Ludo Rocher emphasizes that Puranic texts remained fluid living traditions across centuries.
+  - method: traditional-puranic
+    range: { earliest: -3101, latest: -3101, precision: year, circa: true }
+    grade: D
+    label: Traditional attribution to Krishna Dvaipayana Vyasa and Romaharshana at the Kali Yuga transition
+    sources:
+      - src.brockington-1987-puranas-rocher-review
+      - src.hiltebeitel-2011-dharma
+    note: Within the Puranic tradition itself, the original Purana Samhita was compiled by Vyasa at the end of the Dvapara Yuga and transmitted through his bardic (suta) disciple Romaharshana (Lomaharshana) and his son Ugrashravas into the eighteen Mahapuranas.
+claims:
+  - text: >-
+      Amarasimha's fifth/sixth-century CE lexicon Amarakosha defines a Purana by five distinguishing topics (panchalakshana) - primary creation (sarga), periodic dissolution and re-creation (pratisarga), genealogies of gods and sages (vamsha), cosmic epochs of the Manus (manvantara), and histories of royal dynasties (vamshanucharita).
+    grade: A
+    sources:
+      - src.brockington-1987-puranas-rocher-review
+      - src.hiltebeitel-2011-dharma
+  - text: The vamshanucharita sections of the Vayu, Brahmanda, Matsya, Vishnu and Bhagavata Puranas preserve the primary Sanskrit dynastic king-lists for post-Mahabharata northern and Deccan history, including the Haryanka, Shishunaga, Nanda, Maurya, Shunga, Kanva, Andhra (Satavahana) and early Gupta dynasties.
+    grade: A
+    sources:
+      - src.kulke-2004-history-of-india
+      - src.thapar-2012-asoka-decline-mauryas
+relations:
+  - { kind: related-to, target: text.mahabharata }
+  - { kind: related-to, target: text.valmiki-ramayana }
+  - { kind: contemporary-of, target: polity.gupta-empire }
+wikidata: Q188602
+tags: [puranas, mahapurana, panchalakshana, cosmology, genealogy, gupta, vyasa]
+review: { status: draft, author: "gemini-4-argon" }

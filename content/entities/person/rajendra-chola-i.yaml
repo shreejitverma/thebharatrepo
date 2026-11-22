@@ -1,0 +1,40 @@
+id: person.rajendra-chola-i
+type: person
+kind: person
+names:
+  en: Rajendra Chola I
+  iast: Rājendra Cōḻa
+  native: இராஜேந்திர சோழன்
+summary: >-
+  Rajendra I, son of Rajaraja I, ruled the Chola empire from 1014 to 1044 CE. He led an army to the
+  Ganga, after which he took the title Gangaikonda and built a new capital, Gangaikondacholapuram, and
+  he sent a naval expedition against the Srivijaya kingdom of maritime Southeast Asia in about 1025 CE.
+summaries:
+  kids: >-
+    Rajendra was a Chola king who sent his army all the way north to the river Ganga and his navy
+    across the sea to the islands of Southeast Asia.
+  teen: >-
+    Rajendra built on his father's empire. His inscriptions list ports in Malaysia and Sumatra captured
+    by his fleet, a rare case of an Indian kingdom sending a war fleet so far overseas.
+region: Tamil Nadu
+location: { name: Gangaikondacholapuram, lat: 11.21, lon: 79.45 }
+datings:
+  - method: epigraphic
+    range: { earliest: "1014 CE", latest: "1044 CE", precision: year, circa: false }
+    grade: A
+    label: Reign
+    sources: [src.sastri-1955-the-colas-medieval, src.singh-2008-ancient-early-medieval-india]
+    note: He was associated with his father as heir from about 1012 CE.
+claims:
+  - text: After his northern campaign he took the title Gangaikonda and founded Gangaikondacholapuram as his capital.
+    grade: B
+    sources: [src.sastri-1955-the-colas-medieval, src.unesco-1987-great-living-chola-temples-medieval]
+  - text: His inscriptions list the ports of Srivijaya and Kadaram (Kedah) among his conquests.
+    grade: A
+    sources: [src.sastri-1955-the-colas-medieval, src.kulke-2009-nagapattinam-to-suvarnadwipa-medieval]
+relations:
+  - { kind: ruled, target: polity.chola-dynasty }
+  - { kind: succeeded, target: person.rajaraja-i }
+wikidata: Q211483
+tags: [chola, king, maritime]
+review: { status: draft, author: "claude-opus-5-5" }

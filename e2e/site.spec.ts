@@ -58,7 +58,9 @@ test.describe('pages render, are accessible and fit the viewport', () => {
 test.describe('Kaalchakra', () => {
   test('selecting a point opens its record and is reflected in the URL', async ({ page }) => {
     await page.goto('/kaalchakra');
-    const mark = page.locator('.kc-wheel .kc-mark').nth(5);
+    await expect(page.locator('.kc-toolbar')).toBeVisible();
+    // Click a mark's dedicated hit target: an arc's bounding-box centre can fall on the era sector beneath.
+    const mark = page.locator('.kc-canvas .kc-wheel .kc-mark circle[fill="transparent"]').nth(5);
     await mark.click({ force: true });
     const heading = page.locator('.kc-panel h2');
     await expect(heading).not.toHaveText('One wheel, two lenses');
@@ -104,6 +106,7 @@ test.describe('Kaalchakra', () => {
 
   test('keyboard arrows step through entries in time order', async ({ page }) => {
     await page.goto('/kaalchakra');
+    await expect(page.locator('.kc-toolbar')).toBeVisible();
     await page.locator('.kc-canvas').focus();
     await page.keyboard.press('ArrowRight');
     const first = await page.locator('.kc-panel h2').textContent();

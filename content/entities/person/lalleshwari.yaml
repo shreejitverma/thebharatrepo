@@ -1,0 +1,39 @@
+id: person.lalleshwari
+type: person
+kind: dharma
+names:
+  en: Lalleshwari
+  native: लल्लेश्वरी
+summary: >-
+  Lalleshwari (Lal Ded, Lalla) was a 14th-century Kashmiri yogini whose short verse sayings (vakh) are
+  among the earliest works of Kashmiri literature. Her verses draw on Shaiva yoga and are cherished by
+  both Hindu and Muslim Kashmiris, who also know her as Lalla Arifa.
+summaries:
+  kids: >-
+    Lal Ded was a wise woman of Kashmir who wandered and sang short poems about finding God inside
+    yourself. People of different religions in Kashmir still love her songs.
+  teen: >-
+    Lalla's vakhs are four-line poems in early Kashmiri. They talk about yoga, breath and inner
+    awareness of Shiva, and mock empty rituals; they were passed down orally for centuries before
+    being written down.
+region: Kashmir
+location: { name: Srinagar, lat: 34.08, lon: 74.80 }
+datings:
+  - method: textual-internal
+    range: { earliest: "1300 CE", latest: "1400 CE", precision: century, circa: true }
+    grade: C
+    label: 14th century
+    sources: [src.grierson-1920-lalla-vakyani]
+    note: Placed in the 14th century by Kashmiri tradition and by her association with the Sufi Nund Rishi (Sheikh Nur-ud-din).
+claims:
+  - text: Her sayings survive in oral tradition and in later manuscripts, edited and translated by George Grierson and Lionel Barnett in 1920.
+    grade: A
+    sources: [src.grierson-1920-lalla-vakyani]
+  - text: Her verses express a Shaiva yoga of inner realisation rather than external ritual.
+    grade: B
+    sources: [src.grierson-1920-lalla-vakyani]
+relations:
+  - { kind: related-to, target: tradition.kashmir-shaivism }
+wikidata: Q2667861
+tags: [kashmiri, poetry, yogini, women-poets, bhakti]
+review: { status: draft, author: "claude-opus-5-5" }

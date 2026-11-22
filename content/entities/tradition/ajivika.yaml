@@ -1,0 +1,47 @@
+id: tradition.ajivika
+type: tradition
+kind: dharma
+names:
+  en: Ajivikas
+  iast: Ājīvika
+  native: आजीविक
+summary: >-
+  The Ajivikas were a shramana ascetic order of the middle Gangetic plain, most closely associated with Makkhali Gosala, a contemporary and rival of the Buddha and Mahavira. Known only through Buddhist and Jain accounts and inscriptions, they taught a strict doctrine of destiny (niyati). Mauryan rulers gave them caves in Bihar, and inscriptions show that they survived in the Tamil and Kannada regions into the medieval period.
+summaries:
+  kids: >-
+    The Ajivikas were wandering monks who lived at the same time as the Buddha and Mahavira. Emperor Ashoka gave them caves cut into solid rock in Bihar.
+  teen: >-
+    Led by Makkhali Gosala, the Ajivikas taught that everything is fixed by destiny (niyati). They competed with Buddhists and Jains, received rock-cut caves from the Mauryas, and survived in South India for many centuries.
+region: Middle Gangetic plain (Bihar), later the Tamil and Kannada regions
+location: { name: "Barabar Caves, Bihar", lat: 25.005, lon: 85.063 }
+datings:
+  - method: scholarly-consensus
+    range: { earliest: "500 BCE", latest: "1400 CE", precision: century, circa: true }
+    grade: B
+    label: Span of the Ajivika order
+    sources:
+      - src.basham-1951-history-doctrines-ajivikas
+      - src.hultzsch-1925-inscriptions-of-asoka
+    note: The order appears in the 5th century BCE with Makkhali Gosala, received Mauryan cave donations in the 3rd century BCE, and reappears in medieval Tamil and Kannada inscriptions; Basham concludes that it outlived its founder by nearly two thousand years.
+claims:
+  - text: Cave inscriptions of Ashoka in the Barabar Hills and of his grandson Dasharatha in the nearby Nagarjuni Hills in Bihar record the gift of caves to Ajivika monks.
+    grade: A
+    sources:
+      - src.hultzsch-1925-inscriptions-of-asoka
+      - src.basham-1951-history-doctrines-ajivikas
+  - text: No Ajivika scripture survives, so their doctrine of niyati, an impersonal destiny that governs the course of rebirth, is reconstructed from Buddhist and Jain accounts written by their opponents.
+    grade: B
+    sources:
+      - src.basham-1951-history-doctrines-ajivikas
+      - src.dundas-2002-the-jains-doi
+  - text: Medieval inscriptions from the Tamil and Kannada regions show the Ajivikas still present there many centuries after their disappearance from northern records.
+    grade: B
+    sources:
+      - src.basham-1951-history-doctrines-ajivikas
+relations:
+  - { kind: contemporary-of, target: person.gautama-buddha }
+  - { kind: contemporary-of, target: person.mahavira }
+  - { kind: related-to, target: polity.magadha }
+wikidata: Q412873
+tags: [ajivika, shramana, barabar-caves, niyati]
+review: { status: draft, author: "gemini-4-argon" }

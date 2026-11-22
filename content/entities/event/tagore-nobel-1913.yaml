@@ -1,0 +1,36 @@
+id: event.tagore-nobel-1913
+type: event
+kind: event
+names:
+  en: Rabindranath Tagore’s Nobel Prize
+summary: Rabindranath Tagore received the 1913 Nobel Prize in Literature for his
+  English Gitanjali and related verse. He was the first non-European laureate in
+  literature.
+summaries:
+  kids: Rabindranath Tagore won the Nobel Prize in Literature in 1913 for his poetry.
+  teen: The Swedish Academy recognized Tagore’s English-language poetry; the award
+    reflected the transnational circulation of his work.
+datings:
+  - method: documentary
+    range:
+      earliest: "1913"
+      latest: "1913"
+      precision: year
+      circa: false
+    grade: A
+    label: Documentary record
+    sources: &a1
+      - src.nobel-tagore-1913
+      - src.dutta-robinson-1995-rabindranath-tagore
+claims:
+  - text: Rabindranath Tagore received the 1913 Nobel Prize in Literature for his
+      English Gitanjali and related verse. He was the first non-European
+      laureate in literature.
+    grade: A
+    sources: *a1
+relations: []
+tags:
+  - event
+review:
+  status: draft
+  author: codex-gpt-6
