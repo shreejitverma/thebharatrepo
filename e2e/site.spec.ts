@@ -122,6 +122,8 @@ test.describe('Kaalchakra', () => {
 
   test('lens switching filters to traditional datings only', async ({ page }) => {
     await page.goto('/kaalchakra?view=list');
+    // The items arrive after the page; count the rows only once the list has rendered.
+    await expect(page.locator('.kc-canvas .kc-list li').first()).toBeVisible();
     const all = await page.locator('.kc-list li').count();
     await page.getByRole('group', { name: 'Lens' }).getByRole('button', { name: 'Tradition' }).click();
     const trad = await page.locator('.kc-list li').count();

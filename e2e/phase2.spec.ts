@@ -26,6 +26,14 @@ function hrefOf(id: string): string {
   return `/archive/${type}/${slug}`;
 }
 
+/**
+ * Entity pages load a Wikimedia Commons photo, whose latency is outside this site's control; the page itself is
+ * complete at DOMContentLoaded (static HTML), so waiting for the third-party image only makes the tests flaky.
+ */
+async function openEntity(page: Page, id: string) {
+  await page.goto(hrefOf(id), { waitUntil: 'domcontentloaded' });
+}
+
 async function noSeriousA11yViolations(page: Page) {
   const results = await new AxeBuilder({ page }).withTags(['wcag2a', 'wcag2aa', 'wcag21a', 'wcag21aa', 'wcag22aa']).analyze();
   const serious = results.violations.filter((v) => v.impact === 'serious' || v.impact === 'critical');
@@ -95,7 +103,7 @@ test.describe('Map view', () => {
 
   test('the entity page links to its place on the map', async ({ page, request }) => {
     const placed = (await entities(request)).find((e) => e.location)!;
-    await page.goto(hrefOf(placed.id));
+    await openEntity(page, placed.id);
     await page.getByRole('link', { name: 'Show on the map' }).click();
     await expect(page).toHaveURL(/view=map/);
     await expect(page.locator(`.kc-map-svg .kc-mark[data-active="true"][data-id="${placed.id}"]`)).toHaveCount(1);
@@ -354,7 +362,7 @@ test.describe('Relation graph', () => {
     const inboundTo = new Set(all.flatMap((e) => e.relations.map((r) => r.target)));
     const subject = all.find((e) => e.relations.length >= 2 && inboundTo.has(e.id))!;
     expect(subject).toBeTruthy();
-    await page.goto(hrefOf(subject.id));
+    await openEntity(page, subject.id);
     const graph = page.locator('.relgraph');
     await expect(graph.getByRole('heading', { name: 'Connections' })).toBeVisible();
     await expect(graph.locator('.relgraph__summary')).toHaveText(/^\d+ connections? to other entries: \d+ stated on this record, \d+ stated on other records, \d+ stated on both\.$/);
@@ -387,7 +395,7 @@ test.describe('Relation graph', () => {
     const inboundTo = new Set(all.flatMap((e) => e.relations.map((r) => r.target)));
     const lonely = all.find((e) => e.relations.length === 0 && !inboundTo.has(e.id));
     test.skip(!lonely, 'every entity has at least one relation');
-    await page.goto(hrefOf(lonely!.id));
+    await openEntity(page, lonely!.id);
     await expect(page.locator('.relgraph__none')).toHaveText('0 connections: no relation between this entry and another is recorded yet.');
     await expect(page.locator('.relgraph__tree')).toHaveCount(0);
   });
@@ -396,7 +404,7 @@ test.describe('Relation graph', () => {
     const all = await entities(request);
     const busiest = [...all].sort((a, b) => b.relations.length - a.relations.length)[0];
     await page.emulateMedia({ colorScheme: 'dark' });
-    await page.goto(hrefOf(busiest.id));
+    await openEntity(page, busiest.id);
     await expect(page.locator('.relgraph__tree')).toBeVisible();
     await fitsViewport(page, '.relgraph__tree');
     await noSeriousA11yViolations(page);
@@ -410,7 +418,7 @@ test.describe('Entity pages', () => {
     test(`a ${type} page shows datings, grades, sources, relations and its place in time`, async ({ page, request }) => {
       const entity = (await entities(request)).find((e) => e.type === type);
       expect(entity, `no entity of type ${type}`).toBeTruthy();
-      await page.goto(hrefOf(entity!.id));
+      await openEntity(page, entity!.id);
       await expect(page.locator('h1')).toHaveText(entity!.names.en);
       await expect(page.getByRole('heading', { name: 'When, and how we know' })).toBeVisible();
       await expect(page.locator('.datings .dating').first()).toBeVisible();
