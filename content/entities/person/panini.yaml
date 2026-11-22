@@ -54,9 +54,9 @@ relations:
   - { kind: related-to, target: concept.vedic-sanskrit }
 wikidata: Q189725
 image:
-  commons: "File:Panini 1.jpg"
-  alt: Modern commemorative statue of the grammarian Panini
-  credit: Jameela P.
+  commons: "File:Panini Astadhyayi, Sanskrit language, Southern Grantha script.jpg"
+  alt: Palm-leaf manuscript folio of Panini's Ashtadhyayi in Sanskrit written in Southern Grantha script (EFEO collection, Puducherry)
+  credit: Ms Sarah Welch
   license: CC BY-SA 4.0
 tags: [grammarian, linguistics, ashtadhyayi, gandhara, vyakarana]
 review: { status: draft, author: "gemini-4-argon" }

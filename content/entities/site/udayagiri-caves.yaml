@@ -38,8 +38,8 @@ relations:
   - { kind: part-of, target: polity.gupta-empire }
   - { kind: related-to, target: artifact.iron-pillar-of-delhi }
 image:
-  commons: "File:Chandragupta II paying homage to Varaha in Udayagiri Caves (2).jpg"
-  alt: The monumental Varaha rock-cut relief in Cave 5 at Udayagiri, Madhya Pradesh
+  commons: "File:005 Varaha Relief (32851921924).jpg"
+  alt: Rock-cut Cave 5 relief panel at Udayagiri depicting Vishnu as Varaha raising Bhudevi from the cosmic ocean before tiered rows of gods and sages, a naga king, and a kneeling royal figure
   credit: Photo Dharma from Sadao, Thailand
   license: CC BY 2.0
 tags: [udayagiri-caves, varaha, chandragupta-ii, gupta-empire, vaishnavism, rock-cut-art]
