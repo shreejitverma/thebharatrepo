@@ -1255,16 +1255,18 @@ a:hover {
 }
 
 .relgraph__when {
+  min-width: 0;
   color: var(--ink-faint);
   font-size: 0.78rem;
 }
 
-/* The date and the arrow wrap as one, so an arrow never ends up alone on a line. */
-.relgraph__meta {
-  display: inline-flex;
-  align-items: center;
-  gap: 7px;
+/* The arrow is joined to the last word of the date, so it never ends up alone on a line. */
+.relgraph__tail {
   white-space: nowrap;
+}
+
+.relgraph__tail .relgraph__dir {
+  margin-left: 7px;
 }
 
 .relgraph__dir {

@@ -28,6 +28,23 @@ function DirectionMark({ direction }: { direction: RelationDirection }) {
   );
 }
 
+/**
+ * The date, then the direction arrow. A long date (deep time, or a marked traditional reckoning) may wrap, but the
+ * arrow stays joined to its last word, so it never sits alone on a line.
+ */
+function WhenAndDirection({ when, direction }: { when: string; direction: RelationDirection }) {
+  const cut = when.lastIndexOf(' ');
+  return (
+    <span className="relgraph__when">
+      {cut > 0 ? `${when.slice(0, cut)} ` : null}
+      <span className="relgraph__tail">
+        {when.slice(cut + 1)}
+        <DirectionMark direction={direction} />
+      </span>
+    </span>
+  );
+}
+
 function plural(n: number, one: string, many: string): string {
   return `${n} ${n === 1 ? one : many}`;
 }
@@ -68,10 +85,7 @@ export default function RelationGraph({ name, groups, node }: { name: string; gr
                             <span className="chip__dot" aria-hidden="true" />
                             <span className="relgraph__text">
                               <span className="relgraph__name">{other.name}</span>
-                              <span className="relgraph__meta">
-                                <span className="relgraph__when">{other.when}</span>
-                                <DirectionMark direction={e.direction} />
-                              </span>
+                              <WhenAndDirection when={other.when} direction={e.direction} />
                               <span className="visually-hidden">
                                 ({KIND_LABELS[other.kind]}, {DIRECTION_TEXT[e.direction]})
                               </span>
