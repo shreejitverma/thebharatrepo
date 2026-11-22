@@ -87,8 +87,9 @@ test.describe('wheel motion', () => {
     const angles = await recordSpin(page, () => mark.click({ force: true }));
     await expect(page).not.toHaveURL(new RegExp(`id=${ASHOKA}`));
     await expectAtIndicator(page);
-    // It animated through intermediate angles and turned less than half a circle.
-    expect(angles.length).toBeGreaterThan(5);
+    // It animated through intermediate angles and turned less than half a circle. A jump shows only the start
+    // and end angles; how many frames fall in between depends on the engine's frame rate under load.
+    expect(angles.length).toBeGreaterThan(2);
     expect(Math.abs(angles[angles.length - 1] - angles[0])).toBeLessThanOrEqual(180.5);
   });
 
@@ -105,7 +106,7 @@ test.describe('wheel motion', () => {
     await openWheel(page, `?id=${ASHOKA}`);
     await page.locator('.kc-canvas').focus();
     const step = await recordSpin(page, () => page.keyboard.press('ArrowRight'));
-    expect(step.length).toBeGreaterThan(3);
+    expect(step.length).toBeGreaterThan(2);
     await expectAtIndicator(page);
     await expect(page).not.toHaveURL(new RegExp(`id=${ASHOKA}`));
 
@@ -234,13 +235,13 @@ test.describe('wheel motion', () => {
     const back = await recordSpin(page, () => page.goBack());
     await expect(page).toHaveURL(new RegExp(`id=${ASHOKA}`));
     // An animation, not a jump (a jump shows at most the start and end angles); headless engines vary in frame rate.
-    expect(back.length).toBeGreaterThan(5);
+    expect(back.length).toBeGreaterThan(2);
     await expectAtIndicator(page);
     await expect(page.locator('.kc-panel h2')).toHaveText('Ashoka');
 
     const fwd = await recordSpin(page, () => page.goForward());
     expect(selectedId(page)).toBe(later);
-    expect(fwd.length).toBeGreaterThan(5);
+    expect(fwd.length).toBeGreaterThan(2);
     await expectAtIndicator(page);
   });
 
