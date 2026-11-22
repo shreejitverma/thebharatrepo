@@ -1,0 +1,58 @@
+id: "site.mehrangarh-fort"
+type: "site"
+kind: "art"
+names:
+  en: "Mehrangarh Fort"
+summary: "Rao Jodha founded Mehrangarh on a hill above Jodhpur in 1459. Its walls, gates and palaces
+  reflect centuries of building by the Rathore rulers of Marwar."
+summaries:
+  kids: "A ruler named Rao Jodha built a fort on a high rock. Later rulers added rooms, courtyards and
+    gates as the city of Jodhpur grew below."
+  teen: "Mehrangarh's fabric records several building phases, including major work under Maldeo. The
+    fort's plans and decoration changed with successive Marwar courts."
+region: "Jodhpur, Rajasthan"
+datings:
+  - method: "scholarly-consensus"
+    range:
+      earliest: 1459
+      latest: 1459
+      precision: "year"
+      circa: false
+    grade: "B"
+    label: "Foundation attributed to Rao Jodha"
+    sources:
+      - "src.mehrangarh-architecture"
+  - method: "art-historical"
+    range:
+      earliest: 1500
+      latest: 1900
+      precision: "century"
+      circa: true
+    grade: "B"
+    label: "Major phases of construction and rebuilding"
+    sources:
+      - "src.mehrangarh-architecture"
+claims:
+  - text: "The Mehrangarh Museum Trust identifies Rao Jodha as the fort's founder and Maldeo's reign as
+      an early major period of construction."
+    grade: "B"
+    sources:
+      - "src.mehrangarh-architecture"
+  - text: "Sher Shah Sur's forces occupied the fort in 1544."
+    grade: "B"
+    sources:
+      - "src.mehrangarh-architecture"
+relations: []
+wikidata: "Q1483099"
+image:
+  commons: "File:Mehrangarh, Rajasthan.jpg"
+  alt: "Mehrangarh Fort above the rocky hill at Jodhpur"
+  credit: "Aman Malhotra"
+  license: "CC BY-SA 4.0"
+tags:
+  - "marwar"
+  - "rajasthan"
+  - "fort"
+review:
+  status: "draft"
+  author: "codex-gpt-6"

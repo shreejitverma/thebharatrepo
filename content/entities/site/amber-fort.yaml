@@ -1,0 +1,64 @@
+id: "site.amber-fort"
+type: "site"
+kind: "art"
+names:
+  en: "Amber Fort"
+summary: "Amber Fort was a fortified palace of the Kachhwaha rulers. Its courtyards and audience
+  spaces illustrate the exchange of architectural ideas between Rajput courts and the Mughal
+  empire."
+summaries:
+  kids: "Amber's rulers built a palace inside the fort walls. Its gates, courtyards and halls show how
+    rulers lived and met visitors."
+  teen: "The standing palace was developed under successive Kachhwaha rulers. Its relationship to the
+    surrounding hills and defensive works is part of the reason for its inclusion in the Hill Forts
+    of Rajasthan World Heritage property."
+region: "Amer, Jaipur district, Rajasthan"
+datings:
+  - method: "art-historical"
+    range:
+      earliest: 1590
+      latest: 1730
+      precision: "century"
+      circa: true
+    grade: "B"
+    label: "Principal palace building phases"
+    sources:
+      - "src.unesco-2013-hill-forts-rajasthan"
+      - "src.asher-1992-architecture-of-mughal-india"
+  - method: "documentary"
+    range:
+      earliest: 2013
+      latest: 2013
+      precision: "year"
+      circa: false
+    grade: "A"
+    label: "World Heritage inscription as a component of the Hill Forts of Rajasthan"
+    sources:
+      - "src.unesco-2013-hill-forts-rajasthan"
+claims:
+  - text: "Amber's palace complex is one of six components of the Hill Forts of Rajasthan inscription."
+    grade: "A"
+    sources:
+      - "src.unesco-2013-hill-forts-rajasthan"
+  - text: "The palace shows interaction between Rajput and Mughal forms of court architecture."
+    grade: "B"
+    sources:
+      - "src.unesco-2013-hill-forts-rajasthan"
+      - "src.asher-1992-architecture-of-mughal-india"
+relations:
+  - kind: "related-to"
+    target: "event.battle-of-haldighati"
+    note: "Man Singh of Amber commanded the Mughal army."
+tags:
+  - "amer"
+  - "rajasthan"
+  - "unesco"
+  - "fort"
+review:
+  status: "draft"
+  author: "codex-gpt-6"
+image:
+  commons: "File:Amber Fort view.jpg"
+  alt: "View of Amber Fort at Amer"
+  credit: "Bhaiyaji Smile 123"
+  license: "CC BY-SA 4.0"

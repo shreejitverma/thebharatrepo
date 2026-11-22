@@ -1,0 +1,46 @@
+id: "site.bharmour-temples"
+type: "site"
+kind: "art"
+names:
+  en: "Bharmour temples"
+summary: "The Bharmour temple group occupies the former political centre of Brahmapura. Inscriptions
+  on images record early royal patronage, and the Lakshana Devi temple preserves carved woodwork."
+summaries:
+  kids: "Bharmour has old shrines with carved wood and metal images. Words on some of the images tell
+    us who ordered them to be made."
+  teen: "The Lakshana Devi image pedestal names Meru Varman and the craftsman Gugga. The image
+    provides a chronological clue for the early temple, while the buildings and images in the group
+    belong to several phases."
+region: "Bharmour, Chamba district, Himachal Pradesh"
+datings:
+  - method: "epigraphic"
+    range:
+      earliest: 675
+      latest: 750
+      precision: "century"
+      circa: true
+    grade: "C"
+    label: "Early temple patronage inferred from inscriptions of Meru Varman"
+    sources:
+      - "src.vogel-1994-antiquities-chamba"
+      - "src.sharma-2009-western-himalayan-temples"
+    note: "The inscriptions are undated. Script and dynastic context support an approximate date."
+claims:
+  - text: "The pedestal inscription on the Lakshana Devi image names the ruler Meru Varman and the maker
+      Gugga."
+    grade: "A"
+    sources:
+      - "src.vogel-1994-antiquities-chamba"
+  - text: "Early inscriptions survive on images at Bharmour and nearby Chatrari."
+    grade: "A"
+    sources:
+      - "src.vogel-1994-antiquities-chamba"
+relations: []
+tags:
+  - "himalaya"
+  - "chamba"
+  - "temple"
+  - "inscription"
+review:
+  status: "draft"
+  author: "codex-gpt-6"

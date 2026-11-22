@@ -1,0 +1,64 @@
+id: "person.somananda"
+type: "person"
+kind: "person"
+names:
+  en: "Somananda"
+  iast: "Somānanda"
+  native: "सोमानन्द"
+summary: "Somananda’s Shivadrishti sets out a systematic Shaiva account of reality and argues
+  against rival philosophical positions. Scholars place him near the turn of the tenth century and
+  differ on the bounds of his career."
+summaries:
+  kids: "Somananda wrote a book about Shiva. He used arguments to explain his ideas and to answer
+    thinkers who understood the world differently."
+  teen: "In the Shivadrishti, Somananda argues that Shiva is the conscious reality of the world and
+    debates rival theories. Utpaladeva's surviving commentary helps establish the sequence of the
+    Recognition school."
+region: "Kashmir Valley"
+datings:
+  - method: "textual-internal"
+    range:
+      earliest: 875
+      latest: 950
+      precision: "century"
+      circa: true
+    grade: "C"
+    label: "Raffaele Torella’s broader chronology"
+    sources:
+      - id: "src.nemec-2011-ubiquitous-siva"
+        locator: "The Author and His Works, note 19"
+    note: "Torella sets the beginning around 875 or 900 and the end around 925 or 950."
+  - method: "textual-internal"
+    range:
+      earliest: 900
+      latest: 950
+      precision: "century"
+      circa: true
+    grade: "C"
+    label: "Sanderson and Nemec’s early tenth-century placement"
+    sources:
+      - "src.nemec-2021-ubiquitous-siva-ii"
+claims:
+  - text: "The Shivadrishti presents Somananda's account of Shiva and disputes positions held by other
+      religious and philosophical schools."
+    grade: "B"
+    sources:
+      - "src.nemec-2021-ubiquitous-siva-ii"
+  - text: "Parts of Utpaladeva's commentary survive alongside the Sanskrit text."
+    grade: "B"
+    sources:
+      - "src.nemec-2021-ubiquitous-siva-ii"
+relations:
+  - kind: "part-of"
+    target: "tradition.kashmir-shaivism"
+  - kind: "taught"
+    target: "person.utpaladeva"
+tags:
+  - "shaiva"
+  - "philosophy"
+review:
+  status: "draft"
+  author: "codex-gpt-6"
+debate: "Torella allows Somananda’s activity to begin in the late ninth century. Sanderson, followed
+  by Nemec, prefers an early tenth-century placement. Both use the relative sequence of early
+  authors in the Recognition school."

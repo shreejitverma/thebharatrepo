@@ -1,0 +1,69 @@
+id: "polity.chamba-hill-state"
+type: "polity"
+kind: "polity"
+names:
+  en: "Chamba hill state"
+summary: "Chamba developed as a hill kingdom in the western Himalaya. Its early seat was Brahmapura,
+  now Bharmour, and historians associate the move to Chamba town with Sahila Varman in the tenth
+  century."
+summaries:
+  kids: "The rulers of Chamba first had their seat at Bharmour. Later they moved their capital to a
+    town farther down the Ravi Valley."
+  teen: "Genealogies, temple inscriptions and land records together document the hill polity. Mahesh
+    Sharma traces how the shift to Chamba changed royal patronage and relations with temples."
+region: "Ravi Valley, Himachal Pradesh"
+datings:
+  - method: "epigraphic"
+    range:
+      earliest: 650
+      latest: 800
+      precision: "century"
+      circa: true
+    grade: "C"
+    label: "Early inscriptions associated with the kingdom at Brahmapura"
+    sources:
+      - "src.vogel-1994-antiquities-chamba"
+      - "src.sharma-2009-western-himalayan-temples"
+    note: "Meru Varman's Bharmour inscriptions are undated; script and dynastic context support a late seventh- or eighth-century placement."
+  - method: "scholarly-consensus"
+    range:
+      earliest: 900
+      latest: 975
+      precision: "century"
+      circa: true
+    grade: "B"
+    label: "Transfer of the political centre to Chamba"
+    sources:
+      - "src.sharma-2009-western-himalayan-temples"
+      - "src.vogel-1994-antiquities-chamba"
+  - method: "scholarly-consensus"
+    range:
+      earliest: 650
+      latest: 1900
+      precision: "century"
+      circa: true
+    grade: "B"
+    label: "Dynastic continuity from Brahmapura and Chamba town through the nineteenth century"
+    sources:
+      - "src.vogel-1994-antiquities-chamba"
+      - "src.sharma-2009-western-himalayan-temples"
+    note: "Inscriptions, royal copper plates and temple records document continuous hill-state governance well into the nineteenth century."
+claims:
+  - text: "Inscriptions at Bharmour name Meru Varman as a royal patron."
+    grade: "A"
+    sources:
+      - "src.vogel-1994-antiquities-chamba"
+  - text: "Sharma places the move to Chamba town under Sahila Varman in the tenth century."
+    grade: "B"
+    sources:
+      - "src.sharma-2009-western-himalayan-temples"
+relations:
+  - kind: "related-to"
+    target: "site.bharmour-temples"
+tags:
+  - "himalaya"
+  - "ravi"
+  - "chamba"
+review:
+  status: "draft"
+  author: "codex-gpt-6"

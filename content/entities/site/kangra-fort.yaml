@@ -1,0 +1,56 @@
+id: "site.kangra-fort"
+type: "site"
+kind: "art"
+names:
+  en: "Kangra Fort"
+summary: "Kangra Fort was a stronghold of the Katoch rulers. Jahangir's forces took it in 1620, and
+  the 1905 Kangra earthquake severely damaged the complex."
+summaries:
+  kids: "Kangra Fort stands high above river valleys. Different rulers held it over the centuries, and
+    a powerful earthquake damaged it in 1905."
+  teen: "The fort's successive occupations reflect competition between hill rulers and larger powers.
+    Jahangir records its capture in 1620, and later Sikh and British administrations also held it."
+region: "Kangra, Himachal Pradesh"
+datings:
+  - method: "documentary"
+    range:
+      earliest: 1620
+      latest: 1620
+      precision: "year"
+      circa: false
+    grade: "A"
+    label: "Mughal capture under Jahangir"
+    sources:
+      - "src.jahangir-1909-tuzuk"
+      - "src.incredible-india-kangra-fort"
+  - method: "documentary"
+    range:
+      earliest: 1905
+      latest: 1905
+      precision: "year"
+      circa: false
+    grade: "B"
+    label: "Damage in the Kangra earthquake"
+    sources:
+      - "src.incredible-india-kangra-fort"
+claims:
+  - text: "Jahangir's memoir records the capture of Kangra Fort by Mughal forces in 1620."
+    grade: "A"
+    sources:
+      - "src.jahangir-1909-tuzuk"
+  - text: "The British took over the fort after the First Anglo-Sikh War, in 1846."
+    grade: "B"
+    sources:
+      - "src.incredible-india-kangra-fort"
+relations:
+  - kind: "related-to"
+    target: "polity.mughal-empire"
+  - kind: "related-to"
+    target: "polity.sikh-empire"
+tags:
+  - "himalaya"
+  - "kangra"
+  - "fort"
+review:
+  status: "draft"
+  author: "codex-gpt-6"

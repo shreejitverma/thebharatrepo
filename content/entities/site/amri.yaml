@@ -1,0 +1,67 @@
+id: "site.amri"
+type: "site"
+kind: "civilisation"
+names:
+  en: "Amri"
+summary: "Amri is a pair of archaeological mounds near the west bank of the Indus. Excavations
+  revealed pottery and stone tools from an occupation that preceded the Mature Harappan levels at
+  the site."
+summaries:
+  kids: "Digging at Amri revealed old pottery and stone tools under the remains of a later town. The
+    layers help archaeologists see what changed over time."
+  teen: "N. G. Majumdar and Jean-Marie Casal distinguished earlier ceramic levels from the later
+    Harappan deposits. At Amri, the change is preserved in layers at the same settlement."
+region: "Lower Indus Valley, Sindh"
+datings:
+  - method: "archaeological-stratigraphic"
+    range:
+      earliest: "3500 BCE"
+      latest: "3000 BCE"
+      precision: "century"
+      circa: true
+    grade: "B"
+    label: "Amri Period I, phases A to D"
+    sources:
+      - "src.lechevallier-1979-amri-lithics"
+      - "src.wright-2010-ancient-indus"
+  - method: "archaeological-stratigraphic"
+    range:
+      earliest: "3000 BCE"
+      latest: "2600 BCE"
+      precision: "century"
+      circa: true
+    grade: "C"
+    label: "Intermediate occupation within the early third millennium"
+    sources:
+      - "src.lechevallier-1979-amri-lithics"
+      - "src.wright-2010-ancient-indus"
+    note: "Lechevallier places Period II broadly in the first half of the third millennium. The endpoint
+      follows the regional transition chronology."
+  - method: "archaeological-stratigraphic"
+    range:
+      earliest: "2600 BCE"
+      latest: "1700 BCE"
+      precision: "century"
+      circa: true
+    grade: "C"
+    label: "Mature Harappan and subsequent occupations (Period III)"
+    sources:
+      - "src.lechevallier-1979-amri-lithics"
+      - "src.wright-2010-ancient-indus"
+    note: "Lechevallier places Period III across the Mature Harappan and subsequent occupation into the early second millennium BCE."
+claims:
+  - text: "Lechevallier studied stone tools recovered during Casal's excavations and described the
+      pre-Harappan deposits beneath the Harappan occupation."
+    grade: "A"
+    sources:
+      - "src.lechevallier-1979-amri-lithics"
+relations:
+  - kind: "related-to"
+    target: "tradition.amri-nal-phase"
+tags:
+  - "sindh"
+  - "indus"
+  - "excavation"
+review:
+  status: "draft"
+  author: "codex-gpt-6"

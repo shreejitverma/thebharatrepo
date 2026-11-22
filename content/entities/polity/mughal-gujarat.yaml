@@ -1,0 +1,59 @@
+id: "polity.mughal-gujarat"
+type: "polity"
+kind: "polity"
+names:
+  en: "Mughal Gujarat"
+summary: "Akbar's campaigns of 1572 and 1573 brought Gujarat into the Mughal Empire as a province.
+  Officials governed commercial centres such as Surat and Cambay through negotiation with local
+  elites and merchants."
+summaries:
+  kids: "Akbar took control of Gujarat, a region with busy ports. Mughal officials worked with
+    merchants and local leaders to run towns and collect taxes."
+  teen: "Farhat Hasan studies Mughal rule through local records from western India. They show how
+    imperial offices, merchant interests and local authority interacted in port towns."
+region: "Gujarat"
+datings:
+  - method: "scholarly-consensus"
+    range:
+      earliest: 1572
+      latest: 1573
+      precision: "year"
+      circa: false
+    grade: "B"
+    label: "Akbar's conquest and annexation of Gujarat"
+    sources:
+      - "src.hasan-2004-state-and-locality"
+      - "src.asher-talbot-2006-india-before-europe"
+  - method: "scholarly-consensus"
+    range:
+      earliest: 1572
+      latest: 1730
+      precision: "decade"
+      circa: true
+    grade: "B"
+    label: "Mughal provincial governance in Gujarat"
+    sources:
+      - "src.hasan-2004-state-and-locality"
+      - "src.asher-talbot-2006-india-before-europe"
+    note: "Hasan examines Mughal provincial authority and local power relations in Gujarat from Akbar's conquest through c. 1730, before mid-eighteenth-century Maratha takeover."
+claims:
+  - text: "Surat and Cambay were both in the Mughal province of Gujarat."
+    grade: "B"
+    sources:
+      - "src.hasan-2004-state-and-locality"
+  - text: "Hasan argues that Mughal expansion helped connect Surat to a larger inland trading area."
+    grade: "B"
+    sources:
+      - "src.hasan-2004-state-and-locality"
+relations:
+  - kind: "part-of"
+    target: "polity.mughal-empire"
+  - kind: "related-to"
+    target: "site.surat-port"
+tags:
+  - "gujarat"
+  - "mughal"
+  - "trade"
+review:
+  status: "draft"
+  author: "codex-gpt-6"

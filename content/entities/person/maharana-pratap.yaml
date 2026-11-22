@@ -1,0 +1,56 @@
+id: "person.maharana-pratap"
+type: "person"
+kind: "person"
+names:
+  en: "Maharana Pratap"
+summary: "Maharana Pratap led Mewar's resistance to Akbar. He escaped after Mughal forces defeated
+  his army at Haldighati in 1576 and continued to resist imperial control."
+summaries:
+  kids: "Maharana Pratap ruled Mewar. He survived a defeat at Haldighati and kept up the struggle to
+    hold his kingdom."
+  teen: "The Mughal army under Man Singh won at Haldighati but did not capture Pratap. Pratap
+    continued his resistance in Mewar after the battle."
+region: "Mewar, Rajasthan"
+datings:
+  - method: "scholarly-consensus"
+    range:
+      earliest: 1572
+      latest: 1597
+      precision: "year"
+      circa: false
+    grade: "B"
+    label: "Reign of Pratap in Mewar"
+    sources:
+      - "src.asher-talbot-2006-india-before-europe"
+      - "src.nath-2023-akbar-journeys-to-ajmer"
+  - method: "scholarly-consensus"
+    range:
+      earliest: 1576
+      latest: 1576
+      precision: "year"
+      circa: false
+    grade: "B"
+    label: "Battle of Haldighati"
+    sources:
+      - "src.nath-2023-akbar-journeys-to-ajmer"
+claims:
+  - text: "In 1576 a Mughal force under Man Singh of Amber defeated Pratap's army at Haldighati without
+      capturing him."
+    grade: "B"
+    sources:
+      - "src.nath-2023-akbar-journeys-to-ajmer"
+  - text: "Pratap continued to oppose Mughal power after Haldighati."
+    grade: "B"
+    sources:
+      - "src.asher-talbot-2006-india-before-europe"
+      - "src.nath-2023-akbar-journeys-to-ajmer"
+relations:
+  - kind: "related-to"
+    target: "event.battle-of-haldighati"
+tags:
+  - "mewar"
+  - "rajput"
+  - "mughal"
+review:
+  status: "draft"
+  author: "codex-gpt-6"

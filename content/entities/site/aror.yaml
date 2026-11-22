@@ -1,0 +1,49 @@
+id: "site.aror"
+type: "site"
+kind: "site"
+names:
+  en: "Aror"
+summary: "Aror, also called Alor, is near modern Rohri. Medieval accounts describe it as a political
+  centre in Sindh before and during the Umayyad conquest. Its proposed identification with Roruka of
+  Buddhist literature is debated."
+summaries:
+  kids: "Old accounts describe rulers at Aror, near today's Rohri. An older story mentions a place
+    with a similar name, and historians have tried to work out whether it was the same place."
+  teen: "Aror appears in conquest narratives as an inland political centre. The resemblance to Roruka
+    is one clue for an older identification, which depends on interpreting ancient geographical and
+    literary references."
+region: "Upper Sindh, Pakistan"
+datings:
+  - method: "textual-internal"
+    range:
+      earliest: 600
+      latest: 715
+      precision: "century"
+      circa: true
+    grade: "C"
+    label: "Aror in accounts of late pre-conquest Sindh"
+    sources:
+      - "src.kufi-1985-chachnamah"
+      - "src.baladhuri-1968-origins-islamic-state"
+claims:
+  - text: "The Chachnama represents Aror as the seat of rulers of Sindh before the Arab conquest."
+    grade: "B"
+    sources:
+      - "src.kufi-1985-chachnamah"
+  - text: "Ahmad Hasan Dani proposes identifying the Roruka of Buddhist literature with the Alor and
+      Rohri area."
+    grade: "C"
+    sources:
+      - id: "src.khuhro-1981-sind-through-the-centuries"
+        locator: "Ahmad Hasan Dani, Sindhu-Sauvira, p. 36"
+relations: []
+debate: "Ahmad Hasan Dani used textual geography and the resemblance between place names to place
+  Roruka near Rohri. Earlier suggestions discussed by Dani include T. W. Rhys Davids’s link to
+  Surat. These are proposed identifications of a place. Reconstructing a ruling dynasty requires
+  separate evidence."
+tags:
+  - "sindh"
+  - "historical-geography"
+review:
+  status: "draft"
+  author: "codex-gpt-6"

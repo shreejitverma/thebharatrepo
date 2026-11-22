@@ -1,0 +1,58 @@
+id: "concept.taxila-university-debate"
+type: "concept"
+kind: "text"
+names:
+  en: "Taxila and the university debate"
+summary: "Taxila's reputation for teaching is well established in Buddhist literature. Whether to
+  call it a university is contested because the texts describe individual teachers and the
+  archaeological remains represent several periods and settings."
+summaries:
+  kids: "Old stories tell of students coming to Taxila to learn from teachers. People today use
+    different words for this kind of learning centre."
+  teen: "Calling Taxila a university can describe its role as a destination for advanced study. A
+    claim that it had a single administration or campus requires evidence beyond references to
+    teachers, pupils and monasteries."
+region: "Punjab, Pakistan"
+datings:
+  - method: "textual-internal"
+    range:
+      earliest: "500 BCE"
+      latest: "200 CE"
+      precision: "century"
+      circa: true
+    grade: "C"
+    label: "Broad period associated with Taxila's educational reputation"
+    sources:
+      - "src.scharfe-2002-education-in-ancient-india"
+      - "src.unesco-1980-taxila"
+    note: "This is the period of the ancient centre in the UNESCO account. Literary episodes can be much
+      later than the events they depict."
+claims:
+  - text: "Altekar understood the oldest literary accounts as depicting groups of pupils attached to
+      individual teachers."
+    grade: "B"
+    sources:
+      - "src.altekar-1965-education-in-ancient-india"
+  - text: "Marshall distinguished the teaching described in early Buddhist stories from the
+      institutional structures of later endowed Buddhist monasteries."
+    grade: "B"
+    sources:
+      - "src.marshall-1951-taxila"
+  - text: "Michael A. Peters discusses a broader use of the term university for ancient centres of
+      advanced learning, including Taxila."
+    grade: "B"
+    sources:
+      - "src.peters-2019-ancient-centres"
+relations:
+  - kind: "related-to"
+    target: "site.taxila"
+debate: "Altekar and Marshall distinguish teaching in the city from a university in a formal
+  institutional sense. D. G. Gupta, cited by Michael A. Peters, uses university as a broader
+  category for centres of advanced learning, including Taxila."
+tags:
+  - "gandhara"
+  - "education"
+  - "historiography"
+review:
+  status: "draft"
+  author: "codex-gpt-6"

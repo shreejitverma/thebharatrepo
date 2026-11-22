@@ -1,0 +1,67 @@
+id: "tradition.pandharpur-wari"
+type: "tradition"
+kind: "dharma"
+names:
+  en: "Pandharpur Wari"
+  native: "पंढरपूर वारी"
+summary: "Varkari pilgrims walk to Pandharpur to worship Vithoba, singing devotional poetry along
+  the way. Major processions carry palanquins associated with Jnaneshwar and Tukaram."
+summaries:
+  kids: "Groups of pilgrims walk together to Pandharpur to worship Vithoba. They sing on the journey
+    and carry decorated palanquins."
+  teen: "The Wari brings organised groups of pilgrims to Pandharpur. Ethnographic accounts describe
+    collective singing, shared routines and processions centred on palanquins associated with
+    Varkari saints."
+region: "Maharashtra"
+datings:
+  - method: "scholarly-consensus"
+    range:
+      earliest: 1250
+      latest: 1320
+      precision: "century"
+      circa: true
+    grade: "B"
+    label: "Medieval pilgrimage in the period of Jnaneshwar"
+    sources:
+      - id: "src.eaton-2005-social-history-deccan"
+        locator: "p. 152"
+    note: "Eaton places the pilgrimage tradition in the thirteenth century. Its processions took more
+      organised forms in later centuries."
+  - method: "documentary"
+    range:
+      earliest: 1962
+      latest: 1962
+      precision: "year"
+      circa: false
+    grade: "A"
+    label: "Contemporary ethnographic record by Irawati Karve"
+    sources:
+      - "src.karve-1962-maharashtrian-pilgrimage"
+    note: "This dates a documented account of the practice. The pilgrimage is older."
+claims:
+  - text: "Karve's account records the pilgrimage on foot and the worship of Vithoba at Pandharpur."
+    grade: "A"
+    sources:
+      - "src.karve-1962-maharashtrian-pilgrimage"
+  - text: "Mokashi describes walking with the Jnaneshwar palanquin procession."
+    grade: "A"
+    sources:
+      - "src.mokashi-1987-palkhi"
+  - text: "Eaton describes how Tukaram’s son instituted a procession from Dehu carrying the poet’s
+      sandals after his father’s disappearance."
+    grade: "B"
+    sources:
+      - id: "src.eaton-2005-social-history-deccan"
+        locator: "p. 152"
+relations:
+  - kind: "related-to"
+    target: "person.jnaneshwar"
+  - kind: "related-to"
+    target: "person.namdev"
+tags:
+  - "maharashtra"
+  - "varkari"
+  - "pilgrimage"
+review:
+  status: "draft"
+  author: "codex-gpt-6"

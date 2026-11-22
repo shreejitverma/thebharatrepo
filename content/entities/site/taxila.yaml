@@ -1,0 +1,62 @@
+id: "site.taxila"
+type: "site"
+kind: "site"
+names:
+  en: "Taxila"
+  iast: "Takṣaśilā"
+  native: "तक्षशिला"
+summary: "The Taxila World Heritage property comprises successive urban sites and Buddhist
+  monuments. Literary and archaeological evidence identifies Taxila as a centre of learning, while
+  scholars debate how broadly to apply the term university."
+summaries:
+  kids: "Taxila's ruins include old city walls, streets, and Buddhist buildings. Stories also describe
+    people travelling to Taxila to learn from renowned teachers."
+  teen: "Taxila's different settlement mounds record centuries of urban change. Buddhist texts
+    describe students studying with individual teachers, while the wider site preserves monasteries
+    and shrines from different periods."
+region: "Punjab, Pakistan"
+datings:
+  - method: "archaeological-stratigraphic"
+    range:
+      earliest: "600 BCE"
+      latest: "500 CE"
+      precision: "century"
+      circa: true
+    grade: "B"
+    label: "Urban settlements and Buddhist monastic complexes from the Bhir Mound through the fifth century CE"
+    sources:
+      - "src.marshall-1951-taxila"
+      - "src.unesco-1980-taxila"
+  - method: "documentary"
+    range:
+      earliest: 1980
+      latest: 1980
+      precision: "year"
+      circa: false
+    grade: "A"
+    label: "UNESCO World Heritage inscription"
+    sources:
+      - "src.unesco-1980-taxila"
+claims:
+  - text: "The inscribed property includes the Bhir Mound, Sirkap and Sirsukh, as well as Buddhist
+      archaeological remains."
+    grade: "A"
+    sources:
+      - "src.unesco-1980-taxila"
+  - text: "Literary accounts of study under individual teachers are evidence for Taxila's educational
+      reputation, including beyond formal monastic settings."
+    grade: "B"
+    sources:
+      - "src.scharfe-2002-education-in-ancient-india"
+      - "src.altekar-1965-education-in-ancient-india"
+relations: []
+debate: "Altekar uses stories of individual teachers to argue against a single organised university,
+  while some comparative historians use university as a broad category for ancient centres of
+  advanced learning. The two usages imply different standards of institutional evidence."
+tags:
+  - "punjab"
+  - "gandhara"
+  - "unesco"
+review:
+  status: "draft"
+  author: "codex-gpt-6"

@@ -1,0 +1,78 @@
+id: "person.lalitaditya-muktapida"
+type: "person"
+kind: "person"
+names:
+  en: "Lalitaditya Muktapida"
+  iast: "Lalitāditya Muktāpīḍa"
+summary: "Lalitaditya was an eighth-century ruler of the Karkota dynasty. Tang records securely
+  place him on the throne in 733, while the dates and reach of his reign as described by Kalhana
+  remain debated."
+summaries:
+  kids: "Lalitaditya ruled Kashmir and sent a message to the emperor of China. A poet later told
+    stories of his victories, some far beyond the places that other records can confirm."
+  teen: "The Tang court record provides an independent date for Lalitaditya. Kalhana's account,
+    written four centuries later, credits him with the Martand temple and extensive conquests, whose
+    scale is difficult to corroborate."
+region: "Kashmir Valley"
+datings:
+  - method: "textual-internal"
+    range:
+      earliest: 699
+      latest: 736
+      precision: "decade"
+      circa: true
+    grade: "C"
+    label: "Kalhana's chronology as calculated by Stein in 1900"
+    sources:
+      - id: "src.stein-1900-rajatarangini"
+        locator: "Introduction, §85"
+    note: "Stein noted in 1900 that Kalhana’s chronology required correction in light of the Tang
+      records."
+  - method: "foreign-synchronism"
+    range:
+      earliest: 720
+      latest: 770
+      precision: "decade"
+      circa: true
+    grade: "C"
+    label: "Approximate reign aligned with Tang synchronisms"
+    sources:
+      - "src.sen-2016-buddhism-diplomacy-trade"
+      - id: "src.stein-1900-rajatarangini"
+        locator: "Appendix I"
+    note: "The 733 embassy is independently attested. The broad endpoints account for uncertainty in
+      aligning Kalhana’s reported reign length with the Tang evidence (commonly placed c. 724-760 CE)."
+  - method: "foreign-synchronism"
+    range:
+      earliest: 733
+      latest: 733
+      precision: "year"
+      circa: false
+    grade: "B"
+    label: "Embassy recorded at the Tang court"
+    sources:
+      - "src.sen-2016-buddhism-diplomacy-trade"
+claims:
+  - text: "Tang records report a diplomatic mission from the Kashmiri ruler in 733."
+    grade: "B"
+    sources:
+      - "src.sen-2016-buddhism-diplomacy-trade"
+  - text: "Kalhana attributes the temple of Martand and the founding of Parihasapura to Lalitaditya."
+    grade: "B"
+    sources:
+      - id: "src.stein-1900-rajatarangini"
+        locator: "Book IV"
+relations:
+  - kind: "patronised"
+    target: "site.martand-sun-temple"
+debate: "Stein calculated 699 to 736 from Kalhana’s regnal lists and already recognised that the
+  chronology required adjustment. Tang annals securely place Lalitaditya on the throne by 733, and
+  later Tang references are the basis for dating his reign further into the eighth century.
+  Kalhana’s most distant conquests lack comparable independent confirmation."
+tags:
+  - "kashmir"
+  - "karkota"
+  - "tang"
+review:
+  status: "draft"
+  author: "codex-gpt-6"

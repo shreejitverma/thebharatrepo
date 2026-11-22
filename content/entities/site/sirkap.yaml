@@ -1,0 +1,51 @@
+id: "site.sirkap"
+type: "site"
+kind: "site"
+names:
+  en: "Sirkap"
+summary: "Sirkap is a walled city within the Taxila archaeological landscape. Its visible remains
+  include streets arranged on a grid and shrines with architectural motifs from several traditions."
+summaries:
+  kids: "Inside Sirkap's old walls, streets and buildings formed a city. A decorated Buddhist shrine
+    still shows the outline of an eagle with two heads."
+  teen: "The foundation is generally assigned to the Indo-Greek period. Successive occupations shaped
+    the remains visible today, including the formal street grid and shrines."
+region: "Taxila, Punjab, Pakistan"
+datings:
+  - method: "archaeological-stratigraphic"
+    range:
+      earliest: "200 BCE"
+      latest: "100 CE"
+      precision: "century"
+      circa: true
+    grade: "B"
+    label: "Indo-Greek foundation and principal later occupation"
+    sources:
+      - "src.marshall-1951-taxila"
+      - "src.unesco-1980-taxila"
+claims:
+  - text: "Marshall's excavations exposed a walled town with a rectilinear street plan."
+    grade: "A"
+    sources:
+      - "src.marshall-1951-taxila"
+  - text: "The monument known as the Double-Headed Eagle Stupa stands within Sirkap."
+    grade: "A"
+    sources:
+      - "src.marshall-1951-taxila"
+relations:
+  - kind: "part-of"
+    target: "site.taxila"
+  - kind: "related-to"
+    target: "polity.indo-greek-kingdom"
+image:
+  commons: "File:Double-Headed Eagle Stupa at Sirkap 02.jpg"
+  alt: "Stone facade of the Double-Headed Eagle Stupa at Sirkap"
+  credit: "Teseum"
+  license: "CC BY-SA 4.0"
+tags:
+  - "punjab"
+  - "gandhara"
+  - "excavation"
+review:
+  status: "draft"
+  author: "codex-gpt-6"

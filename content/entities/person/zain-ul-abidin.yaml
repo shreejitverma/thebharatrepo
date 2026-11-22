@@ -1,0 +1,43 @@
+id: "person.zain-ul-abidin"
+type: "person"
+kind: "person"
+names:
+  en: "Zain-ul-Abidin"
+  native: "زین العابدین"
+summary: "Zain-ul-Abidin ruled the Kashmir Sultanate for much of the fifteenth century. His court
+  supported Sanskrit historical writing, including Jonaraja's continuation of Kalhana's chronicle."
+summaries:
+  kids: "Zain-ul-Abidin was a sultan of Kashmir. He asked the scholar Jonaraja to carry on a book that
+    told the stories of Kashmir's rulers."
+  teen: "Jonaraja continued the Sanskrit Rajatarangini under Zain-ul-Abidin. The chronicle provides a
+    court perspective on a sultanate in which Sanskrit and Persian literary cultures both had a
+    place."
+region: "Kashmir Valley"
+datings:
+  - method: "scholarly-consensus"
+    range:
+      earliest: 1420
+      latest: 1470
+      precision: "year"
+      circa: false
+    grade: "B"
+    label: "Principal reign of Zain-ul-Abidin"
+    sources:
+      - "src.slaje-2014-kingship-in-kasmir"
+      - "src.bazaz-2023-nund-rishi"
+claims:
+  - text: "Jonaraja wrote a continuation of Kalhana's Rajatarangini at the sultan's request. The work
+      breaks off in 1459."
+    grade: "B"
+    sources:
+      - "src.slaje-2014-kingship-in-kasmir"
+relations:
+  - kind: "related-to"
+    target: "text.rajatarangini"
+tags:
+  - "kashmir"
+  - "sultanate"
+  - "court"
+review:
+  status: "draft"
+  author: "codex-gpt-6"

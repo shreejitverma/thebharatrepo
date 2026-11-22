@@ -1,0 +1,43 @@
+id: "person.rana-sanga"
+type: "person"
+kind: "person"
+names:
+  en: "Rana Sanga"
+summary: "Rana Sanga, or Sangram Singh, led Mewar in the early sixteenth century. He assembled a
+  coalition that challenged Babur at Khanwa in 1527."
+summaries:
+  kids: "Rana Sanga brought together rulers and soldiers to fight Babur. We know about their battle at
+    Khanwa partly because Babur wrote about it himself."
+  teen: "Sanga's coalition included Hasan Khan of Mewat and challenged Babur's position after Panipat.
+    Babur's memoir gives a participant's view of the conflict."
+region: "Mewar, Rajasthan"
+datings:
+  - method: "scholarly-consensus"
+    range:
+      earliest: 1508
+      latest: 1528
+      precision: "decade"
+      circa: true
+    grade: "B"
+    label: "Rana Sanga's period of rule and campaigns"
+    sources:
+      - "src.asher-talbot-2006-india-before-europe"
+      - "src.babur-1922-baburnama"
+    note: "The earliest and latest years are approximate. The battle in 1527 is directly documented."
+claims:
+  - text: "Babur describes the defeat of Sanga's coalition at Khanwa in 1527."
+    grade: "A"
+    sources:
+      - "src.babur-1922-baburnama"
+  - text: "The coalition included Hasan Khan Mewati."
+    grade: "A"
+    sources:
+      - "src.babur-1922-baburnama"
+relations: []
+tags:
+  - "mewar"
+  - "rajput"
+  - "mughal"
+review:
+  status: "draft"
+  author: "codex-gpt-6"

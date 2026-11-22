@@ -1,0 +1,54 @@
+id: "site.tabo-monastery"
+type: "site"
+kind: "dharma"
+names:
+  en: "Tabo Monastery"
+summary: "Tabo's main Buddhist temple was founded in 996 CE and renovated in 1042 CE, according to
+  its Tibetan inscription. Its murals and clay figures document early Buddhist art in the western
+  Himalaya."
+summaries:
+  kids: "Tabo has a temple with old paintings and clay figures. An inscription tells when the main
+    temple was built and when people renewed it."
+  teen: "The renovation inscription says that the main temple was founded in a monkey year and
+    renovated 46 years later. Steinkellner and Luczanits identify those dates as 996 and 1042."
+region: "Spiti Valley, Himachal Pradesh"
+datings:
+  - method: "epigraphic"
+    range:
+      earliest: 996
+      latest: 996
+      precision: "year"
+      circa: false
+    grade: "A"
+    label: "Foundation of the main temple"
+    sources:
+      - "src.steinkellner-1999-tabo-renovation"
+  - method: "epigraphic"
+    range:
+      earliest: 1042
+      latest: 1042
+      precision: "year"
+      circa: false
+    grade: "A"
+    label: "Renovation of the main temple"
+    sources:
+      - "src.steinkellner-1999-tabo-renovation"
+claims:
+  - text: "The renovation inscription distinguishes the foundation from work carried out 46 years later."
+    grade: "A"
+    sources:
+      - "src.steinkellner-1999-tabo-renovation"
+  - text: "The inscription associates the renovation with Jangchup O, a descendant of the ruling house
+      of western Tibet."
+    grade: "A"
+    sources:
+      - "src.steinkellner-1999-tabo-renovation"
+relations: []
+tags:
+  - "spiti"
+  - "himalaya"
+  - "buddhism"
+  - "inscription"
+review:
+  status: "draft"
+  author: "codex-gpt-6"

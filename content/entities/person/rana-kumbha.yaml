@@ -1,0 +1,56 @@
+id: "person.rana-kumbha"
+type: "person"
+kind: "person"
+names:
+  en: "Rana Kumbha"
+summary: "Rana Kumbha ruled Mewar in the fifteenth century. His architectural patronage is visible
+  at Chittor and Kumbhalgarh, where inscriptions record how his court represented its rule."
+summaries:
+  kids: "Rana Kumbha ruled Mewar and had temples and forts built. An inscription at Kumbhalgarh tells
+    us about his court and the temple it built."
+  teen: "Kumbha's major building projects included Kumbhalgarh and the victory tower at Chittor. A
+    Sanskrit inscription from Kumbhalgarh survives in several fragments and situates the patron
+    within a royal lineage."
+region: "Mewar, Rajasthan"
+datings:
+  - method: "scholarly-consensus"
+    range:
+      earliest: 1433
+      latest: 1468
+      precision: "decade"
+      circa: true
+    grade: "B"
+    label: "Reign in Mewar"
+    sources:
+      - "src.unesco-2013-hill-forts-rajasthan"
+      - "src.vyas-1937-kumbhalgarh-inscription"
+  - method: "epigraphic"
+    range:
+      earliest: 1460
+      latest: 1460
+      precision: "year"
+      circa: false
+    grade: "A"
+    label: "Kumbhalgarh inscription, Vikrama Samvat 1517"
+    sources:
+      - "src.vyas-1937-kumbhalgarh-inscription"
+claims:
+  - text: "The Kumbhalgarh inscription was associated with Kumbha's Kumbhasvamin temple, now called
+      Mamadeva."
+    grade: "A"
+    sources:
+      - "src.vyas-1937-kumbhalgarh-inscription"
+  - text: "The fort at Kumbhalgarh preserves major building work associated with his reign."
+    grade: "B"
+    sources:
+      - "src.unesco-2013-hill-forts-rajasthan"
+relations:
+  - kind: "patronised"
+    target: "site.kumbhalgarh-fort"
+tags:
+  - "mewar"
+  - "rajput"
+  - "patronage"
+review:
+  status: "draft"
+  author: "codex-gpt-6"

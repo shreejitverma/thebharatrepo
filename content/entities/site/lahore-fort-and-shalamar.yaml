@@ -1,0 +1,67 @@
+id: "site.lahore-fort-and-shalamar"
+type: "site"
+kind: "art"
+names:
+  en: "Lahore Fort and Shalamar Gardens"
+summary: "The Lahore World Heritage property combines two Mughal royal complexes. The fort preserves
+  buildings from successive reigns, and the Shalamar Gardens use terraced waterworks, pools and
+  pavilions."
+summaries:
+  kids: "In Lahore, Mughal rulers built halls in a fort and made gardens with pools and flowing water.
+    Both places are protected as World Heritage."
+  teen: "Architectural phases at the fort range from Akbar through Shah Jahan, who also commissioned
+    the separate Shalamar Gardens. The two sites were grouped into one World Heritage inscription."
+region: "Lahore, Punjab, Pakistan"
+datings:
+  - method: "art-historical"
+    range:
+      earliest: 1556
+      latest: 1658
+      precision: "century"
+      circa: true
+    grade: "B"
+    label: "Major Mughal building phases at Lahore Fort"
+    sources:
+      - "src.unesco-1981-lahore-fort-shalamar"
+      - "src.asher-1992-architecture-of-mughal-india"
+  - method: "documentary"
+    range:
+      earliest: 1641
+      latest: 1642
+      precision: "year"
+      circa: false
+    grade: "B"
+    label: "Construction of Shalamar Gardens under Shah Jahan"
+    sources:
+      - "src.unesco-1981-lahore-fort-shalamar"
+  - method: "documentary"
+    range:
+      earliest: 1981
+      latest: 1981
+      precision: "year"
+      circa: false
+    grade: "A"
+    label: "World Heritage inscription"
+    sources:
+      - "src.unesco-1981-lahore-fort-shalamar"
+claims:
+  - text: "The World Heritage property groups Lahore Fort and the Shalamar Gardens as two distinct
+      complexes."
+    grade: "A"
+    sources:
+      - "src.unesco-1981-lahore-fort-shalamar"
+  - text: "The gardens have terraces and pavilions organised around water features."
+    grade: "A"
+    sources:
+      - "src.unesco-1981-lahore-fort-shalamar"
+relations:
+  - kind: "related-to"
+    target: "polity.mughal-empire"
+tags:
+  - "punjab"
+  - "lahore"
+  - "mughal"
+  - "unesco"
+review:
+  status: "draft"
+  author: "codex-gpt-6"
