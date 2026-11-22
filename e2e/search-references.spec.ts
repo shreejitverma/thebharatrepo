@@ -132,6 +132,47 @@ test.describe('search', () => {
     await expect(page).toHaveURL(new RegExp(`${href}$`));
   });
 
+  test('a name query puts the record with that exact title first', async ({ page }) => {
+    for (const [q, title] of [
+      ['ashoka', 'Ashoka'],
+      ['buddha', 'Gautama Buddha'],
+      ['aryabhata', 'Aryabhata'],
+    ]) {
+      await page.goto(`/search?q=${q}`);
+      await expect(status(page)).toHaveText(new RegExp(`results? for “${q}”`));
+      await expect(results(page).first().locator('a[data-result]')).toHaveText(title);
+    }
+  });
+
+  test('a hard load of results does not shift the page as they arrive', async ({ page }) => {
+    await page.addInitScript(() => {
+      (window as unknown as { cls: number }).cls = 0;
+      new PerformanceObserver((list) => {
+        for (const e of list.getEntries() as unknown as { value: number; hadRecentInput: boolean }[]) if (!e.hadRecentInput) (window as unknown as { cls: number }).cls += e.value;
+      }).observe({ type: 'layout-shift', buffered: true });
+    });
+    await page.goto('/search?q=Harappa');
+    await expect(results(page).first()).toBeVisible();
+    expect(await page.evaluate(() => (window as unknown as { cls: number }).cls)).toBeLessThan(0.1);
+  });
+
+  test('on a phone, the filter panel closes onto the updated results', async ({ page }, testInfo) => {
+    test.skip(testInfo.project.name !== 'mobile', 'the filter panel is a disclosure only on narrow screens');
+    await page.goto('/search?q=veda');
+    await expect(status(page)).toHaveText(/results? for “veda”\./);
+    await openFilters(page);
+    await page.getByRole('group', { name: 'Kind' }).getByLabel(/^Texts/).check();
+    await expect(status(page)).toHaveText(/results? for “veda” with 1 filter\./);
+    const show = page.getByRole('button', { name: /^Show \d+ results?$/ });
+    await expect(show).toBeVisible();
+    const n = (await show.textContent())!.match(/\d+/)![0];
+    await show.click();
+    await expect(page.locator('.search-filters-toggle')).toHaveAttribute('aria-expanded', 'false');
+    await expect(page.locator('#search-filters')).toBeHidden();
+    await expect(status(page)).toHaveText(`${n} results for “veda” with 1 filter.`);
+    await expect(status(page)).toBeFocused();
+  });
+
   test('no match shows an explicit 0 results state', async ({ page }) => {
     await page.goto('/search?q=xyzzyplugh');
     await expect(status(page)).toHaveText('0 results for “xyzzyplugh”.');

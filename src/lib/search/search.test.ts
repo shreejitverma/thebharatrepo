@@ -1,6 +1,6 @@
 import { describe, expect, it } from 'vitest';
 import { FACET_OPTIONS, activeFilterCount, parseSearchParams, toPagefindFilters, toSearchParams, withoutFacet } from './facets';
-import { excerptParts, excerptWithEllipses, isGenuineMatch, matchedWords, normaliseWord } from './pagefind';
+import { excerptParts, excerptWithEllipses, isGenuineMatch, matchedWords, normaliseWord, promoteExactTitle } from './pagefind';
 
 describe('search URL state', () => {
   it('keeps the legacy ?q= contract', () => {
@@ -86,5 +86,28 @@ describe('isGenuineMatch', () => {
   it('reads matched words from content locations', () => {
     expect(matchedWords({ content: 'The Maurya empire and Ashoka.', locations: [1, 4, 9] })).toEqual(['Maurya', 'Ashoka.']);
     expect(normaliseWord('Ash-Mound')).toBe('ashmound');
+  });
+});
+
+describe('exact title promotion', () => {
+  const r = (title: string) => ({ meta: { title } });
+  const titles = (xs: { meta: { title?: string } }[]) => xs.map((x) => x.meta.title);
+
+  it('moves an exact title match to the front and keeps the rest in order', () => {
+    const items = [r('Lumbini Pillar Inscription of Ashoka'), r('Major Rock Edict XIII of Ashoka'), r('Ashoka in Ancient India'), r('Ashoka')];
+    expect(titles(promoteExactTitle(items, 'ashoka'))).toEqual(['Ashoka', 'Lumbini Pillar Inscription of Ashoka', 'Major Rock Edict XIII of Ashoka', 'Ashoka in Ancient India']);
+  });
+
+  it('ignores case, diacritics, punctuation and extra spaces', () => {
+    const items = [r('Other'), r('Āryabhaṭa.')];
+    expect(titles(promoteExactTitle(items, '  aryabhata '))).toEqual(['Āryabhaṭa.', 'Other']);
+  });
+
+  it('keeps every exact match, in order, and changes nothing without one', () => {
+    const items = [r('Kalidasa in context'), r('Kalidasa'), r('Kālidāsa')];
+    expect(titles(promoteExactTitle(items, 'Kalidasa'))).toEqual(['Kalidasa', 'Kālidāsa', 'Kalidasa in context']);
+    const none = [r('A'), r('B')];
+    expect(promoteExactTitle(none, 'c')).toBe(none);
+    expect(promoteExactTitle(none, '')).toBe(none);
   });
 });

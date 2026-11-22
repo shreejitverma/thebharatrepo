@@ -1456,8 +1456,6 @@ kbd {
 .search-filters {
   display: grid;
   gap: 18px;
-  position: sticky;
-  top: 76px;
 }
 
 .search-facet {
@@ -1515,10 +1513,34 @@ kbd {
   font-variant-numeric: tabular-nums;
 }
 
-.search-filters__clear {
-  justify-self: start;
+/*
+ * The search block holds a full viewport while the index loads and results arrive, so the footer starts
+ * below the fold and is not pushed down (layout shift) when they render.
+ */
+.search,
+.search-loading {
+  min-height: 100vh;
+}
+
+.search-filters__actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  grid-column: 1 / -1;
+}
+
+.search-filters__actions:not(:has(.search-filters__clear)) {
+  display: none;
+}
+
+.search-filters__clear,
+.search-filters__done {
   padding: 6px 14px;
   font-size: 0.9rem;
+}
+
+.search-filters__done {
+  display: none;
 }
 
 .search-status {
@@ -1668,7 +1690,6 @@ kbd {
   }
   .search-filters {
     display: none;
-    position: static;
     margin-top: 12px;
     padding: 14px 16px;
     border: 1px solid var(--line);
@@ -1678,6 +1699,12 @@ kbd {
   }
   .search-filters.is-open {
     display: grid;
+  }
+  .search-filters__actions:not(:has(.search-filters__clear)) {
+    display: flex;
+  }
+  .search-filters__done {
+    display: inline-flex;
   }
   .search-hint {
     display: none;

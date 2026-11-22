@@ -19,10 +19,25 @@ import {
   type Facet,
   type SearchState,
 } from '@/lib/search/facets';
-import { excerptWithEllipses, isGenuineMatch, loadPagefind, matchedWords, type FilterCounts, type Pagefind, type PagefindResult, type PagefindResultData } from '@/lib/search/pagefind';
+import {
+  excerptWithEllipses,
+  isGenuineMatch,
+  loadPagefind,
+  matchedWords,
+  promoteExactTitle,
+  type FilterCounts,
+  type PagefindHandle,
+  type PagefindResult,
+  type PagefindResultData,
+} from '@/lib/search/pagefind';
 
 const PAGE_SIZE = 20;
 const TYPING_DEBOUNCE_MS = 180;
+
+// Start loading the index as soon as this module runs in the browser, before hydration finishes, so the
+// index entry and WebAssembly are on their way while React hydrates. The page also modulepreloads
+// pagefind.js. Errors surface through the loadPagefind() call in the component, which retries.
+if (typeof window !== 'undefined') loadPagefind().catch(() => undefined);
 
 type Outcome =
   | { status: 'idle'; counts: FilterCounts }
@@ -41,13 +56,14 @@ export default function Search() {
   const [state, setState] = useState<SearchState>(() => parseSearchParams(new URLSearchParams(paramString)));
   const [draft, setDraft] = useState(state.q);
   const [syncedParams, setSyncedParams] = useState(paramString);
-  const [pagefind, setPagefind] = useState<Pagefind | null>(null);
+  const [handle, setHandle] = useState<PagefindHandle | null>(null);
   const [error, setError] = useState<string | null>(null);
   const [outcome, setOutcome] = useState<Outcome | null>(null);
   const [loadingMore, setLoadingMore] = useState(false);
   const [filtersOpen, setFiltersOpen] = useState(false);
   const inputRef = useRef<HTMLInputElement>(null);
   const listRef = useRef<HTMLOListElement>(null);
+  const statusRef = useRef<HTMLParagraphElement>(null);
 
   // External navigation (the header search box, Back and Forward) changes the URL: adopt it.
   if (paramString !== syncedParams) {
@@ -75,55 +91,59 @@ export default function Search() {
 
   useEffect(() => {
     loadPagefind()
-      .then(setPagefind)
+      .then(setHandle)
       .catch((e: Error) => setError(e.message || 'the search index could not be loaded'));
   }, []);
 
   useEffect(() => {
-    if (!pagefind) return;
+    if (!handle) return;
+    const { pagefind, filtersReady } = handle;
     let cancelled = false;
     const key = serialise(state);
     (async () => {
       if (!isActive(state)) {
+        await filtersReady;
         const counts = await pagefind.filters();
         if (!cancelled) setOutcome({ status: 'idle', counts });
         return;
       }
       const term = state.q || null;
       const nFilters = activeFilterCount(state.filters);
-      // Pagefind's fallback for an unknown term is decided per term, so probe it once without filters:
-      // if the top hit is only a short-prefix fallback, the honest answer is 0 results, with no counts.
-      if (term) {
-        const probe = await pagefind.search(term);
-        const top = probe.results[0] ? await probe.results[0].data() : null;
-        if (top && !isGenuineMatch(term, matchedWords(top))) {
-          if (!cancelled) setOutcome({ status: 'done', for: key, q: state.q, nFilters, results: [], items: [], counts: {} });
-          return;
-        }
-      }
-      const res = await pagefind.search(term, {
-        filters: toPagefindFilters(state.filters),
-        // With no query there is no relevance to rank by, so browse alphabetically.
-        sort: state.q ? undefined : { title: 'asc' },
-      });
-      // A facet with a selection is counted as if its own selection were cleared, so its other options
-      // show how many results they would add instead of a misleading 0.
-      const counts: FilterCounts = { ...res.filters };
-      await Promise.all(
-        FACETS.filter((f) => state.filters[f].length).map(async (f) => {
-          const other = await pagefind.search(term, { filters: toPagefindFilters(withoutFacet(state.filters, f)) });
-          counts[f] = other.filters[f] ?? {};
+      // Fetch the filter index and this query's index chunks in parallel; every search below then runs
+      // in memory, and all of them (and their result fragments) are issued together.
+      await Promise.all([filtersReady, term ? pagefind.preload(term) : null]);
+      const selected = FACETS.filter((f) => state.filters[f].length);
+      const [probe, res, ...others] = await Promise.all([
+        // Pagefind's fallback for an unknown term is decided per term, so probe it once without filters:
+        // if the top hit is only a short-prefix fallback, the honest answer is 0 results, with no counts.
+        term ? pagefind.search(term) : null,
+        pagefind.search(term, {
+          filters: toPagefindFilters(state.filters),
+          // With no query there is no relevance to rank by, so browse alphabetically.
+          sort: state.q ? undefined : { title: 'asc' },
         }),
-      );
-      const items = await Promise.all(res.results.slice(0, PAGE_SIZE).map((r) => r.data()));
-      if (!cancelled) setOutcome({ status: 'done', for: key, q: state.q, nFilters, results: res.results, items, counts });
+        // A facet with a selection is counted as if its own selection were cleared, so its other options
+        // show how many results they would add instead of a misleading 0.
+        ...selected.map((f) => pagefind.search(term, { filters: toPagefindFilters(withoutFacet(state.filters, f)) })),
+      ]);
+      const [top, page] = await Promise.all([probe?.results[0]?.data() ?? null, Promise.all(res.results.slice(0, PAGE_SIZE).map((r) => r.data()))]);
+      if (cancelled) return;
+      if (term && top && !isGenuineMatch(term, matchedWords(top))) {
+        setOutcome({ status: 'done', for: key, q: state.q, nFilters, results: [], items: [], counts: {} });
+        return;
+      }
+      const counts: FilterCounts = { ...res.filters };
+      selected.forEach((f, i) => {
+        counts[f] = others[i].filters[f] ?? {};
+      });
+      setOutcome({ status: 'done', for: key, q: state.q, nFilters, results: res.results, items: promoteExactTitle(page, state.q), counts });
     })().catch((e: Error) => {
       if (!cancelled) setError(e.message || 'the search failed');
     });
     return () => {
       cancelled = true;
     };
-  }, [pagefind, state]);
+  }, [handle, state]);
 
   const loadMore = useCallback(async () => {
     if (!outcome || outcome.status !== 'done') return;
@@ -191,6 +211,13 @@ export default function Search() {
 
   const clearFilters = () => setState((s) => ({ ...s, filters: emptySelection() }));
 
+  // On narrow screens the open filter panel pushes the results below the fold; this closes it and moves
+  // focus (and so the scroll position) to the result count.
+  const showResults = () => {
+    setFiltersOpen(false);
+    requestAnimationFrame(() => statusRef.current?.focus());
+  };
+
   const nFilters = activeFilterCount(state.filters);
   const counts = outcome?.counts ?? {};
   // While a new search runs, keep showing the previous results rather than flashing an empty list.
@@ -200,7 +227,7 @@ export default function Search() {
 
   let status: string;
   if (error) status = `Search is unavailable: ${error}.`;
-  else if (!pagefind) status = 'Loading the search index...';
+  else if (!handle) status = 'Loading the search index...';
   else if (!isActive(state)) status = indexed ? `${indexed} records indexed. Type a word or a name, or choose a filter to browse.` : 'Type a word or a name, or choose a filter to browse.';
   else if (!current) status = 'Searching...';
   else {
@@ -286,16 +313,21 @@ export default function Search() {
                 </fieldset>
               );
             })}
-            {nFilters ? (
-              <button type="button" className="btn search-filters__clear" onClick={clearFilters}>
-                Clear filters
+            <div className="search-filters__actions">
+              {nFilters ? (
+                <button type="button" className="btn search-filters__clear" onClick={clearFilters}>
+                  Clear filters
+                </button>
+              ) : null}
+              <button type="button" className="btn btn--primary search-filters__done" onClick={showResults}>
+                {!isActive(state) ? 'Close filters' : current && current.for === serialise(state) ? `Show ${total} ${total === 1 ? 'result' : 'results'}` : 'Show results'}
               </button>
-            ) : null}
+            </div>
           </div>
         </div>
 
         <div className="search-main">
-          <p className={current && total === 0 ? 'search-status search-status--empty' : 'search-status'} role="status" aria-live="polite">
+          <p ref={statusRef} tabIndex={-1} className={current && total === 0 ? 'search-status search-status--empty' : 'search-status'} role="status" aria-live="polite">
             {status}
           </p>
           {error ? (
@@ -355,7 +387,8 @@ function ResultItem({ data }: { data: PagefindResultData }) {
     <li className="search-result">
       <p className="search-result__kind">{RECORD_KIND_LABELS[kind] ?? kind}</p>
       <h2 className="search-result__title">
-        <Link href={data.url} data-result>
+        {/* Not prefetched: twenty result links would each download their page's payload on every search. */}
+        <Link href={data.url} prefetch={false} data-result>
           {data.meta.title ?? data.url}
         </Link>
       </h2>

@@ -1,9 +1,11 @@
 import type { Metadata } from 'next';
 import Link from 'next/link';
 import { Suspense } from 'react';
+import { preloadModule } from 'react-dom';
 import Search from '@/components/Search';
 import { SITE_URL } from '@/lib/content/site-url';
 import { CATEGORIES, CATEGORY_LABELS } from '@/lib/content/labels';
+import { PAGEFIND_URL } from '@/lib/search/pagefind';
 
 export const metadata: Metadata = { title: 'Search', description: 'Search every entity, article and source in The Bharat Repo, filtered by kind, category, evidence grade and lens.' };
 
@@ -50,6 +52,8 @@ function NoScriptFallback() {
 }
 
 export default function SearchPage() {
+  // Fetch the Pagefind runtime while the page's own scripts load, instead of after hydration.
+  preloadModule(PAGEFIND_URL, { as: 'script' });
   return (
     <div className="main-content">
       <p className="eyebrow">Search</p>

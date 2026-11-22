@@ -38,18 +38,34 @@ export interface Pagefind {
 
 export const PAGEFIND_URL = '/pagefind/pagefind.js';
 
-let loading: Promise<Pagefind> | undefined;
+/**
+ * Ranking. Pagefind's default page-length penalty (0.75) let short bibliography records outrank the entity
+ * a reader is looking for: on 20 name queries ("buddha", "aryabhata", "ashoka", ...) the expected page
+ * ranked 4th or 5th for three of them. At 0.25 all but "ashoka" rank first (its two edicts, titled
+ * "... of Ashoka", come first; see promoteExactTitle). Lower values changed nothing further.
+ */
+export const RANKING = { pageLength: 0.25 } as const;
 
-export function loadPagefind(): Promise<Pagefind> {
+export interface PagefindHandle {
+  pagefind: Pagefind;
+  /** Resolves once the filter index has loaded; searches issued before it report no filter counts. */
+  filtersReady: Promise<unknown>;
+}
+
+let loading: Promise<PagefindHandle> | undefined;
+
+/**
+ * Loads and initialises Pagefind once. Resolves as soon as the index entry is ready, with the filter index
+ * still loading, so a caller can fetch the filter index and a query's index chunks in parallel.
+ */
+export function loadPagefind(): Promise<PagefindHandle> {
   if (!loading) {
     loading = (async () => {
       const url = PAGEFIND_URL;
       const mod = (await import(/* webpackIgnore: true */ /* turbopackIgnore: true */ url)) as Pagefind;
-      await mod.options({ excerptLength: 28 });
+      await mod.options({ excerptLength: 28, ranking: RANKING });
       await mod.init();
-      // Load the filter index up front: a search issued before it has loaded reports no filter counts.
-      await mod.filters();
-      return mod;
+      return { pagefind: mod, filtersReady: mod.filters() };
     })();
     // A failed load (offline, missing index in `next dev`) must be retryable.
     loading.catch(() => {
@@ -57,6 +73,23 @@ export function loadPagefind(): Promise<Pagefind> {
     });
   }
   return loading;
+}
+
+/** Folds title case, diacritics and punctuation, so "Ashoka", "ashoka." and "Ásoka" compare by letters only. */
+function titleKey(s: string): string {
+  return s.split(/\s+/).map(normaliseWord).filter(Boolean).join(' ');
+}
+
+/**
+ * Moves results whose title is exactly the query (ignoring case, diacritics and punctuation) to the front,
+ * keeping Pagefind's order otherwise. A reader who types a name expects that record first, even when
+ * shorter pages that mention the name in their own titles score higher.
+ */
+export function promoteExactTitle<T extends { meta: Record<string, string | undefined> }>(items: T[], query: string): T[] {
+  const q = titleKey(query);
+  if (!q) return items;
+  const exact = items.filter((d) => titleKey(d.meta.title ?? '') === q);
+  return exact.length ? [...exact, ...items.filter((d) => !exact.includes(d))] : items;
 }
 
 /**
