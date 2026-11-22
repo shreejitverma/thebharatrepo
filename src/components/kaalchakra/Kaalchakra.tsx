@@ -1,6 +1,6 @@
 'use client';
 
-import { useCallback, useEffect, useId, useMemo, useRef, useState } from 'react';
+import { use, useCallback, useEffect, useId, useMemo, useRef, useState } from 'react';
 import { useSearchParams } from 'next/navigation';
 import { KINDS, KIND_LABELS, type Kind } from '@/lib/content/labels';
 import type { KcItem } from '@/lib/content/kaalchakra';
@@ -11,6 +11,7 @@ import Wheel from './Wheel';
 import River from './River';
 import ListView from './ListView';
 import Panel from './Panel';
+import { loadItems } from './data';
 import { SEGMENTS, SHORT_SEGMENT_LABELS, formatDating, kindColor, orderedItems, primaryAnchor, primaryDating, segmentUnitBounds, yearToUnit, type Level, type View } from './shared';
 
 const VIEWS: { id: View; label: string }[] = [
@@ -40,11 +41,17 @@ interface State {
 
 const DEFAULT: State = { view: 'wheel', lens: 'both', cal: 'ce', kinds: [...KINDS], q: '', sel: null, win: { start: 0, end: 1 }, level: 'adult' };
 
+/** The List view is the default for readers who ask for reduced motion; an explicit view in the URL still wins. */
+function prefersReducedMotion(): boolean {
+  return typeof window !== 'undefined' && typeof window.matchMedia === 'function' && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+}
+
 function parseState(search: string, ids: Set<string>): State {
   const p = new URLSearchParams(search);
   const s: State = { ...DEFAULT, kinds: [...KINDS] };
   const v = p.get('view');
   if (v === 'wheel' || v === 'river' || v === 'list') s.view = v;
+  else if (prefersReducedMotion()) s.view = 'list';
   const l = p.get('lens');
   if (l && (LENSES as readonly string[]).includes(l)) s.lens = l as Lens;
   const c = p.get('cal');
@@ -70,7 +77,8 @@ function parseState(search: string, ids: Set<string>): State {
 /** Query string for a state, without the leading "?", in URLSearchParams encoding. */
 function serialise(s: State): string {
   const p = new URLSearchParams();
-  if (s.view !== DEFAULT.view) p.set('view', s.view);
+  // Reduced motion changes the default view, so its readers always get an explicit view: their links then open the same view for everyone.
+  if (s.view !== DEFAULT.view || prefersReducedMotion()) p.set('view', s.view);
   if (s.lens !== DEFAULT.lens) p.set('lens', s.lens);
   if (s.cal !== DEFAULT.cal) p.set('cal', s.cal);
   if (s.kinds.length !== KINDS.length) p.set('kinds', s.kinds.join(','));
@@ -105,13 +113,35 @@ interface Mount {
 }
 
 /**
+ * The items arrive as a static JSON file rather than in the page, so the HTML stays small as the archive grows.
+ * Until they arrive the page's Suspense fallback (the server-rendered wheel) stays on screen.
+ * useSearchParams comes first: during static prerendering it bails out to that fallback before any fetch.
+ */
+export default function Kaalchakra() {
+  const search = useSearchParams().toString();
+  const result = use(loadItems());
+  if (!result.ok) {
+    return (
+      <div className="kc">
+        <p className="empty" role="alert">
+          The Kaalchakra data could not be loaded ({result.error}).{' '}
+          <button type="button" className="btn" onClick={() => window.location.reload()}>
+            Reload the page
+          </button>
+        </p>
+      </div>
+    );
+  }
+  return <KaalchakraMount items={result.items} search={search} />;
+}
+
+/**
  * State is initialised from useSearchParams, so deep links work on first load and on client-side
  * navigation. The inner component remounts only when the search params change to something this
  * component did not write itself: Back and Forward, or following a link such as the nav link to
  * /kaalchakra. Its own debounced replaceState writes are recognised and do not remount it.
  */
-export default function Kaalchakra({ items }: { items: KcItem[] }) {
-  const search = useSearchParams().toString();
+function KaalchakraMount({ items, search }: { items: KcItem[]; search: string }) {
   const ids = useMemo(() => new Set(items.map((i) => i.id)), [items]);
   const [mount, setMount] = useState<Mount>(() => ({ seen: search, written: null, epoch: 0, initial: parseState(search, ids) }));
   if (search !== mount.seen) {
@@ -259,7 +289,7 @@ function KaalchakraInner({ items, initial, onWrite }: { items: KcItem[]; initial
           <label className="visually-hidden" htmlFor="kc-q">
             Filter entries
           </label>
-          <input id="kc-q" className="input" type="search" placeholder="Filter: Ashoka, Vedas, Chola..." value={s.q} onChange={(e) => update({ q: e.target.value })} />
+          <input id="kc-q" className="input" type="search" placeholder="Filter, e.g. Ashoka" value={s.q} onChange={(e) => update({ q: e.target.value })} />
         </div>
       </div>
       <div className="kc-kinds" role="group" aria-label="Kinds of entry">
