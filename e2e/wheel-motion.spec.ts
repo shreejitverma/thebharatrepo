@@ -47,24 +47,30 @@ async function expectAtIndicator(page: Page) {
  */
 async function recordSpin(page: Page, act: () => Promise<unknown>): Promise<number[]> {
   await page.evaluate(() => {
-    const w = window as unknown as { __spin: number[]; __spinOn: boolean };
+    const w = window as unknown as { __spin: number[]; __spinOn: boolean; __spinSample: () => void };
     const rotor = document.querySelector<SVGSVGElement>('.kc-wheel__rotor')!;
     w.__spin = [];
     w.__spinOn = true;
-    const tick = () => {
+    w.__spinSample = () => {
       const m = /rotate\((-?[\d.]+)deg\)/.exec(rotor.style.transform);
       const a = m ? Number(m[1]) : 0;
       if (w.__spin[w.__spin.length - 1] !== a) w.__spin.push(a);
+    };
+    const tick = () => {
+      w.__spinSample();
       if (w.__spinOn) requestAnimationFrame(tick);
     };
+    // The start and end are sampled directly, so a loaded engine that skips frames still reports both.
+    w.__spinSample();
     requestAnimationFrame(tick);
   });
   await act();
   await page.waitForTimeout(150);
   await settled(page);
   return page.evaluate(() => {
-    const w = window as unknown as { __spin: number[]; __spinOn: boolean };
+    const w = window as unknown as { __spin: number[]; __spinOn: boolean; __spinSample: () => void };
     w.__spinOn = false;
+    w.__spinSample();
     return w.__spin;
   });
 }
@@ -191,14 +197,20 @@ test.describe('wheel motion', () => {
   test('scroll over the wheel scrolls the page, until the wheel has focus', async ({ page, isMobile }) => {
     test.skip(isMobile, 'mouse wheel');
     await page.setViewportSize({ width: 1280, height: 700 });
+    await page.clock.install();
     await openWheel(page, `?id=${ASHOKA}`);
     await centreWheel(page);
     const box = (await page.locator('.kc-canvas .kc-wheel').boundingBox())!;
-    await page.mouse.move(box.x + box.width / 2, box.y + box.height * 0.3);
     const y0 = await page.evaluate(() => window.scrollY);
+    // A pointer passing over the wheel: the page clock stands still, so it never rests long enough to turn the
+    // wheel, however slowly the browser delivers the scroll (WebKit can take over a second under load).
+    await page.clock.pauseAt((await page.evaluate(() => Date.now())) + 1000);
+    await page.mouse.move(box.x + box.width / 2, box.y + box.height * 0.3);
     await page.mouse.wheel(0, 120);
-    await expect.poll(() => page.evaluate(() => window.scrollY)).toBeGreaterThan(y0);
+    // The whole 120 px reaches the page. Waiting for all of it also waits out WebKit's animated scroll on Linux.
+    await expect.poll(() => page.evaluate(() => window.scrollY)).toBeCloseTo(y0 + 120, 0);
     expect(selectedId(page)).toBe(ASHOKA);
+    await page.clock.resume();
 
     await page.locator('.kc-canvas').focus();
     const y1 = await page.evaluate(() => window.scrollY);
