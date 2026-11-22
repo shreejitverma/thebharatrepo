@@ -16,6 +16,8 @@ const eslintConfig = defineConfig([
     "public/pagefind/**",
     // Build output of `vercel build`, used to check what a deployment serves.
     ".vercel/**",
+    // Local scratch directories (gitignored).
+    ".tmp*/**",
   ]),
 ]);
 
