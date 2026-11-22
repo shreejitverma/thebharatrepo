@@ -1,0 +1,11 @@
+id: person.plain
+type: person
+kind: person
+names: { en: Plain }
+summary: A fixture person with no summaries for young readers.
+datings:
+  - method: epigraphic
+    range: { earliest: "268 BCE", latest: "233 BCE", precision: year, circa: true }
+    grade: A
+    sources: [src.doe-2001-a-book]
+review: { status: draft }

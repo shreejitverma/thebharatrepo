@@ -10,6 +10,7 @@ import { usePathname } from 'next/navigation';
 const LINKS = [
   { href: '/kaalchakra', label: 'Kaalchakra', primary: true, prefetch: false },
   { href: '/archive', label: 'Archive', prefetch: false },
+  { href: '/learn', label: 'Learn', prefetch: false },
   { href: '/history', label: 'History' },
   { href: '/philosophy', label: 'Philosophy' },
   { href: '/science', label: 'Science' },

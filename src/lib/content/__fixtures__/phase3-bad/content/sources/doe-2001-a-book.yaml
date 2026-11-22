@@ -1,0 +1,7 @@
+id: src.doe-2001-a-book
+type: book
+title: A Book About Things
+authors: [Jane Doe]
+year: 2001
+publisher: Test Press
+isbn: "9780000000002"

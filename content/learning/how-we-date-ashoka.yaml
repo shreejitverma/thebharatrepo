@@ -1,0 +1,130 @@
+id: learn.how-we-date-ashoka
+title: How do we know when Ashoka lived?
+level: teen
+audience: Ages 13 to 17, in class or at home
+summary: >-
+  Ashoka is the earliest Indian ruler whose own inscriptions survive, and his reign is one of the best
+  dated in ancient Indian history. This path follows the clues: how the forgotten Brahmi script was read
+  again, how one edict ties Ashoka to Greek kings with known dates, and why some dates nearby, like the
+  Buddha's, are still debated.
+# The decipherment step is modern; the path itself is about the Maurya period.
+focus: { earliest: "324 BCE", latest: "232 BCE", precision: decade, circa: true }
+goals:
+  - Explain why Rock Edict XIII lets historians date Ashoka using Greek records.
+  - Tell the difference between a date fixed by an inscription and a date counted back from later chronicles.
+  - Read an evidence grade and say what kind of evidence earns it.
+steps:
+  - entity: event.brahmi-decipherment-prinsep
+    title: Reading a forgotten script
+    note: >-
+      Before 1837 nobody could read Ashoka's inscriptions. Look at how James Prinsep used one short word,
+      repeated on many gift inscriptions at Sanchi, to unlock the Brahmi script.
+  - entity: person.ashoka
+    title: The emperor in his own words
+    note: >-
+      Meet Ashoka through his inscriptions. Notice that they call him Devanampiya Piyadasi, and look at how
+      historians showed that this is the Ashoka of Buddhist tradition.
+  - entity: artifact.ashoka-major-rock-edict-xiii
+    title: The key clue, five Greek kings
+    note: >-
+      This edict names five Greek kings whose reigns are dated in Greek records. Notice why that makes the
+      dating grade A, directly attested, and how it fixes Ashoka in the mid-3rd century BCE.
+  - entity: person.chandragupta-maurya
+    title: A second link with the Greek world
+    note: >-
+      Greek writers called Ashoka's grandfather Sandrokottos. Two separate links between Indian and Greek
+      history make the Maurya timeline much stronger than one link would.
+  - entity: artifact.lumbini-pillar-inscription
+    title: A pillar at the Buddha's birthplace
+    note: >-
+      This pillar is dated by Ashoka's own regnal year. Compare it with the Buddha's dates, which have to be
+      counted back from Ashoka and are still debated.
+  - entity: site.sanchi-stupa
+    title: Stones that keep telling the story
+    note: >-
+      Sanchi shows how buildings and inscriptions together tell a longer story, from Ashoka's brick stupa to
+      gateways carved two centuries later.
+  - article: history/maurya-empire
+    title: Going further, the whole empire
+    note: >-
+      Read the full article to see how inscriptions, Greek fragments and later texts fit together, and where
+      they disagree.
+quiz:
+  - id: edict-xiii
+    question: Which inscription names five Greek kings whose dates are known, so that historians can date Ashoka?
+    choices:
+      - text: The Lumbini pillar inscription
+        explanation: It records Ashoka's visit to the Buddha's birthplace in his twentieth regnal year, but names no Greek kings.
+      - text: Major Rock Edict XIII
+        correct: true
+        explanation: >-
+          It names Antiochus II, Ptolemy II, Antigonus II Gonatas, Magas and Alexander, whose reigns are dated
+          in Greek records.
+      - text: The donor inscriptions at Sanchi
+        explanation: They record gifts by monks, nuns and lay donors, and helped Prinsep read Brahmi, but they name no Greek kings.
+    sources:
+      - { id: src.hultzsch-1925-inscriptions-of-asoka, locator: "Rock Edict XIII" }
+      - src.thapar-2012-asoka-decline-mauryas
+  - id: prinsep
+    question: How did James Prinsep work out how to read the Brahmi script in 1837?
+    choices:
+      - text: He was taught by scholars who still wrote the script every day.
+        explanation: Brahmi had gone out of use many centuries earlier; nobody could read Ashoka's inscriptions until it was deciphered.
+      - text: He compared it letter by letter with Egyptian hieroglyphs.
+        explanation: Brahmi was read from Indian evidence, the Sanchi donor inscriptions, not from Egyptian scripts.
+      - text: He noticed the same short word, danam ("gift"), at the end of many donor inscriptions from Sanchi.
+        correct: true
+        explanation: >-
+          The repeated word gave him the sound values of several letters, and with them he could read
+          Ashoka's pillar edicts.
+    sources:
+      - src.salomon-1998-indian-epigraphy
+  - id: sandrokottos
+    question: What name did Greek writers use for Chandragupta Maurya?
+    choices:
+      - text: Sandrokottos
+        correct: true
+        explanation: >-
+          In 1793 William Jones identified the Sandrokottos of Greek writers with Chandragupta, the first fixed
+          link between Indian and Mediterranean dates.
+      - text: Piyadasi
+        explanation: Piyadasi ("of gracious mien") is the title Ashoka uses for himself in his own inscriptions.
+      - text: Antiochus
+        explanation: Antiochus II was a Greek king of Syria, one of the five kings named in Ashoka's Rock Edict XIII.
+    sources:
+      - src.thapar-2012-asoka-decline-mauryas
+      - src.stoneman-2019-greek-experience-of-india
+  - id: lumbini
+    question: What does Ashoka's pillar inscription at Lumbini say about the place?
+    choices:
+      - text: That Ashoka himself was born there
+        explanation: The inscription records Ashoka's visit in his twentieth regnal year, not his own birth.
+      - text: That the Buddha gave his first teaching there
+        explanation: Buddhist tradition places the first teaching at Sarnath; the Lumbini pillar marks the birthplace.
+      - text: That the Buddha Shakyamuni was born there
+        correct: true
+        explanation: >-
+          The king says he came to worship because the Buddha Shakyamuni was born here, and set up a stone
+          pillar to mark the spot.
+    sources:
+      - { id: src.hultzsch-1925-inscriptions-of-asoka, locator: "Rummindei pillar inscription" }
+      - { id: src.paranavitana-1962-rummindei-pillar, locator: "pp. 163-167" }
+  - id: grades
+    question: Why is the dating of Rock Edict XIII graded A, while the Buddha's dates are graded C?
+    choices:
+      - text: The edict is older than the Buddha.
+        explanation: The edict belongs to Ashoka's reign in the 3rd century BCE, after the Buddha on every chronology.
+      - text: The edict is tied to Greek kings with independently known reigns, but the Buddha's dates are counted back from Ashoka using chronicle figures that disagree.
+        correct: true
+        explanation: >-
+          Grade A means directly attested. The Sri Lankan and northern Buddhist chronicles give different gaps
+          between the Buddha and Ashoka, so the Buddha's dates stay a reasoned estimate, grade C.
+      - text: Historians trust Greek writers more than Indian ones.
+        explanation: >-
+          Grades depend on whether the evidence is contemporary and independent, not on where it comes from.
+          Ashoka's own Indian inscriptions are graded A too.
+    sources:
+      - { id: src.hultzsch-1925-inscriptions-of-asoka, locator: "Rock Edict XIII" }
+      - { id: src.cousins-1996-dating-historical-buddha, locator: "pp. 57-63" }
+tags: [ashoka, maurya, epigraphy, evidence]
+review: { status: draft, author: "claude-opus-5-5" }

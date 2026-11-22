@@ -66,6 +66,16 @@ if (g.warnings.length) {
   for (const w of g.warnings) console.log(`  warning: ${w.file}: ${w.message}`);
 }
 
+// Warnings never fail the build: names in IAST and native script are added as entities are reviewed.
+const ents = [...g.entities.values()];
+const noIast = ents.filter((e) => !e.names.iast).length;
+const noNative = ents.filter((e) => !e.names.native).length;
+if (noIast || noNative) {
+  console.log(`content:validate warning: ${noIast} of ${ents.length} entities have no names.iast, ${noNative} have no names.native (counts only; not an error)`);
+}
+const unpublished = g.debates.filter((d) => !d.published).length;
+console.log(`content:validate debates: ${g.debates.length} (${g.debates.length - unpublished} published, ${unpublished} awaiting owner approval); learning paths: ${g.learningPaths.length}`);
+
 if (g.errors.length === 0) {
   console.log(`content:validate ok: ${g.entities.size} entities, ${g.sources.size} sources, ${g.articles.length} articles`);
 } else {

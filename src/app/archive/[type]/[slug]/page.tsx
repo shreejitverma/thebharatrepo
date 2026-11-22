@@ -2,17 +2,22 @@ import type { Metadata } from 'next';
 import Link from 'next/link';
 import { notFound } from 'next/navigation';
 import { preconnect } from 'react-dom';
+import EntityNames from '@/components/EntityNames';
 import GradeBadge from '@/components/GradeBadge';
 import DatingList from '@/components/DatingList';
+import LeveledText from '@/components/LeveledText';
+import ReadingLevelSwitcher from '@/components/ReadingLevel';
 import KaalchakraStrip from '@/components/KaalchakraStrip';
 import SearchIndexMeta from '@/components/SearchIndexMeta';
 import RelationGraph from '@/components/RelationGraph';
 import SourceCitation from '@/components/SourceCitation';
 import { getGraph, getIndex, issueUrl, SITE_URL } from '@/lib/content/site';
-import { entityHref, primaryAnchor } from '@/lib/content/kaalchakra';
+import { entityHref, primaryAnchor, toKcItem } from '@/lib/content/kaalchakra';
+import { debateHref, debatesForEntity } from '@/lib/content/debates';
+import { learnHref, pathsForEntity } from '@/lib/content/learning';
 import { rankDatings, summarizeDatings } from '@/lib/content/lens';
 import { relationGroups } from '@/lib/content/relations';
-import { KIND_LABELS, isTraditional, citationId } from '@/lib/content/schema';
+import { KIND_LABELS, READING_LEVEL_LABELS, isTraditional, citationId, type ReadingLevel } from '@/lib/content/schema';
 import { verifiedImage } from '@/lib/content/verification';
 import { formatYear } from '@/lib/time';
 import { yearToUnit } from '@/lib/time/scale';
@@ -73,6 +78,10 @@ export default async function EntityPage({ params }: { params: Promise<{ type: s
     }
   }
   const articles = g.articlesByEntity.get(e.id) ?? [];
+  const item = toKcItem(e);
+  const levels: ReadingLevel[] = ['adult', ...(e.summaries?.teen ? (['teen'] as const) : []), ...(e.summaries?.kids ? (['kids'] as const) : [])];
+  const debates = debatesForEntity(g, e.id);
+  const paths = pathsForEntity(g, e.id);
   const src = (ref: Parameters<typeof citationId>[0]) => {
     const s = g.sources.get(citationId(ref));
     return s ? <SourceCitation source={s} locator={typeof ref === 'string' ? undefined : ref.locator} record /> : citationId(ref);
@@ -106,20 +115,9 @@ export default async function EntityPage({ params }: { params: Promise<{ type: s
       <div className="entity-head">
         <div>
           <h1>{e.names.en}</h1>
-          {e.names.iast || e.names.native ? (
-            <div className="names">
-              {e.names.native ? <span lang="sa">{e.names.native}</span> : null}{' '}
-              {e.names.iast ? <span>{e.names.iast}</span> : null}
-            </div>
-          ) : null}
-          <p className="lede" style={{ margin: '0 0 12px' }}>{e.summary}</p>
-          {e.summaries?.teen || e.summaries?.kids ? (
-            <details>
-              <summary>Simpler explanations for young readers</summary>
-              {e.summaries.teen ? <p><strong>For teens:</strong> {e.summaries.teen}</p> : null}
-              {e.summaries.kids ? <p><strong>For children:</strong> {e.summaries.kids}</p> : null}
-            </details>
-          ) : null}
+          <EntityNames native={item.native} iast={item.iast} nativeLang={item.nativeLang} iastLang={item.iastLang} />
+          {levels.length > 1 ? <ReadingLevelSwitcher available={levels} /> : null}
+          <LeveledText className="lede entity-lede" adult={e.summary} teen={e.summaries?.teen} kids={e.summaries?.kids} tagged />
           {e.region ? <p className="muted">Region: {e.region}</p> : null}
           {e.location ? (
             <p className="muted">
@@ -199,6 +197,36 @@ export default async function EntityPage({ params }: { params: Promise<{ type: s
       ) : null}
 
       <RelationGraph name={e.names.en} groups={groups} node={relationNode} />
+
+      {debates.length ? (
+        <>
+          <h2>Debates</h2>
+          <ul className="relations">
+            {debates.map((d) => (
+              <li key={d.id}>
+                <Link href={debateHref(d)}>
+                  {d.title} <span>{d.positions.length} positions</span>
+                </Link>
+              </li>
+            ))}
+          </ul>
+        </>
+      ) : null}
+
+      {paths.length ? (
+        <>
+          <h2>Learning paths</h2>
+          <ul className="relations">
+            {paths.map((lp) => (
+              <li key={lp.id}>
+                <Link href={learnHref(lp)}>
+                  {lp.title} <span>{READING_LEVEL_LABELS[lp.level]} level</span>
+                </Link>
+              </li>
+            ))}
+          </ul>
+        </>
+      ) : null}
 
       {articles.length ? (
         <>

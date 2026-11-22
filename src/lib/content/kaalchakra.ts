@@ -8,6 +8,7 @@ import { rangeAnchor, type Precision } from '../time';
 import { yearToUnit } from '../time/scale';
 import type { ContentGraph } from './load';
 import { primaryAnchor, rankDatings, type Lens } from './lens';
+import { nativeLang, romanisedLang } from './script';
 export { primaryAnchor };
 
 export interface KcDating {
@@ -50,6 +51,9 @@ export interface KcItem {
   name: string;
   iast?: string;
   native?: string;
+  /** BCP 47 tags for `native` and `iast` (see script.ts). */
+  nativeLang?: string;
+  iastLang?: string;
   summary: string;
   kids?: string;
   teen?: string;
@@ -96,6 +100,11 @@ export function toKcItem(e: Entity): KcItem {
     label: d.label,
     note: d.note,
   }));
+  const anchor = {
+    scholarship: anchorFor(datings.filter((d) => d.lens === 'scholarship')),
+    tradition: anchorFor(datings.filter((d) => d.lens === 'tradition')),
+  };
+  const langs = nameLangs(e, anchor.scholarship ?? anchor.tradition);
   return {
     id: e.id,
     kind: e.kind,
@@ -103,6 +112,8 @@ export function toKcItem(e: Entity): KcItem {
     name: e.names.en,
     iast: e.names.iast ?? undefined,
     native: e.names.native ?? undefined,
+    nativeLang: e.names.native ? langs.native : undefined,
+    iastLang: e.names.iast ? langs.iast : undefined,
     summary: e.summary,
     kids: e.summaries?.kids,
     teen: e.summaries?.teen,
@@ -112,11 +123,14 @@ export function toKcItem(e: Entity): KcItem {
     extents: e.extents?.map((x) => ({ label: x.label, from: x.from, to: x.to, polygon: x.polygon, grade: x.grade, lens: x.grade === 'D' ? 'tradition' : 'scholarship', note: x.note })),
     href: entityHref(e.id),
     datings,
-    anchor: {
-      scholarship: anchorFor(datings.filter((d) => d.lens === 'scholarship')),
-      tradition: anchorFor(datings.filter((d) => d.lens === 'tradition')),
-    },
+    anchor,
   };
+}
+
+/** Language tags for an entity's native-script and romanised names. */
+export function nameLangs(e: Pick<Entity, 'names'>, anchorYear: number | null): { native: string; iast: string } {
+  const native = e.names.native ? nativeLang(e.names.native, { override: e.names.nativeLang, anchorYear }) : undefined;
+  return { native: native ?? 'und', iast: romanisedLang(native) };
 }
 
 export function buildKaalchakraIndex(g: ContentGraph): KcItem[] {

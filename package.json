@@ -5,6 +5,7 @@
   "scripts": {
     "predev": "tsx scripts/build-content.ts",
     "dev": "next dev",
+    "dev:debates-preview": "DEBATES_PREVIEW=1 next dev",
     "prebuild": "npm run content:validate && tsx scripts/content-verify-sources.ts --offline && tsx scripts/build-content.ts",
     "build": "next build && tsx scripts/build-search.ts",
     "start": "next start",

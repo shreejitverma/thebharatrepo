@@ -3,6 +3,11 @@ import type { Source } from '@/lib/content/schema';
 import { formatSource, sourceHref } from '@/lib/content/kaalchakra';
 import { verifiedSourceLink } from '@/lib/content/verification';
 
+/** Keeps a locator abbreviation with its number ("pp. 163-167", "fig. 4") when the line wraps. */
+export function bindLocator(locator: string): string {
+  return locator.replace(/\b(pp?|ll?|vv?|fig|figs|no|nos|col|cols|vol|ch)\.\s+(?=\S)/gi, '$1.\u00a0');
+}
+
 /**
  * A formatted citation. The title links to the source's verified identifier only (see sourceIdentifiers);
  * `record` adds a link to the source's own page, which lists everything that cites it.
@@ -24,7 +29,7 @@ export default function SourceCitation({ source, locator, record = false, identi
       ) : (
         text
       )}
-      {locator ? `, ${locator}` : ''}
+      {locator ? `, ${bindLocator(locator)}` : ''}
       {id || record ? (
         <span className="source-citation__meta">
           {id ? <span className="muted">{id}</span> : null}

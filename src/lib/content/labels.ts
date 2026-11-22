@@ -227,3 +227,19 @@ export const RELATION_INBOUND_LABELS: Record<RelationKind, string> = {
   'contemporary-of': 'contemporary of',
   'related-to': 'related to',
 };
+
+/** Reading levels, fullest first. Summaries: adult = `summary`, teen = `summaries.teen`, kids = `summaries.kids`. */
+export const READING_LEVELS = ['adult', 'teen', 'kids'] as const;
+export type ReadingLevel = (typeof READING_LEVELS)[number];
+
+export const READING_LEVEL_LABELS: Record<ReadingLevel, string> = {
+  adult: 'Full',
+  teen: 'Teen',
+  kids: 'Kids',
+};
+
+export const READING_LEVEL_AUDIENCE: Record<ReadingLevel, string> = {
+  adult: 'Adults and researchers',
+  teen: 'Ages 13 to 17',
+  kids: 'Ages 8 to 12',
+};

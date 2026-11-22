@@ -1,0 +1,108 @@
+/*
+ * Print stylesheet, site-wide. Every page prints as black text on white with the site chrome removed;
+ * the editorial draft notice stays, because a printout must not look more authoritative than the page.
+ * Printable learning packs (/learn/<slug>/print) add page breaks before the answer key.
+ */
+
+@media print {
+  :root,
+  :root:not([data-theme='light']),
+  :root[data-theme='dark'] {
+    color-scheme: light;
+    --bg: #fff;
+    --bg-elev: #fff;
+    --bg-sunk: #f3f3f3;
+    --ink: #000;
+    --ink-soft: #222;
+    --ink-faint: #444;
+    --line: #bbb;
+    --line-strong: #888;
+    --accent: #000;
+    --accent-ink: #fff;
+    --gold: #000;
+    --indigo: #000;
+    --grade-a: #1f6b3a;
+    --grade-b: #2b5a8a;
+    --grade-c: #8a5a00;
+    --grade-d: #7a3f8f;
+    --grade-e: #7a4a3a;
+    --shadow: none;
+  }
+
+  @page {
+    margin: 16mm 14mm;
+  }
+
+  html,
+  body {
+    background: #fff !important;
+    color: #000 !important;
+    font-size: 11pt;
+  }
+
+  .site-header,
+  .site-footer,
+  .skip-link,
+  .breadcrumbs,
+  .reading-level,
+  .social-share,
+  .no-print,
+  .kc-strip svg,
+  .step__check,
+  .print-toolbar,
+  button {
+    display: none !important;
+  }
+
+  .draft-notice {
+    border: 1px solid #888;
+    background: #fff !important;
+    font-size: 9pt;
+  }
+
+  .main-content {
+    max-width: none;
+    padding: 0;
+  }
+
+  a {
+    color: #000;
+    text-decoration: none;
+  }
+
+  h1,
+  h2,
+  h3 {
+    break-after: avoid-page;
+  }
+
+  .card,
+  .dating,
+  .claims li,
+  .position,
+  .step,
+  .print-card,
+  .print-quiz > li,
+  .answer-key > li,
+  .quiz__q {
+    break-inside: avoid;
+    box-shadow: none !important;
+  }
+
+  /* Backgrounds do not print by default: badges become outlined text. */
+  .level-badge {
+    background: none;
+    color: #000;
+    border: 1px solid #000;
+  }
+
+  .print-break {
+    break-before: page;
+  }
+
+  .grade__letter {
+    color: #fff !important;
+    print-color-adjust: exact;
+    -webkit-print-color-adjust: exact;
+  }
+}

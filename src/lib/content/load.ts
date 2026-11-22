@@ -5,6 +5,8 @@
  *   content/entities/<type>/<slug>.yaml   one entity per file, id = <type>.<slug>
  *   content/sources/<slug>.yaml           one source per file, id = src.<slug>
  *   content/corrections.yaml              public corrections log
+ *   content/debates/<slug>.yaml           debate pages, id = debate.<slug> (validated even when unpublished)
+ *   content/learning/<slug>.yaml          learning paths with quizzes, id = learn.<slug>
  *   _content/<category>/<slug>.md         articles (frontmatter + Markdown with [@src.id, locator] citations)
  *
  * loadContent() never throws on bad content: it returns every problem in `errors` so a single run
@@ -22,14 +24,18 @@ import {
   ArticleFrontmatterSchema,
   CATEGORIES,
   CorrectionSchema,
+  DebateSchema,
   EntitySchema,
+  LearningPathSchema,
   SourceSchema,
   citationId,
   isTraditional,
   type ArticleFrontmatter,
   type DatingMethod,
   type Correction,
+  type Debate,
   type Entity,
+  type LearningPath,
   type Source,
 } from './schema';
 
@@ -43,6 +49,17 @@ export interface Article extends ArticleFrontmatter {
   inlineCitations: { id: string; locator?: string }[];
 }
 
+/** A debate with its file location. `published: false` debates are loaded so they validate, never rendered. */
+export interface DebateDoc extends Debate {
+  slug: string;
+  file: string;
+}
+
+export interface LearningPathDoc extends LearningPath {
+  slug: string;
+  file: string;
+}
+
 export interface ContentProblem {
   file: string;
   message: string;
@@ -53,6 +70,9 @@ export interface ContentGraph {
   sources: Map<string, Source>;
   articles: Article[];
   corrections: Correction[];
+  /** Every debate, published or not, sorted by id. Pages must filter with visibleDebates(). */
+  debates: DebateDoc[];
+  learningPaths: LearningPathDoc[];
   /** entity id -> articles about it */
   articlesByEntity: Map<string, Article[]>;
   /** entity id -> entities pointing at it */
@@ -522,12 +542,81 @@ export function loadContentUncached(): ContentGraph {
 
   correctionSourceChecks.forEach(({ c, file }) => c.sources.forEach((s) => checkSource(file, c.target, citationId(s))));
 
+  const debates = loadDebates(roots, errors);
+  const learningPaths = loadLearningPaths(roots, errors);
+  const articleKeys = new Set(articles.map((a) => `${a.category}/${a.slug}`));
+  for (const d of debates) {
+    d.commonGround.forEach((ev, j) => ev.sources.forEach((s) => checkSource(d.file, `commonGround[${j}]`, s.id)));
+    d.positions.forEach((p, i) => {
+      p.evidence.forEach((ev, j) => ev.sources.forEach((s) => checkSource(d.file, `positions[${i}].evidence[${j}]`, s.id)));
+      p.proponents.forEach((pr, j) => pr.work && checkSource(d.file, `positions[${i}].proponents[${j}].work`, citationId(pr.work)));
+    });
+    for (const id of d.relatedEntities) if (!entities.has(id)) errors.push({ file: d.file, message: `relatedEntities: unknown entity ${id}` });
+    for (const ref of d.relatedArticles) if (!articleKeys.has(ref)) errors.push({ file: d.file, message: `relatedArticles: unknown article ${ref}` });
+  }
+  for (const lp of learningPaths) {
+    lp.steps.forEach((st, i) => {
+      if (st.article && !articleKeys.has(st.article)) errors.push({ file: lp.file, message: `steps[${i}]: unknown article ${st.article}` });
+      if (!st.entity) return;
+      const e = entities.get(st.entity);
+      if (!e) errors.push({ file: lp.file, message: `steps[${i}]: unknown entity ${st.entity}` });
+      else if (lp.level !== 'adult' && !e.summaries?.[lp.level]) {
+        errors.push({ file: lp.file, message: `steps[${i}]: ${st.entity} has no ${lp.level} summary; every entity on a ${lp.level} path needs one` });
+      }
+    });
+    lp.quiz.forEach((q, i) => q.sources.forEach((s) => checkSource(lp.file, `quiz[${i}] (${q.id})`, citationId(s))));
+  }
+
   for (const p of strays) errors.push({ file: rel(p), message: 'unexpected file: entities and sources must be .yaml, articles must be .md' });
 
   const relations = checkRelations(entities.values());
   const warnings = relations.warnings.map((w) => ({ file: entityFile.get(w.id) ?? w.id, message: w.message }));
 
-  return { entities, sources, articles, corrections, articlesByEntity, inbound, aliases, errors, warnings, relationStats: relations.stats };
+  return { entities, sources, articles, corrections, debates, learningPaths, articlesByEntity, inbound, aliases, errors, warnings, relationStats: relations.stats };
+}
+
+/* ---------- Debates and learning paths ---------- */
+
+/** Reads <root>/<dir>/<slug>.yaml for every root, validates each file and checks that its id is <prefix>.<slug>. */
+function loadTyped<T extends { id: string }>(roots: string[], dir: string, prefix: string, parse: (raw: unknown) => z.ZodSafeParseResult<T>, errors: ContentProblem[]) {
+  const out: (T & { slug: string; file: string })[] = [];
+  const seen = new Set<string>();
+  for (const file of roots.flatMap((r) => walk(path.join(r, dir), '.yaml'))) {
+    const relFile = rel(file);
+    if (path.basename(path.dirname(file)) !== dir) {
+      errors.push({ file: relFile, message: `${dir} files must sit directly in content/${dir}/` });
+      continue;
+    }
+    const raw = readYaml(file, errors);
+    if (raw === undefined) continue;
+    // Debate positions and learning path focus carry optional ranges; the same rule as entity datings applies.
+    for (const m of rawNegativeYears((raw as { positions?: unknown } | null)?.positions)) errors.push({ file: relFile, message: m.replace(/^datings/, 'positions') });
+    const focus = (raw as { focus?: unknown } | null)?.focus;
+    if (focus) for (const m of rawNegativeYears([{ range: focus }])) errors.push({ file: relFile, message: m.replace(/^datings\[0\]\.range/, 'focus') });
+    const parsed = parse(raw);
+    if (!parsed.success) {
+      for (const m of formatZod(parsed.error)) errors.push({ file: relFile, message: m });
+      continue;
+    }
+    const slugName = path.basename(file, '.yaml');
+    const expected = `${prefix}.${slugName}`;
+    if (parsed.data.id !== expected) errors.push({ file: relFile, message: `id ${parsed.data.id} must match filename (${expected})` });
+    if (seen.has(parsed.data.id)) {
+      errors.push({ file: relFile, message: `duplicate id ${parsed.data.id}` });
+      continue;
+    }
+    seen.add(parsed.data.id);
+    out.push({ ...parsed.data, slug: slugName, file: relFile });
+  }
+  return out.sort((a, b) => a.id.localeCompare(b.id));
+}
+
+function loadDebates(roots: string[], errors: ContentProblem[]): DebateDoc[] {
+  return loadTyped(roots, 'debates', 'debate', (raw) => DebateSchema.safeParse(raw), errors);
+}
+
+function loadLearningPaths(roots: string[], errors: ContentProblem[]): LearningPathDoc[] {
+  return loadTyped(roots, 'learning', 'learn', (raw) => LearningPathSchema.safeParse(raw), errors);
 }
 
 let cache: ContentGraph | undefined;

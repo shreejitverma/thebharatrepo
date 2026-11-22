@@ -1,9 +1,9 @@
 import Link from 'next/link';
 import type { KcItem } from '@/lib/content/kaalchakra';
 import { neighbours } from '@/lib/content/kaalchakra';
-import { datingSummary } from '@/lib/content/lens';
+import { withTraditionMark } from '@/lib/content/lens';
 import { isTraditional, type DatingMethod } from '@/lib/content/labels';
-import type { YearRange } from '@/lib/time';
+import { formatRange, type YearRange } from '@/lib/time';
 import { SEGMENTS, SEGMENT_STARTS, yearToUnit } from '@/lib/time/scale';
 
 const W = 1000;
@@ -28,7 +28,8 @@ function ticksPath(items: KcItem[]): string {
 }
 
 /**
- * Mini Kaalchakra: locates an entity or article on the full axis, with its neighbours in time.
+ * Mini Kaalchakra: locates an entity or article (by its primary dating) or a debate or learning path (by a
+ * lens-tagged span) on the full axis, with its neighbours in time.
  * Server component, no client JavaScript.
  */
 const GROUPS = [
@@ -38,12 +39,24 @@ const GROUPS = [
 ] as const;
 
 /**
- * `dating` is the page's primary dating (lens.ts primaryDating). Neighbours are drawn from the same lens as that
- * dating, so a page placed by traditional reckoning is compared only with other traditional datings.
+ * `dating` is the page's primary dating (lens.ts primaryDating), or a lens-tagged span for a debate or learning path.
+ * Neighbours are drawn from the same lens as that dating, so a page placed by traditional reckoning is compared only
+ * with other traditional datings.
  */
-export default function KaalchakraStrip({ items, dating, selfId, focusHref }: { items: KcItem[]; dating: { range: YearRange; method: DatingMethod }; selfId: string | null; focusHref: string }) {
-  const { range, method } = dating;
-  const lens = isTraditional(method) ? 'tradition' : 'scholarship';
+export default function KaalchakraStrip({
+  items,
+  dating,
+  selfId,
+  focusHref,
+}: {
+  items: KcItem[];
+  dating: { range: YearRange; method: DatingMethod } | { range: YearRange; lens: 'scholarship' | 'tradition' };
+  selfId: string | null;
+  focusHref: string;
+}) {
+  const { range } = dating;
+  const traditional = 'method' in dating ? isTraditional(dating.method) : dating.lens === 'tradition';
+  const lens = traditional ? 'tradition' : 'scholarship';
   const u0 = yearToUnit(range.earliest);
   const u1 = yearToUnit(range.latest);
   const markW = Math.min(Math.max((u1 - u0) * W, 4), W);
@@ -53,7 +66,7 @@ export default function KaalchakraStrip({ items, dating, selfId, focusHref }: { 
     <section className="kc-strip" aria-label="Place in the Kaalchakra">
       <div className="kc-strip__head">
         <strong>Place in the Kaalchakra</strong>
-        <span className="muted">{datingSummary(range, method)}</span>
+        <span className="muted">{withTraditionMark(formatRange(range), traditional)}</span>
         <Link href={focusHref} prefetch={false}>
           Open in the Kaalchakra
         </Link>

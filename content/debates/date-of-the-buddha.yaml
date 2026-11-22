@@ -1,0 +1,146 @@
+id: debate.date-of-the-buddha
+title: The date of the Buddha
+question: When did the Buddha live, and when did he die?
+summary: >-
+  No contemporary record gives the Buddha's dates. Every chronology counts back from the reign of Ashoka,
+  which Hellenistic synchronisms anchor to the mid-3rd century BCE, and the positions differ on how many
+  years separated the Buddha's death (the Parinirvana) from Ashoka's consecration: 218 years in the Sri
+  Lankan chronicles, about a century in northern Buddhist sources. The Theravada Buddhist Era is an older
+  reckoning of the Sri Lankan count, kept in its own lens.
+# Owner rule: debate pages are published only with owner approval. Leave false until approved.
+published: false
+commonGround:
+  - text: >-
+      Ashoka's Major Rock Edict XIII names five Hellenistic kings whose reigns are dated independently in
+      Greek records, which anchors his consecration to about 268 BCE. Every chronology of the Buddha counts
+      back from this anchor.
+    grade: A
+    sources:
+      - { id: src.hultzsch-1925-inscriptions-of-asoka, locator: "Rock Edict XIII" }
+  - text: >-
+      Ashoka's pillar inscription at Lumbini, set up in his twentieth regnal year, says that the Buddha
+      Shakyamuni was born there, so by about 249 BCE the birthplace was already a place of worship.
+    grade: A
+    sources:
+      - { id: src.hultzsch-1925-inscriptions-of-asoka, locator: "Rummindei pillar inscription" }
+      - { id: src.paranavitana-1962-rummindei-pillar, locator: "pp. 163-167" }
+positions:
+  - id: corrected-long-chronology
+    label: "Corrected long chronology: death about 486 to 483 BCE"
+    lens: scholarship
+    statement: >-
+      The Sri Lankan Pali chronicles preserve the most detailed internal chronology of early Buddhism and
+      state that Ashoka was consecrated 218 years after the Parinirvana. Counted back from a consecration of
+      about 268 BCE, that interval places the death around 486 to 483 BCE and, with the traditional 80-year
+      life, the birth around 566 to 563 BCE. The interval is a specific figure, not a round number, and the
+      position keeps it while correcting the older traditional era to fit the Hellenistic anchor.
+    grade: C
+    range: { earliest: "566 BCE", latest: "483 BCE", precision: decade, circa: true }
+    proponents:
+      - name: Wilhelm Geiger
+        role: Indologist, editor and translator of the Pali chronicles
+      - name: Robin Coningham and colleagues
+        role: Archaeologists at the Maya Devi temple, Lumbini, whose sixth-century BCE date for an early shrine is cited for an earlier Buddha
+        work: { id: src.coningham-2013-earliest-buddhist-shrine, locator: "pp. 1104-1123" }
+    evidence:
+      - text: >-
+          The Sri Lankan chronicles place Ashoka's consecration 218 years after the Parinirvana; from a
+          consecration of about 268 BCE this gives a death around 486 BCE.
+        grade: C
+        sources:
+          - { id: src.cousins-1996-dating-historical-buddha, locator: "pp. 57-63" }
+      - text: >-
+          Excavators at Lumbini dated a timber structure beneath the Ashokan brick shrine to the sixth century
+          BCE and interpreted it as an early Buddhist shrine at the birthplace.
+        grade: C
+        sources:
+          - { id: src.coningham-2013-earliest-buddhist-shrine, locator: "pp. 1104-1123" }
+    objections:
+      - >-
+        The 218-year interval comes from one chronicle tradition compiled centuries after the events, and
+        the lists of monastic teachers between the Buddha and Ashoka seem too short to fill it.
+      - >-
+        An early structure at Lumbini shows that the site was used before Ashoka; it does not by itself date
+        the Buddha's life, and its identification as a Buddhist shrine has been questioned.
+  - id: short-chronology
+    label: "Short chronology: death about 400 BCE"
+    lens: scholarship
+    statement: >-
+      Northern Buddhist sources place Ashoka only about a century after the Parinirvana, and the lineages
+      of monastic teachers in the Vinaya tradition contain too few generations to span 218 years. Weighing
+      these against the Sri Lankan figure, many of the scholars who re-examined the question at the 1988
+      symposium edited by Heinz Bechert concluded that the death fell in the decades around 400 BCE. On this
+      view the long interval is a later chronicle construction, and the shorter one fits the other evidence
+      better.
+    grade: C
+    range: { earliest: "490 BCE", latest: "380 BCE", best: "400 BCE", precision: decade, circa: true }
+    proponents:
+      - name: Heinz Bechert
+        role: Indologist, organiser of the 1988 symposium on the date of the Buddha and editor of its volumes
+      - name: Richard Gombrich
+        role: Indologist, argued from the lineages of monastic teachers
+      - name: L. S. Cousins
+        role: Scholar of Pali Buddhism, reviewed the symposium volumes
+        work: { id: src.cousins-1996-dating-historical-buddha, locator: "pp. 57-63" }
+    evidence:
+      - text: >-
+          Northern Buddhist traditions put Ashoka about 100 years after the Parinirvana, which, counted from a
+          consecration of about 268 BCE, points to a death around 370 BCE.
+        grade: C
+        sources:
+          - { id: src.cousins-1996-dating-historical-buddha, locator: "pp. 57-63" }
+      - text: >-
+          The succession lists of monastic teachers between the Buddha and Ashoka contain too few generations
+          for an interval of 218 years, which favours a shorter gap.
+        grade: C
+        sources:
+          - { id: src.cousins-1996-dating-historical-buddha, locator: "pp. 57-63" }
+    objections:
+      - >-
+        The northern figure of about a century is itself a round number from later sources, and teacher lists
+        can omit generations, so neither is independent proof.
+      - No inscription or excavated find dates the Buddha's death directly.
+  - id: theravada-buddhist-era
+    label: "Theravada Buddhist Era: Parinirvana in 544 or 543 BCE"
+    lens: tradition
+    statement: >-
+      The Buddhist Era used in Sri Lanka and Southeast Asia counts from a Parinirvana in 544 or 543 BCE,
+      after an 80-year life. It is the living reckoning of the Theravada tradition, used for its calendar
+      and festivals, and it is presented here in the Tradition lens as tradition, not as a historical dating.
+    grade: D
+    range: { earliest: "624 BCE", latest: "543 BCE", precision: year, circa: false }
+    proponents:
+      - name: Theravada chronicle tradition of Sri Lanka and Southeast Asia
+        role: The reckoning behind the Buddhist Era calendar
+    evidence:
+      - text: >-
+          The Theravada Buddhist Era places the Parinirvana in 544 or 543 BCE after an 80-year life, and is the
+          era used in Sri Lanka and Southeast Asia.
+        grade: D
+        sources:
+          - { id: src.cousins-1996-dating-historical-buddha, locator: "pp. 57-63" }
+    objections:
+      - >-
+        Combined with the same 218-year interval, the traditional era puts Ashoka's consecration about sixty
+        years earlier than the Hellenistic synchronism allows, which is why historians who keep the interval
+        correct the era to about 486 to 483 BCE.
+whatWouldChangeThis:
+  - >-
+    A dated inscription or manuscript that states the interval between the Parinirvana and Ashoka,
+    independent of both the Sri Lankan and the northern chronicle traditions.
+  - >-
+    Securely stratified, calibrated radiocarbon or luminescence dates for the earliest Buddhist levels at
+    places tied to the Buddha's life, such as Lumbini, with clear evidence that those levels are Buddhist.
+  - >-
+    An independent fixed date for a contemporary of the Buddha, such as the Magadhan king Bimbisara, from a
+    foreign record or an inscription.
+relatedEntities:
+  - person.gautama-buddha
+  - artifact.lumbini-pillar-inscription
+  - artifact.ashoka-major-rock-edict-xiii
+  - person.ashoka
+  - person.bimbisara
+relatedArticles:
+  - philosophy/buddhism
+tags: [buddhism, chronology, ashoka, contested-chronology]
+review: { status: draft, author: "claude-opus-5-5" }
