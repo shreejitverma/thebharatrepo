@@ -64,7 +64,7 @@ npm run dev:debates-preview     # local preview that renders unpublished debate 
 Both browser suites expect `npm run build` first; set `E2E_PORT` or `LHCI_PORT` to avoid a port another server holds.
 After editing content during `npm run dev`, run `npm run content:build` to refresh the open data and the Kaalchakra data in `public/data/`.
 The Map view has visual snapshots (`e2e/map-visual.spec.ts`) drawn from a fixed fixture (`e2e/fixtures/kaalchakra-map.json`), so they change only when rendering changes.
-Snapshots are per platform; refresh them with `npx playwright test e2e/map-visual.spec.ts --update-snapshots=all` on macOS, and in the Playwright Linux image for CI.
+They are refreshed together with the Wheel and River snapshots; see [Quality gates](#quality-gates).
 
 `npm run build` refuses to build when content is invalid or when any identifier lacks a matching verified record in `content/verification.json` (`content-verify-sources.ts --offline`).
 Every cached verification is re-checked against the current title or name, so a reused or edited identifier cannot ride on an old success.
@@ -105,15 +105,18 @@ Two deliberate departures from the product brief, both measured:
 the brief's 100 KB JavaScript budget for article pages is below the roughly 128 KB that React 19 and the Next.js 16 App Router runtime ship on every page, so the gate is 150 KB;
 and a hard load of search results (`/search?q=...`) renders after hydration and the index download, so it is held to a 4.5 s LCP ratchet until search results are rendered on the server.
 
-The visual snapshots in `e2e/visual.spec.ts-snapshots/` use a fixed fixture (`e2e/fixtures/kaalchakra.json`), so they change only when rendering changes.
-They are per platform; after an intended visual change, refresh both:
+The visual snapshots in `e2e/visual.spec.ts-snapshots/` and `e2e/map-visual.spec.ts-snapshots/` use fixed fixtures (`e2e/fixtures/`), so they change only when rendering changes.
+They are kept for the two Chromium projects and are per platform; after an intended visual change, refresh both:
 
 ```sh
-npx playwright test e2e/visual.spec.ts --update-snapshots=all      # macOS
+npx playwright test e2e/visual.spec.ts e2e/map-visual.spec.ts --project=desktop --project=mobile --update-snapshots=all      # macOS
 # Linux, as CI; node_modules and .next stay inside the container so the host install is untouched
-docker run --rm -v "$PWD":/work -v /work/node_modules -v /work/.next -w /work -e CI=1 mcr.microsoft.com/playwright:v1.65.1-noble \
-  sh -c 'npm ci && npm run build && npx playwright test e2e/visual.spec.ts --update-snapshots=all'
+docker run --rm -v "$PWD":/work -v /work/node_modules -v /work/.next -w /work -e CI=1 -e HOME=/root mcr.microsoft.com/playwright:v1.65.1-noble \
+  sh -c 'npm ci && npm run build && npx playwright test e2e/visual.spec.ts e2e/map-visual.spec.ts --project=desktop --project=mobile --update-snapshots=all'
 ```
+
+From a git worktree, also mount the main repository's `.git` directory at its own path (`-v "$GIT_DIR":"$GIT_DIR":ro`), because the export reads the content commit date from git and a worktree's `.git` file points there.
+
 ## Search
 
 Search is [Pagefind](https://pagefind.app), built inside `npm run build` (`next build && tsx scripts/build-search.ts`), so the index can never be skipped by a package manager that ignores lifecycle scripts.
