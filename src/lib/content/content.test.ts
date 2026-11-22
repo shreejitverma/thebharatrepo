@@ -44,6 +44,24 @@ describe('entity and source rules', () => {
     expect(EntitySchema.safeParse(entity).success).toBe(false);
     expect(EntitySchema.safeParse({ ...entity, datings: [{ ...baseDating, method: 'traditional-puranic', grade: 'D' }] }).success).toBe(true);
   });
+  it('rejects a dating that dates a text about a figure rather than the figure', () => {
+    const rama = {
+      ...entity,
+      id: 'person.rama',
+      type: 'person',
+      kind: 'person',
+      datings: [
+        { ...baseDating, method: 'traditional-puranic', grade: 'D' },
+        { ...baseDating, method: 'linguistic', grade: 'C', label: 'Composition of the Valmiki Ramayana (date of the text)' },
+      ],
+    };
+    const r = EntitySchema.safeParse(rama);
+    expect(r.success).toBe(false);
+    expect(r.error?.issues.map((i) => i.message)).toEqual(['this linguistic dating dates a text, not person.rama; record the attestation as a claim or on the text entity']);
+    expect(EntitySchema.safeParse({ ...rama, datings: [rama.datings[0]] }).success).toBe(true);
+    // A text entity is dated by its own composition.
+    expect(EntitySchema.safeParse({ ...rama, id: 'text.ramayana', type: 'text', kind: 'text' }).success).toBe(true);
+  });
   it('requires the id prefix to match the type', () => {
     expect(EntitySchema.safeParse({ ...entity, id: 'event.kalpa', datings: [{ ...baseDating, method: 'traditional-puranic', grade: 'D' }] }).success).toBe(false);
   });

@@ -19,20 +19,6 @@ summaries:
     known Indian flood story. The Mahabharata and Puranas retell it, and in the Puranas the fish becomes
     Matsya, Vishnu's first avatar, saving Manu, the Seven Sages and the seeds of life.
 datings:
-  - method: linguistic
-    range:
-      earliest: "800 BCE"
-      latest: "600 BCE"
-      precision: century
-      circa: true
-    grade: C
-    label: Earliest known attestation, Shatapatha Brahmana 1.8.1.1-10 (date of the text)
-    sources:
-      - src.eggeling-1882-satapatha-brahmana-part-1
-      - src.flood-2003-blackwell-companion-hinduism
-    note: >-
-      This dates the text, not any event: the late Brahmana prose of the Shatapatha Brahmana, which contains
-      the flood episode, is usually placed in roughly the 8th to 6th centuries BCE.
   - method: traditional-puranic
     range:
       earliest: "120531102 BCE"
@@ -64,6 +50,13 @@ claims:
       - src.brockington-1998-sanskrit-epics
       - src.dimmitt-vanbuitenen-1978-classical-hindu-mythology
       - src.rocher-1986-puranas
+  - text: >-
+      The late Brahmana prose of the Shatapatha Brahmana, which contains the flood episode, is usually placed
+      in roughly the 8th to 6th centuries BCE; this dates the earliest known telling, not any flood.
+    grade: C
+    sources:
+      - src.eggeling-1882-satapatha-brahmana-part-1
+      - src.flood-2003-blackwell-companion-hinduism
 relations:
   - kind: related-to
     target: person.vaivasvata-manu

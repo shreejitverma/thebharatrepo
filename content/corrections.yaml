@@ -2710,3 +2710,52 @@
   before: "The Cholas succeeded the Pallavas as the dominant power in the Tamil country, and the Pallavas preceded the Cholas, who displaced them in the late 9th century."
   after: "One relation: the Cholas succeeded the Pallavas as the dominant power in the Tamil country, displacing them in the late 9th century."
   reason: "Both relations described the same succession; their notes were combined on the one kept."
+- date: 2026-11-22
+  target: person.rama
+  before: "Rama carried a grade C linguistic dating of 750 BCE to 300 CE, the composition of the Valmiki Ramayana, which placed him on the Kaalchakra as a scholarly-dated marker in the 3rd century BCE."
+  after: "Rama carries only the traditional Treta Yuga placement. The composition window of the poem is recorded as a grade C claim, and the Valmiki Ramayana entity keeps its own dating."
+  reason: "The dating was of the text, not of Rama. No inscription or excavated layer attests Rama, so scholarship offers no date for him and the marker presented the poem's date as his."
+  sources:
+    - src.goldman-1984-ramayana-balakanda
+    - src.brockington-1998-sanskrit-epics
+- date: 2026-11-22
+  target: person.krishna
+  before: "Krishna carried a grade C linguistic dating from the Chandogya Upanishad (700 to 500 BCE) and a grade B epigraphic dating from the Heliodorus pillar (120 to 100 BCE), which placed him on the Kaalchakra as a scholarly-dated marker in the late 2nd century BCE."
+  after: "Krishna carries only the two traditional datings. The Chandogya reference and the Heliodorus pillar remain as claims, and the pillar claim gives its date by the reign of Antialcidas."
+  reason: "Both datings dated evidence about Krishna, a text and the worship of Vasudeva, not Krishna himself, whose historicity the evidence cannot settle."
+  sources:
+    - src.olivelle-1998-early-upanisads
+    - src.salomon-1998-indian-epigraphy
+    - src.malinar-2007-bhagavadgita-doctrines-contexts
+- date: 2026-11-22
+  target: person.vaivasvata-manu
+  before: "Vaivasvata Manu carried a grade B linguistic dating of 1500 to 600 BCE, the dates of the Rigveda and the Shatapatha Brahmana."
+  after: "Vaivasvata Manu carries only the traditional manvantara placement, and the dates of the texts that tell of him are a grade B claim."
+  reason: "The dating was of the texts, not of the figure, and placed a traditional progenitor on the Kaalchakra as if scholarship dated him."
+  sources:
+    - src.jamison-brereton-2014-rigveda
+    - src.eggeling-1882-satapatha-brahmana-part-1
+- date: 2026-11-22
+  target: event.matsya-flood-narrative
+  before: "The flood carried a grade C linguistic dating of 800 to 600 BCE, the date of the Shatapatha Brahmana."
+  after: "The flood carries only the traditional Puranic placement, and the date of its earliest known telling is a grade C claim."
+  reason: "The dating's own note said it dated the text, not any event, but the Kaalchakra showed it as a scholarly date for the flood."
+  sources:
+    - src.eggeling-1882-satapatha-brahmana-part-1
+    - src.flood-2003-blackwell-companion-hinduism
+- date: 2026-11-22
+  target: event.samudra-manthana
+  before: "The churning carried a grade B textual-internal dating of 300 BCE to 400 CE, the dates of the epics and early Puranas."
+  after: "The churning carries only the traditional Chakshusha manvantara placement, and the dates of the epic tellings are a grade B claim."
+  reason: "The dating was of the texts that tell the story, not of the event, which is known only from tradition."
+  sources:
+    - src.brockington-1998-sanskrit-epics
+    - src.rocher-1986-puranas
+- date: 2026-11-22
+  target: person.kautilya
+  before: "The grade C textual-internal dating of 350 to 280 BCE was labelled \"Traditional identification as Chandragupta Maurya's minister\"."
+  after: "The same dating is labelled as the Mauryan identification held by R. P. Kangle and, for an original core, by Romila Thapar."
+  reason: "The label called a scholarly position held by named scholars a traditional one, which mixed the two lenses."
+  sources:
+    - src.thapar-2012-asoka-decline-mauryas
+    - src.trautmann-1971-kautilya-arthasastra

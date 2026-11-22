@@ -62,6 +62,9 @@ Use the widest range the evidence supports, not the narrowest one you have seen 
 
 `archaeological-radiocarbon`, `archaeological-stratigraphic`, `luminescence`, `epigraphic`, `numismatic`, `foreign-synchronism`, `textual-internal`, `linguistic`, `astronomical-reference`, `art-historical`, `genetic`, `geological`, `documentary`, `scholarly-consensus`, `traditional-puranic`, `traditional-siddhantic`, `traditional-sampradaya`.
 
+A dating places the entity itself.
+For a figure or event known only from tradition (Rama, Krishna, Manu, the churning of the ocean), scholarship dates the texts and inscriptions that tell of it, not the figure, so it carries only traditional datings and records those dates as graded claims; the texts carry their own datings.
+The validator rejects a non-traditional dating on a non-text entity whose label or note calls it the date of the text.
 Give an entity several datings when methods disagree.
 For example, a text can have a `linguistic` dating graded C and a `traditional-puranic` dating graded D.
 Use the `label` field to name the position, for example `label: "Mainstream Indology"` or `label: "Kanchi and Dwaraka matha tradition"`, and the `note` field to explain the basis in one or two sentences.
