@@ -1,10 +1,10 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32">
   <style>
-    .rim { stroke: #a3262a; }
-    .hub { fill: #8a5600; }
+    .rim { stroke: #a3202b; }
+    .hub { fill: #7f5200; }
     @media (prefers-color-scheme: dark) {
-      .rim { stroke: #e0645c; }
-      .hub { fill: #e2a93b; }
+      .rim { stroke: #f07466; }
+      .hub { fill: #ebb24c; }
     }
   </style>
   <circle class="rim" cx="16" cy="16" r="14.5" fill="none" stroke-width="2"/>

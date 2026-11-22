@@ -46,7 +46,7 @@ export default function Panel({ item, lens, cal, level, onLevel, onPrev, onNext,
           </span>
           <span>
             <svg width="16" height="16" aria-hidden="true">
-              <circle cx="8" cy="8" r="5" fill="var(--bg-elev)" stroke="var(--gold)" strokeWidth="2.2" />
+              <circle cx="8" cy="8" r="5" fill="var(--wheel-trad-fill)" stroke="var(--lens-tradition)" strokeWidth="2.2" />
             </svg>{' '}
             Traditional reckoning
           </span>

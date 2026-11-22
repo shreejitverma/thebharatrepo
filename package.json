@@ -17,7 +17,8 @@
     "content:build": "tsx scripts/build-content.ts",
     "test:e2e": "playwright test",
     "test:lighthouse": "lhci autorun",
-    "content:merge": "tsx scripts/content-merge-staging.ts"
+    "content:merge": "tsx scripts/content-merge-staging.ts",
+    "design:contrast": "tsx scripts/palette-contrast.ts"
   },
   "dependencies": {
     "fuse.js": "^7.1.0",

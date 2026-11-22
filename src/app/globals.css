@@ -1,61 +1,73 @@
 /*
- * The Bharat Repo design tokens.
- * Feeling: a temple at dawn, a manuscript library, an observatory. Calm, deep, luminous.
+ * The Bharat Repo design tokens: a palette drawn from Hindu iconography and traditional Indian pigments.
+ * Light reads as palm-leaf, lime plaster and sandalwood at dawn; dark reads as temple lamplight on basalt.
+ * Every token, its iconographic or pigment source and its use is documented in docs/design/palette.md,
+ * and src/lib/design/palette.test.ts fails if a documented text or UI pair drops below WCAG 2.2 AA.
  * Colour is never the only carrier of meaning: grades and lenses also use letters, shapes and text.
  */
 
 :root {
   color-scheme: light;
-  --bg: #f7f1e6;            /* palm-leaf */
-  --bg-elev: #fffaf1;
-  --bg-sunk: #efe5d3;
-  --ink: #1e1a2e;           /* indigo-black */
-  --ink-soft: #4a4458;
-  --ink-faint: #6f6878;
-  --line: #ddd0b8;
-  --line-strong: #c4b394;
-  --accent: #a3262a;        /* kumkum */
-  --accent-ink: #fff8ef;
-  --gold: #8a5600;          /* turmeric, darkened for AA text contrast on light surfaces */
-  --indigo: #2b2d6e;
-  --focus: #1f5fbf;
-
-  --grade-a: #1f6b3a;
-  --grade-b: #2b5a8a;
-  --grade-c: #8a5a00;
-  --grade-d: #7a3f8f;
-  --grade-e: #7a4a3a;
-
-  --k-cosmology: #9a6b00;
-  --k-prehistory: #8a5a3a;
-  --k-civilisation: #b0472f;
-  --k-polity: #a3262a;
-  --k-text: #2b2d6e;
-  --k-person: #1f6b6b;
-  --k-science: #2b5a8a;
-  --k-art: #8f2f6b;
-  --k-dharma: #c25e00;
-  --k-site: #4f6b1f;
-  --k-event: #4a4458;
-
-  --wheel-seg-a: #f1e6d2;
-  --wheel-seg-b: #ebdcc2;
-  --wheel-core: #1e1a2e;
-  --wheel-core-ink: #f7f1e6;
-  --era-a: var(--wheel-seg-a);
-  --era-b: var(--wheel-seg-b);
-  --lens-tradition: var(--gold);
-  --wheel-trad-fill: var(--bg-elev);
-  --wheel-mark-edge: var(--bg-elev);
-  --wheel-core-ring: var(--gold);
-  --wheel-tag-bg: var(--gold);
-  --wheel-tag-edge: var(--gold);
-  --wheel-tag-ink: var(--wheel-core);
-  --wheel-indicator: var(--accent);
+  /* Surfaces: palm-leaf, lime plaster and sandalwood */
+  --bg: #f6efe3;            /* tadpatra, the palm-leaf of manuscripts */
+  --bg-elev: #fffaf3;       /* chuna, the lime-white ground of Ajanta murals */
+  --bg-sunk: #ece1cd;       /* chandan, sandalwood paste */
+  /* Ink: lamp black with Kali's indigo in it */
+  --ink: #1c1a2c;           /* kajal and masi, lamp-black manuscript ink */
+  --ink-soft: #463f55;
+  --ink-faint: #625a6b;     /* vibhuti ash, deepened for text */
+  --line: #dccdb3;
+  --line-strong: #8f7a5c;   /* panchaloha bronze; control borders meet 3:1 */
+  /* Accents */
+  --accent: #a3202b;        /* kumkum and sindoor: Shakti, Durga */
+  --accent-ink: #fffaf3;
+  --gold: #7f5200;          /* kanaka, Lakshmi's and Brahma's gold, darkened for text */
+  --indigo: #1f3a73;        /* nila and shyama, Vishnu's rain-cloud blue */
+  --focus: #1f55b8;         /* lapis lazuli */
+  /* Lenses: lapis for the measured sky of scholarship, gerua for the ochre of tradition */
+  --lens-scholarship: #22508f;
+  --lens-tradition: #9a430f;
+  /* Evidence grades, A to E: nila to lapis to terre verte to gerua to ash. Letter and shape also carry the grade. */
+  --grade-a: #1b3f73;
+  --grade-b: #2a6390;
+  --grade-c: #4a6a37;
+  --grade-d: #9a430f;
+  --grade-e: #6a5d61;
+  /* Kinds of entry (wheel rings, river lanes, filter chips) */
+  --k-cosmology: #8a5c00;   /* kanaka: Hiranyagarbha, Brahma's golden womb */
+  --k-prehistory: #8a4426;  /* geru red ochre, the pigment of Bhimbetka */
+  --k-civilisation: #a8492a;/* Harappan terracotta */
+  --k-polity: #9e1f2c;      /* rakta, the red of royal power and Durga */
+  --k-text: #243f7c;        /* nila ink of the manuscript line */
+  --k-person: #1d6762;      /* mayura, Krishna's peacock feather */
+  --k-science: #2b5c9e;     /* lapis, the jyotisha sky */
+  --k-art: #9c2d66;         /* padma, Lakshmi's lotus */
+  --k-dharma: #b4500b;      /* bhagwa saffron */
+  --k-site: #526b25;        /* terre verte and tulsi */
+  --k-event: #5a4740;       /* rudraksha brown */
+  /* Era washes on the wheel, oldest first */
+  --era-1: #e9ecf3;         /* cosmic: Vishnu's nila ocean */
+  --era-2: #f3e6dc;         /* palaeolithic: red ochre */
+  --era-3: #e8eddc;         /* neolithic: terre verte */
+  --era-4: #f4e6d6;         /* Harappan and Vedic: terracotta */
+  --era-5: #f6ecd2;         /* classical: kanaka gold */
+  --era-6: #f7e5d4;         /* medieval: kesari saffron */
+  --era-7: #f5e4e7;         /* early modern: lotus pink */
+  --era-8: #e6ebf3;         /* republic: lapis */
+  /* The wheel's hub is the night sky of nila, ringed in pitambara gold; the indicator is a sindoor drop */
+  --wheel-core: #1c1a2c;
+  --wheel-core-ink: #f6efe3;
+  --wheel-core-ring: #d9a441;
+  --wheel-indicator: #a3202b;
+  --wheel-mark-edge: #fffaf3;
+  --wheel-trad-fill: #fffaf3;
+  --wheel-tag-bg: #f0a05a;  /* gerua lit from within */
+  --wheel-tag-edge: #ffd18f;
+  --wheel-tag-ink: #1c1a2c;
+  --shadow: 0 1px 2px rgba(28, 26, 44, 0.06), 0 6px 20px rgba(28, 26, 44, 0.06);
 
   --radius: 10px;
   --radius-sm: 6px;
-  --shadow: 0 1px 2px rgba(30, 26, 46, 0.06), 0 6px 20px rgba(30, 26, 46, 0.06);
   --measure: 70ch;
   --gutter: 16px;
 
@@ -67,78 +79,113 @@
 @media (prefers-color-scheme: dark) {
   :root:not([data-theme='light']) {
     color-scheme: dark;
-    --bg: #12111c;
-    --bg-elev: #1b1a28;
-    --bg-sunk: #0d0c15;
-    --ink: #efe7d8;
-    --ink-soft: #c9bfae;
-    --ink-faint: #9d9484;
-    --line: #2f2c40;
-    --line-strong: #474259;
-    --accent: #e0645c;
-    --accent-ink: #12111c;
-    --gold: #e2a93b;
-    --indigo: #a9b0ff;
-    --focus: #7fb2ff;
-    --grade-a: #6fcf8f;
-    --grade-b: #7fb2ff;
-    --grade-c: #e2a93b;
-    --grade-d: #c99be0;
-    --grade-e: #d9a08c;
-    --k-cosmology: #e2a93b;
-    --k-prehistory: #c99a72;
-    --k-civilisation: #e07a5f;
-    --k-polity: #e0645c;
-    --k-text: #a9b0ff;
-    --k-person: #5fc9c0;
-    --k-science: #7fb2ff;
-    --k-art: #e08ac0;
-    --k-dharma: #f2994a;
-    --k-site: #a5c96f;
-    --k-event: #b8b0c8;
-    --wheel-seg-a: #1b1a28;
-    --wheel-seg-b: #222033;
-    --wheel-core: #efe7d8;
-    --wheel-core-ink: #12111c;
-    --shadow: 0 1px 2px rgba(0, 0, 0, 0.3), 0 8px 24px rgba(0, 0, 0, 0.35);
+    /* Temple lamplight on basalt */
+    --bg: #15120f;
+    --bg-elev: #1f1a15;
+    --bg-sunk: #0f0d0a;
+    --ink: #f2e7d3;           /* karpura-gaura, camphor white, in lamplight */
+    --ink-soft: #d4c5ab;
+    --ink-faint: #a89a83;
+    --line: #362e25;
+    --line-strong: #7d6a52;
+    --accent: #f07466;        /* kumkum by a diya */
+    --accent-ink: #15120f;
+    --gold: #ebb24c;          /* the diya flame on kanaka */
+    --indigo: #aab9ff;
+    --focus: #8fb4ff;
+    --lens-scholarship: #93b4f5;
+    --lens-tradition: #f0a05a;
+    --grade-a: #a7c0f5;
+    --grade-b: #7fc6d6;
+    --grade-c: #aecb8c;
+    --grade-d: #f0a05a;
+    --grade-e: #bcb0a6;
+    --k-cosmology: #ebb24c;
+    --k-prehistory: #d9946c;
+    --k-civilisation: #ef8a68;
+    --k-polity: #f07466;
+    --k-text: #a9b8ff;
+    --k-person: #5cc8bd;
+    --k-science: #7fb4f5;
+    --k-art: #ee8fc4;
+    --k-dharma: #f59a4c;
+    --k-site: #a9cc6e;
+    --k-event: #c9b6ac;
+    --era-1: #1c1d26;
+    --era-2: #241b16;
+    --era-3: #1c2018;
+    --era-4: #251c14;
+    --era-5: #262014;
+    --era-6: #271c12;
+    --era-7: #26191c;
+    --era-8: #1a1e26;
+    /* In the dark the hub is the lamp: camphor and gold light, with a gerua tag */
+    --wheel-core: #f3e2bf;
+    --wheel-core-ink: #1c1a2c;
+    --wheel-core-ring: #9a6612;
+    --wheel-indicator: #f07466;
+    --wheel-mark-edge: #1f1a15;
+    --wheel-trad-fill: #1f1a15;
+    --wheel-tag-bg: #9a430f;
+    --wheel-tag-edge: #6d2f0a;
+    --wheel-tag-ink: #fffaf3;
+    --shadow: 0 1px 2px rgba(0, 0, 0, 0.3), 0 8px 24px rgba(0, 0, 0, 0.4);
   }
 }
 
 :root[data-theme='dark'] {
   color-scheme: dark;
-  --bg: #12111c;
-  --bg-elev: #1b1a28;
-  --bg-sunk: #0d0c15;
-  --ink: #efe7d8;
-  --ink-soft: #c9bfae;
-  --ink-faint: #9d9484;
-  --line: #2f2c40;
-  --line-strong: #474259;
-  --accent: #e0645c;
-  --accent-ink: #12111c;
-  --gold: #e2a93b;
-  --indigo: #a9b0ff;
-  --focus: #7fb2ff;
-  --grade-a: #6fcf8f;
-  --grade-b: #7fb2ff;
-  --grade-c: #e2a93b;
-  --grade-d: #c99be0;
-  --grade-e: #d9a08c;
-  --k-cosmology: #e2a93b;
-  --k-prehistory: #c99a72;
-  --k-civilisation: #e07a5f;
-  --k-polity: #e0645c;
-  --k-text: #a9b0ff;
-  --k-person: #5fc9c0;
-  --k-science: #7fb2ff;
-  --k-art: #e08ac0;
-  --k-dharma: #f2994a;
-  --k-site: #a5c96f;
-  --k-event: #b8b0c8;
-  --wheel-seg-a: #1b1a28;
-  --wheel-seg-b: #222033;
-  --wheel-core: #efe7d8;
-  --wheel-core-ink: #12111c;
+  /* Temple lamplight on basalt */
+  --bg: #15120f;
+  --bg-elev: #1f1a15;
+  --bg-sunk: #0f0d0a;
+  --ink: #f2e7d3;           /* karpura-gaura, camphor white, in lamplight */
+  --ink-soft: #d4c5ab;
+  --ink-faint: #a89a83;
+  --line: #362e25;
+  --line-strong: #7d6a52;
+  --accent: #f07466;        /* kumkum by a diya */
+  --accent-ink: #15120f;
+  --gold: #ebb24c;          /* the diya flame on kanaka */
+  --indigo: #aab9ff;
+  --focus: #8fb4ff;
+  --lens-scholarship: #93b4f5;
+  --lens-tradition: #f0a05a;
+  --grade-a: #a7c0f5;
+  --grade-b: #7fc6d6;
+  --grade-c: #aecb8c;
+  --grade-d: #f0a05a;
+  --grade-e: #bcb0a6;
+  --k-cosmology: #ebb24c;
+  --k-prehistory: #d9946c;
+  --k-civilisation: #ef8a68;
+  --k-polity: #f07466;
+  --k-text: #a9b8ff;
+  --k-person: #5cc8bd;
+  --k-science: #7fb4f5;
+  --k-art: #ee8fc4;
+  --k-dharma: #f59a4c;
+  --k-site: #a9cc6e;
+  --k-event: #c9b6ac;
+  --era-1: #1c1d26;
+  --era-2: #241b16;
+  --era-3: #1c2018;
+  --era-4: #251c14;
+  --era-5: #262014;
+  --era-6: #271c12;
+  --era-7: #26191c;
+  --era-8: #1a1e26;
+  /* In the dark the hub is the lamp: camphor and gold light, with a gerua tag */
+  --wheel-core: #f3e2bf;
+  --wheel-core-ink: #1c1a2c;
+  --wheel-core-ring: #9a6612;
+  --wheel-indicator: #f07466;
+  --wheel-mark-edge: #1f1a15;
+  --wheel-trad-fill: #1f1a15;
+  --wheel-tag-bg: #9a430f;
+  --wheel-tag-edge: #6d2f0a;
+  --wheel-tag-ink: #fffaf3;
+  --shadow: 0 1px 2px rgba(0, 0, 0, 0.3), 0 8px 24px rgba(0, 0, 0, 0.4);
 }
 
 *,
@@ -559,16 +606,13 @@ a:hover {
   width: 20px;
   height: 20px;
   border-radius: 4px;
-  color: #fff;
+  color: var(--bg);
   font-size: 0.75rem;
   font-weight: 700;
   font-family: var(--font-ui);
 }
 
 /* Shape encodes the grade family: square = scholarship (A to C), circle = tradition (D), outlined = speculative (E). */
-.grade__letter {
-  color: var(--bg);
-}
 
 .grade--A .grade__letter { background: var(--grade-a); }
 .grade--B .grade__letter { background: var(--grade-b); }
@@ -590,10 +634,15 @@ a:hover {
   color: var(--ink-soft);
 }
 
+.lens-tag--scholarship {
+  border-color: var(--lens-scholarship);
+  color: var(--lens-scholarship);
+}
+
 .lens-tag--tradition {
   border-style: dashed;
-  border-color: var(--gold);
-  color: var(--gold);
+  border-color: var(--lens-tradition);
+  color: var(--lens-tradition);
 }
 
 .draft-notice {
@@ -933,7 +982,7 @@ a:hover {
 
 .dating--tradition {
   border-style: dashed;
-  border-color: color-mix(in srgb, var(--gold) 60%, var(--line));
+  border-color: color-mix(in srgb, var(--lens-tradition) 60%, var(--line));
 }
 
 .dating__top {
