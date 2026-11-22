@@ -1,10 +1,13 @@
 import type { Metadata } from 'next';
+import SourceCitation from '@/components/SourceCitation';
+import { citationId } from '@/lib/content/schema';
 import { getGraph } from '@/lib/content/site';
 
 export const metadata: Metadata = { title: 'Corrections log', description: 'Every substantive correction made to The Bharat Repo, with reasons and sources.' };
 
 export default function CorrectionsPage() {
-  const list = getGraph().corrections;
+  const g = getGraph();
+  const list = g.corrections;
   return (
     <div className="main-content">
       <div className="prose-wrap">
@@ -28,6 +31,15 @@ export default function CorrectionsPage() {
             <p style={{ margin: '6px 0' }} className="muted">
               Why: {c.reason}
             </p>
+            <p style={{ margin: '6px 0 0' }}>
+              <strong>Sources:</strong>
+            </p>
+            <ul className="correction-sources">
+              {c.sources.map((ref, j) => {
+                const s = g.sources.get(citationId(ref));
+                return <li key={j}>{s ? <SourceCitation source={s} locator={typeof ref === 'string' ? undefined : ref.locator} /> : citationId(ref)}</li>;
+              })}
+            </ul>
           </section>
         ))}
       </div>
