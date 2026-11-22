@@ -22,10 +22,15 @@ export default function ArticleReferences({ references }: { references: Rendered
                   </a>
                 ))}
               </span>
-            ) : null}{' '}
+            ) : null}
             <SourceCitation source={r.source} record />
-            {r.locators.length ? <span className="references__locators"> Cited at: {r.locators.join('; ')}.</span> : null}
-            {r.dating ? <span className="muted"> {r.uses.length ? 'Also cited for' : 'Cited for'} the article&rsquo;s dating.</span> : null}
+            {r.locators.length || r.dating ? (
+              <span className="references__notes">
+                {r.locators.length ? <span className="references__locators">Cited at: {r.locators.join('; ')}.</span> : null}
+                {r.locators.length && r.dating ? ' ' : null}
+                {r.dating ? <span className="muted">{r.uses.length ? 'Also cited for' : 'Cited for'} the article&rsquo;s dating.</span> : null}
+              </span>
+            ) : null}
           </li>
         ))}
       </ol>

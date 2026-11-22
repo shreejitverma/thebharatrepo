@@ -224,6 +224,14 @@ test.describe('references', () => {
     await expect(page).toHaveURL(/#ref-\d+$/);
     await expect(page.locator(`.references a.references__back[href="#${citeId}"]`)).toHaveCount(1);
 
+    // Fragment targets land below the sticky header, not under it.
+    for (const link of [summary.getByRole('link', { name: `${n} references` }), page.locator('.references a.references__back').first()]) {
+      await link.click();
+      const hash = await page.evaluate(() => location.hash);
+      const [targetTop, headerBottom] = await page.evaluate((h) => [document.querySelector(h)!.getBoundingClientRect().top, document.querySelector('.site-header')!.getBoundingClientRect().bottom], hash);
+      expect(targetTop).toBeGreaterThanOrEqual(headerBottom);
+    }
+
     await noHorizontalScroll(page);
     await noSeriousA11yViolations(page);
   });

@@ -85,7 +85,7 @@ export default async function SourcePage({ params }: { params: Promise<{ slug: s
         <p className="eyebrow">{typeLabel(s.type)}</p>
         <h1>{s.title}</h1>
         <p className="source-citation" data-pagefind-ignore>
-          <SourceCitation source={s} />
+          <SourceCitation source={s} identifier={false} />
         </p>
         <dl className="source-facts">
           {people
