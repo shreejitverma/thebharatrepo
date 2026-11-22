@@ -10,6 +10,7 @@ import { renderArticle } from '@/lib/content/render';
 import { entityHref } from '@/lib/content/kaalchakra';
 import { METHOD_LABELS, isTraditional } from '@/lib/content/labels';
 import { formatRange } from '@/lib/time';
+import { primaryDating, summarizeDatings } from '@/lib/content/lens';
 import { yearToUnit } from '@/lib/time/scale';
 
 export const dynamicParams = false;
@@ -34,7 +35,7 @@ export default async function ArticlePage({ params }: { params: Promise<{ catego
   if (!a) notFound();
   const g = getGraph();
   const { html, references } = await renderArticle(a.body, g.sources);
-  const primary = a.datings[0];
+  const primary = primaryDating(a.datings);
   const u = yearToUnit(primary.range.best ?? (primary.range.earliest + primary.range.latest) / 2);
   const focus = `/kaalchakra?view=river&win=${Math.max(0, u - 0.02).toFixed(5)},${Math.min(1, u + 0.02).toFixed(5)}`;
   const linked = a.entities.map((id) => g.entities.get(id)).filter((e) => e !== undefined);
@@ -67,7 +68,7 @@ export default async function ArticlePage({ params }: { params: Promise<{ catego
                 <li key={e.id}>
                   <Link href={entityHref(e.id)}>
                     {e.names.en}
-                    <span>{formatRange(e.datings[0].range)}</span>
+                    <span>{summarizeDatings(e.datings)}</span>
                   </Link>
                 </li>
               ))}
