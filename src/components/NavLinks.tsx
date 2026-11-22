@@ -22,12 +22,15 @@ const LINKS = [
 
 export default function NavLinks() {
   const path = usePathname();
+  // On the search page nothing is prefetched: on a slow connection those requests queue ahead of the index
+  // and result downloads, and held the first result back by about 1.4 s in the Lighthouse profile.
+  const searching = path === '/search';
   return (
     <nav className="site-nav" aria-label="Main">
       {LINKS.map((l) => {
         const active = path === l.href || path.startsWith(`${l.href}/`);
         return (
-          <Link key={l.href} href={l.href} prefetch={l.prefetch} aria-current={active ? 'page' : undefined} className={l.primary ? 'site-nav__primary' : undefined}>
+          <Link key={l.href} href={l.href} prefetch={searching ? false : l.prefetch} aria-current={active ? 'page' : undefined} className={l.primary ? 'site-nav__primary' : undefined}>
             {l.label}
           </Link>
         );

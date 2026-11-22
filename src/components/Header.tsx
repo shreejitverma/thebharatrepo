@@ -19,7 +19,7 @@ export default function Header() {
   return (
     <header className="site-header">
       <div className="site-header__inner">
-        <Link href="/" className="brand" aria-label="The Bharat Repo, home">
+        <Link href="/" prefetch={false} className="brand" aria-label="The Bharat Repo, home">
           <BrandMark className="brand__mark" />
           <span className="brand__name">The Bharat Repo</span>
         </Link>
