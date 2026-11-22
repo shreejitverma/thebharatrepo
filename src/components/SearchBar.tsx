@@ -18,7 +18,7 @@ export default function SearchBar() {
       <label htmlFor="site-search" className="visually-hidden">
         Search the archive
       </label>
-      <input id="site-search" type="search" value={query} onChange={(e) => setQuery(e.target.value)} placeholder="Search the archive" />
+      <input id="site-search" type="search" value={query} onChange={(e) => setQuery(e.target.value)} placeholder="Search" />
     </form>
   );
 }

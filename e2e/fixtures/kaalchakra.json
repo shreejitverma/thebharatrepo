@@ -1,0 +1,1422 @@
+[
+ {
+  "id": "cosmology.brahma-lifespan",
+  "kind": "cosmology",
+  "type": "cosmology",
+  "name": "Lifespan of Brahma (Mahakalpa)",
+  "iast": "Brahmāyu",
+  "native": "ब्रह्मायु",
+  "summary": "In traditional Hindu cosmology, the full lifespan of the creator deity Brahma (a mahakalpa or para) spans 100 divine years of 360 days and 360 nights each, where every daytime and every night is a kalpa of 4.32 billion human years, yielding a total duration of 311.04 trillion solar years.",
+  "kids": "In traditional Hindu cosmology, Brahma lives for 100 cosmic years, and because every single day and night is 4.32 billion human years long, his whole life spans 311.04 trillion human years.",
+  "teen": "Traditional Puranic and Siddhantic cosmology calculates Brahma's 100-year life (para) as 36,000 day-kalpas and 36,000 night-kalpas, or 311,040,000,000,000 human years, placing the present universe on the first day of his 51st year (the second parardha).",
+  "href": "/archive/cosmology/brahma-lifespan",
+  "datings": [
+   {
+    "method": "traditional-puranic",
+    "grade": "D",
+    "lens": "tradition",
+    "earliest": -155521972947101,
+    "latest": -3101,
+    "precision": "cosmological",
+    "circa": false,
+    "label": "Elapsed first parardha and opening of the 51st year of Brahma",
+    "note": "Vishnu Purana 1.3 describes Brahma's 100-year life and its two halves (parardhas); Surya Siddhanta 1.21-23 states that half of that life (155.52 trillion human years) has passed and lists the manvantaras and yugas elapsed in the present kalpa, which sum to 1,972,944,000 years at the Kali Yuga epoch (-3101)."
+   }
+  ],
+  "anchor": {
+   "scholarship": null,
+   "tradition": -77760986475101
+  }
+ },
+ {
+  "id": "cosmology.pralaya",
+  "kind": "cosmology",
+  "type": "cosmology",
+  "name": "Pralaya (Cosmic Dissolution)",
+  "iast": "Pralaya",
+  "native": "प्रलय",
+  "summary": "In traditional Hindu cosmology, pralaya denotes the periodic dissolution and reabsorption of the cosmos, classified in the Puranas into four kinds: continual daily dissolution (nitya), occasional dissolution at the end of a kalpa during Brahma's night (naimittika), elemental dissolution at the end of Brahma's 100-year life (prakritika), and individual liberation (atyantika).",
+  "kids": "In traditional Hindu cosmology, pralaya is the resting period when the universe dissolves back into its source during Brahma's 4.32-billion-year night before a new cosmic day begins.",
+  "teen": "Puranic cosmology distinguishes naimittika pralaya, when the three worlds dissolve for a 4.32-billion-year night of Brahma at the close of each kalpa, from prakritika mahapralaya, when all cosmic elements reabsorb into prakriti after Brahma's 100-year lifespan.",
+  "href": "/archive/cosmology/pralaya",
+  "datings": [
+   {
+    "method": "traditional-puranic",
+    "grade": "D",
+    "lens": "tradition",
+    "earliest": -1972947101,
+    "latest": -1972947101,
+    "precision": "cosmological",
+    "circa": false,
+    "label": "Close of the previous Naimittika Pralaya at the dawn of the present Kalpa",
+    "note": "In Puranic chronology, the preceding 4.32-billion-year night of Brahma (naimittika pralaya) ended at the opening of the present Shveta-Varaha Kalpa 1,972,944,000 years before the 3102 BCE Kali epoch."
+   }
+  ],
+  "anchor": {
+   "scholarship": null,
+   "tradition": -1972947101
+  }
+ },
+ {
+  "id": "cosmology.jambudvipa-and-meru",
+  "kind": "cosmology",
+  "type": "cosmology",
+  "name": "Jambudvipa and Mount Meru",
+  "iast": "Jambūdvīpa",
+  "native": "जम्बूद्वीप",
+  "summary": "In traditional Hindu cosmology and Puranic cosmography (bhuvanakosha), the terrestrial plane consists of seven concentric island-continents (sapta-dvipa) and seven oceans surrounding the central continent of Jambudvipa, at whose hub rises the golden axis mundi Mount Meru, with Bharatavarsha lying south of the Himalaya.",
+  "kids": "In traditional Hindu cosmology, the earth is pictured as seven rings of land and seven oceans around a central continent called Jambudvipa, with the golden mountain Meru at the middle and Bharatavarsha to the south.",
+  "teen": "Puranic cosmography depicts Jambudvipa as a 100,000-yojana central continent divided into nine varshas around Mount Meru, while Siddhantic astronomers from Aryabhata onward reinterpreted Meru as the north polar axis of a spherical earth.",
+  "href": "/archive/cosmology/jambudvipa-and-meru",
+  "datings": [
+   {
+    "method": "traditional-puranic",
+    "grade": "D",
+    "lens": "tradition",
+    "earliest": -1972947101,
+    "latest": -3101,
+    "precision": "cosmological",
+    "circa": false,
+    "label": "Puranic bhuvanakosha cosmography within the present Kalpa",
+    "note": "In Vishnu Purana 2.1-4, the seven dvipas centred on Jambudvipa and Mount Meru endure throughout the present day of Brahma (Shveta-Varaha Kalpa)."
+   }
+  ],
+  "anchor": {
+   "scholarship": null,
+   "tradition": -986475101
+  }
+ },
+ {
+  "id": "event.indian-plate-asia-collision",
+  "kind": "prehistory",
+  "type": "event",
+  "name": "Indian Plate Collision with Asia and Rise of the Himalaya",
+  "summary": "The northward drift of the Indian tectonic plate closed the Neo-Tethys Ocean and collided with Eurasia, initiating the uplift of the Himalaya and the Tibetan Plateau. While most geological models place the onset of continental collision between roughly 59 and 50 million years ago, two-stage collision hypotheses\n remain actively debated.",
+  "kids": "About 55 million years ago, the land that became India drifted north across an ancient ocean and crashed into Asia, pushing up the mighty Himalayan mountains.",
+  "teen": "After breaking away from Gondwana, the Indian plate moved northward and collided with Eurasia during the Cenozoic era, closing the Neo-Tethys Ocean and driving the ongoing uplift of the Himalaya.",
+  "region": "Himalaya and Tibetan Plateau (Indus-Yarlung Tsangpo suture zone)",
+  "href": "/archive/event/indian-plate-asia-collision",
+  "datings": [
+   {
+    "method": "geological",
+    "grade": "B",
+    "lens": "scholarship",
+    "earliest": -58999999,
+    "latest": -49999999,
+    "best": -54999999,
+    "precision": "Ma",
+    "circa": true,
+    "label": "Paleocene-Early Eocene initial collision consensus",
+    "note": "Stratigraphic, paleomagnetic and provenance evidence along the Indus-Yarlung Tsangpo suture places the initial contact of Indian continental crust with Asian margin units at c. 59-50 Ma."
+   },
+   {
+    "method": "geological",
+    "grade": "C",
+    "lens": "scholarship",
+    "earliest": -51999999,
+    "latest": -19999999,
+    "precision": "Ma",
+    "circa": true,
+    "label": "Two-stage collision (Greater India Basin hypothesis)",
+    "note": "Proposes an initial c. 50 Ma collision of a microcontinent or arc followed by final hard continent-continent collision around 25-20 Ma."
+   }
+  ],
+  "anchor": {
+   "scholarship": -54999999,
+   "tradition": null
+  }
+ },
+ {
+  "id": "concept.siwalik-fossil-record",
+  "kind": "prehistory",
+  "type": "concept",
+  "name": "Siwalik Hills Fossil Record",
+  "summary": "The Neogene and Quaternary fluvial sediments of the Siwalik (Sivalik) Hills along the southern Himalayan foreland preserve one of the world's richest terrestrial vertebrate and hominoid fossil sequences, spanning roughly 18 to 1 million years ago and including Miocene apes such as Sivapithecus.",
+  "kids": "The Siwalik Hills at the foot of the Himalaya hold millions of years of animal fossils, including ancient apes, giant elephants and sabre-toothed cats that lived along prehistoric rivers.",
+  "teen": "Deposited by rivers eroding the rising Himalaya, the Siwalik strata preserve an 18-million-year record of mammalian evolution, monsoon shifts, C4 grassland expansion and Miocene hominoids like Sivapithecus.",
+  "region": "Sub-Himalayan foreland basin (Pakistan, northern India and Nepal)",
+  "href": "/archive/concept/siwalik-fossil-record",
+  "datings": [
+   {
+    "method": "geological",
+    "grade": "A",
+    "lens": "scholarship",
+    "earliest": -17999999,
+    "latest": -999999,
+    "best": -8999999,
+    "precision": "Ma",
+    "circa": true,
+    "label": "Magnetostratigraphic and biostratigraphic sequence",
+    "note": "High-resolution paleomagnetic and biostratigraphic sections date the Siwalik vertebrate zones across the Early Miocene to Early Pleistocene, with Sivapithecus horizons concentrated around 12.5-8.5 Ma."
+   }
+  ],
+  "anchor": {
+   "scholarship": -8999999,
+   "tradition": null
+  }
+ },
+ {
+  "id": "site.attirampakkam",
+  "kind": "prehistory",
+  "type": "site",
+  "name": "Attirampakkam Palaeolithic Site",
+  "summary": "An open-air stratified Palaeolithic site in the Kortallayar river basin of Tamil Nadu yielding both some of the earliest known Acheulian bifaces in South Asia (dated to c. 1.51 million years ago) and an early Middle Palaeolithic Levallois assemblage emerging around 385,000 to 172,000 years ago.",
+  "kids": "At Attirampakkam in Tamil Nadu, archaeologists dug through deep layers of mud to find stone handaxes made 1.5 million years ago and smaller stone tools made over 300,000 years ago.",
+  "teen": "Attirampakkam preserves a long Stone Age sequence in southern India: cosmogenic-nuclide dating places its Lower Palaeolithic Acheulian tools at c. 1.51 Ma, while luminescence dating shows a Middle Palaeolithic Levallois industry by c. 385-172 ka.",
+  "region": "Kortallayar river basin, Tiruvallur district, Tamil Nadu",
+  "href": "/archive/site/attirampakkam",
+  "datings": [
+   {
+    "method": "geological",
+    "grade": "A",
+    "lens": "scholarship",
+    "earliest": -1769999,
+    "latest": -1069999,
+    "best": -1509999,
+    "precision": "Ma",
+    "circa": true,
+    "label": "Lower Palaeolithic Acheulian horizon (cosmogenic burial and paleomagnetic dating)",
+    "note": "Cosmogenic 26Al/10Be burial dating of laminated clays containing Acheulian handaxes and cleavers yields a pooled average age of 1.51 +/- 0.07 Ma within the Matuyama reversed chron (>1.07 Ma)."
+   },
+   {
+    "method": "luminescence",
+    "grade": "A",
+    "lens": "scholarship",
+    "earliest": -384999,
+    "latest": -171999,
+    "precision": "ka",
+    "circa": true,
+    "label": "Middle Palaeolithic transition (pIRIR luminescence dating)",
+    "note": "Post-infrared infrared stimulated luminescence (pIRIR) ages document the gradual loss of large cutting tools and the rise of Levallois core and point technology between c. 385 +/- 64 ka and 172 +/- 41 ka."
+   }
+  ],
+  "anchor": {
+   "scholarship": -1509999,
+   "tradition": null
+  }
+ },
+ {
+  "id": "site.bhimbetka",
+  "kind": "site",
+  "type": "site",
+  "name": "Bhimbetka Rock Shelters",
+  "iast": "Bhīmabeṭakā",
+  "native": "भीमबेटका",
+  "summary": "A UNESCO World Heritage complex of over 700 sandstone rock shelters in the Vindhyan hills of Raisen district, Madhya Pradesh, preserving continuous stratified human occupation from the Lower Palaeolithic Acheulian through the Mesolithic, together with multi-period rock paintings depicting hunting, dancing and animal life.",
+  "kids": "High in the rocky hills of Madhya Pradesh, the caves of Bhimbetka sheltered people for over 100,000 years and hold hundreds of colourful rock paintings of wild animals, hunters and dancers.",
+  "teen": "Discovered by V. S. Wakankar in 1957 and inscribed by UNESCO in 2003, Bhimbetka combines deeply stratified Palaeolithic and Mesolithic cave floors with one of the largest concentrations of prehistoric rock art in South Asia.",
+  "region": "Vindhyan hills, Raisen district, Madhya Pradesh",
+  "href": "/archive/site/bhimbetka",
+  "datings": [
+   {
+    "method": "archaeological-stratigraphic",
+    "grade": "A",
+    "lens": "scholarship",
+    "earliest": -99999,
+    "latest": -999,
+    "precision": "ka",
+    "circa": true,
+    "label": "Stratified Lower Palaeolithic to Mesolithic shelter occupation and rock art sequence",
+    "note": "Excavations in Shelter III F-23 by V. N. Misra revealed an unbroken stratigraphic sequence from Late Acheulian through Middle and Upper Palaeolithic to Mesolithic microlithic floors and rock paintings."
+   }
+  ],
+  "anchor": {
+   "scholarship": -50499,
+   "tradition": null
+  }
+ },
+ {
+  "id": "concept.ghaggar-hakra-sarasvati-debate",
+  "kind": "civilisation",
+  "type": "concept",
+  "name": "Ghaggar-Hakra Palaeochannel and the Sarasvati Identification",
+  "iast": "Sarasvatī-Ghaggara-Hākrā",
+  "native": "सरस्वती (घग्गर-हाकरा)",
+  "summary": "The major wide dry riverbed and palaeochannel network running from the Siwalik foothills through Punjab, Haryana, northern Rajasthan, and Cholistan toward the Rann of Kutch - along which hundreds of Early, Mature, and Late Harappan settlements (including Rakhigarhi, Kalibangan, Banawali, Bhirrana, Kunal, and Ganweriwala) are clustered - and the focus of a multidisciplinary geological, archaeological, and Indological debate regarding when the channel ceased carrying perennial Himalayan glacier-fed water and how it relates to the river Sarasvati celebrated in the Rigveda and Mahabharata.",
+  "kids": "Hundreds of Harappan towns were built along the wide dry bed of the Ghaggar-Hakra river, which many scholars connect to the ancient Sarasvati River, while geologists study how its waters changed thousands of years ago.",
+  "teen": "The Ghaggar-Hakra palaeochannel hosts the densest concentration of Harappan sites; geological studies (Giosan et al. 2012; Clift et al. 2012; Singh et al. 2017) indicate that the glacier-fed Himalayan Sutlej and Yamuna shifted away in the Late Pleistocene (c. 45,000-8,000 years ago), leaving a wide, stable monsoon-fed valley during the Harappan era, while scholars debate how the Harappan river relates to the Rigvedic Sarasvati.",
+  "region": "Haryana, Punjab, northern Rajasthan (India) and Cholistan, Sindh (Pakistan)",
+  "href": "/archive/concept/ghaggar-hakra-sarasvati-debate",
+  "datings": [
+   {
+    "method": "geological",
+    "grade": "A",
+    "lens": "scholarship",
+    "earliest": -42974,
+    "latest": -5974,
+    "precision": "ka",
+    "circa": true,
+    "label": "Late Pleistocene to Early Holocene Avulsion of the Himalayan Sutlej and Yamuna (Clift et al. 2012; Singh et al. 2017)",
+    "note": "U-Pb detrital zircon provenance (Clift et al. 2012) and optically stimulated luminescence (OSL) plus K-feldspar pIRIR dating of coarse Himalayan channel sands beneath Kalibangan and across the Ghaggar-Hakra (Singh et al. 2017) demonstrate that a glacier-fed Himalayan Sutlej-Yamuna system flowed through the channel until its capture/avulsion between ~45 ka and ~15-8 ka BP, millennia before Mature Harappan urbanisation."
+   },
+   {
+    "method": "geological",
+    "grade": "A",
+    "lens": "scholarship",
+    "earliest": -3499,
+    "latest": -1899,
+    "precision": "century",
+    "circa": true,
+    "label": "Mid-Holocene Monsoon-Fed Fluvial Phase and Relict Underfit Valley (Giosan et al. 2012; Singh et al. 2017)",
+    "note": "During the Early and Mature Harappan phases (c. 3500-1900 BCE), the incised relic Sutlej palaeovalley acted as a topographically stable, monsoon-fed and groundwater-sustained river corridor protected from the devastating mega-floods of active Himalayan rivers, before drying further after the 4.2 ka monsoon weakening."
+   },
+   {
+    "method": "textual-internal",
+    "grade": "C",
+    "lens": "scholarship",
+    "earliest": -3299,
+    "latest": -1899,
+    "precision": "century",
+    "circa": true,
+    "label": "Holistic / Indigenous Continuity Identification of the Harappan Ghaggar-Hakra with the Rigvedic Sarasvati (B. B. Lal, Michel Danino)",
+    "note": "Position advocated by B. B. Lal, V. N. Misra, and Michel Danino identifying the Harappan-era Ghaggar-Hakra directly with the mighty river Sarasvati flowing \"from the mountains to the sea\" (giribhyah a samudrat, RV 7.95.2) between the Yamuna and Sutlej (RV 10.75.5), and arguing that the river's drying c. 1900 BCE recorded in the Panchavimsha Brahmana and Mahabharata (Vinasana) correlates with Harappan de-urbanisation."
+   },
+   {
+    "method": "linguistic",
+    "grade": "B",
+    "lens": "scholarship",
+    "earliest": -1499,
+    "latest": -999,
+    "precision": "century",
+    "circa": true,
+    "label": "Mainstream Indological Chronology of the Rigvedic Sarasvati and Later Vedic Vinasana (Parpola, Witzel, Thapar)",
+    "note": "Mainstream philological position accepting the geographical identification of the middle-to-late Vedic Sarasvati (rising in the Siwaliks between Yamuna and Sutlej and disappearing in the desert at Vinasana) with the Ghaggar-Hakra, while dating the composition of the Rigveda to c. 1500-1000 BCE after Mature Harappan urban collapse and proposing that early Rigvedic hymns may preserve either memories of the Helmand (Avestan Haraxvaiti) or monsoon-swollen Ghaggar floods."
+   }
+  ],
+  "anchor": {
+   "scholarship": -24474,
+   "tradition": null
+  }
+ },
+ {
+  "id": "tradition.hakra-ware-phase",
+  "kind": "civilisation",
+  "type": "tradition",
+  "name": "Hakra Ware and Ravi Phase",
+  "summary": "The earliest formative phase of the Early Harappan Regionalisation Era in the Cholistan desert, the Ghaggar-Hakra valley and the Ravi basin, characterised by hand-made and early wheel-thrown pottery with mud-applique and incised surfaces.",
+  "kids": "Before the big Harappan cities were built, early villagers in the Ravi and Ghaggar-Hakra valleys made patterned clay pots, copper tools, and shell beads.",
+  "teen": "The Hakra Ware and Ravi phase marks the earliest village-to-town stage of the Harappan tradition, found at Harappa, Jalilpur, Bhirrana, and across Cholistan between roughly 3800 and 2800 BCE.",
+  "region": "Cholistan (Punjab, Pakistan), Ravi basin, and Ghaggar-Hakra valley (Haryana, India)",
+  "href": "/archive/tradition/hakra-ware-phase",
+  "datings": [
+   {
+    "method": "archaeological-radiocarbon",
+    "grade": "A",
+    "lens": "scholarship",
+    "earliest": -3799,
+    "latest": -2799,
+    "precision": "century",
+    "circa": true,
+    "label": "Ravi Phase at Harappa and Hakra Ware Horizon",
+    "note": "Calibrated radiocarbon dates from Harappa Period 1A-1B (Ravi aspect of the Hakra phase) place the phase between c. 3700/3300 and 2800 BCE."
+   },
+   {
+    "method": "archaeological-radiocarbon",
+    "grade": "C",
+    "lens": "scholarship",
+    "earliest": -7499,
+    "latest": -5999,
+    "precision": "millennium",
+    "circa": true,
+    "label": "Early radiocarbon claims at Bhirrana Period IA (contested)",
+    "note": "Charcoal and bioapatite analyses from Bhirrana Period IA Hakra Ware pit-dwellings have been interpreted by some excavators as extending back to the 8th-7th millennium BCE, though many archaeologists attribute the oldest dates to old-wood effects or pre-Hakra Neolithic levels."
+   }
+  ],
+  "anchor": {
+   "scholarship": -3299,
+   "tradition": null
+  }
+ },
+ {
+  "id": "tradition.amri-nal-phase",
+  "kind": "civilisation",
+  "type": "tradition",
+  "name": "Amri-Nal Phase",
+  "summary": "An Early Harappan regional culture of lower Sindh, southern Balochistan and north Gujarat (c. 3600-2600 BCE), combining lowland alluvial farming settlements such as Amri with highland pastoral and copper-working towns such as Sohr Damb (Nal).",
+  "kids": "In southern Sindh and the hills of Balochistan, early farmers and craftspeople of the Amri-Nal culture painted colourful geometric designs on fine clay bowls before the rise of Mohenjo-daro.",
+  "teen": "The Amri-Nal phase represents the southern Regionalisation Era of the Indus tradition, linking seasonal highland settlements in Balochistan with year-round farming villages in the lower Indus plain and Gujarat.",
+  "region": "Lower Sindh, Jhalawan (Balochistan), and Kutch-North Gujarat",
+  "href": "/archive/tradition/amri-nal-phase",
+  "datings": [
+   {
+    "method": "archaeological-radiocarbon",
+    "grade": "A",
+    "lens": "scholarship",
+    "earliest": -3599,
+    "latest": -2599,
+    "precision": "century",
+    "circa": true,
+    "label": "Early Harappan Amri-Nal Regionalisation Phase",
+    "note": "Stratified sequences at Amri (Periods IA-ID), Balakot, and Sohr Damb (Nal) date this southern Early Harappan horizon between the mid-4th millennium and c. 2600 BCE."
+   }
+  ],
+  "anchor": {
+   "scholarship": -3099,
+   "tradition": null
+  }
+ },
+ {
+  "id": "site.kot-diji",
+  "kind": "site",
+  "type": "site",
+  "name": "Kot Diji",
+  "iast": "Koṭ Dījī",
+  "summary": "The stratified Early and Mature Harappan site in Khairpur District, Sindh, Pakistan, excavated by F. A. Khan in 1955 and 1957, where 16 occupational layers separated a fortified Early Harappan settlement (the type-site of the Kot Diji phase, c. 3300-2600 BCE) beneath a burnt destruction horizon and an overlying Mature Harappan town.",
+  "kids": "Kot Diji in Sindh gave archaeologists the first proof of how an older walled town grew right underneath a Mature Harappan settlement.",
+  "teen": "Excavated by F. A. Khan in 1955-1957 in Khairpur District, Sindh, Kot Diji is the type-site for the Early Harappan Kot Diji phase, featuring a stone-and-mud-brick fortified citadel below Mature Harappan levels.",
+  "region": "Khairpur District, Sindh, Pakistan",
+  "href": "/archive/site/kot-diji",
+  "datings": [
+   {
+    "method": "archaeological-radiocarbon",
+    "grade": "A",
+    "lens": "scholarship",
+    "earliest": -3299,
+    "latest": -2599,
+    "precision": "century",
+    "circa": true,
+    "label": "Period I (Early Harappan Kot Dijian Type-Site)",
+    "note": "Calibrated radiocarbon dates from the lower Kot Dijian layers (Layers 16 to 4) span c. 3300/3000 to 2600 BCE."
+   },
+   {
+    "method": "archaeological-stratigraphic",
+    "grade": "A",
+    "lens": "scholarship",
+    "earliest": -2599,
+    "latest": -1899,
+    "precision": "century",
+    "circa": true,
+    "label": "Period II (Mature Harappan Occupation)",
+    "note": "Upper Layers 3 to 1 contain classic Mature Harappan architecture and ceramics overlying an ash layer."
+   }
+  ],
+  "anchor": {
+   "scholarship": -2949,
+   "tradition": null
+  }
+ },
+ {
+  "id": "site.kunal",
+  "kind": "site",
+  "type": "site",
+  "name": "Kunal",
+  "iast": "Kunāla",
+  "native": "कुणाल",
+  "summary": "An Early Harappan village settlement on the dry Sarasvati (Rangoi/Ghaggar) riverbed in Fatehabad District, Haryana (c. 3300-2600 BCE), excavated by J. S. Khatri and M. Acharya (1990s), notable for its transition from Hakra Ware pit-dwellings to Sothi-Siswal mud-brick houses and a hoard of silver and gold elite ornaments, thousands of steatite and semi-precious beads, and six early steatite and shell seals.",
+  "kids": "At the early village of Kunal in Haryana, archaeologists found a clay pot buried beneath a house floor filled with two silver tiara-like ornaments, gold beads, and early stone seals.",
+  "teen": "Excavated in the 1990s in Fatehabad District, Haryana, Kunal documents the Hakra-to-Early Harappan transition and yielded an extraordinary cache of silver head-ornaments, gold disc beads, copper tools, and geometric steatite seals.",
+  "region": "Fatehabad District, Haryana, India",
+  "href": "/archive/site/kunal",
+  "datings": [
+   {
+    "method": "archaeological-radiocarbon",
+    "grade": "A",
+    "lens": "scholarship",
+    "earliest": -3299,
+    "latest": -2599,
+    "precision": "century",
+    "circa": true,
+    "label": "Periods IA, IB, and IC (Hakra Ware to Early Harappan Sothi-Siswal)",
+    "note": "Calibrated radiocarbon dates from Kunal Period I span c. 3300/3100 to 2600 BCE."
+   }
+  ],
+  "anchor": {
+   "scholarship": -2949,
+   "tradition": null
+  }
+ },
+ {
+  "id": "artifact.kalibangan-ploughed-field",
+  "kind": "science",
+  "type": "artifact",
+  "name": "Kalibangan Early Harappan Ploughed Field",
+  "summary": "An in situ furrowed agricultural horizon excavated outside the southeastern fortification wall of Early Harappan (Period I, c. 2900-2600 BCE) Kalibangan in Rajasthan, preserving a bidirectional grid of closely spaced east-west furrows and widely spaced north-south furrows that constitutes the earliest direct archaeological evidence of a ploughed agricultural field in the world.",
+  "kids": "Buried under later town layers at Kalibangan in Rajasthan is an ancient farm field with two sets of plough lines crossing each other so farmers could grow two crops at the same time.",
+  "teen": "Dated to c. 2900-2600 BCE during the Early Harappan Sothi-Siswal phase at Kalibangan, this preserved ploughed field displays a perpendicular double-furrow grid identical to traditional winter intercropping of mustard and chickpea or horsegram in modern Rajasthan.",
+  "region": "Kalibangan, Hanumangarh District, Rajasthan, India",
+  "href": "/archive/artifact/kalibangan-ploughed-field",
+  "datings": [
+   {
+    "method": "archaeological-stratigraphic",
+    "grade": "A",
+    "lens": "scholarship",
+    "earliest": -2899,
+    "latest": -2599,
+    "precision": "century",
+    "circa": true,
+    "label": "Kalibangan Period I (Early Harappan Sothi-Siswal Horizon)",
+    "note": "Sealed directly beneath Mature Harappan Period II deposits outside the southeastern corner of the Early Harappan Period I fortification at Kalibangan."
+   }
+  ],
+  "anchor": {
+   "scholarship": -2749,
+   "tradition": null
+  }
+ },
+ {
+  "id": "concept.harappan-carnelian-bead-making",
+  "kind": "science",
+  "type": "concept",
+  "name": "Harappan Bead-Making and Etched Carnelian Technology",
+  "summary": "The specialised lapidary and pyrotechnological industry of the Harappan Civilisation (c. 3300-1900 BCE), producing ultra-fine fired steatite microbeads, long-barrel carnelian beads up to 12 cm in length drilled with ultra-hard cylindrical \"Ernestite\" stone drill bits, and white-on-red or black-on-red alkaline-etched carnelian beads exported across South and West Asia.",
+  "kids": "Harappan craftspeople heated yellowish agate stones in kilns until they turned glowing red carnelian, painted white designs onto them, and drilled tiny holes through them using special super-hard stone drill bits.",
+  "teen": "Centred at workshops in Chanhudaro, Lothal, Dholavira, and Harappa, Harappan bead-makers mastered controlled kiln heat-treatment of chalcedony into deep-red carnelian, chemical soda-alkali etching, and precision bow-drilling with cylindrical Ernestite bits that took days per bead.",
+  "region": "Gujarat (Ratanpur mines, Lothal, Dholavira, Nagwada), Sindh (Chanhudaro, Mohenjo-daro), and Punjab (Harappa)",
+  "href": "/archive/concept/harappan-carnelian-bead-making",
+  "datings": [
+   {
+    "method": "archaeological-radiocarbon",
+    "grade": "A",
+    "lens": "scholarship",
+    "earliest": -3299,
+    "latest": -1899,
+    "precision": "century",
+    "circa": true,
+    "label": "Early and Mature Harappan Lapidary Tradition",
+    "note": "Carnelian and glazed steatite bead-making began in the Neolithic and Early Harappan eras and reached industrial specialisation with Ernestite drills and long-barrel carnelian production during the Mature Harappan period (c. 2600-1900 BCE)."
+   }
+  ],
+  "anchor": {
+   "scholarship": -2599,
+   "tradition": null
+  }
+ },
+ {
+  "id": "concept.indus-periphery-cline",
+  "kind": "science",
+  "type": "concept",
+  "name": "Indus Periphery Genetic Cline",
+  "summary": "An ancient genetic population profile identified by Vagheesh Narasimhan, Nick Patterson, Priya Moorjani, Vasant Shinde, Niraj Rai, David Reich and 111 co-authors in Science (2019) from 11 Bronze Age migrant or trade-diaspora outlier individuals buried at Shahr-i-Sokhta (eastern Iran) and Gonur Tepe (Bactria-Margiana Archaeological Complex, Turkmenistan) dated to c. 3100-2000 BCE, which matches the Rakhigarhi I6113 genome and represents the ancestral Harappan population that later admixed to form both Ancestral South Indian (ASI) and Ancestral North Indian (ANI) populations.",
+  "kids": "By studying the DNA of traders and travellers from the Indus region buried in ancient towns in Iran and Central Asia, scientists reconstructed the genetic profile of the people who lived in the Harappan cities.",
+  "teen": "Published in Science in 2019 alongside the Rakhigarhi genome paper, the \"Indus Periphery Cline\" describes 11 Bronze Age individuals at Shahr-i-Sokhta and Gonur whose DNA lacked Steppe ancestry, matched Rakhigarhi I6113, and formed the foundational genetic source for both northern and southern South Asian populations after 2000 BCE.",
+  "region": "Indus Basin, Eastern Iran (Shahr-i-Sokhta), and Southern Central Asia (Gonur, BMAC)",
+  "href": "/archive/concept/indus-periphery-cline",
+  "datings": [
+   {
+    "method": "archaeological-radiocarbon",
+    "grade": "A",
+    "lens": "scholarship",
+    "earliest": -3099,
+    "latest": -1999,
+    "precision": "century",
+    "circa": true,
+    "label": "Direct AMS Radiocarbon Dates of the 11 Indus Periphery Individuals",
+    "note": "Directly AMS radiocarbon-dated skeletal remains of eight genetic outliers at Shahr-i-Sokhta (c. 3100-2200 BCE) and three outliers at Gonur Tepe in Turkmenistan (c. 2300-2000 BCE)."
+   }
+  ],
+  "anchor": {
+   "scholarship": -2549,
+   "tradition": null
+  }
+ },
+ {
+  "id": "artifact.harappan-steatite-seals",
+  "kind": "art",
+  "type": "artifact",
+  "name": "Harappan Steatite Stamp Seals",
+  "summary": "Over 3,700 carved and alkali-fired square and rectangular steatite stamp seals and moulded tablets produced across the Harappan Civilisation (primarily c. 2600-1900 BCE), engraved in intaglio with a single animal motif (most frequently the one-horned \"unicorn\", humped zebu bull, elephant, rhinoceros, or tiger) beneath a line of Indus script signs and used to stamp wet clay tags on trade goods and storerooms.",
+  "kids": "Harappan merchants and officials carved small square stone seals with animals like the unicorn, zebu bull, and elephant, and pressed them into wet clay to seal packages of trade goods.",
+  "teen": "Carved in soft steatite and whitened by kiln firing, more than 3,700 Harappan stamp seals functioned as tokens of authority, clan identity, and commercial certification across the Indus basin and as far away as Mesopotamia.",
+  "region": "Pan-Harappan (with exports found in the Persian Gulf, Susa, Ur, Kish, and Nippur)",
+  "href": "/archive/artifact/harappan-steatite-seals",
+  "datings": [
+   {
+    "method": "archaeological-radiocarbon",
+    "grade": "A",
+    "lens": "scholarship",
+    "earliest": -2799,
+    "latest": -1899,
+    "precision": "century",
+    "circa": true,
+    "label": "Early Kot Dijian Origins (c. 2800-2600 BCE) and Mature Harappan Standardisation (c. 2600-1900 BCE)",
+    "note": "Early geometric and animal stamp seals appear in Harappa Period 2 (c. 2800-2600 BCE), reaching full standardisation with script and perforated boss backs during Period 3A-3C (c. 2600-1900 BCE)."
+   }
+  ],
+  "anchor": {
+   "scholarship": -2349,
+   "tradition": null
+  }
+ },
+ {
+  "id": "artifact.dancing-girl-mohenjo-daro",
+  "kind": "art",
+  "type": "artifact",
+  "name": "Dancing Girl of Mohenjo-daro",
+  "summary": "A 10.5-centimetre solid bronze statuette cast by the lost-wax (cire perdue) technique during the Mature Harappan period (c. 2500-1900 BCE) and discovered by Ernest Mackay in 1926 in the HR Area of Mohenjo-daro, depicting a slender young woman standing with her right hand on her hip and her left arm covered from shoulder to wrist with 24 to 25 bangles.",
+  "kids": "The Dancing Girl is a small bronze statue from Mohenjo-daro, just over ten centimetres tall, showing a confident young woman wearing more than twenty shell bangles on her left arm.",
+  "teen": "Excavated in Mohenjo-daro's HR Area in 1926 and now housed in the National Museum, New Delhi, the Dancing Girl demonstrates Mature Harappan mastery of lost-wax bronze casting and naturalistic figural sculpture.",
+  "region": "Mohenjo-daro, Sindh (housed in the National Museum, New Delhi)",
+  "href": "/archive/artifact/dancing-girl-mohenjo-daro",
+  "datings": [
+   {
+    "method": "archaeological-stratigraphic",
+    "grade": "A",
+    "lens": "scholarship",
+    "earliest": -2599,
+    "latest": -1899,
+    "precision": "century",
+    "circa": true,
+    "label": "Mature Harappan Context at Mohenjo-daro (HR Area)",
+    "note": "Excavated by Daya Ram Sahni and Ernest Mackay in 1926 from a Mature Harappan house in the southern HR Area of Mohenjo-daro."
+   }
+  ],
+  "anchor": {
+   "scholarship": -2249,
+   "tradition": null
+  }
+ },
+ {
+  "id": "artifact.dholavira-signboard",
+  "kind": "art",
+  "type": "artifact",
+  "name": "Dholavira Signboard",
+  "summary": "A unique Mature Harappan monumental inscription found in the western chamber of the North Gate of the Castle at Dholavira, Gujarat (c. 2500-2000 BCE), during the ASI excavations directed by R. S. Bisht. Its ten large Indus script signs, each about 30 cm across, were made of cut white gypsum pieces inlaid on a wooden board about as long as the 3.5 m wide gate passage.",
+  "kids": "Above the northern castle gate at Dholavira once hung a giant wooden board inlaid with ten gleaming white mineral letters so large they could be seen from far across the city.",
+  "teen": "Excavated in the northern gateway of Dholavira's Castle by R. S. Bisht's team, the Dholavira Signboard is unique in the Harappan world: ten Indus script characters, each about 30 cm across, inlaid in white gypsum on a long wooden board that has since decayed.",
+  "region": "Dholavira, Kutch District, Gujarat, India",
+  "href": "/archive/artifact/dholavira-signboard",
+  "datings": [
+   {
+    "method": "archaeological-stratigraphic",
+    "grade": "A",
+    "lens": "scholarship",
+    "earliest": -2499,
+    "latest": -1999,
+    "precision": "century",
+    "circa": true,
+    "label": "Mature Harappan Stage IV-V Context at Dholavira",
+    "note": "Found lying in the western chamber of the North Gate of the Castle; the ASI nomination dossier places the inscription in use during Stage IV, the classical Mature Harappan stage at Dholavira."
+   }
+  ],
+  "anchor": {
+   "scholarship": -2249,
+   "tradition": null
+  }
+ },
+ {
+  "id": "concept.indus-script",
+  "kind": "text",
+  "type": "concept",
+  "name": "Indus Script (Harappan Script)",
+  "summary": "The undeciphered graphic system of the Harappan Civilisation, attested on roughly 4,000 to 5,000 inscribed objects (primarily steatite stamp seals, clay sealings, copper tablets, miniature tablets, and pottery) with an inventory of approximately 400 to 450 distinct principal signs; subject of major scholarly debate between logo-syllabic Dravidian hypotheses (Iravatham Mahadevan, Asko Parpola), Indo-Aryan hypotheses (S. R. Rao), and the non-linguistic emblem-system hypothesis (Steve Farmer, Richard Sproat, Michael Witzel).",
+  "kids": "The people of the Harappan cities carved over 400 different picture-like symbols onto stone seals, copper tablets, and clay pots, creating a famous ancient script that no one has been able to read yet.",
+  "teen": "Known from nearly 5,000 short inscriptions averaging five signs in length and written mostly from right to left, the Indus script remains undeciphered because no bilingual text has been found; scholars debate whether it records an early Dravidian language, an Indo-Aryan language, or a non-linguistic system of clan and trade symbols.",
+  "region": "Pan-Harappan (with examples discovered in Mesopotamia and the Persian Gulf)",
+  "href": "/archive/concept/indus-script",
+  "datings": [
+   {
+    "method": "archaeological-radiocarbon",
+    "grade": "B",
+    "lens": "scholarship",
+    "earliest": -3299,
+    "latest": -2599,
+    "precision": "century",
+    "circa": true,
+    "label": "Formative Early Indus Graphic Signs (Ravi and Kot Diji Phases)",
+    "note": "Pre-firing and post-firing potters' marks and single or paired graphic signs on pottery from Harappa Periods 1 and 2 (c. 3300-2600 BCE) that prefigure Mature Harappan sign forms."
+   },
+   {
+    "method": "archaeological-radiocarbon",
+    "grade": "A",
+    "lens": "scholarship",
+    "earliest": -2599,
+    "latest": -1899,
+    "precision": "century",
+    "circa": true,
+    "label": "Mature Harappan Logo-Syllabic / Proto-Dravidian Hypothesis (Asko Parpola, Iravatham Mahadevan)",
+    "note": "Mainstream linguistic decipherment school interpreting the Mature Harappan sign system (c. 2600-1900 BCE, roughly 400-450 core signs) as a logo-syllabic writing system using the rebus principle, most plausibly encoding an early Dravidian language; supported by conditional entropy analyses (Rao et al. 2009)."
+   },
+   {
+    "method": "linguistic",
+    "grade": "C",
+    "lens": "scholarship",
+    "earliest": -2599,
+    "latest": -1599,
+    "precision": "century",
+    "circa": true,
+    "label": "Indo-Aryan / Old Indic Decipherment Proposal (S. R. Rao)",
+    "note": "Proposal by S. R. Rao arguing that the Mature and Late Harappan signs simplified from a mixed system into a 22-sign consonantal/syllabic script recording an early Indo-Aryan language; rejected by most comparative linguists and epigraphists for lacking methodological constraints."
+   },
+   {
+    "method": "scholarly-consensus",
+    "grade": "C",
+    "lens": "scholarship",
+    "earliest": -2599,
+    "latest": -1899,
+    "precision": "century",
+    "circa": true,
+    "label": "Non-Linguistic Symbol System Hypothesis (Farmer, Sproat, and Witzel)",
+    "note": "Contested thesis formulated by Steve Farmer, Richard Sproat, and Michael Witzel (2004, 2014) arguing that extreme brevity (average 4.6 signs, maximum 26-34 signs) and sign-repetition patterns indicate a non-linguistic heraldic, ritual, or administrative emblem system rather than speech-encoding writing."
+   }
+  ],
+  "anchor": {
+   "scholarship": -2249,
+   "tradition": null
+  }
+ },
+ {
+  "id": "event.4-2-ka-climate-aridification",
+  "kind": "event",
+  "type": "event",
+  "name": "The 4.2 ka Aridification Event and Monsoon Weakening in Northwest India",
+  "summary": "A major multi-century palaeoclimatic shift commencing around 4,200 to 4,100 years ago (c. 2200-2100 BCE) at the Northgrippian-Meghalayan boundary, attested in northwestern Indian palaeolake records (Kotla Dahar and Rann of Kutch), Arabian Sea marine cores, and archaeological bioapatites (Bhirrana), during which an abrupt weakening of the Indian Summer Monsoon reduced flood-water reliability along the Ghaggar-Hakra and Indus floodplains and stressed Mature Harappan agricultural systems.",
+  "kids": "Around 2200 to 2100 BCE, the summer monsoon rains in northwestern India grew much weaker for several centuries, drying up seasonal rivers and ponds that Harappan farmers relied on.",
+  "teen": "Documented in oxygen-isotope records from Lake Kotla Dahar in Haryana (Dixit et al. 2014) and fluvial geomorphology across the Indus-Ghaggar plains (Giosan et al. 2012), the 4.2 ka climate event reduced summer monsoon rainfall, prompting Harappan farmers to diversify into drought-hardy millets and gradually shift settlements eastward.",
+  "region": "Northwestern Indian Subcontinent (Indus and Ghaggar-Hakra basins, Haryana, Rajasthan, Gujarat)",
+  "href": "/archive/event/4-2-ka-climate-aridification",
+  "datings": [
+   {
+    "method": "geological",
+    "grade": "A",
+    "lens": "scholarship",
+    "earliest": -2299,
+    "latest": -1899,
+    "precision": "century",
+    "circa": true,
+    "label": "Abrupt Summer Monsoon Weakening at Kotla Dahar (~4.1 ka BP) and 4.2 ka Event",
+    "note": "Anchored by radiocarbon-dated gastropod shell oxygen-isotope (delta-18O) shifts at paleolake Kotla Dahar in Haryana (~4,100 cal yr BP, c. 2150 BCE; Dixit et al. 2014), marine cores off the Indus delta, and bioapatite records at Bhirrana (Sarkar et al. 2016)."
+   }
+  ],
+  "anchor": {
+   "scholarship": -2099,
+   "tradition": null
+  }
+ },
+ {
+  "id": "event.harappan-deurbanisation",
+  "kind": "event",
+  "type": "event",
+  "name": "Harappan De-urbanisation and Post-Urban Transition",
+  "summary": "The gradual transformation of the Harappan Civilisation between c. 1900 and 1300 BCE (the Late Harappan or Localisation Era), during which large cities such as Mohenjo-daro, Kalibangan, and Dholavira were progressively depopulated or abandoned, long-distance maritime trade with Mesopotamia ceased, the Indus script and standardised cubical chert weights fell out of use, and population shifted markedly toward smaller agrarian villages in the upper Ghaggar-Yamuna watershed and Gujarat.",
+  "kids": "Around 1900 BCE, people gradually left the big Harappan cities and moved into hundreds of smaller farming villages in Gujarat and near the Yamuna and Ganga rivers.",
+  "teen": "Modern archaeology has overturned the old theory that the Harappan cities were destroyed by a sudden military invasion; instead, changing river flows, monsoon weakening, civic breakdown, and shifting trade networks between 1900 and 1300 BCE caused a gradual de-urbanisation and an eastward shift of rural settlements.",
+  "region": "Indus Basin, Ghaggar-Hakra-Yamuna plains, Punjab, Haryana, western Uttar Pradesh, and Gujarat",
+  "href": "/archive/event/harappan-deurbanisation",
+  "datings": [
+   {
+    "method": "archaeological-radiocarbon",
+    "grade": "A",
+    "lens": "scholarship",
+    "earliest": -1899,
+    "latest": -1299,
+    "precision": "century",
+    "circa": true,
+    "label": "Late Harappan Localisation Era and De-urbanisation",
+    "note": "Anchored by radiocarbon sequences across Harappa Periods 4-5, Dholavira Stages VI-VII, Lothal B, and Late Harappan settlements in Haryana and Gujarat."
+   }
+  ],
+  "anchor": {
+   "scholarship": -1599,
+   "tradition": null
+  }
+ },
+ {
+  "id": "event.mitanni-treaty",
+  "kind": "event",
+  "type": "event",
+  "name": "Hittite-Mitanni Treaty of Suppiluliuma I and Shattiwaza",
+  "iast": "Mitrāvaruṇa-Indra-Nāsatya",
+  "summary": "The cuneiform treaty concluded around 1380 BCE between the Hittite king Suppiluliuma I and the Mitanni prince Shattiwaza (Kurtiwaza), discovered at Hattusa (Bogazkoy), invokes four Vedic deities - Mitra, Varuna, Indra, and the Nasatyas (Ashvins) - as divine witnesses. It is the oldest directly dated epigraphic attestation of Indo-Aryan divine names.",
+  "kids": "Around 1380 BCE, two ancient kings in West Asia signed a clay-tablet peace treaty that called upon four Vedic gods - Mitra, Varuna, Indra, and the Nasatyas - as witnesses.",
+  "teen": "Excavated on cuneiform tablets at the Hittite capital of Hattusa, the c. 1380 BCE treaty between Suppiluliuma I and Shattiwaza of Mitanni invokes Mitra, Varuna, Indra, and the Nasatyas, providing an external chronological benchmark for early Indo-Aryan language and religion.",
+  "region": "Upper Mesopotamia and Anatolia (found at Hattusa, modern Bogazkale, Turkey)",
+  "href": "/archive/event/mitanni-treaty",
+  "datings": [
+   {
+    "method": "epigraphic",
+    "grade": "A",
+    "lens": "scholarship",
+    "earliest": -1385,
+    "latest": -1339,
+    "best": -1379,
+    "precision": "decade",
+    "circa": true,
+    "label": "Reign of Suppiluliuma I of Hatti (Hattusa cuneiform archive)",
+    "note": "Directly attested on Akkadian cuneiform tablets from the royal archives of Hattusa dated to the reign of Suppiluliuma I (c. 1380 to 1346 BCE)."
+   }
+  ],
+  "anchor": {
+   "scholarship": -1379,
+   "tradition": null
+  }
+ },
+ {
+  "id": "text.rigveda",
+  "kind": "text",
+  "type": "text",
+  "name": "Rigveda",
+  "iast": "Ṛgveda",
+  "native": "ऋग्वेद",
+  "summary": "The Rigveda is the oldest surviving collection of Vedic Sanskrit hymns, comprising 1,028 suktas organized into ten mandalas. Its absolute chronology is contested between mainstream linguistic and comparative scholarship, Out-of-India reconstructions, and traditional Hindu reckoning.",
+  "kids": "The Rigveda is the oldest collection of Sanskrit hymns in the Vedic tradition, containing 1,028 poems organized into ten books that praise deities such as Agni, Indra, and Soma.",
+  "teen": "Comprising 1,028 hymns in ten mandalas, the Rigveda is the earliest stratum of Vedic Sanskrit literature. Historians debate its date using comparative linguistics, the c. 1380 BCE Mitanni treaty synchronism, and traditional Puranic chronology.",
+  "region": "Sapta Sindhu (northwestern Indian subcontinent, Punjab and Haryana)",
+  "href": "/archive/text/rigveda",
+  "datings": [
+   {
+    "method": "linguistic",
+    "grade": "C",
+    "lens": "scholarship",
+    "earliest": -1499,
+    "latest": -999,
+    "best": -1199,
+    "precision": "century",
+    "circa": true,
+    "label": "Mainstream Indology (Witzel, Jamison and Brereton)",
+    "note": "Dated by comparative Indo-Iranian linguistics, internal stratification between the Family Books (Mandalas 2 to 7) and late books (1 and 10), and the absence of iron (shyama ayas) in the Rigvedic vocabulary."
+   },
+   {
+    "method": "foreign-synchronism",
+    "grade": "C",
+    "lens": "scholarship",
+    "earliest": -1399,
+    "latest": -1349,
+    "best": -1379,
+    "precision": "decade",
+    "circa": true,
+    "label": "Mitanni treaty synchronism",
+    "note": "The c. 1380 BCE treaty between Suppiluliuma I of Hatti and Shattiwaza of Mitanni invokes the Indo-Aryan deities Mitra, Varuna, Indra, and the Nasatyas, providing an external chronological anchor for early Indo-Aryan religious vocabulary."
+   },
+   {
+    "method": "textual-internal",
+    "grade": "E",
+    "lens": "scholarship",
+    "earliest": -2999,
+    "latest": -1499,
+    "precision": "century",
+    "circa": true,
+    "label": "Out-of-India and indigenous chronologies (Talageri, Lal)",
+    "note": "Indigenous and Out-of-India proponents such as Shrikant Talageri and B. B. Lal place the Rigveda in the third or early second millennium BCE based on internal dynastic lists and the perennial flow of the Sarasvati river before its late Harappan drying."
+   },
+   {
+    "method": "traditional-puranic",
+    "grade": "D",
+    "lens": "tradition",
+    "earliest": -3101,
+    "latest": -2999,
+    "precision": "century",
+    "circa": true,
+    "label": "Traditional Puranic and sampradaya reckoning",
+    "note": "Orthodox Hindu tradition regards the Vedic mantras as eternal (apaurusheya) and attributes their compilation into four Samhitas by Vyasa to the transition from Dvapara Yuga to Kali Yuga around 3102 BCE."
+   }
+  ],
+  "anchor": {
+   "scholarship": -1199,
+   "tradition": -3050
+  }
+ },
+ {
+  "id": "tradition.soma-ritual",
+  "kind": "dharma",
+  "type": "tradition",
+  "name": "Soma Ritual",
+  "iast": "Somayāga",
+  "native": "सोमयाग",
+  "summary": "The Soma sacrifice (Somayaga) is the central liturgical complex of the early and classical Vedic ritual system, centered on the pressing, filtering, and offering of the juice of the sacred Soma plant (Proto-Indo-Iranian *sauma, Avestan haoma) primarily to Indra and other deities. The whole of Rigveda Mandala 9 is dedicated to Soma Pavamana (\"self-purifying Soma\"), and the Agnishtoma forms the archetype of all Shrauta Soma ceremonies.",
+  "kids": "The Soma ritual was a grand Vedic ceremony where priests pressed the juice of the sacred Soma plant, filtered it through sheep's wool, and offered it with hymns and chants.",
+  "teen": "Inheriting a shared Indo-Iranian liturgy (Vedic soma, Avestan haoma), the Soma sacrifice brings together all four Vedic priestly orders around three daily pressings of the Soma plant and is celebrated throughout the entire ninth mandala of the Rigveda.",
+  "region": "Northwestern and northern Indian subcontinent (later Pan-Indian)",
+  "href": "/archive/tradition/soma-ritual",
+  "datings": [
+   {
+    "method": "linguistic",
+    "grade": "B",
+    "lens": "scholarship",
+    "earliest": -1999,
+    "latest": -499,
+    "best": -1199,
+    "precision": "century",
+    "circa": true,
+    "label": "Common Indo-Iranian origin (*sauma) through classical Vedic Shrauta codification",
+    "note": "Comparative Vedic and Avestan evidence shows that the pressing and filtering of *sauma / haoma dates back to the common Indo-Iranian period (c. 2000 to 1500 BCE) and was elaborated in the Rigveda (Mandala 9) and Kuru-period Shrauta liturgy."
+   }
+  ],
+  "anchor": {
+   "scholarship": -1199,
+   "tradition": null
+  }
+ },
+ {
+  "id": "person.vaivasvata-manu",
+  "kind": "person",
+  "type": "person",
+  "name": "Vaivasvata Manu",
+  "iast": "Vaivasvata Manu",
+  "native": "वैवस्वत मनु",
+  "summary": "In Vedic and Itihasa-Purana tradition, Vaivasvata Manu (also Shraddhadeva), son of Vivasvat the Sun, is the seventh Manu, who presides over the present manvantara, survives the flood with the help of a great fish, and becomes the ancestor of humanity and of the Solar and Lunar royal lines. His place in time is traditional cosmology; the texts that tell of him can be dated.",
+  "kids": "In Hindu tradition, Vaivasvata Manu is the first ancestor of people in our present cosmic age. A giant fish warned him of a great flood and pulled his boat to safety.",
+  "teen": "Manu appears in the Rigveda as an ancestral sacrificer and in the Shatapatha Brahmana's flood story. The Puranas make Vaivasvata Manu the head of the present manvantara and the ancestor of both the Solar (Suryavamsha) and Lunar (Chandravamsha) dynasties.",
+  "href": "/archive/person/vaivasvata-manu",
+  "datings": [
+   {
+    "method": "traditional-puranic",
+    "grade": "D",
+    "lens": "tradition",
+    "earliest": -120531101,
+    "latest": -120531101,
+    "precision": "cosmological",
+    "circa": true,
+    "label": "Progenitor at the opening of the seventh (Vaivasvata) manvantara",
+    "note": "Puranic and Siddhantic reckoning places the start of the Vaivasvata manvantara 27 mahayugas and three yugas (120,528,000 years) before the Kali Yuga epoch of 3102 BCE."
+   },
+   {
+    "method": "linguistic",
+    "grade": "B",
+    "lens": "scholarship",
+    "earliest": -1499,
+    "latest": -599,
+    "precision": "century",
+    "circa": true,
+    "label": "Earliest Vedic attestations, Rigveda to Shatapatha Brahmana (date of the texts)",
+    "note": "Manu appears as an ancestral sacrificer in the Rigveda (c. 1500-1000 BCE) and as the hero of the flood story in Shatapatha Brahmana 1.8.1 (c. 8th to 6th centuries BCE)."
+   }
+  ],
+  "anchor": {
+   "scholarship": -1049,
+   "tradition": -120531101
+  }
+ },
+ {
+  "id": "concept.vedic-sanskrit",
+  "kind": "text",
+  "type": "concept",
+  "name": "Vedic Sanskrit",
+  "iast": "Vaidika Saṃskṛta",
+  "native": "वैदिकसंस्कृतम्",
+  "summary": "Vedic Sanskrit is the archaic Old Indo-Aryan language in which the Vedic Samhitas, Brahmanas, Aranyakas, and early Upanishads were composed. Closely related to Old Iranian (Avestan and Old Persian) within the Indo-Iranian branch of Indo-European, it preserves a musical pitch accent, a rich modal verbal system (including the subjunctive and injunctives), and multiple infinitive forms that were simplified before Panini codified Classical Sanskrit.",
+  "kids": "Vedic Sanskrit is the oldest form of the Sanskrit language, used to compose the hymns of the Rigveda and spoken with musical pitch accents on words.",
+  "teen": "As the earliest attested Old Indo-Aryan language, Vedic Sanskrit evolved across five detectable linguistic strata from the Rigveda to the late Sutras, retaining Indo-European pitch accents and verbal moods before Panini standardized Classical Sanskrit in the Ashtadhyayi.",
+  "region": "Northwestern and northern Indian subcontinent",
+  "href": "/archive/concept/vedic-sanskrit",
+  "datings": [
+   {
+    "method": "linguistic",
+    "grade": "B",
+    "lens": "scholarship",
+    "earliest": -1499,
+    "latest": -399,
+    "best": -999,
+    "precision": "century",
+    "circa": true,
+    "label": "Five linguistic strata of Vedic Sanskrit (Witzel, Jamison, Cardona)",
+    "note": "Historical linguists trace Vedic Sanskrit across five sequential diachronic layers from c. 1500 to 400 BCE: (1) Rigvedic, (2) Mantra language (Yajurveda and Atharvaveda mantras), (3) Samhita prose, (4) Brahmana prose, and (5) Sutra language leading up to Panini."
+   }
+  ],
+  "anchor": {
+   "scholarship": -999,
+   "tradition": null
+  }
+ },
+ {
+  "id": "event.kurukshetra-war",
+  "kind": "event",
+  "type": "event",
+  "name": "Kurukshetra War",
+  "iast": "Kurukṣetra Yuddha",
+  "native": "कुरुक्षेत्र युद्ध",
+  "summary": "The Kurukshetra War is the eighteen-day dynastic conflict between the Pandavas and Kauravas of the Kuru lineage narrated at the centre of the Mahabharata. Its historicity and date are contested: historians infer a possible Iron Age Kuru-Panchala conflict in c. 1200-800 BCE while noting the absence of a secure archaeological horizon or contemporary inscription for the war; traditional Siddhantic and Puranic reckonings place it near the Kali Yuga epoch (3102 or 3138 BCE); and planetarium-software reconstructions by authors such as B. N. Narahari Achar propose speculative dates such as 3067 BCE.",
+  "kids": "The Kurukshetra War is the famous eighteen-day battle between the Pandavas and Kauravas described in the Mahabharata, whose date is debated between ancient tradition and modern historians.",
+  "teen": "The Kurukshetra War of the Mahabharata has no direct contemporary inscription or secure archaeological horizon: historians place any underlying Kuru conflict in the early Iron Age (c. 1200-800 BCE), tradition links it to the 3102/3138 BCE Kali Yuga transition, and astronomical reconstructions propose dates such as 3067 BCE.",
+  "region": "Kurukshetra (Haryana) and the Kuru-Panchala Doab",
+  "href": "/archive/event/kurukshetra-war",
+  "datings": [
+   {
+    "method": "archaeological-stratigraphic",
+    "grade": "C",
+    "lens": "scholarship",
+    "earliest": -1199,
+    "latest": -799,
+    "precision": "century",
+    "circa": true,
+    "label": "Early Iron Age Kuru-Panchala and Painted Grey Ware horizon (B. B. Lal and mainstream historians)",
+    "note": "Associates a possible historical kernel of an intra-Kuru conflict with the Vedic Kuru-Panchala polity and Painted Grey Ware sites (Hastinapura, Indraprastha, Ahichchhatra, Kurukshetra) of c. 1200-800 BCE, while noting that archaeology cannot verify the epic war itself."
+   },
+   {
+    "method": "traditional-siddhantic",
+    "grade": "D",
+    "lens": "tradition",
+    "earliest": -3101,
+    "latest": -3101,
+    "precision": "year",
+    "circa": false,
+    "label": "Aryabhata and Aihole inscription Kali Yuga epoch (3102 BCE)",
+    "note": "The 634 CE Aihole inscription of Pulakeshin II equates Saka 556 with 3,735 years elapsed since the Bharata war, matching Aryabhata's 3102 BCE Kali Yuga epoch."
+   },
+   {
+    "method": "traditional-puranic",
+    "grade": "D",
+    "lens": "tradition",
+    "earliest": -3138,
+    "latest": -2448,
+    "best": -3137,
+    "precision": "year",
+    "circa": true,
+    "label": "Puranic and Brihat Samhita traditional reckonings (3138 BCE and 2449 BCE)",
+    "note": "One traditional reckoning places the war 36 years before the 3102 BCE Kali Yuga onset (3138/3139 BCE), while another preserved by Varahamihira (Brihat Samhita 13.3) and Kalhana places Yudhishthira 653 years into the Kali Yuga (2449 BCE)."
+   },
+   {
+    "method": "astronomical-reference",
+    "grade": "E",
+    "lens": "scholarship",
+    "earliest": -3066,
+    "latest": -1477,
+    "best": -3066,
+    "precision": "year",
+    "circa": true,
+    "label": "Planetarium-software reconstructions (B. N. Narahari Achar 3067 BCE; competing 1793 and 1478 BCE models)",
+    "note": "B. N. Narahari Achar simulated planetary and eclipse notices in the Udyogaparvan and Bhishmaparvan with planetarium software to propose 3067 BCE (building on S. Balakrishna and K. S. Raghavan), whereas other authors using different subsets of the same verses propose 1478 BCE or 1793 BCE; Indologists and historians of astronomy regard these reconstructions as speculative because the epic's astronomical verses are poetic, multi-layered and mutually contradictory."
+   }
+  ],
+  "anchor": {
+   "scholarship": -999,
+   "tradition": -3101
+  }
+ },
+ {
+  "id": "polity.kuru-kingdom",
+  "kind": "polity",
+  "type": "polity",
+  "name": "Kuru Kingdom",
+  "iast": "Kuru",
+  "native": "कुरु",
+  "summary": "The Kuru kingdom was the first major territorial polity of the Vedic Iron Age, formed in the Kurukshetra and upper Ganga-Yamuna Doab region through the coalescence of the Bharata and Puru tribes. As analyzed by Michael Witzel and historians of early India, Kuru rulers such as Parikshit and Janamejaya sponsored the codification of the Vedic Samhitas and the classical Shrauta ritual system.",
+  "kids": "The Kuru kingdom was an ancient state in northern India formed when the Bharata and Puru tribes united. Its capitals included Asandivat and Hastinapura, and its priests organized the four Vedas.",
+  "teen": "Emerging around 1200 to 900 BCE in Kurukshetra and the upper Ganga-Yamuna Doab, the Kuru kingdom united the Rigvedic Bharata and Puru tribes, oversaw the collection of the four Vedic Samhitas, and corresponds archaeologically to the Painted Grey Ware horizon.",
+  "region": "Kurukshetra and upper Ganga-Yamuna Doab (Haryana, Delhi, and western Uttar Pradesh)",
+  "href": "/archive/polity/kuru-kingdom",
+  "datings": [
+   {
+    "method": "textual-internal",
+    "grade": "B",
+    "lens": "scholarship",
+    "earliest": -1199,
+    "latest": -499,
+    "best": -999,
+    "precision": "century",
+    "circa": true,
+    "label": "Mainstream historical and Indological dating (Witzel, Thapar, Singh)",
+    "note": "Michael Witzel dates the Kuru realm from the post-Rigvedic mantra period (c. 1200 to 900 BCE) under Parikshit and Janamejaya through its close alliance with Panchala and eventual continued existence as one of the sixteen Mahajanapadas into the 6th and 5th centuries BCE."
+   }
+  ],
+  "anchor": {
+   "scholarship": -999,
+   "tradition": null
+  }
+ },
+ {
+  "id": "text.atharvaveda",
+  "kind": "text",
+  "type": "text",
+  "name": "Atharvaveda",
+  "iast": "Atharvaveda",
+  "native": "अथर्ववेद",
+  "summary": "The Atharvaveda is the fourth Vedic Samhita, comprising hymns, healing charms, domestic rites, royal consecration prayers, and philosophical speculations associated with the Atharvan and Angiras priestly traditions. It survives in the Shaunakiya and Paippalada recensions.",
+  "kids": "The Atharvaveda is the fourth Veda. Alongside prayers to the gods, it records healing songs, household blessings, and questions about how the universe began.",
+  "teen": "Unlike the three liturgical Vedas focused on the great Shrauta sacrifices, the Atharvaveda preserves domestic rituals, early medical and botanical knowledge, royal charms, and cosmological hymns in the Shaunakiya and Paippalada recensions.",
+  "region": "Kuru-Panchala and middle Ganga plain (northern India)",
+  "href": "/archive/text/atharvaveda",
+  "datings": [
+   {
+    "method": "linguistic",
+    "grade": "C",
+    "lens": "scholarship",
+    "earliest": -1199,
+    "latest": -899,
+    "best": -999,
+    "precision": "century",
+    "circa": true,
+    "label": "Mantra-period Kuru compilation",
+    "note": "Compiled during the Kuru reign (mentioning King Parikshit as a prosperous ruler) in the early Iron Age, though preserving some archaic Indo-European poetic formulas alongside late Rigvedic material."
+   },
+   {
+    "method": "traditional-puranic",
+    "grade": "D",
+    "lens": "tradition",
+    "earliest": -3101,
+    "latest": -2999,
+    "precision": "century",
+    "circa": true,
+    "label": "Traditional Puranic reckoning",
+    "note": "Traditional Puranic accounts attribute the transmission of the Atharvaveda to the sage Sumantu, disciple of Vyasa, at the start of Kali Yuga."
+   }
+  ],
+  "anchor": {
+   "scholarship": -999,
+   "tradition": -3050
+  }
+ },
+ {
+  "id": "text.krishna-yajurveda",
+  "kind": "text",
+  "type": "text",
+  "name": "Krishna Yajurveda",
+  "iast": "Kṛṣṇa Yajurveda",
+  "native": "कृष्णयजुर्वेद",
+  "summary": "The Krishna (Black) Yajurveda is the older branch of the Yajurveda, characterized by the integration of sacrificial formulas (mantras) and explanatory ritual prose (brahmana) within the same Samhita collections. It survives in four main recensions: Taittiriya, Maitrayani, Kathaka, and Kapishthala.",
+  "kids": "The Krishna Yajurveda, or Black Yajurveda, is an ancient collection of ritual prayers that combines sacred verses with prose explanations of how and why ceremonies are performed.",
+  "teen": "Preserved in the Taittiriya, Maitrayani, Kathaka, and Kapishthala recensions, the Krishna Yajurveda combines ritual mantras directly with the earliest surviving theological prose commentaries in Sanskrit.",
+  "region": "Kurukshetra and Kuru-Panchala (Haryana, Punjab, and western Uttar Pradesh)",
+  "href": "/archive/text/krishna-yajurveda",
+  "datings": [
+   {
+    "method": "linguistic",
+    "grade": "C",
+    "lens": "scholarship",
+    "earliest": -1199,
+    "latest": -799,
+    "best": -999,
+    "precision": "century",
+    "circa": true,
+    "label": "Early Kuru mantra and prose linguistic stratum",
+    "note": "The mantra sections of the Maitrayani, Kathaka, and Taittiriya Samhitas belong to the early Kuru state formation (c. 1200 to 1000 BCE), while their embedded Brahmana prose belongs to c. 1000 to 800 BCE."
+   },
+   {
+    "method": "traditional-puranic",
+    "grade": "D",
+    "lens": "tradition",
+    "earliest": -3101,
+    "latest": -2999,
+    "precision": "century",
+    "circa": true,
+    "label": "Traditional Puranic reckoning",
+    "note": "Tradition traces the Krishna Yajurveda to the sage Vaishampayana and his pupil Tittiri at the beginning of Kali Yuga."
+   }
+  ],
+  "anchor": {
+   "scholarship": -999,
+   "tradition": -3050
+  }
+ },
+ {
+  "id": "text.samaveda",
+  "kind": "text",
+  "type": "text",
+  "name": "Samaveda",
+  "iast": "Sāmaveda",
+  "native": "सामवेद",
+  "summary": "The Samaveda is the Veda of melodies and chants (saman), compiled for the Udgatri priests who sang liturgical verses during the Soma sacrifice. The vast majority of its stanza text is drawn from the Rigveda, set to musical notation and prolongations.",
+  "kids": "The Samaveda is the Veda of sacred songs and melodies. Priests called Udgatris sang its verses during rituals, turning hymns from the Rigveda into musical chants.",
+  "teen": "Compiled for the Udgatri officiating priests of the Soma ritual, the Samaveda takes verses mainly from the eighth and ninth mandalas of the Rigveda and adapts them into liturgical melodies (saman), forming an early foundation of Indian musical tradition.",
+  "region": "Kuru-Panchala (Haryana and western Uttar Pradesh)",
+  "href": "/archive/text/samaveda",
+  "datings": [
+   {
+    "method": "linguistic",
+    "grade": "C",
+    "lens": "scholarship",
+    "earliest": -1199,
+    "latest": -899,
+    "best": -999,
+    "precision": "century",
+    "circa": true,
+    "label": "Post-Rigvedic Kuru-period compilation",
+    "note": "Linguistically and textually presupposes the completed Rigveda Samhita and belongs to the early Kuru reorganization of the Shrauta liturgy."
+   },
+   {
+    "method": "traditional-puranic",
+    "grade": "D",
+    "lens": "tradition",
+    "earliest": -3101,
+    "latest": -2999,
+    "precision": "century",
+    "circa": true,
+    "label": "Traditional Puranic reckoning",
+    "note": "Traditional accounts hold that Vyasa divided the single Veda into four and entrusted the Samaveda to his disciple Jaimini at the beginning of Kali Yuga."
+   }
+  ],
+  "anchor": {
+   "scholarship": -999,
+   "tradition": -3050
+  }
+ },
+ {
+  "id": "text.yajurveda",
+  "kind": "text",
+  "type": "text",
+  "name": "Yajurveda",
+  "iast": "Yajurveda",
+  "native": "यजुर्वेद",
+  "summary": "The Yajurveda is the Veda of sacrificial formulas (yajus) recited by the Adhvaryu priest while performing the physical actions of Vedic rituals. It is divided into two major branches: the older Krishna (Black) Yajurveda and the younger Shukla (White) Yajurveda.",
+  "kids": "The Yajurveda is a collection of sacred formulas and instructions used by priests who built altars and made offerings during Vedic fire rituals.",
+  "teen": "Serving as the ritual manual for the Adhvaryu priest, the Yajurveda contains verse mantras and the earliest surviving Sanskrit prose. It splits into the Krishna (Black) Yajurveda, which mixes mantras with prose explanations, and the Shukla (White) Yajurveda, which separates them.",
+  "region": "Kuru-Panchala and Videha (northern India)",
+  "href": "/archive/text/yajurveda",
+  "datings": [
+   {
+    "method": "linguistic",
+    "grade": "C",
+    "lens": "scholarship",
+    "earliest": -1199,
+    "latest": -799,
+    "best": -999,
+    "precision": "century",
+    "circa": true,
+    "label": "Mantra-period to Brahmana-period linguistic dating",
+    "note": "Yajurvedic mantra prose represents the linguistic layer immediately following the Rigveda, composed in the Kuru heartland during the early Iron Age when shyama ayas (dark metal, iron) is first attested."
+   },
+   {
+    "method": "traditional-puranic",
+    "grade": "D",
+    "lens": "tradition",
+    "earliest": -3101,
+    "latest": -2999,
+    "precision": "century",
+    "circa": true,
+    "label": "Traditional Puranic reckoning",
+    "note": "Tradition attributes the transmission of the Yajurveda to Vaishampayana (Krishna Yajurveda) and Yajnavalkya (Shukla Yajurveda) following Vyasa's division of the Vedas."
+   }
+  ],
+  "anchor": {
+   "scholarship": -999,
+   "tradition": -3050
+  }
+ },
+ {
+  "id": "tradition.shrauta-ritual",
+  "kind": "dharma",
+  "type": "tradition",
+  "name": "Shrauta Ritual Tradition",
+  "iast": "Śrauta",
+  "native": "श्रौतयज्ञ",
+  "summary": "The Shrauta ritual tradition encompasses the solemn public Vedic fire sacrifices (yajna) grounded directly in the Shruti corpus (Samhitas and Brahmanas) and systematized in the Shrauta Sutras. Requiring three sacred fires (garhapatya, ahavaniya, and dakshinagni) maintained by an initiated householder (ahitagni) and his wife (patni), it coordinates four specialized priestly orders representing the four Vedas.",
+  "kids": "The Shrauta rituals are solemn Vedic ceremonies performed around three sacred fires, where four teams of priests recite hymns, sing melodies, and offer ghee and grain into the flames.",
+  "teen": "Codified during the Kuru reorganization of the Vedas and detailed in the Brahmanas and Shrauta Sutras, the Shrauta system coordinates the Hotri (Rigveda), Udgatri (Samaveda), Adhvaryu (Yajurveda), and Brahman (Atharvaveda) priests around three perpetual ritual fires.",
+  "region": "Pan-Indian (codified in Kuru-Panchala)",
+  "href": "/archive/tradition/shrauta-ritual",
+  "datings": [
+   {
+    "method": "linguistic",
+    "grade": "B",
+    "lens": "scholarship",
+    "earliest": -1199,
+    "latest": -399,
+    "best": -899,
+    "precision": "century",
+    "circa": true,
+    "label": "Kuru ritual reform through Shrauta Sutra codification (Witzel, Gonda, Staal)",
+    "note": "While fire offerings (yajna) go back to the Rigvedic and common Indo-Iranian period, Michael Witzel shows that the classical four-Veda Shrauta ritual synthesis was organized in the early Kuru kingdom (c. 1200 to 900 BCE) and codified in the Brahmanas and Shrauta Sutras (c. 900 to 400 BCE)."
+   }
+  ],
+  "anchor": {
+   "scholarship": -899,
+   "tradition": null
+  }
+ },
+ {
+  "id": "polity.panchala",
+  "kind": "polity",
+  "type": "polity",
+  "name": "Panchala",
+  "iast": "Pañcāla",
+  "native": "पञ्चाल",
+  "summary": "Panchala was a major Vedic confederacy and kingdom in the upper and middle Ganga-Yamuna Doab and Rohilkhand, closely allied with the neighboring Kuru state. Formed from five coalescing tribes (including the Krivis and Turvashas), it became a premier center of Brahmana ritual scholarship and Upanishadic philosophy, with capitals at Ahichhatra and Kampilya.",
+  "kids": "Panchala was a powerful ancient kingdom in northern India next to Kuru. Its capitals were Ahichhatra and Kampilya, and its courts were famous for Vedic learning and philosophy.",
+  "teen": "Formed from a confederation of five tribes in the Ganga-Yamuna Doab and Rohilkhand, Panchala partnered with the Kuru kingdom as the cultural heartland of Middle and Late Vedic orthodoxy, hosting philosophers such as Uddalaka Aruni and Pravahana Jaivali.",
+  "region": "Rohilkhand and central Ganga-Yamuna Doab (western and central Uttar Pradesh)",
+  "href": "/archive/polity/panchala",
+  "datings": [
+   {
+    "method": "textual-internal",
+    "grade": "B",
+    "lens": "scholarship",
+    "earliest": -1099,
+    "latest": -349,
+    "best": -799,
+    "precision": "century",
+    "circa": true,
+    "label": "Middle Vedic Kuru-Panchala to Mahajanapada period",
+    "note": "Attested from the Yajurveda Samhitas and Brahmanas (c. 1100 to 700 BCE) through the early Upanishads and the sixteen Mahajanapadas of the 6th to 4th centuries BCE."
+   }
+  ],
+  "anchor": {
+   "scholarship": -799,
+   "tradition": null
+  }
+ },
+ {
+  "id": "text.aitareya-brahmana",
+  "kind": "text",
+  "type": "text",
+  "name": "Aitareya Brahmana",
+  "iast": "Aitareya Brāhmaṇa",
+  "native": "ऐतरेयब्राह्मण",
+  "summary": "The Aitareya Brahmana is the older of the two surviving Brahmanas of the Rigveda, affiliated with the Shakala recension. Across 40 chapters (adhyayas) in eight books (panchikas), it specifies the duties of the Hotri priest in the Soma rituals and the royal consecration (Rajasuya).",
+  "kids": "The Aitareya Brahmana is an ancient prose guide linked to the Rigveda that explains the chants recited by priests during rituals and royal crowning ceremonies.",
+  "teen": "Comprising 40 chapters in eight books, the Aitareya Brahmana explains the liturgy of the Hotri priest who recites Rigvedic hymns during Soma sacrifices, and preserves early accounts of Vedic kingship across regions of ancient India.",
+  "region": "Kuru-Panchala and northern India",
+  "href": "/archive/text/aitareya-brahmana",
+  "datings": [
+   {
+    "method": "linguistic",
+    "grade": "C",
+    "lens": "scholarship",
+    "earliest": -899,
+    "latest": -599,
+    "best": -799,
+    "precision": "century",
+    "circa": true,
+    "label": "Early to Middle Brahmana prose dating",
+    "note": "Books 1 to 5 belong to an older Kuru-Panchala Brahmana prose layer (c. 900 to 700 BCE), whereas Books 6 to 8 show slightly later linguistic and geographical features."
+   },
+   {
+    "method": "traditional-puranic",
+    "grade": "D",
+    "lens": "tradition",
+    "earliest": -3101,
+    "latest": -2499,
+    "precision": "century",
+    "circa": true,
+    "label": "Traditional sampradaya reckoning",
+    "note": "Tradition attributes the text to Mahidasa Aitareya as an authoritative Shruti commentary on the Rigveda."
+   }
+  ],
+  "anchor": {
+   "scholarship": -799,
+   "tradition": -2800
+  }
+ },
+ {
+  "id": "tradition.agnicayana",
+  "kind": "dharma",
+  "type": "tradition",
+  "name": "Agnicayana",
+  "iast": "Agnicayana",
+  "native": "अग्निचयन",
+  "summary": "The Agnicayana (\"piling of Agni\"), also called the Atiratra-Agnicayana, is an elaborate twelve-day Vedic Shrauta Soma ritual in which a five-layered brick fire altar (uttaravedi) is constructed in the shape of a soaring falcon (shyena-chit) out of more than a thousand kiln-fired clay bricks. Its theology fills five books of the Shatapatha Brahmana and its geometric rules gave rise to the Shulba Sutras.",
+  "kids": "The Agnicayana is a twelve-day Vedic ceremony in which priests build a five-layer brick fire altar shaped like a giant bird with outstretched wings.",
+  "teen": "Documented in the Yajurveda, Shatapatha Brahmana, and Shulba Sutras - and filmed during its 1975 performance in Panjal, Kerala, by Frits Staal - the Agnicayana reconstructs the cosmic being Prajapati in a five-layer falcon-shaped fire altar of 1,000+ geometrically measured bricks.",
+  "region": "Northern Indian subcontinent (preserved in Kerala, Andhra Pradesh, and Maharashtra)",
+  "href": "/archive/tradition/agnicayana",
+  "datings": [
+   {
+    "method": "linguistic",
+    "grade": "B",
+    "lens": "scholarship",
+    "earliest": -1099,
+    "latest": 1975,
+    "best": -799,
+    "precision": "century",
+    "circa": true,
+    "label": "Yajurveda Samhita codification through modern Nambudiri performance (Staal)",
+    "note": "First codified in the Krishna Yajurveda Samhitas (Taittiriya Samhita Book 4 and 5, c. 1000 BCE) and Books 6 to 10 of the Shatapatha Brahmana (c. 800 to 600 BCE), and documented in living practice in Kerala by Frits Staal in 1975."
+   }
+  ],
+  "anchor": {
+   "scholarship": -799,
+   "tradition": null
+  }
+ },
+ {
+  "id": "person.bimbisara",
+  "kind": "person",
+  "type": "person",
+  "name": "Bimbisara",
+  "iast": "Bimbisāra",
+  "native": "बिम्बिसार",
+  "summary": "Bimbisara (Shrenika in Jain sources) was the Haryanka king of Magadha who began its expansion by annexing Anga and making marriage alliances with Kosala, the Licchavis of Vaishali and Madra. Buddhist and Jain texts both remember him as a contemporary and patron of the Buddha and of Mahavira. His dates depend on the contested date of the Buddha.",
+  "kids": "King Bimbisara ruled Magadha from the city of Rajagriha. He made friends with nearby kingdoms through marriages and welcomed teachers such as the Buddha and Mahavira.",
+  "teen": "Bimbisara made Magadha a major regional power by annexing Anga and marrying into the royal houses of Kosala and Vaishali. Buddhist and Jain texts say his son Ajatashatru later overthrew him.",
+  "region": "Magadha (Bihar)",
+  "href": "/archive/person/bimbisara",
+  "datings": [
+   {
+    "method": "textual-internal",
+    "grade": "C",
+    "lens": "scholarship",
+    "earliest": -545,
+    "latest": -489,
+    "precision": "decade",
+    "circa": true,
+    "label": "Reign by the long chronology",
+    "note": "The Mahavamsa gives Bimbisara a reign of 52 years and places the Buddha's death in the eighth year of his son Ajatashatru; counted back from a Parinirvana of about 486 to 483 BCE, this gives a reign of about 544 to 492 BCE."
+   },
+   {
+    "method": "textual-internal",
+    "grade": "C",
+    "lens": "scholarship",
+    "earliest": -469,
+    "latest": -404,
+    "precision": "decade",
+    "circa": true,
+    "label": "Reign by the short chronology",
+    "note": "The same regnal lengths counted back from a Parinirvana of about 400 BCE place Bimbisara's reign roughly 80 years later."
+   }
+  ],
+  "anchor": {
+   "scholarship": -517,
+   "tradition": null
+  }
+ },
+ {
+  "id": "person.yaska",
+  "kind": "person",
+  "type": "person",
+  "name": "Yaska",
+  "iast": "Yāska",
+  "native": "यास्क",
+  "summary": "Yaska was an ancient Sanskrit lexicographer, semanticist, and Vedic commentator who authored the Nirukta, the foundational treatise of the etymological Vedanga. His work synthesizes the views of numerous earlier grammarians and ritual exegetes such as Shakatayana, Gargya, and Shakapuni.",
+  "kids": "Yaska was an ancient Indian language scholar who studied the oldest words in the Vedas and showed how nouns grow out of action verbs.",
+  "teen": "Author of the Nirukta, Yaska was a pioneer of Sanskrit semantics and etymology. He classified words into four parts of speech and preserved debates among earlier schools of Vedic grammarians and historians.",
+  "region": "Northwestern or northern Indian subcontinent",
+  "href": "/archive/person/yaska",
+  "datings": [
+   {
+    "method": "linguistic",
+    "grade": "C",
+    "lens": "scholarship",
+    "earliest": -699,
+    "latest": -399,
+    "best": -499,
+    "precision": "century",
+    "circa": true,
+    "label": "Late Vedic grammatical chronology",
+    "note": "Placed around the 6th to 5th century BCE based on the state of the Sanskrit language in the Nirukta and his relative chronology with Panini and the late Brahmanas."
+   }
+  ],
+  "anchor": {
+   "scholarship": -499,
+   "tradition": null
+  }
+ },
+ {
+  "id": "polity.haryanka-dynasty",
+  "kind": "polity",
+  "type": "polity",
+  "name": "Haryanka Dynasty",
+  "iast": "Haryaṅka",
+  "native": "हर्यङ्क",
+  "summary": "The Haryanka dynasty is the early ruling house of Magadha named in Buddhist sources. Its best-known kings, Bimbisara and his son Ajatashatru, were contemporaries of the Buddha and Mahavira and made Magadha the leading power of the middle Gangetic plain. Its dates depend on the contested date of the Buddha, and it was followed by the Shishunaga line and then the Nandas.",
+  "kids": "The Haryanka kings were the royal family that first made Magadha a powerful kingdom. They ruled from Rajagriha, a city ringed by hills.",
+  "teen": "Under Bimbisara and Ajatashatru, the Haryanka kings annexed Anga, defeated the Vajji confederacy and laid the foundations of Magadha's later empire. Their exact dates shift with the debated date of the Buddha.",
+  "region": "Magadha (Bihar)",
+  "href": "/archive/polity/haryanka-dynasty",
+  "datings": [
+   {
+    "method": "textual-internal",
+    "grade": "C",
+    "lens": "scholarship",
+    "earliest": -544,
+    "latest": -412,
+    "precision": "decade",
+    "circa": true,
+    "label": "Long chronology (Sri Lankan chronicles, corrected)",
+    "note": "Regnal lengths from the Dipavamsa and Mahavamsa, counted from a Parinirvana of about 486 to 483 BCE in Ajatashatru's eighth year."
+   },
+   {
+    "method": "textual-internal",
+    "grade": "C",
+    "lens": "scholarship",
+    "earliest": -469,
+    "latest": -359,
+    "precision": "decade",
+    "circa": true,
+    "label": "Short chronology",
+    "note": "If the Buddha died around 400 BCE, as many scholars since the Bechert symposium hold, the reigns of Bimbisara and Ajatashatru move down by about 80 years."
+   }
+  ],
+  "anchor": {
+   "scholarship": -478,
+   "tradition": null
+  }
+ }
+]

@@ -54,6 +54,24 @@ describe('formatting', () => {
     expect(formatYear(2026 - 1_972_949_000, 'cosmological')).toBe('1.973 billion years ago');
   });
 
+  it('names the present in words at deep-time precision', () => {
+    expect(formatYear(2026, 'cosmological')).toBe('the present');
+    expect(formatYear(2026, 'Ma', true)).toBe('the present');
+    expect(formatYear(2026, 'ka')).toBe('the present');
+    expect(formatYear(2026, 'year')).toBe('2026 CE');
+    expect(formatRange({ earliest: 2026 - 1_972_949_000, latest: 2026, precision: 'cosmological', circa: false })).toBe('1.973 billion years ago to the present');
+  });
+
+  it('never prints a deep-time value that rounds to zero', () => {
+    // A cosmological range closing at the Kali Yuga epoch, as the cosmology entities do.
+    expect(formatYear(-3101, 'cosmological')).toBe('3102 BCE');
+    expect(formatRange({ earliest: -1972947101, latest: -3101, precision: 'cosmological', circa: false })).toBe('1.973 billion years ago to 3102 BCE');
+    expect(formatYear(-3101, 'Ma')).toBe('0.01 Ma');
+    expect(formatYear(2000, 'ka')).toBe('2000 CE');
+    expect(formatYear(2026 - 60_000_000, 'cosmological')).toBe('60 million years ago');
+    expect(formatYear(2026 - 50_000, 'Ma')).toBe('0.05 Ma');
+  });
+
   it('formats ranges', () => {
     expect(formatRange({ earliest: -2599, latest: -1899, precision: 'year', circa: true })).toBe('c. 2600 to 1900 BCE');
     expect(formatRange({ earliest: -321, latest: -184, precision: 'year', circa: false })).toBe('322 to 185 BCE');
