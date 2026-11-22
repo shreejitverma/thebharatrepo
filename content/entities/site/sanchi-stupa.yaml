@@ -16,7 +16,7 @@ region: Malwa plateau, Madhya Pradesh (near Vidisha)
 location: { name: "Sanchi, Madhya Pradesh", lat: 23.479, lon: 77.739 }
 datings:
   - method: archaeological-stratigraphic
-    range: { earliest: "260 BCE", latest: 499, precision: century, circa: true }
+    range: { earliest: "260 BCE", latest: 500, precision: century, circa: true }
     grade: A
     label: Multi-phase monumental construction from Ashoka to the Gupta era
     sources:

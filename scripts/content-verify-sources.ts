@@ -21,7 +21,7 @@ import fs from 'node:fs';
 import path from 'node:path';
 import { loadContentUncached, CONTENT_DIR } from '../src/lib/content/load';
 import type { Source } from '../src/lib/content/schema';
-import { pageMatchesTitle, sameName, sameTitle } from '../src/lib/content/similarity';
+import { cachedTitleMatches, registryRecord, sameName, sameTitle, urlMatchKind } from '../src/lib/content/similarity';
 
 const CACHE_FILE = process.env.VERIFY_CACHE ? path.resolve(process.env.VERIFY_CACHE) : path.join(CONTENT_DIR, 'verification.json');
 const UA = 'TheBharatRepo-SourceVerifier/1.0 (+https://www.thebharatrepo.com)';
@@ -98,7 +98,7 @@ function stripHtml(s: string): string {
 }
 
 function titleVerdict(cited: string, found: string, what: string): CacheEntry {
-  return sameTitle(cited, found)
+  return cachedTitleMatches('record', cited, found)
     ? { ok: true, checkedAt: now(), matched: found }
     : { ok: false, checkedAt: now(), matched: found, detail: `${what} resolves to a different work` };
 }
@@ -131,22 +131,16 @@ async function verifyOclc(oclc: string, title: string): Promise<CacheEntry> {
 }
 
 async function verifyUrl(url: string, title: string): Promise<CacheEntry> {
-  let u: URL;
-  try {
-    u = new URL(url);
-  } catch {
-    return { ok: false, checkedAt: now(), detail: 'invalid URL' };
-  }
-  const ia = /^\/details\/([^/?#]+)/.exec(u.pathname);
-  if (u.hostname.endsWith('archive.org') && ia) {
-    const { body } = await getJson<{ metadata?: { title?: string } }>(`https://archive.org/metadata/${ia[1]}`);
+  if (!URL.canParse(url)) return { ok: false, checkedAt: now(), detail: 'invalid URL' };
+  const record = registryRecord(url);
+  if (record?.site === 'archive.org') {
+    const { body } = await getJson<{ metadata?: { title?: string } }>(`https://archive.org/metadata/${record.id}`);
     const t = body?.metadata?.title;
     if (!t) return { ok: false, checkedAt: now(), detail: 'archive.org item not found' };
     return titleVerdict(title, t, 'archive.org item');
   }
-  const ol = /^\/(works|books)\/(OL\w+)/.exec(u.pathname);
-  if (u.hostname.endsWith('openlibrary.org') && ol) {
-    const { body } = await getJson<{ title?: string; subtitle?: string }>(`https://openlibrary.org/${ol[1]}/${ol[2]}.json`);
+  if (record?.site === 'openlibrary.org') {
+    const { body } = await getJson<{ title?: string; subtitle?: string }>(`https://openlibrary.org/${record.path}.json`);
     if (!body?.title) return { ok: false, checkedAt: now(), detail: 'Open Library record not found' };
     return titleVerdict(title, [body.title, body.subtitle].filter(Boolean).join(': '), 'Open Library record');
   }
@@ -161,7 +155,7 @@ async function verifyUrl(url: string, title: string): Promise<CacheEntry> {
   ]
     .filter((x): x is string => Boolean(x))
     .map(stripHtml);
-  const hit = bits.find((b) => pageMatchesTitle(title, b));
+  const hit = bits.find((b) => cachedTitleMatches('page', title, b));
   return hit ? { ok: true, checkedAt: now(), matched: hit } : { ok: false, checkedAt: now(), matched: bits[0], detail: 'page does not carry the cited title' };
 }
 
@@ -213,7 +207,7 @@ interface Job {
 
 function sourceJobs(s: Source): Job[] {
   const jobs: Job[] = [];
-  const titleCheck = (e: CacheEntry) => (e.matched && sameTitle(s.title, e.matched) ? null : `cached record "${e.matched ?? ''}" does not match the cited title`);
+  const titleCheck = (e: CacheEntry) => (e.matched && cachedTitleMatches('record', s.title, e.matched) ? null : `cached record "${e.matched ?? ''}" does not match the cited title`);
   if (s.doi) jobs.push({ key: `doi:${s.doi.toLowerCase()}`, where: s.id, run: () => verifyDoi(s.doi!, s.title), recheck: titleCheck });
   if (s.isbn) jobs.push({ key: `isbn:${s.isbn}`, where: s.id, run: () => verifyIsbn(s.isbn!, s.title), recheck: titleCheck });
   if (s.oclc) jobs.push({ key: `oclc:${s.oclc}`, where: s.id, run: () => verifyOclc(s.oclc!, s.title), recheck: titleCheck });
@@ -222,7 +216,7 @@ function sourceJobs(s: Source): Job[] {
       key: `url:${s.url}`,
       where: s.id,
       run: () => verifyUrl(s.url!, s.title),
-      recheck: (e) => (e.matched && (pageMatchesTitle(s.title, e.matched) || sameTitle(s.title, e.matched)) ? null : `cached page title "${e.matched ?? ''}" does not carry the cited title`),
+      recheck: (e) => (e.matched && cachedTitleMatches(urlMatchKind(s.url!), s.title, e.matched) ? null : `cached title "${e.matched ?? ''}" does not match the cited title`),
     });
   }
   return jobs;

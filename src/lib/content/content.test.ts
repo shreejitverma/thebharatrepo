@@ -111,6 +111,8 @@ describe('loader against fixtures', () => {
       const { loadContentUncached } = await import('./load');
       const msgs = loadContentUncached().errors.map((e) => e.message);
       expect(msgs).toContain('datings[0]: unknown source src.nobody-1999-nothing');
+      expect(msgs).toContain('datings[0]: endpoint is written as "7001 BCE" but the text says "7000 BCE"; check which is meant');
+      expect(msgs).toContain('datings[0].range.earliest: "74000 BCE" is a deep-time date; write it as years before present ("N ka" or "N Ma") as the cited source reports it');
       expect(msgs).toContain('relation related-to -> unknown entity person.ghost');
       expect(msgs).toContain('article body cites no sources; use [@src.id, locator]');
       expect(msgs).toContain('isbn:9780000000002 already identifies src.roe-1990-a-work; cite one source id per work');
@@ -150,9 +152,48 @@ describe('human-readable years', () => {
 describe('integrity checks', () => {
   it('flags BCE off-by-one storage', async () => {
     const { bceOffByOne } = await import('./load');
-    expect(bceOffByOne({ earliest: -7000, latest: -2599 }, 'from c. 7000 BCE to 2600 BCE')).toEqual([7000]);
-    expect(bceOffByOne({ earliest: -6999, latest: -2599 }, 'from c. 7000 BCE to 2600 BCE')).toEqual([]);
-    expect(bceOffByOne({ earliest: -7000, latest: -6999 }, 'around 7000 BCE')).toEqual([]);
+    const { parseYear } = await import('./schema');
+    const y = (s: string) => parseYear(s) as number;
+    expect(bceOffByOne({ earliest: y('7001 BCE'), latest: y('2600 BCE') }, 'from c. 7000 BCE to 2600 BCE')).toEqual([7000]);
+    expect(bceOffByOne({ earliest: y('7000 BCE'), latest: y('2600 BCE') }, 'from c. 7000 BCE to 2600 BCE')).toEqual([]);
+    expect(bceOffByOne({ earliest: y('7001 BCE'), latest: y('7000 BCE') }, 'around 7000 BCE')).toEqual([]);
+  });
+  it('flags a CE end year one short of the round year or century the text gives', async () => {
+    const { ceOffByOne } = await import('./load');
+    const ending = (latest: number, method: 'textual-internal' | 'traditional-sampradaya' = 'textual-internal') => ({ method, range: { latest } });
+    expect(ceOffByOne(ending(499), "completed by Dridhabala (c. 300-500 CE)")).toEqual([500]);
+    expect(ceOffByOne(ending(499), 'later expansions up to the fifth century CE')).toEqual([500]);
+    expect(ceOffByOne(ending(599), 'Gupta inscriptions of the fourth to sixth centuries CE')).toEqual([600]);
+    expect(ceOffByOne(ending(1199), 'a single 8th-12th century CE manuscript copy')).toEqual([1200]);
+    expect(ceOffByOne(ending(500), 'up to the fifth century CE')).toEqual([]);
+    expect(ceOffByOne(ending(499), 'composed in 499 CE, early in the fifth century CE')).toEqual([]);
+    expect(ceOffByOne(ending(499), 'by the fifth century BCE')).toEqual([]);
+    expect(ceOffByOne(ending(1199, 'traditional-sampradaya'), 'twelfth century CE')).toEqual([]);
+    expect(ceOffByOne(ending(399), 'from 399 CE onward')).toEqual([]);
+  });
+  it('rejects raw negative years in authored datings', async () => {
+    const { rawNegativeYears } = await import('./load');
+    const msgs = rawNegativeYears([
+      { range: { earliest: -6000, latest: '5000 BCE', best: -5499 } },
+      { range: { earliest: 320, latest: 0 } },
+    ]);
+    expect(msgs).toHaveLength(2);
+    expect(msgs[0]).toContain('datings[0].range.earliest');
+    expect(msgs[0]).toContain('"6000 BCE" or "6001 BCE"');
+    expect(msgs[1]).toContain('datings[0].range.best');
+    expect(rawNegativeYears([{ range: { earliest: '7000 BCE', latest: '1.5 Ma' } }])).toEqual([]);
+    expect(rawNegativeYears(undefined)).toEqual([]);
+    expect(rawNegativeYears([null, { range: null }])).toEqual([]);
+  });
+  it('rejects deep-time dates written as calendar years, but not ka strings, round calendar figures or tradition', async () => {
+    const { deepTimeBceYears } = await import('./load');
+    const { parseYear } = await import('./schema');
+    const toba = (v: string, method = 'luminescence') => [{ method, range: { earliest: v, latest: v } }];
+    expect(deepTimeBceYears(toba('74000 BCE'))).toHaveLength(2);
+    expect(deepTimeBceYears(toba('74 ka'))).toEqual([]);
+    expect(2026 - (parseYear('74 ka') as number)).toBe(74000);
+    expect(deepTimeBceYears(toba('10000 BCE'))).toEqual([]);
+    expect(deepTimeBceYears(toba('3891102 BCE', 'traditional-puranic'))).toEqual([]);
   });
   it('rejects raw negative years in authored datings', async () => {
     const { rawNegativeYears } = await import('./load');

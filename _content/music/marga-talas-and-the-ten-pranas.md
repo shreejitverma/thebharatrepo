@@ -59,7 +59,7 @@ The older and newer systems must not be confused here.
 In today's Carnatic practice a laghu is a variable count (3 to 9) and the other limbs are counted relative to it.
 In the older theory a laghu is one matra and a guru two.
 Some popular summaries give the old limbs as 1, 2, 4, 8, 12 and 16 beats; those numbers mix the two systems and are not what these sources say.
-A sixth limb, kakapada, is sometimes added, but I could not confirm its value in the sources consulted.
+A sixth limb, kakapada, is sometimes added, but its value could not be confirmed in the sources consulted.
 
 ## The five marga talas
 

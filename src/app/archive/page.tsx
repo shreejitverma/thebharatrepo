@@ -2,8 +2,7 @@ import type { Metadata } from 'next';
 import Link from 'next/link';
 import { getIndex } from '@/lib/content/site';
 import { KINDS, KIND_LABELS } from '@/lib/content/labels';
-import { formatRange } from '@/lib/time';
-import { primaryAnchor } from '@/lib/content/lens';
+import { datingSummary, primaryAnchor, primaryDating } from '@/lib/content/lens';
 
 export const metadata: Metadata = { title: 'Archive', description: 'Every entity in The Bharat Repo, by kind and in time order.' };
 
@@ -31,13 +30,13 @@ export default function ArchivePage() {
             <h2 id={`h-${k}`}>{KIND_LABELS[k]}</h2>
             <div className="category-grid">
               {list.map((i) => {
-                const d = i.datings.find((x) => x.lens === 'scholarship') ?? i.datings[0];
+                const d = primaryDating(i.datings);
                 return (
                   <Link key={i.id} href={i.href} className="card">
                     <h3>{i.name}</h3>
                     <p>{i.summary.length > 140 ? `${i.summary.slice(0, 137).replace(/\s+\S*$/, '')}...` : i.summary}</p>
                     <p className="card__meta">
-                      {formatRange(d)} {d.lens === 'tradition' ? '(tradition)' : ''}
+                      {datingSummary(d, d.method)}
                     </p>
                   </Link>
                 );

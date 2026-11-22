@@ -18,13 +18,13 @@ datings:
       latest: "2017"
       precision: year
       circa: false
-    grade: A
+    grade: B
     sources:
       - { id: src.sivanantham-2019-keeladi-urban-settlement, locator: "Introduction" }
 claims:
   - text: Tamil Nadu's Department of Archaeology records ASI excavations at Keezhadi for the
       2014-15, 2015-16 and 2016-17 seasons.
-    grade: A
+    grade: B
     sources:
       - { id: src.sivanantham-2019-keeladi-urban-settlement, locator: "Introduction" }
 relations:

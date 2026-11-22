@@ -1,0 +1,12 @@
+id: event.misdated
+type: event
+kind: event
+names: { en: Misdated }
+summary: A fixture whose earliest endpoint is one year earlier than its note says.
+datings:
+  - method: archaeological-radiocarbon
+    range: { earliest: "7001 BCE", latest: "6000 BCE", precision: century, circa: true }
+    grade: B
+    sources: [src.roe-1990-a-work]
+    note: Occupation begins around 7000 BCE.
+review: { status: draft }
