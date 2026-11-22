@@ -1,0 +1,65 @@
+id: tradition.carnatic-music
+type: tradition
+kind: art
+names:
+  en: Carnatic Music
+  iast: Karṇāṭaka Saṅgīta
+  native: கர்நாடக இசை / కర్ణాటక సంగీతం
+summary: Carnatic (Karnatak) music is the classical art music tradition of southern India, balancing a vast composed
+  repertoire (kritis and varnams) with structured improvisation (manodharma) within raga and tala. Anchored in the
+  72-melakarta parent-scale framework, Purandara Dasa's pedagogy and the late-eighteenth-century Thanjavur Trinity, its
+  modern concert format (kutcheri) consolidated in early twentieth-century Madras.
+summaries:
+  kids: Carnatic music is the classical music of South India, known for devotional songs called kritis, fast improvised
+    note patterns and percussion rhythms on the mridangam.
+  teen: Built on raga melody, tala rhythm, composed kritis and improvised manodharma sections, South Indian Carnatic music
+    draws on Purandara Dasa, Venkatamakhin's 72-melakarta scheme and the Thanjavur Trinity.
+region: South India (Tamil Nadu, Karnataka, Andhra Pradesh, Telangana, Kerala)
+location:
+  name: Thanjavur, Tamil Nadu
+  lat: 10.787
+  lon: 79.138
+datings:
+  - method: scholarly-consensus
+    range:
+      earliest: 1500
+      latest: 1935
+      precision: century
+      circa: true
+    grade: B
+    label: Vijayanagara and Thanjavur formulation through the modern Madras concert era
+    sources:
+      - src.grove-2001-karnatak-music
+      - src.viswanathan-2004-music-in-south-india
+      - src.subramanian-2006-tanjore-court-madras-music-academy
+    note: Beginning with Vijayanagara-period Haridasa pedagogy and 17th-century Thanjavur musicology, the concert canon
+      crystallized around the Trinity (1762-1847) and the Madras Music Academy (founded 1928).
+claims:
+  - text: The modern Carnatic concert revolves around composed kritis alongside manodharma improvisation (alapana, tanam,
+      niraval, kalpanaswara) and the ragam-tanam-pallavi suite.
+    grade: A
+    sources:
+      - src.grove-2001-karnatak-music
+      - src.viswanathan-2004-music-in-south-india
+  - text: Scholars Lakshmi Subramanian and Amanda Weidman demonstrate that early twentieth-century urban sabhas in Madras
+      standardised the concert format and elevated the Thanjavur Trinity.
+    grade: B
+    sources:
+      - src.subramanian-2006-tanjore-court-madras-music-academy
+      - src.weidman-2006-singing-the-classical
+relations:
+  - kind: related-to
+    target: tradition.hindustani-classical-music
+  - kind: related-to
+    target: text.brihaddeshi
+wikidata: Q956883
+tags:
+  - carnatic-music
+  - karnatak
+  - south-india
+  - kriti
+  - raga
+  - tala
+review:
+  status: draft
+  author: gemini-4-hydrogen-xhigh

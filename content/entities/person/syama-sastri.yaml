@@ -1,0 +1,63 @@
+id: person.syama-sastri
+type: person
+kind: art
+names:
+  en: Syama Sastri
+  iast: Śyāma Śāstri
+  native: சியாமா சாஸ்திரி
+summary: Syama Sastri (1762-1827 CE; born Venkata Subrahmanya) was the eldest composer of the Carnatic Trinity, serving
+  as a hereditary priest of the Bangaru Kamakshi shrine in Thanjavur. Renowned for rhythmic intricacy, expanded viloma
+  chapu and misra chapu talas, and three masterwork swarajatis, he composed deeply devotional kritis in Telugu, Sanskrit
+  and Tamil under the signature 'Syamakrishna'.
+summaries:
+  kids: Syama Sastri (1762-1827) was the eldest of the three great Carnatic composers, famous for songs with clever
+    rhythms praising Goddess Kamakshi.
+  teen: Signing his works 'Syamakrishna', Thanjavur priest-composer Syama Sastri excelled at subtle chapu rhythmic cycles
+    and elevated the swarajati into a major Carnatic concert form.
+region: Tiruvarur and Thanjavur, Tamil Nadu
+location:
+  name: Thanjavur, Tamil Nadu
+  lat: 10.785
+  lon: 79.139
+datings:
+  - method: documentary
+    range:
+      earliest: 1762
+      latest: 1827
+      precision: year
+      circa: false
+    grade: B
+    label: Lifespan recorded in Thanjavur family and Music Academy records
+    sources:
+      - src.sambamoorthy-1934-syama-sastri
+      - src.tenijenhuis-2011-kirtana
+      - src.grove-2001-karnatak-music
+    note: Born 26 April 1762 at Tiruvarur into a Vadama Smarta Brahmin family, moved to Thanjavur, and died in February 1827.
+claims:
+  - text: Though his surviving corpus is smaller than Tyagaraja's or Dikshitar's (around 40 to 70 authenticated pieces),
+      Syama Sastri's three swarajatis in Bhairavi, Yadukulakambhoji and Todi became pillars of Carnatic repertoire.
+    grade: B
+    sources:
+      - src.sambamoorthy-1934-syama-sastri
+      - src.tenijenhuis-2011-kirtana
+  - text: He was celebrated for rhythmic command of misra chapu and viloma chapu talas and nuanced depictions of ragas such
+      as Anandabhairavi and Chintamani.
+    grade: B
+    sources:
+      - src.sambamoorthy-1934-syama-sastri
+      - src.viswanathan-2004-music-in-south-india
+relations:
+  - kind: influenced
+    target: tradition.carnatic-music
+  - kind: contemporary-of
+    target: person.tyagaraja
+wikidata: Q3519351
+tags:
+  - syama-sastri
+  - carnatic-music
+  - trinity
+  - swarajati
+  - thanjavur
+review:
+  status: draft
+  author: gemini-4-hydrogen-xhigh

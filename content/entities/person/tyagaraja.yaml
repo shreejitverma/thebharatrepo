@@ -1,0 +1,65 @@
+id: person.tyagaraja
+type: person
+kind: art
+names:
+  en: Tyagaraja
+  iast: Tyāgarāja
+  native: தியாகராஜர் / త్యాగరాజు
+summary: "Kakarla Tyagaraja (1767-1847 CE) was a pre-eminent Telugu composer of Carnatic music and among the most widely performed composers of the Carnatic Trinity. Living at Thiruvaiyaru in the Kaveri delta, he refined the kriti song form through hundreds of surviving devotional compositions to Rama, notably the five Pancharatna Kritis, and introduced rich sangati melodic variations."
+summaries:
+  kids: Tyagaraja (1767-1847) was a great South Indian composer from Tamil Nadu who wrote hundreds of Telugu devotional
+    songs called kritis in praise of Rama.
+  teen: Born in Tiruvarur and active at Thiruvaiyaru, Tyagaraja perfected the Carnatic kriti form with flowing melodic
+    variations (sangatis), composing over seven hundred surviving songs including the Pancharatna Kritis.
+region: Kaveri delta (Tiruvarur and Thiruvaiyaru, Tamil Nadu)
+location:
+  name: Thiruvaiyaru, Tamil Nadu
+  lat: 10.88
+  lon: 79.104
+datings:
+  - method: documentary
+    range:
+      earliest: 1767
+      latest: 1847
+      precision: year
+      circa: false
+    grade: B
+    label: Documented dates in disciple lineages and standard musicology
+    sources:
+      - src.lord-2001-tyagaraja-grove
+      - src.jackson-1991-tyagaraja-renewal
+    note: Born 4 May 1767 in Tiruvarur to a Telugu Smarta Brahmin family settled in Thanjavur district, and died 6 January
+      1847 at Thiruvaiyaru.
+claims:
+  - text: Around 700 kritis attributed to Tyagaraja survive in print and palm-leaf manuscripts, far fewer than the legendary
+      traditional figure of 24,000 compositions.
+    grade: B
+    sources:
+      - src.lord-2001-tyagaraja-grove
+      - src.viswanathan-2004-music-in-south-india
+  - text: Tyagaraja systematically developed sangatis (progressive melodic variations on a recurring refrain) in the kriti
+      and created the five Ghana Raga Pancharatna Kritis.
+    grade: B
+    sources:
+      - src.jackson-1992-features-of-the-kriti
+      - src.tenijenhuis-2011-kirtana
+relations:
+  - kind: influenced
+    target: tradition.carnatic-music
+  - kind: related-to
+    target: person.rama
+wikidata: Q2044389
+image:
+  commons: File:Tyagaraja (cropped).png
+  alt: Historical Jaganmohan Palace painting depicting Carnatic composer Tyagaraja seated with rosary and tambura
+  credit: Jaganmohan Palace, Mysore (public domain scan)
+  license: Public domain
+tags:
+  - tyagaraja
+  - carnatic-music
+  - trinity
+  - kriti
+  - thiruvaiyaru
+review:
+  status: draft
+  author: gemini-4-hydrogen-xhigh

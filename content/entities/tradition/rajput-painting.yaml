@@ -1,0 +1,68 @@
+id: tradition.rajput-painting
+type: tradition
+kind: art
+names:
+  en: Rajput Painting
+  iast: Rājapūta Citrakalā
+  native: राजपूत चित्रकला
+summary: Rajput painting encompasses the courtly miniature schools of Rajasthan and central India - notably Mewar,
+  Bundi, Kota, Amber-Jaipur, Bikaner, Marwar and Kishangarh - flourishing from the late sixteenth to the nineteenth
+  centuries. Drawing on pre-Mughal Chaurapanchasika and Western Indian manuscript idioms as well as Mughal techniques,
+  Rajput ateliers excelled in devotional Krishna cycles, Ragamala series and court scenes.
+summaries:
+  kids: Rajput painting includes bright, vivid miniature art made for royal courts in Rajasthan such as Mewar, Bundi and
+    Kishangarh, depicting Krishna stories, music modes and royal hunts.
+  teen: Centred at Rajasthan courts including Mewar, Bundi-Kota and Kishangarh from the late sixteenth to nineteenth
+    centuries, Rajput ateliers fused indigenous bold colour with Mughal portraiture into Bhakti and Ragamala art.
+region: Rajasthan and central India (Mewar, Bundi, Kota, Kishangarh, Bikaner, Jaipur)
+location:
+  name: Udaipur (Mewar), Rajasthan
+  lat: 24.576
+  lon: 73.683
+datings:
+  - method: art-historical
+    range:
+      earliest: 1540
+      latest: 1850
+      precision: decade
+      circa: true
+    grade: B
+    label: Chaurapanchasika antecedents and dated Rajasthani court ateliers
+    sources:
+      - src.beach-1992-mughal-rajput-painting
+      - src.aitken-2010-intelligence-of-tradition
+      - src.bautze-2003-rajput-painting-grove
+    note: Anchored by dated milestones such as the 1605 CE Chawand Ragamala of Mewar (by Nasiruddin), Sahibdin's Mewar
+      manuscripts, late-17th c. Bundi-Kota hunts and 18th c. Kishangarh works by Nihal Chand.
+claims:
+  - text: Early Mewar milestones include the 1605 Chawand Ragamala and Sahibdin's vibrant mid-seventeenth-century Bhagavata
+      Purana and Ramayana series, while Bundi and Kota became famed for lush monsoon and hunting paintings.
+    grade: A
+    sources:
+      - src.beach-1992-mughal-rajput-painting
+      - src.bautze-2003-rajput-painting-grove
+  - text: At eighteenth-century Kishangarh, artist Nihal Chand working for ruler Savant Singh (Nagari Das) created the
+      iconic elongated profile type exemplified by Bani Thani.
+    grade: B
+    sources:
+      - src.aitken-2010-intelligence-of-tradition
+      - src.bautze-2003-rajput-painting-grove
+relations:
+  - kind: related-to
+    target: text.gita-govinda
+wikidata: Q2988788
+image:
+  commons: File:4 Radha (Bani Thani), Kishangarh, ca. 1750, National Museum New Delhi.jpg
+  alt: Eighteenth-century Kishangarh Rajput miniature painting of Radha (Bani Thani) holding two lotus buds
+  credit: Attributed to Nihal Chand (c. 1750, National Museum, New Delhi)
+  license: Public domain
+tags:
+  - rajput-painting
+  - mewar
+  - bundi
+  - kishangarh
+  - ragamala
+  - miniature
+review:
+  status: draft
+  author: gemini-4-hydrogen-xhigh

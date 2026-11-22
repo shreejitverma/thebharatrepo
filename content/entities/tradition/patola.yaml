@@ -1,0 +1,79 @@
+id: tradition.patola
+type: tradition
+kind: art
+names:
+  en: Patola
+  iast: Paṭolā
+  native: પટોળું
+summary: Patola is the rare double-ikat silk weaving tradition of Patan in northern Gujarat, practised primarily by the
+  Salvi community. In true double ikat, both the warp and weft silk threads are separately tied and dyed prior to
+  weaving so that every intersecting square aligns cleanly on the loom; Patan patolas were historically prized across
+  India and exported as sacred heirloom cloths throughout maritime Southeast Asia.
+summaries:
+  kids: Patola is a special silk cloth from Patan in Gujarat where artisans tie and dye both sets of threads before
+    weaving so crisp patterns appear cleanly on both sides.
+  teen: Woven in Patan by Salvi master weavers, Patola is a double-ikat silk where pre-dyed warp and weft threads
+    interlock exactly on the loom, historically treasured across Gujarat and Southeast Asia.
+region: Patan, northern Gujarat
+location:
+  name: Patan, Gujarat
+  lat: 23.851
+  lon: 72.129
+datings:
+  - method: traditional-sampradaya
+    range:
+      earliest: 1143
+      latest: 1173
+      precision: decade
+      circa: true
+    grade: D
+    label: Salvi community tradition of migration to Chaulukya Patan under Kumarpala
+    sources:
+      - src.buhler-fischer-1979-patola-gujarat
+    note: Salvi oral tradition holds that Chaulukya king Kumarpala (r. c. 1143-1173 CE) invited hundreds of Salvi weavers
+      from Jalna in Maharashtra/Karnataka to settle in Anhilwad Patan.
+  - method: documentary
+    range:
+      earliest: 1500
+      latest: 1900
+      precision: century
+      circa: true
+    grade: A
+    label: Surviving exported cloths in Southeast Asia and European/Gujarati records
+    sources:
+      - src.buhler-fischer-1979-patola-gujarat
+      - src.crill-1998-indian-ikat-textiles
+      - src.barnes-1989-origins-patola
+    note: Textiles and trade inventories from the sixteenth to nineteenth centuries document Patola exports to Indonesia and
+      Malaysia alongside domestic ceremonial use in Gujarat and Kerala.
+claims:
+  - text: In Patan double ikat, warp and weft bundles are resist-tied with cotton thread and dyed sequentially before
+      weaving, producing identical crisp geometric, floral (navaratna, pan bhat) or animal motifs on both cloth faces.
+    grade: A
+    sources:
+      - src.buhler-fischer-1979-patola-gujarat
+      - src.crill-1998-indian-ikat-textiles
+  - text: Ruth Barnes and John Guy trace how exported Patan patolas became high-status ritual heirlooms (cindai / patola)
+      across Indonesia, shaping local double-ikat geringsing and motif traditions.
+    grade: B
+    sources:
+      - src.barnes-1989-origins-patola
+      - src.guy-1998-woven-cargoes
+relations: []
+wikidata: Q7145171
+image:
+  commons: File:'Patola' (ritual heirloom cloth) from Gujarat, India, late 18th or early 19th century.jpg
+  alt: Late eighteenth- or early nineteenth-century double-ikat silk patola cloth from Gujarat with elephant and tiger
+    motifs
+  credit: Unknown Patan Salvi weaver (Honolulu Museum of Art)
+  license: Public domain
+tags:
+  - patola
+  - double-ikat
+  - patan
+  - gujarat
+  - silk
+  - textiles
+review:
+  status: draft
+  author: gemini-4-hydrogen-xhigh

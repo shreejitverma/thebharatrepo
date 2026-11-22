@@ -1,0 +1,82 @@
+id: tradition.pashmina-kani-shawls
+type: tradition
+kind: art
+names:
+  en: Pashmina and Kani Shawls
+  iast: Paśmīnā va Kānī Śāla
+  native: पश्मीना / کانی شال
+summary: Kashmiri Pashmina and Kani shawls are fine textiles hand-spun from the winter underfleece (pashm) of
+  high-altitude Changthangi goats of Ladakh and Tibet and woven in the Kashmir Valley. In the classic kani technique,
+  weavers interlock coloured weft threads using small wooden bobbins (kanis) following a coded pattern script (talim),
+  celebrated in Mughal court records and nineteenth-century global trade.
+summaries:
+  kids: Pashmina shawls are woven in Kashmir from ultra-soft mountain goat wool, and Kani shawls use tiny wooden needles
+    to weave intricate paisley patterns directly into the cloth.
+  teen: Combining Changthang-Ladakh goat underfleece (pashm) with Kashmiri weaving and coded talim scripts, Kani shawls
+    were prized at Mughal courts from Akbar onward before becoming famous globally.
+region: Kashmir Valley and Ladakh
+location:
+  name: Srinagar, Jammu and Kashmir
+  lat: 34.084
+  lon: 74.797
+datings:
+  - method: traditional-sampradaya
+    range:
+      earliest: 1420
+      latest: 1470
+      precision: decade
+      circa: true
+    grade: D
+    label: Kashmiri tradition crediting Sultan Zain-ul-Abidin with introducing shawl looms
+    sources:
+      - src.rizvi-ahmed-2009-pashmina
+    note: Local Kashmiri chronicles and craft memory attribute the introduction or reorganisation of fine wool-shawl weaving
+      to Sultan Zain-ul-Abidin (r. 1420-1470 CE).
+  - method: documentary
+    range:
+      earliest: 1590
+      latest: 1870
+      precision: decade
+      circa: true
+    grade: A
+    label: Mughal Ain-i Akbari records through the nineteenth-century export peak
+    sources:
+      - src.abulfazl-1873-ain-i-akbari
+      - src.rizvi-ahmed-2009-pashmina
+      - src.ahmed-2020-pashmina-shawl
+    note: Abu'l Fazl's Ain-i Akbari (1590s) records Kashmir's param-narm shawls and Akbar's patronage; the 18th-19th
+      centuries saw expansive kani and sozni embroidery production centered in Srinagar and Kanihama.
+claims:
+  - text: The raw fibre (pashm) originates as the fine winter undercoat of Changra/Changthangi goats herded by pastoralists
+      in Ladakh and western Tibet, traded down to Kashmiri spinners and weavers.
+    grade: A
+    sources:
+      - src.rizvi-ahmed-2009-pashmina
+      - src.ahmed-2020-pashmina-shawl
+  - text: Kani weavers execute complex twill-tapestry designs (such as the buta/paisley) with tiny eyeless wooden bobbins
+      (tujis/kanis) by reading aloud a coded notation (talim) prepared by a naqqash designer.
+    grade: A
+    sources:
+      - src.rizvi-ahmed-2009-pashmina
+      - src.chishti-2003-indian-textiles-grove
+relations:
+  - kind: patronised-by
+    target: person.akbar
+  - kind: patronised-by
+    target: polity.mughal-empire
+image:
+  commons: File:A shawl weaver's shop, by Bishan Singh, likely Amritsar, ca.1874–75.jpg
+  alt: Gouache painting by Bishan Singh (c. 1874-75) showing Kashmiri shawl weavers, dyers, talim readers and finished
+    shawls
+  credit: Bishan Singh (c. 1874-1875)
+  license: Public domain
+tags:
+  - pashmina
+  - kani-shawl
+  - kashmir
+  - ladakh
+  - textiles
+  - talim
+review:
+  status: draft
+  author: gemini-4-hydrogen-xhigh

@@ -1,0 +1,65 @@
+id: person.muthuswami-dikshitar
+type: person
+kind: art
+names:
+  en: Muthuswami Dikshitar
+  iast: Muttusvāmi Dīkṣitar
+  native: முத்துசுவாமி தீட்சிதர்
+summary: Muthuswami Dikshitar (1775/1776-1835 CE) was a Sanskrit composer and vainika of the Carnatic Trinity, famous
+  for slow-paced, architectonic kritis bearing his signature 'Guruguha'. Educated in Banaras as well as Tiruvarur, he
+  wove sacred temple geography, raga names (raga mudra) and Venkatamakhin's asampurna melakarta system into cycles such
+  as the Navavarana and Panchabhuta Kritis.
+summaries:
+  kids: Muthuswami Dikshitar (1775-1835) was one of the three great composers of Carnatic music, known for stately
+    Sanskrit songs describing temples, deities and ragas.
+  teen: Signing his Sanskrit kritis 'Guruguha', Muthuswami Dikshitar preserved the Venkatamakhin raga system, composed
+    sacred temple cycles and even adapted European band tunes into Carnatic Nottusvara Sahityas.
+region: Tamil Nadu (Tiruvarur, Manali, Ettayapuram) and Varanasi
+location:
+  name: Tiruvarur, Tamil Nadu
+  lat: 10.772
+  lon: 79.637
+datings:
+  - method: documentary
+    range:
+      earliest: 1775
+      latest: 1835
+      precision: year
+      circa: true
+    grade: B
+    label: Lifetime recorded in Sangita Sampradaya Pradarsini (1904) and family records
+    sources:
+      - src.tenijenhuis-2011-kirtana
+      - src.viswanathan-2004-music-in-south-india
+      - src.grove-2001-karnatak-music
+    note: Born at Tiruvarur (sources cite March 1775 or 1776) and died at Ettayapuram in October 1835.
+claims:
+  - text: Dikshitar's family preserved Venkatamakhin's Chaturdandi Prakasika, and his grand-nephew Subbarama Dikshitar later
+      published hundreds of his notated compositions in the Sangita Sampradaya Pradarsini (1904).
+    grade: A
+    sources:
+      - src.tenijenhuis-2011-kirtana
+      - src.subramanian-2006-tanjore-court-madras-music-academy
+  - text: He encoded sacred temple iconography, regional shrine geography and raga names (raga mudra) directly into Sanskrit
+      texts, alongside about three dozen Nottusvara compositions inspired by British brass band melodies.
+    grade: B
+    sources:
+      - src.balachandran-2001-dikshita-geography
+      - src.viswanathan-2004-music-in-south-india
+relations:
+  - kind: influenced
+    target: tradition.carnatic-music
+  - kind: contemporary-of
+    target: person.tyagaraja
+  - kind: contemporary-of
+    target: person.syama-sastri
+wikidata: Q1771067
+tags:
+  - muthuswami-dikshitar
+  - carnatic-music
+  - trinity
+  - sanskrit
+  - guruguha
+review:
+  status: draft
+  author: gemini-4-hydrogen-xhigh

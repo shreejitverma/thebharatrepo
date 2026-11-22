@@ -1,0 +1,70 @@
+id: person.amrita-sher-gil
+type: person
+kind: art
+names:
+  en: Amrita Sher-Gil
+  iast: Amṛtā Śeragila
+  native: अमृता शेरगिल
+summary: Amrita Sher-Gil (1913-1941 CE) was a foundational modernist painter of Hungarian-Indian heritage whose work
+  bridged Parisian Post-Impressionist oil painting with Ajanta murals and Rajput and Pahari miniatures. Trained at the
+  Ecole des Beaux-Arts in Paris before returning to India in 1934, she painted iconic works such as Three Girls,
+  Brahmacharis and Bride's Toilet before her premature death at age twenty-eight.
+summaries:
+  kids: Amrita Sher-Gil (1913-1941) was a brilliant painter trained in Paris who came back to India and painted powerful,
+    colourful portraits of Indian women and village life.
+  teen: Bridging European Post-Impressionism with Ajanta, Pahari and Mughal colour, Amrita Sher-Gil rejected both
+    Victorian realism and the pale Bengal School wash to pioneer Indian modern painting.
+region: Paris, Shimla, Saraya (Gorakhpur) and Lahore
+location:
+  name: Shimla, Himachal Pradesh
+  lat: 31.104
+  lon: 77.173
+datings:
+  - method: documentary
+    range:
+      earliest: 1913
+      latest: 1941
+      precision: year
+      circa: false
+    grade: A
+    label: Documented lifespan (1913-1941 CE)
+    sources:
+      - src.kapur-2003-shergil-grove
+      - src.dalmia-2006-amrita-sher-gil
+    note: Born 30 January 1913 in Budapest to Umrao Singh Sher-Gil and Marie Antoinette Gottesmann; died 5 December 1941 in
+      Lahore.
+claims:
+  - text: Trained in Paris under Lucien Simon and elected an Associate of the Grand Salon at twenty for Young Girls (1932),
+      Sher-Gil returned permanently to India in late 1934 seeking to paint rural Indian life.
+    grade: A
+    sources:
+      - src.kapur-2003-shergil-grove
+      - src.dalmia-2006-amrita-sher-gil
+  - text: Following travels to Ajanta, Ellora, Cochin and Mattancherry in 1936-1937, she forged a flat, richly saturated
+      oil-painting idiom seen in Bride's Toilet, Brahmacharis and South Indian Villagers Going to Market.
+    grade: A
+    sources:
+      - src.kapur-2003-shergil-grove
+      - src.dalmia-2006-amrita-sher-gil
+relations:
+  - kind: related-to
+    target: tradition.ajanta-painting
+  - kind: related-to
+    target: tradition.pahari-painting
+  - kind: influenced
+    target: person.m-f-husain
+wikidata: Q150312
+image:
+  commons: File:Amrita Sher-Gil 2.jpg
+  alt: Portrait photograph of modernist painter Amrita Sher-Gil wearing a spotted sari and bangles
+  credit: Attributed to Umrao Singh Sher-Gil (public domain)
+  license: Public domain
+tags:
+  - amrita-sher-gil
+  - modern-art
+  - oil-painting
+  - lahore
+  - shimla
+review:
+  status: draft
+  author: gemini-4-hydrogen-xhigh

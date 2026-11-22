@@ -1,0 +1,66 @@
+id: tradition.kalamkari
+type: tradition
+kind: art
+names:
+  en: Kalamkari
+  iast: Kalamakārī
+  native: కలంకారీ
+summary: "Kalamkari ('pen-work') denotes the mordant- and resist-dyed cotton textile painting traditions of coastal and southern Andhra Pradesh: hand-drawn narrative temple hangings of Srikalahasti using a bamboo kalam pen, and woodblock-printed, wax-resist textiles of Machilipatnam (Masulipatam). Rooted in early-modern Coromandel dye chemistry, Coromandel painted chintz was a major commodity of early modern global textile trade."
+summaries:
+  kids: Kalamkari is cloth art from Andhra Pradesh made with a bamboo pen and natural dyes like myrobalan, madder root and
+    indigo to paint temple stories and floral vines.
+  teen: Encompassing Srikalahasti's hand-drawn temple cloths and Machilipatnam's block-printed chintz, Kalamkari relies on
+    multistep mordant and resist dyeing with natural botanical extracts.
+region: Andhra Pradesh (Srikalahasti and Machilipatnam)
+location:
+  name: Srikalahasti, Andhra Pradesh
+  lat: 13.75
+  lon: 79.704
+datings:
+  - method: documentary
+    range:
+      earliest: 1600
+      latest: 1850
+      precision: century
+      circa: true
+    grade: B
+    label: Golconda, Coromandel export chintz and surviving temple cloths
+    sources:
+      - src.varadarajan-1982-kalamkari
+      - src.guy-1998-woven-cargoes
+      - src.rosenfield-2020-madder-kalamkari
+    note: Sixteenth- to eighteenth-century Coromandel mordant-dyed cloths survive in Southeast Asian, Japanese and European
+      collections, alongside temple narrative hangings from Srikalahasti.
+claims:
+  - text: Kalamkari relies on tannin pre-treatment (myrobalan and buffalo milk), iron-acetate black, alum mordant dipped in
+      madder root (Rubia/Oldenlandia) for fast reds, and beeswax resist with indigo vats for blues.
+    grade: A
+    sources:
+      - src.varadarajan-1982-kalamkari
+      - src.rosenfield-2020-madder-kalamkari
+  - text: "The two main Andhra centres diverge in technique and patronage: Srikalahasti uses freehand bamboo pens (kalam)
+      for Hindu temple narratives, whereas Machilipatnam combines carved wooden blocks and pens for export and court
+      hangings."
+    grade: A
+    sources:
+      - src.divakala-2017-kalamkari-srikalahasti
+      - src.varadarajan-1982-kalamkari
+relations:
+  - kind: related-to
+    target: tradition.patola
+wikidata: Q17146207
+image:
+  commons: File:KALAMKARI HAND PAINTED CLOTH SRIKALAHASTI AP - panoramio.jpg
+  alt: Hand-painted Srikalahasti kalamkari cotton textile depicting a bird amid madder-red and indigo floral vines
+  credit: Rajaraman Sundaram
+  license: CC BY 3.0
+tags:
+  - kalamkari
+  - srikalahasti
+  - machilipatnam
+  - textiles
+  - natural-dye
+  - coromandel
+review:
+  status: draft
+  author: gemini-4-hydrogen-xhigh

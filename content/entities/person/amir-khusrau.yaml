@@ -1,0 +1,75 @@
+id: person.amir-khusrau
+type: person
+kind: art
+names:
+  en: Amir Khusrau
+  iast: Amīr Khusraw Dihlavī
+  native: अमीर ख़ुसरो / امیر خسرو
+summary: Amir Khusrau (1253-1325 CE) was a prolific Delhi-based Persian and Hindavi poet, Sufi disciple of Nizamuddin
+  Auliya, chronicler and musical theorist who served successive Delhi Sultans including Alauddin Khalji. In Persian
+  works such as I'jaz-i Khusravi and Nuh Sipihr he wrote early accounts of Indian music and cultural synthesis; later
+  oral traditions also credit him with qawwali, tarana, sitar and khayal.
+summaries:
+  kids: Amir Khusrau was a famous poet, scholar and musician in thirteenth- and fourteenth-century Delhi who wrote in
+    Persian and Hindavi and celebrated Indian music.
+  teen: A court poet and Sufi mystic of the Delhi Sultanate (1253-1325 CE), Amir Khusrau praised Indian melody in his
+    Persian writings; later legend also attributes qawwali, khayal, sitar and tabla to him.
+region: Delhi and northern India
+location:
+  name: Delhi
+  lat: 28.591
+  lon: 77.242
+datings:
+  - method: documentary
+    range:
+      earliest: 1253
+      latest: 1325
+      precision: year
+      circa: false
+    grade: A
+    label: Documented lifespan in contemporary Delhi Sultanate and Chishti records
+    sources:
+      - src.katz-2001-amir-khusrau-grove
+      - src.sharma-2005-amir-khusraw
+    note: Born in Patiyali (1253 CE) and died in Delhi (1325 CE), buried beside his pir Nizamuddin Auliya.
+claims:
+  - text: In his Persian treatises Nuh Sipihr and I'jaz-i Khusravi, Khusrau discussed Indian musical excellence, court
+      ensembles and Indo-Persian melodic interaction.
+    grade: A
+    sources:
+      - src.katz-2001-amir-khusrau-grove
+      - src.schofield-2021-emotions-indian-music
+  - text: Musicologists treat later attributions crediting Khusrau with inventing the sitar, tabla and khayal as
+      retrospective hagiographical traditions rather than verified fourteenth-century fact.
+    grade: B
+    sources:
+      - src.katz-2001-amir-khusrau-grove
+      - src.wade-1984-khyal
+debate: Popular and gharana narratives credit Amir Khusrau with inventing the sitar, tabla, qawwali, tarana and khayal.
+  Modern musicologists such as Jonathan Katz and Bonnie Wade note that contemporary fourteenth-century sources attest to
+  his deep musical skill and writings on Indian music, whereas the specific attribution of modern instruments and genres
+  dates from centuries later.
+relations:
+  - kind: contemporary-of
+    target: person.alauddin-khalji
+  - kind: influenced
+    target: tradition.hindustani-classical-music
+  - kind: related-to
+    target: tradition.khayal
+wikidata: Q207817
+image:
+  commons: File:Amir Khusraw (portrait) presents a book of poetry to Ala'uddin Khalji. Khamsa (Quintet) by Amir Khusraw
+    Dihlavi. Balkh, Afghanistan, 1503-1504 (Smithsonian, S1986.213).jpg
+  alt: Early sixteenth-century manuscript miniature depicting Amir Khusrau reading from a volume of poetry
+  credit: Ala'uddin Muhammad al-Harawi (1503-1504)
+  license: Public domain
+tags:
+  - amir-khusrau
+  - delhi-sultanate
+  - hindavi
+  - persian
+  - music
+  - sufi
+review:
+  status: draft
+  author: gemini-4-hydrogen-xhigh

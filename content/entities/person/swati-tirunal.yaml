@@ -1,0 +1,74 @@
+id: person.swati-tirunal
+type: person
+kind: art
+names:
+  en: Swati Tirunal
+  iast: Svāti Tirunāḷ
+  native: സ്വാതി തിരുനാൾ രാമവർമ്മ
+summary: Swati Tirunal Rama Varma (1813-1846 CE) was the Maharaja of Travancore and a major patron and polyglot composer
+  of South Indian classical music. Collaborating with Vadivelu of the Thanjavur Quartet and North Indian court
+  musicians, he left hundreds of compositions spanning Carnatic kritis, varnams and padams alongside Hindustani
+  dhrupads, khayals and thumris under the signature 'Padmanabha'.
+summaries:
+  kids: Swati Tirunal (1813-1846) was a king of Travancore in Kerala who loved music and composed hundreds of songs in
+    both South Indian Carnatic and North Indian Hindustani styles.
+  teen: Ruling Travancore while assembling musicians from Thanjavur and North India, Maharaja Swati Tirunal composed in
+    Sanskrit, Malayalam, Telugu and Hindi and helped introduce the violin and Mohiniyattam to court culture.
+region: Travancore (Thiruvananthapuram, Kerala)
+location:
+  name: Thiruvananthapuram, Kerala
+  lat: 8.483
+  lon: 76.944
+datings:
+  - method: documentary
+    range:
+      earliest: 1813
+      latest: 1846
+      precision: year
+      circa: false
+    grade: A
+    label: Documented Travancore royal dates (1813-1846 CE)
+    sources:
+      - src.iyer-1975-swati-tirunal-music
+      - src.iyer-1971-swati-tirunal-compositions
+    note: Born 16 April 1813 as heir of Travancore ('Garbhasriman'), assumed direct rule in 1829, and died in December 1846.
+claims:
+  - text: Swati Tirunal patronised Vadivelu of the Thanjavur Quartet and helped popularise the European violin in Carnatic
+      accompaniment alongside Mohiniyattam repertoire at Travancore.
+    grade: B
+    sources:
+      - src.iyer-1975-swati-tirunal-music
+      - src.subramanian-2006-tanjore-court-madras-music-academy
+  - text: Musicologists debate the authorship and late-nineteenth-century editing of parts of the corpus attributed to him,
+      while confirming his prolific multilingual court output (Navaratri Kritis, ragamalikas, tillanas and Hindi
+      compositions).
+    grade: C
+    sources:
+      - src.iyer-1971-swati-tirunal-compositions
+      - src.subramanian-2006-tanjore-court-madras-music-academy
+debate: Later twentieth-century musicological debates questioned whether all compositions published under Swati
+  Tirunal's 'Padmanabha' signature were personally composed by the king or partly shaped and tuned by court musicians
+  such as the Thanjavur Quartet and editors like Harikesanallur Muthiah Bhagavatar; scholars such as S.
+  Venkitasubramonia Iyer defend the core corpus from Travancore palace manuscripts.
+relations:
+  - kind: influenced
+    target: tradition.carnatic-music
+  - kind: patronised
+    target: tradition.mohiniyattam
+  - kind: contemporary-of
+    target: person.tyagaraja
+wikidata: Q2283372
+image:
+  commons: File:Swathi Thirunal Rama Varma.jpg
+  alt: Royal portrait painting of Maharaja Swati Tirunal Rama Varma of Travancore
+  credit: Unknown nineteenth-century artist (public domain)
+  license: Public domain
+tags:
+  - swati-tirunal
+  - travancore
+  - carnatic-music
+  - kerala
+  - padmanabha
+review:
+  status: draft
+  author: gemini-4-hydrogen-xhigh

@@ -1,0 +1,71 @@
+id: tradition.manipuri-dance
+type: tradition
+kind: art
+names:
+  en: Manipuri Dance
+  iast: Maṇipurī
+  native: মণিপুরী জগোই
+summary: Manipuri dance (Jagoi) is the classical devotional dance tradition of Manipur in northeastern India, noted for
+  gentle, continuous circular motion, restrained facial expression and elaborate cylindrical kumil/potloi skirts.
+  Closely bound to Meitei Vaishnavism, its celebrated Ras Lila cycles were systematised in the eighteenth century under
+  King Bhagyachandra alongside older Lai Haraoba ritual dances.
+summaries:
+  kids: Manipuri is a gentle, flowing classical dance from Manipur where dancers wear bell-shaped skirts and glide
+    gracefully to the rhythm of the pung drum.
+  teen: Combining older Meitei ritual traditions such as Lai Haraoba with eighteenth-century Gaudiya Vaishnava Ras Lila
+    choreography under King Bhagyachandra, Manipuri is marked by fluid movement and devotional restraint.
+region: Manipur, northeastern India
+location:
+  name: Imphal, Manipur
+  lat: 24.817
+  lon: 93.937
+datings:
+  - method: documentary
+    range:
+      earliest: 1764
+      latest: 1798
+      precision: decade
+      circa: true
+    grade: B
+    label: Eighteenth-century Ras Lila synthesis under King Bhagyachandra
+    sources:
+      - src.doshi-1989-dances-of-manipur
+      - src.bandopadhay-2010-manipuri-dance
+    note: Manipuri chronicles and oral history credit Maharaja Bhagyachandra (Ching-Thang Khomba, r. late 18th century) with
+      codifying the Ras Lila dances and the distinctive potloi costume.
+claims:
+  - text: Manipuri classical repertoire integrates older Meitei ritual dances (such as Lai Haraoba) with eighteenth-century
+      Vaishnava Ras Lila and Sankirtana traditions.
+    grade: B
+    sources:
+      - src.doshi-1989-dances-of-manipur
+      - src.bandopadhay-2010-manipuri-dance
+  - text: Accompanied by the pung (two-headed barrel drum) and pena, the style avoids sharp foot stamping in favour of
+      suspended, undulating leg and wrist movements.
+    grade: A
+    sources:
+      - src.doshi-1989-dances-of-manipur
+      - src.bandopadhay-2010-manipuri-dance
+relations:
+  - kind: related-to
+    target: person.chaitanya-mahaprabhu
+  - kind: related-to
+    target: text.gita-govinda
+  - kind: related-to
+    target: tradition.sattriya
+wikidata: Q511116
+image:
+  commons: File:Rasa Lila in Manipuri dance style.jpg
+  alt: Performers in embroidered cylindrical potloi skirts and Krishna crown staging Manipuri Ras Lila
+  credit: Matsukin
+  license: CC BY 2.0
+tags:
+  - manipuri
+  - dance
+  - manipur
+  - ras-lila
+  - jagoi
+  - vaishnavism
+review:
+  status: draft
+  author: gemini-4-hydrogen-xhigh

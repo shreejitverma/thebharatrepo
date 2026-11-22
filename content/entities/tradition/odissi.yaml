@@ -1,0 +1,86 @@
+id: tradition.odissi
+type: tradition
+kind: art
+names:
+  en: Odissi
+  iast: Oḍiśī
+  native: ଓଡ଼ିଶୀ
+summary: Odissi is the classical dance tradition of Odisha, characterised by the basic square stance (chauk), the
+  three-bend posture (tribhanga) and lyric abhinaya often set to Jayadeva's Gita Govinda. Drawing on the hereditary
+  mahari ritual tradition of the Jagannath temple at Puri, boy performers (gotipuas) and sculpted temple reliefs, its
+  modern stage grammar was codified in the 1950s.
+summaries:
+  kids: Odissi is a graceful classical dance from Odisha whose curved three-bend poses resemble ancient stone sculptures
+    on Odisha's temples.
+  teen: Reconstructed in the mid-twentieth century from Odisha's temple mahari and gotipua traditions, temple sculpture
+    and Sanskrit treatises, Odissi pairs sculptural geometry with lyrical poetry such as the Gita Govinda.
+region: Odisha (Puri, Bhubaneswar, Cuttack)
+location:
+  name: Puri, Odisha
+  lat: 19.813
+  lon: 85.831
+datings:
+  - method: art-historical
+    range:
+      earliest: 1100
+      latest: 1900
+      precision: century
+      circa: true
+    grade: B
+    label: Medieval temple dance iconography, mahari and gotipua antecedents
+    sources:
+      - src.kothari-1990-odissi
+      - src.pathy-2007-rethinking-odissi
+    note: Temple reliefs at Konark and Bhubaneswar, Jagannath temple inscriptions and living mahari and gotipua lineages
+      attest to Odisha's dance traditions across the second millennium CE.
+  - method: documentary
+    range:
+      earliest: 1950
+      latest: 1965
+      precision: decade
+      circa: true
+    grade: A
+    label: Mid-twentieth-century codification by the Jayantika collective
+    sources:
+      - src.pathy-2007-rethinking-odissi
+      - src.lopez-y-royo-2007-reinvention-odissi
+    note: Founded in 1958, the Jayantika group of gurus and scholars standardised the modern Odissi repertoire, technique
+      and Sanskrit nomenclature.
+claims:
+  - text: Modern Odissi was codified in the late 1950s by gurus including Pankaj Charan Das, Kelucharan Mohapatra and Deba
+      Prasad Das alongside scholars in the Jayantika collective.
+    grade: A
+    sources:
+      - src.pathy-2007-rethinking-odissi
+      - src.kothari-1990-odissi
+  - text: Its movement grammar synthesises hereditary mahari and gotipua practice with sculptural poses from Odishan temples
+      and Sanskrit treatises such as the Abhinaya Chandrika.
+    grade: B
+    sources:
+      - src.lopez-y-royo-2007-reinvention-odissi
+      - src.kothari-1990-odissi
+relations:
+  - kind: related-to
+    target: text.gita-govinda
+  - kind: related-to
+    target: person.jayadeva
+  - kind: related-to
+    target: text.natyashastra
+  - kind: related-to
+    target: site.konark-sun-temple
+wikidata: Q2014687
+image:
+  commons: File:Abhinaya.jpg
+  alt: Odissi dancer performing abhinaya in traditional silk costume, silver belt and floral crown
+  credit: Melolagnia28192
+  license: CC BY-SA 4.0
+tags:
+  - odissi
+  - dance
+  - odisha
+  - mahari
+  - gotipua
+  - tribhanga
+review:
+  status: draft
+  author: gemini-4-hydrogen-xhigh
