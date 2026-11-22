@@ -34,6 +34,12 @@ describe('sameTitle', () => {
     expect(sameTitle('Ajanta Caves - UNESCO World Heritage Centre', 'Ellora Caves - UNESCO World Heritage Centre')).toBe(false);
     expect(sameTitle('Early History of India', 'Early History of Bengal')).toBe(false);
   });
+  it('keeps subject words such as cultural and world significant inside a title', () => {
+    expect(sameTitle('A Cultural History of India', 'A Political History of India')).toBe(false);
+    expect(sameTitle('Cultural History of Ancient India', 'Economic History of Ancient India')).toBe(false);
+    expect(sameTitle('World Religions of India', 'Folk Religions of India')).toBe(false);
+    expect(pageMatchesTitle('A Cultural History of India', 'A Political History of India')).toBe(false);
+  });
   it('rejects a short title whose words are scattered through a different work', () => {
     expect(sameTitle('A History of India', 'History of the Archaeological Survey of India')).toBe(false);
     expect(sameTitle('A History of India', 'A History of India, Fourth Edition')).toBe(true);

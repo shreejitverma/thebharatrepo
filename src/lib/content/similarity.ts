@@ -25,7 +25,6 @@ export function normalizeTitle(s: string): string[] {
     .toLowerCase()
     .replace(/<[^>]+>/g, ' ')
     .replace(/&(?:#\d+|#x[0-9a-f]+|[a-z]+);/g, ' ')
-    .replace(/\[[^\]]*\]/g, ' ')
     .replace(/[^a-z0-9\s]/g, ' ')
     .replace(/isation/g, 'ization')
     .replace(/colour/g, 'color')
@@ -57,9 +56,9 @@ function nameNumeralsAgree(a: string, b: string): boolean {
   return A.size === B.size && subset(A, B);
 }
 
-function sets(a: string, b: string, words: (t: string) => string[] = normalizeTitle) {
-  const A = new Set(words(a));
-  const B = new Set(words(b));
+function sets(a: string, b: string) {
+  const A = new Set(normalizeTitle(a));
+  const B = new Set(normalizeTitle(b));
   let inter = 0;
   for (const t of A) if (B.has(t)) inter++;
   return { A, B, inter };
@@ -93,11 +92,22 @@ function mainTitle(t: string): string {
   return t.replace(/\([^)]*\)|\[[^\]]*\]/g, ' ').split(/:|\s[-–]\s|\.\s|,\s/)[0];
 }
 
-const BOILERPLATE = new Set(['unesco', 'world', 'heritage', 'centre', 'center', 'list', 'intangible', 'cultural', 'site', 'official', 'website', 'home', 'page']);
+const SITE_WORDS = new Set(['unesco', 'world', 'heritage', 'centre', 'center', 'list', 'intangible', 'cultural', 'site', 'official', 'website', 'home', 'page', 'google', 'book', 'books', 'jstor']);
 
-/** Significant words that name the subject: site and list boilerplate removed. */
-function subjectWords(t: string): string[] {
-  return normalizeTitle(t).filter((w) => !BOILERPLATE.has(w));
+/**
+ * A title without leading or trailing site segments: "Ajanta Caves - UNESCO World Heritage Centre" is
+ * "Ajanta Caves". Only whole segments made of site words go; words inside a title ("A Cultural History
+ * of India") always count.
+ */
+function withoutSiteSegments(t: string): string {
+  const parts = t.split(/\s+[-–|:]\s+/);
+  const isSite = (part: string) => {
+    const words = normalizeTitle(part);
+    return words.length > 0 && words.every((w) => SITE_WORDS.has(w));
+  };
+  while (parts.length > 1 && isSite(parts[parts.length - 1])) parts.pop();
+  while (parts.length > 1 && isSite(parts[0])) parts.shift();
+  return parts.join(' - ');
 }
 
 /** The words of `small` appear in `big` in the same order as one contiguous run. */
@@ -107,14 +117,14 @@ function containsRun(small: string[], big: string[]): boolean {
 }
 
 /**
- * Subject-word overlap of two titles. A title whose subject words are a strict subset of the other's
+ * Word overlap of two titles. A title whose words are a strict subset of the other's
  * counts only with at least two words, and two or three must form one contiguous run there, so
  * "A History of India" is not "History of the Archaeological Survey of India". Four or more words
  * all present are too specific to coincide.
  */
-function subjectOverlap(a: string, b: string): { A: Set<string>; B: Set<string>; inter: number; subsetOk: boolean } {
-  const { A, B, inter } = sets(a, b, subjectWords);
-  const dedupe = (t: string) => [...new Set(subjectWords(t))];
+function overlap(a: string, b: string): { A: Set<string>; B: Set<string>; inter: number; subsetOk: boolean } {
+  const { A, B, inter } = sets(a, b);
+  const dedupe = (t: string) => [...new Set(normalizeTitle(t))];
   const [small, big] = A.size <= B.size ? [dedupe(a), dedupe(b)] : [dedupe(b), dedupe(a)];
   const strictSubset = A.size !== B.size && inter === Math.min(A.size, B.size);
   return { A, B, inter, subsetOk: !strictSubset || small.length >= 4 || (small.length >= 2 && containsRun(small, big)) };
@@ -130,11 +140,11 @@ function sameWord(x: string, y: string): boolean {
 /**
  * Sibling titles about different subjects: the main titles share a word, and each swaps in one or two
  * words the other lacks ("Ajanta Caves" vs "Ellora Caves", "Early History of India" vs "Early History of
- * Bengal"). Site boilerplate and numerals (checked separately) are ignored; a looser paraphrase with
- * more differing words falls through to the overlap test.
+ * Bengal"). Numerals are checked separately; a looser paraphrase with more differing words falls
+ * through to the overlap test.
  */
 function differentSubjects(a: string, b: string): boolean {
-  const words = (t: string) => normalizeTitle(mainTitle(t)).filter((w) => !BOILERPLATE.has(w) && numeral(w) === null);
+  const words = (t: string) => normalizeTitle(mainTitle(t)).filter((w) => numeral(w) === null);
   const A = words(a);
   const B = words(b);
   const missing = (xs: string[], ys: string[]) => xs.filter((x) => !ys.some((y) => sameWord(x, y)));
@@ -144,7 +154,9 @@ function differentSubjects(a: string, b: string): boolean {
   return shares && onlyA.length >= 1 && onlyA.length <= 2 && onlyB.length >= 1 && onlyB.length <= 2;
 }
 
-export function sameTitle(cited: string, found: string): boolean {
+export function sameTitle(citedTitle: string, foundTitle: string): boolean {
+  const cited = withoutSiteSegments(citedTitle);
+  const found = withoutSiteSegments(foundTitle);
   if (!titleNumeralsAgree(cited, found)) return false;
   if (exact(cited, found)) return true;
   // A cited main title matches a record that adds a subtitle (and vice versa), if it is at least two words.
@@ -158,7 +170,7 @@ export function sameTitle(cited: string, found: string): boolean {
   // A record that only adds a series name in parentheses ("The Jains (Library of Religious Beliefs)").
   if (exact(cited.replace(/\([^)]*\)/g, ' '), found.replace(/\([^)]*\)/g, ' '))) return true;
   if (differentSubjects(cited, found)) return false;
-  const { A, B, inter, subsetOk } = subjectOverlap(cited, found);
+  const { A, B, inter, subsetOk } = overlap(cited, found);
   if (Math.min(A.size, B.size) < 2 || inter < 2 || !subsetOk) return false;
   return inter / Math.min(A.size, B.size) >= 0.6 && inter / (A.size + B.size - inter) >= 0.4;
 }
@@ -167,11 +179,13 @@ export function sameTitle(cited: string, found: string): boolean {
  * Web page titles carry site names and section labels, so require the cited title's words to be
  * present (high overlap, at least two shared words) without a Jaccard floor.
  */
-export function pageMatchesTitle(cited: string, pageText: string): boolean {
+export function pageMatchesTitle(citedTitle: string, pageTitle: string): boolean {
+  const cited = withoutSiteSegments(citedTitle);
+  const pageText = withoutSiteSegments(pageTitle);
   if (exact(cited, pageText)) return true;
   if (!subset(numerals(cited), numerals(pageText))) return false;
   if (differentSubjects(cited, pageText)) return false;
-  const { A, inter, subsetOk } = subjectOverlap(cited, pageText);
+  const { A, inter, subsetOk } = overlap(cited, pageText);
   if (A.size === 0 || !subsetOk) return false;
   return inter >= Math.min(2, A.size) && inter / A.size >= 0.6;
 }
