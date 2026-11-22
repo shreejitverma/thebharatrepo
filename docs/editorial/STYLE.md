@@ -361,5 +361,7 @@ Rules:
 
 - `names.native` is tagged by its script: Devanagari as Sanskrit (`sa-Deva`) for entities placed before 1200 CE and as Hindi (`hi`) after, Tamil as `ta`, Kannada as `kn`, Perso-Arabic as `fa` or `ar`, and so on.
 - When the default is wrong, set `names.nativeLang` to a BCP 47 tag, for example `nativeLang: mr` for a Marathi name in Devanagari.
+  Tag the language the name is written in, not the entity's era: a modern Hindi place name for an ancient site is `hi` (the default would call it Sanskrit), and a Sanskrit-form name of a later figure is `sa-Deva`.
+  Others in use: `awa` (Awadhi), `pi` (Pali), `as` (Assamese in the Bengali-Assamese script), and for Perso-Arabic script `ur` (Urdu), `sd` (Sindhi) and `ks` (Kashmiri), where the default would be `fa` or `ar`.
 - `names.iast` is tagged as the romanisation of the same language (`sa-Latn`, `ta-Latn`): IAST for Sanskrit, ISO 15919 conventions for Dravidian names (`Tirukkuṟaḷ`).
 - `content:validate` prints a warning with the number of entities missing `names.iast` or `names.native`; it is not an error, but new entities should carry both where they exist.
