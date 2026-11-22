@@ -27,7 +27,7 @@ datings:
       latest: "1800 BCE"
       precision: century
       circa: true
-    grade: A
+    grade: B
     label: Period I Kayatha Chalcolithic radiocarbon chronology
     sources:
       - src.misra-2001-prehistoric-colonization-india

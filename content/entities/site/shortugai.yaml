@@ -28,7 +28,7 @@ datings:
       latest: "1800 BCE"
       precision: century
       circa: true
-    grade: A
+    grade: B
     label: Mature Harappan colony and later levels
     sources:
       - src.possehl-2002-indus-civilization

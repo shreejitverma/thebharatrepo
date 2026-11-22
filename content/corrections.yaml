@@ -2850,3 +2850,18 @@
   sources:
     - { id: src.misra-2001-prehistoric-colonization-india, locator: "p. 515" }
     - src.coningham-2015-archaeology-south-asia
+- date: 2026-11-22
+  target: site.shortugai
+  before: "The radiocarbon dating of about 2300 to 1800 BCE was graded A."
+  after: "The same dating is graded B."
+  reason: "The style guide reserves grade A for directly attested evidence such as a calibrated radiocarbon series from a stratified excavation. The period-by-period series for Shortugai could not be confirmed in the cited syntheses, so the grade follows that definition."
+  sources:
+    - src.possehl-2002-indus-civilization
+    - src.kenoyer-1998-ancient-cities-indus
+- date: 2026-11-22
+  target: site.kayatha
+  before: "The radiocarbon dating of about 2450 to 1800 BCE was graded A."
+  after: "The same dating is graded B."
+  reason: "The style guide reserves grade A for directly attested evidence such as a calibrated radiocarbon series from a stratified excavation. Misra (2001) reports radiocarbon dates without a confirmed calibrated series, and the earlier start could not be checked, so the grade follows that definition."
+  sources:
+    - { id: src.misra-2001-prehistoric-colonization-india, locator: "p. 515" }
