@@ -1,0 +1,11 @@
+import { chromium } from '@playwright/test';
+const url = process.argv[2];
+const b = await chromium.launch();
+const p = await b.newPage({ viewport: { width: 412, height: 823 } });
+await p.goto(url, { waitUntil: 'networkidle' });
+await p.locator('.kc-map-svg').waitFor();
+const r = await p.evaluate(() => performance.getEntriesByType('resource').filter((e) => e.initiatorType === 'script' || e.name.endsWith('.js')).map((e) => ({ n: e.name.split('/').pop(), t: e.encodedBodySize })));
+const total = r.reduce((a, e) => a + e.t, 0);
+const big = r.sort((a, c) => c.t - a.t).slice(0, 4);
+console.log(`JS transferred: ${(total / 1024).toFixed(1)} KB`, JSON.stringify(big));
+await b.close();

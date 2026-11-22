@@ -1,4 +1,5 @@
 import { describe, expect, it } from 'vitest';
+import basemap from '@/data/basemap/south-asia.json';
 import { PRESENT_YEAR } from '@/lib/time';
 import { AXIS_START, SEGMENTS, yearToUnit } from '@/lib/time/scale';
 import { containsPoint, project, viewBounds } from '@/lib/geo/projection';
@@ -9,6 +10,7 @@ import {
   MIN_SPAN,
   REGIONS,
   clampTime,
+  maxSpanFor,
   datedWithin,
   entriesAt,
   extentsAt,
@@ -169,7 +171,52 @@ describe('regions', () => {
     expect(v.span).toBe(MIN_SPAN);
     const panned = panRegion({ preset: DEFAULT_REGION }, size, 100, 0);
     expect(panned.lon).toBeLessThan(base.lon);
-    expect(panRegion(panned, size, -1e7, -1e7)).toMatchObject({ lon: MAP_LIMITS.east, lat: MAP_LIMITS.south });
+    const corner = viewBounds(panRegion(panned, size, -1e7, -1e7), size);
+    expect(corner.east).toBeCloseTo(MAP_LIMITS.east, 9);
+    expect(corner.south).toBeCloseTo(MAP_LIMITS.south, 9);
+  });
+});
+
+describe('the viewport never leaves the basemap', () => {
+  // The oracle is the basemap file itself: its bounds are where its land, lakes and rivers stop.
+  const limits = basemap.bounds;
+  const EPS = 1e-6;
+  const inside = (v: { lon: number; lat: number; span: number }, s: { width: number; height: number }) => {
+    const b = viewBounds(v, s);
+    return b.west >= limits.west - EPS && b.east <= limits.east + EPS && b.south >= limits.south - EPS && b.north <= limits.north + EPS;
+  };
+  // Desktop and tablet canvases, and portrait phones down to a 320 px screen (the canvas is at least 280 px wide).
+  const sizes = [size, { width: 1000, height: 620 }, { width: 1400, height: 580 }, { width: 2400, height: 580 }, { width: 600, height: 400 }, { width: 341, height: 358 }, { width: 288, height: 302 }, { width: 280, height: 294 }];
+
+  it('for any centre, span and canvas', () => {
+    for (const s of sizes) {
+      for (let lon = -60; lon <= 200; lon += 13) {
+        for (let lat = -80; lat <= 85; lat += 11) {
+          for (const span of [0.5, 1.5, 7, 30, 60, 88, 95, 120, 140, 500]) {
+            const v = resolveRegion({ lon, lat, span }, s);
+            expect(inside(v, s), `${lon},${lat},${span} on ${s.width}x${s.height}`).toBe(true);
+            expect(v.span).toBeLessThanOrEqual(maxSpanFor(s) + EPS);
+          }
+        }
+      }
+    }
+  });
+  it('for every named region, and after zooming fully out or panning far in any direction', () => {
+    for (const s of sizes) {
+      for (const r of REGIONS) expect(inside(resolveRegion({ preset: r.id }, s), s), `${r.id} on ${s.width}x${s.height}`).toBe(true);
+      let v = resolveRegion({ preset: 'wide' }, s);
+      for (let i = 0; i < 8; i++) v = zoomRegion(v, s, 2);
+      expect(v.span).toBeCloseTo(maxSpanFor(s), 9);
+      expect(inside(v, s)).toBe(true);
+      for (const [dx, dy] of [[1e6, 0], [-1e6, 0], [0, 1e6], [0, -1e6], [1e6, 1e6], [-1e6, -1e6]]) expect(inside(panRegion({ preset: 'south' }, s, dx, dy), s)).toBe(true);
+    }
+  });
+  it('while the widest view is as wide as the basemap allows on that canvas', () => {
+    for (const s of sizes) {
+      const b = viewBounds(resolveRegion({ lon: 70, lat: 20, span: 1e9 }, s), s);
+      // Filled edge to edge on at least one axis: the clamp never leaves a reader more zoomed in than it must.
+      expect(Math.abs(b.east - b.west - Math.min(MAX_SPAN, limits.east - limits.west)) < 1e-6 || Math.abs(b.north - limits.north) + Math.abs(b.south - limits.south) < 1e-6).toBe(true);
+    }
   });
 });
 

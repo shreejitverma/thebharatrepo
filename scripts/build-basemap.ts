@@ -26,8 +26,11 @@ import { mercatorY, type Bounds } from '../src/lib/geo/projection';
 
 type Pt = [number, number];
 
-/** Everything the map can ever show. */
-const BOUNDS: Bounds = { west: 24, east: 112, south: -4, north: 48 };
+/**
+ * Everything the map can ever show, from Greece to Japan and from northern Australia to southern Siberia, so the
+ * places of the archive's neighbours sit well inside it. The Map view clamps its viewport to these bounds.
+ */
+const BOUNDS: Bounds = { west: 0, east: 140, south: -20, north: 62 };
 /** The subcontinent, where readers zoom in and detail matters. */
 const CORE: Bounds = { west: 58, east: 100, south: 3, north: 40 };
 /** Simplification tolerances and minimum ring areas, in degrees and square degrees. */

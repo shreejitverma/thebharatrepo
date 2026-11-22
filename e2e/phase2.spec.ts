@@ -1,5 +1,7 @@
 import { expect, test, type APIRequestContext, type Page } from '@playwright/test';
 import AxeBuilder from '@axe-core/playwright';
+import fs from 'node:fs';
+import path from 'node:path';
 
 interface ArchiveEntity {
   id: string;
@@ -472,6 +474,39 @@ test.describe('Map view', () => {
     });
     expect(id).not.toBeNull();
     await expect(page).toHaveURL(new RegExp(`id=${id!.replace('.', '\\.')}`));
+  });
+
+  test('on a portrait phone the wide view and the widest zoom show only the basemap, never past its edges', async ({ page, isMobile }) => {
+    test.skip(!isMobile, 'portrait phones are the tallest canvases');
+    // The generated basemap states the rectangle its land, lakes and rivers cover, in its own projected units.
+    const { bounds, scale } = JSON.parse(fs.readFileSync(path.join(__dirname, '../src/data/basemap/south-asia.json'), 'utf8')) as { bounds: { west: number; east: number; south: number; north: number }; scale: number };
+    /** How far each edge of the basemap rectangle lies outside the canvas, in pixels; negative means a gap. */
+    const margins = () =>
+      page.locator('.kc-map-svg').evaluate(
+        (svg, { bounds, scale }) => {
+          const m = svg.querySelector<SVGGElement>('.kc-map-base')!.transform.baseVal.consolidate()!.matrix;
+          const merc = (lat: number) => (Math.log(Math.tan(Math.PI / 4 + (lat * Math.PI) / 360)) * 180) / Math.PI;
+          const nw = new DOMPoint(bounds.west * scale, -merc(bounds.north) * scale).matrixTransform(m);
+          const se = new DOMPoint(bounds.east * scale, -merc(bounds.south) * scale).matrixTransform(m);
+          const box = (svg as SVGSVGElement).viewBox.baseVal;
+          return { west: -nw.x, north: -nw.y, east: se.x - box.width, south: se.y - box.height };
+        },
+        { bounds, scale },
+      );
+    const coversCanvas = async () => {
+      for (const [edge, px] of Object.entries(await margins())) expect(px, `the basemap's ${edge} edge`).toBeGreaterThanOrEqual(-1);
+    };
+
+    await page.goto('/kaalchakra?view=map&region=wide');
+    await expect(page.locator('.kc-map-svg')).toBeVisible();
+    await coversCanvas();
+    const zoomOut = page.getByRole('button', { name: 'Zoom out' });
+    for (let i = 0; i < 8 && (await zoomOut.isEnabled()); i++) await zoomOut.click();
+    await expect(zoomOut).toBeDisabled();
+    await coversCanvas();
+    // At the widest zoom the view fills the basemap on at least one axis, so zooming out stops only where it must.
+    const m = await margins();
+    expect(Math.min(m.west + m.east, m.north + m.south)).toBeLessThan(2);
   });
 
   for (const scheme of ['light', 'dark'] as const) {

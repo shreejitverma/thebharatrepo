@@ -7,19 +7,19 @@ import { KIND_LABELS } from '@/lib/content/labels';
 import type { KcItem } from '@/lib/content/kaalchakra';
 import type { Lens } from '@/lib/content/lens';
 import { clusterPoints, type Cluster } from '@/lib/geo/cluster';
-import { boundsOf, clampView, fitBounds, kmPerPixel, mercatorY, project, viewBounds, type MapView as View, type Size } from '@/lib/geo/projection';
+import { boundsOf, fitBounds, kmPerPixel, mercatorY, project, viewBounds, type MapView as View, type Size } from '@/lib/geo/projection';
 import { formatInCalendar, type CalendarSystem } from '@/lib/time';
 import { segmentOf, unitToYear, yearToUnit } from '@/lib/time/scale';
 import {
-  MAP_LIMITS,
-  MAX_SPAN,
   MIN_SPAN,
   REGIONS,
   TIME_ZOOMS,
   TIME_ZOOM_LABELS,
   clampTime,
+  clampToMap,
   extentsAt,
   isPreset,
+  maxSpanFor,
   panRegion,
   stepTime,
   timeWindow,
@@ -426,7 +426,7 @@ export default function MapView({ items, extentItems, unplaced, lens, cal, selec
     if (!viaKeyboard && drag.current?.moved) return;
     const b = boundsOf(c.ids.map((id) => layout.byId.get(id)!.item.place!));
     if (b) {
-      const fitted = clampView(fitBounds(b, size, Math.min(70, width / 5)), MAP_LIMITS, MIN_SPAN, MAX_SPAN);
+      const fitted = clampToMap(fitBounds(b, size, Math.min(70, width / 5)), size);
       const p = project(fitted, size, b.west, b.south);
       const q = project(fitted, size, b.east, b.north);
       // Zoom in only when that would pull the members apart; places a few hundred metres apart never separate.
@@ -620,7 +620,7 @@ export default function MapView({ items, extentItems, unplaced, lens, cal, selec
         <button type="button" className="btn kc-map-btn" onClick={() => commit(zoomRegion(region, size, 0.5))} aria-label="Zoom in" disabled={view.span <= MIN_SPAN}>
           +
         </button>
-        <button type="button" className="btn kc-map-btn" onClick={() => commit(zoomRegion(region, size, 2))} aria-label="Zoom out" disabled={view.span >= MAX_SPAN}>
+        <button type="button" className="btn kc-map-btn" onClick={() => commit(zoomRegion(region, size, 2))} aria-label="Zoom out" disabled={view.span >= maxSpanFor(size)}>
           -
         </button>
         <span className="kc-map-hint">
@@ -642,7 +642,7 @@ export default function MapView({ items, extentItems, unplaced, lens, cal, selec
           onLostPointerCapture={onLostPointerCapture}
         >
           <rect width={width} height={height} fill="var(--map-sea)" />
-          <g aria-hidden="true" transform={`translate(${(width / 2 - view.lon * k).toFixed(2)} ${(height / 2 + mercatorY(view.lat) * k).toFixed(2)}) scale(${(k / basemap.scale).toFixed(6)})`}>
+          <g className="kc-map-base" aria-hidden="true" transform={`translate(${(width / 2 - view.lon * k).toFixed(2)} ${(height / 2 + mercatorY(view.lat) * k).toFixed(2)}) scale(${(k / basemap.scale).toFixed(6)})`}>
             <path d={basemap.land} fill="var(--map-land)" />
             <path d={basemap.coast} fill="none" stroke="var(--map-coast)" strokeWidth={1} vectorEffect="non-scaling-stroke" strokeLinejoin="round" />
             <path d={basemap.lakes} fill="var(--map-sea)" />

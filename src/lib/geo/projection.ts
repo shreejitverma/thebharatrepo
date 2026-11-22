@@ -3,7 +3,7 @@
  *
  * The projection is spherical Mercator, expressed in degrees on both axes so that one projected unit
  * is one degree of longitude everywhere. It is conformal, which keeps coastlines and river courses in
- * their familiar shapes between the equator and about 48 N, the band the basemap covers. Mercator
+ * their familiar shapes across the band the basemap covers, from 20 S to 62 N. Mercator
  * stretches distance with latitude, so the view draws a scale bar computed at the centre latitude
  * instead of implying one scale for the whole canvas.
  *
@@ -103,15 +103,27 @@ export function fitBounds(b: Bounds, size: Size, padding = 0): MapView {
   return { lon: (b.west + b.east) / 2, lat: inverseMercatorY((yN + yS) / 2), span: size.width / k };
 }
 
+const clamp = (v: number, lo: number, hi: number) => Math.min(hi, Math.max(lo, v));
+
+/** The widest span at which a canvas of this size shows nothing outside `limits`, on either axis. */
+export function maxSpanWithin(limits: Bounds, size: Size): number {
+  return Math.min(limits.east - limits.west, ((mercatorY(limits.north) - mercatorY(limits.south)) * size.width) / size.height);
+}
+
 /**
- * Keeps a view usable: span within [minSpan, maxSpan] and the centre inside `limits`, so the reader
- * can never pan the basemap entirely off the canvas.
+ * Keeps a view inside `limits` on a canvas of this size: the span within [minSpan, maxSpan] and no wider than the
+ * limits allow, and the centre moved just far enough that no edge of the canvas shows anything outside them.
  */
-export function clampView(view: MapView, limits: Bounds, minSpan: number, maxSpan: number): MapView {
+export function clampView(view: MapView, size: Size, limits: Bounds, minSpan: number, maxSpan: number): MapView {
+  const span = Math.min(maxSpan, maxSpanWithin(limits, size), Math.max(minSpan, view.span));
+  const halfWidth = span / 2;
+  const halfHeight = (span * size.height) / size.width / 2;
+  const y = mercatorY(view.lat);
+  const clampedY = clamp(y, mercatorY(limits.south) + halfHeight, mercatorY(limits.north) - halfHeight);
   return {
-    lon: Math.min(limits.east, Math.max(limits.west, view.lon)),
-    lat: Math.min(limits.north, Math.max(limits.south, view.lat)),
-    span: Math.min(maxSpan, Math.max(minSpan, view.span)),
+    lon: clamp(view.lon, limits.west + halfWidth, limits.east - halfWidth),
+    lat: clampedY === y ? view.lat : inverseMercatorY(clampedY),
+    span,
   };
 }
 

@@ -7,7 +7,7 @@ import type { KcExtent, KcItem, KcPlace } from '@/lib/content/kaalchakra';
 import type { Lens } from '@/lib/content/lens';
 import { PRESENT_YEAR } from '@/lib/time';
 import { AXIS_START, SEGMENTS, SEGMENT_STARTS, segmentOf, unitToYear, yearToUnit } from '@/lib/time/scale';
-import { clampView, containsPoint, fitBounds, panView, viewBounds, zoomView, type Bounds, type MapView, type Size } from '@/lib/geo/projection';
+import { clampView, containsPoint, fitBounds, maxSpanWithin, panView, viewBounds, zoomView, type Bounds, type MapView, type Size } from '@/lib/geo/projection';
 
 /* ---------- Time ---------- */
 
@@ -99,11 +99,21 @@ export function extentsAt(item: Pick<KcItem, 'extents'>, lens: Lens, t: number |
 
 /* ---------- Space ---------- */
 
-/** The basemap extent; the view centre is kept inside it. */
-export const MAP_LIMITS: Bounds = { west: 24, east: 112, south: -4, north: 48 };
-/** Closest and widest zoom, in degrees of longitude across the canvas. */
+/** The basemap extent (`bounds` in src/data/basemap/south-asia.json); no view ever shows anything outside it. */
+export const MAP_LIMITS: Bounds = { west: 0, east: 140, south: -20, north: 62 };
+/** Closest and widest zoom, in degrees of longitude across the canvas. A tall canvas is held narrower; see maxSpanFor. */
 export const MIN_SPAN = 1.5;
 export const MAX_SPAN = 120;
+
+/** The widest view on a canvas of this size that still shows only the basemap. */
+export function maxSpanFor(size: Size): number {
+  return Math.min(MAX_SPAN, maxSpanWithin(MAP_LIMITS, size));
+}
+
+/** A view kept within the zoom limits and inside the basemap on a canvas of this size. */
+export function clampToMap(view: MapView, size: Size): MapView {
+  return clampView(view, size, MAP_LIMITS, MIN_SPAN, MAX_SPAN);
+}
 
 export const REGIONS = [
   { id: 'subcontinent', label: 'Subcontinent', bounds: { west: 60, east: 98, south: 5, north: 38 } },
@@ -143,7 +153,12 @@ export function parseRegion(raw: string | null): MapRegion | null {
   if (parts.length !== 3 || parts.some((n) => !Number.isFinite(n))) return null;
   const [lon, lat, span] = parts;
   if (span <= 0) return null;
-  return clampView({ lon, lat, span }, MAP_LIMITS, MIN_SPAN, MAX_SPAN);
+  // The view is fitted to the canvas when it is resolved; here only values no canvas could show are pulled in.
+  return {
+    lon: Math.min(MAP_LIMITS.east, Math.max(MAP_LIMITS.west, lon)),
+    lat: Math.min(MAP_LIMITS.north, Math.max(MAP_LIMITS.south, lat)),
+    span: Math.min(MAX_SPAN, Math.max(MIN_SPAN, span)),
+  };
 }
 
 /** Pixels kept clear around a named region so markers on its edge are not cut off. */
@@ -151,16 +166,15 @@ const REGION_PADDING = 12;
 
 /** The concrete view for a region on a canvas of the given size. */
 export function resolveRegion(r: MapRegion, size: Size): MapView {
-  if (!isPreset(r)) return clampView(r, MAP_LIMITS, MIN_SPAN, MAX_SPAN);
-  return clampView(fitBounds(regionBounds(r.preset), size, REGION_PADDING), MAP_LIMITS, MIN_SPAN, MAX_SPAN);
+  return clampToMap(isPreset(r) ? fitBounds(regionBounds(r.preset), size, REGION_PADDING) : r, size);
 }
 
 export function zoomRegion(r: MapRegion, size: Size, factor: number, focus?: { x: number; y: number }): MapView {
-  return clampView(zoomView(resolveRegion(r, size), size, factor, focus), MAP_LIMITS, MIN_SPAN, MAX_SPAN);
+  return clampToMap(zoomView(resolveRegion(r, size), size, factor, focus), size);
 }
 
 export function panRegion(r: MapRegion, size: Size, dx: number, dy: number): MapView {
-  return clampView(panView(resolveRegion(r, size), size, dx, dy), MAP_LIMITS, MIN_SPAN, MAX_SPAN);
+  return clampToMap(panView(resolveRegion(r, size), size, dx, dy), size);
 }
 
 /** Margin, in pixels, inside which a place counts as comfortably visible. */
@@ -173,7 +187,7 @@ export function revealPlace(r: MapRegion, size: Size, place: KcPlace): MapRegion
   // The same centre and scale on a canvas shrunk by the margin: its bounds are the comfortable area.
   const comfortable = viewBounds({ ...view, span: (view.span * inner.width) / size.width }, inner);
   if (containsPoint(comfortable, place.lon, place.lat)) return r;
-  return clampView({ lon: place.lon, lat: place.lat, span: view.span }, MAP_LIMITS, MIN_SPAN, MAX_SPAN);
+  return clampToMap({ lon: place.lon, lat: place.lat, span: view.span }, size);
 }
 
 /** The first region to try for a deep link to a place: the default, or the wide one when the place lies outside it. */

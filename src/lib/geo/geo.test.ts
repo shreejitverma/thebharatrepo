@@ -126,10 +126,19 @@ describe('zoom, pan and clamp', () => {
     expect(q.x - p.x).toBeCloseTo(50, 9);
     expect(q.y - p.y).toBeCloseTo(-30, 9);
   });
-  it('clamps span and centre', () => {
+  it('clamps the span, and moves the view just far enough that its edges stay inside the limits', () => {
     const limits = { west: 24, east: 112, south: -4, north: 48 };
-    expect(clampView({ lon: 0, lat: 80, span: 500 }, limits, 2, 90)).toEqual({ lon: 24, lat: 48, span: 90 });
-    expect(clampView({ lon: 80, lat: 22, span: 0.1 }, limits, 2, 90).span).toBe(2);
+    // Far off to the north-west and too wide: the view fills the limits' height and sits in their north-west corner.
+    const v = clampView({ lon: 0, lat: 80, span: 500 }, size, limits, 2, 90);
+    const b = viewBounds(v, size);
+    expect(b.west).toBeCloseTo(24, 9);
+    expect(b.north).toBeCloseTo(48, 9);
+    expect(b.south).toBeCloseTo(-4, 9);
+    expect(b.east).toBeLessThan(112);
+    // A wide, short canvas is limited by the width instead.
+    const wide = { width: 1600, height: 200 };
+    expect(clampView({ lon: 80, lat: 22, span: 500 }, wide, limits, 2, 200).span).toBeCloseTo(88, 9);
+    expect(clampView({ lon: 80, lat: 22, span: 0.1 }, size, limits, 2, 90)).toEqual({ lon: 80, lat: 22, span: 2 });
   });
   it('gives a ground scale that shrinks toward the pole', () => {
     expect(kmPerPixel({ lon: 80, lat: 0, span: 40 }, size)).toBeCloseTo((111.195 * 40) / 800, 9);

@@ -1,7 +1,8 @@
 # Basemap
 
 `south-asia.json` is the offline basemap of the Kaalchakra Map view.
-It covers 24 E to 112 E and 4 S to 48 N: the subcontinent and its neighbours, west to Anatolia and east to Indochina.
+It covers 0 E to 140 E and 20 S to 62 N: the subcontinent and its neighbours, from Greece and Mesopotamia to Japan, and from northern Australia to southern Siberia.
+The Map view clamps its viewport by its edges to these bounds (`MAP_LIMITS` in `src/components/kaalchakra/mapState.ts`), so no view shows anything past them.
 
 ## Source and licence
 
@@ -44,4 +45,4 @@ done
 cd - && npx tsx scripts/build-basemap.ts /tmp/natural-earth
 ```
 
-The script clips each layer to the bounds, simplifies it (Douglas-Peucker, 0.02 degrees inside the subcontinent and 0.1 degrees outside), drops very small islands and lakes, and writes about 47 KB of JSON (about 16 KB gzipped, since the outlines repeat the rings).
+The script clips each layer to the bounds, simplifies it (Douglas-Peucker, 0.02 degrees inside the subcontinent and 0.1 degrees outside), drops very small islands and lakes, and writes about 82 KB of JSON (about 26 KB gzipped, since the outlines repeat the rings).
