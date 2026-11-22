@@ -97,13 +97,15 @@ Performance budgets (`lighthouserc.js`, median of three runs, Moto G Power class
 | Largest Contentful Paint | 2.0 s |
 | Total Blocking Time (lab stand-in for INP) | 200 ms |
 | Cumulative Layout Shift | 0.1 |
-| JavaScript, compressed | 250 KB on `/kaalchakra`, 150 KB elsewhere |
+| JavaScript, compressed | 250 KB on `/kaalchakra`, 160 KB on `/search`, 150 KB elsewhere |
 | Total transfer | 1.2 MB |
 | Lighthouse performance / accessibility score | 0.9 / 0.95 |
 
-Two deliberate departures from the product brief, both measured:
+Three deliberate departures from the product brief, all measured:
 the brief's 100 KB JavaScript budget for article pages is below the roughly 128 KB that React 19 and the Next.js 16 App Router runtime ship on every page, so the gate is 150 KB;
-and a hard load of search results (`/search?q=...`) renders after hydration and the index download, so it is held to a 4.5 s LCP ratchet until search results are rendered on the server.
+`/search` also carries Pagefind's runtime and the search interface, 153 KB in all, so it is held to 160 KB;
+and a hard load of search results (`/search?q=...`) paints its first result only after hydration and the index downloads, so it is held to a 4.0 s LCP ratchet (measured 3.6 to 3.8 s) until search results are rendered on the server.
+Lighthouse runs against the home page, the Kaalchakra wheel and Map view, an entity, an article, search and search results, a source record, the learning index, a learning path and the open data page.
 
 The visual snapshots in `e2e/visual.spec.ts-snapshots/` and `e2e/map-visual.spec.ts-snapshots/` use fixed fixtures (`e2e/fixtures/`), so they change only when rendering changes.
 They are kept for the two Chromium projects and are per platform; after an intended visual change, refresh both:
