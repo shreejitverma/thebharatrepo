@@ -91,3 +91,125 @@ export const KIND_LABELS: Record<Kind, string> = {
   event: 'Events',
 };
 
+
+/**
+ * Relation kinds. A relation always reads as a sentence with the entity that declares it as the
+ * subject: "<this entity> <kind> <target>".
+ */
+export const RELATION_KINDS = [
+  'part-of',
+  'authored',
+  'authored-by',
+  'ruled',
+  'ruled-by',
+  'patronised',
+  'patronised-by',
+  'succeeded',
+  'preceded',
+  'commented-on',
+  'located-at',
+  'excavated-at',
+  'issued-by',
+  'founded',
+  'founded-by',
+  'taught',
+  'student-of',
+  'influenced',
+  'contemporary-of',
+  'related-to',
+] as const;
+export type RelationKind = (typeof RELATION_KINDS)[number];
+
+/** Kinds that mean the same in both directions: "A contemporary-of B" is "B contemporary-of A". */
+export const SYMMETRIC_RELATIONS: readonly RelationKind[] = ['contemporary-of', 'related-to'];
+
+/** Kinds with a named inverse: "A ruled B" is "B ruled-by A". Listed in both directions. */
+export const RELATION_INVERSE: Partial<Record<RelationKind, RelationKind>> = {
+  authored: 'authored-by',
+  'authored-by': 'authored',
+  ruled: 'ruled-by',
+  'ruled-by': 'ruled',
+  patronised: 'patronised-by',
+  'patronised-by': 'patronised',
+  succeeded: 'preceded',
+  preceded: 'succeeded',
+  founded: 'founded-by',
+  'founded-by': 'founded',
+  taught: 'student-of',
+  'student-of': 'taught',
+};
+
+/**
+ * Kinds that cannot hold in both directions between the same two entities: nothing is part of its own
+ * part, and nobody succeeds their own successor. Mutual influence and mutual commentary are possible,
+ * so those kinds are not listed.
+ */
+export const ONE_WAY_RELATIONS: readonly RelationKind[] = [
+  'part-of',
+  'authored',
+  'authored-by',
+  'ruled',
+  'ruled-by',
+  'patronised',
+  'patronised-by',
+  'succeeded',
+  'preceded',
+  'located-at',
+  'excavated-at',
+  'issued-by',
+  'founded',
+  'founded-by',
+  'taught',
+  'student-of',
+];
+
+/** Phrase for an outgoing relation, read as "<this entity> <phrase> <target>". */
+export const RELATION_LABELS: Record<RelationKind, string> = {
+  'part-of': 'part of',
+  authored: 'authored',
+  'authored-by': 'authored by',
+  ruled: 'ruled',
+  'ruled-by': 'ruled by',
+  patronised: 'patronised',
+  'patronised-by': 'patronised by',
+  succeeded: 'succeeded',
+  preceded: 'preceded',
+  'commented-on': 'commented on',
+  'located-at': 'located at',
+  'excavated-at': 'excavated at',
+  'issued-by': 'issued by',
+  founded: 'founded',
+  'founded-by': 'founded by',
+  taught: 'taught',
+  'student-of': 'student of',
+  influenced: 'influenced',
+  'contemporary-of': 'contemporary of',
+  'related-to': 'related to',
+};
+
+/**
+ * Phrase for an incoming relation seen from its target, read as "<this entity> <phrase> <source>".
+ * "X part-of this" becomes "this includes X".
+ */
+export const RELATION_INBOUND_LABELS: Record<RelationKind, string> = {
+  'part-of': 'includes',
+  authored: 'authored by',
+  'authored-by': 'authored',
+  ruled: 'ruled by',
+  'ruled-by': 'ruled',
+  patronised: 'patronised by',
+  'patronised-by': 'patronised',
+  succeeded: 'preceded',
+  preceded: 'succeeded',
+  'commented-on': 'commented on by',
+  'located-at': 'location of',
+  'excavated-at': 'find place of',
+  'issued-by': 'issued',
+  founded: 'founded by',
+  'founded-by': 'founded',
+  taught: 'student of',
+  'student-of': 'taught',
+  influenced: 'influenced by',
+  'contemporary-of': 'contemporary of',
+  'related-to': 'related to',
+};

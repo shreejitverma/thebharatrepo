@@ -4,12 +4,14 @@ import { notFound } from 'next/navigation';
 import { preconnect } from 'react-dom';
 import GradeBadge, { LensTag } from '@/components/GradeBadge';
 import KaalchakraStrip from '@/components/KaalchakraStrip';
+import RelationGraph from '@/components/RelationGraph';
 import SourceCitation from '@/components/SourceCitation';
 import { getGraph, getIndex, issueUrl, SITE_URL } from '@/lib/content/site';
-import { entityHref } from '@/lib/content/kaalchakra';
+import { entityHref, primaryAnchor } from '@/lib/content/kaalchakra';
+import { relationGroups } from '@/lib/content/relations';
 import { KIND_LABELS, METHOD_LABELS, isTraditional, citationId } from '@/lib/content/schema';
 import { verifiedImage } from '@/lib/content/verification';
-import { formatRange } from '@/lib/time';
+import { formatRange, formatYear } from '@/lib/time';
 import { yearToUnit } from '@/lib/time/scale';
 
 export const dynamicParams = false;
@@ -31,8 +33,8 @@ export async function generateMetadata({ params }: { params: Promise<{ type: str
   return e ? { title: e.names.en, description: e.summary, openGraph: { title: e.names.en, description: e.summary } } : {};
 }
 
-function relationLabel(kind: string): string {
-  return kind.replace(/-/g, ' ');
+function coordinate(value: number, positive: string, negative: string): string {
+  return `${Math.abs(value).toFixed(2)}\u00b0${value < 0 ? negative : positive}`;
 }
 
 export default async function EntityPage({ params }: { params: Promise<{ type: string; slug: string }> }) {
@@ -47,7 +49,28 @@ export default async function EntityPage({ params }: { params: Promise<{ type: s
   const anchor = primary.range.best ?? (primary.range.earliest + primary.range.latest) / 2;
   const u = yearToUnit(anchor);
   const focus = `/kaalchakra?id=${encodeURIComponent(e.id)}`;
-  const inbound = g.inbound.get(e.id) ?? [];
+  const lens = isTraditional(primary.method) ? 'tradition' : 'scholarship';
+  const index = new Map(getIndex().map((i) => [i.id, i]));
+  // Entities inside a relation group run in time order, so successions read left to right.
+  const when = (id: string) => {
+    const item = index.get(id);
+    return item ? (primaryAnchor(item, 'both') ?? 0) : 0;
+  };
+  const groups = relationGroups(g.entities, g.inbound, e.id, (a, b) => when(a) - when(b) || a.localeCompare(b));
+  const relationNode = (id: string) => {
+    const other = g.entities.get(id);
+    if (!other) return undefined;
+    const first = [...other.datings].sort((a, b) => Number(isTraditional(a.method)) - Number(isTraditional(b.method)))[0];
+    return { name: other.names.en, href: entityHref(id), kind: other.kind, when: formatRange(first.range) };
+  };
+  // Every source cited anywhere on this page, once each, in order of first use.
+  const cited = new Map<string, NonNullable<ReturnType<typeof g.sources.get>>>();
+  for (const block of [...ordered, ...e.claims, ...(e.extents ?? [])]) {
+    for (const ref of block.sources) {
+      const source = g.sources.get(citationId(ref));
+      if (source) cited.set(source.id, source);
+    }
+  }
   const articles = g.articlesByEntity.get(e.id) ?? [];
   const src = (ref: Parameters<typeof citationId>[0]) => {
     const s = g.sources.get(citationId(ref));
@@ -87,6 +110,12 @@ export default async function EntityPage({ params }: { params: Promise<{ type: s
             </details>
           ) : null}
           {e.region ? <p className="muted">Region: {e.region}</p> : null}
+          {e.location ? (
+            <p className="muted">
+              Place: {e.location.name} ({coordinate(e.location.lat, 'N', 'S')}, {coordinate(e.location.lon, 'E', 'W')}).{' '}
+              <Link href={`${focus}&view=map`}>Show on the map</Link>
+            </p>
+          ) : null}
         </div>
         {img && e.image ? (
           <figure>
@@ -100,18 +129,18 @@ export default async function EntityPage({ params }: { params: Promise<{ type: s
         ) : null}
       </div>
 
-      <KaalchakraStrip items={getIndex()} range={primary.range} selfId={e.id} focusHref={`${focus}&view=river&win=${Math.max(0, u - 0.02).toFixed(5)},${Math.min(1, u + 0.02).toFixed(5)}`} />
+      <KaalchakraStrip items={getIndex()} range={primary.range} selfId={e.id} lens={lens} focusHref={`${focus}&view=river&win=${Math.max(0, u - 0.02).toFixed(5)},${Math.min(1, u + 0.02).toFixed(5)}`} />
 
       <h2>When, and how we know</h2>
       <div className="datings">
         {ordered.map((d, i) => {
-          const lens = isTraditional(d.method) ? 'tradition' : 'scholarship';
+          const datingLens = isTraditional(d.method) ? 'tradition' : 'scholarship';
           return (
-            <div key={i} className={`dating dating--${lens}`}>
+            <div key={i} className={`dating dating--${datingLens}`}>
               <div className="dating__top">
                 <span className="dating__range">{formatRange(d.range)}</span>
                 <GradeBadge grade={d.grade} />
-                <LensTag lens={lens} />
+                <LensTag lens={datingLens} />
               </div>
               <div className="dating__method" style={{ marginTop: 6 }}>
                 {METHOD_LABELS[d.method]}
@@ -154,33 +183,30 @@ export default async function EntityPage({ params }: { params: Promise<{ type: s
         </>
       ) : null}
 
-      {e.relations.length || inbound.length ? (
-        <>
-          <h2>Connections</h2>
-          <ul className="relations">
-            {e.relations.map((r) => {
-              const t = g.entities.get(r.target)!;
-              return (
-                <li key={`o-${r.kind}-${r.target}`}>
-                  <Link href={entityHref(r.target)}>
-                    <span>{relationLabel(r.kind)}</span> {t.names.en}
-                  </Link>
-                </li>
-              );
-            })}
-            {inbound.map((r) => {
-              const t = g.entities.get(r.from)!;
-              return (
-                <li key={`i-${r.kind}-${r.from}`}>
-                  <Link href={entityHref(r.from)}>
-                    {t.names.en} <span>{relationLabel(r.kind)} this</span>
-                  </Link>
-                </li>
-              );
-            })}
+      {e.extents?.length ? (
+        <section aria-labelledby="extent">
+          <h2 id="extent">Extent on the map</h2>
+          <ul className="claims">
+            {e.extents.map((x, i) => (
+              <li key={i}>
+                <p>
+                  {x.label ?? 'Approximate extent'}
+                  {x.from !== undefined && x.to !== undefined ? ` (${formatYear(x.from)} to ${formatYear(x.to)})` : ''}
+                  {x.note ? `. ${x.note}` : ''}
+                </p>
+                <GradeBadge grade={x.grade} />
+                <ul className="dating__sources">
+                  {x.sources.map((s, j) => (
+                    <li key={j}>{src(s)}</li>
+                  ))}
+                </ul>
+              </li>
+            ))}
           </ul>
-        </>
+        </section>
       ) : null}
+
+      <RelationGraph name={e.names.en} groups={groups} node={relationNode} />
 
       {articles.length ? (
         <>
@@ -194,6 +220,21 @@ export default async function EntityPage({ params }: { params: Promise<{ type: s
           </ul>
         </>
       ) : null}
+
+      <section aria-labelledby="sources">
+        <h2 id="sources">Sources</h2>
+        <p className="muted" style={{ marginTop: 0 }}>
+          {cited.size} {cited.size === 1 ? 'work is' : 'works are'} cited on this page. Each is listed above beside the dating or claim it supports.
+        </p>
+        <ul className="biblio entity-sources">
+          {[...cited.values()].map((source) => (
+            <li key={source.id}>
+              <SourceCitation source={source} />
+              <div className="muted">{source.type.replace(/-/g, ' ')}</div>
+            </li>
+          ))}
+        </ul>
+      </section>
 
       <p className="review-note" style={{ marginTop: 32, maxWidth: 860 }}>
         Review status: {e.review.status === 'reviewed' ? `reviewed by ${e.review.reviewer} on ${e.review.lastReviewed}` : 'draft. Every DOI, ISBN, Wikidata and Commons identifier on this page has been machine-verified; editor review is pending'}.

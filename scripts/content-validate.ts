@@ -11,7 +11,10 @@ const g = loadContentUncached();
 const report = process.argv.includes('--report');
 const scopeIdx = process.argv.indexOf('--scope');
 const scope = scopeIdx > 0 ? process.argv[scopeIdx + 1] : undefined;
-if (scope) g.errors = g.errors.filter((e) => e.file.startsWith(scope));
+if (scope) {
+  g.errors = g.errors.filter((e) => e.file.startsWith(scope));
+  g.warnings = g.warnings.filter((e) => e.file.startsWith(scope));
+}
 
 if (report) {
   const ents = [...g.entities.values()];
@@ -37,6 +40,27 @@ if (report) {
   console.log(`  entities with image: ${ents.filter((e) => e.image).length}, with wikidata: ${ents.filter((e) => e.wikidata).length}`);
   console.log(`  entities with kids summary: ${ents.filter((e) => e.summaries?.kids).length}`);
   if (unused.length) console.log(`  unused sources: ${unused.join(', ')}`);
+  const located = ents.filter((e) => e.location).length;
+  console.log(`  entities with a place: ${located}, with an extent: ${ents.filter((e) => e.extents?.length).length}`);
+  console.log(`  entities with relations (either direction): ${ents.filter((e) => e.relations.length || g.inbound.get(e.id)?.length).length}`);
+  const byRelation = Object.entries(g.relationStats.byKind)
+    .sort((a, b) => b[1] - a[1])
+    .map(([k, v]) => `${k}=${v}`)
+    .join(' ');
+  console.log(`  relations by kind: ${byRelation}`);
+}
+
+// Relation consistency is advisory: it is reported on every run and never fails the build.
+const rs = g.relationStats;
+console.log(
+  `relations: ${rs.declared} declared, ${rs.facts} distinct; ${rs.unknownTargets} unknown targets, ${rs.contradictions} contradictory pairs, ${rs.selfRelations} self relations, ${rs.duplicates} duplicates`,
+);
+console.log(
+  `  inverse pairs: ${rs.inverse.bothSides} declared on both records, ${rs.inverse.oneSide} on one; symmetric: ${rs.symmetric.bothSides} on both records, ${rs.symmetric.oneSide} on one (one side is enough; the site shows inbound relations)`,
+);
+if (g.warnings.length) {
+  console.log(`content:validate: ${g.warnings.length} warning(s), not failing the build`);
+  for (const w of g.warnings) console.log(`  warning: ${w.file}: ${w.message}`);
 }
 
 if (g.errors.length === 0) {

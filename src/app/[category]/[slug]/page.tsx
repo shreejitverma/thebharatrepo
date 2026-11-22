@@ -56,7 +56,7 @@ export default async function ArticlePage({ params }: { params: Promise<{ catego
             <span>{METHOD_LABELS[primary.method]}</span>
             <span>{references.length} sources cited</span>
           </div>
-          <KaalchakraStrip items={getIndex()} range={primary.range} selfId={null} focusHref={focus} />
+          <KaalchakraStrip items={getIndex()} range={primary.range} selfId={null} lens={isTraditional(primary.method) ? 'tradition' : 'scholarship'} focusHref={focus} />
         </header>
         <div className="article-content" dangerouslySetInnerHTML={{ __html: html }} />
         {linked.length ? (

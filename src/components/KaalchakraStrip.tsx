@@ -29,13 +29,31 @@ function ticksPath(items: KcItem[]): string {
  * Mini Kaalchakra: locates an entity or article on the full axis, with its neighbours in time.
  * Server component, no client JavaScript.
  */
-export default function KaalchakraStrip({ items, range, selfId, focusHref }: { items: KcItem[]; range: YearRange; selfId: string | null; focusHref: string }) {
+const GROUPS = [
+  { key: 'before', label: 'Before' },
+  { key: 'during', label: 'During' },
+  { key: 'after', label: 'After' },
+] as const;
+
+export default function KaalchakraStrip({
+  items,
+  range,
+  selfId,
+  focusHref,
+  lens = 'scholarship',
+}: {
+  items: KcItem[];
+  range: YearRange;
+  selfId: string | null;
+  focusHref: string;
+  /** The lens of the dating that places this page; neighbours are drawn from the same lens. */
+  lens?: 'scholarship' | 'tradition';
+}) {
   const u0 = yearToUnit(range.earliest);
   const u1 = yearToUnit(range.latest);
   const markW = Math.min(Math.max((u1 - u0) * W, 4), W);
   const markX = clamp(u0 * W, 0, W - markW);
-  const anchor = range.best ?? (range.earliest + range.latest) / 2;
-  const { before, after } = neighbours(items, anchor, selfId, 3);
+  const nb = neighbours(items, range, selfId, lens, 3);
   return (
     <section className="kc-strip" aria-label="Place in the Kaalchakra">
       <div className="kc-strip__head">
@@ -51,30 +69,25 @@ export default function KaalchakraStrip({ items, range, selfId, focusHref }: { i
         <path d={ticksPath(items)} stroke="var(--ink-faint)" strokeWidth={1.2} opacity={0.45} fill="none" />
         <rect x={markX.toFixed(1)} y={8} width={markW.toFixed(1)} height={30} rx={2} fill="var(--accent)" opacity={0.85} />
       </svg>
-      {before.length || after.length ? (
-        <div className="kc-strip__nb">
-          <div>
-            <span className="muted">Before</span>
-            <ul>
-              {before.map((b) => (
-                <li key={b.id}>
-                  <Link href={b.href}>{b.name}</Link>
-                </li>
-              ))}
-            </ul>
+      <div className="kc-strip__nb">
+        {GROUPS.map((g) => (
+          <div key={g.key} data-neighbours={g.key}>
+            <span className="muted">{g.label}</span>
+            {nb[g.key].length ? (
+              <ul>
+                {nb[g.key].map((b) => (
+                  <li key={b.id}>
+                    <Link href={b.href}>{b.name}</Link>
+                  </li>
+                ))}
+              </ul>
+            ) : (
+              <p className="kc-strip__none">No entries {g.key === 'during' ? 'overlap this range' : `${g.key} this`}{lens === 'tradition' ? ' in traditional reckoning' : ''}.</p>
+            )}
           </div>
-          <div>
-            <span className="muted">After</span>
-            <ul>
-              {after.map((b) => (
-                <li key={b.id}>
-                  <Link href={b.href}>{b.name}</Link>
-                </li>
-              ))}
-            </ul>
-          </div>
-        </div>
-      ) : null}
+        ))}
+      </div>
+      {lens === 'tradition' ? <p className="kc-strip__lens">Placed by traditional reckoning; the neighbours shown are other traditional datings.</p> : null}
     </section>
   );
 }

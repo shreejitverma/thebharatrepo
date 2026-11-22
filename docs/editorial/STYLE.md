@@ -162,6 +162,24 @@ Rules:
   For example, on `text.aitareya-brahmana` write `{ kind: commented-on, target: text.rigveda }` (the Brahmana comments on the Rigveda), and on `person.ashoka` write `{ kind: ruled, target: polity.maurya-empire }`.
   Never use a kind in the reverse sense; the site shows inbound relations automatically.
   Relation kinds: `part-of`, `authored`, `authored-by`, `ruled`, `ruled-by`, `patronised`, `patronised-by`, `succeeded`, `preceded`, `commented-on`, `located-at`, `excavated-at`, `issued-by`, `founded`, `founded-by`, `taught`, `student-of`, `influenced`, `contemporary-of`, `related-to`.
+- `extents` (optional) gives approximate territorial extents for the Map view, usually for a polity.
+  Each extent is a claim: it carries a `grade` and at least one source, and the map draws nothing where no extent is authored.
+  `polygon` is one ring of `[longitude, latitude]` vertices (3 to 400; the last joins the first).
+  `from` and `to` are optional years, given together, for an extent that held only part of the entity's span; `label` names it.
+  Grade D marks an extent from traditional geography, shown in the Tradition lens.
+
+  ```yaml
+  extents:
+    - label: Under Ashoka
+      from: "260 BCE"
+      to: "232 BCE"
+      polygon: [[66.0, 34.5], [72.5, 36.0], [88.5, 26.5], [77.0, 14.0]]
+      grade: C
+      sources: [src.example-a]
+      note: Outline follows the find-spots of the edicts; the frontier is not known precisely.
+  ```
+
+  The coordinates above are illustrative, not data.
 - `debate` (optional) is a short neutral paragraph, shown under "Where scholars disagree", summarising the positions for a contested entity.
 - `wikidata` and `image` are optional; include them only when verified.
 - `review.status` is `draft` for new content.
