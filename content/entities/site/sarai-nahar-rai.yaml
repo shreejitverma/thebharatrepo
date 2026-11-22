@@ -63,9 +63,6 @@ claims:
     grade: A
     sources:
       - src.lukacs-1993-mesolithic-subsistence-north-india
-relations:
-  - kind: contemporary-of
-    target: site.mahadaha
 wikidata: Q97124536
 debate: >-
   An early radiocarbon date on uncharred bone carbonate placed Sarai Nahar Rai around 8400 BCE (Sharma 1973),

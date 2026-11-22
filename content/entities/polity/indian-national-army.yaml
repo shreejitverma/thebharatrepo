@@ -29,7 +29,8 @@ claims:
       from 1943.
     grade: B
     sources: *a1
-relations: []
+relations:
+  - { kind: related-to, target: person.subhas-chandra-bose, note: Bose reorganised and led the army from 1943 }
 tags:
   - polity
 review:

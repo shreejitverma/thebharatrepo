@@ -41,6 +41,7 @@ claims:
     sources:
       - src.malinar-2007-bhagavadgita-doctrines-contexts
 relations:
+  - { kind: related-to, target: person.krishna, note: "In the text, Krishna instructs Arjuna" }
   - { kind: part-of, target: text.mahabharata }
   - { kind: related-to, target: event.kurukshetra-war }
   - { kind: related-to, target: text.yoga-sutras }

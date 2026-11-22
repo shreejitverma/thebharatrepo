@@ -36,6 +36,7 @@ claims:
       - src.salomon-1998-indian-epigraphy
       - src.brockington-1998-sanskrit-epics
 relations:
+  - { kind: related-to, target: person.krishna, note: The inscription attests devotion to Vasudeva }
   - { kind: related-to, target: polity.indo-greek-kingdom }
   - { kind: related-to, target: polity.shunga-dynasty }
   - { kind: related-to, target: text.mahabharata }

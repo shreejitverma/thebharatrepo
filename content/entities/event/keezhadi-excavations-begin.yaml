@@ -27,6 +27,8 @@ claims:
     grade: A
     sources:
       - src.keeladi-lok-sabha-2024
+relations:
+  - { kind: located-at, target: site.keezhadi }
 tags:
   - archaeology
   - tamil-nadu

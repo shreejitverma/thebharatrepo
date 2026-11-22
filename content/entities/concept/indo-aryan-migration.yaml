@@ -92,7 +92,7 @@ relations:
   - { kind: related-to, target: event.mitanni-treaty }
   - { kind: related-to, target: concept.gandhara-grave-culture }
   - { kind: related-to, target: concept.sintashta-steppe-chariot-question }
-  - { kind: related-to, target: concept.rigvedic-sarasvati }
+  - { kind: related-to, target: concept.ghaggar-hakra-sarasvati-debate }
 wikidata: Q269145
 debate: >-
   The mainstream scholarly synthesis integrates comparative Indo-European linguistics, Steppe MLBA

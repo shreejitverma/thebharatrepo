@@ -70,8 +70,8 @@ claims:
       - src.witzel-1997-early-sanskritization-kuru
 relations:
   - { kind: related-to, target: text.rigveda }
-  - { kind: preceded, target: polity.kuru-kingdom }
-  - { kind: related-to, target: concept.rigvedic-sarasvati }
+  - { kind: related-to, target: polity.kuru-kingdom, note: The Bharatas named in the battle hymns figure in reconstructions of the later Kuru state }
+  - { kind: related-to, target: concept.ghaggar-hakra-sarasvati-debate }
 wikidata: Q513097
 tags: [dasarajna, rigveda, bharata, sudas, vasishtha, vishvamitra, parushni]
 review: { status: draft, author: "gemini-4-argon" }

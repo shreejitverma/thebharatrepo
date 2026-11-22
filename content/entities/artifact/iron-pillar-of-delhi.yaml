@@ -39,6 +39,7 @@ claims:
       - src.fleet-1888-inscriptions-early-gupta-kings
       - src.balasubramaniam-2000-corrosion-delhi-iron-pillar
 relations:
+  - { kind: located-at, target: site.qutb-minar, note: In the courtyard of the Quwwat-ul-Islam mosque }
   - { kind: related-to, target: person.chandragupta-ii }
   - { kind: part-of, target: polity.gupta-empire }
   - { kind: related-to, target: site.udayagiri-caves }
