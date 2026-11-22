@@ -99,23 +99,24 @@ function WheelImpl({ items, kinds, lens, selectedId, cal, onSelect, onHover, onS
     };
   }, [initialRotation]);
 
-  // Spin whenever the target moves: a new selection, a lens that moves the anchor, or Back and Forward.
+  // Spin whenever the target moves (a new selection, a lens that moves the anchor, or Back and Forward), and
+  // whenever a drag or tap hands over a turn, even to another entry at the same place on the wheel.
   const lastTarget = useRef(target);
   useEffect(() => {
     const s = spinner.current;
     if (!s) return;
-    if (target === lastTarget.current) {
+    const p = pending.current;
+    pending.current = null;
+    const handedOver = p !== null && p.id === selectedId;
+    if (!handedOver && target === lastTarget.current) {
       // Same place on the wheel (another entry of the same year, say): nothing to turn, but still announce it.
       if (!s.moving) latest.current.onSettled(selectedId);
       return;
     }
     lastTarget.current = target;
-    const p = pending.current;
-    pending.current = null;
-    const rotor = rotorRef.current;
     const instant = reducedMotion();
-    if (!instant) rotor?.setAttribute('data-spinning', '');
-    if (p && p.id === selectedId) s.spinTo(p.to, { v0: p.v0, instant });
+    if (!instant) rotorRef.current?.setAttribute('data-spinning', '');
+    if (handedOver) s.spinTo(p.to, { v0: p.v0, instant });
     else s.spinTo(s.current + shortestDelta(s.current, target), { instant });
   }, [target, selectedId]);
 

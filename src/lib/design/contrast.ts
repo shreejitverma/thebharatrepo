@@ -1,7 +1,6 @@
 /*
  * Colour maths for the design tokens: parse the token blocks of globals.css, resolve aliases, and measure
- * WCAG 2.2 contrast and colour-vision-deficiency separation. Pure functions, used by the palette unit test
- * and by scripts/palette-contrast.ts.
+ * WCAG 2.2 contrast and colour-vision-deficiency separation. Pure functions, used by the palette unit test.
  */
 
 export type Tokens = Record<string, string>;

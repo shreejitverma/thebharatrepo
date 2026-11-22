@@ -201,6 +201,10 @@ function KaalchakraInner({ items, external, epoch, onWrite }: { items: KcItem[];
   const keysId = useId();
   /** The state behind the current history entry. */
   const committed = useRef<State>(external);
+  // An outside change already has its own history entry: writing its canonical form replaces that entry.
+  useEffect(() => {
+    committed.current = external;
+  }, [external]);
 
   // A new selection, view or lens is written at once as its own history entry, so Back and Forward step through
   // them and a link clicked straight afterwards is never overtaken by a late write. A burst of such changes (an
