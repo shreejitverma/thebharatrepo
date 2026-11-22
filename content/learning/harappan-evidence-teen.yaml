@@ -1,0 +1,150 @@
+id: learn.harappan-evidence-teen
+title: How do we know about the Harappan civilisation?
+level: teen
+audience: Ages 13 to 17, in class or at home
+summary: >-
+  The Harappan cities left no writing we can read, yet we know a great deal about them. This path shows
+  how: layers in the ground dated by radiocarbon, city plans and standard bricks, seals pressed into clay,
+  a giant signboard at Dholavira, and the slow change that ended the cities. At each step, ask what the
+  evidence shows and what it cannot.
+focus: { earliest: "3300 BCE", latest: "1300 BCE", precision: century, circa: true }
+goals:
+  - Explain how archaeologists date Harappan sites without any readable text.
+  - Describe what shared bricks, drains and seals suggest about how the cities were organised.
+  - Explain why the Indus script still cannot be read.
+  - Explain why historians now describe the end of the cities as gradual change rather than a sudden invasion.
+steps:
+  - entity: site.harappa
+    title: Where the name comes from
+    note: >-
+      Harappa was the first Indus city to be excavated, so the whole civilisation is named after it. Look
+      at how its layers, one on top of another, record about two thousand years, from a farming village to
+      a walled city.
+  - entity: site.mohenjo-daro
+    title: A city on a grid
+    note: >-
+      Mohenjo-daro had a high western mound and a lower town laid out along straight streets, with private
+      wells and covered drains. Think about what kind of planning and cooperation a city like this needed.
+  - entity: concept.harappan-town-planning-and-drainage
+    title: The same bricks everywhere
+    note: >-
+      Bricks in the proportion 1:2:4 were made across a huge area. Notice that this standard, along with
+      house bathrooms linked to street drains, is evidence of shared rules, even though we do not know who
+      set them.
+  - entity: artifact.harappan-steatite-seals
+    title: Seals pressed into clay
+    note: >-
+      Small stone seals show an animal, often the one-horned "unicorn", under a line of signs. Look at the
+      clay sealings with cord and matting marks on the back: they show seals being used to close and mark
+      goods.
+  - entity: concept.indus-script
+    title: The script nobody can read
+    note: >-
+      There are thousands of inscriptions, but most are only about five signs long and there is no
+      bilingual text to act as a key. Notice that scholars still disagree about what language, if any, the
+      signs record.
+  - entity: artifact.dholavira-signboard
+    title: A signboard over a gate
+    note: >-
+      At Dholavira, ten large signs of white gypsum were set into a wooden board at the north gate of the
+      Castle. It shows that the script was used in public, on a monumental scale, and yet it is just as
+      unreadable as the tiny seals.
+  - entity: event.harappan-deurbanisation
+    title: How the cities ended
+    note: >-
+      After about 1900 BCE the big cities slowly emptied and people moved to many smaller villages. Look at
+      why the old idea of a sudden invasion was given up, and which changes in rivers, rainfall and trade
+      historians now point to.
+  - article: history/indus-valley-civilisation
+    title: Going further, the whole civilisation
+    note: >-
+      Read the full article to see how cities, crafts, trade and genetics fit together, and which questions
+      are still open.
+quiz:
+  - id: dating-without-text
+    question: How do archaeologists date the layers of a Harappan site such as Harappa?
+    choices:
+      - text: With radiocarbon dates from material found in each excavated layer
+        correct: true
+        explanation: >-
+          The Harappa excavators obtained more than a hundred calibrated radiocarbon dates, which turn the
+          site's stack of layers into a timeline of five periods.
+      - text: By reading dates carved on the city's seals
+        explanation: >-
+          The signs on the seals cannot be read, so they cannot give dates.
+      - text: From Greek travellers who described the city
+        explanation: >-
+          Greek contact with India began in the 4th century BCE, long after Harappa had stopped being a city.
+    sources:
+      - src.kenoyer-1998-ancient-cities-indus
+      - src.possehl-2002-indus-civilization
+  - id: bricks
+    question: What do bricks made in the same 1:2:4 proportions at many distant sites suggest?
+    choices:
+      - text: That every brick was made in one factory and carried to the other cities
+        explanation: >-
+          Both sun-dried and kiln-fired bricks follow the ratio, in cities hundreds of kilometres apart; the
+          evidence points to a shared standard used by many builders, not to one source of bricks.
+      - text: That each brick was stamped with the name of the king who ordered it
+        explanation: >-
+          No Harappan ruler's name is known from any brick or inscription.
+      - text: That builders across a very large area followed shared standards
+        correct: true
+        explanation: >-
+          The same proportions, with standard weights and similar drains, appear across the Indus and
+          Ghaggar-Hakra region, which points to shared rules and training.
+    sources:
+      - src.kenoyer-1998-ancient-cities-indus
+      - src.possehl-2002-indus-civilization
+  - id: script
+    question: Why can nobody read the Indus script yet?
+    choices:
+      - text: All the inscriptions were destroyed when the cities were abandoned.
+        explanation: >-
+          About 4,000 to 5,000 inscribed objects survive; the problem is their brevity, not their loss.
+      - text: The inscriptions are very short and no bilingual text has been found to act as a key.
+        correct: true
+        explanation: >-
+          Most texts are about five signs long, too short to test a proposed reading, and there is no
+          inscription that repeats the same message in a known language.
+      - text: The script was used only once, on the Dholavira signboard.
+        explanation: >-
+          The same signs appear on thousands of seals, tablets and pots, as well as on the signboard.
+    sources:
+      - src.possehl-2002-indus-civilization
+      - src.kenoyer-1998-ancient-cities-indus
+  - id: signboard
+    question: What does the Dholavira signboard show about how the Indus script was used?
+    choices:
+      - text: That it was used in public, in large signs that could be seen from a distance
+        correct: true
+        explanation: >-
+          Its ten signs are each about 30 cm across, made of white gypsum on a long wooden board at a city
+          gate, very different from the small seals.
+      - text: That it recorded the name of Dholavira, now read with certainty
+        explanation: >-
+          The signboard is as undeciphered as every other Indus inscription; its meaning is unknown.
+      - text: That it was used only by children learning to write
+        explanation: >-
+          A monumental board at the main gate of the Castle is not schoolwork; there is no evidence for this.
+    sources:
+      - src.asi-2020-dholavira-nomination-dossier
+  - id: invasion
+    question: Why did historians give up the idea that an invasion suddenly destroyed Mohenjo-daro?
+    choices:
+      - text: An inscription was found describing a peaceful move to the east.
+        explanation: >-
+          No Harappan inscription can be read, so none could describe the move.
+      - text: The skeletons once used as proof came from different layers and times, and showed disease and old injuries rather than one massacre.
+        correct: true
+        explanation: >-
+          Restudy by Dales, Kennedy and Kenoyer showed that the evidence did not fit a single attack, and
+          other sites show a slow shift to villages between about 1900 and 1300 BCE.
+      - text: Radiocarbon proved the city was never inhabited.
+        explanation: >-
+          Mohenjo-daro was a large, long-lived city; radiocarbon dates its occupation, not its absence.
+    sources:
+      - src.kenoyer-1998-ancient-cities-indus
+      - src.possehl-2002-indus-civilization
+tags: [harappan, archaeology, evidence, indus-script]
+review: { status: draft, author: "claude-opus-5-5" }

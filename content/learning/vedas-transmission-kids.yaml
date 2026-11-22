@@ -1,0 +1,126 @@
+id: learn.vedas-transmission-kids
+title: The Vedas, kept by memory
+level: kids
+audience: Ages 8 to 12, with a parent or teacher
+summary: >-
+  The Vedas are very old Sanskrit hymns and teachings. For a very long time they were not kept in books:
+  teachers taught them to students by heart, using clever patterns so that no sound would change. Find out
+  how, and what is inside the four Vedas.
+focus: { earliest: "1500 BCE", latest: "400 BCE", precision: century, circa: true }
+goals:
+  - Explain how the Vedas were passed down by memory.
+  - Name what is inside two of the four Vedas.
+  - Explain that historians and tradition give different answers about how old the Vedas are.
+steps:
+  - entity: text.rigveda
+    title: The Rigveda
+    note: >-
+      The Rigveda is a collection of 1,028 hymns in ten books. Look at which gods the hymns praise.
+  - entity: tradition.vedic-oral-transmission
+    title: Learning by heart
+    note: >-
+      Students learned each verse in different patterns, saying the words forward and backward. Why would
+      that help them catch a mistake?
+  - entity: tradition.vedic-chanting
+    title: Chanting with pitch
+    note: >-
+      Vedic chanting uses high and low tones, exact lengths of sounds and hand movements. Listen for how the
+      voice goes up and down.
+  - entity: text.samaveda
+    title: The Veda of songs
+    note: >-
+      Priests sang the Samaveda. Most of its verses come from the Rigveda, turned into melodies.
+  - entity: text.atharvaveda
+    title: Healing songs and blessings
+    note: >-
+      The Atharvaveda has prayers, healing songs, blessings for the home, and questions about how the world
+      began. Look for one thing that surprises you.
+  - entity: text.upanishads
+    title: Big questions
+    note: >-
+      The Upanishads come at the end of the Vedas. Teachers and students ask deep questions about the self
+      and the universe.
+quiz:
+  - id: memory
+    question: How were the Vedas passed down for a very long time?
+    choices:
+      - text: They were printed in books and sold in shops.
+        explanation: >-
+          Printing came much later; for a very long time the Vedas were kept by memory.
+      - text: Teachers taught them to students by heart.
+        correct: true
+        explanation: >-
+          Students listened and repeated until they knew every sound, and then taught the next students.
+      - text: They were painted on cave walls.
+        explanation: >-
+          The Vedas were passed on by voice and memory, from teacher to student.
+    sources:
+      - src.unesco-2003-tradition-vedic-chanting
+      - src.flood-2003-blackwell-companion-hinduism
+  - id: patterns
+    question: Why did students say the words in forward and backward patterns?
+    choices:
+      - text: To check that no word or sound had changed
+        correct: true
+        explanation: >-
+          If one word slipped, the patterns would not fit together, so the mistake would be noticed.
+      - text: To make the hymns shorter
+        explanation: >-
+          The patterns make reciting longer. They are there to keep the words exact.
+      - text: To turn the hymns into a new language
+        explanation: >-
+          The patterns keep the same words in the same language; they only change the order for checking.
+    sources:
+      - src.unesco-2003-tradition-vedic-chanting
+      - src.flood-2003-blackwell-companion-hinduism
+  - id: samaveda
+    question: What is special about the Samaveda?
+    choices:
+      - text: It is a book of maps.
+        explanation: >-
+          The Samaveda is a collection of chants, not maps.
+      - text: It is the Veda of songs, with verses sung as melodies by priests.
+        correct: true
+        explanation: >-
+          Priests called Udgatris sang its verses, most of which come from the Rigveda.
+      - text: It was written by Emperor Ashoka.
+        explanation: >-
+          Ashoka lived much later, and the Samaveda belongs to the Vedic tradition, not to him.
+    sources:
+      - src.gonda-1975-vedic-literature
+  - id: atharvaveda
+    question: What can you find in the Atharvaveda?
+    choices:
+      - text: Stories about the Maurya emperors
+        explanation: >-
+          The Atharvaveda is much older than the Mauryas and does not mention them.
+      - text: Instructions for building ships
+        explanation: >-
+          The Atharvaveda is a collection of hymns and charms, not a shipbuilding manual.
+      - text: Prayers, healing songs, home blessings and questions about how the world began
+        correct: true
+        explanation: >-
+          The Atharvaveda is the fourth Veda and is known for its everyday and healing hymns as well as its
+          big questions.
+    sources:
+      - src.gonda-1975-vedic-literature
+      - src.flood-2003-blackwell-companion-hinduism
+  - id: how-old
+    question: Do historians and tradition give the same answer about how old the Vedas are?
+    choices:
+      - text: No. Historians estimate from clues in the language, and tradition counts in its own way, so the answers differ.
+        correct: true
+        explanation: >-
+          This site shows both answers side by side: the historians' estimate and the traditional reckoning,
+          each labelled for what it is.
+      - text: Yes, because the date is written at the start of the Rigveda.
+        explanation: >-
+          The Rigveda does not give its own date, which is why people have to work it out.
+      - text: Yes, because a stone carving tells the exact year.
+        explanation: >-
+          No old stone carving contains the Vedas or tells when they were made.
+    sources:
+      - src.jamison-brereton-2014-rigveda
+      - src.flood-2003-blackwell-companion-hinduism
+tags: [vedas, oral-tradition]
+review: { status: draft, author: "claude-opus-5-5" }

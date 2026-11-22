@@ -1,0 +1,178 @@
+id: learn.maurya-ashoka-inscriptions-adult
+title: The Maurya Empire and Ashoka's inscriptions
+level: adult
+audience: Adult readers, for self-study or a seminar
+summary: >-
+  The Maurya state is known from three kinds of evidence that rarely agree on detail: Ashoka's own
+  inscriptions, fragments of Greek writers, and later Indian texts such as the Arthashastra. This path
+  weighs each kind, shows how the Brahmi decipherment and Rock Edict XIII made the inscriptions into a
+  datable record, and asks what each source can carry.
+# The decipherment step is modern; the path itself is about the Maurya period.
+focus: { earliest: "324 BCE", latest: "185 BCE", precision: decade, circa: true }
+goals:
+  - Explain how Greek synchronisms for Chandragupta and Ashoka anchor Mauryan chronology, and why they give ranges.
+  - Describe how the Brahmi decipherment and the Maski edict identified Devanampiya Piyadasi as Ashoka.
+  - Assess the Arthashastra and Megasthenes' Indica as sources for the Maurya state.
+  - Use the distribution of the inscriptions to describe the empire's reach.
+steps:
+  - entity: polity.maurya-empire
+    title: An empire known from its inscriptions
+    note: >-
+      Start with the span of about 322 to 185 BCE and the find spots of Ashoka's inscriptions, from Kandahar
+      and Laghman to Karnataka and Odisha. Notice that the dynasty's length of 137 years comes from the
+      Puranas, while its anchors come from Greek synchronisms.
+  - entity: person.chandragupta-maurya
+    title: Sandrokottos and the first synchronism
+    note: >-
+      William Jones's 1793 identification of the Sandrokottos of Greek writers with Chandragupta was the
+      first fixed link between Indian and Mediterranean dates. Look at how the treaty with Seleucus I of
+      about 305 to 303 BCE brackets his reign.
+  - entity: text.megasthenes-indica
+    title: A lost Greek eyewitness
+    note: >-
+      Megasthenes went to Chandragupta's court as Seleucus's envoy, but his Indica survives only in later
+      quotations and paraphrases. Ask how second-hand transmission and his tall tales limit what the
+      fragments can prove.
+  - entity: text.arthashastra
+    title: A treatise of contested date
+    note: >-
+      Tradition credits the Arthashastra to Chandragupta's minister. Patrick Olivelle dates its composition
+      to about 50 BCE to 125 CE with a later redaction, and Trautmann's word statistics point to several
+      authors. Consider what it can tell us about Mauryan government on each view.
+  - entity: event.brahmi-decipherment-prinsep
+    title: Reading Brahmi again
+    note: >-
+      Prinsep's 1837 decipherment used the repeated word danam on Sanchi donor inscriptions. Notice that in
+      the same year Turnour linked the title Piyadasi to the Ashoka of the Sri Lankan chronicles, and that in
+      1838 Prinsep found the names of Hellenistic kings in Rock Edict XIII.
+  - entity: person.ashoka
+    title: Devanampiya Piyadasi is Ashoka
+    note: >-
+      Most edicts call the king Devanampiya Piyadasi. Look at how the Minor Rock Edict at Maski and Gujarra
+      names him Ashoka, and at the content of his dhamma, including restraint among followers of different
+      sects in Rock Edict XII.
+  - entity: artifact.ashoka-major-rock-edict-xiii
+    title: Five kings and a range of years
+    note: >-
+      Rock Edict XIII names five Hellenistic kings who reigned together only for a few years after 261 BCE.
+      Notice why the lower limit depends on the death of Magas and on which Alexander is meant, so that the
+      synchronism yields a range rather than a year.
+  - entity: artifact.lumbini-pillar-inscription
+    title: A date counted in regnal years
+    note: >-
+      This pillar is dated to Ashoka's twentieth regnal year, so its absolute date depends on his
+      consecration year. Compare that with the Buddha's dates, which are counted back from Ashoka and remain
+      debated.
+  - article: history/maurya-empire
+    title: Going further, the whole empire
+    note: >-
+      Read the full article on the rise of Chandragupta, Ashoka's inscriptions, the working of the empire and
+      its end, and on how the traditional account and the evidence relate.
+quiz:
+  - id: maski
+    question: How do historians know that the Devanampiya Piyadasi of the edicts is the Ashoka of Buddhist tradition?
+    choices:
+      - text: Mauryan coins carry his portrait with both names.
+        explanation: >-
+          Mauryan coins are punch-marked with symbols and carry no royal portraits or names.
+      - text: Versions of the Minor Rock Edict at Maski and Gujarra name the king as Ashoka.
+        correct: true
+        explanation: >-
+          Most edicts use only the title Devanampiya Piyadasi; the Maski and Gujarra versions add the personal
+          name, confirming the identification first proposed from the Sri Lankan chronicles.
+      - text: The Arthashastra names Piyadasi as its patron.
+        explanation: >-
+          The Arthashastra names its author as Kautilya and makes no mention of Piyadasi.
+    sources:
+      - src.salomon-1998-indian-epigraphy
+      - src.lahiri-2015-ashoka-ancient-india
+  - id: range
+    question: Why does Rock Edict XIII date Ashoka to a range of years rather than to a single year?
+    choices:
+      - text: The stone is damaged, so the regnal year cannot be read.
+        explanation: >-
+          The edict's dating comes from the Greek kings it names; the range reflects uncertainty in Greek
+          chronology, not damage to the stone.
+      - text: Radiocarbon dating of the rock surface has a wide margin of error.
+        explanation: >-
+          Inscriptions on rock are not dated by radiocarbon; this one is dated by the kings it names.
+      - text: The five kings it names reigned together only for a span of years, and the end of that span depends on when Magas died and which Alexander is meant.
+        correct: true
+        explanation: >-
+          All five were reigning between the accession of Antiochus II in 261 BCE and the death of Magas,
+          placed by different scholars around 258 or 250 BCE, so the synchronism fixes a short span.
+    sources:
+      - { id: src.hultzsch-1925-inscriptions-of-asoka, locator: "Rock Edict XIII" }
+      - src.thapar-2012-asoka-decline-mauryas
+  - id: arthashastra
+    question: Why must the Arthashastra be used with caution as a source for the Maurya state?
+    choices:
+      - text: Its date is contested, and Patrick Olivelle places its composition several centuries after Chandragupta, with a later redaction.
+        correct: true
+        explanation: >-
+          Olivelle dates Kautilya's recension to about 50 to 125 CE and the redaction to about 175 to 300 CE,
+          and Trautmann found several authors' styles in it. If so, it describes statecraft in general rather
+          than the Mauryan court in particular.
+      - text: It survives only in a Greek translation.
+        explanation: >-
+          The Arthashastra survives in Sanskrit; it is Megasthenes' Greek Indica that survives only in later
+          quotations.
+      - text: It was written by Ashoka, who was biased toward Buddhism.
+        explanation: >-
+          The text names its author as Kautilya; no one attributes it to Ashoka.
+    sources:
+      - src.olivelle-2013-king-governance-law
+      - src.trautmann-1971-kautilya-arthasastra
+  - id: megasthenes
+    question: What kind of source is Megasthenes' Indica?
+    choices:
+      - text: A Prakrit inscription set up at Pataliputra
+        explanation: >-
+          The Indica was a Greek book, not an inscription.
+      - text: A complete Greek manuscript copied in the Mauryan period
+        explanation: >-
+          No manuscript of the Indica survives; it is known only from later authors who quoted it.
+      - text: A lost Greek account known only through fragments and paraphrases in later writers such as Diodorus, Strabo and Arrian
+        correct: true
+        explanation: >-
+          Megasthenes visited Chandragupta's court around 300 BCE, but his own text is lost, so every passage
+          reaches us at second hand.
+    sources:
+      - src.stoneman-2019-greek-experience-of-india
+  - id: languages
+    question: In what languages are Ashoka's inscriptions written?
+    choices:
+      - text: Entirely in Classical Sanskrit
+        explanation: >-
+          The edicts use the Prakrit spoken languages of the time, not Classical Sanskrit.
+      - text: Mostly in Prakrit, with Greek and Aramaic versions in the northwest
+        correct: true
+        explanation: >-
+          Most edicts are in Prakrit dialects written in Brahmi, and the northwestern inscriptions near
+          Kandahar include Greek and Aramaic texts.
+      - text: Only in Greek, carved by Greek scribes
+        explanation: >-
+          Greek appears only in the far northwest; the great majority of the edicts are in Prakrit.
+    sources:
+      - src.salomon-1998-indian-epigraphy
+      - src.lahiri-2015-ashoka-ancient-india
+  - id: lumbini
+    question: Why is the Lumbini pillar inscription important for Buddhist history?
+    choices:
+      - text: It is the earliest known record naming Lumbini as the Buddha's birthplace, set up by Ashoka in his twentieth regnal year.
+        correct: true
+        explanation: >-
+          The king says he came to worship because the Buddha Shakyamuni was born there, and set up a stone
+          pillar to mark the spot.
+      - text: It gives the year of the Buddha's death.
+        explanation: >-
+          The inscription names no year for the Buddha; his dates are still counted back from Ashoka and
+          debated.
+      - text: It was carved by the Buddha's disciples during his lifetime.
+        explanation: >-
+          It is Ashoka's inscription, made in his twentieth regnal year, long after the Buddha.
+    sources:
+      - { id: src.hultzsch-1925-inscriptions-of-asoka, locator: "Rummindei pillar inscription" }
+      - { id: src.paranavitana-1962-rummindei-pillar, locator: "pp. 163-167" }
+tags: [maurya, ashoka, epigraphy, evidence]
+review: { status: draft, author: "claude-opus-5-5" }
