@@ -235,7 +235,9 @@ export function sameWork(a: Source, b: Source): boolean {
     if (!u) return '';
     try {
       const x = new URL(u);
-      return `${x.hostname}/${x.pathname.split('/').filter(Boolean).slice(0, 2).join('/')}`.toLowerCase();
+      // Google Books names the volume in its query string, so two different volumes share a path.
+      const volume = /(^|\.)books\.google\./.test(x.hostname) ? (x.searchParams.get('id') ?? '') : '';
+      return `${x.hostname}/${x.pathname.split('/').filter(Boolean).slice(0, 2).join('/')}${volume && `?id=${volume}`}`.toLowerCase();
     } catch {
       return u;
     }
@@ -247,6 +249,14 @@ export function sameWork(a: Source, b: Source): boolean {
     [urlKey(a.url), urlKey(b.url)],
   ];
   if (pairs.some(([x, y]) => x && y && x !== y)) return false;
+  // Similar titles by different people are different works ("Early India" by Thapar is not Devadevan's
+  // "'Early Medieval' Origins of India"). Editions keep at least one author or editor, and a record with
+  // named creators is not the same work as one credited only to an institution.
+  const surnames = (s: Source) => new Set([...s.authors, ...s.editors].map((n) => n.trim().split(/\s+/).pop()!.toLowerCase()));
+  const sa = surnames(a);
+  const sb = surnames(b);
+  if (sa.size > 0 !== sb.size > 0) return false;
+  if (sa.size > 0 && ![...sa].some((n) => sb.has(n))) return false;
   return sameTitle(a.title, b.title);
 }
 
