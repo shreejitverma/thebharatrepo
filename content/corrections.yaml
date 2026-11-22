@@ -2821,3 +2821,8 @@
   reason: "The label called a scholarly position held by named scholars a traditional one, which mixed the two lenses."
   sources:
     - src.thapar-2012-asoka-decline-mauryas
+- date: 2026-11-22
+  target: /language/paninian-grammar
+  before: "The link to the article on verbal roots pointed at /archive/article/language/dhatu-the-verbal-roots, which does not exist."
+  after: "The link points at /language/dhatu-the-verbal-roots."
+  reason: "Articles live at /<category>/<slug>; the archive only holds entities. The validator now checks internal links in article bodies."

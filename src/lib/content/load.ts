@@ -110,6 +110,12 @@ export function findMalformedCitations(body: string): string[] {
   return out;
 }
 
+/** Site-internal Markdown link targets in a body (`[text](/path)`), without query or fragment, outside code. */
+export function internalLinks(body: string): string[] {
+  const visible = body.replace(/```[\s\S]*?```|`[^`\n]*`/g, '');
+  return [...visible.matchAll(/\]\((\/[^)\s?#]*)[^)]*\)/g)].map((m) => m[1].replace(/\/+$/, '') || '/');
+}
+
 /** Citations inside HTML comments or code are invisible to readers and must not count. */
 export function findHiddenCitations(body: string): string[] {
   const hidden: string[] = [];
@@ -492,6 +498,20 @@ export function loadContentUncached(): ContentGraph {
       const list = articlesByEntity.get(id) ?? [];
       list.push(a);
       articlesByEntity.set(id, list);
+    }
+  }
+
+  // Internal links in article bodies must reach a live entity or article.
+  const articlePaths = new Set(articles.map((a) => `/${a.category}/${a.slug}`));
+  for (const a of articles) {
+    for (const href of internalLinks(a.body)) {
+      const m = /^\/archive\/([a-z]+)\/([a-z0-9-]+)$/.exec(href);
+      if (m) {
+        const id = `${m[1]}.${m[2]}`;
+        if (!entities.has(id)) errors.push({ file: a.file, message: `link ${href} -> unknown entity ${unknownEntity(id)}` });
+      } else if (href.startsWith('/archive/') || ((CATEGORIES as readonly string[]).includes(href.split('/')[1]) && !articlePaths.has(href))) {
+        errors.push({ file: a.file, message: `link ${href} does not reach an entity or article` });
+      }
     }
   }
 

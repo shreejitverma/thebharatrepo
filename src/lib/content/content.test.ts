@@ -222,6 +222,9 @@ describe('loader against fixtures', () => {
       expect(msgs.filter((m) => m.startsWith('unexpected file'))).toHaveLength(1);
       expect(msgs).toContain('alias event.toba collides with a live entity id; an alias names an entity that no longer exists');
       expect(msgs).toContain('relation related-to -> unknown entity event.former-toba (merged into event.toba; link to that id)');
+      expect(msgs).toContain('link /archive/event/former-toba -> unknown entity event.former-toba (merged into event.toba; link to that id)');
+      expect(msgs).toContain('link /history/nothing does not reach an entity or article');
+      expect(msgs.filter((m) => m.startsWith('link '))).toHaveLength(2);
       expect(msgs).toContain('relation contemporary-of -> event.toba is listed twice');
       expect(msgs).toContain("relation related-to -> event.misdated duplicates event.misdated's relation contemporary-of -> event.toba; the site shows inbound relations on both pages, so keep one");
       expect(msgs).toContain('relation related-to -> event.toba points at the entity itself');
@@ -320,6 +323,10 @@ describe('integrity checks', () => {
     const { findMalformedCitations } = await import('./load');
     expect(findMalformedCitations('ok [@src.a-1, p. 2] and [see @src.b-2] and @src.c-3 and [@ src.d]')).toEqual(['[see @src.b-2]', '@src.c-3', '[@ src.d]']);
     expect(findMalformedCitations('fine [@src.a; @src.b, ch. 1].')).toEqual([]);
+  });
+  it('finds internal link targets outside code', async () => {
+    const { internalLinks } = await import('./load');
+    expect(internalLinks('[a](/archive/site/dholavira) [b](/language/sandhi/#x) `[c](/history/x)` [d](https://example.org/x) [e](/kaalchakra?id=site.dholavira)')).toEqual(['/archive/site/dholavira', '/language/sandhi', '/kaalchakra']);
   });
   it('finds citations hidden in comments or code', async () => {
     const { findHiddenCitations } = await import('./load');

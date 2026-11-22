@@ -23,7 +23,7 @@ Scholars commonly place him in the 5th or 4th century BCE, but the evidence does
 
 The text has eight chapters, each split into four quarters, and holds roughly four thousand rules (*sūtras*), the exact count varying slightly between transmitted versions [@src.katre-1987-astadhyayi-panini].
 It does not list words.
-It works as a derivation machine: you start with a root (see [the article on verbal roots](/archive/article/language/dhatu-the-verbal-roots)) and an affix, apply rules in a fixed order, and a finished word comes out [@src.cardona-1988-panini-work-traditions; @src.kiparsky-2009-architecture-paninis-grammar].
+It works as a derivation machine: you start with a root (see [the article on verbal roots](/language/dhatu-the-verbal-roots)) and an affix, apply rules in a fixed order, and a finished word comes out [@src.cardona-1988-panini-work-traditions; @src.kiparsky-2009-architecture-paninis-grammar].
 The grammar also records where the older Vedic language differs from the speech of Pāṇini's own day, including the pitch accents of Vedic recitation [@src.katre-1987-astadhyayi-panini; @src.cardona-1988-panini-work-traditions].
 It is one of the six Vedāṅgas, the "limbs of the Veda", and Pāṇini names a number of earlier grammarians whose work he built on [@src.cardona-1988-panini-work-traditions].
 
