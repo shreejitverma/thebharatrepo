@@ -60,6 +60,7 @@ async function settledUrl(page: Page, pattern: RegExp): Promise<URL> {
 const ROUTES: { name: string; path: string; ready?: string }[] = [
   { name: 'home', path: '/' },
   { name: 'kaalchakra wheel', path: '/kaalchakra', ready: '.kc-wheel' },
+  { name: 'kaalchakra wheel spun to a tradition entry', path: '/kaalchakra?id=cosmology.kali-yuga', ready: '.kc-hub__tag:visible' },
   { name: 'kaalchakra river', path: '/kaalchakra?view=river', ready: '.kc-river' },
   { name: 'kaalchakra list', path: '/kaalchakra?view=list', ready: '.kc-list' },
   { name: 'kaalchakra selection', path: `/kaalchakra?view=list&id=artifact.ashoka-major-rock-edict-xiii`, ready: '.kc-panel .dating' },
@@ -452,8 +453,9 @@ test.describe('Kaalchakra', () => {
       await expect(page.locator('.kc-canvas .kc-wheel')).toBeVisible();
     });
 
-    test('the list is keyboard complete', async ({ page, isMobile }) => {
+    test('the list is keyboard complete', async ({ page, isMobile, browserName }) => {
       test.skip(isMobile, 'hardware keyboard navigation');
+      test.skip(browserName === 'webkit', 'WebKit moves Tab focus to links only, by default, as Safari does');
       await openKaalchakra(page, '?view=list');
       const first = page.locator('.kc-list button').first();
       await first.focus();

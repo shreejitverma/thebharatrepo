@@ -19,6 +19,8 @@ The product brief is in [`docs/prompts/kaalchakra-master-prompt.md`](docs/prompt
 - Next.js 16 App Router, React 19, static generation for every page.
 - Content as YAML and Markdown in git, validated by Zod schemas at build time.
 - Kaalchakra views (Wheel, River, List) are hand-written SVG with no charting dependency.
+- The wheel's motion is a hand-rolled `requestAnimationFrame` loop (`src/components/kaalchakra/spin.ts`) with no animation library: every selection spins to the fixed indicator at the top, the rotating layer is turned with a CSS transform so frames cost no repaint, and reduced motion jumps instead.
+- Colour tokens are drawn from Hindu iconography and Indian pigments; every token, its source and its use is in [`docs/design/palette.md`](docs/design/palette.md), and a unit test holds every documented pair to WCAG 2.2 AA.
 
 ## Content layout
 
@@ -35,14 +37,15 @@ The product brief is in [`docs/prompts/kaalchakra-master-prompt.md`](docs/prompt
 ```sh
 npm ci
 npm run dev                     # local site at http://localhost:3000 (predev writes the search and Kaalchakra data)
-npm test                        # unit tests (time engine, scale, schemas, loader, citations)
+npm test                        # unit tests (time engine, scale, schemas, loader, citations, wheel motion, palette contrast)
 npm run typecheck
 npm run lint
 npm run content:validate        # schemas and cross-references; exit 1 on any problem
 npm run content:report          # coverage: entities, grades, kinds, sources
 npm run content:verify-sources  # resolve every DOI, ISBN, OCLC, QID and Commons file, and each URL that is a source's only identifier; exit 1 on any mismatch
 npm run build                   # validate, offline verification gate, search index and open data, then next build
-npm run test:e2e                # Playwright, axe and visual snapshots against a production build (desktop and mobile)
+npm run test:e2e                # Playwright, axe and visual snapshots against a production build (Chromium, Firefox, WebKit, Pixel 7, iPhone 14)
+npm run design:contrast         # contrast of every documented colour pair in light and dark; exit 1 below AA
 npm run test:lighthouse         # Lighthouse CI budgets against a production build (lighthouserc.js)
 ```
 
@@ -73,7 +76,7 @@ The loader rejects raw negative years in datings; write BCE years as `"N BCE"` s
 | Job | What fails it |
 |---|---|
 | verify | ESLint, `tsc --noEmit`, Vitest, `content:validate`, the offline source verification gate |
-| e2e | The production build, then Playwright on a desktop and a Pixel 7 profile: every route type in light and dark with zero serious or critical axe violations and no horizontal scroll, navigation, Kaalchakra zoom, lenses, kind filters, URL state round trips, the List fallback (including reduced motion making List the default) and visual snapshots of the Wheel and River |
+| e2e | The production build, then Playwright on desktop Chromium, Firefox and WebKit and on Pixel 7 and iPhone 14 profiles: every route type in light and dark with zero serious or critical axe violations and no horizontal scroll, navigation, Kaalchakra zoom, lenses, kind filters, URL state round trips, the wheel's spin (click, era tap, drag, touch swipe, keyboard, scroll with intent, Back and Forward, one announcement at rest, reduced motion), the List fallback (including reduced motion making List the default) and visual snapshots of the Wheel and River (Chromium projects) |
 | lighthouse | The production build, then Lighthouse CI on a throttled mid-tier Android profile, with the budgets below as hard gates |
 
 Performance budgets (`lighthouserc.js`, median of three runs, Moto G Power class phone, simulated slow 4G, 4x CPU):
@@ -95,10 +98,10 @@ The visual snapshots in `e2e/visual.spec.ts-snapshots/` use a fixed fixture (`e2
 They are per platform; after an intended visual change, refresh both:
 
 ```sh
-npx playwright test e2e/visual.spec.ts --update-snapshots      # macOS
+npx playwright test e2e/visual.spec.ts --update-snapshots=all      # macOS
 # Linux, as CI; node_modules and .next stay inside the container so the host install is untouched
 docker run --rm -v "$PWD":/work -v /work/node_modules -v /work/.next -w /work -e CI=1 mcr.microsoft.com/playwright:v1.65.1-noble \
-  sh -c 'npm ci && npm run build && npx playwright test e2e/visual.spec.ts --update-snapshots'
+  sh -c 'npm ci && npm run build && npx playwright test e2e/visual.spec.ts --update-snapshots=all'
 ```
 
 ## Time model

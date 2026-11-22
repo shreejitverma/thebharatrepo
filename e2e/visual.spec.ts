@@ -6,7 +6,7 @@ import { KC_ITEMS_URL } from '../src/lib/content/public-data';
 /**
  * Visual regression of the Kaalchakra views. The items come from a fixed fixture rather than the live archive,
  * so a snapshot changes only when rendering changes, not when content is added.
- * Snapshots are per platform (font rasterisation differs); refresh them with `npx playwright test e2e/visual.spec.ts --update-snapshots`
+ * Snapshots are per platform (font rasterisation differs); refresh them with `npx playwright test e2e/visual.spec.ts --update-snapshots=all`
  * on macOS, and in the Playwright Linux image for CI (see README).
  */
 const FIXTURE = fs.readFileSync(path.join(__dirname, 'fixtures', 'kaalchakra.json'), 'utf8');
@@ -26,6 +26,8 @@ async function openWithFixture(page: Page, query: string) {
 for (const colorScheme of ['light', 'dark'] as const) {
   test.describe(`${colorScheme} scheme`, () => {
     test.use({ colorScheme });
+    // Each engine rasterises text its own way; one baseline per Chromium project keeps the set reviewable.
+    test.skip(({ browserName }) => browserName !== 'chromium', 'visual baselines are kept for Chromium');
 
     test('wheel', async ({ page, isMobile }) => {
       test.skip(isMobile && colorScheme === 'dark', 'the dark scheme is covered on desktop');
