@@ -1,0 +1,13 @@
+id: person.someone
+type: person
+kind: person
+names: { en: Someone, iast: Kaścit, native: कश्चित् }
+summary: A fixture person used to exercise the content loader in tests.
+summaries:
+  teen: A fixture person, explained for teenage readers of the tests.
+datings:
+  - method: epigraphic
+    range: { earliest: "268 BCE", latest: "233 BCE", precision: year, circa: true }
+    grade: A
+    sources: [src.doe-2001-a-book]
+review: { status: draft }

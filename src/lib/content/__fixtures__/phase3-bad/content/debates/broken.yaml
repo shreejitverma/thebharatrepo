@@ -1,0 +1,25 @@
+id: debate.broken
+title: A broken debate
+question: What is wrong with this debate?
+summary: A fixture debate with unknown references, used to test the loader's checks.
+positions:
+  - id: one
+    label: First position
+    lens: scholarship
+    statement: The first position cites a source that does not exist in the bibliography.
+    grade: C
+    proponents: [{ name: Jane Doe }]
+    evidence:
+      - { text: Evidence that cites an unknown source., grade: C, sources: [{ id: src.nobody-1999-nothing, locator: "p. 1" }] }
+  - id: two
+    label: Second position
+    lens: scholarship
+    statement: The second position is fine on its own, but the debate links unknown records.
+    grade: C
+    proponents: [{ name: John Roe }]
+    evidence:
+      - { text: Evidence that cites a known source., grade: C, sources: [{ id: src.doe-2001-a-book, locator: "p. 2" }] }
+whatWouldChangeThis: [A dated inscription naming the fixture person would settle it.]
+relatedEntities: [person.ghost]
+relatedArticles: [history/missing]
+review: { status: draft }

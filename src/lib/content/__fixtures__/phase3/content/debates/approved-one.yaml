@@ -1,0 +1,28 @@
+id: debate.approved-one
+title: An approved debate
+question: When did the fixture person live?
+summary: A fixture debate that the owner has approved, so it is published.
+published: true
+approval: { by: Owner, date: "2026-11-21" }
+positions:
+  - id: early
+    label: Early dating
+    lens: scholarship
+    statement: The fixture person lived early, as the first line of evidence shows at length.
+    grade: C
+    range: { earliest: "300 BCE", latest: "250 BCE", precision: decade, circa: true }
+    proponents: [{ name: Jane Doe, work: { id: src.doe-2001-a-book, locator: "p. 4" } }]
+    evidence:
+      - { text: The first line of evidence points early., grade: C, sources: [{ id: src.doe-2001-a-book, locator: "p. 4" }] }
+  - id: traditional
+    label: Traditional dating
+    lens: tradition
+    statement: The tradition places the fixture person much earlier, in its own reckoning.
+    grade: D
+    proponents: [{ name: A fixture tradition }]
+    evidence:
+      - { text: The tradition counts back from a later king., grade: D, sources: [{ id: src.doe-2001-a-book, locator: "p. 9" }] }
+whatWouldChangeThis: [A dated inscription naming the fixture person would settle it.]
+relatedEntities: [person.someone]
+relatedArticles: [history/fixture]
+review: { status: draft }

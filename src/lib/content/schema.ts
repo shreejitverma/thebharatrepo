@@ -17,6 +17,7 @@ import {
   DATING_METHODS,
   ENTITY_TYPES,
   KINDS,
+  READING_LEVELS,
   isTraditional,
 } from './labels';
 
@@ -25,6 +26,8 @@ export * from './labels';
 const slug = /^[a-z0-9]+(?:-[a-z0-9]+)*$/;
 export const ENTITY_ID = new RegExp(`^(${ENTITY_TYPES.join('|')})\\.[a-z0-9]+(?:-[a-z0-9]+)*$`);
 export const SOURCE_ID = /^src\.[a-z0-9]+(?:-[a-z0-9]+)*$/;
+/** Language tag: language, optional script, optional region ("sa-Deva", "hi", "ta-Latn", "zh-Hant"). */
+export const BCP47 = /^[a-z]{2,3}(?:-[A-Z][a-z]{3})?(?:-[A-Z]{2})?$/;
 
 export const CitationRef = z.union([
   z.string().regex(SOURCE_ID, 'source ids look like src.author-year-short-title'),
@@ -163,6 +166,8 @@ export const EntitySchema = z
       en: z.string().min(1),
       iast: z.string().optional(),
       native: z.string().optional(),
+      /** BCP 47 tag for `native` when the script default is wrong, e.g. "mr" for a Marathi name in Devanagari. */
+      nativeLang: z.string().regex(BCP47, 'a BCP 47 tag such as "hi", "mr", "sa-Deva" or "ta"').optional(),
     }),
     summary: z.string().min(20).max(600),
     summaries: z
@@ -275,5 +280,157 @@ export const CorrectionSchema = z.strictObject({
   sources: z.array(CitationRef).default([]),
 });
 export type Correction = z.infer<typeof CorrectionSchema>;
+
+
+/* ---------- Debates (content/debates/<slug>.yaml) ---------- */
+
+export const DEBATE_ID = /^debate\.[a-z0-9]+(?:-[a-z0-9]+)*$/;
+/** An article reference: "<category>/<slug>", for example "history/maurya-empire". */
+export const ARTICLE_REF = new RegExp(`^(${CATEGORIES.join('|')})/[a-z0-9]+(?:-[a-z0-9]+)*$`);
+const ISO_DATE = /^\d{4}-\d{2}-\d{2}$/;
+
+/** A citation that must say where in the source the evidence is: page, chapter, verse, edict or figure. */
+export const LocatedCitation = z.strictObject({
+  id: z.string().regex(SOURCE_ID, 'source ids look like src.author-year-short-title'),
+  locator: z.string().min(1, 'debate evidence needs a locator (page, chapter, verse, edict, figure)'),
+});
+export type LocatedCitation = z.infer<typeof LocatedCitation>;
+
+export const ProponentSchema = z.strictObject({
+  /** A named person (or a named tradition such as "Theravada chronicle tradition"). */
+  name: z.string().min(3),
+  /** One line on who they are, for example "Indologist, editor of the Gottingen symposium volumes". */
+  role: z.string().min(3).optional(),
+  /** Their own statement of the position, when it is in the bibliography. */
+  work: CitationRef.optional(),
+});
+
+export const EvidenceSchema = z.strictObject({
+  text: z.string().min(20),
+  grade: z.enum(GRADES),
+  sources: z.array(LocatedCitation).min(1, 'every evidence item needs at least one source with a locator'),
+});
+
+export const PositionSchema = z
+  .strictObject({
+    id: z.string().regex(slug, 'position ids are slugs, e.g. long-chronology'),
+    label: z.string().min(3),
+    /** Scholarship or Tradition. Tradition positions are grade D, as datings are. */
+    lens: z.enum(['scholarship', 'tradition']),
+    /** The position at its strongest, in the words a proponent would accept. */
+    statement: z.string().min(40).max(1500),
+    /** Overall standing of the position's evidence. */
+    grade: z.enum(GRADES),
+    /** The range this position proposes, when it proposes one; drawn on the debate's timeline. */
+    range: YearRangeSchema.optional(),
+    proponents: z.array(ProponentSchema).min(1, 'every position needs at least one named proponent'),
+    evidence: z.array(EvidenceSchema).min(1, 'every position needs at least one cited evidence item'),
+    /** The strongest objections the position has to answer. */
+    objections: z.array(z.string().min(10)).default([]),
+  })
+  .superRefine((p, ctx) => {
+    if (p.lens === 'tradition' && p.grade !== 'D') ctx.addIssue({ code: 'custom', message: `tradition position ${p.id} must be grade D` });
+    if (p.lens === 'scholarship' && p.grade === 'D') ctx.addIssue({ code: 'custom', message: `grade D is reserved for tradition positions, not ${p.id}` });
+  });
+export type DebatePosition = z.infer<typeof PositionSchema>;
+
+export const DebateSchema = z
+  .strictObject({
+    id: z.string().regex(DEBATE_ID, 'debate ids look like debate.<slug>'),
+    title: z.string().min(3),
+    question: z.string().min(10).regex(/\?$/, 'the question ends with a question mark'),
+    summary: z.string().min(20).max(1200),
+    /**
+     * Owner rule: no debate page is published without owner approval. Unpublished debates are validated
+     * but excluded from the static build, the sitemap, search and every link.
+     */
+    published: z.boolean().default(false),
+    approval: z.strictObject({ by: z.string().min(2), date: z.string().regex(ISO_DATE), note: z.string().optional() }).optional(),
+    /** Evidence every position accepts, shown before the positions. */
+    commonGround: z.array(EvidenceSchema).default([]),
+    positions: z.array(PositionSchema).min(2, 'a debate needs at least two positions'),
+    whatWouldChangeThis: z.array(z.string().min(20)).min(1, 'say what evidence would change the picture'),
+    relatedEntities: z.array(z.string().regex(ENTITY_ID)).min(1, 'a debate is placed in time through at least one related entity'),
+    relatedArticles: z.array(z.string().regex(ARTICLE_REF, 'article references look like history/maurya-empire')).default([]),
+    tags: z.array(z.string()).default([]),
+    review: ReviewSchema,
+  })
+  .superRefine((d, ctx) => {
+    if (d.published && !d.approval) ctx.addIssue({ code: 'custom', path: ['approval'], message: 'published debates need owner approval: add approval { by, date }' });
+    const ids = d.positions.map((p) => p.id);
+    for (const id of ids.filter((x, i) => ids.indexOf(x) !== i)) ctx.addIssue({ code: 'custom', path: ['positions'], message: `duplicate position id ${id}` });
+  });
+export type Debate = z.infer<typeof DebateSchema>;
+
+/* ---------- Learning paths and quizzes (content/learning/<slug>.yaml) ---------- */
+
+export const LEARNING_ID = /^learn\.[a-z0-9]+(?:-[a-z0-9]+)*$/;
+
+export const LearningStepSchema = z
+  .strictObject({
+    entity: z.string().regex(ENTITY_ID).optional(),
+    article: z.string().regex(ARTICLE_REF, 'article references look like history/maurya-empire').optional(),
+    /** Heading for the step; defaults to the entity name or article title. */
+    title: z.string().min(3).optional(),
+    /** What to look for in this step, written at the path's reading level. */
+    note: z.string().min(20).max(600),
+  })
+  .superRefine((s, ctx) => {
+    if (Boolean(s.entity) === Boolean(s.article)) ctx.addIssue({ code: 'custom', message: 'a step references exactly one of entity or article' });
+  });
+export type LearningStep = z.infer<typeof LearningStepSchema>;
+
+const TRICK_CHOICE = /^(all|none|both|neither) of (the )?(above|these|them)\.?$/i;
+
+export const QuizChoiceSchema = z.strictObject({
+  text: z.string().min(1),
+  correct: z.boolean().default(false),
+  /** Why this choice is right, or why it is wrong. Every choice is explained. */
+  explanation: z.string().min(10),
+});
+
+export const QuizQuestionSchema = z
+  .strictObject({
+    id: z.string().regex(slug, 'question ids are slugs, e.g. q1 or edict-xiii'),
+    question: z.string().min(10),
+    choices: z.array(QuizChoiceSchema).min(2).max(5),
+    /** Sources that support the correct answer. */
+    sources: z.array(CitationRef).min(1, 'every correct answer must be supported by a cited source'),
+  })
+  .superRefine((q, ctx) => {
+    const correct = q.choices.filter((c) => c.correct).length;
+    if (correct !== 1) ctx.addIssue({ code: 'custom', path: ['choices'], message: `exactly one choice is correct (found ${correct})` });
+    const texts = q.choices.map((c) => c.text.trim().toLowerCase());
+    if (new Set(texts).size !== texts.length) ctx.addIssue({ code: 'custom', path: ['choices'], message: 'choices must be distinct' });
+    for (const c of q.choices) {
+      if (TRICK_CHOICE.test(c.text.trim())) ctx.addIssue({ code: 'custom', path: ['choices'], message: `no trick questions: "${c.text}" is not allowed` });
+    }
+    if (/\b(NOT|EXCEPT|NEVER)\b/.test(q.question)) ctx.addIssue({ code: 'custom', path: ['question'], message: 'no trick questions: ask what is true, not which option is NOT' });
+  });
+export type QuizQuestion = z.infer<typeof QuizQuestionSchema>;
+
+export const LearningPathSchema = z
+  .strictObject({
+    id: z.string().regex(LEARNING_ID, 'learning path ids look like learn.<slug>'),
+    title: z.string().min(3),
+    level: z.enum(READING_LEVELS),
+    /** Who the path is for, in a phrase: "Ages 13 to 17, in class or at home". */
+    audience: z.string().min(3),
+    summary: z.string().min(20).max(600),
+    /** Where the path sits on the Kaalchakra when its steps span more than its subject (for example a modern decipherment of an ancient script). */
+    focus: YearRangeSchema.optional(),
+    goals: z.array(z.string().min(10)).min(1, 'say what the learner will be able to do'),
+    steps: z.array(LearningStepSchema).min(2, 'a path has at least two steps'),
+    quiz: z.array(QuizQuestionSchema).default([]),
+    tags: z.array(z.string()).default([]),
+    review: ReviewSchema,
+  })
+  .superRefine((p, ctx) => {
+    const refs = p.steps.map((s) => s.entity ?? s.article);
+    for (const r of refs.filter((x, i) => refs.indexOf(x) !== i)) ctx.addIssue({ code: 'custom', path: ['steps'], message: `step ${r} appears twice` });
+    const ids = p.quiz.map((q) => q.id);
+    for (const id of ids.filter((x, i) => ids.indexOf(x) !== i)) ctx.addIssue({ code: 'custom', path: ['quiz'], message: `duplicate question id ${id}` });
+  });
+export type LearningPath = z.infer<typeof LearningPathSchema>;
 
 export { slug as SLUG };

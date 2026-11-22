@@ -1,6 +1,6 @@
 /**
  * Build-time artifacts derived from validated content:
- *   public/search.json        compact search index (entities and articles)
+ *   public/search.json        compact search index (entities, articles, published debates, learning paths)
  *   public/data/archive.json  open data export of the full entity graph and sources
  */
 
@@ -10,6 +10,8 @@ import { loadContentUncached } from '../src/lib/content/load';
 import { KIND_LABELS } from '../src/lib/content/labels';
 import { entityHref } from '../src/lib/content/kaalchakra';
 import { formatRange } from '../src/lib/time';
+import { debateSearchDocs } from '../src/lib/content/debates';
+import { learningSearchDocs } from '../src/lib/content/learning';
 
 const g = loadContentUncached();
 if (g.errors.length) {
@@ -37,6 +39,9 @@ const docs = [
     when: formatRange(a.datings[0].range),
     text: [a.tags.join(' '), a.body.replace(/\[@[^\]]+\]/g, '').replace(/[#*_>`]/g, ' ').slice(0, 1500)].join(' '),
   })),
+  // Published debates only: drafts awaiting owner approval never reach the index.
+  ...debateSearchDocs(g),
+  ...learningSearchDocs(g),
 ];
 fs.writeFileSync(path.join(pub, 'search.json'), JSON.stringify(docs));
 

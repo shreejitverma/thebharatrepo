@@ -1,0 +1,17 @@
+id: learn.teen-gap
+title: A path with gaps
+level: teen
+audience: Ages 13 to 17
+summary: A fixture teen path whose entity has no teen summary and whose quiz cites an unknown source.
+goals: [Find the problems in this fixture path.]
+steps:
+  - { entity: person.plain, note: This entity has no teen summary and the loader must flag it. }
+  - { entity: person.nobody, note: This entity does not exist and the loader must flag it too. }
+quiz:
+  - id: q1
+    question: Which source supports this answer?
+    choices:
+      - { text: An unknown one, correct: true, explanation: The cited source is not in the bibliography. }
+      - { text: A known one, explanation: Only the unknown source is cited. }
+    sources: [src.nobody-1999-nothing]
+review: { status: draft }
