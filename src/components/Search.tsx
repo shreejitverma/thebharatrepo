@@ -14,6 +14,8 @@ export interface SearchDoc {
   text: string;
 }
 
+const MAX_SHOWN = 60;
+
 export default function Search() {
   const query = useSearchParams().get('q') ?? '';
   const [docs, setDocs] = useState<SearchDoc[] | null>(null);
@@ -30,7 +32,8 @@ export default function Search() {
   }, []);
 
   const fuse = useMemo(() => (docs ? new Fuse(docs, { keys: [{ name: 'title', weight: 3 }, { name: 'summary', weight: 2 }, 'text'], ignoreLocation: true, threshold: 0.34 }) : null), [docs]);
-  const results = useMemo(() => (fuse && query ? fuse.search(query, { limit: 60 }).map((r) => r.item) : []), [fuse, query]);
+  const results = useMemo(() => (fuse && query ? fuse.search(query).map((r) => r.item) : []), [fuse, query]);
+  const shown = results.slice(0, MAX_SHOWN);
 
   return (
     <>
@@ -41,9 +44,9 @@ export default function Search() {
       {docs && query && results.length === 0 ? <p className="empty">0 results for &ldquo;{query}&rdquo;. Try a broader term, or browse the <Link href="/kaalchakra">Kaalchakra</Link>.</p> : null}
       {results.length > 0 ? (
         <>
-          <p className="muted">{results.length} results</p>
+          <p className="muted">{results.length > shown.length ? `Showing ${shown.length} of ${results.length} results` : `${results.length} ${results.length === 1 ? 'result' : 'results'}`}</p>
           <div className="category-grid">
-            {results.map((d) => (
+            {shown.map((d) => (
               <Link key={d.href} href={d.href} className="card">
                 <p className="eyebrow" style={{ margin: 0 }}>{d.kind}</p>
                 <h3>{d.title}</h3>

@@ -12,7 +12,7 @@ datings:
     sources: [src.witzel-1997-early-sanskritization-kuru, src.jamison-brereton-2014-rigveda, src.flood-2003-blackwell-companion-hinduism]
     note: "The hymns of the Rigveda are placed c. 1500 to 1000 BCE and the Vedic corpus as a whole is placed before the rise of Buddhism, on linguistic and internal evidence. Indigenist scholars argue for earlier dates."
   - method: traditional-puranic
-    range: { earliest: "3101 BCE", latest: "2999 BCE", precision: century, circa: true }
+    range: { earliest: "3102 BCE", latest: "3000 BCE", precision: century, circa: true }
     grade: D
     label: Traditional Puranic and sampradaya reckoning
     sources: [src.flood-2003-blackwell-companion-hinduism]

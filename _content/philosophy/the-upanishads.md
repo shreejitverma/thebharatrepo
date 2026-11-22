@@ -12,7 +12,7 @@ datings:
     sources: [src.olivelle-1998-early-upanisads, src.cohen-2018-upanishads-complete-guide]
     note: "The earliest prose Upanishads (Brihadaranyaka, Chandogya) are placed before or around the rise of Buddhism, and a second group of verse Upanishads in the following centuries. Later texts called Upanishads continued to be composed for over a thousand years."
   - method: traditional-sampradaya
-    range: { earliest: "3101 BCE", latest: "2499 BCE", precision: century, circa: true }
+    range: { earliest: "3102 BCE", latest: "2500 BCE", precision: century, circa: true }
     grade: D
     label: Traditional Vedanta sampradaya reckoning
     sources: [src.flood-2003-blackwell-companion-hinduism]
