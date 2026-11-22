@@ -64,13 +64,7 @@ claims:
     grade: B
     sources:
       - src.williams-2009-toba-environmental-impact
-relations:
-  - kind: contemporary-of
-    target: site.dhaba
-  - kind: related-to
-    target: event.arrival-of-modern-humans-south-asia
-  - kind: related-to
-    target: site.bori
+relations: []
 debate: >-
   Petraglia et al. (2007) argue that Middle Palaeolithic technological continuity below and above the 74 ka Toba
   ash at Jwalapuram reflects early Homo sapiens survival in India, whereas Ambrose (1998), Williams et al. (2009)

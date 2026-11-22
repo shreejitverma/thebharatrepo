@@ -58,37 +58,6 @@ datings:
     note: >-
       Varahamihira, quoted by Kalhana (Rajatarangini 1.56), dates Yudhishthira's reign to 2,526 years before
       the Shaka era (2449 BCE); Krishna, his contemporary, would then belong to the mid-25th century BCE.
-  - method: linguistic
-    range:
-      earliest: "700 BCE"
-      latest: "500 BCE"
-      precision: century
-      circa: true
-    grade: C
-    label: Krishna Devakiputra in Chandogya Upanishad 3.17.6 (date of the text; identification debated)
-    sources:
-      - src.olivelle-1998-early-upanisads
-      - src.malinar-2007-bhagavadgita-doctrines-contexts
-    note: >-
-      The Chandogya Upanishad, dated by Olivelle to roughly the 7th to 6th centuries BCE, names Krishna son
-      of Devaki as a pupil of Ghora Angirasa; whether he is the Krishna of the epic is debated.
-  - method: epigraphic
-    range:
-      earliest: "120 BCE"
-      latest: "100 BCE"
-      best: "113 BCE"
-      precision: decade
-      circa: true
-    grade: B
-    label: Heliodorus pillar at Besnagar, worship of Vasudeva (date by the reign of Antialcidas)
-    sources:
-      - src.salomon-1998-indian-epigraphy
-      - src.shaw-2016-buddhist-landscapes-sanchi
-      - src.singh-2008-ancient-early-medieval-india
-      - src.malinar-2007-bhagavadgita-doctrines-contexts
-    note: >-
-      Heliodorus, envoy of the Indo-Greek king Antialcidas and a self-described Bhagavata, set up a Garuda
-      column for Vasudeva, god of gods; the date follows the approximate reign of Antialcidas.
 claims:
   - text: >-
       Chandogya Upanishad 3.17.6 names Krishna, son of Devaki, as a pupil of Ghora Angirasa; scholars
@@ -105,12 +74,16 @@ claims:
       - src.brockington-1998-sanskrit-epics
       - src.malinar-2007-bhagavadgita-doctrines-contexts
   - text: >-
-      The Heliodorus Garuda pillar at Besnagar and the Ghosundi-Hathibada inscriptions attest the worship of
-      Vasudeva and Samkarshana in central and western India in the 2nd and 1st centuries BCE.
+      The Heliodorus Garuda pillar at Besnagar, set up for Vasudeva by an envoy of the Indo-Greek king
+      Antialcidas around 120 to 100 BCE, and the Ghosundi-Hathibada inscriptions attest the worship of
+      Vasudeva and Samkarshana in central and western India in the 2nd and 1st centuries BCE; these date the
+      worship, not Krishna.
     grade: A
     sources:
       - src.salomon-1998-indian-epigraphy
       - src.singh-2008-ancient-early-medieval-india
+      - src.shaw-2016-buddhist-landscapes-sanchi
+      - src.malinar-2007-bhagavadgita-doctrines-contexts
   - text: >-
       The Vishnu Purana states that Kali Yuga could not take hold while Krishna remained on earth and began
       on the day he left it.
@@ -126,13 +99,7 @@ debate: >-
   beyond what the evidence can settle.
 relations:
   - kind: related-to
-    target: cosmology.dvapara-yuga
-  - kind: related-to
     target: cosmology.kali-yuga
-  - kind: related-to
-    target: event.kali-yuga-epoch
-  - kind: related-to
-    target: concept.yuga-chronology-of-the-itihasa
   - kind: related-to
     target: text.chandogya-upanishad
   - kind: related-to

@@ -87,12 +87,6 @@ debate: >-
   inscription before Aryabhata.
 relations:
   - kind: related-to
-    target: cosmology.kali-yuga
-  - kind: related-to
-    target: concept.kali-era-in-inscriptions
-  - kind: related-to
-    target: concept.yuga-chronology-of-the-itihasa
-  - kind: related-to
     target: person.krishna
 wikidata: null
 tags:

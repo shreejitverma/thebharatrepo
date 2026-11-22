@@ -58,7 +58,6 @@ claims:
       - src.flood-2003-blackwell-companion-hinduism
 relations:
   - { kind: succeeded, target: text.brahmanas }
-  - { kind: preceded, target: text.upanishads }
   - { kind: related-to, target: tradition.shrauta-ritual }
 wikidata: Q265461
 tags: [veda, aranyaka, shruti, ritual, philosophy]

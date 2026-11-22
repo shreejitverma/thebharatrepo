@@ -48,10 +48,6 @@ claims:
 relations:
   - kind: part-of
     target: tradition.ahar-banas-culture
-  - kind: contemporary-of
-    target: site.ahar
-  - kind: contemporary-of
-    target: site.balathal
 tags:
   - chalcolithic
   - ahar-banas

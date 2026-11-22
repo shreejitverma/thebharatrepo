@@ -62,6 +62,10 @@ Use the widest range the evidence supports, not the narrowest one you have seen 
 
 `archaeological-radiocarbon`, `archaeological-stratigraphic`, `luminescence`, `epigraphic`, `numismatic`, `foreign-synchronism`, `textual-internal`, `linguistic`, `astronomical-reference`, `art-historical`, `genetic`, `geological`, `documentary`, `scholarly-consensus`, `traditional-puranic`, `traditional-siddhantic`, `traditional-sampradaya`.
 
+A dating places the entity itself.
+Never date a figure or event by the composition date of a text about it.
+For a figure or event known only from tradition (Rama, Krishna, Manu, the churning of the ocean), scholarship dates the texts and inscriptions that tell of it, not the figure, so it carries only traditional datings and records those dates as graded claims; the texts carry their own datings.
+The validator rejects a non-traditional dating on a non-text entity whose label or note calls it the date of the text.
 Give an entity several datings when methods disagree.
 For example, a text can have a `linguistic` dating graded C and a `traditional-puranic` dating graded D.
 Use the `label` field to name the position, for example `label: "Mainstream Indology"` or `label: "Kanchi and Dwaraka matha tradition"`, and the `note` field to explain the basis in one or two sentences.
@@ -165,7 +169,13 @@ Rules:
   A relation always reads as a sentence with this entity as the subject: `<this entity> <kind> <target>`.
   For example, on `text.aitareya-brahmana` write `{ kind: commented-on, target: text.rigveda }` (the Brahmana comments on the Rigveda), and on `person.ashoka` write `{ kind: ruled, target: polity.maurya-empire }`.
   Never use a kind in the reverse sense; the site shows inbound relations automatically.
+  Author each connection once, on one of the two entities: the validator rejects a second relation between the same pair, in either direction and of any kind, because the page would list the other entity twice.
+  Keep the most specific kind and put any further detail in `note`.
   Relation kinds: `part-of`, `authored`, `authored-by`, `ruled`, `ruled-by`, `patronised`, `patronised-by`, `succeeded`, `preceded`, `commented-on`, `located-at`, `excavated-at`, `issued-by`, `founded`, `founded-by`, `taught`, `student-of`, `influenced`, `contemporary-of`, `related-to`.
+- `aliases` (optional) lists former ids of entities merged into this one, for example `aliases: [concept.rigvedic-sarasvati]` on `concept.ghaggar-hakra-sarasvati-debate`.
+  The build turns each alias into a permanent (308) redirect from `/archive/<type>/<slug>` and from the Kaalchakra deep link `/kaalchakra?id=<id>`, so published URLs keep working.
+  An alias must not be a live entity id and may be claimed by only one entity; relations and articles link to the surviving id, never to an alias.
+  When you merge or rename an entity, add its old id here and record the merge in `corrections.yaml`.
 - `debate` (optional) is a short neutral paragraph, shown under "Where scholars disagree", summarising the positions for a contested entity.
 - `wikidata` and `image` are optional; include them only when verified.
 - `review.status` is `draft` for new content.

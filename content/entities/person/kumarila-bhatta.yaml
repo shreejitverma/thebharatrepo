@@ -35,7 +35,6 @@ claims:
       and his followers.
     grade: A
     sources: [src.taber-2005-hindu-critique-buddhist-epistemology]
-relations:
-  - { kind: related-to, target: person.adi-shankara }
+relations: []
 tags: [mimamsa, philosophy, epistemology]
 review: { status: draft, author: "claude-opus-5-5" }

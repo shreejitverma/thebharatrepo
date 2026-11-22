@@ -40,9 +40,6 @@ claims:
       - src.dundas-2002-the-jains
 relations:
   - { kind: founded, target: polity.maurya-empire }
-  - { kind: ruled, target: polity.maurya-empire }
-  - { kind: contemporary-of, target: person.kautilya }
-  - { kind: related-to, target: person.ashoka, note: Grandfather of Ashoka }
 wikidata: Q188541
 tags: [maurya, chandragupta-maurya, sandrokottos, pataliputra]
 review: { status: draft, author: "gemini-4-argon" }

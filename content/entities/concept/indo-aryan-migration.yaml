@@ -91,7 +91,6 @@ relations:
   - { kind: related-to, target: text.rigveda }
   - { kind: related-to, target: concept.vedic-sanskrit }
   - { kind: related-to, target: event.mitanni-treaty }
-  - { kind: related-to, target: concept.gandhara-grave-culture }
   - { kind: related-to, target: concept.sintashta-steppe-chariot-question }
   - { kind: related-to, target: concept.ghaggar-hakra-sarasvati-debate }
 wikidata: Q269145

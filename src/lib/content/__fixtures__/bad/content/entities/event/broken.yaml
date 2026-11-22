@@ -10,4 +10,5 @@ datings:
     sources: [src.nobody-1999-nothing]
 relations:
   - { kind: related-to, target: person.ghost }
+  - { kind: related-to, target: event.former-toba }
 review: { status: draft }

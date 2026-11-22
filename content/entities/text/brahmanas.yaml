@@ -58,9 +58,6 @@ claims:
       - src.keith-1920-rigveda-brahmanas
 relations:
   - { kind: succeeded, target: text.rigveda }
-  - { kind: preceded, target: text.aranyakas }
-  - { kind: related-to, target: text.shatapatha-brahmana }
-  - { kind: related-to, target: text.aitareya-brahmana }
   - { kind: related-to, target: tradition.shrauta-ritual }
 wikidata: Q823671
 tags: [veda, brahmana, shruti, ritual, prose]

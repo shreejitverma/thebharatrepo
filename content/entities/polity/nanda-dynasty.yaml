@@ -36,7 +36,5 @@ claims:
       - src.kulke-2004-history-of-india
 relations:
   - { kind: ruled, target: polity.magadha }
-  - { kind: preceded, target: polity.maurya-empire }
-  - { kind: contemporary-of, target: event.alexander-punjab-campaign }
 tags: [nanda, magadha, pataliputra]
 review: { status: draft, author: "gemini-4-argon" }

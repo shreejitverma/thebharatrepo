@@ -69,10 +69,6 @@ claims:
 relations:
   - kind: related-to
     target: tradition.harappan-civilisation
-  - kind: preceded
-    target: event.harappan-deurbanisation
-  - kind: related-to
-    target: concept.ghaggar-hakra-sarasvati-debate
   - kind: related-to
     target: site.bhirrana
 tags:

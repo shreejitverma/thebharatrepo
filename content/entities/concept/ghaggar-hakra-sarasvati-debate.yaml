@@ -171,6 +171,8 @@ relations:
     target: event.4-2-ka-climate-aridification
   - kind: related-to
     target: polity.kuru-kingdom
+aliases:
+  - concept.rigvedic-sarasvati
 image:
   commons: "File:Sarasvati river.jpg"
   alt: Schematic river diagram comparing pre-Harappan, Harappan, and modern courses of the Indus, Sutlej, Ghaggar-Hakra, and Yamuna rivers

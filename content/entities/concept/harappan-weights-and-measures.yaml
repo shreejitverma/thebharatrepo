@@ -66,10 +66,6 @@ claims:
 relations:
   - kind: part-of
     target: tradition.harappan-civilisation
-  - kind: related-to
-    target: concept.harappan-mesopotamian-trade
-  - kind: related-to
-    target: concept.harappan-town-planning-and-drainage
 wikidata: null
 image:
   commons: "File:Harappan weights Delhi Museum.jpg"

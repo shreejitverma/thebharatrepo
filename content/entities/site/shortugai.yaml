@@ -6,7 +6,7 @@ names:
   iast: Śortugāī
 summary: >-
   A Mature Harappan trading and craft colony situated north of the Hindu Kush near the confluence of the Kokcha
-  and Amu Darya (Oxus) rivers in Badakhshan, northeastern Afghanistan (c. 2200-1800 BCE), excavated by Henri-Paul
+  and Amu Darya (Oxus) rivers in Badakhshan, northeastern Afghanistan (c. 2300-1800 BCE), excavated by Henri-Paul
   Francfort (1976-1979), established to procure Badakhshan lapis lazuli, tin, and Central Asian resources.
 summaries:
   kids: >-
@@ -28,16 +28,17 @@ datings:
       latest: "1800 BCE"
       precision: century
       circa: true
-    grade: A
-    label: Periods I-II (Mature Harappan Colony) and Periods III-IV (Late/Bishkent Transition)
+    grade: B
+    label: Mature Harappan colony and later levels
     sources:
       - src.possehl-2002-indus-civilization
       - src.kenoyer-1998-ancient-cities-indus
       - src.wright-2010-ancient-indus
     note: >-
-      Calibrated radiocarbon dates from Henri-Paul Francfort's excavations place the Mature Harappan colony
-      (Period I, Mound A) around c. 2200-2000 BCE and Late Harappan / Bactrian interaction levels (Periods II-IV)
-      down to c. 1800/1700 BCE.
+      Henri-Paul Francfort's excavations found a Mature Harappan colony overlain by later levels with Central
+      Asian (Bactrian) affinities.
+      The period-by-period radiocarbon dates could not be checked against the cited syntheses for this entry, so
+      the range keeps the broader span of about 2300 to 1800 BCE rather than a narrower one for the colony alone.
 claims:
   - text: >-
       Despite lying more than 1,000 km north of the core Indus alluvial plain across the Hindu Kush passes,
@@ -61,8 +62,6 @@ claims:
 relations:
   - kind: part-of
     target: tradition.harappan-civilisation
-  - kind: related-to
-    target: concept.harappan-mesopotamian-trade
   - kind: related-to
     target: concept.harappan-carnelian-bead-making
 wikidata: Q1550221

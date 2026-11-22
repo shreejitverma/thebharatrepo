@@ -32,7 +32,6 @@ claims:
     sources:
       - src.stoneman-2019-greek-experience-of-india
 relations:
-  - { kind: related-to, target: person.menander-i }
   - { kind: related-to, target: polity.indo-greek-kingdom }
 wikidata: Q497089
 tags: [milindapanha, menander, nagasena, buddhism, philosophy]

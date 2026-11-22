@@ -35,8 +35,6 @@ claims:
       - src.bronkhorst-2007-greater-magadha
 relations:
   - { kind: part-of, target: polity.sixteen-mahajanapadas }
-  - { kind: ruled-by, target: polity.haryanka-dynasty }
-  - { kind: ruled-by, target: polity.nanda-dynasty }
   - { kind: related-to, target: polity.maurya-empire, note: Heartland of the Maurya Empire }
 wikidata: Q234009
 tags: [magadha, mahajanapadas, rajagriha, pataliputra]

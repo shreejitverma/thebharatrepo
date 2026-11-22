@@ -57,7 +57,6 @@ claims:
       - src.gonda-1975-vedic-literature
 relations:
   - { kind: part-of, target: text.yajurveda }
-  - { kind: related-to, target: text.brihadaranyaka-upanishad }
   - { kind: related-to, target: tradition.agnicayana }
 tags: [veda, samhita, yajurveda, vajasaneyi, yajnavalkya]
 review: { status: draft, author: "gemini-4-argon" }

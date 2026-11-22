@@ -54,7 +54,6 @@ claims:
     sources: [src.devahuti-1970-harsha-political-study, src.thapar-2002-early-india]
 relations:
   - { kind: patronised, target: person.banabhatta }
-  - { kind: contemporary-of, target: event.xuanzang-travels-in-india }
   - { kind: related-to, target: polity.chalukya-dynasty-of-badami, note: Rival of Pulakeshin II }
 wikidata: Q216895
 tags: [pushyabhuti, kannauj, early-medieval, kingship]

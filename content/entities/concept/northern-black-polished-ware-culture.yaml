@@ -62,7 +62,6 @@ relations:
   - { kind: excavated-at, target: site.hastinapura }
   - { kind: excavated-at, target: site.ahichhatra }
   - { kind: excavated-at, target: site.atranjikhera }
-  - { kind: related-to, target: concept.iron-metallurgy-in-india }
 wikidata: Q2495995
 image:
   commons: "File:Northern Polished Black Ware Culture (700-200 BCE).png"

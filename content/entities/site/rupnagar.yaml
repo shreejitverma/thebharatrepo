@@ -8,7 +8,7 @@ names:
 summary: >-
   An important northern Harappan site on the left bank of the Sutlej River where it emerges from the Siwalik Hills
   in Punjab, India, excavated by Y. D. Sharma (1953-1955), famous as the first site excavated in post-independence
-  India to demonstrate a stratigraphic sequence from Mature and Bara-related Harappan levels (Period I, c. 2100-1400 BCE)
+  India to demonstrate a stratigraphic sequence from Mature and Bara-related Harappan levels (Period I, c. 2400-1400 BCE)
   to Painted Grey Ware (Period II).
 summaries:
   kids: >-
@@ -35,9 +35,16 @@ datings:
       - src.possehl-2002-indus-civilization
       - src.singh-2008-ancient-early-medieval-india
       - src.allchin-1982-rise-of-civilization
+      - src.asi-1954-indian-archaeology-1953-54
+      - src.asi-1955-indian-archaeology-1954-55
     note: >-
       Period I at Rupnagar combines late Mature Harappan urban material (steatite seal, chert weights, mud-brick
       and river-pebble houses) with the regional Bara ceramic tradition of the upper Sutlej basin.
+      The excavation reports describe a lower late Mature Harappan phase and an upper phase with new ceramic
+      traditions, an occupation of about half a millennium, and a long desertion before Painted Grey Ware settlers
+      arrived around 1000 BC, but they give no calendar dates for Period I.
+      The cited syntheses could not be rechecked for a narrower span, so the range keeps the broader window of
+      about 2400 to 1400 BCE.
 claims:
   - text: >-
       Excavated by Y. D. Sharma of the Archaeological Survey of India in 1953-1955, Rupnagar (Ropar) was the first

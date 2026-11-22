@@ -47,7 +47,6 @@ claims:
       - src.dundas-2002-the-jains
 relations:
   - { kind: contemporary-of, target: polity.satavahana-dynasty }
-  - { kind: related-to, target: artifact.hathigumpha-inscription }
   - { kind: related-to, target: polity.nanda-dynasty }
 wikidata: Q1391280
 tags: [kharavela, kalinga, odisha, jainism, hathigumpha]

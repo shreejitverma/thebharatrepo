@@ -30,7 +30,6 @@ claims:
   - text: The Siddhanta Shiromani was completed in 1150 according to Bhaskara II's own dating.
     grade: A
     sources: [src.plofker-2009-mathematics-in-india]
-relations:
-  - { kind: authored-by, target: person.bhaskara-ii }
+relations: []
 tags: [mathematics, arithmetic, sanskrit]
 review: { status: draft, author: "codex-gpt-6" }

@@ -500,3 +500,29 @@ test.describe('Kaalchakra', () => {
     });
   });
 });
+
+test.describe('merged entities keep their old URLs', () => {
+  const OLD = '/archive/concept/rigvedic-sarasvati';
+  const NEW = '/archive/concept/ghaggar-hakra-sarasvati-debate';
+
+  test('an old archive URL redirects permanently to the surviving entity', async ({ page, request }) => {
+    const res = await request.get(OLD, { maxRedirects: 0 });
+    expect(res.status()).toBe(308);
+    expect(new URL(res.headers()['location'], 'http://x').pathname).toBe(NEW);
+    await page.goto(OLD);
+    await expect(page).toHaveURL(NEW);
+    await expect(page.locator('h1')).toHaveText('Ghaggar-Hakra Palaeochannel and the Sarasvati Identification');
+  });
+
+  test('an old Kaalchakra deep link selects the surviving entity', async ({ page, request }) => {
+    const res = await request.get('/kaalchakra?view=list&id=event.dholavira-unesco-inscription', { maxRedirects: 0 });
+    expect(res.status()).toBe(308);
+    const loc = new URL(res.headers()['location'], 'http://x');
+    expect(loc.searchParams.get('id')).toBe('site.dholavira');
+    expect(loc.searchParams.get('view')).toBe('list');
+    await page.goto('/kaalchakra?view=list&id=event.dholavira-unesco-inscription');
+    await expect(page.locator('.kc-list button[aria-current="true"]')).toHaveCount(1);
+    await expect(page.locator('.kc-panel .btn--primary')).toHaveAttribute('href', '/archive/site/dholavira');
+    await expect(page).toHaveURL(/[?&]id=site\.dholavira(&|$)/);
+  });
+});

@@ -56,6 +56,8 @@ export interface ContentGraph {
   articlesByEntity: Map<string, Article[]>;
   /** entity id -> entities pointing at it */
   inbound: Map<string, { from: string; kind: string }[]>;
+  /** former entity id (alias) -> the live entity it was merged into */
+  aliases: Map<string, string>;
   errors: ContentProblem[];
 }
 
@@ -108,6 +110,12 @@ export function findMalformedCitations(body: string): string[] {
   return out;
 }
 
+/** Site-internal Markdown link targets in a body (`[text](/path)`), without query or fragment, outside code. */
+export function internalLinks(body: string): string[] {
+  const visible = body.replace(/```[\s\S]*?```|`[^`\n]*`/g, '');
+  return [...visible.matchAll(/\]\((\/[^)\s?#]*)[^)]*\)/g)].map((m) => m[1].replace(/\/+$/, '') || '/');
+}
+
 /** Citations inside HTML comments or code are invisible to readers and must not count. */
 export function findHiddenCitations(body: string): string[] {
   const hidden: string[] = [];
@@ -128,6 +136,25 @@ export function bceOffByOne(range: { earliest: number; latest: number; best?: nu
     if (ends.includes(-n) && !ends.includes(1 - n)) flagged.add(n);
   }
   return [...flagged];
+}
+
+const LABEL_RANGE = /\b(\d{2,5})\s*(BCE|BC|CE|AD)?\s*(?:to|-|–)\s*(\d{2,5})\s*(BCE|BC|CE|AD)\b/gi;
+
+/**
+ * A dating label that states one span and no other year, such as "Reign (about 268 to 232 BCE)", is what
+ * readers see beside the range, so it must name the range's own endpoints. Labels that name several
+ * phases or alternatives are left alone. Returns a message when they disagree.
+ */
+export function labelRangeMismatch(dating: { label?: string; range: { earliest: number; latest: number } }): string | null {
+  const label = (dating.label ?? '').replace(/,(?=\d{3})/g, '');
+  const spans = [...label.matchAll(LABEL_RANGE)];
+  if (spans.length !== 1 || /\d/.test(label.replace(spans[0][0], ''))) return null;
+  const [, a, eraA, b, eraB] = spans[0];
+  const astro = (n: string, era: string | undefined) => (era && /^B/i.test(era) ? 1 - Number(n) : Number(n));
+  const earliest = astro(a, eraA ?? eraB);
+  const latest = astro(b, eraB);
+  if (earliest === dating.range.earliest && latest === dating.range.latest) return null;
+  return `label "${dating.label}" names a different span from the range; make the label and the range agree`;
 }
 
 const CENTURY_ORDINALS = ['first', 'second', 'third', 'fourth', 'fifth', 'sixth', 'seventh', 'eighth', 'ninth', 'tenth', 'eleventh', 'twelfth', 'thirteenth', 'fourteenth', 'fifteenth', 'sixteenth', 'seventeenth', 'eighteenth', 'nineteenth', 'twentieth', 'twenty-first'];
@@ -228,6 +255,54 @@ function identifierKeys(s: Source): string[] {
   return [s.doi && `doi:${s.doi.toLowerCase()}`, s.isbn && `isbn:${s.isbn}`, s.oclc && `oclc:${s.oclc}`, s.url && `url:${s.url.replace(/\/+$/, '')}`].filter((k): k is string => Boolean(k));
 }
 
+/**
+ * Maps every alias to the entity that declares it. An alias is a former id, so it must not be a live
+ * entity id (the redirect would hide that page) and only one entity may claim it.
+ */
+export function resolveAliases(entities: Iterable<Pick<Entity, 'id' | 'aliases'>>): { aliases: Map<string, string>; problems: { id: string; message: string }[] } {
+  const list = [...entities];
+  const live = new Set(list.map((e) => e.id));
+  const aliases = new Map<string, string>();
+  const problems: { id: string; message: string }[] = [];
+  for (const e of list) {
+    for (const a of e.aliases) {
+      if (live.has(a)) problems.push({ id: e.id, message: `alias ${a} collides with a live entity id; an alias names an entity that no longer exists` });
+      else if (aliases.has(a) && aliases.get(a) !== e.id) problems.push({ id: e.id, message: `alias ${a} is already claimed by ${aliases.get(a)}` });
+      else aliases.set(a, e.id);
+    }
+  }
+  return { aliases, problems };
+}
+
+/**
+ * The entity page lists outbound relations and, automatically, inbound ones, so each pair of entities
+ * takes at most one relation: a second relation between the same two entities, in either direction and
+ * of any kind, shows the other entity twice on both pages. Also rejects an entity relating to itself.
+ * Each problem is filed against the entity that carries the redundant relation.
+ */
+export function duplicateRelations(entities: Iterable<Pick<Entity, 'id' | 'relations'>>): { id: string; message: string }[] {
+  const problems: { id: string; message: string }[] = [];
+  const first = new Map<string, { from: string; kind: string; target: string }>();
+  for (const e of entities) {
+    for (const r of e.relations) {
+      if (r.target === e.id) {
+        problems.push({ id: e.id, message: `relation ${r.kind} -> ${r.target} points at the entity itself` });
+        continue;
+      }
+      const key = [e.id, r.target].sort().join(' ');
+      const prev = first.get(key);
+      if (!prev) {
+        first.set(key, { from: e.id, kind: r.kind, target: r.target });
+        continue;
+      }
+      if (prev.from === e.id && prev.kind === r.kind) problems.push({ id: e.id, message: `relation ${r.kind} -> ${r.target} is listed twice` });
+      else if (prev.from === e.id) problems.push({ id: e.id, message: `relations ${prev.kind} and ${r.kind} both link to ${r.target}; keep one relation per pair of entities and put any detail in its note` });
+      else problems.push({ id: e.id, message: `relation ${r.kind} -> ${r.target} duplicates ${prev.from}'s relation ${prev.kind} -> ${e.id}; the site shows inbound relations on both pages, so keep one` });
+    }
+  }
+  return problems;
+}
+
 let strays: string[] = [];
 
 function walk(dir: string, ext: string): string[] {
@@ -316,6 +391,8 @@ export function loadContentUncached(): ContentGraph {
       for (const n of ceOffByOne(d, `${text} ${d.label ?? ''} ${d.note ?? ''}`)) {
         errors.push({ file: rel(file), message: `datings[${i}]: latest is written as "${n - 1} CE" but the text gives ${n} CE (or the century ending then); a CE year needs no BCE-style shift` });
       }
+      const mismatch = labelRangeMismatch(d);
+      if (mismatch) errors.push({ file: rel(file), message: `datings[${i}]: ${mismatch}` });
     });
     const expected = `${path.basename(path.dirname(file))}.${path.basename(file, '.yaml')}`;
     if (e.id !== expected) errors.push({ file: rel(file), message: `id ${e.id} must match path (${expected})` });
@@ -358,6 +435,8 @@ export function loadContentUncached(): ContentGraph {
         for (const n of ceOffByOne(d, `${parsed.data.summary} ${d.label ?? ''} ${d.note ?? ''}`)) {
           errors.push({ file: relFile, message: `datings[${i}]: latest is written as "${n - 1} CE" but the text gives ${n} CE (or the century ending then); a CE year needs no BCE-style shift` });
         }
+        const mismatch = labelRangeMismatch(d);
+        if (mismatch) errors.push({ file: relFile, message: `datings[${i}]: ${mismatch}` });
       });
       articles.push({ ...parsed.data, slug: path.basename(file, '.md'), file: relFile, category, body: content, inlineCitations });
     }
@@ -390,13 +469,17 @@ export function loadContentUncached(): ContentGraph {
     else if (!sources.has(id)) errors.push({ file, message: `${where}: unknown source ${id}` });
   };
 
+  const { aliases, problems: aliasProblems } = resolveAliases(entities.values());
+  for (const p of [...aliasProblems, ...duplicateRelations(entities.values())]) errors.push({ file: entityFile.get(p.id) ?? p.id, message: p.message });
+  const unknownEntity = (id: string) => (aliases.has(id) ? `${id} (merged into ${aliases.get(id)}; link to that id)` : id);
+
   const inbound = new Map<string, { from: string; kind: string }[]>();
   for (const e of entities.values()) {
     const file = entityFile.get(e.id) ?? e.id;
     e.datings.forEach((d, i) => d.sources.forEach((s) => checkSource(file, `datings[${i}]`, citationId(s))));
     e.claims.forEach((c, i) => c.sources.forEach((s) => checkSource(file, `claims[${i}]`, citationId(s))));
     for (const r of e.relations) {
-      if (!entities.has(r.target)) errors.push({ file, message: `relation ${r.kind} -> unknown entity ${r.target}` });
+      if (!entities.has(r.target)) errors.push({ file, message: `relation ${r.kind} -> unknown entity ${unknownEntity(r.target)}` });
       else {
         const list = inbound.get(r.target) ?? [];
         list.push({ from: e.id, kind: r.kind });
@@ -411,10 +494,24 @@ export function loadContentUncached(): ContentGraph {
     a.datings.forEach((d, i) => d.sources.forEach((s) => checkSource(file, `datings[${i}]`, citationId(s))));
     a.inlineCitations.forEach((c) => checkSource(file, 'body', c.id));
     for (const id of a.entities) {
-      if (!entities.has(id)) errors.push({ file, message: `unknown entity ${id}` });
+      if (!entities.has(id)) errors.push({ file, message: `unknown entity ${unknownEntity(id)}` });
       const list = articlesByEntity.get(id) ?? [];
       list.push(a);
       articlesByEntity.set(id, list);
+    }
+  }
+
+  // Internal links in article bodies must reach a live entity or article.
+  const articlePaths = new Set(articles.map((a) => `/${a.category}/${a.slug}`));
+  for (const a of articles) {
+    for (const href of internalLinks(a.body)) {
+      const m = /^\/archive\/([a-z]+)\/([a-z0-9-]+)$/.exec(href);
+      if (m) {
+        const id = `${m[1]}.${m[2]}`;
+        if (!entities.has(id)) errors.push({ file: a.file, message: `link ${href} -> unknown entity ${unknownEntity(id)}` });
+      } else if (href.startsWith('/archive/') || ((CATEGORIES as readonly string[]).includes(href.split('/')[1]) && !articlePaths.has(href))) {
+        errors.push({ file: a.file, message: `link ${href} does not reach an entity or article` });
+      }
     }
   }
 
@@ -422,7 +519,7 @@ export function loadContentUncached(): ContentGraph {
 
   for (const p of strays) errors.push({ file: rel(p), message: 'unexpected file: entities and sources must be .yaml, articles must be .md' });
 
-  return { entities, sources, articles, corrections, articlesByEntity, inbound, errors };
+  return { entities, sources, articles, corrections, articlesByEntity, inbound, aliases, errors };
 }
 
 let cache: ContentGraph | undefined;

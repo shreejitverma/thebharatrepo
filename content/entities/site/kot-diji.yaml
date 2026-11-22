@@ -66,8 +66,6 @@ claims:
 relations:
   - kind: part-of
     target: tradition.harappan-civilisation
-  - kind: related-to
-    target: tradition.kot-diji-phase
   - kind: contemporary-of
     target: site.mohenjo-daro
 wikidata: Q1017084

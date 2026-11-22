@@ -68,8 +68,6 @@ relations:
   - kind: part-of
     target: tradition.harappan-civilisation
   - kind: related-to
-    target: artifact.sanauli-wheeled-vehicles
-  - kind: related-to
     target: event.harappan-deurbanisation
 wikidata: Q7415547
 debate: >-

@@ -61,8 +61,6 @@ relations:
     target: site.mohenjo-daro
   - kind: part-of
     target: tradition.harappan-civilisation
-  - kind: contemporary-of
-    target: artifact.dancing-girl-mohenjo-daro
 wikidata: Q60847016
 image:
   commons: "File:Mohenjo-daro Priesterkönig.jpeg"

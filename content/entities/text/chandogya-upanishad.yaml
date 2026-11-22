@@ -67,8 +67,6 @@ claims:
 relations:
   - { kind: part-of, target: text.upanishads }
   - { kind: related-to, target: text.samaveda }
-  - { kind: contemporary-of, target: text.brihadaranyaka-upanishad }
-  - { kind: related-to, target: polity.panchala }
   - { kind: related-to, target: polity.kuru-kingdom }
 wikidata: Q773328
 image:

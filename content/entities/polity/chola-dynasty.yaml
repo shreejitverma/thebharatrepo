@@ -40,6 +40,6 @@ claims:
     grade: B
     sources: [src.kulke-2009-nagapattinam-to-suvarnadwipa]
 relations:
-  - { kind: succeeded, target: polity.pallava-dynasty, note: As the dominant power in the Tamil country }
+  - { kind: succeeded, target: polity.pallava-dynasty, note: "As the dominant power in the Tamil country, displacing the Pallavas in the late 9th century" }
 tags: [tamil-nadu, dynasty, maritime, temple-architecture]
 review: { status: draft, author: "claude-opus-5-5" }

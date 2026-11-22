@@ -43,7 +43,6 @@ claims:
 debate: >-
   While the early phase at Ajanta (Caves 9, 10, 12, 13, 15A) is securely dated to the second/first century BCE, the duration of the second (Mahayana) phase is a major art-historical debate. Walter M. Spink argued through an exhaustive cave-by-cave structural and chisel-mark analysis that the second phase spanned less than two decades (c. 462-480 CE) under the Vakataka emperor Harishena. Other art historians and epigraphists question whether so many caves and painting cycles could be executed in eighteen years and argue for a broader development spanning the mid-fifth to the early or mid-sixth century CE.
 relations:
-  - { kind: patronised-by, target: polity.satavahana-dynasty }
   - { kind: contemporary-of, target: polity.gupta-empire }
 wikidata: Q184427
 image:

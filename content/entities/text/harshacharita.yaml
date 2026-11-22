@@ -37,7 +37,6 @@ claims:
     grade: A
     sources: [src.cowell-1897-harsa-carita, src.singh-2008-ancient-early-medieval-india]
 relations:
-  - { kind: authored-by, target: person.banabhatta }
   - { kind: related-to, target: person.harshavardhana, note: Biography of Harsha }
 wikidata: Q1810426
 tags: [sanskrit-literature, biography, harsha]

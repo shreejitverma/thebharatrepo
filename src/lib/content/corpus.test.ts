@@ -3,6 +3,7 @@ import path from 'node:path';
 import { describe, expect, it } from 'vitest';
 import { loadContentUncached, sameWork } from './load';
 import { cachedTitleMatches, normalizeTitle, urlMatchKind } from './similarity';
+import { primaryDating } from './lens';
 
 /**
  * Regression guards over the real bibliography. The committed verification cache (content/verification.json)
@@ -19,6 +20,12 @@ const SAME_WORK_ALLOWED: [string, string, string][] = [];
 describe('real bibliography', () => {
   it('loads without content errors', () => {
     expect(graph.errors).toEqual([]);
+  });
+
+  it('never displays an entity by a recognition or publication milestone', () => {
+    // The displayed dating places the entity itself; a UNESCO listing or a paper's publication year belongs in a claim.
+    const shown = [...graph.entities.values()].filter((e) => /^(UNESCO|Publication)\b/i.test(primaryDating(e.datings).label ?? ''));
+    expect(shown.map((e) => e.id)).toEqual([]);
   });
 
   it('every cached registry and page success still matches the cited title', () => {

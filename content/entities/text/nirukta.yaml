@@ -63,11 +63,8 @@ claims:
     sources:
       - src.sarup-1920-nighantu-nirukta
 relations:
-  - { kind: authored-by, target: person.yaska }
   - { kind: part-of, target: text.vedangas }
   - { kind: commented-on, target: text.rigveda }
-  - { kind: preceded, target: text.ashtadhyayi }
-  - { kind: related-to, target: concept.vedic-sanskrit }
 wikidata: Q2047159
 tags: [vedanga, nirukta, yaska, linguistics, etymology, nighantu]
 review: { status: draft, author: "gemini-4-argon" }

@@ -37,7 +37,6 @@ claims:
       - src.behrendt-2004-buddhist-architecture-gandhara
 relations:
   - { kind: ruled, target: polity.kushan-empire }
-  - { kind: related-to, target: artifact.rabatak-inscription }
   - { kind: patronised, target: tradition.gandhara-art }
   - { kind: patronised, target: tradition.mathura-art }
 wikidata: Q312544

@@ -45,10 +45,7 @@ claims:
 debate: >-
   Because Kalidasa states in the prologue of Malavikagnimitra that he is a contemporary successor to older playwrights like Bhasa, Saumilla and Kaviputra without giving a calendar date, scholars reconstruct his era from external termini and internal allusions. The possible echoes of Kalidasa in the 473 CE Mandasor inscription and the 634 CE Aihole inscription provide possible fifth-century and secure seventh-century upper bounds, respectively. The Gupta court is a common scholarly identification, while the Nine Gems tradition links Kalidasa to a Vikramaditya of Ujjain and the era beginning in 57 BCE.
 relations:
-  - { kind: contemporary-of, target: person.chandragupta-ii }
   - { kind: related-to, target: polity.gupta-empire }
-  - { kind: related-to, target: text.valmiki-ramayana }
-  - { kind: related-to, target: text.natyashastra }
 wikidata: Q7011
 tags: [kalidasa, sanskrit, kavya, drama, shakuntala, meghaduta, gupta, contested-chronology]
 review: { status: draft, author: "gemini-4-argon" }

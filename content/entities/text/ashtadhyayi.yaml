@@ -58,10 +58,8 @@ claims:
       - src.katre-1987-astadhyayi-panini
       - src.cardona-1988-panini-work-traditions
 relations:
-  - { kind: authored-by, target: person.panini }
   - { kind: part-of, target: text.vedangas }
   - { kind: succeeded, target: text.nirukta }
-  - { kind: related-to, target: concept.vedic-sanskrit }
 wikidata: Q2868351
 tags: [vedanga, vyakarana, grammar, linguistics, sanskrit, panini]
 review: { status: draft, author: "gemini-4-argon" }

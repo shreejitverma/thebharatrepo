@@ -58,8 +58,5 @@ claims:
       - src.thieme-1960-aryan-gods-mitanni-treaties
 relations:
   - { kind: related-to, target: text.rigveda }
-  - { kind: related-to, target: concept.vedic-sanskrit }
-  - { kind: related-to, target: concept.indo-aryan-migration }
-  - { kind: related-to, target: concept.sintashta-steppe-chariot-question }
 tags: [mitanni, hattusa, cuneiform, synchronism, indra, mitra, varuna, nasatya]
 review: { status: draft, author: "gemini-4-argon" }

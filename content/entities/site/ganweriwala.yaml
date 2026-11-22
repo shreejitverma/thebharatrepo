@@ -59,8 +59,6 @@ relations:
     target: site.mohenjo-daro
   - kind: contemporary-of
     target: site.harappa
-  - kind: related-to
-    target: concept.ghaggar-hakra-sarasvati-debate
 wikidata: Q3095220
 tags:
   - harappan

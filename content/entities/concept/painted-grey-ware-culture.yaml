@@ -64,10 +64,8 @@ relations:
   - { kind: excavated-at, target: site.ahichhatra }
   - { kind: excavated-at, target: site.atranjikhera }
   - { kind: succeeded, target: concept.black-and-red-ware-culture }
-  - { kind: preceded, target: concept.northern-black-polished-ware-culture }
   - { kind: related-to, target: polity.kuru-kingdom }
   - { kind: related-to, target: polity.panchala }
-  - { kind: related-to, target: concept.iron-metallurgy-in-india }
 wikidata: Q2525293
 image:
   commons: "File:Painted Grey Ware - Sonkh - 1000-600 BCE - Showcase 6-15 - Prehistory and Terracotta Gallery - Government Museum - Mathura 2013-02-24 6461.JPG"

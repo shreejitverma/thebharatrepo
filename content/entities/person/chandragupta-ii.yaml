@@ -42,8 +42,6 @@ claims:
 relations:
   - { kind: ruled, target: polity.gupta-empire }
   - { kind: patronised, target: site.udayagiri-caves }
-  - { kind: related-to, target: artifact.iron-pillar-of-delhi }
-  - { kind: contemporary-of, target: event.faxian-travels }
   - { kind: contemporary-of, target: person.kalidasa }
 wikidata: Q844536
 tags: [chandragupta-ii, vikramaditya, gupta-empire, udayagiri, iron-pillar]

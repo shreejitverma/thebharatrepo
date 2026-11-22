@@ -46,8 +46,6 @@ claims:
 relations:
   - kind: located-at
     target: site.hunsgi-baichbal-valley
-  - kind: contemporary-of
-    target: site.attirampakkam
 tags:
   - palaeolithic
   - acheulian

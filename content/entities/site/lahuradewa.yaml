@@ -63,11 +63,7 @@ claims:
     grade: A
     sources:
       - src.thakur-2018-lahuradewa-early-holocene-paddy
-relations:
-  - kind: related-to
-    target: site.koldihwa
-  - kind: related-to
-    target: site.chirand
+relations: []
 debate: >-
   The excavators and palaeolimnologists interpret the 7th-millennium BCE Oryza remains and diatom/phytolith signals
   at Lahuradewa as early paddy cultivation, whereas Dorian Fuller and colleagues argue that the earliest grains

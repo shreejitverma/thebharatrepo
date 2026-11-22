@@ -59,10 +59,6 @@ claims:
       - src.flood-2003-blackwell-companion-hinduism
       - src.plofker-2009-mathematics-in-india
 relations:
-  - { kind: related-to, target: text.nirukta }
-  - { kind: related-to, target: text.ashtadhyayi }
-  - { kind: related-to, target: text.shulba-sutras }
-  - { kind: related-to, target: text.vedanga-jyotisha }
   - { kind: related-to, target: tradition.vedic-oral-transmission }
 wikidata: Q917680
 tags: [veda, vedanga, sutra, linguistics, astronomy, geometry]

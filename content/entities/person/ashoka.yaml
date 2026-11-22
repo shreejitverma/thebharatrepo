@@ -6,19 +6,19 @@ names:
   iast: Aśoka
   native: अशोक
 summary: >-
-  Ashoka, who called himself Devanampiya Piyadasi ("Beloved of the Gods, of gracious mien"), was the third Maurya emperor and reigned from about 268 to 232 BCE. After his conquest of Kalinga in his eighth regnal year he turned to Buddhism and proclaimed a moral code he called dhamma in inscriptions on rocks and polished stone pillars, written mostly in Prakrit and also in Greek and Aramaic.
+  Ashoka, who called himself Devanampiya Piyadasi ("Beloved of the Gods, of gracious mien"), was the third Maurya emperor. He came to the throne a few years before his consecration in about 268 BCE and reigned until about 232 BCE. After his conquest of Kalinga in his eighth regnal year he turned to Buddhism and proclaimed a moral code he called dhamma in inscriptions on rocks and polished stone pillars, written mostly in Prakrit and also in Greek and Aramaic.
 summaries:
   kids: >-
     Emperor Ashoka ruled the Maurya Empire. After the terrible Kalinga war, he carved messages on rocks and pillars across India asking people to be kind, honest and respectful of all religions.
   teen: >-
-    Ashoka, reigning about 268 to 232 BCE, is the earliest known Indian ruler whose own inscriptions survive. They record his remorse over Kalinga, his support for Buddhism and his policy of dhamma.
+    Ashoka, who was consecrated in about 268 BCE a few years after coming to the throne and reigned until about 232 BCE, is the earliest known Indian ruler whose own inscriptions survive. They record his remorse over Kalinga, his support for Buddhism and his policy of dhamma.
 region: Most of the Indian subcontinent (capital at Pataliputra)
 location: { name: "Patna (ancient Pataliputra)", lat: 25.611, lon: 85.144 }
 datings:
   - method: foreign-synchronism
     range: { earliest: "273 BCE", latest: "232 BCE", precision: decade, circa: true }
     grade: B
-    label: Reign (about 268 to 232 BCE)
+    label: Reign (accession a few years before the consecration of about 268 BCE, to about 232 BCE)
     sources:
       - src.thapar-2012-asoka-decline-mauryas
       - src.lahiri-2015-ashoka-ancient-india

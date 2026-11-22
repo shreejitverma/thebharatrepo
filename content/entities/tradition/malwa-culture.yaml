@@ -61,12 +61,6 @@ relations:
     note: Malwa ceramics occur in Period III at Kayatha, above the earlier Kayatha and Ahar-Banas levels
   - kind: succeeded
     target: tradition.ahar-banas-culture
-  - kind: preceded
-    target: tradition.jorwe-culture
-  - kind: related-to
-    target: site.inamgaon
-  - kind: related-to
-    target: site.daimabad
 wikidata: Q48728691
 tags:
   - chalcolithic
