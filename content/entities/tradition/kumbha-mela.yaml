@@ -114,6 +114,8 @@ debate: >-
 relations:
   - kind: related-to
     target: event.samudra-manthana
+aliases:
+  - tradition.kumbh-mela-unesco-inscription
 wikidata: Q10283
 image:
   commons: "File:Kumbh Mela 2019, India (47216681442).jpg"

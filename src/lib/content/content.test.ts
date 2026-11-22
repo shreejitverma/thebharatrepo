@@ -54,6 +54,64 @@ describe('entity and source rules', () => {
   });
 });
 
+describe('aliases of merged entities', () => {
+  const live = (id: string, aliases: string[] = []) => ({ id, aliases });
+  it('rejects an alias that is the entity itself, listed twice, or not an entity id', () => {
+    const e = {
+      id: 'cosmology.kalpa',
+      type: 'cosmology',
+      kind: 'cosmology',
+      names: { en: 'Kalpa' },
+      summary: 'A day of Brahma in traditional cosmology, 4.32 billion years.',
+      datings: [{ ...baseDating, method: 'traditional-puranic', grade: 'D' }],
+      review: { status: 'draft' },
+    };
+    expect(EntitySchema.parse(e).aliases).toEqual([]);
+    expect(EntitySchema.safeParse({ ...e, aliases: ['cosmology.old-kalpa'] }).success).toBe(true);
+    expect(EntitySchema.safeParse({ ...e, aliases: ['cosmology.kalpa'] }).success).toBe(false);
+    expect(EntitySchema.safeParse({ ...e, aliases: ['cosmology.old-kalpa', 'cosmology.old-kalpa'] }).success).toBe(false);
+    expect(EntitySchema.safeParse({ ...e, aliases: ['old-kalpa'] }).success).toBe(false);
+  });
+  it('maps each alias to its entity, across types', async () => {
+    const { resolveAliases } = await import('./load');
+    const r = resolveAliases([live('site.dholavira', ['event.dholavira-unesco-inscription']), live('event.other')]);
+    expect(r.problems).toEqual([]);
+    expect(r.aliases).toEqual(new Map([['event.dholavira-unesco-inscription', 'site.dholavira']]));
+  });
+  it('rejects an alias that collides with a live id or is claimed by two entities', async () => {
+    const { resolveAliases } = await import('./load');
+    const r = resolveAliases([live('concept.a', ['concept.b', 'concept.gone']), live('concept.b'), live('concept.c', ['concept.gone'])]);
+    expect(r.problems).toEqual([
+      { id: 'concept.a', message: 'alias concept.b collides with a live entity id; an alias names an entity that no longer exists' },
+      { id: 'concept.c', message: 'alias concept.gone is already claimed by concept.a' },
+    ]);
+    expect(r.aliases).toEqual(new Map([['concept.gone', 'concept.a']]));
+  });
+  it('generates permanent redirects for the archive page and the Kaalchakra deep link', async () => {
+    const { aliasRedirects } = await import('./redirects');
+    expect(aliasRedirects(new Map([['concept.rigvedic-sarasvati', 'concept.ghaggar-hakra-sarasvati-debate']]))).toEqual([
+      { source: '/archive/concept/rigvedic-sarasvati', destination: '/archive/concept/ghaggar-hakra-sarasvati-debate', permanent: true },
+      {
+        source: '/kaalchakra',
+        has: [{ type: 'query', key: 'id', value: 'concept\\.rigvedic-sarasvati' }],
+        destination: '/kaalchakra?id=concept.ghaggar-hakra-sarasvati-debate',
+        permanent: true,
+      },
+    ]);
+  });
+  it('covers every entity removed from the corpus since the last production deploy', async () => {
+    const { loadContentUncached } = await import('./load');
+    const { aliases } = loadContentUncached();
+    expect(Object.fromEntries(aliases)).toMatchObject({
+      'concept.rigvedic-sarasvati': 'concept.ghaggar-hakra-sarasvati-debate',
+      'event.dholavira-unesco-inscription': 'site.dholavira',
+      'event.rakhigarhi-genome-publication': 'concept.rakhigarhi-i6113-genome',
+      'tradition.kumbh-mela-unesco-inscription': 'tradition.kumbha-mela',
+      'tradition.vedic-chanting-unesco-inscription': 'tradition.vedic-chanting',
+    });
+  });
+});
+
 describe('citations', () => {
   it('parses single, located and multiple citations', () => {
     expect(parseCitationGroup('@src.a-1')).toEqual([{ id: 'src.a-1' }]);
@@ -93,6 +151,7 @@ describe('loader against fixtures', () => {
       expect(g.entities.size).toBe(2);
       expect(g.inbound.get('person.someone')).toEqual([{ from: 'event.thing', kind: 'related-to' }]);
       expect(g.articlesByEntity.get('person.someone')?.[0].slug).toBe('fixture');
+      expect(g.aliases).toEqual(new Map([['person.someone-else', 'person.someone']]));
       const { renderArticle } = await import('./render');
       const r = await renderArticle(g.articles[0].body, g.sources);
       expect(r.references).toHaveLength(1);
@@ -117,6 +176,8 @@ describe('loader against fixtures', () => {
       expect(msgs).toContain('article body cites no sources; use [@src.id, locator]');
       expect(msgs).toContain('isbn:9780000000002 already identifies src.roe-1990-a-work; cite one source id per work');
       expect(msgs.filter((m) => m.startsWith('unexpected file'))).toHaveLength(1);
+      expect(msgs).toContain('alias event.toba collides with a live entity id; an alias names an entity that no longer exists');
+      expect(msgs).toContain('relation related-to -> unknown entity event.former-toba (merged into event.toba; link to that id)');
     } finally {
       process.chdir(cwd);
     }

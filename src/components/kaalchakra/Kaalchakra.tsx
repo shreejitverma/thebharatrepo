@@ -40,7 +40,11 @@ interface State {
 
 const DEFAULT: State = { view: 'wheel', lens: 'both', cal: 'ce', kinds: [...KINDS], q: '', sel: null, win: { start: 0, end: 1 }, level: 'adult' };
 
-function parseState(search: string, ids: Set<string>): State {
+/**
+ * `aliases` maps the former id of a merged entity to the entity it was merged into, so an old ?id= deep link
+ * selects the surviving entry (the server also redirects it; this covers client-side navigation).
+ */
+function parseState(search: string, ids: Set<string>, aliases: Readonly<Record<string, string>>): State {
   const p = new URLSearchParams(search);
   const s: State = { ...DEFAULT, kinds: [...KINDS] };
   const v = p.get('view');
@@ -56,7 +60,8 @@ function parseState(search: string, ids: Set<string>): State {
   }
   s.q = p.get('q') ?? '';
   const sel = p.get('id');
-  if (sel && ids.has(sel)) s.sel = sel;
+  const live = sel && !ids.has(sel) && Object.hasOwn(aliases, sel) ? aliases[sel] : sel;
+  if (live && ids.has(live)) s.sel = live;
   const w = p.get('win');
   if (w) {
     const [a, b] = w.split(',').map(Number);
@@ -110,13 +115,13 @@ interface Mount {
  * component did not write itself: Back and Forward, or following a link such as the nav link to
  * /kaalchakra. Its own debounced replaceState writes are recognised and do not remount it.
  */
-export default function Kaalchakra({ items }: { items: KcItem[] }) {
+export default function Kaalchakra({ items, aliases = {} }: { items: KcItem[]; aliases?: Readonly<Record<string, string>> }) {
   const search = useSearchParams().toString();
   const ids = useMemo(() => new Set(items.map((i) => i.id)), [items]);
-  const [mount, setMount] = useState<Mount>(() => ({ seen: search, written: null, epoch: 0, initial: parseState(search, ids) }));
+  const [mount, setMount] = useState<Mount>(() => ({ seen: search, written: null, epoch: 0, initial: parseState(search, ids, aliases) }));
   if (search !== mount.seen) {
     if (search === mount.written) setMount({ ...mount, seen: search });
-    else setMount({ seen: search, written: null, epoch: mount.epoch + 1, initial: parseState(search, ids) });
+    else setMount({ seen: search, written: null, epoch: mount.epoch + 1, initial: parseState(search, ids, aliases) });
   }
   const onWrite = useCallback((query: string) => setMount((m) => ({ ...m, written: query })), []);
   return <KaalchakraInner key={mount.epoch} items={items} initial={mount.initial} onWrite={onWrite} />;

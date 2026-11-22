@@ -2,7 +2,7 @@ import type { Metadata } from 'next';
 import { Suspense } from 'react';
 import Kaalchakra from '@/components/kaalchakra/Kaalchakra';
 import KaalchakraFallback from '@/components/kaalchakra/KaalchakraFallback';
-import { getIndex } from '@/lib/content/site';
+import { getGraph, getIndex } from '@/lib/content/site';
 
 export const metadata: Metadata = {
   title: 'Kaalchakra: the wheel of time',
@@ -11,6 +11,7 @@ export const metadata: Metadata = {
 
 export default function KaalchakraPage() {
   const items = getIndex();
+  const aliases = Object.fromEntries(getGraph().aliases);
   return (
     <div className="main-content">
       <p className="eyebrow">The Kaalchakra</p>
@@ -20,7 +21,7 @@ export default function KaalchakraPage() {
       </p>
       {/* Kaalchakra reads its state from the search params, so static prerendering stops at this boundary. */}
       <Suspense fallback={<KaalchakraFallback items={items} />}>
-        <Kaalchakra items={items} />
+        <Kaalchakra items={items} aliases={aliases} />
       </Suspense>
     </div>
   );

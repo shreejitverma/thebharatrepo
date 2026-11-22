@@ -56,6 +56,8 @@ export interface ContentGraph {
   articlesByEntity: Map<string, Article[]>;
   /** entity id -> entities pointing at it */
   inbound: Map<string, { from: string; kind: string }[]>;
+  /** former entity id (alias) -> the live entity it was merged into */
+  aliases: Map<string, string>;
   errors: ContentProblem[];
 }
 
@@ -228,6 +230,25 @@ function identifierKeys(s: Source): string[] {
   return [s.doi && `doi:${s.doi.toLowerCase()}`, s.isbn && `isbn:${s.isbn}`, s.oclc && `oclc:${s.oclc}`, s.url && `url:${s.url.replace(/\/+$/, '')}`].filter((k): k is string => Boolean(k));
 }
 
+/**
+ * Maps every alias to the entity that declares it. An alias is a former id, so it must not be a live
+ * entity id (the redirect would hide that page) and only one entity may claim it.
+ */
+export function resolveAliases(entities: Iterable<Pick<Entity, 'id' | 'aliases'>>): { aliases: Map<string, string>; problems: { id: string; message: string }[] } {
+  const list = [...entities];
+  const live = new Set(list.map((e) => e.id));
+  const aliases = new Map<string, string>();
+  const problems: { id: string; message: string }[] = [];
+  for (const e of list) {
+    for (const a of e.aliases) {
+      if (live.has(a)) problems.push({ id: e.id, message: `alias ${a} collides with a live entity id; an alias names an entity that no longer exists` });
+      else if (aliases.has(a) && aliases.get(a) !== e.id) problems.push({ id: e.id, message: `alias ${a} is already claimed by ${aliases.get(a)}` });
+      else aliases.set(a, e.id);
+    }
+  }
+  return { aliases, problems };
+}
+
 let strays: string[] = [];
 
 function walk(dir: string, ext: string): string[] {
@@ -390,13 +411,17 @@ export function loadContentUncached(): ContentGraph {
     else if (!sources.has(id)) errors.push({ file, message: `${where}: unknown source ${id}` });
   };
 
+  const { aliases, problems: aliasProblems } = resolveAliases(entities.values());
+  for (const p of aliasProblems) errors.push({ file: entityFile.get(p.id) ?? p.id, message: p.message });
+  const unknownEntity = (id: string) => (aliases.has(id) ? `${id} (merged into ${aliases.get(id)}; link to that id)` : id);
+
   const inbound = new Map<string, { from: string; kind: string }[]>();
   for (const e of entities.values()) {
     const file = entityFile.get(e.id) ?? e.id;
     e.datings.forEach((d, i) => d.sources.forEach((s) => checkSource(file, `datings[${i}]`, citationId(s))));
     e.claims.forEach((c, i) => c.sources.forEach((s) => checkSource(file, `claims[${i}]`, citationId(s))));
     for (const r of e.relations) {
-      if (!entities.has(r.target)) errors.push({ file, message: `relation ${r.kind} -> unknown entity ${r.target}` });
+      if (!entities.has(r.target)) errors.push({ file, message: `relation ${r.kind} -> unknown entity ${unknownEntity(r.target)}` });
       else {
         const list = inbound.get(r.target) ?? [];
         list.push({ from: e.id, kind: r.kind });
@@ -411,7 +436,7 @@ export function loadContentUncached(): ContentGraph {
     a.datings.forEach((d, i) => d.sources.forEach((s) => checkSource(file, `datings[${i}]`, citationId(s))));
     a.inlineCitations.forEach((c) => checkSource(file, 'body', c.id));
     for (const id of a.entities) {
-      if (!entities.has(id)) errors.push({ file, message: `unknown entity ${id}` });
+      if (!entities.has(id)) errors.push({ file, message: `unknown entity ${unknownEntity(id)}` });
       const list = articlesByEntity.get(id) ?? [];
       list.push(a);
       articlesByEntity.set(id, list);
@@ -422,7 +447,7 @@ export function loadContentUncached(): ContentGraph {
 
   for (const p of strays) errors.push({ file: rel(p), message: 'unexpected file: entities and sources must be .yaml, articles must be .md' });
 
-  return { entities, sources, articles, corrections, articlesByEntity, inbound, errors };
+  return { entities, sources, articles, corrections, articlesByEntity, inbound, aliases, errors };
 }
 
 let cache: ContentGraph | undefined;

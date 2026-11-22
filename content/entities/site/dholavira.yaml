@@ -89,6 +89,8 @@ relations:
     target: site.lothal
   - kind: related-to
     target: concept.harappan-town-planning-and-drainage
+aliases:
+  - event.dholavira-unesco-inscription
 wikidata: Q9468
 image:
   commons: "File:Water reservoir at Dholavira site.jpg"

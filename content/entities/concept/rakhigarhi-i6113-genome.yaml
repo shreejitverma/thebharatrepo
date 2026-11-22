@@ -84,6 +84,8 @@ relations:
     target: concept.indus-periphery-cline
   - kind: part-of
     target: tradition.harappan-civilisation
+aliases:
+  - event.rakhigarhi-genome-publication
 wikidata: null
 tags:
   - harappan

@@ -8,4 +8,5 @@ datings:
     range: { earliest: "74000 BCE", latest: "74000 BCE", precision: ka, circa: true }
     grade: A
     sources: [src.roe-1990-a-work]
+aliases: [event.former-toba]
 review: { status: draft }

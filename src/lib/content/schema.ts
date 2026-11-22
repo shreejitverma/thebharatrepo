@@ -176,6 +176,11 @@ export const EntitySchema = z
     datings: z.array(DatingSchema).min(1, 'every entity needs at least one dating'),
     claims: z.array(ClaimSchema).default([]),
     relations: z.array(RelationSchema).default([]),
+    /**
+     * Former ids of entities merged into this one. Each alias keeps its old URLs working: the build turns it
+     * into permanent redirects from /archive/<type>/<slug> and /kaalchakra?id=<id> to this entity.
+     */
+    aliases: z.array(z.string().regex(ENTITY_ID, 'an alias is a former entity id, such as concept.old-slug')).default([]),
     wikidata: z.string().regex(/^Q\d+$/).nullable().optional(),
     image: ImageSchema.optional(),
     debate: z.string().optional(),
@@ -186,6 +191,12 @@ export const EntitySchema = z
     if (!e.id.startsWith(`${e.type}.`)) ctx.addIssue({ code: 'custom', message: `id ${e.id} must start with "${e.type}."` });
     if (e.type === 'cosmology' && e.datings.some((d) => !isTraditional(d.method))) {
       ctx.addIssue({ code: 'custom', message: 'cosmology entities may only carry traditional datings' });
+    }
+    if (e.aliases.includes(e.id)) ctx.addIssue({ code: 'custom', path: ['aliases'], message: `alias ${e.id} is the entity's own id` });
+    const seen = new Set<string>();
+    for (const a of e.aliases) {
+      if (seen.has(a)) ctx.addIssue({ code: 'custom', path: ['aliases'], message: `alias ${a} is listed twice` });
+      seen.add(a);
     }
   });
 export type Entity = z.infer<typeof EntitySchema>;
