@@ -39,6 +39,15 @@ describe('sameTitle', () => {
     expect(sameTitle('The Rigveda, Volume 1', 'The Rigveda: 3-Volume Set')).toBe(false);
     expect(sameTitle('India: The First Millennium', 'India: A History')).toBe(false);
   });
+  it('matches a single-volume record only to a title that names the same volume', () => {
+    expect(sameTitle('The Rigveda: The Earliest Religious Poetry of India', 'The Rigveda, Volume 1')).toBe(false);
+    expect(sameTitle('The Rigveda', 'The Rigveda, Volume 1')).toBe(false);
+    expect(sameTitle('The Mahabharata: A Modern Rendering', 'The Mahabharata (Volume 2)')).toBe(false);
+    expect(sameTitle('The Ramayana: A New Translation', 'The Ramayana, Book II')).toBe(false);
+    expect(sameTitle('The Rigveda, Volume 1', 'The Rigveda, Vol. 1')).toBe(true);
+    expect(sameTitle('The Ramayana, Part 2', 'The Ramayana: Part II')).toBe(true);
+    expect(sameTitle('The Rigveda, Volume 1', 'The Rigveda, Volume 2')).toBe(false);
+  });
   it('rejects a different volume of the same work', () => {
     expect(sameTitle('History of Indian Medical Literature, Vol. 1', 'History of Indian Medical Literature, Vol. 2')).toBe(false);
     expect(sameTitle('Epigraphia Indica Vol 1', 'Epigraphia Indica Vol 6')).toBe(false);

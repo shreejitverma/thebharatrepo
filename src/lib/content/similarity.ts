@@ -183,23 +183,38 @@ function qualifiedMainTitle(a: string, b: string): boolean {
   return small.every((w) => big.includes(w)) && !small.includes(big[0]);
 }
 
-const EDITION_WORDS = new Set(['volume', 'vol', 'vols', 'set', 'box', 'boxed', 'paperback', 'hardcover', 'hardback', 'edition', 'revised', 'first', 'second', 'third', 'fourth', 'fifth', 'sixth', 'seventh', 'eighth', 'ninth', 'tenth']);
+const PACKAGING_WORDS = new Set(['set', 'vols', 'box', 'boxed', 'paperback', 'hardcover', 'hardback', 'edition', 'revised', 'first', 'second', 'third', 'fourth', 'fifth', 'sixth', 'seventh', 'eighth', 'ninth', 'tenth']);
+const VOLUME_WORDS = new Set(['volume', 'vol', 'part', 'book']);
 
 /**
- * Everything after the main title only names a retail packaging or an edition ("The Rigveda: 3-Volume
- * Set", "Sanskrit Grammar: Third Revised Edition", "The Mahabharata (Vols. 1-3)"). Volume numbers are
- * compared separately, so a single volume still does not match the whole set.
+ * What everything after the main title names, when it is only a retail packaging or an edition: "packaging"
+ * for a set, binding or edition ("The Rigveda: 3-Volume Set", "Hampi (Paperback)", "Third Revised Edition",
+ * "Vols. 1-3"), "volume" for a single volume ("The Rigveda, Volume 1", "Part II"), otherwise null.
  */
-function editionOnlySubtitle(t: string): boolean {
+function editionSubtitle(t: string): 'packaging' | 'volume' | null {
   const words = normalizeTitle(t);
   const main = normalizeTitle(mainTitle(t));
   const sub = words.slice(main.length);
-  return (
-    main.length > 0 &&
-    words.slice(0, main.length).join(' ') === main.join(' ') &&
-    sub.some((w) => EDITION_WORDS.has(w)) &&
-    sub.every((w) => EDITION_WORDS.has(w) || numeral(w) !== null)
-  );
+  const named = sub.filter((w) => numeral(w) === null);
+  if (main.length === 0 || named.length === 0 || words.slice(0, main.length).join(' ') !== main.join(' ')) return null;
+  if (!named.every((w) => PACKAGING_WORDS.has(w) || VOLUME_WORDS.has(w))) return null;
+  return named.some((w) => VOLUME_WORDS.has(w)) && !named.some((w) => w === 'set' || w === 'vols') ? 'volume' : 'packaging';
+}
+
+/**
+ * Two titles with the same main title, one of which only adds a packaging, edition or volume subtitle. A
+ * packaging or edition subtitle matches any subtitle on the other side, even under a one-word main title
+ * ("India: A History" and "India: Box Set"): the identifier is the primary evidence and this is a sanity
+ * check that it resolves to the work. A single-volume subtitle matches only a title that carries the same
+ * volume number, so neither an unnumbered work nor another volume matches it.
+ */
+function sameWorkOtherEdition(cited: string, found: string): boolean {
+  const kinds = [editionSubtitle(cited), editionSubtitle(found)];
+  if (kinds.every((k) => k === null) || !exact(mainTitle(cited), mainTitle(found))) return false;
+  if (!kinds.includes('volume')) return true;
+  const A = numerals(cited);
+  const B = numerals(found);
+  return A.size > 0 && A.size === B.size && subset(A, B);
 }
 
 export function sameTitle(citedTitle: string, foundTitle: string): boolean {
@@ -207,8 +222,7 @@ export function sameTitle(citedTitle: string, foundTitle: string): boolean {
   const found = withoutSiteSegments(foundTitle);
   if (!titleNumeralsAgree(cited, found)) return false;
   if (exact(cited, found)) return true;
-  // A packaging or edition subtitle names the same work as its main title, even a one-word one.
-  if ((editionOnlySubtitle(found) || editionOnlySubtitle(cited)) && exact(mainTitle(cited), mainTitle(found))) return true;
+  if (sameWorkOtherEdition(cited, found)) return true;
   // A cited main title matches a record that adds a subtitle (and vice versa), if it is at least two words.
   for (const [x, y] of [
     [mainTitle(cited), found],
