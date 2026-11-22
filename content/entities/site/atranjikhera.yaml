@@ -23,7 +23,7 @@ region: Upper Ganga-Yamuna Doab (Etah district, Uttar Pradesh)
 location: { name: "Atranjikhera", lat: 27.7, lon: 78.68 }
 datings:
   - method: archaeological-radiocarbon
-    range: { earliest: -1999, latest: -49, best: -999, precision: century, circa: true }
+    range: { earliest: "2000 BCE", latest: "50 BCE", best: "1000 BCE", precision: century, circa: true }
     grade: A
     label: Four-period protohistoric to early historic sequence (R. C. Gaur)
     sources:

@@ -20,7 +20,7 @@ summaries:
 region: Kuru-Panchala and middle Ganga plain (northern India)
 datings:
   - method: linguistic
-    range: { earliest: -1199, latest: -899, best: -999, precision: century, circa: true }
+    range: { earliest: "1200 BCE", latest: "900 BCE", best: "1000 BCE", precision: century, circa: true }
     grade: C
     label: Mantra-period Kuru compilation
     sources:
@@ -32,7 +32,7 @@ datings:
       early Iron Age, though preserving some archaic Indo-European poetic formulas alongside late
       Rigvedic material.
   - method: traditional-puranic
-    range: { earliest: -3101, latest: -2999, precision: century, circa: true }
+    range: { earliest: "3102 BCE", latest: "3000 BCE", precision: century, circa: true }
     grade: D
     label: Traditional Puranic reckoning
     sources:

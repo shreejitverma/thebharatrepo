@@ -30,10 +30,11 @@ Mechanical rules (the validator rejects violations):
 ## 3. Years
 
 **Write years as strings** and let the build convert them: `"7000 BCE"`, `"320 CE"`, `"1947"`, `"385 ka"`, `"1.5 Ma"`, `"1.97 Ga"`.
-This is the preferred form because it removes BCE arithmetic, the most common authoring error.
+Every BCE year must be written as an `"N BCE"` string (or as `ka`, `Ma`, `Ga` for deep time), because BCE arithmetic is the most common authoring error.
+The loader rejects any raw negative year in an entity or article dating (`earliest`, `latest` or `best`); raw non-negative numbers such as `1947` are still accepted.
 
 Internally all years are **astronomical year numbers**: 1 CE = `1`, 1 BCE = `0`, 2 BCE = `-1`, N BCE = `1 - N`.
-Raw numbers are still accepted and must follow this rule; the validator rejects a range that stores `-N` where the text says "N BCE".
+The table shows that internal form for reference only; never write the right-hand column in content.
 
 | Historical | Astronomical |
 |---|---|

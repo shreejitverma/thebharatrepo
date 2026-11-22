@@ -35,8 +35,8 @@ datings:
       the flood episode, is usually placed in roughly the 8th to 6th centuries BCE.
   - method: traditional-puranic
     range:
-      earliest: -120531101
-      latest: -120531101
+      earliest: "120531102 BCE"
+      latest: "120531102 BCE"
       precision: cosmological
       circa: false
     grade: D

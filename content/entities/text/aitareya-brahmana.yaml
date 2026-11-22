@@ -20,7 +20,7 @@ summaries:
 region: Kuru-Panchala and northern India
 datings:
   - method: linguistic
-    range: { earliest: -899, latest: -599, best: -799, precision: century, circa: true }
+    range: { earliest: "900 BCE", latest: "600 BCE", best: "800 BCE", precision: century, circa: true }
     grade: C
     label: Early to Middle Brahmana prose dating
     sources:
@@ -31,7 +31,7 @@ datings:
       Books 1 to 5 belong to an older Kuru-Panchala Brahmana prose layer (c. 900 to 700 BCE),
       whereas Books 6 to 8 show slightly later linguistic and geographical features.
   - method: traditional-puranic
-    range: { earliest: -3101, latest: -2499, precision: century, circa: true }
+    range: { earliest: "3102 BCE", latest: "2500 BCE", precision: century, circa: true }
     grade: D
     label: Traditional sampradaya reckoning
     sources:

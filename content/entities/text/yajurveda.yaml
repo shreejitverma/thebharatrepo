@@ -20,7 +20,7 @@ summaries:
 region: Kuru-Panchala and Videha (northern India)
 datings:
   - method: linguistic
-    range: { earliest: -1199, latest: -799, best: -999, precision: century, circa: true }
+    range: { earliest: "1200 BCE", latest: "800 BCE", best: "1000 BCE", precision: century, circa: true }
     grade: C
     label: Mantra-period to Brahmana-period linguistic dating
     sources:
@@ -32,7 +32,7 @@ datings:
       composed in the Kuru heartland during the early Iron Age when shyama ayas (dark metal, iron)
       is first attested.
   - method: traditional-puranic
-    range: { earliest: -3101, latest: -2999, precision: century, circa: true }
+    range: { earliest: "3102 BCE", latest: "3000 BCE", precision: century, circa: true }
     grade: D
     label: Traditional Puranic reckoning
     sources:

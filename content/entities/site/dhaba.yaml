@@ -22,9 +22,9 @@ location:
 datings:
   - method: luminescence
     range:
-      earliest: -80000
-      latest: -24000
-      best: -74000
+      earliest: "80000 BCE"
+      latest: "24000 BCE"
+      best: "74000 BCE"
       precision: ka
       circa: true
     grade: A

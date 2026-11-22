@@ -24,7 +24,7 @@ datings:
     range:
       earliest: "5000 BCE"
       latest: "600 BCE"
-      best: -4480
+      best: "4480 BCE"
       precision: century
       circa: true
     grade: A

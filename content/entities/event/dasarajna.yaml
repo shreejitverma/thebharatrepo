@@ -23,7 +23,7 @@ region: Parushni (Ravi) river basin, Punjab
 location: { name: "Parushni River (Ravi basin, Punjab)", lat: 31.58, lon: 74.33 }
 datings:
   - method: textual-internal
-    range: { earliest: -1499, latest: -1199, best: -1299, precision: century, circa: true }
+    range: { earliest: "1500 BCE", latest: "1200 BCE", best: "1300 BCE", precision: century, circa: true }
     grade: C
     label: Mainstream Rigvedic textual-internal dating (Witzel, Jamison and Brereton)
     sources:
@@ -35,7 +35,7 @@ datings:
       Indology dates the battle within the middle Rigvedic period (roughly 1400 to 1200 BCE), prior
       to the post-Rigvedic union of the Bharatas and Purus into the Kuru state.
   - method: textual-internal
-    range: { earliest: -2599, latest: -1899, precision: century, circa: true }
+    range: { earliest: "2600 BCE", latest: "1900 BCE", precision: century, circa: true }
     grade: E
     label: Out-of-India internal chronological reconstruction (Talageri)
     sources:

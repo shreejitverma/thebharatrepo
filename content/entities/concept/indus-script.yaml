@@ -21,8 +21,8 @@ region: Pan-Harappan (with examples discovered in Mesopotamia and the Persian Gu
 datings:
   - method: archaeological-radiocarbon
     range:
-      earliest: -3299
-      latest: -2599
+      earliest: "3300 BCE"
+      latest: "2600 BCE"
       precision: century
       circa: true
     grade: B
@@ -35,8 +35,8 @@ datings:
       and 2 (c. 3300-2600 BCE) that prefigure Mature Harappan sign forms.
   - method: archaeological-radiocarbon
     range:
-      earliest: -2599
-      latest: -1899
+      earliest: "2600 BCE"
+      latest: "1900 BCE"
       precision: century
       circa: true
     grade: A
@@ -50,8 +50,8 @@ datings:
       encoding an early Dravidian language; supported by conditional entropy analyses (Rao et al. 2009).
   - method: linguistic
     range:
-      earliest: -2599
-      latest: -1599
+      earliest: "2600 BCE"
+      latest: "1600 BCE"
       precision: century
       circa: true
     grade: C
@@ -65,8 +65,8 @@ datings:
       linguists and epigraphists for lacking methodological constraints.
   - method: scholarly-consensus
     range:
-      earliest: -2599
-      latest: -1899
+      earliest: "2600 BCE"
+      latest: "1900 BCE"
       precision: century
       circa: true
     grade: C

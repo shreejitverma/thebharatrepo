@@ -16,7 +16,7 @@ region: Gangetic plain and Malwa (Pataliputra and Vidisha)
 location: { name: "Vidisha, Madhya Pradesh", lat: 23.525, lon: 77.808 }
 datings:
   - method: scholarly-consensus
-    range: { earliest: -184, latest: -72, precision: decade, circa: true }
+    range: { earliest: "185 BCE", latest: "73 BCE", precision: decade, circa: true }
     grade: B
     label: Post-Mauryan Shunga rule (c. 185-73 BCE)
     sources:

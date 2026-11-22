@@ -22,7 +22,7 @@ summaries:
 region: Central Ganga plain, Eastern Vindhyas, Ganga-Yamuna Doab, and southern India
 datings:
   - method: archaeological-radiocarbon
-    range: { earliest: -1199, latest: -799, best: -999, precision: century, circa: true }
+    range: { earliest: "1200 BCE", latest: "800 BCE", best: "1000 BCE", precision: century, circa: true }
     grade: B
     label: Mainstream multi-regional Iron Age consensus (Chakrabarti, Allchin, Singh)
     sources:
@@ -34,7 +34,7 @@ datings:
       Atranjikhera and Jakhera), Malwa, eastern India, and South Indian megalithic-BRW sites (such
       as Hallur) - between c. 1200 and 900 BCE.
   - method: archaeological-radiocarbon
-    range: { earliest: -1799, latest: -1199, best: -1499, precision: century, circa: true }
+    range: { earliest: "1800 BCE", latest: "1200 BCE", best: "1500 BCE", precision: century, circa: true }
     grade: C
     label: Early Central Ganga and Eastern Vindhyan radiocarbon series (Tewari 2003)
     sources:

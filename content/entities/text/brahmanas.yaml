@@ -20,7 +20,7 @@ summaries:
 region: Kuru-Panchala, Kosala, and Videha (northern India)
 datings:
   - method: linguistic
-    range: { earliest: -999, latest: -599, best: -799, precision: century, circa: true }
+    range: { earliest: "1000 BCE", latest: "600 BCE", best: "800 BCE", precision: century, circa: true }
     grade: C
     label: Middle to Late Vedic prose period
     sources:
@@ -32,7 +32,7 @@ datings:
       horizon spanning from Kurukshetra and Panchala eastward to Kosala and Videha before the rise
       of Buddhism.
   - method: traditional-puranic
-    range: { earliest: -3101, latest: -2499, precision: century, circa: true }
+    range: { earliest: "3102 BCE", latest: "2500 BCE", precision: century, circa: true }
     grade: D
     label: Traditional sampradaya reckoning
     sources:

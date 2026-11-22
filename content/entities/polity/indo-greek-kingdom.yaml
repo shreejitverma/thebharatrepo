@@ -16,7 +16,7 @@ region: Eastern Afghanistan, Gandhara and Punjab (capitals at Taxila, Pushkalava
 location: { name: "Sialkot (ancient Sagala)", lat: 32.494, lon: 74.522 }
 datings:
   - method: numismatic
-    range: { earliest: -189, latest: 10, precision: decade, circa: true }
+    range: { earliest: "190 BCE", latest: 10, precision: decade, circa: true }
     grade: A
     label: Numismatic and epigraphic chronology from Demetrius I to Strato II
     sources:

@@ -61,7 +61,7 @@ Treat that as tradition: no practical description survives.
 How could anyone prove that twenty-two steps exist?
 The Natyashastra offers a thought experiment, called the *sāraṇā-catuṣṭaya* ("four-fold shifting"), using two identical seven-stringed vinas.
 One is kept fixed; on the other, certain strings are lowered by one shruti in stages, and the listener is meant to hear that the shifted notes take on the pitch character of the neighbouring notes, which marks out the shruti steps [@src.rowell-1992-music-musical-thought-early-india].
-I do not give the stage-by-stage tuning here, because the passage is terse and interpreters read the individual steps differently.
+The stage-by-stage tuning is not given here, because the passage is terse and interpreters read the individual steps differently.
 What matters is that Bharata argues from the ear and from instruments, not from numerical ratios.
 
 ## Did the early texts give ratios?
@@ -78,7 +78,7 @@ The main modern positions are:
 - **Unequal shrutis tied to just ratios.** Here the shrutis have different sizes, derived from simple whole-number ratios, and the gap between a "major tone" (9/8) and a "minor tone" (10/9), the ratio 81/80, is identified with the *pramāṇa* (measuring) shruti. This is attractive because the Sa-grama to Ma-grama shift of Pa is then the size of one such step. It is a modern interpretation, not a statement found in the treatises [@src.rowell-1992-music-musical-thought-early-india].
 - **A counting framework only.** On this view the 22 is a tool for describing which notes are close to which, not a claim that twenty-two separate pitches are sung.
 
-I have not found a way to decide between these using the early texts alone, and the question remains open.
+No way has been found to decide between these from the early texts alone, and the question remains open.
 
 ## What do performers actually sing?
 

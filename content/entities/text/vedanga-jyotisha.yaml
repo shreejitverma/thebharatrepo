@@ -22,7 +22,7 @@ summaries:
 region: Northern Indian subcontinent
 datings:
   - method: astronomical-reference
-    range: { earliest: -1399, latest: -1199, best: -1299, precision: century, circa: true }
+    range: { earliest: "1400 BCE", latest: "1200 BCE", best: "1300 BCE", precision: century, circa: true }
     grade: C
     label: Solstice nakshatra observation epoch (Pingree, Plofker)
     sources:
@@ -33,7 +33,7 @@ datings:
       (Shravishtha) and the summer solstice at the middle of Ashlesha, an astronomical configuration
       corresponding via precession of the equinoxes to roughly the 14th to 12th century BCE.
   - method: linguistic
-    range: { earliest: -499, latest: -299, best: -399, precision: century, circa: true }
+    range: { earliest: "500 BCE", latest: "300 BCE", best: "400 BCE", precision: century, circa: true }
     grade: B
     label: Textual redaction of the surviving verse recensions (Pingree, Plofker)
     sources:

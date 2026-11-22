@@ -15,7 +15,7 @@ summaries:
 region: Kosala (Ayodhya) and Pan-Indian
 datings:
   - method: linguistic
-    range: { earliest: -699, latest: 300, precision: century, circa: true }
+    range: { earliest: "700 BCE", latest: 300, precision: century, circa: true }
     grade: C
     label: Textual-critical five-stage compositional dating (Robert P. Goldman and John Brockington)
     sources:
@@ -23,7 +23,7 @@ datings:
       - src.brockington-1998-sanskrit-epics
     note: Based on the Baroda critical edition, John Brockington and Robert Goldman date the oral and early verse core of Books 2-6 (Ayodhyakanda to Yuddhakanda) to c. 700/500-300 BCE, with the framing Books 1 (Balakanda) and 7 (Uttarakanda) added between the first century BCE and third century CE.
   - method: traditional-puranic
-    range: { earliest: -869000, latest: -869000, precision: cosmological, circa: true }
+    range: { earliest: "869000 BCE", latest: "869000 BCE", precision: cosmological, circa: true }
     grade: D
     label: Traditional Puranic placement in the Treta Yuga
     sources:

@@ -22,9 +22,9 @@ location:
 datings:
   - method: geological
     range:
-      earliest: -18000000
-      latest: -1000000
-      best: -9000000
+      earliest: "18000000 BCE"
+      latest: "1000000 BCE"
+      best: "9000000 BCE"
       precision: Ma
       circa: true
     grade: A

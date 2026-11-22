@@ -22,8 +22,8 @@ location:
 datings:
   - method: archaeological-radiocarbon
     range:
-      earliest: -3599
-      latest: -2599
+      earliest: "3600 BCE"
+      latest: "2600 BCE"
       precision: century
       circa: true
     grade: A

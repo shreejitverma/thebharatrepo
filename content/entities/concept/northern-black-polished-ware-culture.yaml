@@ -20,7 +20,7 @@ summaries:
 region: Gangetic plain and northern Indian subcontinent (from Taxila to Bengal and the Deccan)
 datings:
   - method: archaeological-radiocarbon
-    range: { earliest: -699, latest: -199, best: -499, precision: century, circa: true }
+    range: { earliest: "700 BCE", latest: "200 BCE", best: "500 BCE", precision: century, circa: true }
     grade: A
     label: Stratified radiocarbon chronology of Early and Late NBPW
     sources:

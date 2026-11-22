@@ -24,7 +24,7 @@ datings:
       - src.hiltebeitel-2011-dharma
     note: The dynastic "prophecies" of the Kali age (Brihadratha/Nanda/Maurya/Shunga/Satavahana/Gupta lists) in the Vayu, Brahmanda and Matsya Puranas terminate with early fourth-century CE Gupta holdings in Prayaga, Saketa and Magadha, anchoring the core compilation of the early Mahapuranas to c. 300-600 CE, while Ludo Rocher emphasizes that Puranic texts remained fluid living traditions across centuries.
   - method: traditional-puranic
-    range: { earliest: -3101, latest: -3101, precision: year, circa: true }
+    range: { earliest: "3102 BCE", latest: "3102 BCE", precision: year, circa: true }
     grade: D
     label: Traditional attribution to Krishna Dvaipayana Vyasa and Romaharshana at the Kali Yuga transition
     sources:

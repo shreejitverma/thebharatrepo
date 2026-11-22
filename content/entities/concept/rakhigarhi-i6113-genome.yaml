@@ -28,8 +28,8 @@ location:
 datings:
   - method: genetic
     range:
-      earliest: -2799
-      latest: -2299
+      earliest: "2800 BCE"
+      latest: "2300 BCE"
       precision: century
       circa: true
     grade: A

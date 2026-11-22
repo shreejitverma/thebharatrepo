@@ -21,8 +21,8 @@ region: Pan-Harappan (Mohenjo-daro, Harappa, Dholavira, Rakhigarhi, Kalibangan, 
 datings:
   - method: archaeological-radiocarbon
     range:
-      earliest: -2799
-      latest: -1899
+      earliest: "2800 BCE"
+      latest: "1900 BCE"
       precision: century
       circa: true
     grade: A

@@ -20,7 +20,7 @@ summaries:
 region: Kuru-Panchala to Kosala and Videha (Uttar Pradesh and Bihar)
 datings:
   - method: linguistic
-    range: { earliest: -799, latest: -599, best: -699, precision: century, circa: true }
+    range: { earliest: "800 BCE", latest: "600 BCE", best: "700 BCE", precision: century, circa: true }
     grade: C
     label: Late Brahmana prose dating
     sources:
@@ -32,7 +32,7 @@ datings:
       a western sub-corpus associated with Shandilya (Books 6 to 10) and an eastern sub-corpus
       associated with Yajnavalkya in Videha (Books 1 to 5 and 11 to 14).
   - method: traditional-puranic
-    range: { earliest: -3101, latest: -2499, precision: century, circa: true }
+    range: { earliest: "3102 BCE", latest: "2500 BCE", precision: century, circa: true }
     grade: D
     label: Traditional sampradaya reckoning
     sources:

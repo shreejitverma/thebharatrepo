@@ -22,7 +22,7 @@ region: Upper Mesopotamia and Anatolia (found at Hattusa, modern Bogazkale, Turk
 location: { name: "Hattusa (Bogazkale)", lat: 40.0197, lon: 34.6153 }
 datings:
   - method: epigraphic
-    range: { earliest: -1385, latest: -1340, best: -1379, precision: decade, circa: true }
+    range: { earliest: "1386 BCE", latest: "1340 BCE", best: "1380 BCE", precision: decade, circa: true }
     grade: A
     label: Reign of Suppiluliuma I of Hatti (Hattusa cuneiform archive)
     sources:

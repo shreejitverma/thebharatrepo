@@ -29,8 +29,8 @@ location:
 datings:
   - method: geological
     range:
-      earliest: -42974
-      latest: -5974
+      earliest: "42975 BCE"
+      latest: "5975 BCE"
       precision: ka
       circa: true
     grade: A
@@ -46,8 +46,8 @@ datings:
       between ~45 ka and ~15-8 ka BP, millennia before Mature Harappan urbanisation.
   - method: geological
     range:
-      earliest: -3499
-      latest: -1899
+      earliest: "3500 BCE"
+      latest: "1900 BCE"
       precision: century
       circa: true
     grade: A
@@ -61,8 +61,8 @@ datings:
       mega-floods of active Himalayan rivers, before drying further after the 4.2 ka monsoon weakening.
   - method: textual-internal
     range:
-      earliest: -3299
-      latest: -1899
+      earliest: "3300 BCE"
+      latest: "1900 BCE"
       precision: century
       circa: true
     grade: C
@@ -77,8 +77,8 @@ datings:
       Panchavimsha Brahmana and Mahabharata (Vinasana) correlates with Harappan de-urbanisation.
   - method: linguistic
     range:
-      earliest: -1499
-      latest: -999
+      earliest: "1500 BCE"
+      latest: "1000 BCE"
       precision: century
       circa: true
     grade: B

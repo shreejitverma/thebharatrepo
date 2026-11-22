@@ -26,8 +26,8 @@ location:
 datings:
   - method: archaeological-radiocarbon
     range:
-      earliest: -2999
-      latest: -2599
+      earliest: "3000 BCE"
+      latest: "2600 BCE"
       precision: century
       circa: true
     grade: A
@@ -40,8 +40,8 @@ datings:
       southeastern wall; terminated by what the excavators identified as a seismic event around 2600 BCE.
   - method: archaeological-radiocarbon
     range:
-      earliest: -2599
-      latest: -1899
+      earliest: "2600 BCE"
+      latest: "1900 BCE"
       precision: century
       circa: true
     grade: A

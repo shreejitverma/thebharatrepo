@@ -23,7 +23,7 @@ summaries:
 region: Eurasian steppe, Central Asia, and northwestern Indian subcontinent
 datings:
   - method: genetic
-    range: { earliest: -1999, latest: -1399, best: -1699, precision: century, circa: true }
+    range: { earliest: "2000 BCE", latest: "1400 BCE", best: "1700 BCE", precision: century, circa: true }
     grade: B
     label: Ancient DNA Steppe MLBA admixture model (Narasimhan et al. 2019)
     sources:
@@ -34,7 +34,7 @@ datings:
       Asia and admixed with Indus Periphery populations in the Swat valley and northern South Asia
       between c. 2000 and 1500 BCE.
   - method: linguistic
-    range: { earliest: -1899, latest: -1199, best: -1499, precision: century, circa: true }
+    range: { earliest: "1900 BCE", latest: "1200 BCE", best: "1500 BCE", precision: century, circa: true }
     grade: B
     label: Comparative Indo-European and Indo-Iranian linguistics (Anthony, Witzel, Kuzmina)
     sources:
@@ -46,7 +46,7 @@ datings:
       Mitanni Indo-Aryan (c. 1380 BCE), and the Sintashta-Andronovo archaeological horizon (c. 2100
       to 1500 BCE).
   - method: archaeological-stratigraphic
-    range: { earliest: -3299, latest: -1499, precision: century, circa: true }
+    range: { earliest: "3300 BCE", latest: "1500 BCE", precision: century, circa: true }
     grade: E
     label: Indigenous Indo-Aryan and Out-of-India position (Lal, Talageri)
     sources:

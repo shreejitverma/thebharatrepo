@@ -20,7 +20,7 @@ summaries:
 region: Northwestern or northern Indian subcontinent
 datings:
   - method: linguistic
-    range: { earliest: -699, latest: -399, best: -499, precision: century, circa: true }
+    range: { earliest: "700 BCE", latest: "400 BCE", best: "500 BCE", precision: century, circa: true }
     grade: C
     label: Late Vedic grammatical chronology
     sources:

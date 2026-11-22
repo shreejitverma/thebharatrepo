@@ -22,7 +22,7 @@ summaries:
 region: Pan-Indian
 datings:
   - method: scholarly-consensus
-    range: { earliest: -1199, latest: 2003, precision: century, circa: true }
+    range: { earliest: "1200 BCE", latest: 2003, precision: century, circa: true }
     grade: B
     label: Codification of Shakalya's Padapatha to modern UNESCO inscription
     sources:

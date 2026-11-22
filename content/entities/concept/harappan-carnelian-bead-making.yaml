@@ -20,8 +20,8 @@ region: Gujarat (Ratanpur mines, Lothal, Dholavira, Nagwada), Sindh (Chanhudaro,
 datings:
   - method: archaeological-radiocarbon
     range:
-      earliest: -3299
-      latest: -1899
+      earliest: "3300 BCE"
+      latest: "1900 BCE"
       precision: century
       circa: true
     grade: A

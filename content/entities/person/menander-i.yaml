@@ -16,7 +16,7 @@ region: Gandhara and Punjab (capital at Sagala / Sialkot)
 location: { name: "Sialkot (ancient Sagala)", lat: 32.494, lon: 74.522 }
 datings:
   - method: numismatic
-    range: { earliest: -164, latest: -129, precision: decade, circa: true }
+    range: { earliest: "165 BCE", latest: "130 BCE", precision: decade, circa: true }
     grade: B
     label: Numismatic and classical textual chronology (c. 165/155-130 BCE)
     sources:

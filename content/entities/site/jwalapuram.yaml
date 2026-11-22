@@ -23,9 +23,9 @@ location:
 datings:
   - method: luminescence
     range:
-      earliest: -77000
-      latest: -38000
-      best: -74000
+      earliest: "77000 BCE"
+      latest: "38000 BCE"
+      best: "74000 BCE"
       precision: ka
       circa: true
     grade: A
@@ -37,9 +37,9 @@ datings:
       Youngest Toba Tuff horizon between pre-ash (~77 ka) and post-ash (~74-38 ka) Middle Palaeolithic levels.
   - method: geological
     range:
-      earliest: -75000
-      latest: -71000
-      best: -73500
+      earliest: "75000 BCE"
+      latest: "71000 BCE"
+      best: "73500 BCE"
       precision: ka
       circa: true
     grade: C

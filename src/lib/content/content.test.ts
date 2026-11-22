@@ -154,6 +154,20 @@ describe('integrity checks', () => {
     expect(bceOffByOne({ earliest: -6999, latest: -2599 }, 'from c. 7000 BCE to 2600 BCE')).toEqual([]);
     expect(bceOffByOne({ earliest: -7000, latest: -6999 }, 'around 7000 BCE')).toEqual([]);
   });
+  it('rejects raw negative years in authored datings', async () => {
+    const { rawNegativeYears } = await import('./load');
+    const msgs = rawNegativeYears([
+      { range: { earliest: -6000, latest: '5000 BCE', best: -5499 } },
+      { range: { earliest: 320, latest: 0 } },
+    ]);
+    expect(msgs).toHaveLength(2);
+    expect(msgs[0]).toContain('datings[0].range.earliest');
+    expect(msgs[0]).toContain('"6000 BCE" or "6001 BCE"');
+    expect(msgs[1]).toContain('datings[0].range.best');
+    expect(rawNegativeYears([{ range: { earliest: '7000 BCE', latest: '1.5 Ma' } }])).toEqual([]);
+    expect(rawNegativeYears(undefined)).toEqual([]);
+    expect(rawNegativeYears([null, { range: null }])).toEqual([]);
+  });
   it('finds malformed citations', async () => {
     const { findMalformedCitations } = await import('./load');
     expect(findMalformedCitations('ok [@src.a-1, p. 2] and [see @src.b-2] and @src.c-3 and [@ src.d]')).toEqual(['[see @src.b-2]', '@src.c-3', '[@ src.d]']);

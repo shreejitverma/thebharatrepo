@@ -20,8 +20,8 @@ region: Pan-Harappan (with Harappan weights also attested in Dilmun/Bahrain and 
 datings:
   - method: archaeological-radiocarbon
     range:
-      earliest: -2599
-      latest: -1899
+      earliest: "2600 BCE"
+      latest: "1900 BCE"
       precision: century
       circa: true
     grade: A

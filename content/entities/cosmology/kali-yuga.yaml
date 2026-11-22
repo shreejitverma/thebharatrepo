@@ -20,7 +20,7 @@ summaries:
 datings:
   - method: traditional-siddhantic
     range:
-      earliest: -3101
+      earliest: "3102 BCE"
       latest: 2026
       precision: cosmological
       circa: false

@@ -23,7 +23,7 @@ summaries:
 region: Kuru-Panchala (western and central Uttar Pradesh)
 datings:
   - method: linguistic
-    range: { earliest: -699, latest: -499, best: -599, precision: century, circa: true }
+    range: { earliest: "700 BCE", latest: "500 BCE", best: "600 BCE", precision: century, circa: true }
     grade: B
     label: Earliest prose Upanishad stratum (Olivelle)
     sources:
@@ -34,7 +34,7 @@ datings:
       Dated alongside the Brihadaranyaka Upanishad to the 7th to 6th century BCE on linguistic
       grounds and its pre-Buddhist geographical focus on Kuru-Panchala.
   - method: traditional-puranic
-    range: { earliest: -3101, latest: -2499, precision: century, circa: true }
+    range: { earliest: "3102 BCE", latest: "2500 BCE", precision: century, circa: true }
     grade: D
     label: Traditional Vedanta reckoning
     sources:

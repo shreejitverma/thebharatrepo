@@ -20,7 +20,7 @@ summaries:
 region: Middle Ganga plain (Kosala and Videha, eastern Uttar Pradesh and Bihar)
 datings:
   - method: linguistic
-    range: { earliest: -999, latest: -699, best: -799, precision: century, circa: true }
+    range: { earliest: "1000 BCE", latest: "700 BCE", best: "800 BCE", precision: century, circa: true }
     grade: C
     label: Late Samhita and eastern Vedic redaction
     sources:
@@ -32,7 +32,7 @@ datings:
       older Krishna Yajurveda Samhitas, reflecting the eastward expansion of Vedic culture toward
       Kosala and Videha.
   - method: traditional-puranic
-    range: { earliest: -3101, latest: -2999, precision: century, circa: true }
+    range: { earliest: "3102 BCE", latest: "3000 BCE", precision: century, circa: true }
     grade: D
     label: Traditional Puranic reckoning
     sources:

@@ -22,7 +22,7 @@ summaries:
 region: Northern Indian subcontinent
 datings:
   - method: linguistic
-    range: { earliest: -799, latest: -499, best: -599, precision: century, circa: true }
+    range: { earliest: "800 BCE", latest: "500 BCE", best: "600 BCE", precision: century, circa: true }
     grade: C
     label: Early Sutra period dating (Plofker)
     sources:

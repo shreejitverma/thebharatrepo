@@ -22,7 +22,7 @@ summaries:
 region: Pan-Indian (northwestern and northern Indian subcontinent)
 datings:
   - method: linguistic
-    range: { earliest: -699, latest: -199, best: -499, precision: century, circa: true }
+    range: { earliest: "700 BCE", latest: "200 BCE", best: "500 BCE", precision: century, circa: true }
     grade: B
     label: Late Vedic Sutra period
     sources:
@@ -34,7 +34,7 @@ datings:
       the 7th or 6th century BCE (early Shrauta, Shulba, and Nirukta traditions) to the 3rd or
       2nd century BCE.
   - method: traditional-puranic
-    range: { earliest: -3101, latest: -1499, precision: century, circa: true }
+    range: { earliest: "3102 BCE", latest: "1500 BCE", precision: century, circa: true }
     grade: D
     label: Traditional sampradaya reckoning
     sources:

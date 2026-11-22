@@ -63,7 +63,7 @@ This belongs to a cosmological framework and is graded D; it is not a date deriv
 
 Some modern authors have tried to match the planetary positions the epic mentions at Rama's birth and exile against computer sky models and have proposed dates in the sixth millennium BCE and earlier.
 These are single-author reconstructions that rely on treating the poem's astronomical details as exact records.
-I could not locate a peer-reviewed publication that I could verify for any such date, so no figure is graded or cited here, and none can be treated as an established result.
+No verifiable peer-reviewed publication was located for any such date, so no figure is graded or cited here, and none can be treated as an established result.
 
 ## Many Ramayanas
 

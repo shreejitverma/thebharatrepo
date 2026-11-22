@@ -23,9 +23,9 @@ location:
 datings:
   - method: archaeological-stratigraphic
     range:
-      earliest: -2100
-      latest: -1400
-      best: -1750
+      earliest: "2100 BCE"
+      latest: "1400 BCE"
+      best: "1750 BCE"
       precision: century
       circa: true
     grade: B

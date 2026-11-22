@@ -15,7 +15,7 @@ summaries:
 region: Varanasi (Kashi) and Northern India (oldest surviving dated palm-leaf manuscript copied in Nepal in 878 CE)
 datings:
   - method: textual-internal
-    range: { earliest: -250, latest: 500, precision: century, circa: true }
+    range: { earliest: "250 BCE", latest: 500, precision: century, circa: true }
     grade: B
     label: Layered composition of the five-sthana surgical core and the Uttaratantra supplement (Meulenbeld and Wujastyk)
     sources:

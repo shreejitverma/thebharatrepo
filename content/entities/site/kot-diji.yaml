@@ -23,8 +23,8 @@ location:
 datings:
   - method: archaeological-radiocarbon
     range:
-      earliest: -3299
-      latest: -2599
+      earliest: "3300 BCE"
+      latest: "2600 BCE"
       precision: century
       circa: true
     grade: A
@@ -37,8 +37,8 @@ datings:
       Calibrated radiocarbon dates from the lower Kot Dijian layers (Layers 16 to 4) span c. 3300/3000 to 2600 BCE.
   - method: archaeological-stratigraphic
     range:
-      earliest: -2599
-      latest: -1899
+      earliest: "2600 BCE"
+      latest: "1900 BCE"
       precision: century
       circa: true
     grade: A

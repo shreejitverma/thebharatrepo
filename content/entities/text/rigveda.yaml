@@ -20,7 +20,7 @@ summaries:
 region: Sapta Sindhu (northwestern Indian subcontinent, Punjab and Haryana)
 datings:
   - method: linguistic
-    range: { earliest: -1499, latest: -999, best: -1199, precision: century, circa: true }
+    range: { earliest: "1500 BCE", latest: "1000 BCE", best: "1200 BCE", precision: century, circa: true }
     grade: C
     label: Mainstream Indology (Witzel, Jamison and Brereton)
     sources:
@@ -32,7 +32,7 @@ datings:
       Books (Mandalas 2 to 7) and late books (1 and 10), and the absence of iron (shyama ayas) in
       the Rigvedic vocabulary.
   - method: foreign-synchronism
-    range: { earliest: -1399, latest: -1349, best: -1379, precision: decade, circa: true }
+    range: { earliest: "1400 BCE", latest: "1350 BCE", best: "1380 BCE", precision: decade, circa: true }
     grade: C
     label: Mitanni treaty synchronism
     sources:
@@ -44,7 +44,7 @@ datings:
       Indo-Aryan deities Mitra, Varuna, Indra, and the Nasatyas, providing an external chronological
       anchor for early Indo-Aryan religious vocabulary.
   - method: textual-internal
-    range: { earliest: -2999, latest: -1499, precision: century, circa: true }
+    range: { earliest: "3000 BCE", latest: "1500 BCE", precision: century, circa: true }
     grade: E
     label: Out-of-India and indigenous chronologies (Talageri, Lal)
     sources:
@@ -56,7 +56,7 @@ datings:
       Rigveda in the third or early second millennium BCE based on internal dynastic lists and
       the perennial flow of the Sarasvati river before its late Harappan drying.
   - method: traditional-puranic
-    range: { earliest: -3101, latest: -2999, precision: century, circa: true }
+    range: { earliest: "3102 BCE", latest: "3000 BCE", precision: century, circa: true }
     grade: D
     label: Traditional Puranic and sampradaya reckoning
     sources:
