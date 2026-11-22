@@ -156,6 +156,21 @@ test.describe('search', () => {
     await expect(epic.locator('.search-result__meta > span').first()).toHaveText(/ CE$/);
   });
 
+  test('results fill a page of twenty, then page on with a focus move', async ({ page }) => {
+    await page.goto('/search?q=Harappa');
+    await expect(status(page)).toHaveText(/^\d+ results for “Harappa”\.$/);
+    const total = Number((await status(page).textContent())!.match(/^(\d+)/)![1]);
+    expect(total).toBeGreaterThan(40);
+    await expect(results(page)).toHaveCount(20);
+    const more = page.getByRole('button', { name: `Show 20 more of ${total - 20} remaining` });
+    await more.click();
+    await expect(results(page)).toHaveCount(40);
+    await expect(results(page).nth(20).locator('a[data-result]')).toBeFocused();
+    // Every result is distinct across pages.
+    const hrefs = await results(page).locator('a[data-result]').evaluateAll((as) => as.map((a) => a.getAttribute('href')));
+    expect(new Set(hrefs).size).toBe(40);
+  });
+
   test('a hard load of results does not shift the page as they arrive', async ({ page }) => {
     await page.addInitScript(() => {
       (window as unknown as { cls: number }).cls = 0;

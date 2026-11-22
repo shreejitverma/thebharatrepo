@@ -82,7 +82,7 @@ function titleKey(s: string): string {
 
 /**
  * Moves results whose title is exactly the query (ignoring case, diacritics and punctuation) to the front,
- * keeping Pagefind's order otherwise. A reader who types a name expects that record first, even when
+ * keeping Pagefind's order otherwise. Search applies it to the first batch of results it renders. A reader who types a name expects that record first, even when
  * shorter pages that mention the name in their own titles score higher.
  */
 export function promoteExactTitle<T extends { meta: Record<string, string | undefined> }>(items: T[], query: string): T[] {

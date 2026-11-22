@@ -32,6 +32,12 @@ import {
 } from '@/lib/search/pagefind';
 
 const PAGE_SIZE = 20;
+/**
+ * Results rendered before the rest of the first page is fetched. Each result is one fragment request, and
+ * over HTTP/1.1 (next start, Lighthouse CI) twenty of them queue on six connections; six fill a phone
+ * screen and more than a desktop one, so the first paint waits for one round instead of four.
+ */
+const FIRST_BATCH = 6;
 const TYPING_DEBOUNCE_MS = 180;
 
 // Start loading the index as soon as this module runs in the browser, before hydration finishes, so the
@@ -41,7 +47,7 @@ if (typeof window !== 'undefined') loadPagefind().catch(() => undefined);
 
 type Outcome =
   | { status: 'idle'; counts: FilterCounts }
-  | { status: 'done'; for: string; q: string; nFilters: number; results: PagefindResult[]; items: PagefindResultData[]; counts: FilterCounts };
+  | { status: 'done'; for: string; q: string; nFilters: number; results: PagefindResult[]; items: PagefindResultData[]; complete: boolean; counts: FilterCounts };
 
 function serialise(s: SearchState): string {
   return toSearchParams(s).toString();
@@ -126,17 +132,26 @@ export default function Search() {
         // show how many results they would add instead of a misleading 0.
         ...selected.map((f) => pagefind.search(term, { filters: toPagefindFilters(withoutFacet(state.filters, f)) })),
       ]);
-      const [top, page] = await Promise.all([probe?.results[0]?.data() ?? null, Promise.all(res.results.slice(0, PAGE_SIZE).map((r) => r.data()))]);
+      const firstData = res.results.slice(0, FIRST_BATCH).map((r) => r.data());
+      // Without filters the probe's top hit is usually the main search's top hit: reuse its fragment.
+      const probeTop = probe?.results[0];
+      const topData = !probeTop ? null : probeTop.id === res.results[0]?.id ? firstData[0] : probeTop.data();
+      const [top, first] = await Promise.all([topData, Promise.all(firstData)]);
       if (cancelled) return;
       if (term && top && !isGenuineMatch(term, matchedWords(top))) {
-        setOutcome({ status: 'done', for: key, q: state.q, nFilters, results: [], items: [], counts: {} });
+        setOutcome({ status: 'done', for: key, q: state.q, nFilters, results: [], items: [], complete: true, counts: {} });
         return;
       }
       const counts: FilterCounts = { ...res.filters };
       selected.forEach((f, i) => {
         counts[f] = others[i].filters[f] ?? {};
       });
-      setOutcome({ status: 'done', for: key, q: state.q, nFilters, results: res.results, items: promoteExactTitle(page, state.q), counts });
+      const complete = res.results.length <= FIRST_BATCH;
+      setOutcome({ status: 'done', for: key, q: state.q, nFilters, results: res.results, items: promoteExactTitle(first, state.q), complete, counts });
+      if (complete) return;
+      // The rest of the first page renders below the first batch, so nothing visible moves.
+      const rest = await Promise.all(res.results.slice(FIRST_BATCH, PAGE_SIZE).map((r) => r.data()));
+      if (!cancelled) setOutcome((o) => (o && o.status === 'done' && o.for === key ? { ...o, items: [...o.items, ...rest], complete: true } : o));
     })().catch((e: Error) => {
       if (!cancelled) setError(e.message || 'the search failed');
     });
@@ -353,7 +368,7 @@ export default function Search() {
                   <ResultItem key={d.url} data={d} />
                 ))}
               </ol>
-              {current.items.length < total ? (
+              {current.complete && current.items.length < total ? (
                 <button type="button" className="btn search-more" onClick={loadMore} disabled={loadingMore}>
                   {loadingMore ? 'Loading...' : `Show ${Math.min(PAGE_SIZE, total - current.items.length)} more of ${total - current.items.length} remaining`}
                 </button>
