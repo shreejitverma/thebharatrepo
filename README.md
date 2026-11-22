@@ -18,7 +18,8 @@ The product brief is in [`docs/prompts/kaalchakra-master-prompt.md`](docs/prompt
 
 - Next.js 16 App Router, React 19, static generation for every page.
 - Content as YAML and Markdown in git, validated by Zod schemas at build time.
-- Kaalchakra views (Wheel, River, List) are hand-written SVG with no charting dependency.
+- Kaalchakra views (Wheel, River, Map, List) are hand-written SVG with no charting or mapping dependency.
+- The Map view draws an offline basemap derived from public-domain Natural Earth data (`src/data/basemap/`): no tiles, no API keys, no third-party requests.
 
 ## Content layout
 
@@ -35,7 +36,7 @@ The product brief is in [`docs/prompts/kaalchakra-master-prompt.md`](docs/prompt
 ```sh
 npm ci
 npm run dev                     # local site at http://localhost:3000
-npm test                        # unit tests (time engine, scale, schemas, loader, citations)
+npm test                        # unit tests (time engine, scale, schemas, loader, citations, relations, map projection, clustering, URL state)
 npm run typecheck
 npm run lint
 npm run content:validate        # schemas and cross-references; exit 1 on any problem
@@ -66,6 +67,38 @@ Run `npm run content:verify-sources` after every merge.
 All years are astronomical year numbers (1 BCE = 0).
 Calendar conversion (CE/BCE, years ago, Vikram Samvat, Shaka Samvat, Kali Yuga era) lives only in `src/lib/time/index.ts`.
 The Kaalchakra axis is piecewise: logarithmic for deep time, linear for history, with visible scale breaks (`src/lib/time/scale.ts`).
+
+## Kaalchakra URL state
+
+All four views share one URL, so any moment is a link.
+Defaults are omitted; parsing and serialising live in `src/components/kaalchakra/urlState.ts`.
+
+| Parameter | Meaning |
+|---|---|
+| `view` | `wheel` (default), `river`, `map` or `list` |
+| `lens` | `both` (default), `scholarship` or `tradition` |
+| `kinds` | Comma-separated kinds; absent means all |
+| `q`, `id`, `cal`, `level` | Text filter, selected entity, calendar, reading level |
+| `win` | River window on the unit axis, `start,end` |
+| `t` | Map moment as an astronomical year (269 BCE is `-268`); absent means all time |
+| `zoom` | Map time window around `t`: `era`, `millennium`, `century` (default) or `decade` |
+| `region` | Map viewport: `subcontinent` (default), `wide`, `northwest`, `ganga`, `west`, `deccan`, `south`, `east`, or `lon,lat,span` after panning or zooming |
+
+Example: `/kaalchakra?view=map&t=-268&zoom=century&lens=scholarship&kinds=site,event&region=ganga`.
+
+## Map view
+
+- Shows every entity that has a `location`, clustered when markers would overlap, with an accessible list of the same entries below the map.
+- A moment shows entries whose dating overlaps the window; it does not claim that everything else had ceased to exist.
+- The basemap is physical geography only (land, lakes, rivers) and draws no modern political boundary.
+- A polity extent is drawn only where an entity carries sourced `extents` data (see `docs/editorial/STYLE.md`); none is inferred.
+- Projection, viewport and clustering are pure functions in `src/lib/geo/`; scrubber and region state are in `src/components/kaalchakra/mapState.ts`.
+- `src/data/basemap/README.md` records the source, licence and rebuild steps of the basemap.
+
+## Relations
+
+`npm run content:validate` fails on a relation whose target does not exist, and reports, without failing, pairs that contradict each other (two records each claiming to succeed the other), self relations and duplicates, with counts of how many inverse and symmetric relations are declared on one record or on both.
+Every entity page draws its relations as a tree, merging both declarations of one fact into one edge and marking where each edge was stated (`src/lib/content/relations.ts`).
 
 ## Open data
 
