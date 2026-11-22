@@ -4,8 +4,13 @@
  */
 
 :root {
-  /* Devanagari for names and terms: Noto Serif Devanagari (loaded on demand), then the display face, then system faces. */
-  --font-deva-stack: var(--font-deva), 'Noto Serif Devanagari', var(--font-tiro), 'Noto Sans Devanagari', 'Kohinoor Devanagari', 'Devanagari Sangam MN', 'Mangal', serif;
+  /*
+   * Devanagari for names and terms. The Latin reading serif comes first: it has no Devanagari glyphs, so the
+   * letters fall through to Noto Serif Devanagari (loaded on demand), while spaces and punctuation use the
+   * already-loaded Latin face instead of fetching that font's own Latin subset (about 29 KB).
+   * Then the display face, then system faces.
+   */
+  --font-deva-stack: var(--font-serif), var(--font-deva), 'Noto Serif Devanagari', var(--font-tiro), 'Noto Sans Devanagari', 'Kohinoor Devanagari', 'Devanagari Sangam MN', 'Mangal', serif;
 }
 
 /* ---------- Names: native script and IAST ---------- */
