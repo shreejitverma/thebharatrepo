@@ -144,6 +144,18 @@ test.describe('search', () => {
     }
   });
 
+  test('a result is dated by its primary dating, and a traditional reckoning says so', async ({ page }) => {
+    await page.goto('/search?q=kali%20yuga');
+    const first = results(page).first();
+    await expect(first.locator('a[data-result]')).toHaveText('Kali Yuga');
+    await expect(first.locator('.search-result__meta > span').first()).toHaveText(/\(tradition\)$/);
+    // The Mahabharata has a traditional and a scholarly dating; the scholarly one stands for it, unmarked.
+    await page.goto('/search?q=mahabharata');
+    const epic = results(page).first();
+    await expect(epic.locator('a[data-result]')).toHaveText('Mahabharata');
+    await expect(epic.locator('.search-result__meta > span').first()).toHaveText(/ CE$/);
+  });
+
   test('a hard load of results does not shift the page as they arrive', async ({ page }) => {
     await page.addInitScript(() => {
       (window as unknown as { cls: number }).cls = 0;

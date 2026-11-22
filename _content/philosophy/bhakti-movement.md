@@ -60,7 +60,7 @@ A fair summary is that bhakti gave people of many backgrounds a voice and a dire
 
 The dates of individual poets are less certain than the surrounding story suggests.
 Kabir is traditionally given as 1440 to 1518, and some accounts give a longer life, but the scholarship says only that he lived in the fifteenth century [@src.hess-2015-bodies-of-song; @src.hawley-2005-three-bhakti-voices].
-Mirabai is traditionally dated to about 1498 to 1547, and many of the songs attributed to her are later compositions in her name [@src.hawley-2005-three-bhakti-voices].
-Ramanuja is traditionally dated 1017 to 1137 [@src.carman-1974-theology-of-ramanuja].
+Mirabai is associated with the first half of the sixteenth century. Her exact dates are uncertain, and many of the songs attributed to her are later compositions in her name [@src.martin-2023-mirabai; @src.hawley-2005-three-bhakti-voices].
+The Shrivaishnava tradition dates Ramanuja to 1017 to 1137 CE. John Carman proposes about 1077 to 1157 CE [@src.carman-1974-theology-of-ramanuja].
 Guru Nanak (1469 to 1539) is better documented, and his followers later formed the distinct Sikh community [@src.mcleod-1968-guru-nanak].
 Sufi saints such as Nizamuddin Auliya, who taught Islamic devotion in the same centuries, are sometimes listed beside the bhakti poets, but they belong to a different tradition that interacted with it.

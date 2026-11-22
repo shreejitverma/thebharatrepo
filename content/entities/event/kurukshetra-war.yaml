@@ -29,16 +29,25 @@ datings:
     label: Aryabhata and Aihole inscription Kali Yuga epoch (3102 BCE)
     sources:
       - src.plofker-2009-mathematics-in-india
+      - src.kielhorn-1900-aihole-inscription
       - src.bhatnagar-2017-date-mahabharata-war
     note: The 634 CE Aihole inscription of Pulakeshin II equates Saka 556 with 3,735 years elapsed since the Bharata war, matching Aryabhata's 3102 BCE Kali Yuga epoch.
   - method: traditional-puranic
-    range: { earliest: "3139 BCE", latest: "2449 BCE", best: "3138 BCE", precision: year, circa: true }
+    range: { earliest: "3138 BCE", latest: "3138 BCE", precision: year, circa: false }
     grade: D
-    label: Puranic and Brihat Samhita traditional reckonings (3138 BCE and 2449 BCE)
+    label: War 36 years before the Kali Yuga epoch
     sources:
       - src.bhatnagar-2017-date-mahabharata-war
       - src.plofker-2009-mathematics-in-india
-    note: One traditional reckoning places the war 36 years before the 3102 BCE Kali Yuga onset (3138/3139 BCE), while another preserved by Varahamihira (Brihat Samhita 13.3) and Kalhana places Yudhishthira 653 years into the Kali Yuga (2449 BCE).
+    note: The epic puts Krishna's death in the thirty-sixth year after the war. In the reckoning that equates his death with the Kali epoch of 3102 BCE, counting back 36 years gives 3138 BCE.
+  - method: traditional-siddhantic
+    range: { earliest: "2449 BCE", latest: "2449 BCE", precision: year, circa: false }
+    grade: D
+    label: Varahamihira's Yudhishthira reckoning
+    sources:
+      - src.pingree-1981-jyotihsastra
+      - src.stein-1900-rajatarangini
+    note: The Brihat Samhita reckoning places Yudhishthira 2,526 years before the Shaka era. On this reckoning the epic's events are placed around 2449 BCE.
   - method: astronomical-reference
     range: { earliest: "3067 BCE", latest: "1478 BCE", best: "3067 BCE", precision: year, circa: true }
     grade: E

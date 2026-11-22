@@ -7,7 +7,7 @@ tags: [medieval history, mughal empire, akbar, taj mahal, aurangzeb]
 datings:
   - method: documentary
     range: { earliest: "1526 CE", latest: "1858 CE", best: "1526 CE", precision: year, circa: false }
-    grade: A
+    grade: B
     label: Dynasty from Panipat to the deposition of Bahadur Shah II
     sources: [src.richards-1993-mughal-empire, src.metcalf-2012-concise-history-modern-india]
     note: "Imperial power over most of the subcontinent lasted from the mid-sixteenth to the early eighteenth century. After 1707 the emperors steadily lost real authority, and the title survived until the British deposed Bahadur Shah II in 1858."

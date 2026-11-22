@@ -4,28 +4,29 @@ import { GRADES, GRADE_LABELS, METHOD_LABELS, isTraditional } from '@/lib/conten
 import { formatRange } from '@/lib/time';
 import type { GradeSummary } from '@/lib/content/references';
 
-/** Evidence-grade summary at the top of an article: its own dating, then the grades of the records it covers. */
-export default function EvidenceSummary({ summary, references }: { summary: GradeSummary; references: number }) {
+/**
+ * Evidence-grade summary at the top of an article: the dating that stands for it (scholarship first, see
+ * rankDatings), a link to every dating with its sources, then the grades of the records it covers.
+ */
+export default function EvidenceSummary({ summary, references, datingsHref }: { summary: GradeSummary; references: number; datingsHref: string }) {
   const present = GRADES.filter((g) => summary.counts[g] > 0);
+  const [primary] = summary.datings;
+  const n = summary.datings.length;
   return (
     <aside className="evidence-summary" aria-labelledby="evidence-summary-title" data-pagefind-ignore>
       <h2 id="evidence-summary-title" className="evidence-summary__title">
         Evidence at a glance
       </h2>
-      <ul className="evidence-summary__datings">
-        {summary.datings.map((d, i) => (
-          <li key={i}>
-            <span className="evidence-summary__range">{formatRange(d.range)}</span>
-            <span className="evidence-summary__how">
-              <span>
-                <span className="muted">{i === 0 ? 'Dated by' : 'Also dated by'}</span> {METHOD_LABELS[d.method]}
-              </span>
-              <GradeBadge grade={d.grade} />
-              <LensTag lens={isTraditional(d.method) ? 'tradition' : 'scholarship'} />
-            </span>
-          </li>
-        ))}
-      </ul>
+      <div className="evidence-summary__datings">
+        <span className="evidence-summary__range">{formatRange(primary.range)}</span>
+        <span className="evidence-summary__how">
+          <span>
+            <span className="muted">Dated by</span> {METHOD_LABELS[primary.method]}
+          </span>
+          <GradeBadge grade={primary.grade} />
+          <LensTag lens={isTraditional(primary.method) ? 'tradition' : 'scholarship'} />
+        </span>
+      </div>
       {summary.total > 0 ? (
         <>
           <p className="evidence-summary__lead">
@@ -50,6 +51,7 @@ export default function EvidenceSummary({ summary, references }: { summary: Grad
         <p className="evidence-summary__lead muted">No archive records are linked to this article yet, so only its own dating is graded here. Each reference below links to the source and everything else that cites it.</p>
       )}
       <p className="evidence-summary__links">
+        <a href={datingsHref}>{n === 1 ? 'Its dating and sources' : n === 2 ? 'Both datings and their sources' : `All ${n} datings and their sources`}</a>
         <a href="#refs">
           {references} {references === 1 ? 'reference' : 'references'}
         </a>

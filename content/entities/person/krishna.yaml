@@ -75,13 +75,15 @@ datings:
   - method: epigraphic
     range:
       earliest: "120 BCE"
-      latest: "90 BCE"
+      latest: "100 BCE"
+      best: "113 BCE"
       precision: decade
       circa: true
     grade: B
     label: Heliodorus pillar at Besnagar, worship of Vasudeva (date by the reign of Antialcidas)
     sources:
       - src.salomon-1998-indian-epigraphy
+      - src.shaw-2016-buddhist-landscapes-sanchi
       - src.singh-2008-ancient-early-medieval-india
       - src.malinar-2007-bhagavadgita-doctrines-contexts
     note: >-

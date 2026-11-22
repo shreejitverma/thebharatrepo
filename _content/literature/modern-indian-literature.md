@@ -44,7 +44,7 @@ His novel *Godan* ("The Gift of a Cow"), about a peasant family in debt, is the 
 
 The same age produced poets and novelists in nearly every Indian language, among them the Tamil poet Subramania Bharati, whose songs were part of the independence movement, and R. K. Narayan, who wrote in English about the fictional town of Malgudi.
 Indian writers in English, and writers of the diaspora, form a further strand, and Salman Rushdie's *Midnight's Children*, a Booker Prize winner in 1981, is one of its best-known works.
-I have named these writers to indicate the range of the field, but I have not found sources that I can verify for the details of their careers, so this article does not make further claims about them.
+These writers are named to indicate the range of the field, but no verifiable sources were found for the details of their careers, so this article does not make further claims about them.
 
 ## How we know
 

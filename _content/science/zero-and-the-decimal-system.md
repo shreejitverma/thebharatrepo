@@ -16,7 +16,7 @@ datings:
     grade: C
     label: "Bakhshali manuscript: Bodleian radiocarbon (3rd or 4th century at the earliest) versus palaeographic estimates (8th to 12th century)"
     sources: [src.bodleian-2017-bakhshali-carbon-dating, src.plofker-2017-bakhshali-radiocarbon]
-    note: "The Bodleian team reported birch-bark folios from at least three periods, the earliest 3rd or 4th century; Wujastyk, Hayashi, Keller, Montelle and Plofker argue that the latest dated folio better marks the scribal date and that this agrees with earlier estimates."
+    note: "The Bodleian team reported birch-bark folios from at least three periods, the earliest 3rd or 4th century. Plofker, Keller, Hayashi, Montelle and Wujastyk argue that the latest dated folio better marks the scribal date and that this agrees with earlier estimates."
 entities: []
 readingLevel: adult
 review: { status: draft, author: "claude-sonnet-5-5" }
@@ -66,7 +66,7 @@ Before 2017 the most authoritative study, by Takao Hayashi, dated it on palaeogr
 In September 2017 the Bodleian Libraries announced the first radiocarbon dating of the manuscript.
 It found that the leaves come from at least three different periods, with the earliest as early as the 3rd or 4th century, and presented this as the world's oldest recorded origin of the zero symbol [@src.bodleian-2017-bakhshali-carbon-dating].
 
-That reading was challenged within weeks by a group of historians of Indian mathematics: Dominik Wujastyk, Takao Hayashi, Agathe Keller, Clemency Montelle and Kim Plofker.
+That reading was challenged within weeks by Kim Plofker, Agathe Keller, Takao Hayashi, Clemency Montelle and Dominik Wujastyk.
 They argue that the earliest dated folio is unlikely to be the date of the whole text, and that the latest dateable folio is logically the date of the scribal activity, which fits the earlier estimates [@src.plofker-2017-bakhshali-radiocarbon].
 They also argue that the manuscript uses written zeros as arithmetical operators, meaning as numbers in their own right, and not just as placeholders, which is another point of disagreement with the Bodleian announcement [@src.plofker-2017-bakhshali-radiocarbon].
 They regret that the results were announced by press release, without peer review [@src.plofker-2017-bakhshali-radiocarbon].

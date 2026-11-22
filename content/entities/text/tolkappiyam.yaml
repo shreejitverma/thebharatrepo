@@ -15,7 +15,7 @@ summaries:
 region: Tamilakam (Tamil Nadu)
 datings:
   - method: linguistic
-    range: { earliest: "200 BCE", latest: 499, precision: century, circa: true }
+    range: { earliest: "200 BCE", latest: 500, precision: century, circa: true }
     grade: C
     label: Stratified linguistic dating (archaic core Books 1-2 vs expanded Book 3)
     sources:

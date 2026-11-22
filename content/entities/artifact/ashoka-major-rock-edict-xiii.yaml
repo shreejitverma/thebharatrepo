@@ -40,9 +40,9 @@ relations:
   - { kind: part-of, target: polity.maurya-empire }
   - { kind: related-to, target: event.brahmi-decipherment-prinsep }
 image:
-  commons: "File:0051823 Major rock edict of Asoka, Kalsi Uttarakhand 017.jpg"
-  alt: Inscribed rock face of Ashoka's Major Rock Edicts at Kalsi, Uttarakhand
-  credit: Ms Sarah Welch
-  license: CC0
+  commons: "File:Khalsi Edict 13.jpg"
+  alt: Inscribed sandstone rock face bearing Major Rock Edict XIII of Ashoka in Brahmi script at Kalsi, Uttarakhand
+  credit: Archaeological Survey of India Dehradun Circle, Uttarakhand
+  license: Public domain
 tags: [ashoka, inscription, kalinga, foreign-synchronism, maurya]
 review: { status: draft, author: "gemini-4-argon" }

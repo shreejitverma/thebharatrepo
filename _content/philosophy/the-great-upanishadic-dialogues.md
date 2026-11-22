@@ -11,7 +11,7 @@ datings:
     sources: [src.olivelle-1998-early-upanisads, src.flood-2003-blackwell-companion-hinduism]
     note: "Both texts are placed before the rise of Buddhism on linguistic and geographical grounds; they are composite works and individual passages may differ in age."
   - method: traditional-sampradaya
-    range: { earliest: "3101 BCE", latest: "2499 BCE", precision: century, circa: true }
+    range: { earliest: "3102 BCE", latest: "2500 BCE", precision: century, circa: true }
     grade: D
     label: "Vedanta sampradaya"
     sources: [src.flood-2003-blackwell-companion-hinduism]

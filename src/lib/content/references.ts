@@ -5,7 +5,8 @@
  * Pure functions over the content graph, so the build and the unit tests share one implementation.
  */
 
-import { GRADES, type DatingMethod, type Grade } from './labels';
+import { GRADES, isTraditional, type DatingMethod, type Grade } from './labels';
+import { rankDatings } from './lens';
 import { citationId, type CitationRef, type Claim, type Correction, type Dating, type Entity } from './schema';
 import type { Article } from './load';
 
@@ -187,7 +188,7 @@ export function buildCitationIndex(g: { entities: Map<string, Entity>; articles:
 // ---------- Evidence-grade summary for an article ----------
 
 export interface GradeSummary {
-  /** The article's own datings, in authored order. */
+  /** The article's own datings, scholarship first and then by grade (rankDatings); the first stands for the article. */
   datings: { grade: Grade; method: DatingMethod; range: Dating['range'] }[];
   /** Graded datings and claims across the archive records the article links to. */
   counts: Record<Grade, number>;
@@ -207,7 +208,7 @@ export function articleGradeSummary(article: Pick<Article, 'datings' | 'entities
     for (const c of e.claims) counts[c.grade]++;
   }
   return {
-    datings: article.datings.map((d) => ({ grade: d.grade, method: d.method, range: d.range })),
+    datings: rankDatings(article.datings, (d) => isTraditional(d.method)).map((d) => ({ grade: d.grade, method: d.method, range: d.range })),
     counts,
     total: GRADES.reduce((n, g) => n + counts[g], 0),
     records,

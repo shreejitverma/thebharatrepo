@@ -24,20 +24,20 @@ datings:
       - src.kulke-2004-history-of-india
     note: The Sri Lankan chronicles place Ashoka's consecration 218 years after the Parinirvana; counted from a consecration of about 268 BCE this gives a death around 486 to 483 BCE and, with an 80-year life, a birth around 566 to 563 BCE. Long favoured by Wilhelm Geiger and many historians of India.
   - method: textual-internal
-    range: { earliest: "490 BCE", latest: "380 BCE", best: "400 BCE", precision: decade, circa: true }
+    range: { earliest: "500 BCE", latest: "380 BCE", best: "400 BCE", precision: decade, circa: true }
     grade: C
-    label: Short chronology (lifespan; Heinz Bechert, Richard Gombrich and others)
+    label: Short chronology (possible lifespan; Heinz Bechert, Richard Gombrich and others)
     sources:
       - src.cousins-1996-dating-historical-buddha
       - src.bronkhorst-2007-greater-magadha
-    note: Northern Buddhist traditions put Ashoka about a century after the Parinirvana, and the Vinaya lists of teachers are too short for a 218-year gap; scholars at the Gottingen symposium edited by Heinz Bechert therefore place the death around 420 to 380 BCE. Cousins reviews these arguments.
+    note: Northern Buddhist traditions put Ashoka about a century after the Parinirvana, and the Vinaya lists of teachers are too short for a 218-year gap; Cousins reviews these arguments and favours a death around 400 BCE. A death approximately between 420 and 380 BCE and a traditional lifespan of 80 years give this possible lifespan window.
   - method: traditional-sampradaya
     range: { earliest: "624 BCE", latest: "543 BCE", precision: year, circa: false }
     grade: D
     label: Theravada Buddhist Era
     sources:
       - src.cousins-1996-dating-historical-buddha
-    note: The Buddhist Era used in Sri Lanka and Southeast Asia places the Parinirvana in 544 or 543 BCE, after an 80-year life.
+    note: The Buddhist Era used in Sri Lanka and Southeast Asia places the Parinirvana in 544 or 543 BCE, with the corresponding birth dates counted 80 years earlier.
 claims:
   - text: Ashoka's pillar inscription at Lumbini (Rummindei), set up in his twentieth regnal year, states that "here the Buddha, the sage of the Shakyas, was born".
     grade: A

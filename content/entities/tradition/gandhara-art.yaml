@@ -16,7 +16,7 @@ region: Gandhara, Swat (Uddiyana), Taxila and eastern Afghanistan
 location: { name: "Taxila, Punjab", lat: 33.746, lon: 72.787 }
 datings:
   - method: art-historical
-    range: { earliest: "50 BCE", latest: 499, precision: century, circa: true }
+    range: { earliest: "50 BCE", latest: 500, precision: century, circa: true }
     grade: B
     label: Archaeological and architectural sequence of Gandharan Buddhist sites
     sources:

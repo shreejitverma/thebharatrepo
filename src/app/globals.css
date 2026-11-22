@@ -750,14 +750,12 @@ a:hover {
   max-width: var(--measure);
 }
 
-.article-meta {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 8px 16px;
-  align-items: center;
-  font-size: 0.9rem;
-  color: var(--ink-faint);
-  margin: 8px 0 16px;
+.article-datings {
+  margin: 0 0 16px;
+}
+
+.article-datings h2 {
+  margin: 16px 0 10px;
 }
 
 .article-content {
@@ -1753,14 +1751,7 @@ kbd {
 }
 
 .evidence-summary__datings {
-  list-style: none;
   margin: 0 0 10px;
-  padding: 0;
-  display: grid;
-  gap: 10px;
-}
-
-.evidence-summary__datings li {
   display: grid;
   gap: 2px;
 }

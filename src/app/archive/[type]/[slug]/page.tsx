@@ -2,15 +2,16 @@ import type { Metadata } from 'next';
 import Link from 'next/link';
 import { notFound } from 'next/navigation';
 import { preconnect } from 'react-dom';
-import GradeBadge, { LensTag } from '@/components/GradeBadge';
+import GradeBadge from '@/components/GradeBadge';
+import DatingList from '@/components/DatingList';
 import KaalchakraStrip from '@/components/KaalchakraStrip';
 import SearchIndexMeta from '@/components/SearchIndexMeta';
 import SourceCitation from '@/components/SourceCitation';
 import { getGraph, getIndex, issueUrl, SITE_URL } from '@/lib/content/site';
 import { entityHref } from '@/lib/content/kaalchakra';
-import { KIND_LABELS, METHOD_LABELS, isTraditional, citationId } from '@/lib/content/schema';
+import { rankDatings, summarizeDatings } from '@/lib/content/lens';
+import { KIND_LABELS, isTraditional, citationId } from '@/lib/content/schema';
 import { verifiedImage } from '@/lib/content/verification';
-import { formatRange } from '@/lib/time';
 import { yearToUnit } from '@/lib/time/scale';
 
 export const dynamicParams = false;
@@ -43,7 +44,7 @@ export default async function EntityPage({ params }: { params: Promise<{ type: s
   const g = getGraph();
   const img = e.image ? verifiedImage(e.image.commons) : null;
   if (img) preconnect(new URL(img.thumb).origin);
-  const ordered = [...e.datings].sort((a, b) => Number(isTraditional(a.method)) - Number(isTraditional(b.method)));
+  const ordered = rankDatings(e.datings, (d) => isTraditional(d.method));
   const primary = ordered[0];
   const anchor = primary.range.best ?? (primary.range.earliest + primary.range.latest) / 2;
   const u = yearToUnit(anchor);
@@ -69,7 +70,7 @@ export default async function EntityPage({ params }: { params: Promise<{ type: s
       <SearchIndexMeta
         title={e.names.en}
         kind={e.kind}
-        when={formatRange(primary.range)}
+        when={summarizeDatings(e.datings)}
         filters={{
           kind: [e.kind],
           grade: [...e.datings.map((d) => d.grade), ...e.claims.map((c) => c.grade)],
@@ -112,34 +113,11 @@ export default async function EntityPage({ params }: { params: Promise<{ type: s
       </div>
 
       <div data-pagefind-ignore>
-        <KaalchakraStrip items={getIndex()} range={primary.range} selfId={e.id} focusHref={`${focus}&view=river&win=${Math.max(0, u - 0.02).toFixed(5)},${Math.min(1, u + 0.02).toFixed(5)}`} />
+        <KaalchakraStrip items={getIndex()} dating={primary} selfId={e.id} focusHref={`${focus}&view=river&win=${Math.max(0, u - 0.02).toFixed(5)},${Math.min(1, u + 0.02).toFixed(5)}`} />
       </div>
 
-      <h2>When, and how we know</h2>
-      <div className="datings">
-        {ordered.map((d, i) => {
-          const lens = isTraditional(d.method) ? 'tradition' : 'scholarship';
-          return (
-            <div key={i} className={`dating dating--${lens}`}>
-              <div className="dating__top">
-                <span className="dating__range">{formatRange(d.range)}</span>
-                <GradeBadge grade={d.grade} />
-                <LensTag lens={lens} />
-              </div>
-              <div className="dating__method" style={{ marginTop: 6 }}>
-                {METHOD_LABELS[d.method]}
-                {d.label ? `: ${d.label}` : ''}
-              </div>
-              {d.note ? <p>{d.note}</p> : null}
-              <ul className="dating__sources" data-pagefind-ignore>
-                {d.sources.map((s, j) => (
-                  <li key={j}>{src(s)}</li>
-                ))}
-              </ul>
-            </div>
-          );
-        })}
-      </div>
+      <h2 data-pagefind-ignore>When, and how we know</h2>
+      <DatingList datings={ordered} sources={g.sources} />
 
       {e.debate ? (
         <section aria-labelledby="debate" style={{ maxWidth: 860 }}>

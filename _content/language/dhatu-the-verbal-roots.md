@@ -5,8 +5,8 @@ date: "2026-11-21"
 tags: [sanskrit, grammar, dhatu, roots, verbs, panini, vyakarana]
 datings:
   - method: linguistic
-    range: { earliest: "500 BCE", latest: "350 BCE", best: "400 BCE", precision: century, circa: true }
-    grade: B
+    range: { earliest: "600 BCE", latest: "350 BCE", best: "400 BCE", precision: century, circa: true }
+    grade: C
     label: Root-and-affix system as used in Pāṇini's grammar
     sources: [src.cardona-1988-panini-work-traditions, src.katre-1987-astadhyayi-panini]
     note: Dates the grammar that relies on the root list. The transmitted Dhātupāṭha was copied and revised over later centuries and is not dated here.

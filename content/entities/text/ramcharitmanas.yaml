@@ -29,7 +29,10 @@ claims:
       history continued to develop through manuscript transmission.
     grade: B
     sources: *a1
-relations: []
+relations:
+  - { kind: authored-by, target: person.tulsidas }
+  - { kind: related-to, target: person.rama, note: Rama is the central figure of the poem }
+  - { kind: related-to, target: text.valmiki-ramayana, note: Both works tell the story of Rama }
 tags:
   - text
 review:

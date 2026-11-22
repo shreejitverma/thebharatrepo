@@ -32,8 +32,6 @@ claims:
   - text: Each poet signs the vachanas with a personal name of Shiva (ankita), such as Kudalasangama for Basavanna.
     grade: A
     sources: [src.ramanujan-1973-speaking-of-siva]
-relations:
-  - { kind: related-to, target: person.basava }
 wikidata: Q7907990
 tags: [kannada, lingayat, poetry, bhakti]
 review: { status: draft, author: "claude-opus-5-5" }

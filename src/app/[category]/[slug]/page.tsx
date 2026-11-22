@@ -2,6 +2,7 @@ import type { Metadata } from 'next';
 import Link from 'next/link';
 import { notFound } from 'next/navigation';
 import SocialShare from '@/components/SocialShare';
+import DatingList from '@/components/DatingList';
 import KaalchakraStrip from '@/components/KaalchakraStrip';
 import ArticleReferences from '@/components/ArticleReferences';
 import EvidenceSummary from '@/components/EvidenceSummary';
@@ -11,7 +12,7 @@ import { renderArticle } from '@/lib/content/render';
 import { articleGradeSummary, toCitationUse } from '@/lib/content/references';
 import { entityHref } from '@/lib/content/kaalchakra';
 import { isTraditional } from '@/lib/content/labels';
-import { formatRange } from '@/lib/time';
+import { rankDatings, summarizeDatings } from '@/lib/content/lens';
 import { yearToUnit } from '@/lib/time/scale';
 
 export const dynamicParams = false;
@@ -35,13 +36,14 @@ export default async function ArticlePage({ params }: { params: Promise<{ catego
   const a = find(category, slug);
   if (!a) notFound();
   const g = getGraph();
+  const ordered = rankDatings(a.datings, (d) => isTraditional(d.method));
+  const primary = ordered[0];
   const { html, references } = await renderArticle(
     a.body,
     g.sources,
     a.datings.flatMap((d) => d.sources.map(toCitationUse)),
   );
   const summary = articleGradeSummary(a, g.entities);
-  const primary = a.datings[0];
   const u = yearToUnit(primary.range.best ?? (primary.range.earliest + primary.range.latest) / 2);
   const focus = `/kaalchakra?view=river&win=${Math.max(0, u - 0.02).toFixed(5)},${Math.min(1, u + 0.02).toFixed(5)}`;
   const linked = a.entities.map((id) => g.entities.get(id)).filter((e) => e !== undefined);
@@ -56,7 +58,7 @@ export default async function ArticlePage({ params }: { params: Promise<{ catego
         <SearchIndexMeta
           title={a.title}
           kind="article"
-          when={formatRange(primary.range)}
+          when={summarizeDatings(a.datings)}
           filters={{
             kind: ['article'],
             category: [a.category],
@@ -67,10 +69,16 @@ export default async function ArticlePage({ params }: { params: Promise<{ catego
         <header className="article-header">
           <h1>{a.title}</h1>
           <p className="lede" style={{ margin: '0 0 16px' }}>{a.summary}</p>
-          <EvidenceSummary summary={summary} references={references.length} />
+          <EvidenceSummary summary={summary} references={references.length} datingsHref="#when" />
           <div data-pagefind-ignore>
-            <KaalchakraStrip items={getIndex()} range={primary.range} selfId={null} focusHref={focus} />
+            <KaalchakraStrip items={getIndex()} dating={primary} selfId={null} focusHref={focus} />
           </div>
+          <section className="article-datings" aria-labelledby="when">
+            <h2 id="when" data-pagefind-ignore>
+              When, and how we know
+            </h2>
+            <DatingList datings={ordered} sources={g.sources} />
+          </section>
         </header>
         <div className="article-content" dangerouslySetInnerHTML={{ __html: html }} />
         {linked.length ? (
@@ -81,7 +89,7 @@ export default async function ArticlePage({ params }: { params: Promise<{ catego
                 <li key={e.id}>
                   <Link href={entityHref(e.id)}>
                     {e.names.en}
-                    <span>{formatRange(e.datings[0].range)}</span>
+                    <span>{summarizeDatings(e.datings)}</span>
                   </Link>
                 </li>
               ))}

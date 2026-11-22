@@ -35,7 +35,7 @@ The accurate statement is that ornament is structural in many ragas, not that it
 
 The Natyashastra's music chapters concern notes, gramas and their shrutis [@src.rowell-1992-music-musical-thought-early-india].
 The best-known classical list of gamakas comes later, from the Sangitaratnakara of Sarngadeva (thirteenth century), which defines gamaka as a trembling or movement of a svara and gives a list of fifteen types, among them *tiripa*, *sphurita*, *kampita*, *līna*, *āndolita*, *vali*, *ullāsita*, *plāvita*, *gumphita*, *mudrita*, *namita* and *miśrita* [@src.shringy-1978-sangitaratnakara-vol1].
-Even among specialists, how each of these was performed is reconstructed from short Sanskrit definitions and is debated; I do not give a single confident description for each.
+Even among specialists, how each of these was performed is reconstructed from short Sanskrit definitions and is debated, so this article does not give a single confident description for each.
 The treatise itself is best read in the Shringy and Sharma edition, which gives text and translation with notes.
 
 Two cautions about popular lists:
@@ -66,7 +66,7 @@ Note that "gamak" has two senses: the general word for all such movements, and t
 
 Some of the clearest examples are the ragas whose character depends on a specific oscillation.
 Many musicians describe the komal Re and Dha in Bhairav as sung with a slow, wide andolan, and the komal Ga and Dha in Darbari Kanada as held with a very slow, deep oscillation.
-These are performance-practice descriptions from teaching traditions, and I have not verified them in a peer-reviewed source, so treat them as widely repeated but unchecked here.
+These are performance-practice descriptions from teaching traditions, and they have not been verified here in a peer-reviewed source, so treat them as widely repeated but unchecked.
 What the verified research does support is the broader point: pitch movement, not only pitch position, is a defining part of raga in South Indian music [@src.viswanathan-1977-raga-alapana; @src.koduri-2014-intonation-carnatic].
 
 ## Where this leaves us

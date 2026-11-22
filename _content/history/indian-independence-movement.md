@@ -5,9 +5,9 @@ date: "2026-01-10"
 updated: "2026-11-21"
 tags: [modern history, gandhi, subhas chandra bose, bhagat singh, partition, nationalism]
 datings:
-  - method: documentary
+  - method: scholarly-consensus
     range: { earliest: "1885", latest: "1947", precision: year, circa: false }
-    grade: A
+    grade: B
     label: From the founding of the Indian National Congress to independence
     sources: [src.chandra-1989-indias-struggle-for-independence]
     note: The conventional span of the organised national movement; earlier revolts and reform movements are often included in broader accounts.

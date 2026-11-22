@@ -1,22 +1,22 @@
 ---
 title: "The Ramayana"
-summary: "The Ramayana, ascribed to the sage Valmiki, is the story of Rama, Sita and the war against Ravana. Scholars date its growth from about the 5th century BCE to the early centuries CE; tradition places Rama in the Treta Yuga, an immense span before our era."
+summary: "The Ramayana, ascribed to the sage Valmiki, is the story of Rama, Sita and the war against Ravana. Scholars date its growth from the middle of the first millennium BCE to the early centuries CE; tradition places Rama in the Treta Yuga, an immense span before our era."
 date: "2026-01-02"
 updated: "2026-11-21"
 tags: [epic, literature, valmiki, rama, retellings, chronology]
 datings:
   - method: textual-internal
-    range: { earliest: "500 BCE", latest: "300 CE", precision: century, circa: true }
+    range: { earliest: "750 BCE", latest: "300 CE", precision: century, circa: true }
     grade: C
     label: "Composition of Valmiki's text (Goldman, Brockington and mainstream Indology)"
     sources: [src.goldman-1984-ramayana-balakanda, src.brockington-1998-sanskrit-epics]
-    note: "Books 2 to 6 form the older core; Books 1 and 7 are widely judged later additions."
+    note: "The window includes Goldman’s earlier estimate for the oral core and Brockington’s later one. Books 1 and 7 are widely judged later additions."
   - method: traditional-puranic
-    range: { earliest: "870 ka", latest: "869 ka", precision: cosmological, circa: true }
+    range: { earliest: "2163102 BCE", latest: "867102 BCE", precision: cosmological, circa: true }
     grade: D
-    label: "Traditional placement of Rama at the end of the Treta Yuga"
-    sources: [src.olivelle-2005-manus-code-of-law]
-    note: "The Dvapara Yuga of 864,000 human years lies between the Treta Yuga and the Kali Yuga, so Rama is placed some 869,000 years before our time. This is a derived figure from the yuga scheme, not a date found in the epic."
+    label: "Traditional placement of Rama in the Treta Yuga of the current mahayuga"
+    sources: [src.olivelle-2005-manus-code-of-law, src.wilson-1840-vishnu-purana, src.plofker-2009-mathematics-in-india]
+    note: "These are the calculated bounds of the full Treta Yuga in the current cycle. The epic tradition places Rama in Treta without specifying a calendar year."
 entities: []
 readingLevel: adult
 review: { status: draft, author: "claude-sonnet-5-5" }
@@ -56,14 +56,13 @@ Historians therefore do not treat the story as evidence for an event with a date
 
 In the traditional scheme Rama belongs to the Treta Yuga, the second of four ages, which precedes the Dvapara Yuga that in turn ends at the Mahabharata war.
 Manu's law book gives the yuga lengths in divine years, and on the standard reckoning the Dvapara Yuga alone has 864,000 human years [@src.olivelle-2005-manus-code-of-law].
-On that scheme Rama is set very roughly 869,000 years ago.
-This belongs to a cosmological framework and is graded D; it is not a date derived from the epic's text.
+Counting back from the traditional start of Kali in 3102 BCE gives a Treta span of 2,163,102 to 867,102 BCE in the current cycle. The tradition places Rama within that age [@src.wilson-1840-vishnu-purana; @src.plofker-2009-mathematics-in-india].
 
 ### Astronomical reconstructions
 
 Some modern authors have tried to match the planetary positions the epic mentions at Rama's birth and exile against computer sky models and have proposed dates in the sixth millennium BCE and earlier.
 These are single-author reconstructions that rely on treating the poem's astronomical details as exact records.
-I could not locate a peer-reviewed publication that I could verify for any such date, so no figure is graded or cited here, and none can be treated as an established result.
+No verifiable peer-reviewed publication was located for any such date, so no figure is graded or cited here, and none can be treated as an established result.
 
 ## Many Ramayanas
 

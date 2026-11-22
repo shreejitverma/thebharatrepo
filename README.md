@@ -26,7 +26,7 @@ The product brief is in [`docs/prompts/kaalchakra-master-prompt.md`](docs/prompt
 |---|---|
 | `content/entities/<type>/<slug>.yaml` | One entity (event, person, text, site, polity, artifact, tradition, concept, cosmology); id `<type>.<slug>` |
 | `content/sources/<slug>.yaml` | One source; id `src.<slug>` |
-| `content/verification.json` | Committed cache of registry checks (DOI, ISBN, Wikidata, Commons) |
+| `content/verification.json` | Committed cache of registry checks (DOI, ISBN, OCLC, URL, Wikidata, Commons) |
 | `content/corrections.yaml` | Public corrections log |
 | `_content/<category>/<slug>.md` | Articles, with inline citations `[@src.id, locator]` |
 
@@ -60,7 +60,8 @@ Large batches are written to `staging/<batch>/` (gitignored), validated in isola
 `CONTENT_ROOTS=content:staging/<batch> ARTICLES_ROOT= npm run content:validate -- --scope staging/<batch>`,
 and merged with `npm run content:merge -- staging/<batch>`, which re-validates the combined content, aborts on any conflict before writing, and never copies the staging verification cache.
 Run `npm run content:verify-sources` after every merge.
-`npx tsx scripts/content-fix-bce.ts content/entities` mechanically repairs ranges that store `-N` for "N BCE".
+The loader rejects raw negative years in datings; write BCE years as `"N BCE"` strings.
+`npx tsx scripts/content-fix-bce.ts <entities-root>` mechanically rewrites a raw `-N` endpoint to `"N BCE"` where the entity's own text says "N BCE".
 
 ## Search
 

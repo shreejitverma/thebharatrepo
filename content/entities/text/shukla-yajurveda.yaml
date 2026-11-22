@@ -57,7 +57,6 @@ claims:
       - src.gonda-1975-vedic-literature
 relations:
   - { kind: part-of, target: text.yajurveda }
-  - { kind: commented-on, target: text.shatapatha-brahmana }
   - { kind: related-to, target: text.brihadaranyaka-upanishad }
   - { kind: related-to, target: tradition.agnicayana }
 tags: [veda, samhita, yajurveda, vajasaneyi, yajnavalkya]

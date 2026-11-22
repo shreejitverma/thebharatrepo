@@ -16,7 +16,7 @@ region: Gandhara (discovered at Bakhshali near Mardan, Pakistan; housed at the B
 location: { name: "Bakhshali, Mardan District, Pakistan", lat: 34.287, lon: 72.142 }
 datings:
   - method: linguistic
-    range: { earliest: 600, latest: 1199, best: 800, precision: century, circa: true }
+    range: { earliest: 600, latest: 1200, best: 800, precision: century, circa: true }
     grade: B
     label: Palaeographic (Sharada script) and codicological dating of the manuscript (Takao Hayashi and Kim Plofker et al.)
     sources:
@@ -56,8 +56,8 @@ relations:
   - { kind: related-to, target: text.aryabhatiya }
 wikidata: Q115690
 image:
-  commons: "File:Bakhshali manuscript zero detail.jpg"
-  alt: Detail of a birch-bark folio from the Bakhshali manuscript showing decimal numbers with the dot zero
+  commons: "File:Bakhshali manuscript.jpg"
+  alt: Birch-bark folio fragment of the Bakhshali manuscript in Sharada script showing tabular calculations, negative-sign crosses, and dot-zero placeholders
   credit: National Geographic
   license: Public domain
 tags: [bakhshali-manuscript, zero, mathematics, sharada, birch-bark, radiocarbon, contested-chronology]

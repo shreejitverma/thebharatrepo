@@ -11,7 +11,7 @@ datings:
     label: Mainstream philological and archaeological estimate
     sources: [src.erdosy-1995-indo-aryans-of-ancient-south-asia, src.witzel-1997-early-sanskritization-kuru]
     note: The Rigveda is placed by most Indologists in the later second millennium BCE and the later Vedic texts in the early first millennium; the dates rest on linguistic change, internal references and the Painted Grey Ware archaeology, not on inscriptions.
-entities: [text.rigveda, text.atharvaveda, text.samaveda, text.yajurveda, text.brahmanas, text.aranyakas, text.upanishads, concept.vedic-sanskrit, tradition.vedic-oral-transmission, concept.indo-aryan-migration, concept.painted-grey-ware-culture, concept.iron-metallurgy-in-india, polity.kuru-kingdom, polity.panchala, event.dasarajna, event.mitanni-treaty, concept.rigvedic-sarasvati, concept.gandhara-grave-culture, site.hastinapura]
+entities: [text.rigveda, text.atharvaveda, text.samaveda, text.yajurveda, text.brahmanas, text.aranyakas, text.upanishads, concept.vedic-sanskrit, tradition.vedic-oral-transmission, concept.indo-aryan-migration, concept.painted-grey-ware-culture, concept.iron-metallurgy-in-india, polity.kuru-kingdom, polity.panchala, event.dasarajna, event.mitanni-treaty, concept.ghaggar-hakra-sarasvati-debate, concept.gandhara-grave-culture, site.hastinapura]
 readingLevel: adult
 review: { status: draft, author: "claude-sonnet-5-5" }
 ---

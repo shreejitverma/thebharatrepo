@@ -65,9 +65,9 @@ relations:
   - { kind: related-to, target: text.shatapatha-brahmana }
 wikidata: Q6113985
 image:
-  commons: "File:Guru and DiscipleI.jpg"
-  alt: Traditional depiction of a Vedic teacher instructing a disciple in the Upanishads
-  credit: Unknown artist
-  license: Public domain
+  commons: "File:Katha Upanishad 1.1.1 to 1.1.3 verses, Krishna Yajurveda.jpg"
+  alt: Devanagari manuscript folio opening verses 1.1.1 to 1.1.3 of the Katha Upanishad with interlinear and marginal Sanskrit glosses
+  credit: Ms Sarah Welch
+  license: CC BY-SA 4.0
 tags: [veda, upanishad, vedanta, philosophy, atman, brahman]
 review: { status: draft, author: "gemini-4-argon" }
