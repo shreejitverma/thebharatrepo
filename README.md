@@ -47,7 +47,7 @@ npm run lint
 npm run content:new -- <type> <slug>
 npm run content:new-source -- <slug>
 npm run content:check -- <file...> [--write-cache]
-npm run content:review-queue    # draft entities and articles awaiting human review
+npm run content:review-queue    # draft entities, articles, debates and learning paths awaiting human review, and every unpublished debate
 npm run content:validate        # schemas and cross-references; exit 1 on any problem
 npm run content:report          # coverage: entities, grades, kinds, sources
 npm run content:verify-sources  # resolve every DOI, ISBN, OCLC, QID and Commons file, and each URL that is a source's only identifier; exit 1 on any mismatch
@@ -121,8 +121,8 @@ From a git worktree, also mount the main repository's `.git` directory at its ow
 
 ## Search
 
-Search is [Pagefind](https://pagefind.app), built inside `npm run build` (`next build && tsx scripts/build-search.ts`), so the index can never be skipped by a package manager that ignores lifecycle scripts.
-`scripts/build-search.ts` reads the prerendered HTML in `.next/server/app`, indexes every entity, article and source page under its real route, and writes `public/pagefind/`.
+Search is [Pagefind](https://pagefind.app), built inside `npm run build` itself, after content validation, the offline verification gate, the open data export and its round trip, and `next build`; none of these is a lifecycle script, so a package manager that ignores lifecycle scripts cannot skip them.
+`scripts/build-search.ts` reads the prerendered HTML in `.next/server/app`, indexes every entity, article, source and learning path page, and every published debate, under its real route, and writes `public/pagefind/`.
 The build fails if any expected page is missing or unindexed.
 On Vercel this is served because the Next.js builder collects `public/` only after the build command exits, and `vercel.json` pins that build command to `npm run build` so a dashboard override cannot drop the index; `vercel build` locally puts all of `public/pagefind/` in `.vercel/output/static/pagefind/`.
 Content-hashed chunks (`/pagefind/{index,filter,fragment}/`) are served as immutable (`next.config.ts`); `pagefind.js` and `pagefind-entry.json` keep the default revalidation.

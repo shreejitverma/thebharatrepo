@@ -551,10 +551,15 @@ test.describe('Relation graph', () => {
     await expect(graph.locator('.relgraph__summary')).toHaveText(/^\d+ connections? to other entries: \d+ stated on this record, \d+ stated on other records, \d+ stated on both\.$/);
     await expect(graph.locator('.relgraph__root')).toHaveText(subject.names.en);
 
-    // Every declared target appears once, as a link to that entity, under a typed branch.
+    // Every declared target appears as a link to that entity, under a typed branch, and once only within a branch:
+    // a fact declared on both records is one connection, so no relation kind may list the same entity twice.
     const links = graph.locator('.relgraph__nodes a');
     const hrefs = await links.evaluateAll((els) => els.map((a) => a.getAttribute('href')));
-    expect(new Set(hrefs).size).toBe(new Set(hrefs.filter(Boolean)).size);
+    expect(hrefs.every(Boolean)).toBe(true);
+    const branches = await graph.locator('.relgraph__branch').evaluateAll((els) =>
+      els.map((b) => ({ label: b.querySelector('.relgraph__label')?.textContent ?? '', hrefs: [...b.querySelectorAll('.relgraph__nodes a')].map((a) => a.getAttribute('href')) })),
+    );
+    for (const b of branches) expect(b.hrefs.length, `branch "${b.label}" lists an entity twice`).toBe(new Set(b.hrefs).size);
     for (const target of new Set(subject.relations.map((r) => r.target))) expect(hrefs).toContain(hrefOf(target));
     const directions = await links.evaluateAll((els) => els.map((a) => a.getAttribute('data-direction')));
     for (const d of directions) expect(['out', 'in', 'both']).toContain(d);
@@ -568,7 +573,8 @@ test.describe('Relation graph', () => {
     const target = subject.relations[0].target;
     await graph.locator(`.relgraph__nodes a[href="${hrefOf(target)}"]`).click();
     await expect(page).toHaveURL(new RegExp(`${hrefOf(target)}$`));
-    await expect(page.locator(`.relgraph__nodes a[href="${hrefOf(subject.id)}"]`)).toHaveCount(1);
+    // Two entities may be linked by more than one relation kind, so the back-link appears once per kind.
+    await expect(page.locator(`.relgraph__nodes a[href="${hrefOf(subject.id)}"]`).first()).toBeVisible();
     await fitsViewport(page, '.relgraph__tree');
     await noSeriousA11yViolations(page);
   });

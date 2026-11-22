@@ -36,8 +36,8 @@ steps:
   - entity: text.arthashastra
     title: A treatise of contested date
     note: >-
-      Tradition credits the Arthashastra to Chandragupta's minister. Patrick Olivelle dates its composition
-      to about 50 BCE to 125 CE with a later redaction, and Trautmann's word statistics point to several
+      Tradition credits the Arthashastra to Chandragupta's minister. Patrick Olivelle places its earliest
+      sources around 50 BCE and Kautilya's recension around 50 to 125 CE, with a later redaction, and Trautmann's word statistics point to several
       authors. Consider what it can tell us about Mauryan government on each view.
   - entity: event.brahmi-decipherment-prinsep
     title: Reading Brahmi again

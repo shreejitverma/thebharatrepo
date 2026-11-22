@@ -53,7 +53,7 @@ steps:
   - entity: event.mitanni-treaty
     title: An outside anchor
     note: >-
-      A Hittite treaty of about 1380 BCE, dated within Near Eastern chronology, calls Mitra, Varuna, Indra
+      A Hittite treaty of about 1350 BCE, dated within Near Eastern chronology, calls Mitra, Varuna, Indra
       and the Nasatyas to witness. Consider what this proves about Indo-Aryan religious vocabulary, and what
       it leaves open about the Rigveda itself.
   - entity: concept.indo-aryan-migration
@@ -88,7 +88,7 @@ quiz:
       - src.flood-2003-blackwell-companion-hinduism
       - src.staal-2008-discovering-the-vedas
   - id: mitanni
-    question: What does the Hittite-Mitanni treaty of about 1380 BCE show?
+    question: What does the Hittite-Mitanni treaty of about 1350 BCE show?
     choices:
       - text: That the Rigveda was composed in northern Syria
         explanation: >-

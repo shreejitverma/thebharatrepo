@@ -62,6 +62,18 @@ describe('entity and source rules', () => {
     // A text entity is dated by its own composition.
     expect(EntitySchema.safeParse({ ...rama, id: 'text.ramayana', type: 'text', kind: 'text' }).success).toBe(true);
   });
+  it('rejects a dating that dates the earliest statement or attestation of an event in a text', () => {
+    const epoch = { ...entity, id: 'event.epoch', type: 'event', kind: 'event' };
+    const traditional = { ...baseDating, method: 'traditional-siddhantic', grade: 'D' };
+    for (const label of ['Earliest known statement of the epoch, Aryabhatiya (499 CE)', 'First attested in the Rigveda', 'Earliest mention of the flood in a text']) {
+      const r = EntitySchema.safeParse({ ...epoch, datings: [traditional, { ...baseDating, method: 'textual-internal', grade: 'A', label }] });
+      expect(r.success, label).toBe(false);
+      expect(r.error?.issues.map((i) => i.message)).toEqual(['this textual-internal dating dates a text, not event.epoch; record the attestation as a claim or on the text entity']);
+    }
+    // Saying where a name is attested, in a note on a dating of the person, is not dating the person by a text.
+    const kalidasa = { ...entity, id: 'person.kalidasa', type: 'person', kind: 'person' };
+    expect(EntitySchema.safeParse({ ...kalidasa, datings: [{ ...baseDating, method: 'textual-internal', grade: 'C', note: 'His name is securely attested in the Aihole inscription of 634 CE.' }] }).success).toBe(true);
+  });
   it('requires the id prefix to match the type', () => {
     expect(EntitySchema.safeParse({ ...entity, id: 'event.kalpa', datings: [{ ...baseDating, method: 'traditional-puranic', grade: 'D' }] }).success).toBe(false);
   });

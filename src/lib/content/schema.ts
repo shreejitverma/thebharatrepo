@@ -169,8 +169,8 @@ export const ImageSchema = z.strictObject({
   license: z.string().min(2),
 });
 
-/** Wording that marks a dating as the date of a text rather than of the entity. */
-const TEXT_DATE = /\b(?:date of the texts?|dates? the texts?)\b/i;
+/** Wording that marks a dating as the date of a text, or of a text's statement or attestation, rather than of the entity. */
+const TEXT_DATE = /\b(?:date of the texts?|dates? the texts?|earliest (?:known )?(?:statement|mention|attestation|reference)|first (?:attested|stated|mentioned) in)\b/i;
 
 export const EntitySchema = z
   .strictObject({

@@ -3,7 +3,8 @@ import { READING_LEVEL_AUDIENCE, type ReadingLevel } from '@/lib/content/labels'
 /**
  * A text at up to three reading levels. Every available version is in the static HTML; CSS keyed on
  * <html data-reading-level> shows one (see styles/learning.css), falling back kids -> teen -> adult.
- * Without JavaScript the adult text shows.
+ * Without JavaScript the adult text shows. Only the adult text is indexed for search: the others repeat it
+ * for younger readers, and their labels would match every leveled page.
  */
 export default function LeveledText({
   adult,
@@ -28,7 +29,7 @@ export default function LeveledText({
     <div className={`rl ${className ?? ''}`} data-has-teen={teen ? '' : undefined} data-has-kids={kids ? '' : undefined}>
       {versions.map(([level, text]) =>
         text ? (
-          <p key={level} data-rl={level}>
+          <p key={level} data-rl={level} data-pagefind-ignore={level === 'adult' ? undefined : ''}>
             {tagged && level !== 'adult' ? (
               <>
                 <span className="rl__tag">{READING_LEVEL_AUDIENCE[level]}</span>

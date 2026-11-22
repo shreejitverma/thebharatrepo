@@ -3482,15 +3482,6 @@
     ],
     "matched": "Treta Yuga"
   },
-  "qid:Q177321:concept.rigvedic-sarasvati": {
-    "ok": false,
-    "checkedAt": "2026-11-22T02:37:10.189Z",
-    "labels": [
-      "Sarasvati River"
-    ],
-    "matched": "Sarasvati River",
-    "detail": "QID label \"Sarasvati River\" does not identify this entity; remove the wikidata field or use the QID of this exact thing"
-  },
   "qid:Q180967:person.adi-shankara": {
     "ok": true,
     "checkedAt": "2026-11-22T02:51:30.717Z",

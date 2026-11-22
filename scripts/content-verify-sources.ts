@@ -373,6 +373,8 @@ async function main() {
     }
   };
   await Promise.all(Array.from({ length: offline ? 1 : 4 }, worker));
+  // A full run also drops Wikidata results kept for entity ids that no longer exist, such as merged-away records.
+  if (!stagingRoots.length) for (const key of Object.keys(cache)) if (key.startsWith('qid:') && !g.entities.has(key.slice(key.lastIndexOf(':') + 1))) delete cache[key];
   if (!offline) saveCache(cache);
 
   console.log(`verify-sources${offline ? ' (offline)' : ''}: ${jobs.length} identifiers, ${cached} cached, ${fetched} fetched, ${failures.length} failed`);

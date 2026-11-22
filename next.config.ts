@@ -1,6 +1,7 @@
 import fs from "node:fs";
 import path from "node:path";
 import type { NextConfig } from "next";
+import { assertPreviewNotDeployed } from "./src/lib/content/debates";
 import { loadContentUncached } from "./src/lib/content/load";
 import { aliasRedirects } from "./src/lib/content/redirects";
 
@@ -22,6 +23,8 @@ function unpublishedDebateFiles(): string[] {
     .filter((f) => f.endsWith(".yaml") && !/^published:\s*true\s*(#.*)?$/m.test(fs.readFileSync(path.join(dir, f), "utf8")))
     .map((f) => `content/debates/${f}`);
 }
+
+assertPreviewNotDeployed();
 
 const nextConfig: NextConfig = {
   reactCompiler: true,

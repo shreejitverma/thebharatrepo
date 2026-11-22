@@ -217,6 +217,30 @@ describe('loader: debates and learning paths', () => {
     });
   });
 
+  it('lets an article link a published debate and rejects a link to a draft', async () => {
+    await inFixture('phase3', async () => {
+      const { readContentRecords, assembleContent } = await import('./load');
+      const { records, errors } = readContentRecords();
+      const article = records.articles[0] as { body: string };
+      article.body += '\n\nSee [the approved debate](/debates/approved-one) and [the draft](/debates/draft-one).';
+      const msgs = assembleContent(records, errors).errors.map((e) => e.message);
+      expect(msgs).toEqual(['link /debates/draft-one does not reach a published debate; a draft debate is never linked']);
+    });
+  });
+
+  it('refuses a preview build that would be deployed, through the real next.config', async () => {
+    const { assertPreviewNotDeployed } = await import('./debates');
+    expect(() => assertPreviewNotDeployed({ DEBATES_PREVIEW: '1', NODE_ENV: 'development' })).not.toThrow();
+    expect(() => assertPreviewNotDeployed({ NODE_ENV: 'production', VERCEL: '1' })).not.toThrow();
+    expect(() => assertPreviewNotDeployed({ DEBATES_PREVIEW: '1', NODE_ENV: 'production' })).toThrow(/must never be deployed/);
+    expect(() => assertPreviewNotDeployed({ DEBATES_PREVIEW: '1', VERCEL: '1', NODE_ENV: 'development' })).toThrow(/must never be deployed/);
+    // Next.js evaluates next.config.ts on every build, so loading it is what stops a deployed preview build.
+    vi.stubEnv('DEBATES_PREVIEW', '1');
+    vi.stubEnv('VERCEL', '1');
+    vi.resetModules();
+    await expect(import('../../../next.config')).rejects.toThrow(/must never be deployed/);
+  });
+
   it('resolves learning path steps and search documents', async () => {
     await inFixture('phase3', async () => {
       const { loadContentUncached } = await import('./load');

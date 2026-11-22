@@ -574,9 +574,10 @@ export function assembleContent<T extends ArticleMetadata>(
     }
   }
 
-  // Internal links in article bodies must reach a live entity, an article or a category index.
+  // Internal links in article bodies must reach a live entity, an article, a category index or a published debate.
   // Checked only where the bodies are present: a re-imported archive carries article metadata without them.
   const articlePaths = new Set([...CATEGORIES.map((c) => `/${c}`), ...articles.map((a) => `/${a.category}/${a.slug}`)]);
+  const publishedDebatePaths = new Set(records.debates.filter((d) => d.published).map((d) => `/debates/${d.slug}`));
   for (const a of articles) {
     const body = (a as { body?: unknown }).body;
     for (const href of typeof body === 'string' ? internalLinks(body) : []) {
@@ -584,6 +585,8 @@ export function assembleContent<T extends ArticleMetadata>(
       if (m) {
         const id = `${m[1]}.${m[2]}`;
         if (!entities.has(id)) errors.push({ file: a.file, message: `link ${href} -> unknown entity ${unknownEntity(id)}` });
+      } else if (href.startsWith('/debates/') && !publishedDebatePaths.has(href)) {
+        errors.push({ file: a.file, message: `link ${href} does not reach a published debate; a draft debate is never linked` });
       } else if (href.startsWith('/archive/') || ((CATEGORIES as readonly string[]).includes(href.split('/')[1]) && !articlePaths.has(href))) {
         errors.push({ file: a.file, message: `link ${href} does not reach an entity or article` });
       }

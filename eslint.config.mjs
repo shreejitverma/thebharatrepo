@@ -17,7 +17,7 @@ const eslintConfig = defineConfig([
     // Build output of `vercel build`, used to check what a deployment serves.
     ".vercel/**",
     // Local scratch directories (gitignored).
-    ".tmp*/**",
+    "**/.tmp*/**",
   ]),
 ]);
 

@@ -43,7 +43,7 @@ steps:
   - entity: event.mitanni-treaty
     title: Vedic gods in a Hittite treaty
     note: >-
-      A treaty of about 1380 BCE from the Hittite capital names Mitra, Varuna, Indra and the Nasatyas. Think
+      A treaty of about 1350 BCE from the Hittite capital names Mitra, Varuna, Indra and the Nasatyas. Think
       about what this outside record proves, and what it does not tell us about the Rigveda's own date.
   - entity: text.upanishads
     title: The philosophical end of the Veda
@@ -93,7 +93,7 @@ quiz:
       - src.gonda-1975-vedic-literature
       - src.singh-2008-ancient-early-medieval-india
   - id: mitanni
-    question: What does the treaty of about 1380 BCE between the Hittite king and Mitanni show?
+    question: What does the treaty of about 1350 BCE between the Hittite king and Mitanni show?
     choices:
       - text: That the Rigveda was written on clay tablets
         explanation: >-

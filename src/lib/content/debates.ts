@@ -17,6 +17,14 @@ export function debatesPreview(): boolean {
   return process.env.DEBATES_PREVIEW === '1';
 }
 
+/** A preview build renders unpublished drafts, so it must never be a production or Vercel build. Throws if it would be. */
+export function assertPreviewNotDeployed(env: Readonly<Record<string, string | undefined>> = process.env): void {
+  if (env.DEBATES_PREVIEW !== '1') return;
+  if (env.VERCEL || env.NODE_ENV === 'production') {
+    throw new Error('DEBATES_PREVIEW=1 renders unpublished debate drafts and must never be deployed: unset it for a production or Vercel build, and use `npm run dev:debates-preview` to review drafts locally.');
+  }
+}
+
 /** The debates a build may render: published ones, plus unpublished drafts in a preview build. */
 export function visibleDebates(debates: readonly DebateDoc[], preview = debatesPreview()): DebateDoc[] {
   return debates.filter((d) => d.published || preview);

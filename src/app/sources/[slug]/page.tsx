@@ -62,6 +62,10 @@ export default async function SourcePage({ params }: { params: Promise<{ slug: s
   const cited = getCitationIndex().get(s.id) ?? { entities: [], articles: [], corrections: [] };
   const total = citedByCount(cited);
   const ids = sourceIdentifiers(s);
+  const linked = ids.filter((i) => i.href).map((i) => i.kind);
+  const unlinkedNote = linked.length
+    ? `not linked: ${linked.length === 1 ? `the ${linked[0]} is the verified identifier` : `the ${linked.slice(0, -1).join(', ')} and ${linked[linked.length - 1]} are the verified identifiers`}`
+    : 'not linked: not verified';
   const people: [string, string[]][] = [
     ['Authors', s.authors],
     ['Editors', s.editors],
@@ -117,7 +121,7 @@ export default async function SourcePage({ params }: { params: Promise<{ slug: s
                       </a>
                     ) : (
                       <>
-                        <span className="source-ids__value">{i.value}</span> <span className="muted">(not linked: only the {ids[0].kind} is the verified identifier)</span>
+                        <span className="source-ids__value">{i.value}</span> <span className="muted">({unlinkedNote})</span>
                       </>
                     )}
                   </li>
