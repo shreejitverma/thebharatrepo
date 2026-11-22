@@ -5,10 +5,14 @@ import { getGraph } from '@/lib/content/site';
 import { debateHref, debateRange, debatesPreview, visibleDebates } from '@/lib/content/debates';
 import { formatRange } from '@/lib/time';
 
-export const metadata: Metadata = {
-  title: 'Debates',
-  description: 'Where credible positions disagree: each position at its strongest, with named proponents, graded evidence and what would change the picture.',
-};
+export function generateMetadata(): Metadata {
+  return {
+    title: 'Debates',
+    description: 'Where credible positions disagree: each position at its strongest, with named proponents, graded evidence and what would change the picture.',
+    // An empty index is not worth a search result; it is indexed once the owner approves the first debate.
+    robots: visibleDebates(getGraph().debates).length ? undefined : { index: false, follow: true },
+  };
+}
 
 export default function DebatesPage() {
   const g = getGraph();

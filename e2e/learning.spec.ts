@@ -29,6 +29,9 @@ test.describe('debates: unpublished drafts stay out of the public build', () => 
     await expect(page.locator('h1')).toHaveText('Where the evidence is contested');
     await expect(page.getByText('0 debates published yet.')).toBeVisible();
     await expect(page.locator('a[href^="/debates/"]')).toHaveCount(0);
+    // An empty index is kept out of search results and out of the site footer until a debate is approved.
+    await expect(page.locator('meta[name="robots"]')).toHaveAttribute('content', /noindex/);
+    await expect(page.locator('.site-footer a[href="/debates"]')).toHaveCount(0);
     await noHorizontalScroll(page);
     await noSeriousA11yViolations(page);
     expect(errors).toEqual([]);
