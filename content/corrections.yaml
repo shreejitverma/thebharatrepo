@@ -1390,7 +1390,7 @@
 - date: 2026-11-22
   target: src.jamison-brereton-2014-rigveda
   before: The 2014 Rigveda translation was identified by the DOI for Jamison and Brereton's 2020 introductory book.
-  after: The source uses the catalogue title and set ISBN for the 2014 three-volume translation, 9780199370184.
+  after: "The source gives the translation's full title, The Rigveda: The Earliest Religious Poetry of India, and the set ISBN for the 2014 three-volume translation, 9780199370184."
   reason: The cited hymns are in the 2014 translation and the Oxford University Press edition gives the set ISBN on its copyright page.
   sources:
     - src.jamison-brereton-2014-rigveda
@@ -1793,7 +1793,7 @@
 - date: 2026-11-22
   target: /archive/event/keezhadi-excavations-begin
   before: "Grade A field seasons and Ministry of Culture claim cited src.keeladi-lok-sabha-2024, a 2019 Tamil Nadu archaeology booklet."
-  after: "The 2014-15, 2015-16 and 2016-17 ASI seasons retain grade A and cite the 2019 Tamil Nadu Department of Archaeology report under its correct identity."
+  after: "The 2014-15, 2015-16 and 2016-17 ASI seasons are graded B and cite the 2019 Tamil Nadu Department of Archaeology report under its correct identity."
   reason: "The introduction to the Tamil Nadu report explicitly lists all three ASI seasons, as does the 2017 Lok Sabha reply."
   sources:
     - { id: src.sivanantham-2019-keeladi-urban-settlement, locator: "Introduction" }
@@ -1865,7 +1865,7 @@
 - date: 2026-11-22
   target: /archive/concept/northern-black-polished-ware-culture
   before: "Gaur's excavation report cited through DOI 10.2307/3631855."
-  after: "Gaur's 1983 excavation report cited through Open Library edition OL3007165M."
+  after: "Gaur's 1983 excavation report cited through OCLC 13396022."
   reason: "The DOI resolves to Gérard Fussman's review of the report. The library record identifies Gaur's original edition."
   sources:
     - src.gaur-1983-excavations-atranjikhera
@@ -2098,7 +2098,7 @@
 - date: 2026-11-22
   target: /archive/text/valmiki-ramayana
   before: "The poem's compositional growth spanned about 500 BCE to 300 CE."
-  after: "Scholars think the poem took shape in stages starting around the seventh or fifth century BCE and continuing into the third century CE."
+  after: "Scholars think the poem took shape in stages, from around 750 BCE to about 300 CE."
   reason: "The broader formulation reflects estimates for the early layers and distinguishes them from traditional authorship and dating."
   sources:
     - src.goldman-1984-ramayana-balakanda
@@ -2667,3 +2667,11 @@
   sources:
     - src.plofker-2009-mathematics-in-india
     - src.plofker-2017-bakhshali-radiocarbon
+- date: 2026-11-22
+  target: /archive/event/domestication-of-zebu-cattle
+  before: "c. 7000 to 5000 BCE regional domestication estimate at grade B."
+  after: "c. 7000 to 5000 BCE regional domestication estimate at grade C, noting the later Mehrgarh radiocarbon chronology."
+  reason: "Mutin 2025 dates the Period I cemetery to about 5250 to 4650 BCE and argues for a later start of farming at Mehrgarh, so the earlier range is a debated reasoned estimate."
+  sources:
+    - src.mutin-2025-mehrgarh-radiocarbon
+    - src.fuller-2006-agricultural-origins-south-asia

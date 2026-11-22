@@ -29,7 +29,7 @@ datings:
       best: "6000 BCE"
       precision: millennium
       circa: true
-    grade: B
+    grade: C
     label: Approximate regional zooarchaeological domestication trajectory at Neolithic Mehrgarh and phylogeographic synthesis
     sources:
       - src.loftus-1994-independent-domestications-cattle
@@ -37,9 +37,10 @@ datings:
       - src.fuller-2006-agricultural-origins-south-asia
       - src.mutin-2025-mehrgarh-radiocarbon
     note: >-
-      The interval is an approximate regional estimate for a gradual domestication process. Changes in cattle bones
-      at Mehrgarh and mitochondrial lineages support a South Asian origin. New radiocarbon work dates the sampled
-      Period I cemetery later than the chronology used in earlier studies of domestication.
+      The interval is a debated reasoned estimate for a gradual domestication process. Changes in cattle bones at
+      Mehrgarh and mitochondrial lineages support a South Asian origin. The Mutin 2025 radiocarbon chronology argues
+      for a later start of farming at Mehrgarh, dating the Period I cemetery to about 5250 to 4650 BCE, so the earlier
+      part of the range rests on the older chronology used in earlier studies of domestication.
 claims:
   - text: >-
       Mitochondrial DNA sequencing demonstrates a deep divergence of several hundred thousand years between
