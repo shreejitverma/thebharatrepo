@@ -26,7 +26,7 @@ export default function CorrectionsPage() {
         {list.map((c, i) => (
           <section key={anchors[i]} id={anchors[i]} className="correction" aria-label={`Correction of ${c.date} to ${c.target}`}>
             <p className="muted" style={{ margin: 0 }}>
-              {c.date} / {pages.has(c.target) ? <Link href={c.target}>{c.target}</Link> : c.target}
+              {c.date} / {pages.has(c.target) ? <Link href={c.target} prefetch={false}>{c.target}</Link> : c.target}
             </p>
             <p style={{ margin: '6px 0' }}>
               <strong>Before:</strong> {c.before}

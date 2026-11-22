@@ -99,7 +99,7 @@ export default function MethodologyPage() {
 
         <h2>Corrections</h2>
         <p>
-          Every page has a link to report an error. Substantive changes are recorded in the public <Link href="/corrections">corrections log</Link>, and the full history of every page is public in the <a href="https://github.com/shreejitverma/thebharatrepo">source repository</a>.
+          Every page has a link to report an error. Substantive changes are recorded in the public <Link href="/corrections" prefetch={false}>corrections log</Link>, and the full history of every page is public in the <a href="https://github.com/shreejitverma/thebharatrepo">source repository</a>.
         </p>
         <p className="muted">
           Grade meanings at a glance: {GRADES.map((g) => `${g}, ${GRADE_LABELS[g].toLowerCase()}`).join('; ')}.

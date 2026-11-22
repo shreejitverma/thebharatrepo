@@ -79,7 +79,7 @@ export default async function SourcePage({ params }: { params: Promise<{ slug: s
     <div className="main-content" data-pagefind-body>
       <SearchIndexMeta title={s.title} kind="source" when={s.year ? String(s.year) : undefined} filters={{ kind: ['source'] }} />
       <nav className="breadcrumbs" aria-label="Breadcrumb" data-pagefind-ignore>
-        <Link href="/sources">Bibliography</Link>
+        <Link href="/sources" prefetch={false}>Bibliography</Link>
       </nav>
       <div className="prose-wrap">
         <p className="eyebrow">{typeLabel(s.type)}</p>
@@ -189,7 +189,7 @@ export default async function SourcePage({ params }: { params: Promise<{ slug: s
             <ul className="cited-by__list">
               {cited.corrections.map(({ correction: c, anchor, locator }) => (
                 <li key={anchor}>
-                  <Link href={`/corrections#${anchor}`}>
+                  <Link href={`/corrections#${anchor}`} prefetch={false}>
                     {c.date}, {c.target}
                   </Link>
                   <div className="cited-by__detail">

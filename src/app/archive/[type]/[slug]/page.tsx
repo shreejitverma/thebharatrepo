@@ -122,7 +122,7 @@ export default async function EntityPage({ params }: { params: Promise<{ type: s
           {e.location ? (
             <p className="muted">
               Place: {e.location.name} ({coordinate(e.location.lat, 'N', 'S')}, {coordinate(e.location.lon, 'E', 'W')}).{' '}
-              <Link href={`${focus}&view=map`}>Show on the map</Link>
+              <Link href={`${focus}&view=map`} prefetch={false}>Show on the map</Link>
             </p>
           ) : null}
         </div>

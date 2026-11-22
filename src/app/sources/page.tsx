@@ -25,7 +25,7 @@ export default function SourcesPage() {
               <SourceCitation source={s} />
               <div className="muted">
                 {s.type.replace(/-/g, ' ')},{' '}
-                <Link href={sourceHref(s.id)} aria-label={`Source record, cited by ${n} ${n === 1 ? 'item' : 'items'}: ${s.title}`}>
+                <Link href={sourceHref(s.id)} prefetch={false} aria-label={`Source record, cited by ${n} ${n === 1 ? 'item' : 'items'}: ${s.title}`}>
                   source record, cited by {n} {n === 1 ? 'item' : 'items'}
                 </Link>
               </div>

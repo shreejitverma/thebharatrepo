@@ -125,7 +125,7 @@ export default function DataPage() {
           and keep their own licences.
         </p>
         <p>
-          Found a mistake? <a href={`${REPO_URL}/issues/new?template=correction.yml`}>Request a correction</a>, or see the <Link href="/corrections">corrections log</Link>.
+          Found a mistake? <a href={`${REPO_URL}/issues/new?template=correction.yml`}>Request a correction</a>, or see the <Link href="/corrections" prefetch={false}>corrections log</Link>.
         </p>
       </div>
     </div>

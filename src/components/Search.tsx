@@ -360,7 +360,7 @@ export default function Search() {
           </p>
           {error ? (
             <p className="muted">
-              Browse the <Link href="/archive">archive</Link>, the <Link href="/sources">bibliography</Link> or the <Link href="/kaalchakra?view=list">Kaalchakra list</Link> instead.
+              Browse the <Link href="/archive" prefetch={false}>archive</Link>, the <Link href="/sources" prefetch={false}>bibliography</Link> or the <Link href="/kaalchakra?view=list" prefetch={false}>Kaalchakra list</Link> instead.
             </p>
           ) : null}
           {current && total === 0 ? (
@@ -371,7 +371,7 @@ export default function Search() {
                   clear the filters
                 </button>
               ) : null}
-              . You can also browse the <Link href="/archive">archive</Link> or the <Link href="/kaalchakra?view=list">Kaalchakra</Link>.
+              . You can also browse the <Link href="/archive" prefetch={false}>archive</Link> or the <Link href="/kaalchakra?view=list" prefetch={false}>Kaalchakra</Link>.
             </p>
           ) : null}
           {current && total > 0 ? (

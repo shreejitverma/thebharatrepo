@@ -35,7 +35,7 @@ export default function SourceCitation({ source, locator, record = false, identi
           {id ? <span className="muted">{id}</span> : null}
           {id && record ? ' ' : null}
           {record ? (
-            <Link href={sourceHref(source.id)} className="source-record" aria-label={`Source record: ${text}`}>
+            <Link href={sourceHref(source.id)} prefetch={false} className="source-record" aria-label={`Source record: ${text}`}>
               Source record
             </Link>
           ) : null}

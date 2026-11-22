@@ -21,10 +21,10 @@ function NoScriptFallback() {
       </p>
       <ul>
         <li>
-          <Link href="/archive">The archive</Link>: every entity, grouped by kind and in time order.
+          <Link href="/archive" prefetch={false}>The archive</Link>: every entity, grouped by kind and in time order.
         </li>
         <li>
-          <Link href="/sources">The bibliography</Link>: every source, each with a record of what cites it.
+          <Link href="/sources" prefetch={false}>The bibliography</Link>: every source, each with a record of what cites it.
         </li>
         <li>
           Articles by category:{' '}
