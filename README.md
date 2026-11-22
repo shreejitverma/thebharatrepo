@@ -43,10 +43,16 @@ npm run dev                     # local site at http://localhost:3000 (predev wr
 npm test                        # unit tests (time engine, scale, schemas, loader, citations, relations, map projection, clustering, URL state, wheel motion, palette contrast)
 npm run typecheck
 npm run lint
+npm run content:new -- <type> <slug>
+npm run content:new-source -- <slug>
+npm run content:check -- <file...> [--write-cache]
+npm run content:review-queue    # draft entities and articles awaiting human review
 npm run content:validate        # schemas and cross-references; exit 1 on any problem
 npm run content:report          # coverage: entities, grades, kinds, sources
 npm run content:verify-sources  # resolve every DOI, ISBN, OCLC, QID and Commons file, and each URL that is a source's only identifier; exit 1 on any mismatch
-npm run build                   # validate, offline verification gate and open data, then next build and the Pagefind index
+npm run data:export             # generate JSON, CSV, JSON Schema and manifest
+npm run data:verify-export      # check checksums, re-import through the validators, and compare byte for byte
+npm run build                   # validate, offline verification gate, open data export and its round trip, then next build and the Pagefind index
 npm run search:build            # rebuild only the Pagefind index from an existing .next build
 npm run test:e2e                # Playwright, axe and visual snapshots against a production build (Chromium, Firefox, WebKit, Pixel 7, iPhone 14)
 npx vitest run src/lib/design/palette.test.ts  # contrast of every documented colour pair in light and dark; fails below AA
@@ -64,10 +70,7 @@ Every cached verification is re-checked against the current title or name, so a 
 
 ## Adding content
 
-1. Read `docs/editorial/STYLE.md`.
-2. Add sources and entities as YAML, or edit an article.
-3. Run `npm run content:validate` and `npm run content:verify-sources` until both pass.
-4. Open a pull request; a subject editor reviews before `review.status` moves past `draft`.
+Follow the [contributor guide](CONTRIBUTING.md) to scaffold, cite, check, and submit a record for editor review.
 
 Large batches are written to `staging/<batch>/` (gitignored), validated in isolation with
 `CONTENT_ROOTS=content:staging/<batch> ARTICLES_ROOT= npm run content:validate -- --scope staging/<batch>`,
@@ -184,10 +187,30 @@ Every entity page draws its relations as a tree, merging both declarations of on
 
 ## Open data
 
-Each build writes `public/data/archive.json` with every entity and source.
-`public/data/kaalchakra.json` is the compact index the Kaalchakra fetches; it is kept out of the page HTML so the page stays small as the archive grows.
+`npm run data:export` writes the download bundle to `public/data/`, and the `/data` page (`src/app/data/page.tsx`) lists it with sizes and checksums.
+`npm run build` regenerates it and then runs `npm run data:verify-export`, so no build ships a bundle that fails the round trip.
+`npm run dev` regenerates it first as well.
+
+- `archive.json` includes schema version 1, entities, sources, article frontmatter and inline citation metadata, and corrections.
+- `entities.csv` covers core entity fields plus `primaryDate`, the entity's primary dating as the site writes it.
+- `datings.csv` has one row per entity dating, with a 1-based ordinal, a `primary` flag set by the shared ranking rule (`primaryDating` in `src/lib/content/lens.ts`), and a JSON-encoded sources field.
+- `schema.json` is generated from the archive's Zod schemas and describes the exported JSON structure.
+- `manifest.json` records the version, counts, licence, content commit date and SHA-256 checksums for the other files.
+
+Exported years use [astronomical year numbering](#time-model).
+The verifier runs the Zod refinements and the loader's integrity checks and compares the re-imported bundle to the current archive.
+
+The data files are a pure function of the validated content, so their bytes change only when content changes.
+Only `manifest.json` depends on git: `contentCommitDate` is the UTC committer timestamp of the most recent first-parent commit that changed `content/` or `_content/`.
+When the checkout cannot answer, because it has no `.git` or is a shallow clone (as on Vercel) whose history ends before that commit and its parent, the date is `null` and `contentCommitDateNote` says why; the build warns and continues rather than guess.
+
+The bundle is generated and gitignored, along with the rest of `public/data/`, and must be kept out of pull requests.
+Other build steps may write their own files there (for example `kaalchakra.json`); the export replaces only its own files and removes only the retired `index.html`.
+`public/data/kaalchakra.json` is the compact index the Kaalchakra fetches (written by `scripts/build-content.ts`); it is kept out of the page HTML so the page stays small as the archive grows.
 
 ## Licence
 
 Code: MIT (see `LICENSE`).
-Content: CC BY-SA 4.0.
+Archive content and open data are licensed under [Creative Commons Attribution-ShareAlike 4.0 International](https://creativecommons.org/licenses/by-sa/4.0/).
+When redistributing, attribute The Bharat Repo, link to the licence, and indicate changes.
+Wikimedia images retain their individual licences and credits.

@@ -1,3 +1,4 @@
+import { createHash } from 'node:crypto';
 import { expect, test, type Page } from '@playwright/test';
 import AxeBuilder from '@axe-core/playwright';
 
@@ -71,6 +72,7 @@ const ROUTES: { name: string; path: string; ready?: string }[] = [
   { name: 'sources', path: '/sources' },
   { name: 'corrections', path: '/corrections' },
   { name: 'methodology', path: '/methodology' },
+  { name: 'open data', path: '/data', ready: '.data-file' },
   { name: 'search', path: '/search' },
   { name: 'search results', path: '/search?q=Harappa', ready: '.search-result' },
   { name: 'not found', path: '/no-such-page' },
@@ -526,4 +528,21 @@ test.describe('merged entities keep their old URLs', () => {
     await expect(page.locator('.kc-panel .btn--primary')).toHaveAttribute('href', '/archive/site/dholavira');
     await expect(page).toHaveURL(/[?&]id=site\.dholavira(&|$)/);
   });
+});
+
+test('open data page links every export file, each matching its manifest checksum', async ({ page, request }) => {
+  await page.goto('/data');
+  await expect(page.getByRole('heading', { level: 1, name: 'Download the archive' })).toBeVisible();
+  const manifest = await (await request.get('/data/manifest.json')).json();
+  const downloads = page.locator('.data-file a[download]');
+  const hrefs = await downloads.evaluateAll((links) => links.map((a) => a.getAttribute('href')));
+  expect(hrefs.sort()).toEqual([...Object.keys(manifest.sha256), 'manifest.json'].map((name) => `/data/${name}`).sort());
+  for (const [name, sha256] of Object.entries(manifest.sha256)) {
+    const response = await request.get(`/data/${name}`);
+    expect(response.status()).toBe(200);
+    expect(createHash('sha256').update(await response.body()).digest('hex')).toBe(sha256);
+    await expect(page.locator('.data-file', { hasText: `Download ${name}` }).locator('code')).toHaveText(sha256 as string);
+  }
+  await expect(page.locator('.data-counts')).toContainText(String(manifest.counts.entities));
+  await expect(page.locator('.site-footer').getByRole('link', { name: 'Open data' })).toHaveAttribute('href', '/data');
 });

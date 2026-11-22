@@ -2165,6 +2165,99 @@ a:hover {
   font-size: 0.82rem;
 }
 
+/* ---------- Open data (/data) ---------- */
+
+.data-counts {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px 32px;
+  margin: 8px 0 12px;
+}
+
+.data-counts dt {
+  font-size: 0.8rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--ink-faint);
+  font-weight: 600;
+}
+
+.data-counts dd {
+  margin: 0;
+  font-family: var(--font-display);
+  font-size: 1.8rem;
+  line-height: 1.2;
+  color: var(--ink);
+}
+
+.data-asof {
+  font-size: 0.9rem;
+  max-width: var(--measure);
+  margin: 0 0 24px;
+}
+
+.data-files {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(min(100%, 320px), 1fr));
+  gap: 16px;
+}
+
+.data-file {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  background: var(--bg-elev);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  padding: 18px 20px;
+  box-shadow: var(--shadow);
+}
+
+.data-file h2 {
+  font-size: 1.35rem;
+  margin: 0;
+}
+
+.data-file p {
+  margin: 0;
+  color: var(--ink-soft);
+  font-size: 0.95rem;
+}
+
+.data-file__meta {
+  display: flex;
+  gap: 12px;
+  font-size: 0.85rem !important;
+  color: var(--ink-faint) !important;
+}
+
+.data-file__meta span + span::before {
+  content: '/';
+  margin-right: 12px;
+}
+
+.data-file__sum {
+  font-size: 0.8rem !important;
+}
+
+.data-file__sum code {
+  overflow-wrap: anywhere;
+  color: var(--ink-soft);
+}
+
+.data-file .btn {
+  align-self: flex-start;
+  margin-top: auto;
+}
+
+.data-page code {
+  font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+  font-size: 0.9em;
+}
+
 /* ---------- Share ---------- */
 
 .social-share {

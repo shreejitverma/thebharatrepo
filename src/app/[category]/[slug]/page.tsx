@@ -11,7 +11,7 @@ import { CATEGORY_META, getGraph, getIndex, issueUrl } from '@/lib/content/site'
 import { renderArticle } from '@/lib/content/render';
 import { articleGradeSummary, toCitationUse } from '@/lib/content/references';
 import { entityHref } from '@/lib/content/kaalchakra';
-import { isTraditional } from '@/lib/content/labels';
+import { isTraditional, reviewStatusText } from '@/lib/content/labels';
 import { rankDatings, summarizeDatings } from '@/lib/content/lens';
 import { yearToUnit } from '@/lib/time/scale';
 
@@ -98,7 +98,7 @@ export default async function ArticlePage({ params }: { params: Promise<{ catego
         ) : null}
         <ArticleReferences references={references} />
         <p className="review-note prose-wrap" data-pagefind-ignore>
-          Review status: {a.review.status === 'reviewed' ? `reviewed by ${a.review.reviewer} on ${a.review.lastReviewed}` : a.review.status === 'machine-checked' ? 'citations machine-checked, awaiting editor review' : 'draft, identifiers machine-verified, awaiting editor review'}.
+          Review status: {reviewStatusText(a.review)}.
           {a.updated ? ` Last updated ${a.updated}.` : ''}{' '}
           <a href={issueUrl(`Correction: ${a.title}`, `Page: /${a.category}/${a.slug}\n\nWhat is wrong:\n\nEvidence (with source):\n`)}>Report an error</a>
         </p>

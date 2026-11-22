@@ -17,7 +17,7 @@ import { debateHref, debatesForEntity } from '@/lib/content/debates';
 import { learnHref, pathsForEntity } from '@/lib/content/learning';
 import { rankDatings, summarizeDatings } from '@/lib/content/lens';
 import { relationGroups } from '@/lib/content/relations';
-import { KIND_LABELS, READING_LEVEL_LABELS, isTraditional, citationId, type ReadingLevel } from '@/lib/content/schema';
+import { KIND_LABELS, READING_LEVEL_LABELS, isTraditional, citationId, reviewStatusText, type ReadingLevel } from '@/lib/content/schema';
 import { verifiedImage } from '@/lib/content/verification';
 import { formatYear } from '@/lib/time';
 import { yearToUnit } from '@/lib/time/scale';
@@ -257,7 +257,7 @@ export default async function EntityPage({ params }: { params: Promise<{ type: s
       </section>
 
       <p className="review-note" style={{ marginTop: 32, maxWidth: 860 }} data-pagefind-ignore>
-        Review status: {e.review.status === 'reviewed' ? `reviewed by ${e.review.reviewer} on ${e.review.lastReviewed}` : 'draft. Every DOI, ISBN, Wikidata and Commons identifier on this page has been machine-verified; editor review is pending'}.
+        Review status: {reviewStatusText(e.review)}.
         {e.wikidata ? (
           <>
             {' '}Wikidata: <a href={`https://www.wikidata.org/wiki/${e.wikidata}`}>{e.wikidata}</a>.
