@@ -4,7 +4,7 @@ import { primaryAnchor, type Lens } from '@/lib/content/lens';
 import type { KcDating, KcItem } from '@/lib/content/kaalchakra';
 import type { Grade, Kind } from '@/lib/content/labels';
 
-export type View = 'wheel' | 'river' | 'list';
+export type View = 'wheel' | 'river' | 'list' | 'map';
 export type Level = 'adult' | 'teen' | 'kids';
 
 export const GRADE_ORDER: Grade[] = ['A', 'B', 'C', 'D', 'E'];
