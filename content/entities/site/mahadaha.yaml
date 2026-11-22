@@ -51,8 +51,9 @@ claims:
     sources:
       - src.lukacs-1993-mesolithic-subsistence-north-india
 relations:
-  - kind: contemporary-of
+  - kind: related-to
     target: site.sarai-nahar-rai
+    note: Nearby Mesolithic lakeshore sites with comparable burials and uncertain occupation overlap
 tags:
   - mesolithic
   - ganga-valley

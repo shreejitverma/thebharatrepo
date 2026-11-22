@@ -31,7 +31,8 @@ claims:
     sources:
       - src.asi-history-1861
       - src.trautmann-1997-aryans-and-british-india
-relations: []
+relations:
+  - { kind: founded-by, target: person.william-jones }
 tags:
   - event
 review:

@@ -41,6 +41,7 @@ claims:
     sources: [src.singh-2008-ancient-early-medieval-india]
 relations:
   - { kind: contemporary-of, target: person.harshavardhana }
+  - { kind: related-to, target: site.nalanda-mahavihara, note: Xuanzang studied at Nalanda during the journey }
 wikidata: null
 tags: [buddhism, travel-account, foreign-account, china]
 review: { status: draft, author: "claude-opus-5-5" }

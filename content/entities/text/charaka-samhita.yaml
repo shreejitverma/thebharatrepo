@@ -15,7 +15,7 @@ summaries:
 region: Northwestern India and Kashmir
 datings:
   - method: textual-internal
-    range: { earliest: "100 BCE", latest: 499, precision: century, circa: true }
+    range: { earliest: "100 BCE", latest: 500, precision: century, circa: true }
     grade: B
     label: Layered composition from Charaka's revision (c. 100 BCE-200 CE) to Dridhabala's completion (c. 300-500 CE)
     sources:

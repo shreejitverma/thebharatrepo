@@ -24,7 +24,9 @@ export function normalizeTitle(s: string): string[] {
     .replace(/[̀-ͯ]/g, '')
     .toLowerCase()
     .replace(/<[^>]+>/g, ' ')
+    .replace(/&(?:#\d+|#x[0-9a-f]+|[a-z]+);/g, ' ')
     .replace(/[^a-z0-9\s]/g, ' ')
+    .replace(/([a-z])(\d)|(\d)([a-z])/g, '$1$3 $2$4')
     .replace(/isation/g, 'ization')
     .replace(/colour/g, 'color')
     .split(/\s+/)
@@ -88,37 +90,162 @@ function exact(a: string, b: string): boolean {
  * title that is merely a subset of a much longer one (e.g. "India" vs "Early India") does not pass.
  */
 function mainTitle(t: string): string {
-  return t.replace(/\([^)]*\)/g, ' ').split(/:|\s[-–]\s|\.\s|,\s/)[0];
+  return t.replace(/\([^)]*\)|\[[^\]]*\]/g, ' ').split(/:|\s[-–]\s|\.\s|,\s/)[0];
 }
 
-export function sameTitle(cited: string, found: string): boolean {
+const SITE_WORDS = new Set(['unesco', 'world', 'heritage', 'centre', 'center', 'list', 'intangible', 'cultural', 'site', 'official', 'website', 'home', 'page', 'google', 'book', 'books', 'jstor']);
+
+/**
+ * A title without leading or trailing site segments: "Ajanta Caves - UNESCO World Heritage Centre" is
+ * "Ajanta Caves". Only whole segments made of site words go; words inside a title ("A Cultural History
+ * of India") always count.
+ */
+function withoutSiteSegments(t: string): string {
+  const parts = t.split(/\s+[-–|:]\s+/);
+  const isSite = (part: string) => {
+    const words = normalizeTitle(part);
+    return words.length > 0 && words.every((w) => SITE_WORDS.has(w));
+  };
+  while (parts.length > 1 && isSite(parts[parts.length - 1])) parts.pop();
+  while (parts.length > 1 && isSite(parts[0])) parts.shift();
+  return parts.join(' - ');
+}
+
+/** The words of `small` appear in `big` in the same order as one contiguous run. */
+function containsRun(small: string[], big: string[]): boolean {
+  for (let i = 0; i + small.length <= big.length; i++) if (small.every((w, k) => big[i + k] === w)) return true;
+  return false;
+}
+
+/**
+ * Word overlap of two titles. A title whose words are a strict subset of the other's
+ * counts only with at least two words. Two or three must form one contiguous run there (for registry
+ * records, the start of the title), so "A History of India" is not "History of the Archaeological
+ * Survey of India" and "The Mughal Empire" is not "The Princes of the Mughal Empire". Four or more
+ * words all present are too specific to coincide.
+ */
+function overlap(a: string, b: string, leading: boolean): { A: Set<string>; B: Set<string>; inter: number; subsetOk: boolean } {
+  const { A, B, inter } = sets(a, b);
+  const dedupe = (t: string) => [...new Set(normalizeTitle(t))];
+  const [small, big] = A.size <= B.size ? [dedupe(a), dedupe(b)] : [dedupe(b), dedupe(a)];
+  const strictSubset = A.size !== B.size && inter === Math.min(A.size, B.size);
+  const placed = leading ? small.every((w, k) => big[k] === w) : containsRun(small, big);
+  return { A, B, inter, subsetOk: !strictSubset || small.length >= 4 || (small.length >= 2 && placed) };
+}
+
+/** Same word, a one-letter variant, or one half of a compound ("sangita" in "sangitaratnakara"). */
+function sameWord(x: string, y: string): boolean {
+  if (x === y || nearlyEqual(x, y)) return true;
+  const [short, long] = x.length <= y.length ? [x, y] : [y, x];
+  return short.length >= 5 && long.includes(short);
+}
+
+/**
+ * Sibling titles about different subjects. Either the main titles share a word and each swaps in one or
+ * two words the other lacks ("Ajanta Caves" vs "Ellora Caves", "Early History of India" vs "Early
+ * History of Bengal"), or the main titles are the same and each subtitle names something the other
+ * lacks ("Early India: From the Origins to AD 1300" vs "Early India: A Concise History", "Sun Temple,
+ * Konarak" vs "Sun Temple, Modhera"). Volume and regnal numerals are checked separately; years count
+ * in main titles ("Indian Independence Act 1947" is not "... 1935") but not in subtitles, which state
+ * date ranges inconsistently. A looser paraphrase falls through to the overlap test.
+ */
+function differentSubjects(a: string, b: string): boolean {
+  const significant = (t: string) => normalizeTitle(t).filter((w) => numeral(w) === null);
+  const missing = (xs: string[], ys: string[]) => xs.filter((x) => !ys.some((y) => sameWord(x, y)));
+  const A = significant(mainTitle(a));
+  const B = significant(mainTitle(b));
+  if (A.length > 0 && A.join(' ') === B.join(' ')) {
+    const rest = (t: string) =>
+      significant(t.replace(/\([^)]*\)|\[[^\]]*\]/g, ' '))
+        .slice(A.length)
+        .filter((w) => !/^\d+$/.test(w));
+    const subA = rest(a);
+    const subB = rest(b);
+    return missing(subA, subB).length >= 1 && missing(subB, subA).length >= 1;
+  }
+  const shares = A.some((x) => B.some((y) => x === y || nearlyEqual(x, y)));
+  const onlyA = missing(A, B);
+  const onlyB = missing(B, A);
+  return shares && onlyA.length >= 1 && onlyA.length <= 2 && onlyB.length >= 1 && onlyB.length <= 2;
+}
+
+/**
+ * One main title is the other's words with a qualifier put in front, so shared subtitle words cannot lift
+ * the narrower title into a match: "The Art of Ancient India: Buddhist, Hindu, Jain" is not "Classical Art
+ * and Ancient India". Words added after the first one still pass, since catalogues drop the colon before a
+ * subtitle ("Dholavira" and "Dholavira A Harappan City") and carry typos or split formulae inside titles.
+ */
+function qualifiedMainTitle(a: string, b: string): boolean {
+  const A = [...new Set(normalizeTitle(mainTitle(a)))];
+  const B = [...new Set(normalizeTitle(mainTitle(b)))];
+  if (A.length === 0 || B.length === 0 || A.length === B.length) return false;
+  const [small, big] = A.length < B.length ? [A, B] : [B, A];
+  return small.every((w) => big.includes(w)) && !small.includes(big[0]);
+}
+
+export function sameTitle(citedTitle: string, foundTitle: string): boolean {
+  const cited = withoutSiteSegments(citedTitle);
+  const found = withoutSiteSegments(foundTitle);
   if (!titleNumeralsAgree(cited, found)) return false;
   if (exact(cited, found)) return true;
   // A cited main title matches a record that adds a subtitle (and vice versa), if it is at least two words.
   for (const [x, y] of [
     [mainTitle(cited), found],
     [cited, mainTitle(found)],
-    [mainTitle(cited), mainTitle(found)],
   ]) {
     if (normalizeTitle(x).length >= 2 && exact(x, y)) return true;
   }
   // A record that only adds a series name in parentheses ("The Jains (Library of Religious Beliefs)").
   if (exact(cited.replace(/\([^)]*\)/g, ' '), found.replace(/\([^)]*\)/g, ' '))) return true;
-  const { A, B, inter } = sets(cited, found);
-  if (Math.min(A.size, B.size) < 2) return false;
-  return inter >= 2 && titleSimilarity(cited, found) >= 0.6 && jaccard(cited, found) >= 0.4;
+  if (differentSubjects(cited, found)) return false;
+  if (qualifiedMainTitle(cited, found)) return false;
+  const { A, B, inter, subsetOk } = overlap(cited, found, true);
+  if (Math.min(A.size, B.size) < 2 || inter < 2 || !subsetOk) return false;
+  return inter / Math.min(A.size, B.size) >= 0.6 && inter / (A.size + B.size - inter) >= 0.4;
 }
 
 /**
  * Web page titles carry site names and section labels, so require the cited title's words to be
  * present (high overlap, at least two shared words) without a Jaccard floor.
  */
-export function pageMatchesTitle(cited: string, pageText: string): boolean {
+export function pageMatchesTitle(citedTitle: string, pageTitle: string): boolean {
+  const cited = withoutSiteSegments(citedTitle);
+  const pageText = withoutSiteSegments(pageTitle);
   if (exact(cited, pageText)) return true;
   if (!subset(numerals(cited), numerals(pageText))) return false;
-  const { A, inter } = sets(cited, pageText);
-  if (A.size === 0) return false;
+  if (differentSubjects(cited, pageText)) return false;
+  const { A, inter, subsetOk } = overlap(cited, pageText, false);
+  if (A.size === 0 || !subsetOk) return false;
   return inter >= Math.min(2, A.size) && inter / A.size >= 0.6;
+}
+
+/** A URL that names a catalogue record (an archive.org item or an Open Library edition or work), or null. */
+export function registryRecord(url: string): { site: 'archive.org'; id: string } | { site: 'openlibrary.org'; path: string } | null {
+  let u: URL;
+  try {
+    u = new URL(url);
+  } catch {
+    return null;
+  }
+  const ia = /^\/details\/([^/?#]+)/.exec(u.pathname);
+  if (u.hostname.endsWith('archive.org') && ia) return { site: 'archive.org', id: ia[1] };
+  const ol = /^\/(works|books)\/(OL\w+)/.exec(u.pathname);
+  if (u.hostname.endsWith('openlibrary.org') && ol) return { site: 'openlibrary.org', path: `${ol[1]}/${ol[2]}` };
+  return null;
+}
+
+/** How a URL's title is judged: catalogue records as registry titles, anything else as a web page. */
+export function urlMatchKind(url: string): 'record' | 'page' {
+  return registryRecord(url) ? 'record' : 'page';
+}
+
+/**
+ * A registry or page title identifies the cited work. One rule for the live check and the offline
+ * recheck: registry records (DOI, ISBN, OCLC, catalogue URLs) must be the same title; a web page must
+ * carry the cited title among its site text or be titled with the cited main title.
+ */
+export function cachedTitleMatches(kind: 'record' | 'page', cited: string, matched: string): boolean {
+  return kind === 'record' ? sameTitle(cited, matched) : pageMatchesTitle(cited, matched) || sameTitle(cited, matched);
 }
 
 /**
@@ -146,9 +273,16 @@ export function sameName(names: string[], labels: string[], opts: { namedThing?:
   );
 }
 
-/** Levenshtein distance <= 1 for words of six or more letters (Hastinapur vs Hastinapura). */
+/**
+ * One edit or one adjacent transposition apart, for words of six or more letters (Hastinapur vs
+ * Hastinapura, Sanskirt vs Sanskrit).
+ */
 function nearlyEqual(a: string, b: string): boolean {
   if (Math.min(a.length, b.length) < 6 || Math.abs(a.length - b.length) > 1) return false;
+  if (a.length === b.length) {
+    const diff = [...a].flatMap((c, k) => (c === b[k] ? [] : [k]));
+    if (diff.length === 2 && diff[1] === diff[0] + 1 && a[diff[0]] === b[diff[1]] && a[diff[1]] === b[diff[0]]) return true;
+  }
   let i = 0;
   let j = 0;
   let edits = 0;

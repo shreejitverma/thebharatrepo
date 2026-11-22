@@ -34,13 +34,14 @@ datings:
 claims:
   - text: >-
       Amarasimha's fifth/sixth-century CE lexicon Amarakosha defines a Purana by five distinguishing topics (panchalakshana) - primary creation (sarga), periodic dissolution and re-creation (pratisarga), genealogies of gods and sages (vamsha), cosmic epochs of the Manus (manvantara), and histories of royal dynasties (vamshanucharita).
-    grade: A
+    grade: B
     sources:
       - src.brockington-1987-puranas-rocher-review
       - src.hiltebeitel-2011-dharma
-  - text: The vamshanucharita sections of the Vayu, Brahmanda, Matsya, Vishnu and Bhagavata Puranas preserve the primary Sanskrit dynastic king-lists for post-Mahabharata northern and Deccan history, including the Haryanka, Shishunaga, Nanda, Maurya, Shunga, Kanva, Andhra (Satavahana) and early Gupta dynasties.
-    grade: A
+  - text: The Vayu, Brahmanda, Matsya, Vishnu and Bhagavata Puranas preserve differing dynastic lists that historians compare with other evidence for early northern Indian and Deccan dynasties, including the Mauryas and Satavahanas.
+    grade: B
     sources:
+      - src.pargiter-1913-dynasties-kali-age
       - src.kulke-2004-history-of-india
       - src.thapar-2012-asoka-decline-mauryas
 relations:

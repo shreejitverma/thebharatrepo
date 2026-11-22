@@ -62,11 +62,6 @@ relations:
   - kind: part-of
     target: tradition.harappan-civilisation
 wikidata: null
-image:
-  commons: "File:Signboard at Dholavira.jpg"
-  alt: The ten-sign Indus script inscription from the northern gateway at Dholavira
-  credit: Nishith S. Parikh
-  license: CC BY-SA 4.0
 tags:
   - harappan
   - artifact

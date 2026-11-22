@@ -22,9 +22,9 @@ region: Rohilkhand (Bareilly district, Uttar Pradesh)
 location: { name: "Ahichhatra (Ramnagar)", lat: 28.374, lon: 79.136 }
 datings:
   - method: archaeological-stratigraphic
-    range: { earliest: "1200 BCE", latest: 1099, best: "600 BCE", precision: century, circa: true }
-    grade: A
-    label: Continuous stratigraphic sequence from PGW to early medieval periods
+    range: { earliest: "1200 BCE", latest: 1100, best: "600 BCE", precision: century, circa: true }
+    grade: B
+    label: Stratigraphic sequence from PGW to early medieval periods
     sources:
       - src.lal-1955-excavation-hastinapura
       - src.singh-2008-ancient-early-medieval-india
@@ -48,7 +48,7 @@ claims:
       Period I (Ochre Coloured Pottery), Period II (Painted Grey Ware with iron), Period III
       (Northern Black Polished Ware with mud ramparts), and Period IV (fortified brick defenses and
       Panchala coins).
-    grade: A
+    grade: B
     sources:
       - src.singh-2008-ancient-early-medieval-india
       - src.allchin-1995-archaeology-early-historic-south-asia

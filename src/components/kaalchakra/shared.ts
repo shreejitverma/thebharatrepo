@@ -1,13 +1,11 @@
 import { formatInCalendar, formatRange, type CalendarSystem } from '@/lib/time';
 import { yearToUnit, unitToYear, SEGMENTS, type Segment } from '@/lib/time/scale';
-import { primaryAnchor, type Lens } from '@/lib/content/lens';
+import { primaryAnchor, rankDatings, withTraditionMark, type Lens } from '@/lib/content/lens';
 import type { KcDating, KcItem } from '@/lib/content/kaalchakra';
-import type { Grade, Kind } from '@/lib/content/labels';
+import type { Kind } from '@/lib/content/labels';
 
 export type View = 'wheel' | 'river' | 'list' | 'map';
 export type Level = 'adult' | 'teen' | 'kids';
-
-export const GRADE_ORDER: Grade[] = ['A', 'B', 'C', 'D', 'E'];
 
 export const SHORT_SEGMENT_LABELS: Record<string, string> = {
   cosmic: 'Cosmic',
@@ -61,17 +59,24 @@ export function anchorIn(item: Pick<KcItem, 'anchor'>, lens: Lens): number | nul
   return primaryAnchor(item as KcItem, lens);
 }
 
-/** Datings of an item visible in a lens, scholarship first, best grade first. */
+/** Datings of an item visible in a lens, in the archive's rankDatings order. */
 export function visibleDatings<D extends PlacedDating>(item: { datings: D[] }, lens: Lens): D[] {
-  return item.datings
-    .filter((d) => lens === 'both' || d.lens === lens)
-    .sort((a, b) => (a.lens === b.lens ? GRADE_ORDER.indexOf(a.grade) - GRADE_ORDER.indexOf(b.grade) : a.lens === 'scholarship' ? -1 : 1));
+  return rankDatings(
+    item.datings.filter((d) => lens === 'both' || d.lens === lens),
+    (d) => d.lens === 'tradition',
+  );
 }
 
-export function formatDating(d: KcDating, cal: CalendarSystem): string {
+/** The bare range in a calendar, for places that show the lens beside it. */
+export function formatDatingRange(d: KcDating, cal: CalendarSystem): string {
   if (cal === 'ce') return formatRange(d);
   if (d.earliest === d.latest) return formatInCalendar(d.earliest, cal, d.precision, d.circa);
   return `${formatInCalendar(d.earliest, cal, d.precision, d.circa)} to ${formatInCalendar(d.latest, cal, d.precision)}`;
+}
+
+/** One-line date label in a calendar, marked when the dating is a traditional reckoning. */
+export function formatDating(d: KcDating, cal: CalendarSystem): string {
+  return withTraditionMark(formatDatingRange(d, cal), d.lens === 'tradition');
 }
 
 export function primaryDating(item: KcItem, lens: Lens): KcDating | undefined {

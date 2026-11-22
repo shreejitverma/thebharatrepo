@@ -25,7 +25,7 @@ datings:
   - method: archaeological-radiocarbon
     range:
       earliest: "1900 BCE"
-      latest: "1350 BCE"
+      latest: "1400 BCE"
       best: "1600 BCE"
       precision: century
       circa: true
@@ -56,8 +56,9 @@ claims:
       - src.misra-2001-prehistoric-colonization-india
       - src.coningham-2015-archaeology-south-asia
 relations:
-  - kind: succeeded
+  - kind: located-at
     target: site.kayatha
+    note: Malwa ceramics occur in Period III at Kayatha, above the earlier Kayatha and Ahar-Banas levels
   - kind: succeeded
     target: tradition.ahar-banas-culture
   - kind: preceded

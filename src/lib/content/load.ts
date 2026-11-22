@@ -25,7 +25,9 @@ import {
   EntitySchema,
   SourceSchema,
   citationId,
+  isTraditional,
   type ArticleFrontmatter,
+  type DatingMethod,
   type Correction,
   type Entity,
   type Source,
@@ -119,9 +121,8 @@ export function findHiddenCitations(body: string): string[] {
 }
 
 /**
- * Detects the most common authoring error with raw astronomical years: storing -N for "N BCE"
- * (correct is 1 - N). Flags a dating when the accompanying text names "N BCE", an endpoint equals -N,
- * and no endpoint equals 1 - N.
+ * Detects a BCE endpoint one year earlier than the text says: an endpoint equal to -N (that is,
+ * "N+1 BCE") while the accompanying text names "N BCE" and no endpoint equals 1 - N. Returns each such N.
  */
 export function bceOffByOne(range: { earliest: number; latest: number; best?: number }, text: string): number[] {
   const ends = [range.earliest, range.latest, range.best].filter((x): x is number => x !== undefined);
@@ -131,6 +132,31 @@ export function bceOffByOne(range: { earliest: number; latest: number; best?: nu
     if (ends.includes(-n) && !ends.includes(1 - n)) flagged.add(n);
   }
   return [...flagged];
+}
+
+const CENTURY_ORDINALS = ['first', 'second', 'third', 'fourth', 'fifth', 'sixth', 'seventh', 'eighth', 'ninth', 'tenth', 'eleventh', 'twelfth', 'thirteenth', 'fourteenth', 'fifteenth', 'sixteenth', 'seventeenth', 'eighteenth', 'nineteenth', 'twentieth', 'twenty-first'];
+
+function ordinalSuffix(n: number): string {
+  if (n % 100 >= 11 && n % 100 <= 13) return 'th';
+  return ['th', 'st', 'nd', 'rd'][n % 10] ?? 'th';
+}
+
+/**
+ * Detects a CE end year one short of the round year the text gives: a non-traditional latest
+ * endpoint of the form N99 CE while the text names "(N+1)00 CE" or the century ending there
+ * ("fifth century CE" for 500), and never names the N99 year itself. Returns the round year.
+ */
+export function ceOffByOne(dating: { method: DatingMethod; range: { latest: number } }, text: string): number[] {
+  const { latest } = dating.range;
+  if (isTraditional(dating.method) || latest <= 0 || latest % 100 !== 99) return [];
+  const round = latest + 1;
+  const flat = text.replace(/,/g, '');
+  const names = (year: number) => new RegExp(`\\b${year}\\s*(?:CE|AD)\\b`).test(flat);
+  if (names(latest)) return [];
+  const century = round / 100;
+  const ordinals = [`${century}${ordinalSuffix(century)}`, CENTURY_ORDINALS[century - 1]].filter(Boolean).join('|');
+  const namesCentury = new RegExp(`\\b(?:${ordinals})[- ]centur(?:y|ies)(?![- ]*(?:BCE|BC)\\b)`, 'i').test(flat);
+  return names(round) || namesCentury ? [round] : [];
 }
 
 /**
@@ -148,6 +174,29 @@ export function rawNegativeYears(datings: unknown): string[] {
       const v = range[key];
       if (typeof v === 'number' && v < 0) {
         out.push(`datings[${i}].range.${key}: write "${-v} BCE" or "${1 - v} BCE" as a string, not the raw astronomical year ${v} (${1 - v} BCE)`);
+      }
+    }
+  });
+  return out;
+}
+
+/**
+ * Scholarly deep-time dates are reported as years before present, so they must be written "385 ka" or
+ * "1.5 Ma". A string such as "385000 BCE" is read as a calendar year and lands about 2,025 years too
+ * early. Calendar figures up to "10000 BCE" stay allowed; traditional reckonings count from 3102 BCE and
+ * are exempt. Returns one message per offending endpoint.
+ */
+export function deepTimeBceYears(datings: unknown): string[] {
+  if (!Array.isArray(datings)) return [];
+  const out: string[] = [];
+  datings.forEach((d, i) => {
+    const { method, range } = (d ?? {}) as { method?: unknown; range?: Record<string, unknown> };
+    if (!range || typeof range !== 'object' || (typeof method === 'string' && isTraditional(method as DatingMethod))) return;
+    for (const key of ['earliest', 'latest', 'best']) {
+      const v = range[key];
+      const m = typeof v === 'string' ? /^(\d+(?:\.\d+)?)\s*(?:BCE|BC)$/i.exec(v.trim().replace(/,/g, '')) : null;
+      if (m && Number(m[1]) > 10000) {
+        out.push(`datings[${i}].range.${key}: "${v}" is a deep-time date; write it as years before present ("N ka" or "N Ma") as the cited source reports it`);
       }
     }
   });
@@ -255,7 +304,8 @@ export function loadContentUncached(): ContentGraph {
   for (const file of roots.flatMap((r) => walk(path.join(r, 'entities'), '.yaml'))) {
     const raw = readYaml(file, errors);
     if (raw === undefined) continue;
-    for (const m of rawNegativeYears((raw as { datings?: unknown } | null)?.datings)) errors.push({ file: rel(file), message: m });
+    const rawDatings = (raw as { datings?: unknown } | null)?.datings;
+    for (const m of [...rawNegativeYears(rawDatings), ...deepTimeBceYears(rawDatings)]) errors.push({ file: rel(file), message: m });
     const parsed = EntitySchema.safeParse(raw);
     if (!parsed.success) {
       for (const m of formatZod(parsed.error)) errors.push({ file: rel(file), message: m });
@@ -265,7 +315,10 @@ export function loadContentUncached(): ContentGraph {
     const text = [e.summary, e.summaries?.kids, e.summaries?.teen, ...e.claims.map((c) => c.text)].join(' ');
     e.datings.forEach((d, i) => {
       for (const n of bceOffByOne(d.range, `${text} ${d.label ?? ''} ${d.note ?? ''}`)) {
-        errors.push({ file: rel(file), message: `datings[${i}]: stores -${n} for "${n} BCE"; ${n} BCE is ${1 - n} (or write "${n} BCE")` });
+        errors.push({ file: rel(file), message: `datings[${i}]: endpoint is written as "${n + 1} BCE" but the text says "${n} BCE"; check which is meant` });
+      }
+      for (const n of ceOffByOne(d, `${text} ${d.label ?? ''} ${d.note ?? ''}`)) {
+        errors.push({ file: rel(file), message: `datings[${i}]: latest is written as "${n - 1} CE" but the text gives ${n} CE (or the century ending then); a CE year needs no BCE-style shift` });
       }
     });
     const expected = `${path.basename(path.dirname(file))}.${path.basename(file, '.yaml')}`;
@@ -291,7 +344,7 @@ export function loadContentUncached(): ContentGraph {
         continue;
       }
       const { data, content } = matter(fs.readFileSync(file, 'utf8'));
-      for (const m of rawNegativeYears(data.datings)) errors.push({ file: relFile, message: m });
+      for (const m of [...rawNegativeYears(data.datings), ...deepTimeBceYears(data.datings)]) errors.push({ file: relFile, message: m });
       const parsed = ArticleFrontmatterSchema.safeParse(data);
       if (!parsed.success) {
         for (const m of formatZod(parsed.error)) errors.push({ file: relFile, message: m });
@@ -304,7 +357,10 @@ export function loadContentUncached(): ContentGraph {
       if (inlineCitations.length === 0) errors.push({ file: relFile, message: 'article body cites no sources; use [@src.id, locator]' });
       parsed.data.datings.forEach((d, i) => {
         for (const n of bceOffByOne(d.range, `${parsed.data.summary} ${d.label ?? ''} ${d.note ?? ''}`)) {
-          errors.push({ file: relFile, message: `datings[${i}]: stores -${n} for "${n} BCE"; ${n} BCE is ${1 - n} (or write "${n} BCE")` });
+          errors.push({ file: relFile, message: `datings[${i}]: endpoint is written as "${n + 1} BCE" but the text says "${n} BCE"; check which is meant` });
+        }
+        for (const n of ceOffByOne(d, `${parsed.data.summary} ${d.label ?? ''} ${d.note ?? ''}`)) {
+          errors.push({ file: relFile, message: `datings[${i}]: latest is written as "${n - 1} CE" but the text gives ${n} CE (or the century ending then); a CE year needs no BCE-style shift` });
         }
       });
       articles.push({ ...parsed.data, slug: path.basename(file, '.md'), file: relFile, category, body: content, inlineCitations });

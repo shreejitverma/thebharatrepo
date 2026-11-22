@@ -6,23 +6,25 @@ names:
   iast: Maurya Sāmrājya
   native: मौर्य साम्राज्य
 summary: >-
-  The Maurya Empire (about 322 to 185 BCE), founded by Chandragupta Maurya with its capital at Pataliputra, is the earliest known state to rule most of the Indian subcontinent together with parts of present-day Afghanistan. Under its third ruler, Ashoka, it reached from Kandahar to Karnataka and left South Asia's earliest large body of deciphered, datable inscriptions.
+  The Maurya Empire (late fourth century BCE to about 185 BCE), founded by Chandragupta Maurya with its capital at Pataliputra, is the earliest known state to rule most of the Indian subcontinent together with parts of present-day Afghanistan. Under its third ruler, Ashoka, it reached from Kandahar to Karnataka and left South Asia's earliest large body of deciphered, datable inscriptions.
 summaries:
   kids: >-
     The Maurya Empire united most of the Indian subcontinent about 2,300 years ago. It was ruled from Pataliputra by emperors such as Chandragupta, Bindusara and Ashoka.
   teen: >-
-    From about 322 to 185 BCE the Maurya Empire joined northern, western and much of peninsular India under one government. Ashoka's rock and pillar edicts and Greek accounts are our main sources for it.
+    From the late fourth century BCE to about 185 BCE the Maurya Empire joined northern, western and much of peninsular India under one government. Ashoka's rock and pillar edicts and Greek accounts are our main sources for it.
 region: Most of the Indian subcontinent and eastern Afghanistan (from Kandahar to Bengal and Karnataka)
 location: { name: "Patna (ancient Pataliputra)", lat: 25.611, lon: 85.144 }
 datings:
   - method: foreign-synchronism
     range: { earliest: "324 BCE", latest: "185 BCE", precision: decade, circa: true }
     grade: B
-    label: Mainstream chronology (about 322 to 185 BCE)
+    label: Mainstream chronology (late fourth century to about 185 BCE)
     sources:
       - src.thapar-2012-asoka-decline-mauryas
       - src.kulke-2004-history-of-india
-    note: Anchored by Greek synchronisms for Chandragupta (Sandrokottos) and Ashoka (Major Rock Edict XIII), with the total dynastic length of 137 years given in the Puranas.
+      - src.thapar-2002-early-india
+      - src.singh-2008-ancient-early-medieval-india
+    note: Accession estimates range from about 324 to 321 BCE. The chronology is anchored by Greek synchronisms for Chandragupta (Sandrokottos) and Ashoka (Major Rock Edict XIII), with the total dynastic length of 137 years given in the Puranas.
 claims:
   - text: Ashoka's inscriptions are found from Kandahar and Laghman in Afghanistan to Maski and Brahmagiri in Karnataka and Dhauli and Jaugada in Odisha, marking the reach of Mauryan authority.
     grade: A

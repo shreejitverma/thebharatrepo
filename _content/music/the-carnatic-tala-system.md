@@ -87,7 +87,7 @@ The jati changes the laghu wherever it appears, so a "Misra jati Jhampa" is a la
 Within each beat, the notes or syllables can be grouped in threes, fours, fives, sevens or nines.
 That grouping is called gati or nadai, and it is a separate matter from the jati, which sizes the laghu.
 Counting each of the 35 talas in each of the five gatis gives the figure of 175 that is sometimes quoted [@src.viswanathan-2004-music-in-south-india].
-Whether a change of gati makes a "different tala", or only changes the subdivision inside the same cycle, is a question of definition, and I did not find a source in this research that settles it; the figure 175 is best treated as a convenient teaching count.
+Whether a change of gati makes a "different tala", or only changes the subdivision inside the same cycle, is a question of definition, and no source consulted for this article settles it; the figure 175 is best treated as a convenient teaching count.
 
 ## Cycles outside the 35
 

@@ -22,9 +22,9 @@ location:
 datings:
   - method: geological
     range:
-      earliest: "18000000 BCE"
-      latest: "1000000 BCE"
-      best: "9000000 BCE"
+      earliest: "18 Ma"
+      latest: "1 Ma"
+      best: "9 Ma"
       precision: Ma
       circa: true
     grade: A
@@ -50,13 +50,14 @@ claims:
     sources:
       - src.barry-2002-siwalik-faunal-change
 relations:
-  - kind: succeeded
+  - kind: related-to
     target: event.indian-plate-asia-collision
+    note: The fossil-bearing Siwalik sediments accumulated in the Himalayan foreland
 image:
-  commons: "File:View over the Sivalik Hills 02.jpg"
-  alt: Forested ridges of the Siwalik Hills in the Himalayan foothills
-  credit: Kritzolina
-  license: CC BY-SA 4.0
+  commons: "File:Sivapithecus skull AMNH.jpg"
+  alt: Partial cranium and mandible (cast of GSP 15000) of the Miocene hominoid Sivapithecus indicus from the Siwalik deposits of the Potwar Plateau, displayed at the American Museum of Natural History
+  credit: Ryan Schwark
+  license: CC0
 tags:
   - palaeontology
   - siwalik

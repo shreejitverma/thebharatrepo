@@ -67,10 +67,5 @@ relations:
   - { kind: related-to, target: concept.northern-black-polished-ware-culture }
   - { kind: contemporary-of, target: site.ahichhatra }
   - { kind: contemporary-of, target: site.atranjikhera }
-image:
-  commons: "File:Hastinapur-Vidur ka Teela-Plaque.jpg"
-  alt: Archaeological Survey of India plaque at the Vidur ka Teela mound in Hastinapura
-  credit: Giridharmamidi
-  license: CC BY-SA 3.0
 tags: [hastinapura, archaeology, bb-lal, painted-grey-ware, kuru, ganga]
 review: { status: draft, author: "gemini-4-argon" }

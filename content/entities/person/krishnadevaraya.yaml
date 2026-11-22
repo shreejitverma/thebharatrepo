@@ -32,7 +32,8 @@ claims:
     sources:
       - src.stein-1989-vijayanagara
       - src.wagoner-1996-sultan-among-hindu-kings
-relations: []
+relations:
+  - { kind: patronised, target: site.hampi, note: Temples at the Vijayanagara capital received his patronage }
 tags:
   - person
 review:

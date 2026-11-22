@@ -4,8 +4,8 @@ kind: polity
 names:
   en: Mughal Empire
 summary: The Mughal Empire was a Persianate imperial polity founded by Babur in
-  1526 and formally ended after the 1857 revolt. Its extent and governing
-  structures changed considerably over time.
+  1526. The British captured its last emperor, Bahadur Shah II, during the 1857
+  revolt and tried and exiled him in 1858, formally ending the dynasty.
 summaries:
   kids: The Mughal Empire ruled large parts of South Asia for several centuries,
     but its borders and strength changed over time.
@@ -15,21 +15,26 @@ datings:
   - method: scholarly-consensus
     range:
       earliest: "1526"
-      latest: "1857"
+      latest: "1858"
       precision: year
-      circa: true
+      circa: false
     grade: B
     label: Historical scholarship
     sources: &a1
       - src.richards-1993-mughal-empire
       - src.asher-talbot-2006-india-before-europe
+      - src.metcalf-2012-concise-history-modern-india
 claims:
-  - text: The Mughal Empire was a Persianate imperial polity founded by Babur in
-      1526 and formally ended after the 1857 revolt. Its extent and governing
-      structures changed considerably over time.
+  - text: Babur founded the Mughal Empire in 1526. Mughal rule formally ended in
+      1858 after the trial of the last emperor, Bahadur Shah II, who was sent into
+      exile in Rangoon.
     grade: B
     sources: *a1
-relations: []
+relations:
+  - { kind: ruled-by, target: person.akbar }
+  - { kind: related-to, target: person.dara-shikoh, note: Mughal prince and contender for the throne }
+  - { kind: related-to, target: event.first-battle-of-panipat, note: Babur's victory laid the foundation of Mughal rule }
+  - { kind: related-to, target: event.indian-revolt-of-1857, note: Rebels rallied around the last Mughal emperor Bahadur Shah II }
 tags:
   - polity
 review:

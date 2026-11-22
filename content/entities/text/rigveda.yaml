@@ -15,7 +15,7 @@ summaries:
     1,028 poems organized into ten books that praise deities such as Agni, Indra, and Soma.
   teen: >-
     Comprising 1,028 hymns in ten mandalas, the Rigveda is the earliest stratum of Vedic Sanskrit
-    literature. Historians debate its date using comparative linguistics, the c. 1380 BCE Mitanni
+    literature. Historians debate its date using comparative linguistics, the later 14th-century BCE Mitanni
     treaty synchronism, and traditional Puranic chronology.
 region: Sapta Sindhu (northwestern Indian subcontinent, Punjab and Haryana)
 datings:
@@ -32,15 +32,16 @@ datings:
       Books (Mandalas 2 to 7) and late books (1 and 10), and the absence of iron (shyama ayas) in
       the Rigvedic vocabulary.
   - method: foreign-synchronism
-    range: { earliest: "1400 BCE", latest: "1350 BCE", best: "1380 BCE", precision: decade, circa: true }
+    range: { earliest: "1350 BCE", latest: "1322 BCE", precision: decade, circa: true }
     grade: C
     label: Mitanni treaty synchronism
     sources:
       - src.thieme-1960-aryan-gods-mitanni-treaties
       - src.beckman-1999-hittite-diplomatic-texts
+      - src.bryce-2005-kingdom-of-the-hittites
       - src.jamison-brereton-2014-rigveda
     note: >-
-      The c. 1380 BCE treaty between Suppiluliuma I of Hatti and Shattiwaza of Mitanni invokes the
+      The later 14th-century BCE treaty between Suppiluliuma I of Hatti and Shattiwaza of Mitanni invokes the
       Indo-Aryan deities Mitra, Varuna, Indra, and the Nasatyas, providing an external chronological
       anchor for early Indo-Aryan religious vocabulary.
   - method: textual-internal
@@ -94,10 +95,9 @@ relations:
   - { kind: related-to, target: concept.vedic-sanskrit }
   - { kind: related-to, target: event.mitanni-treaty }
   - { kind: related-to, target: event.dasarajna }
-  - { kind: related-to, target: concept.rigvedic-sarasvati }
+  - { kind: related-to, target: concept.ghaggar-hakra-sarasvati-debate }
   - { kind: related-to, target: tradition.soma-ritual }
   - { kind: related-to, target: tradition.vedic-oral-transmission }
-  - { kind: commented-on, target: text.aitareya-brahmana }
   - { kind: preceded, target: text.samaveda }
 wikidata: Q727413
 image:

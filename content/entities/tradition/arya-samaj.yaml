@@ -29,7 +29,8 @@ claims:
       and social reform debates.
     grade: B
     sources: *a1
-relations: []
+relations:
+  - { kind: founded-by, target: person.dayananda-saraswati }
 tags:
   - dharma
 review:

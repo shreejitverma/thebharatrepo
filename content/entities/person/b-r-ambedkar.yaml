@@ -31,7 +31,8 @@ claims:
     sources:
       - src.jaffrelot-2005-ambedkar-and-untouchability
       - src.bandyopadhyay-2004-from-plassey-to-partition
-relations: []
+relations:
+  - { kind: related-to, target: event.constitution-adopted-and-commenced, note: Ambedkar chaired the Drafting Committee and moved the motion to adopt the Constitution }
 tags:
   - person
 review:

@@ -31,7 +31,11 @@ claims:
     sources:
       - src.brown-1989-gandhi-prisoner-of-hope
       - src.metcalf-2012-concise-history-modern-india
-relations: []
+relations:
+  - { kind: related-to, target: event.champaran-satyagraha }
+  - { kind: related-to, target: event.salt-march }
+  - { kind: related-to, target: event.quit-india-movement }
+  - { kind: related-to, target: event.independence-and-partition-1947 }
 tags:
   - person
 review:

@@ -7,7 +7,7 @@ import { isTraditional, type Entity, type Kind, type Grade, type DatingMethod, t
 import { rangeAnchor, type Precision } from '../time';
 import { yearToUnit } from '../time/scale';
 import type { ContentGraph } from './load';
-import { primaryAnchor, type Lens } from './lens';
+import { primaryAnchor, rankDatings, type Lens } from './lens';
 export { primaryAnchor };
 
 export interface KcDating {
@@ -68,11 +68,9 @@ export function entityHref(id: string): string {
   return `/archive/${type}/${slug}`;
 }
 
-const GRADE_RANK: Grade[] = ['A', 'B', 'C', 'D', 'E'];
-
-/** The dating that places an entity: the best-graded one; ties keep the author's order. */
-function placingDating<D extends { grade: Grade }>(datings: readonly D[]): D | undefined {
-  return [...datings].sort((a, b) => GRADE_RANK.indexOf(a.grade) - GRADE_RANK.indexOf(b.grade))[0];
+/** The dating that places an entity in one lens: the archive's rankDatings order (best grade first, ties in the author's order). */
+function placingDating<D extends KcDating>(datings: readonly D[]): D | undefined {
+  return rankDatings(datings, (d) => d.lens === 'tradition')[0];
 }
 
 function anchorFor(datings: KcDating[]): number | null {

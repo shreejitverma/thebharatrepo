@@ -25,7 +25,10 @@ if (report) {
   const ab = scholarly.filter((d) => d.grade === 'A' || d.grade === 'B').length;
   const cited = new Set<string>();
   for (const e of ents) for (const d of [...e.datings, ...e.claims]) for (const s of d.sources) cited.add(citationId(s));
-  for (const a of g.articles) for (const c of a.inlineCitations) cited.add(c.id);
+  for (const a of g.articles) {
+    for (const c of a.inlineCitations) cited.add(c.id);
+    for (const d of a.datings) for (const s of d.sources) cited.add(citationId(s));
+  }
   const unused = [...g.sources.keys()].filter((id) => !cited.has(id));
 
   console.log('report:');

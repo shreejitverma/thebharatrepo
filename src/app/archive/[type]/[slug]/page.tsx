@@ -2,16 +2,18 @@ import type { Metadata } from 'next';
 import Link from 'next/link';
 import { notFound } from 'next/navigation';
 import { preconnect } from 'react-dom';
-import GradeBadge, { LensTag } from '@/components/GradeBadge';
+import GradeBadge from '@/components/GradeBadge';
+import DatingList from '@/components/DatingList';
 import KaalchakraStrip from '@/components/KaalchakraStrip';
 import RelationGraph from '@/components/RelationGraph';
 import SourceCitation from '@/components/SourceCitation';
 import { getGraph, getIndex, issueUrl, SITE_URL } from '@/lib/content/site';
 import { entityHref, primaryAnchor } from '@/lib/content/kaalchakra';
+import { rankDatings, summarizeDatings } from '@/lib/content/lens';
 import { relationGroups } from '@/lib/content/relations';
-import { KIND_LABELS, METHOD_LABELS, isTraditional, citationId } from '@/lib/content/schema';
+import { KIND_LABELS, isTraditional, citationId } from '@/lib/content/schema';
 import { verifiedImage } from '@/lib/content/verification';
-import { formatRange, formatYear } from '@/lib/time';
+import { formatYear } from '@/lib/time';
 import { yearToUnit } from '@/lib/time/scale';
 
 export const dynamicParams = false;
@@ -44,12 +46,11 @@ export default async function EntityPage({ params }: { params: Promise<{ type: s
   const g = getGraph();
   const img = e.image ? verifiedImage(e.image.commons) : null;
   if (img) preconnect(new URL(img.thumb).origin);
-  const ordered = [...e.datings].sort((a, b) => Number(isTraditional(a.method)) - Number(isTraditional(b.method)));
+  const ordered = rankDatings(e.datings, (d) => isTraditional(d.method));
   const primary = ordered[0];
   const anchor = primary.range.best ?? (primary.range.earliest + primary.range.latest) / 2;
   const u = yearToUnit(anchor);
   const focus = `/kaalchakra?id=${encodeURIComponent(e.id)}`;
-  const lens = isTraditional(primary.method) ? 'tradition' : 'scholarship';
   const index = new Map(getIndex().map((i) => [i.id, i]));
   // Entities inside a relation group run in time order, so successions read left to right.
   const when = (id: string) => {
@@ -60,8 +61,7 @@ export default async function EntityPage({ params }: { params: Promise<{ type: s
   const relationNode = (id: string) => {
     const other = g.entities.get(id);
     if (!other) return undefined;
-    const first = [...other.datings].sort((a, b) => Number(isTraditional(a.method)) - Number(isTraditional(b.method)))[0];
-    return { name: other.names.en, href: entityHref(id), kind: other.kind, when: formatRange(first.range) };
+    return { name: other.names.en, href: entityHref(id), kind: other.kind, when: summarizeDatings(other.datings) };
   };
   // Every source cited anywhere on this page, once each, in order of first use.
   const cited = new Map<string, NonNullable<ReturnType<typeof g.sources.get>>>();
@@ -129,33 +129,10 @@ export default async function EntityPage({ params }: { params: Promise<{ type: s
         ) : null}
       </div>
 
-      <KaalchakraStrip items={getIndex()} range={primary.range} selfId={e.id} lens={lens} focusHref={`${focus}&view=river&win=${Math.max(0, u - 0.02).toFixed(5)},${Math.min(1, u + 0.02).toFixed(5)}`} />
+      <KaalchakraStrip items={getIndex()} dating={primary} selfId={e.id} focusHref={`${focus}&view=river&win=${Math.max(0, u - 0.02).toFixed(5)},${Math.min(1, u + 0.02).toFixed(5)}`} />
 
       <h2>When, and how we know</h2>
-      <div className="datings">
-        {ordered.map((d, i) => {
-          const datingLens = isTraditional(d.method) ? 'tradition' : 'scholarship';
-          return (
-            <div key={i} className={`dating dating--${datingLens}`}>
-              <div className="dating__top">
-                <span className="dating__range">{formatRange(d.range)}</span>
-                <GradeBadge grade={d.grade} />
-                <LensTag lens={datingLens} />
-              </div>
-              <div className="dating__method" style={{ marginTop: 6 }}>
-                {METHOD_LABELS[d.method]}
-                {d.label ? `: ${d.label}` : ''}
-              </div>
-              {d.note ? <p>{d.note}</p> : null}
-              <ul className="dating__sources">
-                {d.sources.map((s, j) => (
-                  <li key={j}>{src(s)}</li>
-                ))}
-              </ul>
-            </div>
-          );
-        })}
-      </div>
+      <DatingList datings={ordered} sources={g.sources} />
 
       {e.debate ? (
         <section aria-labelledby="debate" style={{ maxWidth: 860 }}>

@@ -8,7 +8,7 @@ import { KIND_LABELS, METHOD_LABELS } from '@/lib/content/labels';
 import type { KcItem } from '@/lib/content/kaalchakra';
 import type { Lens } from '@/lib/content/lens';
 import type { CalendarSystem } from '@/lib/time';
-import { formatDating, summaryFor, visibleDatings, type Level, type View } from './shared';
+import { formatDatingRange, summaryFor, visibleDatings, type Level, type View } from './shared';
 
 export interface PanelProps {
   item: KcItem | undefined;
@@ -148,7 +148,7 @@ export default function Panel({ item, lens, cal, level, onLevel, onPrev, onNext,
         {ds.map((d, i) => (
           <div key={i} className={`dating dating--${d.lens}`}>
             <div className="dating__top">
-              <span className="dating__range">{formatDating(d, cal)}</span>
+              <span className="dating__range">{formatDatingRange(d, cal)}</span>
             </div>
             <div className="dating__top" style={{ marginTop: 6 }}>
               <GradeBadge grade={d.grade} />

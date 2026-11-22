@@ -119,7 +119,7 @@ Sanskrit *devá* means "god", while Avestan *daēva* means a demon; and Sanskrit
 Scholars have long discussed how this reversal came about, and no single explanation has won general agreement.
 
 Indo-Aryan words also turn up outside India.
-In a treaty of about 1380 BCE between a Hittite king and a king of Mitanni, a kingdom in northern Mesopotamia and Syria, the gods Mitra, Varuna, Indra and the Nasatyas are invoked under names that look Indo-Aryan [@src.thieme-1960-aryan-gods-mitanni-treaties].
+In a treaty from the later 14th century BCE between a Hittite king and a king of Mitanni, a kingdom in northern Mesopotamia and Syria, the gods Mitra, Varuna, Indra and the Nasatyas are invoked under names that look Indo-Aryan [@src.thieme-1960-aryan-gods-mitanni-treaties; @src.bryce-2005-kingdom-of-the-hittites].
 
 ## Where did the family begin?
 

@@ -5,16 +5,14 @@ names:
   en: Earliest Known Cotton Fibres at Mehrgarh
 summary: >-
   The earliest known archaeological evidence of cotton textile thread in the Old World, identified from
-  mineralized Gossypium fibres preserved by copper corrosion products inside a biconical copper bead from a
-  Period II burial at Neolithic Mehrgarh in Balochistan (c. 6000-5500 BCE).
+  mineralized Gossypium fibres preserved by copper corrosion products inside a copper bead from a Period I burial at Neolithic Mehrgarh in Balochistan. The calendar date of the burial is debated.
 summaries:
   kids: >-
-    Inside a tiny copper bead buried at Mehrgarh nearly 8,000 years ago, scientists using strong microscopes
+    Inside a tiny copper bead from a Neolithic grave at Mehrgarh, scientists using strong microscopes
     discovered preserved threads of cotton - the earliest known cotton string in the world.
   teen: >-
-    In 2002, archaeobotanists and metallurgists analyzing a copper bead from Period II at Mehrgarh identified
-    mineralized spun cotton (Gossypium) thread dating to the 6th millennium BCE, pushing back the history of
-    South Asian cotton use by over two thousand years.
+    In 2002, archaeobotanists and metallurgists analyzing a copper bead from Period I at Mehrgarh identified
+    mineralized cotton thread. The first study placed the burial in the sixth millennium BCE. New radiocarbon dating suggests a later date for the cemetery.
 region: Kachi Plain (Bolan River valley), Balochistan
 location:
   name: Mehrgarh
@@ -22,24 +20,28 @@ location:
   lon: 67.62
 datings:
   - method: archaeological-stratigraphic
-    range:
-      earliest: "6000 BCE"
-      latest: "5000 BCE"
-      best: "5500 BCE"
-      precision: century
-      circa: true
-    grade: A
-    label: Period II Neolithic burial horizon at Mehrgarh (Moulherat et al. 2002)
+    range: { earliest: "5250 BCE", latest: "4650 BCE", precision: century, circa: true }
+    grade: C
+    label: Contextual estimate from the revised Period I cemetery chronology
     sources:
       - src.moulherat-2002-mehrgarh-cotton
-      - src.fuller-2006-agricultural-origins-south-asia
-    note: >-
-      Recovered from Grave 153 in Structure 2 of Period II at Mound MR2, Mehrgarh, dated stratigraphically
-      and radiometrically to the 6th millennium BCE.
+      - src.mutin-2025-mehrgarh-radiocarbon
+    note: Mutin and colleagues place the Period I cemetery in this range using radiocarbon dates from human tooth enamel. This gives a contextual estimate for the bead.
+  - method: archaeological-stratigraphic
+    range:
+      earliest: "6000 BCE"
+      latest: "5500 BCE"
+      precision: century
+      circa: true
+    grade: C
+    label: Original estimate for the Period I burial (Moulherat et al. 2002)
+    sources:
+      - src.moulherat-2002-mehrgarh-cotton
+    note: Moulherat and colleagues report that the bead came from grave MR.84.03.158 and assign it to the first half of the sixth millennium BCE.
 claims:
   - text: >-
       Scanning electron microscopy and reflected-light microscopy of mineralized threads inside a copper bead
-      from Period II at Mehrgarh identified ribbon-like convoluted cellulose fibres diagnostic of cotton (Gossypium sp.).
+      from a Period I grave at Mehrgarh identified ribbon-like convoluted cellulose fibres diagnostic of cotton (Gossypium sp.).
     grade: A
     sources:
       - src.moulherat-2002-mehrgarh-cotton

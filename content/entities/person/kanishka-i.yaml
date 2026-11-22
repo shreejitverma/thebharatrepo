@@ -42,9 +42,9 @@ relations:
   - { kind: patronised, target: tradition.mathura-art }
 wikidata: Q312544
 image:
-  commons: "File:Coin of Kanishka I, with Iranian solar deity Mithra (Miiro) on the reverse, National Museum, New Delhi.jpg"
-  alt: Gold dinara of Emperor Kanishka I in the National Museum, New Delhi
-  credit: SpeakingArch
-  license: CC BY-SA 4.0
+  commons: "File:MET DP123353.jpg"
+  alt: Gold coin obverse of Kushan emperor Kanishka I standing left sacrificing at a fire altar with Bactrian legend, Metropolitan Museum of Art
+  credit: "Metropolitan Museum of Art (Bequest of Joseph H. Durkee, 1898)"
+  license: CC0
 tags: [kanishka, kushan, 127-ce, rabatak, buddhism, numismatics]
 review: { status: draft, author: "gemini-4-argon" }

@@ -6,7 +6,7 @@ names:
 summary: >-
   The independent South Asian domestication of humped zebu cattle (Bos indicus) from native wild Indian aurochs
   (Bos primigenius namadicus), attested both by progressive body-size diminution and demographic profiles in
-  Neolithic Period I at Mehrgarh (c. 7000-5500 BCE) and by deep mitochondrial and nuclear divergence from Near
+  Neolithic Mehrgarh and by deep mitochondrial and nuclear divergence from Near
   Eastern taurine cattle.
 summaries:
   kids: >-
@@ -22,22 +22,24 @@ location:
   lat: 29.39
   lon: 67.62
 datings:
-  - method: archaeological-radiocarbon
+  - method: archaeological-stratigraphic
     range:
       earliest: "7000 BCE"
       latest: "5000 BCE"
       best: "6000 BCE"
       precision: millennium
       circa: true
-    grade: A
-    label: Zooarchaeological domestication trajectory at Neolithic Mehrgarh and phylogeographic synthesis
+    grade: B
+    label: Approximate regional zooarchaeological domestication trajectory at Neolithic Mehrgarh and phylogeographic synthesis
     sources:
       - src.loftus-1994-independent-domestications-cattle
       - src.chen-2010-zebu-cattle-south-asia-neolithic
       - src.fuller-2006-agricultural-origins-south-asia
+      - src.mutin-2025-mehrgarh-radiocarbon
     note: >-
-      Osteometric size reduction and shifting slaughter profiles at Mehrgarh trace local Bos indicus domestication
-      across Period I (c. 7000-5500 BCE), corroborated by mitochondrial I1 and I2 haplogroup phylogeography.
+      The interval is an approximate regional estimate for a gradual domestication process. Changes in cattle bones
+      at Mehrgarh and mitochondrial lineages support a South Asian origin. New radiocarbon work dates the sampled
+      Period I cemetery later than the chronology used in earlier studies of domestication.
 claims:
   - text: >-
       Mitochondrial DNA sequencing demonstrates a deep divergence of several hundred thousand years between
@@ -58,10 +60,10 @@ relations:
   - kind: influenced
     target: concept.southern-neolithic-ash-mounds
 image:
-  commons: "File:Farmer in Tamil Nadu 1993.JPG"
-  alt: Domesticated humped zebu cattle (Bos indicus) ploughing a field in Tamil Nadu
-  credit: Michael Gabler
-  license: CC BY 3.0
+  commons: "File:Hump-Backed Bull LACMA AC1992.214.29.jpg"
+  alt: Early Harappan terracotta humped zebu bull figurine with traces of red pigment from the Kot Diji region, c. 2800-2600 BCE (LACMA)
+  credit: "Los Angeles County Museum of Art (Gift of Andrew Hale and Kate Fitz Gibbon)"
+  license: Public domain
 tags:
   - neolithic
   - domestication
