@@ -1,0 +1,72 @@
+id: person.marthanda-varma
+type: person
+kind: person
+names:
+  en: Marthanda Varma
+  iast: Mārtāṇḍa Varma
+  native: മാർത്താണ്ഡവർമ്മ
+summary: >-
+  Anizham Thirunal Marthanda Varma (1706-1758) ruled Venad from 1729 and built it into the kingdom of
+  Travancore. He broke the power of local chiefs, annexed neighbouring principalities, defeated the Dutch
+  East India Company at Colachel in 1741 and in 1750 dedicated his kingdom to the deity Padmanabha at
+  Thiruvananthapuram.
+summaries:
+  kids: >-
+    Marthanda Varma brought several small kingdoms together to make Travancore. He defeated the Dutch at
+    Colachel and dedicated his kingdom to Padmanabha, the deity honoured by his family.
+  teen: >-
+    Taking the Venad throne in 1729, Marthanda Varma broke the power of local nobles, defeated the Dutch at
+    Colachel in 1741 and built a standing army with the help of the captured officer Eustachius De Lannoy.
+    In 1750 he dedicated the state to Padmanabha.
+region: Southern Kerala and adjoining Tamil country
+location:
+  name: Padmanabhapuram (royal palace)
+  lat: 8.25
+  lon: 77.33
+datings:
+  - method: documentary
+    range:
+      earliest: "1729"
+      latest: "1758"
+      precision: year
+      circa: false
+    grade: B
+    label: Reign or recorded political activity
+    sources:
+      - src.lannoy-1997-kulasekhara-perumals-travancore
+      - src.ramachandran-1997-kerala-development
+      - src.menon-2007-survey-of-kerala-history
+    note: The dates run from his accession in 1729 to his death in 1758. He was born in 1706.
+claims:
+  - text: Marthanda Varma extended central control over lands previously held by local chiefs.
+    grade: B
+    sources:
+      - src.ramachandran-1997-kerala-development
+      - src.eaton-2019-india-persianate-age
+  - text: Marthanda Varma defeated the Dutch East India Company at Colachel in 1741 and later employed the
+      captured officer Eustachius De Lannoy to train his army and build forts.
+    grade: B
+    sources:
+      - src.lannoy-1997-kulasekhara-perumals-travancore
+      - src.koshy-1989-dutch-power-in-kerala
+  - text: In January 1750 Marthanda Varma dedicated his kingdom to Padmanabha at Thiruvananthapuram and
+      thereafter ruled as Padmanabhadasa, the servant of the deity.
+    grade: B
+    sources:
+      - src.lannoy-1997-kulasekhara-perumals-travancore
+      - src.ramachandran-1997-kerala-development
+relations:
+  - kind: founded
+    target: polity.kingdom-of-travancore
+wikidata: Q2596305
+image:
+  commons: File:Anizham Thirunal Marthanda Varma.jpg
+  alt: Painted portrait of Marthanda Varma of Travancore
+  credit: Unknown author
+  license: Public domain
+tags:
+  - travancore
+  - kerala
+review:
+  status: draft
+  author: codex-gpt-6

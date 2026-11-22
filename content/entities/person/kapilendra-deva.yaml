@@ -1,0 +1,62 @@
+id: person.kapilendra-deva
+type: person
+kind: person
+names:
+  en: Kapilendra Deva
+  iast: Kapilendra Deva
+  native: କପିଳେନ୍ଦ୍ର ଦେବ
+summary: Kapilendra Deva established the Suryavamshi Gajapati line in Odisha and led its expansion
+  along the east coast. The precise calendar placement of his reign varies with the interpretation
+  of inscriptions.
+summaries:
+  kids: Kapilendra began a new royal line in Odisha. His rulers left records carved at temples along
+    the east coast.
+  teen: Kapilendra inherited institutions associated with Eastern Ganga rule, but established a new
+    lineage. Scholars reconstruct his reign from inscriptions that use regnal counting conventions.
+region: Odisha and the eastern seaboard
+datings:
+  - method: epigraphic
+    range:
+      earliest: "1434"
+      latest: "1468"
+      precision: decade
+      circa: true
+    grade: C
+    label: Conventional date of the reign
+    sources:
+      - src.mishra-2016-eastern-ganga-gajapati
+      - src.sewell-1932-historical-inscriptions-southern-india
+    note: The interval follows the commonly used mid-1430s accession and mid-1460s succession, with
+      allowance for conversion.
+  - method: epigraphic
+    range:
+      earliest: "1429"
+      latest: "1468"
+      precision: decade
+      circa: true
+    grade: C
+    label: Earlier accession proposed by Sewell and Aiyangar
+    sources:
+      - src.sewell-1932-historical-inscriptions-southern-india
+    note: The compilation discusses a chronology that would place the accession in 1429 to 1432. The
+      outer range keeps the later succession approximate.
+claims:
+  - text: Kapilendra established a court at Cuttack after the Eastern Gangas.
+    grade: B
+    sources:
+      - src.mishra-2016-eastern-ganga-gajapati
+      - src.sewell-1932-historical-inscriptions-southern-india
+  - text: His reign extended Gajapati authority south along the east coast.
+    grade: B
+    sources:
+      - src.mishra-2016-eastern-ganga-gajapati
+      - src.asher-talbot-2006-india-before-europe
+relations:
+  - kind: founded
+    target: polity.gajapati-dynasty
+debate: The conventional accession falls around 1434 to 1435. Sewell's inscriptional chronology
+  discusses dates earlier in the 1430s, depending on the treatment of regnal years.
+tags: []
+review:
+  status: draft
+  author: codex-gpt-6

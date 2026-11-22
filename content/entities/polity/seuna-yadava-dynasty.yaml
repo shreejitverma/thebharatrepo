@@ -1,0 +1,100 @@
+id: polity.seuna-yadava-dynasty
+type: polity
+kind: polity
+names:
+  en: Seuna Yadavas of Devagiri
+  iast: Seuṇa Yādava
+  native: ಸೇವುಣ
+summary: >-
+  The Seuna Yadavas served as feudatories of the Rashtrakutas and Kalyani Chalukyas before Bhillama V made
+  Devagiri (Daulatabad) the seat of a sovereign kingdom in the late twelfth century. Under Singhana II and
+  Ramachandra they ruled much of Maharashtra and northern Karnataka, until Delhi Sultanate campaigns from
+  1296 ended their rule by about 1318. Their early genealogy is disputed.
+summaries:
+  kids: >-
+    The Yadavas ruled from a hill fortress called Devagiri, later known as Daulatabad. Marathi and Sanskrit
+    writing flourished in their kingdom before the Delhi Sultanate conquered it.
+  teen: >-
+    Bhillama V established the royal centre at Devagiri, and Singhana II expanded the kingdom. Earlier kings
+    are harder to place, and historians test later genealogies against dated inscriptions.
+region: Northern and western Deccan
+location:
+  name: Devagiri (Daulatabad)
+  lat: 19.94
+  lon: 75.22
+datings:
+  - method: textual-internal
+    range:
+      earliest: "850"
+      latest: "1318"
+      precision: decade
+      circa: true
+    grade: C
+    label: Dynastic horizon including the early Seunas
+    sources:
+      - src.singh-2008-ancient-early-medieval-india
+      - src.henige-1975-phantom-dynasties
+      - src.eaton-2005-social-history-deccan
+    note: The opening is a broad horizon for the pre-imperial line. Later reigns and the Sultanate conquest
+      are better dated.
+  - method: epigraphic
+    range:
+      earliest: "1180"
+      latest: "1318"
+      precision: decade
+      circa: true
+    grade: B
+    label: Sovereign kingdom at Devagiri
+    sources:
+      - src.singh-2008-ancient-early-medieval-india
+      - src.henige-1975-phantom-dynasties
+      - src.yazdani-1960-early-history-deccan-part2
+    note: Dated inscriptions are firmer for the period after Bhillama V's consolidation in the 1180s.
+      Mubarak Shah Khalji ended Seuna rule around 1317 to 1318.
+claims:
+  - text: Bhillama V made Devagiri the centre of a sovereign Yadava kingdom, and Singhana II (r. c. 1200-1247)
+      expanded it.
+    grade: B
+    sources:
+      - src.yazdani-1960-early-history-deccan-part2
+      - src.singh-2008-ancient-early-medieval-india
+  - text: Some names of early Seuna rulers survive only in retrospective genealogies.
+    grade: C
+    sources:
+      - src.henige-1975-phantom-dynasties
+  - text: The minister Hemadri compiled the Chaturvarga Chintamani at the Seuna court, and Jnaneshwar
+      completed the Jnaneshwari in 1290 during Ramachandra's reign.
+    grade: B
+    sources:
+      - src.pollock-2006-language-of-the-gods
+      - src.yazdani-1960-early-history-deccan-part2
+  - text: Alauddin Khalji raided Devagiri in 1296, and later Delhi Sultanate campaigns reduced the kingdom to
+      tributary status and then annexed it.
+    grade: B
+    sources:
+      - src.eaton-2019-india-persianate-age
+      - src.asher-talbot-2006-india-before-europe
+relations:
+  - kind: succeeded
+    target: polity.chalukya-dynasty-of-kalyani
+    note: The Seunas had been Kalyani Chalukya feudatories before independence.
+  - kind: contemporary-of
+    target: polity.hoysala-dynasty
+    note: Rivals for the southern frontier of the Seuna kingdom.
+  - kind: preceded
+    target: polity.delhi-sultanate
+    note: The Delhi Sultanate absorbed the Devagiri kingdom.
+  - kind: related-to
+    target: person.jnaneshwar
+    note: The Jnaneshwari was completed under Seuna rule in 1290.
+  - kind: related-to
+    target: person.alauddin-khalji
+    note: Alauddin's raid on Devagiri in 1296.
+debate: Henige distinguishes the disputed sequence of early names from the better-attested Devagiri
+  kingdom. Murthy and Verma also reconstruct Bhillama V's rise differently.
+tags:
+  - seuna
+  - devagiri
+review:
+  status: draft
+  author: codex-gpt-6

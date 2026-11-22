@@ -1,0 +1,52 @@
+id: polity.peshwa-government
+type: polity
+kind: polity
+names:
+  en: Maratha Peshwa Government
+  iast: Peśvā
+  native: पेशवा
+summary: The Peshwa was a chief minister of the Maratha king. From Balaji Vishwanath onward, his
+  family made the office hereditary in practice and developed Pune as the centre of a government
+  that became dominant within the wider Maratha confederacy.
+summaries:
+  kids: A Peshwa was a chief minister. One family held the job for generations and made Pune an
+    important centre of Maratha power.
+  teen: The Peshwas exercised growing authority while the Maratha kings retained a dynastic role.
+    Their dealings with regional houses make the government at Pune part of a wider confederacy.
+region: Western Deccan and Maratha network across India
+location:
+  name: Pune (Peshwa seat)
+  lat: 18.52
+  lon: 73.85
+datings:
+  - method: documentary
+    range:
+      earliest: "1713"
+      latest: "1818"
+      precision: year
+      circa: false
+    grade: B
+    label: Period of rule
+    sources:
+      - src.gordon-1993-marathas-1600-1818
+      - src.eaton-2019-india-persianate-age
+      - src.halladay-2024-many-swords-shivaji
+    note: The first Bhat Peshwa was appointed in 1713. The last ruling Peshwa surrendered to the Company
+      in 1818.
+claims:
+  - text: The Bhat family's long tenure began with Balaji Vishwanath's appointment as Peshwa in 1713.
+    grade: B
+    sources:
+      - src.gordon-1993-marathas-1600-1818
+      - src.halladay-2024-many-swords-shivaji
+  - text: Baji Rao II surrendered in 1818, ending the Peshwa's territorial government.
+    grade: B
+    sources:
+      - src.gordon-1993-marathas-1600-1818
+relations:
+  - kind: part-of
+    target: polity.maratha-empire
+tags: []
+review:
+  status: draft
+  author: codex-gpt-6

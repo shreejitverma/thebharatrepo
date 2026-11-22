@@ -1,0 +1,52 @@
+id: polity.maitraka-dynasty
+type: polity
+kind: polity
+names:
+  en: Maitraka Dynasty of Valabhi
+  iast: Maitraka
+summary: The Maitrakas established a regional kingdom at Valabhi as Gupta power receded in western
+  India. Copperplate charters record the royal succession and grants to Brahmins and Buddhist
+  establishments.
+summaries:
+  kids: The Maitrakas ruled from Valabhi. They wrote gifts of land and water on sheets of copper that
+    people could keep as records.
+  teen: Maitraka copperplates name rulers, recipients and local officials. Their genealogies show the
+    family's advancement from commanders to kings.
+region: Saurashtra and Gujarat
+location:
+  name: Valabhipur (Valabhi)
+  lat: 21.89
+  lon: 71.88
+datings:
+  - method: scholarly-consensus
+    range:
+      earliest: "470"
+      latest: "790"
+      precision: decade
+      circa: true
+    grade: B
+    label: Period of rule
+    sources:
+      - src.singh-2008-ancient-early-medieval-india
+      - src.schmiedchen-maliya-plates
+    note: The window combines later Maitraka genealogies with dated charters. Its beginning and final
+      decades are approximate.
+claims:
+  - text: The Maliya plates of Dharasena II were issued from Valabhi and record a land grant and a
+      cistern for a Yajurveda specialist.
+    grade: A
+    sources:
+      - src.schmiedchen-maliya-plates
+  - text: Maitraka charters document support for Brahmins as well as Buddhist monasteries.
+    grade: B
+    sources:
+      - src.singh-2008-ancient-early-medieval-india
+      - src.salomon-1998-indian-epigraphy
+relations:
+  - kind: related-to
+    target: polity.gupta-empire
+    note: The dynasty emerged as Gupta authority receded in Gujarat.
+tags: []
+review:
+  status: draft
+  author: codex-gpt-6

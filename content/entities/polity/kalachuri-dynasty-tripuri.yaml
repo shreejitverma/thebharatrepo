@@ -1,0 +1,53 @@
+id: polity.kalachuri-dynasty-tripuri
+type: polity
+kind: polity
+names:
+  en: Kalachuris of Tripuri
+  iast: Kalacuri
+summary: The Kalachuris of Tripuri ruled parts of central India from a seat near modern Jabalpur.
+  Their inscriptions, many dated in the Kalachuri-Chedi era, document the rise of rulers such as
+  Gangeyadeva and Lakshmikarna.
+summaries:
+  kids: The Kalachuris ruled from Tripuri near the Narmada. Their stone and copper records often used
+    a calendar era named after their house.
+  teen: Tripuri's Kalachuris used dated grants and eulogies to record gifts and political claims.
+    Their relationship to other Kalachuri houses requires separate evidence.
+region: Dahala and the Narmada valley
+location:
+  name: Tewar (Tripuri)
+  lat: 23.13
+  lon: 79.79
+datings:
+  - method: scholarly-consensus
+    range:
+      earliest: "800"
+      latest: "1250"
+      precision: decade
+      circa: true
+    grade: B
+    label: Period of rule
+    sources:
+      - src.singh-2008-ancient-early-medieval-india
+      - src.mirashi-1955-kalachuri-chedi-inscriptions
+      - src.devadevan-2020-early-medieval-origins-india
+    note: The early range is reconstructed from genealogies. Dated inscriptions sharpen the mid-dynastic
+      chronology.
+claims:
+  - text: The Kalachuri-Chedi corpus preserves royal grants dated in the era used by the Tripuri house.
+    grade: A
+    sources:
+      - src.mirashi-1955-kalachuri-chedi-inscriptions
+  - text: The main line had its seat at Tripuri in the Dahala region, near present-day Jabalpur.
+    grade: B
+    sources:
+      - src.mirashi-1955-kalachuri-chedi-inscriptions
+      - src.singh-2008-ancient-early-medieval-india
+relations:
+  - kind: related-to
+    target: polity.chandela-dynasty
+  - kind: related-to
+    target: polity.paramara-dynasty
+tags: []
+review:
+  status: draft
+  author: codex-gpt-6

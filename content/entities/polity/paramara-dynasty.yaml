@@ -1,0 +1,55 @@
+id: polity.paramara-dynasty
+type: polity
+kind: polity
+names:
+  en: Paramara Dynasty of Malwa
+  iast: Paramāra
+summary: The Paramaras established a kingdom in Malwa centred on Dhar. The house rose during the
+  weakening of Rashtrakuta power, and Bhoja's eleventh-century court became associated with Sanskrit
+  scholarship and temple building.
+summaries:
+  kids: The Paramaras ruled from Dhar. Their king Bhoja is remembered in books and in stories told
+    long after his reign.
+  teen: Early Paramara charters help trace the dynasty's rise. Historians distinguish those records
+    from the much later legends that grew around Bhoja.
+region: Malwa, central India
+location:
+  name: Dhar
+  lat: 22.6
+  lon: 75.3
+datings:
+  - method: scholarly-consensus
+    range:
+      earliest: "900"
+      latest: "1310"
+      precision: decade
+      circa: true
+    grade: B
+    label: Period of rule
+    sources:
+      - src.singh-2008-ancient-early-medieval-india
+      - src.thapar-2002-early-india
+      - src.devadevan-2020-early-medieval-origins-india
+    note: The earliest generations are imperfectly documented. The end brackets the absorption of Malwa
+      by the Delhi Sultanate.
+claims:
+  - text: The Dhar branch became a regional power under Siyaka II during the decline of the Rashtrakutas.
+    grade: B
+    sources:
+      - src.singh-2008-ancient-early-medieval-india
+      - src.thapar-2002-early-india
+  - text: Dhar was a principal capital of the Malwa Paramaras, including under Bhoja.
+    grade: B
+    sources:
+      - src.singh-2008-ancient-early-medieval-india
+      - src.thapar-2002-early-india
+relations:
+  - kind: related-to
+    target: polity.rashtrakuta-dynasty
+  - kind: preceded
+    target: polity.delhi-sultanate
+    note: Transition in Malwa, within the already established Sultanate.
+tags: []
+review:
+  status: draft
+  author: codex-gpt-6

@@ -1,0 +1,62 @@
+id: polity.tughlaq-dynasty
+type: polity
+kind: polity
+names:
+  en: Tughlaq Dynasty
+summary: The Tughlaqs took power under Ghiyasuddin in 1320. Their rule reached far into the Deccan
+  under Muhammad bin Tughluq, then contracted as regional states emerged and the Delhi court
+  fragmented.
+summaries:
+  kids: The Tughlaqs built forts and cities around Delhi. For a time their rule reached far south,
+    before several regions formed kingdoms of their own.
+  teen: Tughlaq political authority expanded under Muhammad bin Tughluq. The establishment of new
+    powers in the Deccan and elsewhere shows how quickly that reach could contract.
+region: Delhi and much of the subcontinent at its largest extent
+location:
+  name: Delhi (Tughlaqabad and later urban seats)
+  lat: 28.51
+  lon: 77.26
+datings:
+  - method: documentary
+    range:
+      earliest: "1320"
+      latest: "1414"
+      precision: year
+      circa: false
+    grade: B
+    label: Tughlaq period through the Sayyid transition
+    sources:
+      - src.jackson-1999-delhi-sultanate
+      - src.eaton-2019-india-persianate-age
+      - src.asher-talbot-2006-india-before-europe
+    note: The dynastic transition began in 1320. The closing date allows for the interval between the
+      last Tughlaq and Khizr Khan's entry in 1414.
+claims:
+  - text: Ghiyasuddin Tughluq established the line in 1320.
+    grade: B
+    sources:
+      - src.jackson-1999-delhi-sultanate
+  - text: The capture of Warangal in 1323 brought the Kakatiya capital under Tughluq control.
+    grade: B
+    sources:
+      - src.jackson-1999-delhi-sultanate
+      - src.eaton-2005-social-history-deccan
+  - text: The Bahmani state emerged out of the loss of Delhi's authority in the Deccan.
+    grade: B
+    sources:
+      - src.eaton-2019-india-persianate-age
+      - src.asher-talbot-2006-india-before-europe
+relations:
+  - kind: part-of
+    target: polity.delhi-sultanate
+  - kind: succeeded
+    target: polity.khalji-dynasty
+tags: []
+review:
+  status: draft
+  author: codex-gpt-6
+image:
+  commons: File:Tughlaqabad Fort, Tughlaqabad, Delhi.jpg
+  credit: Saad.Akhtar
+  license: CC BY 2.0
+  alt: The stone fortifications of Tughlaqabad in Delhi

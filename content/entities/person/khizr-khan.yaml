@@ -1,0 +1,38 @@
+id: person.khizr-khan
+type: person
+kind: person
+names:
+  en: Khizr Khan
+summary: Khizr Khan took Delhi in 1414 and founded the Sayyid line. His rise followed Timur's
+  invasion and the loss of effective authority by the later Tughlaqs.
+summaries:
+  kids: Khizr Khan took control of Delhi after a period of upheaval. His family continued to rule
+    after he died.
+  teen: Khizr Khan's position grew out of the post-Timurid political settlement. His rule at Delhi is
+    conventionally dated from 1414 to 1421.
+region: Multan and Delhi
+datings:
+  - method: documentary
+    range:
+      earliest: "1414"
+      latest: "1421"
+      precision: year
+      circa: false
+    grade: B
+    label: Reign or recorded political activity
+    sources:
+      - src.jackson-1999-delhi-sultanate
+      - src.asher-talbot-2006-india-before-europe
+    note: The chronology is based on Persian accounts of the late Tughlaq and early Sayyid periods.
+claims:
+  - text: Khizr Khan entered Delhi as ruler in 1414 and was succeeded by Mubarak Shah.
+    grade: B
+    sources:
+      - src.jackson-1999-delhi-sultanate
+relations:
+  - kind: founded
+    target: polity.sayyid-dynasty
+tags: []
+review:
+  status: draft
+  author: codex-gpt-6

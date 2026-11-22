@@ -1,0 +1,46 @@
+id: person.balaji-vishwanath
+type: person
+kind: person
+names:
+  en: Balaji Vishwanath
+  iast: Bālājī Viśvanātha
+  native: बाळाजी विश्वनाथ
+summary: Balaji Vishwanath was the first Peshwa from the Bhat family. His appointment under Shahu
+  began a long succession of Peshwas from that family.
+summaries:
+  kids: Shahu chose Balaji Vishwanath as his chief minister. Balaji's family then held that office for
+    generations.
+  teen: Balaji Vishwanath strengthened Shahu's government and negotiated for Maratha claims at the
+    Mughal court. His son Baji Rao succeeded him.
+region: Western Deccan
+datings:
+  - method: documentary
+    range:
+      earliest: "1713"
+      latest: "1720"
+      precision: year
+      circa: false
+    grade: B
+    label: Reign or recorded political activity
+    sources:
+      - src.gordon-1993-marathas-1600-1818
+      - src.eaton-2019-india-persianate-age
+      - src.halladay-2024-many-swords-shivaji
+    note: The range records his term as Peshwa, from appointment to death.
+claims:
+  - text: Shahu appointed Balaji Vishwanath Peshwa in 1713.
+    grade: B
+    sources:
+      - src.gordon-1993-marathas-1600-1818
+      - src.halladay-2024-many-swords-shivaji
+  - text: His son Baji Rao succeeded to the same office in 1720.
+    grade: B
+    sources:
+      - src.gordon-1993-marathas-1600-1818
+relations:
+  - kind: founded
+    target: polity.peshwa-government
+tags: []
+review:
+  status: draft
+  author: codex-gpt-6

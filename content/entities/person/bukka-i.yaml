@@ -1,0 +1,40 @@
+id: person.bukka-i
+type: person
+kind: person
+names:
+  en: Bukka I
+  iast: Bukka
+summary: Bukka I was a Sangama co-founder of Vijayanagara. His reign expanded the kingdom beyond its
+  Tungabhadra base and helped consolidate the Sangama house.
+summaries:
+  kids: Bukka helped his brother Harihara build Vijayanagara. The kingdom grew during Bukka's own rule.
+  teen: Bukka's position was established during the formative period of Vijayanagara. Reconstructed
+    reign dates can overlap with those of Harihara because authority developed across different
+    territories.
+region: Tungabhadra valley and southern India
+datings:
+  - method: scholarly-consensus
+    range:
+      earliest: "1344"
+      latest: "1377"
+      precision: decade
+      circa: true
+    grade: B
+    label: Reign or recorded political activity
+    sources:
+      - src.stein-1989-vijayanagara
+      - src.asher-talbot-2006-india-before-europe
+    note: The range follows Stein's broad placement of Bukka's political activity as a ruler.
+claims:
+  - text: Bukka I expanded the Vijayanagara realm after its early Sangama foundations.
+    grade: B
+    sources:
+      - src.stein-1989-vijayanagara
+      - src.asher-talbot-2006-india-before-europe
+relations:
+  - kind: founded
+    target: polity.vijayanagara-empire
+tags: []
+review:
+  status: draft
+  author: codex-gpt-6

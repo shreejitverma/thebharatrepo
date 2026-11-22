@@ -1,0 +1,69 @@
+id: polity.western-satraps
+type: polity
+kind: polity
+names:
+  en: Western Satraps
+  iast: Kṣatrapa
+summary: The Western Satraps ruled across parts of Gujarat, Malwa and the western Deccan. The
+  Kshaharata house of Nahapana and the later line of Chashtana are documented by coins and
+  inscriptions, including Rudradaman's record at Junagadh.
+summaries:
+  kids: The Western Satraps ruled parts of western India and made coins. One of their kings left a
+    stone record about repairing a dam.
+  teen: The Western Satraps comprised distinct ruling houses. Dated silver issues and the Junagadh
+    inscription make parts of their chronology unusually accessible.
+region: Gujarat, Malwa and the western Deccan
+location:
+  name: Ujjain (a political centre associated with Chashtana)
+  lat: 23.18
+  lon: 75.78
+datings:
+  - method: numismatic
+    range:
+      earliest: "50"
+      latest: "415"
+      precision: decade
+      circa: true
+    grade: B
+    label: Western Kshatrapa coin and inscription sequences
+    sources:
+      - src.singh-2008-ancient-early-medieval-india
+      - src.salomon-1998-indian-epigraphy
+    note: This span covers the early Kshaharata evidence and the late issues around the Gupta takeover.
+      The date and extent of the earliest rule remain approximate.
+  - method: epigraphic
+    range:
+      earliest: "150"
+      latest: "150"
+      precision: year
+      circa: false
+    grade: A
+    label: Rudradaman's Junagadh inscription, Shaka year 72
+    sources:
+      - src.kielhorn-1906-junagadh-inscription
+      - src.salomon-1998-indian-epigraphy
+    note: The inscribed year is conventionally converted to 150 CE.
+claims:
+  - text: The Junagadh inscription names Chashtana as Rudradaman's grandfather and records repair of the
+      Sudarshana reservoir.
+    grade: A
+    sources:
+      - src.kielhorn-1906-junagadh-inscription
+  - text: Nahapana's issues belong to the Kshaharata line, while the Chashtana line issued its own
+      extensive coin series.
+    grade: B
+    sources:
+      - src.singh-2008-ancient-early-medieval-india
+      - src.salomon-1998-indian-epigraphy
+relations:
+  - kind: related-to
+    target: polity.indo-scythian-kingdoms
+  - kind: related-to
+    target: polity.satavahana-dynasty
+  - kind: preceded
+    target: polity.gupta-empire
+    note: Gupta control replaced the late satraps in western India.
+tags: []
+review:
+  status: draft
+  author: codex-gpt-6

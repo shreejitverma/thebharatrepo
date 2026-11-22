@@ -1,0 +1,49 @@
+id: person.demetrius-i
+type: person
+kind: person
+names:
+  en: Demetrius I
+summary: Demetrius I was a Greco-Bactrian ruler and a son of Euthydemus I. His role and timing in
+  the expansion south of the Hindu Kush remain debated, and his coins famously show him wearing an
+  elephant scalp.
+summaries:
+  kids: Demetrius was a king north of the Hindu Kush mountains. On some of his coins he wears an
+    elephant's scalp as a headdress.
+  teen: Greek accounts link Demetrius with Euthydemus. His coin portrait and the distribution of Greek
+    power south of the Hindu Kush inform reconstructions of his role in Indo-Greek expansion.
+region: Bactria and the Hindu Kush frontier
+datings:
+  - method: numismatic
+    range:
+      earliest: 205 BCE
+      latest: 170 BCE
+      precision: decade
+      circa: true
+    grade: C
+    label: Conventional early second-century placement
+    sources:
+      - src.stoneman-2019-greek-experience-of-india
+      - src.singh-2008-ancient-early-medieval-india
+    note: The interval covers his activity across the uncertain transition from Greco-Bactrian to
+      Indo-Greek rule.
+claims:
+  - text: Silver coins bearing the royal name Demetrius show the king in an elephant-scalp headdress.
+    grade: A
+    sources:
+      - src.stoneman-2019-greek-experience-of-india
+  - text: Demetrius is associated with early expansion across the Hindu Kush, with the extent of his
+      conquests debated.
+    grade: C
+    sources:
+      - src.stoneman-2019-greek-experience-of-india
+      - src.singh-2008-ancient-early-medieval-india
+relations:
+  - kind: related-to
+    target: polity.indo-greek-kingdom
+    note: Associated with early expansion south of the Hindu Kush.
+debate: The extent of the expansion attributable to Demetrius and the assignment of evidence among
+  kings of the same name remain disputed.
+tags: []
+review:
+  status: draft
+  author: codex-gpt-6

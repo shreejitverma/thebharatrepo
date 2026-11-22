@@ -1,0 +1,91 @@
+id: polity.kingdom-of-mysore
+type: polity
+kind: polity
+names:
+  en: Kingdom of Mysore
+  iast: Maisūru
+  native: ಮೈಸೂರು ಸಂಸ್ಥಾನ
+aliases:
+  - polity.mysore-kingdom
+summary: >-
+  Mysore grew from a Vijayanagara feudatory into southern Karnataka's leading state under the Wodeyars,
+  whose court tradition dates the dynasty to 1399. Raja Wodeyar took Srirangapatna in 1610, and Chikka
+  Devaraja Wodeyar centralised its administration. Haidar Ali and Tipu Sultan held power from 1761 to 1799
+  and fought four wars with the East India Company, after which the Wodeyars were restored over a reduced
+  princely state that acceded to India in 1947.
+summaries:
+  kids: >-
+    The Wodeyar family ruled Mysore for centuries, except for about forty years when Haidar Ali and Tipu
+    Sultan held power. The kingdom later became a princely state and then part of India.
+  teen: >-
+    Mysore expanded under the Wodeyars and changed under Haidar and Tipu, who fought the Company in four
+    wars. Its defeat in 1799 led to a smaller princely state under British paramountcy, which acceded to
+    India in 1947.
+region: Southern Karnataka and parts of the southern Deccan
+location:
+  name: Srirangapatna (early modern capital)
+  lat: 12.42
+  lon: 76.68
+datings:
+  - method: scholarly-consensus
+    range:
+      earliest: "1578"
+      latest: "1947"
+      precision: year
+      circa: true
+    grade: B
+    label: Documented Wodeyar state from Raja Wodeyar to accession to India
+    sources:
+      - src.simmons-2020-devotional-sovereignty
+      - src.yazdani-2020-mysore-potentialities
+      - src.bandyopadhyay-2004-from-plassey-to-partition
+      - id: src.ministry-of-states-1950-white-paper-indian-states
+        locator: Part V
+    note: The span begins with Raja Wodeyar (r. 1578-1617), who took Srirangapatna in 1610. Haidar Ali and
+      Tipu Sultan held power from 1761 to 1799, and the restored state acceded to India in 1947.
+  - method: traditional-sampradaya
+    range:
+      earliest: "1399"
+      latest: "1578"
+      precision: year
+      circa: true
+    grade: D
+    label: Wodeyar court genealogical tradition of Yaduraya
+    sources:
+      - src.simmons-2020-devotional-sovereignty
+      - src.ikegame-2013-princely-india-reimagined
+    note: Later Wodeyar court chronicles trace the dynasty to the brothers Yaduraya and Krishnaraya, said to
+      have come from Dwarka in 1399.
+claims:
+  - text: Chikka Devaraja Wodeyar (r. 1673-1704) reorganised Mysore's administration into departments,
+      expanded its territory and patronised Kannada literature.
+    grade: B
+    sources:
+      - src.simmons-2020-devotional-sovereignty
+      - src.rice-1921-history-of-kanarese-literature
+  - text: Haidar Ali and Tipu Sultan held power in Mysore from 1761 to 1799 and carried out revenue and
+      military reforms.
+    grade: B
+    sources:
+      - src.yazdani-2020-mysore-potentialities
+      - src.hasan-1971-history-of-tipu-sultan
+  - text: The Company defeated Tipu in 1799 and restored the Wodeyars in a reduced Mysore under a subsidiary
+      alliance; after a period of direct British administration from 1831 to 1881, the Wodeyars governed
+      the princely state until 1947.
+    grade: B
+    sources:
+      - src.bandyopadhyay-2004-from-plassey-to-partition
+      - src.ikegame-2013-princely-india-reimagined
+relations:
+  - kind: succeeded
+    target: polity.vijayanagara-empire
+    note: Emerged from a Vijayanagara feudatory around Srirangapatna.
+  - kind: related-to
+    target: polity.east-india-company-rule
+wikidata: Q266923
+tags:
+  - mysore
+  - wodeyar
+review:
+  status: draft
+  author: codex-gpt-6

@@ -1,0 +1,49 @@
+id: person.sabuktigin
+type: person
+kind: person
+names:
+  en: Sabuktigin
+summary: Sabuktigin rose from military service to rule Ghazni and established the hereditary
+  Ghaznavid line. His conflicts with Jayapala preceded the larger expansion of his son Mahmud.
+summaries:
+  kids: Sabuktigin became ruler at Ghazni. His family kept governing after him, and his son Mahmud
+    enlarged the kingdom.
+  teen: Sabuktigin's military household provided the basis for a dynasty. His conflict with the Hindu
+    Shahis began before Mahmud's major campaigns in the subcontinent.
+region: Ghazni and the northwestern frontier
+location:
+  name: Ghazni
+  lat: 33.55
+  lon: 68.43
+datings:
+  - method: documentary
+    range:
+      earliest: "977"
+      latest: "997"
+      precision: year
+      circa: false
+    grade: B
+    label: Reign or recorded political activity
+    sources:
+      - src.bosworth-2002-ghaznavids
+      - src.jackson-1999-delhi-sultanate
+      - src.wink-2002-al-hind-volume-2
+    note: The dates follow his accession at Ghazni and his death.
+claims:
+  - text: Sabuktigin became ruler of Ghazni in 977 and established the family's dynastic power.
+    grade: B
+    sources:
+      - src.bosworth-2002-ghaznavids
+      - src.jackson-1999-delhi-sultanate
+  - text: Sabuktigin fought Jayapala on the northwestern frontier.
+    grade: B
+    sources:
+      - src.bosworth-2002-ghaznavids
+      - src.wink-2002-al-hind-volume-2
+relations:
+  - kind: founded
+    target: polity.ghaznavid-empire
+tags: []
+review:
+  status: draft
+  author: codex-gpt-6

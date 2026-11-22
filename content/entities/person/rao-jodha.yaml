@@ -1,0 +1,41 @@
+id: person.rao-jodha
+type: person
+kind: person
+names:
+  en: Rao Jodha
+summary: Rao Jodha established Jodhpur as the new seat of Marwar in the fifteenth century. His
+  foundation of Mehrangarh Fort shifted the court away from Mandore.
+summaries:
+  kids: Rao Jodha began a fort on a hill and moved his court there. The city around it became Jodhpur.
+  teen: Jodha inherited a Rathor political tradition based at Mandore. Founding Jodhpur and Mehrangarh
+    changed where that court exercised its power.
+region: Marwar, western Rajasthan
+location:
+  name: Mehrangarh Fort
+  lat: 26.3
+  lon: 73.02
+datings:
+  - method: documentary
+    range:
+      earliest: "1438"
+      latest: "1489"
+      precision: decade
+      circa: true
+    grade: B
+    label: Reign or recorded political activity
+    sources:
+      - src.mehrangarh-fort-history
+      - src.asher-talbot-2006-india-before-europe
+    note: The conventional dates follow the Mehrangarh Museum Trust's historical account.
+claims:
+  - text: The building of Mehrangarh and the move to Jodhpur are associated with Rao Jodha.
+    grade: B
+    sources:
+      - src.mehrangarh-fort-history
+relations:
+  - kind: ruled
+    target: polity.marwar
+tags: []
+review:
+  status: draft
+  author: codex-gpt-6

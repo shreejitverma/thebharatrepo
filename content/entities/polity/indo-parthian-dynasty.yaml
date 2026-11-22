@@ -1,0 +1,81 @@
+id: polity.indo-parthian-dynasty
+type: polity
+kind: polity
+names:
+  en: Indo-Parthian Dynasty
+summary: The Indo-Parthian dynasty of Gondophares and successors controlled territories from Sistan
+  to the northwestern subcontinent. Regional coin sequences trace a changing political geography,
+  while the date of the founding reign remains debated.
+summaries:
+  kids: Gondophares and other Indo-Parthian kings left coins across a large area. Those coins help
+    show which regions they ruled.
+  teen: Coins connect Indo-Parthian rulers to Sistan, Arachosia and the Indus region. The Takht-i Bahi
+    inscription names Gondophares, but its unstated era complicates an absolute chronology.
+region: Sistan, Arachosia and the northwestern subcontinent
+location:
+  name: Taxila (eastern centre, no single capital established)
+  lat: 33.75
+  lon: 72.83
+datings:
+  - method: numismatic
+    range:
+      earliest: "1"
+      latest: "80"
+      precision: decade
+      circa: true
+    grade: B
+    label: First-century Indo-Parthian rule in the northwest
+    sources:
+      - src.frohlich-2004-indo-parthian-dynasty
+      - src.singh-2008-ancient-early-medieval-india
+    note: The main eastern phase is reconstructed from regional coin sequences. Rule in western areas
+      followed a different trajectory.
+  - method: numismatic
+    range:
+      earliest: 50 BCE
+      latest: 1 BCE
+      precision: decade
+      circa: true
+    grade: C
+    label: Robert C. Senior's earlier placement of Gondophares I
+    sources:
+      - src.senior-2005-indo-scythian-dynasty
+    note: Senior's reading of the relationship to the coinage of Azes favours a pre-CE reign for the
+      founder.
+  - method: epigraphic
+    range:
+      earliest: "20"
+      latest: "46"
+      precision: year
+      circa: true
+    grade: C
+    label: A. D. H. Bivar's Takht-i Bahi chronology
+    sources:
+      - src.bivar-2002-gondophares
+    note: Bivar associates inscriptional year 103 with a 57 BCE epoch and identifies its king with the
+      dynastic founder.
+claims:
+  - text: Coin legends attest Gondophares and the names of rulers including Orthagnes and Pacores.
+    grade: A
+    sources:
+      - src.frohlich-2004-indo-parthian-dynasty
+  - text: In the northwestern subcontinent, the Indo-Parthians were followed by Kushan rule during the
+      first century CE.
+    grade: B
+    sources:
+      - src.frohlich-2004-indo-parthian-dynasty
+      - src.singh-2008-ancient-early-medieval-india
+relations:
+  - kind: succeeded
+    target: polity.indo-scythian-kingdoms
+    note: In parts of the northwest.
+  - kind: preceded
+    target: polity.kushan-empire
+    note: In the eastern part of the Indo-Parthian domains.
+debate: Bivar reads Takht-i Bahi as an inscription of the founder and uses a 57 BCE epoch. Senior
+  assigns earlier dates to Gondophares I from coin sequences and questions whether the inscription
+  names the founder.
+tags: []
+review:
+  status: draft
+  author: codex-gpt-6

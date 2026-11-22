@@ -1,0 +1,39 @@
+id: person.konganivarman
+type: person
+kind: person
+names:
+  en: Konganivarman Madhava
+  iast: Koṅgaṇivarman Mādhava
+summary: Konganivarman Madhava is the ruler placed at the start of the Western Ganga genealogy. The
+  absolute dates of his reign are reconstructed from later records.
+summaries:
+  kids: The Western Ganga family remembered Konganivarman as an early ruler. Later records preserve
+    his name.
+  teen: Konganivarman's founding role comes from royal genealogies. An early sequence of rulers can be
+    reconstructed more readily than an exact accession date.
+region: Southern Karnataka
+datings:
+  - method: epigraphic
+    range:
+      earliest: "330"
+      latest: "400"
+      precision: decade
+      circa: true
+    grade: C
+    label: Reign or recorded political activity
+    sources:
+      - src.singh-2008-ancient-early-medieval-india
+      - src.karashima-2014-concise-history-south-india
+    note: The interval covers the conventional fourth-century placement based on dynastic genealogy.
+claims:
+  - text: The received Western Ganga genealogy places Konganivarman Madhava at the start of the line.
+    grade: C
+    sources:
+      - src.singh-2008-ancient-early-medieval-india
+relations:
+  - kind: founded
+    target: polity.western-ganga-dynasty
+tags: []
+review:
+  status: draft
+  author: codex-gpt-6

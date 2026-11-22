@@ -1,0 +1,70 @@
+id: polity.hindu-shahi-dynasty
+type: polity
+kind: polity
+names:
+  en: Hindu Shahi Dynasty
+  iast: Śāhi
+summary: The Hindu Shahis, also called the Late Shahis, succeeded the earlier Shahis in the Kabul
+  and Gandhara region. Their chronology combines coins, inscriptions and written sources, with the
+  date of the transition to Kallar still debated.
+summaries:
+  kids: The Shahi kings ruled in the northwest. Their coins sometimes show a bull on one side and a
+    horse rider on the other.
+  teen: Al-Biruni names Kallar in his Shahi succession. Coins and inscriptions help locate the
+    dynasty, while different readings of the written evidence place its beginning decades apart.
+region: Kabul region, Gandhara and northwestern Punjab
+location:
+  name: Hund (Udabhandapura, later administrative centre)
+  lat: 34.03
+  lon: 72.44
+datings:
+  - method: epigraphic
+    range:
+      earliest: "820"
+      latest: "1030"
+      precision: decade
+      circa: true
+    grade: C
+    label: Abdur Rehman’s proposed Shahi era, applied to the dynastic transition
+    sources:
+      - src.inaba-2017-across-hindukush
+      - src.rehman-1976-last-two-dynasties-sahis
+      - src.wink-2002-al-hind-volume-2
+    note: Inaba discusses Abdur Rehman’s revised date of 822 CE for the transition at Kabul, based on
+      the Zalamkot inscription and other evidence. The link between the era and the accession
+      remains inferential.
+  - method: textual-internal
+    range:
+      earliest: "840"
+      latest: "1030"
+      precision: decade
+      circa: true
+    grade: C
+    label: Abdur Rehman’s earlier chronology beginning in the mid-ninth century
+    sources:
+      - src.rehman-1976-last-two-dynasties-sahis
+    note: Rehman places Kallar's conventional accession around 843 and assigns the last phase to the
+      1020s.
+claims:
+  - text: Al-Biruni identifies Kallar as a minister who succeeded the last ruler in the earlier Shahi
+      line.
+    grade: C
+    sources:
+      - src.rehman-1976-last-two-dynasties-sahis
+  - text: Hund on the Indus became a principal centre of the later Shahi kingdom.
+    grade: B
+    sources:
+      - src.rehman-1976-last-two-dynasties-sahis
+  - text: The dynasty's later rulers fought the Ghaznavids, whose expansion brought Shahi rule to an end
+      in the early eleventh century.
+    grade: B
+    sources:
+      - src.wink-2002-al-hind-volume-2
+relations: []
+debate: Rehman’s 1976 reconstruction placed Kallar’s accession around 843. In later work discussed
+  by Inaba, he proposed 822 on inscriptional grounds. The association of the Shahi era with Kallar’s
+  accession remains uncertain.
+tags: []
+review:
+  status: draft
+  author: codex-gpt-6

@@ -1,0 +1,88 @@
+id: polity.east-india-company-rule
+type: polity
+kind: polity
+names:
+  en: East India Company Rule in India
+summary: >-
+  The English East India Company grew from a chartered trading corporation into a territorial government
+  through war, grants and treaties. Plassey in 1757 and the diwani of Bengal, Bihar and Orissa in 1765
+  marked decisive stages, and after the revolt of 1857 the Government of India Act 1858 transferred its
+  governing powers to the British Crown.
+summaries:
+  kids: >-
+    The East India Company began by trading. Over time it took control of large areas and collected taxes
+    there. In 1858 the British Crown took over its governing powers.
+  teen: >-
+    The Company already exercised powers in several settlements before Plassey. Its reach expanded after
+    1757 and the grant of revenue rights in 1765, while Parliament increased its oversight before Crown
+    rule replaced it in 1858.
+region: Bengal and expanding territories across the Indian subcontinent
+location:
+  name: Kolkata (Fort William, seat of the governor-general)
+  lat: 22.56
+  lon: 88.34
+datings:
+  - method: documentary
+    range:
+      earliest: "1757"
+      latest: "1858"
+      precision: year
+      circa: false
+    grade: B
+    label: Plassey to the end of Company government
+    sources:
+      - src.stern-2011-company-state
+      - src.bandyopadhyay-2004-from-plassey-to-partition
+      - src.uk-parliament-1858-government-of-india-act
+    note: Plassey marks an early phase of Company territorial ascendancy. The 1858 Act fixes the end of
+      Company government.
+  - method: scholarly-consensus
+    range:
+      earliest: "1765"
+      latest: "1858"
+      precision: year
+      circa: false
+    grade: B
+    label: Bengal revenue grant to the end of Company government
+    sources:
+      - src.bayly-1988-making-of-british-empire
+      - src.marshall-1987-bengal-british-bridgehead
+    note: This periodisation begins with the fiscal turning point of 1765. The Company held settlements and
+      territory before then.
+  - method: documentary
+    range:
+      earliest: "1858"
+      latest: "1858"
+      precision: year
+      circa: false
+    grade: A
+    label: Transfer under the Government of India Act
+    sources:
+      - src.uk-parliament-1858-government-of-india-act
+    note: The Act transferred the Company's governing authority to the Crown.
+claims:
+  - text: The Mughal emperor granted the Company the diwani of Bengal, Bihar and Odisha in 1765.
+    grade: B
+    sources:
+      - src.bandyopadhyay-2004-from-plassey-to-partition
+  - text: Revenue from eastern India helped the Company sustain its administration and military expansion.
+    grade: B
+    sources:
+      - src.bayly-1988-making-of-british-empire
+      - src.marshall-1987-bengal-british-bridgehead
+  - text: The Government of India Act 1858 transferred the Company's governing powers and territories to the
+      British Crown.
+    grade: A
+    sources:
+      - src.uk-parliament-1858-government-of-india-act
+relations:
+  - kind: related-to
+    target: event.battle-of-plassey
+  - kind: related-to
+    target: event.indian-revolt-of-1857
+tags:
+  - company-rule
+  - colonial-administration
+review:
+  status: draft
+  author: codex-gpt-6

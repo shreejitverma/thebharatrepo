@@ -1,0 +1,52 @@
+id: polity.vatsa
+type: polity
+kind: polity
+names:
+  en: Vatsa
+  iast: Vatsa
+  native: वत्स
+summary: Vatsa was a kingdom on the Yamuna centred on Kaushambi. Its capital is identified with the
+  extensive archaeological site near modern Kosam.
+summaries:
+  kids: The kingdom of Vatsa had its main city at Kaushambi, beside the Yamuna River. Archaeologists
+    have found the remains of the old city.
+  teen: Kaushambi helps locate Vatsa on the Yamuna. Political narratives and the remains of a
+    fortified city provide different kinds of evidence for the kingdom.
+region: Lower Yamuna valley, Uttar Pradesh
+location:
+  name: Kaushambi (Kosam)
+  lat: 25.34
+  lon: 81.39
+datings:
+  - method: scholarly-consensus
+    range:
+      earliest: 600 BCE
+      latest: 350 BCE
+      precision: century
+      circa: true
+    grade: B
+    label: Mahajanapada period
+    sources:
+      - src.bivar-1988-indus-lands
+      - src.singh-2008-ancient-early-medieval-india
+    note: Early literary geography and the archaeological record of Kaushambi place Vatsa in the early
+      historic urban landscape.
+claims:
+  - text: Kaushambi, on the Yamuna, was the capital of Vatsa.
+    grade: B
+    sources:
+      - src.bivar-1988-indus-lands
+      - src.singh-2008-ancient-early-medieval-india
+  - text: Buddhist narrative traditions associate the king Udayana with Kaushambi.
+    grade: C
+    sources:
+      - src.singh-2008-ancient-early-medieval-india
+relations:
+  - kind: part-of
+    target: polity.sixteen-mahajanapadas
+    note: Listed among the great realms in the Anguttara Nikaya.
+tags:
+  - mahajanapadas
+review:
+  status: draft
+  author: codex-gpt-6

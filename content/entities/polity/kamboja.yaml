@@ -1,0 +1,65 @@
+id: polity.kamboja
+type: polity
+kind: polity
+names:
+  en: Kamboja
+  iast: Kamboja
+  native: कम्बोज
+summary: Kamboja appears in the Buddhist list of sixteen realms on the northwestern frontier.
+  Ashoka's inscriptions attest the people by name, while the location of the capital called Rajapura
+  in the Mahabharata remains uncertain.
+summaries:
+  kids: Ancient books and stone inscriptions name the Kambojas. Their capital is named in a story, but
+    its site is still unknown.
+  teen: Kamboja appears in Buddhist and Sanskrit writing, and Ashoka names the Kambojas in two rock
+    edicts. The combination confirms the name more securely than the borders or location of any
+    capital.
+region: Northwestern Indo-Iranian frontier
+datings:
+  - method: textual-internal
+    range:
+      earliest: 600 BCE
+      latest: 350 BCE
+      precision: century
+      circa: true
+    grade: C
+    label: Mahajanapada period
+    sources:
+      - src.schmitt-2021-kamboja
+      - id: src.bodhi-2012-numerical-discourses-buddha
+        locator: AN 8.42
+    note: This is the early historic horizon of the Buddhist list and linguistic evidence. Exact
+      boundaries and the duration of the polity remain uncertain.
+  - method: epigraphic
+    range:
+      earliest: 270 BCE
+      latest: 230 BCE
+      precision: decade
+      circa: true
+    grade: A
+    label: Kambojas in Ashoka's Major Rock Edicts V and XIII
+    sources:
+      - src.schmitt-2021-kamboja
+      - src.hultzsch-1925-inscriptions-of-asoka
+    note: The edicts attest the people in the Mauryan horizon. Their date does not measure the life of
+      an independent kingdom.
+claims:
+  - text: Major Rock Edicts V and XIII name the Kambojas among the frontier peoples addressed in
+      Ashoka's proclamations.
+    grade: A
+    sources:
+      - src.schmitt-2021-kamboja
+      - src.hultzsch-1925-inscriptions-of-asoka
+  - text: The Mahabharata names Rajapura, but the capital remains unlocated.
+    grade: C
+    sources:
+      - src.schmitt-2021-kamboja
+relations:
+  - kind: part-of
+    target: polity.sixteen-mahajanapadas
+    note: Listed among the great realms in the Anguttara Nikaya.
+tags:
+  - mahajanapadas
+review:
+  status: draft
+  author: codex-gpt-6

@@ -1,0 +1,56 @@
+id: polity.kosala
+type: polity
+kind: polity
+names:
+  en: Kosala
+  iast: Kosala
+  native: कोसल
+summary: Kosala was a kingdom north of the middle Ganga whose major centres included Shravasti and
+  Saketa. Early Buddhist discourses portray its king Pasenadi in conversation with the Buddha.
+summaries:
+  kids: Kosala was a kingdom with a great city called Shravasti. Buddhist stories tell of its king
+    visiting the Buddha.
+  teen: Shravasti and Saketa were important Kosalan centres. Early Buddhist texts give Kosala a
+    prominent role, though the reign of Pasenadi has no securely fixed absolute dates.
+region: Awadh and the middle Ganga plain
+location:
+  name: Shravasti (Sahet-Mahet)
+  lat: 27.5
+  lon: 82.05
+datings:
+  - method: scholarly-consensus
+    range:
+      earliest: 600 BCE
+      latest: 400 BCE
+      precision: century
+      circa: true
+    grade: B
+    label: Mahajanapada period to absorption by Magadha
+    sources:
+      - src.bivar-1988-indus-lands
+      - src.singh-2008-ancient-early-medieval-india
+    note: Textual geography and excavated settlement provide a broad setting for Kosala's political prominence. The range ends with its absorption by Magadha, conventionally placed in or soon after the reign of Ajatashatru, whose dates are approximate.
+claims:
+  - text: Shravasti and Saketa were major cities of early Kosala.
+    grade: B
+    sources:
+      - src.bivar-1988-indus-lands
+      - src.singh-2008-ancient-early-medieval-india
+  - text: Discourses preserved in the Pali canon portray Pasenadi of Kosala as a contemporary of the
+      Buddha.
+    grade: C
+    sources:
+      - src.singh-2008-ancient-early-medieval-india
+      - src.thapar-2002-early-india
+relations:
+  - kind: part-of
+    target: polity.sixteen-mahajanapadas
+    note: Listed among the great realms in the Anguttara Nikaya.
+  - kind: related-to
+    target: polity.magadha
+    note: A rival power in the middle Ganga valley.
+tags:
+  - mahajanapadas
+review:
+  status: draft
+  author: codex-gpt-6

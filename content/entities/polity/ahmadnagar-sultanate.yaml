@@ -1,0 +1,55 @@
+id: polity.ahmadnagar-sultanate
+type: polity
+kind: polity
+names:
+  en: Ahmadnagar Sultanate (Nizam Shahi Dynasty)
+summary: The Nizam Shahis established a sultanate in the western Deccan during the breakup of
+  Bahmani authority. The dynasty survived Mughal pressure for several decades through regents and
+  commanders including Malik Ambar.
+summaries:
+  kids: The Nizam Shahis began ruling from Ahmadnagar as the Bahmani kingdom broke up. Malik Ambar
+    later helped the kingdom survive against the Mughals.
+  teen: The fall of Ahmadnagar city and the end of the dynasty occurred at different times. Malik
+    Ambar and other leaders sustained a Nizam Shahi court after the Mughals took the old capital.
+region: Western Deccan
+location:
+  name: Ahmednagar (later capital)
+  lat: 19.1
+  lon: 74.74
+datings:
+  - method: documentary
+    range:
+      earliest: "1490"
+      latest: "1636"
+      precision: decade
+      circa: true
+    grade: B
+    label: Period of rule
+    sources:
+      - src.eaton-2005-social-history-deccan
+      - src.michell-1995-architecture-art-southern-india
+      - src.eaton-2019-india-persianate-age
+    note: The range begins with the conventional founding date and ends with the final Mughal settlement
+      that extinguished the dynasty.
+claims:
+  - text: Malik Ahmad established the Nizam Shahi line around 1490.
+    grade: B
+    sources:
+      - src.michell-1995-architecture-art-southern-india
+      - src.eaton-2005-social-history-deccan
+  - text: Malik Ambar governed on behalf of Nizam Shahi rulers and sustained resistance to the Mughals.
+    grade: B
+    sources:
+      - src.eaton-2005-social-history-deccan
+      - src.eaton-2019-india-persianate-age
+relations:
+  - kind: succeeded
+    target: polity.bahmani-sultanate
+    note: In the Ahmadnagar region.
+  - kind: preceded
+    target: polity.mughal-empire
+    note: Mughal rule replaced Ahmadnagar in much of its former territory.
+tags: []
+review:
+  status: draft
+  author: codex-gpt-6

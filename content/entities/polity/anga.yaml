@@ -1,0 +1,55 @@
+id: polity.anga
+type: polity
+kind: polity
+names:
+  en: Anga
+  iast: Aṅga
+  native: अङ्ग
+summary: Anga lay east of Magadha in the middle Ganga valley, with its principal city at Champa near
+  present-day Bhagalpur. Historical reconstructions place its annexation under the Magadhan king
+  Bimbisara.
+summaries:
+  kids: Anga was a kingdom near the Ganga. Its main city, Champa, stood near today's Bhagalpur.
+  teen: Anga was one of Magadha's eastern neighbours. Buddhist accounts connect its loss of
+    independence with Bimbisara's expansion, whose dates remain approximate.
+region: Eastern Bihar, middle Ganga valley
+location:
+  name: Champa (Champa-Bhagalpur archaeological area)
+  lat: 25.25
+  lon: 87
+datings:
+  - method: scholarly-consensus
+    range:
+      earliest: 600 BCE
+      latest: 400 BCE
+      precision: century
+      circa: true
+    grade: B
+    label: Mahajanapada period to annexation by Magadha
+    sources:
+      - src.bivar-1988-indus-lands
+      - src.singh-2008-ancient-early-medieval-india
+    note: Working range for Anga in the textual geography of the early historic period. It ends with the annexation by Bimbisara, whose dates depend on the contested chronology of the Buddha.
+claims:
+  - text: Champa, the chief city of Anga, is identified in the Bhagalpur area.
+    grade: B
+    sources:
+      - src.singh-2008-ancient-early-medieval-india
+      - src.thapar-2002-early-india
+  - text: Bimbisara is credited with annexing Anga to Magadha.
+    grade: B
+    sources:
+      - src.singh-2008-ancient-early-medieval-india
+      - src.thapar-2002-early-india
+relations:
+  - kind: part-of
+    target: polity.sixteen-mahajanapadas
+    note: Listed among the great realms in the Anguttara Nikaya.
+  - kind: related-to
+    target: polity.magadha
+    note: Magadha incorporated Anga under Bimbisara in the received reconstruction.
+tags:
+  - mahajanapadas
+review:
+  status: draft
+  author: codex-gpt-6

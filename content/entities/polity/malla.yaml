@@ -1,0 +1,57 @@
+id: polity.malla
+type: polity
+kind: polity
+names:
+  en: Malla
+  iast: Malla
+  native: मल्ल
+summary: Malla was a clan-based polity associated with Kushinara and Pava. The Mahaparinibbana Sutta
+  treats the Mallas of those two centres as distinct groups in its account of the division of the
+  Buddha's relics.
+summaries:
+  kids: People called the Mallas lived in towns including Kushinara. An old Buddhist book tells how
+    they cared for the Buddha's remains.
+  teen: Kushinara and Pava appear as separate Malla centres in the Buddhist account of the Buddha's
+    final journey and the distribution of his relics.
+region: Eastern Uttar Pradesh and the Himalayan foothill plain
+location:
+  name: Kushinagar (Kushinara, one Malla centre)
+  lat: 26.75
+  lon: 83.92
+datings:
+  - method: textual-internal
+    range:
+      earliest: 600 BCE
+      latest: 350 BCE
+      precision: century
+      circa: true
+    grade: C
+    label: Mahajanapada period
+    sources:
+      - src.singh-2008-ancient-early-medieval-india
+      - id: src.walshe-1995-long-discourses-buddha
+        locator: DN 16
+    note: The place of Malla in the early historic sequence rests largely on early Buddhist texts. Firm
+      dates for its political boundaries are unavailable.
+claims:
+  - text: The Mahaparinibbana Sutta gives the Mallas of Pava and Kushinara separate shares in its
+      narrative of the relic distribution.
+    grade: C
+    sources:
+      - id: src.walshe-1995-long-discourses-buddha
+        locator: DN 16
+  - text: Historical reconstructions treat the Mallas as a gana-sangha, a polity whose leading clans
+      exercised political authority.
+    grade: B
+    sources:
+      - src.singh-2008-ancient-early-medieval-india
+      - src.thapar-2002-early-india
+relations:
+  - kind: part-of
+    target: polity.sixteen-mahajanapadas
+    note: Listed among the great realms in the Anguttara Nikaya.
+tags:
+  - mahajanapadas
+review:
+  status: draft
+  author: codex-gpt-6

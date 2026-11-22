@@ -1,0 +1,68 @@
+id: polity.gandhara
+type: polity
+kind: polity
+names:
+  en: Gandhara
+  iast: Gandhāra
+  native: गान्धार
+summary: Gandhara was a northwestern realm associated with Taxila and the Peshawar valley. Darius
+  I's Behistun inscription attests Gandara under Achaemenid rule, while early Buddhist texts list
+  Gandhara among the sixteen great realms.
+summaries:
+  kids: Gandhara lay in the northwest of the subcontinent. Its name appears both in old Buddhist texts
+    and in an inscription of a Persian king.
+  teen: The Persian inscription of Darius provides a contemporary date for the name Gandara. Buddhist
+    lists and the archaeology of Taxila illuminate the region from different directions.
+region: Northwestern subcontinent, upper Indus and Peshawar valleys
+location:
+  name: Taxila (Bhir Mound, early urban centre)
+  lat: 33.744
+  lon: 72.819
+datings:
+  - method: scholarly-consensus
+    range:
+      earliest: 600 BCE
+      latest: 350 BCE
+      precision: century
+      circa: true
+    grade: B
+    label: Mahajanapada period
+    sources:
+      - src.singh-2008-ancient-early-medieval-india
+      - src.bivar-1988-indus-lands
+    note: This range groups the early historic evidence, including Persian incorporation. The date of
+      the preceding polity's formation is uncertain.
+  - method: epigraphic
+    range:
+      earliest: 522 BCE
+      latest: 518 BCE
+      precision: decade
+      circa: true
+    grade: A
+    label: Gandara in the Behistun inscription of Darius I
+    sources:
+      - src.bivar-1988-indus-lands
+    note: The imperial list attests Gandara during the early reign of Darius I.
+claims:
+  - text: The Old Persian version of Darius I's Behistun inscription names Gandara among the territories
+      under his authority.
+    grade: A
+    sources:
+      - src.bivar-1988-indus-lands
+  - text: Taxila was a major early urban centre associated with Gandhara.
+    grade: B
+    sources:
+      - src.bivar-1988-indus-lands
+      - src.singh-2008-ancient-early-medieval-india
+relations:
+  - kind: part-of
+    target: polity.sixteen-mahajanapadas
+    note: Listed among the great realms in the Anguttara Nikaya.
+  - kind: related-to
+    target: event.alexander-punjab-campaign
+    note: The region was traversed by Alexander's forces in the fourth century BCE.
+tags:
+  - mahajanapadas
+review:
+  status: draft
+  author: codex-gpt-6

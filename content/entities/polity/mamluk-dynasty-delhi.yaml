@@ -1,0 +1,49 @@
+id: polity.mamluk-dynasty-delhi
+type: polity
+kind: polity
+names:
+  en: Mamluk Dynasties of Delhi
+summary: The first phase of the Delhi Sultanate is often called Mamluk rule, after the military
+  slave backgrounds of figures including Aybak and Iltutmish. The period included several ruling
+  families and ended with the accession of Jalaluddin Khalji.
+summaries:
+  kids: The first sultans came from military households, including men who had once been enslaved. A
+    later ruler, Iltutmish, made Delhi his centre of power.
+  teen: The term Mamluk covers successive households, including those of Iltutmish and Balban. Their
+    political authority grew from the institutions and military networks left by the Ghurids.
+region: Delhi, Lahore and the northern subcontinent
+location:
+  name: Delhi
+  lat: 28.61
+  lon: 77.21
+datings:
+  - method: documentary
+    range:
+      earliest: "1206"
+      latest: "1290"
+      precision: year
+      circa: false
+    grade: B
+    label: Period of rule
+    sources:
+      - src.jackson-1999-delhi-sultanate
+      - src.jackson-2010-muslim-india-delhi-sultanate
+    note: The conventional period runs from the succession crisis of 1206 to Khalji rule in 1290.
+claims:
+  - text: Aybak held Lahore, and Iltutmish established himself at Delhi after Aybak's death.
+    grade: B
+    sources:
+      - src.jackson-1999-delhi-sultanate
+      - src.jackson-2010-muslim-india-delhi-sultanate
+  - text: The early Delhi rulers included the family of Iltutmish and, subsequently, the household of
+      Balban.
+    grade: B
+    sources:
+      - src.jackson-1999-delhi-sultanate
+relations:
+  - kind: part-of
+    target: polity.delhi-sultanate
+tags: []
+review:
+  status: draft
+  author: codex-gpt-6

@@ -1,0 +1,43 @@
+id: person.ghiyasuddin-tughluq
+type: person
+kind: person
+names:
+  en: Ghiyasuddin Tughluq
+summary: Ghiyasuddin Tughluq, previously known as Ghazi Malik, took Delhi in 1320 and founded the
+  Tughluq line. He established the fortified complex of Tughlaqabad.
+summaries:
+  kids: Ghiyasuddin became sultan and built a strongly fortified city near Delhi. Its walls can still
+    be seen.
+  teen: The founder's short reign left a major architectural record at Tughlaqabad. His son Muhammad
+    succeeded him and extended the sultanate's control.
+region: Delhi and northern India
+datings:
+  - method: documentary
+    range:
+      earliest: "1320"
+      latest: "1325"
+      precision: year
+      circa: false
+    grade: B
+    label: Reign or recorded political activity
+    sources:
+      - src.jackson-1999-delhi-sultanate
+      - src.eaton-2019-india-persianate-age
+    note: The dated political succession bounds his reign.
+claims:
+  - text: Ghazi Malik became Sultan Ghiyasuddin Tughluq in 1320.
+    grade: B
+    sources:
+      - src.jackson-1999-delhi-sultanate
+  - text: The fortified complex at Tughlaqabad was a project of his reign.
+    grade: B
+    sources:
+      - src.jackson-1999-delhi-sultanate
+      - src.eaton-2019-india-persianate-age
+relations:
+  - kind: founded
+    target: polity.tughlaq-dynasty
+tags: []
+review:
+  status: draft
+  author: codex-gpt-6

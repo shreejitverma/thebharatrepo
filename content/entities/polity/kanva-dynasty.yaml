@@ -1,0 +1,62 @@
+id: polity.kanva-dynasty
+type: polity
+kind: polity
+names:
+  en: Kanva Dynasty
+  iast: Kāṇva
+summary: The Kanvas are a short post-Shunga dynasty known mainly from Puranic lists. Those texts
+  name four rulers beginning with Vasudeva, while the court's territorial reach and exact chronology
+  remain uncertain.
+summaries:
+  kids: Old royal lists tell of four Kanva kings. The first, Vasudeva, took power after the last
+    Shunga king.
+  teen: The Puranic lists preserve an order of Kanva rulers and a total duration. Reconstructing their
+    BCE dates requires tying that total to the less certain end of the Shunga period.
+region: Post-Shunga northern India
+datings:
+  - method: textual-internal
+    range:
+      earliest: 80 BCE
+      latest: 20 BCE
+      precision: decade
+      circa: true
+    grade: C
+    label: Conventional post-Shunga placement
+    sources:
+      - src.singh-2008-ancient-early-medieval-india
+      - src.pargiter-1913-dynasties-kali-age
+    note: Modern summaries place Kanva rule in this window by relating the king lists to the
+      reconstructed end of Shunga rule.
+  - method: traditional-puranic
+    range:
+      earliest: 80 BCE
+      latest: 20 BCE
+      precision: decade
+      circa: true
+    grade: D
+    label: Puranic reckoning of four reigns
+    sources:
+      - src.pargiter-1913-dynasties-kali-age
+    note: The Puranic series assigns the four Kanva kings forty-five years in all. The calendar window
+      is derived from its relative position in the sequence.
+claims:
+  - text: The Puranic lists put Vasudeva first and Susharman last in a succession of four Kanva kings.
+    grade: D
+    sources:
+      - src.pargiter-1913-dynasties-kali-age
+  - text: The traditions place the Kanvas immediately after the Shungas, but give little secure
+      information about their territorial control.
+    grade: C
+    sources:
+      - src.singh-2008-ancient-early-medieval-india
+      - src.pargiter-1913-dynasties-kali-age
+relations:
+  - kind: succeeded
+    target: polity.shunga-dynasty
+    note: Sequence in the Puranic lists.
+debate: The Puranic list supplies a relative sequence and regnal totals. Its conversion to BCE dates
+  depends on the end assigned to Shunga rule.
+tags: []
+review:
+  status: draft
+  author: codex-gpt-6

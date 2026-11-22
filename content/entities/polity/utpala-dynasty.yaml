@@ -1,0 +1,53 @@
+id: polity.utpala-dynasty
+type: polity
+kind: polity
+names:
+  en: Utpala Dynasty of Kashmir
+  iast: Utpala
+summary: The Utpalas succeeded the Karkotas in Kashmir with Avantivarman's accession in the
+  mid-ninth century. Kalhana credits his reign with new temples and works on the Jhelum connected
+  with the engineer Suyya.
+summaries:
+  kids: Avantivarman began a new ruling family in Kashmir. A later chronicle tells how Suyya helped
+    control floods and improve farmland.
+  teen: Kalhana associates Avantivarman's reign with temple building and changes to the Jhelum's water
+    flow. His account remains a major source for the Utpala succession.
+region: Kashmir Valley
+location:
+  name: Srinagar (capital region)
+  lat: 34.09
+  lon: 74.8
+datings:
+  - method: scholarly-consensus
+    range:
+      earliest: "855"
+      latest: "940"
+      precision: decade
+      circa: true
+    grade: B
+    label: Period of rule
+    sources:
+      - src.stein-1900-rajatarangini
+      - src.singh-2008-ancient-early-medieval-india
+      - src.hauptmann-2024-lords-mountains
+    note: The opening follows the conventional accession of Avantivarman. The end is approximate because
+      custody of the throne changed repeatedly.
+claims:
+  - text: Kalhana describes Suyya's management of the Jhelum and the recovery of agricultural land under
+      Avantivarman.
+    grade: C
+    sources:
+      - id: src.stein-1900-rajatarangini
+        locator: Book V
+  - text: Avantipura preserves temple remains linked to the reign of Avantivarman.
+    grade: B
+    sources:
+      - src.stein-1900-rajatarangini
+      - src.hauptmann-2024-lords-mountains
+relations:
+  - kind: succeeded
+    target: polity.karkota-dynasty
+tags: []
+review:
+  status: draft
+  author: codex-gpt-6

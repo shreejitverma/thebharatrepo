@@ -1,0 +1,53 @@
+id: polity.surasena
+type: polity
+kind: polity
+names:
+  en: Surasena
+  iast: Śūrasena
+  native: शूरसेन
+summary: Surasena was an early historic realm around Mathura on the Yamuna. Its geographic centre is
+  more securely identifiable than the boundaries or succession of its early rulers.
+summaries:
+  kids: Surasena grew around Mathura, a city beside the Yamuna River. Old Buddhist texts count it
+    among the great realms.
+  teen: Mathura anchors the geography of Surasena. The Pali lists establish the realm's place in early
+    Buddhist geographic memory, while its borders and political history remain less clear.
+region: Mathura area, upper Yamuna valley
+location:
+  name: Mathura
+  lat: 27.5
+  lon: 77.67
+datings:
+  - method: textual-internal
+    range:
+      earliest: 600 BCE
+      latest: 350 BCE
+      precision: century
+      circa: true
+    grade: C
+    label: Mahajanapada period
+    sources:
+      - src.bivar-1988-indus-lands
+      - src.singh-2008-ancient-early-medieval-india
+    note: The broad period follows early Buddhist geography read with the archaeological record of
+      Mathura.
+claims:
+  - text: Mathura on the Yamuna was the centre of Surasena.
+    grade: B
+    sources:
+      - src.bivar-1988-indus-lands
+      - src.singh-2008-ancient-early-medieval-india
+  - text: Surasena occurs in the Anguttara Nikaya's list of sixteen great realms.
+    grade: C
+    sources:
+      - id: src.bodhi-2012-numerical-discourses-buddha
+        locator: AN 8.42
+relations:
+  - kind: part-of
+    target: polity.sixteen-mahajanapadas
+    note: Listed among the great realms in the Anguttara Nikaya.
+tags:
+  - mahajanapadas
+review:
+  status: draft
+  author: codex-gpt-6

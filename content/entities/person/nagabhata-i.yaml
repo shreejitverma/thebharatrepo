@@ -1,0 +1,40 @@
+id: person.nagabhata-i
+type: person
+kind: person
+names:
+  en: Nagabhata I
+  iast: Nāgabhaṭa
+summary: Nagabhata I is the earliest major ruler named in the genealogy of the imperial Pratiharas.
+  A later inscription at Gwalior credits him with resisting a hostile foreign force.
+summaries:
+  kids: A later stone inscription names Nagabhata as an early ruler of his family. It praises him for
+    defeating enemies.
+  teen: Bhoja's Gwalior inscription looks back to Nagabhata I. Historians compare its praise with
+    other evidence for eighth-century campaigns in western India.
+region: Western India
+datings:
+  - method: epigraphic
+    range:
+      earliest: "725"
+      latest: "765"
+      precision: decade
+      circa: true
+    grade: C
+    label: Reign or recorded political activity
+    sources:
+      - src.singh-2008-ancient-early-medieval-india
+      - src.thapar-2002-early-india
+    note: The broad reign is reconstructed backwards from later Pratihara dates.
+claims:
+  - text: The Gwalior eulogy of Mihira Bhoja names Nagabhata in the early imperial genealogy.
+    grade: A
+    sources:
+      - src.singh-2008-ancient-early-medieval-india
+      - src.salomon-1998-indian-epigraphy
+relations:
+  - kind: founded
+    target: polity.gurjara-pratihara-dynasty
+tags: []
+review:
+  status: draft
+  author: codex-gpt-6

@@ -1,0 +1,51 @@
+id: person.pushyamitra-shunga
+type: person
+kind: person
+names:
+  en: Pushyamitra Shunga
+  iast: Puṣyamitra Śuṅga
+summary: Pushyamitra founded the Shunga ruling house after the fall of the Mauryas. A subsequent
+  inscription from Ayodhya credits him with twice performing the ashvamedha, a royal horse
+  sacrifice.
+summaries:
+  kids: Pushyamitra was a commander who became a king after the Mauryas. An old stone inscription says
+    he held two important royal ceremonies.
+  teen: Literary accounts place Pushyamitra at the Maurya-Shunga transition. The Ayodhya inscription
+    independently preserves his title of commander and records two ashvamedhas.
+region: Gangetic plain and Malwa
+location:
+  name: Vidisha (Shunga court centre)
+  lat: 23.52
+  lon: 77.81
+datings:
+  - method: scholarly-consensus
+    range:
+      earliest: 190 BCE
+      latest: 145 BCE
+      precision: decade
+      circa: true
+    grade: B
+    label: Reconstructed reign of the first Shunga
+    sources:
+      - src.singh-2008-ancient-early-medieval-india
+      - src.thapar-2012-asoka-decline-mauryas
+    note: The end of the Mauryan line provides the approximate opening anchor. Puranic reign totals
+      underlie the end estimate.
+claims:
+  - text: Dhanadeva's Ayodhya inscription names Pushyamitra as a commander and credits him with two
+      ashvamedhas.
+    grade: A
+    sources:
+      - src.salomon-1998-indian-epigraphy
+  - text: Literary accounts ascribe the killing of the last Maurya king, Brihadratha, to Pushyamitra.
+    grade: C
+    sources:
+      - src.pargiter-1913-dynasties-kali-age
+      - src.cowell-1897-harsa-carita
+relations:
+  - kind: founded
+    target: polity.shunga-dynasty
+tags: []
+review:
+  status: draft
+  author: codex-gpt-6

@@ -1,0 +1,54 @@
+id: polity.ghurid-empire
+type: polity
+kind: polity
+names:
+  en: Ghurid Empire
+summary: The Ghurids emerged from the Shansabani ruling family of Ghur. Under Ghiyath al-Din and
+  Muizz al-Din they defeated the Ghaznavids and expanded into northern India, where former Ghurid
+  commanders established successor governments.
+summaries:
+  kids: The Ghurids built a large kingdom from the mountains of Ghur. Some of their commanders later
+    began ruling independently in northern India.
+  teen: Ghurid conquests established provincial governments across parts of northern India. The
+    succession crisis of 1206 enabled commanders including Aybak to build independent power.
+region: Central Afghanistan, eastern Iranian lands and northern South Asia
+location:
+  name: Lahore (Ghurid seat in the Punjab)
+  lat: 31.55
+  lon: 74.36
+datings:
+  - method: documentary
+    range:
+      earliest: "1149"
+      latest: "1215"
+      precision: decade
+      circa: true
+    grade: B
+    label: Period of rule
+    sources:
+      - src.bosworth-2001-ghurids
+      - src.jackson-1999-delhi-sultanate
+      - src.jackson-2010-muslim-india-delhi-sultanate
+    note: The dates cover the Ghurids' rise to imperial power and the end of their central Afghan court,
+      which outlasted the autonomy of the Indian commanders.
+claims:
+  - text: The Ghurids took Lahore in 1186, ending the Ghaznavid state.
+    grade: B
+    sources:
+      - src.bosworth-2001-ghurids
+      - src.jackson-1999-delhi-sultanate
+  - text: Former Ghurid commanders established autonomous governments after Muizz al-Din's death in 1206.
+    grade: B
+    sources:
+      - src.jackson-2010-muslim-india-delhi-sultanate
+      - src.bosworth-2001-ghurids
+relations:
+  - kind: succeeded
+    target: polity.ghaznavid-empire
+  - kind: preceded
+    target: polity.delhi-sultanate
+    note: In the northern Indian domains.
+tags: []
+review:
+  status: draft
+  author: codex-gpt-6

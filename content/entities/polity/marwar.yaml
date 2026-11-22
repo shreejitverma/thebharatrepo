@@ -1,0 +1,74 @@
+id: polity.marwar
+type: polity
+kind: polity
+names:
+  en: Kingdom of Marwar (Jodhpur)
+  iast: Mārvāṛa
+  native: मारवाड़
+summary: Rathor rule in Marwar developed at Mandore before Rao Jodha founded the fortified seat of
+  Jodhpur in the fifteenth century. The house played a major role in Mughal politics and later ruled
+  a princely state.
+summaries:
+  kids: Marwar's rulers moved their capital from Mandore to Jodhpur. They built Mehrangarh Fort on the
+    hill overlooking the new city.
+  teen: Jodhpur's Rathors remained regional rulers while prominent members of the house served at the
+    Mughal court. The state's archives and material collections record the relationships that
+    sustained their rule.
+region: Western Rajasthan
+location:
+  name: Jodhpur
+  lat: 26.3
+  lon: 73.02
+datings:
+  - method: scholarly-consensus
+    range:
+      earliest: "1380"
+      latest: "1949"
+      precision: decade
+      circa: true
+    grade: B
+    label: Period of rule
+    sources:
+      - src.asher-talbot-2006-india-before-europe
+      - src.eaton-2019-india-persianate-age
+      - src.mehrangarh-fort-history
+      - &a1
+        id: src.ministry-of-states-1950-white-paper-indian-states
+        locator: Part V
+    note: The interval takes Mandore's consolidation as its opening and includes the princely state
+      until integration into Rajasthan.
+  - method: documentary
+    range:
+      earliest: "1949"
+      latest: "1949"
+      precision: year
+      circa: false
+    grade: A
+    label: Integration into Rajasthan
+    sources:
+      - *a1
+claims:
+  - text: Rao Jodha established the new Rathor seat at Jodhpur in 1459.
+    grade: B
+    sources:
+      - src.mehrangarh-fort-history
+      - src.asher-talbot-2006-india-before-europe
+  - text: Members of the Jodhpur house held high office in the Mughal Empire while retaining their
+      regional base.
+    grade: B
+    sources:
+      - src.asher-talbot-2006-india-before-europe
+      - src.eaton-2019-india-persianate-age
+  - text: Jodhpur joined Greater Rajasthan in 1949.
+    grade: A
+    sources:
+      - *a1
+relations:
+  - kind: related-to
+    target: polity.mughal-empire
+  - kind: related-to
+    target: polity.mewar
+tags: []
+review:
+  status: draft
+  author: codex-gpt-6
