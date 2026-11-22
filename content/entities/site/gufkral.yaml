@@ -1,0 +1,63 @@
+id: site.gufkral
+type: site
+kind: prehistory
+names:
+  en: Gufkral Neolithic Site
+summary: >-
+  A stratified Neolithic and Megalithic settlement on a karewa mound near Tral in Pulwama district, Jammu and
+  Kashmir, distinguished from neighbouring Burzahom by a clearly defined Aceramic Neolithic basal horizon
+  (Period IA) featuring subterranean pits, bone tools and early wheat, barley, lentil, sheep and goat remains.
+summaries:
+  kids: >-
+    Gufkral (whose name means "cave of the potter") is an ancient hilltop site in Kashmir where the earliest
+    settlers lived in underground pits and grew wheat, barley and lentils even before making clay pots.
+  teen: >-
+    Excavated by A. K. Sharma in the 1980s, Gufkral in the Kashmir Valley revealed an Aceramic Neolithic stage
+    (Period IA) preceding ceramic Neolithic phases (IB-IC) and an Iron-using Megalithic horizon (Period II).
+region: Kashmir Valley, Pulwama district, Jammu and Kashmir
+location:
+  name: Gufkral
+  lat: 33.9
+  lon: 75.09
+datings:
+  - method: archaeological-radiocarbon
+    range:
+      earliest: "2800 BCE"
+      latest: "1000 BCE"
+      best: "2400 BCE"
+      precision: century
+      circa: true
+    grade: B
+    label: Aceramic Neolithic (Period IA) to Ceramic Neolithic (IB-IC) and Megalithic sequence
+    sources:
+      - src.fuller-2006-agricultural-origins-south-asia
+      - src.misra-2001-prehistoric-colonization-india
+      - src.coningham-2015-archaeology-south-asia
+    note: >-
+      Radiocarbon dates from ceramic Neolithic levels (Periods IB-IC) fall around c. 2400-1600 BCE, with the
+      underlying Aceramic Neolithic (Period IA) extending back into the early 3rd millennium BCE.
+claims:
+  - text: >-
+      Period IA at Gufkral represents an aceramic Neolithic occupation with plastered dwelling pits, polished
+      stone celts, bone points and needles, and domesticated wheat, barley, lentil, pea, sheep and goat.
+    grade: A
+    sources:
+      - src.fuller-2006-agricultural-origins-south-asia
+      - src.coningham-2015-archaeology-south-asia
+  - text: >-
+      Periods IB and IC at Gufkral show a replacement of underground dwelling pits by mud-and-rubble surface
+      houses, handmade grey and burnished pottery, and an overwhelming predominance of domesticated livestock.
+    grade: A
+    sources:
+      - src.misra-2001-prehistoric-colonization-india
+      - src.coningham-2015-archaeology-south-asia
+relations:
+  - kind: contemporary-of
+    target: site.burzahom
+tags:
+  - neolithic
+  - aceramic-neolithic
+  - kashmir
+review:
+  status: draft
+  author: gemini-4-argon

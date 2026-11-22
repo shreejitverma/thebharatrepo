@@ -1,0 +1,40 @@
+id: site.pattadakal
+type: site
+kind: site
+names:
+  en: Group of Monuments at Pattadakal
+  native: ಪಟ್ಟದಕಲ್ಲು
+summary: >-
+  Pattadakal, on the Malaprabha river in Karnataka, has nine Hindu temples and a Jain sanctuary built
+  mainly in the 7th and 8th centuries CE, where northern (nagara) and southern (dravida) temple forms
+  stand side by side. The Virupaksha temple was built by Queen Lokamahadevi to mark Vikramaditya II's
+  victory over the Pallavas. UNESCO listed the site in 1987.
+summaries:
+  kids: >-
+    Pattadakal is a group of old temples by a river in Karnataka. Some have tall curved towers like
+    temples in the north, and some have stepped towers like temples in the south.
+  teen: >-
+    Pattadakal was where Chalukya kings were crowned, and its temples are a showroom of two
+    architectural traditions. The Virupaksha temple even copied ideas from the Pallava temples of
+    Kanchi after the Chalukyas raided that city.
+region: Bagalkot district, Karnataka
+location: { name: Pattadakal, lat: 15.95, lon: 75.82 }
+datings:
+  - method: art-historical
+    range: { earliest: "650 CE", latest: "760 CE", precision: decade, circa: true }
+    grade: B
+    label: Main Chalukya temple building
+    sources: [src.unesco-1987-pattadakal, src.michell-1988-hindu-temple]
+    note: The Virupaksha and Mallikarjuna temples are dated by inscriptions to about 745 CE; the Jain temple is later, of the Rashtrakuta period.
+claims:
+  - text: The site was inscribed on the UNESCO World Heritage List in 1987.
+    grade: A
+    sources: [src.unesco-1987-pattadakal]
+  - text: The Virupaksha temple was built by Queen Lokamahadevi to commemorate her husband Vikramaditya II's victory over the Pallavas.
+    grade: B
+    sources: [src.unesco-1987-pattadakal, src.michell-1988-hindu-temple]
+relations:
+  - { kind: patronised-by, target: polity.chalukya-dynasty-of-badami }
+wikidata: Q817250
+tags: [unesco, chalukya, temple-architecture, karnataka]
+review: { status: draft, author: "claude-opus-5-5" }

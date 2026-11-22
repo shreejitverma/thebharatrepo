@@ -1,0 +1,41 @@
+id: person.banabhatta
+type: person
+kind: person
+names:
+  en: Banabhatta
+  iast: Bāṇabhaṭṭa
+  native: बाणभट्ट
+summary: >-
+  Banabhatta was a Sanskrit prose writer at the court of Harsha in the first half of the 7th century
+  CE. He wrote the Harshacharita, a partly historical account of his patron, and the romance
+  Kadambari.
+summaries:
+  kids: >-
+    Bana was a writer who lived at King Harsha's court. He wrote a long, fancy story about the king's
+    life, full of long sentences and beautiful descriptions.
+  teen: >-
+    Banabhatta is one of the great masters of Sanskrit prose. His Harshacharita tells the story of how
+    Harsha became king, and his Kadambari is a romance; both are famous for extremely long, ornate
+    sentences.
+region: Northern India
+datings:
+  - method: textual-internal
+    range: { earliest: "600 CE", latest: "660 CE", precision: decade, circa: true }
+    grade: B
+    label: Active at Harsha's court
+    sources: [src.cowell-1897-harsa-carita, src.thapar-2002-early-india]
+    note: Bana describes his own presentation at Harsha's court, which fixes his activity within Harsha's reign.
+claims:
+  - text: >-
+      The opening chapters of the Harshacharita give an account of Bana's own family, youth and
+      first meeting with Harsha.
+    grade: A
+    sources: [src.cowell-1897-harsa-carita]
+  - text: Besides the Harshacharita, Bana is the author of the prose romance Kadambari.
+    grade: B
+    sources: [src.thapar-2002-early-india]
+relations:
+  - { kind: authored, target: text.harshacharita }
+  - { kind: patronised-by, target: person.harshavardhana }
+tags: [sanskrit-literature, kavya, prose]
+review: { status: draft, author: "claude-opus-5-5" }

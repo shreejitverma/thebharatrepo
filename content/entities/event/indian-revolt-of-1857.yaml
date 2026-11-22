@@ -1,0 +1,37 @@
+id: event.indian-revolt-of-1857
+type: event
+kind: event
+names:
+  en: Indian Revolt of 1857
+summary: The 1857 revolt began among soldiers of the East India Company and
+  spread through parts of north and central India. It was suppressed by 1858 and
+  led to a major change in British governance.
+summaries:
+  kids: In 1857, soldiers and other groups rebelled against East India Company
+    rule in parts of India. The revolt was defeated by 1858.
+  teen: The revolt involved diverse actors and regional aims. Historians use
+    several names and interpretations, including rebellion, revolt and uprising.
+datings:
+  - method: documentary
+    range:
+      earliest: "1857"
+      latest: "1858"
+      precision: year
+      circa: false
+    grade: A
+    label: Documentary record
+    sources: &a1
+      - src.stokes-1986-peasant-armed-revolt-1857
+      - src.metcalf-2012-concise-history-modern-india
+claims:
+  - text: The 1857 revolt began among soldiers of the East India Company and spread
+      through parts of north and central India. It was suppressed by 1858 and
+      led to a major change in British governance.
+    grade: A
+    sources: *a1
+relations: []
+tags:
+  - event
+review:
+  status: draft
+  author: codex-gpt-6

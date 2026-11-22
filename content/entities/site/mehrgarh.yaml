@@ -1,0 +1,83 @@
+id: site.mehrgarh
+type: site
+kind: prehistory
+names:
+  en: Mehrgarh Neolithic and Chalcolithic Site
+summary: >-
+  A foundational 200-hectare prehistoric settlement complex on the Kachi Plain at the foot of the Bolan Pass
+  in Balochistan, documenting an unbroken transition from aceramic Neolithic mud-brick farming villages
+  (c. 7000 BCE) through local zebu domestication, early dentistry, cotton textiles and copper metallurgy to
+  the threshold of the Indus Civilization (c. 2600 BCE).
+summaries:
+  kids: >-
+    Around 9,000 years ago at Mehrgarh near the Bolan Pass, early farmers built mud-brick houses and storage
+    granaries, grew barley and wheat, raised humped zebu cattle and even spun cotton thread.
+  teen: >-
+    Excavated by Jean-Francois and Catherine Jarrige from 1974, Mehrgarh in Balochistan traces the development
+    of South Asian village farming, zebu cattle domestication, early dentistry, cotton use and painted ceramics
+    from c. 7000 to 2600 BCE.
+region: Kachi Plain (Bolan River valley), Balochistan
+location:
+  name: Mehrgarh
+  lat: 29.39
+  lon: 67.62
+datings:
+  - method: archaeological-radiocarbon
+    range:
+      earliest: "7000 BCE"
+      latest: "2600 BCE"
+      best: "6500 BCE"
+      precision: century
+      circa: true
+    grade: A
+    label: Multi-period Aceramic Neolithic (Period I) to Chalcolithic (Period VII) sequence
+    sources:
+      - src.fuller-2006-agricultural-origins-south-asia
+      - src.coppa-2006-mehrgarh-dentistry
+      - src.moulherat-2002-mehrgarh-cotton
+      - src.coningham-2015-archaeology-south-asia
+    note: >-
+      Period I (Aceramic Neolithic) spans c. 7000-5500 BCE, Period II (Ceramic Neolithic and early copper/cotton)
+      c. 5500-4800 BCE, and Periods III-VII continue through the Chalcolithic down to c. 2600 BCE.
+claims:
+  - text: >-
+      Aceramic Neolithic Period I at Mehrgarh featured rectilinear mud-brick houses, cellular storage compartments,
+      six-row barley and wheat cultivation, and burials with turquoise, lapis lazuli and marine shell ornaments.
+    grade: A
+    sources:
+      - src.fuller-2006-agricultural-origins-south-asia
+      - src.coningham-2015-archaeology-south-asia
+  - text: >-
+      Eleven drilled human molar crowns from nine adults in the Neolithic cemetery at Mehrgarh (c. 7000-5500 BCE)
+      provide direct evidence of in vivo therapeutic dental drilling using flint micro-drill heads.
+    grade: A
+    sources:
+      - src.coppa-2006-mehrgarh-dentistry
+  - text: >-
+      Zooarchaeological assemblages across Period I show a steady shift from wild gazelle and game toward
+      locally domesticated humped zebu cattle (Bos indicus), which became the dominant livestock by the end of Period I.
+    grade: A
+    sources:
+      - src.fuller-2006-agricultural-origins-south-asia
+      - src.chen-2010-zebu-cattle-south-asia-neolithic
+relations:
+  - kind: related-to
+    target: event.domestication-of-zebu-cattle
+  - kind: related-to
+    target: event.earliest-cotton-mehrgarh
+  - kind: preceded
+    target: site.bhirrana
+image:
+  commons: "File:Mehrgarh ruins.jpg"
+  alt: Excavated mud-brick cellular compartments and walls at Neolithic Mehrgarh
+  credit: Ashish_Premier
+  license: CC BY-SA 3.0
+tags:
+  - neolithic
+  - chalcolithic
+  - mehrgarh
+  - agriculture
+  - balochistan
+review:
+  status: draft
+  author: gemini-4-argon

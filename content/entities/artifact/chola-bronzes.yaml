@@ -1,0 +1,39 @@
+id: artifact.chola-bronzes
+type: artifact
+kind: art
+names:
+  en: Chola bronze sculptures
+  native: சோழர் செப்புத் திருமேனிகள்
+summary: >-
+  Chola bronzes are images of Hindu deities and saints cast by the lost-wax method in south India,
+  mainly from the 9th to the 13th century CE, to be carried in temple processions. The image of Shiva
+  as Nataraja, Lord of Dance, within a ring of flames is the best known; technical studies suggest the
+  Nataraja bronze form had Pallava-period origins.
+summaries:
+  kids: >-
+    Chola artists made beautiful metal statues of gods by shaping them in wax, covering the wax in clay,
+    and pouring in hot metal. The most famous shows Shiva dancing in a circle of fire.
+  teen: >-
+    Each bronze was cast solid from a single wax model, so no two are identical. Temple bronzes were
+    dressed and carried through the streets at festivals, and craftsmen at Swamimalai still use the
+    same lost-wax technique.
+region: Tamil Nadu
+location: { name: Swamimalai, lat: 10.96, lon: 79.33 }
+datings:
+  - method: art-historical
+    range: { earliest: "850 CE", latest: "1280 CE", precision: century, circa: true }
+    grade: B
+    label: Chola period of production
+    sources: [src.srinivasan-2016-tamil-chola-bronzes, src.srinivasan-2004-pallava-origins-nataraja]
+claims:
+  - text: The bronzes were cast solid by the lost-wax (cire perdue) process, a technique still practised by hereditary craftsmen at Swamimalai.
+    grade: B
+    sources: [src.srinivasan-2016-tamil-chola-bronzes]
+  - text: Analyses of metal composition and style led Sharada Srinivasan to argue that the Nataraja bronze originated in the Pallava period, before the Chola apogee.
+    grade: C
+    sources: [src.srinivasan-2004-pallava-origins-nataraja]
+relations:
+  - { kind: patronised-by, target: polity.chola-dynasty }
+wikidata: Q18411105
+tags: [bronze, sculpture, nataraja, chola, metallurgy]
+review: { status: draft, author: "claude-opus-5-5" }

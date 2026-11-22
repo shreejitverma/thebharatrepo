@@ -1,0 +1,35 @@
+id: tradition.vedic-chanting-unesco-inscription
+type: tradition
+kind: dharma
+names:
+  en: Tradition of Vedic chanting inscribed by UNESCO
+summary: The Tradition of Vedic chanting was proclaimed a Masterpiece in 2003
+  and inscribed on UNESCO’s Representative List in 2008.
+summaries:
+  kids: UNESCO first proclaimed Vedic chanting in 2003 and added it to its
+    Representative List in 2008.
+  teen: The Tradition of Vedic chanting entered UNESCO’s Masterpieces programme in
+    2003 and was incorporated into the Representative List in 2008.
+datings:
+  - method: documentary
+    range:
+      earliest: "2003"
+      latest: "2008"
+      precision: year
+      circa: false
+    grade: A
+    sources:
+      - src.unesco-2003-tradition-vedic-chanting
+claims:
+  - text: UNESCO records the tradition as originally proclaimed in 2003 and
+      inscribed in 2008.
+    grade: A
+    sources:
+      - src.unesco-2003-tradition-vedic-chanting
+tags:
+  - vedic
+  - oral-tradition
+  - unesco
+review:
+  status: draft
+  author: codex-gpt-6

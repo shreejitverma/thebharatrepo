@@ -1,0 +1,38 @@
+id: person.ramananda
+type: person
+kind: person
+names:
+  en: Ramananda
+  iast: Rāmānanda
+  native: रामानन्द
+summary: >-
+  Ramananda is remembered as a Vaishnava teacher associated with devotional communities in North India.
+  Accounts connecting him to Kabir and other poet-saints became important in later Ramanandi traditions,
+  but the chronology and historical form of his community remain disputed.
+summaries:
+  kids: >-
+    Ramananda is remembered as a teacher of devotion to Rama. Later stories connect him to Kabir, but
+    historians are careful because these stories were written down later.
+  teen: >-
+    Ramananda became an important figure in North Indian Vaishnava memory. Scholarship distinguishes
+    later Ramanandi traditions from the uncertain evidence for his own life and disciples.
+region: North India
+datings:
+  - method: textual-internal
+    range: { earliest: "1300 CE", latest: "1500 CE", precision: century, circa: true }
+    grade: C
+    label: Broad scholarly range amid disputed chronology
+    sources: [src.burghart-1978-founding-ramanandi-sect]
+claims:
+  - text: Ramananda is associated with the development of the Ramanandi religious community.
+    grade: B
+    sources: [src.burghart-1978-founding-ramanandi-sect]
+  - text: The historical chronology of Ramananda and the community's early formation are debated.
+    grade: B
+    sources: [src.burghart-1978-founding-ramanandi-sect]
+debate: >-
+  Dates proposed for Ramananda vary substantially, and the claim that Kabir was his direct disciple is
+  questioned by modern scholarship. Later lineage traditions remain historically significant evidence
+  for Ramanandi identity, but do not settle the chronology.
+tags: [vaishnavism, bhakti, north-india]
+review: { status: draft, author: "codex-gpt-6" }

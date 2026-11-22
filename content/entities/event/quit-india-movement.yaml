@@ -1,0 +1,37 @@
+id: event.quit-india-movement
+type: event
+kind: event
+names:
+  en: Quit India Movement
+summary: The Indian National Congress launched the Quit India movement in August
+  1942, demanding an end to British rule. British authorities arrested major
+  leaders and suppressed protests across the country.
+summaries:
+  kids: In 1942, Congress called for British rule to end. The government arrested
+    leaders and suppressed protests.
+  teen: The movement included strikes, demonstrations and local resistance under
+    wartime conditions, with substantial regional variation.
+datings:
+  - method: documentary
+    range:
+      earliest: "1942"
+      latest: "1942"
+      precision: year
+      circa: false
+    grade: A
+    label: Documentary record
+    sources: &a1
+      - src.metcalf-2012-concise-history-modern-india
+      - src.bose-jalal-2004-modern-south-asia
+claims:
+  - text: The Indian National Congress launched the Quit India movement in August
+      1942, demanding an end to British rule. British authorities arrested major
+      leaders and suppressed protests across the country.
+    grade: A
+    sources: *a1
+relations: []
+tags:
+  - event
+review:
+  status: draft
+  author: codex-gpt-6

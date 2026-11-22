@@ -1,0 +1,40 @@
+id: person.basava
+type: person
+kind: dharma
+names:
+  en: Basava
+  iast: Basavaṇṇa
+  native: ಬಸವಣ್ಣ
+summary: >-
+  Basava (Basavanna) was a 12th-century Kannada poet and minister at the Kalachuri court of Bijjala II
+  at Kalyana. His vachanas, short free-verse sayings addressed to Shiva as Kudalasangama, rejected
+  temple ritual and caste hierarchy and are central to the Virashaiva (Lingayat) tradition.
+summaries:
+  kids: >-
+    Basava was a poet and royal minister in Karnataka. He wrote short poems saying that the body itself
+    can be a temple, and that all devotees of Shiva are equal.
+  teen: >-
+    Basava's vachanas are in plain spoken Kannada rather than Sanskrit. He gathered a community of
+    devotees from many castes, and his poem "the rich will make temples for Shiva" contrasts built
+    temples with the living body.
+region: Northern Karnataka (Kalyana, now Basavakalyan)
+location: { name: Basavakalyan, lat: 17.87, lon: 76.95 }
+datings:
+  - method: textual-internal
+    range: { earliest: "1105 CE", latest: "1170 CE", precision: decade, circa: true }
+    grade: C
+    label: Contemporary of Bijjala II
+    sources: [src.ramanujan-1973-speaking-of-siva, src.flood-1996-introduction-to-hinduism]
+    note: His association with the Kalachuri usurper Bijjala II fixes him in the mid-12th century; exact birth and death years vary between accounts.
+claims:
+  - text: Basava's vachanas are addressed to Shiva under the name Kudalasangamadeva, lord of the meeting rivers.
+    grade: A
+    sources: [src.ramanujan-1973-speaking-of-siva]
+  - text: The Virashaiva movement linked with Basava rejected caste distinctions among devotees and emphasised the personal linga worn on the body.
+    grade: B
+    sources: [src.ramanujan-1973-speaking-of-siva, src.flood-1996-introduction-to-hinduism]
+relations:
+  - { kind: authored, target: text.vachana-sahitya, note: Among its principal authors }
+wikidata: Q771686
+tags: [lingayat, virashaiva, kannada, bhakti]
+review: { status: draft, author: "claude-opus-5-5" }

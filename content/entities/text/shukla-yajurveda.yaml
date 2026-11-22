@@ -1,0 +1,64 @@
+id: text.shukla-yajurveda
+type: text
+kind: text
+names:
+  en: Shukla Yajurveda
+  iast: Śukla Yajurveda
+  native: शुक्लयजुर्वेद
+summary: >-
+  The Shukla (White) Yajurveda, also known as the Vajasaneyi Samhita, is the branch of the
+  Yajurveda that separates the ritual mantras from their prose commentary, relegating the prose
+  explanations to the Shatapatha Brahmana. It survives in the Madhyandina and Kanva recensions.
+summaries:
+  kids: >-
+    The Shukla Yajurveda, or White Yajurveda, organizes ritual prayers clearly on their own,
+    keeping the prose explanations in a separate book called the Shatapatha Brahmana.
+  teen: >-
+    Associated with the sage Yajnavalkya and the eastern Vedic centres of Kosala and Videha, the
+    Shukla Yajurveda (Vajasaneyi Samhita) separates verse and prose mantras cleanly from their
+    exegesis in the Shatapatha Brahmana.
+region: Middle Ganga plain (Kosala and Videha, eastern Uttar Pradesh and Bihar)
+datings:
+  - method: linguistic
+    range: { earliest: "1000 BCE", latest: "700 BCE", best: "800 BCE", precision: century, circa: true }
+    grade: C
+    label: Late Samhita and eastern Vedic redaction
+    sources:
+      - src.gonda-1975-vedic-literature
+      - src.flood-2003-blackwell-companion-hinduism
+      - { id: src.eggeling-1882-satapatha-brahmana-part-1, locator: "Introduction" }
+    note: >-
+      Linguistic and geographical markers place the redaction of the Vajasaneyi Samhita after the
+      older Krishna Yajurveda Samhitas, reflecting the eastward expansion of Vedic culture toward
+      Kosala and Videha.
+  - method: traditional-puranic
+    range: { earliest: "3102 BCE", latest: "3000 BCE", precision: century, circa: true }
+    grade: D
+    label: Traditional Puranic reckoning
+    sources:
+      - src.flood-2003-blackwell-companion-hinduism
+    note: >-
+      Tradition holds that Yajnavalkya Vajasaneya received the Shukla Yajurveda directly from the
+      Sun deity Surya after parting from his teacher Vaishampayana.
+claims:
+  - text: >-
+      The Shukla Yajurveda is preserved in two closely related recensions, the Madhyandina and the
+      Kanva, consisting of 40 chapters (adhyayas) of ritual formulas.
+    grade: A
+    sources:
+      - src.gonda-1975-vedic-literature
+      - { id: src.eggeling-1882-satapatha-brahmana-part-1, locator: "Introduction" }
+  - text: >-
+      The fortieth and final chapter of the Vajasaneyi Samhita is the Isha Upanishad, making it
+      the only Principal Upanishad embedded directly inside a Vedic mantra Samhita.
+    grade: A
+    sources:
+      - src.olivelle-1998-early-upanisads
+      - src.gonda-1975-vedic-literature
+relations:
+  - { kind: part-of, target: text.yajurveda }
+  - { kind: commented-on, target: text.shatapatha-brahmana }
+  - { kind: related-to, target: text.brihadaranyaka-upanishad }
+  - { kind: related-to, target: tradition.agnicayana }
+tags: [veda, samhita, yajurveda, vajasaneyi, yajnavalkya]
+review: { status: draft, author: "gemini-4-argon" }

@@ -1,0 +1,42 @@
+id: event.ramayana-sites-project
+type: event
+kind: event
+names:
+  en: B. B. Lal’s Archaeology of the Ramayana Sites project
+summary: B. B. Lal described a project on archaeology of Ramayana sites
+  beginning in 1975. Its excavations examined sites associated in tradition with
+  the epic; archaeology does not by itself establish the historicity of the
+  narrative.
+summaries:
+  kids: Archaeologist B. B. Lal led a project beginning in 1975 that excavated
+    several places connected with the Ramayana tradition.
+  teen: B. B. Lal’s account places the start of the Archaeology of the Ramayana
+    Sites project in 1975. Its site investigations are archaeological evidence
+    about places and material remains, not proof of the epic’s events.
+region: Northern India
+datings:
+  - method: documentary
+    range:
+      earliest: "1975"
+      latest: "1975"
+      precision: year
+      circa: false
+    grade: A
+    sources:
+      - src.ramayana-sites-lal
+claims:
+  - text: B. B. Lal’s account says he initiated the Archaeology of the Ramayana
+      Sites project in 1975.
+    grade: A
+    sources:
+      - src.ramayana-sites-lal
+debate: Lal’s project linked excavated sites to places named in the Ramayana
+  tradition. The archaeological record can document stratigraphy and material
+  culture, but identification of sites with epic events and the historicity of
+  those events require separate argument.
+tags:
+  - archaeology
+  - ramayana
+review:
+  status: draft
+  author: codex-gpt-6

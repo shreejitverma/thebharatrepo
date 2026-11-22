@@ -1,0 +1,1337 @@
+- date: 2026-11-21
+  target: /history/maurya-empire
+  before: The first pan-Indian empire ... unified the subcontinent under a centralized administration.
+  after: The earliest known state to rule most of the subcontinent; control was uneven and the far south stayed outside it.
+  reason: Ashoka's own edicts name independent southern neighbours and are sparse in the far south, and the unqualified superlative needs a qualifier.
+  sources:
+    - src.hultzsch-1925-inscriptions-of-asoka
+    - src.smith-2005-networks-territories-ancient-states
+    - src.thapar-2002-early-india
+- date: 2026-11-21
+  target: /history/maurya-empire
+  before: Guided by the Arthashastra, the state controlled key industries, maintained a standing army, and established an elaborate espionage system.
+  after: The Arthashastra, in its surviving form, is argued to have been composed and edited over several centuries and cannot be used directly as a description of Mauryan government.
+  reason: Olivelle dates the text as we have it to the first centuries CE, so it is not straightforward Mauryan evidence.
+  sources:
+    - src.olivelle-2013-king-governance-law
+- date: 2026-11-21
+  target: /history/maurya-empire
+  before: "305 BCE: Defeat of Seleucus Nicator; Mauryan territory expands to Afghanistan."
+  after: Chandragupta and Seleucus I concluded a negotiated settlement, c. 305 to 303 BCE, including territory west of the Indus and 500 elephants per Greek sources.
+  reason: Greek accounts describe a treaty, not a clear Mauryan victory, and the extent of the territory is debated.
+  sources:
+    - src.thapar-2002-early-india
+    - src.singh-2008-ancient-early-medieval-india
+- date: 2026-11-21
+  target: /history/maurya-empire
+  before: Ashoka ... embracing Buddhism, spreading 'Dhamma' (moral law) across Asia.
+  after: Ashoka declared himself a lay Buddhist and promoted a broad ethical dhamma in his edicts; the spread of Buddhism across Asia was not his work alone.
+  reason: The edicts present dhamma as a public ethic, and later chronicles, not the edicts, describe the missions abroad.
+  sources:
+    - src.hultzsch-1925-inscriptions-of-asoka
+    - src.thapar-2012-asoka-decline-mauryas
+    - src.lahiri-2015-ashoka-ancient-india
+- date: 2026-11-21
+  target: /history/maurya-empire
+  before: Trade flourished via the Grand Trunk Road.
+  after: Greek writers describe a royal road from the northwest to Pataliputra; it should not be identified with the later Grand Trunk Road.
+  reason: The attribution of the modern road to the Mauryas is not supported by the sources.
+  sources:
+    - src.thapar-2002-early-india
+- date: 2026-11-21
+  target: /history/gupta-empire
+  before: At its zenith, from approximately 319 to 467 CE, it covered much of the Indian subcontinent.
+  after: The Gupta era begins in 319 or 320 CE; the kingdom grew under Samudragupta and Chandragupta II and was strained after about 467 CE. It did not cover most of the subcontinent directly.
+  reason: 319/320 is the start of the era, not an imperial peak, and the Gupta heartland was the north, with looser overlordship elsewhere.
+  sources:
+    - src.fleet-1888-inscriptions-early-gupta-kings
+    - src.agrawal-1989-rise-and-fall-imperial-guptas
+    - src.thapar-2002-early-india
+- date: 2026-11-21
+  target: /history/gupta-empire
+  before: This period is considered as the Golden Age of India by some historians.
+  after: The 'Golden Age' label is a modern judgment that many historians now question.
+  reason: Comparable cultural achievements occur in other regions and periods, and Gupta power was regional.
+  sources:
+    - src.thapar-2002-early-india
+    - src.williams-1982-art-of-gupta-india
+- date: 2026-11-21
+  target: /history/chola-empire
+  before: The Chola Dynasty (c. 850-1279 CE) was one of the longest-ruling dynasties in world history.
+  after: The medieval Cholas ruled for more than four centuries; the superlative is dropped.
+  reason: No systematic comparison supports the claim.
+  sources:
+    - src.subbarayalu-2012-south-india-under-cholas
+- date: 2026-11-21
+  target: /history/chola-empire
+  before: The Chola navy dominated the Indian Ocean, conquering Sri Lanka, the Maldives, and expanding influence to Southeast Asia (Srivijaya).
+  after: The Cholas conquered much of Sri Lanka and mounted a naval raid on Srivijaya c. 1025 CE; the Maldives claim is a court claim of uncertain extent, and no lasting Southeast Asian territory resulted.
+  reason: Inscriptions and scholarship support a notable expedition but not lasting naval dominance.
+  sources:
+    - src.kulke-2009-nagapattinam-to-suvarnadwipa
+    - src.spencer-1976-politics-of-plunder-cholas-ceylon
+    - src.sastri-1955-the-colas
+- date: 2026-11-21
+  target: /history/chola-empire
+  before: "850 CE: Vijayalaya Chola captures Thanjavur."
+  after: Vijayalaya took Thanjavur from the Muttaraiyar chiefs around the middle of the 9th century (c. 850 CE).
+  reason: The date is approximate and the dynasty's earlier history, including Ashoka's mention of the Cholas, is distinct.
+  sources:
+    - src.sastri-1955-the-colas
+    - src.hultzsch-1925-inscriptions-of-asoka
+- date: 2026-11-21
+  target: /history/maratha-empire
+  before: ended Mughal dominance and became the paramount power in India in the 18th century
+  after: The Marathas survived a long Mughal war and gained large revenue claims in the 18th century; 'paramount power' is a contested judgement, since Hyderabad, Mysore and the East India Company were also strong.
+  reason: The original overstated Maratha supremacy and attributed the end of Mughal power to one actor; the Mughal decline had several causes.
+  sources:
+    - src.gordon-1993-marathas-1600-1818
+- date: 2026-11-21
+  target: /history/maratha-empire
+  before: Founded by Chhatrapati Shivaji Maharaj in 1674
+  after: Shivaji built a fortified kingdom from the 1640s; 1674 is the date of his formal coronation as chhatrapati, which was itself a contested claim to status.
+  reason: 1674 marks a coronation, not the founding of the state, and the ritual was disputed.
+  sources:
+    - src.gordon-1993-marathas-1600-1818
+    - src.laine-2003-shivaji
+- date: 2026-11-21
+  target: /history/maratha-empire
+  before: Under the Peshwas the empire expanded from Attock to Thanjavur
+  after: The Peshwa-led system was a confederacy in which Sindhia, Holkar, Gaekwad and Bhonsle leaders held large, partly autonomous territories; it was not a centrally governed empire.
+  reason: The original implied a single expanding empire under the Peshwas, which the structure of Maratha power does not support.
+  sources:
+    - src.gordon-1993-marathas-1600-1818
+    - src.wink-1986-land-and-sovereignty
+- date: 2026-11-21
+  target: /history/maratha-empire
+  before: They were masters of guerrilla warfare (Ganimi Kava)
+  after: Maratha armies used mobile cavalry and raiding but also fought pitched battles and sieges, and adapted Deccan methods of war.
+  reason: "'Guerrilla warfare' alone is an oversimplification of the Maratha military record."
+  sources:
+    - src.gordon-1993-marathas-1600-1818
+- date: 2026-11-21
+  target: /history/british-raj
+  before: "1857: The First War of Independence (Sepoy Mutiny)"
+  after: The uprising of 1857 began as a revolt of Company sepoys; scholars now often call it a rebellion or uprising, and the 'war of independence' label dates from Savarkar in 1909.
+  reason: Both 'Mutiny' and 'First War of Independence' are partisan labels; the article names the debate.
+  sources:
+    - src.metcalf-2012-concise-history-modern-india
+- date: 2026-11-21
+  target: /history/british-raj
+  before: "Economic: De-industrialization of Indian textiles; introduction of railways and telegraph."
+  after: The extent of de-industrialisation is contested; railways and telegraph were built, but who benefited is debated; famine policy is a separate and serious part of the record.
+  reason: The original stated a contested economic thesis as fact and omitted the debate.
+  sources:
+    - src.parthasarathi-2011-why-europe-grew-rich
+    - src.metcalf-2012-concise-history-modern-india
+    - src.davis-2001-late-victorian-holocausts
+    - src.sen-1981-poverty-and-famines
+- date: 2026-11-21
+  target: /history/british-raj
+  before: "Social: English education (Macaulay), social reforms (Sati abolition)."
+  after: The 1829 sati regulation followed a debate involving Indian reformers and was argued over scriptural authority, with women's voices largely absent; Macaulay's 1835 Minute favoured English higher education.
+  reason: The original presented reform as a British act without the Indian participation and the debate.
+  sources:
+    - src.mani-1998-contentious-traditions
+    - src.metcalf-2012-concise-history-modern-india
+- date: 2026-11-21
+  target: /history/british-raj
+  before: British Raj (framing as British rule from Plassey)
+  after: "'Raj' strictly means Crown rule from 1858; the period 1757 to 1858 was rule by the East India Company."
+  reason: The original merged two different forms of government.
+  sources:
+    - src.metcalf-2012-concise-history-modern-india
+- date: 2026-11-21
+  target: /history/indian-independence-movement
+  before: non-violent resistance (Satyagraha) led by Mahatma Gandhi and armed revolution by figures like Bhagat Singh and Subhas Chandra Bose
+  after: The movement had many currents, including constitutional politics, mass campaigns, revolutionary groups and the Indian National Army; their relative weight is debated.
+  reason: A two-sided summary hid the range of currents and the historiographic debate.
+  sources:
+    - src.chandra-1989-indias-struggle-for-independence
+    - src.metcalf-2012-concise-history-modern-india
+- date: 2026-11-21
+  target: /history/indian-independence-movement
+  before: "1942: Launch of Quit India Movement; INA formation"
+  after: The INA was first formed in 1942 from prisoners of war in Southeast Asia and was reorganised under Bose in 1943.
+  reason: The INA existed in two phases; the original dated its formation without this.
+  sources:
+    - src.bose-2011-his-majestys-opponent
+- date: 2026-11-21
+  target: /history/indian-independence-movement
+  before: "1947: Independence and Partition (August 15)"
+  after: Pakistan became a dominion on 14 August 1947 and India on 15 August; Partition killed an uncertain number of people, with estimates from about 200,000 to 2 million.
+  reason: The original omitted the date for Pakistan and the scale and uncertainty of Partition violence.
+  sources:
+    - src.khan-2007-the-great-partition
+- date: 2026-11-21
+  target: /history/modern-india
+  before: "Constitution: Adopted in 1950"
+  after: The Constitution was adopted on 26 November 1949 and came into force on 26 January 1950.
+  reason: The original gave the date it entered into force as the date of adoption.
+  sources:
+    - src.guha-2007-india-after-gandhi
+- date: 2026-11-21
+  target: /history/modern-india
+  before: "Green Revolution: Achieved food self-sufficiency in the 1960s-70s."
+  after: High-yielding varieties raised grain output from the mid-1960s and ended large-scale imports, but gains were regional and unequal, and undernutrition persisted.
+  reason: "'Self-sufficiency' overstated a partial and uneven change."
+  sources:
+    - src.guha-2007-india-after-gandhi
+- date: 2026-11-21
+  target: /history/modern-india
+  before: Becoming a nuclear power (1974, 1998)
+  after: India conducted a test in 1974 that it called a peaceful nuclear explosion, and tests in 1998 after which it declared itself a nuclear-weapon state.
+  reason: The two events had different official characterisations.
+  sources:
+    - src.perkovich-1999-indias-nuclear-bomb
+- date: 2026-11-21
+  target: /history/modern-india
+  before: "2023: Chandrayaan-3 lands on the lunar south pole"
+  after: Chandrayaan-3 landed in the south polar region at about 69 degrees south latitude, not at the pole itself.
+  reason: The lunar south pole is at 90 degrees south; the landing site was about 21 degrees of latitude away.
+  sources: []
+- date: 2026-11-21
+  target: /history/modern-india
+  before: "1971: Indo-Pak War; liberation of Bangladesh"
+  after: The 1971 war followed the crisis in East Pakistan and led to the creation of Bangladesh; its outcome also depended on Cold War diplomacy.
+  reason: "'Liberation' is one framing; the article describes events and the scholarly argument about causes."
+  sources:
+    - src.raghavan-2013-1971
+- date: 2026-11-21
+  target: /music/01-origin-and-evolution
+  before: The Sama Veda ... This is considered the earliest form of organized music in India.
+  after: Vedic chant is the earliest musical tradition we can examine in detail because it was fixed in a text and transmitted orally; earlier and parallel non-Vedic music certainly existed but is not documented.
+  reason: An unqualified 'earliest' claim cannot be supported; the evidence only shows that chant is the earliest well-documented tradition.
+  sources:
+    - src.howard-1977-samavedic-chant
+    - src.rowell-1992-music-musical-thought-early-india
+- date: 2026-11-21
+  target: /music/01-origin-and-evolution
+  before: Vedic Period (c. 1500-500 BCE) ... The origins of Indian music can be traced back to the Vedic period.
+  after: The Samaveda is dated by linguistic and textual reasoning to roughly the later second millennium BCE, an estimate with wide margins; it does not date the origin of music.
+  reason: Dating the Samaveda is an estimate, and it marks the earliest documented chant, not the origin of music.
+  sources:
+    - src.witzel-1997-early-sanskritization-kuru
+    - src.singh-2008-ancient-early-medieval-india
+- date: 2026-11-21
+  target: /music/01-origin-and-evolution
+  before: "[The Natya Shastra] introduced the concepts of swara (musical note), raga (melodic framework), and tala (rhythmic cycle)."
+  after: The Natyashastra organises seven named pitches into grama scales, murchana and jati; the jati system is a precursor of raga, and raga as a defined concept is first treated systematically in the Brhaddesi attributed to Matanga.
+  reason: Swara predates the Natyashastra, and raga as a technical concept is not found there in its later sense.
+  sources:
+    - src.rowell-1992-music-musical-thought-early-india
+    - src.sharma-1992-brhaddesi-matanga
+    - src.widdess-1995-ragas-early-indian-music
+- date: 2026-11-21
+  target: /music/01-origin-and-evolution
+  before: Hindustani music ... was influenced by Persian music and developed new forms like Khayal, Ghazal, and Qawwali; Carnatic ... remained closer to the ancient Hindu traditions.
+  after: Hindustani music reflects a long, two-way exchange between Hindu and Muslim musicians; both Hindustani and Carnatic traditions have changed continuously and claim the same earlier treatises; ghazal and qawwali are separate genres, not branches of classical music.
+  reason: The original oversimplified Persian influence, implied a static southern tradition, and listed non-classical genres as classical developments.
+  sources:
+    - src.sanyal-widdess-2004-dhrupad
+    - src.neuman-1990-life-of-music
+    - src.tenijenhuis-1974-indian-music
+    - src.wade-1984-khyal
+- date: 2026-11-21
+  target: /music/02-core-concepts
+  before: Shruti is the smallest interval of pitch that the human ear can detect.
+  after: In the treatises the octave is analysed into 22 shrutis, a theoretical unit used to define the sizes of the scale intervals; it is not a claim about the limit of hearing.
+  reason: The original definition is not what the texts say.
+  sources:
+    - src.rangacharya-1996-natyasastra
+    - src.rowell-1992-music-musical-thought-early-india
+- date: 2026-11-21
+  target: /music/02-core-concepts
+  before: Indian music uses a system of just intonation.
+  after: Measured intonation in North Indian performance lies close to just-intonation ratios but varies by raga and performer.
+  reason: Empirical measurement shows approximation and variation, not a fixed just scale.
+  sources:
+    - src.jairazbhoy-1963-intonation-north-indian
+- date: 2026-11-21
+  target: /music/02-core-concepts
+  before: A dominant note (vadi) and a sub-dominant note (samvadi).
+  after: Vadi is the leading note and samvadi a consonant partner; 'sub-dominant' is a Western analogy that does not fit.
+  reason: The Western terms mislead about the function of these notes.
+  sources:
+    - src.jairazbhoy-1971-rags-north-indian-music
+- date: 2026-11-21
+  target: /music/02-core-concepts
+  before: Out of these seven, Sa and Pa are fixed, while the other five can be shuddha or vikrit, giving a total of 12 notes.
+  after: Sa and Pa are fixed; Re, Ga, Dha and Ni can be komal and Ma can be tivra, giving twelve pitches.
+  reason: Ma is raised, not lowered; the five variable notes alter in different directions, which the original blurred.
+  sources:
+    - src.jairazbhoy-1971-rags-north-indian-music
+- date: 2026-11-21
+  target: /music/03-hindustani-music
+  before: It is a tradition that originated in Vedic ritual chants and has been evolving since the 12th century CE ... Persian tradition of Musiqi-e assil.
+  after: Its theory has ancient roots, but the forms and gharana system described are documented mainly from the 15th to the 19th century, and a direct line from Vedic chant cannot be demonstrated.
+  reason: The original asserted origin and a precise start date without evidence, and the Persian tradition named was not supported by a scholarly source.
+  sources:
+    - src.neuman-1990-life-of-music
+    - src.widdess-1995-ragas-early-indian-music
+    - src.sanyal-widdess-2004-dhrupad
+- date: 2026-11-21
+  target: /music/03-hindustani-music
+  before: "Dhrupad: This is the oldest and most majestic form of Hindustani classical music."
+  after: Dhrupad is among the oldest living forms of North Indian classical song, documented from the 15th and 16th centuries.
+  reason: An unqualified 'oldest' needs a qualifier and a source.
+  sources:
+    - src.sanyal-widdess-2004-dhrupad
+- date: 2026-11-21
+  target: /music/03-hindustani-music
+  before: "Ghazal: ... has become a very popular form of light classical music in India; Khayal ... more romantic than Dhrupad."
+  after: Ghazal is a Persian-derived verse form that belongs to the light-classical and popular world; khyal rose to prominence in the 18th century and its origins are debated.
+  reason: Placing ghazal among classical forms and giving khyal no history misstates the record.
+  sources:
+    - src.manuel-1989-thumri
+    - src.wade-1984-khyal
+- date: 2026-11-21
+  target: /art-and-culture/bharatanatyam
+  before: Bharatanatyam is a major genre of Indian classical dance that originated in the Hindu temples of Tamil Nadu in South India.
+  after: The dance draws on older court and temple traditions (sadir, dasiattam) of hereditary performers, but the name Bharatanatyam and the modern concert form date from the 1930s revival in Madras.
+  reason: Saying the dance simply originated in temples compresses a documented history in which court musicians, hereditary performers and 1930s revivalists reshaped the art; the name and present form are twentieth-century.
+  sources:
+    - src.allen-1997-rewriting-script-south-indian-dance
+    - src.soneji-2012-unfinished-gestures
+- date: 2026-11-21
+  target: /art-and-culture/classical-dances-of-india
+  before: "Bharatanatyam (Tamil Nadu): Oldest form"
+  after: The oldest-form claim is withdrawn; its roots are older than its name, but the name and modern form date from the 1930s and no form can be shown to be the oldest.
+  reason: "'Oldest' is an unqualified superlative with no supporting evidence; scholarship dates the modern form to the 1930s."
+  sources:
+    - src.allen-1997-rewriting-script-south-indian-dance
+    - src.soneji-2012-unfinished-gestures
+- date: 2026-11-21
+  target: /art-and-culture/classical-dances-of-india
+  before: all rooted in the Natya Shastra
+  after: The forms share vocabulary and theory drawn from the Natyashastra, but were not derived directly from it; the link was strengthened in the twentieth century.
+  reason: The treatise is a general work on theatre composed centuries before any of the forms took their present shape, so 'rooted in' overstates a direct descent.
+  sources:
+    - src.ghosh-1951-natyasastra
+    - src.soneji-2012-unfinished-gestures
+- date: 2026-11-21
+  target: /art-and-culture/classical-dances-of-india
+  before: Kathak ... Influenced by Persian culture.
+  after: Kathak developed in both Hindu devotional storytelling and Muslim and Rajput court settings; a single Persian influence is too simple.
+  reason: Historical work on Kathak presents a mixed and contested set of influences.
+  sources:
+    - src.walker-2014-kathak-historical-perspective
+    - src.chakravorty-2008-bells-of-change
+- date: 2026-11-21
+  target: /art-and-culture/classical-dances-of-india
+  before: "Kuchipudi (Andhra Pradesh): Combines dance and acting."
+  after: Kuchipudi is a dance-drama named for the village of Kuchipudi, traditionally performed by Brahmin men and later also a solo form.
+  reason: The original description was generic; scholarship documents a specific male Brahmin troupe tradition.
+  sources:
+    - src.kamath-2019-impersonations
+    - src.soneji-2012-unfinished-gestures
+- date: 2026-11-21
+  target: /art-and-culture/classical-dances-of-india
+  before: "c. 200 BCE: Compilation of Natya Shastra by Bharata Muni. 15th-17th Century: Evolution of regional styles (Kathak, Kuchipudi)."
+  after: The Natyashastra is dated to roughly 200 BCE to 200 CE with debate; the single-author attribution and a 15th-17th century origin for Kathak and Kuchipudi are not asserted.
+  reason: The date is an estimate with a range, and the other dates were unsourced.
+  sources:
+    - src.ghosh-1951-natyasastra
+- date: 2026-11-21
+  target: /art-and-culture/martial-arts
+  before: "Kalaripayattu (Kerala): Often called the 'Mother of all Martial Arts.'"
+  after: The 'Mother of all Martial Arts' claim is withdrawn as an unsupported slogan.
+  reason: No scholarly source demonstrates that Kalaripayattu gave rise to other martial arts; the documented history is regional.
+  sources:
+    - src.zarrilli-1998-when-the-body-becomes-all-eyes
+- date: 2026-11-21
+  target: /art-and-culture/martial-arts
+  before: "c. 3rd Century BCE: Early references to martial practices in Sangam literature."
+  after: Sangam poems are usually dated to the early centuries CE, and kalari there means a battlefield rather than a martial school.
+  reason: The 3rd century BCE date is earlier than the usual dating of the poems, and the references do not describe the later art.
+  sources:
+    - src.thapar-2002-early-india
+    - src.zarrilli-1998-when-the-body-becomes-all-eyes
+- date: 2026-11-21
+  target: /art-and-culture/martial-arts
+  before: "c. 11th Century: Golden age of Kalaripayattu during the Chola-Chera wars."
+  after: The medieval wars of the 11th and 12th centuries are the usual context for the rise of Kerala's martial schools, but this is a graded estimate (C), not a documented golden age.
+  reason: A 'golden age' is an interpretation; direct evidence is thin.
+  sources:
+    - src.zarrilli-1998-when-the-body-becomes-all-eyes
+- date: 2026-11-21
+  target: /art-and-culture/martial-arts
+  before: "Mallakhamb (Maharashtra): Traditional aerial yoga/gymnastics performed on a vertical wooden pole."
+  after: Mallakhamb is athletic pole gymnastics, associated in tradition with training for wrestlers and an early-19th-century revival; the yoga comparison is dropped.
+  reason: "'Aerial yoga' is a modern comparison; the revival account is traditional and not verified in scholarly sources."
+  sources: []
+- date: 2026-11-21
+  target: /art-and-culture/indian-cinema
+  before: Indian Cinema is one of the oldest and largest film industries in the world
+  after: India is usually counted among the most prolific film-producing countries; the unqualified superlative 'oldest' is dropped.
+  reason: No source supports a ranking of India as the oldest film industry; film production began in several countries in the 1890s and 1900s. Volume of production is the supportable claim.
+  sources:
+    - src.gokulsing-2013-routledge-handbook-indian-cinemas
+    - src.rajadhyaksha-1999-encyclopaedia-indian-cinema
+- date: 2026-11-21
+  target: /art-and-culture/indian-cinema
+  before: Raja Harishchandra (1913) was the first full-length Indian feature film.
+  after: Raja Harishchandra (1913) is the first Indian feature film by the conventional reckoning; Shree Pundalik (1912) is a disputed earlier candidate.
+  reason: Whether Pundalik, a filmed stage play shown in 1912, counts as the first Indian feature is argued by historians, so the unqualified claim overstated the consensus.
+  sources:
+    - src.rajadhyaksha-1999-encyclopaedia-indian-cinema
+- date: 2026-11-21
+  target: /art-and-culture/indian-cinema
+  before: "1931: Alam Ara, the first Indian sound film."
+  after: Alam Ara (1931) is usually described as the first Hindi-Urdu sound feature; South Indian talkies such as Kalidas appeared the same year.
+  reason: The unqualified claim ignores the language-specific industries that adopted sound in 1931.
+  sources:
+    - src.rajadhyaksha-1999-encyclopaedia-indian-cinema
+- date: 2026-11-21
+  target: /art-and-culture/indian-cinema
+  before: The rise of pan-Indian cinema (Bollywood, Tollywood, Kollywood).
+  after: Bollywood is the Hindi industry of Mumbai; Tollywood and Kollywood are regional-industry nicknames, not synonyms for pan-Indian cinema.
+  reason: The original conflated regional industries with a single pan-Indian cinema.
+  sources:
+    - src.ganti-2004-bollywood
+    - src.gokulsing-2013-routledge-handbook-indian-cinemas
+- date: 2026-11-21
+  target: /art-and-culture/indian-cinema
+  before: "2023: RRR wins an Oscar for Best Original Song."
+  after: The song 'Naatu Naatu' from the Telugu film RRR won the Best Original Song award; the film itself did not win.
+  reason: The award was given to the song's composer and lyricist, not to the film.
+  sources:
+    - src.academy-2023-95th-awards
+- date: 2026-11-21
+  target: /art-and-culture/indian-cinema
+  before: Mother India (1957) became a global icon.
+  after: Mother India was nominated for the Academy Award for Best Foreign Language Film but did not win.
+  reason: "'Global icon' was unsupported; the documented international recognition is the Oscar nomination."
+  sources:
+    - src.chatterjee-2002-mother-india
+- date: 2026-11-21
+  target: /art-and-culture/indian-cuisine
+  before: "c. 2600 BCE: Evidence of turmeric, ginger, and garlic in Indus Valley."
+  after: Starch grains identified as resembling ginger and turmeric (and aubergine) were found in a cooking pot at the Mature Harappan site of Farmana; garlic is not claimed.
+  reason: The cited study supports ginger and turmeric at one site, with probabilistic identification; garlic is not supportable here and the site is Farmana in Haryana, not the whole Indus Valley.
+  sources:
+    - src.kashyap-2010-farmana-starch
+- date: 2026-11-21
+  target: /art-and-culture/indian-cuisine
+  before: India was the center of the global spice trade (Pepper, Cardamom, Cinnamon) for millennia.
+  after: India was a major source of pepper and cardamom and a hub of Indian Ocean trade; true cinnamon is native to Sri Lanka.
+  reason: Cinnamon is not an Indian spice, and 'the center' for 'millennia' is an overstatement.
+  sources:
+    - src.achaya-1994-indian-food
+    - src.collingham-2006-curry
+- date: 2026-11-21
+  target: /art-and-culture/indian-cuisine
+  before: "c. 16th Century: Introduction of potato, tomato, and chili by the Portuguese (now staples)."
+  after: American crops reached India from the sixteenth century through several channels, including the Portuguese; chilli spread quickly while potato and tomato became staples much later.
+  reason: The original compressed a long, multi-channel process into a single event and agent.
+  sources:
+    - src.achaya-1994-indian-food
+    - src.collingham-2006-curry
+- date: 2026-11-21
+  target: /art-and-culture/textiles-of-india
+  before: "c. 2500 BCE: Cotton cultivation in Indus Valley."
+  after: The earliest cotton thread from the subcontinent is from Neolithic Mehrgarh, sixth millennium BCE; Harappan cities show developed cotton use in the third millennium BCE.
+  reason: Evidence for cotton in the region is much older than the date given, and 'cultivation' is inferred rather than directly shown by the thread.
+  sources:
+    - src.moulherat-2002-mehrgarh-cotton
+    - src.marshall-1931-mohenjo-daro
+- date: 2026-11-21
+  target: /art-and-culture/textiles-of-india
+  before: "17th Century: Indian textiles dominate global trade (Calico)."
+  after: Indian cotton cloth was among the most widely traded manufactured goods of the early modern world.
+  reason: "'Dominate global trade' is an overstatement; the supported claim concerns manufactured cloth exports to Asia, Africa and Europe."
+  sources:
+    - src.riello-2009-how-india-clothed-the-world
+- date: 2026-11-21
+  target: /art-and-culture/textiles-of-india
+  before: "c. 1st Century CE: Silk Route trade connects India to Rome/China."
+  after: Removed as a dated claim; not supported by a cited source in the rewrite.
+  reason: The original gave no source and conflated land silk routes with Indian Ocean trade.
+  sources:
+    - src.guy-1998-woven-cargoes
+- date: 2026-11-21
+  target: /philosophy/the-vedas
+  before: the texts constitute the oldest layer of Sanskrit literature and the oldest scriptures of Hinduism
+  after: The Vedas are the earliest surviving Sanskrit literature; calling them the oldest scriptures of Hinduism holds only with the qualification that Vedic sacrificial religion differs substantially from later Hinduism.
+  reason: An unqualified 'oldest' claim needs a citation and qualifier, and the equation of Vedic religion with Hinduism overstates continuity.
+  sources:
+    - src.flood-2003-blackwell-companion-hinduism
+    - src.gonda-1975-vedic-literature
+- date: 2026-11-21
+  target: /philosophy/the-upanishads
+  before: They are the most recent part of the Vedas, the oldest scriptures of Hinduism
+  after: The earliest Upanishads close the Vedic sequence (c. 7th to 2nd centuries BCE by scholarly estimate), but texts called Upanishads continued to be composed into the medieval period, and the Vedas are the earliest surviving Hindu-tradition scriptures only with qualification.
+  reason: "The Upanishad corpus is not a single closed 'most recent part': it spans more than a thousand years, and an unqualified 'oldest' claim is not supported."
+  sources:
+    - src.olivelle-1998-early-upanisads
+    - src.cohen-2018-upanishads-complete-guide
+- date: 2026-11-21
+  target: /philosophy/six-darshanas
+  before: "c. 600-200 BCE: Formation of the Sutras for each school."
+  after: The surviving foundational sutras are mostly dated between roughly the 2nd century BCE and the 5th century CE, with the Samkhya Karika at the later end; the schools' ideas are older than their texts.
+  reason: The earlier range is not supported for the sutras as transmitted; dates are estimates with wide margins and disagreement on individual texts.
+  sources:
+    - src.perrett-2016-introduction-indian-philosophy
+    - src.king-1999-indian-philosophy
+    - src.larson-1979-classical-samkhya
+- date: 2026-11-21
+  target: /philosophy/six-darshanas
+  before: "c. 200 CE: Compilation of Yoga Sutras."
+  after: The Yoga Sutras are dated by scholars anywhere from the last centuries BCE to the 5th century CE, and the identification of the author with the grammarian Patanjali is disputed.
+  reason: A single date presented as fact overstates the consensus.
+  sources:
+    - src.bryant-2009-yoga-sutras-patanjali
+- date: 2026-11-21
+  target: /philosophy/six-darshanas
+  before: The six Astika schools accept the authority of the Vedas.
+  after: The astika/nastika division and the list of exactly six schools are a later scheme; medieval surveys gave different lists of six, and some of the six, such as classical Samkhya, do not rest on Vedic authority or accept a creator god.
+  reason: The original presented a later doxographic classification as a fixed historical fact and Vedic authority as a uniform criterion.
+  sources:
+    - src.nicholson-2010-unifying-hinduism
+    - src.larson-1979-classical-samkhya
+- date: 2026-11-21
+  target: /philosophy/six-darshanas
+  before: Founded by Gautama / Kanada / Kapila / Patanjali / Jaimini
+  after: Each school is traditionally attributed to a founder who is the reputed author of its foundational sutra; the historicity and dating of these figures vary and the ideas are older than the texts.
+  reason: Traditional attributions were stated as fact.
+  sources:
+    - src.perrett-2016-introduction-indian-philosophy
+    - src.king-1999-indian-philosophy
+- date: 2026-11-21
+  target: /history/indus-valley-civilisation
+  before: it was one of three early civilisations of the Near East and South Asia, and of the three, the most widespread
+  after: Mesopotamia, Egypt and the Indus are the best-known early urban traditions west of China, but they are not the only early civilisations; the Indus is often described as among the most extensive, with area estimates depending on how its edges are drawn.
+  reason: The 'three civilisations' framing is a textbook convention, not a finding, and the 'most widespread' claim is an estimate that depends on boundary definitions.
+  sources:
+    - src.wright-2010-ancient-indus
+    - src.coningham-2015-archaeology-south-asia
+- date: 2026-11-21
+  target: /history/indus-valley-civilisation
+  before: lasting from 3300 BCE to 1300 BCE, and in its mature form from 2600 BCE to 1900 BCE
+  after: Early Harappan c. 3300 to 2600 BCE, Mature c. 2600 to 1900 BCE, Late to c. 1300 BCE, all approximate scholarly estimates with phase boundaries varying by site.
+  reason: The original gave round dates as fixed; they are phase estimates from radiocarbon and stratigraphy.
+  sources:
+    - src.possehl-2002-indus-civilization
+- date: 2026-11-21
+  target: /history/vedic-period
+  before: the crystallization of the caste system (Varna)
+  after: A fourfold varna ideal appears in a late Rigvedic hymn (RV 10.90) and is elaborated in later Vedic priestly texts; jati, the actual birth-groups, is a later and distinct reality, and the existence of a developed caste system in this period is not established.
+  reason: Varna (a theoretical scheme) and jati (social groups) were conflated, and the claim of crystallisation in this period overstates the evidence.
+  sources:
+    - src.jamison-brereton-2014-rigveda
+    - src.bayly-1999-caste-society-politics
+    - src.olivelle-2005-manus-code-of-law
+- date: 2026-11-21
+  target: /history/vedic-period
+  before: tag 'aryans'; the Vedic Period (c. 1500 - c. 500 BCE) ... defined by the composition of the Vedas
+  after: The tag is replaced with 'vedic people' and 'indo-aryan'; the origin of Indo-Aryan speakers is presented as a debate between migration and indigenist positions, and 1500 to 500 BCE is graded as a reasoned estimate (grade C).
+  reason: "'Aryans' as a people is outdated race-theory vocabulary; the dates are linguistic and archaeological estimates, not attested."
+  sources:
+    - src.trautmann-1997-aryans-and-british-india
+    - src.narasimhan-2019-formation-human-populations
+    - src.talageri-2000-rigveda-historical-analysis
+- date: 2026-11-21
+  target: /history/vedic-period
+  before: "c. 1200 BCE: Expansion into the Gangetic Plain; Use of Iron."
+  after: Iron appears in the Ganga plain by the early first millennium BCE, with some excavators proposing considerably earlier dates; the Painted Grey Ware horizon is dated roughly to the early first millennium BCE.
+  reason: The single date 1200 BCE overstated precision and the dating of early iron is debated.
+  sources:
+    - src.chakrabarti-1992-early-use-iron-india
+    - src.tewari-2003-origins-iron-working-india
+    - src.allchin-1995-archaeology-early-historic-south-asia
+- date: 2026-11-21
+  target: /history/mahajanapadas
+  before: "c. 563-483 BCE: Life of Gautama Buddha; c. 544-492 BCE: Bimbisara rules Magadha; c. 540-468 BCE: Life of Mahavira"
+  after: These are dates of the long chronology; many historians place the Buddha's death around 400 BCE, with Bimbisara and Ajatashatru shifting accordingly.
+  reason: The precise dates were presented as established but depend on one reading of the Sri Lankan chronicles.
+  sources:
+    - src.cousins-1996-dating-historical-buddha
+    - src.thapar-2002-early-india
+- date: 2026-11-21
+  target: /history/mahajanapadas
+  before: "By 600 BCE ... the rise of 16 Great Kingdoms ... Republics (Ganas/Sanghas): Oligarchic assemblies"
+  after: Sixteen is the Buddhist textual list (Jain lists differ), and the republics are described as clan-based assemblies whose character is debated.
+  reason: The number and the characterisation of the republics reflect particular texts and are not uniform.
+  sources:
+    - src.bodhi-2012-numerical-discourses-buddha
+    - src.thapar-2002-early-india
+- date: 2026-11-21
+  target: /science/ancient-mathematics
+  before: Indian mathematicians made pioneering contributions to the field, notably the invention of zero, the decimal system, and early calculus.
+  after: "The article states what the texts show: place-value zero is covered in its own article with 'earliest known' wording, and the Kerala school's series are described as series expansions, not a general calculus."
+  reason: Unqualified 'invention' claims are not supported; place-value with a placeholder also arose in Babylonia and among the Maya, and the Kerala results lack the general derivative and integral concepts of calculus.
+  sources:
+    - src.plofker-2009-mathematics-in-india
+    - src.joseph-2011-crest-of-the-peacock
+- date: 2026-11-21
+  target: /science/ancient-mathematics
+  before: "Calculus: The Kerala School (Madhava) developed infinite series for sine, cosine, and arctangent centuries before Newton and Leibniz."
+  after: Later Kerala sources attribute the series to Madhava; his own works are not known to survive; the series are not a general calculus; transmission to Europe is a hypothesis, not established.
+  reason: The attribution rests on later works such as Nilakantha's Tantrasamgraha and the Yuktibhasha, and the 'calculus' label overstates the results.
+  sources:
+    - src.plofker-2009-mathematics-in-india
+    - src.roy-1990-series-formula-pi
+    - src.joseph-2011-crest-of-the-peacock
+- date: 2026-11-21
+  target: /science/ancient-mathematics
+  before: "Brahmagupta (598-668 CE): Defined rules for zero and negative numbers."
+  after: Brahmagupta's 628 CE text is the earliest surviving text that gives rules for arithmetic with zero and negative quantities; some of his rules, including division by zero, are incorrect by modern standards.
+  reason: "'Earliest surviving' is the evidence-based qualifier, and the original omitted that part of the treatment is faulty."
+  sources:
+    - src.plofker-2009-mathematics-in-india
+- date: 2026-11-21
+  target: /science/ancient-mathematics
+  before: "Bhaskara II (1114-1185 CE): Wrote Lilavati; worked on calculus concepts."
+  after: Bhaskara II wrote the Lilavati and Bijaganita in the 12th century and set out the chakravala method for indeterminate equations; the 'calculus concepts' claim is dropped.
+  reason: The unspecific calculus claim was not supported by a cited source.
+  sources:
+    - src.plofker-2009-mathematics-in-india
+- date: 2026-11-21
+  target: /science/ancient-mathematics
+  before: "Trigonometry: Introduction of sine (jya) and cosine (kojya)."
+  after: Indian texts use a half-chord sine (jya) and the sine of the complement, the ancestor of the Arabic and Latin terms; this is described as systematic use, not sole introduction.
+  reason: Unqualified 'introduction' overstates; Greek chord tables preceded the Indian half-chord sine.
+  sources:
+    - src.plofker-2009-mathematics-in-india
+- date: 2026-11-21
+  target: /science/ancient-mathematics
+  before: "Srinivasa Ramanujan (1887-1920): Modern genius in number theory."
+  after: Removed from this article, which covers ancient and medieval Indian mathematics.
+  reason: Ramanujan belongs to modern mathematics, and the entry carried no source.
+  sources:
+    - src.plofker-2009-mathematics-in-india
+- date: 2026-11-21
+  target: /science/zero-and-the-decimal-system
+  before: The decimal system, which is the basis of modern mathematics, was also developed in India.
+  after: Decimal place-value notation with zero as a number is documented in Sanskrit texts from the middle of the first millennium CE, and its transmission to the Arabic world and Europe is traced; placeholder zeros also arose independently in Babylonia and among the Maya.
+  reason: "'Developed in India' is stated without evidence of when and how, and independent placeholder systems existed elsewhere."
+  sources:
+    - src.plofker-2009-mathematics-in-india
+    - src.joseph-2011-crest-of-the-peacock
+- date: 2026-11-21
+  target: /science/zero-and-the-decimal-system
+  before: The concept of zero as a number and not merely a symbol for the absence of a quantity was a key innovation in the history of mathematics.
+  after: The earliest surviving text with rules for zero as a number is Brahmagupta's of 628 CE; the Bakhshali manuscript's date, and whether its zeros are numbers or placeholders, are disputed.
+  reason: An undated claim of innovation is replaced by the earliest surviving evidence and the 2017 dispute over the Bakhshali manuscript.
+  sources:
+    - src.plofker-2009-mathematics-in-india
+    - src.bodleian-2017-bakhshali-carbon-dating
+    - src.plofker-2017-bakhshali-radiocarbon
+- date: 2026-11-21
+  target: /science/ancient-astronomy
+  before: "Heliocentrism: Aryabhata proposed the earth rotates on its axis."
+  after: Aryabhata proposed a rotating Earth within a geocentric planetary model; a partly Sun-centred (geo-heliocentric) planetary model appears in Nilakantha's Tantrasamgraha of 1501.
+  reason: Axial rotation is not heliocentrism; the heading mislabelled it.
+  sources:
+    - src.clark-1930-aryabhatiya
+    - src.plofker-2009-mathematics-in-india
+- date: 2026-11-21
+  target: /science/ancient-astronomy
+  before: "Eclipses: Scientific explanation of solar and lunar eclipses (shadows of moon/earth) rather than demons (Rahu/Ketu)."
+  after: Aryabhata explained eclipses by shadows; the Rahu tradition persisted, and Brahmagupta criticised Aryabhata's account.
+  reason: The original presented a clean replacement of myth by science, which the history does not show.
+  sources:
+    - src.clark-1930-aryabhatiya
+    - src.plofker-2009-mathematics-in-india
+- date: 2026-11-21
+  target: /science/ancient-astronomy
+  before: "Gravity: Brahmagupta recognized gravity as an attractive force."
+  after: Brahmagupta stated that bodies fall because it is the nature of the Earth to attract them; this is not a law of universal gravitation.
+  reason: The original overstated a qualitative remark as a theory of gravity.
+  sources:
+    - src.plofker-2009-mathematics-in-india
+- date: 2026-11-21
+  target: /science/ancient-astronomy
+  before: "c. 1400 BCE: Vedanga Jyotisha (Lagadha)."
+  after: The solstice data in the Vedanga Jyotisha point to the 14th to 12th century BCE if they record observation, but Pingree and Plofker date the surviving redaction to the 5th or 4th century BCE.
+  reason: The date is contested and was given as settled.
+  sources:
+    - src.pingree-1981-jyotihsastra
+    - src.plofker-2009-mathematics-in-india
+- date: 2026-11-21
+  target: /science/ancient-astronomy
+  before: "Jantar Mantar: Built by Maharaja Jai Singh II in the 18th century (Jaipur, Delhi)... 1724-1735: Construction of Jantar Mantars."
+  after: Sawai Jai Singh II built five observatories (Delhi, Jaipur, Ujjain, Varanasi, Mathura), beginning with Delhi in 1724 and continuing into the 1730s.
+  reason: The original named two sites and compressed the building programme into a single span.
+  sources:
+    - src.sharma-1987-jai-singh-astronomical-efforts
+- date: 2026-11-21
+  target: /literature/mahabharata
+  before: Core events (Kurukshetra War) likely took place c. 8th-9th Century BCE.
+  after: The war is not independently attested and cannot be dated; scholars place the Kuru-Panchala world in the early Iron Age of the early first millennium BCE, tradition places the war around 3102 BCE, and astronomical reconstructions disagree with each other.
+  reason: The original stated a date for the war as likely without evidence. No source outside the epic records the war, so the date is presented as contested, with each position labelled and graded.
+  sources:
+    - src.witzel-1997-early-sanskritization-kuru
+    - src.thapar-2002-early-india
+    - src.bhatnagar-2017-date-mahabharata-war
+- date: 2026-11-21
+  target: /literature/mahabharata
+  before: It is the longest epic poem known and has been described as 'the longest poem ever written'.
+  after: It is a very long epic of about 100,000 verses in its traditional form and somewhat shorter in the reconstructed critical text; the superlative is removed.
+  reason: The unqualified superlative was uncited and not needed; length is reported with the traditional and critical-edition figures.
+  sources:
+    - src.brockington-1998-sanskrit-epics
+- date: 2026-11-21
+  target: /literature/mahabharata
+  before: "Bhishma Parva: Contains the Gita; Compilation and expansion c. 400 BCE - 400 CE of the text attributed to Vyasa."
+  after: The Gita is placed in the Bhishma Parva; the composition range of about 400 BCE to 400 CE is kept but is described as a debated estimate (grade C) and the text as composite, not the work of one author.
+  reason: Attribution to a single author is a tradition, not a scholarly finding.
+  sources:
+    - src.brockington-1998-sanskrit-epics
+- date: 2026-11-21
+  target: /literature/modern-indian-literature
+  before: "Munshi Premchand: the 'Emperor of Novels'."
+  after: "'Emperor of Novels' is described as an honorific title, not a formal award."
+  reason: The title is a popular epithet; the original gave it as a fact about his status.
+  sources:
+    - src.orsini-2002-hindi-public-sphere
+- date: 2026-11-21
+  target: /art-and-culture/ajanta-ellora-caves
+  before: The Ajanta and Ellora Caves are a group of rock-cut Buddhist, Hindu, and Jain monuments ... famous for their paintings and sculptures.
+  after: Ajanta and Ellora are two separate sites about 100 km apart. Ajanta is Buddhist only and known for its wall paintings; Ellora has Buddhist, Hindu and Jain caves and is known for sculpture and the Kailasa temple.
+  reason: The original merged two distinct monument groups and implied all three religions and both art forms belong to both sites.
+  sources:
+    - src.unesco-1983-ajanta-caves
+    - src.unesco-1983-ellora-caves
+- date: 2026-11-21
+  target: /art-and-culture/indian-architecture
+  before: "Indo-Islamic Architecture: Introduced the arch, dome, and minaret."
+  after: Turkic rulers of the Delhi Sultanate introduced the true arch and true dome built with wedge-shaped stones; Indian builders already used corbelled arches and domes.
+  reason: The original implied arches and domes were wholly new; the new element was the structural method.
+  sources:
+    - src.harle-1994-art-architecture-indian-subcontinent
+    - src.asher-1992-architecture-of-mughal-india
+- date: 2026-11-21
+  target: /art-and-culture/indian-architecture
+  before: "Vesara Style (Deccan): A hybrid of Nagara and Dravida."
+  after: The 'Vesara' label is a loose, contested shorthand; specialists describe Deccan temples by dynasty and region, and treat Hoysala temples as a distinctive tradition.
+  reason: A flat 'hybrid' classification overstates a modern, inconsistently used category.
+  sources:
+    - src.hardy-1995-indian-temple-architecture
+    - src.michell-1988-hindu-temple
+- date: 2026-11-21
+  target: /art-and-culture/indian-architecture
+  before: "c. 6th-13th Century: Golden Age of Temple Architecture."
+  after: Temple building continued from the Gupta period onward; 'golden age' is a value judgement, not a dating.
+  reason: The phrase was unsupported and presented opinion as chronology.
+  sources:
+    - src.harle-1994-art-architecture-indian-subcontinent
+    - src.michell-1988-hindu-temple
+- date: 2026-11-21
+  target: /art-and-culture/indian-architecture
+  before: "c. 3rd Century BCE: Stupas (Sanchi)."
+  after: The Great Stupa at Sanchi was founded in the third century BCE (usually attributed to Ashoka's time) and enlarged later, with the carved gateways added afterwards.
+  reason: The original compressed the whole history of the stupa into one Sanchi date.
+  sources:
+    - src.unesco-1989-sanchi
+    - src.harle-1994-art-architecture-indian-subcontinent
+- date: 2026-11-21
+  target: /art-and-culture/indian-architecture
+  before: "c. 2500 BCE: Harappan urban planning."
+  after: Mature Harappan planned cities date to about 2600 to 1900 BCE.
+  reason: A single date was replaced by the range given in the excavation literature.
+  sources:
+    - src.possehl-2002-indus-civilization
+    - src.kenoyer-1998-ancient-cities-indus
+- date: 2026-11-21
+  target: /art-and-culture/indian-painting
+  before: "c. 10,000 BCE: Bhimbetka Rock Shelters."
+  after: Bhimbetka's paintings span several phases from the Mesolithic to the historic period and are dated indirectly; no single date such as 10,000 BCE is secure.
+  reason: Most rock art cannot be directly dated, so a single precise date overstated the evidence.
+  sources:
+    - src.neumayer-2013-prehistoric-rock-art-india
+    - src.unesco-2003-bhimbetka
+- date: 2026-11-21
+  target: /art-and-culture/indian-painting
+  before: "Ajanta Caves (2nd BCE - 5th CE): Depict Jataka tales; masterpiece of expression. ... c. 400-500 CE: Ajanta Murals."
+  after: Ajanta has early patches from the first centuries BCE and CE and finest paintings from the fifth century CE; Spink's 460 to 480 CE chronology is debated.
+  reason: The original gave two inconsistent date ranges and no sign of the scholarly debate.
+  sources:
+    - src.spink-2006-ajanta-cave-by-cave
+    - src.harle-1994-art-architecture-indian-subcontinent
+- date: 2026-11-21
+  target: /art-and-culture/indian-painting
+  before: "Mughal School: Focus on realism. Rajput/Pahari School: Focus on devotion (Krishna/Radha), romance, and folk themes."
+  after: Mughal painting includes idealised and allegorical conventions as well as naturalistic portraits and studies. Rajput and Pahari painting are court traditions with devotional, romantic, literary and portrait subjects, and are not folk art.
+  reason: The one-word summaries mischaracterised the schools, and 'folk' conflated court painting with folk traditions.
+  sources:
+    - src.beach-1992-mughal-rajput-painting
+- date: 2026-11-21
+  target: /art-and-culture/indian-painting
+  before: "c. 16th-18th Century: Golden Age of Miniature Painting."
+  after: Court painting flourished at different times in different courts, from the sixteenth to the nineteenth century.
+  reason: "'Golden age' is a judgement, and the court schools did not peak simultaneously."
+  sources:
+    - src.beach-1992-mughal-rajput-painting
+- date: 2026-11-21
+  target: /philosophy/buddhism
+  before: Buddhism is "a non-theistic philosophy"
+  after: A religion and path of practice; gods appear in its cosmology but are neither creators nor saviours
+  reason: Calling it a non-theistic philosophy understates its devotional and ritual dimensions and misstates the role of deities in the texts.
+  sources:
+    - src.harvey-2013-introduction-to-buddhism
+- date: 2026-11-21
+  target: /philosophy/buddhism
+  before: Birth c. 563 BCE, death c. 483 BCE
+  after: "Dates are contested: the death is now often placed in the decades around 400 BCE (c. 420 to 350 BCE); 563 to 483 BCE is a modern adjustment of the Sri Lankan chronology (death 544/543 BCE)"
+  reason: The 1988 symposium and later work (Cousins, Gombrich) showed the older dates are not securely founded.
+  sources:
+    - src.cousins-1996-dating-historical-buddha
+    - src.gombrich-2006-theravada-buddhism
+- date: 2026-11-21
+  target: /philosophy/buddhism
+  before: "c. 528 BCE: Enlightenment at Bodh Gaya; c. 483 BCE: Mahaparinirvana and First Buddhist Council"
+  after: Presented as traditional dates drawn from later texts, not as established history
+  reason: These dates depend on the long chronology and on texts written down centuries after the events.
+  sources:
+    - src.cousins-1996-dating-historical-buddha
+    - src.harvey-2013-introduction-to-buddhism
+- date: 2026-11-21
+  target: /philosophy/buddhism
+  before: c. 383 BCE Second Council; c. 250 BCE Third Council under Ashoka
+  after: Council traditions are reported by monastic texts and Sri Lankan chronicles, differ between schools, and are not mentioned in Ashoka's inscriptions
+  reason: The council dates are tradition tied to the discredited chronology, not attested history.
+  sources:
+    - src.gombrich-2006-theravada-buddhism
+    - src.hultzsch-1925-inscriptions-of-asoka
+    - src.thapar-2002-early-india
+- date: 2026-11-21
+  target: /philosophy/buddhism
+  before: "c. 72 CE: Fourth Buddhist Council; Split into Hinayana and Mahayana"
+  after: The Mahayana emerged gradually from about the first century BCE to first century CE; no council caused a split; "Hinayana" is a polemical term
+  reason: The claim conflates a northern tradition of a council under Kanishka with the gradual emergence of the Mahayana, and uses a pejorative label.
+  sources:
+    - src.williams-2009-mahayana-buddhism
+    - src.harvey-2013-introduction-to-buddhism
+- date: 2026-11-21
+  target: /philosophy/buddhism
+  before: "Four Noble Truths: Life is suffering; suffering has a cause (desire)"
+  after: Dukkha (unsatisfactoriness, often translated suffering) arises from craving (tanha)
+  reason: The first truth is not that all of life is only suffering, and the cause is craving, a more specific term than desire.
+  sources:
+    - src.harvey-2013-introduction-to-buddhism
+- date: 2026-11-21
+  target: /philosophy/jainism
+  before: "c. 599 BCE: Birth of Mahavira"
+  after: 599 to 527 BCE is the traditional Svetambara reckoning; scholars place Mahavira in about the fifth century BCE, with exact decades debated
+  reason: The traditional date was stated as fact; it is tradition and is in tension with the modern dating of the Buddha's contemporary.
+  sources:
+    - src.dundas-2002-the-jains
+    - src.bronkhorst-2007-greater-magadha
+- date: 2026-11-21
+  target: /philosophy/jainism
+  before: Mahavira (24th Tirthankara)
+  after: The twenty-fourth Tirthankara in Jain tradition; only Mahavira and, to many scholars, Parshva are historical
+  reason: Stating tradition as plain fact did not distinguish the mythic earlier Tirthankaras from the historical teachers.
+  sources:
+    - src.dundas-2002-the-jains
+    - src.jacobi-1884-jaina-sutras-part-1
+- date: 2026-11-21
+  target: /philosophy/jainism
+  before: "c. 300 BCE: First Jain Council at Pataliputra; c. 5th Century CE: Second Jain Council at Valabhi; final redaction of scriptures"
+  after: These are Svetambara traditions, not independently attested; the Digambara hold that the old canon was lost
+  reason: The original presented one tradition's council history as Jainism's history.
+  sources:
+    - src.dundas-2002-the-jains
+    - src.jaini-1979-jaina-path-of-purification
+- date: 2026-11-21
+  target: /philosophy/jainism
+  before: "c. 1st Century CE: Schism into Digambara and Svetambara"
+  after: The division was gradual; the Svetambara traditional date is the end of the first century CE, and the two groups are clearly distinct by the mid first millennium CE
+  reason: A single dated schism is a tradition-based simplification of a gradual process.
+  sources:
+    - src.dundas-2002-the-jains
+- date: 2026-11-21
+  target: /philosophy/jainism
+  before: "Brahmacharya: Celibacy/Chastity (among five principles)"
+  after: Five great vows for monastics, with celibacy as the fifth added by Mahavira according to the canon (Parshva taught four); lay vows are modified, chastity within marriage
+  reason: The original did not distinguish monastic from lay practice or the four-vow tradition of Parshva.
+  sources:
+    - src.jacobi-1884-jaina-sutras-part-1
+    - src.jaini-1979-jaina-path-of-purification
+- date: 2026-11-21
+  target: /philosophy/bhakti-movement
+  before: Started in Tamil Nadu (6th-9th century) by Alvars and Nayanars as the origin of the Bhakti Movement
+  after: The Tamil saints are the earliest large surviving body of such poetry, but the picture of one movement spreading from the south is a modern construction
+  reason: Hawley shows that the single-movement narrative was built in the late nineteenth and twentieth centuries and hides regional variety.
+  sources:
+    - src.hawley-2015-storm-of-songs
+    - src.hardy-1983-viraha-bhakti
+- date: 2026-11-21
+  target: /philosophy/bhakti-movement
+  before: preaching devotion ... disregarding caste and ritualism
+  after: Some poets criticised caste and ritual, others worked within them, and the effect varied by place
+  reason: A blanket claim that bhakti disregarded caste and ritual is not supported across its poets and schools.
+  sources:
+    - src.hawley-2015-storm-of-songs
+    - src.hess-2015-bodies-of-song
+    - src.ramanujan-1973-speaking-of-siva
+- date: 2026-11-21
+  target: /philosophy/bhakti-movement
+  before: "c. 1100 CE: Ramanuja; 1440-1518: Kabir Das; 1498-1547: Mirabai"
+  after: Ramanuja is traditionally dated 1017 to 1137; Kabir is dated only to the fifteenth century with traditional years 1440 to 1518; Mirabai's traditional dates are 1498 to 1547 and her attributed songs include later compositions
+  reason: The original gave precise years as fact; they are traditional or uncertain.
+  sources:
+    - src.carman-1974-theology-of-ramanuja
+    - src.hess-2015-bodies-of-song
+    - src.hawley-2005-three-bhakti-voices
+- date: 2026-11-21
+  target: /philosophy/bhakti-movement
+  before: "c. 1238-1325: Nizamuddin Auliya (Sufi Chishti Order) listed in the bhakti timeline"
+  after: Sufi saints belong to a separate Islamic tradition that interacted with bhakti and are not counted among the bhakti poets
+  reason: The entry conflated two distinct traditions.
+  sources:
+    - src.hawley-2015-storm-of-songs
+- date: 2026-11-21
+  target: /science/ancient-metallurgy
+  before: India was a global leader in metallurgy for millennia, exporting high-quality steel and pioneering zinc extraction.
+  after: Indian metalworkers made notable advances in copper, iron, crucible steel and zinc, each with its own evidence and dating; no global ranking is claimed.
+  reason: A blanket superlative is not supported by any single source; the article now states each technology's evidence separately.
+  sources:
+    - src.chakrabarti-1992-early-use-iron-india
+    - src.craddock-1983-zinc-production-medieval-india
+- date: 2026-11-21
+  target: /science/ancient-metallurgy
+  before: "The Iron Pillar of Delhi: A 7-meter high column from the Gupta period (c. 400 CE) that has resisted rust for over 1,600 years."
+  after: The pillar is about 7 m tall, forge-welded wrought iron; it does corrode, extremely slowly, because of a protective iron phosphate film. The c. 400 CE date rests on identifying the inscribed king Chandra as Chandragupta II.
+  reason: The pillar is not rust-proof and its durability has a materials-science explanation; the dating rests on an identification, not an absolute date.
+  sources:
+    - src.balasubramaniam-2000-corrosion-delhi-iron-pillar
+    - src.balasubramaniam-2005-story-delhi-iron-pillar
+- date: 2026-11-21
+  target: /science/ancient-metallurgy
+  before: "Zinc Smelting: India was the first to master zinc distillation (Zawar mines, Rajasthan) around the 12th century, centuries before Europe."
+  after: Zawar is among the earliest known and best-documented sites of large-scale zinc production by distillation; the mines are older, the industry is medieval, and the 'centuries before Europe' comparison is dropped.
+  reason: An unqualified 'first' and a comparative claim were unsupported; the sources describe Zawar's technology and medieval dating but do not establish priority.
+  sources:
+    - src.craddock-1983-zinc-production-medieval-india
+    - src.freestone-1990-zawar-materials-analysis
+    - src.willies-1984-lead-zinc-mining-rajasthan
+- date: 2026-11-21
+  target: /science/ancient-metallurgy
+  before: "c. 1200 BCE: Iron Age begins in India."
+  after: Iron smelting is securely attested across India by about 1200 to 1000 BCE, with an earlier, debated case from the central Ganga plain (Tewari).
+  reason: The origin of Indian ironworking is a live scholarly debate with multiple regional centres, not a single starting date.
+  sources:
+    - src.chakrabarti-1992-early-use-iron-india
+    - src.tewari-2003-origins-iron-working-india
+- date: 2026-11-21
+  target: /science/ancient-metallurgy
+  before: "c. 300 BCE: Production of Wootz steel begins in South India."
+  after: The date at which Indian crucible steel began is not securely fixed; the 300 BCE figure is removed.
+  reason: No consulted source supports the specific date; the article describes the technology and a documented late production site instead.
+  sources:
+    - src.rao-2021-mysore-process-crucible-steel
+    - src.verhoeven-1996-wootz-damascus-steel-blades
+- date: 2026-11-21
+  target: /science/ayurveda
+  before: Ayurveda is one of the world's oldest medical systems, originating in India over 3,000 years ago.
+  after: Vedic healing material (the Atharvaveda) is about 3,000 years old or more, but Ayurveda as a systematic medicine is documented in classical texts built up over the last centuries BCE and the first millennium CE.
+  reason: The unqualified 'oldest' and the 3,000-year origin conflate Vedic healing charms with the classical medical system.
+  sources:
+    - src.wujastyk-2003-roots-of-ayurveda
+    - src.wujastyk-2011-indian-medicine-obo
+- date: 2026-11-21
+  target: /science/ayurveda
+  before: "c. 600 BCE: Period of Sushruta (early recension). c. 200 CE: Compilation of Charaka Samhita."
+  after: Both works are layered compilations without a single secure date; the received forms belong to the first millennium CE.
+  reason: The cited single dates are not supported by textual scholarship, which treats both Samhitas as built up by several hands over centuries.
+  sources:
+    - src.wujastyk-2003-roots-of-ayurveda
+    - src.hoernle-1909-caraka-samhita-bower-manuscript
+- date: 2026-11-21
+  target: /science/ayurveda
+  before: "c. 1500-1000 BCE: Early references to healing in the Atharva Veda."
+  after: The Atharvaveda is dated by linguistic criteria to roughly the late second or early first millennium BCE, a graded estimate.
+  reason: The earlier range is not the mainstream estimate used elsewhere in the archive.
+  sources:
+    - src.flood-2003-blackwell-companion-hinduism
+- date: 2026-11-21
+  target: /science/plastic-surgery
+  before: The earliest known plastic surgery procedures were performed in ancient India by the physician Sushruta. He is considered the 'father of plastic surgery'.
+  after: The Sushruta Samhita contains the earliest known detailed Sanskrit description of nose and ear reconstruction using cheek flaps; the Samhita is a layered compilation, and no performed operation is documented.
+  reason: The original asserted performed procedures by a single datable person; the evidence is a text compiled over time. 'Father of' is dropped.
+  sources:
+    - src.bhishagratna-1907-sushruta-samhita-vol1
+    - src.wujastyk-2003-roots-of-ayurveda
+    - src.wujastyk-2011-indian-medicine-obo
+- date: 2026-11-21
+  target: /history/delhi-sultanate
+  before: The Delhi Sultanate ... marked the integration of Islamic culture with existing Indian traditions, leading to the Indo-Islamic synthesis.
+  after: Cultural exchange, accommodation and conflict all occurred; the evidence is mixed, and 'synthesis' is presented as one contested framing rather than a settled outcome.
+  reason: A single smooth 'synthesis' narrative overstates what the sources show; modern scholarship documents both cooperation and violence.
+  sources:
+    - src.eaton-2019-india-persianate-age
+    - src.talbot-1995-inscribing-the-other
+    - src.eaton-2000-temple-desecration
+- date: 2026-11-21
+  target: /history/delhi-sultanate
+  before: Introduction of dome and arch architecture.
+  after: Sultanate builders brought true arch, vault and dome techniques and combined them with Indian post-and-lintel masonry; arches and domed forms were not entirely new to India.
+  reason: The original claim of introduction was too absolute.
+  sources:
+    - src.asher-1992-architecture-of-mughal-india
+- date: 2026-11-21
+  target: /history/delhi-sultanate
+  before: Rise of the Urdu language.
+  after: Persian was the court and administrative language; the Sultanate-era vernacular of Delhi was called Hindavi, and the name Urdu is much later.
+  reason: The name and standardised language Urdu are anachronistic for the Sultanate period.
+  sources:
+    - src.eaton-2019-india-persianate-age
+- date: 2026-11-21
+  target: /history/delhi-sultanate
+  before: Market reforms under Alauddin Khilji.
+  after: The chronicler Barani reports price controls under Ala al-Din Khalji; historians accept that some controls existed but debate their reach and duration.
+  reason: The reforms rest chiefly on one later chronicle and were presented as established fact.
+  sources:
+    - src.jackson-1999-delhi-sultanate
+    - src.raychaudhuri-1982-cambridge-economic-history-india
+- date: 2026-11-21
+  target: /history/delhi-sultanate
+  before: "1327: Muhammad bin Tughlaq moves capital to Daulatabad (failed experiment)."
+  after: Around 1327 Daulatabad was made a second capital; the 'failure' is Barani's verdict, and the scale and aims of the move are interpreted differently by modern scholars.
+  reason: The original stated a contested judgement as fact.
+  sources:
+    - src.jackson-1999-delhi-sultanate
+    - src.battuta-2004-travels-asia-africa
+- date: 2026-11-21
+  target: /history/vijayanagara-empire
+  before: Vijayanagara rose as a bulwark against the Delhi Sultanate in the Deccan.
+  after: Vijayanagara grew in the vacuum left by Delhi's retreat from the south; it fought the Deccan sultanates but also adopted Persianate court forms, employed Muslim soldiers and sometimes allied with sultanates.
+  reason: The 'Hindu bulwark' framing derives from Sewell (1900) and is qualified by later scholarship.
+  sources:
+    - src.wagoner-1996-sultan-among-hindu-kings
+    - src.eaton-2013-power-memory-architecture
+    - src.sewell-1900-forgotten-empire
+- date: 2026-11-21
+  target: /history/vijayanagara-empire
+  before: Established in 1336 by Harihara and Bukka.
+  after: 1336 is the conventional date; the brothers' background is debated, and the story of their conversion and reconversion in Delhi is a later narrative not accepted as a record of events.
+  reason: The original presented the conventional foundation story without qualification.
+  sources:
+    - src.stein-1989-vijayanagara
+- date: 2026-11-21
+  target: /history/vijayanagara-empire
+  before: Its capital, Hampi, was one of the wealthiest cities in the world.
+  after: The capital was Vijayanagara, whose ruins lie at Hampi; visitors such as Paes described a very large and wealthy city, but exact population and wealth are uncertain.
+  reason: Hampi is the modern name of the site, and the wealth claim rests mainly on visitors' impressions.
+  sources:
+    - src.sewell-1900-forgotten-empire
+    - src.michell-1995-architecture-art-southern-india
+- date: 2026-11-21
+  target: /history/vijayanagara-empire
+  before: "1565: Battle of Talikota; defeat by the Deccan Sultanates and destruction of Hampi."
+  after: An alliance of Deccan sultanates defeated Vijayanagara in January 1565 and plundered the capital; how much of Hampi's ruin came from the sack versus later neglect is uncertain.
+  reason: The original attributed all the destruction to the battle.
+  sources:
+    - src.sewell-1900-forgotten-empire
+    - src.michell-1995-architecture-art-southern-india
+- date: 2026-11-21
+  target: /history/vijayanagara-empire
+  before: "1646: Final decline of the Aravidu dynasty."
+  after: 1646 is the conventional date of the Aravidu line's effective end, after its power and its hold over the nayakas had faded.
+  reason: Clarifies a conventional date that was presented as an event.
+  sources:
+    - src.stein-1989-vijayanagara
+- date: 2026-11-21
+  target: /history/mughal-empire
+  before: The Mughal Empire (1526-1857) consolidated almost the entire Indian subcontinent.
+  after: At its height around 1700 the empire ruled most of the subcontinent but never the far south or parts of the northeast, and much rule over local chiefs was indirect; the dynasty formally ended in 1858.
+  reason: The original overstated territorial reach and gave the wrong end year.
+  sources:
+    - src.richards-1993-mughal-empire
+    - src.metcalf-2012-concise-history-modern-india
+- date: 2026-11-21
+  target: /history/mughal-empire
+  before: "Akbar: Known for religious tolerance (Din-i Ilahi)."
+  after: Akbar's policy of sulh-i kull and the abolition of the jizya are documented; the Din-i Ilahi is better described as a small circle of disciples than as a new state religion.
+  reason: The original equated the Din-i Ilahi with Akbar's tolerance and implied it was a religion.
+  sources:
+    - src.richards-1993-mughal-empire
+    - src.truschke-2016-culture-of-encounters
+- date: 2026-11-21
+  target: /history/mughal-empire
+  before: "Aurangzeb: Expansionist, strict orthodox policies."
+  after: Aurangzeb reimposed the jizya and ordered some temples demolished, but also issued temple grants and employed more Hindu nobles than earlier emperors; historians debate motives.
+  reason: The one-line characterisation omitted documented evidence on both sides.
+  sources:
+    - src.chandra-1969-jizyah
+    - src.eaton-2000-temple-desecration
+    - src.truschke-2017-aurangzeb
+- date: 2026-11-21
+  target: /history/mughal-empire
+  before: "1707: Death of Aurangzeb; beginning of decline."
+  after: Imperial authority weakened after 1707, but the cause and extent of 'decline' is debated among historians.
+  reason: The original presented one side of an open historiographical debate as fact.
+  sources:
+    - src.ali-1993-mughal-polity
+    - src.metcalf-2012-concise-history-modern-india
+- date: 2026-11-21
+  target: /history/mughal-empire
+  before: "1857: Bahadur Shah Zafar exiled; official end of the empire."
+  after: After the 1857 rebellion the last emperor was tried and exiled to Rangoon in 1858.
+  reason: The exile and the formal end took place in 1858.
+  sources:
+    - src.metcalf-2012-concise-history-modern-india
+- date: 2026-11-21
+  target: /music/04-carnatic-music
+  before: Hindustani music, which evolved as a distinct form around the 13th century.
+  after: The two traditions diverged gradually over the second millennium CE; there is no single date.
+  reason: The 13th-century date is too precise; the Sangitaratnakara of that century is claimed by both traditions.
+  sources:
+    - src.widdess-1995-ragas-early-indian-music
+    - src.arnold-2000-garland-south-asia
+- date: 2026-11-21
+  target: /music/04-carnatic-music
+  before: Tyagaraja composed thousands of devotional compositions.
+  after: Large traditional figures are undocumented; a few hundred compositions survive in printed editions.
+  reason: The very large numbers are traditional claims without documentary support.
+  sources:
+    - src.viswanathan-2004-music-in-south-india
+- date: 2026-11-21
+  target: /music/04-carnatic-music
+  before: Shyama Sastri's kritis are known for emphasis on kalpana swara.
+  after: Shyama Sastri is remembered for subtle rhythmic structure and the swarajati form.
+  reason: Kalpanaswara is a performance practice of the concert, not a hallmark of his compositions.
+  sources:
+    - src.viswanathan-2004-music-in-south-india
+- date: 2026-11-21
+  target: /music/04-carnatic-music
+  before: "Violin: it often plays in unison with the vocalist."
+  after: The violin, a European import of the 18th and 19th centuries, follows and answers the voice.
+  reason: The violin is a later adoption and accompanies rather than doubles the singer.
+  sources:
+    - src.weidman-2006-singing-the-classical
+- date: 2026-11-21
+  target: /music/04-carnatic-music
+  before: The 18th century is considered the golden age of Carnatic music.
+  after: The Trinity's canonical status is a retrospective, largely 20th-century construction.
+  reason: The golden-age framing is a judgement made later, not a documented fact of the period.
+  sources:
+    - src.subramanian-2006-tanjore-court-madras-music-academy
+    - src.weidman-2006-singing-the-classical
+- date: 2026-11-21
+  target: /music/05-musical-instruments
+  before: "c. 200 BCE: Classification in Natya Shastra."
+  after: The Natyashastra is dated to a wide, debated range from the last centuries BCE to the early centuries CE.
+  reason: A single date overstates what the composite text allows.
+  sources:
+    - src.rowell-1992-music-musical-thought-early-india
+- date: 2026-11-21
+  target: /music/05-musical-instruments
+  before: "c. 13th Century: Introduction of Persian instruments (Sitar, Tabla evolution) by Amir Khusrau."
+  after: The attribution to Amir Khusrau is a later legend; the sitar and tabla are documented from about the 18th century.
+  reason: No early evidence ties Khusrau to either instrument.
+  sources:
+    - src.miner-1993-sitar-and-sarod
+    - src.kippen-1988-tabla-of-lucknow
+- date: 2026-11-21
+  target: /literature/ancient-sanskrit-literature
+  before: Bhasa (c. 2nd-3rd Century CE)
+  after: Bhasa's date is uncertain, placed between the last centuries BCE and the 4th century CE, and certainly before Kalidasa; whether one author wrote all thirteen Trivandrum plays is disputed.
+  reason: The original gave a single narrow date as if settled. Both the date and the authorship of the plays ascribed to Bhasa are debated.
+  sources:
+    - src.lienhard-1984-history-classical-poetry
+- date: 2026-11-21
+  target: /literature/ancient-sanskrit-literature
+  before: "c. 4th-7th Century CE: Golden Age of Sanskrit Literature (Gupta Period)"
+  after: The 'golden age' label is contested; the Gupta period is roughly the 4th to mid-6th century CE, and the literature in question begins before it and continues after it at many courts.
+  reason: The Gupta dynasty ended well before the 7th century, and the label ties a broad literary culture to one dynasty.
+  sources:
+    - src.pollock-2006-language-of-the-gods
+    - src.thapar-2002-early-india
+- date: 2026-11-21
+  target: /literature/ancient-sanskrit-literature
+  before: Mudrarakshasa (political drama about Chanakya)
+  after: The play dramatises Mauryan politics many centuries after the events, and its own date is disputed; it is a later literary imagining, not a contemporary record.
+  reason: The original gave no date or caveat, which could be read as treating the play as evidence for Mauryan history.
+  sources:
+    - src.lienhard-1984-history-classical-poetry
+    - src.thapar-2002-early-india
+- date: 2026-11-21
+  target: /literature/kalidasa
+  before: His plays and poetry are primarily based on the Vedas, the Ramayana, the Mahabharata and the Puranas.
+  after: Shakuntala draws on the Mahabharata, Raghuvamsha on the Ramayana, and Vikramorvashiya on the Pururavas-Urvashi tale of the Rigveda and Shatapatha Brahmana; Malavikagnimitra is built on a historical Shunga king and has no epic source.
+  reason: "The blanket statement was too broad: one play has a historical, non-epic subject, and the Vedic link is specific to a single story."
+  sources:
+    - src.brockington-1998-sanskrit-epics
+    - src.jamison-brereton-2014-rigveda
+    - src.eggeling-1900-satapatha-brahmana-part-5
+- date: 2026-11-21
+  target: /literature/kalidasa
+  before: widely regarded as the greatest poet and dramatist in the Sanskrit language of India
+  after: regarded by many as the finest classical Sanskrit poet and dramatist; his date is bracketed between the 2nd century BCE and 634 CE, with a 4th to 5th century CE placement favoured by many scholars.
+  reason: An unqualified superlative needs a qualifier, and the article now states the evidence for his date.
+  sources:
+    - src.lienhard-1984-history-classical-poetry
+    - src.pollock-2006-language-of-the-gods
+- date: 2026-11-21
+  target: /literature/sangam-literature
+  before: "c. 300 BCE - 300 CE: The Sangam Age."
+  after: A commonly cited range for the core poems is about 100 BCE to 250 CE (Zvelebil); some scholars, such as Tieken, argue for a much later date.
+  reason: The original range is wider than the evidence directly supports and does not note the live dispute.
+  sources:
+    - src.zvelebil-1992-companion-studies
+    - src.tieken-2001-kavya-south-india
+- date: 2026-11-21
+  target: /literature/sangam-literature
+  before: "Tolkappiyam: The oldest extant Tamil grammar text. / c. 2nd Century BCE: Composition of Tolkappiyam (early layers)."
+  after: The earliest surviving Tamil grammar, a layered text whose date is debated, with some strata thought older than others.
+  reason: "'Oldest' needs a qualifier and the single date was presented as settled."
+  sources:
+    - src.zvelebil-1992-companion-studies
+- date: 2026-11-21
+  target: /literature/sangam-literature
+  before: ancient Tamil literature composed by poets in assemblies called 'Sangams'
+  after: The 'Sangam' name comes from later tradition about three assemblies at Madurai; the poems themselves do not describe such assemblies.
+  reason: The assemblies are a medieval tradition, not evidence from the poems.
+  sources:
+    - src.zvelebil-1992-companion-studies
+    - src.wilden-2014-manuscript-print-memory
+- date: 2026-11-22
+  target: /archive/event/arrival-of-modern-humans-south-asia
+  before: c. 67 ka to 52 ka; c. 122 ka to 76 ka
+  after: c. 65 ka to 50 ka; c. 120 ka to 74 ka
+  reason: Dates the cited source reports in thousands or millions of years before present had been stored as BCE years, which made them about 2,025 years too old; they now match the source.
+  sources:
+    - src.macaulay-2005-coastal-settlement-asia
+    - src.mellars-2013-colonization-southern-asia
+    - src.petraglia-2007-jwalapuram-toba
+    - src.petraglia-2010-indian-ocean-rim-dispersal
+    - src.clarkson-2020-dhaba-toba
+    - src.blinkhorn-2013-thar-middle-palaeolithic
+- date: 2026-11-22
+  target: /archive/site/attirampakkam
+  before: c. 387 ka to 174 ka
+  after: c. 385 ka to 172 ka
+  reason: Dates the cited source reports in thousands or millions of years before present had been stored as BCE years, which made them about 2,025 years too old; they now match the source.
+  sources:
+    - src.akhilesh-2018-attirampakkam-middle-palaeolithic
+- date: 2026-11-22
+  target: /archive/site/bhimbetka
+  before: c. 102 ka to 3 ka
+  after: c. 100 ka to 3 ka
+  reason: Dates the cited source reports in thousands or millions of years before present had been stored as BCE years, which made them about 2,025 years too old; they now match the source.
+  sources:
+    - src.misra-2001-prehistoric-colonization-india
+    - src.unesco-2003-bhimbetka
+    - src.coningham-2015-archaeology-south-asia
+- date: 2026-11-22
+  target: /archive/site/bori
+  before: c. 742 ka to 602 ka; c. 82 ka to 72 ka
+  after: c. 740 ka to 600 ka; c. 80 ka to 70 ka
+  reason: Dates the cited source reports in thousands or millions of years before present had been stored as BCE years, which made them about 2,025 years too old; they now match the source.
+  sources:
+    - src.mishra-1995-bori-earliest-acheulian
+    - src.westgate-1998-toba-tephra-peninsular-india
+- date: 2026-11-22
+  target: /archive/site/dhaba
+  before: c. 82 ka to 26 ka
+  after: c. 80 ka to 24 ka
+  reason: Dates the cited source reports in thousands or millions of years before present had been stored as BCE years, which made them about 2,025 years too old; they now match the source.
+  sources:
+    - src.clarkson-2020-dhaba-toba
+- date: 2026-11-22
+  target: /archive/site/didwana
+  before: c. 802 ka to 27 ka
+  after: c. 800 ka to 25 ka
+  reason: Dates the cited source reports in thousands or millions of years before present had been stored as BCE years, which made them about 2,025 years too old; they now match the source.
+  sources:
+    - src.misra-2001-prehistoric-colonization-india
+    - src.blinkhorn-2013-thar-middle-palaeolithic
+- date: 2026-11-22
+  target: /archive/site/hunsgi-baichbal-valley
+  before: c. 1.2 Ma to 52 ka
+  after: c. 1.2 Ma to 50 ka
+  reason: Dates the cited source reports in thousands or millions of years before present had been stored as BCE years, which made them about 2,025 years too old; they now match the source.
+  sources:
+    - src.petraglia-1999-isampur-acheulian-quarry
+    - src.paddayya-2000-isampur-excavation
+    - src.misra-2001-prehistoric-colonization-india
+- date: 2026-11-22
+  target: /archive/site/jwalapuram
+  before: c. 79 ka to 40 ka; c. 77 ka to 73 ka
+  after: c. 77 ka to 38 ka; c. 75 ka to 71 ka
+  reason: Dates the cited source reports in thousands or millions of years before present had been stored as BCE years, which made them about 2,025 years too old; they now match the source.
+  sources:
+    - src.petraglia-2007-jwalapuram-toba
+    - src.ambrose-1998-toba-volcanic-winter
+    - src.williams-2009-toba-environmental-impact
+    - src.mellars-2013-colonization-southern-asia
+- date: 2026-11-22
+  target: /archive/event/keezhadi-excavations-begin
+  before: Parliamentary and Ministry of Culture records list ASI excavation seasons at Keezhadi in 2014-15, 2015-16 and 2016-17 (grade A).
+  after: The Tamil Nadu State Department of Archaeology's 2019 report records ASI excavation seasons at Keezhadi in 2014-15, 2015-16 and 2016-17 (grade B).
+  reason: The cited record was the state department's 2019 Keeladi report, not a Lok Sabha or Ministry of Culture record, so the attribution and grade now match the source actually cited.
+  sources:
+    - src.sivanantham-2019-keeladi-urban-settlement
+- date: 2026-11-22
+  target: /sources
+  before: Chandrayaan-1_Science
+  after: Chandrayaan-1 Science
+  reason: The bibliography showed the page's file slug instead of a readable title for the ISRO Chandrayaan-1 science page.
+  sources:
+    - src.chandrayaan1-isro-science
+- date: 2026-11-22
+  target: /sources
+  before: Neumayer 2013, Prehistoric Rock Art of India
+  after: Neumayer 2013, Rock Art of India
+  reason: The Library of Congress and Open Library records for the cited ISBN (9780198060987, Oxford University Press 2013) give the title as Rock Art of India.
+  sources:
+    - src.neumayer-2013-prehistoric-rock-art-india
+- date: 2026-11-22
+  target: /archive/text/charaka-samhita
+  before: c. 100 BCE to 499 CE
+  after: c. 100 BCE to 500 CE
+  reason: The end year was one short of the round CE year the text gives, as if a BCE-style shift had been applied to a CE year; the dating's own label places Dridhabala's completion at c. 300-500 CE.
+  sources:
+    - src.wujastyk-2008-body-of-knowledge-ayurvedic
+- date: 2026-11-22
+  target: /archive/text/tolkappiyam
+  before: c. 200 BCE to 499 CE
+  after: c. 200 BCE to 500 CE
+  reason: The end year was one short of the round CE year the text gives, as if a BCE-style shift had been applied to a CE year; the dating's note places the later Porulatikaram expansions up to the fifth century CE.
+  sources:
+    - src.zvelebil-1973-smile-of-murugan
+    - src.wilden-2014-manuscript-print-memory
+- date: 2026-11-22
+  target: /archive/site/sanchi-stupa
+  before: c. 260 BCE to 499 CE
+  after: c. 260 BCE to 500 CE
+  reason: The end year was one short of the round CE year the text gives, as if a BCE-style shift had been applied to a CE year; the dating's note ends the sequence with Gupta-era shrines of the fifth century CE.
+  sources:
+    - src.shaw-2016-buddhist-landscapes-sanchi
+    - src.lahiri-2015-ashoka-ancient-india
+- date: 2026-11-22
+  target: /archive/tradition/gandhara-art
+  before: c. 50 BCE to 499 CE
+  after: c. 50 BCE to 500 CE
+  reason: The end year was one short of the round CE year the text gives, as if a BCE-style shift had been applied to a CE year; the entry's summary says the school flourished to the fifth century CE.
+  sources:
+    - src.behrendt-2004-buddhist-architecture-gandhara
+    - src.stoneman-2019-greek-experience-of-india
+- date: 2026-11-22
+  target: /archive/concept/brahmi-to-gupta-script
+  before: c. 268 BCE to 599 CE
+  after: c. 268 BCE to 600 CE
+  reason: The end year was one short of the round CE year the text gives, as if a BCE-style shift had been applied to a CE year; the entry traces the script to the sixth century CE.
+  sources:
+    - src.salomon-1998-indian-epigraphy
+    - src.coningham-1996-early-brahmi-script
+- date: 2026-11-22
+  target: /archive/site/ahichhatra
+  before: c. 1200 BCE to 1099 CE
+  after: c. 1200 BCE to 1100 CE
+  reason: The end year 1099 was an artefact of the same BCE-style shift; a century-precision early medieval end is written as the round year 1100.
+  sources:
+    - src.lal-1955-excavation-hastinapura
+    - src.singh-2008-ancient-early-medieval-india
+    - src.allchin-1995-archaeology-early-historic-south-asia
+- date: 2026-11-22
+  target: /archive/artifact/bakhshali-manuscript
+  before: c. 600 to 1199 CE
+  after: c. 600 to 1200 CE
+  reason: The end year was one short of the round CE year the text gives, as if a BCE-style shift had been applied to a CE year; the palaeographic dating places the manuscript in the eighth to twelfth centuries CE.
+  sources:
+    - src.plofker-2009-mathematics-in-india
+    - src.plofker-2017-bakhshali-radiocarbon

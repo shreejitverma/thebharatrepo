@@ -1,0 +1,53 @@
+id: person.kharavela
+type: person
+kind: person
+names:
+  en: Kharavela
+  iast: Khāravela
+  native: खारवेल
+summary: >-
+  Kharavela was the most prominent ruler of the Mahameghavahana (Chedi) dynasty of Kalinga (modern Odisha), known primarily from his seventeen-line biographical inscription at Hathigumpha in the Udayagiri Hills near Bhubaneswar. A devoted patron of Jainism who also sponsored all religious communities, he campaigned west against the Satavahana ruler Satakarni and north into Magadha.
+summaries:
+  kids: >-
+    King Kharavela ruled Kalinga in present-day Odisha over 2,000 years ago, repaired canals and city walls, and carved rock-cut caves for Jain monks at Udayagiri.
+  teen: >-
+    Attested by the Hathigumpha inscription near Bhubaneswar, King Kharavela of the Mahameghavahana dynasty restored Kalinga's power after Mauryan rule, campaigned against Magadha and the Satavahanas, and patronised Jain ascetics.
+region: Kalinga (Odisha)
+location: { name: "Udayagiri Hills, Bhubaneswar", lat: 20.263, lon: 85.786 }
+datings:
+  - method: epigraphic
+    range: { earliest: "100 BCE", latest: "2 BCE", precision: century, circa: true }
+    grade: B
+    label: First century BCE palaeographic and Satakarni synchronism
+    sources:
+      - src.salomon-1998-indian-epigraphy
+      - src.kulke-2004-history-of-india
+      - src.dundas-2002-the-jains
+    note: Most epigraphists date Kharavela to the first century BCE based on the developed post-Mauryan Brahmi paleography of the Hathigumpha inscription and his synchronism with an early Satavahana king named Satakarni.
+  - method: epigraphic
+    range: { earliest: "180 BCE", latest: "130 BCE", precision: decade, circa: true }
+    grade: C
+    label: Second century BCE dating based on proposed reading of Demetrius and Nanda era
+    sources:
+      - src.fleet-1910-hathigumpha-inscription
+      - src.salomon-1998-indian-epigraphy
+    note: An older scholarly view read a damaged passage in line 8 as referring to the Indo-Greek king Demetrius (Dimita) and interpreted line 16 as a year count from the Nandas, placing Kharavela in the second century BCE.
+claims:
+  - text: In his Hathigumpha inscription, Kharavela records campaigning west without regard for King Satakarni, marching into Magadha, and recovering a Kalinga Jina image that had been carried away by a Nanda king.
+    grade: B
+    sources:
+      - src.salomon-1998-indian-epigraphy
+      - src.dundas-2002-the-jains
+      - src.kulke-2004-history-of-india
+  - text: Although opening his inscription with a Jain salutation to the Arhats and Siddhas, Kharavela calls himself "the worshipper of all religious orders" (sava-pasanda-pujako) and "the repairer of all shrines of the gods" (sava-devayatana-sankhara-karako).
+    grade: A
+    sources:
+      - src.salomon-1998-indian-epigraphy
+      - src.dundas-2002-the-jains
+relations:
+  - { kind: contemporary-of, target: polity.satavahana-dynasty }
+  - { kind: related-to, target: artifact.hathigumpha-inscription }
+  - { kind: related-to, target: polity.nanda-dynasty }
+wikidata: Q1391280
+tags: [kharavela, kalinga, odisha, jainism, hathigumpha]
+review: { status: draft, author: "gemini-4-argon" }

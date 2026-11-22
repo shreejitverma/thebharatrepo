@@ -1,0 +1,73 @@
+id: artifact.kalibangan-ploughed-field
+type: artifact
+kind: science
+names:
+  en: Kalibangan Early Harappan Ploughed Field
+summary: >-
+  An in situ furrowed agricultural horizon excavated outside the southeastern fortification wall of Early Harappan
+  (Period I, c. 2900-2600 BCE) Kalibangan in Rajasthan, preserving a bidirectional grid of closely spaced east-west
+  furrows and widely spaced north-south furrows that constitutes the earliest direct archaeological evidence of a
+  ploughed agricultural field in the world.
+summaries:
+  kids: >-
+    Buried under later town layers at Kalibangan in Rajasthan is an ancient farm field with two sets of plough
+    lines crossing each other so farmers could grow two crops at the same time.
+  teen: >-
+    Dated to c. 2900-2600 BCE during the Early Harappan Sothi-Siswal phase at Kalibangan, this preserved ploughed
+    field displays a perpendicular double-furrow grid identical to traditional winter intercropping of mustard and
+    chickpea or horsegram in modern Rajasthan.
+region: Kalibangan, Hanumangarh District, Rajasthan, India
+location:
+  name: Kalibangan
+  lat: 29.4739
+  lon: 74.1303
+datings:
+  - method: archaeological-stratigraphic
+    range:
+      earliest: "2900 BCE"
+      latest: "2600 BCE"
+      precision: century
+      circa: true
+    grade: A
+    label: Kalibangan Period I (Early Harappan Sothi-Siswal Horizon)
+    sources:
+      - src.lal-2003-excavations-at-kalibangan
+      - src.possehl-2002-indus-civilization
+      - src.singh-2008-ancient-early-medieval-india
+    note: >-
+      Sealed directly beneath Mature Harappan Period II deposits outside the southeastern corner of the Early
+      Harappan Period I fortification at Kalibangan.
+claims:
+  - text: >-
+      The excavated agricultural surface at Kalibangan preserves two intersecting sets of ard-plough furrows: closely
+      spaced east-west furrows roughly 30 cm apart, cut across by widely spaced north-south furrows roughly 190 cm apart.
+    grade: A
+    sources:
+      - src.lal-2003-excavations-at-kalibangan
+      - src.possehl-2002-indus-civilization
+      - src.singh-2008-ancient-early-medieval-india
+  - text: >-
+      B. B. Lal demonstrated that this exact furrow geometry matches contemporary rain-fed and flood-recession
+      winter farming in northwestern Rajasthan, where short-statured crops (such as chickpea or horsegram) are sown
+      in the narrow east-west rows and tall mustard plants are sown in the wide north-south rows to avoid shading.
+    grade: A
+    sources:
+      - src.lal-2003-excavations-at-kalibangan
+      - src.possehl-2002-indus-civilization
+relations:
+  - kind: excavated-at
+    target: site.kalibangan
+  - kind: part-of
+    target: tradition.sothi-siswal-phase
+  - kind: related-to
+    target: artifact.banawali-terracotta-plough
+wikidata: null
+tags:
+  - harappan
+  - early-harappan
+  - agriculture
+  - kalibangan
+  - science
+review:
+  status: draft
+  author: gemini-4-argon

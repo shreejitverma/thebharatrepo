@@ -1,0 +1,53 @@
+id: person.yaska
+type: person
+kind: person
+names:
+  en: Yaska
+  iast: Yāska
+  native: यास्क
+summary: >-
+  Yaska was an ancient Sanskrit lexicographer, semanticist, and Vedic commentator who authored the
+  Nirukta, the foundational treatise of the etymological Vedanga. His work synthesizes the views of
+  numerous earlier grammarians and ritual exegetes such as Shakatayana, Gargya, and Shakapuni.
+summaries:
+  kids: >-
+    Yaska was an ancient Indian language scholar who studied the oldest words in the Vedas and
+    showed how nouns grow out of action verbs.
+  teen: >-
+    Author of the Nirukta, Yaska was a pioneer of Sanskrit semantics and etymology. He classified
+    words into four parts of speech and preserved debates among earlier schools of Vedic
+    grammarians and historians.
+region: Northwestern or northern Indian subcontinent
+datings:
+  - method: linguistic
+    range: { earliest: "700 BCE", latest: "400 BCE", best: "500 BCE", precision: century, circa: true }
+    grade: C
+    label: Late Vedic grammatical chronology
+    sources:
+      - src.sarup-1920-nighantu-nirukta
+      - src.cardona-1988-panini-work-traditions
+    note: >-
+      Placed around the 6th to 5th century BCE based on the state of the Sanskrit language in the
+      Nirukta and his relative chronology with Panini and the late Brahmanas.
+claims:
+  - text: >-
+      Yaska cites more than a dozen earlier scholars and schools of interpretation, including the
+      Nairuktas (etymologists), Aitihasikas (narrative historians), and Vaiyakaranas (grammarians).
+    grade: A
+    sources:
+      - src.sarup-1920-nighantu-nirukta
+  - text: >-
+      Yaska classified the Vedic pantheon in the Daivata-kanda into three cosmic domains:
+      terrestrial deities led by Agni, atmospheric deities led by Indra or Vayu, and celestial
+      deities led by Surya.
+    grade: A
+    sources:
+      - src.sarup-1920-nighantu-nirukta
+      - src.gonda-1975-vedic-literature
+relations:
+  - { kind: authored, target: text.nirukta }
+  - { kind: influenced, target: person.panini }
+  - { kind: related-to, target: concept.vedic-sanskrit }
+wikidata: Q993504
+tags: [linguistics, etymology, nirukta, vedanga, scholar]
+review: { status: draft, author: "gemini-4-argon" }

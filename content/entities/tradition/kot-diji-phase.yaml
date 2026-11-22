@@ -1,0 +1,69 @@
+id: tradition.kot-diji-phase
+type: tradition
+kind: civilisation
+names:
+  en: Kot Diji Phase
+summary: >-
+  A major Early Harappan archaeological culture (c. 2800-2600 BCE) extending across northern Sindh, Punjab, the
+  Ghaggar-Hakra plain and the Gomal valley, marked by fortified citadel-and-lower-town settlements, wheel-thrown
+  short-necked globular jars, and early stamp seals.
+summaries:
+  kids: >-
+    During the Kot Diji phase, people built walled towns and began using early seals and weights that soon grew
+    into the great Harappan cities.
+  teen: >-
+    Named after the site of Kot Diji in Sindh, this late Regionalisation Era culture (c. 2800-2600 BCE) introduced
+    grid-planned streets, defensive walls, and red-slipped wheel-made pottery across the Indus basin.
+region: Northern Sindh, Punjab, Cholistan, and Khyber Pakhtunkhwa
+location:
+  name: Kot Diji
+  lat: 27.3431
+  lon: 68.7083
+datings:
+  - method: archaeological-radiocarbon
+    range:
+      earliest: "2800 BCE"
+      latest: "2600 BCE"
+      precision: century
+      circa: true
+    grade: A
+    label: Early Harappan Kot Diji Phase (Harappa Period 2)
+    sources:
+      - src.kenoyer-1998-ancient-cities-indus
+      - src.possehl-2002-indus-civilization
+      - src.wright-2010-ancient-indus
+    note: >-
+      Calibrated radiocarbon sequences from Harappa Period 2, Rehman Dheri, and Kot Diji define the main Early
+      Harappan Kot Diji horizon from c. 2800 to 2600 BCE, with Late Kot Diji persistence in northern regions.
+claims:
+  - text: >-
+      At Harappa Period 2 (Kot Diji phase), excavators documented massive mud-brick perimeter walls, early cubical
+      limestone weights, and square steatite seals bearing geometric and animal motifs.
+    grade: A
+    sources:
+      - src.kenoyer-1998-ancient-cities-indus
+      - src.wright-2010-ancient-indus
+  - text: >-
+      Distinctive Kot Dijian ceramics feature fine wheel-thrown red-ware vessels decorated with horizontal black
+      or sepia bands, grooved exteriors (Bhoot Ware), and horned deity motifs.
+    grade: A
+    sources:
+      - src.possehl-2002-indus-civilization
+      - src.singh-2008-ancient-early-medieval-india
+relations:
+  - kind: part-of
+    target: tradition.harappan-civilisation
+  - kind: succeeded
+    target: tradition.hakra-ware-phase
+  - kind: located-at
+    target: site.kot-diji
+  - kind: located-at
+    target: site.harappa
+wikidata: null
+tags:
+  - harappan
+  - early-harappan
+  - kot-diji
+review:
+  status: draft
+  author: gemini-4-argon

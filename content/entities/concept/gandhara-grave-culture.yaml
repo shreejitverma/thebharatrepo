@@ -1,0 +1,76 @@
+id: concept.gandhara-grave-culture
+type: concept
+kind: civilisation
+names:
+  en: Gandhara Grave Culture (Swat Protohistoric Graves)
+summary: >-
+  The Gandhara Grave culture (also termed the Swat Protohistoric Grave complex) is a Late Bronze
+  Age to Early Iron Age archaeological horizon in the Swat, Dir, and Peshawar valleys of
+  northwestern Pakistan (the Vedic Suvastu region). Documented at cemeteries such as Loebanr,
+  Katelai, Butkara II, Aligrama, and Timargarha, it features flexed inhumations, fractional burials,
+  and cremations in urns, horses, and early iron, and has provided the key ancient DNA benchmark
+  for second-millennium BCE Steppe admixture in South Asia.
+summaries:
+  kids: >-
+    The Gandhara Grave culture was a Bronze and Iron Age society in the Swat valley of northwestern
+    South Asia, known for its stone-lined cemeteries, grey pottery, and horse burials.
+  teen: >-
+    Located in the Swat and Dir valleys (the Rigvedic Suvastu river), the Gandhara Grave culture
+    (c. 1600 to 500 BCE) combines inhumation and urn-cremation burial rites, domestic horse
+    remains, and early iron, and yielded the ancient DNA samples tested by Narasimhan et al.
+    (2019).
+region: Swat, Dir, Buner, and Peshawar valleys (Khyber Pakhtunkhwa, northwestern Pakistan)
+location: { name: "Swat Valley (Loebanr and Katelai, Mingora)", lat: 34.77, lon: 72.36 }
+datings:
+  - method: archaeological-radiocarbon
+    range: { earliest: "1600 BCE", latest: "500 BCE", best: "1200 BCE", precision: century, circa: true }
+    grade: A
+    label: Radiocarbon and ancient DNA series from Swat protohistoric cemeteries (Narasimhan et al. 2019)
+    sources:
+      - src.narasimhan-2019-formation-human-populations
+      - src.singh-2008-ancient-early-medieval-india
+      - src.allchin-1995-archaeology-early-historic-south-asia
+    note: >-
+      Direct AMS radiocarbon dates on skeletal remains from Loebanr, Katelai, Barikot, Udegram, and
+      Aligrama analysed in Narasimhan et al. (2019) confirm major cemetery phases from c. 1400/1200
+      BCE into the first millennium BCE, within a broader regional sequence spanning c. 1600 to 500
+      BCE.
+claims:
+  - text: >-
+      Excavated cemeteries in Swat and Dir (including Loebanr, Katelai, Butkara II, and Timargarha)
+      display stone-lined cist graves containing three coexisting burial practices: flexed
+      inhumation, post-exposure fractional burial, and cremation in anthropomorphic or face-urns.
+    grade: A
+    sources:
+      - src.singh-2008-ancient-early-medieval-india
+      - src.allchin-1995-archaeology-early-historic-south-asia
+      - src.kuzmina-2007-origin-indo-iranians
+  - text: >-
+      The Swat valley is directly mentioned in the Rigveda (8.19.37) as the river Suvastu ("having
+      fair dwellings"), and the later phases of the Gandhara Grave culture contain horse burials,
+      horse trappings, and iron weapons dating to around the 10th to 9th centuries BCE.
+    grade: A
+    sources:
+      - src.jamison-brereton-2014-rigveda
+      - src.singh-2008-ancient-early-medieval-india
+      - src.chakrabarti-1992-early-use-iron-india
+  - text: >-
+      Genome-wide ancient DNA from Swat valley protohistoric graves (Narasimhan et al. 2019) detects
+      the influx of Steppe Middle-to-Late Bronze Age ancestry into an Indus Periphery-related
+      substrate during the middle to late second millennium BCE.
+    grade: A
+    sources:
+      - src.narasimhan-2019-formation-human-populations
+relations:
+  - { kind: related-to, target: concept.indo-aryan-migration }
+  - { kind: related-to, target: text.rigveda }
+  - { kind: related-to, target: concept.iron-metallurgy-in-india }
+  - { kind: related-to, target: concept.sintashta-steppe-chariot-question }
+wikidata: Q2625916
+image:
+  commons: "File:Rigvedic geography.jpg"
+  alt: Map of Rigvedic rivers showing the Suvastu (Swat) and Kubha (Kabul) valleys in the northwest
+  credit: Avantiputra7
+  license: CC BY-SA 3.0
+tags: [gandhara-grave-culture, swat, suvastu, archaeology, archaeogenetics, narasimhan-2019]
+review: { status: draft, author: "gemini-4-argon" }

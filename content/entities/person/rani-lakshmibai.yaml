@@ -1,0 +1,37 @@
+id: person.rani-lakshmibai
+type: person
+kind: person
+names:
+  en: Rani Lakshmibai of Jhansi
+summary: Lakshmibai, the Rani of Jhansi, became a prominent leader in the 1857
+  revolt and died during fighting near Gwalior in 1858.
+summaries:
+  kids: Lakshmibai was the ruler of Jhansi and became a leader during the 1857
+    revolt.
+  teen: Her role and later memory have been shaped by historical accounts,
+    nationalist writing and popular remembrance.
+datings:
+  - method: scholarly-consensus
+    range:
+      earliest: "1828"
+      latest: "1858"
+      precision: year
+      circa: true
+    grade: B
+    label: Historical scholarship
+    sources:
+      - src.lebra-chapman-1986-rani-of-jhansi
+      - src.stokes-1986-peasant-armed-revolt-1857
+claims:
+  - text: Lakshmibai, the Rani of Jhansi, became a prominent leader in the 1857
+      revolt and died during fighting near Gwalior in 1858.
+    grade: B
+    sources:
+      - src.lebra-chapman-1986-rani-of-jhansi
+      - src.stokes-1986-peasant-armed-revolt-1857
+relations: []
+tags:
+  - person
+review:
+  status: draft
+  author: codex-gpt-6

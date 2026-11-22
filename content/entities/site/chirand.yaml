@@ -1,0 +1,65 @@
+id: site.chirand
+type: site
+kind: prehistory
+names:
+  en: Chirand Neolithic and Chalcolithic Site
+summary: >-
+  A major riverine settlement mound at the confluence of the Ghaghara and Ganga rivers in Saran district,
+  Bihar, preserving an eastern Indian Neolithic horizon (Period I) rich in bone and antler tools, terracotta
+  figurines, semi-precious stone beads and a mixed crop economy combining rice, wheat, barley and pulses.
+summaries:
+  kids: >-
+    Where the Ghaghara River meets the Ganga in Bihar, Neolithic farmers at Chirand built circular reed huts,
+    grew both rice and wheat, and crafted hundreds of tools and ornaments out of deer antlers and bone.
+  teen: >-
+    Chirand in Saran district is the key Neolithic-to-Chalcolithic type-site of the middle Ganga plains in Bihar,
+    famous for its sophisticated antler and bone toolkit and its early combination of summer rice and winter wheat-barley crops.
+region: Middle Ganga plain, Saran district, Bihar
+location:
+  name: Chirand
+  lat: 25.73
+  lon: 84.83
+datings:
+  - method: archaeological-radiocarbon
+    range:
+      earliest: "2500 BCE"
+      latest: "1300 BCE"
+      best: "1900 BCE"
+      precision: century
+      circa: true
+    grade: A
+    label: Period I Neolithic to Period II Chalcolithic radiocarbon chronology
+    sources:
+      - src.fuller-2006-agricultural-origins-south-asia
+      - src.misra-2001-prehistoric-colonization-india
+      - src.coningham-2015-archaeology-south-asia
+    note: >-
+      Calibrated radiocarbon dates place the Neolithic occupation at Chirand (Period I) primarily in the late
+      3rd to early 2nd millennium BCE (c. 2200-1600 BCE), transitioning to the Black-and-Red Ware Chalcolithic.
+claims:
+  - text: >-
+      Neolithic Period I at Chirand yielded a prolific bone and antler industry including needles, bodkins,
+      socketed celts, tanged arrowheads and pendant ornaments alongside microliths and polished stone axes.
+    grade: A
+    sources:
+      - src.misra-2001-prehistoric-colonization-india
+      - src.coningham-2015-archaeology-south-asia
+  - text: >-
+      Archaeobotanical samples from Neolithic Chirand combine indigenous monsoon rice and mungbean with western-derived
+      winter crops including free-threshing wheat, six-row barley, lentil and grass pea.
+    grade: A
+    sources:
+      - src.fuller-2006-agricultural-origins-south-asia
+      - src.kingwellbanham-2015-early-agriculture-south-asia
+relations:
+  - kind: related-to
+    target: site.lahuradewa
+tags:
+  - neolithic
+  - chalcolithic
+  - ganga-valley
+  - bone-tools
+  - bihar
+review:
+  status: draft
+  author: gemini-4-argon

@@ -1,0 +1,78 @@
+id: site.sutkagen-dor
+type: site
+kind: site
+names:
+  en: Sutkagen-dor
+  iast: Sutkāgen-ḍor
+summary: >-
+  The westernmost known fortified coastal outpost of the Mature Harappan Civilisation, situated on the eastern
+  bank of the Dasht River along the Makran coast of southwestern Balochistan near the Pakistan-Iran border
+  (c. 2500-1900 BCE), first investigated by Major E. Mockler (1875), Marc Aurel Stein (1928), and George Dales
+  (1960), consisting of a massive stone-walled citadel enclosing mud-brick structures that controlled maritime
+  trade between the Indus delta, Magan (Oman), and the Persian Gulf.
+summaries:
+  kids: >-
+    Sutkagen-dor was a stone-walled Harappan fortress near the Arabian Sea coast on the edge of modern Pakistan
+    and Iran, where ships stopped on their way to Oman and Mesopotamia.
+  teen: >-
+    Investigated by Aurel Stein and George Dales in the Dasht valley of Balochistan, Sutkagen-dor marks the
+    western coastal frontier of the Mature Harappan world, built with stone walls up to 9 metres thick at the
+    base to guard maritime trade routes along the Makran coast.
+region: Makran Coast, Gwadar District, Balochistan, Pakistan
+location:
+  name: Sutkagen-dor
+  lat: 25.4986
+  lon: 61.9964
+datings:
+  - method: archaeological-stratigraphic
+    range:
+      earliest: "2500 BCE"
+      latest: "1900 BCE"
+      precision: century
+      circa: true
+    grade: B
+    label: Mature Harappan Coastal Outpost
+    sources:
+      - src.possehl-2002-indus-civilization
+      - src.kenoyer-1998-ancient-cities-indus
+      - src.wright-2010-ancient-indus
+    note: >-
+      Dated by diagnostic Mature Harappan black-on-red ceramics, shell bangles, copper-bronze blades, and stone
+      masonry architecture examined by Aurel Stein (1928) and George F. Dales (1960).
+claims:
+  - text: >-
+      Sutkagen-dor's rectangular citadel (measuring roughly 170 by 103 metres) is enclosed by massive fortification
+      walls constructed of semi-dressed sandstone blocks set in mud mortar, sloping inward from a base thickness
+      of nearly 7.5 to 9 metres and flanked by bastion towers at the narrow southwestern gateway.
+    grade: A
+    sources:
+      - src.possehl-2002-indus-civilization
+      - src.singh-2008-ancient-early-medieval-india
+  - text: >-
+      Together with the nearby Makran coastal forts of Sotka Koh (Shadi Kaur valley) and Balakot, Sutkagen-dor
+      provided protected estuarine anchorage and overland staging along the arid Makran littoral before coastal
+      uplift and progradation stranded the site roughly 48 kilometres inland from the modern Arabian Sea coastline.
+    grade: B
+    sources:
+      - src.possehl-2002-indus-civilization
+      - src.wright-2010-ancient-indus
+      - src.kenoyer-1998-ancient-cities-indus
+relations:
+  - kind: part-of
+    target: tradition.harappan-civilisation
+  - kind: related-to
+    target: concept.harappan-mesopotamian-trade
+  - kind: contemporary-of
+    target: site.lothal
+  - kind: contemporary-of
+    target: site.dholavira
+wikidata: null
+tags:
+  - harappan
+  - site
+  - balochistan
+  - makran
+  - maritime-trade
+review:
+  status: draft
+  author: gemini-4-argon

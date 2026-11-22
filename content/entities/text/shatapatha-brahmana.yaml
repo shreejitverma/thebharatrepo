@@ -1,0 +1,77 @@
+id: text.shatapatha-brahmana
+type: text
+kind: text
+names:
+  en: Shatapatha Brahmana
+  iast: Śatapatha Brāhmaṇa
+  native: शतपथब्राह्मण
+summary: >-
+  The Shatapatha Brahmana ("Brahmana of One Hundred Paths") is the most comprehensive surviving
+  Vedic prose commentary, attached to the Shukla Yajurveda. It details the theology and construction
+  of the Soma sacrifice and the Agnicayana fire altar, and concludes with the Brihadaranyaka Upanishad.
+summaries:
+  kids: >-
+    The Shatapatha Brahmana, meaning "Book of One Hundred Paths," is a large ancient prose book
+    that explains Vedic ceremonies, stories, and how to build brick fire altars.
+  teen: >-
+    Attached to the Shukla Yajurveda in 100 chapters (adhyayas) in its Madhyandina recension, the
+    Shatapatha Brahmana is a major source for Late Vedic ritual, geometry, and the eastward
+    spread of Vedic culture into Kosala and Videha.
+region: Kuru-Panchala to Kosala and Videha (Uttar Pradesh and Bihar)
+datings:
+  - method: linguistic
+    range: { earliest: "800 BCE", latest: "600 BCE", best: "700 BCE", precision: century, circa: true }
+    grade: C
+    label: Late Brahmana prose dating
+    sources:
+      - { id: src.eggeling-1882-satapatha-brahmana-part-1, locator: "Introduction" }
+      - src.gonda-1975-vedic-literature
+      - src.flood-2003-blackwell-companion-hinduism
+    note: >-
+      Linguistic features place the Shatapatha Brahmana among the later Brahmana texts, combining
+      a western sub-corpus associated with Shandilya (Books 6 to 10) and an eastern sub-corpus
+      associated with Yajnavalkya in Videha (Books 1 to 5 and 11 to 14).
+  - method: traditional-puranic
+    range: { earliest: "3102 BCE", latest: "2500 BCE", precision: century, circa: true }
+    grade: D
+    label: Traditional sampradaya reckoning
+    sources:
+      - src.flood-2003-blackwell-companion-hinduism
+    note: >-
+      Tradition attributes the Shatapatha Brahmana to the sage Yajnavalkya Vajasaneya as part of
+      the revealed Shukla Yajurveda canon.
+claims:
+  - text: >-
+      The Madhyandina recension of the Shatapatha Brahmana comprises 100 chapters (adhyayas)
+      grouped into 14 books (kandas), while the Kanva recension contains 104 chapters in 17 books.
+    grade: A
+    sources:
+      - { id: src.eggeling-1882-satapatha-brahmana-part-1, locator: "Introduction" }
+      - src.gonda-1975-vedic-literature
+  - text: >-
+      In Shatapatha Brahmana 1.4.1, the narrative of Videgha Mathava carrying the sacrificial fire
+      Agni Vaishvanara across the Sadanira river records the eastward integration of Videha into
+      Brahmanical ritual geography.
+    grade: A
+    sources:
+      - { id: src.eggeling-1882-satapatha-brahmana-part-1, locator: "1.4.1" }
+      - src.thapar-2002-early-india
+  - text: >-
+      Books 6 through 10 provide an extensive theological and geometric account of the Agnicayana
+      fire altar, while the final chapters of Book 14 constitute the Brihadaranyaka Upanishad.
+    grade: A
+    sources:
+      - { id: src.eggeling-1894-satapatha-brahmana-part-3, locator: "Kandas VI and VII" }
+      - { id: src.eggeling-1897-satapatha-brahmana-part-4, locator: "Kandas VIII to X" }
+      - { id: src.muller-1884-upanishads-part-2, locator: "Brihadaranyaka Upanishad" }
+      - src.staal-1983-agni-fire-altar
+      - src.olivelle-1998-early-upanisads
+relations:
+  - { kind: part-of, target: text.brahmanas }
+  - { kind: commented-on, target: text.shukla-yajurveda }
+  - { kind: related-to, target: text.brihadaranyaka-upanishad }
+  - { kind: related-to, target: tradition.agnicayana }
+  - { kind: related-to, target: tradition.shrauta-ritual }
+wikidata: Q676774
+tags: [veda, brahmana, shukla-yajurveda, yajnavalkya, agnicayana, videha]
+review: { status: draft, author: "gemini-4-argon" }

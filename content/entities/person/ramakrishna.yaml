@@ -1,0 +1,40 @@
+id: person.ramakrishna
+type: person
+kind: person
+names:
+  en: Ramakrishna
+summary: Ramakrishna was a Bengali religious teacher whose teachings and life
+  were central to the movement later institutionalized by his disciples as the
+  Ramakrishna Mission.
+summaries:
+  kids: Ramakrishna was a religious teacher in Bengal whose students later founded
+    the Ramakrishna Mission.
+  teen: Accounts of Ramakrishna’s spiritual life are interpreted through
+    devotional biographies and modern scholarship on Neo-Vedanta and religious
+    movements.
+datings:
+  - method: scholarly-consensus
+    range:
+      earliest: "1836"
+      latest: "1886"
+      precision: year
+      circa: true
+    grade: B
+    label: Historical scholarship
+    sources:
+      - src.beckerlegge-2000-ramakrishna-mission
+      - src.fort-1998-jivanmukti-in-transformation
+claims:
+  - text: Ramakrishna was a Bengali religious teacher whose teachings and life were
+      central to the movement later institutionalized by his disciples as the
+      Ramakrishna Mission.
+    grade: B
+    sources:
+      - src.beckerlegge-2000-ramakrishna-mission
+      - src.fort-1998-jivanmukti-in-transformation
+relations: []
+tags:
+  - person
+review:
+  status: draft
+  author: codex-gpt-6

@@ -1,0 +1,33 @@
+id: event.isro-founded
+type: event
+kind: event
+names:
+  en: Indian Space Research Organisation formed
+summary: ISRO was formed on 15 August 1969, initially under the Department of
+  Atomic Energy.
+summaries:
+  kids: ISRO, India’s space agency, was formed in 1969.
+  teen: The Indian Space Research Organisation was formed on 15 August 1969 under
+    the Department of Atomic Energy.
+region: India
+datings:
+  - method: documentary
+    range:
+      earliest: "1969"
+      latest: "1969"
+      precision: year
+      circa: false
+    grade: A
+    sources:
+      - src.isro-faq
+claims:
+  - text: ISRO was formed on 15 August 1969.
+    grade: A
+    sources:
+      - src.isro-faq
+tags:
+  - space
+  - science
+review:
+  status: draft
+  author: codex-gpt-6

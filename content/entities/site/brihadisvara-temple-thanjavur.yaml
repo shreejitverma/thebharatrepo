@@ -1,0 +1,46 @@
+id: site.brihadisvara-temple-thanjavur
+type: site
+kind: site
+names:
+  en: Brihadisvara Temple, Thanjavur
+  iast: Bṛhadīśvara
+  native: பெருவுடையார் கோயில்
+summary: >-
+  The Rajarajeshvara or Brihadisvara temple at Thanjavur was built by the Chola king Rajaraja I and
+  completed in 1010 CE. Its towering granite pyramidal vimana rises over the sanctum, and its walls carry long inscriptions on the temple's endowments and staff.
+  It is part of UNESCO's Great Living Chola Temples site.
+summaries:
+  kids: >-
+    This huge granite temple to Shiva in Thanjavur is more than a thousand years old. Its tall tower
+    is topped by a giant stone, and people still worship there every day.
+  teen: >-
+    Rajaraja's temple was one of the largest in India when it was built. Its inscriptions list the dancers,
+    musicians, priests and villages that supported it, giving historians a detailed picture of how a
+    Chola temple worked.
+region: Thanjavur, Tamil Nadu
+location: { name: Thanjavur, lat: 10.78, lon: 79.13 }
+datings:
+  - method: epigraphic
+    range: { earliest: "1010 CE", latest: "1010 CE", precision: year, circa: false }
+    grade: A
+    label: Completion in Rajaraja I's 25th regnal year
+    sources: [src.sastri-1955-the-colas, src.unesco-1987-great-living-chola-temples]
+  - method: scholarly-consensus
+    range: { earliest: "1003 CE", latest: "1010 CE", precision: year, circa: true }
+    grade: B
+    label: Construction period
+    sources: [src.michell-1988-hindu-temple]
+claims:
+  - text: >-
+      The Great Living Chola Temples (Thanjavur, with Gangaikondacholapuram and Darasuram added in
+      2004) were inscribed on the UNESCO World Heritage List in 1987.
+    grade: A
+    sources: [src.unesco-1987-great-living-chola-temples]
+  - text: Inscriptions on the temple record its endowments, including villages assigned to it and hundreds of temple dancers and other staff.
+    grade: B
+    sources: [src.sastri-1955-the-colas]
+relations:
+  - { kind: patronised-by, target: person.rajaraja-i }
+  - { kind: patronised-by, target: polity.chola-dynasty }
+tags: [unesco, chola, temple-architecture, shaiva]
+review: { status: draft, author: "claude-opus-5-5" }

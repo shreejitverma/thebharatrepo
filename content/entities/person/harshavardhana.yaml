@@ -1,0 +1,61 @@
+id: person.harshavardhana
+type: person
+kind: person
+names:
+  en: Harsha
+  iast: Harṣavardhana
+  native: हर्षवर्धन
+summary: >-
+  Harshavardhana of the Pushyabhuti family ruled from Thanesar and then Kanyakubja (Kannauj) from about
+  606 to 647 CE. He is known from three independent sources: Banabhatta's Harshacharita, the travel
+  record of the Chinese monk Xuanzang, and inscriptions, including the Aihole inscription of his rival
+  Pulakeshin II.
+summaries:
+  kids: >-
+    Harsha was a king in north India about 1,400 years ago. A poet at his court wrote his life story,
+    and a Chinese monk named Xuanzang who visited him also wrote about him.
+  teen: >-
+    Harsha ruled a large north Indian kingdom from Kannauj in the early 7th century. Historians can
+    check his story three ways: a Sanskrit biography by his court poet Bana, the diary of the Chinese
+    pilgrim Xuanzang, and the Aihole inscription, which boasts that the Chalukya king Pulakeshin II
+    defeated him.
+region: Ganga-Yamuna doab, northern India
+location: { name: Kannauj, lat: 27.05, lon: 79.92 }
+datings:
+  - method: scholarly-consensus
+    range: { earliest: "606 CE", latest: "647 CE", precision: year, circa: true }
+    grade: B
+    label: Reign
+    sources: [src.thapar-2002-early-india, src.singh-2008-ancient-early-medieval-india, src.devahuti-1970-harsha-political-study]
+    note: >-
+      The accession is placed in 606 CE, the epoch of the era associated with Harsha, and his death in
+      about 647 CE from Chinese records of the Tang embassies.
+  - method: foreign-synchronism
+    range: { earliest: "636 CE", latest: "643 CE", precision: year, circa: true }
+    grade: A
+    label: Contemporary record of Xuanzang
+    sources: [src.beal-1906-si-yu-ki]
+    note: Xuanzang describes Harsha (Shiladitya) as the reigning king during his stay in India.
+claims:
+  - text: >-
+      The Aihole inscription of 634 to 635 CE claims that the Chalukya king Pulakeshin II defeated
+      Harsha, which is generally placed on the Narmada frontier.
+    grade: A
+    sources: [src.kielhorn-1900-aihole-inscription, src.singh-2008-ancient-early-medieval-india]
+  - text: >-
+      Xuanzang records that Harsha held a great religious assembly at Kanyakubja and distributed his
+      wealth at a quinquennial assembly at Prayaga.
+    grade: A
+    sources: [src.beal-1906-si-yu-ki]
+  - text: >-
+      Three Sanskrit plays, Nagananda, Ratnavali and Priyadarshika, are attributed to Harsha, though
+      some scholars question whether he wrote them himself.
+    grade: B
+    sources: [src.devahuti-1970-harsha-political-study, src.thapar-2002-early-india]
+relations:
+  - { kind: patronised, target: person.banabhatta }
+  - { kind: contemporary-of, target: event.xuanzang-travels-in-india }
+  - { kind: related-to, target: polity.chalukya-dynasty-of-badami, note: Rival of Pulakeshin II }
+wikidata: Q216895
+tags: [pushyabhuti, kannauj, early-medieval, kingship]
+review: { status: draft, author: "claude-opus-5-5" }

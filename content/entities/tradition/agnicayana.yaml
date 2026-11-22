@@ -1,0 +1,81 @@
+id: tradition.agnicayana
+type: tradition
+kind: dharma
+names:
+  en: Agnicayana
+  iast: Agnicayana
+  native: अग्निचयन
+summary: >-
+  The Agnicayana ("piling of Agni"), also called the Atiratra-Agnicayana, is an elaborate twelve-day
+  Vedic Shrauta Soma ritual in which a five-layered brick fire altar (uttaravedi) is constructed in
+  the shape of a soaring falcon (shyena-chit) out of more than a thousand kiln-fired clay bricks.
+  Its theology fills five books of the Shatapatha Brahmana and its geometric rules gave rise to the
+  Shulba Sutras.
+summaries:
+  kids: >-
+    The Agnicayana is a twelve-day Vedic ceremony in which priests build a five-layer brick fire
+    altar shaped like a giant bird with outstretched wings.
+  teen: >-
+    Documented in the Yajurveda, Shatapatha Brahmana, and Shulba Sutras - and filmed during its
+    1975 performance in Panjal, Kerala, by Frits Staal - the Agnicayana reconstructs the cosmic
+    being Prajapati in a five-layer falcon-shaped fire altar of 1,000+ geometrically measured
+    bricks.
+region: Northern Indian subcontinent (preserved in Kerala, Andhra Pradesh, and Maharashtra)
+datings:
+  - method: linguistic
+    range: { earliest: "1100 BCE", latest: 1975, best: "800 BCE", precision: century, circa: true }
+    grade: B
+    label: Yajurveda Samhita codification through modern Nambudiri performance (Staal)
+    sources:
+      - src.staal-1983-agni-fire-altar
+      - { id: src.eggeling-1894-satapatha-brahmana-part-3, locator: "Kandas VI and VII" }
+      - { id: src.eggeling-1897-satapatha-brahmana-part-4, locator: "Kandas VIII to X" }
+      - src.keith-1914-veda-black-yajus-school
+    note: >-
+      First codified in the Krishna Yajurveda Samhitas (Taittiriya Samhita Book 4 and 5, c. 1000
+      BCE) and Books 6 to 10 of the Shatapatha Brahmana (c. 800 to 600 BCE), and documented in
+      living practice in Kerala by Frits Staal in 1975.
+claims:
+  - text: >-
+      In the standard shyena-chit configuration of the Agnicayana, the great fire altar is built in
+      five layers of kilned clay bricks to a total area of 7.5 square purushas in the silhouette of
+      a falcon or eagle in flight, symbolizing the reconstitution of the creator Prajapati and the
+      ascent of the sacrificer to heaven.
+    grade: A
+    sources:
+      - src.staal-1983-agni-fire-altar
+      - { id: src.eggeling-1894-satapatha-brahmana-part-3, locator: "Kandas VI and VII" }
+      - { id: src.eggeling-1897-satapatha-brahmana-part-4, locator: "Kandas VIII to X" }
+      - src.plofker-2009-mathematics-in-india
+  - text: >-
+      Geometric rules requiring that the seams of bricks in odd-numbered layers never align
+      vertically with the seams in even-numbered layers while preserving exact total surface area
+      stimulated the mathematical constructions of the Baudhayana and Apastamba Shulba Sutras.
+    grade: A
+    sources:
+      - src.plofker-2009-mathematics-in-india
+      - src.seidenberg-1961-ritual-origin-geometry
+      - src.staal-1983-agni-fire-altar
+  - text: >-
+      In April 1975, a complete twelve-day Atiratra-Agnicayana performed by Nambudiri Brahmins in
+      Panjal, Kerala, was documented by Frits Staal and an international team in the two-volume
+      monograph Agni (1983).
+    grade: A
+    sources:
+      - src.staal-1983-agni-fire-altar
+relations:
+  - { kind: part-of, target: tradition.shrauta-ritual }
+  - { kind: related-to, target: tradition.soma-ritual }
+  - { kind: related-to, target: text.yajurveda }
+  - { kind: related-to, target: text.krishna-yajurveda }
+  - { kind: related-to, target: text.shatapatha-brahmana }
+  - { kind: related-to, target: text.shulba-sutras }
+  - { kind: related-to, target: text.baudhayana-shulba-sutra }
+wikidata: Q1812470
+image:
+  commons: "File:Agnichayanam अग्निचयनम्.jpg"
+  alt: Falcon-shaped brick fire altar (shyena-chit) constructed for the Vedic Agnicayana ritual
+  credit: Puranastudy
+  license: CC BY-SA 4.0
+tags: [agnicayana, shrauta, yajurveda, shatapatha-brahmana, shulba-sutra, frits-staal, geometry]
+review: { status: draft, author: "gemini-4-argon" }

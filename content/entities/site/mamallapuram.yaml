@@ -1,0 +1,44 @@
+id: site.mamallapuram
+type: site
+kind: site
+names:
+  en: Group of Monuments at Mahabalipuram
+  native: மாமல்லபுரம்
+summary: >-
+  The port of Mamallapuram (Mahabalipuram) holds Pallava monuments of the 7th and 8th centuries CE:
+  cave temples, monolithic shrines known as rathas, the great open-air relief of the Descent of the
+  Ganga (also called Arjuna's Penance) and the structural Shore Temple. UNESCO listed the group in 1984.
+summaries:
+  kids: >-
+    At Mamallapuram, by the sea in Tamil Nadu, Pallava artists carved whole temples, elephants and a
+    giant wall of figures straight out of granite rock, more than 1,200 years ago.
+  teen: >-
+    Mamallapuram shows the Pallava experiment in stone: shrines cut from single boulders, a huge
+    carved rock face full of gods, people and animals, and the Shore Temple, an early free-standing
+    temple built of cut stone blocks.
+region: Chengalpattu district, Tamil Nadu
+location: { name: Mamallapuram, lat: 12.62, lon: 80.19 }
+datings:
+  - method: art-historical
+    range: { earliest: "630 CE", latest: "730 CE", precision: decade, circa: true }
+    grade: B
+    label: Main period of carving and building
+    sources: [src.unesco-1984-mahabalipuram, src.michell-1988-hindu-temple]
+    note: Attributed mainly to Narasimhavarman I (Mamalla) and Narasimhavarman II (Rajasimha), from style and short inscriptions.
+claims:
+  - text: The group was inscribed on the UNESCO World Heritage List in 1984.
+    grade: A
+    sources: [src.unesco-1984-mahabalipuram]
+  - text: >-
+      The five rathas are monolithic shrines carved from single outcrops of granite, imitating
+      different forms of built temples.
+    grade: B
+    sources: [src.michell-1988-hindu-temple, src.unesco-1984-mahabalipuram]
+  - text: The Shore Temple is a structural temple of dressed stone attributed to the reign of Rajasimha in the early 8th century.
+    grade: B
+    sources: [src.michell-1988-hindu-temple]
+relations:
+  - { kind: patronised-by, target: polity.pallava-dynasty }
+wikidata: Q3522747
+tags: [unesco, pallava, rock-cut, temple-architecture]
+review: { status: draft, author: "claude-opus-5-5" }

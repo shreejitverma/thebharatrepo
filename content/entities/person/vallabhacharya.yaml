@@ -1,0 +1,40 @@
+id: person.vallabhacharya
+type: person
+kind: person
+names:
+  en: Vallabhacharya
+summary: Vallabhacharya was a Vaishnava theologian associated with the
+  Pushtimarg tradition. His life dates and itinerary are reconstructed from
+  sectarian and historical sources.
+summaries:
+  kids: Vallabhacharya taught a path of devotion to Krishna that became known as
+    Pushtimarg.
+  teen: Vallabhacharya developed a Vaishnava theology and a devotional community
+    centered on Krishna; his biography is preserved in tradition and historical
+    scholarship.
+datings:
+  - method: scholarly-consensus
+    range:
+      earliest: "1479"
+      latest: "1531"
+      precision: year
+      circa: true
+    grade: C
+    label: Historical scholarship
+    sources:
+      - src.hawley-2015-storm-of-songs
+      - src.asher-talbot-2006-india-before-europe
+claims:
+  - text: Vallabhacharya was a Vaishnava theologian associated with the Pushtimarg
+      tradition. His life dates and itinerary are reconstructed from sectarian
+      and historical sources.
+    grade: C
+    sources:
+      - src.hawley-2015-storm-of-songs
+      - src.asher-talbot-2006-india-before-europe
+relations: []
+tags:
+  - person
+review:
+  status: draft
+  author: codex-gpt-6

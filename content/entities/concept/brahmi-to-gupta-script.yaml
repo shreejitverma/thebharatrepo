@@ -1,0 +1,42 @@
+id: concept.brahmi-to-gupta-script
+type: concept
+kind: text
+names:
+  en: Brahmi to Gupta Script Evolution
+  iast: Brāhmī-Guptalipi-Vikāsaḥ
+  native: ब्राह्मी-गुप्तलिपि-विकासः
+summary: >-
+  The paleographic evolution from Ashokan Brahmi (third century BCE) through Shunga, Kshatrapa and Kushan Middle Brahmi into the Late Brahmi or Gupta script (fourth to sixth centuries CE) is the foundational historical trajectory of Indian writing systems. An alphasyllabic abugida in which each consonant carries an inherent short a modified by vowel signs (matras) and conjuncts, Brahmi and its Gupta script descendant are the common ancestors of Devanagari, Sharada, Siddham, Bengali, Odia, Gujarati, Gurmukhi, South Indian, Tibetan and Southeast Asian scripts.
+summaries:
+  kids: >-
+    Over several centuries, the geometric Brahmi letters carved by Emperor Ashoka gradually evolved into the graceful Gupta script, which became the ancestor of Devanagari and most modern Indian and Southeast Asian alphabets.
+  teen: >-
+    Traced continuously across dated Maurya, Shunga, Kushan and Gupta inscriptions from the third century BCE to the sixth century CE, the evolution of Brahmi into the Gupta abugida produced the parent script family of South, Central and Southeast Asia.
+region: Pan-Indian, with extensions into Central, East and Southeast Asia
+datings:
+  - method: epigraphic
+    range: { earliest: "268 BCE", latest: 600, precision: century, circa: true }
+    grade: A
+    label: Dated epigraphic trajectory from Early (Ashokan) Brahmi to Late (Gupta) Brahmi
+    sources:
+      - src.salomon-1998-indian-epigraphy
+      - src.coningham-1996-early-brahmi-script
+    note: Directly attested by a continuous sequence of dated inscriptions from Ashoka's third-century BCE edicts through Kushan-era Mathura records to fourth- through sixth-century CE Gupta stone and copper-plate inscriptions.
+claims:
+  - text: Between the first and fourth centuries CE, reed-pen and ink manuscript writing influenced stone epigraphy, introducing flat serif head-marks (matras), Equalized letter heights and more cursive medial vowel flourishes that distinguish the Kushan and Gupta scripts from rectilinear Ashokan Brahmi.
+    grade: A
+    sources:
+      - src.salomon-1998-indian-epigraphy
+  - text: By the fourth to sixth centuries CE, Late Brahmi split into northern ("Gupta") and southern script varieties; the northern Gupta script evolved into the acute-angled Siddhamatrika script ( sixth century CE), from which both Nagari (Devanagari) in the Gangetic plain and Sharada in Kashmir and the northwest directly descended.
+    grade: A
+    sources:
+      - src.salomon-1998-indian-epigraphy
+relations:
+  - { kind: related-to, target: event.brahmi-decipherment-prinsep }
+  - { kind: related-to, target: artifact.ashoka-major-rock-edict-xiii }
+  - { kind: related-to, target: artifact.tamil-brahmi-inscriptions }
+  - { kind: related-to, target: polity.gupta-empire }
+  - { kind: related-to, target: artifact.bakhshali-manuscript }
+wikidata: Q1992659
+tags: [brahmi, gupta-script, palaeography, epigraphy, abugida, writing-systems]
+review: { status: draft, author: "gemini-4-argon" }

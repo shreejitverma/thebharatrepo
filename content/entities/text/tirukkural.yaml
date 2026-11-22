@@ -1,0 +1,49 @@
+id: text.tirukkural
+type: text
+kind: text
+names:
+  en: Tirukkural
+  iast: Tirukkuṟaḷ
+  native: திருக்குறள்
+summary: >-
+  The Tirukkural ("Sacred Couplets"), authored by the Tamil poet-philosopher Tiruvalluvar and included among the Eighteen Lesser Classics (Patinenkirkkanakku), is a celebrated ethical and political treatise consisting of 1,330 short two-line kural couplets grouped into 133 chapters of ten verses each. Its three books address virtue and moral duty (Arattuppal), statecraft, wealth and civic life (Porutpal), and romantic love (Kamattuppal) in a non-sectarian idiom admired by Jain, Shaiva, Vaishnava and secular readers alike.
+summaries:
+  kids: >-
+    The Tirukkural is a classic Tamil book of 1,330 short two-line poems by Tiruvalluvar that teaches honesty, kindness, non-violence, good government and friendship.
+  teen: >-
+    Composed by Tiruvalluvar in 1,330 tightly metered couplets across three books on virtue (aram), polity and wealth (porul) and love (inbam/kamam), the Tirukkural synthesizes classical Tamil ethics and statecraft.
+region: Tamilakam (Tamil Nadu)
+datings:
+  - method: linguistic
+    range: { earliest: 400, latest: 550, best: 450, precision: century, circa: true }
+    grade: B
+    label: Post-Sangam classical philological dating (Kamil Zvelebil and Stuart Blackburn)
+    sources:
+      - src.zvelebil-1973-smile-of-murugan
+      - src.blackburn-2000-legend-of-valluvar
+    note: Dated by Kamil Zvelebil and most modern scholars to c. 450-550 CE on the basis of its post-early-Sangam Tamil morphology, Sanskrit loanwords, engagement with Kautilyan and Dharmashastric concepts, and citations in the sixth-century CE epics Cilappatikaram and Manimekalai.
+  - method: traditional-sampradaya
+    range: { earliest: "31 BCE", latest: "31 BCE", precision: year, circa: false }
+    grade: D
+    label: Tiruvalluvar Year (31 BCE) commemorative reckoning
+    sources:
+      - src.blackburn-2000-legend-of-valluvar
+    note: Adopted in 1935 by Tamil scholars led by Maraimalai Adigal and officially used by the Government of Tamil Nadu since 1971, placing Tiruvalluvar's birth in 31 BCE.
+claims:
+  - text: The Tirukkural is structured into 133 chapters of ten kural-venpa couplets each (1,330 couplets in total), organized around the threefold human aims of aram (dharma/virtue), porul (artha/polity and wealth) and kamam (kama/love).
+    grade: A
+    sources:
+      - src.zvelebil-1973-smile-of-murugan
+      - src.blackburn-2000-legend-of-valluvar
+  - text: The text emphasizes non-killing, vegetarianism, hospitality, impartiality, gratitude and wise ministerial counsel while avoiding sectarian allegiance to any single temple cult, leading Jain, Shaiva and Vaishnava commentators such as Parimelalakar to claim it within their respective traditions.
+    grade: B
+    sources:
+      - src.zvelebil-1973-smile-of-murugan
+      - src.blackburn-2000-legend-of-valluvar
+relations:
+  - { kind: related-to, target: text.sangam-literature }
+  - { kind: related-to, target: text.arthashastra }
+  - { kind: related-to, target: text.manusmriti }
+wikidata: Q2167085
+tags: [tirukkural, tiruvalluvar, tamil-literature, ethics, statecraft]
+review: { status: draft, author: "gemini-4-argon" }

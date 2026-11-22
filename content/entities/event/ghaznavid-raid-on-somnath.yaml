@@ -1,0 +1,50 @@
+id: event.ghaznavid-raid-on-somnath
+type: event
+kind: event
+names:
+  en: Ghaznavid raid on Somnath
+  native: सोमनाथ
+summary: >-
+  In January 1026 CE Mahmud of Ghazni sacked the Shiva temple of Somanatha on the coast of Saurashtra,
+  breaking its linga and carrying off its wealth. The raid is recorded by contemporaries including
+  al-Biruni; how it was remembered, in Persian chronicles, Sanskrit inscriptions and modern
+  nationalism, is the subject of a large historiography.
+summaries:
+  kids: >-
+    About a thousand years ago, Mahmud, a ruler from Ghazni in Afghanistan, attacked the rich temple of
+    Somnath in Gujarat and took away its treasure. The temple was rebuilt many times.
+  teen: >-
+    Mahmud of Ghazni raided north India many times for plunder. His attack on Somnath in 1026 became
+    the most famous, and historians such as Romila Thapar have studied how different groups told and
+    retold the story over the following centuries.
+region: Saurashtra, Gujarat
+location: { name: Somnath (Prabhas Patan), lat: 20.89, lon: 70.40 }
+datings:
+  - method: documentary
+    range: { earliest: "1025 CE", latest: "1026 CE", best: "1026 CE", precision: year, circa: false }
+    grade: A
+    label: Contemporary Persian and Arabic records
+    sources: [src.sachau-1910-alberunis-india, src.thapar-2005-somanatha]
+    note: The raid is placed in the winter of 1025 to 1026 CE (Hijri 416).
+claims:
+  - text: Al-Biruni, a contemporary at the Ghaznavid court, records that Mahmud destroyed the Somanatha linga and took parts of it to Ghazni.
+    grade: A
+    sources: [src.sachau-1910-alberunis-india]
+  - text: >-
+      Sanskrit inscriptions of the following centuries record the temple's restoration and continued
+      worship, and treat the raid very differently from Turko-Persian chronicles.
+    grade: B
+    sources: [src.thapar-2005-somanatha]
+  - text: Richard Eaton argues that temple desecration by Indo-Muslim rulers was largely tied to the political targeting of royal temples of defeated or rival kings.
+    grade: C
+    sources: [src.eaton-2000-temple-desecration]
+debate: >-
+  The fact of the raid is not in doubt. Historians disagree about its meaning: it has been read as
+  religious iconoclasm, as plunder of temple wealth by a ruler funding Central Asian wars, and as
+  politically targeted destruction. Thapar shows that later Persian accounts magnified the event, while
+  local Sanskrit and Jain sources dwell on rebuilding; 19th- and 20th-century writers turned it into a
+  symbol of national trauma.
+relations:
+  - { kind: related-to, target: person.al-biruni, note: Contemporary witness at the Ghaznavid court }
+tags: [ghaznavid, temple, gujarat, historiography]
+review: { status: draft, author: "claude-opus-5-5" }

@@ -1,0 +1,41 @@
+id: tradition.nayanars
+type: tradition
+kind: dharma
+names:
+  en: Nayanars
+  iast: Nāyaṉmār
+  native: நாயன்மார்
+summary: >-
+  The Nayanars are sixty-three Tamil Shaiva saints, among them the hymnists Appar, Sambandar and
+  Sundarar, active from about the 6th to the 9th century CE. Their hymns form the Tevaram, part of the
+  Shaiva canon Tirumurai, and their lives were retold in Sekkizhar's 12th-century Periyapuranam.
+summaries:
+  kids: >-
+    The Nayanars were sixty-three devotees of Shiva in Tamil Nadu. Some were kings, some were farmers or
+    potters, and three of them wrote hymns still sung in Shiva temples.
+  teen: >-
+    The Nayanar hymnists travelled from temple to temple singing in Tamil about Shiva. Their songs, the
+    Tevaram, helped make temples the centre of Tamil religious life in the Pallava and Chola periods.
+region: Tamil Nadu
+datings:
+  - method: textual-internal
+    range: { earliest: "550 CE", latest: "900 CE", precision: century, circa: true }
+    grade: C
+    label: Period of the hymnists
+    sources: [src.peterson-1989-poems-to-siva, src.zvelebil-1973-smile-of-murugan]
+    note: Appar and Sambandar are linked by tradition and internal references to the Pallava court of the 7th century.
+claims:
+  - text: >-
+      The Tevaram hymns of Appar, Sambandar and Sundarar make up the first seven books of the Tamil
+      Shaiva canon, the Tirumurai.
+    grade: B
+    sources: [src.peterson-1989-poems-to-siva]
+  - text: Sekkizhar's Periyapuranam, composed in the Chola period, tells the lives of all sixty-three saints.
+    grade: B
+    sources: [src.peterson-1989-poems-to-siva, src.zvelebil-1973-smile-of-murugan]
+relations:
+  - { kind: related-to, target: polity.pallava-dynasty }
+  - { kind: related-to, target: tradition.alvars, note: Parallel Tamil bhakti traditions }
+wikidata: Q1241843
+tags: [bhakti, shaiva, tamil, poet-saints]
+review: { status: draft, author: "claude-opus-5-5" }

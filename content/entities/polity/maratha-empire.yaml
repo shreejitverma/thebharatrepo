@@ -1,0 +1,37 @@
+id: polity.maratha-empire
+type: polity
+kind: polity
+names:
+  en: Maratha Empire
+summary: The Maratha polity grew from Shivaji’s kingdom into a confederacy that
+  became a major power across much of India. British victory in 1818 ended its
+  political dominance.
+summaries:
+  kids: The Marathas grew from a regional kingdom into a powerful confederacy
+    across India.
+  teen: Maratha power expanded through networks of chiefs and military campaigns,
+    with the confederacy’s political structure changing across the 18th century.
+datings:
+  - method: scholarly-consensus
+    range:
+      earliest: "1674"
+      latest: "1818"
+      precision: year
+      circa: true
+    grade: B
+    label: Historical scholarship
+    sources: &a1
+      - src.gordon-1993-marathas-1600-1818
+      - src.eaton-2005-social-history-deccan
+claims:
+  - text: The Maratha polity grew from Shivaji’s kingdom into a confederacy that
+      became a major power across much of India. British victory in 1818 ended
+      its political dominance.
+    grade: B
+    sources: *a1
+relations: []
+tags:
+  - polity
+review:
+  status: draft
+  author: codex-gpt-6

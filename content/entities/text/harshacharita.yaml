@@ -1,0 +1,44 @@
+id: text.harshacharita
+type: text
+kind: text
+names:
+  en: Harshacharita
+  iast: Harṣacarita
+  native: हर्षचरित
+summary: >-
+  The Harshacharita is a Sanskrit prose work by Banabhatta on the early career of his patron Harsha,
+  composed in the first half of the 7th century CE. It is a literary work rather than a chronicle, but
+  much of its account of Harsha's accession can be checked against inscriptions and Xuanzang.
+summaries:
+  kids: >-
+    The Harshacharita means "the deeds of Harsha". It tells how Harsha became king after his
+    brother was killed, and how he rescued his sister Rajyashri.
+  teen: >-
+    Written by Harsha's court poet Bana, the Harshacharita is one of the earliest Sanskrit works about
+    a living king. It stops before Harsha's later reign, and it praises him, but historians still use
+    it alongside other evidence to rebuild 7th-century history.
+region: Northern India
+datings:
+  - method: textual-internal
+    range: { earliest: "620 CE", latest: "650 CE", precision: decade, circa: true }
+    grade: B
+    label: Composed during Harsha's reign
+    sources: [src.cowell-1897-harsa-carita, src.devahuti-1970-harsha-political-study]
+    note: The author writes as a living member of Harsha's court.
+claims:
+  - text: >-
+      The work is divided into eight chapters (ucchvasas) and breaks off after Harsha recovers his
+      widowed sister Rajyashri in the Vindhya forest.
+    grade: A
+    sources: [src.cowell-1897-harsa-carita]
+  - text: >-
+      It narrates the death of Harsha's elder brother Rajyavardhana at the hands of the king of Gauda
+      (identified with Shashanka), which set off Harsha's accession.
+    grade: A
+    sources: [src.cowell-1897-harsa-carita, src.singh-2008-ancient-early-medieval-india]
+relations:
+  - { kind: authored-by, target: person.banabhatta }
+  - { kind: related-to, target: person.harshavardhana, note: Biography of Harsha }
+wikidata: Q1810426
+tags: [sanskrit-literature, biography, harsha]
+review: { status: draft, author: "claude-opus-5-5" }

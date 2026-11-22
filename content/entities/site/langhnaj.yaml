@@ -1,0 +1,63 @@
+id: site.langhnaj
+type: site
+kind: prehistory
+names:
+  en: Langhnaj Mesolithic Site
+summary: >-
+  A major Mesolithic sand-dune habitation and burial site in Mehsana district, North Gujarat, excavated by
+  H. D. Sankalia from the 1940s onward, yielding geometric microliths, wild mammal fauna, flexed human burials
+  and later copper knife and pottery horizons demonstrating hunter-gatherer exchange with Harappan and Chalcolithic neighbours.
+summaries:
+  kids: >-
+    Langhnaj in Gujarat is an ancient sand-dune camp where Mesolithic hunter-gatherers made tiny stone tools,
+    hunted wild animals and later traded with nearby copper-using villagers.
+  teen: >-
+    Excavated by H. D. Sankalia, Langhnaj in North Gujarat provided the first systematic osteological and
+    archaeological record of Mesolithic hunter-gatherers in western India and their interaction with Chalcolithic farmers.
+region: North Gujarat plain, Mehsana district, Gujarat
+location:
+  name: Langhnaj
+  lat: 23.45
+  lon: 72.52
+datings:
+  - method: archaeological-radiocarbon
+    range:
+      earliest: "2500 BCE"
+      latest: "1500 BCE"
+      best: "2040 BCE"
+      precision: century
+      circa: true
+    grade: B
+    label: Radiocarbon and stratigraphic dating of main Mesolithic-Chalcolithic contact horizon
+    sources:
+      - src.misra-2001-prehistoric-colonization-india
+      - src.coningham-2015-archaeology-south-asia
+    note: >-
+      A radiocarbon assay on uncharred bone places the middle horizon around 2040 BCE (c. -2039), within a broader
+      3rd to 2nd millennium BCE sequence of microlith-using hunter-gatherers in contact with Harappan/Chalcolithic groups.
+claims:
+  - text: >-
+      Excavations at Langhnaj uncovered fourteen flexed human skeletons buried within the habitation dune alongside
+      geometric microliths and bones of wild rhinoceros, nilgai, blackbuck, chital and wild boar.
+    grade: A
+    sources:
+      - src.misra-2001-prehistoric-colonization-india
+      - src.coningham-2015-archaeology-south-asia
+  - text: >-
+      A pure copper knife and Harappan-affiliated disk beads in the middle levels at Langhnaj attest to symbiotic
+      trade between Mesolithic foragers and settled Chalcolithic communities in Gujarat.
+    grade: A
+    sources:
+      - src.misra-2001-prehistoric-colonization-india
+      - src.coningham-2015-archaeology-south-asia
+relations:
+  - kind: contemporary-of
+    target: site.bagor
+tags:
+  - mesolithic
+  - microlithic
+  - burials
+  - gujarat
+review:
+  status: draft
+  author: gemini-4-argon

@@ -1,0 +1,91 @@
+id: cosmology.kalpa
+type: cosmology
+kind: cosmology
+names:
+  en: Kalpa (Day of Brahma)
+  iast: Kalpa
+  native: कल्प
+summary: >-
+  In traditional Hindu cosmology, a kalpa is a single daytime period of the creator deity Brahma lasting
+  4.32 billion human years (1,000 mahayugas), followed by a night of cosmic dissolution (pralaya) of equal
+  length. Both the Puranas and the astronomical Siddhantas divide each kalpa into fourteen manvantaras
+  separated by fifteen junction intervals (sandhis).
+summaries:
+  kids: >-
+    In traditional Hindu cosmology, one daytime of the creator god Brahma is called a kalpa and lasts
+    4.32 billion human years, followed by a night of the same length when the universe rests.
+  teen: >-
+    Traditional Puranic and Siddhantic cosmology defines a kalpa as 1,000 mahayugas (4,320,000,000 solar
+    years), structured into fourteen manvantaras of 71 mahayugas each plus fifteen dawn and twilight
+    junctions worth 1,728,000 years apiece.
+datings:
+  - method: traditional-puranic
+    range:
+      earliest: "1972947102 BCE"
+      latest: "3102 BCE"
+      precision: cosmological
+      circa: false
+    grade: D
+    label: Puranic and Siddhantic kalpa reckoning
+    sources:
+      - src.wilson-1840-vishnu-purana
+      - src.burgess-1860-surya-siddhanta
+      - src.plofker-2009-mathematics-in-india
+    note: >-
+      Vishnu Purana 1.3 and Surya Siddhanta 1.15-23 define a full kalpa as 4,320,000,000 solar years, of
+      which 1,972,944,000 years had elapsed from the start of the present kalpa to the Kali Yuga epoch in
+      3102 BCE (-3101).
+  - method: traditional-siddhantic
+    range:
+      earliest: "1986123102 BCE"
+      latest: "3102 BCE"
+      precision: cosmological
+      circa: false
+    grade: D
+    label: Aryabhata's 1,008-yuga kalpa system
+    sources:
+      - src.shukla-sarma-1976-aryabhatiya
+      - src.plofker-2009-mathematics-in-india
+    note: >-
+      In the Dashagitika (verse 5) Aryabhata divides the kalpa into 14 Manus of 72 yugas each (1,008 yugas,
+      4,354,560,000 years, with no junction periods) and states that six Manus, 27 yugas and three
+      yuga-quarters (1,986,120,000 years) had elapsed from the start of the kalpa to the Kali epoch.
+claims:
+  - text: >-
+      In the Surya Siddhanta (1.15-21) and Vishnu Purana (1.3), one kalpa equals 1,000 mahayugas or
+      4,320,000,000 human solar years.
+    grade: D
+    sources:
+      - src.burgess-1860-surya-siddhanta
+      - src.wilson-1840-vishnu-purana
+      - src.plofker-2009-mathematics-in-india
+  - text: >-
+      A kalpa comprises fourteen manvantaras of 71 mahayugas each (994 mahayugas) together with fifteen
+      transitional sandhis of 1,728,000 years each (6 mahayugas), making exactly 1,000 mahayugas.
+    grade: D
+    sources:
+      - src.burgess-1860-surya-siddhanta
+      - src.plofker-2009-mathematics-in-india
+  - text: >-
+      Indian astronomers used the beginning of the kalpa as a grand epoch at which all planets, apogees
+      and nodes were assumed to be in mean conjunction at the start of Aries.
+    grade: B
+    sources:
+      - src.plofker-2009-mathematics-in-india
+relations:
+  - kind: part-of
+    target: cosmology.brahma-lifespan
+  - kind: related-to
+    target: cosmology.pralaya
+  - kind: related-to
+    target: cosmology.shveta-varaha-kalpa
+wikidata: Q864326
+tags:
+  - cosmology
+  - kalpa
+  - purana
+  - siddhanta
+  - time-cycles
+review:
+  status: draft
+  author: gemini-4-argon

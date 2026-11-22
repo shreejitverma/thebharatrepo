@@ -1,0 +1,47 @@
+id: person.menander-i
+type: person
+kind: person
+names:
+  en: Menander I
+  iast: Milinda
+  native: मिलिन्द
+summary: >-
+  Menander I Soter (reigned c. 165/155-130 BCE), known in Pali and Sanskrit sources as Milinda, was the most powerful Indo-Greek monarch, ruling from Sagala (modern Sialkot) over a territory stretching from the Kabul valley across the Punjab and raiding into the Gangetic plain. He is celebrated in Buddhist literature as the royal interlocutor of the sage Nagasena in the Milindapanha ("Questions of King Milinda").
+summaries:
+  kids: >-
+    King Menander I, called Milinda in India, was an Indo-Greek ruler remembered for his philosophical discussions with the Buddhist monk Nagasena.
+  teen: >-
+    Reigning c. 155 to 130 BCE from Sagala in the Punjab, Menander I left the largest and most widespread coinage of any Indo-Greek king and became famous in Buddhist tradition through the Milindapanha.
+region: Gandhara and Punjab (capital at Sagala / Sialkot)
+location: { name: "Sialkot (ancient Sagala)", lat: 32.494, lon: 74.522 }
+datings:
+  - method: numismatic
+    range: { earliest: "165 BCE", latest: "130 BCE", precision: decade, circa: true }
+    grade: B
+    label: Numismatic and classical textual chronology (c. 165/155-130 BCE)
+    sources:
+      - src.stoneman-2019-greek-experience-of-india
+      - src.kulke-2004-history-of-india
+    note: Established from the volume and hoard sequence of Menander's bilingual silver drachms and references in Strabo and Trogus/Justin.
+claims:
+  - text: Plutarch records in the Moralia (Praec. ger. reip. 821D-E) that when Menander died in camp, the cities of his realm contested for his ashes and divided his relics equally to erect monuments (stupas) over them.
+    grade: B
+    sources:
+      - src.stoneman-2019-greek-experience-of-india
+  - text: The Bajaur reliquary casket inscription from Shinkot in Khyber Pakhtunkhwa is dated in the reign of Maharaja Minadra (Menander), attesting Buddhist relic dedications within his kingdom.
+    grade: A
+    sources:
+      - src.salomon-1998-indian-epigraphy
+      - src.stoneman-2019-greek-experience-of-india
+relations:
+  - { kind: ruled, target: polity.indo-greek-kingdom }
+  - { kind: related-to, target: text.milindapanha }
+  - { kind: contemporary-of, target: polity.shunga-dynasty }
+wikidata: Q347878
+image:
+  commons: "File:Coin of Menander (155-130 BCE), Ashmolean Museum, Oxford.jpg"
+  alt: Silver drachm of the Indo-Greek king Menander I Soter in the Ashmolean Museum
+  credit: SpeakingArch
+  license: CC BY-SA 4.0
+tags: [menander, milinda, indo-greek, buddhism, numismatics]
+review: { status: draft, author: "gemini-4-argon" }

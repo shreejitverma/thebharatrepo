@@ -1,0 +1,88 @@
+id: concept.vikram-samvat
+type: concept
+kind: science
+names:
+  en: Vikram Samvat Era (57 BCE)
+  iast: Vikrama-saṃvat
+  native: विक्रमसंवत्
+summary: >-
+  Vikram Samvat is one of the main historical and civil eras of northern and western India and Nepal,
+  counting luni-solar years from an epoch in 58-57 BCE. Inscriptions call it the Krita era from the 3rd
+  century CE and the era of the Malavas from the 5th; its association with a king Vikramaditya of Ujjain
+  appears only in later records, and its true origin is debated.
+summaries:
+  kids: >-
+    Vikram Samvat is a traditional Indian calendar that starts in 57 BCE, so its year number is about 57
+    more than the common calendar. Many people in India and Nepal still use it for festivals.
+  teen: >-
+    The era of 57 BCE appears in 3rd to 5th century inscriptions from Rajasthan and Malwa as the Krita and
+    then the Malava era. Only later was it tied to a legendary king Vikramaditya of Ujjain who is said to
+    have defeated the Shakas, and historians still debate who began it.
+region: Northern, western and central India, and Nepal
+location:
+  name: Ujjain
+  lat: 23.18
+  lon: 75.78
+datings:
+  - method: epigraphic
+    range:
+      earliest: "58 BCE"
+      latest: "57 BCE"
+      precision: year
+      circa: false
+    grade: A
+    label: Epoch of the Krita, Malava or Vikrama era fixed by dated inscriptions
+    sources:
+      - src.salomon-1998-indian-epigraphy
+      - src.singh-2008-ancient-early-medieval-india
+    note: >-
+      Synchronisms in dated inscriptions place year 1 of the era in 58-57 BCE; years beginning in the spring
+      month Chaitra start in 57 BCE, those beginning in the autumn month Kartika in 58 BCE.
+  - method: traditional-sampradaya
+    range:
+      earliest: "57 BCE"
+      latest: "57 BCE"
+      precision: year
+      circa: false
+    grade: D
+    label: Traditional foundation by King Vikramaditya of Ujjain
+    sources:
+      - src.salomon-1998-indian-epigraphy
+      - src.thapar-2002-early-india
+    note: >-
+      Later literary and Jain tradition, including the story of Kalakacharya, credits the era to a king
+      Vikramaditya of Ujjayini who expelled the Shakas.
+claims:
+  - text: >-
+      In its earliest dated inscriptions from Rajasthan and Malwa (3rd to 5th centuries CE) the era of
+      58-57 BCE is called Krita, and from the 5th century it is described as the era of the Malavas.
+    grade: A
+    sources:
+      - src.salomon-1998-indian-epigraphy
+      - src.singh-2008-ancient-early-medieval-india
+  - text: >-
+      The name Vikrama for this era is attested in inscriptions only from the 9th century CE, after which it
+      became the standard designation in northern and western India.
+    grade: B
+    sources:
+      - src.salomon-1998-indian-epigraphy
+debate: >-
+  Tradition attributes the 57 BCE epoch to a king Vikramaditya of Ujjain, but no contemporary coin or
+  inscription of a 1st-century BCE Vikramaditya is known. Historians discuss whether the era began with an
+  Indo-Scythian ruler such as Azes, or with the Malava republic, before it was linked to the Vikramaditya
+  legend, which may also echo the Gupta king Chandragupta II Vikramaditya.
+relations:
+  - kind: related-to
+    target: concept.shaka-era
+  - kind: related-to
+    target: concept.kali-era-in-inscriptions
+wikidata: null
+tags:
+  - calendar
+  - vikram-samvat
+  - epigraphy
+  - malava
+  - ujjain
+review:
+  status: draft
+  author: gemini-4-argon

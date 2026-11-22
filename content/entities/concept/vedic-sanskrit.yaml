@@ -1,0 +1,73 @@
+id: concept.vedic-sanskrit
+type: concept
+kind: text
+names:
+  en: Vedic Sanskrit
+  iast: Vaidika Saṃskṛta
+  native: वैदिकसंस्कृतम्
+summary: >-
+  Vedic Sanskrit is the archaic Old Indo-Aryan language in which the Vedic Samhitas, Brahmanas,
+  Aranyakas, and early Upanishads were composed. Closely related to Old Iranian (Avestan and Old
+  Persian) within the Indo-Iranian branch of Indo-European, it preserves a musical pitch accent, a
+  rich modal verbal system (including the subjunctive and injunctives), and multiple infinitive
+  forms that were simplified before Panini codified Classical Sanskrit.
+summaries:
+  kids: >-
+    Vedic Sanskrit is the oldest form of the Sanskrit language, used to compose the hymns of the
+    Rigveda and spoken with musical pitch accents on words.
+  teen: >-
+    As the earliest attested Old Indo-Aryan language, Vedic Sanskrit evolved across five detectable
+    linguistic strata from the Rigveda to the late Sutras, retaining Indo-European pitch accents
+    and verbal moods before Panini standardized Classical Sanskrit in the Ashtadhyayi.
+region: Northwestern and northern Indian subcontinent
+datings:
+  - method: linguistic
+    range: { earliest: "1500 BCE", latest: "400 BCE", best: "1000 BCE", precision: century, circa: true }
+    grade: B
+    label: Five linguistic strata of Vedic Sanskrit (Witzel, Jamison, Cardona)
+    sources:
+      - src.witzel-1997-early-sanskritization-kuru
+      - src.jamison-brereton-2014-rigveda
+      - src.cardona-1988-panini-work-traditions
+    note: >-
+      Historical linguists trace Vedic Sanskrit across five sequential diachronic layers from c.
+      1500 to 400 BCE: (1) Rigvedic, (2) Mantra language (Yajurveda and Atharvaveda mantras), (3)
+      Samhita prose, (4) Brahmana prose, and (5) Sutra language leading up to Panini.
+claims:
+  - text: >-
+      Unlike Classical Sanskrit, Vedic Sanskrit preserves an inherited Indo-European phonemic pitch
+      accent system (udatta, anudatta, svarita), a productive subjunctive mood (let), an unmarked
+      injunctive mood, and more than a dozen distinct infinitive case formations.
+    grade: A
+    sources:
+      - src.jamison-brereton-2014-rigveda
+      - src.cardona-1988-panini-work-traditions
+      - src.katre-1987-astadhyayi-panini
+  - text: >-
+      Even within the oldest Rigvedic stratum, Vedic Sanskrit already exhibits retroflex consonants
+      (t, th, d, dh, n, sh, l) alongside probable substrate loanwords for local flora, fauna, and
+      agricultural tools (such as langala for plough and ulukhala for mortar).
+    grade: B
+    sources:
+      - src.jamison-brereton-2014-rigveda
+      - src.witzel-1997-early-sanskritization-kuru
+      - src.bryant-2001-quest-origins-vedic-culture
+  - text: >-
+      Michael Witzel identifies five chronological and dialectical strata within Vedic Sanskrit,
+      documenting a gradual eastward shift in dialectal base from the Punjab (Rigveda) to
+      Kurukshetra (Mantra and Samhita prose) and Panchala-Kosala-Videha (late Brahmanas and early
+      Upanishads).
+    grade: B
+    sources:
+      - src.witzel-1997-early-sanskritization-kuru
+      - src.flood-2003-blackwell-companion-hinduism
+relations:
+  - { kind: related-to, target: text.rigveda }
+  - { kind: related-to, target: text.ashtadhyayi }
+  - { kind: related-to, target: text.nirukta }
+  - { kind: related-to, target: event.mitanni-treaty }
+  - { kind: related-to, target: concept.indo-aryan-migration }
+  - { kind: related-to, target: tradition.vedic-oral-transmission }
+wikidata: Q36858
+tags: [vedic-sanskrit, old-indo-aryan, linguistics, grammar, pitch-accent, rigveda]
+review: { status: draft, author: "gemini-4-argon" }

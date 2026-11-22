@@ -1,0 +1,68 @@
+id: site.ahar
+type: site
+kind: prehistory
+names:
+  en: Ahar (Tambavati) Chalcolithic Site
+summary: >-
+  The type-site of the Ahar-Banas Chalcolithic culture on the bank of the Ahar River within modern Udaipur,
+  Rajasthan (known locally as Dhulkot and traditionally as Tambavati, "city of copper"), where excavations
+  revealed fifteen structural phases of schist-and-mud houses, copper slag heaps and white-painted Black-and-Red Ware.
+summaries:
+  kids: >-
+    Located in Udaipur, Rajasthan, Ahar was called Tambavati ("place of copper") because its ancient villagers
+    melted copper ore in furnaces and shaped it into axes and ornaments over 4,000 years ago.
+  teen: >-
+    Excavated by R. C. Agrawala and H. D. Sankalia, the Dhulkot mound at Ahar in Udaipur gave its name to the
+    Ahar-Banas Chalcolithic culture and revealed extensive copper smelting alongside stone-built multi-roomed houses.
+region: Ahar River valley, Udaipur district, Rajasthan
+location:
+  name: Ahar (Udaipur)
+  lat: 24.59
+  lon: 73.72
+datings:
+  - method: archaeological-radiocarbon
+    range:
+      earliest: "2600 BCE"
+      latest: "1500 BCE"
+      best: "2000 BCE"
+      precision: century
+      circa: true
+    grade: A
+    label: Period I (Phases Ia, Ib, Ic) Chalcolithic radiocarbon sequence
+    sources:
+      - src.misra-2001-prehistoric-colonization-india
+      - src.coningham-2015-archaeology-south-asia
+    note: >-
+      Calibrated radiocarbon dates from Period I at Ahar span roughly 2580 to 1500 BCE across three ceramic
+      and structural sub-phases (Ia, Ib and Ic), succeeded after a hiatus by Iron Age Period II.
+claims:
+  - text: >-
+      Excavations at Ahar (Dhulkot) uncovered multi-roomed rectangular houses built on random-rubble schist
+      plinths with mud walls, quartz-tempered plaster and multi-mouthed chulha hearths.
+    grade: A
+    sources:
+      - src.misra-2001-prehistoric-colonization-india
+      - src.coningham-2015-archaeology-south-asia
+  - text: >-
+      Abundant copper slag, furnace remains, copper celts and sheet metal at Ahar demonstrate local smelting
+      of Aravalli copper ores and virtually no reliance on stone microlithic blades.
+    grade: A
+    sources:
+      - src.misra-2001-prehistoric-colonization-india
+      - src.coningham-2015-archaeology-south-asia
+relations:
+  - kind: part-of
+    target: tradition.ahar-banas-culture
+  - kind: contemporary-of
+    target: site.balathal
+  - kind: contemporary-of
+    target: site.gilund
+tags:
+  - chalcolithic
+  - ahar-banas
+  - copper-metallurgy
+  - udaipur
+  - rajasthan
+review:
+  status: draft
+  author: gemini-4-argon

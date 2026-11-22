@@ -1,0 +1,76 @@
+id: site.attirampakkam
+type: site
+kind: prehistory
+names:
+  en: Attirampakkam Palaeolithic Site
+summary: >-
+  An open-air stratified Palaeolithic site in the Kortallayar river basin of Tamil Nadu yielding both some
+  of the earliest known Acheulian bifaces in South Asia (dated to c. 1.51 million years ago) and an early
+  Middle Palaeolithic Levallois assemblage emerging around 385,000 to 172,000 years ago.
+summaries:
+  kids: >-
+    At Attirampakkam in Tamil Nadu, archaeologists dug through deep layers of mud to find stone handaxes made
+    1.5 million years ago and smaller stone tools made over 300,000 years ago.
+  teen: >-
+    Attirampakkam preserves a long Stone Age sequence in southern India: cosmogenic-nuclide dating places its
+    Lower Palaeolithic Acheulian tools at c. 1.51 Ma, while luminescence dating shows a Middle Palaeolithic
+    Levallois industry by c. 385-172 ka.
+region: Kortallayar river basin, Tiruvallur district, Tamil Nadu
+location:
+  name: Attirampakkam
+  lat: 13.23
+  lon: 79.89
+datings:
+  - method: geological
+    range:
+      earliest: "1.77 Ma"
+      latest: "1.07 Ma"
+      best: "1.51 Ma"
+      precision: Ma
+      circa: true
+    grade: A
+    label: Lower Palaeolithic Acheulian horizon (cosmogenic burial and paleomagnetic dating)
+    sources:
+      - src.pappu-2011-attirampakkam-acheulian
+    note: >-
+      Cosmogenic 26Al/10Be burial dating of laminated clays containing Acheulian handaxes and cleavers yields a
+      pooled average age of 1.51 +/- 0.07 Ma within the Matuyama reversed chron (>1.07 Ma).
+  - method: luminescence
+    range:
+      earliest: "385 ka"
+      latest: "172 ka"
+      precision: ka
+      circa: true
+    grade: A
+    label: Middle Palaeolithic transition (pIRIR luminescence dating)
+    sources:
+      - src.akhilesh-2018-attirampakkam-middle-palaeolithic
+    note: >-
+      Post-infrared infrared stimulated luminescence (pIRIR) ages document the gradual loss of large cutting tools
+      and the rise of Levallois core and point technology between c. 385 +/- 64 ka and 172 +/- 41 ka.
+claims:
+  - text: >-
+      Excavated laminated clays in Trench T8 yielded over 3,500 quartzite Acheulian artefacts, demonstrating early
+      Pleistocene hominin occupation in peninsular India by c. 1.51 Ma.
+    grade: A
+    sources:
+      - src.pappu-2011-attirampakkam-acheulian
+  - text: >-
+      The emergence of Middle Palaeolithic Levallois technology at Attirampakkam around 385-172 ka occurred well
+      before the traditionally assumed <125 ka Out of Africa dispersal window.
+    grade: A
+    sources:
+      - src.akhilesh-2018-attirampakkam-middle-palaeolithic
+relations:
+  - kind: contemporary-of
+    target: site.isampur
+  - kind: related-to
+    target: event.arrival-of-modern-humans-south-asia
+tags:
+  - palaeolithic
+  - acheulian
+  - middle-palaeolithic
+  - tamil-nadu
+review:
+  status: draft
+  author: gemini-4-argon

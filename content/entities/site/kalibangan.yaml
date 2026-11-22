@@ -1,0 +1,104 @@
+id: site.kalibangan
+type: site
+kind: site
+names:
+  en: Kalibangan
+  iast: Kālībaṅgan
+  native: कालीबंगन
+summary: >-
+  A major Early and Mature Harappan fortified town on the southern bank of the dry Ghaggar (ancient Sarasvati/Hakra)
+  riverbed in Hanumangarh District, Rajasthan (c. 3000-1900 BCE), renowned for preserving the earliest known
+  ploughed agricultural field in the world (Period I) and rows of mud-brick fire altars on its citadel platforms
+  (Period II).
+summaries:
+  kids: >-
+    At Kalibangan in Rajasthan, archaeologists uncovered a 4,800-year-old ploughed farm field with criss-cross
+    furrows where farmers grew two crops at once.
+  teen: >-
+    Excavated by B. B. Lal, B. K. Thapar, and J. P. Joshi between 1960 and 1969, Kalibangan revealed a fortified
+    Early Harappan town with a furrowed agricultural field beneath a Mature Harappan twin-mound city containing
+    clay-lined fire altars.
+region: Hanumangarh District, Rajasthan, India
+location:
+  name: Kalibangan
+  lat: 29.4739
+  lon: 74.1303
+datings:
+  - method: archaeological-radiocarbon
+    range:
+      earliest: "3000 BCE"
+      latest: "2600 BCE"
+      precision: century
+      circa: true
+    grade: A
+    label: Period I (Early Harappan Sothi-Siswal Occupation)
+    sources:
+      - src.lal-2003-excavations-at-kalibangan
+      - src.possehl-2002-indus-civilization
+    note: >-
+      Fortified mud-brick settlement using 1:2:3 ratio bricks and the furrowed agricultural field outside the
+      southeastern wall; terminated by what the excavators identified as a seismic event around 2600 BCE.
+  - method: archaeological-radiocarbon
+    range:
+      earliest: "2600 BCE"
+      latest: "1900 BCE"
+      precision: century
+      circa: true
+    grade: A
+    label: Period II (Mature Harappan Urban Occupation)
+    sources:
+      - src.lal-2003-excavations-at-kalibangan
+      - src.possehl-2002-indus-civilization
+      - src.singh-2008-ancient-early-medieval-india
+    note: >-
+      Rebuilt on a bipartite plan with a fortified Western Citadel (KLB-1) and fortified Eastern Lower Town (KLB-2)
+      using 1:2:4 Mature Harappan bricks, before abandonment around c. 1900 BCE as the Ghaggar dried.
+claims:
+  - text: >-
+      Southeast of the Period I Early Harappan fortification at Kalibangan, excavators uncovered a ploughed field
+      surface with two perpendicular sets of furrows spaced 30 cm apart (east-west) and 190 cm apart (north-south),
+      matching modern Rajasthan intercropping of horsegram and mustard.
+    grade: A
+    sources:
+      - src.lal-2003-excavations-at-kalibangan
+      - src.possehl-2002-indus-civilization
+      - src.singh-2008-ancient-early-medieval-india
+  - text: >-
+      On the southern rhombic half of the Mature Harappan citadel at Kalibangan, elevated mud-brick platforms bore
+      rows of sunken clay-lined rectangular pits containing ash, charcoal, and cylindrical or triangular terracotta
+      stele and cakes, interpreted by excavators as ritual fire altars.
+    grade: B
+    sources:
+      - src.possehl-2002-indus-civilization
+      - src.singh-2008-ancient-early-medieval-india
+  - text: >-
+      Unlike Mohenjo-daro, Kalibangan lacked a comprehensive street-level baked-brick drainage system, relying
+      instead on wooden hollowed-out Uf-drains and soakage jars buried outside individual houses.
+    grade: A
+    sources:
+      - src.possehl-2002-indus-civilization
+      - src.singh-2008-ancient-early-medieval-india
+relations:
+  - kind: part-of
+    target: tradition.harappan-civilisation
+  - kind: contemporary-of
+    target: site.banawali
+  - kind: contemporary-of
+    target: site.rakhigarhi
+  - kind: related-to
+    target: concept.ghaggar-hakra-sarasvati-debate
+wikidata: Q1722226
+image:
+  commons: "File:Kalibangan cylinder seal.jpg"
+  alt: Harappan cylinder seal and impression excavated from Kalibangan
+  credit: Ministry of Culture, Government of India
+  license: GODL-India
+tags:
+  - harappan
+  - site
+  - rajasthan
+  - ghaggar-hakra
+  - agriculture
+review:
+  status: draft
+  author: gemini-4-argon

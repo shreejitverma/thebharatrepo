@@ -1,0 +1,46 @@
+id: person.chandragupta-ii
+type: person
+kind: person
+names:
+  en: Chandragupta II
+  iast: Candragupta Vikramāditya
+  native: चन्द्रगुप्त विक्रमादित्य
+summary: >-
+  Chandragupta II (reigned c. 375/380-413/415 CE), who adopted the imperial title Vikramaditya ("Sun of Valour") and the Vaishnava epithet Paramabhagavata, was the son of Samudragupta and one of the most powerful emperors of the Gupta dynasty. He secured the Deccan flank through the marriage of his daughter Prabhavatigupta to the Vakataka ruler Rudrasena II, conquered the Western Kshatrapas (Shakas) of Malwa, Gujarat and Kathiawar to gain the Arabian Sea ports and Ujjain, patronised the royal rock-cut shrines at Udayagiri, and reigned during the visit of the Chinese Buddhist pilgrim Faxian.
+summaries:
+  kids: >-
+    Emperor Chandragupta II Vikramaditya ruled the Gupta Empire at its height, defeated the Western Shaka rulers to reach the Arabian Sea, and supported poets, scholars and artists.
+  teen: >-
+    Reigning c. 375 to 415 CE, Chandragupta II Vikramaditya expanded Gupta rule to the western coast by conquering the Western Kshatrapas, allied by marriage with the Vakatakas of the Deccan, and commissioned monuments at Udayagiri and the Iron Pillar of King Chandra.
+region: Northern, Central and Western India (capitals at Pataliputra and Ujjain)
+location: { name: "Ujjain, Madhya Pradesh", lat: 23.176, lon: 75.788 }
+datings:
+  - method: epigraphic
+    range: { earliest: 375, latest: 415, precision: year, circa: true }
+    grade: A
+    label: Dated Gupta-era inscriptions from Year 61 (380 CE Mathura pillar) to Year 93 (412/413 CE Sanchi railing)
+    sources:
+      - src.fleet-1888-inscriptions-early-gupta-kings
+      - src.willis-2002-lion-capital-udayagiri
+      - src.kulke-2004-history-of-india
+    note: The Mathura pillar inscription of Gupta Year 61 (380 CE), recorded in his fifth regnal year, places his accession in 375/376 CE; his latest dated inscription is the Sanchi railing record of Gupta Year 93 (412/413 CE), and his son Kumaragupta I is attested by Year 96 (415/416 CE).
+claims:
+  - text: An inscription of Chandragupta II's minister Virasena in Cave 6 at Udayagiri states that the emperor came to eastern Malwa in person "seeking to conquer the whole world" (kritsna-prithvi-jayarthena), coinciding with the overthrow of the Western Kshatrapas and the introduction of Gupta silver coinage after 409 CE.
+    grade: A
+    sources:
+      - src.fleet-1888-inscriptions-early-gupta-kings
+      - src.willis-2002-lion-capital-udayagiri
+  - text: Numismatic and palaeographic evidence identifies Chandragupta II with the "King Chandra" of the Mehrauli Iron Pillar inscription, who worshipped Vishnu, crossed the seven mouths of the Indus to defeat the Vahlikas, and established a Vishnupadagiri standard.
+    grade: B
+    sources:
+      - src.balasubramaniam-2000-corrosion-delhi-iron-pillar
+      - src.fleet-1888-inscriptions-early-gupta-kings
+relations:
+  - { kind: ruled, target: polity.gupta-empire }
+  - { kind: patronised, target: site.udayagiri-caves }
+  - { kind: related-to, target: artifact.iron-pillar-of-delhi }
+  - { kind: contemporary-of, target: event.faxian-travels }
+  - { kind: contemporary-of, target: person.kalidasa }
+wikidata: Q844536
+tags: [chandragupta-ii, vikramaditya, gupta-empire, udayagiri, iron-pillar]
+review: { status: draft, author: "gemini-4-argon" }

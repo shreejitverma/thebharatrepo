@@ -1,0 +1,152 @@
+id: person.krishna
+type: person
+kind: person
+names:
+  en: Krishna
+  iast: Kṛṣṇa Vāsudeva
+  native: कृष्ण वासुदेव
+summary: >-
+  Krishna Vasudeva of the Vrishni clan is a central figure of the Mahabharata, the teacher of the
+  Bhagavadgita and, across Hindu traditions, an avatar of Vishnu or the supreme deity. Itihasa-Purana
+  tradition places his life at the close of Dvapara Yuga, his passing marking the start of Kali Yuga in
+  3102 BCE; this is traditional chronology. Historical evidence begins with texts and inscriptions: the
+  worship of Vasudeva is attested in stone by the 2nd century BCE.
+summaries:
+  kids: >-
+    Krishna is a hero and teacher of the Mahabharata and the Bhagavadgita, worshipped by millions. Tradition
+    says Kali Yuga began when his life on earth ended, in 3102 BCE. A stone pillar from over 2,000 years ago
+    shows that people were already worshipping him as Vasudeva.
+  teen: >-
+    Tradition places Krishna at the Dvapara-Kali transition, in 3102 BCE or, in another school, around 2449
+    BCE. Historians instead follow the evidence: a Krishna son of Devaki in the Chandogya Upanishad, the
+    pairing of Vasudeva and Arjuna in Panini's grammar, and the Heliodorus pillar at Besnagar honouring
+    Vasudeva in the late 2nd century BCE.
+region: Mathura (Shurasena), Kurukshetra and Dvaraka in epic geography
+location:
+  name: Mathura
+  lat: 27.50
+  lon: 77.67
+datings:
+  - method: traditional-puranic
+    range:
+      earliest: "3138 BCE"
+      latest: "3102 BCE"
+      best: "3102 BCE"
+      precision: year
+      circa: true
+    grade: D
+    label: Puranic-Siddhantic tradition (war 3138 BCE, passing at the start of Kali Yuga, 3102 BCE)
+    sources:
+      - src.wilson-1840-vishnu-purana
+      - src.gonzalezreimann-2002-mahabharata-yugas
+      - src.bhatnagar-2017-date-mahabharata-war
+    note: >-
+      The Vishnu Purana (4.24, 5.38) says Kali Yuga began on the day Krishna left the world, 36 years after
+      the war; equated with the Siddhantic Kali epoch, this places his passing in 3102 BCE and the war in
+      3138 BCE.
+  - method: traditional-siddhantic
+    range:
+      earliest: "2449 BCE"
+      latest: "2413 BCE"
+      precision: decade
+      circa: true
+    grade: D
+    label: Vriddha Garga, Varahamihira and Kalhana school (Yudhishthira 2449 BCE)
+    sources:
+      - src.stein-1900-rajatarangini
+      - src.saha-1955-calendar-reform-committee-report
+    note: >-
+      Varahamihira, quoted by Kalhana (Rajatarangini 1.56), dates Yudhishthira's reign to 2,526 years before
+      the Shaka era (2449 BCE); Krishna, his contemporary, would then belong to the mid-25th century BCE.
+  - method: linguistic
+    range:
+      earliest: "700 BCE"
+      latest: "500 BCE"
+      precision: century
+      circa: true
+    grade: C
+    label: Krishna Devakiputra in Chandogya Upanishad 3.17.6 (date of the text; identification debated)
+    sources:
+      - src.olivelle-1998-early-upanisads
+      - src.malinar-2007-bhagavadgita-doctrines-contexts
+    note: >-
+      The Chandogya Upanishad, dated by Olivelle to roughly the 7th to 6th centuries BCE, names Krishna son
+      of Devaki as a pupil of Ghora Angirasa; whether he is the Krishna of the epic is debated.
+  - method: epigraphic
+    range:
+      earliest: "120 BCE"
+      latest: "90 BCE"
+      precision: decade
+      circa: true
+    grade: B
+    label: Heliodorus pillar at Besnagar, worship of Vasudeva (date by the reign of Antialcidas)
+    sources:
+      - src.salomon-1998-indian-epigraphy
+      - src.singh-2008-ancient-early-medieval-india
+      - src.malinar-2007-bhagavadgita-doctrines-contexts
+    note: >-
+      Heliodorus, envoy of the Indo-Greek king Antialcidas and a self-described Bhagavata, set up a Garuda
+      column for Vasudeva, god of gods; the date follows the approximate reign of Antialcidas.
+claims:
+  - text: >-
+      Chandogya Upanishad 3.17.6 names Krishna, son of Devaki, as a pupil of Ghora Angirasa; scholars
+      disagree on whether this is the same figure as the Krishna of the Mahabharata.
+    grade: C
+    sources:
+      - src.olivelle-1998-early-upanisads
+      - src.malinar-2007-bhagavadgita-doctrines-contexts
+  - text: >-
+      Panini's sutra 4.3.98 (vasudevarjunabhyam vun) forms derivatives meaning a devotee of Vasudeva or of
+      Arjuna, which many scholars take as evidence for veneration of Vasudeva by Panini's time.
+    grade: B
+    sources:
+      - src.brockington-1998-sanskrit-epics
+      - src.malinar-2007-bhagavadgita-doctrines-contexts
+  - text: >-
+      The Heliodorus Garuda pillar at Besnagar and the Ghosundi-Hathibada inscriptions attest the worship of
+      Vasudeva and Samkarshana in central and western India in the 2nd and 1st centuries BCE.
+    grade: A
+    sources:
+      - src.salomon-1998-indian-epigraphy
+      - src.singh-2008-ancient-early-medieval-india
+  - text: >-
+      The Vishnu Purana states that Kali Yuga could not take hold while Krishna remained on earth and began
+      on the day he left it.
+    grade: D
+    sources:
+      - src.wilson-1840-vishnu-purana
+      - src.gonzalezreimann-2002-mahabharata-yugas
+debate: >-
+  Traditional chronology places Krishna at the close of Dvapara Yuga, in 3102 BCE or, in the Garga and
+  Varahamihira school, around 2449 BCE. Historians trace the growth of the Vasudeva-Krishna tradition
+  through its datable evidence: a possible early reference in the Chandogya Upanishad, the sutra of Panini,
+  and inscriptions of the 2nd and 1st centuries BCE, and they treat the historicity of the epic figure as
+  beyond what the evidence can settle.
+relations:
+  - kind: related-to
+    target: cosmology.dvapara-yuga
+  - kind: related-to
+    target: cosmology.kali-yuga
+  - kind: related-to
+    target: event.kali-yuga-epoch
+  - kind: related-to
+    target: concept.yuga-chronology-of-the-itihasa
+  - kind: related-to
+    target: text.chandogya-upanishad
+  - kind: related-to
+    target: text.ashtadhyayi
+wikidata: null
+image:
+  commons: "File:Krishna Arjuna Gita.jpg"
+  alt: Painting of about 1830 from an album of Indian deities, showing Arjuna kneeling before Krishna, his charioteer
+  credit: Unknown artist
+  license: Public domain
+tags:
+  - krishna
+  - vasudeva
+  - bhagavadgita
+  - dvapara-yuga
+  - besnagar
+review:
+  status: draft
+  author: gemini-4-argon

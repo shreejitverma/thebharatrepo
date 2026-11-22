@@ -1,0 +1,76 @@
+id: site.hastinapura
+type: site
+kind: site
+names:
+  en: Hastinapura (Hastinapur)
+  iast: Hastināpura
+  native: हस्तिनापुर
+summary: >-
+  Hastinapura, located on an old bank of the Ganga in Meerut district, Uttar Pradesh, is the
+  traditional capital of the Kuru kingdom and a benchmark site of North Indian protohistoric
+  archaeology. Excavated by B. B. Lal in 1950 to 1952, its five-period stratigraphic sequence
+  established the relative chronology of Ochre Coloured Pottery (OCP), Painted Grey Ware (PGW), and
+  Northern Black Polished Ware (NBPW).
+summaries:
+  kids: >-
+    Hastinapura is an ancient city by the Ganga River that served as the capital of the Kuru
+    kingdom. Archaeologist B. B. Lal dug here in 1950 and found layers of painted grey pottery and
+    river flood deposits.
+  teen: >-
+    Excavated by B. B. Lal in 1950 to 1952, Hastinapura revealed a five-period cultural sequence
+    from Ochre Coloured Pottery and Painted Grey Ware to Northern Black Polished Ware, including a
+    major Ganga flood layer at the close of Period II.
+region: Upper Ganga-Yamuna Doab (Meerut district, western Uttar Pradesh)
+location: { name: "Hastinapura", lat: 29.17, lon: 78.02 }
+datings:
+  - method: archaeological-stratigraphic
+    range: { earliest: "1500 BCE", latest: "200 BCE", best: "1000 BCE", precision: century, circa: true }
+    grade: A
+    label: Stratified protohistoric and early historic sequence (Periods I to III, B. B. Lal)
+    sources:
+      - src.lal-1955-excavation-hastinapura
+      - src.singh-2008-ancient-early-medieval-india
+      - src.allchin-1995-archaeology-early-historic-south-asia
+    note: >-
+      B. B. Lal identified Period I (Ochre Coloured Pottery, pre-1200 BCE), Period II (Painted Grey
+      Ware, dated by Lal to c. 1100 to 800 BCE), and Period III (Northern Black Polished Ware, c.
+      6th to 3rd century BCE), followed by later historical occupations in Periods IV and V.
+claims:
+  - text: >-
+      B. B. Lal's 1950 to 1952 excavations at the Ulta Khera mound in Hastinapura defined five
+      occupational periods separated by clear stratigraphic breaks: Period I (OCP), Period II
+      (PGW), Period III (NBPW), Period IV (Shunga-Kushana), and Period V (medieval).
+    grade: A
+    sources:
+      - src.lal-1955-excavation-hastinapura
+      - src.singh-2008-ancient-early-medieval-india
+  - text: >-
+      Period II (the Painted Grey Ware level) yielded wattle-and-daub and mud-brick structural
+      remains, copper arrowheads and antimony rods, iron slag in the upper levels, glass bangles,
+      charred rice (Oryza sativa), and skeletal remains of the domestic horse (Equus caballus).
+    grade: A
+    sources:
+      - src.lal-1955-excavation-hastinapura
+      - src.singh-2008-ancient-early-medieval-india
+  - text: >-
+      The PGW settlement of Period II was terminated by a heavy riverine erosion and flood deposit
+      from the Ganga, which B. B. Lal compared with the Puranic reference to the washing away of
+      Hastinapura during the reign of Nichakshu and the transfer of the Kuru capital to Kausambi.
+    grade: C
+    sources:
+      - src.lal-1955-excavation-hastinapura
+      - src.singh-2008-ancient-early-medieval-india
+      - src.thapar-2002-early-india
+relations:
+  - { kind: related-to, target: polity.kuru-kingdom }
+  - { kind: related-to, target: concept.painted-grey-ware-culture }
+  - { kind: related-to, target: concept.northern-black-polished-ware-culture }
+  - { kind: contemporary-of, target: site.ahichhatra }
+  - { kind: contemporary-of, target: site.atranjikhera }
+image:
+  commons: "File:Hastinapur-Vidur ka Teela-Plaque.jpg"
+  alt: Archaeological Survey of India plaque at the Vidur ka Teela mound in Hastinapura
+  credit: Giridharmamidi
+  license: CC BY-SA 3.0
+tags: [hastinapura, archaeology, bb-lal, painted-grey-ware, kuru, ganga]
+review: { status: draft, author: "gemini-4-argon" }

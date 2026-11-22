@@ -1,0 +1,51 @@
+id: polity.pallava-dynasty
+type: polity
+kind: polity
+names:
+  en: Pallava dynasty
+  iast: Pallava
+  native: பல்லவர்
+summary: >-
+  The Pallavas ruled from Kanchipuram in northern Tamil Nadu. Their best-documented line, from
+  Simhavishnu in the late 6th century to Aparajita at the end of the 9th, fought long wars with the
+  Chalukyas of Badami and patronised the rock-cut and structural temples of Mamallapuram and Kanchi.
+summaries:
+  kids: >-
+    The Pallavas were kings who ruled from the city of Kanchipuram in south India. They built amazing
+    temples carved out of solid rock by the sea at Mamallapuram.
+  teen: >-
+    From Kanchipuram, the Pallava kings competed with the Chalukyas of the Deccan for two centuries.
+    Their artists moved from carving cave temples into rock to building free-standing stone temples, a
+    key step in the history of south Indian architecture.
+region: Tondaimandalam, northern Tamil Nadu and southern Andhra Pradesh
+location: { name: Kanchipuram, lat: 12.83, lon: 79.70 }
+datings:
+  - method: epigraphic
+    range: { earliest: "560 CE", latest: "900 CE", precision: decade, circa: true }
+    grade: B
+    label: Simhavishnu to Aparajita
+    sources: [src.thapar-2002-early-india, src.singh-2008-ancient-early-medieval-india]
+    note: Reconstructed from copper-plate charters and stone inscriptions dated in regnal years.
+  - method: epigraphic
+    range: { earliest: "275 CE", latest: "560 CE", precision: century, circa: true }
+    grade: C
+    label: Early Pallava charters
+    sources: [src.singh-2008-ancient-early-medieval-india]
+    note: Early Prakrit and Sanskrit charters attest Pallava kings before Simhavishnu, but their sequence and dates are uncertain.
+claims:
+  - text: >-
+      Narasimhavarman I captured the Chalukya capital Vatapi (Badami) in about 642 CE, avenging the
+      earlier Chalukya invasion of Pallava territory.
+    grade: B
+    sources: [src.thapar-2002-early-india, src.singh-2008-ancient-early-medieval-india]
+  - text: >-
+      Pallava patronage produced the monuments of Mamallapuram and the structural Kailasanatha temple
+      at Kanchipuram, built under Narasimhavarman II (Rajasimha).
+    grade: B
+    sources: [src.michell-1988-hindu-temple, src.unesco-1984-mahabalipuram]
+relations:
+  - { kind: related-to, target: polity.chalukya-dynasty-of-badami, note: Long-running rivals }
+  - { kind: preceded, target: polity.chola-dynasty, note: The Cholas displaced the Pallavas in the late 9th century }
+wikidata: Q466803
+tags: [tamil-nadu, kanchipuram, dynasty, temple-architecture]
+review: { status: draft, author: "claude-opus-5-5" }

@@ -1,0 +1,67 @@
+id: text.aitareya-brahmana
+type: text
+kind: text
+names:
+  en: Aitareya Brahmana
+  iast: Aitareya Brāhmaṇa
+  native: ऐतरेयब्राह्मण
+summary: >-
+  The Aitareya Brahmana is the older of the two surviving Brahmanas of the Rigveda, affiliated
+  with the Shakala recension. Across 40 chapters (adhyayas) in eight books (panchikas), it specifies
+  the duties of the Hotri priest in the Soma rituals and the royal consecration (Rajasuya).
+summaries:
+  kids: >-
+    The Aitareya Brahmana is an ancient prose guide linked to the Rigveda that explains the chants
+    recited by priests during rituals and royal crowning ceremonies.
+  teen: >-
+    Comprising 40 chapters in eight books, the Aitareya Brahmana explains the liturgy of the Hotri
+    priest who recites Rigvedic hymns during Soma sacrifices, and preserves early accounts of
+    Vedic kingship across regions of ancient India.
+region: Kuru-Panchala and northern India
+datings:
+  - method: linguistic
+    range: { earliest: "900 BCE", latest: "600 BCE", best: "800 BCE", precision: century, circa: true }
+    grade: C
+    label: Early to Middle Brahmana prose dating
+    sources:
+      - src.keith-1920-rigveda-brahmanas
+      - src.gonda-1975-vedic-literature
+      - src.witzel-1997-early-sanskritization-kuru
+    note: >-
+      Books 1 to 5 belong to an older Kuru-Panchala Brahmana prose layer (c. 900 to 700 BCE),
+      whereas Books 6 to 8 show slightly later linguistic and geographical features.
+  - method: traditional-puranic
+    range: { earliest: "3102 BCE", latest: "2500 BCE", precision: century, circa: true }
+    grade: D
+    label: Traditional sampradaya reckoning
+    sources:
+      - src.keith-1920-rigveda-brahmanas
+      - src.flood-2003-blackwell-companion-hinduism
+    note: >-
+      Tradition attributes the text to Mahidasa Aitareya as an authoritative Shruti commentary on
+      the Rigveda.
+claims:
+  - text: >-
+      The Aitareya Brahmana is divided into eight panchikas totaling 40 chapters, detailing the
+      Agnyadhana, Agnishtoma, Gavamanayana, and twelve-day Soma rituals for the Hotri priest.
+    grade: A
+    sources:
+      - src.keith-1920-rigveda-brahmanas
+      - src.gonda-1975-vedic-literature
+  - text: >-
+      Book 8 of the Aitareya Brahmana describes the Aindra Mahabhiseka (great consecration of a
+      king) and maps five regions of Vedic India along with their distinct titles of sovereignty
+      such as Samraj in the east and Svaraj in the west.
+    grade: A
+    sources:
+      - src.keith-1920-rigveda-brahmanas
+      - src.singh-2008-ancient-early-medieval-india
+relations:
+  - { kind: part-of, target: text.brahmanas }
+  - { kind: commented-on, target: text.rigveda }
+  - { kind: related-to, target: tradition.soma-ritual }
+  - { kind: related-to, target: polity.kuru-kingdom }
+  - { kind: related-to, target: polity.panchala }
+wikidata: Q4699299
+tags: [veda, brahmana, rigveda, kingship, soma-ritual]
+review: { status: draft, author: "gemini-4-argon" }

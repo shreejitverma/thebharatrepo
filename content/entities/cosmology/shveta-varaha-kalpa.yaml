@@ -1,0 +1,67 @@
+id: cosmology.shveta-varaha-kalpa
+type: cosmology
+kind: cosmology
+names:
+  en: Shveta-Varaha Kalpa
+  iast: Śvetavārāhakalpa
+  native: श्वेतवाराहकल्प
+summary: >-
+  In traditional Hindu cosmology, the Shveta-Varaha Kalpa (Kalpa of the White Boar) is the present daytime
+  of Brahma, corresponding to the first day of his 51st year and named after Vishnu's Varaha incarnation
+  lifting the earth from the cosmic waters at the dawn of this cycle.
+summaries:
+  kids: >-
+    In traditional Hindu cosmology, our current cosmic day of Brahma is called the Shveta-Varaha Kalpa,
+    named after the story of Vishnu taking the form of a white boar to lift the earth from the cosmic ocean.
+  teen: >-
+    Recited daily in traditional Hindu ritual sankalpa formulas, the Shveta-Varaha Kalpa is the first day
+    of Brahma's 51st year, of which six manvantaras and 27 mahayugas of the seventh manvantara have elapsed.
+datings:
+  - method: traditional-puranic
+    range:
+      earliest: "1972947102 BCE"
+      latest: "3102 BCE"
+      precision: cosmological
+      circa: false
+    grade: D
+    label: Elapsed span of the present Shveta-Varaha Kalpa to the Kali epoch
+    sources:
+      - src.wilson-1840-vishnu-purana
+      - src.burgess-1860-surya-siddhanta
+      - src.plofker-2009-mathematics-in-india
+    note: >-
+      In traditional Puranic and Siddhantic reckoning, 1,972,944,000 solar years of the 4,320,000,000-year
+      present kalpa had elapsed by the onset of Kali Yuga on 18 February 3102 BCE (-3101).
+claims:
+  - text: >-
+      Traditional Hindu ritual declarations (sankalpa) specify the present time within the second parardha
+      of Brahma, in the Shveta-Varaha Kalpa, the Vaivasvata Manvantara, and the first quarter of the 28th
+      Kali Yuga.
+    grade: D
+    sources:
+      - src.wilson-1840-vishnu-purana
+      - src.flood-2003-blackwell-companion-hinduism
+  - text: >-
+      Six complete manvantaras and twenty-seven mahayugas of the seventh (Vaivasvata) manvantara are
+      reckoned to have elapsed within the present kalpa prior to the current mahayuga.
+    grade: D
+    sources:
+      - src.burgess-1860-surya-siddhanta
+      - src.plofker-2009-mathematics-in-india
+relations:
+  - kind: part-of
+    target: cosmology.brahma-lifespan
+  - kind: related-to
+    target: cosmology.kalpa
+  - kind: related-to
+    target: cosmology.vaivasvata-manvantara
+wikidata: null
+tags:
+  - cosmology
+  - kalpa
+  - varaha
+  - sankalpa
+  - purana
+review:
+  status: draft
+  author: gemini-4-argon

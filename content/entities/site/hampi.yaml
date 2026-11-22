@@ -1,0 +1,36 @@
+id: site.hampi
+type: site
+kind: site
+names:
+  en: Hampi
+  native: ಹಂಪಿ
+summary: >-
+  Hampi contains the archaeological remains of Vijayanagara, a major South Indian capital from the
+  fourteenth to sixteenth centuries. The landscape includes temples, royal and civic structures,
+  fortifications, and waterworks; UNESCO inscribed the group of monuments in 1986.
+summaries:
+  kids: >-
+    Hampi is a historic city in Karnataka. Its temples, walls, and other ruins show what the capital of
+    the Vijayanagara Empire looked like.
+  teen: >-
+    The Hampi landscape preserves religious, royal, civic, and water-management structures associated
+    with Vijayanagara. Archaeology and inscriptions help historians reconstruct the city's growth.
+region: Karnataka, India
+location: { name: "Hampi, Karnataka, India", lat: 15.335, lon: 76.46 }
+datings:
+  - method: scholarly-consensus
+    range: { earliest: "1336 CE", latest: "1565 CE", precision: year, circa: true }
+    grade: B
+    label: Vijayanagara capital phase
+    sources: [src.unesco-1986-hampi, src.stein-1989-vijayanagara]
+claims:
+  - text: Hampi preserves the remains of the capital city of the Vijayanagara Empire.
+    grade: A
+    sources: [src.unesco-1986-hampi]
+  - text: The monument group was inscribed on the UNESCO World Heritage List in 1986.
+    grade: A
+    sources: [src.unesco-1986-hampi]
+relations:
+  - { kind: related-to, target: event.founding-of-vijayanagara }
+tags: [hampi, vijayanagara, archaeology, unesco]
+review: { status: draft, author: "codex-gpt-6" }

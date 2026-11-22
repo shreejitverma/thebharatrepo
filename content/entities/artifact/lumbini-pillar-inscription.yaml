@@ -1,0 +1,48 @@
+id: artifact.lumbini-pillar-inscription
+type: artifact
+kind: site
+names:
+  en: Lumbini Pillar Inscription of Ashoka
+  iast: Lumbinī Stambhalekhaḥ
+  native: लुम्बिनी स्तम्भलेखः
+summary: >-
+  The Lumbini (Rummindei) pillar inscription is a five-line Prakrit inscription in Brahmi on a stone pillar at Lumbini in the Rupandehi district of Nepal. It records that King Devanampiya Piyadasi (Ashoka) came in person twenty years after his consecration to worship at the birthplace of the Buddha, set up the pillar, and lightened the village's taxes.
+summaries:
+  kids: >-
+    Twenty years into his reign, Emperor Ashoka visited Lumbini, where the Buddha was born. He set up a stone pillar there and lowered the villagers' taxes.
+  teen: >-
+    Found in 1896 in the Nepal Terai, Ashoka's pillar at Lumbini says "here the Buddha was born". It is the earliest known record that names Lumbini as the Buddha's birthplace.
+region: Nepal Terai (Rupandehi District)
+location: { name: "Lumbini, Nepal", lat: 27.469, lon: 83.276 }
+datings:
+  - method: epigraphic
+    range: { earliest: "253 BCE", latest: "245 BCE", precision: decade, circa: true }
+    grade: A
+    label: Twentieth regnal year of Ashoka
+    sources:
+      - src.hultzsch-1925-inscriptions-of-asoka
+      - src.paranavitana-1962-rummindei-pillar
+    note: The inscription is dated to Ashoka's twentieth regnal year (visati-vasabhisitena); with a consecration around 268 BCE this falls around 249 to 248 BCE, and the range allows for uncertainty in the consecration year.
+claims:
+  - text: The inscription says that the king came and worshipped here "because the Buddha Sakyamuni was born here", and that he had a stone pillar set up to show that the Blessed One was born at this spot.
+    grade: A
+    sources:
+      - src.hultzsch-1925-inscriptions-of-asoka
+      - src.paranavitana-1962-rummindei-pillar
+  - text: Ashoka made the village of Lummini (Lumbini) free of the bali tax and liable to pay only an eighth share of its produce (atha-bhagiye).
+    grade: A
+    sources:
+      - src.hultzsch-1925-inscriptions-of-asoka
+      - src.paranavitana-1962-rummindei-pillar
+relations:
+  - { kind: issued-by, target: person.ashoka }
+  - { kind: related-to, target: person.gautama-buddha }
+  - { kind: part-of, target: polity.maurya-empire }
+wikidata: Q85782651
+image:
+  commons: "File:Lumbini pillar with inscription and its location.jpg"
+  alt: Ashoka's Lumbini pillar inscription photographed at its rediscovery in 1896
+  credit: Archaeological Survey of India 1896
+  license: Public domain
+tags: [ashoka, lumbini, inscription, buddhism, brahmi]
+review: { status: draft, author: "gemini-4-argon" }

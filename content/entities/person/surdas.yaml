@@ -1,0 +1,37 @@
+id: person.surdas
+type: person
+kind: person
+names:
+  en: Surdas
+summary: Surdas is associated with Braj-language devotional poetry about
+  Krishna. The authorship and dates of the poems attributed to him are debated.
+summaries:
+  kids: Surdas is remembered for poetry about Krishna. Scholars note that many
+    poems were added to his name over time.
+  teen: The Surdas corpus grew through oral and manuscript transmission, so
+    historians treat authorship and biographical dates cautiously.
+datings:
+  - method: scholarly-consensus
+    range:
+      earliest: "1478"
+      latest: "1583"
+      precision: year
+      circa: true
+    grade: C
+    label: Historical scholarship
+    sources:
+      - src.hawley-2005-three-bhakti-voices
+      - src.hawley-2015-storm-of-songs
+claims:
+  - text: Surdas is associated with Braj-language devotional poetry about Krishna.
+      The authorship and dates of the poems attributed to him are debated.
+    grade: C
+    sources:
+      - src.hawley-2005-three-bhakti-voices
+      - src.hawley-2015-storm-of-songs
+relations: []
+tags:
+  - person
+review:
+  status: draft
+  author: codex-gpt-6

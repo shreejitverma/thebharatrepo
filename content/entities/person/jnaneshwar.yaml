@@ -1,0 +1,37 @@
+id: person.jnaneshwar
+type: person
+kind: person
+names:
+  en: Jnaneshwar
+  iast: Jñāneśvar
+  native: ज्ञानेश्वर
+summary: >-
+  Jnaneshwar was a Marathi poet, philosopher, and Varkari devotional figure of thirteenth-century
+  Maharashtra. He is associated with the Jnaneshwari, a Marathi exposition of the Bhagavad Gita,
+  completed at Nevasa in 1290 according to its closing verses.
+summaries:
+  kids: >-
+    Jnaneshwar was a poet and teacher in Maharashtra. He explained the Bhagavad Gita in Marathi in a
+    book called the Jnaneshwari.
+  teen: >-
+    Jnaneshwar's Marathi commentary on the Bhagavad Gita helped establish a major vernacular literary
+    and devotional tradition. Its colophon associates its completion with Nevasa in 1290.
+region: Maharashtra, India
+datings:
+  - method: textual-internal
+    range: { earliest: "1270 CE", latest: "1300 CE", precision: decade, circa: true }
+    grade: C
+    label: Scholarly life range
+    sources: [src.pradhan-1987-jnaneshvari-translation]
+    note: The work's colophon dates the Jnaneshwari to 1290; biographical dates remain less secure.
+claims:
+  - text: Jnaneshwar is associated with the Marathi commentary known as the Jnaneshwari.
+    grade: B
+    sources: [src.pradhan-1987-jnaneshvari-translation]
+  - text: The Jnaneshwari's completion is traditionally dated to 1290 at Nevasa.
+    grade: B
+    sources: [src.pradhan-1987-jnaneshvari-translation]
+relations:
+  - { kind: authored, target: text.jnaneshwari }
+tags: [marathi, bhakti, varkari]
+review: { status: draft, author: "codex-gpt-6" }

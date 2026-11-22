@@ -1,0 +1,67 @@
+id: cosmology.satya-yuga
+type: cosmology
+kind: cosmology
+names:
+  en: Satya Yuga (Krita Yuga)
+  iast: Satyayuga
+  native: सत्ययुग
+summary: >-
+  In traditional Hindu cosmology, Satya Yuga (also called Krita Yuga, after the winning four-spot dice
+  throw) is the first and longest of the four world ages in a mahayuga, when dharma stands complete on all
+  four legs and the age lasts 4,800 divine years or 1,728,000 human solar years.
+summaries:
+  kids: >-
+    In traditional Hindu cosmology, Satya Yuga is the first and longest of the four world ages in a cycle,
+    lasting 1,728,000 human years and described as an age of truth and full harmony.
+  teen: >-
+    Named Krita after the winning four-pip throw in Vedic dice and later called Satya Yuga, this opening
+    quarter of the mahayuga spans 4,800 divine years (4,000 main years plus 400-year dawn and 400-year
+    twilight), equal to 1,728,000 human solar years.
+datings:
+  - method: traditional-puranic
+    range:
+      earliest: "3891102 BCE"
+      latest: "2163102 BCE"
+      precision: cosmological
+      circa: false
+    grade: D
+    label: Satya Yuga of the 28th Mahayuga
+    sources:
+      - src.olivelle-2005-manus-code-of-law
+      - src.wilson-1840-vishnu-purana
+      - src.burgess-1860-surya-siddhanta
+    note: >-
+      In the 4:3:2:1 yuga scheme of Manusmriti 1.69, Vishnu Purana 1.3 and Surya Siddhanta 1.15-17, the
+      Satya Yuga of the present 28th mahayuga lasted 1,728,000 years, ending 2,160,000 years before the
+      Kali Yuga epoch of 3102 BCE (-3101).
+claims:
+  - text: >-
+      Satya Yuga spans 4,000 divine years with a dawn (sandhya) of 400 divine years and a twilight
+      (sandhyamsha) of 400 divine years, making 4,800 divine years or 1,728,000 human years (four-tenths
+      of a 4,320,000-year mahayuga).
+    grade: D
+    sources:
+      - src.olivelle-2005-manus-code-of-law
+      - src.burgess-1860-surya-siddhanta
+  - text: >-
+      In Manusmriti 1.81-82 and the Mahabharata, dharma in Krita (Satya) Yuga is symbolized as a bull
+      standing firmly on all four legs, before losing one leg in each subsequent yuga.
+    grade: B
+    sources:
+      - src.olivelle-2005-manus-code-of-law
+      - src.gonzalezreimann-2002-mahabharata-yugas
+relations:
+  - kind: part-of
+    target: cosmology.mahayuga
+  - kind: preceded
+    target: cosmology.treta-yuga
+wikidata: Q1623029
+tags:
+  - cosmology
+  - satya-yuga
+  - krita-yuga
+  - yuga
+  - dharma
+review:
+  status: draft
+  author: gemini-4-argon

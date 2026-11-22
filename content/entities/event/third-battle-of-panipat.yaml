@@ -1,0 +1,37 @@
+id: event.third-battle-of-panipat
+type: event
+kind: event
+names:
+  en: Third Battle of Panipat
+summary: Ahmad Shah Durrani defeated the Maratha army at Panipat in 1761. The
+  battle checked Maratha expansion in northern India but did not end Maratha
+  political power.
+summaries:
+  kids: The Marathas lost a major battle to Ahmad Shah Durrani at Panipat in 1761,
+    but their power continued.
+  teen: The battle caused extensive casualties and reshaped alliances in northern
+    India; Maratha power recovered in subsequent decades.
+datings:
+  - method: documentary
+    range:
+      earliest: "1761"
+      latest: "1761"
+      precision: year
+      circa: false
+    grade: B
+    label: Documentary record
+    sources: &a1
+      - src.gordon-1993-marathas-1600-1818
+      - src.kulke-2004-history-of-india
+claims:
+  - text: Ahmad Shah Durrani defeated the Maratha army at Panipat in 1761. The
+      battle checked Maratha expansion in northern India but did not end Maratha
+      political power.
+    grade: B
+    sources: *a1
+relations: []
+tags:
+  - event
+review:
+  status: draft
+  author: codex-gpt-6

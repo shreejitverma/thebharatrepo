@@ -1,0 +1,35 @@
+id: tradition.ramlila-unesco-inscription
+type: tradition
+kind: art
+names:
+  en: Ramlila inscribed by UNESCO
+summary: UNESCO inscribed Ramlila, the traditional performance of the Ramayana,
+  on the Representative List in 2008. The practice had been proclaimed a
+  Masterpiece in 2005.
+summaries:
+  kids: UNESCO added Ramlila to its living heritage list in 2008 after an earlier
+    proclamation in 2005.
+  teen: Ramlila was proclaimed a UNESCO Masterpiece in 2005 and incorporated into
+    the Representative List of Intangible Cultural Heritage in 2008.
+datings:
+  - method: documentary
+    range:
+      earliest: "2005"
+      latest: "2008"
+      precision: year
+      circa: false
+    grade: A
+    sources:
+      - src.ramlila-unesco-2008
+claims:
+  - text: UNESCO records Ramlila as originally proclaimed in 2005 and inscribed in
+      2008.
+    grade: A
+    sources:
+      - src.ramlila-unesco-2008
+tags:
+  - ramlila
+  - unesco
+review:
+  status: draft
+  author: codex-gpt-6

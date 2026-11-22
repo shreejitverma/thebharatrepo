@@ -1,0 +1,38 @@
+id: site.hoysala-sacred-ensembles
+type: site
+kind: site
+names:
+  en: Sacred Ensembles of the Hoysalas
+  native: ಹೊಯ್ಸಳ ದೇವಾಲಯಗಳು
+summary: >-
+  UNESCO's Sacred Ensembles of the Hoysalas (2023) comprises three temples of the Hoysala dynasty in
+  Karnataka: the Chennakeshava at Belur (1117 CE), the Hoysaleshvara at Halebidu (12th century) and the
+  Keshava at Somanathapura (1268 CE). Built of finely carved soapstone on star-shaped platforms, they
+  are known for dense sculptural friezes.
+summaries:
+  kids: >-
+    The Hoysala kings built temples of soft soapstone in Karnataka, carved so finely that the stone
+    looks almost like lace. Three of them are now World Heritage sites.
+  teen: >-
+    Hoysala temples stand on raised star-shaped platforms and are wrapped in bands of carving: elephants,
+    horsemen, scenes from the epics and the gods. Soapstone is soft when quarried, which allowed this
+    detail.
+region: Hassan and Mysuru districts, Karnataka
+location: { name: Belur, lat: 13.16, lon: 75.86 }
+datings:
+  - method: epigraphic
+    range: { earliest: "1117 CE", latest: "1268 CE", precision: year, circa: true }
+    grade: B
+    label: Belur (1117) to Somanathapura (1268)
+    sources: [src.unesco-2023-hoysala-sacred-ensembles]
+claims:
+  - text: The three temples were inscribed on the UNESCO World Heritage List in 2023 as the Sacred Ensembles of the Hoysalas.
+    grade: A
+    sources: [src.unesco-2023-hoysala-sacred-ensembles]
+  - text: The Chennakeshava temple at Belur was consecrated in 1117 CE under the Hoysala king Vishnuvardhana.
+    grade: B
+    sources: [src.unesco-2023-hoysala-sacred-ensembles, src.michell-1988-hindu-temple]
+relations: []
+wikidata: Q66023123
+tags: [unesco, hoysala, karnataka, temple-architecture]
+review: { status: draft, author: "claude-opus-5-5" }

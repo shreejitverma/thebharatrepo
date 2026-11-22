@@ -1,0 +1,81 @@
+id: site.dholavira-water-system
+type: site
+kind: science
+names:
+  en: Dholavira Rock-Cut Reservoirs and Hydraulic Network
+summary: >-
+  The monumental Mature Harappan water-harvesting and storage engineering system surrounding the walled city of
+  Dholavira on Khadir Bet island in the Rann of Kutch, Gujarat (c. 2500-1900 BCE), excavated by R. S. Bisht,
+  consisting of dams across the seasonal Manhar and Mansar torrents, sixteen or more masonry-faced and rock-cut
+  reservoirs within the city walls, and covered stone stormwater drains.
+summaries:
+  kids: >-
+    Because Dholavira had no year-round river and very little rain, its builders made sixteen or more
+    stone-walled tanks inside the city walls to catch and store monsoon floodwater.
+  teen: >-
+    Excavated by R. S. Bisht at Dholavira in Kutch, this Bronze Age hydraulic network used dams to divert flash
+    floods from the seasonal Manhar and Mansar streams into a series of reservoirs that together covered about
+    10 hectares, roughly a tenth of the city's area.
+region: Khadir Bet, Kutch District, Gujarat, India
+location:
+  name: Dholavira (Eastern and Southern Reservoirs)
+  lat: 23.8861
+  lon: 70.2131
+datings:
+  - method: archaeological-stratigraphic
+    range:
+      earliest: "2500 BCE"
+      latest: "1900 BCE"
+      precision: century
+      circa: true
+    grade: A
+    label: Mature Harappan Stages IV and V at Dholavira
+    sources:
+      - src.asi-2020-dholavira-nomination-dossier
+      - src.unesco-2021-dholavira
+      - src.agrawal-2018-dholavira-gpr
+    note: >-
+      The East Reservoir in its present form is attributed to Stage IV, the classical Mature Harappan stage; smaller
+      and shallower reservoirs may have existed from the first settlement onward.
+claims:
+  - text: >-
+      Dholavira's builders raised dams at three places across the seasonal Manhar stream to the south and at two
+      places across the Mansar stream to the north, diverting monsoon runoff into sixteen or more reservoirs of
+      varying sizes laid out within the city walls.
+    grade: A
+    sources:
+      - src.asi-2020-dholavira-nomination-dossier
+      - src.unesco-2021-dholavira
+      - src.agrawal-2018-dholavira-gpr
+  - text: >-
+      The East Reservoir, the largest excavated at Dholavira, measures about 73.4 m by 29.3 m at the top with a
+      general depth of about 7.2 to 7.5 m, deepening to 10.6 m where it was cut into the rock in its northern part;
+      it was furnished with three flights of steps, a rock-cut well in a walled enclosure and a smaller, deeper
+      rock-cut basin.
+    grade: A
+    sources:
+      - src.asi-2020-dholavira-nomination-dossier
+  - text: >-
+      In the Castle at Dholavira, large covered stone drains with capstones and air ducts carried monsoon runoff,
+      not household waste, westward through the castle wall into a drain in the Bailey that emptied into a
+      reservoir cut in the western part of the Bailey.
+    grade: A
+    sources:
+      - src.asi-2020-dholavira-nomination-dossier
+relations:
+  - kind: located-at
+    target: site.dholavira
+  - kind: part-of
+    target: tradition.harappan-civilisation
+  - kind: related-to
+    target: concept.harappan-town-planning-and-drainage
+wikidata: null
+tags:
+  - harappan
+  - dholavira
+  - water-management
+  - hydraulic-engineering
+  - unesco
+review:
+  status: draft
+  author: gemini-4-argon

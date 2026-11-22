@@ -1,0 +1,36 @@
+id: person.jayadeva
+type: person
+kind: person
+names:
+  en: Jayadeva
+  iast: Jayadeva
+  native: ଜୟଦେବ
+summary: >-
+  Jayadeva was a Sanskrit poet associated with the court of Lakshmana Sena in eastern India around the
+  turn of the twelfth to thirteenth century. His Gita Govinda became influential in devotional poetry,
+  music, dance, and temple traditions.
+summaries:
+  kids: >-
+    Jayadeva was a poet who wrote the Gita Govinda, a Sanskrit poem about Radha and Krishna. People have
+    sung and performed it for many centuries.
+  teen: >-
+    Jayadeva's Gita Govinda is a lyrical Sanskrit poem about Radha and Krishna. Its verses shaped later
+    devotional performance traditions, especially in eastern India.
+region: Eastern India
+datings:
+  - method: linguistic
+    range: { earliest: "1170 CE", latest: "1230 CE", precision: decade, circa: true }
+    grade: C
+    label: Scholarly dating of the poet
+    sources: [src.miller-1977-love-song-dark-lord]
+claims:
+  - text: Jayadeva composed the Sanskrit lyric poem Gita Govinda.
+    grade: B
+    sources: [src.miller-1977-love-song-dark-lord]
+  - text: The poem is associated with the eastern Indian court of Lakshmana Sena.
+    grade: C
+    sources: [src.miller-1977-love-song-dark-lord]
+relations:
+  - { kind: authored, target: text.gita-govinda }
+tags: [sanskrit, poetry, bhakti, odisha]
+review: { status: draft, author: "codex-gpt-6" }

@@ -1,0 +1,89 @@
+id: concept.harappan-carnelian-bead-making
+type: concept
+kind: science
+names:
+  en: Harappan Bead-Making and Etched Carnelian Technology
+summary: >-
+  The specialised lapidary and pyrotechnological industry of the Harappan Civilisation (c. 3300-1900 BCE),
+  producing ultra-fine fired steatite microbeads, long-barrel carnelian beads up to 12 cm in length drilled with
+  ultra-hard cylindrical "Ernestite" stone drill bits, and white-on-red or black-on-red alkaline-etched carnelian
+  beads exported across South and West Asia.
+summaries:
+  kids: >-
+    Harappan craftspeople heated yellowish agate stones in kilns until they turned glowing red carnelian, painted
+    white designs onto them, and drilled tiny holes through them using special super-hard stone drill bits.
+  teen: >-
+    Centred at workshops in Chanhudaro, Lothal, Dholavira, and Harappa, Harappan bead-makers mastered controlled
+    kiln heat-treatment of chalcedony into deep-red carnelian, chemical soda-alkali etching, and precision bow-drilling
+    with cylindrical Ernestite bits that took days per bead.
+region: Gujarat (Ratanpur mines, Lothal, Dholavira, Nagwada), Sindh (Chanhudaro, Mohenjo-daro), and Punjab (Harappa)
+datings:
+  - method: archaeological-radiocarbon
+    range:
+      earliest: "3300 BCE"
+      latest: "1900 BCE"
+      precision: century
+      circa: true
+    grade: A
+    label: Early and Mature Harappan Lapidary Tradition
+    sources:
+      - src.kenoyer-1991-indus-valley-tradition
+      - src.kenoyer-vidale-1992-stone-drills
+      - src.kenoyer-1998-ancient-cities-indus
+    note: >-
+      Carnelian and glazed steatite bead-making began in the Neolithic and Early Harappan eras and reached industrial
+      specialisation with Ernestite drills and long-barrel carnelian production during the Mature Harappan period
+      (c. 2600-1900 BCE).
+claims:
+  - text: >-
+      To drill hard chalcedony and carnelian (Mohs hardness 7) without abrasives, Mature Harappan artisans invented
+      tubular and constricted cylindrical drill bits made of "Ernestite"-a rare fine-grained metamorphic rock
+      containing mullite, sillimanite, cristobalite, and titanium-iron oxides that hardens further when heated.
+    grade: A
+    sources:
+      - src.kenoyer-vidale-1992-stone-drills
+      - src.kenoyer-1998-ancient-cities-indus
+      - src.wright-2010-ancient-indus
+  - text: >-
+      Experimental replications by J. M. Kenoyer and Massimo Vidale showed that manufacturing a single slender
+      long-barrel carnelian bead (8 to 12 cm long, drilled from both ends to meet accurately in the centre) required
+      repeated kiln heat-treatments in manganese-rich pots, chipping, sandstone grinding, and roughly three to eight
+      days of continuous bow-drilling, making a 36-bead belt worth several months of master artisan labour.
+    grade: A
+    sources:
+      - src.kenoyer-vidale-1992-stone-drills
+      - src.kenoyer-1998-ancient-cities-indus
+  - text: >-
+      Harappan lapidaries pioneered alkaline-etched ("bleached") carnelian beads by painting geometric eye, figure-eight,
+      and trefoil motifs onto red carnelian using a sodium carbonate (washing soda) and plant-sap solution and
+      re-firing the stone so the white design fused permanently into the surface.
+    grade: A
+    sources:
+      - src.kenoyer-1998-ancient-cities-indus
+      - src.possehl-2002-indus-civilization
+relations:
+  - kind: part-of
+    target: tradition.harappan-civilisation
+  - kind: located-at
+    target: site.chanhudaro
+  - kind: located-at
+    target: site.lothal
+  - kind: located-at
+    target: site.dholavira
+  - kind: related-to
+    target: concept.harappan-mesopotamian-trade
+wikidata: null
+image:
+  commons: "File:Etched carnelian bead of the Indus Valley Civilization.jpg"
+  alt: Etched carnelian bead with white geometric eye designs from the Harappan Civilisation
+  credit: Ernest John Henry Mackay
+  license: Public domain
+tags:
+  - harappan
+  - carnelian
+  - bead-making
+  - technology
+  - ernestite
+review:
+  status: draft
+  author: gemini-4-argon

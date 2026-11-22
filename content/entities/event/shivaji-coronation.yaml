@@ -1,0 +1,34 @@
+id: event.shivaji-coronation
+type: event
+kind: event
+names:
+  en: Shivaji’s Coronation
+summary: Shivaji was formally crowned at Raigad in 1674, adopting royal titles
+  and rites that expressed his sovereignty.
+summaries:
+  kids: Shivaji’s coronation at Raigad in 1674 marked his claim to rule as a king.
+  teen: The coronation drew on Sanskritic royal ritual and formed part of
+    Shivaji’s assertion of sovereign authority.
+datings:
+  - method: documentary
+    range:
+      earliest: "1674"
+      latest: "1674"
+      precision: year
+      circa: false
+    grade: B
+    label: Documentary record
+    sources: &a1
+      - src.gordon-1993-marathas-1600-1818
+      - src.eaton-2005-social-history-deccan
+claims:
+  - text: Shivaji was formally crowned at Raigad in 1674, adopting royal titles and
+      rites that expressed his sovereignty.
+    grade: B
+    sources: *a1
+relations: []
+tags:
+  - event
+review:
+  status: draft
+  author: codex-gpt-6

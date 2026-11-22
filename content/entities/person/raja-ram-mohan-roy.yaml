@@ -1,0 +1,38 @@
+id: person.raja-ram-mohan-roy
+type: person
+kind: person
+names:
+  en: Raja Ram Mohan Roy
+summary: Raja Ram Mohan Roy was a Bengali intellectual and reformer who
+  campaigned on religious and social questions and helped establish the Brahmo
+  Sabha.
+summaries:
+  kids: Raja Ram Mohan Roy was a Bengali reformer who helped found the Brahmo
+    Sabha and argued for changes in society.
+  teen: Roy worked across religious scholarship, print and colonial public debate;
+    historians situate his reform work in early 19th-century Bengal.
+datings:
+  - method: scholarly-consensus
+    range:
+      earliest: "1772"
+      latest: "1833"
+      precision: year
+      circa: true
+    grade: B
+    label: Historical scholarship
+    sources:
+      - src.jones-1989-socio-religious-reform-movements
+      - src.hatcher-2008-bourgeois-hinduism
+claims:
+  - text: Raja Ram Mohan Roy was a Bengali intellectual and reformer who campaigned
+      on religious and social questions and helped establish the Brahmo Sabha.
+    grade: B
+    sources:
+      - src.jones-1989-socio-religious-reform-movements
+      - src.hatcher-2008-bourgeois-hinduism
+relations: []
+tags:
+  - person
+review:
+  status: draft
+  author: codex-gpt-6

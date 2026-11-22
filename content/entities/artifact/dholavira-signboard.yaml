@@ -1,0 +1,78 @@
+id: artifact.dholavira-signboard
+type: artifact
+kind: art
+names:
+  en: Dholavira Signboard
+summary: >-
+  A unique Mature Harappan monumental inscription found in the western chamber of the North Gate of the Castle at
+  Dholavira, Gujarat (c. 2500-2000 BCE), during the ASI excavations directed by R. S. Bisht. Its ten large Indus
+  script signs, each about 30 cm across, were made of cut white gypsum pieces inlaid on a wooden board about as
+  long as the 3.5 m wide gate passage.
+summaries:
+  kids: >-
+    Above the northern castle gate at Dholavira once hung a giant wooden board inlaid with ten gleaming white
+    mineral letters so large they could be seen from far across the city.
+  teen: >-
+    Excavated in the northern gateway of Dholavira's Castle by R. S. Bisht's team, the Dholavira Signboard is
+    unique in the Harappan world: ten Indus script characters, each about 30 cm across, inlaid in white gypsum
+    on a long wooden board that has since decayed.
+region: Dholavira, Kutch District, Gujarat, India
+location:
+  name: Dholavira (Northern Gate of the Castle)
+  lat: 23.8869
+  lon: 70.2122
+datings:
+  - method: archaeological-stratigraphic
+    range:
+      earliest: "2500 BCE"
+      latest: "2000 BCE"
+      precision: century
+      circa: true
+    grade: A
+    label: Mature Harappan Stage IV-V Context at Dholavira
+    sources:
+      - src.asi-2020-dholavira-nomination-dossier
+      - src.possehl-2002-indus-civilization
+      - src.kenoyer-1998-ancient-cities-indus
+    note: >-
+      Found lying in the western chamber of the North Gate of the Castle; the ASI nomination dossier places the
+      inscription in use during Stage IV, the classical Mature Harappan stage at Dholavira.
+claims:
+  - text: >-
+      The inscription consists of ten large Indus script signs, each about 30 cm by 30 cm, made of white gypsum
+      pieces cut to shape and inlaid on a wooden base; with its wooden frame impression it is about as long as
+      the 3.5 m width of the North Gate's central passage, above which it was probably mounted.
+    grade: A
+    sources:
+      - src.asi-2020-dholavira-nomination-dossier
+  - text: >-
+      Among the ten signs, the four-spoked wheel sign is repeated four times; its monumental scale and placement
+      in the high-elevation Northern Gate suggest a civic emblem, royal/clan title, or ceremonial proclamation
+      visible across the stadium and Middle Town below.
+    grade: B
+    sources:
+      - src.asi-2020-dholavira-nomination-dossier
+      - src.kenoyer-1998-ancient-cities-indus
+      - src.possehl-2002-indus-civilization
+relations:
+  - kind: excavated-at
+    target: site.dholavira
+  - kind: related-to
+    target: concept.indus-script
+  - kind: part-of
+    target: tradition.harappan-civilisation
+wikidata: null
+image:
+  commons: "File:Signboard at Dholavira.jpg"
+  alt: The ten-sign Indus script inscription from the northern gateway at Dholavira
+  credit: Nishith S. Parikh
+  license: CC BY-SA 4.0
+tags:
+  - harappan
+  - artifact
+  - dholavira
+  - indus-script
+  - inscription
+review:
+  status: draft
+  author: gemini-4-argon

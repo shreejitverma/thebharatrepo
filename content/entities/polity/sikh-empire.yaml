@@ -1,0 +1,37 @@
+id: polity.sikh-empire
+type: polity
+kind: polity
+names:
+  en: Sikh Empire
+summary: The Sikh Empire, centered at Lahore, expanded under Ranjit Singh from
+  1799 and was annexed by the East India Company in 1849 after the Anglo-Sikh
+  wars.
+summaries:
+  kids: The Sikh Empire grew under Ranjit Singh and ended after the British
+    annexed Punjab in 1849.
+  teen: The polity brought much of Punjab and adjoining regions under Lahore’s
+    authority before the Anglo-Sikh wars.
+datings:
+  - method: scholarly-consensus
+    range:
+      earliest: "1799"
+      latest: "1849"
+      precision: year
+      circa: true
+    grade: B
+    label: Historical scholarship
+    sources: &a1
+      - src.grewal-1990-sikhs-of-the-punjab
+      - src.singh-fenech-2014-oxford-handbook-sikh-studies
+claims:
+  - text: The Sikh Empire, centered at Lahore, expanded under Ranjit Singh from 1799
+      and was annexed by the East India Company in 1849 after the Anglo-Sikh
+      wars.
+    grade: B
+    sources: *a1
+relations: []
+tags:
+  - polity
+review:
+  status: draft
+  author: codex-gpt-6

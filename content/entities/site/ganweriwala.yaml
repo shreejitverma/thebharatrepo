@@ -1,0 +1,72 @@
+id: site.ganweriwala
+type: site
+kind: site
+names:
+  en: Ganweriwala
+  iast: Gaṇverīvālā
+summary: >-
+  A large Mature Harappan urban centre in the Cholistan desert of Bahawalpur, Punjab, Pakistan, situated along
+  the dry bed of the Hakra River roughly equidistant between Mohenjo-daro and Harappa, surveyed by M. Rafique Mughal
+  in the 1970s across two high contiguous mounds covering an estimated 42 to 81.5 hectares.
+summaries:
+  kids: >-
+    Deep in the Cholistan desert of Pakistan lies Ganweriwala, a major Harappan city along the dry Hakra riverbed
+    halfway between Mohenjo-daro and Harappa.
+  teen: >-
+    Documented by M. Rafique Mughal during his Cholistan survey, Ganweriwala was the central urban hub of the dense
+    Hakra basin settlement cluster during the Mature Harappan period.
+region: Cholistan Desert, Bahawalpur District, Punjab, Pakistan
+location:
+  name: Ganweriwala
+  lat: 28.5986
+  lon: 71.1500
+datings:
+  - method: archaeological-stratigraphic
+    range:
+      earliest: "2600 BCE"
+      latest: "1900 BCE"
+      precision: century
+      circa: true
+    grade: B
+    label: Mature Harappan Urban Centre in Cholistan
+    sources:
+      - src.possehl-2002-indus-civilization
+      - src.kenoyer-1998-ancient-cities-indus
+      - src.wright-2010-ancient-indus
+    note: >-
+      Dated by surface ceramic assemblages, baked bricks in 1:2:4 proportions, terracotta cakes, and an impressed
+      clay tablet to the Mature Harappan Integration Era (c. 2600-1900 BCE).
+claims:
+  - text: >-
+      M. Rafique Mughal initially estimated Ganweriwala's total area including eroded skirts at 81.5 hectares, while
+      later topographic re-assessments by Mughal and colleagues measured the preserved dual mounds (Mounds A and B)
+      at roughly 42 hectares, still making it the largest Mature Harappan city in Cholistan.
+    grade: B
+    sources:
+      - src.possehl-2002-indus-civilization
+      - src.wright-2010-ancient-indus
+  - text: >-
+      Surface collections at Ganweriwala yielded classic Mature Harappan diagnostics including unicorn and yogic
+      scene tablet impressions, copper tools, shell bangles, and industrial kiln vitrification scatters.
+    grade: A
+    sources:
+      - src.kenoyer-1998-ancient-cities-indus
+      - src.possehl-2002-indus-civilization
+relations:
+  - kind: part-of
+    target: tradition.harappan-civilisation
+  - kind: contemporary-of
+    target: site.mohenjo-daro
+  - kind: contemporary-of
+    target: site.harappa
+  - kind: related-to
+    target: concept.ghaggar-hakra-sarasvati-debate
+wikidata: Q3095220
+tags:
+  - harappan
+  - site
+  - cholistan
+  - ghaggar-hakra
+review:
+  status: draft
+  author: gemini-4-argon

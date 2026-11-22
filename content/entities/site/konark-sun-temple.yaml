@@ -1,0 +1,38 @@
+id: site.konark-sun-temple
+type: site
+kind: site
+names:
+  en: Konark Sun Temple
+  native: କୋଣାର୍କ ସୂର୍ଯ୍ୟ ମନ୍ଦିର
+summary: >-
+  The Sun temple at Konark on the Odisha coast was built in the 13th century CE, attributed to the
+  Eastern Ganga king Narasimhadeva I. It was conceived as the chariot of the sun god Surya, with
+  twenty-four carved stone wheels and teams of horses. The tall sanctuary tower has collapsed; the
+  assembly hall (jagamohana) survives. UNESCO listed it in 1984.
+summaries:
+  kids: >-
+    The Konark temple is shaped like the giant chariot of Surya, the sun god, with huge stone wheels
+    and stone horses pulling it.
+  teen: >-
+    Konark's carved wheels are covered with fine sculpture, spoke by spoke. The main
+    tower fell long ago, but the surviving hall still shows how ambitious Odisha's temple builders were.
+region: Puri district, Odisha
+location: { name: Konark, lat: 19.89, lon: 86.09 }
+datings:
+  - method: scholarly-consensus
+    range: { earliest: "1238 CE", latest: "1264 CE", best: "1250 CE", precision: decade, circa: true }
+    grade: B
+    label: Reign of Narasimhadeva I
+    sources: [src.unesco-1984-konark-sun-temple, src.michell-1988-hindu-temple]
+claims:
+  - text: The Sun Temple at Konarak was inscribed on the UNESCO World Heritage List in 1984.
+    grade: A
+    sources: [src.unesco-1984-konark-sun-temple]
+  - text: The temple represents Surya's chariot, with twenty-four wheels drawn by horses.
+    grade: A
+    sources: [src.unesco-1984-konark-sun-temple, src.michell-1988-hindu-temple]
+relations:
+  - { kind: related-to, target: site.lingaraja-temple, note: Kalinga temple tradition of Odisha }
+wikidata: Q752091
+tags: [unesco, surya, odisha, kalinga-architecture]
+review: { status: draft, author: "claude-opus-5-5" }

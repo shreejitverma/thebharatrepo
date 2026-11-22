@@ -1,0 +1,52 @@
+id: text.valmiki-ramayana
+type: text
+kind: text
+names:
+  en: Valmiki Ramayana
+  iast: Vālmīki Rāmāyaṇa
+  native: वाल्मीकि रामायण
+summary: >-
+  The Valmiki Ramayana is the foundational Sanskrit epic poem (adikavya) in seven books (kandas) of roughly 24,000 shloka verses narrating the life of Rama of Ayodhya, his exile to the forest with Sita and Lakshmana, the abduction of Sita by Ravana of Lanka, and her rescue with the aid of Hanuman and Sugriva. Textual-critical scholarship dates the evolution of the epic across five stages from roughly the seventh or fifth century BCE to the third century CE, while Hindu tradition places the events of the Ramayana in the Treta Yuga.
+summaries:
+  kids: >-
+    The Valmiki Ramayana is an ancient Sanskrit epic poem in seven books telling the story of Prince Rama, Sita, Lakshmana and Hanuman, and the triumph of dharma over Ravana.
+  teen: >-
+    Revered as the adikavya ("first poem") and traditionally ascribed to the sage Valmiki in the Treta Yuga, the Sanskrit Ramayana is dated by philologists like Robert Goldman and John Brockington to a compositional growth spanning c. 500 BCE to 300 CE.
+region: Kosala (Ayodhya) and Pan-Indian
+datings:
+  - method: linguistic
+    range: { earliest: "700 BCE", latest: 300, precision: century, circa: true }
+    grade: C
+    label: Textual-critical five-stage compositional dating (Robert P. Goldman and John Brockington)
+    sources:
+      - src.goldman-1984-ramayana-balakanda
+      - src.brockington-1998-sanskrit-epics
+    note: Based on the Baroda critical edition, John Brockington and Robert Goldman date the oral and early verse core of Books 2-6 (Ayodhyakanda to Yuddhakanda) to c. 700/500-300 BCE, with the framing Books 1 (Balakanda) and 7 (Uttarakanda) added between the first century BCE and third century CE.
+  - method: traditional-puranic
+    range: { earliest: "869000 BCE", latest: "869000 BCE", precision: cosmological, circa: true }
+    grade: D
+    label: Traditional Puranic placement in the Treta Yuga
+    sources:
+      - src.goldman-1984-ramayana-balakanda
+      - src.hiltebeitel-2011-dharma
+    note: In Puranic yuga cosmology, Rama's reign at Ayodhya and Valmiki's composition of the epic are placed in the Treta Yuga, the second age of the current Mahayuga.
+claims:
+  - text: Linguistic, metrical and narrative analyses of the Baroda critical edition show that Books 2 through 6 (Ayodhyakanda to Yuddhakanda) form the older homogeneous core of the Valmiki Ramayana, whereas major portions of Book 1 (Balakanda) and Book 7 (Uttarakanda) belong to a later compositional stratum.
+    grade: B
+    sources:
+      - src.goldman-1984-ramayana-balakanda
+      - src.brockington-1998-sanskrit-epics
+  - text: An abridged version of the Rama story, the Ramopakhyana, is embedded in Book 3 (Aranyakaparvan) of the Mahabharata, demonstrating mutual awareness between the two Sanskrit epics during their later compositional stages.
+    grade: A
+    sources:
+      - src.brockington-1998-sanskrit-epics
+      - src.hiltebeitel-2011-dharma
+debate: >-
+  Indological scholarship led by Robert P. Goldman and John Brockington places the historical formation of the Valmiki Ramayana over several centuries (c. 700/500 BCE to 300 CE) by tracking its pre-Paninian epic Sanskrit forms, geographical horizon and socio-political institutions, while traditional Itihasa-Purana reckoning situates Valmiki as a contemporary of Rama in the Treta Yuga.
+relations:
+  - { kind: related-to, target: text.mahabharata }
+  - { kind: influenced, target: person.kalidasa }
+  - { kind: related-to, target: text.puranas }
+wikidata: Q37293
+tags: [ramayana, valmiki, itihasa, sanskrit-epic, treta-yuga, contested-chronology]
+review: { status: draft, author: "gemini-4-argon" }

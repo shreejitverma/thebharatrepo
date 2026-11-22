@@ -1,0 +1,105 @@
+id: site.dholavira
+type: site
+kind: site
+names:
+  en: Dholavira
+  iast: Dholāvīrā
+  native: धोलावीरा
+summary: >-
+  A monumental Harappan city on Khadir Bet island in the Rann of Kutch, Gujarat, occupied across seven cultural
+  stages (c. 3000-1500 BCE), celebrated for its dressed-stone architecture, tripartite urban plan (Citadel, Middle
+  Town, Lower Town), ten-sign gypsum signboard, and sophisticated rock-cut water harvesting reservoirs; inscribed
+  as a UNESCO World Heritage Site in 2021.
+summaries:
+  kids: >-
+    Built on an island in the dry Rann of Kutch, Dholavira captured seasonal rainwater in giant stone-lined
+    reservoirs and had a huge ten-letter signboard above its castle gate.
+  teen: >-
+    Excavated by R. S. Bisht for the Archaeological Survey of India and designated a UNESCO World Heritage Site
+    in 2021, Dholavira features three walled urban divisions and an extensive network of dams, stormwater channels,
+    and rock-cut reservoirs that sustained a major city in an arid environment.
+region: Khadir Bet, Kutch District, Gujarat, India
+location:
+  name: Dholavira
+  lat: 23.8869
+  lon: 70.2122
+datings:
+  - method: archaeological-stratigraphic
+    range:
+      earliest: "3000 BCE"
+      latest: "1500 BCE"
+      precision: century
+      circa: true
+    grade: A
+    label: Seven-Stage Occupational Sequence (Stages I to VII)
+    sources:
+      - src.asi-2020-dholavira-nomination-dossier
+      - src.unesco-2021-dholavira
+      - src.possehl-2002-indus-civilization
+    note: >-
+      The ASI excavations directed by R. S. Bisht (1989-2005) identified seven cultural stages spanning about 1,500
+      years, from the beginning of the third millennium BCE: Early Harappan (Stages I-II), Mature Harappan (Stages
+      III-V), Late Harappan (Stage VI) and a deurbanised final occupation (Stage VII), after which the site was
+      not reoccupied.
+  - method: documentary
+    range:
+      earliest: 2021
+      latest: 2021
+      precision: year
+      circa: false
+    grade: A
+    label: UNESCO World Heritage Inscription
+    sources:
+      - src.unesco-2021-dholavira
+    note: >-
+      Inscribed on the UNESCO World Heritage List in July 2021 under criteria (iii) and (iv) as "Dholavira: a
+      Harappan City".
+claims:
+  - text: >-
+      On Khadir island, which receives only about 260 mm of rain a year and has no perennial river, Dholavira's
+      builders dammed the seasonal Mansar and Manhar streams and laid out sixteen or more reservoirs of varying
+      sizes within the city walls, together estimated to cover about 10 hectares.
+    grade: A
+    sources:
+      - src.asi-2020-dholavira-nomination-dossier
+      - src.unesco-2021-dholavira
+      - src.agrawal-2018-dholavira-gpr
+  - text: >-
+      Unlike Harappa and Mohenjo-daro, Dholavira was laid out in three principal divisions-a bipartite Citadel
+      (Castle and Bailey), a Middle Town, and a Lower Town-separated by an open ceremonial ground or stadium and
+      built extensively with dressed sandstone blocks alongside mud-bricks.
+    grade: A
+    sources:
+      - src.asi-2020-dholavira-nomination-dossier
+      - src.possehl-2002-indus-civilization
+      - src.singh-2008-ancient-early-medieval-india
+  - text: >-
+      In 2021, UNESCO inscribed Dholavira on the World Heritage List as the first Harappan site in India to receive
+      World Heritage status.
+    grade: A
+    sources:
+      - src.unesco-2021-dholavira
+relations:
+  - kind: part-of
+    target: tradition.harappan-civilisation
+  - kind: contemporary-of
+    target: site.mohenjo-daro
+  - kind: contemporary-of
+    target: site.lothal
+  - kind: related-to
+    target: concept.harappan-town-planning-and-drainage
+wikidata: Q9468
+image:
+  commons: "File:Dholavira gujarat.jpg"
+  alt: Stone-lined water reservoir and stepped masonry at Dholavira, Kutch
+  credit: Himalyan
+  license: CC BY-SA 3.0
+tags:
+  - harappan
+  - site
+  - gujarat
+  - unesco
+  - water-management
+review:
+  status: draft
+  author: gemini-4-argon

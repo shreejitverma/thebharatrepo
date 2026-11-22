@@ -1,0 +1,86 @@
+id: concept.harappan-weights-and-measures
+type: concept
+kind: science
+names:
+  en: Harappan Standardisation of Weights and Measures
+summary: >-
+  The uniform metrological system enforced across the Mature Harappan Civilisation (c. 2600-1900 BCE), comprising
+  finely polished cubical and truncated-spherical banded chert weights calibrated to a unit of approximately
+  13.63 to 13.71 grams in a combined binary (1, 2, 4, 8, 16, 32, 64) and decimal (160, 200, 320, 640, 1600)
+  progression, alongside graduated linear measuring scales in shell, ivory, and bronze.
+summaries:
+  kids: >-
+    Across hundreds of kilometres, Harappan traders used the exact same set of polished stone cube weights and
+    shell rulers so trade and building measurements were fair everywhere.
+  teen: >-
+    Mature Harappan cities maintained an exceptionally precise system of polished Rohri chert weights based on a
+    unit of ~13.65 grams, using binary ratios for small high-value goods and decimal multiples for bulk commodities,
+    together with finely subdivided linear rulers at Mohenjo-daro, Harappa, and Lothal.
+region: Pan-Harappan (with Harappan weights also attested in Dilmun/Bahrain and Mesopotamia)
+datings:
+  - method: archaeological-radiocarbon
+    range:
+      earliest: "2600 BCE"
+      latest: "1900 BCE"
+      precision: century
+      circa: true
+    grade: A
+    label: Mature Harappan Metrological Integration (Harappa Period 3)
+    sources:
+      - src.kenoyer-1998-ancient-cities-indus
+      - src.possehl-2002-indus-civilization
+      - src.wright-2010-ancient-indus
+    note: >-
+      While early regional weights appear in Kot Dijian levels (c. 2800-2600 BCE), the uniform cubical chert weight
+      series is strictly co-extensive with the Mature Harappan Integration Era (c. 2600-1900 BCE) and disappears
+      during Late Harappan de-urbanisation.
+claims:
+  - text: >-
+      First mathematically analyzed by A. S. Hemmy in 1931, Mature Harappan cubical weights - mostly crafted from
+      banded chert quarried in the Rohri Hills of Sindh - follow a lower binary series (1, 2, 4, 8, 16, 32, 64, where
+      16 equals the base unit of ~13.63-13.71 grams, close to the historical Indian ratti/karsha scale) and an upper
+      decimal series (160, 200, 320, 640, 1600, 3200, 6400, 12800).
+    grade: A
+    sources:
+      - src.marshall-1931-mohenjo-daro
+      - src.kenoyer-1998-ancient-cities-indus
+      - src.possehl-2002-indus-civilization
+  - text: >-
+      Excavations at Mohenjo-daro (a marine-shell scale divided into units of 6.705 mm with five-unit decimal groupings),
+      Lothal (an ivory scale with 1.704 mm graduations), Harappa, and Kalibangan recovered precision linear measuring
+      rods corresponding to standard Harappan foot (33.5 cm) and cubit (52 cm) modules used in architecture.
+    grade: A
+    sources:
+      - src.rao-1979-lothal-harappan-port
+      - src.kenoyer-1998-ancient-cities-indus
+      - src.danino-2010-lost-river-sarasvati
+  - text: >-
+      Sets of tiny chert weights paired with copper balance pans found near city gateways at Harappa and in bead
+      and gold workshops at Chanhudaro and Lothal indicate their use both for taxing incoming high-value raw materials
+      and weighing precious metals and beads.
+    grade: A
+    sources:
+      - src.kenoyer-1998-ancient-cities-indus
+      - src.wright-2010-ancient-indus
+relations:
+  - kind: part-of
+    target: tradition.harappan-civilisation
+  - kind: related-to
+    target: concept.harappan-mesopotamian-trade
+  - kind: related-to
+    target: concept.harappan-town-planning-and-drainage
+wikidata: null
+image:
+  commons: "File:Harappan weights Delhi Museum.jpg"
+  alt: Graduated set of polished cubical chert weights from the Harappan Civilisation
+  credit: Nomu420
+  license: CC BY-SA 3.0
+tags:
+  - harappan
+  - metrology
+  - weights-and-measures
+  - science
+  - trade
+review:
+  status: draft
+  author: gemini-4-argon

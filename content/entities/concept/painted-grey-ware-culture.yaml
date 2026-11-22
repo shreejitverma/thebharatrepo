@@ -1,0 +1,78 @@
+id: concept.painted-grey-ware-culture
+type: concept
+kind: civilisation
+names:
+  en: Painted Grey Ware Culture
+summary: >-
+  The Painted Grey Ware (PGW) culture is an Iron Age archaeological horizon of the western
+  Gangetic plain and the Ghaggar-Hakra valley, characterized by fine, wheel-thrown grey pottery
+  painted with geometric designs in black. First defined by B. B. Lal at Ahichhatra and
+  Hastinapura, it corresponds geographically and chronologically to the Middle and Late Vedic
+  Kuru-Panchala society.
+summaries:
+  kids: >-
+    The Painted Grey Ware culture was an Iron Age society in northern India known for making smooth,
+    thin grey clay bowls and dishes decorated with black painted lines and dots.
+  teen: >-
+    Spanning c. 1200 to 600 BCE across the Ghaggar-Hakra basin and the Ganga-Yamuna Doab, the
+    Painted Grey Ware culture marks the spread of iron working, horse breeding, and agrarian towns
+    at sites such as Hastinapura, Ahichhatra, and Atranjikhera during the Middle-to-Late Vedic
+    period.
+region: Upper Ganga-Yamuna Doab, Haryana, Punjab, and northern Rajasthan
+datings:
+  - method: archaeological-radiocarbon
+    range: { earliest: "1200 BCE", latest: "600 BCE", best: "900 BCE", precision: century, circa: true }
+    grade: A
+    label: Stratified radiocarbon chronology (Hastinapura, Atranjikhera, Noh)
+    sources:
+      - src.gaur-1983-excavations-atranjikhera
+      - src.singh-2008-ancient-early-medieval-india
+      - src.allchin-1995-archaeology-early-historic-south-asia
+    note: >-
+      Calibrated radiocarbon and stratigraphic sequences from Atranjikhera, Noh, Jakhera, and
+      Hastinapura place the Painted Grey Ware horizon between roughly 1200/1100 BCE and 600 BCE,
+      succeeded by Northern Black Polished Ware.
+claims:
+  - text: >-
+      Painted Grey Ware consists of fine-grained, well-levigated clay thrown on a fast wheel,
+      painted before firing with black geometric motifs (swastikas, concentric circles, sigmas,
+      dots, and dashes), and fired under reducing conditions to a smooth ash-grey surface.
+    grade: A
+    sources:
+      - src.lal-1955-excavation-hastinapura
+      - src.gaur-1983-excavations-atranjikhera
+      - src.singh-2008-ancient-early-medieval-india
+  - text: >-
+      The vessel repertoire is dominated by open tableware forms - particularly straight-sided
+      bowls and dishes - suggesting its function as elite dining or ritual ware alongside coarser
+      domestic red wares.
+    grade: A
+    sources:
+      - src.lal-1955-excavation-hastinapura
+      - src.singh-2008-ancient-early-medieval-india
+  - text: >-
+      At Doab sites such as Atranjikhera and Jakhera, PGW levels yield iron implements (axes,
+      sickles, spearheads, arrowheads, and slag), domestic horse bones (Equus caballus), and
+      cultivated rice, wheat, and barley.
+    grade: A
+    sources:
+      - src.gaur-1983-excavations-atranjikhera
+      - src.chakrabarti-1992-early-use-iron-india
+      - src.singh-2008-ancient-early-medieval-india
+relations:
+  - { kind: excavated-at, target: site.hastinapura }
+  - { kind: excavated-at, target: site.ahichhatra }
+  - { kind: excavated-at, target: site.atranjikhera }
+  - { kind: succeeded, target: concept.black-and-red-ware-culture }
+  - { kind: preceded, target: concept.northern-black-polished-ware-culture }
+  - { kind: related-to, target: polity.kuru-kingdom }
+  - { kind: related-to, target: polity.panchala }
+  - { kind: related-to, target: concept.iron-metallurgy-in-india }
+wikidata: Q2525293
+image:
+  commons: "File:Painted Grey Ware - Sonkh - 1000-600 BCE - Showcase 6-15 - Prehistory and Terracotta Gallery - Government Museum - Mathura 2013-02-24 6461.JPG"
+  alt: Painted Grey Ware pottery vessels from Sonkh displayed at the Government Museum, Mathura
+  credit: Biswarup Ganguly
+  license: CC BY 3.0
+tags: [painted-grey-ware, archaeology, iron-age, pottery, hastinapura, atranjikhera]
+review: { status: draft, author: "gemini-4-argon" }

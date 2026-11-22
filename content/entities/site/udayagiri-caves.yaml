@@ -1,0 +1,46 @@
+id: site.udayagiri-caves
+type: site
+kind: art
+names:
+  en: Udayagiri Caves and Varaha Panel
+  iast: Udayagiri Guhāḥ (Varāha)
+  native: उदयगिरि गुहाः (वराह)
+summary: >-
+  The Udayagiri Caves near Vidisha in Madhya Pradesh are a group of twenty rock-cut sandstone cave shrines (nineteen Hindu and one Jain) sculpted during the reigns of the Gupta emperors Chandragupta II (dated inscription of Gupta Year 82 = 401/402 CE) and Kumaragupta I (Gupta Year 106 = 425/426 CE). Cave 5 houses the colossal high-relief Varaha panel showing Vishnu in his boar incarnation lifting the earth goddess Bhudevi from the cosmic ocean before gods, sages, river goddesses Ganga and Yamuna, and a kneeling royal figure widely identified as Chandragupta II.
+summaries:
+  kids: >-
+    Carved into a hillside in Madhya Pradesh around 401 CE under Emperor Chandragupta II, the Udayagiri Caves feature a giant stone relief of Vishnu as the boar Varaha rescuing the Earth from the cosmic ocean.
+  teen: >-
+    Dated by inscriptions of Gupta Year 82 (401/402 CE) and Chandragupta II's minister Virasena, the Udayagiri Caves are the earliest securely dated corpus of Gupta Hindu rock-cut art, anchored by the monumental Varaha panel of Cave 5.
+region: Eastern Malwa (near Vidisha and Besnagar, Madhya Pradesh)
+location: { name: "Udayagiri Caves, Vidisha, Madhya Pradesh", lat: 23.536, lon: 77.772 }
+datings:
+  - method: epigraphic
+    range: { earliest: 400, latest: 426, best: 401, precision: year, circa: false }
+    grade: A
+    label: Inscriptions of Gupta Year 82 (401/402 CE), Virasena under Chandragupta II, and Gupta Year 106 (425/426 CE)
+    sources:
+      - src.fleet-1888-inscriptions-early-gupta-kings
+      - src.willis-2002-lion-capital-udayagiri
+    note: Cave 6 carries a dated inscription of a Sanakanika maharaja under Chandragupta II in Gupta Year 82 (401/402 CE), Cave 7 carries the undated Sanskrit inscription of Chandragupta II's minister Virasena, and Cave 20 carries a Jain inscription dated Gupta Year 106 (425/426 CE).
+claims:
+  - text: The monumental Cave 5 relief depicts Vishnu as the cosmic boar (Varaha) raising the earth goddess Prithvi/Bhudevi on his tusk above the waters while nagas and a royal figure worship at his feet, functioning simultaneously as Vaishnava myth and political allegory of Chandragupta II's pacification and unification of the earth (kritsna-prithvi-jaya).
+    grade: A
+    sources:
+      - src.willis-2002-lion-capital-udayagiri
+      - src.fleet-1888-inscriptions-early-gupta-kings
+  - text: Research by Michael Willis and Meera Dass demonstrates that Udayagiri was landscaped as a royal ritual and astronomical observatory centre aligned with the summer solstice sun path and water-channelled abhisheka ceremonies during Chandragupta II's western campaign.
+    grade: B
+    sources:
+      - src.willis-2002-lion-capital-udayagiri
+relations:
+  - { kind: patronised-by, target: person.chandragupta-ii }
+  - { kind: part-of, target: polity.gupta-empire }
+  - { kind: related-to, target: artifact.iron-pillar-of-delhi }
+image:
+  commons: "File:Chandragupta II paying homage to Varaha in Udayagiri Caves (2).jpg"
+  alt: The monumental Varaha rock-cut relief in Cave 5 at Udayagiri, Madhya Pradesh
+  credit: Photo Dharma from Sadao, Thailand
+  license: CC BY 2.0
+tags: [udayagiri-caves, varaha, chandragupta-ii, gupta-empire, vaishnavism, rock-cut-art]
+review: { status: draft, author: "gemini-4-argon" }

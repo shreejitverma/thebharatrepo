@@ -1,0 +1,88 @@
+id: site.mohenjo-daro
+type: site
+kind: site
+names:
+  en: Mohenjo-daro
+  iast: Mohenjo-dāro
+summary: >-
+  The largest excavated Mature Harappan metropolis (over 200 hectares), situated on the right bank of the Indus
+  River in Larkana District, Sindh, renowned for its elevated mud-brick citadel platform, the Great Bath, massive
+  brick drains, hundreds of deep brick-lined wells, and famous bronze and steatite sculptures.
+summaries:
+  kids: >-
+    Mohenjo-daro was a huge brick city built along the Indus River around 2500 BCE, with two-storey houses, private
+    wells, bathrooms, covered street drains, and the famous Great Bath.
+  teen: >-
+    Excavated from 1922 onward by R. D. Banerji, John Marshall, and E. J. H. Mackay, Mohenjo-daro is the best-preserved
+    urban center of the Mature Harappan phase, covering over 200 hectares with a Western Citadel and an Eastern
+    Lower Town.
+region: Larkana District, Sindh, Pakistan
+location:
+  name: Mohenjo-daro
+  lat: 27.3242
+  lon: 68.1375
+datings:
+  - method: archaeological-radiocarbon
+    range:
+      earliest: "2600 BCE"
+      latest: "1900 BCE"
+      precision: century
+      circa: true
+    grade: A
+    label: Mature Harappan Urban Occupation
+    sources:
+      - src.marshall-1931-mohenjo-daro
+      - src.kenoyer-1998-ancient-cities-indus
+      - src.possehl-2002-indus-civilization
+    note: >-
+      Major urban construction and occupation belong to the Mature Harappan Integration Era (c. 2600-1900 BCE),
+      with unexcavated Early Harappan levels submerged beneath the modern water table and a brief Late Harappan
+      Jhukar-related occupation in the uppermost strata.
+claims:
+  - text: >-
+      First recognized as a prehistoric site by Archaeological Survey of India officer R. D. Banerji in 1922,
+      Mohenjo-daro covers an estimated 200 to 250 hectares and is divided into a high Western Citadel mound and
+      a multi-mound Eastern Lower Town laid out on cardinal streets.
+    grade: A
+    sources:
+      - src.marshall-1931-mohenjo-daro
+      - src.kenoyer-1998-ancient-cities-indus
+      - src.possehl-2002-indus-civilization
+  - text: >-
+      Michael Jansen estimated that Mohenjo-daro was served by roughly 700 Cylindrical brick-lined public and
+      private wells, giving the city the highest density of indoor water supply structures known in the ancient
+      Bronze Age world.
+    grade: B
+    sources:
+      - src.possehl-2002-indus-civilization
+      - src.wright-2010-ancient-indus
+  - text: >-
+      Mohenjo-daro yielded iconic Harappan artifacts including the lost-wax bronze Dancing Girl, the steatite
+      Priest-King sculpture, the Pashupati seal (Seal 420), and thousands of inscribed steatite seals.
+    grade: A
+    sources:
+      - src.marshall-1931-mohenjo-daro
+      - src.kenoyer-1998-ancient-cities-indus
+relations:
+  - kind: part-of
+    target: tradition.harappan-civilisation
+  - kind: contemporary-of
+    target: site.harappa
+  - kind: contemporary-of
+    target: site.dholavira
+  - kind: contemporary-of
+    target: site.rakhigarhi
+wikidata: Q5725
+image:
+  commons: "File:Mohenjodaro - view of the stupa mound.JPG"
+  alt: View of the citadel mound and baked-brick architecture at Mohenjo-daro
+  credit: Saqib Qayyum
+  license: CC BY-SA 3.0
+tags:
+  - harappan
+  - site
+  - sindh
+  - unesco
+review:
+  status: draft
+  author: gemini-4-argon

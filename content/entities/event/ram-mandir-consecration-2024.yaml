@@ -1,0 +1,35 @@
+id: event.ram-mandir-consecration-2024
+type: event
+kind: event
+names:
+  en: Ram Janmabhoomi temple consecration
+summary: The consecration ceremony for the image of Ram Lalla at the newly built
+  Shri Ram Janmabhoomi Mandir in Ayodhya took place on 22 January 2024.
+summaries:
+  kids: A consecration ceremony for Ram Lalla took place at the new temple in
+    Ayodhya on 22 January 2024.
+  teen: The newly built Shri Ram Janmabhoomi Mandir in Ayodhya held the Pran
+    Pratishtha ceremony for Ram Lalla on 22 January 2024.
+region: Ayodhya, Uttar Pradesh
+datings:
+  - method: documentary
+    range:
+      earliest: "2024"
+      latest: "2024"
+      precision: year
+      circa: false
+    grade: A
+    sources:
+      - src.ram-temple-consecration-pib
+claims:
+  - text: The Prime Minister participated in the consecration ceremony at the newly
+      built temple on 22 January 2024.
+    grade: A
+    sources:
+      - src.ram-temple-consecration-pib
+tags:
+  - ayodhya
+  - temple
+review:
+  status: draft
+  author: codex-gpt-6

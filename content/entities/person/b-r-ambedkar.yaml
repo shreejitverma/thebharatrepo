@@ -1,0 +1,39 @@
+id: person.b-r-ambedkar
+type: person
+kind: person
+names:
+  en: B. R. Ambedkar
+summary: Bhimrao Ramji Ambedkar was a jurist, economist and anti-caste political
+  leader who chaired the Constitution’s Drafting Committee after independence.
+summaries:
+  kids: B. R. Ambedkar campaigned against caste oppression and helped lead the
+    drafting of India’s Constitution.
+  teen: Ambedkar’s work combined legal scholarship, political organization and
+    critique of caste; historians examine his independent political vision and
+    constitutional role.
+datings:
+  - method: scholarly-consensus
+    range:
+      earliest: "1891"
+      latest: "1956"
+      precision: year
+      circa: true
+    grade: B
+    label: Historical scholarship
+    sources:
+      - src.jaffrelot-2005-ambedkar-and-untouchability
+      - src.bandyopadhyay-2004-from-plassey-to-partition
+claims:
+  - text: Bhimrao Ramji Ambedkar was a jurist, economist and anti-caste political
+      leader who chaired the Constitution’s Drafting Committee after
+      independence.
+    grade: B
+    sources:
+      - src.jaffrelot-2005-ambedkar-and-untouchability
+      - src.bandyopadhyay-2004-from-plassey-to-partition
+relations: []
+tags:
+  - person
+review:
+  status: draft
+  author: codex-gpt-6

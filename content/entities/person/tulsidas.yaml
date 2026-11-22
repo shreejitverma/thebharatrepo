@@ -1,0 +1,39 @@
+id: person.tulsidas
+type: person
+kind: person
+names:
+  en: Tulsidas
+summary: Tulsidas was a poet whose major work, the Ramcharitmanas, retells the
+  Ramayana in Awadhi. His conventional life dates are supported by historical
+  scholarship but details remain uncertain.
+summaries:
+  kids: Tulsidas wrote the Ramcharitmanas, a widely read retelling of the Ramayana
+    in Awadhi.
+  teen: Tulsidas’s poetry helped establish the Ramcharitmanas as a major text in
+    North Indian religious and literary life.
+datings:
+  - method: scholarly-consensus
+    range:
+      earliest: "1532"
+      latest: "1623"
+      precision: year
+      circa: true
+    grade: B
+    label: Historical scholarship
+    sources:
+      - src.lutgendorf-1991-life-of-a-text
+      - src.kulke-2004-history-of-india
+claims:
+  - text: Tulsidas was a poet whose major work, the Ramcharitmanas, retells the
+      Ramayana in Awadhi. His conventional life dates are supported by
+      historical scholarship but details remain uncertain.
+    grade: B
+    sources:
+      - src.lutgendorf-1991-life-of-a-text
+      - src.kulke-2004-history-of-india
+relations: []
+tags:
+  - person
+review:
+  status: draft
+  author: codex-gpt-6

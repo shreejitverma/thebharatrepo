@@ -1,0 +1,34 @@
+id: text.kamba-ramayanam
+type: text
+kind: text
+names:
+  en: Kamba Ramayanam
+  iast: Irāmāvatāram
+  native: கம்பராமாயணம்
+summary: >-
+  The Kamba Ramayanam, also called Irāmāvatāram, is a Tamil retelling of the Rama story attributed to
+  the poet Kampan. It reworks inherited Ramayana narratives through Tamil literary, devotional, and
+  political contexts; its conventional date is the twelfth century.
+summaries:
+  kids: >-
+    The Kamba Ramayanam is a Tamil poem telling the story of Rama. Its poet, Kampan, shaped the story
+    for Tamil audiences and traditions.
+  teen: >-
+    Kampan's Irāmāvatāram adapts the Ramayana narrative in Tamil rather than simply translating a
+    Sanskrit source. Scholars have discussed its date and the traditions that influenced it.
+region: Tamil Nadu, India
+datings:
+  - method: linguistic
+    range: { earliest: "1100 CE", latest: "1200 CE", precision: century, circa: true }
+    grade: C
+    label: Conventional twelfth-century dating
+    sources: [src.richman-1991-many-ramayanas]
+claims:
+  - text: The Irāmāvatāram is a major Tamil retelling of the Rama narrative attributed to Kampan.
+    grade: B
+    sources: [src.richman-1991-many-ramayanas]
+  - text: The poem adapts the Ramayana narrative within Tamil literary and cultural traditions.
+    grade: B
+    sources: [src.richman-1991-many-ramayanas]
+tags: [tamil, literature, ramayana, poetry]
+review: { status: draft, author: "codex-gpt-6" }

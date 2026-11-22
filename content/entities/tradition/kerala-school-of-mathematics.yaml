@@ -1,0 +1,35 @@
+id: tradition.kerala-school-of-mathematics
+type: tradition
+kind: science
+names:
+  en: Kerala school of mathematics and astronomy
+  iast: Keralagaṇita-paramparā
+summary: >-
+  The Kerala school was a scholarly lineage of mathematicians and astronomers active from about the
+  fourteenth through sixteenth centuries. Later authors attribute to Madhava a series for pi and
+  infinite series for trigonometric functions, preserved in works by successors including Nilakantha
+  Somayaji and Jyeshthadeva.
+summaries:
+  kids: >-
+    Scholars in Kerala studied mathematics and astronomy over several generations. Later writers
+    credited Madhava with important infinite series and recorded some of them in their own works.
+  teen: >-
+    The Kerala school was a connected scholarly tradition rather than a formal institution. Its
+    mathematicians developed sophisticated series methods, with key attributions to Madhava preserved
+    by later writers.
+region: Kerala, southwestern India
+datings:
+  - method: scholarly-consensus
+    range: { earliest: "1340 CE", latest: "1600 CE", precision: century, circa: true }
+    grade: B
+    label: Attested scholarly lineage
+    sources: [src.plofker-2009-mathematics-in-india, src.ramasubramanian-2011-tantrasangraha]
+claims:
+  - text: Later Kerala mathematicians attribute infinite series for trigonometric functions and pi to Madhava.
+    grade: B
+    sources: [src.plofker-2009-mathematics-in-india, src.ramasubramanian-2011-tantrasangraha]
+  - text: The surviving evidence for some of Madhava's results comes from later authors who quote or name him.
+    grade: B
+    sources: [src.plofker-2009-mathematics-in-india]
+tags: [mathematics, astronomy, kerala, sanskrit]
+review: { status: draft, author: "codex-gpt-6" }

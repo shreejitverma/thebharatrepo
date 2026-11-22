@@ -1,0 +1,42 @@
+id: person.varahamihira
+type: person
+kind: science
+names:
+  en: Varahamihira
+  iast: Varāhamihira
+  native: वराहमिहिर
+summary: >-
+  Varahamihira (c. 505-587 CE) was a renowned classical Indian astronomer, mathematician and encyclopaedist of Avanti (born at Kapitthaka near Ujjain as the son of Adityadasa). His major works include the Panchasiddhantika (using an epoch of Shaka 427 = 505 CE and preserving our only detailed mathematical summaries of five earlier astronomical schools: the Paitamaha, Vasishtha, Romaka, Paulisha and Surya Siddhantas), the encyclopaedic Brihat Samhita covering architecture, hydrology, gemology, meteorology and planetary omens, and the astrological treatise Brihat Jataka.
+summaries:
+  kids: >-
+    Varahamihira was a sixth-century scientist and astronomer from Ujjain who wrote an encyclopaedia called the Brihat Samhita covering stars, rainfall, groundwater, temple architecture and gemstones.
+  teen: >-
+    Working at Ujjain in the sixth century CE, Varahamihira compiled the Panchasiddhantika (comparing five ancient astronomical systems, including Greco-Babylonian and Siddhantic models) and the 106-chapter encyclopaedia Brihat Samhita.
+region: Avanti (Ujjain and Kapitthaka, Madhya Pradesh)
+location: { name: "Ujjain, Madhya Pradesh", lat: 23.176, lon: 75.788 }
+datings:
+  - method: astronomical-reference
+    range: { earliest: 505, latest: 587, best: 550, precision: year, circa: true }
+    grade: A
+    label: Epoch of the Panchasiddhantika (Shaka 427 = 505 CE) and Amarakosha/Amaraja death record (Shaka 509 = 587 CE)
+    sources:
+      - src.plofker-2009-mathematics-in-india
+      - src.bhatnagar-2017-date-mahabharata-war
+    note: The Panchasiddhantika explicitly adopts the epoch of 427 Shaka elapsed (505 CE) for its astronomical calculations, and the commentator Amaraja records Varahamihira's death in Shaka 509 (587 CE).
+claims:
+  - text: In the Panchasiddhantika, Varahamihira compares five astronomical treatises (Paitamaha, Vasishtha, Romaka, Paulisha and Surya Siddhanta), cites Aryabhata's midnight and sunrise day-reckoning systems, and states complex trigonometric identities equivalent to sin^2(x) + cos^2(x) = 1 and the half-angle sine formula.
+    grade: A
+    sources:
+      - src.plofker-2009-mathematics-in-india
+  - text: The Brihat Samhita compiles 106 chapters on astronomical phenomena, meteorology, ecological indicators of underground water veins (dakargala), temple proportions (prasada-lakshana), iconometry, perfumery and combinatorics (computing C(16,4) = 1,820 perfume combinations via a Pascal-triangle array, the loshtaka-prastara).
+    grade: A
+    sources:
+      - src.plofker-2009-mathematics-in-india
+relations:
+  - { kind: related-to, target: person.aryabhata }
+  - { kind: related-to, target: text.aryabhatiya }
+  - { kind: related-to, target: polity.gupta-empire }
+  - { kind: related-to, target: event.kurukshetra-war }
+wikidata: Q858348
+tags: [varahamihira, astronomy, mathematics, panchasiddhantika, brihat-samhita, ujjain]
+review: { status: draft, author: "gemini-4-argon" }

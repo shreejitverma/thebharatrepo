@@ -9,19 +9,16 @@ export default function SearchBar() {
 
   const handleSearch = (e: React.FormEvent) => {
     e.preventDefault();
-    if (query) {
-      router.push(`/search?q=${query}`);
-    }
+    const q = query.trim();
+    if (q) router.push(`/search?q=${encodeURIComponent(q)}`);
   };
 
   return (
-    <form onSubmit={handleSearch} className="search-bar">
-      <input
-        type="text"
-        value={query}
-        onChange={(e) => setQuery(e.target.value)}
-        placeholder="Search..."
-      />
+    <form onSubmit={handleSearch} className="search-bar" role="search">
+      <label htmlFor="site-search" className="visually-hidden">
+        Search the archive
+      </label>
+      <input id="site-search" type="search" value={query} onChange={(e) => setQuery(e.target.value)} placeholder="Search the archive" />
     </form>
   );
 }

@@ -1,0 +1,83 @@
+id: site.lahuradewa
+type: site
+kind: prehistory
+names:
+  en: Lahuradewa Neolithic and Early Rice Site
+summary: >-
+  A lake-margin settlement mound in Sant Kabir Nagar district, Uttar Pradesh, where Period IA deposits and
+  adjacent lake cores yielded cord-impressed pottery, micro-charcoal, rice phytoliths and charred Oryza grains
+  AMS-dated to the 7th millennium BCE, making it central to debates on early rice cultivation in India.
+summaries:
+  kids: >-
+    At Lahuradewa beside a lake in Uttar Pradesh, archaeologists found charred grains of rice and cord-marked
+    clay pots from over 8,000 years ago, showing some of the earliest rice use in South Asia.
+  teen: >-
+    Lahuradewa in the Sarayu plain produced AMS radiocarbon dates of c. 6400 BCE directly on carbonized rice grains,
+    sparking a lively scholarly debate over whether these represent early rice agriculture or wild rice management.
+region: Middle Ganga plain (Sarayu basin), Sant Kabir Nagar district, Uttar Pradesh
+location:
+  name: Lahuradewa
+  lat: 26.77
+  lon: 82.95
+datings:
+  - method: archaeological-radiocarbon
+    range:
+      earliest: "7000 BCE"
+      latest: "5000 BCE"
+      best: "6409 BCE"
+      precision: century
+      circa: true
+    grade: A
+    label: Period IA Early Holocene AMS radiocarbon dates on rice and charcoal
+    sources:
+      - src.thakur-2018-lahuradewa-early-holocene-paddy
+      - src.coningham-2015-archaeology-south-asia
+    note: >-
+      Direct AMS radiocarbon dating of a carbonized Oryza grain from Period IA yielded 7532 +/- 65 BP
+      (calibrated c. 6409 BCE), alongside wood charcoal and lake-core dates extending to c. 7000-5300 BCE.
+  - method: scholarly-consensus
+    range:
+      earliest: "2500 BCE"
+      latest: "2000 BCE"
+      precision: century
+      circa: true
+    grade: C
+    label: Morphological rice domestication and mixed farming threshold (Fuller 2006; Kingwell-Banham et al. 2015)
+    sources:
+      - src.fuller-2006-agricultural-origins-south-asia
+      - src.kingwellbanham-2015-early-agriculture-south-asia
+    note: >-
+      Archaeobotanists distinguish early Holocene wild or pre-domestication Oryza harvesting at Lahuradewa IA
+      from full morphological domestication (non-shattering spikelet bases) achieved by the late 3rd millennium BCE.
+claims:
+  - text: >-
+      Period IA at Lahuradewa yielded handmade cord-impressed and red and black ware pottery, carbonized Oryza
+      grains and charred rice husk impressions directly AMS-dated to the 7th millennium BCE.
+    grade: A
+    sources:
+      - src.thakur-2018-lahuradewa-early-holocene-paddy
+      - src.coningham-2015-archaeology-south-asia
+  - text: >-
+      Diatom, phytolith and micro-charcoal profiles from the Lahuradewa lake core record persistent wetland
+      management and anthropogenic burning around the lake from the Early Holocene onward.
+    grade: A
+    sources:
+      - src.thakur-2018-lahuradewa-early-holocene-paddy
+relations:
+  - kind: related-to
+    target: site.koldihwa
+  - kind: related-to
+    target: site.chirand
+debate: >-
+  The excavators and palaeolimnologists interpret the 7th-millennium BCE Oryza remains and diatom/phytolith signals
+  at Lahuradewa as early paddy cultivation, whereas Dorian Fuller and colleagues argue that the earliest grains
+  reflect intensive wetland foraging or pre-domestication cultivation prior to full morphological domestication around 2500-2000 BCE.
+tags:
+  - neolithic
+  - early-rice
+  - archaeobotany
+  - ganga-valley
+  - uttar-pradesh
+review:
+  status: draft
+  author: gemini-4-argon

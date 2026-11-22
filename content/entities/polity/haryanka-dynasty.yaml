@@ -1,0 +1,47 @@
+id: polity.haryanka-dynasty
+type: polity
+kind: polity
+names:
+  en: Haryanka Dynasty
+  iast: Haryaṅka
+  native: हर्यङ्क
+summary: >-
+  The Haryanka dynasty is the early ruling house of Magadha named in Buddhist sources. Its best-known kings, Bimbisara and his son Ajatashatru, were contemporaries of the Buddha and Mahavira and made Magadha the leading power of the middle Gangetic plain. Its dates depend on the contested date of the Buddha, and it was followed by the Shishunaga line and then the Nandas.
+summaries:
+  kids: >-
+    The Haryanka kings were the royal family that first made Magadha a powerful kingdom. They ruled from Rajagriha, a city ringed by hills.
+  teen: >-
+    Under Bimbisara and Ajatashatru, the Haryanka kings annexed Anga, defeated the Vajji confederacy and laid the foundations of Magadha's later empire. Their exact dates shift with the debated date of the Buddha.
+region: Magadha (Bihar)
+location: { name: "Rajgir", lat: 25.028, lon: 85.419 }
+datings:
+  - method: textual-internal
+    range: { earliest: "545 BCE", latest: "413 BCE", precision: decade, circa: true }
+    grade: C
+    label: Long chronology (Sri Lankan chronicles, corrected)
+    sources:
+      - src.cousins-1996-dating-historical-buddha
+      - src.singh-2008-ancient-early-medieval-india
+    note: Regnal lengths from the Dipavamsa and Mahavamsa, counted from a Parinirvana of about 486 to 483 BCE in Ajatashatru's eighth year.
+  - method: textual-internal
+    range: { earliest: "470 BCE", latest: "360 BCE", precision: decade, circa: true }
+    grade: C
+    label: Short chronology
+    sources:
+      - src.cousins-1996-dating-historical-buddha
+    note: If the Buddha died around 400 BCE, as many scholars since the Bechert symposium hold, the reigns of Bimbisara and Ajatashatru move down by about 80 years.
+claims:
+  - text: Bimbisara annexed Anga, and his son Ajatashatru fought Kosala and defeated the Vajji confederacy, extending Magadhan power across the middle Gangetic plain.
+    grade: B
+    sources:
+      - src.singh-2008-ancient-early-medieval-india
+      - src.kulke-2004-history-of-india
+  - text: Buddhist texts describe Ajatashatru fortifying the village of Pataligrama on the Ganga, while Jain and Puranic traditions credit his successor Udayin with founding the city of Pataliputra (Kusumapura).
+    grade: C
+    sources:
+      - src.singh-2008-ancient-early-medieval-india
+relations:
+  - { kind: ruled, target: polity.magadha }
+wikidata: Q12459974
+tags: [magadha, haryanka, rajagriha]
+review: { status: draft, author: "gemini-4-argon" }

@@ -1,0 +1,40 @@
+id: person.mirabai
+type: person
+kind: person
+names:
+  en: Mirabai
+summary: Mirabai is remembered as a poet and devotee of Krishna. Her biography
+  and dates remain uncertain because later devotional traditions shaped the
+  accounts of her life.
+summaries:
+  kids: Mirabai is remembered for songs expressing devotion to Krishna. Historians
+    cannot confirm every story told about her life.
+  teen: Mirabai’s songs became influential in North Indian devotional traditions.
+    Her historical biography is difficult to separate from later hagiography and
+    performance.
+datings:
+  - method: scholarly-consensus
+    range:
+      earliest: "1498"
+      latest: "1546"
+      precision: year
+      circa: true
+    grade: C
+    label: Historical scholarship
+    sources:
+      - src.hawley-2005-three-bhakti-voices
+      - src.hawley-2015-storm-of-songs
+claims:
+  - text: Mirabai is remembered as a poet and devotee of Krishna. Her biography and
+      dates remain uncertain because later devotional traditions shaped the
+      accounts of her life.
+    grade: C
+    sources:
+      - src.hawley-2005-three-bhakti-voices
+      - src.hawley-2015-storm-of-songs
+relations: []
+tags:
+  - person
+review:
+  status: draft
+  author: codex-gpt-6

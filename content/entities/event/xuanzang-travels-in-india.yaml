@@ -1,0 +1,46 @@
+id: event.xuanzang-travels-in-india
+type: event
+kind: event
+names:
+  en: Xuanzang's travels in India
+  native: 玄奘
+summary: >-
+  The Chinese Buddhist monk Xuanzang left China in 629 CE, spent about a decade and a half in Central
+  Asia and India, studied at Nalanda, and returned to Chang'an in 645 CE. His record of the western
+  regions, the Da Tang Xiyu Ji, is one of the most detailed contemporary descriptions of 7th-century
+  India.
+summaries:
+  kids: >-
+    Xuanzang was a Chinese monk who walked all the way to India to study Buddhism. He stayed for many
+    years, studied at Nalanda, met King Harsha, and wrote a book about everything he saw.
+  teen: >-
+    Xuanzang crossed deserts and mountains to reach India, where he studied at Nalanda and visited
+    Buddhist sites. Back in China he wrote a report describing kingdoms, monasteries and customs, which
+    archaeologists still use to identify ancient sites.
+region: Central Asia and the Indian subcontinent
+datings:
+  - method: documentary
+    range: { earliest: "629 CE", latest: "645 CE", precision: year, circa: true }
+    grade: A
+    label: Journey from and back to China
+    sources: [src.beal-1906-si-yu-ki, src.devahuti-1970-harsha-political-study]
+    note: The departure and return are fixed by Chinese records; dates for individual stages within India are approximate.
+claims:
+  - text: Xuanzang studied at Nalanda under its senior teacher Shilabhadra.
+    grade: A
+    sources: [src.beal-1906-si-yu-ki, src.scharfe-2002-education-in-ancient-india]
+  - text: >-
+      He attended Harsha's assembly at Kanyakubja and described the king as a patron of Buddhism and
+      of other faiths.
+    grade: A
+    sources: [src.beal-1906-si-yu-ki]
+  - text: >-
+      His descriptions of Buddhist sites were used by 19th-century archaeologists such as Alexander
+      Cunningham to identify ancient places in India.
+    grade: B
+    sources: [src.singh-2008-ancient-early-medieval-india]
+relations:
+  - { kind: contemporary-of, target: person.harshavardhana }
+wikidata: null
+tags: [buddhism, travel-account, foreign-account, china]
+review: { status: draft, author: "claude-opus-5-5" }

@@ -1,0 +1,32 @@
+id: tradition.yoga-unesco-inscription
+type: tradition
+kind: dharma
+names:
+  en: Yoga inscribed by UNESCO
+summary: UNESCO inscribed Yoga on the Representative List of the Intangible
+  Cultural Heritage of Humanity in 2016.
+summaries:
+  kids: UNESCO added Yoga to its list of living cultural heritage in 2016.
+  teen: UNESCO inscribed Yoga on its Representative List of the Intangible
+    Cultural Heritage of Humanity in 2016.
+datings:
+  - method: documentary
+    range:
+      earliest: "2016"
+      latest: "2016"
+      precision: year
+      circa: false
+    grade: A
+    sources:
+      - src.yoga-unesco-2016
+claims:
+  - text: UNESCO inscribed Yoga on the Representative List in 2016.
+    grade: A
+    sources:
+      - src.yoga-unesco-2016
+tags:
+  - yoga
+  - unesco
+review:
+  status: draft
+  author: codex-gpt-6

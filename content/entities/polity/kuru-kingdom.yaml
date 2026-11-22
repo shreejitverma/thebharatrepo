@@ -1,0 +1,80 @@
+id: polity.kuru-kingdom
+type: polity
+kind: polity
+names:
+  en: Kuru Kingdom
+  iast: Kuru
+  native: कुरु
+summary: >-
+  The Kuru kingdom was the first major territorial polity of the Vedic Iron Age, formed in the
+  Kurukshetra and upper Ganga-Yamuna Doab region through the coalescence of the Bharata and Puru
+  tribes. As analyzed by Michael Witzel and historians of early India, Kuru rulers such as
+  Parikshit and Janamejaya sponsored the codification of the Vedic Samhitas and the classical
+  Shrauta ritual system.
+summaries:
+  kids: >-
+    The Kuru kingdom was an ancient state in northern India formed when the Bharata and Puru tribes
+    united. Its capitals included Asandivat and Hastinapura, and its priests organized the four
+    Vedas.
+  teen: >-
+    Emerging around 1200 to 900 BCE in Kurukshetra and the upper Ganga-Yamuna Doab, the Kuru
+    kingdom united the Rigvedic Bharata and Puru tribes, oversaw the collection of the four Vedic
+    Samhitas, and corresponds archaeologically to the Painted Grey Ware horizon.
+region: Kurukshetra and upper Ganga-Yamuna Doab (Haryana, Delhi, and western Uttar Pradesh)
+location: { name: "Hastinapura", lat: 29.17, lon: 78.02 }
+datings:
+  - method: textual-internal
+    range: { earliest: "1200 BCE", latest: "500 BCE", best: "1000 BCE", precision: century, circa: true }
+    grade: B
+    label: Mainstream historical and Indological dating (Witzel, Thapar, Singh)
+    sources:
+      - src.witzel-1997-early-sanskritization-kuru
+      - src.thapar-2002-early-india
+      - src.singh-2008-ancient-early-medieval-india
+    note: >-
+      Michael Witzel dates the Kuru realm from the post-Rigvedic mantra period (c. 1200 to 900 BCE)
+      under Parikshit and Janamejaya through its close alliance with Panchala and eventual
+      continued existence as one of the sixteen Mahajanapadas into the 6th and 5th centuries BCE.
+claims:
+  - text: >-
+      Formed by the union of the Rigvedic Bharata and Puru tribes (with early royal figures such as
+      Kuru Shravana and Trasadasyu linked to the Puru-Bharata lineage), the Kuru polity centered on
+      Kurukshetra ( bounded by the Sarasvati and Drishadvati) and the upper Ganga-Yamuna Doab, with
+      capitals at Asandivat and Hastinapura.
+    grade: B
+    sources:
+      - src.witzel-1997-early-sanskritization-kuru
+      - src.singh-2008-ancient-early-medieval-india
+  - text: >-
+      Under Kuru patronage during the reigns of Parikshit and Janamejaya, the hymns of the Rigveda
+      were fixed into a single Samhita and the liturgies of the Samaveda, Yajurveda, and
+      Atharvaveda were organized around the four-priest Shrauta ritual system.
+    grade: B
+    sources:
+      - src.witzel-1997-early-sanskritization-kuru
+      - src.flood-2003-blackwell-companion-hinduism
+  - text: >-
+      Archaeologically, the core territory and period of the early Kuru state correspond to the
+      Iron Age Painted Grey Ware (PGW) culture excavated at sites such as Hastinapura and
+      Bhagwanpura.
+    grade: B
+    sources:
+      - src.witzel-1997-early-sanskritization-kuru
+      - src.lal-1955-excavation-hastinapura
+      - src.singh-2008-ancient-early-medieval-india
+relations:
+  - { kind: contemporary-of, target: polity.panchala }
+  - { kind: located-at, target: site.hastinapura }
+  - { kind: related-to, target: concept.painted-grey-ware-culture }
+  - { kind: patronised, target: tradition.shrauta-ritual }
+  - { kind: related-to, target: text.atharvaveda }
+  - { kind: related-to, target: text.yajurveda }
+  - { kind: succeeded, target: event.dasarajna }
+wikidata: Q1068408
+image:
+  commons: "File:Map of Kuru Kingdom.jpg"
+  alt: Map showing the location of the Kuru kingdom in northern India
+  credit: Roshan Krishna Dhanawade
+  license: CC BY-SA 4.0
+tags: [kuru, mahajanapada, kurukshetra, hastinapura, parikshit, witzel, iron-age]
+review: { status: draft, author: "gemini-4-argon" }

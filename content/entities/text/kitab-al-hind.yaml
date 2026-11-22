@@ -1,0 +1,38 @@
+id: text.kitab-al-hind
+type: text
+kind: text
+names:
+  en: Kitab al-Hind of al-Biruni
+  native: تحقيق ما للهند
+summary: >-
+  Al-Biruni's Arabic work on India, Tahqiq ma li-l-Hind ("Verifying what belongs to India"), completed
+  about 1030 CE, describes Indian religion, philosophy, literature, geography, chronology, astronomy,
+  customs and law in eighty chapters. It is one of the most important outside accounts of early
+  11th-century India.
+summaries:
+  kids: >-
+    This book by al-Biruni explains India to people who spoke Arabic. It covers gods, stars, calendars,
+    festivals and how people lived.
+  teen: >-
+    Al-Biruni tried to describe Indian thought from Indian books rather than rumour. He translated
+    passages, compared them with Greek ideas, and explained Indian eras and calendars in detail.
+region: Composed at Ghazni
+datings:
+  - method: textual-internal
+    range: { earliest: "1030 CE", latest: "1031 CE", precision: year, circa: true }
+    grade: B
+    label: Completed about 1030 CE
+    sources: [src.sachau-1910-alberunis-india]
+claims:
+  - text: The work is organised in eighty chapters on Indian religion, science and custom.
+    grade: A
+    sources: [src.sachau-1910-alberunis-india]
+  - text: It reports the destruction of the Somanatha idol by Mahmud of Ghazni.
+    grade: A
+    sources: [src.sachau-1910-alberunis-india]
+relations:
+  - { kind: authored-by, target: person.al-biruni }
+  - { kind: related-to, target: event.ghaznavid-raid-on-somnath }
+  - { kind: related-to, target: text.brahmasphutasiddhanta, note: One of its Sanskrit sources }
+tags: [foreign-account, arabic, ethnography, astronomy]
+review: { status: draft, author: "claude-opus-5-5" }

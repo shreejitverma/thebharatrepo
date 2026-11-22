@@ -1,0 +1,42 @@
+id: polity.nanda-dynasty
+type: polity
+kind: polity
+names:
+  en: Nanda Dynasty
+  iast: Nanda
+  native: नन्द
+summary: >-
+  The Nanda dynasty ruled Magadha from Pataliputra in the 4th century BCE and built a large state across the Gangetic plain, before Chandragupta Maurya overthrew it around 322 to 321 BCE. Indian traditions name its founder Mahapadma Nanda, and Greek and Roman historians of Alexander describe a rich king of the Gangetic peoples with a very large army.
+summaries:
+  kids: >-
+    The Nanda kings ruled from Pataliputra in the 4th century BCE. They were famous for their huge army and their wealth until Chandragupta Maurya took their throne.
+  teen: >-
+    The Nandas ruled much of the Gangetic plain in the 4th century BCE. Greek writers say that reports of their huge army were one reason Alexander's soldiers refused to cross the Beas in 326 BCE.
+region: Gangetic plain and parts of eastern India (capital at Pataliputra)
+location: { name: "Patna (ancient Pataliputra)", lat: 25.611, lon: 85.144 }
+datings:
+  - method: scholarly-consensus
+    range: { earliest: "370 BCE", latest: "321 BCE", precision: decade, circa: true }
+    grade: B
+    label: Mid to late 4th century BCE
+    sources:
+      - src.kulke-2004-history-of-india
+      - src.bosworth-1996-alexander-and-the-east
+    note: The end is fixed by Chandragupta Maurya's accession soon after Alexander's campaign of 326 BCE, when Greek sources name a Gangetic king called Agrammes or Xandrames; the start is uncertain because the Puranic and Buddhist traditions give very different lengths for the dynasty.
+claims:
+  - text: Greek and Roman historians of Alexander's expedition report that the king of the Gangaridae and Prasii, east of the Beas, commanded a very large army of infantry, cavalry, chariots and war elephants.
+    grade: B
+    sources:
+      - src.bosworth-1996-alexander-and-the-east
+      - src.stoneman-2019-greek-experience-of-india
+  - text: Kharavela's Hathigumpha inscription in Odisha mentions a canal or aqueduct opened by a Nanda king (Nandaraja), suggesting Nanda activity in Kalinga.
+    grade: B
+    sources:
+      - src.fleet-1910-hathigumpha-inscription
+      - src.kulke-2004-history-of-india
+relations:
+  - { kind: ruled, target: polity.magadha }
+  - { kind: preceded, target: polity.maurya-empire }
+  - { kind: contemporary-of, target: event.alexander-punjab-campaign }
+tags: [nanda, magadha, pataliputra]
+review: { status: draft, author: "gemini-4-argon" }

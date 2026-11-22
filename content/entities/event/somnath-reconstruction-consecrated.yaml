@@ -1,0 +1,35 @@
+id: event.somnath-reconstruction-consecrated
+type: event
+kind: event
+names:
+  en: Somnath temple reconstruction consecrated
+summary: The rebuilt Somnath temple was consecrated on 11 May 1951 in the
+  presence of President Rajendra Prasad.
+summaries:
+  kids: The rebuilt Somnath temple was consecrated in 1951, with President
+    Rajendra Prasad present.
+  teen: The rebuilt temple at Somnath was consecrated on 11 May 1951 in the
+    presence of India’s first President, Rajendra Prasad.
+region: Prabhas Patan, Gujarat
+datings:
+  - method: documentary
+    range:
+      earliest: "1951"
+      latest: "1951"
+      precision: year
+      circa: false
+    grade: A
+    sources:
+      - src.somnath-pib-2026
+claims:
+  - text: The rebuilt temple was consecrated on 11 May 1951 in the presence of
+      President Rajendra Prasad.
+    grade: A
+    sources:
+      - src.somnath-pib-2026
+tags:
+  - somnath
+  - temple
+review:
+  status: draft
+  author: codex-gpt-6

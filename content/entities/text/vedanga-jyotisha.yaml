@@ -1,0 +1,77 @@
+id: text.vedanga-jyotisha
+type: text
+kind: science
+names:
+  en: Vedanga Jyotisha
+  iast: Vedāṅgajyotiṣa
+  native: वेदाङ्गज्योतिष
+summary: >-
+  The Vedanga Jyotisha, attributed to the sage Lagadha, is the earliest surviving Sanskrit
+  astronomical and calendrical treatise, representing the Jyotisha Vedanga. Preserved in Rigvedic
+  (36 verses) and Yajurvedic (43 to 45 verses) recensions, it models a five-year luni-solar cycle
+  (yuga) to time Vedic sacrifices relative to the new and full moons, solstices, and 27 nakshatras.
+summaries:
+  kids: >-
+    The Vedanga Jyotisha is the oldest surviving astronomy handbook in Sanskrit. It tracked the
+    movements of the sun, the moon, and 27 star groups so priests could hold ceremonies on the
+    right days.
+  teen: >-
+    Attributed to Lagadha, the Vedanga Jyotisha codifies a five-year luni-solar calendar cycle of
+    1,830 civil days and 62 synodic months, using linear zigzag functions to track solar and lunar
+    positions across the 27 nakshatras and the variation of daylight between solstices.
+region: Northern Indian subcontinent
+datings:
+  - method: astronomical-reference
+    range: { earliest: "1400 BCE", latest: "1200 BCE", best: "1300 BCE", precision: century, circa: true }
+    grade: C
+    label: Solstice nakshatra observation epoch (Pingree, Plofker)
+    sources:
+      - src.pingree-1981-jyotihsastra
+      - src.plofker-2009-mathematics-in-india
+    note: >-
+      The text places the winter solstice at the beginning of the nakshatra Dhanishtha
+      (Shravishtha) and the summer solstice at the middle of Ashlesha, an astronomical configuration
+      corresponding via precession of the equinoxes to roughly the 14th to 12th century BCE.
+  - method: linguistic
+    range: { earliest: "500 BCE", latest: "300 BCE", best: "400 BCE", precision: century, circa: true }
+    grade: B
+    label: Textual redaction of the surviving verse recensions (Pingree, Plofker)
+    sources:
+      - src.pingree-1981-jyotihsastra
+      - src.plofker-2009-mathematics-in-india
+    note: >-
+      David Pingree and Kim Plofker date the compilation of the surviving Rigvedic and Yajurvedic
+      metrical recensions attributed to Lagadha to roughly the 5th or 4th century BCE, preserving
+      the earlier solstice tradition.
+claims:
+  - text: >-
+      The Vedanga Jyotisha defines a five-year luni-solar cycle (yuga) containing 1,830 civil days
+      (savana), 62 synodic lunar months (including two intercalary adhika months), 67 sidereal
+      lunar months, and 1,860 lunar days (tithis).
+    grade: A
+    sources:
+      - src.plofker-2009-mathematics-in-india
+      - src.pingree-1981-jyotihsastra
+  - text: >-
+      The treatise states that the shortest and longest days of the year at the winter and summer
+      solstices differ by 6 muhurtas (a 12:18 ratio of minimum to maximum daylight, corresponding
+      to a 30-muhurta day) and varies daylight linearly across each half-year (ayana).
+    grade: A
+    sources:
+      - src.plofker-2009-mathematics-in-india
+      - src.pingree-1981-jyotihsastra
+  - text: >-
+      It survives in two recensions: the Archajyotisha associated with the Rigveda (36 verses) and
+      the Yajushajyotisha associated with the Yajurveda (43 to 45 verses).
+    grade: A
+    sources:
+      - src.pingree-1981-jyotihsastra
+      - src.plofker-2009-mathematics-in-india
+relations:
+  - { kind: part-of, target: text.vedangas }
+  - { kind: related-to, target: text.rigveda }
+  - { kind: related-to, target: text.yajurveda }
+  - { kind: related-to, target: tradition.shrauta-ritual }
+wikidata: Q404199
+tags: [vedanga, jyotisha, astronomy, mathematics, calendar, nakshatra, lagadha]
+review: { status: draft, author: "gemini-4-argon" }

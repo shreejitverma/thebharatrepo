@@ -1,0 +1,41 @@
+id: person.rajaraja-i
+type: person
+kind: person
+names:
+  en: Rajaraja I
+  iast: Rājarāja Cōḻa
+  native: இராஜராஜ சோழன்
+summary: >-
+  Rajaraja I ruled the Chola kingdom from 985 to 1014 CE. He extended Chola power over much of south
+  India and northern Sri Lanka, organised the state's revenue records, and built the Rajarajeshvara
+  (Brihadisvara) temple at Thanjavur, completed in 1010 CE.
+summaries:
+  kids: >-
+    Rajaraja was a great Chola king. He built the giant Brihadisvara temple in Thanjavur, and had
+    every gift to the temple carved on its walls.
+  teen: >-
+    Rajaraja turned the Chola kingdom into an empire, conquering the Pandyas, Cheras and northern Sri
+    Lanka. His temple at Thanjavur was a political statement as much as a religious one, with
+    inscriptions listing hundreds of staff and villages that supported it.
+region: Tamil Nadu
+location: { name: Thanjavur, lat: 10.78, lon: 79.13 }
+datings:
+  - method: epigraphic
+    range: { earliest: "985 CE", latest: "1014 CE", precision: year, circa: false }
+    grade: A
+    label: Reign
+    sources: [src.sastri-1955-the-colas, src.singh-2008-ancient-early-medieval-india]
+    note: Fixed by regnal-year dates in his inscriptions combined with astronomical details.
+claims:
+  - text: The Thanjavur temple was completed in Rajaraja's 25th regnal year, 1010 CE.
+    grade: A
+    sources: [src.sastri-1955-the-colas, src.unesco-1987-great-living-chola-temples]
+  - text: His campaigns brought northern Sri Lanka under Chola rule, with Polonnaruva as the Chola centre there.
+    grade: B
+    sources: [src.sastri-1955-the-colas, src.thapar-2002-early-india]
+relations:
+  - { kind: ruled, target: polity.chola-dynasty }
+  - { kind: founded, target: site.brihadisvara-temple-thanjavur }
+wikidata: Q2128757
+tags: [chola, king, tamil-nadu]
+review: { status: draft, author: "claude-opus-5-5" }

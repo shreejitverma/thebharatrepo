@@ -1,0 +1,46 @@
+id: polity.kushan-empire
+type: polity
+kind: polity
+names:
+  en: Kushan Empire
+  iast: Kuṣāṇa Sāmrājya
+  native: कुषाण साम्राज्य
+summary: >-
+  The Kushan Empire (c. 30-375 CE) was a major Eurasian realm founded in Bactria by Kujula Kadphises of the Kushan (Guishuang) branch of the Yuezhi confederacy and expanded across northern India under Vima Taktu, Vima Kadphises and Kanishka I. Ruling from summer and winter capitals including Purushapura (Peshawar), Kapisa and Mathura, the Kushans linked Silk Road trade with Indian Ocean ports, minted a standardized gold dinara coinage, and patronised both the Gandhara and Mathura sculptural schools.
+summaries:
+  kids: >-
+    The Kushan Empire stretched from Central Asia across northern India to Mathura and the Gangetic plain, connecting the Silk Road with India and supporting grand art and monasteries.
+  teen: >-
+    Founded by Kujula Kadphises in the first century CE and reaching its zenith under Kanishka I (accession 127 CE), the Kushan Empire integrated Bactria, Gandhara and northern India into a trans-Asian commercial and religious network.
+region: Bactria, Gandhara and Northern India (Peshawar, Taxila, Mathura and the Gangetic plain)
+location: { name: "Mathura, Uttar Pradesh", lat: 27.492, lon: 77.673 }
+datings:
+  - method: epigraphic
+    range: { earliest: 30, latest: 375, precision: decade, circa: true }
+    grade: B
+    label: Imperial Kushan chronology from Kujula Kadphises to Kipunada
+    sources:
+      - src.cribb-2023-kushan-royal-inscription
+      - src.kulke-2004-history-of-india
+      - src.behrendt-2004-buddhist-architecture-gandhara
+    note: Anchored by Chinese Hou Hanshu annals on Kujula Kadphises and Vima Taktu, the Rabatak genealogical inscription, and Harry Falk's resolution of Year 1 of the Kanishka era to 127 CE.
+claims:
+  - text: >-
+      The Rabatak inscription establishes the unbroken royal genealogy of the early Kushan emperors - Kujula Kadphises (great-grandfather), Vima Taktu (grandfather), Vima Kadphises (father) and Kanishka I.
+    grade: A
+    sources:
+      - src.cribb-2023-kushan-royal-inscription
+  - text: Kushan gold and copper coinage displays an eclectic imperial pantheon combining Iranian, Greek, Hindu (Oesho/Shiva, Skanda-Kumara, Mahasena) and Buddhist (Boddo/Buddha) deities.
+    grade: A
+    sources:
+      - src.cribb-2023-kushan-royal-inscription
+      - src.behrendt-2004-buddhist-architecture-gandhara
+relations:
+  - { kind: ruled-by, target: person.kanishka-i }
+  - { kind: related-to, target: artifact.rabatak-inscription }
+  - { kind: patronised, target: tradition.gandhara-art }
+  - { kind: patronised, target: tradition.mathura-art }
+  - { kind: preceded, target: polity.gupta-empire }
+wikidata: Q25979
+tags: [kushan, kanishka, mathura, gandhara, silk-road]
+review: { status: draft, author: "gemini-4-argon" }

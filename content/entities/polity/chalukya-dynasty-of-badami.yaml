@@ -1,0 +1,47 @@
+id: polity.chalukya-dynasty-of-badami
+type: polity
+kind: polity
+names:
+  en: Chalukya dynasty of Badami
+  iast: Cāḷukya
+  native: ಚಾಳುಕ್ಯ
+summary: >-
+  The early Chalukyas ruled the western Deccan from Vatapi (Badami) from the mid-6th to the mid-8th
+  century CE. Pulakeshin II checked Harsha's southward expansion, and the dynasty's temples at Aihole,
+  Badami and Pattadakal are landmarks of early Indian temple architecture.
+summaries:
+  kids: >-
+    The Chalukyas were kings of the Deccan who ruled from Badami in Karnataka. Their famous king
+    Pulakeshin II stopped the northern king Harsha from conquering the south.
+  teen: >-
+    From their fortress at Badami, the Chalukyas ruled much of the Deccan for two centuries. They
+    fought the Pallavas of Kanchi again and again, and their builders experimented with both northern
+    and southern temple styles.
+region: Western Deccan, northern Karnataka
+location: { name: Badami, lat: 15.92, lon: 75.68 }
+datings:
+  - method: epigraphic
+    range: { earliest: "543 CE", latest: "757 CE", precision: decade, circa: true }
+    grade: B
+    label: Pulakeshin I to Kirtivarman II
+    sources: [src.singh-2008-ancient-early-medieval-india, src.thapar-2002-early-india]
+    note: >-
+      The Badami cliff inscription of Pulakeshin I is dated Shaka 465 (543 CE); the line was displaced
+      by the Rashtrakuta Dantidurga in the 750s.
+claims:
+  - text: >-
+      The Aihole inscription of Pulakeshin II, dated Shaka 556 (634 to 635 CE), records his victory over
+      Harsha.
+    grade: A
+    sources: [src.kielhorn-1900-aihole-inscription]
+  - text: >-
+      The Pallava king Narasimhavarman I took Vatapi in about 642 CE; Vikramaditya II later raided the
+      Pallava capital Kanchi in the 740s.
+    grade: B
+    sources: [src.singh-2008-ancient-early-medieval-india, src.unesco-1987-pattadakal]
+relations:
+  - { kind: related-to, target: polity.pallava-dynasty, note: Rivals }
+  - { kind: preceded, target: polity.rashtrakuta-dynasty }
+wikidata: Q1395011
+tags: [deccan, karnataka, dynasty, badami]
+review: { status: draft, author: "claude-opus-5-5" }

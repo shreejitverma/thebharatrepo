@@ -1,0 +1,33 @@
+id: tradition.garba-unesco-inscription
+type: tradition
+kind: art
+names:
+  en: Garba of Gujarat inscribed by UNESCO
+summary: UNESCO inscribed Garba of Gujarat on the Representative List of the
+  Intangible Cultural Heritage of Humanity in 2023.
+summaries:
+  kids: UNESCO added Gujarat’s Garba tradition to its living heritage list in 2023.
+  teen: Garba of Gujarat was inscribed on UNESCO’s Representative List of the
+    Intangible Cultural Heritage of Humanity in 2023.
+region: Gujarat
+datings:
+  - method: documentary
+    range:
+      earliest: "2023"
+      latest: "2023"
+      precision: year
+      circa: false
+    grade: A
+    sources:
+      - src.garba-unesco-2023
+claims:
+  - text: UNESCO inscribed Garba of Gujarat on the Representative List in 2023.
+    grade: A
+    sources:
+      - src.garba-unesco-2023
+tags:
+  - garba
+  - unesco
+review:
+  status: draft
+  author: codex-gpt-6

@@ -1,0 +1,40 @@
+id: person.krishnadevaraya
+type: person
+kind: person
+names:
+  en: Krishnadevaraya
+summary: Krishnadevaraya ruled the Vijayanagara Empire from 1509 to 1529. His
+  reign is documented through courtly records, inscriptions and later historical
+  accounts.
+summaries:
+  kids: Krishnadevaraya was a ruler of the Vijayanagara Empire in southern India.
+    He supported temples, literature and military campaigns.
+  teen: Krishnadevaraya ruled Vijayanagara in the early 1500s. Historians study
+    his reign through inscriptions, court culture and regional political
+    history.
+datings:
+  - method: scholarly-consensus
+    range:
+      earliest: "1509"
+      latest: "1529"
+      precision: year
+      circa: true
+    grade: B
+    label: Historical scholarship
+    sources:
+      - src.stein-1989-vijayanagara
+      - src.wagoner-1996-sultan-among-hindu-kings
+claims:
+  - text: Krishnadevaraya ruled the Vijayanagara Empire from 1509 to 1529. His reign
+      is documented through courtly records, inscriptions and later historical
+      accounts.
+    grade: B
+    sources:
+      - src.stein-1989-vijayanagara
+      - src.wagoner-1996-sultan-among-hindu-kings
+relations: []
+tags:
+  - person
+review:
+  status: draft
+  author: codex-gpt-6

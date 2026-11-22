@@ -1,0 +1,48 @@
+id: tradition.mathura-art
+type: tradition
+kind: art
+names:
+  en: Mathura Art
+  iast: Mathurā Kalā
+  native: मथुरा कला
+summary: >-
+  The Mathura school of sculpture was an indigenous Indian artistic tradition centred at Mathura on the Yamuna River in Uttar Pradesh, carved in distinctive buff-spotted Sikri red sandstone from roughly the second century BCE through the Kushan and Gupta periods. Evolving from colossal yaksha and naga figures, Mathura workshops simultaneously created iconic images for Jainism (Tirthankaras and ayagapatas), Buddhism (kapardin-type Buddhas and Bodhisattvas) and Brahmanical Hinduism (Vasudeva-Krishna, Shiva, Surya and Durga), as well as royal Kushan portraits at Mat.
+summaries:
+  kids: >-
+    Carved from spotted red sandstone along the Yamuna River, the Mathura school of art created early statues of the Buddha, Jain Tirthankaras and Hindu deities.
+  teen: >-
+    Working in distinctive Sikri spotted red sandstone from c. 150 BCE through the Kushan and Gupta eras, Mathura sculptors developed an indigenous Indian idiom for Jain, Buddhist and Hindu icons that directly shaped classical Gupta sculpture.
+region: Braj region along the Yamuna River (Mathura, Uttar Pradesh)
+location: { name: "Mathura, Uttar Pradesh", lat: 27.492, lon: 77.673 }
+datings:
+  - method: art-historical
+    range: { earliest: "150 BCE", latest: 550, precision: century, circa: true }
+    grade: A
+    label: Epigraphically dated Mathura sandstone sculpture from Shunga/Mitra through Shaka, Kushan and Gupta eras
+    sources:
+      - src.quintanilla-2007-sculpture-at-mathura
+      - src.salomon-1998-indian-epigraphy
+    note: Anchored by dated inscriptions from the reign of the Northern Kshatrapa Sodasa (early first century CE) and the Kanishka-era pedestals of Friar Bala (Year 3 of Kanishka = c. 129 CE) through Gupta-dated Buddha and Jina images.
+claims:
+  - text: Prior to the Kushan period (c. 150 BCE-50 CE), Mathura workshops at Kankali Tila and nearby sites already produced inscribed Jain ayagapatas (homage tablets), Tirthankara figures and Brahmanical icons derived from earlier yaksha prototypes.
+    grade: A
+    sources:
+      - src.quintanilla-2007-sculpture-at-mathura
+  - text: During the early reign of Kanishka I, the monk Bala commissioned colossal red-sandstone standing images at Mathura that were exported to Sarnath and Shravasti, establishing the kapardin ("shell-curled topknot") Mathura Buddha type across the Gangetic basin.
+    grade: A
+    sources:
+      - src.quintanilla-2007-sculpture-at-mathura
+      - src.behrendt-2004-buddhist-architecture-gandhara
+relations:
+  - { kind: patronised-by, target: polity.kushan-empire }
+  - { kind: patronised-by, target: person.kanishka-i }
+  - { kind: patronised-by, target: polity.gupta-empire }
+  - { kind: contemporary-of, target: tradition.gandhara-art }
+wikidata: Q28173968
+image:
+  commons: "File:Seated Buddha with attendants, Mathura School of Art, Government Museum, Mathura.jpg"
+  alt: Seated Buddha with attendants in spotted red sandstone, Government Museum, Mathura
+  credit: SpeakingArch
+  license: CC BY-SA 4.0
+tags: [mathura, art, sculpture, kushan, jainism, buddhism, vaishnavism]
+review: { status: draft, author: "gemini-4-argon" }

@@ -1,0 +1,76 @@
+id: site.daimabad
+type: site
+kind: prehistory
+names:
+  en: Daimabad Chalcolithic Site and Bronzes
+summary: >-
+  The largest Chalcolithic settlement in the Godavari-Pravara basin of Ahmednagar district, Maharashtra
+  (c. 50 hectares), preserving a five-phase stratigraphic sequence from Savalda, Late Harappan, Buff-and-Cream
+  Ware and Malwa to Jorwe (c. 2200-1000 BCE), and renowned for a hoard of four heavy solid-cast copper-bronze
+  sculptures (a bull-drawn chariot, elephant, rhinoceros and water buffalo).
+summaries:
+  kids: >-
+    At Daimabad in Maharashtra, a farmer unearthed four heavy bronze sculptures on wheels - an elephant, a rhino,
+    a buffalo and a two-bull chariot driven by a man with a dog - made in the Late Harappan and Chalcolithic era.
+  teen: >-
+    Excavated by M. N. Deshpande and S. A. Sali on the Pravara River, Daimabad is a 50-hectare settlement showing
+    five successive Chalcolithic phases (Savalda, Late Harappan, Daimabad, Malwa and Jorwe) and the famous 60-kg
+    Daimabad bronze hoard.
+region: Pravara River valley (Godavari basin), Ahmednagar district, Maharashtra
+location:
+  name: Daimabad
+  lat: 19.51
+  lon: 74.69
+datings:
+  - method: archaeological-radiocarbon
+    range:
+      earliest: "2200 BCE"
+      latest: "1000 BCE"
+      best: "1600 BCE"
+      precision: century
+      circa: true
+    grade: A
+    label: Five-phase Chalcolithic radiocarbon and stratigraphic sequence
+    sources:
+      - src.misra-2001-prehistoric-colonization-india
+      - src.coningham-2015-archaeology-south-asia
+    note: >-
+      Stratigraphy and radiocarbon dates span Phase I Savalda (c. 2200-2000 BCE), Phase II Late Harappan
+      (c. 2000-1800 BCE), Phase III Daimabad ware (c. 1800-1600 BCE), Phase IV Malwa (c. 1600-1400 BCE) and
+      Phase V Jorwe (c. 1400-1000 BCE).
+claims:
+  - text: >-
+      Phase II at Daimabad yielded wheel-made Late Harappan red ware, mud-brick houses, two terracotta button
+      seals and potsherds inscribed with Indus script signs, documenting the southernmost known Harappan presence.
+    grade: A
+    sources:
+      - src.misra-2001-prehistoric-colonization-india
+      - src.coningham-2015-archaeology-south-asia
+  - text: >-
+      The Daimabad bronze hoard comprises four solid-cast wheeled copper-arsenic alloy figures weighing over
+      60 kilograms in total - an ox-drawn chariot with driver, an elephant, a single-horned rhinoceros and a water buffalo.
+    grade: A
+    sources:
+      - src.misra-2001-prehistoric-colonization-india
+      - src.coningham-2015-archaeology-south-asia
+relations:
+  - kind: part-of
+    target: tradition.jorwe-culture
+  - kind: part-of
+    target: tradition.malwa-culture
+  - kind: contemporary-of
+    target: site.inamgaon
+image:
+  commons: "File:Coach driver Indus 01.jpg"
+  alt: Solid-cast bronze ox-drawn chariot and driver from the Daimabad Chalcolithic hoard
+  credit: Miya.m
+  license: CC BY-SA 3.0
+tags:
+  - chalcolithic
+  - late-harappan
+  - jorwe-culture
+  - bronze-sculpture
+  - maharashtra
+review:
+  status: draft
+  author: gemini-4-argon

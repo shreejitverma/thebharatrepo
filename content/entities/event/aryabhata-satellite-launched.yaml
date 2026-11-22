@@ -1,0 +1,34 @@
+id: event.aryabhata-satellite-launched
+type: event
+kind: event
+names:
+  en: Aryabhata satellite launched
+summary: Aryabhata, India’s first satellite, was launched by a Soviet rocket
+  from Kapustin Yar on 19 April 1975.
+summaries:
+  kids: Aryabhata was India’s first satellite. It was launched in 1975 from what
+    is now Russia.
+  teen: Designed and built in India, Aryabhata was launched by a Soviet rocket
+    from Kapustin Yar on 19 April 1975.
+region: Kapustin Yar, Soviet Union (now Russia)
+datings:
+  - method: documentary
+    range:
+      earliest: "1975"
+      latest: "1975"
+      precision: year
+      circa: false
+    grade: A
+    sources:
+      - src.aryabhata-isro
+claims:
+  - text: Aryabhata was India’s first satellite and was launched on 19 April 1975.
+    grade: A
+    sources:
+      - src.aryabhata-isro
+tags:
+  - space
+  - satellite
+review:
+  status: draft
+  author: codex-gpt-6

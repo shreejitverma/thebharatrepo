@@ -1,0 +1,34 @@
+id: person.namdev
+type: person
+kind: person
+names:
+  en: Namdev
+  iast: Nāmdev
+  native: नामदेव
+summary: >-
+  Namdev was a Marathi devotional poet associated with the Varkari tradition and the worship of
+  Vithoba at Pandharpur. His poetry circulated in multiple regional and religious communities, while
+  the details of his life are preserved chiefly through later hagiography.
+summaries:
+  kids: >-
+    Namdev was a poet whose devotional songs became important in Maharashtra and beyond. Stories about
+    his life were written down later, so historians treat many details carefully.
+  teen: >-
+    Namdev's songs became part of Varkari devotion and also circulated in North Indian traditions.
+    Later hagiographies shaped his biography, so precise life dates are uncertain.
+region: Maharashtra and northern India
+datings:
+  - method: textual-internal
+    range: { earliest: "1270 CE", latest: "1400 CE", precision: century, circa: true }
+    grade: C
+    label: Scholarly estimate for the poet's life and activity
+    sources: [src.novetzke-2008-religion-public-memory, src.novetzke-2016-quotidian-revolution]
+claims:
+  - text: Namdev is a major poet-saint in the Varkari devotional tradition of Maharashtra.
+    grade: B
+    sources: [src.novetzke-2008-religion-public-memory]
+  - text: Later hagiographic traditions shaped the surviving accounts of Namdev's life.
+    grade: B
+    sources: [src.novetzke-2008-religion-public-memory]
+tags: [bhakti, marathi, varkari, poetry]
+review: { status: draft, author: "codex-gpt-6" }

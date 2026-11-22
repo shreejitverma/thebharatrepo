@@ -1,0 +1,34 @@
+id: site.angkor-wat
+type: site
+kind: site
+names:
+  en: Angkor Wat
+summary: >-
+  Angkor Wat is a twelfth-century temple in Cambodia, built under Khmer ruler Suryavarman II and
+  originally dedicated to Vishnu. Its design draws on South Asian religious and architectural forms,
+  which Khmer patrons and builders adapted within local political, artistic, and ritual traditions.
+summaries:
+  kids: >-
+    Angkor Wat is a huge temple in Cambodia built about 900 years ago for the Hindu god Vishnu. Khmer
+    builders shaped it using their own artistic traditions and ideas from South Asia.
+  teen: >-
+    Angkor Wat was a Khmer royal temple dedicated to Vishnu and later became a Buddhist religious site.
+    Its architecture reflects exchange across South and Southeast Asia alongside strong local Khmer
+    innovation.
+region: Siem Reap province, Cambodia
+location: { name: "Angkor Wat, Cambodia", lat: 13.4125, lon: 103.867 }
+datings:
+  - method: art-historical
+    range: { earliest: "1113 CE", latest: "1150 CE", precision: decade, circa: true }
+    grade: B
+    label: Construction under Suryavarman II
+    sources: [src.mannikka-1996-angkor-wat, src.unesco-1992-angkor]
+claims:
+  - text: Angkor Wat was built in the twelfth century under Suryavarman II and was dedicated to Vishnu.
+    grade: B
+    sources: [src.mannikka-1996-angkor-wat]
+  - text: Angkor's art developed as a distinctive Khmer tradition with influence across Southeast Asia.
+    grade: A
+    sources: [src.unesco-1992-angkor]
+tags: [angkor, khmer, hinduism, architecture, unesco]
+review: { status: draft, author: "codex-gpt-6" }

@@ -1,0 +1,69 @@
+id: cosmology.kali-yuga
+type: cosmology
+kind: cosmology
+names:
+  en: Kali Yuga
+  iast: Kaliyuga
+  native: कलियुग
+summary: >-
+  In traditional Hindu cosmology, Kali Yuga is the fourth and shortest of the four world ages in a
+  mahayuga, when dharma stands on a single leg and the age spans 1,200 divine years or 432,000 human solar
+  years, traditionally reckoned to have begun on 18 February 3102 BCE.
+summaries:
+  kids: >-
+    In traditional Hindu cosmology, Kali Yuga is the fourth and shortest age in the great cycle of four
+    yugas, lasting 432,000 human years and traditionally said to have started in 3102 BCE.
+  teen: >-
+    Named after the losing one-pip throw in Vedic dice (not the goddess Kali), Kali Yuga represents
+    one-tenth of a mahayuga (1,000 divine years plus 100-year dawn and 100-year twilight, or 432,000 human
+    years), with slightly more than 5,100 years elapsed since its traditional 3102 BCE epoch.
+datings:
+  - method: traditional-siddhantic
+    range:
+      earliest: "3102 BCE"
+      latest: 2026
+      precision: cosmological
+      circa: false
+    grade: D
+    label: Elapsed portion of the 28th Kali Yuga from the 3102 BCE epoch
+    sources:
+      - src.shukla-sarma-1976-aryabhatiya
+      - src.burgess-1860-surya-siddhanta
+      - src.plofker-2009-mathematics-in-india
+    note: >-
+      In Siddhantic and Puranic reckoning, the present 28th Kali Yuga began on 18 February 3102 BCE (-3101)
+      and has a full traditional duration of 432,000 solar years (of which 5,127 years have elapsed by
+      2026 CE; future years beyond 2100 CE are omitted from the historical timeline).
+claims:
+  - text: >-
+      Kali Yuga consists of 1,000 divine years flanked by a 100-divine-year dawn (sandhya) and a
+      100-divine-year twilight (sandhyamsha), equalling 1,200 divine years or 432,000 human solar years.
+    grade: D
+    sources:
+      - src.olivelle-2005-manus-code-of-law
+      - src.burgess-1860-surya-siddhanta
+  - text: >-
+      In Vishnu Purana 4.24 and Bhagavata Purana 12.2, Kali Yuga commences on the day Krishna departs from
+      the earth and concludes after 432,000 years when Kalki inaugurates the return of Satya Yuga.
+    grade: D
+    sources:
+      - src.wilson-1840-vishnu-purana
+      - src.gonzalezreimann-2002-mahabharata-yugas
+relations:
+  - kind: part-of
+    target: cosmology.mahayuga
+  - kind: succeeded
+    target: cosmology.dvapara-yuga
+  - kind: related-to
+    target: event.kali-yuga-epoch
+  - kind: related-to
+    target: concept.kalki-prophecy
+wikidata: Q228409
+tags:
+  - cosmology
+  - kali-yuga
+  - yuga
+  - siddhanta
+review:
+  status: draft
+  author: gemini-4-argon

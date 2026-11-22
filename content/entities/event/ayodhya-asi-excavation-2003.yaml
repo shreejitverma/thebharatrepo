@@ -1,0 +1,45 @@
+id: event.ayodhya-asi-excavation-2003
+type: event
+kind: event
+names:
+  en: ASI excavation at the Ayodhya disputed site
+summary: At the Allahabad High Court’s direction, the Archaeological Survey of
+  India excavated the disputed Ayodhya site from March to August 2003. The
+  report interpreted some remains as evidence of a pre-existing structure; its
+  interpretation has been debated.
+summaries:
+  kids: In 2003 the ASI excavated the disputed site in Ayodhya for a court case.
+    Archaeologists and historians have debated how to interpret the remains.
+  teen: The ASI excavated the disputed Ayodhya site in 2003 under court direction.
+    The Supreme Court later summarized the report’s evidence while cautioning
+    that it did not establish that a temple was demolished to build the mosque.
+region: Ayodhya, Uttar Pradesh
+datings:
+  - method: documentary
+    range:
+      earliest: "2003"
+      latest: "2003"
+      precision: year
+      circa: false
+    grade: A
+    sources:
+      - src.ayodhya-judgment-2019
+claims:
+  - text: The Supreme Court discussed the 2003 ASI excavation report and said it did
+      not establish that a temple was demolished to construct the mosque.
+    grade: A
+    sources:
+      - src.ayodhya-judgment-2019
+debate: The ASI report interpreted archaeological remains as indicating a
+  substantial pre-existing structure. The Supreme Court accepted the presence of
+  a non-Islamic structure beneath the mosque but expressly said the evidence did
+  not establish that it was demolished for the mosque’s construction.
+  Archaeological observations and historical attribution should be kept
+  distinct.
+tags:
+  - archaeology
+  - ayodhya
+  - contested
+review:
+  status: draft
+  author: codex-gpt-6

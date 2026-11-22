@@ -1,0 +1,37 @@
+id: event.nalanda-university-reestablished
+type: event
+kind: event
+names:
+  en: Nalanda University established under the 2010 Act
+summary: Parliament enacted the Nalanda University Act in 2010. Teaching began
+  in 2014; the university is a modern institution established by statute, not a
+  continuation of the ancient monastery as an organization.
+summaries:
+  kids: A new Nalanda University was created by an Act of Parliament in 2010. It
+    began teaching in 2014.
+  teen: The Nalanda University Act, 2010 established the modern university.
+    Teaching commenced in 2014; this statutory institution should be
+    distinguished from the ancient Nalanda Mahavihara.
+region: Rajgir, Bihar
+datings:
+  - method: documentary
+    range:
+      earliest: "2010"
+      latest: "2014"
+      precision: year
+      circa: false
+    grade: A
+    sources:
+      - src.nalanda-revival-pib
+claims:
+  - text: The Government records the university’s establishment under the 2010 Act
+      and teaching inauguration in September 2014.
+    grade: A
+    sources:
+      - src.nalanda-revival-pib
+tags:
+  - education
+  - nalanda
+review:
+  status: draft
+  author: codex-gpt-6

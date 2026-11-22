@@ -1,0 +1,49 @@
+id: person.mahavira
+type: person
+kind: dharma
+names:
+  en: Mahavira
+  iast: Vardhamāna Mahāvīra
+  native: वर्धमान महावीर
+summary: >-
+  Vardhamana Mahavira is revered in Jainism as the twenty-fourth and last Tirthankara of the present age. Born into the Jnatrika clan near Vaishali in Bihar, he renounced the world, attained omniscience and taught a path of strict non-violence (ahimsa) and non-possession, building on the earlier tradition of Parshva. Scholars place him in the 5th century BCE as a contemporary of the Buddha; Jain tradition dates his death to 527 BCE.
+summaries:
+  kids: >-
+    Mahavira was the twenty-fourth great teacher, or Tirthankara, of Jainism. He taught people to harm no living being, not even the smallest insect.
+  teen: >-
+    Mahavira, a contemporary of the Buddha, taught in Bihar and organised the Jain community of monks, nuns, laymen and laywomen. Jain tradition places his death in 527 BCE; most historians place it in the 5th century BCE.
+region: Middle Gangetic plain (Vaishali and Pava, Bihar)
+location: { name: "Pawapuri", lat: 25.092, lon: 85.539 }
+datings:
+  - method: textual-internal
+    range: { earliest: "510 BCE", latest: "390 BCE", precision: decade, circa: true }
+    grade: C
+    label: Scholarly dating as a contemporary of the Buddha (lifespan)
+    sources:
+      - src.dundas-2002-the-jains
+      - src.bronkhorst-2007-greater-magadha
+    note: Pali texts say that Nigantha Nataputta (Mahavira) died at Pava while the Buddha was still alive, so his dates follow the Buddha's; with the now widely preferred later date for the Buddha, his death falls in the 5th century BCE.
+  - method: traditional-sampradaya
+    range: { earliest: "599 BCE", latest: "527 BCE", precision: year, circa: false }
+    grade: D
+    label: Traditional Vira Nirvana era
+    sources:
+      - src.dundas-2002-the-jains
+    note: The Vira Nirvana Samvat, the era counted from Mahavira's liberation, places his death in 527 BCE after a life of 72 years.
+claims:
+  - text: Early Buddhist texts refer to Mahavira as Nigantha Nataputta and describe him teaching in the Gangetic cities in the time of Bimbisara and Ajatashatru.
+    grade: B
+    sources:
+      - src.dundas-2002-the-jains
+      - src.bronkhorst-2007-greater-magadha
+  - text: Jain ascetics take five great vows (mahavratas), attributed to Mahavira's teaching - non-violence (ahimsa), truthfulness (satya), not stealing (asteya), celibacy (brahmacharya) and non-possession (aparigraha).
+    grade: B
+    sources:
+      - src.dundas-2002-the-jains
+relations:
+  - { kind: contemporary-of, target: person.gautama-buddha }
+  - { kind: contemporary-of, target: person.bimbisara }
+  - { kind: related-to, target: tradition.ajivika }
+wikidata: Q9422
+tags: [jainism, tirthankara, shramana, ahimsa]
+review: { status: draft, author: "gemini-4-argon" }

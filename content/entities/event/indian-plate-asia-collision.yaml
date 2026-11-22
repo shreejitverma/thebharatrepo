@@ -1,0 +1,79 @@
+id: event.indian-plate-asia-collision
+type: event
+kind: prehistory
+names:
+  en: Indian Plate Collision with Asia and Rise of the Himalaya
+summary: >-
+  The northward drift of the Indian tectonic plate closed the Neo-Tethys Ocean and collided with Eurasia,
+  initiating the uplift of the Himalaya and the Tibetan Plateau. While most geological models place the
+  onset of continental collision between roughly 59 and 50 million years ago, two-stage collision hypotheses
+   remain actively debated.
+summaries:
+  kids: >-
+    About 55 million years ago, the land that became India drifted north across an ancient ocean and crashed
+    into Asia, pushing up the mighty Himalayan mountains.
+  teen: >-
+    After breaking away from Gondwana, the Indian plate moved northward and collided with Eurasia during the
+    Cenozoic era, closing the Neo-Tethys Ocean and driving the ongoing uplift of the Himalaya.
+region: Himalaya and Tibetan Plateau (Indus-Yarlung Tsangpo suture zone)
+location:
+  name: Indus-Yarlung Tsangpo Suture Zone
+  lat: 29.3
+  lon: 88.8
+datings:
+  - method: geological
+    range:
+      earliest: "59 Ma"
+      latest: "50 Ma"
+      best: "55 Ma"
+      precision: Ma
+      circa: true
+    grade: B
+    label: Paleocene-Early Eocene initial collision consensus
+    sources:
+      - src.hu-2016-india-asia-collision
+    note: >-
+      Stratigraphic, paleomagnetic and provenance evidence along the Indus-Yarlung Tsangpo suture places the
+      initial contact of Indian continental crust with Asian margin units at c. 59-50 Ma.
+  - method: geological
+    range:
+      earliest: "52 Ma"
+      latest: "20 Ma"
+      precision: Ma
+      circa: true
+    grade: C
+    label: Two-stage collision (Greater India Basin hypothesis)
+    sources:
+      - src.vanhinsbergen-2012-greater-india-basin
+    note: >-
+      Proposes an initial c. 50 Ma collision of a microcontinent or arc followed by final hard continent-continent
+      collision around 25-20 Ma.
+claims:
+  - text: >-
+      Sedimentary provenance changes in the foreland and suture zone indicate that Indian continental margin
+      sediments received Asian detritus by approximately 59 to 50 Ma.
+    grade: B
+    sources:
+      - src.hu-2016-india-asia-collision
+  - text: >-
+      Continued convergence after initial collision drove crustal thickening, Himalayan orogeny and foreland
+      basin sedimentation that later formed the Siwalik hills.
+    grade: B
+    sources:
+      - src.hu-2016-india-asia-collision
+      - src.vanhinsbergen-2012-greater-india-basin
+relations:
+  - kind: preceded
+    target: concept.siwalik-fossil-record
+debate: >-
+  Geologists debate whether India-Asia collision occurred in a single Paleocene-Early Eocene event (c. 59-50 Ma)
+  or a two-stage process involving an intervening oceanic basin or intraoceanic arc before Oligocene-Miocene
+  continental collision.
+tags:
+  - geology
+  - tectonics
+  - himalaya
+  - deep-time
+review:
+  status: draft
+  author: gemini-4-argon

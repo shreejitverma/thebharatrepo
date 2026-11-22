@@ -1,0 +1,35 @@
+id: event.chandrayaan-3-lunar-landing
+type: event
+kind: event
+names:
+  en: Chandrayaan-3 lunar landing
+summary: On 23 August 2023, Chandrayaan-3’s Vikram lander made a soft landing in
+  the Moon’s south polar region.
+summaries:
+  kids: India’s Chandrayaan-3 lander touched down on the Moon on 23 August 2023,
+    near its south polar region.
+  teen: Vikram, the Chandrayaan-3 lander, soft-landed in the Moon’s south polar
+    region on 23 August 2023; Pragyan then deployed onto the surface.
+region: Lunar south polar region
+datings:
+  - method: documentary
+    range:
+      earliest: "2023"
+      latest: "2023"
+      precision: year
+      circa: false
+    grade: A
+    sources:
+      - src.chandrayaan3-isro
+claims:
+  - text: Chandrayaan-3’s Vikram lander soft-landed in the Moon’s south polar region
+      on 23 August 2023.
+    grade: A
+    sources:
+      - src.chandrayaan3-isro
+tags:
+  - space
+  - moon
+review:
+  status: draft
+  author: codex-gpt-6

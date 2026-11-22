@@ -1,0 +1,90 @@
+id: event.arrival-of-modern-humans-south-asia
+type: event
+kind: prehistory
+names:
+  en: Arrival of Anatomically Modern Humans in South Asia
+summary: >-
+  The initial dispersal and settlement of anatomically modern humans (Homo sapiens) across the Indian subcontinent,
+  a subject of major interdisciplinary debate between a genetic and microlithic model favouring a rapid post-Toba
+  coastal dispersal around 65,000-50,000 years ago and an archaeological model proposing pre-Toba dispersal
+  between 120,000 and 74,000 years ago.
+summaries:
+  kids: >-
+    Tens of thousands of years ago, the first modern humans walked into South Asia from Africa; scientists use
+    DNA and ancient stone tools to debate whether they arrived before or after the huge Toba volcano erupted 74,000 years ago.
+  teen: >-
+    Modern humans dispersed into South Asia during the Late Pleistocene, but scholars remain divided between
+    mitochondrial/genomic coalescence estimates pointing to a single coastal dispersal at c. 65-50 ka and Middle
+    Palaeolithic sites like Jwalapuram and Dhaba suggesting arrival before the 74 ka Toba eruption.
+region: Indian Subcontinent (Indian Ocean coastal rim and inland river basins)
+datings:
+  - method: genetic
+    range:
+      earliest: "65 ka"
+      latest: "50 ka"
+      best: "60 ka"
+      precision: ka
+      circa: true
+    grade: B
+    label: Post-Toba Southern Coastal Dispersal model (Macaulay et al. 2005; Mellars et al. 2013)
+    sources:
+      - src.macaulay-2005-coastal-settlement-asia
+      - src.mellars-2013-colonization-southern-asia
+    note: >-
+      Mitochondrial DNA macrohaplogroups M, N and R and Y-chromosome lineages in living South Asians coalesce
+      between ~65 and 50 ka, supporting a single rapid coastal dispersal out of Africa after the 74 ka Toba eruption.
+  - method: luminescence
+    range:
+      earliest: "120 ka"
+      latest: "74 ka"
+      best: "80 ka"
+      precision: ka
+      circa: true
+    grade: C
+    label: Pre-Toba Marine Isotope Stage 5 Dispersal model (Petraglia et al. 2007, 2010; Clarkson et al. 2020)
+    sources:
+      - src.petraglia-2007-jwalapuram-toba
+      - src.petraglia-2010-indian-ocean-rim-dispersal
+      - src.clarkson-2020-dhaba-toba
+      - src.blinkhorn-2013-thar-middle-palaeolithic
+    note: >-
+      Based on Middle Palaeolithic prepared-core assemblages in the Thar Desert, Jwalapuram and Dhaba that
+      resemble African Middle Stone Age industries and continue uninterrupted across the 74 ka Toba ash layer.
+claims:
+  - text: >-
+      Autosomal and uniparental (mtDNA M and N; Y-chromosome C, D and F) diversity in contemporary South Asian
+      populations derives overwhelmingly from a Late Pleistocene dispersal episode dated genetically to roughly 65-50 ka.
+    grade: A
+    sources:
+      - src.macaulay-2005-coastal-settlement-asia
+      - src.mellars-2013-colonization-southern-asia
+  - text: >-
+      Stratified Middle Palaeolithic sites at Jwalapuram (Andhra Pradesh), Dhaba (Madhya Pradesh) and the Thar
+      Desert preserve continuous prepared-core lithic industries spanning c. 115-80 ka through the 74 ka Toba tephra.
+    grade: A
+    sources:
+      - src.petraglia-2007-jwalapuram-toba
+      - src.clarkson-2020-dhaba-toba
+      - src.blinkhorn-2013-thar-middle-palaeolithic
+relations:
+  - kind: related-to
+    target: site.jwalapuram
+  - kind: related-to
+    target: site.dhaba
+  - kind: related-to
+    target: site.attirampakkam
+debate: >-
+  Proponents of the Post-Toba model (Macaulay et al. 2005; Mellars et al. 2013) cite the ~65-50 ka coalescence
+  of extant non-African mtDNA and Y-DNA lineages and link Homo sapiens arrival to geometric microlithic/backed-blade
+  innovations, whereas proponents of the Pre-Toba model (Petraglia et al. 2007, 2010; Clarkson et al. 2020) argue
+  that early Homo sapiens entered South Asia during MIS 5 carrying African-like Middle Palaeolithic Levallois
+  technology and survived the 74 ka Toba super-eruption.
+tags:
+  - human-evolution
+  - out-of-africa
+  - archaeogenetics
+  - middle-palaeolithic
+  - toba-eruption
+review:
+  status: draft
+  author: gemini-4-argon

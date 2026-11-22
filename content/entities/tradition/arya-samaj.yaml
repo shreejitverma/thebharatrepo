@@ -1,0 +1,37 @@
+id: tradition.arya-samaj
+type: tradition
+kind: dharma
+names:
+  en: Arya Samaj
+summary: Dayananda Saraswati founded the Arya Samaj in Bombay in 1875. The
+  movement advocated a return to Vedic authority and became influential in
+  religious and social reform debates.
+summaries:
+  kids: The Arya Samaj began in 1875 under Dayananda Saraswati and encouraged
+    followers to study the Vedas.
+  teen: Arya Samaj combined scriptural reform, education and public organization,
+    with differing approaches across regions and periods.
+datings:
+  - method: documentary
+    range:
+      earliest: "1875"
+      latest: "1875"
+      precision: year
+      circa: false
+    grade: B
+    label: Documentary record
+    sources: &a1
+      - src.jones-1989-socio-religious-reform-movements
+      - src.metcalf-2012-concise-history-modern-india
+claims:
+  - text: Dayananda Saraswati founded the Arya Samaj in Bombay in 1875. The movement
+      advocated a return to Vedic authority and became influential in religious
+      and social reform debates.
+    grade: B
+    sources: *a1
+relations: []
+tags:
+  - dharma
+review:
+  status: draft
+  author: codex-gpt-6

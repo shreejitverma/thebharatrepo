@@ -1,0 +1,36 @@
+id: person.shivaji
+type: person
+kind: person
+names:
+  en: Shivaji
+summary: Shivaji was a Deccan ruler who established the foundations of Maratha
+  power and was crowned at Raigad in 1674.
+summaries:
+  kids: Shivaji built a kingdom in the Deccan and was crowned in 1674.
+  teen: Shivaji’s military and administrative projects helped establish the
+    Maratha state within the changing politics of the Deccan.
+datings:
+  - method: scholarly-consensus
+    range:
+      earliest: "1630"
+      latest: "1680"
+      precision: year
+      circa: true
+    grade: B
+    label: Historical scholarship
+    sources:
+      - src.gordon-1993-marathas-1600-1818
+      - src.eaton-2005-social-history-deccan
+claims:
+  - text: Shivaji was a Deccan ruler who established the foundations of Maratha
+      power and was crowned at Raigad in 1674.
+    grade: B
+    sources:
+      - src.gordon-1993-marathas-1600-1818
+      - src.eaton-2005-social-history-deccan
+relations: []
+tags:
+  - person
+review:
+  status: draft
+  author: codex-gpt-6

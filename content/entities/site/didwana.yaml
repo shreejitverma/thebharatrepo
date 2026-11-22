@@ -1,0 +1,61 @@
+id: site.didwana
+type: site
+kind: prehistory
+names:
+  en: Didwana and the Thar Palaeolithic (16R Dune and Singi Talav)
+summary: >-
+  A benchmark cluster of stratified Palaeolithic sites around the Didwana salt lake in the eastern Thar Desert
+  of Rajasthan, including the Singi Talav playal Acheulian locality and the 20-metre 16R Dune profile spanning
+  Lower, Middle and Upper Palaeolithic occupation through shifting Pleistocene monsoon cycles.
+summaries:
+  kids: >-
+    Near Didwana in the Thar Desert of Rajasthan, deep sand dunes and dried lake beds hold layer after layer
+    of stone tools showing that early humans lived there when the desert was greener.
+  teen: >-
+    Excavations at Singi Talav and the 16R Dune near Didwana revealed a continuous Pleistocene sequence of Lower,
+    Middle and Upper Palaeolithic tools embedded in aeolian sands and palaeosols across multiple monsoon phases.
+region: Eastern Thar Desert, Nagaur district, Rajasthan
+location:
+  name: Didwana
+  lat: 27.4
+  lon: 74.57
+datings:
+  - method: luminescence
+    range:
+      earliest: "800 ka"
+      latest: "25 ka"
+      precision: ka
+      circa: true
+    grade: B
+    label: Multi-period Thar Pleistocene sequence (Singi Talav and 16R Dune)
+    sources:
+      - src.misra-2001-prehistoric-colonization-india
+      - src.blinkhorn-2013-thar-middle-palaeolithic
+    note: >-
+      Combines Early-Middle Pleistocene Acheulian lacustrine marls at Singi Talav with thermoluminescence, OSL
+      and U-Th dates on the 16R Dune sequence spanning Middle and Upper Palaeolithic horizons down to MIS 5-3.
+claims:
+  - text: >-
+      The 16R Dune trench near Didwana preserves a stratified 20-metre aeolian sequence containing Lower, Middle
+      and Upper Palaeolithic assemblages interleaved with carbonate-rich palaeosols.
+    grade: A
+    sources:
+      - src.misra-2001-prehistoric-colonization-india
+      - src.blinkhorn-2013-thar-middle-palaeolithic
+  - text: >-
+      Middle Palaeolithic occupation in the Thar Desert persisted through Marine Isotope Stage 5 and Stage 3
+      humid intervals, utilizing Levallois cores, points and scrapers.
+    grade: A
+    sources:
+      - src.blinkhorn-2013-thar-middle-palaeolithic
+relations:
+  - kind: related-to
+    target: site.bagor
+tags:
+  - palaeolithic
+  - thar-desert
+  - rajasthan
+  - acheulian
+review:
+  status: draft
+  author: gemini-4-argon

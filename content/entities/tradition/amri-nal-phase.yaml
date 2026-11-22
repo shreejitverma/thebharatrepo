@@ -1,0 +1,66 @@
+id: tradition.amri-nal-phase
+type: tradition
+kind: civilisation
+names:
+  en: Amri-Nal Phase
+summary: >-
+  An Early Harappan regional culture of lower Sindh, southern Balochistan and north Gujarat (c. 3600-2600 BCE),
+  combining lowland alluvial farming settlements such as Amri with highland pastoral and copper-working towns
+  such as Sohr Damb (Nal).
+summaries:
+  kids: >-
+    In southern Sindh and the hills of Balochistan, early farmers and craftspeople of the Amri-Nal culture painted
+    colourful geometric designs on fine clay bowls before the rise of Mohenjo-daro.
+  teen: >-
+    The Amri-Nal phase represents the southern Regionalisation Era of the Indus tradition, linking seasonal highland
+    settlements in Balochistan with year-round farming villages in the lower Indus plain and Gujarat.
+region: Lower Sindh, Jhalawan (Balochistan), and Kutch-North Gujarat
+location:
+  name: Amri
+  lat: 26.1744
+  lon: 68.0175
+datings:
+  - method: archaeological-radiocarbon
+    range:
+      earliest: "3600 BCE"
+      latest: "2600 BCE"
+      precision: century
+      circa: true
+    grade: A
+    label: Early Harappan Amri-Nal Regionalisation Phase
+    sources:
+      - src.possehl-2002-indus-civilization
+      - src.wright-2010-ancient-indus
+      - src.coningham-2015-archaeology-south-asia
+    note: >-
+      Stratified sequences at Amri (Periods IA-ID), Balakot, and Sohr Damb (Nal) date this southern Early Harappan
+      horizon between the mid-4th millennium and c. 2600 BCE.
+claims:
+  - text: >-
+      First excavated by N. G. Majumdar in 1929 and Jean-Marie Casal in 1959-1962, Amri provided the first clear
+      stratigraphic demonstration of an indigenous pre-Harappan culture underlying Mature Harappan levels in Sindh.
+    grade: A
+    sources:
+      - src.possehl-2002-indus-civilization
+      - src.singh-2008-ancient-early-medieval-india
+  - text: >-
+      Amri-Nal ceramics are distinguished by fine buff wares decorated with polychrome (red, black, blue, yellow,
+      and green) geometric friezes, stepped motifs, and zoomorphic panels.
+    grade: A
+    sources:
+      - src.possehl-2002-indus-civilization
+      - src.wright-2010-ancient-indus
+relations:
+  - kind: part-of
+    target: tradition.harappan-civilisation
+  - kind: contemporary-of
+    target: tradition.kot-diji-phase
+wikidata: null
+tags:
+  - harappan
+  - early-harappan
+  - amri-nal
+  - sindh
+review:
+  status: draft
+  author: gemini-4-argon

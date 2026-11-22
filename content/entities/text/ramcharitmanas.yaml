@@ -1,0 +1,37 @@
+id: text.ramcharitmanas
+type: text
+kind: text
+names:
+  en: Ramcharitmanas
+summary: The Ramcharitmanas is Tulsidas’s Awadhi retelling of the Ramayana.
+  Tradition dates its composition from 1574; the work’s text and performance
+  history continued to develop through manuscript transmission.
+summaries:
+  kids: The Ramcharitmanas tells the story of Rama in Awadhi, a language spoken in
+    northern India. It is read, sung and performed.
+  teen: Tulsidas composed the Ramcharitmanas in Awadhi, adapting the Rama story
+    for a broad regional audience. Its manuscript and performance histories are
+    central to its reception.
+datings:
+  - method: textual-internal
+    range:
+      earliest: "1574"
+      latest: "1577"
+      precision: year
+      circa: true
+    grade: B
+    label: Historical scholarship
+    sources: &a1
+      - src.lutgendorf-1991-life-of-a-text
+claims:
+  - text: The Ramcharitmanas is Tulsidas’s Awadhi retelling of the Ramayana.
+      Tradition dates its composition from 1574; the work’s text and performance
+      history continued to develop through manuscript transmission.
+    grade: B
+    sources: *a1
+relations: []
+tags:
+  - text
+review:
+  status: draft
+  author: codex-gpt-6

@@ -1,0 +1,37 @@
+id: person.bhaskara-ii
+type: person
+kind: person
+names:
+  en: Bhaskara II
+  iast: Bhāskara II
+  native: भास्कराचार्य
+summary: >-
+  Bhaskara II was a Sanskrit mathematician and astronomer active in the twelfth century. He completed
+  the Siddhanta Shiromani in 1150, including the arithmetic work Lilavati and the algebraic treatise
+  Bijaganita.
+summaries:
+  kids: >-
+    Bhaskara II was an Indian mathematician who wrote about arithmetic, algebra, and astronomy. His
+    book Lilavati taught mathematical problems through verses.
+  teen: >-
+    Bhaskara II's Siddhanta Shiromani, completed in 1150, brought together major works on mathematics
+    and astronomy. Later scholars studied and commented on it for centuries.
+region: Deccan, India
+datings:
+  - method: textual-internal
+    range: { earliest: "1114 CE", latest: "1185 CE", precision: decade, circa: true }
+    grade: B
+    label: Life and scholarly activity
+    sources: [src.plofker-2009-mathematics-in-india]
+    note: His works give a birth year of 1114 and the completion of the Siddhanta Shiromani in 1150; the endpoint of his life is uncertain.
+claims:
+  - text: Bhaskara II completed the Siddhanta Shiromani in 1150.
+    grade: A
+    sources: [src.plofker-2009-mathematics-in-india]
+  - text: His works include the arithmetic text Lilavati and the algebraic Bijaganita.
+    grade: B
+    sources: [src.plofker-2009-mathematics-in-india]
+relations:
+  - { kind: authored, target: text.lilavati }
+tags: [mathematics, astronomy, sanskrit]
+review: { status: draft, author: "codex-gpt-6" }

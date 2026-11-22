@@ -1,0 +1,42 @@
+id: artifact.gwalior-chaturbhuj-zero-inscription
+type: artifact
+kind: science
+names:
+  en: Gwalior Chaturbhuj temple zero inscription
+  native: चतुर्भुज मंदिर, ग्वालियर
+summary: >-
+  Two inscriptions of the small rock-cut Vaillabhattasvamin (Chaturbhuj) temple in Gwalior fort,
+  dated Vikrama Samvat 932 and 933 (875 to 877 CE) in the reign of the Pratihara king Bhoja, write the
+  numbers 270 and 50 with a small circle for zero. They are among the earliest securely dated
+  inscriptions in India to use a written zero in decimal place-value numerals.
+summaries:
+  kids: >-
+    In a little temple in Gwalior fort, someone carved the number 270 in stone more than 1,100 years ago.
+    The last digit is a little round zero, very like the one we write today.
+  teen: >-
+    Zero as an idea appears in Indian maths texts earlier, but dated inscriptions show when people used
+    the written symbol in everyday records. The Gwalior inscriptions, recording a temple land grant
+    and a gift of flower garlands, write numbers like 270 and 50 with a round zero.
+region: Gwalior, Madhya Pradesh
+location: { name: Gwalior fort, lat: 26.23, lon: 78.17 }
+datings:
+  - method: epigraphic
+    range: { earliest: "875 CE", latest: "877 CE", best: "876 CE", precision: year, circa: false }
+    grade: A
+    label: Dated Vikrama Samvat 932 and 933
+    sources: [src.burgess-1892-epigraphia-indica-vol-1, src.plofker-2009-mathematics-in-india]
+claims:
+  - text: >-
+      The inscription records a plot of land measuring 270 hastas and a daily gift of 50 garlands, with
+      both numbers written using a circular zero sign.
+    grade: A
+    sources: [src.burgess-1892-epigraphia-indica-vol-1, src.plofker-2009-mathematics-in-india]
+  - text: >-
+      It is among the earliest securely dated epigraphic uses of zero in Indian decimal place-value
+      numerals; zero is attested earlier in mathematical texts.
+    grade: B
+    sources: [src.plofker-2009-mathematics-in-india, src.salomon-1998-indian-epigraphy]
+relations:
+  - { kind: related-to, target: text.brahmasphutasiddhanta, note: Earlier textual rules for zero }
+tags: [inscription, zero, numerals, mathematics]
+review: { status: draft, author: "claude-opus-5-5" }

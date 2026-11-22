@@ -1,0 +1,35 @@
+id: event.partition-of-bengal-1905
+type: event
+kind: event
+names:
+  en: Partition of Bengal
+summary: The colonial government partitioned Bengal in 1905, creating new
+  provinces. The decision provoked protest and was annulled in 1911.
+summaries:
+  kids: The British partitioned Bengal in 1905. Protests grew, and the partition
+    was reversed in 1911.
+  teen: The partition’s administrative rationale and political effects were
+    contested; opposition helped drive the Swadeshi movement.
+datings:
+  - method: documentary
+    range:
+      earliest: "1905"
+      latest: "1911"
+      precision: year
+      circa: false
+    grade: A
+    label: Documentary record
+    sources: &a1
+      - src.sarkar-1973-swadeshi-movement-in-bengal
+      - src.metcalf-2012-concise-history-modern-india
+claims:
+  - text: The colonial government partitioned Bengal in 1905, creating new
+      provinces. The decision provoked protest and was annulled in 1911.
+    grade: A
+    sources: *a1
+relations: []
+tags:
+  - event
+review:
+  status: draft
+  author: codex-gpt-6

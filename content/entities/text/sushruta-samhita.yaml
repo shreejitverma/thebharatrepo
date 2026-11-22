@@ -1,0 +1,42 @@
+id: text.sushruta-samhita
+type: text
+kind: science
+names:
+  en: Sushruta Samhita
+  iast: Suśrutasaṃhitā
+  native: सुश्रुतसंहिता
+summary: >-
+  The Sushruta Samhita is the foundational Sanskrit treatise on surgery (shalyatantra) and medicine in Ayurveda, attributed to Sushruta in the lineage of Divodasa Dhanvantari of Varanasi. Composed in distinct historical layers - five core books (120 chapters) supplemented by the sixty-six-chapter Uttaratantra - it describes over a hundred blunt and sharp surgical instruments, anatomical inspection by water maceration, cataract couching, lithotomy, and reconstructive plastic procedures including nasal reconstruction (rhinoplasty) using a pedicle skin flap.
+summaries:
+  kids: >-
+    The Sushruta Samhita is an ancient Sanskrit medical book famous for describing over a hundred surgical tools and operations, including how to rebuild a damaged nose or earlobe using a flap of skin.
+  teen: >-
+    Compiled across an early surgical core and a later Uttaratantra supplement by the Gupta period, the Sushruta Samhita documents ancient Indian surgery, cataract couching, fracture treatment and pedicle-flap rhinoplasty and otoplasty.
+region: Varanasi (Kashi) and Northern India (oldest surviving dated palm-leaf manuscript copied in Nepal in 878 CE)
+datings:
+  - method: textual-internal
+    range: { earliest: "250 BCE", latest: 500, precision: century, circa: true }
+    grade: B
+    label: Layered composition of the five-sthana surgical core and the Uttaratantra supplement (Meulenbeld and Wujastyk)
+    sources:
+      - src.wujastyk-2008-body-of-knowledge-ayurvedic
+    note: Historians of Indian medicine distinguish an older five-book surgical core (composed and revised between the last centuries BCE and early centuries CE) from the later sixty-six-chapter Uttaratantra supplement added by redactors (traditionally called Nagarjuna) by the fourth or fifth century CE; the text is quoted in the Bower Manuscript (c. 6th century CE) and preserved in a Nepalese palm-leaf manuscript dated 878 CE.
+claims:
+  - text: Sutrasthana Chapter 16 of the Sushruta Samhita describes reconstructive surgery of a severed nose (rhinoplasty, nasa-sandhana) and split earlobes (otoplasty) by measuring the defect with a leaf template, dissecting a living pedicle flap of skin from the cheek (or forehead in later tradition), suturing it into place, and inserting two hollow castor-oil plant tubes to keep the nostrils open during healing.
+    grade: A
+    sources:
+      - src.wujastyk-2008-body-of-knowledge-ayurvedic
+  - text: The treatise classifies 101 blunt instruments (yantras) and 20 sharp instruments (shastras), instructs students to practice incisions and suturing on gourds, leather bags and lotus stalks (yogya), and describes anatomical inspection via water maceration of a cadaver in Sharirasthana Chapter 5.
+    grade: A
+    sources:
+      - src.wujastyk-2008-body-of-knowledge-ayurvedic
+  - text: The Uttaratantra section adds specialized chapters on ophthalmology - including a detailed surgical description of couching an opaque cataractous lens with a curved needle (shalaka) - along with pediatrics, ENT disorders and internal medicine.
+    grade: A
+    sources:
+      - src.wujastyk-2008-body-of-knowledge-ayurvedic
+relations:
+  - { kind: related-to, target: text.charaka-samhita }
+  - { kind: contemporary-of, target: polity.gupta-empire }
+wikidata: Q1995239
+tags: [sushruta-samhita, ayurveda, surgery, rhinoplasty, medicine, science]
+review: { status: draft, author: "gemini-4-argon" }

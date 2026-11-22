@@ -1,0 +1,81 @@
+id: site.sarai-nahar-rai
+type: site
+kind: prehistory
+names:
+  en: Sarai Nahar Rai Mesolithic Site
+summary: >-
+  An open-air Mesolithic lake-side camp and cemetery beside a dried oxbow lake in Pratapgarh district,
+  Uttar Pradesh, preserving extended human burials (including a multiple burial of four individuals and
+  skeletons with embedded microlithic points), hearths and a geometric microlith industry.
+summaries:
+  kids: >-
+    Beside an ancient horseshoe-shaped lake in Uttar Pradesh, Mesolithic hunters and fishers camped at Sarai
+    Nahar Rai, cooked in clay hearths and buried their dead in carefully arranged graves.
+  teen: >-
+    Excavated by G. R. Sharma, Sarai Nahar Rai in the middle Ganga plain revealed oxbow-lake Mesolithic hunter-gatherers,
+    extended burials in a communal cemetery and evidence of interpersonal conflict from embedded stone points.
+region: Middle Ganga plain, Pratapgarh district, Uttar Pradesh
+location:
+  name: Sarai Nahar Rai
+  lat: 25.8
+  lon: 81.84
+datings:
+  - method: archaeological-radiocarbon
+    range:
+      earliest: "8500 BCE"
+      latest: "8000 BCE"
+      best: "8395 BCE"
+      precision: century
+      circa: true
+    grade: C
+    label: Early Holocene uncharred bone carbonate date (Sharma 1973)
+    sources:
+      - src.sharma-1973-ganga-mesolithic-lakes
+      - src.coningham-2015-archaeology-south-asia
+    note: >-
+      An initial radiocarbon measurement on uncharred calcified bone yielded 8395 +/- 110 BCE, while a charred
+      bone sample gave c. 990 BCE; uncharred bone carbonate dates are widely regarded as unreliable.
+  - method: scholarly-consensus
+    range:
+      earliest: "6000 BCE"
+      latest: "2000 BCE"
+      precision: millennium
+      circa: true
+    grade: B
+    label: Early-to-Middle Holocene Ganga Mesolithic reassessment (Lukacs & Pal 1993; Misra 2001)
+    sources:
+      - src.lukacs-1993-mesolithic-subsistence-north-india
+      - src.misra-2001-prehistoric-colonization-india
+    note: >-
+      Bioarchaeological, stratigraphic and regional radiocarbon comparisons place the Pratapgarh oxbow-lake
+      Mesolithic occupations primarily in the Early to Middle Holocene.
+claims:
+  - text: >-
+      Excavations at Sarai Nahar Rai uncovered extended West-East human burials within the habitation area,
+      including a single grave holding four individuals and a skeleton with a microlithic point embedded in a rib.
+    grade: A
+    sources:
+      - src.sharma-1973-ganga-mesolithic-lakes
+      - src.coningham-2015-archaeology-south-asia
+  - text: >-
+      Skeletal and dental analyses of the Sarai Nahar Rai population indicate tall, robust foragers with heavy
+      dental attrition and low caries prevalence typical of a coarse hunting-and-foraging diet.
+    grade: A
+    sources:
+      - src.lukacs-1993-mesolithic-subsistence-north-india
+relations:
+  - kind: contemporary-of
+    target: site.mahadaha
+wikidata: Q97124536
+debate: >-
+  An early radiocarbon date on uncharred bone carbonate placed Sarai Nahar Rai around 8400 BCE (Sharma 1973),
+  but specialists note that inorganic bone carbonate is prone to groundwater contamination and favour an Early
+  to Middle Holocene date alongside Mahadaha and Damdama.
+tags:
+  - mesolithic
+  - ganga-valley
+  - bioarchaeology
+  - uttar-pradesh
+review:
+  status: draft
+  author: gemini-4-argon

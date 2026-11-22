@@ -1,0 +1,72 @@
+id: site.rupnagar
+type: site
+kind: site
+names:
+  en: Rupnagar (Ropar)
+  iast: Rūpanagara
+  native: रूपनगर
+summary: >-
+  An important northern Harappan site on the left bank of the Sutlej River where it emerges from the Siwalik Hills
+  in Punjab, India, excavated by Y. D. Sharma (1953-1955), famous as the first site excavated in post-independence
+  India to demonstrate a stratigraphic sequence from Mature and Bara-related Harappan levels (Period I, c. 2100-1400 BCE)
+  to Painted Grey Ware (Period II).
+summaries:
+  kids: >-
+    Rupnagar, also called Ropar, sits by the Sutlej River in Punjab and was the first Harappan town excavated in
+    India after independence in 1947.
+  teen: >-
+    Excavated by Y. D. Sharma in the 1950s along the Sutlej River in Punjab, Rupnagar revealed a six-period sequence
+    beginning with Mature Harappan and Bara ceramics, a Harappan cemetery, and later Painted Grey Ware levels.
+region: Rupnagar District, Punjab, India
+location:
+  name: Rupnagar
+  lat: 30.9664
+  lon: 76.5331
+datings:
+  - method: archaeological-stratigraphic
+    range:
+      earliest: "2400 BCE"
+      latest: "1400 BCE"
+      precision: century
+      circa: true
+    grade: B
+    label: Period I (Mature Harappan and Bara Phase)
+    sources:
+      - src.possehl-2002-indus-civilization
+      - src.singh-2008-ancient-early-medieval-india
+      - src.allchin-1982-rise-of-civilization
+    note: >-
+      Period I at Rupnagar combines late Mature Harappan urban material (steatite seal, chert weights, mud-brick
+      and river-pebble houses) with the regional Bara ceramic tradition of the upper Sutlej basin.
+claims:
+  - text: >-
+      Excavated by Y. D. Sharma of the Archaeological Survey of India in 1953-1955, Rupnagar (Ropar) was the first
+      Harappan settlement excavated in independent India and established the six-period archaeological sequence
+      of the upper Sutlej plain.
+    grade: A
+    sources:
+      - src.possehl-2002-indus-civilization
+      - src.singh-2008-ancient-early-medieval-india
+  - text: >-
+      Harappan Period I levels at Rupnagar yielded river-cobble and mud-brick foundations, a steatite seal inscribed
+      on both faces, chert weights and blades, copper celts, and a cemetery with extended north-west to south-east
+      inhumations accompanied by grave pottery (including one burial accompanied by a dog).
+    grade: A
+    sources:
+      - src.possehl-2002-indus-civilization
+      - src.singh-2008-ancient-early-medieval-india
+relations:
+  - kind: part-of
+    target: tradition.harappan-civilisation
+  - kind: contemporary-of
+    target: site.harappa
+  - kind: contemporary-of
+    target: site.banawali
+tags:
+  - harappan
+  - site
+  - punjab
+  - sutlej
+review:
+  status: draft
+  author: gemini-4-argon

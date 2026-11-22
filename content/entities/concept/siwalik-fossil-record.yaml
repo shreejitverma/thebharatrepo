@@ -1,0 +1,67 @@
+id: concept.siwalik-fossil-record
+type: concept
+kind: prehistory
+names:
+  en: Siwalik Hills Fossil Record
+summary: >-
+  The Neogene and Quaternary fluvial sediments of the Siwalik (Sivalik) Hills along the southern Himalayan
+  foreland preserve one of the world's richest terrestrial vertebrate and hominoid fossil sequences, spanning
+  roughly 18 to 1 million years ago and including Miocene apes such as Sivapithecus.
+summaries:
+  kids: >-
+    The Siwalik Hills at the foot of the Himalaya hold millions of years of animal fossils, including ancient
+    apes, giant elephants and sabre-toothed cats that lived along prehistoric rivers.
+  teen: >-
+    Deposited by rivers eroding the rising Himalaya, the Siwalik strata preserve an 18-million-year record
+    of mammalian evolution, monsoon shifts, C4 grassland expansion and Miocene hominoids like Sivapithecus.
+region: Sub-Himalayan foreland basin (Pakistan, northern India and Nepal)
+location:
+  name: Siwalik Hills (Potwar and Haritalyangar sectors)
+  lat: 31.54
+  lon: 76.63
+datings:
+  - method: geological
+    range:
+      earliest: "18 Ma"
+      latest: "1 Ma"
+      best: "9 Ma"
+      precision: Ma
+      circa: true
+    grade: A
+    label: Magnetostratigraphic and biostratigraphic sequence
+    sources:
+      - src.barry-2002-siwalik-faunal-change
+      - src.pilbeam-1977-siwalik-hominoid-primates
+    note: >-
+      High-resolution paleomagnetic and biostratigraphic sections date the Siwalik vertebrate zones across the
+      Early Miocene to Early Pleistocene, with Sivapithecus horizons concentrated around 12.5-8.5 Ma.
+claims:
+  - text: >-
+      Fossils of the Miocene hominoid Sivapithecus recovered from Siwalik deposits document ape radiation in
+      South Asia prior to late Miocene habitat fragmentation.
+    grade: A
+    sources:
+      - src.pilbeam-1977-siwalik-hominoid-primates
+      - src.coningham-2015-archaeology-south-asia
+  - text: >-
+      Late Miocene faunal turnover in the Siwaliks tracks ecological shifts from forest habitats toward C4
+      floodplain grasslands between 10.7 and 5.7 Ma.
+    grade: A
+    sources:
+      - src.barry-2002-siwalik-faunal-change
+relations:
+  - kind: succeeded
+    target: event.indian-plate-asia-collision
+image:
+  commons: "File:View over the Sivalik Hills 02.jpg"
+  alt: Forested ridges of the Siwalik Hills in the Himalayan foothills
+  credit: Kritzolina
+  license: CC BY-SA 4.0
+tags:
+  - palaeontology
+  - siwalik
+  - sivapithecus
+  - miocene
+review:
+  status: draft
+  author: gemini-4-argon

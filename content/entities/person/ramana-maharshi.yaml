@@ -1,0 +1,37 @@
+id: person.ramana-maharshi
+type: person
+kind: person
+names:
+  en: Ramana Maharshi
+summary: Ramana Maharshi was a teacher associated with the advaita tradition who
+  lived and taught at Arunachala. His teachings became influential among Indian
+  and international visitors.
+summaries:
+  kids: Ramana Maharshi taught at Arunachala and became known for his teachings
+    about self-inquiry.
+  teen: Modern scholarship places Ramana’s teachings in the context of Advaita and
+    changing interpretations of liberation in modern India.
+datings:
+  - method: scholarly-consensus
+    range:
+      earliest: "1879"
+      latest: "1950"
+      precision: year
+      circa: true
+    grade: B
+    label: Historical scholarship
+    sources:
+      - src.fort-1998-jivanmukti-in-transformation
+claims:
+  - text: Ramana Maharshi was a teacher associated with the advaita tradition who
+      lived and taught at Arunachala. His teachings became influential among
+      Indian and international visitors.
+    grade: B
+    sources:
+      - src.fort-1998-jivanmukti-in-transformation
+relations: []
+tags:
+  - person
+review:
+  status: draft
+  author: codex-gpt-6

@@ -1,0 +1,36 @@
+id: event.raman-effect-and-nobel-1930
+type: event
+kind: event
+names:
+  en: C. V. Raman and the 1930 Nobel Prize
+summary: C. V. Raman received the 1930 Nobel Prize in Physics for work on the
+  scattering of light and discovery of the effect named after him.
+summaries:
+  kids: C. V. Raman won the 1930 Nobel Prize in Physics for research on the
+    scattering of light.
+  teen: Raman and K. S. Krishnan published experimental work on a new type of
+    secondary radiation in 1928; the Nobel recognized Raman’s work on light
+    scattering.
+datings:
+  - method: documentary
+    range:
+      earliest: "1930"
+      latest: "1930"
+      precision: year
+      circa: false
+    grade: A
+    label: Documentary record
+    sources: &a1
+      - src.nobel-raman-1930
+      - src.raman-krishnan-1928-secondary-radiation
+claims:
+  - text: C. V. Raman received the 1930 Nobel Prize in Physics for work on the
+      scattering of light and discovery of the effect named after him.
+    grade: A
+    sources: *a1
+relations: []
+tags:
+  - event
+review:
+  status: draft
+  author: codex-gpt-6

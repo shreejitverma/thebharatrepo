@@ -1,0 +1,34 @@
+id: person.guru-nanak
+type: person
+kind: person
+names:
+  en: Guru Nanak
+  iast: Gurū Nānak
+  native: ਗੁਰੂ ਨਾਨਕ
+summary: >-
+  Guru Nanak (1469-1539) was the founding teacher of the Sikh tradition. His hymns, preserved in the
+  Guru Granth Sahib, address devotion, ethical conduct, and the relation between religious practice and
+  social life.
+summaries:
+  kids: >-
+    Guru Nanak was born in 1469 and taught devotion to one God, honest work, and sharing with others.
+    His hymns are included in the Sikh scripture, the Guru Granth Sahib.
+  teen: >-
+    Guru Nanak's teaching and poetry formed the beginning of the Sikh tradition. Historical study uses
+    his hymns alongside later biographies, which differ in how they describe his life.
+region: Punjab
+datings:
+  - method: textual-internal
+    range: { earliest: "1469 CE", latest: "1539 CE", precision: year, circa: true }
+    grade: B
+    label: Conventional dates
+    sources: [src.mcleod-1968-guru-nanak, src.grewal-1990-sikhs-of-the-punjab]
+claims:
+  - text: Guru Nanak was born in 1469 and died in 1539 according to the conventional Sikh chronology.
+    grade: B
+    sources: [src.mcleod-1968-guru-nanak, src.grewal-1990-sikhs-of-the-punjab]
+  - text: His hymns are preserved in the Guru Granth Sahib.
+    grade: B
+    sources: [src.mcleod-1968-guru-nanak]
+tags: [sikhism, punjab, poetry]
+review: { status: draft, author: "codex-gpt-6" }

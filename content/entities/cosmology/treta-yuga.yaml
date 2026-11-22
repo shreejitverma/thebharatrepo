@@ -1,0 +1,68 @@
+id: cosmology.treta-yuga
+type: cosmology
+kind: cosmology
+names:
+  en: Treta Yuga
+  iast: Tretāyuga
+  native: त्रेतायुग
+summary: >-
+  In traditional Hindu cosmology, Treta Yuga is the second of the four world ages in a mahayuga, when
+  dharma stands on three of its four legs, sacrificial ritual becomes formally instituted, and the age
+  spans 3,600 divine years or 1,296,000 human solar years.
+summaries:
+  kids: >-
+    In traditional Hindu cosmology, Treta Yuga is the second of the four world ages, lasting 1,296,000
+    human years and remembered in tradition as the age in which Rama lived.
+  teen: >-
+    Named after the three-pip throw of the Indian die, Treta Yuga constitutes three-tenths of a mahayuga
+    (3,000 divine years plus 300-year dawn and 300-year twilight, or 1,296,000 human years) and is the
+    traditional Puranic setting for the Valmiki Ramayana.
+datings:
+  - method: traditional-puranic
+    range:
+      earliest: "2163102 BCE"
+      latest: "867102 BCE"
+      precision: cosmological
+      circa: false
+    grade: D
+    label: Treta Yuga of the 28th Mahayuga
+    sources:
+      - src.olivelle-2005-manus-code-of-law
+      - src.wilson-1840-vishnu-purana
+      - src.burgess-1860-surya-siddhanta
+    note: >-
+      In the 4:3:2:1 yuga scheme, the Treta Yuga of the present 28th mahayuga lasted 1,296,000 solar years
+      after Satya Yuga and ended 864,000 years before the Kali Yuga epoch of 3102 BCE (-3101).
+claims:
+  - text: >-
+      Treta Yuga comprises 3,000 divine years together with a 300-divine-year dawn (sandhya) and a
+      300-divine-year twilight (sandhyamsha), totalling 3,600 divine years or 1,296,000 human solar years.
+    grade: D
+    sources:
+      - src.olivelle-2005-manus-code-of-law
+      - src.burgess-1860-surya-siddhanta
+  - text: >-
+      In Itihasa-Purana tradition Rama Dasharathi is placed in a Treta Yuga; the Mahabharata places him at
+      the junction of Treta and Dvapara, and later reckonings differ over which mahayuga's Treta is meant.
+    grade: D
+    sources:
+      - src.goldman-1984-ramayana-balakanda
+      - src.gonzalezreimann-2002-mahabharata-yugas
+relations:
+  - kind: part-of
+    target: cosmology.mahayuga
+  - kind: succeeded
+    target: cosmology.satya-yuga
+  - kind: preceded
+    target: cosmology.dvapara-yuga
+  - kind: related-to
+    target: person.rama
+wikidata: Q1772811
+tags:
+  - cosmology
+  - treta-yuga
+  - yuga
+  - ramayana
+review:
+  status: draft
+  author: gemini-4-argon

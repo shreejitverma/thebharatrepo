@@ -1,0 +1,38 @@
+id: person.kabir
+type: person
+kind: person
+names:
+  en: Kabir
+  iast: Kabīr
+  native: कबीर
+summary: >-
+  Kabir was a North Indian poet whose songs and sayings circulated across communities and later became
+  central to several devotional traditions. His verses challenge ritual and social authority in varied
+  ways, while the details of his life and the attribution of individual poems remain debated.
+summaries:
+  kids: >-
+    Kabir was a poet whose short songs asked people to look for truth and devotion beyond outward
+    labels. Stories about his life differ, and scholars study the poems carefully.
+  teen: >-
+    Kabir's poetry survives through different collections and oral traditions. Historians distinguish
+    the evidence in the poems from later stories about his life and teacher.
+region: North India
+datings:
+  - method: textual-internal
+    range: { earliest: "1390 CE", latest: "1518 CE", precision: decade, circa: true }
+    grade: C
+    label: Broad scholarly life range
+    sources: [src.hess-1983-bijak-of-kabir, src.novetzke-2016-quotidian-revolution]
+claims:
+  - text: Kabir's poetry is preserved in multiple textual and oral traditions.
+    grade: B
+    sources: [src.hess-1983-bijak-of-kabir, src.novetzke-2016-quotidian-revolution]
+  - text: The historical details of Kabir's life and the attribution of poems remain uncertain.
+    grade: B
+    sources: [src.hess-1983-bijak-of-kabir]
+debate: >-
+  Dates for Kabir and the relationship between Kabir and Ramananda are disputed. Later devotional
+  biographies place him in a lineage with Ramananda, but modern scholarship questions whether these
+  traditions establish a direct historical teacher-student relationship.
+tags: [bhakti, poetry, north-india]
+review: { status: draft, author: "codex-gpt-6" }

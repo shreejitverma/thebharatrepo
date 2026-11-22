@@ -1,0 +1,37 @@
+id: concept.indo-european-language-discourse
+type: concept
+kind: science
+names:
+  en: Indo-European Language Discourse
+summary: In his 1786 third anniversary discourse, William Jones argued that
+  Sanskrit, Greek and Latin showed structural affinities and likely shared a
+  common source. This became a landmark in comparative philology.
+summaries:
+  kids: In 1786, William Jones described similarities among Sanskrit, Greek and
+    Latin that scholars later studied as Indo-European languages.
+  teen: Jones’s proposal contributed to comparative historical linguistics; it
+    should be read as a scholarly argument in its 18th-century context.
+datings:
+  - method: documentary
+    range:
+      earliest: "1786"
+      latest: "1786"
+      precision: year
+      circa: false
+    grade: A
+    label: Documentary record
+    sources: &a1
+      - src.trautmann-1997-aryans-and-british-india
+claims:
+  - text: In his 1786 third anniversary discourse, William Jones argued that
+      Sanskrit, Greek and Latin showed structural affinities and likely shared a
+      common source. This became a landmark in comparative philology.
+    grade: A
+    sources: *a1
+relations: []
+tags:
+  - philology
+  - history-of-linguistics
+review:
+  status: draft
+  author: codex-gpt-6

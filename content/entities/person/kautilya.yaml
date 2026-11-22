@@ -1,0 +1,50 @@
+id: person.kautilya
+type: person
+kind: person
+names:
+  en: Kautilya (Chanakya)
+  iast: Kauṭilya
+  native: कौटिल्य (चाणक्य)
+summary: >-
+  Kautilya (also Kautalya) is the author named in the Arthashastra, the Sanskrit treatise on statecraft. Indian tradition identifies him with Chanakya, or Vishnugupta, the minister who helped Chandragupta Maurya overthrow the Nandas around 321 BCE. Patrick Olivelle argues instead that the Kautilya who composed the text lived around 50 to 125 CE, and that the identification with Chanakya entered at a later stage of the text.
+summaries:
+  kids: >-
+    Kautilya, also called Chanakya, is remembered as the clever adviser who helped Chandragupta Maurya build the Maurya Empire and as the author of a famous book on how to rule, the Arthashastra.
+  teen: >-
+    Tradition says Kautilya, or Chanakya, was Chandragupta Maurya's chief minister and wrote the Arthashastra in the 4th century BCE. Many modern scholars think the text, and perhaps its author, belong several centuries later.
+region: Magadha (Pataliputra); Taxila in later legend
+datings:
+  - method: textual-internal
+    range: { earliest: "350 BCE", latest: "280 BCE", precision: decade, circa: true }
+    grade: C
+    label: Traditional identification as Chandragupta Maurya's minister
+    sources:
+      - src.thapar-2012-asoka-decline-mauryas
+      - src.trautmann-1971-kautilya-arthasastra
+    note: Rests on the text's closing verse and on later literature such as the play Mudrarakshasa, which make Kautilya, Chanakya and Vishnugupta one person, the architect of the Maurya coup around 321 BCE; accepted by R. P. Kangle and, for an original Mauryan core, by Romila Thapar.
+  - method: textual-internal
+    range: { earliest: "50 BCE", latest: "125 CE", precision: century, circa: true }
+    grade: C
+    label: Patrick Olivelle (author of the first recension)
+    sources:
+      - src.olivelle-2013-king-governance-law
+    note: Olivelle dates the composition of the treatise by Kautilya to about 50 to 125 CE, and treats the link with the Mauryan minister as part of a later redaction.
+claims:
+  - text: The Arthashastra names its author as Kautilya (or Kautalya), and its closing verse says that the treatise was composed by the one who rescued the earth from the Nanda kings.
+    grade: B
+    sources:
+      - src.olivelle-2013-king-governance-law
+      - src.trautmann-1971-kautilya-arthasastra
+  - text: Later Sanskrit works, including Vishakhadatta's play Mudrarakshasa and Kamandaka's Nitisara, treat Kautilya, Chanakya and Vishnugupta as one person, the minister of Chandragupta Maurya.
+    grade: B
+    sources:
+      - src.olivelle-2013-king-governance-law
+debate: >-
+  Tradition makes Kautilya the minister of Chandragupta Maurya and the author of the whole Arthashastra, a view held by R. P. Kangle and, for an original Mauryan core, by Romila Thapar. Thomas Trautmann's statistical study found several authors in the text, and Patrick Olivelle dates the Kautilya who composed it to about 50 to 125 CE, treating the identification with Chanakya as a later addition.
+relations:
+  - { kind: authored, target: text.arthashastra }
+  - { kind: contemporary-of, target: person.chandragupta-maurya, note: According to tradition }
+  - { kind: related-to, target: polity.maurya-empire }
+wikidata: Q9045
+tags: [kautilya, chanakya, arthashastra, maurya, statecraft, contested-chronology]
+review: { status: draft, author: "gemini-4-argon" }

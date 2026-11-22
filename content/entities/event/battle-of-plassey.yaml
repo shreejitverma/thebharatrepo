@@ -1,0 +1,38 @@
+id: event.battle-of-plassey
+type: event
+kind: event
+names:
+  en: Battle of Plassey
+summary: The East India Company defeated Nawab Siraj ud-Daulah’s forces near
+  Plassey in 1757, an outcome that strengthened Company political influence in
+  Bengal.
+summaries:
+  kids: In 1757, the East India Company defeated the Nawab of Bengal near Plassey
+    and gained greater political power.
+  teen: The battle and subsequent arrangements expanded Company influence, though
+    historians treat Plassey as one stage in a longer process of colonial state
+    formation.
+datings:
+  - method: documentary
+    range:
+      earliest: "1757"
+      latest: "1757"
+      precision: year
+      circa: false
+    grade: B
+    label: Documentary record
+    sources: &a1
+      - src.marshall-1987-bengal-british-bridgehead
+      - src.bandyopadhyay-2004-from-plassey-to-partition
+claims:
+  - text: The East India Company defeated Nawab Siraj ud-Daulah’s forces near
+      Plassey in 1757, an outcome that strengthened Company political influence
+      in Bengal.
+    grade: B
+    sources: *a1
+relations: []
+tags:
+  - event
+review:
+  status: draft
+  author: codex-gpt-6

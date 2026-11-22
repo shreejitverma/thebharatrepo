@@ -1,0 +1,109 @@
+id: site.lothal
+type: site
+kind: site
+names:
+  en: Lothal
+  iast: Lothala
+  native: लोथल
+summary: >-
+  A compact Mature and Late Harappan manufacturing and trading town near the Gulf of Khambhat in Gujarat
+  (c. 2400-1600 BCE), famous for its carnelian bead factory, Persian Gulf seal, warehouse with 65 clay sealings,
+  and a 214-by-36-metre brick-lined basin whose function as a tidal maritime dockyard or a freshwater irrigation
+  and drinking tank is a major scholarly debate.
+summaries:
+  kids: >-
+    Lothal was a busy Harappan craft and trade town in Gujarat with a bead workshop, a storehouse full of stamped
+    clay tags, and a giant brick-lined water basin.
+  teen: >-
+    Excavated by S. R. Rao between 1955 and 1962, Lothal was a specialized Harappan commercial center near the
+    Gulf of Khambhat; archaeologists actively debate whether its huge brick basin functioned as a tidal dockyard
+    for ships or as a freshwater reservoir.
+region: Bhal region, Ahmedabad District, Gujarat, India
+location:
+  name: Lothal
+  lat: 22.5214
+  lon: 72.2494
+datings:
+  - method: archaeological-radiocarbon
+    range:
+      earliest: "2400 BCE"
+      latest: "1900 BCE"
+      precision: century
+      circa: true
+    grade: A
+    label: Lothal Period A (Mature Harappan Phases I to IV)
+    sources:
+      - src.rao-1979-lothal-harappan-port
+      - src.possehl-2002-indus-civilization
+      - src.wright-2010-ancient-indus
+    note: >-
+      Calibrated radiocarbon dates place the planned urban trading settlement of Lothal A between c. 2400 and 1900 BCE.
+  - method: archaeological-radiocarbon
+    range:
+      earliest: "1900 BCE"
+      latest: "1600 BCE"
+      precision: century
+      circa: true
+    grade: A
+    label: Lothal Period B (Late Harappan Phase V)
+    sources:
+      - src.rao-1979-lothal-harappan-port
+      - src.possehl-2002-indus-civilization
+    note: >-
+      Post-urban Late Sorath / Rangpur IIB-IIC occupation following severe flood damage around 1900 BCE.
+claims:
+  - text: >-
+      Along the eastern edge of Lothal lies a trapezoidal baked-brick basin measuring roughly 214 by 36 metres with
+      an inlet channel and a spillway; excavator S. R. Rao identified it as a tidal dockyard, an interpretation
+      supported by marine foraminifera and multi-sensor palaeochannel reconstructions linking the site to an
+      ancient Sabarmati estuary.
+    grade: B
+    sources:
+      - src.rao-1979-lothal-harappan-port
+      - src.khadkikar-2004-palaeogeography-lothal
+      - src.gupta-2024-sabarmati-lothal
+  - text: >-
+      Lawrence Leshnik (1968) and Gregory Possehl argued against the dockyard hypothesis, contending that the basin's
+      inlet geometry, vertical brick walls without steps, and location suited an irrigation and potable-water storage
+      tank rather than a harbour for sea-going vessels.
+    grade: B
+    sources:
+      - src.leshnik-1968-harappan-port-lothal
+      - src.possehl-2002-indus-civilization
+  - text: >-
+      Lothal yielded a circular Persian Gulf ("Dilmun") button seal, a multi-block mud-brick warehouse containing
+      65 baked-clay cargo sealings with cord and reed impressions, and an industrial bead factory with a kiln and
+      hundreds of carnelian beads in all stages of manufacture.
+    grade: A
+    sources:
+      - src.rao-1979-lothal-harappan-port
+      - src.kenoyer-1998-ancient-cities-indus
+      - src.possehl-2002-indus-civilization
+relations:
+  - kind: part-of
+    target: tradition.harappan-civilisation
+  - kind: contemporary-of
+    target: site.dholavira
+  - kind: related-to
+    target: concept.harappan-mesopotamian-trade
+  - kind: related-to
+    target: concept.harappan-carnelian-bead-making
+wikidata: Q9443
+image:
+  commons: "File:Lothal Dockyard N-GJ-60.jpg"
+  alt: The large brick-lined trapezoidal basin (dockyard or reservoir) at Lothal, Gujarat
+  credit: Jashjashjash
+  license: CC BY-SA 4.0
+debate: >-
+  The function of the eastern brick-lined basin at Lothal is debated between the tidal maritime dockyard hypothesis
+  (S. R. Rao, supported by estuarine foraminifera and palaeochannel studies of the Sabarmati by Khadkikar et al. 2004
+  and Gupta et al. 2024) and the freshwater storage and irrigation tank hypothesis (Lawrence Leshnik 1968 and Gregory Possehl).
+tags:
+  - harappan
+  - site
+  - gujarat
+  - dockyard-debate
+  - trade
+review:
+  status: draft
+  author: gemini-4-argon

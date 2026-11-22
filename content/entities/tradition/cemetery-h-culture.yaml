@@ -1,0 +1,72 @@
+id: tradition.cemetery-h-culture
+type: tradition
+kind: civilisation
+names:
+  en: Cemetery H Culture (Punjab Late Harappan)
+summary: >-
+  A Late Harappan (Localisation Era) regional culture centered in the Punjab and Cholistan (c. 1900-1300 BCE),
+  named after a cemetery south of Mound AB at Harappa and distinguished by fine red-slipped funerary urns
+  painted with peacocks, stars and vegetal motifs, as well as the transition from extended inhumation to
+  post-excarnation pot burials.
+summaries:
+  kids: >-
+    In the final centuries at Harappa, people of the Cemetery H culture painted bright red clay jars with peacocks
+    and stars and continued many older Harappan craft traditions.
+  teen: >-
+    The Cemetery H culture (c. 1900-1300 BCE) represents the Late Harappan phase in Punjab and Cholistan, showing
+    continuity in brick architecture and kiln technology alongside new funerary practices and painted pottery styles.
+region: Upper Indus basin, Punjab and Cholistan (Pakistan and northwestern India)
+location:
+  name: Harappa (Cemetery H)
+  lat: 30.6275
+  lon: 72.8650
+datings:
+  - method: archaeological-radiocarbon
+    range:
+      earliest: "1900 BCE"
+      latest: "1300 BCE"
+      precision: century
+      circa: true
+    grade: A
+    label: Harappa Periods 4 and 5 (Cemetery H Phase)
+    sources:
+      - src.kenoyer-1998-ancient-cities-indus
+      - src.possehl-2002-indus-civilization
+      - src.wright-2010-ancient-indus
+    note: >-
+      Calibrated radiocarbon dates from Harappa Period 4 (transitional, c. 1900-1700 BCE) and Period 5 (Cemetery H,
+      c. 1700-1300 BCE) demonstrate gradual local transformation rather than abrupt foreign invasion.
+claims:
+  - text: >-
+      Cemetery H contains two stratigraphic burial strata: a lower stratum of extended earth inhumations with grave
+      pottery, and an upper stratum of fractional post-exposure or post-cremation burials placed inside painted urns.
+    grade: A
+    sources:
+      - src.kenoyer-1998-ancient-cities-indus
+      - src.possehl-2002-indus-civilization
+  - text: >-
+      Biological anthropology and cranial morphometric analyses of individuals from Mature Harappan Cemetery R-37
+      and Late Harappan Cemetery H show biological continuity with the local Harappan population rather than
+      massive population replacement.
+    grade: B
+    sources:
+      - src.kenoyer-1998-ancient-cities-indus
+      - src.wright-2010-ancient-indus
+relations:
+  - kind: part-of
+    target: tradition.harappan-civilisation
+  - kind: located-at
+    target: site.harappa
+  - kind: contemporary-of
+    target: tradition.jhukar-phase
+  - kind: related-to
+    target: event.harappan-deurbanisation
+wikidata: Q2364797
+tags:
+  - harappan
+  - late-harappan
+  - cemetery-h
+  - punjab
+review:
+  status: draft
+  author: gemini-4-argon

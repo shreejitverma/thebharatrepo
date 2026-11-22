@@ -1,0 +1,55 @@
+id: site.ajanta-caves
+type: site
+kind: art
+names:
+  en: Ajanta Caves
+  iast: Ajaṇṭā Guhāḥ
+  native: अजन्ता गुहाः
+summary: >-
+  The Ajanta Caves are a crescent-shaped complex of around thirty rock-cut Buddhist chaitya prayer halls and vihara monasteries carved into a basalt gorge above the Waghora River in Maharashtra. Excavated in two major phases - an early Satavahana-era group (Caves 9, 10, 12, 13 and 15A, second to first century BCE) and a fifth-century CE Mahayana phase patronised by the Vakataka court under Emperor Harishena - Ajanta preserves the most extensive surviving corpus of classical Indian wall paintings alongside monumental rock-cut sculpture.
+summaries:
+  kids: >-
+    Carved into a horseshoe-shaped rock cliff in Maharashtra, the thirty Ajanta Caves contain ancient Buddhist prayer halls, monasteries and famous wall paintings of the Buddha's past lives (Jataka tales).
+  teen: >-
+    Excavated in an early Satavahana phase (c. 100 BCE) and a brilliant fifth-century CE Vakataka phase, the Ajanta Caves preserve world-renowned murals of Jataka stories and Bodhisattvas; art historians debate Walter Spink's short chronology (c. 462-480 CE under Emperor Harishena) versus longer fifth- to sixth-century CE timelines.
+region: Northern Deccan (Chhatrapati Sambhajinagar / Aurangabad District, Maharashtra)
+location: { name: "Ajanta, Maharashtra", lat: 20.552, lon: 75.703 }
+datings:
+  - method: art-historical
+    range: { earliest: "150 BCE", latest: 480, precision: decade, circa: true }
+    grade: B
+    label: Two-phase chronology with Walter M. Spink's short Vakataka chronology (c. 100 BCE and c. 462-480 CE)
+    sources:
+      - src.spink-2005-ajanta-end-of-golden-age
+    note: Everyone agrees that Caves 9, 10, 12, 13 and 15A date to c. 100 BCE-100 CE; for the second phase, Walter Spink argues from epigraphic, architectural and stratigraphic clues that the entire Mahayana excavation program took place in a compressed nineteen-year burst (c. 462-480 CE) during the reign of the Vakataka emperor Harishena, collapsing abruptly after Harishena's death.
+  - method: art-historical
+    range: { earliest: "150 BCE", latest: 550, precision: century, circa: true }
+    grade: C
+    label: Extended second-phase chronology (fifth to mid-sixth century CE)
+    sources:
+      - src.spink-2005-ajanta-end-of-golden-age
+      - src.kulke-2004-history-of-india
+    note: Several art historians and epigraphists question whether all Vakataka caves and mural programs could be completed within eighteen years and propose a longer development spanning the fifth and early sixth centuries CE.
+claims:
+  - text: Donative inscriptions in Caves 16, 17 and 26 link the fifth-century CE Mahayana excavations at Ajanta to Varahadeva (chief minister of the Vakataka king Harishena of the Vatsagulma branch), a local tributary ruler of Ashmaka, and the monk Buddhabhadra.
+    grade: A
+    sources:
+      - src.spink-2005-ajanta-end-of-golden-age
+      - src.salomon-1998-indian-epigraphy
+  - text: Painted on dry mud-and-lime plaster (tempera/secco technique) inside Caves 1, 2, 16 and 17, the Ajanta murals depict Jataka narratives and Bodhisattva figures such as Padmapani and Vajrapani with naturalistic shading (vartana), expressive gesture and vivid courtly detail.
+    grade: A
+    sources:
+      - src.spink-2005-ajanta-end-of-golden-age
+debate: >-
+  While the early phase at Ajanta (Caves 9, 10, 12, 13, 15A) is securely dated to the second/first century BCE, the duration of the second (Mahayana) phase is a major art-historical debate. Walter M. Spink argued through an exhaustive cave-by-cave structural and chisel-mark analysis that the second phase spanned less than two decades (c. 462-480 CE) under the Vakataka emperor Harishena. Other art historians and epigraphists question whether so many caves and painting cycles could be executed in eighteen years and argue for a broader development spanning the mid-fifth to the early or mid-sixth century CE.
+relations:
+  - { kind: patronised-by, target: polity.satavahana-dynasty }
+  - { kind: contemporary-of, target: polity.gupta-empire }
+wikidata: Q184427
+image:
+  commons: "File:Cave 26, Ajanta.jpg"
+  alt: Interior chaitya hall of Cave 26 at Ajanta with rock-cut stupa and Seated Buddha
+  credit: Dey.sandip
+  license: CC BY-SA 3.0
+tags: [ajanta, rock-cut-architecture, buddhism, vakataka, satavahana, murals, walter-spink, contested-chronology]
+review: { status: draft, author: "gemini-4-argon" }

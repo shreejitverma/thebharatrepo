@@ -1,0 +1,33 @@
+id: person.alauddin-khalji
+type: person
+kind: person
+names:
+  en: Alauddin Khalji
+  native: علاء الدین خلجی
+summary: >-
+  Alauddin Khalji ruled the Delhi Sultanate from 1296 to 1316. His reign expanded Sultanate power in
+  northern and peninsular India and included repeated campaigns against Mongol forces on the northwest
+  frontier.
+summaries:
+  kids: >-
+    Alauddin Khalji was a ruler of Delhi from 1296 to 1316. His armies fought several Mongol attacks
+    and expanded the lands under his control.
+  teen: >-
+    Alauddin Khalji strengthened the Delhi Sultanate through military campaigns and administrative
+    measures. Mongol incursions were a recurring challenge during his reign.
+region: Delhi Sultanate
+datings:
+  - method: documentary
+    range: { earliest: "1296 CE", latest: "1316 CE", precision: year, circa: false }
+    grade: B
+    label: Reign
+    sources: [src.jackson-1999-delhi-sultanate]
+claims:
+  - text: Alauddin Khalji ruled the Delhi Sultanate from 1296 to 1316.
+    grade: B
+    sources: [src.jackson-1999-delhi-sultanate]
+  - text: His forces repelled multiple Mongol incursions during his reign.
+    grade: B
+    sources: [src.jackson-1999-delhi-sultanate]
+tags: [delhi-sultanate, khalji, mongols]
+review: { status: draft, author: "codex-gpt-6" }

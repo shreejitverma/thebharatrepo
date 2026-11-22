@@ -1,0 +1,69 @@
+id: cosmology.pralaya
+type: cosmology
+kind: cosmology
+names:
+  en: Pralaya (Cosmic Dissolution)
+  iast: Pralaya
+  native: प्रलय
+summary: >-
+  In traditional Hindu cosmology, pralaya denotes the periodic dissolution and reabsorption of the cosmos,
+  classified in the Puranas into four kinds: continual daily dissolution (nitya), occasional dissolution at
+  the end of a kalpa during Brahma's night (naimittika), elemental dissolution at the end of Brahma's
+  100-year life (prakritika), and individual liberation (atyantika).
+summaries:
+  kids: >-
+    In traditional Hindu cosmology, pralaya is the resting period when the universe dissolves back into its
+    source during Brahma's 4.32-billion-year night before a new cosmic day begins.
+  teen: >-
+    Puranic cosmology distinguishes naimittika pralaya, when the three worlds dissolve for a 4.32-billion-year
+    night of Brahma at the close of each kalpa, from prakritika mahapralaya, when all cosmic elements
+    reabsorb into prakriti after Brahma's 100-year lifespan.
+datings:
+  - method: traditional-puranic
+    range:
+      earliest: "1972947102 BCE"
+      latest: "1972947102 BCE"
+      precision: cosmological
+      circa: false
+    grade: D
+    label: Close of the previous Naimittika Pralaya at the dawn of the present Kalpa
+    sources:
+      - src.wilson-1840-vishnu-purana
+      - src.dimmitt-vanbuitenen-1978-classical-hindu-mythology
+      - src.rocher-1986-puranas
+    note: >-
+      In Puranic chronology, the preceding 4.32-billion-year night of Brahma (naimittika pralaya) ended at
+      the opening of the present Shveta-Varaha Kalpa 1,972,944,000 years before the 3102 BCE Kali epoch.
+claims:
+  - text: >-
+      Vishnu Purana 1.7 and 6.1-5 classify cosmic dissolution into four types: nitya (constant),
+      naimittika (at the close of a kalpa, lasting 4.32 billion years), prakritika (at the close of
+      Brahma's 100-year life), and atyantika (final liberation from rebirth).
+    grade: D
+    sources:
+      - src.wilson-1840-vishnu-purana
+      - src.rocher-1986-puranas
+      - src.flood-2003-blackwell-companion-hinduism
+  - text: >-
+      In addition to the end-of-kalpa dissolution, smaller flood-like transitions (manvantara-sandhya) of
+      1,728,000 years occur between each of the fourteen manvantaras inside a kalpa.
+    grade: D
+    sources:
+      - src.burgess-1860-surya-siddhanta
+      - src.dimmitt-vanbuitenen-1978-classical-hindu-mythology
+relations:
+  - kind: related-to
+    target: cosmology.kalpa
+  - kind: related-to
+    target: cosmology.brahma-lifespan
+  - kind: related-to
+    target: event.matsya-flood-narrative
+wikidata: Q2627710
+tags:
+  - cosmology
+  - pralaya
+  - pratisarga
+  - purana
+review:
+  status: draft
+  author: gemini-4-argon

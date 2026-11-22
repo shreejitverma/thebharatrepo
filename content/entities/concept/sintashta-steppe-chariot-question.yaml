@@ -1,0 +1,84 @@
+id: concept.sintashta-steppe-chariot-question
+type: concept
+kind: civilisation
+names:
+  en: Sintashta Culture and the Steppe Chariot Question in India
+  iast: Ratha
+  native: रथ
+summary: >-
+  The Sintashta-Petrovka archaeological complex (c. 2100 to 1800 BCE) of the southern Ural steppes
+  has yielded the earliest known archaeologically dated spoked-wheel, horse-drawn light chariots
+  along with sacrificial horse burials. In South Asian studies, the relation between Sintashta
+  chariots, the Rigvedic ratha, and recently excavated copper-inlaid wooden wheels at Sinauli in
+  Uttar Pradesh (c. 2000 to 1800 BCE) is a key debate connecting technology, linguistics, and
+  genetics.
+summaries:
+  kids: >-
+    Archaeologists study ancient two-wheeled vehicles from the Eurasian steppes (Sintashta) and
+    from Sinauli in northern India to understand how horse-drawn chariots described in the Rigveda
+    were invented and used.
+  teen: >-
+    The Sintashta culture of the southern Urals (c. 2100 to 1800 BCE) preserves the earliest known
+    spoked-wheel horse chariots and carries the genetic profile linked to Indo-Iranian expansion,
+    while solid-wheel copper-reinforced vehicles at Sinauli in Uttar Pradesh have sparked debate over
+    indigenous versus steppe chariot traditions.
+region: Southern Ural steppes and northern Indian subcontinent (Comparative Indo-Iranian context)
+datings:
+  - method: archaeological-radiocarbon
+    range: { earliest: "2100 BCE", latest: "1800 BCE", best: "2000 BCE", precision: century, circa: true }
+    grade: A
+    label: Calibrated radiocarbon chronology of Sintashta-Petrovka chariot burials (Anthony, Kuzmina)
+    sources:
+      - src.anthony-2007-horse-wheel-language
+      - src.kuzmina-2007-origin-indo-iranians
+      - src.narasimhan-2019-formation-human-populations
+    note: >-
+      Calibrated radiocarbon dates from Sintashta, Krivoe Ozero, and Kamennyi Ambar in the southern
+      Urals date the earliest spoked-wheel chariot impressions and paired horse burials to c. 2100
+      to 1800 BCE.
+claims:
+  - text: >-
+      Graves of the Sintashta-Petrovka culture (c. 2100 to 1800 BCE) contain soil impressions of
+      two-wheeled vehicles with eight to twelve spoked wheels, cheekpieces for bridled horses, and
+      ritual burials of decapitated horses that scholars compare with Rigvedic funeral and
+      Ashvamedha descriptions (Rigveda 1.162 and 10.18).
+    grade: B
+    sources:
+      - src.anthony-2007-horse-wheel-language
+      - src.kuzmina-2007-origin-indo-iranians
+  - text: >-
+      The Rigveda frequently describes the ratha as a light, fast, horse-drawn chariot equipped with
+      spoked wheels (ara), felloes (nemi), a nave (nabhya), and two draught horses under a yoke,
+      using cognate Indo-Iranian terminology shared with Avestan and Mitanni Indo-Aryan.
+    grade: A
+    sources:
+      - src.jamison-brereton-2014-rigveda
+      - src.anthony-2007-horse-wheel-language
+      - src.kuzmina-2007-origin-indo-iranians
+  - text: >-
+      Populations of the Sintashta culture carry the specific Steppe Middle-to-Late Bronze Age
+      (Steppe_MLBA) genetic profile (enriched in Y-chromosome haplogroup R1a-Z93) that subsequently
+      appears in Central Asian and South Asian populations during the second millennium BCE.
+    grade: A
+    sources:
+      - src.narasimhan-2019-formation-human-populations
+relations:
+  - { kind: related-to, target: concept.indo-aryan-migration }
+  - { kind: related-to, target: text.rigveda }
+  - { kind: related-to, target: event.mitanni-treaty }
+  - { kind: related-to, target: concept.gandhara-grave-culture }
+wikidata: Q656393
+image:
+  commons: "File:Sintashta culture.jpg"
+  alt: Archaeological display of Sintashta culture artifacts and chariot burial reconstruction
+  credit: Krakkos
+  license: CC BY-SA 4.0
+debate: >-
+  Mainstream Indo-European archaeologists (David Anthony, Elena Kuzmina) and geneticists (Narasimhan
+  et al. 2019) identify Sintashta-Andronovo as the material source of Proto-Indo-Iranian
+  spoked-wheel horse chariots (ratha). The 2018 discovery of copper-decorated solid-wheel vehicles
+  at Sinauli in western Uttar Pradesh (c. 2000 to 1800 BCE) is interpreted by some Indian
+  archaeologists as indigenous Vedic-era war chariots and by others as solid-wheeled Copper Hoard /
+  OCP carts distinct from the spoked-wheel horse-drawn Rigvedic ratha.
+tags: [sintashta, chariot, ratha, indo-iranian, archaeogenetics, horse, bronze-age]
+review: { status: draft, author: "gemini-4-argon" }

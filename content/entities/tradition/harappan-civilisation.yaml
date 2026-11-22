@@ -1,0 +1,119 @@
+id: tradition.harappan-civilisation
+type: tradition
+kind: civilisation
+names:
+  en: Harappan Civilisation (Indus Valley Civilisation)
+  iast: Sindhu-Sarasvatī Sabhyatā
+  native: सिन्धु-सरस्वती सभ्यता
+summary: >-
+  The Bronze Age urban civilisation of the Indus and Ghaggar-Hakra river basins in northwestern South Asia,
+  conventionally divided into the Early Harappan (Regionalisation Era, c. 3300-2600 BCE), Mature Harappan
+  (Integration Era, c. 2600-1900 BCE) and Late Harappan (Localisation Era, c. 1900-1300 BCE) phases.
+summaries:
+  kids: >-
+    Over four thousand years ago, people along the Indus and Ghaggar-Hakra rivers built planned brick cities
+    with covered drains, standard weights, and carved stone seals.
+  teen: >-
+    The Harappan or Indus Valley Civilisation was South Asia's first urban culture, spanning early village
+    farming phases from c. 3300 BCE, mature planned cities between 2600 and 1900 BCE, and regional post-urban
+    cultures down to c. 1300 BCE.
+region: Indus and Ghaggar-Hakra basins, Gujarat, Punjab, Sindh, Balochistan, Haryana and western Uttar Pradesh
+location:
+  name: Harappa
+  lat: 30.6311
+  lon: 72.8639
+datings:
+  - method: archaeological-radiocarbon
+    range:
+      earliest: "3300 BCE"
+      latest: "2600 BCE"
+      precision: century
+      circa: true
+    grade: A
+    label: Early Harappan Phase (Regionalisation Era)
+    sources:
+      - src.kenoyer-1998-ancient-cities-indus
+      - src.possehl-2002-indus-civilization
+      - src.wright-2010-ancient-indus
+    note: >-
+      Formative regional cultures (Ravi, Hakra, Kot Diji, Amri-Nal, Sothi-Siswal) showing fortified towns,
+      early craft specialisation, and proto-inscribed potsherds prior to full urban integration.
+  - method: archaeological-radiocarbon
+    range:
+      earliest: "2600 BCE"
+      latest: "1900 BCE"
+      precision: century
+      circa: true
+    grade: A
+    label: Mature Harappan Phase (Integration Era)
+    sources:
+      - src.kenoyer-1998-ancient-cities-indus
+      - src.possehl-2002-indus-civilization
+      - src.wright-2010-ancient-indus
+    note: >-
+      Peak urban phase anchored by calibrated radiocarbon sequences across Harappa, Mohenjo-daro, Dholavira,
+      Rakhigarhi, and Kalibangan, and corroborated by Akkadian and Ur III synchronisms in Mesopotamia.
+  - method: archaeological-radiocarbon
+    range:
+      earliest: "1900 BCE"
+      latest: "1300 BCE"
+      precision: century
+      circa: true
+    grade: A
+    label: Late Harappan Phase (Localisation Era)
+    sources:
+      - src.kenoyer-1998-ancient-cities-indus
+      - src.possehl-2002-indus-civilization
+      - src.wright-2010-ancient-indus
+    note: >-
+      Post-urban regional cultures (Cemetery H, Jhukar, Late Sorath/Rangpur, and eastern Ghaggar-Yamuna settlements)
+      following the decline of script, cubical weights, and large civic monuments.
+claims:
+  - text: >-
+      At its Mature Harappan peak (c. 2600-1900 BCE), the civilisation encompassed over 1,000 known settlements
+      across roughly 800,000 to 1,000,000 square kilometres, making it the most geographically extensive of the
+      Old World Bronze Age urban civilisations.
+    grade: B
+    sources:
+      - src.kenoyer-1998-ancient-cities-indus
+      - src.possehl-2002-indus-civilization
+      - src.wright-2010-ancient-indus
+  - text: >-
+      Mature Harappan cities shared standardised baked and mud-brick proportions (1:2:4), a uniform binary and
+      decimal chert weight system, steatite stamp seals bearing the undeciphered Indus script, and complex
+      hydraulic and drainage engineering.
+    grade: A
+    sources:
+      - src.kenoyer-1998-ancient-cities-indus
+      - src.singh-2008-ancient-early-medieval-india
+  - text: >-
+      The highest concentration of known Harappan settlements occurs along the dry Ghaggar-Hakra palaeochannel
+      system in India and Pakistan, alongside major urban nodes in the Indus floodplain and Gujarat.
+    grade: A
+    sources:
+      - src.possehl-2002-indus-civilization
+      - src.giosan-2012-fluvial-landscapes-harappan
+      - src.singh-2017-himalayan-river-morphodynamics
+relations:
+  - kind: preceded
+    target: tradition.cemetery-h-culture
+  - kind: preceded
+    target: tradition.jhukar-phase
+  - kind: succeeded
+    target: tradition.kot-diji-phase
+  - kind: succeeded
+    target: tradition.hakra-ware-phase
+wikidata: Q42534
+image:
+  commons: "File:Simple map of Indus valley civilization.png"
+  alt: Map showing the extent and major sites of the Harappan Civilisation
+  credit: Merikanto
+  license: CC BY 4.0
+tags:
+  - harappan
+  - indus-valley
+  - bronze-age
+  - urbanisation
+review:
+  status: draft
+  author: gemini-4-argon

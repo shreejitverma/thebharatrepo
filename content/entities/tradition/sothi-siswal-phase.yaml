@@ -1,0 +1,71 @@
+id: tradition.sothi-siswal-phase
+type: tradition
+kind: civilisation
+names:
+  en: Sothi-Siswal Phase
+summary: >-
+  The eastern Early Harappan regional culture of the Ghaggar-Hakra (Chautang-Drishadvati) plains in Rajasthan,
+  Haryana and Punjab (c. 3200-2600 BCE), represented in the early levels of Kalibangan, Banawali, Rakhigarhi
+  and Siswal.
+summaries:
+  kids: >-
+    Farmers of the Sothi-Siswal culture lived in walled mud-brick towns in Haryana and Rajasthan and ploughed
+    cross-patterned fields before the Mature Harappan cities grew.
+  teen: >-
+    The Sothi-Siswal phase was the eastern branch of the Early Harappan world, known for its six pottery fabrics
+    at Kalibangan Period I, fortified mud-brick settlements, and early ploughed agriculture.
+region: Northern Rajasthan, Haryana, and eastern Punjab (Ghaggar and Chautang plains)
+location:
+  name: Kalibangan
+  lat: 29.4739
+  lon: 74.1303
+datings:
+  - method: archaeological-radiocarbon
+    range:
+      earliest: "3200 BCE"
+      latest: "2600 BCE"
+      precision: century
+      circa: true
+    grade: A
+    label: Early Harappan Sothi-Siswal Phase
+    sources:
+      - src.possehl-2002-indus-civilization
+      - src.lal-2003-excavations-at-kalibangan
+      - src.singh-2008-ancient-early-medieval-india
+    note: >-
+      Anchored by radiocarbon dates from Kalibangan Period I, Rakhigarhi, Kunal, and Banawali Period I.
+claims:
+  - text: >-
+      Excavators classified Sothi-Siswal pottery at Kalibangan Period I into six distinct fabrics (Fabrics A through F),
+      including white-and-black painted wares and internally incised basins.
+    grade: A
+    sources:
+      - src.lal-2003-excavations-at-kalibangan
+      - src.possehl-2002-indus-civilization
+  - text: >-
+      Sothi-Siswal towns such as Kalibangan Period I already employed mud-bricks in a standardised 1:2:3 ratio
+      before transitioning to the Mature Harappan 1:2:4 ratio.
+    grade: A
+    sources:
+      - src.lal-2003-excavations-at-kalibangan
+      - src.singh-2008-ancient-early-medieval-india
+relations:
+  - kind: part-of
+    target: tradition.harappan-civilisation
+  - kind: contemporary-of
+    target: tradition.kot-diji-phase
+  - kind: located-at
+    target: site.kalibangan
+  - kind: located-at
+    target: site.banawali
+  - kind: located-at
+    target: site.rakhigarhi
+wikidata: null
+tags:
+  - harappan
+  - early-harappan
+  - sothi-siswal
+  - ghaggar-hakra
+review:
+  status: draft
+  author: gemini-4-argon

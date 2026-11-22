@@ -1,0 +1,81 @@
+id: site.kot-diji
+type: site
+kind: site
+names:
+  en: Kot Diji
+  iast: Koṭ Dījī
+summary: >-
+  The stratified Early and Mature Harappan site in Khairpur District, Sindh, Pakistan, excavated by F. A. Khan
+  in 1955 and 1957, where 16 occupational layers separated a fortified Early Harappan settlement (the type-site
+  of the Kot Diji phase, c. 3300-2600 BCE) beneath a burnt destruction horizon and an overlying Mature Harappan town.
+summaries:
+  kids: >-
+    Kot Diji in Sindh gave archaeologists the first proof of how an older walled town grew right underneath a
+    Mature Harappan settlement.
+  teen: >-
+    Excavated by F. A. Khan in 1955-1957 in Khairpur District, Sindh, Kot Diji is the type-site for the Early
+    Harappan Kot Diji phase, featuring a stone-and-mud-brick fortified citadel below Mature Harappan levels.
+region: Khairpur District, Sindh, Pakistan
+location:
+  name: Kot Diji
+  lat: 27.3431
+  lon: 68.7083
+datings:
+  - method: archaeological-radiocarbon
+    range:
+      earliest: "3300 BCE"
+      latest: "2600 BCE"
+      precision: century
+      circa: true
+    grade: A
+    label: Period I (Early Harappan Kot Dijian Type-Site)
+    sources:
+      - src.possehl-2002-indus-civilization
+      - src.kenoyer-1998-ancient-cities-indus
+      - src.singh-2008-ancient-early-medieval-india
+    note: >-
+      Calibrated radiocarbon dates from the lower Kot Dijian layers (Layers 16 to 4) span c. 3300/3000 to 2600 BCE.
+  - method: archaeological-stratigraphic
+    range:
+      earliest: "2600 BCE"
+      latest: "1900 BCE"
+      precision: century
+      circa: true
+    grade: A
+    label: Period II (Mature Harappan Occupation)
+    sources:
+      - src.possehl-2002-indus-civilization
+      - src.singh-2008-ancient-early-medieval-india
+    note: >-
+      Upper Layers 3 to 1 contain classic Mature Harappan architecture and ceramics overlying an ash layer.
+claims:
+  - text: >-
+      Excavated by F. A. Khan of the Pakistan Department of Archaeology in 1955 and 1957, Kot Diji revealed a massive
+      defensive wall built on limestone rubble foundations with mud-brick bastions enclosing the Early Harappan citadel.
+    grade: A
+    sources:
+      - src.possehl-2002-indus-civilization
+      - src.singh-2008-ancient-early-medieval-india
+  - text: >-
+      A thick layer of ash and charcoal separates the Early Harappan Kot Dijian levels from the Mature Harappan
+      occupation at Kot Diji, alongside similar burning horizons at Gumla, Amri, and Nausharo.
+    grade: A
+    sources:
+      - src.possehl-2002-indus-civilization
+      - src.singh-2008-ancient-early-medieval-india
+relations:
+  - kind: part-of
+    target: tradition.harappan-civilisation
+  - kind: related-to
+    target: tradition.kot-diji-phase
+  - kind: contemporary-of
+    target: site.mohenjo-daro
+wikidata: Q1017084
+tags:
+  - harappan
+  - early-harappan
+  - site
+  - sindh
+review:
+  status: draft
+  author: gemini-4-argon

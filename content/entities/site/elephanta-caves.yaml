@@ -1,0 +1,44 @@
+id: site.elephanta-caves
+type: site
+kind: site
+names:
+  en: Elephanta Caves
+  native: घारापुरी लेणी
+summary: >-
+  The Elephanta Caves on Gharapuri island in Mumbai harbour are rock-cut Shaiva cave temples. The main
+  cave contains the colossal three-headed image of Shiva (Maheshamurti) and large relief panels of
+  Shiva myths. Their date rests on style and is debated, with most estimates in the 6th century CE.
+  UNESCO listed them in 1987.
+summaries:
+  kids: >-
+    On an island near Mumbai, artists carved a cave temple for Shiva. Inside is a giant face of Shiva
+    with three heads, each showing a different mood.
+  teen: >-
+    The great cave at Elephanta is a pillared hall cut into rock with huge sculptures of Shiva's
+    stories. Because no inscription names its builders, its date has to be worked out from the style of
+    the sculpture.
+region: Raigad district, Maharashtra (Mumbai harbour)
+location: { name: Gharapuri (Elephanta) island, lat: 18.96, lon: 72.93 }
+datings:
+  - method: art-historical
+    range: { earliest: "500 CE", latest: "650 CE", precision: century, circa: true }
+    grade: C
+    label: Stylistic dating, most estimates mid-6th century
+    sources: [src.unesco-1987-elephanta-caves, src.michell-1988-hindu-temple]
+    note: No foundation inscription survives; attributions range from the Kalachuris of the 6th century to the Chalukyas of the 7th.
+claims:
+  - text: The Elephanta Caves were inscribed on the UNESCO World Heritage List in 1987.
+    grade: A
+    sources: [src.unesco-1987-elephanta-caves]
+  - text: The main cave is dedicated to Shiva and centres on the colossal three-headed Maheshamurti relief.
+    grade: A
+    sources: [src.unesco-1987-elephanta-caves, src.michell-1988-hindu-temple]
+debate: >-
+  Because no dated inscription survives, the date and patron of the main cave are argued from
+  sculptural style. Most specialists place it in the 6th century under the Kalachuris of Mahishmati;
+  others attribute it to the early Chalukyas or later rulers of the Konkan coast in the 7th century.
+relations:
+  - { kind: related-to, target: site.kailasa-temple-ellora, note: Major rock-cut Shaiva monuments of the western Deccan }
+wikidata: Q649384
+tags: [unesco, rock-cut, shaiva, maharashtra]
+review: { status: draft, author: "claude-opus-5-5" }

@@ -1,0 +1,37 @@
+id: event.battle-of-talikota
+type: event
+kind: event
+names:
+  en: Battle of Talikota
+summary: A coalition of Deccan sultanates defeated Vijayanagara forces at
+  Talikota in 1565. The battle weakened the imperial capital, although
+  Vijayanagara successor states continued afterward.
+summaries:
+  kids: At Talikota, Deccan sultanate armies defeated Vijayanagara in 1565. The
+    empire did not disappear immediately, but its power changed.
+  teen: The defeat and sack of the Vijayanagara capital altered Deccan politics,
+    while successor rulers continued to govern from other centers.
+datings:
+  - method: documentary
+    range:
+      earliest: "1565"
+      latest: "1565"
+      precision: year
+      circa: false
+    grade: B
+    label: Documentary record
+    sources: &a1
+      - src.stein-1989-vijayanagara
+      - src.eaton-2005-social-history-deccan
+claims:
+  - text: A coalition of Deccan sultanates defeated Vijayanagara forces at Talikota
+      in 1565. The battle weakened the imperial capital, although Vijayanagara
+      successor states continued afterward.
+    grade: B
+    sources: *a1
+relations: []
+tags:
+  - event
+review:
+  status: draft
+  author: codex-gpt-6

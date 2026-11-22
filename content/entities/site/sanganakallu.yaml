@@ -1,0 +1,69 @@
+id: site.sanganakallu
+type: site
+kind: prehistory
+names:
+  en: Sanganakallu-Kupgal Neolithic Complex
+summary: >-
+  A major Southern Neolithic and Megalithic hill-cluster near Ballari in eastern Karnataka, comprising granite
+  insulbergs (Sannarasamma, Choudammagudda and Hiregudda/Kupgal), multi-mound ash enclosures, hilltop terrace
+  villages, bruisings and ringing rocks, and large-scale dolerite axe-manufacturing workshops.
+summaries:
+  kids: >-
+    On the granite hills of Sanganakallu near Ballari, Neolithic villagers built terraced homes, carved cattle
+    pictures on boulders that rang like bells when struck and crafted thousands of polished stone axes.
+  teen: >-
+    Investigated from the 1940s by B. Subbarao and H. D. Sankalia and re-dated by Fuller, Boivin and Korisettar,
+    the Sanganakallu-Kupgal complex was a regional hub of ash-mound ritual, millet farming and dolerite celt production
+    between c. 2200 and 1200 BCE.
+region: Ballari (Bellary) district, Karnataka
+location:
+  name: Sanganakallu
+  lat: 15.18
+  lon: 76.98
+datings:
+  - method: archaeological-radiocarbon
+    range:
+      earliest: "2200 BCE"
+      latest: "1100 BCE"
+      best: "1700 BCE"
+      precision: century
+      circa: true
+    grade: A
+    label: AMS radiocarbon sequence across Sanganakallu and Hiregudda/Kupgal (Fuller et al. 2007)
+    sources:
+      - src.fuller-2007-dating-neolithic-south-india
+      - src.boivin-2004-deccan-ashmounds
+    note: >-
+      High-precision AMS dates on charred seeds and bone show Kupgal ashmound activity from c. 2200-1900 BCE,
+      hilltop settlement intensification at Sanganakallu-Hiregudda c. 1950-1400 BCE, and Late Neolithic-Megalithic transition c. 1400-1100 BCE.
+claims:
+  - text: >-
+      Hiregudda (Kupgal) within the Sanganakallu complex hosted specialized dolerite quarry and axe-knapping
+      workshops that intensified production around 1500-1200 BCE for regional exchange.
+    grade: A
+    sources:
+      - src.fuller-2007-dating-neolithic-south-india
+      - src.boivin-2004-deccan-ashmounds
+  - text: >-
+      Archaeobotanical flotation at Sanganakallu demonstrates a staple crop package of native browntop millet
+      and horsegram supplemented after c. 1900 BCE by introduced wheat, barley, hyacinth bean and pearl millet.
+    grade: A
+    sources:
+      - src.fuller-2006-agricultural-origins-south-asia
+      - src.fuller-2007-dating-neolithic-south-india
+relations:
+  - kind: part-of
+    target: concept.southern-neolithic-ash-mounds
+  - kind: contemporary-of
+    target: site.budihal
+  - kind: contemporary-of
+    target: site.paiyampalli
+tags:
+  - neolithic
+  - southern-neolithic
+  - ashmounds
+  - stone-axes
+  - karnataka
+review:
+  status: draft
+  author: gemini-4-argon

@@ -1,0 +1,50 @@
+id: text.tolkappiyam
+type: text
+kind: text
+names:
+  en: Tolkappiyam
+  iast: Tolkāppiyam
+  native: தொல்காப்பியம்
+summary: >-
+  The Tolkappiyam, attributed to the grammarian Tolkappiyar, is the earliest extant treatise on Tamil grammar and poetics. Divided into three books of nine chapters each - Eluttatikaram (orthography and phonology), Collatikaram (morphology and syntax) and Porulatikaram (poetic subject matter, the five tinai landscapes of akam and puram, prosody and rhetoric) - it preserves an archaic phonological layer while showing multi-century redactional growth.
+summaries:
+  kids: >-
+    The Tolkappiyam is the oldest surviving book of Tamil grammar and poetry rules, explaining how Tamil sounds, words and nature-based poems work.
+  teen: >-
+    Structured in three books covering phonology, morphology and the poetics of the five ecological landscapes (tinai), the Tolkappiyam is the foundational work of Tamil linguistics and literary theory.
+region: Tamilakam (Tamil Nadu)
+datings:
+  - method: linguistic
+    range: { earliest: "200 BCE", latest: 500, precision: century, circa: true }
+    grade: C
+    label: Stratified linguistic dating (archaic core Books 1-2 vs expanded Book 3)
+    sources:
+      - src.zvelebil-1973-smile-of-murugan
+      - src.wilden-2014-manuscript-print-memory
+    note: Kamil Zvelebil and Eva Wilden distinguish an older grammatical core in the Eluttatikaram and Collatikaram (c. second/first century BCE to second century CE, reflecting pulli usage akin to Tamil-Brahmi) from later expansions in the Porulatikaram (up to the fifth century CE) that draw on Sanskrit aesthetic concepts such as meypatu (bhava/rasa).
+  - method: traditional-sampradaya
+    range: { earliest: "3000 BCE", latest: "500 BCE", precision: millennium, circa: true }
+    grade: D
+    label: Traditional attribution to Tolkappiyar of the Second Sangam
+    sources:
+      - src.zvelebil-1973-smile-of-murugan
+    note: Traditional Tamil accounts make Tolkappiyar a disciple of the sage Agastya during the legendary Second Sangam at Kapatapuram.
+claims:
+  - text: >-
+      The Tolkappiyam consists of roughly 1,610 aphorisms (nurpas) organized into three books - Eluttatikaram (phonology and script), Collatikaram (morphology and syntax) and Porulatikaram (poetics of akam and puram).
+    grade: A
+    sources:
+      - src.zvelebil-1973-smile-of-murugan
+      - src.wilden-2014-manuscript-print-memory
+  - text: The Porulatikaram codifies the classical Tamil system of five ecological landscapes (aintinai - kurinji hills, mullai forest pastures, marutam river plains, neytal seacoast and palai arid waste), correlating each with a season, hour, flora, deity and emotional phase of love or warfare.
+    grade: A
+    sources:
+      - src.zvelebil-1973-smile-of-murugan
+      - src.wilden-2014-manuscript-print-memory
+relations:
+  - { kind: part-of, target: text.sangam-literature }
+  - { kind: related-to, target: artifact.tamil-brahmi-inscriptions }
+  - { kind: related-to, target: text.natyashastra }
+wikidata: Q2418484
+tags: [tolkappiyam, tamil, grammar, poetics, sangam, tinai]
+review: { status: draft, author: "gemini-4-argon" }

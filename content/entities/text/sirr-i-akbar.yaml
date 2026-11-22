@@ -1,0 +1,38 @@
+id: text.sirr-i-akbar
+type: text
+kind: text
+names:
+  en: Sirr-i-Akbar (Persian Upanishads)
+summary: Dara Shikoh’s Sirr-i-Akbar is a Persian translation of a selection of
+  Upanishads completed in 1657. It later informed European access to Upanishadic
+  texts through a Latin translation.
+summaries:
+  kids: Dara Shikoh arranged for Sanskrit Upanishads to be translated into Persian
+    in 1657. The Persian text later reached European readers.
+  teen: The Sirr-i-Akbar records a major Mughal translation project.
+    Anquetil-Duperron translated its Persian version into Latin, creating an
+    important route for European study.
+datings:
+  - method: documentary
+    range:
+      earliest: "1657"
+      latest: "1657"
+      precision: year
+      circa: false
+    grade: B
+    label: Documentary record
+    sources: &a1
+      - src.gandhi-2020-emperor-who-never-was
+      - src.truschke-2016-culture-of-encounters
+claims:
+  - text: Dara Shikoh’s Sirr-i-Akbar is a Persian translation of a selection of
+      Upanishads completed in 1657. It later informed European access to
+      Upanishadic texts through a Latin translation.
+    grade: B
+    sources: *a1
+relations: []
+tags:
+  - text
+review:
+  status: draft
+  author: codex-gpt-6

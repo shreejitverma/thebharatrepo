@@ -1,0 +1,34 @@
+id: event.pokhran-ii-tests
+type: event
+kind: event
+names:
+  en: Pokhran-II nuclear tests
+summary: India conducted five underground nuclear tests at Pokhran on 11 and 13
+  May 1998. The test series is also known as Operation Shakti.
+summaries:
+  kids: India carried out underground nuclear tests at Pokhran in May 1998.
+  teen: Government statements record five tests at Pokhran on 11 and 13 May 1998;
+    the series is commonly called Pokhran-II or Operation Shakti.
+region: Pokhran, Rajasthan
+datings:
+  - method: documentary
+    range:
+      earliest: "1998"
+      latest: "1998"
+      precision: year
+      circa: false
+    grade: A
+    sources:
+      - src.pokhran-tests-pib
+claims:
+  - text: India conducted five nuclear tests at the Pokhran range on 11 and 13 May
+      1998.
+    grade: A
+    sources:
+      - src.pokhran-tests-pib
+tags:
+  - nuclear-history
+  - science
+review:
+  status: draft
+  author: codex-gpt-6

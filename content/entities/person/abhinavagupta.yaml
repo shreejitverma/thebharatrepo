@@ -1,0 +1,42 @@
+id: person.abhinavagupta
+type: person
+kind: dharma
+names:
+  en: Abhinavagupta
+  iast: Abhinavagupta
+  native: अभिनवगुप्त
+summary: >-
+  Abhinavagupta of Kashmir was a philosopher, tantric theologian and literary theorist of the late
+  10th and early 11th centuries CE. He gave the most systematic form to non-dual Kashmir Shaivism in the
+  Tantraloka, and his commentaries on the Natyashastra and on Anandavardhana's Dhvanyaloka made rasa
+  theory central to Indian aesthetics.
+summaries:
+  kids: >-
+    Abhinavagupta was a great thinker from Kashmir. He explained how stories, plays and music make us
+    feel deep emotions, and he wrote about Shiva as the one consciousness in everything.
+  teen: >-
+    Abhinavagupta argued that when we watch a drama we experience rasa, a universal, impersonal form of
+    emotion. In religion he taught that everything is the free self-expression of Shiva as
+    consciousness. Two of his works carry dates, 991 and 1015 CE.
+region: Kashmir
+location: { name: Srinagar, lat: 34.08, lon: 74.80 }
+datings:
+  - method: textual-internal
+    range: { earliest: "950 CE", latest: "1025 CE", precision: decade, circa: true }
+    grade: B
+    label: Lifetime
+    sources: [src.pollock-2016-rasa-reader, src.flood-1996-introduction-to-hinduism]
+    note: His dated works in the Kashmiri Laukika era correspond to about 991 and 1015 CE.
+claims:
+  - text: >-
+      His Abhinavabharati on the Natyashastra and Locana on the Dhvanyaloka are the classic statements of
+      the theory of rasa as aesthetic experience.
+    grade: B
+    sources: [src.pollock-2016-rasa-reader]
+  - text: His Tantraloka is an encyclopaedic exposition of the Trika form of non-dual Shaiva tantra.
+    grade: B
+    sources: [src.flood-1996-introduction-to-hinduism]
+relations:
+  - { kind: part-of, target: tradition.kashmir-shaivism }
+tags: [kashmir-shaivism, aesthetics, rasa, philosophy]
+review: { status: draft, author: "claude-opus-5-5" }

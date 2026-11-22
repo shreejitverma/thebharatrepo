@@ -1,0 +1,63 @@
+id: site.dhaba
+type: site
+kind: prehistory
+names:
+  en: Dhaba Palaeolithic Site
+summary: >-
+  A deeply stratified open-air site on the north bank of the Middle Son River in Madhya Pradesh preserving a
+  continuous stone tool sequence from roughly 80,000 to 24,000 years ago, demonstrating uninterrupted human
+  occupation across the c. 74,000-year-old Toba super-eruption and a gradual transition to microlithic technology.
+summaries:
+  kids: >-
+    At Dhaba beside the Son River in Madhya Pradesh, archaeologists found layers of stone tools covering more
+    than 50,000 years, proving people kept living in northern India before and after the giant Toba volcanic eruption.
+  teen: >-
+    Excavations at Dhaba in the Middle Son Valley revealed a continuous 80,000-to-24,000-year lithic sequence
+    spanning the 74 ka Toba eruption, linking Levallois Middle Palaeolithic tools to later microlithic industries.
+region: Middle Son River valley, Sidhi district, Madhya Pradesh
+location:
+  name: Dhaba
+  lat: 24.5
+  lon: 82.02
+datings:
+  - method: luminescence
+    range:
+      earliest: "80 ka"
+      latest: "24 ka"
+      best: "74 ka"
+      precision: ka
+      circa: true
+    grade: A
+    label: Single-grain OSL and infrared luminescence chronology (Clarkson et al. 2020)
+    sources:
+      - src.clarkson-2020-dhaba-toba
+    note: >-
+      Luminescence ages on colluvial and alluvial strata at Dhaba Localities 1, 2 and 3 span ~80 ka to ~24 ka,
+      with cryptotephra glass shards of the ~74 ka Youngest Toba Tuff identified within the sequence.
+claims:
+  - text: >-
+      The lithic assemblage at Dhaba shifts from Levallois Middle Palaeolithic cores and points (~80-48 ka) to
+      agate and chalcedony microlithic blade technology after ~48 ka without an occupational hiatus at 74 ka.
+    grade: A
+    sources:
+      - src.clarkson-2020-dhaba-toba
+  - text: >-
+      Volcanic glass shards matching the Youngest Toba Tuff occur in the Dhaba sediments alongside Middle
+      Palaeolithic artefacts featuring centripetal and recurrent Levallois reduction.
+    grade: A
+    sources:
+      - src.clarkson-2020-dhaba-toba
+relations:
+  - kind: contemporary-of
+    target: site.jwalapuram
+  - kind: related-to
+    target: event.arrival-of-modern-humans-south-asia
+tags:
+  - palaeolithic
+  - middle-palaeolithic
+  - microlithic
+  - toba-eruption
+  - madhya-pradesh
+review:
+  status: draft
+  author: gemini-4-argon

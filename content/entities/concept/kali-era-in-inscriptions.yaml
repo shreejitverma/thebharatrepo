@@ -1,0 +1,85 @@
+id: concept.kali-era-in-inscriptions
+type: concept
+kind: science
+names:
+  en: Kali Yuga Era in Indian Epigraphy
+  iast: Kaliyuga-saṃvat
+  native: कलियुग-संवत्
+summary: >-
+  The Kali Yuga era, counted from the Siddhantic epoch of 3102 BCE, first appears in astronomy with
+  Aryabhata (499 CE) and in inscriptions with Ravikirti's Aihole inscription of the Chalukya king
+  Pulakeshin II (634-635 CE), which dates itself both as 3,735 years after the Bharata war and as Shaka
+  year 556. Later records, especially in South India, also count Kali years or elapsed Kali days.
+summaries:
+  kids: >-
+    In 634 CE a poet named Ravikirti carved a poem on a temple wall at Aihole in Karnataka. He gave its date
+    in two ways at once: 3,735 years since the Bharata war, and year 556 of the Shaka kings.
+  teen: >-
+    Ravikirti's Aihole inscription of Pulakeshin II is the earliest known inscription to use the Kali era.
+    Its double date (3,735 years after the Bharata war, Shaka 556 expired) fixes the 3,179-year gap between
+    the Kali and Shaka epochs and shows that by 634 CE the war was identified with the start of Kali Yuga.
+region: Karnataka (Aihole), later widely in South India
+location:
+  name: Meguti temple, Aihole
+  lat: 16.02
+  lon: 75.88
+datings:
+  - method: epigraphic
+    range:
+      earliest: 634
+      latest: 635
+      precision: year
+      circa: false
+    grade: A
+    label: Aihole inscription of Pulakeshin II (Kali 3735 = Shaka 556 expired)
+    sources:
+      - src.kielhorn-1900-aihole-inscription
+      - src.salomon-1998-indian-epigraphy
+      - src.saha-1955-calendar-reform-committee-report
+    note: >-
+      Verses 33 and 34 of the inscription state that 3,735 years had passed since the Bharata war and 556
+      years of the Shaka kings; Kielhorn, following Fleet, equates the date with 634-35 CE.
+claims:
+  - text: >-
+      In verses 33 and 34 of the Aihole inscription on the Meguti Jain temple, Ravikirti dates the record
+      to 3,735 years after the Bharata war and 556 years of the Shaka kings (634-35 CE), a difference of
+      3,179 years that matches the gap between the 3102 BCE Kali epoch and the 78 CE Shaka epoch.
+    grade: A
+    sources:
+      - src.kielhorn-1900-aihole-inscription
+      - src.salomon-1998-indian-epigraphy
+  - text: >-
+      The Calendar Reform Committee (1955) notes that the Kali era is first mentioned by Aryabhata and that
+      its first known use in an inscription is the 634-35 CE Aihole record of Pulakeshin II.
+    grade: B
+    sources:
+      - src.saha-1955-calendar-reform-committee-report
+  - text: >-
+      Indian inscriptions and texts sometimes express dates as elapsed days of the Kali era (kali-ahargana),
+      in places written as word or letter chronograms such as the katapayadi system used in Kerala.
+    grade: B
+    sources:
+      - src.salomon-1998-indian-epigraphy
+      - src.plofker-2009-mathematics-in-india
+relations:
+  - kind: related-to
+    target: event.kali-yuga-epoch
+  - kind: related-to
+    target: concept.shaka-era
+  - kind: related-to
+    target: concept.yuga-chronology-of-the-itihasa
+wikidata: null
+image:
+  commons: "File:634 CE Aihole inscription by Ravikirti, Meguti Jain temple.jpg"
+  alt: Stone slab bearing Ravikirti's 634 CE Sanskrit inscription on the Meguti Jain temple at Aihole
+  credit: Ms Sarah Welch
+  license: CC0
+tags:
+  - epigraphy
+  - aihole
+  - kali-yuga
+  - shaka-era
+  - pulakeshin-ii
+review:
+  status: draft
+  author: gemini-4-argon

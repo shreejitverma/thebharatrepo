@@ -1,0 +1,38 @@
+id: tradition.alvars
+type: tradition
+kind: dharma
+names:
+  en: Alvars
+  iast: Āḻvār
+  native: ஆழ்வார்கள்
+summary: >-
+  The Alvars are twelve Tamil poet-saints devoted to Vishnu, active roughly between the 6th and 9th
+  centuries CE. Their roughly four thousand verses, collected as the Nalayira Divya Prabandham, became
+  the Tamil scripture of the Shrivaishnava tradition and a source of the bhakti movement.
+summaries:
+  kids: >-
+    The Alvars were twelve poets of Tamil Nadu who sang about their love for Vishnu. Their songs are
+    still sung in temples today.
+  teen: >-
+    The Alvars wrote in Tamil, not Sanskrit, about longing for and closeness to Vishnu. Their hymns
+    were collected into a sacred anthology that Shrivaishnavas treat as a Tamil Veda.
+region: Tamil Nadu
+datings:
+  - method: linguistic
+    range: { earliest: "550 CE", latest: "900 CE", precision: century, circa: true }
+    grade: C
+    label: Scholarly dating from language and references
+    sources: [src.hardy-1983-viraha-bhakti, src.zvelebil-1973-smile-of-murugan]
+    note: Shrivaishnava tradition places the earliest Alvars much earlier, at the start of the Kali age.
+claims:
+  - text: Their hymns were compiled as the Nalayira Divya Prabandham, about four thousand verses, traditionally by Nathamuni.
+    grade: B
+    sources: [src.carman-1974-theology-of-ramanuja, src.ramanujan-1981-hymns-for-the-drowning]
+  - text: Nammalvar's Tiruvaymoli is regarded within the tradition as the most important work of the collection.
+    grade: B
+    sources: [src.ramanujan-1981-hymns-for-the-drowning]
+relations:
+  - { kind: influenced, target: person.ramanuja }
+wikidata: Q448316
+tags: [bhakti, vaishnava, tamil, poet-saints]
+review: { status: draft, author: "claude-opus-5-5" }

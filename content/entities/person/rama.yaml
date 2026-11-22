@@ -1,0 +1,100 @@
+id: person.rama
+type: person
+kind: person
+names:
+  en: Rama
+  iast: Rāma Dāśarathi
+  native: राम
+summary: >-
+  Rama, son of Dasharatha, prince of Ayodhya in the Ikshvaku (Solar) line and hero of the Valmiki Ramayana,
+  is revered in Hindu tradition as an avatar of Vishnu and the model of dharma. Itihasa-Purana tradition
+  places him in the Treta Yuga, which is traditional chronology, while scholars date the composition of the
+  Valmiki Ramayana from about the mid-first millennium BCE to the early centuries CE.
+summaries:
+  kids: >-
+    Rama, the prince of Ayodhya and hero of the Ramayana, is honoured in Hindu tradition as an avatar of
+    Vishnu who stood for truth and duty. Tradition places him in the Treta Yuga, the second age of the world.
+  teen: >-
+    Traditional chronology places Rama in the Treta Yuga, long before the Mahabharata. Historians cannot date
+    Rama himself, since no inscription or excavation names him, but they can date the poem: the Valmiki
+    Ramayana grew over several centuries, with its first and last books added later.
+region: Kosala (Ayodhya) and the wider subcontinent in epic geography
+location:
+  name: Ayodhya
+  lat: 26.80
+  lon: 82.20
+datings:
+  - method: traditional-puranic
+    range:
+      earliest: "2163102 BCE"
+      latest: "867102 BCE"
+      precision: cosmological
+      circa: true
+    grade: D
+    label: Traditional placement in the Treta Yuga (Treta of the current mahayuga)
+    sources:
+      - src.goldman-1984-ramayana-balakanda
+      - src.wilson-1840-vishnu-purana
+      - src.gonzalezreimann-2002-mahabharata-yugas
+    note: >-
+      The epic and Puranic tradition places Rama in a Treta Yuga; this range is the Treta of the present
+      (28th) mahayuga in the standard 4:3:2:1 scheme. Other reckonings place him at the Treta-Dvapara
+      junction or in the Treta of an earlier mahayuga.
+  - method: linguistic
+    range:
+      earliest: "750 BCE"
+      latest: "300 CE"
+      precision: century
+      circa: true
+    grade: B
+    label: Composition of the Valmiki Ramayana (date of the text; Goldman, Brockington)
+    sources:
+      - src.goldman-1984-ramayana-balakanda
+      - src.brockington-1998-sanskrit-epics
+    note: >-
+      Goldman places the core of the poem (Books 2 to 6) as early as about 750-500 BCE and Brockington
+      somewhat later; both regard the Balakanda and Uttarakanda as additions of roughly the last centuries
+      BCE to the early centuries CE.
+claims:
+  - text: >-
+      Philological study of the critical edition shows that Books 2 to 6 (Ayodhyakanda to Yuddhakanda) form
+      the older core of the Valmiki Ramayana and Books 1 and 7 are later additions.
+    grade: B
+    sources:
+      - src.goldman-1984-ramayana-balakanda
+      - src.brockington-1998-sanskrit-epics
+  - text: >-
+      In the Ramayana and in the Puranic genealogies, Rama belongs to the Ikshvaku (Solar) dynasty of Kosala,
+      which descends from Vaivasvata Manu.
+    grade: D
+    sources:
+      - src.goldman-1984-ramayana-balakanda
+      - src.wilson-1840-vishnu-purana
+      - src.thapar-2002-early-india
+debate: >-
+  Traditional chronology places Rama's life in the Treta Yuga, hundreds of thousands of years or more
+  before the present, and some modern authors propose dates in the last few millennia BCE from the
+  planetary positions given in the epic. Mainstream scholarship notes that no inscription or excavated layer
+  directly attests Rama as a historical individual, and confines itself to dating the stages of the text.
+relations:
+  - kind: related-to
+    target: cosmology.treta-yuga
+  - kind: related-to
+    target: person.vaivasvata-manu
+  - kind: related-to
+    target: concept.yuga-chronology-of-the-itihasa
+wikidata: Q160213
+image:
+  commons: "File:Rama and Sita, with Lakshmana returning to Ayodhya.jpg"
+  alt: Malwa painting of the mid-17th century in the National Museum, New Delhi, showing Rama, Sita and Lakshmana returning to Ayodhya
+  credit: Unknown artist, Malwa
+  license: Public domain
+tags:
+  - rama
+  - ramayana
+  - valmiki
+  - treta-yuga
+  - ikshvaku
+review:
+  status: draft
+  author: gemini-4-argon

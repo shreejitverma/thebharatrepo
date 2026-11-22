@@ -1,0 +1,45 @@
+id: polity.sixteen-mahajanapadas
+type: polity
+kind: polity
+names:
+  en: Sixteen Mahajanapadas
+  iast: Mahājanapada
+  native: षोडश महाजनपदाः
+summary: >-
+  The Sixteen Mahajanapadas ("great realms") are the major kingdoms and oligarchic republics (gana-sanghas) of northern and central India in the 6th to 4th centuries BCE, the period of the second urbanisation. Buddhist and Jain texts preserve conventional lists of sixteen that differ in detail; they include monarchies such as Magadha, Kosala, Vatsa and Avanti and confederacies such as the Vajji and Malla.
+summaries:
+  kids: >-
+    About 2,500 years ago, northern India was divided into big kingdoms and republics. Old Buddhist and Jain books list sixteen of them, called the Mahajanapadas, or "great realms".
+  teen: >-
+    Early Buddhist and Jain texts list sixteen "great realms" in northern India between about 600 and 345 BCE. Some were ruled by kings, others by assemblies of clan elders. Over time Magadha absorbed most of its rivals.
+region: Northern and central Indian subcontinent (Gandhara and Kamboja in the northwest to Anga in the east, Assaka on the Godavari in the south)
+datings:
+  - method: scholarly-consensus
+    range: { earliest: "600 BCE", latest: "345 BCE", precision: century, circa: true }
+    grade: B
+    label: Early historic period before the Nanda unification
+    sources:
+      - src.singh-2008-ancient-early-medieval-india
+      - src.kulke-2004-history-of-india
+    note: Dated from early Buddhist and Jain texts read together with the archaeology of the early historic cities; the end of the period is conventionally set at the rise of the Nandas in the mid-4th century BCE.
+claims:
+  - text: The Buddhist Anguttara Nikaya and the Jain Bhagavati Sutra each give a list of sixteen great states; the lists differ, but both include Anga, Magadha, Kashi, Kosala, Vajji and Vatsa.
+    grade: B
+    sources:
+      - src.singh-2008-ancient-early-medieval-india
+  - text: The Mahajanapadas included both monarchies and gana-sanghas, oligarchic polities governed by clan assemblies, such as the Vajji confederacy and the Mallas.
+    grade: B
+    sources:
+      - src.singh-2008-ancient-early-medieval-india
+      - src.kulke-2004-history-of-india
+  - text: Between the 6th and 4th centuries BCE, Magadha absorbed most of its neighbours and became the dominant power of the Gangetic plain.
+    grade: B
+    sources:
+      - src.singh-2008-ancient-early-medieval-india
+      - src.thapar-2002-early-india
+relations:
+  - { kind: contemporary-of, target: person.gautama-buddha }
+  - { kind: contemporary-of, target: person.mahavira }
+wikidata: Q846025
+tags: [mahajanapadas, second-urbanisation, early-historic]
+review: { status: draft, author: "gemini-4-argon" }

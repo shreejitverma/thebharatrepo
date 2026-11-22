@@ -1,0 +1,70 @@
+id: site.burzahom
+type: site
+kind: prehistory
+names:
+  en: Burzahom Neolithic Site
+summary: >-
+  The type-site of the Northern (Kashmir) Neolithic on a karewa terrace overlooking Dal Lake near Srinagar,
+  Jammu and Kashmir, characterized by subterranean dwelling pits, mat-impressed pottery, a prolific bone and
+  harvester tool industry, stone engravings of a hunting scene and joint human-animal burials.
+summaries:
+  kids: >-
+    To stay warm during icy Kashmir winters, the Neolithic people of Burzahom dug cosy underground pit-homes
+    into the clay terrace, used bone needles and harpoons, and buried pet dogs alongside their owners.
+  teen: >-
+    Situated on a karewa terrace near Srinagar, Burzahom preserves a sequence from Neolithic underground pit
+    dwellings (c. 2700-1700 BCE) to mud-brick houses and megalithic menhirs, showing links across the western Himalayas.
+region: Kashmir Valley, Srinagar district, Jammu and Kashmir
+location:
+  name: Burzahom
+  lat: 34.17
+  lon: 74.88
+datings:
+  - method: archaeological-radiocarbon
+    range:
+      earliest: "2800 BCE"
+      latest: "1000 BCE"
+      best: "2300 BCE"
+      precision: century
+      circa: true
+    grade: A
+    label: Period I-II Neolithic to Period III Megalithic radiocarbon sequence
+    sources:
+      - src.fuller-2006-agricultural-origins-south-asia
+      - src.misra-2001-prehistoric-colonization-india
+      - src.coningham-2015-archaeology-south-asia
+    note: >-
+      Calibrated radiocarbon dates place the Neolithic occupation at Burzahom (Periods I and II) between
+      c. 2800/2700 and 1700 BCE, followed by a Megalithic phase in the 2nd to 1st millennia BCE.
+claims:
+  - text: >-
+      Period I at Burzahom featured bell-shaped subterranean and semi-subterranean dwelling pits cut into karewa
+      loess, plastered with mud and fitted with carved step-ladders, storage pits and surface hearths.
+    grade: A
+    sources:
+      - src.misra-2001-prehistoric-colonization-india
+      - src.coningham-2015-archaeology-south-asia
+  - text: >-
+      Period II burials at Burzahom included human skeletons stained with red ochre, cranial trepanation attempts,
+      and ceremonial burials of domesticated dogs, wolves and ibex interred with or near human graves.
+    grade: A
+    sources:
+      - src.misra-2001-prehistoric-colonization-india
+      - src.coningham-2015-archaeology-south-asia
+  - text: >-
+      Perforated rectangular stone and bone harvesters and an engraved stone slab showing a stag hunt with twin
+      suns were recovered from the Neolithic levels at Burzahom.
+    grade: A
+    sources:
+      - src.coningham-2015-archaeology-south-asia
+relations:
+  - kind: contemporary-of
+    target: site.gufkral
+tags:
+  - neolithic
+  - kashmir
+  - pit-dwellings
+  - megalithic
+review:
+  status: draft
+  author: gemini-4-argon

@@ -1,0 +1,92 @@
+id: concept.shaka-era
+type: concept
+kind: science
+names:
+  en: Shaka Era (78 CE)
+  iast: Śaka-saṃvat
+  native: शकसंवत्
+summary: >-
+  The Shaka era is a continuous Indian era whose year 1 began in the spring of 78 CE. It appears early in
+  the dated records of the Western Kshatrapas of western India, became the working era of Sanskrit
+  astronomy from Aryabhata onward, and is the era chosen for India's reformed national calendar on the
+  recommendation of the Calendar Reform Committee (1955). Who founded it is still debated.
+summaries:
+  kids: >-
+    The Shaka era is an Indian way of counting years that starts in 78 CE. Indian astronomers used it for
+    centuries, and India's national calendar still counts its years in the Shaka era.
+  teen: >-
+    Counting from 78 CE, the Shaka era was used by the Western Kshatrapa rulers, then by astronomers and in
+    inscriptions across the Deccan, South India and Southeast Asia. Later tradition credits a king
+    Shalivahana, while historians debate whether it began with a Kshatrapa or Kushana ruler.
+region: Western India, the Deccan, South India and Southeast Asia; now India's national calendar
+location:
+  name: Ujjain
+  lat: 23.18
+  lon: 75.78
+datings:
+  - method: epigraphic
+    range:
+      earliest: 78
+      latest: 78
+      precision: year
+      circa: false
+    grade: A
+    label: Epoch of the Shaka era fixed by dated records (78 CE)
+    sources:
+      - src.salomon-1998-indian-epigraphy
+      - src.plofker-2009-mathematics-in-india
+    note: >-
+      Synchronisms in dated inscriptions and astronomical works, such as the Aihole inscription's equation
+      of Shaka 556 with Kali 3735, fix the epoch of Shaka year 1 in the spring of 78 CE.
+  - method: traditional-sampradaya
+    range:
+      earliest: 78
+      latest: 78
+      precision: year
+      circa: false
+    grade: D
+    label: Later Deccan attribution to King Shalivahana
+    sources:
+      - src.salomon-1998-indian-epigraphy
+      - src.thapar-2002-early-india
+    note: >-
+      In medieval inscriptions and almanacs the era came to be called Shalivahana-shaka, crediting its
+      start to a king Shalivahana, usually identified in tradition with the Satavahana line.
+claims:
+  - text: >-
+      The founder of the 78 CE era is debated: proposals include an early Western Kshatrapa ruler and the
+      Kushana king Kanishka, and the name Shaka reflects its use by Shaka (Indo-Scythian) rulers.
+    grade: C
+    sources:
+      - src.salomon-1998-indian-epigraphy
+      - src.singh-2008-ancient-early-medieval-india
+  - text: >-
+      Indian astronomers used the Shaka era for calendrical calculation at least from the time of Aryabhata
+      (c. 500 CE), and an elapsed Shaka year converts to an elapsed Kali year by adding 3,179.
+    grade: A
+    sources:
+      - src.plofker-2009-mathematics-in-india
+      - src.saha-1955-calendar-reform-committee-report
+  - text: >-
+      The Calendar Reform Committee chaired by Meghnad Saha recommended in 1955 that the Shaka era be used,
+      with a reformed solar calendar, for the official purposes of the central and state governments.
+    grade: A
+    sources:
+      - src.saha-1955-calendar-reform-committee-report
+relations:
+  - kind: related-to
+    target: concept.vikram-samvat
+  - kind: related-to
+    target: concept.kali-era-in-inscriptions
+  - kind: related-to
+    target: event.kali-yuga-epoch
+wikidata: Q2358959
+tags:
+  - calendar
+  - shaka-era
+  - epigraphy
+  - siddhanta
+  - national-calendar
+review:
+  status: draft
+  author: gemini-4-argon

@@ -1,0 +1,39 @@
+id: event.independence-and-partition-1947
+type: event
+kind: event
+names:
+  en: Indian Independence and Partition
+summary: British India was partitioned into India and Pakistan in August 1947.
+  India became independent on 15 August; partition involved mass displacement
+  and communal violence.
+summaries:
+  kids: India became independent on 15 August 1947 as British India was
+    partitioned into India and Pakistan. Millions were displaced amid violence.
+  teen: The legal transfer of power and the territorial partition produced two
+    states and one of the largest forced migrations of the 20th century; exact
+    casualty estimates remain contested.
+datings:
+  - method: documentary
+    range:
+      earliest: "1947"
+      latest: "1947"
+      precision: year
+      circa: false
+    grade: A
+    label: Documentary record
+    sources: &a1
+      - src.india-independence-act-1947
+      - src.khan-2007-the-great-partition
+      - src.chatterji-2007-spoils-of-partition
+claims:
+  - text: British India was partitioned into India and Pakistan in August 1947.
+      India became independent on 15 August; partition involved mass
+      displacement and communal violence.
+    grade: A
+    sources: *a1
+relations: []
+tags:
+  - event
+review:
+  status: draft
+  author: codex-gpt-6

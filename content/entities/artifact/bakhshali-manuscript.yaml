@@ -1,0 +1,64 @@
+id: artifact.bakhshali-manuscript
+type: artifact
+kind: science
+names:
+  en: Bakhshali Manuscript
+  iast: Bakhśālī Hastalipi
+  native: बख्शाली हस्तलिपि
+summary: >-
+  The Bakhshali manuscript is a fragmentary mathematical treatise on seventy birch-bark folios written in northwestern Sanskrit using the Sharada script, discovered in 1881 near Bakhshali (Mardan district, Pakistan) and housed in the Bodleian Library, Oxford. Famous for using a solid dot (bindu) as a placeholder zero in decimal positional notation alongside fractions and algebraic rules, its dating is contested between a 2017 Bodleian radiocarbon study yielding three dates across centuries and paleographic analysis placing the manuscript in the eighth to twelfth centuries CE.
+summaries:
+  kids: >-
+    Found buried in a field in 1881 and written on seventy leaves of birch bark, the Bakhshali manuscript is an ancient Indian math workbook famous for using a solid dot to represent the number zero.
+  teen: >-
+    Preserved in Oxford's Bodleian Library, the birch-bark Bakhshali manuscript uses a dot (bindu) as a decimal placeholder zero and solves complex algebraic and mercantile problems; its age is debated between a 2017 radiocarbon test yielding three separate dates (3rd-4th, 7th-8th and 9th-10th centuries CE) and paleographic evidence pointing to a single 8th-12th century CE manuscript copy of an earlier treatise.
+region: Gandhara (discovered at Bakhshali near Mardan, Pakistan; housed at the Bodleian Library, Oxford)
+location: { name: "Bakhshali, Mardan District, Pakistan", lat: 34.287, lon: 72.142 }
+datings:
+  - method: linguistic
+    range: { earliest: 600, latest: 1200, best: 800, precision: century, circa: true }
+    grade: B
+    label: Palaeographic (Sharada script) and codicological dating of the manuscript (Takao Hayashi and Kim Plofker et al.)
+    sources:
+      - src.plofker-2009-mathematics-in-india
+      - src.plofker-2017-bakhshali-radiocarbon
+    note: In his 1995 critical edition and the 2017 joint response with Kim Plofker, Agathe Keller, Clemency Montelle and Dominik Wujastyk, Takao Hayashi dates the underlying mathematical commentary to c. 600-700 CE (or slightly earlier) and the extant Sharada-script birch-bark manuscript copy to between the eighth and twelfth centuries CE.
+  - method: archaeological-radiocarbon
+    range: { earliest: 224, latest: 993, precision: century, circa: true }
+    grade: C
+    label: 2017 Oxford Bodleian AMS radiocarbon multi-date results on three birch-bark samples
+    sources:
+      - src.plofker-2017-bakhshali-radiocarbon
+    note: >-
+      In 2017 the Bodleian Libraries announced AMS radiocarbon results on three small uninscribed bark fragments from different folios yielding three non-overlapping 95.4% calibrated ranges (224-383 CE, 680-779 CE and 885-993 CE). Specialists in Indian palaeography and mathematics argue that because all folios share uniform Sharada script, layout and scribal hands, the manuscript cannot have been copied over seven centuries.
+claims:
+  - text: >-
+      Throughout its seventy surviving birch-bark leaves, the Bakhshali manuscript employs a solid dot (bindu) as a zero placeholder within a base-10 positional numeral system, writes fractions vertically in a three-line format without a horizontal bar, and denotes negative quantities by placing a cross sign after the number.
+    grade: A
+    sources:
+      - src.plofker-2009-mathematics-in-india
+      - src.plofker-2017-bakhshali-radiocarbon
+  - text: >-
+      The treatise is organized in a pedagogical sequence of verse rule (sutra), statement of a numerical example (udaharana), formal setting-out of data (sthapana), step-by-step calculation (karana) and verification (pratyaya), covering linear systems, progressions and an iterative rational approximation for non-square roots.
+    grade: A
+    sources:
+      - src.plofker-2009-mathematics-in-india
+      - src.plofker-2017-bakhshali-radiocarbon
+  - text: >-
+      In 2017, radiocarbon testing at Oxford on three bark fragments from the Bakhshali manuscript produced three distinct date intervals (224-383 CE, 680-779 CE and 885-993 CE); historians of Indian mathematics (Plofker, Keller, Hayashi, Montelle and Wujastyk 2017) pointed out that the manuscript's uniform Sharada script and codicological continuity conflict with a multi-century production hypothesis.
+    grade: A
+    sources:
+      - src.plofker-2017-bakhshali-radiocarbon
+debate: >-
+  In September 2017, the Bodleian Libraries reported AMS radiocarbon dates from three birch-bark fragments of the Bakhshali manuscript falling in three different centuries (224-383 CE, 680-779 CE and 885-993 CE), suggesting that the manuscript was an assemblage of leaves from different periods and that the 224-383 CE leaf represented the world's oldest recorded zero symbol. In a peer-reviewed response (2017), historians of Sanskrit mathematics and manuscripts Kim Plofker, Agathe Keller, Takao Hayashi, Clemency Montelle and Dominik Wujastyk noted that the sampled folios share identical Sharada palaeography (a script not attested before the eighth century CE), dialectal features, page layout and overlapping scribal hands, making a 700-year gap between folios codicologically untenable without further testing.
+relations:
+  - { kind: related-to, target: concept.brahmi-to-gupta-script }
+  - { kind: related-to, target: text.aryabhatiya }
+wikidata: Q115690
+image:
+  commons: "File:Bakhshali manuscript zero detail.jpg"
+  alt: Detail of a birch-bark folio from the Bakhshali manuscript showing decimal numbers with the dot zero
+  credit: National Geographic
+  license: Public domain
+tags: [bakhshali-manuscript, zero, mathematics, sharada, birch-bark, radiocarbon, contested-chronology]
+review: { status: draft, author: "gemini-4-argon" }

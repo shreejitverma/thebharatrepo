@@ -1,0 +1,41 @@
+id: person.kumarila-bhatta
+type: person
+kind: dharma
+names:
+  en: Kumarila Bhatta
+  iast: Kumārila Bhaṭṭa
+  native: कुमारिल भट्ट
+summary: >-
+  Kumarila Bhatta was a philosopher of the Mimamsa school, usually placed in the 7th century CE. His
+  verse commentary on Shabara's Mimamsa commentary, the Shlokavarttika, defended the authority of the
+  Veda and the intrinsic validity of knowledge against Buddhist critics, and shaped later Brahmanical
+  philosophy.
+summaries:
+  kids: >-
+    Kumarila was a scholar who argued that the Vedas are a true source of knowledge. He debated
+    Buddhist thinkers who disagreed with him.
+  teen: >-
+    Kumarila founded the Bhatta branch of Mimamsa, the school that interprets Vedic ritual. He argued
+    that a belief is valid in itself unless something shows it to be false, and he wrote sharp
+    critiques of Buddhist theories of perception.
+region: India (exact region unknown)
+datings:
+  - method: textual-internal
+    range: { earliest: "560 CE", latest: "700 CE", precision: decade, circa: true }
+    grade: C
+    label: Relative chronology with Buddhist philosophers
+    sources: [src.taber-2005-hindu-critique-buddhist-epistemology]
+    note: He responds to Dignaga and is answered by later Buddhist authors, which places him in about the 7th century.
+claims:
+  - text: Kumarila wrote the Shlokavarttika, Tantravarttika and Tuptika on Shabara's commentary to the Mimamsa Sutras.
+    grade: B
+    sources: [src.taber-2005-hindu-critique-buddhist-epistemology]
+  - text: >-
+      The perception chapter of the Shlokavarttika argues against the Buddhist epistemology of Dignaga
+      and his followers.
+    grade: A
+    sources: [src.taber-2005-hindu-critique-buddhist-epistemology]
+relations:
+  - { kind: related-to, target: person.adi-shankara }
+tags: [mimamsa, philosophy, epistemology]
+review: { status: draft, author: "claude-opus-5-5" }

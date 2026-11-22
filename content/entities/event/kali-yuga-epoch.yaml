@@ -1,0 +1,106 @@
+id: event.kali-yuga-epoch
+type: event
+kind: cosmology
+names:
+  en: Kali Yuga Epoch (18 February 3102 BCE)
+  iast: Kaliyugādi
+  native: कलियुगादि
+summary: >-
+  In traditional Siddhantic astronomy the present Kali Yuga began at 17-18 February 3102 BCE (Julian),
+  the zero point from which Indian astronomers counted planetary motion and the Kali era. The epoch is
+  traditional reckoning: its earliest known statement is in Aryabhata's Aryabhatiya (499 CE), and
+  historians of astronomy regard it as computed backward rather than observed.
+summaries:
+  kids: >-
+    Indian astronomers and traditional calendars say the present Kali Yuga began on 18 February 3102 BCE,
+    and they counted years and planet positions from that day. The oldest book that gives this date was
+    written in 499 CE.
+  teen: >-
+    Aryabhata wrote that 3,600 years of the present age had passed when he was 23, which places the start
+    of Kali Yuga in 3102 BCE. Astronomers treated it as a moment when all the planets lined up at the start
+    of Aries, but modern calculation shows no such conjunction, so the epoch was computed backward.
+region: Pan-Indian (Ujjain as the prime meridian of Siddhantic astronomy)
+location:
+  name: Ujjain
+  lat: 23.18
+  lon: 75.78
+datings:
+  - method: traditional-siddhantic
+    range:
+      earliest: "3102 BCE"
+      latest: "3102 BCE"
+      precision: day
+      circa: false
+    grade: D
+    label: Siddhantic epoch of Kali Yuga (17-18 February 3102 BCE)
+    sources:
+      - src.shukla-sarma-1976-aryabhatiya
+      - src.burgess-1860-surya-siddhanta
+      - src.saha-1955-calendar-reform-committee-report
+    note: >-
+      The Surya Siddhanta and Aryabhata's midnight (ardharatrika) system place the epoch at midnight at
+      Ujjain ending 17 February 3102 BCE (Julian); the Aryabhatiya's sunrise (audayika) system places it at
+      mean sunrise on 18 February.
+  - method: textual-internal
+    range:
+      earliest: 499
+      latest: 499
+      precision: year
+      circa: false
+    grade: A
+    label: Earliest known statement of the epoch, Aryabhatiya Kalakriyapada 10 (499 CE)
+    sources:
+      - src.shukla-sarma-1976-aryabhatiya
+      - src.plofker-2009-mathematics-in-india
+      - src.saha-1955-calendar-reform-committee-report
+    note: >-
+      Aryabhata states that when 3,600 years and three yuga-quarters had elapsed he was 23 years old;
+      Kali year 3600 corresponds to Shaka 421, that is 499 CE.
+claims:
+  - text: >-
+      In Aryabhatiya Kalakriyapada 10, Aryabhata states that 3,600 years had elapsed of the current
+      yuga-quarter when he was 23 years old, which places that quarter's start, the Kali epoch, in 3102 BCE.
+    grade: A
+    sources:
+      - src.shukla-sarma-1976-aryabhatiya
+      - src.plofker-2009-mathematics-in-india
+  - text: >-
+      The epoch was conceived as a mean conjunction of the planets at the start of the Siddhantic zodiac;
+      recalculation with modern planetary data shows no such conjunction at that date, so historians regard
+      it as a backward computation by Siddhantic astronomers.
+    grade: B
+    sources:
+      - src.saha-1955-calendar-reform-committee-report
+      - src.plofker-2009-mathematics-in-india
+  - text: >-
+      Within about 135 years of Aryabhata, the 634-35 CE Aihole inscription of Pulakeshin II counted 3,735
+      years from the Bharata war to its own date, identifying the war with the Kali epoch.
+    grade: A
+    sources:
+      - src.kielhorn-1900-aihole-inscription
+      - src.salomon-1998-indian-epigraphy
+debate: >-
+  In Itihasa-Purana tradition the start of Kali Yuga coincides with Krishna's departure from the world, and
+  many traditional reckonings treat 3102 BCE as that historical moment. Historians of astronomy, including
+  the 1955 Calendar Reform Committee, hold that the epoch was obtained by calculation around the 5th century
+  CE to give a common starting point for planetary revolutions, and that it is not mentioned in any text or
+  inscription before Aryabhata.
+relations:
+  - kind: related-to
+    target: cosmology.kali-yuga
+  - kind: related-to
+    target: concept.kali-era-in-inscriptions
+  - kind: related-to
+    target: concept.yuga-chronology-of-the-itihasa
+  - kind: related-to
+    target: person.krishna
+wikidata: null
+tags:
+  - cosmology
+  - kali-yuga
+  - aryabhatiya
+  - siddhanta
+  - calendar
+review:
+  status: draft
+  author: gemini-4-argon

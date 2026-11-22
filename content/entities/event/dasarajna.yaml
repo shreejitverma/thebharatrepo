@@ -1,0 +1,77 @@
+id: event.dasarajna
+type: event
+kind: event
+names:
+  en: Dasarajna (Battle of the Ten Kings)
+  iast: Dāśarājña
+  native: दाशराज्ञ युद्ध
+summary: >-
+  The Dasarajna, or Battle of the Ten Kings, is the central political and military conflict
+  recorded inside the Rigveda (Mandala 7, hymns 18, 33, and 83). Fought on the banks of the
+  Parushni (modern Ravi) river in the Punjab, it resulted in the victory of the Bharata-Tritsu
+  chief Sudas Paijavana, advised by his purohita Vasishtha, over a coalition of ten Indo-Aryan and
+  non-Indo-Aryan tribes organized by Vishvamitra.
+summaries:
+  kids: >-
+    The Battle of the Ten Kings, described in the Rigveda, was fought beside the Ravi River in the
+    Punjab. Chief Sudas of the Bharata tribe defeated an alliance of ten rival chiefs.
+  teen: >-
+    Recorded in Mandala 7 of the Rigveda (hymns 18, 33, and 83), the Dasarajna pitted the Bharata
+    ruler Sudas and his priest Vasishtha against a confederacy of ten tribes along the Parushni
+    (Ravi) river, establishing Bharata hegemony in the Sapta Sindhu region.
+region: Parushni (Ravi) river basin, Punjab
+location: { name: "Parushni River (Ravi basin, Punjab)", lat: 31.58, lon: 74.33 }
+datings:
+  - method: textual-internal
+    range: { earliest: "1500 BCE", latest: "1200 BCE", best: "1300 BCE", precision: century, circa: true }
+    grade: C
+    label: Mainstream Rigvedic textual-internal dating (Witzel, Jamison and Brereton)
+    sources:
+      - src.jamison-brereton-2014-rigveda
+      - src.witzel-1997-early-sanskritization-kuru
+      - src.singh-2008-ancient-early-medieval-india
+    note: >-
+      As a text-internal event narrated in the Vasishtha family book (Mandala 7), mainstream
+      Indology dates the battle within the middle Rigvedic period (roughly 1400 to 1200 BCE), prior
+      to the post-Rigvedic union of the Bharatas and Purus into the Kuru state.
+  - method: textual-internal
+    range: { earliest: "2600 BCE", latest: "1900 BCE", precision: century, circa: true }
+    grade: E
+    label: Out-of-India internal chronological reconstruction (Talageri)
+    sources:
+      - src.talageri-2000-rigveda-historical-analysis
+    note: >-
+      Shrikant Talageri places the Dasarajna in an earlier third-millennium BCE horizon as part of
+      his westward-expansion reading of the Rigvedic mandalas.
+claims:
+  - text: >-
+      The Dasarajna is directly narrated in Rigveda 7.18, 7.33, and 7.83, composed by the Vasishtha
+      clan who served as royal priests (purohitas) to the Bharata-Tritsu ruler Sudas, son or
+      descendant of Pijavana and Divodasa.
+    grade: A
+    sources:
+      - src.jamison-brereton-2014-rigveda
+      - src.witzel-1997-early-sanskritization-kuru
+  - text: >-
+      The opposing coalition assembled along the Parushni (Ravi) river included the five major
+      Vedic tribes (Puru, Yadu, Turvasha, Anu, and Druhyu) alongside northwestern groups such as
+      the Pakthas, Bhalanas, Alinas,Shivas, and Vishanins.
+    grade: A
+    sources:
+      - src.jamison-brereton-2014-rigveda
+      - src.singh-2008-ancient-early-medieval-india
+  - text: >-
+      Following his victory on the Parushni, Sudas defeated a second eastern coalition of the
+      Ajas, Shigrus, and Yakshus led by Bheda along the Yamuna river, consolidating Bharata
+      settlement eastward toward Kurukshetra.
+    grade: A
+    sources:
+      - src.jamison-brereton-2014-rigveda
+      - src.witzel-1997-early-sanskritization-kuru
+relations:
+  - { kind: related-to, target: text.rigveda }
+  - { kind: preceded, target: polity.kuru-kingdom }
+  - { kind: related-to, target: concept.rigvedic-sarasvati }
+wikidata: Q513097
+tags: [dasarajna, rigveda, bharata, sudas, vasishtha, vishvamitra, parushni]
+review: { status: draft, author: "gemini-4-argon" }

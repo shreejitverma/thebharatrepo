@@ -1,0 +1,85 @@
+id: artifact.harappan-steatite-seals
+type: artifact
+kind: art
+names:
+  en: Harappan Steatite Stamp Seals
+summary: >-
+  Over 3,700 carved and alkali-fired square and rectangular steatite stamp seals and moulded tablets produced
+  across the Harappan Civilisation (primarily c. 2600-1900 BCE), engraved in intaglio with a single animal motif
+  (most frequently the one-horned "unicorn", humped zebu bull, elephant, rhinoceros, or tiger) beneath a line of
+  Indus script signs and used to stamp wet clay tags on trade goods and storerooms.
+summaries:
+  kids: >-
+    Harappan merchants and officials carved small square stone seals with animals like the unicorn, zebu bull,
+    and elephant, and pressed them into wet clay to seal packages of trade goods.
+  teen: >-
+    Carved in soft steatite and whitened by kiln firing, more than 3,700 Harappan stamp seals functioned as tokens
+    of authority, clan identity, and commercial certification across the Indus basin and as far away as Mesopotamia.
+region: Pan-Harappan (with exports found in the Persian Gulf, Susa, Ur, Kish, and Nippur)
+location:
+  name: Mohenjo-daro
+  lat: 27.3242
+  lon: 68.1375
+datings:
+  - method: archaeological-radiocarbon
+    range:
+      earliest: "2800 BCE"
+      latest: "1900 BCE"
+      precision: century
+      circa: true
+    grade: A
+    label: Early Kot Dijian Origins (c. 2800-2600 BCE) and Mature Harappan Standardisation (c. 2600-1900 BCE)
+    sources:
+      - src.kenoyer-1998-ancient-cities-indus
+      - src.possehl-2002-indus-civilization
+      - src.wright-2010-ancient-indus
+    note: >-
+      Early geometric and animal stamp seals appear in Harappa Period 2 (c. 2800-2600 BCE), reaching full
+      standardisation with script and perforated boss backs during Period 3A-3C (c. 2600-1900 BCE).
+claims:
+  - text: >-
+      Most Harappan stamp seals are square plaques (typically 2 to 3 cm per side) sawn from soft steatite, engraved
+      in reverse (intaglio) with copper or chert tools, coated with an alkaline slurry, and fired at over 850 degrees
+      Celsius to create a hard white glazed surface (Mohs hardness 6-7).
+    grade: A
+    sources:
+      - src.kenoyer-1998-ancient-cities-indus
+      - src.wright-2010-ancient-indus
+  - text: >-
+      The single-horned bovine or mythical "unicorn" Standing before a ritual offering stand or brazier is by far
+      the most common motif, appearing on over 60 percent of animal-bearing seals at Mohenjo-daro and Harappa.
+    grade: A
+    sources:
+      - src.kenoyer-1998-ancient-cities-indus
+      - src.possehl-2002-indus-civilization
+      - src.parpola-1994-deciphering-indus-script
+  - text: >-
+      Multiple clay bullae and cargo sealings preserved in the Lothal warehouse and at Harappa show seal impressions
+      on one side and impressions of cords, matting, and wooden doors on the reverse, confirming their administrative
+      use in trade and storage control.
+    grade: A
+    sources:
+      - src.rao-1979-lothal-harappan-port
+      - src.kenoyer-1998-ancient-cities-indus
+relations:
+  - kind: part-of
+    target: tradition.harappan-civilisation
+  - kind: related-to
+    target: concept.indus-script
+  - kind: related-to
+    target: concept.harappan-mesopotamian-trade
+wikidata: null
+image:
+  commons: "File:Indus civilisation seal unicorn at Indian Museum, Kolkata.jpg"
+  alt: Harappan square steatite seal depicting the unicorn motif and Indus script signs
+  credit: Royroydeb
+  license: CC BY-SA 4.0
+tags:
+  - harappan
+  - artifact
+  - seal
+  - steatite
+  - trade
+review:
+  status: draft
+  author: gemini-4-argon

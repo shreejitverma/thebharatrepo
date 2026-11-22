@@ -1,0 +1,48 @@
+id: text.manusmriti
+type: text
+kind: dharma
+names:
+  en: Manusmriti
+  iast: Manusmṛti (Mānava-Dharmaśāstra)
+  native: मनुस्मृति (मानवधर्मशास्त्र)
+summary: >-
+  The Manusmriti (or Manava-Dharmasastra) is an influential twelve-chapter metrical Sanskrit legal and social code of 2,685 verses framed as a discourse delivered by the primordial progenitor Manu and his pupil Bhrigu to a gathering of sages. It marks the transition from earlier prose Dharmasutras to versified Dharmashastras, integrating cosmogony, the duties of the four varnas and four ashramas (life stages), royal governance, eighteen titles of civil and criminal law (vyavahara-padas), penance and karma.
+summaries:
+  kids: >-
+    The Manusmriti is an ancient Sanskrit book of laws and social rules in twelve chapters attributed to the mythical first lawgiver Manu.
+  teen: >-
+    Critically edited and dated by Patrick Olivelle to between the second century BCE and second century CE (more narrowly c. 100 BCE-200 CE), the Manusmriti became the most widely commented-on text of the Sanskrit Dharmashastra legal tradition.
+region: Northern India (Brahmavarta and Madhyadesha)
+datings:
+  - method: textual-internal
+    range: { earliest: "100 BCE", latest: 200, best: 100, precision: century, circa: true }
+    grade: B
+    label: Critical-edition philological dating (Patrick Olivelle)
+    sources:
+      - src.olivelle-2005-manus-code-of-law
+      - src.hiltebeitel-2011-dharma
+    note: Patrick Olivelle's 2005 critical edition dates the composition of the Manava-Dharmasastra to between the second century BCE and second century CE (most probably the first to second century CE), based on its structural reliance on early Arthashastra legal categories, coin weight standards, and mentions of Yavanas, Shakas, Pahlavas and Chinas.
+  - method: traditional-puranic
+    range: { earliest: "3102 BCE", latest: "1000 BCE", precision: millennium, circa: true }
+    grade: D
+    label: Traditional attribution to Svayambhuva Manu and Bhrigu
+    sources:
+      - src.olivelle-2005-manus-code-of-law
+    note: Within the orthodox Dharmashastra tradition, the work is revered as the revelation of Svayambhuva Manu transmitted through the sage Bhrigu at the dawn of the cosmic age.
+claims:
+  - text: Patrick Olivelle's structural analysis demonstrates that the Manusmriti was composed by a single primary author (assisted by redactional additions) who organized eighteen formal titles of law (vyavahara-padas) in Chapters 8 and 9 by adapting the royal jurisprudence of the Arthashastra tradition into Brahmanical dharma.
+    grade: B
+    sources:
+      - src.olivelle-2005-manus-code-of-law
+      - src.olivelle-2013-king-governance-law
+  - text: The Manusmriti presents both general ethical duties applicable to all four varnas - non-injury (ahimsa), truthfulness (satya), non-stealing (asteya), purity (shaucha) and control of the senses (Manusmriti 10.63) - and a rigid hierarchical grading of status, ritual privilege and legal punishment by varna and gender.
+    grade: A
+    sources:
+      - src.olivelle-2005-manus-code-of-law
+      - src.hiltebeitel-2011-dharma
+relations:
+  - { kind: related-to, target: text.arthashastra }
+  - { kind: related-to, target: text.mahabharata }
+wikidata: Q321526
+tags: [manusmriti, dharmashastra, law, varna, ashrama, olivelle]
+review: { status: draft, author: "gemini-4-argon" }

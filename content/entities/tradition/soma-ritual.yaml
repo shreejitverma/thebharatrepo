@@ -1,0 +1,70 @@
+id: tradition.soma-ritual
+type: tradition
+kind: dharma
+names:
+  en: Soma Ritual
+  iast: Somayāga
+  native: सोमयाग
+summary: >-
+  The Soma sacrifice (Somayaga) is the central liturgical complex of the early and classical Vedic
+  ritual system, centered on the pressing, filtering, and offering of the juice of the sacred Soma
+  plant (Proto-Indo-Iranian *sauma, Avestan haoma) primarily to Indra and other deities. The whole
+  of Rigveda Mandala 9 is dedicated to Soma Pavamana ("self-purifying Soma"), and the Agnishtoma
+  forms the archetype of all Shrauta Soma ceremonies.
+summaries:
+  kids: >-
+    The Soma ritual was a grand Vedic ceremony where priests pressed the juice of the sacred Soma
+    plant, filtered it through sheep's wool, and offered it with hymns and chants.
+  teen: >-
+    Inheriting a shared Indo-Iranian liturgy (Vedic soma, Avestan haoma), the Soma sacrifice brings
+    together all four Vedic priestly orders around three daily pressings of the Soma plant and is
+    celebrated throughout the entire ninth mandala of the Rigveda.
+region: Northwestern and northern Indian subcontinent (later Pan-Indian)
+datings:
+  - method: linguistic
+    range: { earliest: "2000 BCE", latest: "500 BCE", best: "1200 BCE", precision: century, circa: true }
+    grade: B
+    label: Common Indo-Iranian origin (*sauma) through classical Vedic Shrauta codification
+    sources:
+      - src.jamison-brereton-2014-rigveda
+      - src.staal-1983-agni-fire-altar
+      - src.anthony-2007-horse-wheel-language
+    note: >-
+      Comparative Vedic and Avestan evidence shows that the pressing and filtering of *sauma /
+      haoma dates back to the common Indo-Iranian period (c. 2000 to 1500 BCE) and was elaborated
+      in the Rigveda (Mandala 9) and Kuru-period Shrauta liturgy.
+claims:
+  - text: >-
+      All 114 hymns of the ninth mandala of the Rigveda are addressed to Soma Pavamana ("Soma in
+      the process of clarifying itself" through a sheep's-wool filter), celebrating the ritual plant,
+      its golden pressed juice, and the deity Soma.
+    grade: A
+    sources:
+      - src.jamison-brereton-2014-rigveda
+      - src.gonda-1975-vedic-literature
+  - text: >-
+      In the classical Shrauta system, the fundamental one-day Soma sacrifice is the Agnishtoma,
+      structured around three pressings (savanas) at dawn, midday, and evening, in which the Hotri
+      recites Rigvedic shastras, the Udgatri sings Samavedic stotras, and the Adhvaryu performs the
+      Yajurvedic oblations.
+    grade: A
+    sources:
+      - src.staal-1983-agni-fire-altar
+      - src.keith-1920-rigveda-brahmanas
+  - text: >-
+      While the botanical identity of the original mountain-grown Vedic Soma plant remains debated
+      (with leading scholarly proposals including Ephedra species), later Brahmanas and Shrauta
+      manuals prescribe lawful botanical substitutes such as putika or Sarcostemma acidum when
+      mountain Soma is unavailable.
+    grade: B
+    sources:
+      - src.jamison-brereton-2014-rigveda
+      - src.staal-1983-agni-fire-altar
+relations:
+  - { kind: part-of, target: tradition.shrauta-ritual }
+  - { kind: related-to, target: text.rigveda }
+  - { kind: related-to, target: text.samaveda }
+  - { kind: related-to, target: text.aitareya-brahmana }
+  - { kind: related-to, target: tradition.agnicayana }
+tags: [soma, somayaga, agnishtoma, rigveda, samaveda, shrauta, ephedra]
+review: { status: draft, author: "gemini-4-argon" }

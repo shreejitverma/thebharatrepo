@@ -1,0 +1,37 @@
+id: person.sawai-jai-singh-ii
+type: person
+kind: person
+names:
+  en: Sawai Jai Singh II
+summary: Sawai Jai Singh II was the ruler of Amber and founder of Jaipur, known
+  for sponsoring large observatories and astronomical tables.
+summaries:
+  kids: Jai Singh II founded Jaipur and built observatories to study the positions
+    of stars and planets.
+  teen: Jai Singh’s observatories brought together courtly, mathematical and
+    astronomical projects in the early 18th century.
+datings:
+  - method: scholarly-consensus
+    range:
+      earliest: "1688"
+      latest: "1743"
+      precision: year
+      circa: true
+    grade: B
+    label: Historical scholarship
+    sources:
+      - src.sharma-1995-sawai-jai-singh-astronomy
+      - src.unesco-2010-jantar-mantar-jaipur
+claims:
+  - text: Sawai Jai Singh II was the ruler of Amber and founder of Jaipur, known for
+      sponsoring large observatories and astronomical tables.
+    grade: B
+    sources:
+      - src.sharma-1995-sawai-jai-singh-astronomy
+      - src.unesco-2010-jantar-mantar-jaipur
+relations: []
+tags:
+  - person
+review:
+  status: draft
+  author: codex-gpt-6

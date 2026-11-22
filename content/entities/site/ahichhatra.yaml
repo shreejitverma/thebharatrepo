@@ -1,0 +1,67 @@
+id: site.ahichhatra
+type: site
+kind: site
+names:
+  en: Ahichhatra (Ahichatra)
+  iast: Ahicchatrā
+  native: अहिच्छत्रा
+summary: >-
+  Ahichhatra, situated near Ramnagar in Bareilly district, Uttar Pradesh, was the fortified capital
+  of Northern Panchala (Uttara-Panchala). It is the archaeological type-site where Painted Grey
+  Ware was first recognized during the 1940 to 1944 Archaeological Survey of India excavations,
+  exhibiting continuous cultural succession from the protohistoric Iron Age through the Gupta era.
+summaries:
+  kids: >-
+    Ahichhatra was the capital city of Northern Panchala. It was the first place where
+    archaeologists discovered the famous Painted Grey Ware pottery of the Vedic Iron Age.
+  teen: >-
+    Located near Ramnagar in Bareilly district, Ahichhatra served as the capital of Uttara-Panchala
+    and is the archaeological site where Painted Grey Ware was first identified in the 1940s below
+    Northern Black Polished Ware and massive brick fortifications.
+region: Rohilkhand (Bareilly district, Uttar Pradesh)
+location: { name: "Ahichhatra (Ramnagar)", lat: 28.374, lon: 79.136 }
+datings:
+  - method: archaeological-stratigraphic
+    range: { earliest: "1200 BCE", latest: 1100, best: "600 BCE", precision: century, circa: true }
+    grade: A
+    label: Continuous stratigraphic sequence from PGW to early medieval periods
+    sources:
+      - src.lal-1955-excavation-hastinapura
+      - src.singh-2008-ancient-early-medieval-india
+      - src.allchin-1995-archaeology-early-historic-south-asia
+    note: >-
+      Excavations by K. N. Dikshit and A. Ghosh (1940 to 1944) and N. R. Banerjee (1963 to 1965)
+      documented a sequence from Ochre Coloured Pottery and Painted Grey Ware (c. 1200 to 600 BCE)
+      through Northern Black Polished Ware, Panchala Mitra coinage, Kushana, and Gupta brick
+      temples.
+claims:
+  - text: >-
+      Painted Grey Ware was first noticed as a distinct ceramic class at Ahichhatra during the 1940
+      to 1944 Archaeological Survey of India excavations in the lowest levels beneath Northern
+      Black Polished Ware.
+    grade: A
+    sources:
+      - src.lal-1955-excavation-hastinapura
+      - src.singh-2008-ancient-early-medieval-india
+  - text: >-
+      Subsequent excavations in the 1960s confirmed a four-fold early sequence at Ahichhatra:
+      Period I (Ochre Coloured Pottery), Period II (Painted Grey Ware with iron), Period III
+      (Northern Black Polished Ware with mud ramparts), and Period IV (fortified brick defenses and
+      Panchala coins).
+    grade: A
+    sources:
+      - src.singh-2008-ancient-early-medieval-india
+      - src.allchin-1995-archaeology-early-historic-south-asia
+relations:
+  - { kind: related-to, target: polity.panchala }
+  - { kind: related-to, target: concept.painted-grey-ware-culture }
+  - { kind: related-to, target: concept.northern-black-polished-ware-culture }
+  - { kind: contemporary-of, target: site.hastinapura }
+  - { kind: contemporary-of, target: site.atranjikhera }
+image:
+  commons: "File:Ahichchhatra Fort Temple Bareilly.jpg"
+  alt: Excavated brick terraced monument and fortification remains at Ahichhatra, Bareilly district
+  credit: Suneet87
+  license: CC BY-SA 4.0
+tags: [ahichhatra, panchala, archaeology, painted-grey-ware, nbpw, fortification]
+review: { status: draft, author: "gemini-4-argon" }

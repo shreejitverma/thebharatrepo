@@ -1,0 +1,64 @@
+id: concept.black-and-red-ware-culture
+type: concept
+kind: civilisation
+names:
+  en: Black and Red Ware Culture
+summary: >-
+  Black and Red Ware (BRW) is a long-lived ceramic tradition produced by inverted firing, which
+  renders the interior and rim black (reduced) and the lower exterior red (oxidized). In the upper
+  and middle Gangetic plain, distinct BRW horizons bridge the late Chalcolithic and early Iron Age,
+  stratigraphically preceding or overlapping Painted Grey Ware at sites such as Atranjikhera,
+  Jakhera, and Noh.
+summaries:
+  kids: >-
+    Black and Red Ware was ancient pottery fired upside-down in kilns so that the inside turned
+    shiny black while the outside stayed bright red.
+  teen: >-
+    Produced by the inverted-firing technique across Chalcolithic and early Iron Age India, Black
+    and Red Ware forms an important stratigraphic horizon in the Ganga-Yamuna Doab (c. 1450 to
+    1200 BCE at Atranjikhera) between Ochre Coloured Pottery and Painted Grey Ware.
+region: Ganga-Yamuna Doab, central and eastern Ganga plain, Rajasthan, and western India
+datings:
+  - method: archaeological-stratigraphic
+    range: { earliest: "1450 BCE", latest: "800 BCE", best: "1200 BCE", precision: century, circa: true }
+    grade: B
+    label: Upper and Middle Gangetic BRW horizon (Gaur, Singh)
+    sources:
+      - src.gaur-1983-excavations-atranjikhera
+      - src.singh-2008-ancient-early-medieval-india
+      - src.allchin-1995-archaeology-early-historic-south-asia
+    note: >-
+      At Atranjikhera (Period II) and Noh, the distinct unpaved Black and Red Ware stratum dates to
+      roughly 1450 to 1200 BCE (immediately preceding Painted Grey Ware), while in the middle and
+      lower Ganga plain Chalcolithic-to-Iron Age BRW continues down to c. 800 to 700 BCE.
+claims:
+  - text: >-
+      Black and Red Ware derives its bichrome appearance from inverted firing, in which the rim and
+      interior are buried in organic combustible material under reducing conditions while the
+      exposed outer base oxidizes to red.
+    grade: A
+    sources:
+      - src.singh-2008-ancient-early-medieval-india
+      - src.gaur-1983-excavations-atranjikhera
+  - text: >-
+      At Atranjikhera (Period II) and Noh, an independent Black and Red Ware cultural layer lies
+      stratigraphically above Ochre Coloured Pottery (OCP) and directly below Painted Grey Ware
+      (PGW).
+    grade: A
+    sources:
+      - src.gaur-1983-excavations-atranjikhera
+      - src.singh-2008-ancient-early-medieval-india
+  - text: >-
+      In the middle Ganga plain and eastern Vindhyas (sites such as Malhar, Dadupur, and Raja
+      Nala-ka-Tila), early iron artifacts appear within Black and Red Ware stratigraphic deposits.
+    grade: A
+    sources:
+      - src.tewari-2003-origins-iron-working-india
+      - src.singh-2008-ancient-early-medieval-india
+relations:
+  - { kind: preceded, target: concept.painted-grey-ware-culture }
+  - { kind: excavated-at, target: site.atranjikhera }
+  - { kind: related-to, target: concept.iron-metallurgy-in-india }
+wikidata: Q2525323
+tags: [black-and-red-ware, archaeology, pottery, chalcolithic, iron-age, atranjikhera]
+review: { status: draft, author: "gemini-4-argon" }

@@ -1,0 +1,40 @@
+id: person.nathamuni
+type: person
+kind: dharma
+names:
+  en: Nathamuni
+  iast: Nāthamuni
+  native: நாதமுனி
+summary: >-
+  Nathamuni, usually placed in the 10th century CE, is remembered by the Shrivaishnava tradition as
+  its first acharya. He is credited with recovering and compiling the hymns of the Alvars as the
+  Nalayira Divya Prabandham and setting them for recitation in temple worship.
+summaries:
+  kids: >-
+    Nathamuni was a scholar who collected the songs of the Alvar poets, so that they would not be lost,
+    and arranged them to be sung in temples.
+  teen: >-
+    Shrivaishnava tradition says Nathamuni heard a few verses of Nammalvar and searched until he had
+    recovered the whole body of Alvar hymns. He began the line of teachers that leads to Yamuna and
+    Ramanuja.
+region: Tamil Nadu (Viranarayanapuram, near Chidambaram, by tradition)
+datings:
+  - method: textual-internal
+    range: { earliest: "850 CE", latest: "1000 CE", precision: century, circa: true }
+    grade: C
+    label: Placed two generations before Yamuna
+    sources: [src.carman-1974-theology-of-ramanuja, src.hardy-1983-viraha-bhakti]
+    note: Dated relative to his grandson Yamunacharya and to Ramanuja; Shrivaishnava hagiographies give him a much longer life.
+claims:
+  - text: The Shrivaishnava tradition credits Nathamuni with compiling the Nalayira Divya Prabandham.
+    grade: B
+    sources: [src.carman-1974-theology-of-ramanuja]
+  - text: He is regarded as the grandfather of Yamunacharya, the teacher whose works Ramanuja continued.
+    grade: B
+    sources: [src.carman-1974-theology-of-ramanuja]
+relations:
+  - { kind: related-to, target: tradition.alvars, note: Compiler of their hymns }
+  - { kind: preceded, target: person.ramanuja }
+wikidata: Q4314218
+tags: [shrivaishnava, acharya, tamil, bhakti]
+review: { status: draft, author: "claude-opus-5-5" }

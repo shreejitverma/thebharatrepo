@@ -1,0 +1,39 @@
+id: event.chandrayaan-1-and-lunar-water
+type: event
+kind: event
+names:
+  en: Chandrayaan-1 and evidence of lunar surface water
+summary: Chandrayaan-1 launched in 2008. Analyses published in 2009 using data
+  from its Moon Mineralogy Mapper reported spectral evidence for hydroxyl and
+  water molecules on the lunar surface.
+summaries:
+  kids: Chandrayaan-1 went to the Moon in 2008. Its instruments found signs of
+    water-related molecules on the Moon’s surface.
+  teen: Launched in 2008, Chandrayaan-1 carried instruments whose 2009 results
+    reported OH/H₂O signatures on the lunar surface. The findings indicate
+    hydroxyl and water molecules, not accessible pools of liquid water.
+region: Moon
+datings:
+  - method: documentary
+    range:
+      earliest: "2008"
+      latest: "2009"
+      precision: year
+      circa: false
+    grade: A
+    sources:
+      - src.chandrayaan1-isro-science
+      - src.pieters-2009-lunar-water
+claims:
+  - text: The M3 instrument aboard Chandrayaan-1 detected spectral signatures of
+      OH/H2O on the lunar surface.
+    grade: A
+    sources:
+      - src.chandrayaan1-isro-science
+      - src.pieters-2009-lunar-water
+tags:
+  - space
+  - lunar-science
+review:
+  status: draft
+  author: codex-gpt-6

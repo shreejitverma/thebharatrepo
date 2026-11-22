@@ -1,0 +1,40 @@
+id: person.jagadish-chandra-bose
+type: person
+kind: person
+names:
+  en: Jagadish Chandra Bose
+summary: Jagadish Chandra Bose was a physicist and plant physiologist whose
+  experiments included early work on millimeter waves and the response of plants
+  to stimuli.
+summaries:
+  kids: Jagadish Chandra Bose studied radio waves and later investigated how
+    plants respond to their surroundings.
+  teen: Bose’s millimeter-wave research was published in international scientific
+    venues; later scholarship evaluates both his instruments and his scientific
+    claims.
+datings:
+  - method: scholarly-consensus
+    range:
+      earliest: "1858"
+      latest: "1937"
+      precision: year
+      circa: true
+    grade: B
+    label: Historical scholarship
+    sources:
+      - src.emerson-1997-work-of-jagadis-chandra-bose
+      - src.metcalf-2012-concise-history-modern-india
+claims:
+  - text: Jagadish Chandra Bose was a physicist and plant physiologist whose
+      experiments included early work on millimeter waves and the response of
+      plants to stimuli.
+    grade: B
+    sources:
+      - src.emerson-1997-work-of-jagadis-chandra-bose
+      - src.metcalf-2012-concise-history-modern-india
+relations: []
+tags:
+  - person
+review:
+  status: draft
+  author: codex-gpt-6

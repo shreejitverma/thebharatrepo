@@ -1,0 +1,13 @@
+id: event.thing
+type: event
+kind: event
+names: { en: A thing happened }
+summary: A fixture event that points at the fixture person through a relation.
+datings:
+  - method: documentary
+    range: { earliest: 1947, latest: 1947, precision: day, circa: false }
+    grade: A
+    sources: [src.doe-2001-a-book]
+relations:
+  - { kind: related-to, target: person.someone }
+review: { status: draft }

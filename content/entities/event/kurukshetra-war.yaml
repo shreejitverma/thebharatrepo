@@ -1,0 +1,76 @@
+id: event.kurukshetra-war
+type: event
+kind: event
+names:
+  en: Kurukshetra War
+  iast: Kurukṣetra Yuddha
+  native: कुरुक्षेत्र युद्ध
+summary: >-
+  The Kurukshetra War is the eighteen-day dynastic conflict between the Pandavas and Kauravas of the Kuru lineage narrated at the centre of the Mahabharata. Its historicity and date are contested: historians infer a possible Iron Age Kuru-Panchala conflict in c. 1200-800 BCE while noting the absence of a secure archaeological horizon or contemporary inscription for the war; traditional Siddhantic and Puranic reckonings place it near the Kali Yuga epoch (3102 or 3138 BCE); and planetarium-software reconstructions by authors such as B. N. Narahari Achar propose speculative dates such as 3067 BCE.
+summaries:
+  kids: >-
+    The Kurukshetra War is the famous eighteen-day battle between the Pandavas and Kauravas described in the Mahabharata, whose date is debated between ancient tradition and modern historians.
+  teen: >-
+    The Kurukshetra War of the Mahabharata has no direct contemporary inscription or secure archaeological horizon: historians place any underlying Kuru conflict in the early Iron Age (c. 1200-800 BCE), tradition links it to the 3102/3138 BCE Kali Yuga transition, and astronomical reconstructions propose dates such as 3067 BCE.
+region: Kurukshetra (Haryana) and the Kuru-Panchala Doab
+location: { name: "Kurukshetra, Haryana", lat: 29.969, lon: 76.878 }
+datings:
+  - method: archaeological-stratigraphic
+    range: { earliest: "1200 BCE", latest: "800 BCE", precision: century, circa: true }
+    grade: C
+    label: Early Iron Age Kuru-Panchala and Painted Grey Ware horizon (B. B. Lal and mainstream historians)
+    sources:
+      - src.brockington-1998-sanskrit-epics
+      - src.kulke-2004-history-of-india
+    note: Associates a possible historical kernel of an intra-Kuru conflict with the Vedic Kuru-Panchala polity and Painted Grey Ware sites (Hastinapura, Indraprastha, Ahichchhatra, Kurukshetra) of c. 1200-800 BCE, while noting that archaeology cannot verify the epic war itself.
+  - method: traditional-siddhantic
+    range: { earliest: "3102 BCE", latest: "3102 BCE", precision: year, circa: false }
+    grade: D
+    label: Aryabhata and Aihole inscription Kali Yuga epoch (3102 BCE)
+    sources:
+      - src.plofker-2009-mathematics-in-india
+      - src.bhatnagar-2017-date-mahabharata-war
+    note: The 634 CE Aihole inscription of Pulakeshin II equates Saka 556 with 3,735 years elapsed since the Bharata war, matching Aryabhata's 3102 BCE Kali Yuga epoch.
+  - method: traditional-puranic
+    range: { earliest: "3139 BCE", latest: "2449 BCE", best: "3138 BCE", precision: year, circa: true }
+    grade: D
+    label: Puranic and Brihat Samhita traditional reckonings (3138 BCE and 2449 BCE)
+    sources:
+      - src.bhatnagar-2017-date-mahabharata-war
+      - src.plofker-2009-mathematics-in-india
+    note: One traditional reckoning places the war 36 years before the 3102 BCE Kali Yuga onset (3138/3139 BCE), while another preserved by Varahamihira (Brihat Samhita 13.3) and Kalhana places Yudhishthira 653 years into the Kali Yuga (2449 BCE).
+  - method: astronomical-reference
+    range: { earliest: "3067 BCE", latest: "1478 BCE", best: "3067 BCE", precision: year, circa: true }
+    grade: E
+    label: Planetarium-software reconstructions (B. N. Narahari Achar 3067 BCE; competing 1793 and 1478 BCE models)
+    sources:
+      - src.bhatnagar-2017-date-mahabharata-war
+      - src.achar-2016-calendar-tradition-ancient-india
+    note: B. N. Narahari Achar simulated planetary and eclipse notices in the Udyogaparvan and Bhishmaparvan with planetarium software to propose 3067 BCE (building on S. Balakrishna and K. S. Raghavan), whereas other authors using different subsets of the same verses propose 1478 BCE or 1793 BCE; Indologists and historians of astronomy regard these reconstructions as speculative because the epic's astronomical verses are poetic, multi-layered and mutually contradictory.
+claims:
+  - text: Although B. B. Lal's 1950-1952 excavations at Hastinapura identified Painted Grey Ware (PGW) occupation levels (c. 1100-800 BCE) at several sites named in the Mahabharata, there is no secure archaeological destruction horizon or contemporary epigraphic record that confirms the Kurukshetra War as an historical event.
+    grade: B
+    sources:
+      - src.brockington-1998-sanskrit-epics
+      - src.kulke-2004-history-of-india
+  - text: >-
+      In ancient Indian historical tradition itself, at least two distinct dates circulated by the sixth and seventh centuries CE - the 634 CE Aihole inscription places the Bharata war at the 3102 BCE Kali Yuga epoch, whereas Varahamihira's Brihat Samhita places Yudhishthira at 2449 BCE.
+    grade: A
+    sources:
+      - src.bhatnagar-2017-date-mahabharata-war
+      - src.plofker-2009-mathematics-in-india
+  - text: Planetarium-software simulations of celestial omens in the Mahabharata (such as B. N. Narahari Achar's 3067 BCE model) rely on selecting compatible planetary references while reinterpreting conflicting passages as comets or textual corruptions, yielding widely divergent dates across researchers.
+    grade: B
+    sources:
+      - src.bhatnagar-2017-date-mahabharata-war
+      - src.achar-2016-calendar-tradition-ancient-india
+debate: >-
+  Three distinct approaches exist to the date of the Kurukshetra War: (1) mainstream historical and archaeological scholarship views the epic as a poetic expansion of Iron Age Kuru-Panchala bardic memory (c. 1200-800 BCE) with no verifiable archaeological horizon for a pan-Indian war; (2) traditional Siddhantic and Puranic chronologies date the war to 3102 BCE, 3138 BCE or 2449 BCE; and (3) modern astronomical investigators using planetarium software (including B. N. Narahari Achar proposing 3067 BCE, and others proposing 2559 BCE, 1793 BCE or 1478 BCE) treat selected sky descriptions in the epic as dated observational logs, an approach rejected by textual scholars because the Mahabharata was composed and expanded over many centuries.
+relations:
+  - { kind: related-to, target: text.mahabharata }
+  - { kind: related-to, target: text.bhagavad-gita }
+  - { kind: related-to, target: text.aryabhatiya }
+  - { kind: related-to, target: person.varahamihira }
+wikidata: Q387123
+tags: [kurukshetra-war, mahabharata, kali-yuga, archeoastronomy, painted-grey-ware, contested-chronology]
+review: { status: draft, author: "gemini-4-argon" }

@@ -1,0 +1,35 @@
+id: site.lingaraja-temple
+type: site
+kind: site
+names:
+  en: Lingaraja Temple
+  native: ଲିଙ୍ଗରାଜ ମନ୍ଦିର
+summary: >-
+  The Lingaraja temple at Bhubaneswar is one of the largest of the city's many medieval Shiva temples and a
+  mature example of the Kalinga style of Odisha, with a tall curved rekha tower over the sanctum and a
+  sequence of halls in front. It is usually dated to the 11th century CE and is still in active worship.
+summaries:
+  kids: >-
+    The Lingaraja temple in Bhubaneswar is a huge temple to Shiva with a tall, curved tower. People have
+    been worshipping there for about a thousand years.
+  teen: >-
+    Bhubaneswar is called a temple city, and the Lingaraja is one of its biggest temples. Its line of connected halls,
+    including a dance hall and an offering hall, shows how Odisha temples grew as rituals became more
+    elaborate.
+region: Bhubaneswar, Odisha
+location: { name: Bhubaneswar, lat: 20.24, lon: 85.83 }
+datings:
+  - method: art-historical
+    range: { earliest: "1000 CE", latest: "1100 CE", precision: century, circa: true }
+    grade: C
+    label: Stylistic dating of the main temple
+    sources: [src.michell-1988-hindu-temple]
+    note: Some of the front halls were added later.
+claims:
+  - text: The temple is built in the Kalinga (Odishan) style with a curvilinear rekha deul over the sanctum.
+    grade: B
+    sources: [src.michell-1988-hindu-temple]
+relations: []
+wikidata: Q2365530
+tags: [shaiva, odisha, kalinga-architecture, temple-architecture]
+review: { status: draft, author: "claude-opus-5-5" }

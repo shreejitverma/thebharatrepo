@@ -1,0 +1,40 @@
+id: person.william-jones
+type: person
+kind: person
+names:
+  en: William Jones
+summary: William Jones was a British judge and philologist in Calcutta who
+  helped found the Asiatic Society and delivered influential lectures on
+  language and history.
+summaries:
+  kids: William Jones helped start the Asiatic Society and studied languages,
+    including Sanskrit.
+  teen: Jones’s comparative philology shaped European scholarship on Sanskrit and
+    language relationships, while his work reflected the intellectual and
+    colonial context of the period.
+datings:
+  - method: scholarly-consensus
+    range:
+      earliest: "1746"
+      latest: "1794"
+      precision: year
+      circa: true
+    grade: B
+    label: Historical scholarship
+    sources:
+      - src.trautmann-1997-aryans-and-british-india
+      - src.asi-history-1861
+claims:
+  - text: William Jones was a British judge and philologist in Calcutta who helped
+      found the Asiatic Society and delivered influential lectures on language
+      and history.
+    grade: B
+    sources:
+      - src.trautmann-1997-aryans-and-british-india
+      - src.asi-history-1861
+relations: []
+tags:
+  - person
+review:
+  status: draft
+  author: codex-gpt-6

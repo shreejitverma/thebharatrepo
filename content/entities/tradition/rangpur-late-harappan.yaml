@@ -1,0 +1,72 @@
+id: tradition.rangpur-late-harappan
+type: tradition
+kind: civilisation
+names:
+  en: Rangpur and Late Sorath Harappan Phase
+summary: >-
+  The Late Harappan phase of Saurashtra and Gujarat (c. 1900-1300 BCE), defined by the stratigraphic sequence at
+  Rangpur (Periods IIB-IIC and III), Lothal B, Rojdi C and Prabhas Patan, characterised by an expansion of agro-pastoral
+  village settlements, drought-resistant millet cultivation, and Lustrous Red Ware pottery.
+summaries:
+  kids: >-
+    When the larger Harappan cities declined, many smaller farming villages flourished across Gujarat, growing
+    hardy millet crops and making shiny red pottery.
+  teen: >-
+    In Gujarat, the transition after 1900 BCE saw a sharp rise in the number of small rural settlements during the
+    Late Sorath and Rangpur IIB-III phases, supported by summer monsoon millets and local pastoralism.
+region: Saurashtra, Kutch, and Mainland Gujarat
+location:
+  name: Rangpur
+  lat: 22.3992
+  lon: 71.9231
+datings:
+  - method: archaeological-radiocarbon
+    range:
+      earliest: "1900 BCE"
+      latest: "1300 BCE"
+      precision: century
+      circa: true
+    grade: A
+    label: Late Sorath (Rangpur IIB-IIC) and Lustrous Red Ware (Rangpur III)
+    sources:
+      - src.possehl-2002-indus-civilization
+      - src.wright-2010-ancient-indus
+      - src.singh-2008-ancient-early-medieval-india
+    note: >-
+      Calibrated radiocarbon sequences from Rojdi C, Lothal B, and Rangpur IIB-III span c. 1900 to 1300 BCE.
+claims:
+  - text: >-
+      While monumental architecture and long-distance maritime trade contracted in Gujarat after c. 1900 BCE, the
+      total number of documented Late Sorath / Rangpur IIB-IIC village settlements increased markedly compared
+      with the Mature Harappan period.
+    grade: A
+    sources:
+      - src.possehl-2002-indus-civilization
+      - src.wright-2010-ancient-indus
+  - text: >-
+      Archaeobotanical assemblages from Late Harappan Gujarat document intensive summer (kharif) cultivation of
+      drought-tolerant millets alongside animal husbandry.
+    grade: A
+    sources:
+      - src.wright-2010-ancient-indus
+      - src.petrie-2017-adaptation-variable-environments
+relations:
+  - kind: part-of
+    target: tradition.harappan-civilisation
+  - kind: located-at
+    target: site.lothal
+  - kind: contemporary-of
+    target: tradition.cemetery-h-culture
+  - kind: contemporary-of
+    target: tradition.jhukar-phase
+  - kind: related-to
+    target: event.harappan-deurbanisation
+wikidata: null
+tags:
+  - harappan
+  - late-harappan
+  - gujarat
+  - rangpur
+review:
+  status: draft
+  author: gemini-4-argon

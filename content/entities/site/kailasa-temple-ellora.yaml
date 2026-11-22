@@ -1,0 +1,43 @@
+id: site.kailasa-temple-ellora
+type: site
+kind: site
+names:
+  en: Kailasa Temple, Ellora
+  iast: Kailāsa
+  native: कैलास मंदिर
+summary: >-
+  The Kailasa temple (Cave 16) at Ellora is a complete Shiva temple carved downwards out of the basalt
+  hillside, with its shrine, halls, courtyard and free-standing columns all cut from the living rock.
+  It is attributed to the Rashtrakuta king Krishna I in the second half of the 8th century CE and is
+  part of the Ellora Caves UNESCO World Heritage Site.
+summaries:
+  kids: >-
+    The Kailasa temple was not built from blocks. Workers cut away rock from the top of a hill, little
+    by little, until a whole temple stood inside the hole they made.
+  teen: >-
+    Instead of stacking stones, carvers at Ellora removed rock around a block of hillside and shaped the
+    block into a two-storey temple with sculpture everywhere. It is named after Mount Kailasa, Shiva's
+    home in the Himalayas.
+region: Aurangabad district, Maharashtra
+location: { name: Ellora, lat: 20.02, lon: 75.18 }
+datings:
+  - method: art-historical
+    range: { earliest: "756 CE", latest: "800 CE", precision: decade, circa: true }
+    grade: B
+    label: Reign of Krishna I and after
+    sources: [src.unesco-1983-ellora-caves, src.michell-1988-hindu-temple]
+    note: A later Rashtrakuta copper-plate grant praises Krishna I's temple at Elapura; work on the complex may have continued after him.
+claims:
+  - text: >-
+      The Ellora Caves, with Buddhist, Hindu and Jain monuments, were inscribed on the UNESCO World
+      Heritage List in 1983.
+    grade: A
+    sources: [src.unesco-1983-ellora-caves]
+  - text: The temple is a single monolith excavated from the top down, with its courtyard cut out of the rock around it.
+    grade: B
+    sources: [src.michell-1988-hindu-temple, src.unesco-1983-ellora-caves]
+relations:
+  - { kind: patronised-by, target: polity.rashtrakuta-dynasty }
+wikidata: Q1268562
+tags: [unesco, rock-cut, shaiva, rashtrakuta]
+review: { status: draft, author: "claude-opus-5-5" }

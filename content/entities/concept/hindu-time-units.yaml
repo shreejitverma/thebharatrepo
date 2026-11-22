@@ -1,0 +1,88 @@
+id: concept.hindu-time-units
+type: concept
+kind: science
+names:
+  en: Hindu Time Units (Truti to Kalpa)
+  iast: Kālamāna
+  native: कालमान
+summary: >-
+  Classical Sanskrit texts across the Dharmashastras, Puranas and astronomical Siddhantas
+  codify a continuous hierarchy of time measurement (kalamana) spanning roughly twenty orders of
+  magnitude, from sub-second subdivisions such as the truti and nimesha (blink of an eye) through civil and
+  astronomical units (ghatika, muhurta, ahoratra, masa, varsha) to the macrocosmic cycles of yugas,
+  manvantaras and kalpas.
+summaries:
+  kids: >-
+    Ancient Indian texts measured time with a giant ladder of units, from tiny moments such as the truti
+    and the blink of an eye (nimesha) up to the kalpa, which traditional cosmology counts as 4.32 billion
+    years.
+  teen: >-
+    Spanning roughly twenty orders of magnitude, Sanskrit time metrology links microscopic intervals
+    (truti, prana, nimesha, kashtha, kala) to observational water-clock units (nadika/ghatika of 24 minutes,
+    muhurta of 48 minutes) and astronomical cycles from the solar year to the 4.32-billion-year kalpa.
+datings:
+  - method: textual-internal
+    range:
+      earliest: "300 BCE"
+      latest: "1000 CE"
+      precision: century
+      circa: true
+    grade: C
+    label: Codification across Dharmashastra, Puranas, Aryabhatiya and Surya Siddhanta
+    sources:
+      - src.olivelle-2005-manus-code-of-law
+      - src.burgess-1860-surya-siddhanta
+      - src.plofker-2009-mathematics-in-india
+    note: >-
+      Tables of time units from the nimesha or truti up to the kalpa appear in Manusmriti 1.64-80 (c. 2nd
+      century CE), Vishnu Purana 1.3, the Aryabhatiya (499 CE) and the Surya Siddhanta 1.10-21, whose
+      surviving recension is later than Aryabhata; the range spans the probable dates of these texts.
+claims:
+  - text: >-
+      Manusmriti 1.64 states that 18 nimeshas (eyeblinks) make one kashtha, 30 kashthas one kala, 30 kalas
+      one muhurta (48 minutes) and 30 muhurtas one day and night; the Vishnu Purana (1.3) gives the same
+      ladder but with 15 nimeshas to the kashtha.
+    grade: A
+    sources:
+      - src.olivelle-2005-manus-code-of-law
+      - src.wilson-1840-vishnu-purana
+  - text: >-
+      Surya Siddhanta 1.10-12 distinguishes unmanifest (amurta) microscopic time beginning with the truti
+      from manifest (murta) astronomical time beginning with the prana (one respiration of 4 sidereal
+      seconds), where 6 pranas equal 1 vinadi, 60 vinadis equal 1 nadi (ghatika, 24 minutes), and 60 nadis
+      equal one sidereal day and night.
+    grade: A
+    sources:
+      - src.burgess-1860-surya-siddhanta
+      - src.plofker-2009-mathematics-in-india
+  - text: >-
+      At the macrocosmic end of the scale, one human solar year equals one day and night of the gods
+      (divya-ahoratra), 360 human years equal one divine year, 12,000 divine years equal one mahayuga
+      (4,320,000 human years), and 1,000 mahayugas equal one kalpa (4,320,000,000 human years).
+    grade: A
+    sources:
+      - src.olivelle-2005-manus-code-of-law
+      - src.burgess-1860-surya-siddhanta
+      - src.plofker-2009-mathematics-in-india
+relations:
+  - kind: related-to
+    target: cosmology.kalpa
+  - kind: related-to
+    target: cosmology.mahayuga
+  - kind: related-to
+    target: cosmology.manvantara
+  - kind: related-to
+    target: cosmology.brahma-lifespan
+  - kind: related-to
+    target: text.vedanga-jyotisha
+wikidata: Q3089481
+tags:
+  - time-units
+  - truti
+  - nimesha
+  - muhurta
+  - ghatika
+  - kalpa
+review:
+  status: draft
+  author: gemini-4-argon

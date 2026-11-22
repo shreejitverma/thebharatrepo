@@ -1,0 +1,40 @@
+id: tradition.kashmir-shaivism
+type: tradition
+kind: dharma
+names:
+  en: Kashmir Shaivism
+  native: कश्मीर शैव दर्शन
+summary: >-
+  Kashmir Shaivism is the modern name for the non-dual Shaiva traditions of Kashmir that flourished
+  from about the 9th to the 12th century CE: the Spanda teaching linked to Vasugupta's Shiva Sutras, the
+  Pratyabhijna ("recognition") philosophy of Somananda and Utpaladeva, and the Trika and Krama
+  tantric systems synthesised by Abhinavagupta.
+summaries:
+  kids: >-
+    Kashmir Shaivism is a way of thinking about Shiva that grew up in Kashmir. It teaches that
+    everything is part of Shiva, and that we only need to recognise this.
+  teen: >-
+    Its philosophers taught that reality is one divine consciousness, Shiva, which freely appears as
+    the world. Liberation is "recognition" (pratyabhijna) that one's own awareness is that
+    consciousness.
+region: Kashmir
+location: { name: Srinagar, lat: 34.08, lon: 74.80 }
+datings:
+  - method: textual-internal
+    range: { earliest: "850 CE", latest: "1150 CE", precision: century, circa: true }
+    grade: B
+    label: Classical period of the Kashmiri non-dual Shaiva authors
+    sources: [src.flood-1996-introduction-to-hinduism]
+    note: Anchored by Vasugupta in the 9th century and Abhinavagupta's dated works around 1000 CE.
+claims:
+  - text: The Pratyabhijna school of Somananda and Utpaladeva holds that liberation is recognition of oneself as Shiva.
+    grade: B
+    sources: [src.flood-1996-introduction-to-hinduism]
+  - text: Abhinavagupta's Tantraloka synthesised the Trika tradition and became its central text.
+    grade: B
+    sources: [src.flood-1996-introduction-to-hinduism]
+relations:
+  - { kind: related-to, target: person.lalleshwari, note: Lalla's verses draw on this tradition }
+wikidata: Q1734884
+tags: [shaiva, tantra, philosophy, kashmir]
+review: { status: draft, author: "claude-opus-5-5" }

@@ -1,0 +1,90 @@
+id: concept.neolithic-of-the-vindhyas
+type: concept
+kind: prehistory
+names:
+  en: Neolithic of the Vindhyas
+summary: >-
+  A regional Neolithic farming and pastoral complex along the northern Vindhyan escarpment and the Belan, Adwa
+  and Son river valleys of Uttar Pradesh and Madhya Pradesh (including Koldihwa, Mahagara, Chopani Mando,
+  Pachoh, Indari, Kunjhun and Tokwa), characterized by cord-impressed pottery, rounded-butt ground stone axes,
+  circular wattle-and-daub huts, cattle pens and rice-and-millet cultivation.
+summaries:
+  kids: >-
+    Along the rivers at the northern edge of the Vindhya hills, early Neolithic villagers built round huts around
+    shared cattle pens, shaped polished stone axes and made pots decorated with cord marks.
+  teen: >-
+    Spanning the Belan and Middle Son valleys at sites such as Koldihwa, Mahagara, Tokwa and Kunjhun, the Vindhyan
+    Neolithic documents the transition from Epi-Palaeolithic and Mesolithic wild-grain foraging to settled rice,
+    barley, pulse and zebu cattle farming.
+region: Belan, Adwa and Middle Son River valleys (Northern Vindhyan foothills, Uttar Pradesh and Madhya Pradesh)
+location:
+  name: Belan Valley (Koldihwa-Mahagara cluster)
+  lat: 24.9
+  lon: 82.08
+datings:
+  - method: archaeological-radiocarbon
+    range:
+      earliest: "2500 BCE"
+      latest: "1400 BCE"
+      best: "1850 BCE"
+      precision: century
+      circa: true
+    grade: B
+    label: Mainstream radiocarbon chronology for established Vindhyan Neolithic farming villages (Fuller 2006; Misra 2001)
+    sources:
+      - src.fuller-2006-agricultural-origins-south-asia
+      - src.kingwellbanham-2015-early-agriculture-south-asia
+      - src.misra-2001-prehistoric-colonization-india
+    note: >-
+      Stratigraphic and radiocarbon series from Mahagara, Kunjhun II and Tokwa place the established Vindhyan
+      Neolithic villages between c. 2500 and 1400 BCE.
+  - method: archaeological-radiocarbon
+    range:
+      earliest: "6500 BCE"
+      latest: "4500 BCE"
+      precision: millennium
+      circa: true
+    grade: C
+    label: Early Holocene Belan Valley hypothesis (G. R. Sharma et al.)
+    sources:
+      - src.misra-2001-prehistoric-colonization-india
+      - src.coningham-2015-archaeology-south-asia
+    note: >-
+      Based on three early charcoal dates from Koldihwa and an inferred continuous local evolution from
+      Chopani Mando proto-Neolithic levels; widely questioned due to residual charcoal and later Mahagara dates.
+claims:
+  - text: >-
+      At Mahagara in the Belan valley, horizontal excavations exposed twenty circular wattle-and-daub hut floors
+      grouped around a central stockaded cattle pen measuring 12.5 by 7.5 metres that preserved hoof impressions of zebu cattle.
+    grade: A
+    sources:
+      - src.misra-2001-prehistoric-colonization-india
+      - src.coningham-2015-archaeology-south-asia
+  - text: >-
+      Vindhyan Neolithic sites share a distinct ceramic repertoire of handmade cord-impressed, rusticated,
+      burnished red and burnished black wares together with small rounded-butt ground stone celts and chalcedony microliths.
+    grade: A
+    sources:
+      - src.fuller-2006-agricultural-origins-south-asia
+      - src.coningham-2015-archaeology-south-asia
+relations:
+  - kind: related-to
+    target: site.koldihwa
+  - kind: related-to
+    target: site.lahuradewa
+  - kind: related-to
+    target: site.dhaba
+debate: >-
+  G. R. Sharma and colleagues proposed an indigenous 7th-5th millennium BCE transition from Mesolithic Chopani
+  Mando to Neolithic Koldihwa and Mahagara in the Belan valley, whereas subsequent radiometric and archaeobotanical
+  reviews (Misra 2001; Fuller 2006; Kingwell-Banham et al. 2015) date the sedentary Vindhyan Neolithic villages
+  (Mahagara, Tokwa, Kunjhun) to the late 3rd and 2nd millennia BCE (c. 2500-1400 BCE).
+tags:
+  - neolithic
+  - vindhyas
+  - belan-valley
+  - mahagara
+  - cord-impressed-ware
+review:
+  status: draft
+  author: gemini-4-argon

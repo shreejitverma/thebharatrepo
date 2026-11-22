@@ -1,0 +1,67 @@
+id: text.brahmanas
+type: text
+kind: text
+names:
+  en: Brahmanas
+  iast: Brāhmaṇa
+  native: ब्राह्मणग्रन्थ
+summary: >-
+  The Brahmanas are Vedic Sanskrit prose commentaries attached to each of the four Vedic Samhitas.
+  They explain the symbolic meaning, mythological origins (arthavada), and procedural rules (vidhi)
+  of the solemn Shrauta sacrifices.
+summaries:
+  kids: >-
+    The Brahmanas are ancient prose books that explain the meaning behind Vedic rituals, telling
+    stories about the gods and showing priests how every step of a ceremony works.
+  teen: >-
+    Composed in Vedic Sanskrit prose after the verse Samhitas, the Brahmanas interpret the
+    mechanics and cosmic correspondences (bandhu) of the Shrauta rituals, bridging early Vedic
+    hymns and the philosophical Upanishads.
+region: Kuru-Panchala, Kosala, and Videha (northern India)
+datings:
+  - method: linguistic
+    range: { earliest: "1000 BCE", latest: "600 BCE", best: "800 BCE", precision: century, circa: true }
+    grade: C
+    label: Middle to Late Vedic prose period
+    sources:
+      - src.gonda-1975-vedic-literature
+      - src.flood-2003-blackwell-companion-hinduism
+      - src.singh-2008-ancient-early-medieval-india
+    note: >-
+      Dated by their Vedic prose grammar (post-Samhita, pre-Paninian) and their geographical
+      horizon spanning from Kurukshetra and Panchala eastward to Kosala and Videha before the rise
+      of Buddhism.
+  - method: traditional-puranic
+    range: { earliest: "3102 BCE", latest: "2500 BCE", precision: century, circa: true }
+    grade: D
+    label: Traditional sampradaya reckoning
+    sources:
+      - src.flood-2003-blackwell-companion-hinduism
+    note: >-
+      Orthodox Vedic classification includes the Brahmanas alongside the Samhitas within the
+      eternal Shruti canon revealed to the Vedic rishis.
+claims:
+  - text: >-
+      Each Brahmana is affiliated with a specific Vedic Samhita, including the Aitareya and
+      Kaushitaki with the Rigveda, the Panchavimsha and Jaiminiya with the Samaveda, the
+      Taittiriya and Shatapatha with the Yajurveda, and the Gopatha with the Atharvaveda.
+    grade: A
+    sources:
+      - src.gonda-1975-vedic-literature
+      - src.flood-2003-blackwell-companion-hinduism
+  - text: >-
+      The Brahmanas classify their discourse into vidhi (ritual injunctions) and arthavada
+      (explanatory myths, etymologies, and homologizations connecting the sacrifice to the cosmos).
+    grade: A
+    sources:
+      - src.gonda-1975-vedic-literature
+      - src.keith-1920-rigveda-brahmanas
+relations:
+  - { kind: succeeded, target: text.rigveda }
+  - { kind: preceded, target: text.aranyakas }
+  - { kind: related-to, target: text.shatapatha-brahmana }
+  - { kind: related-to, target: text.aitareya-brahmana }
+  - { kind: related-to, target: tradition.shrauta-ritual }
+wikidata: Q823671
+tags: [veda, brahmana, shruti, ritual, prose]
+review: { status: draft, author: "gemini-4-argon" }

@@ -1,0 +1,88 @@
+id: site.surkotada
+type: site
+kind: site
+names:
+  en: Surkotada
+  iast: Surakoṭaḍā
+  native: सुरकोटडा
+summary: >-
+  A compact fortified Mature-to-Late Harappan garrison and trading settlement in northeastern Kutch, Gujarat
+  (c. 2300-1700 BCE), excavated by J. P. Joshi (1971-1972), consisting of a conjoined twin-enclosure mud-brick and
+  stone-rubble fortress (Citadel and Residential Annexe) and focus of a scholarly debate over reported equid (Equus
+  caballus vs Equus hemionus) bone remains.
+summaries:
+  kids: >-
+    Surkotada was a small stone-and-brick walled fort in Kutch, Gujarat, built with two side-by-side enclosures
+    to guard trade routes across the region.
+  teen: >-
+    Excavated by J. P. Joshi in 1971-1972, Surkotada is a fortified Harappan settlement in Kutch with three cultural
+    sub-periods (IA-IC); it is widely discussed in archaeology for its stone-faced defensive ramparts and debated
+    equid bone identifications.
+region: Rapar Taluka, Kutch District, Gujarat, India
+location:
+  name: Surkotada
+  lat: 23.6125
+  lon: 70.9183
+datings:
+  - method: archaeological-radiocarbon
+    range:
+      earliest: "2300 BCE"
+      latest: "1700 BCE"
+      precision: century
+      circa: true
+    grade: A
+    label: Periods IA, IB, and IC (Mature to Late Harappan Transition)
+    sources:
+      - src.joshi-1990-excavation-at-surkotada
+      - src.possehl-2002-indus-civilization
+      - src.singh-2008-ancient-early-medieval-india
+    note: >-
+      Calibrated radiocarbon dates place Sub-period IA (c. 2300-1950 BCE), Sub-period IB (c. 1950-1800 BCE), and
+      Sub-period IC with white-painted black-and-red ware alongside Harappan forms (c. 1800-1700 BCE).
+claims:
+  - text: >-
+      Surkotada was built as a single rectangular fortress (roughly 120 by 60 metres) divided by a thick central
+      partition wall into an western Citadel and an eastern Residential Annexe, faced with dressed stone rubble
+      in Period IC.
+    grade: A
+    sources:
+      - src.joshi-1990-excavation-at-surkotada
+      - src.possehl-2002-indus-civilization
+  - text: >-
+      Archaeozoologists A. K. Sharma and Sándor Bökönyi identified six equid bones from Surkotada Periods IA-IC
+      as true domestic horse (Equus caballus L.), whereas Richard Meadow and Ajita Patel argued after re-examination
+      that the specimens cannot be securely distinguished from the indigenous wild onager or khur (Equus hemionus khur)
+      native to the Rann of Kutch.
+    grade: C
+    sources:
+      - src.joshi-1990-excavation-at-surkotada
+      - src.possehl-2002-indus-civilization
+      - src.singh-2008-ancient-early-medieval-india
+  - text: >-
+      The cemetery northwest of Surkotada contained distinctive pot burials covered by stone slabs and cairns,
+      including unburned human bone fragments and a large sandstone slab covering an empty grave pit (cenotaph).
+    grade: A
+    sources:
+      - src.joshi-1990-excavation-at-surkotada
+      - src.singh-2008-ancient-early-medieval-india
+relations:
+  - kind: part-of
+    target: tradition.harappan-civilisation
+  - kind: contemporary-of
+    target: site.dholavira
+  - kind: contemporary-of
+    target: site.lothal
+wikidata: Q7646429
+debate: >-
+  Equid bones excavated at Surkotada were identified by A. K. Sharma and Sándor Bökönyi (in Joshi 1990) as true
+  domesticated horse (Equus caballus), while Richard H. Meadow and Ajita Patel contested that osteological markers
+  overlap with the native Indian wild ass (Equus hemionus khur) still inhabiting Kutch.
+tags:
+  - harappan
+  - site
+  - gujarat
+  - kutch
+  - archaeozoology
+review:
+  status: draft
+  author: gemini-4-argon

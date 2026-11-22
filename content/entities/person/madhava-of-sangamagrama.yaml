@@ -1,0 +1,37 @@
+id: person.madhava-of-sangamagrama
+type: person
+kind: person
+names:
+  en: Madhava of Sangamagrama
+  iast: Mādhava of Saṅgamagrāma
+summary: >-
+  Madhava of Sangamagrama was a Kerala mathematician and astronomer active around the late fourteenth
+  and early fifteenth centuries. Later Kerala authors credit him with infinite series for pi and
+  trigonometric functions; most of the specific results survive through their quotations and
+  attributions rather than in extant works by Madhava himself.
+summaries:
+  kids: >-
+    Madhava was a mathematician from Kerala. Later scholars said he found important infinite series,
+    and they preserved those ideas in their own books.
+  teen: >-
+    Madhava is regarded as a central figure in Kerala mathematics. Because much of his writing is lost,
+    his series are known chiefly from later authors who attribute them to him.
+region: Kerala, southwestern India
+datings:
+  - method: scholarly-consensus
+    range: { earliest: "1340 CE", latest: "1425 CE", precision: decade, circa: true }
+    grade: C
+    label: Approximate scholarly life range
+    sources: [src.plofker-2009-mathematics-in-india, src.ramasubramanian-2011-tantrasangraha]
+claims:
+  - text: Later Kerala mathematicians credit Madhava with series for pi and trigonometric functions.
+    grade: B
+    sources: [src.plofker-2009-mathematics-in-india, src.ramasubramanian-2011-tantrasangraha]
+  - text: The surviving attributions to Madhava occur primarily in the works of later scholars.
+    grade: B
+    sources: [src.plofker-2009-mathematics-in-india]
+relations:
+  - { kind: part-of, target: tradition.kerala-school-of-mathematics }
+  - { kind: influenced, target: person.nilakantha-somayaji }
+tags: [mathematics, astronomy, kerala]
+review: { status: draft, author: "codex-gpt-6" }

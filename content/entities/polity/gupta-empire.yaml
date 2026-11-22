@@ -1,0 +1,46 @@
+id: polity.gupta-empire
+type: polity
+kind: polity
+names:
+  en: Gupta Empire
+  iast: Gupta Sāmrājya
+  native: गुप्त साम्राज्य
+summary: >-
+  The Gupta Empire (c. 319-550 CE) was a major northern Indian imperial polity that rose to prominence under Chandragupta I (who inaugurated the Gupta era in 319/320 CE), Samudragupta, Chandragupta II and Kumaragupta I. Ruling directly over the Gangetic basin, central India, Bengal and western India while holding tributary suzerainty over bordering realms, the Gupta age saw landmark achievements in Sanskrit literature (Kalidasa), mathematical astronomy (Aryabhata, Varahamihira), metallurgy (Iron Pillar of Delhi), temple architecture (Udayagiri) and Buddhist learning (Nalanda).
+summaries:
+  kids: >-
+    The Gupta Empire ruled northern India from around 319 to 550 CE, a period famous for great poets like Kalidasa, mathematician-astronomers like Aryabhata, the Iron Pillar of Delhi and the founding of Nalanda University.
+  teen: >-
+    Inaugurating the Gupta calendar era in 319/320 CE and reaching its territorial peak under Samudragupta and Chandragupta II, the Gupta Empire presided over the classical standardization of Sanskrit literature, Hindu temple iconography, Buddhist monastic universities and mathematical astronomy.
+region: Northern, Eastern, Central and Western India (capitals at Pataliputra, Ayodhya and Ujjain)
+location: { name: "Patna (ancient Pataliputra)", lat: 25.611, lon: 85.144 }
+datings:
+  - method: epigraphic
+    range: { earliest: 319, latest: 550, best: 320, precision: year, circa: true }
+    grade: A
+    label: Imperial Gupta Era chronology (Epoch 319/320 CE to Year 224 = 543/544 CE Damodarpur plate)
+    sources:
+      - src.fleet-1888-inscriptions-early-gupta-kings
+      - src.kulke-2004-history-of-india
+      - src.salomon-1998-indian-epigraphy
+    note: Anchored by the epoch of the Gupta era (319-320 CE) determined from Al-Biruni and the Mandasor, Udayagiri, Sanchi, Eran and Damodarpur inscriptions spanning Gupta Year 61 (380 CE) to Year 224 (543/544 CE).
+claims:
+  - text: Harishena's Sanskrit panegyric (prashasti) engraved on the Allahabad Ashokan pillar catalogues Emperor Samudragupta's military campaigns, distinguishing the direct annexation of kings of Aryavarta (northern India) from the capture and reinstatement (grahana-moksha-anugraha) of twelve rulers of Dakshinapatha (the south) and tribute from frontier kingdoms.
+    grade: A
+    sources:
+      - src.fleet-1888-inscriptions-early-gupta-kings
+      - src.kulke-2004-history-of-india
+  - text: Under Skandagupta (reigned c. 455-467 CE), as recorded in the Bhitari pillar and Junagadh rock inscriptions, the empire repelled early invasions of the Hunas (Hephthalites/Alchon Huns) and repaired the Mauryan-era Sudarshana reservoir in Saurashtra before sixth-century Huna wars and regional feudatories fragmented imperial rule.
+    grade: A
+    sources:
+      - src.fleet-1888-inscriptions-early-gupta-kings
+      - src.kulke-2004-history-of-india
+relations:
+  - { kind: ruled-by, target: person.chandragupta-ii }
+  - { kind: succeeded, target: polity.kushan-empire }
+  - { kind: patronised, target: site.udayagiri-caves }
+  - { kind: patronised, target: site.nalanda-mahavihara }
+  - { kind: related-to, target: event.faxian-travels }
+wikidata: Q11774
+tags: [gupta-empire, pataliputra, samudragupta, chandragupta-ii, classical-india]
+review: { status: draft, author: "gemini-4-argon" }

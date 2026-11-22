@@ -1,0 +1,78 @@
+id: site.koldihwa
+type: site
+kind: prehistory
+names:
+  en: Koldihwa Neolithic Site
+summary: >-
+  A Neolithic, Chalcolithic and Iron Age settlement on the left bank of the Belan River in the northern Vindhyan
+  foothills of Prayagraj district, Uttar Pradesh, renowned for handmade cord-impressed pottery tempered with
+  rice husks and its central role in discussions of the Vindhyan Neolithic chronology.
+summaries:
+  kids: >-
+    At Koldihwa beside the Belan River in Uttar Pradesh, Neolithic villagers mixed rice husks into clay to make
+    cord-patterned pots and built round wattle-and-daub huts.
+  teen: >-
+    Excavated in the Belan valley of the Vindhyan foothills, Koldihwa yielded cord-impressed pottery containing
+    rice husk impressions, ground stone celts and wattle-and-daub huts across Neolithic and Chalcolithic strata.
+region: Belan River valley (Vindhyan foothills), Prayagraj district, Uttar Pradesh
+location:
+  name: Koldihwa
+  lat: 24.9
+  lon: 82.08
+datings:
+  - method: archaeological-radiocarbon
+    range:
+      earliest: "6600 BCE"
+      latest: "4500 BCE"
+      best: "5440 BCE"
+      precision: century
+      circa: true
+    grade: C
+    label: Early charcoal radiocarbon dates (Sharma et al.)
+    sources:
+      - src.misra-2001-prehistoric-colonization-india
+      - src.coningham-2015-archaeology-south-asia
+    note: >-
+      Three early charcoal radiocarbon dates from Koldihwa yielded calibrated ages around the 7th to 5th millennia
+      BCE (6570, 5440 and 4530 BCE), though their stratigraphic association with the Neolithic levels is disputed.
+  - method: archaeological-radiocarbon
+    range:
+      earliest: "2500 BCE"
+      latest: "1400 BCE"
+      best: "1800 BCE"
+      precision: century
+      circa: true
+    grade: B
+    label: Vindhyan Neolithic regional reassessment (Fuller 2006; Misra 2001)
+    sources:
+      - src.fuller-2006-agricultural-origins-south-asia
+      - src.misra-2001-prehistoric-colonization-india
+    note: >-
+      Later radiocarbon series from Koldihwa and adjacent Mahagara and Tokwa place the established Vindhyan
+      Neolithic farming villages primarily between c. 2500 and 1400 BCE, treating the older charcoal as residual.
+claims:
+  - text: >-
+      Neolithic deposits at Koldihwa contain handmade cord-impressed, rusticated and burnished wares tempered
+      with Oryza husks alongside ground rounded-butt celts and microlithic blades.
+    grade: A
+    sources:
+      - src.fuller-2006-agricultural-origins-south-asia
+      - src.coningham-2015-archaeology-south-asia
+relations:
+  - kind: part-of
+    target: concept.neolithic-of-the-vindhyas
+  - kind: related-to
+    target: site.lahuradewa
+debate: >-
+  Three charcoal radiocarbon assays originally suggested a 7th-5th millennium BCE date for rice at Koldihwa,
+  but subsequent archaeobotanical and radiometric assessments (Misra 2001; Fuller 2006) attribute those charcoal
+  fragments to old-wood or pre-Neolithic levels and date the Koldihwa-Mahagara Neolithic village horizon to c. 2500-1400 BCE.
+tags:
+  - neolithic
+  - vindhyas
+  - belan-valley
+  - early-rice
+  - uttar-pradesh
+review:
+  status: draft
+  author: gemini-4-argon

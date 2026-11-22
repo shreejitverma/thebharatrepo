@@ -1,0 +1,94 @@
+id: concept.saptarishi-calendar
+type: concept
+kind: science
+names:
+  en: Saptarishi Calendar (Laukika Era)
+  iast: Saptarṣi-saṃvat
+  native: सप्तर्षिसंवत्
+summary: >-
+  The Saptarishi or Laukika era is a reckoning long used in Kashmir and the neighbouring hills. It rests on
+  the traditional idea that the Seven Sages (the stars of the Great Bear) stay 100 years in each of the 27
+  nakshatras, giving a 2,700-year cycle. Its traditional epoch is Chaitra shukla 1 of Kali year 25 expired
+  (3076 BCE), and dates are usually written within the century, omitting the hundreds.
+summaries:
+  kids: >-
+    The Saptarishi calendar is a traditional calendar from Kashmir. It imagines the seven stars of the Big
+    Dipper spending 100 years in each of 27 star groups, and it counts its years from 3076 BCE.
+  teen: >-
+    Kashmiri Brahmans still keep the Laukika or Saptarishi era, whose traditional start is 25 years after the
+    3102 BCE Kali epoch. Kalhana, writing his Rajatarangini in 1148-49 CE, gives his date as Laukika year 24,
+    equal to Shaka 1070, which lets historians convert Laukika dates.
+region: Kashmir and the western Himalayan hill states (Chamba, Kangra, Mandi)
+location:
+  name: Srinagar
+  lat: 34.08
+  lon: 74.80
+datings:
+  - method: traditional-sampradaya
+    range:
+      earliest: "3076 BCE"
+      latest: "3076 BCE"
+      precision: year
+      circa: false
+    grade: D
+    label: Traditional Kashmiri epoch of the Laukika era
+    sources:
+      - src.stein-1900-rajatarangini
+      - src.saha-1955-calendar-reform-committee-report
+    note: >-
+      Kashmiri Brahman tradition, first brought to European notice by Georg Buhler, places the start of the
+      Laukika era on Chaitra shukla 1 of Kali year 25 expired, the year 3076-75 BCE. The 1955 Calendar
+      Reform Committee notes that authorities differ on the start of the cycle.
+  - method: textual-internal
+    range:
+      earliest: 1148
+      latest: 1149
+      precision: year
+      circa: false
+    grade: A
+    label: Dated use in Kalhana's Rajatarangini (Laukika 4224 = Shaka 1070)
+    sources:
+      - src.stein-1900-rajatarangini
+    note: >-
+      Rajatarangini 1.52 states that in the 24th year of the Laukika era 1,070 years of the Shaka era had
+      passed, which Stein computes as Laukika 4224, 1148-49 CE.
+claims:
+  - text: >-
+      The Vishnu Purana (4.24) and Varahamihira's Brihat Samhita, quoted by Kalhana, describe the Seven Sages
+      remaining 100 years in each nakshatra and standing in Magha in the time of Parikshit and Yudhishthira.
+    grade: D
+    sources:
+      - src.wilson-1840-vishnu-purana
+      - src.stein-1900-rajatarangini
+      - src.pargiter-1913-dynasties-kali-age
+  - text: >-
+      Laukika dates are counted in centuries named after the nakshatras, with only the year within the
+      century usually written, and the era remains in use among Kashmiri Brahmans and in the hill states to
+      the south-east.
+    grade: A
+    sources:
+      - src.stein-1900-rajatarangini
+      - src.saha-1955-calendar-reform-committee-report
+  - text: >-
+      Historians of the calendar regard the Saptarishi era, like the Kali era, as a reckoning extrapolated
+      backward long after its nominal epoch, since it is not attested in early inscriptions.
+    grade: B
+    sources:
+      - src.saha-1955-calendar-reform-committee-report
+relations:
+  - kind: related-to
+    target: event.kali-yuga-epoch
+  - kind: related-to
+    target: concept.yuga-chronology-of-the-itihasa
+  - kind: related-to
+    target: concept.shaka-era
+wikidata: null
+tags:
+  - calendar
+  - saptarishi
+  - laukika-era
+  - kashmir
+  - rajatarangini
+review:
+  status: draft
+  author: gemini-4-argon

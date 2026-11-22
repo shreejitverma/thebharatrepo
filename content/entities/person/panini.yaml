@@ -1,0 +1,62 @@
+id: person.panini
+type: person
+kind: person
+names:
+  en: Panini
+  iast: Pāṇini
+  native: पाणिनि
+summary: >-
+  Panini was an ancient Sanskrit grammarian from Shalatura in Gandhara who composed the
+  Ashtadhyayi, the comprehensive generative grammar that standardized Classical Sanskrit. His
+  formal system of phonological classes, morphological derivation, and metalinguistic notation is
+  recognized as one of the earliest formal systems in the history of linguistics.
+summaries:
+  kids: >-
+    Panini was a brilliant linguist from ancient Gandhara who wrote the Ashtadhyayi, organizing
+    the entire grammar of the Sanskrit language into almost 4,000 short rules.
+  teen: >-
+    Born in Shalatura in Gandhara, Panini synthesized earlier grammatical traditions into the
+    Ashtadhyayi. His formal rule system, using abstract markers and recursion, defined Classical
+    Sanskrit and influenced modern structural and formal linguistics.
+region: Shalatura, Gandhara (near the confluence of the Indus and Kabul rivers)
+location: { name: "Shalatura (Chota Lahor, Gandhara)", lat: 34.04, lon: 72.37 }
+datings:
+  - method: linguistic
+    range: { earliest: "600 BCE", latest: "350 BCE", best: "400 BCE", precision: century, circa: true }
+    grade: B
+    label: Mainstream scholarly dating (Cardona, Katre)
+    sources:
+      - src.cardona-1988-panini-work-traditions
+      - src.katre-1987-astadhyayi-panini
+      - src.singh-2008-ancient-early-medieval-india
+    note: >-
+      Scholars place Panini in the 5th or 4th century BCE (most often c. 500 to 350 BCE) in
+      Achaemenid or immediately pre-Alexandrian Gandhara.
+claims:
+  - text: >-
+      Later grammatical and historical sources identify Panini as a native of Shalatura in
+      Gandhara and name his mother as Dakshi (giving the matronymic Dakshiputra).
+    grade: B
+    sources:
+      - src.cardona-1988-panini-work-traditions
+      - src.katre-1987-astadhyayi-panini
+  - text: >-
+      In the Ashtadhyayi, Panini explicitly cites ten earlier Sanskrit grammarians by name,
+      including Apishali, Kashyapa, Gargya, Galava, Chakravarmana, Bharadvaja, Shakatayana,
+      Shakalya, Senaka, and Sphoṭayana.
+    grade: A
+    sources:
+      - src.cardona-1988-panini-work-traditions
+      - src.katre-1987-astadhyayi-panini
+relations:
+  - { kind: authored, target: text.ashtadhyayi }
+  - { kind: related-to, target: text.vedangas }
+  - { kind: related-to, target: concept.vedic-sanskrit }
+wikidata: Q189725
+image:
+  commons: "File:Panini 1.jpg"
+  alt: Modern commemorative statue of the grammarian Panini
+  credit: Jameela P.
+  license: CC BY-SA 4.0
+tags: [grammarian, linguistics, ashtadhyayi, gandhara, vyakarana]
+review: { status: draft, author: "gemini-4-argon" }

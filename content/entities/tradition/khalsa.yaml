@@ -1,0 +1,38 @@
+id: tradition.khalsa
+type: tradition
+kind: dharma
+names:
+  en: Khalsa
+summary: The Khalsa was inaugurated by Guru Gobind Singh at Anandpur in 1699.
+  Its initiation practices and collective identity became central to Sikh
+  community history.
+summaries:
+  kids: The Khalsa is a Sikh community founded by Guru Gobind Singh in 1699, with
+    shared practices and commitments.
+  teen: The Khalsa’s creation marked a significant reorganization of Sikh identity
+    and discipline; accounts of its beginnings are preserved in Sikh tradition
+    and studied historically.
+datings:
+  - method: documentary
+    range:
+      earliest: "1699"
+      latest: "1699"
+      precision: year
+      circa: false
+    grade: B
+    label: Documentary record
+    sources: &a1
+      - src.singh-fenech-2014-oxford-handbook-sikh-studies
+      - src.grewal-1990-sikhs-of-the-punjab
+claims:
+  - text: The Khalsa was inaugurated by Guru Gobind Singh at Anandpur in 1699. Its
+      initiation practices and collective identity became central to Sikh
+      community history.
+    grade: B
+    sources: *a1
+relations: []
+tags:
+  - dharma
+review:
+  status: draft
+  author: codex-gpt-6

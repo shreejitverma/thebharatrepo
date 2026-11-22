@@ -1,0 +1,79 @@
+id: concept.indus-periphery-cline
+type: concept
+kind: science
+names:
+  en: Indus Periphery Genetic Cline
+summary: >-
+  An ancient genetic population profile identified by Vagheesh Narasimhan, Nick Patterson, Priya Moorjani, Vasant
+  Shinde, Niraj Rai, David Reich and 111 co-authors in Science (2019) from 11 Bronze Age migrant or trade-diaspora
+  outlier individuals buried at Shahr-i-Sokhta (eastern Iran) and Gonur Tepe (Bactria-Margiana Archaeological Complex,
+  Turkmenistan) dated to c. 3100-2000 BCE, which matches the Rakhigarhi I6113 genome and represents the ancestral
+  Harappan population that later admixed to form both Ancestral South Indian (ASI) and Ancestral North Indian (ANI)
+  populations.
+summaries:
+  kids: >-
+    By studying the DNA of traders and travellers from the Indus region buried in ancient towns in Iran and Central
+    Asia, scientists reconstructed the genetic profile of the people who lived in the Harappan cities.
+  teen: >-
+    Published in Science in 2019 alongside the Rakhigarhi genome paper, the "Indus Periphery Cline" describes 11
+    Bronze Age individuals at Shahr-i-Sokhta and Gonur whose DNA lacked Steppe ancestry, matched Rakhigarhi I6113,
+    and formed the foundational genetic source for both northern and southern South Asian populations after 2000 BCE.
+region: Indus Basin, Eastern Iran (Shahr-i-Sokhta), and Southern Central Asia (Gonur, BMAC)
+datings:
+  - method: archaeological-radiocarbon
+    range:
+      earliest: "3100 BCE"
+      latest: "2000 BCE"
+      precision: century
+      circa: true
+    grade: A
+    label: Direct AMS Radiocarbon Dates of the 11 Indus Periphery Individuals
+    sources:
+      - src.narasimhan-2019-formation-human-populations
+      - src.shinde-2019-ancient-harappan-genome
+    note: >-
+      Directly AMS radiocarbon-dated skeletal remains of eight genetic outliers at Shahr-i-Sokhta (c. 3100-2200 BCE)
+      and three outliers at Gonur Tepe in Turkmenistan (c. 2300-2000 BCE).
+claims:
+  - text: >-
+      In a genome-wide analysis of 523 ancient individuals from Central and South Asia, Narasimhan et al. (2019)
+      identified 11 outlier individuals at Shahr-i-Sokhta and Gonur who were genetically distinct from the local
+      host populations and formed a tight cline varying from ~14% to ~42% Andamanese/Ancient Ancestral South Indian
+      (AASI)-related ancestry combined with ~58% to ~86% early Iranian-related ancestry.
+    grade: A
+    sources:
+      - src.narasimhan-2019-formation-human-populations
+      - src.shinde-2019-ancient-harappan-genome
+  - text: >-
+      Narasimhan et al. (2019) showed that after the decline of the Mature Harappan phase (c. 1900 BCE), individuals
+      along the Indus Periphery Cline mixed to the south and east with groups carrying higher AASI ancestry to form
+      the Ancestral South Indian (ASI) lineage, and mixed to the north during the 2nd millennium BCE with groups
+      carrying Middle-to-Late Bronze Age Steppe pastoralist ancestry to form the Ancestral North Indian (ANI) lineage.
+    grade: A
+    sources:
+      - src.narasimhan-2019-formation-human-populations
+  - text: >-
+      Even though BMAC towns such as Gonur traded extensively with the Indus Valley, the main local BMAC population
+      carried virtually no South Asian hunter-gatherer ancestry and did not contribute significantly to later South
+      Asian genetics, demonstrating that the 11 outliers were first- or early-generation migrants from the Indus
+      cultural sphere.
+    grade: A
+    sources:
+      - src.narasimhan-2019-formation-human-populations
+relations:
+  - kind: related-to
+    target: concept.rakhigarhi-i6113-genome
+  - kind: part-of
+    target: tradition.harappan-civilisation
+  - kind: related-to
+    target: concept.harappan-mesopotamian-trade
+wikidata: null
+tags:
+  - harappan
+  - archaeogenetics
+  - indus-periphery
+  - ancient-dna
+  - science
+review:
+  status: draft
+  author: gemini-4-argon

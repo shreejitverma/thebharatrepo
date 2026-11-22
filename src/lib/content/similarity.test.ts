@@ -1,0 +1,139 @@
+import { describe, expect, it } from 'vitest';
+import { cachedTitleMatches, urlMatchKind, pageMatchesTitle, sameName, sameTitle, titleSimilarity } from './similarity';
+
+describe('sameTitle', () => {
+  it('accepts a title without its subtitle', () => {
+    expect(sameTitle('Early India', 'Early India: From the Origins to AD 1300')).toBe(true);
+    expect(sameTitle('The formation of human populations in South and Central Asia', 'The formation of human populations in South and Central Asia')).toBe(true);
+  });
+  it('accepts a main title against a record with a long subtitle', () => {
+    expect(sameTitle('The Rāgas of Early Indian Music', 'The Ragas of Early Indian Music: Modes, Melodies, and Musical Notations from the Gupta Period to c. 1250')).toBe(true);
+    expect(sameTitle('Inscriptions of Asoka: New Edition', 'Inscriptions of Asoka. New Edition by E. Hultzsch')).toBe(true);
+  });
+  it('accepts records that add a series name or a comma-led edition note', () => {
+    expect(sameTitle('The Jains', 'The Jains (Library of Religious Beliefs and Practices)')).toBe(true);
+    expect(sameTitle('Astadhyayi of Panini', 'Aṣṭādhyāyī of Pāṇini, In Roman Transliteration by Sumitra Mangesh Katre')).toBe(true);
+  });
+  it('ignores case, diacritics and punctuation', () => {
+    expect(sameTitle('Āryabhaṭīya of Āryabhaṭa', 'aryabhatiya of aryabhata')).toBe(true);
+  });
+  it('rejects a one-word subset of a longer title', () => {
+    expect(sameTitle('Early India: From the Origins to AD 1300', 'India')).toBe(false);
+    expect(sameTitle('The Rigveda', 'Rigveda and Avesta: a comparative grammar of sacrifice')).toBe(false);
+  });
+  it('rejects a different volume of the same work', () => {
+    expect(sameTitle('History of Indian Medical Literature, Vol. 1', 'History of Indian Medical Literature, Vol. 2')).toBe(false);
+    expect(sameTitle('Epigraphia Indica Vol 1', 'Epigraphia Indica Vol 6')).toBe(false);
+    expect(sameTitle('A History of Early Vedanta Philosophy, Volume 2', 'A History of Early Vedanta Philosophy, Part I')).toBe(false);
+  });
+  it('reads Roman and Arabic volume numbers as the same number', () => {
+    expect(sameTitle('Epigraphia Indica, Vol. VI', 'Epigraphia Indica Vol 6')).toBe(true);
+    expect(sameTitle('A History of Early Vedanta Philosophy, Part 1', 'A History of Early Vedanta Philosophy, Part I')).toBe(true);
+  });
+  it('rejects a sibling work whose title differs only in its subject', () => {
+    expect(sameTitle('Ajanta Caves - UNESCO World Heritage Centre', 'Ellora Caves - UNESCO World Heritage Centre')).toBe(false);
+    expect(sameTitle('Early History of India', 'Early History of Bengal')).toBe(false);
+  });
+  it('keeps subject words such as cultural and world significant inside a title', () => {
+    expect(sameTitle('A Cultural History of India', 'A Political History of India')).toBe(false);
+    expect(sameTitle('Cultural History of Ancient India', 'Economic History of Ancient India')).toBe(false);
+    expect(sameTitle('World Religions of India', 'Folk Religions of India')).toBe(false);
+    expect(pageMatchesTitle('A Cultural History of India', 'A Political History of India')).toBe(false);
+  });
+  it('treats a year in a main title as part of the subject', () => {
+    expect(sameTitle('The Nobel Prize in Physics 1930', 'The Nobel Prize in Physics 1931')).toBe(false);
+    expect(pageMatchesTitle('The Nobel Prize in Physics 1930', 'The Nobel Prize in Physics 1931')).toBe(false);
+    expect(sameTitle('Indian Independence Act 1947', 'Indian Independence Act 1935')).toBe(false);
+    expect(sameTitle('Bengal 1757: The Battle', 'Bengal 1857: The Battle')).toBe(false);
+    expect(sameTitle('The Nobel Prize in Physics 1930', 'The Nobel Prize in Physics 1930')).toBe(true);
+  });
+  it('rejects different works that share a main title but not a subtitle', () => {
+    expect(sameTitle('Early India: From the Origins to AD 1300', 'Early India: A Concise History')).toBe(false);
+    expect(sameTitle('Ancient India: Political History', 'Ancient India: Social and Cultural Life')).toBe(false);
+    expect(sameTitle('Sun Temple, Konarak', 'Sun Temple, Modhera')).toBe(false);
+    expect(pageMatchesTitle('Sun Temple, Konarak', 'Sun Temple, Modhera')).toBe(false);
+  });
+  it('accepts a record that drops the subtitle or misspells a word by one swapped pair of letters', () => {
+    expect(sameTitle('Early India: From the Origins to AD 1300', 'Early India')).toBe(true);
+    expect(sameTitle('Classical Hindu Mythology: A Reader in the Sanskrit Puranas', 'Classical Hindu Mythology: A Reader in the Sanskirt Puranas')).toBe(true);
+    expect(sameTitle("Gandhi's Rise to Power: Indian Politics 1915-1922", "Gandhi's Rise to Power: Indian Politics 1915-1922 (Cambridge South Asian Studies)")).toBe(true);
+  });
+  it('rejects a short title whose words are scattered through a different work', () => {
+    expect(sameTitle('A History of India', 'History of the Archaeological Survey of India')).toBe(false);
+    expect(sameTitle('The Mughal Empire', 'The Princes of the Mughal Empire, 1504-1719')).toBe(false);
+    expect(sameTitle('A History of India', 'A History of India, Fourth Edition')).toBe(true);
+  });
+  it('rejects an unrelated work that reuses an identifier', () => {
+    expect(sameTitle('Vedic Astronomy Proves the Mahabharata War Occurred in 5561 BCE', 'The formation of human populations in South and Central Asia')).toBe(false);
+    expect(titleSimilarity('', 'anything')).toBe(0);
+  });
+});
+
+describe('pageMatchesTitle', () => {
+  it('accepts a page title with a site suffix', () => {
+    expect(pageMatchesTitle('Tradition of Vedic chanting', 'UNESCO - Tradition of Vedic chanting - intangible heritage')).toBe(true);
+  });
+  it('rejects a page about a sibling subject with a near-identical title', () => {
+    expect(pageMatchesTitle('Group of Monuments at Mahabalipuram', 'Group of Monuments at Hampi - UNESCO World Heritage Centre')).toBe(false);
+    expect(pageMatchesTitle('Ajanta Caves', 'Ellora Caves - UNESCO World Heritage Centre')).toBe(false);
+    expect(pageMatchesTitle('Ajanta Caves', 'Ajanta Caves - UNESCO World Heritage Centre')).toBe(true);
+  });
+  it('does not count shared site boilerplate as evidence of the same page', () => {
+    expect(pageMatchesTitle('Ajanta Caves - UNESCO World Heritage Centre', 'Taj Mahal - UNESCO World Heritage Centre')).toBe(false);
+    expect(pageMatchesTitle('Sanchi - UNESCO World Heritage Centre', 'Ellora Caves - UNESCO World Heritage Centre')).toBe(false);
+    expect(pageMatchesTitle('Khajuraho Group of Monuments - UNESCO World Heritage Centre', 'Taj Mahal - UNESCO World Heritage Centre')).toBe(false);
+    expect(sameTitle('Ajanta Caves - UNESCO World Heritage Centre', 'Taj Mahal - UNESCO World Heritage Centre')).toBe(false);
+  });
+  it('reads HTML entities and bracketed cataloguer notes in page titles as punctuation', () => {
+    expect(pageMatchesTitle('Rabindranath Tagore - Facts', 'Rabindranath Tagore &#8211; Facts - NobelPrize.org')).toBe(true);
+    expect(pageMatchesTitle('The Invasion of India by Alexander the Great', 'The invasion of India by Alexander the Great [microform], as described by Arrian')).toBe(true);
+  });
+  it('rejects a page that does not carry the title', () => {
+    expect(pageMatchesTitle('Tradition of Vedic chanting', 'Page not found')).toBe(false);
+  });
+});
+
+describe('cached title rechecks', () => {
+  it('judges catalogue URLs as registry records and other URLs as web pages', () => {
+    expect(urlMatchKind('https://archive.org/details/invasionofindiab00mccr')).toBe('record');
+    expect(urlMatchKind('https://openlibrary.org/works/OL123W')).toBe('record');
+    expect(urlMatchKind('https://whc.unesco.org/en/list/242/')).toBe('page');
+    expect(urlMatchKind('not a url')).toBe('page');
+  });
+  it('rejects a shorter cited title for a catalogue item about a different work', () => {
+    const url = 'https://archive.org/details/princesofmughalem0000faru';
+    expect(cachedTitleMatches(urlMatchKind(url), 'The Mughal Empire', 'The Princes of the Mughal Empire, 1504-1719')).toBe(false);
+    expect(cachedTitleMatches(urlMatchKind(url), 'The Princes of the Mughal Empire', 'The Princes of the Mughal Empire, 1504-1719')).toBe(true);
+  });
+});
+
+describe('sameName', () => {
+  it('accepts exact labels and close aliases', () => {
+    expect(sameName(['Rigveda', 'Ṛgveda'], ['Rigveda'])).toBe(true);
+    expect(sameName(['Mohenjo-daro'], ['Mohenjo-daro'])).toBe(true);
+  });
+  it('accepts a multi-word label contained in a longer descriptive name, and spelling variants', () => {
+    expect(sameName(['Cemetery H Culture (Late Harappan Punjab Phase)'], ['Cemetery H culture'])).toBe(true);
+    expect(sameName(['Harappan Civilisation'], ['Indus Valley Civilization', 'Harappan civilization'])).toBe(true);
+  });
+  it('lets a one-word label identify a named site or person, with a one-letter variant', () => {
+    expect(sameName(['Mehrgarh Neolithic and Chalcolithic Site', 'mehrgarh'], ['Mehrgarh'], { namedThing: true })).toBe(true);
+    expect(sameName(['Hastinapura Excavations', 'hastinapura'], ['Hastinapur'], { namedThing: true })).toBe(true);
+    expect(sameName(['Burzahom Neolithic Site', 'burzahom'], ['Burzahom archaeological site'], { namedThing: true })).toBe(true);
+    expect(sameName(['Domestication of Zebu Cattle (Bos indicus)'], ['zebu'], { namedThing: false })).toBe(false);
+  });
+  it('tells apart rulers and scholars that differ only by a regnal number', () => {
+    expect(sameName(['Chandragupta II'], ['Chandragupta I'], { namedThing: true })).toBe(false);
+    expect(sameName(['Bhaskara II'], ['Bhaskara I'], { namedThing: true })).toBe(false);
+    expect(sameName(['Chandragupta II'], ['Chandragupta'], { namedThing: true })).toBe(false);
+    expect(sameName(['Bhaskara II', 'Bhāskara II'], ['Bhāskara II'], { namedThing: true })).toBe(true);
+    expect(sameName(['Rajaraja I'], ['Rajaraja 1'], { namedThing: true })).toBe(true);
+  });
+  it('rejects a related but different thing', () => {
+    expect(sameName(['Soma Ritual'], ['Soma'])).toBe(false);
+    expect(sameName(['Sarasvati in the Rigveda'], ['Sarasvati River'])).toBe(false);
+    expect(sameName(['Domestication of Zebu Cattle (Bos indicus)'], ['zebu'])).toBe(false);
+    expect(sameName(['Major Rock Edict XIII of Ashoka'], ['Ashoka'])).toBe(false);
+    expect(sameName(['Jwalapuram and the Toba Super-Eruption Debate'], ['Jwalapuram'])).toBe(false);
+  });
+});

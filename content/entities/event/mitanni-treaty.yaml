@@ -1,0 +1,66 @@
+id: event.mitanni-treaty
+type: event
+kind: event
+names:
+  en: Hittite-Mitanni Treaty of Suppiluliuma I and Shattiwaza
+  iast: Mitrāvaruṇa-Indra-Nāsatya
+summary: >-
+  The cuneiform treaty concluded around 1380 BCE between the Hittite king Suppiluliuma I and the
+  Mitanni prince Shattiwaza (Kurtiwaza), discovered at Hattusa (Bogazkoy), invokes four Vedic
+  deities - Mitra, Varuna, Indra, and the Nasatyas (Ashvins) - as divine witnesses. It is the
+  oldest directly dated epigraphic attestation of Indo-Aryan divine names.
+summaries:
+  kids: >-
+    Around 1380 BCE, two ancient kings in West Asia signed a clay-tablet peace treaty that called
+    upon four Vedic gods - Mitra, Varuna, Indra, and the Nasatyas - as witnesses.
+  teen: >-
+    Excavated on cuneiform tablets at the Hittite capital of Hattusa, the c. 1380 BCE treaty
+    between Suppiluliuma I and Shattiwaza of Mitanni invokes Mitra, Varuna, Indra, and the
+    Nasatyas, providing an external chronological benchmark for early Indo-Aryan language and
+    religion.
+region: Upper Mesopotamia and Anatolia (found at Hattusa, modern Bogazkale, Turkey)
+location: { name: "Hattusa (Bogazkale)", lat: 40.0197, lon: 34.6153 }
+datings:
+  - method: epigraphic
+    range: { earliest: "1386 BCE", latest: "1340 BCE", best: "1380 BCE", precision: decade, circa: true }
+    grade: A
+    label: Reign of Suppiluliuma I of Hatti (Hattusa cuneiform archive)
+    sources:
+      - src.beckman-1999-hittite-diplomatic-texts
+      - src.thieme-1960-aryan-gods-mitanni-treaties
+      - src.anthony-2007-horse-wheel-language
+    note: >-
+      Directly attested on Akkadian cuneiform tablets from the royal archives of Hattusa dated to
+      the reign of Suppiluliuma I (c. 1380 to 1346 BCE).
+claims:
+  - text: >-
+      Among the Hurrian and Mesopotamian gods of Mitanni, the treaty invokes the divine sequence
+      Mi-it-ra-ash-shi-il, U-ru-wa-na-ash-shi-el (or A-ru-na-ash-shi-il), In-da-ra, and
+      Na-sha-at-ti-ya-an-na, corresponding to Vedic Mitra, Varuna, Indra, and the Nasatyas.
+    grade: A
+    sources:
+      - src.thieme-1960-aryan-gods-mitanni-treaties
+      - src.beckman-1999-hittite-diplomatic-texts
+  - text: >-
+      Paul Thieme demonstrated that the phonological forms (such as Nasatya with -s- rather than
+      Iranian -h-, and Indra as a beneficent sovereign deity rather than a demon) are specifically
+      Indo-Aryan rather than Proto-Indo-Iranian or Old Iranian.
+    grade: B
+    sources:
+      - src.thieme-1960-aryan-gods-mitanni-treaties
+      - src.jamison-brereton-2014-rigveda
+  - text: >-
+      Related Mitanni texts, including the horse-training manual of Kikkuli found at Hattusa,
+      preserve Indo-Aryan technical terms and numerals such as aika (one), tera (three), panza
+      (five), satta (seven), and nawa (nine) joined to wartanna (turn or lap).
+    grade: A
+    sources:
+      - src.anthony-2007-horse-wheel-language
+      - src.thieme-1960-aryan-gods-mitanni-treaties
+relations:
+  - { kind: related-to, target: text.rigveda }
+  - { kind: related-to, target: concept.vedic-sanskrit }
+  - { kind: related-to, target: concept.indo-aryan-migration }
+  - { kind: related-to, target: concept.sintashta-steppe-chariot-question }
+tags: [mitanni, hattusa, cuneiform, synchronism, indra, mitra, varuna, nasatya]
+review: { status: draft, author: "gemini-4-argon" }

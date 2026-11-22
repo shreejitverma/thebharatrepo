@@ -1,0 +1,30 @@
+id: event.founding-of-delhi-sultanate
+type: event
+kind: event
+names:
+  en: Establishment of the Delhi Sultanate
+summary: >-
+  After Muhammad of Ghur's death in 1206, his former military commander Qutb al-Din Aibak established
+  an independent regime centred on Delhi. Historians commonly use 1206 as the beginning of the Delhi
+  Sultanate, while recognizing that its institutions and territorial reach developed over time.
+summaries:
+  kids: >-
+    In 1206, Qutb al-Din Aibak began ruling independently from Delhi. His rule became the start of a
+    series of sultanates based in Delhi.
+  teen: >-
+    The Delhi Sultanate did not appear as a fully formed state in one moment. The year 1206 marks
+    Aibak's independent rule after the death of Muhammad of Ghur and is conventionally used as its
+    starting point.
+region: Delhi and northern India
+datings:
+  - method: documentary
+    range: { earliest: "1206 CE", latest: "1206 CE", precision: year, circa: false }
+    grade: B
+    label: Conventionally dated beginning
+    sources: [src.jackson-1999-delhi-sultanate]
+claims:
+  - text: Qutb al-Din Aibak began an independent regime in Delhi in 1206 after Muhammad of Ghur died.
+    grade: B
+    sources: [src.jackson-1999-delhi-sultanate]
+tags: [delhi-sultanate, delhi, medieval]
+review: { status: draft, author: "codex-gpt-6" }

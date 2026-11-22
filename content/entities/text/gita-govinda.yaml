@@ -1,0 +1,35 @@
+id: text.gita-govinda
+type: text
+kind: text
+names:
+  en: Gita Govinda
+  iast: Gītagovinda
+  native: ଗୀତଗୋବିନ୍ଦ
+summary: >-
+  The Gita Govinda is a Sanskrit lyric poem by Jayadeva that depicts the love of Radha and Krishna and
+  their separation and reunion. Its songs entered eastern Indian devotional and performance traditions.
+summaries:
+  kids: >-
+    The Gita Govinda is a Sanskrit poem about Radha and Krishna. Its songs describe love, separation,
+    and reunion.
+  teen: >-
+    Jayadeva's Gita Govinda combines lyrical poetry with devotional themes around Radha and Krishna.
+    It has had a long life in music, dance, and worship, especially in eastern India.
+region: Eastern India
+datings:
+  - method: linguistic
+    range: { earliest: "1170 CE", latest: "1230 CE", precision: decade, circa: true }
+    grade: C
+    label: Scholarly dating
+    sources: [src.miller-1977-love-song-dark-lord]
+claims:
+  - text: The Gita Govinda is a Sanskrit lyric poem attributed to Jayadeva.
+    grade: B
+    sources: [src.miller-1977-love-song-dark-lord]
+  - text: Its central narrative concerns Radha and Krishna's love, separation, and reunion.
+    grade: B
+    sources: [src.miller-1977-love-song-dark-lord]
+relations:
+  - { kind: authored-by, target: person.jayadeva }
+tags: [sanskrit, poetry, bhakti, music]
+review: { status: draft, author: "codex-gpt-6" }
