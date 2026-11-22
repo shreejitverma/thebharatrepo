@@ -7,6 +7,7 @@ import KaalchakraStrip from '@/components/KaalchakraStrip';
 import SourceCitation from '@/components/SourceCitation';
 import { getGraph, getIndex, issueUrl, SITE_URL } from '@/lib/content/site';
 import { entityHref } from '@/lib/content/kaalchakra';
+import { rankDatings } from '@/lib/content/lens';
 import { KIND_LABELS, METHOD_LABELS, isTraditional, citationId } from '@/lib/content/schema';
 import { verifiedImage } from '@/lib/content/verification';
 import { formatRange } from '@/lib/time';
@@ -42,7 +43,7 @@ export default async function EntityPage({ params }: { params: Promise<{ type: s
   const g = getGraph();
   const img = e.image ? verifiedImage(e.image.commons) : null;
   if (img) preconnect(new URL(img.thumb).origin);
-  const ordered = [...e.datings].sort((a, b) => Number(isTraditional(a.method)) - Number(isTraditional(b.method)));
+  const ordered = rankDatings(e.datings, (d) => isTraditional(d.method));
   const primary = ordered[0];
   const anchor = primary.range.best ?? (primary.range.earliest + primary.range.latest) / 2;
   const u = yearToUnit(anchor);

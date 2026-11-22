@@ -1,5 +1,5 @@
 import type { KcItem } from './kaalchakra';
-import { isTraditional, type DatingMethod } from './labels';
+import { GRADES, isTraditional, type DatingMethod, type Grade } from './labels';
 import { formatRange, type YearRange } from '../time';
 
 export const LENSES = ['both', 'scholarship', 'tradition'] as const;
@@ -18,9 +18,17 @@ export function primaryAnchor(item: KcItem, lens: Lens): number | null {
   return item.anchor.scholarship ?? item.anchor.tradition;
 }
 
-/** The dating that stands for an item in a one-line summary: its first scholarly dating, else its first traditional one. */
-export function primaryDating<D extends { method: DatingMethod }>(datings: readonly D[]): D {
-  return datings.find((d) => !isTraditional(d.method)) ?? datings[0];
+/**
+ * The archive's single ordering rule for datings: scholarship before tradition, then the best evidence grade
+ * (A before E), ties kept in the author's order. The first dating in this order stands for the item everywhere.
+ */
+export function rankDatings<D extends { grade: Grade }>(datings: readonly D[], traditional: (d: D) => boolean): D[] {
+  return [...datings].sort((a, b) => Number(traditional(a)) - Number(traditional(b)) || GRADES.indexOf(a.grade) - GRADES.indexOf(b.grade));
+}
+
+/** The dating that stands for an entity or article, by the rankDatings rule. */
+export function primaryDating<D extends { method: DatingMethod; grade: Grade }>(datings: readonly D[]): D {
+  return rankDatings(datings, (d) => isTraditional(d.method))[0];
 }
 
 /** One-line date label; a traditional reckoning is marked so it never reads as dated history. */
@@ -29,7 +37,7 @@ export function datingSummary(range: YearRange, method: DatingMethod): string {
 }
 
 /** Summary label for an entity or article: its primary dating, marked when it is a traditional reckoning. */
-export function summarizeDatings(datings: readonly { method: DatingMethod; range: YearRange }[]): string {
+export function summarizeDatings(datings: readonly { method: DatingMethod; grade: Grade; range: YearRange }[]): string {
   const d = primaryDating(datings);
   return datingSummary(d.range, d.method);
 }

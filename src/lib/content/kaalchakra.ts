@@ -7,7 +7,7 @@ import { isTraditional, type Entity, type Kind, type Grade, type DatingMethod, t
 import { rangeAnchor, type Precision } from '../time';
 import { yearToUnit } from '../time/scale';
 import type { ContentGraph } from './load';
-import { primaryAnchor, type Lens } from './lens';
+import { primaryAnchor, rankDatings, type Lens } from './lens';
 export { primaryAnchor };
 
 export interface KcDating {
@@ -47,10 +47,7 @@ export function entityHref(id: string): string {
 
 function anchorFor(datings: KcDating[]): number | null {
   if (datings.length === 0) return null;
-  // Prefer the best-graded dating; ties keep the author's order.
-  const order: Grade[] = ['A', 'B', 'C', 'D', 'E'];
-  const best = [...datings].sort((a, b) => order.indexOf(a.grade) - order.indexOf(b.grade))[0];
-  return rangeAnchor(best);
+  return rangeAnchor(rankDatings(datings, (d) => d.lens === 'tradition')[0]);
 }
 
 export function toKcItem(e: Entity): KcItem {
