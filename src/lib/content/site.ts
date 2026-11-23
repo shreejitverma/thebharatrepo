@@ -31,7 +31,7 @@ export function getIndex(): KcItem[] {
 
 let citations: Map<string, CitedBy> | undefined;
 
-/** Source id -> every entity, article and correction that cites it. */
+/** Source id -> every entity, article, correction, quiz and published debate that cites it. */
 export function getCitationIndex(): Map<string, CitedBy> {
   if (!citations || process.env.NODE_ENV === 'development') citations = buildCitationIndex(getGraph());
   return citations;

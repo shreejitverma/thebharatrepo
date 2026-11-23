@@ -71,3 +71,11 @@ test('related entity pages link the draft in the preview build', async ({ page }
   // The dev server compiles the route on first navigation.
   await expect(page).toHaveURL(DEBATE, { timeout: 30_000 });
 });
+
+test('a source cited by the draft never lists it, even in the preview build', async ({ page }) => {
+  await page.goto('/sources/coningham-2013-earliest-buddhist-shrine');
+  await expect(page.getByRole('heading', { name: 'Cited in the archive' })).toBeVisible();
+  await expect(page.locator(`.cited-by a[href^="${DEBATE}"]`)).toHaveCount(0);
+  await expect(page.getByRole('heading', { name: /^Debates/ })).toHaveCount(0);
+  await expect(page.locator('.cited-by__summary, .cited-by .empty')).not.toContainText('debate');
+});

@@ -2,7 +2,7 @@
 title: "The Mauryan Empire"
 summary: "The Mauryan state (late fourth century to about 185 BCE) brought much of the subcontinent under one government for the first time we can document. Its history is built from Ashoka's own inscriptions, Greek fragments and later texts that often disagree."
 date: "2026-01-10"
-updated: "2026-11-21"
+updated: "2026-11-22"
 tags: ["ancient history", "maurya", "ashoka", "chandragupta", "arthashastra"]
 datings:
   - method: scholarly-consensus
@@ -11,19 +11,30 @@ datings:
     label: "Mainstream Indology"
     sources: [src.thapar-2002-early-india, src.singh-2008-ancient-early-medieval-india]
     note: "Estimates for Chandragupta’s accession span about 324 to 321 BCE. The chronology is anchored by Greek synchronisms (Seleucus I, and the Hellenistic kings named in Ashoka's Rock Edict XIII) and by Puranic dynastic lists."
-entities: []
+entities:
+  - polity.maurya-empire
+  - person.chandragupta-maurya
+  - person.ashoka
+  - artifact.ashoka-major-rock-edict-xiii
+  - text.arthashastra
+  - person.kautilya
+  - text.megasthenes-indica
+  - polity.magadha
+  - polity.nanda-dynasty
+  - polity.shunga-dynasty
+  - text.puranas
 readingLevel: adult
 review: { status: draft, author: "claude-sonnet-5-5" }
 ---
 
-Around 324 to 321 BCE Chandragupta took the throne of Magadha, the powerful kingdom in the Ganges plain, and within a few decades his state reached from the Hindu Kush to the Bay of Bengal.
-Historians call this state the Mauryan Empire.
+Around 324 to 321 BCE [Chandragupta](/archive/person/chandragupta-maurya) took the throne of [Magadha](/archive/polity/magadha), the powerful kingdom in the Ganges plain, and within a few decades his state reached from the Hindu Kush to the Bay of Bengal.
+Historians call this state the [Mauryan Empire](/archive/polity/maurya-empire).
 It is the earliest known government to rule most of the subcontinent, though "most" is the important word, as we will see [@src.thapar-2002-early-india; @src.singh-2008-ancient-early-medieval-india].
 
 ## Rise of Chandragupta
 
-The Puranas, the Buddhist chronicles and the Jain tradition all agree that Chandragupta replaced the Nanda dynasty of Magadha, but they disagree about his origins and how he did it [@src.pargiter-1913-dynasties-kali-age; @src.thapar-2002-early-india].
-Later Sanskrit tradition gives a large part of the credit to a brahmana minister, Chanakya or Kautilya.
+The [Puranas](/archive/text/puranas), the Buddhist chronicles and the Jain tradition all agree that Chandragupta replaced the [Nanda dynasty](/archive/polity/nanda-dynasty) of Magadha, but they disagree about his origins and how he did it [@src.pargiter-1913-dynasties-kali-age; @src.thapar-2002-early-india].
+Later Sanskrit tradition gives a large part of the credit to a brahmana minister, [Chanakya or Kautilya](/archive/person/kautilya).
 That story is told in sources written long after the events, so the details are best treated as tradition rather than record [@src.thapar-2002-early-india].
 
 What we can say with more confidence comes from outside India.
@@ -32,15 +43,15 @@ The two made a settlement under which Chandragupta received territory west of th
 The Greek accounts describe a negotiated treaty between Chandragupta and Seleucus, and the territorial detail is debated [@src.thapar-2002-early-india; @src.singh-2008-ancient-early-medieval-india].
 Because Seleucus's dates are known, this encounter helps fix the Mauryan calendar.
 
-The Greek ambassador Megasthenes lived at Chandragupta's court at Pataliputra (modern Patna) and wrote a book on India.
+The Greek ambassador Megasthenes lived at Chandragupta's court at Pataliputra (modern Patna) and wrote a book on India, the [*Indica*](/archive/text/megasthenes-indica).
 It is lost and survives only in quotations by later authors, who describe a large capital, a standing army and officials supervising markets and roads [@src.thapar-2002-early-india].
 
 ## Ashoka and his inscriptions
 
-Ashoka, Chandragupta's grandson, ruled from roughly 268 to 232 BCE.
+[Ashoka](/archive/person/ashoka), Chandragupta's grandson, ruled from roughly 268 to 232 BCE.
 He is the one ancient Indian ruler we can hear speaking for himself, because he had messages carved on rocks and polished stone pillars across his realm, in Prakrit (written in Brahmi, and in Kharoshthi and Greek in the northwest) [@src.hultzsch-1925-inscriptions-of-asoka; @src.lahiri-2015-ashoka-ancient-india].
 
-In Major Rock Edict XIII he describes the conquest of Kalinga (roughly modern Odisha), in his eighth regnal year, c. 261 BCE.
+In [Major Rock Edict XIII](/archive/artifact/ashoka-major-rock-edict-xiii) he describes the conquest of Kalinga (roughly modern Odisha), in his eighth regnal year, c. 261 BCE.
 He says that about 150,000 people were deported, about 100,000 were killed and many more died, and that he felt deep remorse [@src.hultzsch-1925-inscriptions-of-asoka; @src.thapar-2012-asoka-decline-mauryas].
 The same edict names five Hellenistic kings, including Antiochus II of Syria and Ptolemy II of Egypt, as recipients of his message.
 Their reigns overlapped only briefly, which is why this edict anchors Ashoka's date to independently known Greek chronology [@src.thapar-2002-early-india].
@@ -54,7 +65,7 @@ He claims "victory by dhamma" and sends envoys to Hellenistic kings, but the lat
 
 ## How the empire worked
 
-The *Arthashastra*, a manual of statecraft attributed to Kautilya, describes spies, taxation, state-run industries and a standing army.
+The [*Arthashastra*](/archive/text/arthashastra), a manual of statecraft attributed to Kautilya, describes spies, taxation, state-run industries and a standing army.
 It was long read as a portrait of Mauryan government.
 Patrick Olivelle, who made a new critical translation, argues instead that the text as we have it was composed and edited over several centuries and reached its present form in the first centuries CE, so it cannot be used straightforwardly as a Mauryan document [@src.olivelle-2013-king-governance-law].
 Other scholars still see an early core.
@@ -68,7 +79,7 @@ A royal road from the northwest to Pataliputra is described by Greek writers, th
 ## Decline and end
 
 After Ashoka the line continued under his successors for about fifty years.
-The Puranas and later Sanskrit literature say the last Mauryan king, Brihadratha, was killed by his general Pushyamitra Shunga around 185 BCE [@src.pargiter-1913-dynasties-kali-age; @src.thapar-2002-early-india].
+The Puranas and later Sanskrit literature say the last Mauryan king, Brihadratha, was killed around 185 BCE by his general Pushyamitra, who founded the [Shunga dynasty](/archive/polity/shunga-dynasty) [@src.pargiter-1913-dynasties-kali-age; @src.thapar-2002-early-india].
 Older textbooks blamed a "brahmanical reaction" against Ashoka's policies for the fall.
 Thapar argues that this does not hold up, and points instead to a heavy dependence on a strong king, a costly army and bureaucracy, difficulty in controlling distant regions and the pull of regional powers [@src.thapar-2012-asoka-decline-mauryas].
 

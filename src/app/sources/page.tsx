@@ -15,7 +15,7 @@ export default function SourcesPage() {
       <p className="eyebrow">Bibliography</p>
       <h1>Sources</h1>
       <p className="lede" style={{ marginTop: 0 }}>
-        {sources.length} works in the bibliography. Every identifier below (DOI, ISBN, OCLC number or URL) has been machine-verified against its registry or page, and its title matched. Each source record lists every article, archive record and correction that cites it.
+        {sources.length} works in the bibliography. Every identifier below (DOI, ISBN, OCLC number or URL) has been machine-verified against its registry or page, and its title matched. Each source record lists every article, archive record, correction, learning-path quiz and published debate that cites it.
       </p>
       <ul className="biblio">
         {sources.map((s) => {

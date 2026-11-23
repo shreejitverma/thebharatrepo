@@ -140,8 +140,8 @@ export default function MapView({ items, extentItems, unplaced, lens, cal, selec
    * page, so the map cannot trap a reader scrolling past it. Two fingers pan and pinch; a mouse or pen drags.
    */
   const drag = useRef<{ x: number; y: number; sx: number; sy: number; moved: boolean; touch: boolean; pinch?: number } | null>(null);
-  /** Members of a cluster that zooming cannot separate, with the context they were opened in. */
-  const [open, setOpen] = useState<{ ids: string[]; key: string; viaKeyboard: boolean } | null>(null);
+  /** Members of a cluster that zooming cannot separate. Closed whenever the map's context changes; see below. */
+  const [open, setOpen] = useState<{ ids: string[]; viaKeyboard: boolean } | null>(null);
   /** The marker, cluster or cluster-list entry that has focus, and the entries it stands for. */
   const lastFocus = useRef<{ el: Element; ids: readonly string[] } | null>(null);
   const openListRef = useRef<HTMLUListElement>(null);
@@ -201,7 +201,15 @@ export default function MapView({ items, extentItems, unplaced, lens, cal, selec
 
   const { width, height } = size;
   const k = width / view.span;
-  const contextKey = `${view.lon.toFixed(4)},${view.lat.toFixed(4)},${view.span.toFixed(4)}|${t}|${zoom}|${lens}|${items.length}`;
+  const contextKey = `${view.lon.toFixed(4)},${view.lat.toFixed(4)},${view.span.toFixed(4)}|${t}|${zoom}|${lens}`;
+  // An open cluster list belongs to the view, moment, lens and entries it was opened from. Any change to them
+  // closes it for good: hiding it only while they differ brought it back, stale, when they matched again, and a
+  // filter change that kept the count kept the old members. `items` is a new array whenever the entries change.
+  const [openContext, setOpenContext] = useState({ key: contextKey, items });
+  if (openContext.key !== contextKey || openContext.items !== items) {
+    setOpenContext({ key: contextKey, items });
+    if (open) setOpen(null);
+  }
 
   const layout = useMemo(() => {
     const placed: Placed[] = [];
@@ -274,12 +282,21 @@ export default function MapView({ items, extentItems, unplaced, lens, cal, selec
     [extentItems, lens, t, zoom, view, size],
   );
 
-  // When the arrow keys step the selection while a marker has focus, focus follows the selected marker.
+  // When the arrow keys step the selection while a marker has focus, focus follows the selected marker. The
+  // marker that had focus may have unmounted in the same commit: the old selection is no longer kept out of the
+  // clusters, so it can join one, and revealing the new one can pan it out of view. Focus then sits on the body,
+  // and it still belongs on the new selection, not on whichever node took in the old one (the effect below).
   useEffect(() => {
     const svg = svgRef.current;
+    if (!svg || !selectedId) return;
     const active = document.activeElement;
-    if (!svg || !selectedId || !(active instanceof SVGElement) || !svg.contains(active) || active.dataset.key === selectedId) return;
-    svg.querySelector<SVGGElement>(`[data-key="${CSS.escape(selectedId)}"]`)?.focus();
+    const inMap = active instanceof SVGElement && svg.contains(active);
+    const dropped = !!lastFocus.current && !lastFocus.current.el.isConnected && (!active || active === document.body);
+    if (!(inMap || dropped) || (inMap && active.dataset.key === selectedId)) return;
+    const target = svg.querySelector<SVGGElement>(`[data-key="${CSS.escape(selectedId)}"]`);
+    if (!target) return;
+    lastFocus.current = null;
+    target.focus();
   }, [selectedId]);
 
   // A cluster opened from the keyboard moves focus into its list of members.
@@ -432,7 +449,7 @@ export default function MapView({ items, extentItems, unplaced, lens, cal, selec
       // Zoom in only when that would pull the members apart; places a few hundred metres apart never separate.
       if (fitted.span < view.span * 0.95 && Math.hypot(p.x - q.x, p.y - q.y) > CLUSTER_RADIUS * 1.5) return commit(fitted);
     }
-    setOpen({ ids: c.ids, key: contextKey, viaKeyboard });
+    setOpen({ ids: c.ids, viaKeyboard });
   };
 
   /** Enter and Space activate a focused marker or cluster, as they would a button. */
@@ -472,7 +489,7 @@ export default function MapView({ items, extentItems, unplaced, lens, cal, selec
   const status = `${items.length} ${items.length === 1 ? 'entry' : 'entries'} on the map, ${t === null ? 'all time' : `dated ${windowText}`}.`;
   const sliderValue = Math.round(yearToUnit(t ?? unitToYear(1)) * SLIDER_MAX);
   const regionValue: RegionId | 'custom' = isPreset(region) ? region.preset : 'custom';
-  const openIds = open && open.key === contextKey ? open.ids : null;
+  const openIds = open ? open.ids : null;
   const shownInView = items.length - layout.outside;
 
   // When the focused marker, cluster or cluster-list entry unmounts (it joined or left a cluster, left the view, or

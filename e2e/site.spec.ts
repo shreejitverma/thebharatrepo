@@ -38,6 +38,12 @@ async function openKaalchakra(page: Page, query = '') {
   await expect(page.locator('.kc-toolbar')).toBeVisible();
 }
 
+/** On a phone the text filter and kind chips sit behind the Filters button; elsewhere it is hidden and they always show. */
+async function showFilters(page: Page) {
+  const toggle = page.locator('.kc-filters-toggle');
+  if ((await toggle.isVisible()) && (await toggle.getAttribute('aria-expanded')) === 'false') await toggle.click();
+}
+
 function viewButton(page: Page, name: 'Wheel' | 'River' | 'List') {
   return page.getByRole('group', { name: 'View' }).getByRole('button', { name, exact: true });
 }
@@ -139,8 +145,8 @@ test.describe('content pages', () => {
     await expect(flood).toBeVisible();
     await expect(flood).toContainText('The Blackwell Companion to Hinduism');
     // Two sources cited in the text and one cited only for a dating: all three are numbered references.
-    // The labelled aside is matched by its attributes, not getByRole('complementary'): in Playwright's Firefox a landmark
-    // role query that resolves an aria-labelledby name, followed by an axe scan, crashes the page (see phase2.spec.ts).
+    // The labelled aside is matched by its attributes, not getByRole('complementary'): in Playwright's Firefox a named
+    // role query that resolves an aria-labelledby name, before or after an axe scan, crashes the page (docs/testing/firefox-axe-crash.md).
     await expect(page.locator('aside.evidence-summary[aria-labelledby="evidence-summary-title"]').getByRole('link', { name: '3 references' })).toBeVisible();
     await expect(page.locator('#evidence-summary-title')).toHaveText('Evidence at a glance');
     await expect(page.locator('.references ol > li')).toHaveCount(3);
@@ -158,6 +164,31 @@ test.describe('content pages', () => {
     await expect(share.getByRole('link', { name: 'Share on X' })).toHaveAttribute('target', '_blank');
     await expect(share.getByRole('button', { name: 'Copy link' })).toBeVisible();
   });
+
+  for (const colorScheme of ['light', 'dark'] as const) {
+    test(`share links take a visible focus ring and keep their brand discs in the ${colorScheme} theme`, async ({ page, browserName }) => {
+      test.skip(browserName === 'webkit', 'WebKit does not Tab to links by default');
+      await page.emulateMedia({ colorScheme });
+      await page.goto(ARTICLE_WITH_TABLE);
+      const x = page.locator('.share-buttons').getByRole('link', { name: 'Share on X' });
+      await x.scrollIntoViewIfNeeded();
+      // Keyboard focus, so :focus-visible applies: Tab from the link before it.
+      await page.locator('.share-buttons').getByRole('link', { name: 'Share on Facebook' }).focus();
+      await page.keyboard.press('Tab');
+      await expect(x).toBeFocused();
+      const ring = await x.evaluate((el) => {
+        const cs = getComputedStyle(el);
+        return { style: cs.outlineStyle, width: cs.outlineWidth, color: cs.outlineColor, focus: getComputedStyle(document.documentElement).getPropertyValue('--focus').trim() };
+      });
+      expect(ring.style).toBe('solid');
+      expect(ring.width).toBe('2px');
+      const hex = (rgb: string) => `#${(rgb.match(/\d+/g) ?? []).slice(0, 3).map((n) => Number(n).toString(16).padStart(2, '0')).join('')}`;
+      expect(hex(ring.color)).toBe(ring.focus);
+      // X's mark is black on a light page and white on a dark one.
+      const disc = await x.locator('.share-icon__disc').evaluate((el) => getComputedStyle(el).fill);
+      expect(disc).toBe(colorScheme === 'light' ? 'rgb(0, 0, 0)' : 'rgb(255, 255, 255)');
+    });
+  }
 
   test('search finds entities and articles, and says so when nothing matches', async ({ page }) => {
     await page.goto('/search?q=Harappa');
@@ -283,8 +314,62 @@ test.describe('Kaalchakra', () => {
     await expect(page.locator('.kc-panel h2')).toHaveText('One wheel, two lenses');
   });
 
+  test('on a phone the top of the wheel and its indicator are on the first screen', async ({ page, isMobile }) => {
+    test.skip(!isMobile, 'the compact toolbar is for phones');
+    for (const viewport of [
+      { width: 360, height: 640 },
+      { width: 390, height: 664 },
+      { width: 412, height: 839 },
+    ]) {
+      await page.setViewportSize(viewport);
+      await openKaalchakra(page);
+      const pin = page.locator('.kc-wheel__indicator').first();
+      await expect(pin).toBeVisible();
+      const box = (await pin.boundingBox())!;
+      expect(box.y + box.height, `${viewport.width} x ${viewport.height}`).toBeLessThan(viewport.height - 24);
+      await noHorizontalScroll(page);
+    }
+  });
+
+  test('on a phone the filters fold behind a Filters button that counts them', async ({ page, isMobile }) => {
+    test.skip(!isMobile, 'the compact toolbar is for phones');
+    await openKaalchakra(page, '?view=list');
+    const toggle = page.getByRole('button', { name: /^Filters/ });
+    const input = page.getByLabel('Filter entries');
+    const kinds = page.getByRole('group', { name: 'Kinds of entry' });
+    await expect(toggle).toHaveAttribute('aria-expanded', 'false');
+    await expect(toggle).toHaveAccessibleName('Filters');
+    await expect(input).toBeHidden();
+    await expect(kinds).toBeHidden();
+    // Every control in the toolbar is a 44 px target.
+    for (const el of [toggle, page.getByLabel('Calendar'), page.getByRole('group', { name: 'View' }).getByRole('button', { name: 'Wheel' }), page.getByRole('group', { name: 'Lens' }).getByRole('button', { name: 'Tradition' })]) {
+      expect((await el.boundingBox())!.height).toBeGreaterThanOrEqual(44);
+    }
+
+    await toggle.click();
+    await expect(toggle).toHaveAttribute('aria-expanded', 'true');
+    await input.fill('Ashoka');
+    await kinds.getByRole('button', { name: 'People' }).click();
+    await expect(toggle).toHaveAccessibleName('Filters 2 active');
+    await toggle.click();
+    await expect(input).toBeHidden();
+    // Folded away, the filters still apply, and the button still says how many are in force.
+    await expect(toggle).toHaveAccessibleName('Filters 2 active');
+    await expect(page.locator('.kc-list__kind', { hasText: /^People$/ })).toHaveCount(0);
+    await noSeriousA11yViolations(page);
+  });
+
+  test('on a wide screen the filters are always shown and there is no Filters button', async ({ page, isMobile }) => {
+    test.skip(isMobile, 'phones fold the filters');
+    await openKaalchakra(page);
+    await expect(page.getByLabel('Filter entries')).toBeVisible();
+    await expect(page.getByRole('group', { name: 'Kinds of entry' })).toBeVisible();
+    await expect(page.locator('.kc-filters-toggle')).toBeHidden();
+  });
+
   test('filtering by text shows a definitive empty state', async ({ page }) => {
     await openKaalchakra(page, '?view=list');
+    await showFilters(page);
     await page.getByLabel('Filter entries').fill('zzzzqqqq');
     await expect(page.getByText('0 entries match these filters.')).toBeVisible();
   });
@@ -292,6 +377,7 @@ test.describe('Kaalchakra', () => {
   test('kind filters narrow every view and are reflected in the URL', async ({ page }) => {
     await openKaalchakra(page, '?view=list');
     const all = await listCount(page);
+    await showFilters(page);
     const kinds = page.getByRole('group', { name: 'Kinds of entry' });
     await kinds.getByRole('button', { name: 'People' }).click();
     await expect(kinds.getByRole('button', { name: 'People' })).toHaveAttribute('aria-pressed', 'false');
@@ -300,6 +386,31 @@ test.describe('Kaalchakra', () => {
     const url = await settledUrl(page, /kinds=/);
     expect(url.searchParams.get('kinds')!.split(',')).not.toContain('person');
   });
+
+  for (const colorScheme of ['light', 'dark'] as const) {
+    test(`river labels at whole-axis zoom never cover a mark or each other in the ${colorScheme} theme`, async ({ page }) => {
+      await page.emulateMedia({ colorScheme });
+      await openKaalchakra(page, '?view=river');
+      await expect(page.locator('.kc-river .kc-river__label').first()).toBeVisible();
+      // Measured from the rendered glyphs, so the layout's width estimate is checked against the real font.
+      const clashes = await page.locator('.kc-river').evaluate((svg) => {
+        const box = (el: SVGGraphicsElement) => {
+          const b = el.getBBox();
+          return { x0: b.x, y0: b.y, x1: b.x + b.width, y1: b.y + b.height, name: el.textContent ?? el.tagName };
+        };
+        const hit = (a: ReturnType<typeof box>, b: ReturnType<typeof box>) => a.x0 < b.x1 && a.x1 > b.x0 && a.y0 < b.y1 && a.y1 > b.y0;
+        const labels = [...svg.querySelectorAll<SVGTextElement>('.kc-river__label')].map(box);
+        const shapes = [...svg.querySelectorAll<SVGGraphicsElement>('.kc-river__shape')].map(box);
+        const out: string[] = [];
+        labels.forEach((l, i) => {
+          for (const m of labels.slice(i + 1)) if (hit(l, m)) out.push(`${l.name} overlaps label ${m.name}`);
+          for (const m of shapes) if (hit(l, m)) out.push(`${l.name} covers a mark at x=${m.x0.toFixed(0)}`);
+        });
+        return out;
+      });
+      expect(clashes).toEqual([]);
+    });
+  }
 
   test.describe('zoom', () => {
     test('the zoom buttons narrow and widen the river window', async ({ page }) => {
@@ -398,6 +509,7 @@ test.describe('Kaalchakra', () => {
       await viewButton(page, 'River').click();
       await lensButton(page, 'Scholarship').click();
       await page.getByLabel('Calendar').selectOption('vs');
+      await showFilters(page);
       await page.getByRole('group', { name: 'Kinds of entry' }).getByRole('button', { name: 'People' }).click();
       await page.getByLabel('Filter entries').fill('India');
       await page.getByRole('button', { name: 'Zoom in' }).click();
@@ -415,6 +527,7 @@ test.describe('Kaalchakra', () => {
       await expect(viewButton(fresh, 'River')).toHaveAttribute('aria-pressed', 'true');
       await expect(lensButton(fresh, 'Scholarship')).toHaveAttribute('aria-pressed', 'true');
       await expect(fresh.getByLabel('Calendar')).toHaveValue('vs');
+      await showFilters(fresh);
       await expect(fresh.getByRole('group', { name: 'Kinds of entry' }).getByRole('button', { name: 'People' })).toHaveAttribute('aria-pressed', 'false');
       await expect(fresh.getByLabel('Filter entries')).toHaveValue('India');
       await expect(fresh.locator('.kc-river-controls span')).toHaveText(range);
@@ -452,6 +565,8 @@ test.describe('Kaalchakra', () => {
       await expect(viewButton(page, 'Wheel')).toHaveAttribute('aria-pressed', 'true');
       await expect(lensButton(page, 'Both lenses')).toHaveAttribute('aria-pressed', 'true');
       await expect(page.getByLabel('Calendar')).toHaveValue('ce');
+      await showFilters(page);
+      await expect(page.getByRole('group', { name: 'Kinds of entry' }).getByRole('button')).toHaveCount(11);
       await expect(page.getByRole('group', { name: 'Kinds of entry' }).locator('button[aria-pressed="false"]')).toHaveCount(0);
       await expect(page.locator('.kc-panel h2')).toHaveText('One wheel, two lenses');
       expect(errors).toEqual([]);

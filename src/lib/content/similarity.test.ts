@@ -1,5 +1,7 @@
 import { describe, expect, it } from 'vitest';
-import { cachedTitleMatches, urlMatchKind, pageMatchesTitle, sameName, sameTitle, titleSimilarity } from './similarity';
+import { cachedTitleMatches, urlMatchKind, pageMatchesTitle, sameName, sameTitle, titleSimilarity, volumesMatch } from './similarity';
+import { sameWork } from './load';
+import { SourceSchema } from './schema';
 
 describe('sameTitle', () => {
   it('accepts a title without its subtitle', () => {
@@ -47,6 +49,41 @@ describe('sameTitle', () => {
     expect(sameTitle('The Rigveda, Volume 1', 'The Rigveda, Vol. 1')).toBe(true);
     expect(sameTitle('The Ramayana, Part 2', 'The Ramayana: Part II')).toBe(true);
     expect(sameTitle('The Rigveda, Volume 1', 'The Rigveda, Volume 2')).toBe(false);
+  });
+  it('never matches an unnumbered cited work to a single-volume record, under any rule', () => {
+    // The two-word main-title rule used to pass these.
+    expect(sameTitle('A History of Indian Philosophy', 'A History of Indian Philosophy, Volume 1')).toBe(false);
+    expect(sameTitle("Kalhana's Rajatarangini: A Chronicle of the Kings of Kasmir", 'Kalhana’s Rājataraṅginī: A Chronicle of the Kings of Kaśmīr, Vol. I')).toBe(false);
+    // The overlap test used to pass this, and the izafat "-i-" reads as the numeral I, so numbers alone cannot tell.
+    expect(sameTitle('The Ain-i Akbari', 'Ain-i-akbari  Vol. 1')).toBe(false);
+    expect(sameTitle('Mohenjo-daro and the Indus Civilization', 'Mohenjo Daro and the Indus Civilization  Vol-i (1931)')).toBe(false);
+    expect(sameTitle('The Veda of the Black Yajus School', 'The Veda of the Black Yajus School Taittiriya Sanhita Part 1: Kandas I-III')).toBe(false);
+  });
+  it('matches a cited volume to a record that names the same volume, written either way', () => {
+    expect(sameTitle('The Ain-i Akbari, Volume 1', 'Ain-i-akbari  Vol. 1')).toBe(true);
+    expect(sameTitle("Kalhana's Rajatarangini: A Chronicle of the Kings of Kasmir, Volume 1", 'Kalhana’s Rājataraṅginī: A Chronicle of the Kings of Kaśmīr, Vol. I')).toBe(true);
+    expect(sameTitle('Inscriptions of the Early Gupta Kings and Their Successors (Corpus Inscriptionum Indicarum, Vol. III)', 'Corpus Inscriptionum Indicarum  Vol. 3')).toBe(true);
+  });
+  it('lets a registry drop the volume number the citation gives, since the identifier pins the volume', () => {
+    expect(sameTitle('A History of the Sikhs, Volume 1: 1469-1838', 'A history of the Sikhs')).toBe(true);
+  });
+  it('reads a series number in a record as the series, and books as divisions inside a volume', () => {
+    expect(sameTitle('The Indo-Aryans of Ancient South Asia: Language, Material Culture and Ethnicity', 'The Indo-Aryans of Ancient South Asia: Language, Material Culture and Ethnicity (Indian Philology and South Asian Studies, Vol 1)')).toBe(true);
+    expect(sameTitle('The Satapatha-Brahmana, According to the Text of the Madhyandina School, Part V (Sacred Books of the East, Vol. 44)', 'SBE 44: The Satapatha-Brahmana, Part 5, Books XI-XIV (Sacred Books of the East)')).toBe(true);
+  });
+  it('does not count the word volume as shared subject matter', () => {
+    expect(
+      sameTitle('An English Translation of the Sushruta Samhita, Based on Original Sanskrit Text, Vol. I: Sutrasthanam', 'Sangitaratnakara of Sarngadeva: Sanskrit Text and English Translation with Comments and Notes, Volume 1'),
+    ).toBe(false);
+  });
+  it('treats two archive records as the same volume only when both are unnumbered or both name it', () => {
+    expect(volumesMatch('A History of the Sikhs', 'A History of the Sikhs, Volume 1')).toBe(false);
+    expect(volumesMatch('A History of the Sikhs, Vol. 1', 'A History of the Sikhs, Volume I')).toBe(true);
+    expect(volumesMatch('A History of the Sikhs', 'A History of the Sikhs: 3-Volume Set')).toBe(true);
+    const record = (id: string, title: string) => SourceSchema.parse({ id, type: 'book', title, authors: ['A Author'], isbn: '9780195673081' });
+    expect(sameWork(record('src.a', 'A History of the Sikhs, Volume 1'), record('src.b', 'A History of the Sikhs'))).toBe(false);
+    expect(sameWork(record('src.a', 'A History of the Sikhs'), record('src.b', 'A History of the Sikhs, Volume 1'))).toBe(false);
+    expect(sameWork(record('src.a', 'A History of the Sikhs, Volume 1'), record('src.b', 'A History of the Sikhs, Vol. I'))).toBe(true);
   });
   it('rejects a different volume of the same work', () => {
     expect(sameTitle('History of Indian Medical Literature, Vol. 1', 'History of Indian Medical Literature, Vol. 2')).toBe(false);

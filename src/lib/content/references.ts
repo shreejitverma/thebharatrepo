@@ -8,7 +8,8 @@
 import { GRADES, isTraditional, type DatingMethod, type Grade } from './labels';
 import { rankDatings } from './lens';
 import { citationId, type CitationRef, type Claim, type Correction, type Dating, type Entity } from './schema';
-import type { Article } from './load';
+import type { Article, DebateDoc, LearningPathDoc } from './load';
+import { publishedDebates } from './debates';
 
 export interface CitationUse {
   id: string;
@@ -104,14 +105,41 @@ export interface CorrectionCitation {
   locator?: string;
 }
 
+export interface QuizCitation {
+  path: LearningPathDoc;
+  /** The quiz questions whose answers the source supports, in quiz order. */
+  questions: { id: string; question: string; locator?: string }[];
+}
+
+/** Where in a debate a source is cited: the common ground, or one position (its evidence or a proponent's own work). */
+export interface DebateContext {
+  /** The position id, which is also its fragment on the debate page; null for the common ground. */
+  position: string | null;
+  label: string;
+  locators: string[];
+}
+
+export interface DebateCitation {
+  debate: DebateDoc;
+  contexts: DebateContext[];
+}
+
 export interface CitedBy {
   entities: EntityCitation[];
   articles: ArticleCitation[];
   corrections: CorrectionCitation[];
+  /** Learning paths whose quizzes cite the source. */
+  quizzes: QuizCitation[];
+  /** Published debates only: a draft is never shown, linked or counted, whatever the build. */
+  debates: DebateCitation[];
+}
+
+export function emptyCitedBy(): CitedBy {
+  return { entities: [], articles: [], corrections: [], quizzes: [], debates: [] };
 }
 
 export function citedByCount(c: CitedBy | undefined): number {
-  return c ? c.entities.length + c.articles.length + c.corrections.length : 0;
+  return c ? c.entities.length + c.articles.length + c.corrections.length + c.quizzes.length + c.debates.length : 0;
 }
 
 /** 32-bit FNV-1a, hex. Stable across builds and platforms. */
@@ -139,13 +167,22 @@ export function correctionAnchors(corrections: Correction[]): string[] {
   });
 }
 
-/** Every entity, article and correction citing each source id. Lists are sorted for display. */
-export function buildCitationIndex(g: { entities: Map<string, Entity>; articles: Article[]; corrections: Correction[] }): Map<string, CitedBy> {
+/**
+ * Every entity, article, correction, learning-path quiz and published debate citing each source id.
+ * Lists are sorted for display. Unpublished debates are left out here, so no page, preview or count can show them.
+ */
+export function buildCitationIndex(g: {
+  entities: Map<string, Entity>;
+  articles: Article[];
+  corrections: Correction[];
+  learningPaths?: readonly LearningPathDoc[];
+  debates?: readonly DebateDoc[];
+}): Map<string, CitedBy> {
   const index = new Map<string, CitedBy>();
   const slot = (id: string) => {
     let c = index.get(id);
     if (!c) {
-      c = { entities: [], articles: [], corrections: [] };
+      c = emptyCitedBy();
       index.set(id, c);
     }
     return c;
@@ -178,9 +215,46 @@ export function buildCitationIndex(g: { entities: Map<string, Entity>; articles:
     }
   });
 
+  for (const path of g.learningPaths ?? []) {
+    const perSource = new Map<string, QuizCitation['questions']>();
+    for (const q of path.quiz) {
+      const seen = new Set<string>();
+      for (const ref of q.sources) {
+        const use = toCitationUse(ref);
+        if (seen.has(use.id)) continue;
+        seen.add(use.id);
+        (perSource.get(use.id) ?? perSource.set(use.id, []).get(use.id)!).push({ id: q.id, question: q.question, locator: use.locator });
+      }
+    }
+    for (const [id, questions] of perSource) slot(id).quizzes.push({ path, questions });
+  }
+
+  for (const debate of publishedDebates(g.debates ?? [])) {
+    const perSource = new Map<string, DebateContext[]>();
+    const add = (ref: CitationRef, position: string | null, label: string) => {
+      const use = toCitationUse(ref);
+      const contexts = perSource.get(use.id) ?? perSource.set(use.id, []).get(use.id)!;
+      let ctx = contexts.find((c) => c.position === position);
+      if (!ctx) {
+        ctx = { position, label, locators: [] };
+        contexts.push(ctx);
+      }
+      const locator = use.locator ? normalizeLocator(use.locator) : '';
+      if (locator && !ctx.locators.some((l) => locatorKey(l) === locatorKey(locator))) ctx.locators.push(locator);
+    };
+    for (const ev of debate.commonGround) for (const ref of ev.sources) add(ref, null, 'What every position accepts');
+    for (const p of debate.positions) {
+      for (const pr of p.proponents) if (pr.work) add(pr.work, p.id, p.label);
+      for (const ev of p.evidence) for (const ref of ev.sources) add(ref, p.id, p.label);
+    }
+    for (const [id, contexts] of perSource) slot(id).debates.push({ debate, contexts });
+  }
+
   for (const c of index.values()) {
     c.entities.sort((x, y) => x.entity.names.en.localeCompare(y.entity.names.en));
     c.articles.sort((x, y) => x.article.title.localeCompare(y.article.title));
+    c.quizzes.sort((x, y) => x.path.title.localeCompare(y.path.title) || x.path.slug.localeCompare(y.path.slug));
+    c.debates.sort((x, y) => x.debate.title.localeCompare(y.debate.title));
   }
   return index;
 }

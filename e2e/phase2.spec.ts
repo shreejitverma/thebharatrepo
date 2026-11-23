@@ -80,6 +80,12 @@ test.describe('Map view', () => {
     await expect(status(page)).toContainText('within 500 years of 269 BCE');
     await expect(page.getByLabel('Window')).toHaveValue('millennium');
     await expect(page.getByLabel('Region')).toHaveValue('ganga');
+    // On a phone the kind chips sit behind the Filters button, which counts the kind filter as active.
+    const toggle = page.locator('.kc-filters-toggle');
+    if (await toggle.isVisible()) {
+      await expect(toggle).toContainText('1');
+      await toggle.click();
+    }
     await expect(page.getByRole('group', { name: 'Kinds of entry' }).getByRole('button', { pressed: true })).toHaveCount(3);
     expect(await mapCount(page)).toBeGreaterThan(0);
     // The state survives the debounced URL write unchanged.
@@ -273,6 +279,48 @@ test.describe('Map view', () => {
     await expect.poll(async () => (await open.count()) > 0 || /region=/.test(page.url())).toBe(true);
     if (await open.count()) await expect(open.locator('li button').first()).toBeFocused();
     else await expect.poll(async () => (await focused()).key).not.toBeNull();
+  });
+
+  test('arrow keys carry focus to the new selection even when the old one joins a cluster', async ({ page, isMobile }) => {
+    test.skip(isMobile, 'keyboard access is covered on desktop');
+    const focusedKey = () => page.evaluate(() => (document.activeElement as HTMLElement | null)?.dataset.key ?? null);
+    // A member of a crowded cluster, selected so that it is drawn on its own until the selection moves on.
+    await page.goto('/kaalchakra?view=map');
+    const crowded = page.locator('.kc-map-svg .kc-map-cluster');
+    await expect(crowded.first()).toBeVisible();
+    const keys = await crowded.evaluateAll((els) => els.filter((el) => Number(el.getAttribute('data-count')) >= 3).map((el) => el.getAttribute('data-key')!.slice('cluster:'.length)));
+    expect(keys.length).toBeGreaterThan(0);
+    const id = keys[0];
+    await page.goto(`/kaalchakra?view=map&id=${encodeURIComponent(id)}`);
+    const mark = page.locator(`.kc-map-svg .kc-mark[data-key="${id}"]`);
+    await expect(mark).toHaveAttribute('data-active', 'true');
+    await mark.focus();
+    await page.keyboard.press('ArrowRight');
+    await expect(page.locator(`.kc-map-svg .kc-mark[data-active="true"]:not([data-key="${id}"])`)).toHaveCount(1);
+    const next = await page.locator('.kc-map-svg .kc-mark[data-active="true"]').getAttribute('data-key');
+    // The old selection went back into its cluster, so its marker is gone; focus is on the new one, not on that cluster.
+    await expect(mark).toHaveCount(0);
+    await expect.poll(focusedKey).toBe(next);
+  });
+
+  test('an open cluster list closes when the view changes and does not come back', async ({ page, isMobile }) => {
+    test.skip(isMobile, 'keyboard access is covered on desktop');
+    // Entries a few hundred metres apart never separate, so their cluster opens a list.
+    await page.goto('/kaalchakra?view=map&region=68.14,27.33,1.5');
+    const cluster = page.locator('.kc-map-svg .kc-map-cluster').first();
+    await expect(cluster).toBeVisible();
+    const list = page.locator('.kc-map-open');
+    await cluster.focus();
+    await page.keyboard.press('Enter');
+    await expect(list).toHaveCount(1);
+    // Pan away and back to exactly the same view: the list stays closed.
+    await page.locator('.kc-canvas').focus();
+    await page.keyboard.press('Shift+ArrowRight');
+    await expect(list).toHaveCount(0);
+    await page.keyboard.press('Shift+ArrowLeft');
+    await expect.poll(() => new URL(page.url()).searchParams.get('region')).toBe('68.14,27.33,1.5');
+    await page.waitForTimeout(300);
+    await expect(list).toHaveCount(0);
   });
 
   test('on a touch screen one finger scrolls the page and two fingers move the map', async ({ page, isMobile, context, browserName }) => {
@@ -619,8 +667,9 @@ test.describe('Entity pages', () => {
       await expect(page.getByRole('heading', { name: 'Connections' })).toBeVisible();
       await expect(page.getByRole('heading', { name: 'Sources', exact: true })).toBeVisible();
       expect(await page.locator('.entity-sources li').count()).toBeGreaterThan(0);
-      // A labelled section is a region. Matched by its attributes, not with getByRole('region'): Playwright's Firefox
-      // crashes the page ("Page crashed") when axe runs after a region role query, on any page with labelled sections.
+      // A labelled section is a region. Matched by its attributes, not with getByRole('region', { name }): the query reads
+      // the names of the page's aria-labelledby sections too, and in Playwright's Firefox that and an axe scan crash the
+      // page ("Page crashed"). See docs/testing/firefox-axe-crash.md.
       const strip = page.locator('section.kc-strip[aria-label="Place in the Kaalchakra"]');
       await expect(strip).toBeVisible();
       for (const group of ['before', 'during', 'after']) await expect(strip.locator(`[data-neighbours="${group}"]`)).toBeVisible();

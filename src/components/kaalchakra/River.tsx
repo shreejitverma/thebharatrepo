@@ -7,16 +7,14 @@ import type { Lens } from '@/lib/content/lens';
 import { panWindow, zoomWindow, type UnitWindow } from '@/lib/time/scale';
 import { BOUNDARY_LABELS, SEGMENTS, SHORT_SEGMENT_LABELS, kindColor, visibleDatings, yearToUnit } from './shared';
 import { edgeLabel, ticksFor } from './ticks';
+import { LABEL_BASELINE, POINT_PX, laneLabels } from './riverLabels';
 
 const LANE_H = 38;
 const TOP = 30;
 const AXIS_H = 34;
-const LABEL_W_PER_CHAR = 6.6;
 /** Lane titles: 10 px uppercase semibold with 0.05em tracking, measured at about 6.5 px per character. */
 const LANE_TITLE_X = 6;
 const LANE_TITLE_W_PER_CHAR = 6.8;
-/** Minimum horizontal gap between labels in a lane, and between the lane title and the first label. */
-const LABEL_GAP = 8;
 /** Era headers: 12 px semibold, about 7 px per character, with this much clear space on each side. */
 const SEG_LABEL_W_PER_CHAR = 7;
 const SEG_LABEL_PAD = 6;
@@ -262,25 +260,25 @@ export default function River({ items, kinds, lens, selectedId, win, onWindow, o
           const marks = kinds.map((k, i) => {
             const list = lanes.get(k) ?? [];
             const y = TOP + i * LANE_H + LANE_H / 2 + 5;
-            // Range labels sit on the same line as the lane title, so no label may start before the title ends.
+            // The label row starts on the lane title's line, so no label may start before the title ends.
             const titleEnd = LANE_TITLE_X + KIND_LABELS[k].length * LANE_TITLE_W_PER_CHAR;
-            let labelEnd = titleEnd;
+            const names = new Map(list.map((m) => [m.key, m.item]));
+            for (const l of laneLabels(
+              list.map((m) => ({ key: m.key, name: m.item.name, x0: m.x0, x1: m.x1, trad: m.trad })),
+              titleEnd,
+              width,
+            )) {
+              const item = names.get(l.key)!;
+              labels.push({ key: l.key, x: l.x, y: y + LABEL_BASELINE, text: item.name, active: item.id === selectedId });
+            }
             return (
               <g key={k}>
                 {list.map(({ item, key, x0, x1, trad }) => {
-                  const isPoint = x1 - x0 < 8;
+                  const isPoint = x1 - x0 < POINT_PX;
                   const cx = (x0 + x1) / 2;
                   const left = clampX(x0);
                   const right = clampX(x1);
-                  const lw = item.name.length * LABEL_W_PER_CHAR;
-                  let labelX = isPoint ? cx + 8 : Math.max(x0, 0) + 4;
-                  // A range label slides right along its bar, past the lane title or the previous label, while the bar still holds it.
-                  if (!isPoint && labelX < labelEnd + LABEL_GAP && x1 >= labelEnd + LABEL_GAP + lw) labelX = labelEnd + LABEL_GAP;
                   const active = item.id === selectedId;
-                  if (!trad && labelX >= 4 && labelX >= labelEnd + LABEL_GAP && labelX + lw < width - 4) {
-                    labelEnd = labelX + lw;
-                    labels.push({ key, x: labelX, y: isPoint ? y + 4 : y - 8, text: item.name, active });
-                  }
                   const color = trad ? 'var(--lens-tradition)' : kindColor(item.kind);
                   const hitLeft = isPoint ? cx - 10 : left;
                   const hitRight = isPoint ? cx + 10 : Math.max(right, left + 20);
@@ -294,9 +292,10 @@ export default function River({ items, kinds, lens, selectedId, win, onWindow, o
                       onPointerLeave={(e) => onHover(null, e.clientX, e.clientY)}
                     >
                       {isPoint ? (
-                        <circle cx={cx} cy={y} r={active ? 7 : 5.5} fill={trad ? 'var(--bg-elev)' : color} stroke={trad ? color : 'var(--bg-elev)'} strokeWidth={trad ? 2.2 : 1.2} />
+                        <circle className="kc-river__shape" cx={cx} cy={y} r={active ? 7 : 5.5} fill={trad ? 'var(--bg-elev)' : color} stroke={trad ? color : 'var(--bg-elev)'} strokeWidth={trad ? 2.2 : 1.2} />
                       ) : (
                         <rect
+                          className="kc-river__shape"
                           x={left}
                           y={y - (trad ? 3 : 4)}
                           width={right - left}
@@ -322,13 +321,14 @@ export default function River({ items, kinds, lens, selectedId, win, onWindow, o
                 {labels.map((l) => (
                   <text
                     key={l.key}
+                    className="kc-river__label"
                     x={l.x}
                     y={l.y}
                     fontSize={11.5}
                     fill="var(--ink)"
                     fontWeight={l.active ? 700 : 500}
                     stroke="var(--bg-elev)"
-                    strokeWidth={3}
+                    strokeWidth={4}
                     strokeLinejoin="round"
                     paintOrder="stroke"
                   >
