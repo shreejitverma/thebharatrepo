@@ -159,6 +159,31 @@ test.describe('content pages', () => {
     await expect(share.getByRole('button', { name: 'Copy link' })).toBeVisible();
   });
 
+  for (const colorScheme of ['light', 'dark'] as const) {
+    test(`share links take a visible focus ring and keep their brand discs in the ${colorScheme} theme`, async ({ page, browserName }) => {
+      test.skip(browserName === 'webkit', 'WebKit does not Tab to links by default');
+      await page.emulateMedia({ colorScheme });
+      await page.goto(ARTICLE_WITH_TABLE);
+      const x = page.locator('.share-buttons').getByRole('link', { name: 'Share on X' });
+      await x.scrollIntoViewIfNeeded();
+      // Keyboard focus, so :focus-visible applies: Tab from the link before it.
+      await page.locator('.share-buttons').getByRole('link', { name: 'Share on Facebook' }).focus();
+      await page.keyboard.press('Tab');
+      await expect(x).toBeFocused();
+      const ring = await x.evaluate((el) => {
+        const cs = getComputedStyle(el);
+        return { style: cs.outlineStyle, width: cs.outlineWidth, color: cs.outlineColor, focus: getComputedStyle(document.documentElement).getPropertyValue('--focus').trim() };
+      });
+      expect(ring.style).toBe('solid');
+      expect(ring.width).toBe('2px');
+      const hex = (rgb: string) => `#${(rgb.match(/\d+/g) ?? []).slice(0, 3).map((n) => Number(n).toString(16).padStart(2, '0')).join('')}`;
+      expect(hex(ring.color)).toBe(ring.focus);
+      // X's mark is black on a light page and white on a dark one.
+      const disc = await x.locator('.share-icon__disc').evaluate((el) => getComputedStyle(el).fill);
+      expect(disc).toBe(colorScheme === 'light' ? 'rgb(0, 0, 0)' : 'rgb(255, 255, 255)');
+    });
+  }
+
   test('search finds entities and articles, and says so when nothing matches', async ({ page }) => {
     await page.goto('/search?q=Harappa');
     await expect(page.locator('.search-result').first()).toBeVisible();

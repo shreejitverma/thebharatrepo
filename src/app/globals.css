@@ -75,6 +75,18 @@
   --map-cluster: var(--ink);
   --map-cluster-ink: var(--bg-elev);
 
+  /*
+   * Share buttons: each network's own colours, the one place the palette leaves the pigments. Glyphs meet 3:1 on
+   * their disc and discs 3:1 on the page in both themes; where a network's signature colour does not (WhatsApp's
+   * #25d366 under a white glyph is 2:1), its own darker brand shade stands in.
+   */
+  --share-glyph: #ffffff;
+  --share-glyph-x: #ffffff;
+  --share-disc-facebook: #0965fe;
+  --share-disc-x: #000000;
+  --share-disc-linkedin: #0077b5;
+  --share-disc-whatsapp: #128c7e;
+
   --radius: 10px;
   --radius-sm: 6px;
   --measure: 70ch;
@@ -140,6 +152,9 @@
     --wheel-tag-ink: #fffaf3;
     --map-sea: #10151f;
     --map-river: #3f6088;
+    /* X's mark is black or white: white on a dark page */
+    --share-glyph-x: #000000;
+    --share-disc-x: #ffffff;
     --shadow: 0 1px 2px rgba(0, 0, 0, 0.3), 0 8px 24px rgba(0, 0, 0, 0.4);
   }
 }
@@ -198,6 +213,9 @@
   --wheel-tag-ink: #fffaf3;
   --map-sea: #10151f;
   --map-river: #3f6088;
+  /* X's mark is black or white: white on a dark page */
+  --share-glyph-x: #000000;
+  --share-disc-x: #ffffff;
   --shadow: 0 1px 2px rgba(0, 0, 0, 0.3), 0 8px 24px rgba(0, 0, 0, 0.4);
 }
 
@@ -2307,6 +2325,41 @@ a:hover {
   width: 44px;
   height: 44px;
   border-radius: 999px;
+}
+
+/* The ring sits just outside the 32 px disc, inside the 44 px target, so it reads as the button's own. */
+.share-buttons__link:focus-visible {
+  outline: 2px solid var(--focus);
+  outline-offset: -4px;
+  border-radius: 999px;
+}
+
+.share-buttons__link:hover .share-icon {
+  filter: brightness(1.12);
+}
+
+.share-icon__disc {
+  fill: var(--share-disc-facebook);
+}
+
+.share-icon__glyph {
+  fill: var(--share-glyph);
+}
+
+.share-icon--x .share-icon__disc {
+  fill: var(--share-disc-x);
+}
+
+.share-icon--x .share-icon__glyph {
+  fill: var(--share-glyph-x);
+}
+
+.share-icon--linkedin .share-icon__disc {
+  fill: var(--share-disc-linkedin);
+}
+
+.share-icon--whatsapp .share-icon__disc {
+  fill: var(--share-disc-whatsapp);
 }
 
 .share-buttons button {

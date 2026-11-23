@@ -135,6 +135,22 @@ The Map view is drawn in the same materials as the page: the land is the lime-wh
 `--map-grid`, the graticule, is `--ink` at 13 percent, so it follows the theme without a value of its own.
 Markers take the kind colours, extents take their entity's kind colour at low opacity with a dashed outline, and the relation graph on entity pages uses the kind, lens and ink tokens only.
 
+### Share buttons
+
+The share links on articles carry each network's own colours, the one place the palette leaves the pigments, because a reader looks for the brand.
+Where a network's signature colour fails contrast under its white glyph, its own darker brand shade stands in: WhatsApp's teal green `#128c7e` for the 2:1 `#25d366`.
+X's mark is black on a light page and white on a dark one, as X's own guidelines allow.
+The focus ring is drawn 2 px clear of the disc, so it is measured against the page (`--focus` on `--bg`), not against the brand colour.
+
+| Token | Light | Dark | Source | Use |
+|---|---|---|---|---|
+| `--share-glyph` | `#ffffff` | `#ffffff` | The networks' white marks | Facebook, LinkedIn and WhatsApp glyphs |
+| `--share-glyph-x` | `#ffffff` | `#000000` | X's mark | X glyph |
+| `--share-disc-facebook` | `#0965fe` | `#0965fe` | Facebook blue | Facebook disc |
+| `--share-disc-x` | `#000000` | `#ffffff` | X black, X white | X disc |
+| `--share-disc-linkedin` | `#0077b5` | `#0077b5` | LinkedIn blue | LinkedIn disc |
+| `--share-disc-whatsapp` | `#128c7e` | `#128c7e` | WhatsApp teal green | WhatsApp disc |
+
 ### Print
 
 `src/styles/print.css` has the one other token block: on paper every page is black ink on white, with the site chrome removed.
@@ -195,6 +211,11 @@ A `*` stands for every matching token.
 | `--focus` | `--map-sea` | 3 | Focus ring on the map |
 | `--map-cluster` | `--map-sea` | 3 | Cluster discs on water |
 | `--wheel-core-ring` | `--wheel-core` | 3 | Hub ring |
+| `--share-glyph` | `--share-disc-facebook` | 3 | Facebook share glyph |
+| `--share-glyph` | `--share-disc-linkedin` | 3 | LinkedIn share glyph |
+| `--share-glyph` | `--share-disc-whatsapp` | 3 | WhatsApp share glyph |
+| `--share-glyph-x` | `--share-disc-x` | 3 | X share glyph |
+| `--share-disc-*` | `--bg` | 3 | Share buttons on the page |
 
 ## Checking
 
