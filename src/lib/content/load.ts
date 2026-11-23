@@ -19,7 +19,7 @@ import matter from 'gray-matter';
 import YAML from 'yaml';
 import { checkRelations, type RelationStats } from './relations';
 import { unfinishedFields } from './scaffold-markers';
-import { sameTitle, volumeNumbers } from './similarity';
+import { sameTitle, volumesMatch } from './similarity';
 import type { z } from 'zod';
 import {
   ArticleFrontmatterSchema,
@@ -98,6 +98,8 @@ export interface ContentGraph<T extends ArticleMetadata = Article> {
   inbound: Map<string, { from: string; kind: string }[]>;
   /** former entity id (alias) -> the live entity it was merged into */
   aliases: Map<string, string>;
+  /** former source id (alias) -> the live source that replaced it */
+  sourceAliases: Map<string, string>;
   errors: ContentProblem[];
   /** Advisory findings that do not fail the build, such as inconsistent relation pairs. */
   warnings: ContentProblem[];
@@ -271,7 +273,9 @@ export function deepTimeBceYears(datings: unknown): string[] {
 
 /**
  * Two source records describe the same work: no identifier of the same type conflicts (archive.org and
- * other URLs compare by host and first path segment pair) and the titles match.
+ * other URLs compare by host and first path segment pair), they share an author or editor (or both have
+ * none), both name the same volume or neither names one, so a single volume is never merged with the whole
+ * work, and the titles match.
  */
 export function sameWork(a: Source, b: Source): boolean {
   const urlKey = (u?: string) => {
@@ -300,10 +304,12 @@ export function sameWork(a: Source, b: Source): boolean {
   const sb = surnames(b);
   if (sa.size > 0 !== sb.size > 0) return false;
   if (sa.size > 0 && ![...sa].some((n) => sb.has(n))) return false;
-  // A numbered volume is not the unnumbered work beside it ("The Ubiquitous Siva" and "The Ubiquitous Siva
-  // Volume II"). Registry lookups may drop a volume number, so this applies only between two source records.
-  if (volumeNumbers(a.title).size > 0 !== volumeNumbers(b.title).size > 0) return false;
-  return sameTitle(a.title, b.title);
+  // Both records are unnumbered or both name the same volume: a numbered volume is never the unnumbered work
+  // beside it ("The Ubiquitous Siva" and "The Ubiquitous Siva Volume II"), nor another volume. Unlike a registry
+  // lookup, neither record has dropped a volume number, so the rule is strict in both directions. The titles must
+  // also match both ways, since sameTitle lets a cited volume match a registry record that omits its number.
+  if (!volumesMatch(a.title, b.title)) return false;
+  return sameTitle(a.title, b.title) && sameTitle(b.title, a.title);
 }
 
 /** Registry identifiers of a source; two source ids sharing one are the same work registered twice. */
@@ -312,17 +318,20 @@ function identifierKeys(s: Source): string[] {
 }
 
 /**
- * Maps every alias to the entity that declares it. An alias is a former id, so it must not be a live
- * entity id (the redirect would hide that page) and only one entity may claim it.
+ * Maps every alias to the record (an entity, or a source with `noun: 'source'`) that declares it. An alias is a
+ * former id, so it must not be a live id (the redirect would hide that page) and only one record may claim it.
  */
-export function resolveAliases(entities: Iterable<Pick<Entity, 'id' | 'aliases'>>): { aliases: Map<string, string>; problems: { id: string; message: string }[] } {
-  const list = [...entities];
+export function resolveAliases(
+  records: Iterable<{ id: string; aliases?: readonly string[] }>,
+  noun: 'entity' | 'source' = 'entity',
+): { aliases: Map<string, string>; problems: { id: string; message: string }[] } {
+  const list = [...records];
   const live = new Set(list.map((e) => e.id));
   const aliases = new Map<string, string>();
   const problems: { id: string; message: string }[] = [];
   for (const e of list) {
-    for (const a of e.aliases) {
-      if (live.has(a)) problems.push({ id: e.id, message: `alias ${a} collides with a live entity id; an alias names an entity that no longer exists` });
+    for (const a of e.aliases ?? []) {
+      if (live.has(a)) problems.push({ id: e.id, message: `alias ${a} collides with a live ${noun} id; an alias names ${noun === 'entity' ? 'an entity' : 'a source id'} that no longer exists` });
       else if (aliases.has(a) && aliases.get(a) !== e.id) problems.push({ id: e.id, message: `alias ${a} is already claimed by ${aliases.get(a)}` });
       else aliases.set(a, e.id);
     }
@@ -549,8 +558,11 @@ export function assembleContent<T extends ArticleMetadata>(
   }
 
   // Cross-reference checks.
+  const { aliases: sourceAliases, problems: sourceAliasProblems } = resolveAliases(sources.values(), 'source');
+  for (const p of sourceAliasProblems) errors.push({ file: sourceFile.get(p.id) ?? p.id, message: p.message });
   const checkSource = (file: string, where: string, id: string) => {
     if (id.startsWith('!invalid:')) errors.push({ file, message: `${where}: malformed citation "${id.slice(9)}"` });
+    else if (sourceAliases.has(id)) errors.push({ file, message: `${where}: ${id} is a former id of ${sourceAliases.get(id)}; cite that id` });
     else if (!sources.has(id)) errors.push({ file, message: `${where}: unknown source ${id}` });
   };
 
@@ -638,7 +650,7 @@ export function assembleContent<T extends ArticleMetadata>(
   const relations = checkRelations(entities.values());
   const warnings = relations.warnings.map((w) => ({ file: entityFile.get(w.id) ?? w.id, message: w.message }));
 
-  return { entities, sources, articles, corrections, debates, learningPaths, articlesByEntity, inbound, aliases, errors, warnings, relationStats: relations.stats };
+  return { entities, sources, articles, corrections, debates, learningPaths, articlesByEntity, inbound, aliases, sourceAliases, errors, warnings, relationStats: relations.stats };
 }
 
 /* ---------- Debates and learning paths ---------- */

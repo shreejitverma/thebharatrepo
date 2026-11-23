@@ -1,0 +1,160 @@
+id: debate.ram-setu
+title: "Ram Setu (Adam's Bridge): geology and tradition"
+alternates: [Ram Setu, Rama Setu, "Adam's Bridge"]
+question: How did the shoals between India and Sri Lanka form, and how does tradition understand them?
+summary: >-
+  High-resolution satellite bathymetry and remote sensing map a roughly 29-kilometre chain
+  of sandbanks, corals and limestone shoals between Rameswaram and Mannar, nearly 99.98
+  percent submerged. Geological and seismic studies explain the barrier through coastal
+  sediment transport and sea-level rise that drowned former river channels between about
+  8,500 and 7,000 years ago. Some geomythological and Pleistocene-Holocene studies leave
+  open possible local human modification or shallow-water crossings, though no excavated
+  engineered structure is documented. Ramayana tradition identifies the chain as the
+  bridge built under Nala's direction for Rama's passage to Lanka.
+published: true
+approval: { by: Shreejit Verma, date: "2026-11-22", note: "Drafted by Codex; reviewed for fairness, accuracy and sources by Gemini (a machine review). No human editorial review yet." }
+commonGround:
+  - text: >-
+      Adam's Bridge (Ram Setu) is a roughly 29-kilometre submarine ridge and chain of
+      shifting sandbanks between Dhanushkodi on Rameswaram Island and Talaimannar on
+      Mannar Island, with about 99.98 percent of its volume below mean sea level.
+    grade: A
+    sources:
+      - { id: src.dandabathula-2024-adams-bridge-bathymetry, locator: "Abstract; Introduction; Conclusions" }
+  - text: >-
+      High-resolution seismic profiles show three buried subaerial unconformities and
+      channel incisions between the Palk Strait and Gulf of Mannar that were encroached
+      upon by seawater around 8,500 years ago and completely buried by about 7,000 years ago.
+    grade: B
+    sources:
+      - { id: src.dubey-2023-ramasetu-evolution, locator: "Abstract" }
+positions:
+  - id: natural-coastal-formation
+    label: "Natural coastal and reef formation: submerged around 8.5 to 7 ka"
+    lens: scholarship
+    grade: B
+    range: { earliest: "8.5 ka", latest: "7 ka", precision: ka, circa: true }
+    statement: >-
+      Geological, remote-sensing and bathymetric research explains Adam's Bridge as a
+      natural submarine tombolo and coral-sand barrier shaped by sea-level rise and monsoon
+      currents. Nineteenth-century borehole logs record seven to nine metres of loose sand
+      resting on Holocene calcareous sandstone, conglomerate and decaying coral reefs rather
+      than quarried stone. Indian Remote Sensing imagery maps linear coral reefs and
+      sandbanks, ICESat-2 bathymetry confirms asymmetric sediment transport from the Gulf
+      of Mannar into the Palk Strait, and seismic data date full marine burial of the
+      youngest channels to around 7,000 years ago.
+    proponents:
+      - name: Giribabu Dandabathula and colleagues
+        role: Remote-sensing scientists, produced a 10 m ICESat-2 bathymetric model
+        work: { id: src.dandabathula-2024-adams-bridge-bathymetry, locator: "Introduction; Results and discussion; Conclusions" }
+      - name: K. M. Dubey and colleagues
+        role: Marine geologists, interpreted shallow seismic profiles of the Ramasetu region
+        work: { id: src.dubey-2023-ramasetu-evolution, locator: "Abstract" }
+      - name: Anjali Bahuguna, Shailesh Nayak and Benidhar Deshmukh
+        role: Space Applications Centre (ISRO) scientists, analysed IRS imagery
+        work: { id: src.bahuguna-2003-irs-adams-bridge, locator: "pp. 237-239" }
+    evidence:
+      - text: >-
+          ICESat-2 bathymetry maps a continuous submarine extension between Dhanushkodi and
+          Talaimannar with asymmetric slopes driven by stronger Gulf of Mannar wave energy,
+          while historic borehole logs show sand overlying Holocene sandstone and coral.
+        grade: B
+        sources:
+          - { id: src.dandabathula-2024-adams-bridge-bathymetry, locator: "Introduction; Results and discussion; Figs. 2-3 and 5" }
+          - { id: src.bahuguna-2003-irs-adams-bridge, locator: "pp. 237-239" }
+      - text: >-
+          Seismic profiles across the Ramasetu corridor date seawater encroachment into the
+          Palk Strait basin to about 8,500 years ago and complete burial of the youngest
+          incised channels by about 7,000 years ago.
+        grade: B
+        sources:
+          - { id: src.dubey-2023-ramasetu-evolution, locator: "Abstract" }
+    objections:
+      - >-
+        Bathymetry maps present seabed geometry and seismic profiles resolve regional
+        unconformities, while dense radiometric dating across cores from multiple shoals
+        is still needed to establish exact accumulation histories for every sandbank.
+  - id: possible-local-modification
+    label: "Natural barrier with possible local modification or shallow crossings"
+    lens: scholarship
+    grade: E
+    statement: >-
+      While recognizing that Adam's Bridge consists primarily of natural sandbanks, corals
+      and limestone shoals, some writers propose that shallow exposures could have guided
+      human crossings or undergone localized modification. Jayarajan, Sreepadi and Vineesh
+      combine community oral accounts with geospatial observations and raise the possibility
+      of human alteration within a predominantly natural formation. Separately, Dubey and
+      colleagues note as a Pleistocene-Holocene hypothesis that early-to-mid Holocene
+      foragers crossing estuarine patches would have needed rafts or simple bandh-like
+      structures before final submergence around 7,000 years ago.
+    proponents:
+      - name: K. Jayarajan, Sreelu Sreepadi and V. Vineesh
+        role: Authors of a 2026 geomythological and spatial study of Ram Setu
+        work: { id: src.jayarajan-2026-geomythology-ram-setu, locator: "Abstract" }
+    evidence:
+      - text: >-
+          Jayarajan and colleagues combine oral interviews with remote-sensing mapping,
+          describing Ram Setu as primarily natural while suggesting possible traces of
+          human modification, and Dubey and colleagues mention rafts or simple bandh
+          crossings for early-to-mid Holocene estuarine patches prior to ~7.0 ka.
+        grade: E
+        sources:
+          - { id: src.jayarajan-2026-geomythology-ram-setu, locator: "Abstract" }
+          - { id: src.dubey-2023-ramasetu-evolution, locator: "Abstract" }
+    objections:
+      - >-
+        Remote-sensing imagery, ICESat-2 bathymetry and borehole logs identify shifting
+        fine sand over Holocene calcareous sandstone and coral reefs rather than quarried
+        or placed construction masonry along the ridge.
+      - >-
+        Neither field surveys nor seismic profiles document an excavated, dated artificial
+        causeway in sealed context; demonstrating human construction requires datable
+        worked artifacts or placed courses recovered in situ.
+  - id: ramayana-crossing
+    label: "Nala's crossing in Ramayana and Puranic tradition"
+    lens: tradition
+    grade: D
+    statement: >-
+      In the Valmiki Ramayana, the ocean grants Rama passage and the vanara engineer Nala
+      directs the building of a crossing over the sea so Rama's army can reach Lanka and
+      rescue Sita. Together with later retellings in the Mahabharata and Puranas, this
+      account anchors Ram Setu's enduring standing as sacred geography and living cultural
+      heritage for pilgrim and coastal communities.
+    proponents:
+      - name: Valmiki Ramayana tradition
+        role: Preserves the account of Nala's bridge to Lanka in the Yuddhakanda
+        work: { id: src.goldman-2009-ramayana-yuddhakanda, locator: "Yuddhakanda, sarga 15" }
+      - name: Living sacred geography and coastal heritage tradition
+        role: Preserves devotional and local community identification of the shoals with Ram Setu
+        work: { id: src.jayarajan-2026-geomythology-ram-setu, locator: "Abstract" }
+    evidence:
+      - text: >-
+          Yuddhakanda sarga 15 credits Nala with directing the vanaras to place trees and
+          stones into the sea to carry Rama's forces across to Lanka.
+        grade: D
+        sources:
+          - { id: src.goldman-2009-ramayana-yuddhakanda, locator: "6.15.8-25, Baroda critical edition numbering" }
+      - text: >-
+          Community interviews and literary surveys document the continuing identification
+          of the shoals with Rama's bridge across the Ramayana, Mahabharata and Skanda
+          Purana traditions.
+        grade: D
+        sources:
+          - { id: src.jayarajan-2026-geomythology-ram-setu, locator: "Abstract" }
+    objections:
+      - >-
+        The epic and living place-traditions express religious memory and cultural
+        meaning rather than supplying radiometric or stratigraphic proof of an engineered
+        prehistoric bridge.
+whatWouldChangeThis:
+  - >-
+    Transects of dated sediment cores through multiple shoals and reef platforms would
+    establish a detailed Holocene chronology for sandbank accumulation, coral growth and
+    channel migration.
+  - >-
+    Repeated courses of demonstrably worked or placed stone in a sealed stratigraphic
+    context with dated associated finds would test any claim of local human construction.
+relatedEntities: [text.valmiki-ramayana, person.rama, concept.yuga-chronology-of-the-itihasa]
+relatedArticles: [literature/the-ramayana]
+tags: [ram-setu, adams-bridge, coastal-geology, ramayana]
+review: { status: draft, author: codex }

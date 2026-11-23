@@ -37,6 +37,7 @@ datings:
       - id: src.grewal-1990-sikhs-of-the-punjab
         locator: Foundation of the Sikh Panth
       - src.singh-2003-guru-granth-sahib
+    primaryReason: "His active period as the fourth Sikh Guru, inside his lifespan, not a single event in his life."
 claims:
   - text: The settlement established under Guru Ram Das became known as Amritsar.
     grade: B

@@ -1,0 +1,150 @@
+id: debate.dwarka-underwater-findings
+title: Dwarka underwater findings
+question: What do the submerged remains off Dwarka and Bet Dwarka establish about the port and its epic association?
+summary: >-
+  Offshore and coastal surveys have documented submerged dressed stone blocks, numerous
+  stone anchors, and historical trade artifacts off Dwarka and Bet Dwarka. S. R. Rao
+  linked Dwarka's submerged masonry and Bet Dwarka's Late Harappan pottery to a
+  second-millennium BCE port behind the epic Dvaraka tradition. Subsequent marine
+  archaeology by A. S. Gaur, Sundaresh and colleagues indicates that the offshore anchors,
+  jetty remains and Indo-Roman amphorae belong mainly to historical and medieval
+  anchorage phases, distinct from Bet Dwarka's protohistoric settlement. The Mahabharata
+  preserves the sacred account of Dvaraka's submergence.
+published: true
+approval: { by: Shreejit Verma, date: "2026-11-22", note: "Drafted by Codex; reviewed for fairness, accuracy and sources by Gemini (a machine review). No human editorial review yet." }
+commonGround:
+  - text: >-
+      Marine archaeologists documented stone anchors in a submerged channel off modern
+      Dwarka, alongside dressed stone blocks and structures along the former Gomati
+      channel.
+    grade: A
+    sources:
+      - { id: src.gaur-2001-dwarka-stone-anchors, locator: "pp. 95-108, survey and anchor catalogue" }
+      - { id: src.rao-1990-excavation-legendary-city-dwarka, locator: "p. 95; Fig. 9" }
+  - text: >-
+      Surveys on and off Bet Dwarka island documented Late Harappan protohistoric occupation
+      on land and in intertidal zones as well as submerged Early Historic and medieval
+      maritime artifacts offshore.
+    grade: A
+    sources:
+      - { id: src.singh-2008-ancient-early-medieval-india, locator: "p. 169" }
+      - { id: src.gaur-2006-bet-dwarka-indo-roman-trade, locator: "pp. 117-127" }
+positions:
+  - id: rao-protohistoric-port
+    label: "Rao's protohistoric port hypothesis: about 1500 to 1400 BCE"
+    lens: scholarship
+    grade: C
+    range: { earliest: "1500 BCE", latest: "1400 BCE", precision: century, circa: true }
+    statement: >-
+      S. R. Rao interpreted the regularly laid dressed masonry along the submerged Gomati
+      channel off Dwarka as harbour walls and bastions of an inundated protohistoric port.
+      Pairing these offshore structures with Late Harappan Lustrous Red Ware pottery and
+      inscribed finds from Bet Dwarka, he assigned an early urban maritime phase to about
+      1500 to 1400 BCE. On this view, a real coastal port inundated by sea-level change or
+      subsidence provides a historical background for the epic memory of Dvaraka.
+    proponents:
+      - name: S. R. Rao
+        role: Marine archaeologist, leader of the 1980s Dwarka offshore expeditions
+        work: { id: src.rao-1990-excavation-legendary-city-dwarka, locator: "pp. 59-98, especially p. 95 and Fig. 9" }
+    evidence:
+      - text: >-
+          Rao mapped dressed stone alignments along the submerged Gomati channel,
+          interpreting projecting courses as bastions of an early harbour dated by associated
+          finds to roughly 1500 to 1400 BCE.
+        grade: C
+        sources:
+          - { id: src.rao-1990-excavation-legendary-city-dwarka, locator: "p. 95; Fig. 9" }
+      - text: >-
+          Excavations at Bet Dwarka yielded protohistoric Late Harappan pottery and maritime
+          craft remains that Rao linked to the wider Dvaraka port complex.
+        grade: C
+        sources:
+          - { id: src.rao-1990-excavation-legendary-city-dwarka, locator: "pp. 59-98" }
+          - { id: src.singh-2008-ancient-early-medieval-india, locator: "p. 169" }
+    objections:
+      - >-
+        Offshore masonry blocks lack sealed stratigraphic excavation layers or direct
+        radiocarbon dates showing they were built in the second millennium BCE rather than
+        in later historical or medieval periods.
+      - >-
+        Even a documented Late Harappan coastal settlement at Bet Dwarka does not identify
+        its builders with Krishna or establish the historicity of the Mahabharata narrative.
+  - id: harbour-used-over-centuries
+    label: "Historical and medieval anchorage: about 200 BCE to 1500 CE"
+    lens: scholarship
+    grade: B
+    range: { earliest: "200 BCE", latest: "1500 CE", precision: century, circa: true }
+    statement: >-
+      Re-investigations by the National Institute of Oceanography from 1997 to 2002
+      conclude that the submerged anchors and stone blocks off Dwarka and Bet Dwarka reflect
+      repeated historical and medieval port activity rather than a single Bronze Age city.
+      Off Dwarka, many anchors are Indo-Arab grapnel types of medieval date alongside
+      long-lived triangular anchors. Off Bet Dwarka, underwater finds at five to eight metres
+      depth include Mediterranean amphorae sherds and lead objects of the first century BCE
+      to second century CE, pointing to Early Historic Indo-Roman trade and subsequent
+      medieval anchorage.
+    proponents:
+      - name: A. S. Gaur, Sundaresh, Sila Tripati and K. H. Vora
+        role: Marine archaeologists at the National Institute of Oceanography, Goa
+        work: { id: src.gaur-2008-underwater-archaeology-dwarka-somnath, locator: "Section I, Dwarka" }
+    evidence:
+      - text: >-
+          The 1998-99 Dwarka survey catalogued twenty stone anchors of three types, showing
+          that grapnel anchors match medieval Indo-Arab parallels while triangular composite
+          types remained in use over many centuries and cannot prove a Bronze Age date.
+        grade: B
+        sources:
+          - { id: src.gaur-2001-dwarka-stone-anchors, locator: "pp. 95-108" }
+          - { id: src.gaur-2008-underwater-archaeology-dwarka-somnath, locator: "Section I, Dwarka" }
+      - text: >-
+          Underwater excavations in Bet Dwarka waters recovered Roman-period amphorae
+          sherds, a lead ingot and lead anchor components datable to the first century BCE
+          to second century CE, documenting Early Historic long-distance trade.
+        grade: B
+        sources:
+          - { id: src.gaur-2006-bet-dwarka-indo-roman-trade, locator: "pp. 117-127" }
+    objections:
+      - >-
+        Unstratified seabed deposits can mix anchors and pottery from different centuries,
+        and intensive historical and medieval shipping does not rule out smaller-scale use
+        of the coast during Bet Dwarka's Late Harappan phase.
+  - id: krishna-dvaraka-tradition
+    label: "Dvaraka in the Krishna and Mahabharata tradition"
+    lens: tradition
+    grade: D
+    statement: >-
+      The Mausala Parva of the Mahabharata and Puranic accounts remember Dvaraka as the
+      coastal city of Krishna and the Vrishni-Yadavas. After Krishna's departure and the
+      destruction of the clan, Arjuna evacuates the remaining residents and the ocean
+      submerges the city. Within Hindu tradition, the submergence of Dvaraka marks the end
+      of Krishna's earthly presence and gives the modern pilgrimage site of Dwarka its
+      enduring sacred geography.
+    proponents:
+      - name: Mahabharata Mausala Parva tradition
+        role: Preserves the epic account of Dvaraka's evacuation and submergence
+        work: { id: src.doniger-2022-after-the-war, locator: "Book 16, chs. 5-8" }
+    evidence:
+      - text: >-
+          Book 16 of the Mahabharata narrates Krishna's passing, Arjuna's evacuation of the
+          city's inhabitants and the sea flooding Dvaraka immediately thereafter.
+        grade: D
+        sources:
+          - { id: src.doniger-2022-after-the-war, locator: "Book 16, chs. 5 and 8" }
+    objections:
+      - >-
+        The epic and Puranic narratives express theological memory and sacred geography;
+        identifying a specific submerged structure on the seabed as epic Dvaraka requires
+        independent, sealed archaeological and epigraphic dating.
+whatWouldChangeThis:
+  - >-
+    Excavated structural foundations off Dwarka sealed beneath undisturbed sediment layers
+    with direct radiocarbon or luminescence dates would establish when the submerged
+    masonry was built and inundated.
+  - >-
+    A stratified contemporary inscription recovered in place off Dwarka or Bet Dwarka
+    naming the city and its rulers would test historical identifications independently of
+    anchor typology.
+relatedEntities: [person.krishna, text.mahabharata, tradition.harappan-civilisation, site.lothal]
+relatedArticles: [literature/mahabharata]
+tags: [dwarka, bet-dwarka, maritime-archaeology, krishna, mahabharata]
+review: { status: draft, author: codex }

@@ -117,8 +117,25 @@ describe('entity and source rules', () => {
       expect(issues([dating('scholarly-consensus', 'B', 1572, 1573), dating('scholarly-consensus', 'B', 1572, 1730)]).map((i) => i.path)).toEqual([['datings', 0]]);
     });
 
-    it('accepts the span when it leads and the event ranks below it', () => {
-      expect(issues([dating('scholarly-consensus', 'A', 1767, 1795), dating('epigraphic', 'B', 1769, 1769)])).toEqual([]);
+    it('rejects an event that ranks below the span too, with its own message', () => {
+      // Maharana Pratap: the Battle of Haldighati (1576) beside his reign (1572-1597), both grade B.
+      const found = issues([dating('scholarly-consensus', 'B', 1572, 1597), dating('scholarly-consensus', 'B', 1576, 1576)]);
+      expect(found.map((i) => i.path)).toEqual([['datings', 1]]);
+      expect(found[0].message).toMatch(/^the grade B scholarly-consensus dating .* reads as a single event in the history of site\.fort: .* record that event as a claim/);
+      expect(issues([dating('scholarly-consensus', 'A', 1767, 1795), dating('epigraphic', 'B', 1769, 1769)]).map((i) => i.path)).toEqual([['datings', 1]]);
+    });
+
+    it('reports every event, leading or not', () => {
+      const found = issues([dating('documentary', 'A', 1960, 1960), dating('scholarly-consensus', 'B', 1900, 2000), dating('epigraphic', 'B', 1950, 1950)]);
+      expect(found.map((i) => i.path)).toEqual([['datings', 0], ['datings', 2]]);
+      expect(found[0].message).toMatch(/would stand for/);
+      expect(found[1].message).toMatch(/reads as a single event/);
+    });
+
+    it('accepts a short dating below the span that gives the reason it dates the entity itself', () => {
+      // Guru Ram Das: his years as Guru (1574-1581) beside his lifespan (1534-1581) are his active period, not an event.
+      const guru = dating('scholarly-consensus', 'B', 1574, 1581);
+      expect(issues([dating('scholarly-consensus', 'B', 1534, 1581), { ...guru, primaryReason: 'His active period as Guru, beside the lifespan.' }])).toEqual([]);
     });
 
     it('accepts a short leading dating that gives the reason it dates the entity itself', () => {
@@ -188,6 +205,30 @@ describe('aliases of merged entities', () => {
         permanent: true,
       },
     ]);
+  });
+  it('maps each former source id to its source and redirects the old source page', async () => {
+    const { resolveAliases } = await import('./load');
+    const { sourceAliasRedirects } = await import('./redirects');
+    const r = resolveAliases([{ id: 'src.new-1999-x', aliases: ['src.old-1999-x'] }, { id: 'src.other-2000-y' }, { id: 'src.z-2001-z', aliases: ['src.other-2000-y'] }], 'source');
+    expect(r.aliases).toEqual(new Map([['src.old-1999-x', 'src.new-1999-x']]));
+    expect(r.problems).toEqual([{ id: 'src.z-2001-z', message: 'alias src.other-2000-y collides with a live source id; an alias names a source id that no longer exists' }]);
+    expect(sourceAliasRedirects(r.aliases)).toEqual([{ source: '/sources/old-1999-x', destination: '/sources/new-1999-x', permanent: true }]);
+  });
+  it('rejects a source alias that is its own id or listed twice', async () => {
+    const { SourceSchema } = await import('./schema');
+    const src = { id: 'src.a-2000-a', type: 'web', title: 'A page', publisher: 'P', url: 'https://example.org/a' };
+    expect(SourceSchema.safeParse({ ...src, aliases: ['src.old-2000-a'] }).success).toBe(true);
+    expect(SourceSchema.safeParse({ ...src, aliases: ['src.a-2000-a'] }).success).toBe(false);
+    expect(SourceSchema.safeParse({ ...src, aliases: ['src.old-2000-a', 'src.old-2000-a'] }).success).toBe(false);
+    expect(SourceSchema.safeParse({ ...src, aliases: ['old-2000-a'] }).success).toBe(false);
+  });
+  it('keeps the production URLs of renamed sources', async () => {
+    const { loadContentUncached } = await import('./load');
+    const { sourceAliases } = loadContentUncached();
+    expect(Object.fromEntries(sourceAliases)).toEqual({
+      'src.asi-1906-annual-report-1904-05': 'src.asi-1908-annual-report-1904-05',
+      'src.steinkellner-1999-tabo-renovation': 'src.petech-luczanits-1999-tabo-inscriptions',
+    });
   });
   it('covers every entity removed from the corpus since the last production deploy', async () => {
     const { loadContentUncached } = await import('./load');
@@ -290,6 +331,8 @@ describe('loader against fixtures', () => {
       const msgs = g.errors.map((e) => e.message);
       expect(msgs).toContain('datings[0]: unknown source src.nobody-1999-nothing');
       expect(msgs).toContain('extents[0]: unknown source src.nobody-1999-nothing');
+      expect(msgs).toContain('claims[0]: src.doe-1990-a-work is a former id of src.roe-1990-a-work; cite that id');
+      expect(g.sourceAliases).toEqual(new Map([['src.doe-1990-a-work', 'src.roe-1990-a-work']]));
       // The relation graph's own checks are advisory warnings; the loader separately rejects a self relation and
       // a second relation between the same two entities as errors (duplicateRelations), so both lists name them.
       expect(g.warnings).toEqual([

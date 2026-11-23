@@ -26,16 +26,6 @@ datings:
       - "src.gordon-1993-marathas-1600-1818"
     note: "Published government summaries give different years for early work. The range covers
       construction in the 1730s."
-  - method: "documentary"
-    range:
-      earliest: 1828
-      latest: 1828
-      precision: "year"
-      circa: false
-    grade: "B"
-    label: "Fire that destroyed much of the palace"
-    sources:
-      - "src.incredible-india-shaniwar-wada"
 claims:
   - text: "Shaniwar Wada was the principal seat of the Peshwas in Pune."
     grade: "B"

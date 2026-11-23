@@ -54,6 +54,7 @@ npm run content:verify-sources  # resolve every DOI, ISBN, OCLC, QID and Commons
 npm run data:export             # generate JSON, CSV, JSON Schema and manifest
 npm run data:verify-export      # check checksums, re-import through the validators, and compare byte for byte
 npm run build                   # validate, offline verification gate, open data export and its round trip, then next build and the Pagefind index
+npm run build:e2e               # the same build plus the e2e fixture draft (e2e/fixtures/content), which the e2e suite proves never reaches the site
 npm run search:build            # rebuild only the Pagefind index from an existing .next build
 npm run test:e2e                # Playwright, axe and visual snapshots against a production build (Chromium, Firefox, WebKit, Pixel 7, iPhone 14)
 npx vitest run src/lib/design/palette.test.ts  # contrast of every documented colour pair in light and dark; fails below AA
@@ -61,7 +62,8 @@ npm run test:lighthouse         # Lighthouse CI budgets against a production bui
 npm run dev:debates-preview     # local preview that renders unpublished debate drafts, for owner review
 ```
 
-Both browser suites expect `npm run build` first; set `E2E_PORT` or `LHCI_PORT` to avoid a port another server holds.
+The e2e suite expects `npm run build:e2e` first and fails at once against a build without the fixture draft; Lighthouse expects `npm run build`.
+Set `E2E_PORT` or `LHCI_PORT` to avoid a port another server holds.
 After editing content during `npm run dev`, run `npm run content:build` to refresh the open data and the Kaalchakra data in `public/data/`.
 The Map view has visual snapshots (`e2e/map-visual.spec.ts`) drawn from a fixed fixture (`e2e/fixtures/kaalchakra-map.json`), so they change only when rendering changes.
 They are refreshed together with the Wheel and River snapshots; see [Quality gates](#quality-gates).
@@ -87,7 +89,7 @@ The loader rejects raw negative years in datings; write BCE years as `"N BCE"` s
 | Job | What fails it |
 |---|---|
 | verify | ESLint, `tsc --noEmit`, Vitest, `content:validate`, the offline source verification gate |
-| e2e | One job per Playwright project (desktop Chromium, Firefox and WebKit, Pixel 7, iPhone 14, and the two debates preview projects), each running the production build and then its project: every route type in light and dark with zero serious or critical axe violations and no horizontal scroll, navigation, Kaalchakra zoom, lenses, kind filters, URL state round trips, the wheel's spin (click, era tap, drag, touch swipe, keyboard, scroll with intent, Back and Forward, one announcement at rest, reduced motion), the List fallback (including reduced motion making List the default) and visual snapshots of the Wheel and River (Chromium projects) |
+| e2e | One job per Playwright project (desktop Chromium, Firefox and WebKit, Pixel 7, iPhone 14, and the two debates preview projects), each running the production build with the e2e fixture draft (`npm run build:e2e`) and then its project: every route type in light and dark with zero serious or critical axe violations and no horizontal scroll, navigation, Kaalchakra zoom, lenses, kind filters, URL state round trips, the wheel's spin (click, era tap, drag, touch swipe, keyboard, scroll with intent, Back and Forward, one announcement at rest, reduced motion), the List fallback (including reduced motion making List the default), the server-rendered placeholder keeping every block in place when the interactive Kaalchakra replaces it (at 360 and 1280 px), the never-ship-drafts rule (the fixture draft is in the build and unreachable) and visual snapshots of the Wheel and River (Chromium projects) |
 | lighthouse | The production build, then Lighthouse CI on a throttled mid-tier Android profile, with the budgets below as hard gates |
 
 Performance budgets (`lighthouserc.js`, median of three runs, Moto G Power class phone, simulated slow 4G, 4x CPU):
@@ -105,7 +107,7 @@ Three deliberate departures from the product brief, all measured:
 the brief's 100 KB JavaScript budget for article pages is below the roughly 128 KB that React 19 and the Next.js 16 App Router runtime ship on every page, so the gate is 150 KB;
 `/search` also carries Pagefind's runtime and the search interface, 153 KB in all, so it is held to 160 KB;
 and a hard load of search results (`/search?q=...`) paints its first result only after hydration and the index downloads, so it is held to a 4.0 s LCP ratchet (measured 3.6 to 3.8 s) until search results are rendered on the server.
-Lighthouse runs against the home page, the Kaalchakra wheel and Map view, an entity, an article, search and search results, a source record, the learning index, a learning path and the open data page.
+Lighthouse runs against the home page, the Kaalchakra wheel and Map view, an entity, an article, search and search results, a source record, the learning index, a learning path, a debate and the open data page.
 
 The visual snapshots in `e2e/visual.spec.ts-snapshots/` and `e2e/map-visual.spec.ts-snapshots/` use fixed fixtures (`e2e/fixtures/`), so they change only when rendering changes.
 They are kept for the two Chromium projects and are per platform; after an intended visual change, refresh both:
@@ -119,19 +121,24 @@ docker run --rm -v "$PWD":/work -v /work/node_modules -v /work/.next -w /work -e
 
 From a git worktree, also mount the main repository's `.git` directory at its own path (`-v "$GIT_DIR":"$GIT_DIR":ro`), because the export reads the content commit date from git and a worktree's `.git` file points there.
 
+Tests that run axe match labelled landmarks by their attributes, not by a named `getByRole` query, because in Playwright's Firefox that query and an axe scan crash the page; [`docs/testing/firefox-axe-crash.md`](docs/testing/firefox-axe-crash.md) has the reproduction.
+
 ## Search
 
 Search is [Pagefind](https://pagefind.app), built inside `npm run build` itself, after content validation, the offline verification gate, the open data export and its round trip, and `next build`; none of these is a lifecycle script, so a package manager that ignores lifecycle scripts cannot skip them.
-`scripts/build-search.ts` reads the prerendered HTML in `.next/server/app`, indexes every entity, article, source and learning path page, and every published debate, under its real route, and writes `public/pagefind/`.
+`scripts/build-search.ts` reads the prerendered HTML that `next build` writes, indexes every entity, article, source and learning path page, and every published debate, under its real route, and writes `public/pagefind/`.
+A plain build writes each page to `.next/server/app/<route>.html`; with a deployment adapter, as on Vercel (`NEXT_ADAPTER_PATH`), Next 16.4 writes it to `.next/server/route-cache/APP_PAGE/<hash>/$/<route>.html` instead, and the script reads both layouts.
 The build fails if any expected page is missing or unindexed.
 On Vercel this is served because the Next.js builder collects `public/` only after the build command exits, and `vercel.json` pins that build command to `npm run build` so a dashboard override cannot drop the index; `vercel build` locally puts all of `public/pagefind/` in `.vercel/output/static/pagefind/`.
 Content-hashed chunks (`/pagefind/{index,filter,fragment}/`) are served as immutable (`next.config.ts`); `pagefind.js` and `pagefind-entry.json` keep the default revalidation.
 Pages declare what is indexed with `data-pagefind-body` and `data-pagefind-ignore`, and their filters (kind, article category, evidence grade, lens) through `src/components/SearchIndexMeta.tsx`.
 `/search` keeps its `?q=` contract and adds repeatable `kind`, `category`, `grade` and `lens` parameters (`src/lib/search/facets.ts`).
 Ranking lowers Pagefind's page-length penalty to 0.25 (`src/lib/search/pagefind.ts`), and a record whose title or alternate name is exactly the query goes first, so a name query finds its record before the shorter pages that mention the name in their own titles.
-Each page carries a hidden `exact` Pagefind filter: a 32-bit hash of its normalised title and of each alternate name (an entity's `names.iast` and `names.alternates`), normalised by `exactKey` in `src/lib/search/normalise.ts` (lowercase, diacritics folded, punctuation stripped, whitespace collapsed), so "asoka" and "aśoka" both find Ashoka.
+Each page carries a hidden `exact` Pagefind filter: a 32-bit hash of its normalised title and of each alternate name (an entity's `names.iast` and `names.alternates`, a debate's `alternates`), normalised by `exactKey` in `src/lib/search/normalise.ts` (lowercase, diacritics folded, punctuation stripped, whitespace collapsed, a leading "The" dropped), so "asoka" and "aśoka" both find Ashoka and "date of the buddha" finds the debate The date of the Buddha.
+A debate's positions, common ground, what would change it and related records are indexed at Pagefind weight 0.5, so a debate that names a person in every line does not outrank that person's record for a name query.
+Alternate names are stored with a `~` mark, so Search runs two filter-only lookups (title or alternate name, and title alone) and pins records titled with the query before records that only have it as an alternate name: "mahavira" puts the Jain teacher Mahavira before the mathematician whose IAST name is Mahāvīra.
 Search looks the query's hash up in that filter alongside the main search and fetches the hits' fragments with the first batch; the filter is not a facet and never appears in the filter panel or its counts.
-Hashes keep the filter index small (21.5 KB compressed for 2,822 names, against 48.9 KB as text), and `scripts/build-search.ts` fails the build if a page's hashes do not match its title and names or two names share a hash.
+Hashes keep the `exact` filter file small (21.5 KB compressed for 2,833 names, against 50.7 KB as text), and `scripts/build-search.ts` fails the build if a page's hashes do not match its title and names or two names share a hash.
 `npm run dev` serves the index from the last production build; run `npm run build` once before testing search locally.
 
 ## References
@@ -146,7 +153,10 @@ Identifiers are linked only when verified: DOI, ISBN and OCLC always, a URL only
 - Debate pages (`/debates`) are validated whether or not they are published, but a debate is rendered, linked from entity pages, indexed for search or listed only when `published: true`, which the schema accepts only with an `approval { by, date }` record.
   `npm run dev:debates-preview`, or a local `DEBATES_PREVIEW=1 npm run build && npm start`, renders drafts with an "Unpublished draft" banner and `noindex`.
   `next.config.ts` refuses `DEBATES_PREVIEW=1` in a deployment build (on Vercel, where `VERCEL` or `VERCEL_ENV` is set, or a production build in CI), so drafts cannot be deployed.
-  `next.config.ts` also keeps every debate file not marked `published: true` out of the traced server bundles, and until a debate is published the `/debates` index is `noindex` and absent from the footer.
+  `next.config.ts` also keeps every debate file not marked `published: true`, in every content root, out of the traced server bundles, and `scripts/build-search.ts` fails a public build that has prerendered any unpublished debate.
+  Until a debate is published the `/debates` index is `noindex` and absent from the main navigation and the footer; published debates are listed there, linked from their related entities, indexed for search under the Debates kind filter, and exported.
+- No real draft is needed to keep that rule tested: `e2e/fixtures/content/debates/e2e-unpublished-fixture.yaml` is a fixture draft, outside `content/`, loaded only through `CONTENT_ROOTS=content:e2e/fixtures/content` (`npm run build:e2e` and the Playwright preview server).
+  `e2e/debates.spec.ts` checks, from `.next/debates-build.json`, that the build under test loaded it, then that it has no page, link, search entry or export record; `e2e/debates.preview.spec.ts` checks that the preview renders it as a marked draft.
 - Learning paths (`/learn`) have ordered steps, a quiz scored in the browser, per-viewer progress in `localStorage`, and a printable pack at `/learn/<slug>/print` with the answer key on its own page.
   Choices show in the order written; `content:validate` rejects a quiz of three or more questions whose correct answers all share one position.
 - The reading level (Full, Teen, Kids) is chosen with the switcher on entity pages and in the Kaalchakra panel; it is read from `?level=` first, then `localStorage`, and applied before paint by an inline script in the root layout (`src/lib/reading-level.ts`).

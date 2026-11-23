@@ -33,18 +33,6 @@ datings:
       - src.spink-2005-ajanta-end-of-golden-age
     note: The approximate dynasty-wide range encompasses both major lines. The dated grants usually use
       regnal years rather than a continuous absolute era.
-  - method: art-historical
-    range:
-      earliest: "462"
-      latest: "480"
-      precision: decade
-      circa: true
-    grade: C
-    label: Walter Spink's compressed chronology for the Ajanta court phase
-    sources:
-      - src.spink-2005-ajanta-end-of-golden-age
-    note: Spink uses cave sequences and inscriptions to place most later excavation within Harishena's
-      lifetime and immediate aftermath.
 claims:
   - text: Inscriptions document royal grants of land to Brahmins in Vidarbha.
     grade: A
@@ -61,6 +49,10 @@ claims:
     sources:
       - src.singh-2008-ancient-early-medieval-india
       - src.hawkes-2022-grounding-texts
+  - text: "Walter Spink's compressed chronology, built from cave sequences and inscriptions, places most of the later excavation at Ajanta in about 462 to 480 CE, within the Vakataka king Harishena's lifetime and its immediate aftermath."
+    grade: "C"
+    sources:
+      - "src.spink-2005-ajanta-end-of-golden-age"
 relations:
   - kind: related-to
     target: polity.gupta-empire

@@ -37,22 +37,6 @@ datings:
     note: >-
       Optically stimulated luminescence (OSL) dates at Jwalapuram Locality 3 and Locality 22 bracket the c. 74 ka
       Youngest Toba Tuff horizon between pre-ash (~77 ka) and post-ash (~74-38 ka) Middle Palaeolithic levels.
-  - method: geological
-    range:
-      earliest: "75 ka"
-      latest: "71 ka"
-      best: "73.5 ka"
-      precision: ka
-      circa: true
-    grade: C
-    label: Volcanic winter bottleneck and environmental disruption model (Ambrose 1998; Williams et al. 2009)
-    sources:
-      - src.ambrose-1998-toba-volcanic-winter
-      - src.williams-2009-toba-environmental-impact
-      - src.mellars-2013-colonization-southern-asia
-    note: >-
-      Argues that the c. 73-74 ka Toba eruption caused severe regional deforestation and cooling, and questions
-      whether pre-Toba tools at Jwalapuram were made by modern humans rather than archaic hominins.
 claims:
   - text: >-
       Lithic analyses at Jwalapuram Localities 3, 20 and 21 show technological continuity in small prepared-core
@@ -66,6 +50,12 @@ claims:
     grade: B
     sources:
       - src.williams-2009-toba-environmental-impact
+  - text: "Ambrose and Williams et al. argue that the Toba eruption, about 75,000 to 71,000 years ago, caused severe regional deforestation and cooling, and Mellars questions whether the pre-Toba tools at Jwalapuram were made by modern humans rather than archaic hominins."
+    grade: "C"
+    sources:
+      - "src.ambrose-1998-toba-volcanic-winter"
+      - "src.williams-2009-toba-environmental-impact"
+      - "src.mellars-2013-colonization-southern-asia"
 relations: []
 debate: >-
   Petraglia et al. (2007) argue that Middle Palaeolithic technological continuity below and above the 74 ka Toba

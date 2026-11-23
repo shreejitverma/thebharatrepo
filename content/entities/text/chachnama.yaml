@@ -40,6 +40,7 @@ datings:
         locator: "P. Hardy, pp. 111-117"
     note: "MacLean uses the text’s reference to 613 AH and places the work in the context of Qabacha’s
       court. Hardy gives 1216 to 1217."
+    primaryReason: "A competing dating of the composition of the surviving Persian text, which MacLean treats as a translation, not an event in its history."
   - method: "textual-internal"
     range:
       earliest: 1226
@@ -51,6 +52,7 @@ datings:
     sources:
       - "src.asif-2012-long-thirteenth-century"
       - "src.asif-2016-book-of-conquest"
+    primaryReason: "A competing dating of the composition of the surviving Persian text, which Asif treats as the original work, not an event in its history."
 claims:
   - text: "The narrative follows Chach's rise and the later conquest under Muhammad ibn Qasim."
     grade: "A"

@@ -7,7 +7,10 @@ import SourceCitation from '@/components/SourceCitation';
 import { CATEGORY_META, getCitationIndex, getGraph } from '@/lib/content/site';
 import { entityHref, formatSource } from '@/lib/content/kaalchakra';
 import { KIND_LABELS, METHOD_LABELS } from '@/lib/content/labels';
-import { citedByCount, type EntityContext } from '@/lib/content/references';
+import { citedByCount, emptyCitedBy, type CitedBy, type EntityContext } from '@/lib/content/references';
+import { debateHref } from '@/lib/content/debates';
+import { learnHref } from '@/lib/content/learning';
+import { READING_LEVEL_LABELS } from '@/lib/content/schema';
 import { sourceIdentifiers } from '@/lib/content/verification';
 import { formatRange } from '@/lib/time';
 
@@ -24,7 +27,7 @@ function find(slug: string) {
 export async function generateMetadata({ params }: { params: Promise<{ slug: string }> }): Promise<Metadata> {
   const { slug } = await params;
   const s = find(slug);
-  return s ? { title: s.title, description: `${formatSource(s)}. Every entity, article and correction in The Bharat Repo that cites this source.` } : {};
+  return s ? { title: s.title, description: `${formatSource(s)}. Every entity, article, correction, quiz and debate in The Bharat Repo that cites this source.` } : {};
 }
 
 function typeLabel(type: string): string {
@@ -34,6 +37,18 @@ function typeLabel(type: string): string {
 
 function plural(n: number, one: string, many: string): string {
   return `${n} ${n === 1 ? one : many}`;
+}
+
+/** "Cited by 2 articles, 3 archive records and 1 correction.", naming only the kinds that cite it; articles, records and corrections always. */
+function summary(c: CitedBy): string {
+  const parts = [
+    plural(c.articles.length, 'article', 'articles'),
+    plural(c.entities.length, 'archive record', 'archive records'),
+    plural(c.corrections.length, 'correction', 'corrections'),
+    ...(c.quizzes.length ? [plural(c.quizzes.length, 'learning-path quiz', 'learning-path quizzes')] : []),
+    ...(c.debates.length ? [plural(c.debates.length, 'debate', 'debates')] : []),
+  ];
+  return `Cited by ${parts.slice(0, -1).join(', ')} and ${parts[parts.length - 1]}.`;
 }
 
 function Context({ ctx }: { ctx: EntityContext }) {
@@ -59,7 +74,7 @@ export default async function SourcePage({ params }: { params: Promise<{ slug: s
   const { slug } = await params;
   const s = find(slug);
   if (!s) notFound();
-  const cited = getCitationIndex().get(s.id) ?? { entities: [], articles: [], corrections: [] };
+  const cited = getCitationIndex().get(s.id) ?? emptyCitedBy();
   const total = citedByCount(cited);
   const ids = sourceIdentifiers(s);
   const linked = ids.filter((i) => i.href).map((i) => i.kind);
@@ -143,10 +158,7 @@ export default async function SourcePage({ params }: { params: Promise<{ slug: s
         {total === 0 ? (
           <p className="empty">0 records cite this source.</p>
         ) : (
-          <p className="muted cited-by__summary">
-            Cited by {plural(cited.articles.length, 'article', 'articles')}, {plural(cited.entities.length, 'archive record', 'archive records')} and{' '}
-            {plural(cited.corrections.length, 'correction', 'corrections')}.
-          </p>
+          <p className="muted cited-by__summary">{summary(cited)}</p>
         )}
 
         {cited.articles.length ? (
@@ -178,6 +190,51 @@ export default async function SourcePage({ params }: { params: Promise<{ slug: s
                     {contexts.map((ctx) => (
                       <li key={`${ctx.kind}-${ctx.index}`}>
                         <Context ctx={ctx} />
+                      </li>
+                    ))}
+                  </ul>
+                </li>
+              ))}
+            </ul>
+          </>
+        ) : null}
+
+        {cited.quizzes.length ? (
+          <>
+            <h3 id="cited-by-quizzes">Learning-path quizzes ({cited.quizzes.length})</h3>
+            <ul className="cited-by__list">
+              {cited.quizzes.map(({ path, questions }) => (
+                <li key={path.id}>
+                  <Link href={`${learnHref(path)}#quiz`}>{path.title}</Link> <span className="muted">{READING_LEVEL_LABELS[path.level]} level</span>
+                  <ul className="cited-by__contexts">
+                    {questions.map((q) => (
+                      <li key={q.id}>
+                        <span className="cited-by__what">Question</span> {q.question}
+                        {q.locator ? <span className="muted">, cited at {q.locator}</span> : null}
+                      </li>
+                    ))}
+                  </ul>
+                </li>
+              ))}
+            </ul>
+          </>
+        ) : null}
+
+        {cited.debates.length ? (
+          <>
+            <h3 id="cited-by-debates">Debates ({cited.debates.length})</h3>
+            <ul className="cited-by__list">
+              {cited.debates.map(({ debate: d, contexts }) => (
+                <li key={d.id}>
+                  <Link href={debateHref(d)}>{d.title}</Link>
+                  <ul className="cited-by__contexts">
+                    {contexts.map((ctx) => (
+                      <li key={ctx.position ?? 'common'}>
+                        <span className="cited-by__what">{ctx.position ? 'Position' : 'Common ground'}</span>{' '}
+                        <Link href={`${debateHref(d)}#${ctx.position ?? 'common'}`} prefetch={false}>
+                          {ctx.label}
+                        </Link>
+                        {ctx.locators.length ? <span className="muted">, cited at {ctx.locators.join('; ')}</span> : null}
                       </li>
                     ))}
                   </ul>

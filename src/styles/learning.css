@@ -289,6 +289,8 @@ html[data-reading-level='kids'] .rl[data-has-teen]:not([data-has-kids]) > [data-
 .proponents {
   margin: 0;
   padding-left: 1.2em;
+  /* A proponent's own work carries its DOI, which has no break points and would widen a 360 px screen. */
+  overflow-wrap: anywhere;
 }
 
 .proponents li {

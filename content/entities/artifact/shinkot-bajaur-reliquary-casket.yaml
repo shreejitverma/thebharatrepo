@@ -35,21 +35,6 @@ datings:
     note: >-
       First stratigraphic Kharoshthi hand invokes the reign of Maharaja Minadra (Menander I, c. 155-130 BCE)
       on the 14th day of Karttika.
-  - method: epigraphic
-    range:
-      earliest: 20 BCE
-      latest: 50
-      best: 1
-      precision: decade
-      circa: true
-    grade: C
-    label: Secondary Apraca re-consecration inscription (5th regnal year of Vijayamitra)
-    sources:
-      - src.chakravarti-1938-epigraphia-indica-vol-24
-      - src.salomon-1998-indian-epigraphy
-    note: >-
-      Later epigraphs on the bowl/lid record re-establishment by Apracaraja Vijayamitra in Year 5 (25th day of
-      Vaisakha), showing two generations of relic worship across more than a century.
 claims:
   - text: >-
       Published by N. G. Majumdar in Epigraphia Indica Vol. 24 (1938) and re-examined by Sten Konow and
@@ -74,6 +59,11 @@ claims:
     sources:
       - src.chakravarti-1938-epigraphia-indica-vol-24
       - src.salomon-1998-indian-epigraphy
+  - text: "The re-consecration recorded in Vijayamitra's 5th regnal year falls at about 20 BCE to 50 CE, more than a century after the first inscription."
+    grade: "C"
+    sources:
+      - "src.chakravarti-1938-epigraphia-indica-vol-24"
+      - "src.salomon-1998-indian-epigraphy"
 relations:
   - kind: related-to
     target: person.menander-i

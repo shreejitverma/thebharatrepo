@@ -107,6 +107,8 @@ npm run content:validate
 
 If the command reports an unknown source, check that the citation matches a source file's `id`.
 If an identifier resolves to a different title, find the identifier for the edition you actually used.
+If it resolves to one volume of a multi-volume work, name that volume in the title ("The Ain-i Akbari, Volume 1"), or, when your citations reach several volumes, use an identifier for the whole work, such as an Open Library edition record of the set.
+An unnumbered title never matches a single-volume record.
 If a registry is unavailable, retry when it is reachable or use a verifiable source that supports the same claim.
 
 ## 5. Open a pull request

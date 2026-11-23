@@ -182,6 +182,14 @@ test.describe('search', () => {
     }
   });
 
+  test('a record titled with the query comes before one that has it only as an alternate name', async ({ page }) => {
+    // person.mahavira is titled Mahavira; person.mahavira-mathematician has the IAST name Mahāvīra.
+    await page.goto('/search?q=mahavira');
+    await expect(status(page)).toHaveText(/results? for “mahavira”/);
+    await expect(results(page).nth(0).locator('a[data-result]')).toHaveAttribute('href', '/archive/person/mahavira');
+    await expect(results(page).nth(1).locator('a[data-result]')).toHaveAttribute('href', '/archive/person/mahavira-mathematician');
+  });
+
   test('the exact-name lookup is not a facet and leaves the facet counts alone', async ({ page }) => {
     await page.goto('/search?q=ashoka');
     await expect(results(page).first().locator('a[data-result]')).toHaveText('Ashoka');
@@ -287,8 +295,8 @@ test.describe('search', () => {
 test.describe('references', () => {
   test('an article shows its evidence summary and numbered, deduplicated references', async ({ page }) => {
     await page.goto('/history/maurya-empire');
-    // The labelled aside is matched by its attributes, not getByRole('complementary'): in Playwright's Firefox a landmark
-    // role query that resolves an aria-labelledby name, followed by an axe scan, crashes the page (see phase2.spec.ts).
+    // The labelled aside is matched by its attributes, not getByRole('complementary'): in Playwright's Firefox a named
+    // role query that resolves an aria-labelledby name, before or after an axe scan, crashes the page (docs/testing/firefox-axe-crash.md).
     const summary = page.locator('aside.evidence-summary[aria-labelledby="evidence-summary-title"]');
     await expect(page.locator('#evidence-summary-title')).toHaveText('Evidence at a glance');
     await expect(summary).toBeVisible();
@@ -324,14 +332,47 @@ test.describe('references', () => {
     await noSeriousA11yViolations(page);
   });
 
+  test('the Mauryan Empire article links its archive records and grades them in its summary', async ({ page }) => {
+    await page.goto('/history/maurya-empire');
+    const summary = page.locator('aside.evidence-summary');
+    await expect(summary.locator('.evidence-summary__lead')).toHaveText(/^\d+ graded datings and claims across the \d+ archive records this article covers:$/);
+    await expect(summary.locator('.grade-counts li').first()).toBeVisible();
+    // The body links its people, texts and inscriptions on first mention, and the same records are listed below it.
+    const body = page.locator('.article-content');
+    for (const [name, href] of [
+      ['Ashoka', '/archive/person/ashoka'],
+      ['Chandragupta', '/archive/person/chandragupta-maurya'],
+      ['Major Rock Edict XIII', '/archive/artifact/ashoka-major-rock-edict-xiii'],
+      ['Arthashastra', '/archive/text/arthashastra'],
+    ]) {
+      await expect(body.getByRole('link', { name, exact: true })).toHaveAttribute('href', href);
+      await expect(page.locator(`.relations a[href="${href}"]`)).toHaveCount(1);
+    }
+  });
+
   test('a source record lists the article, entities and corrections that cite it', async ({ page }) => {
     await page.goto('/history/maurya-empire');
     const title = await page.locator('h1').textContent();
     await page.locator('.references a.source-record').first().click();
     await expect(page).toHaveURL(/\/sources\/[a-z0-9-]+$/);
     await expect(page.getByRole('heading', { name: 'Cited in the archive' })).toBeVisible();
-    await expect(page.locator('.cited-by__summary')).toHaveText(/^Cited by \d+ articles?, \d+ archive records? and \d+ corrections?\.$/);
+    await expect(page.locator('.cited-by__summary')).toHaveText(/^Cited by \d+ articles?, \d+ archive records?,? (and )?\d+ corrections?(,? (and )?\d+ learning-path quiz(zes)?)?(,? (and )?\d+ debates?)?\.$/);
     await expect(page.locator('.cited-by').getByRole('link', { name: title!, exact: true })).toHaveAttribute('href', '/history/maurya-empire');
+    await noHorizontalScroll(page);
+    await noSeriousA11yViolations(page);
+  });
+
+  test('a source record lists the learning-path quizzes that cite it, with the questions', async ({ page }) => {
+    await page.goto('/sources/cousins-1996-dating-historical-buddha');
+    const quizzes = page.getByRole('heading', { name: /^Learning-path quizzes \(\d+\)$/ });
+    await expect(quizzes).toBeVisible();
+    await expect(page.locator('.cited-by__summary')).toContainText(/\d+ learning-path quiz(zes)?/);
+    const link = page.locator('.cited-by a[href="/learn/how-we-date-ashoka#quiz"]');
+    await expect(link).toHaveText('How do we know when Ashoka lived?');
+    await expect(link.locator('xpath=..').locator('.cited-by__contexts li').first()).toContainText('Question');
+    // The published debate that cites it is listed beside the quizzes; the e2e fixture draft never is.
+    await expect(page.locator('.cited-by a[href="/debates/date-of-the-buddha"]').first()).toBeVisible();
+    await expect(page.locator('.cited-by a[href*="e2e-unpublished-fixture"]')).toHaveCount(0);
     await noHorizontalScroll(page);
     await noSeriousA11yViolations(page);
   });

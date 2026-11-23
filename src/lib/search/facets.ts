@@ -25,12 +25,12 @@ export interface FacetOption {
 
 /**
  * Record kinds: every entity kind (the Kaalchakra rings), plus articles, sources, learning paths and debates.
- * Debates have a label but no filter option: until one is published the site does not advertise them.
+ * Only published debates are indexed (lib/content/debates.ts), so the debate option never surfaces a draft.
  */
 export const RECORD_KIND_LABELS: Record<string, string> = { ...KIND_LABELS, article: 'Articles', source: 'Sources', 'learning-path': 'Learning paths', debate: 'Debates' };
 
 export const FACET_OPTIONS: Record<Facet, FacetOption[]> = {
-  kind: [...KINDS, 'article', 'source', 'learning-path'].map((value) => ({ value, label: RECORD_KIND_LABELS[value] })),
+  kind: [...KINDS, 'article', 'source', 'learning-path', 'debate'].map((value) => ({ value, label: RECORD_KIND_LABELS[value] })),
   category: CATEGORIES.map((value) => ({ value, label: CATEGORY_LABELS[value] })),
   grade: GRADES.map((value) => ({ value, label: `${value}: ${GRADE_LABELS[value]}` })),
   lens: [

@@ -75,6 +75,18 @@
   --map-cluster: var(--ink);
   --map-cluster-ink: var(--bg-elev);
 
+  /*
+   * Share buttons: each network's own colours, the one place the palette leaves the pigments. Glyphs meet 3:1 on
+   * their disc and discs 3:1 on the page in both themes; where a network's signature colour does not (WhatsApp's
+   * #25d366 under a white glyph is 2:1), its own darker brand shade stands in.
+   */
+  --share-glyph: #ffffff;
+  --share-glyph-x: #ffffff;
+  --share-disc-facebook: #0965fe;
+  --share-disc-x: #000000;
+  --share-disc-linkedin: #0077b5;
+  --share-disc-whatsapp: #128c7e;
+
   --radius: 10px;
   --radius-sm: 6px;
   --measure: 70ch;
@@ -140,6 +152,9 @@
     --wheel-tag-ink: #fffaf3;
     --map-sea: #10151f;
     --map-river: #3f6088;
+    /* X's mark is black or white: white on a dark page */
+    --share-glyph-x: #000000;
+    --share-disc-x: #ffffff;
     --shadow: 0 1px 2px rgba(0, 0, 0, 0.3), 0 8px 24px rgba(0, 0, 0, 0.4);
   }
 }
@@ -198,6 +213,9 @@
   --wheel-tag-ink: #fffaf3;
   --map-sea: #10151f;
   --map-river: #3f6088;
+  /* X's mark is black or white: white on a dark page */
+  --share-glyph-x: #000000;
+  --share-disc-x: #ffffff;
   --shadow: 0 1px 2px rgba(0, 0, 0, 0.3), 0 8px 24px rgba(0, 0, 0, 0.4);
 }
 
@@ -350,7 +368,7 @@ a:hover {
 }
 
 /*
- * Ten links. From 1280 px they share the header row with the brand and the search box; the sizes below leave room
+ * Eleven links. From 1280 px they share the header row with the brand and the search box; the sizes below leave room
  * for all of them there. Narrower than that the links take their own row, wrapping onto a second line if they must,
  * and on a phone the row scrolls instead. No link is ever cut off without a way to reach it.
  */
@@ -370,7 +388,7 @@ a:hover {
 .site-nav a {
   color: var(--ink-soft);
   text-decoration: none;
-  padding: 6px 7px;
+  padding: 6px 5px;
   border-radius: 999px;
   white-space: nowrap;
   font-size: 0.9rem;
@@ -423,10 +441,10 @@ a:hover {
     overflow-x: visible;
     gap: 0;
   }
-  /* Slightly tighter, so all ten links sit on one line on a 768 px tablet, with a mouse or with touch. */
+  /* Slightly tighter, so all eleven links sit on one line on a 768 px tablet, with a mouse or with touch. */
   .site-nav a {
-    padding: 6px 5px;
-    font-size: 0.88rem;
+    padding: 6px 4px;
+    font-size: 0.84rem;
   }
   .search-bar {
     margin-left: auto;
@@ -706,6 +724,11 @@ a:hover {
   line-height: 1.45;
   text-align: center;
   text-wrap: pretty;
+}
+
+/* "How we check" stays on one line rather than splitting across the wrap. */
+.draft-notice a {
+  white-space: nowrap;
 }
 
 .review-note {
@@ -1474,6 +1497,136 @@ a:hover {
     padding-bottom: 4px;
     scrollbar-width: thin;
   }
+}
+
+.kc-filters-toggle {
+  display: none;
+}
+
+.kc-filters-toggle__count {
+  display: inline-grid;
+  place-items: center;
+  min-width: 22px;
+  height: 22px;
+  padding: 0 6px;
+  border-radius: 999px;
+  background: var(--ink);
+  color: var(--bg);
+  font-size: 0.78rem;
+  font-weight: 700;
+  line-height: 1;
+}
+
+/*
+ * Phones: the intro tightens, view and lens each take one full row of equal buttons, the calendar sits beside a
+ * Filters button, and the text filter and kind chips fold behind that button, so the top of the wheel and its
+ * indicator are on the first screen from 360 px up. Every control keeps a 44 px target. Wider screens are unchanged.
+ */
+@media (max-width: 720px) {
+  .kc-page {
+    padding-top: 16px;
+  }
+  .kc-page h1 {
+    margin-bottom: 0.2em;
+  }
+  .kc-intro {
+    font-size: 1rem;
+    line-height: 1.5;
+    margin-bottom: 14px;
+    text-wrap: pretty;
+  }
+  .kc-toolbar {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) auto;
+    gap: 8px;
+  }
+  .kc-toolbar > .segmented {
+    grid-column: 1 / -1;
+    display: flex;
+  }
+  .kc-toolbar > .segmented button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    flex: 1 1 0;
+    min-width: 0;
+    min-height: 44px;
+    padding: 6px 8px;
+  }
+  .kc-toolbar__group {
+    display: contents;
+  }
+  /* A native menu ignores min-height in WebKit (24 px on an iPhone), so the select draws its own chevron. */
+  .kc-toolbar .select {
+    width: 100%;
+    height: 44px;
+    padding-right: 36px;
+    -webkit-appearance: none;
+    appearance: none;
+    background-image: linear-gradient(45deg, transparent 50%, var(--ink-soft) 50%), linear-gradient(135deg, var(--ink-soft) 50%, transparent 50%);
+    background-position:
+      calc(100% - 21px) calc(50% + 1px),
+      calc(100% - 15px) calc(50% + 1px);
+    background-size: 6px 6px;
+    background-repeat: no-repeat;
+  }
+  .kc-filters-toggle {
+    display: inline-flex;
+    min-height: 44px;
+    padding: 8px 16px;
+  }
+  .kc-filters-toggle[aria-expanded='true'] {
+    border-color: var(--ink);
+  }
+  .kc-toolbar .input {
+    display: none;
+    grid-column: 1 / -1;
+    max-width: none;
+    min-height: 44px;
+  }
+  .kc-kinds--filter {
+    display: none;
+    flex-wrap: wrap;
+    overflow-x: visible;
+    padding-bottom: 0;
+  }
+  .kc[data-filters-open] .kc-toolbar .input {
+    display: block;
+  }
+  .kc[data-filters-open] .kc-kinds--filter {
+    display: flex;
+  }
+  .kc-kinds--filter .chip {
+    min-height: 44px;
+  }
+}
+
+/*
+ * The toolbar and chips of the server-rendered wheel (KaalchakraFallback): the same elements as the interactive ones,
+ * so they take the same space at every breakpoint, drawn as blank shapes until the Kaalchakra loads.
+ */
+.kc-skeleton :is(.segmented, .select, .input, .btn, .chip) {
+  border-color: transparent;
+  background: color-mix(in srgb, var(--line) 65%, transparent);
+  background-image: none;
+  box-shadow: none;
+  opacity: 1;
+  cursor: default;
+}
+.kc-skeleton,
+.kc-skeleton * {
+  /* Chip labels carry an inline colour. */
+  color: transparent !important;
+}
+.kc-skeleton .segmented button {
+  background: transparent;
+  cursor: default;
+}
+.kc-skeleton .input::placeholder {
+  color: transparent;
+}
+.kc-skeleton .chip__dot {
+  visibility: hidden;
 }
 
 .kc-stage {
@@ -2309,6 +2462,41 @@ a:hover {
   border-radius: 999px;
 }
 
+/* The ring sits just outside the 32 px disc, inside the 44 px target, so it reads as the button's own. */
+.share-buttons__link:focus-visible {
+  outline: 2px solid var(--focus);
+  outline-offset: -4px;
+  border-radius: 999px;
+}
+
+.share-buttons__link:hover .share-icon {
+  filter: brightness(1.12);
+}
+
+.share-icon__disc {
+  fill: var(--share-disc-facebook);
+}
+
+.share-icon__glyph {
+  fill: var(--share-glyph);
+}
+
+.share-icon--x .share-icon__disc {
+  fill: var(--share-disc-x);
+}
+
+.share-icon--x .share-icon__glyph {
+  fill: var(--share-glyph-x);
+}
+
+.share-icon--linkedin .share-icon__disc {
+  fill: var(--share-disc-linkedin);
+}
+
+.share-icon--whatsapp .share-icon__disc {
+  fill: var(--share-disc-whatsapp);
+}
+
 .share-buttons button {
   cursor: pointer;
   min-height: 44px;
@@ -2941,7 +3129,7 @@ a.source-record {
   }
 
   .site-nav a {
-    padding: 0 6px;
+    padding: 0 5px;
   }
 
   .relations li a {
@@ -2975,6 +3163,13 @@ a.source-record {
 
   details > summary {
     padding: 10px 0;
+  }
+}
+
+/* Touch tablets: the links keep their 44 px height but the tablet's tighter spacing, so the row still fits at 768 px. */
+@media (pointer: coarse) and (max-width: 1279px) {
+  .site-nav a {
+    padding: 0 4px;
   }
 }
 

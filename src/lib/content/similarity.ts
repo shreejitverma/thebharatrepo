@@ -16,7 +16,7 @@ function numeral(t: string): string | null {
 
 /**
  * Significant words: lower-case, unaccented, without stop words or words of two letters or fewer.
- * Numerals are always significant and written as decimals, so "Vol. VI" and "Vol. 6" agree.
+ * Numerals are always significant and written as decimals, and "Vol." is "Volume", so "Vol. VI" and "Volume 6" agree.
  */
 export function normalizeTitle(s: string): string[] {
   return s
@@ -31,7 +31,7 @@ export function normalizeTitle(s: string): string[] {
     .replace(/colour/g, 'color')
     .split(/\s+/)
     .filter((t) => (t.length > 2 || numeral(t) !== null) && !STOP.has(t))
-    .map((t) => numeral(t) ?? (t.length > 4 && t.endsWith('s') && !t.endsWith('ss') ? t.slice(0, -1) : t));
+    .map((t) => numeral(t) ?? (t === 'vol' ? 'volume' : t.length > 4 && t.endsWith('s') && !t.endsWith('ss') ? t.slice(0, -1) : t));
 }
 
 function numerals(s: string): Set<string> {
@@ -48,6 +48,50 @@ function titleNumeralsAgree(a: string, b: string): boolean {
   const A = numerals(a);
   const B = numerals(b);
   return A.size === 0 || B.size === 0 || subset(A, B) || subset(B, A);
+}
+
+/**
+ * The numbers a title gives to a single volume or part of a work ("Vol. I", "Part 2"). Books are left out: they
+ * divide a text, and one volume often holds several ("Part 5, Books XI-XIV"). A series volume in parentheses
+ * ("(Corpus Inscriptionum Indicarum, Vol. III)") counts only with `series`: in a citation it says which volume is
+ * meant, but a registry adds the series number of any book in a series. Empty for an unnumbered work and for a
+ * set of volumes ("3-Volume Set", "Vols. 1-3", "in two volumes"), which stands for the whole work.
+ */
+function volumeNumbers(t: string, series: boolean): Set<string> {
+  const own = series ? t : t.replace(/\([^)]*\)|\[[^\]]*\]/g, ' ');
+  const words = normalizeTitle(own);
+  if (words.includes('set') || words.includes('vols') || /\bvolumes\b/i.test(own)) return new Set();
+  const out = new Set<string>();
+  words.forEach((w, i) => {
+    if ((w === 'volume' || w === 'part') && i + 1 < words.length && /^\d{1,3}$/.test(words[i + 1])) out.add(words[i + 1]);
+  });
+  return out;
+}
+
+/** Both name a single volume and the numbers agree, one set within the other ("Volume 7, Book 11" is volume 7). */
+function sameVolumes(A: Set<string>, B: Set<string>): boolean {
+  return A.size > 0 && B.size > 0 && (subset(A, B) || subset(B, A));
+}
+
+/**
+ * A record that names a single volume is that volume, so the cited title must name the same one: an unnumbered
+ * citation of a work never matches one of its volumes, whatever else the titles share. The reverse is allowed,
+ * because registries drop volume numbers from titles and the identifier (an ISBN, an item) already pins the volume:
+ * "A History of the Sikhs, Volume 1" matches the record "A history of the Sikhs".
+ */
+function volumeOfRecordCited(cited: string, found: string): boolean {
+  const F = volumeNumbers(found, false);
+  return F.size === 0 || sameVolumes(volumeNumbers(cited, true), F);
+}
+
+/**
+ * Two of the archive's own source records describe the same volume: both unnumbered, or both naming the same
+ * volume. Unlike a registry record, neither title has dropped a number, so one volume is never the whole work.
+ */
+export function volumesMatch(a: string, b: string): boolean {
+  const A = volumeNumbers(a, true);
+  const B = volumeNumbers(b, true);
+  return (A.size === 0 && B.size === 0) || sameVolumes(A, B);
 }
 
 /** Names carry exactly the same regnal numbers: "Chandragupta" is neither "Chandragupta I" nor "Chandragupta II". */
@@ -125,8 +169,13 @@ function containsRun(small: string[], big: string[]): boolean {
  * words all present are too specific to coincide.
  */
 function overlap(a: string, b: string, leading: boolean): { A: Set<string>; B: Set<string>; inter: number; subsetOk: boolean } {
-  const { A, B, inter } = sets(a, b);
-  const dedupe = (t: string) => [...new Set(normalizeTitle(t))];
+  // The word "volume" says nothing about the subject, and volume numbers are compared on their own.
+  const words = (t: string) => normalizeTitle(t).filter((w) => w !== 'volume');
+  const A = new Set(words(a));
+  const B = new Set(words(b));
+  let inter = 0;
+  for (const t of A) if (B.has(t)) inter++;
+  const dedupe = (t: string) => [...new Set(words(t))];
   const [small, big] = A.size <= B.size ? [dedupe(a), dedupe(b)] : [dedupe(b), dedupe(a)];
   const strictSubset = A.size !== B.size && inter === Math.min(A.size, B.size);
   const placed = leading ? small.every((w, k) => big[k] === w) : containsRun(small, big);
@@ -187,15 +236,6 @@ const PACKAGING_WORDS = new Set(['set', 'vols', 'box', 'boxed', 'paperback', 'ha
 const VOLUME_WORDS = new Set(['volume', 'vol', 'part', 'book']);
 
 /**
- * The volume or part numbers a title names ("Volume II", "Vol. 6", "Part 1"), anywhere in the title, as
- * decimal strings. A title that names none is the whole work or its unnumbered first book.
- */
-export function volumeNumbers(t: string): Set<string> {
-  const words = normalizeTitle(t);
-  return new Set(words.flatMap((w, i) => (VOLUME_WORDS.has(w) && i + 1 < words.length && /^\d+$/.test(words[i + 1]) ? [words[i + 1]] : [])));
-}
-
-/**
  * What everything after the main title names, when it is only a retail packaging or an edition: "packaging"
  * for a set, binding or edition ("The Rigveda: 3-Volume Set", "Hampi (Paperback)", "Third Revised Edition",
  * "Vols. 1-3"), "volume" for a single volume ("The Rigveda, Volume 1", "Part II"), otherwise null.
@@ -229,7 +269,7 @@ function sameWorkOtherEdition(cited: string, found: string): boolean {
 export function sameTitle(citedTitle: string, foundTitle: string): boolean {
   const cited = withoutSiteSegments(citedTitle);
   const found = withoutSiteSegments(foundTitle);
-  if (!titleNumeralsAgree(cited, found)) return false;
+  if (!titleNumeralsAgree(cited, found) || !volumeOfRecordCited(cited, found)) return false;
   if (exact(cited, found)) return true;
   if (sameWorkOtherEdition(cited, found)) return true;
   // A cited main title matches a record that adds a subtitle (and vice versa), if it is at least two words.

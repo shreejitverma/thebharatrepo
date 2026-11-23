@@ -16,6 +16,9 @@ const eslintConfig = defineConfig([
     "public/pagefind/**",
     // Build output of `vercel build`, used to check what a deployment serves.
     ".vercel/**",
+    // Playwright output (gitignored): failure traces bundle minified page scripts.
+    "test-results/**",
+    "playwright-report/**",
     // Local scratch directories (gitignored).
     "**/.tmp*/**",
   ]),

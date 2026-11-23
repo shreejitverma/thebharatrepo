@@ -2,7 +2,7 @@
  * Pagefind index, built by `npm run build` right after `next build` (part of the build script itself, not a
  * lifecycle hook, so no package manager setting can skip it).
  *
- * Reads the prerendered HTML that `next build` writes to .next/server/app, indexes every entity, article,
+ * Reads the prerendered HTML that `next build` writes (see prerenderedPages), indexes every entity, article,
  * source, learning path and published debate page under its real route (Next serves /archive/event/x, not /archive/event/x.html), and
  * writes the browser index to public/pagefind. The Vercel Next.js builder collects public/ after the build
  * command exits (vercel.json pins that command to `npm run build`), and `next start` serves it, so the
@@ -13,24 +13,59 @@
  * stale or partial index can never ship silently. It also fails if a page's `exact` filter (hashes of its
  * normalised title and alternate names, which Search uses to pin a named record first) does not match that
  * page's title and names, or if two distinct names ever share a hash.
+ *
+ * Owner rule, checked on the build output itself: outside a DEBATES_PREVIEW build the build also fails if any
+ * unpublished debate has a prerendered page. It then records which debates the build loaded in
+ * .next/debates-build.json (not served), so the e2e suite can confirm that its fixture draft was in the build
+ * it is testing (npm run build:e2e) before it proves the draft is unreachable.
  */
 
 import fs from 'node:fs';
 import path from 'node:path';
-import { loadContentUncached } from '../src/lib/content/load';
-import { debateSearchHrefs } from '../src/lib/content/debates';
+import { contentRoots, loadContentUncached } from '../src/lib/content/load';
+import { debateHref, debateSearchHrefs, debatesPreview } from '../src/lib/content/debates';
 import { entityHref, sourceHref } from '../src/lib/content/kaalchakra';
 import { learningSearchHrefs } from '../src/lib/content/learning';
-import { EXACT_FILTER, exactHash, exactKeys } from '../src/lib/search/normalise';
+import { EXACT_FILTER, exactFilterValues, exactHash, exactKeys } from '../src/lib/search/normalise';
 
 const ROOT = process.cwd();
-const APP_DIR = path.join(ROOT, '.next', 'server', 'app');
+const SERVER_DIR = path.join(ROOT, '.next', 'server');
 const OUT_DIR = path.join(ROOT, 'public', 'pagefind');
+const DEBATES_BUILD = path.join(ROOT, '.next', 'debates-build.json');
 const EXACT_VALUE = new RegExp(`data-pagefind-filter="${EXACT_FILTER}\\[data-v\\]" data-v="([^"]*)"`, 'g');
 
 function fail(message: string): never {
   console.error(`build-search: ${message}`);
   process.exit(1);
+}
+
+/**
+ * Every prerendered app page, by route. Without a deployment adapter `next build` writes a page to
+ * .next/server/app/<route>.html. With one, as on Vercel (which sets NEXT_ADAPTER_PATH), Next 16.4 writes it to
+ * .next/server/route-cache/APP_PAGE/<hash of the source route>/$/<route>.html instead, and nothing to app/.
+ * A route found in both is stale output from another build and fails the build.
+ */
+function prerenderedPages(): Map<string, string> {
+  const roots = [path.join(SERVER_DIR, 'app')];
+  const cache = path.join(SERVER_DIR, 'route-cache', 'APP_PAGE');
+  if (fs.existsSync(cache)) for (const hash of fs.readdirSync(cache)) roots.push(path.join(cache, hash, '$'));
+  const pages = new Map<string, string>();
+  const walk = (root: string, dir: string) => {
+    if (!fs.existsSync(dir)) return;
+    for (const e of fs.readdirSync(dir, { withFileTypes: true })) {
+      const p = path.join(dir, e.name);
+      if (e.isDirectory()) walk(root, p);
+      else if (e.name.endsWith('.html')) {
+        const route = `/${path.relative(root, p).slice(0, -'.html'.length).split(path.sep).join('/')}`;
+        const url = route === '/index' ? '/' : route;
+        const prior = pages.get(url);
+        if (prior) fail(`${url} is prerendered twice, at ${path.relative(ROOT, prior)} and ${path.relative(ROOT, p)}; run next build again`);
+        pages.set(url, p);
+      }
+    }
+  };
+  for (const root of roots) walk(root, root);
+  return pages;
 }
 
 function dirSize(dir: string): { files: number; bytes: number } {
@@ -56,9 +91,18 @@ let pagefind: PagefindModule | undefined;
 
 async function main() {
   pagefind = await import('pagefind');
-  if (!fs.existsSync(APP_DIR)) fail(`${path.relative(ROOT, APP_DIR)} not found; run next build first`);
+  const pages = prerenderedPages();
+  if (!pages.size) fail(`no prerendered pages under ${path.relative(ROOT, SERVER_DIR)}; run next build first`);
   const g = loadContentUncached();
   if (g.errors.length) fail(`${g.errors.length} content problem(s); run npm run content:validate`);
+
+  const preview = debatesPreview();
+  if (!preview) {
+    const leaked = g.debates
+      .filter((d) => !d.published)
+      .flatMap((d) => [...pages].filter(([url]) => url === debateHref(d) || url.startsWith(`${debateHref(d)}/`)).map(([, file]) => `${path.relative(ROOT, file)} (${d.id})`));
+    if (leaked.length) fail(`unpublished debate output in a public build, which must never ship:\n  ${leaked.join('\n  ')}`);
+  }
 
   type PageType = 'entity' | 'article' | 'source' | 'learning' | 'debate';
   const expected = new Map<string, PageType>();
@@ -72,16 +116,19 @@ async function main() {
   const { index, errors } = await pagefind.createIndex({ forceLanguage: 'en' });
   if (!index || errors.length) fail(`could not create the index: ${errors.join('; ')}`);
 
-  // Alternate names an entity page adds to its title in the `exact` filter; other pages use their title alone.
-  const entityNames = new Map([...g.entities.values()].map((e) => [entityHref(e.id), [e.names.iast, ...(e.names.alternates ?? [])]]));
+  // Alternate names an entity or debate page adds to its title in the `exact` filter; other pages use their title alone.
+  const pageNames = new Map<string, (string | undefined)[]>([
+    ...[...g.entities.values()].map((e): [string, (string | undefined)[]] => [entityHref(e.id), [e.names.iast, ...(e.names.alternates ?? [])]]),
+    ...g.debates.map((d): [string, (string | undefined)[]] => [debateHref(d), d.alternates ?? []]),
+  ]);
   const keyByHash = new Map<string, string>();
 
   const counts: Record<PageType, number> = { entity: 0, article: 0, source: 0, learning: 0, debate: 0 };
   const problems: string[] = [];
   for (const [url, type] of expected) {
-    const file = path.join(APP_DIR, `${url.slice(1)}.html`);
-    if (!fs.existsSync(file)) {
-      problems.push(`${url}: no prerendered HTML at ${path.relative(ROOT, file)}`);
+    const file = pages.get(url);
+    if (!file) {
+      problems.push(`${url}: no prerendered HTML under ${path.relative(ROOT, SERVER_DIR)}`);
       continue;
     }
     const content = fs.readFileSync(file, 'utf8');
@@ -93,8 +140,9 @@ async function main() {
     if (res.errors.length) problems.push(`${url}: ${res.errors.join('; ')}`);
     else if (!res.file.meta.title || !res.file.meta.kind) problems.push(`${url}: indexed without title or kind metadata`);
     else {
-      const keys = exactKeys([res.file.meta.title, ...(entityNames.get(url) ?? [])]);
-      const want = [...new Set(keys.map(exactHash))].sort().join(' ');
+      const names = pageNames.get(url) ?? [];
+      const keys = exactKeys([res.file.meta.title, ...names]);
+      const want = [...new Set(exactFilterValues(res.file.meta.title, names))].sort().join(' ');
       const got = [...new Set([...content.matchAll(EXACT_VALUE)].map((m) => m[1]))].sort().join(' ');
       if (got !== want) problems.push(`${url}: exact-name filter [${got}] does not match its title and names [${want}]`);
       for (const k of keys) {
@@ -116,6 +164,9 @@ async function main() {
   await pagefind.close();
   if (written.errors.length) fail(`writing the index failed: ${written.errors.join('; ')}`);
   if (!fs.existsSync(path.join(OUT_DIR, 'pagefind.js'))) fail('pagefind.js was not written');
+
+  const debates = { preview, roots: contentRoots().map((r) => path.relative(ROOT, r)), published: g.debates.filter((d) => d.published).map((d) => d.id), unpublished: g.debates.filter((d) => !d.published).map((d) => d.id) };
+  fs.writeFileSync(DEBATES_BUILD, `${JSON.stringify(debates, null, 2)}\n`);
 
   const size = dirSize(OUT_DIR);
   const filters = dirSize(path.join(OUT_DIR, 'filter'));

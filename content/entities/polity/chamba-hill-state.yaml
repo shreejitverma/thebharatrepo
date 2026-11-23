@@ -13,18 +13,6 @@ summaries:
     Sharma traces how the shift to Chamba changed royal patronage and relations with temples."
 region: "Ravi Valley, Himachal Pradesh"
 datings:
-  - method: "epigraphic"
-    range:
-      earliest: 650
-      latest: 800
-      precision: "century"
-      circa: true
-    grade: "C"
-    label: "Early inscriptions associated with the kingdom at Brahmapura"
-    sources:
-      - "src.vogel-1994-antiquities-chamba"
-      - "src.sharma-2009-western-himalayan-temples"
-    note: "Meru Varman's Bharmour inscriptions are undated; script and dynastic context support a late seventh- or eighth-century placement."
   - method: "scholarly-consensus"
     range:
       earliest: 650
@@ -45,6 +33,11 @@ claims:
   - text: "Sharma places the move to Chamba town under Sahila Varman in the tenth century."
     grade: "B"
     sources:
+      - "src.sharma-2009-western-himalayan-temples"
+  - text: "Meru Varman's Bharmour inscriptions, the earliest associated with the kingdom at Brahmapura, are undated; script and dynastic context place them in the late seventh or eighth century."
+    grade: "C"
+    sources:
+      - "src.vogel-1994-antiquities-chamba"
       - "src.sharma-2009-western-himalayan-temples"
 relations:
   - kind: "related-to"

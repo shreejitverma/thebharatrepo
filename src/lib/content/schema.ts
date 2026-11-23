@@ -89,9 +89,10 @@ export const DatingSchema = z
     sources: z.array(CitationRef).min(1, 'every dating needs at least one source'),
     note: z.string().optional(),
     /**
-     * Why this dating stands for the entity although a dating of it at least five times longer exists, such as a
-     * competing dating of the same deposit. Without it the validator treats such a dating as a single event in the
-     * entity's history, which belongs in a claim.
+     * Why this dating dates the entity itself although another dating of it is at least five times longer, such as a
+     * competing dating of the same deposit, or a person's active period beside the lifespan. Without it the validator
+     * treats such a dating, leading the ranking or not, as a single event in the entity's history, which belongs in a
+     * claim.
      */
     primaryReason: z.string().min(10).optional(),
   })
@@ -180,19 +181,22 @@ export const ImageSchema = z.strictObject({
 const EVENT_SPAN_RATIO = 5;
 
 /**
- * The scholarship dating that ranks first stands for the entity everywhere (see rankDatings). A dating describes the
- * entity's own existence, so when the leading dating is at most a fifth as long as another dating of the entity, inside
- * or outside it, it reads as one event in the entity's history (a speech, a capture, an inscription, the completion of
- * one work) and the item would be labelled and sorted by it. Returns that event and the longer dating, unless the
- * leading dating gives a primaryReason.
+ * A dating describes the entity's own existence (STYLE.md section 4), so a scholarship dating at most a fifth as long
+ * as another scholarship dating of the entity, inside or outside it, reads as one event in the entity's history (a
+ * speech, a capture, a founding, an inscription, the completion of one work). Returns each such dating with the longer
+ * one, in the order of `datings`, unless it gives a primaryReason, and says whether it ranks first (see rankDatings):
+ * a leading event would stand for the entity on cards and in sort order, and one below the span still shows on the
+ * entity's page as a dating of the entity.
  */
-function eventOutrankingSpan(datings: readonly Dating[]): { event: Dating; span: Dating } | null {
+function eventDatings(datings: readonly Dating[]): { event: Dating; span: Dating; leading: boolean }[] {
   const scholarly = datings.filter((d) => !isTraditional(d.method));
-  const [event] = rankDatings(scholarly, () => false);
-  if (!event || event.primaryReason) return null;
+  const [lead] = rankDatings(scholarly, () => false);
   const years = (d: Dating) => d.range.latest - d.range.earliest + 1;
-  const span = scholarly.find((d) => d !== event && years(d) >= EVENT_SPAN_RATIO * years(event));
-  return span ? { event, span } : null;
+  return scholarly.flatMap((event) => {
+    if (event.primaryReason) return [];
+    const span = scholarly.find((d) => d !== event && years(d) >= EVENT_SPAN_RATIO * years(event));
+    return span ? [{ event, span, leading: event === lead }] : [];
+  });
 }
 
 /** Wording that marks a dating as the date of a text, or of a text's statement or attestation, rather than of the entity. */
@@ -252,13 +256,15 @@ export const EntitySchema = z
         ctx.addIssue({ code: 'custom', path: ['datings', i], message: `this ${d.method} dating dates a text, not ${e.id}; record the attestation as a claim or on the text entity` });
       }
     });
-    const outranking = eventOutrankingSpan(e.datings);
-    if (outranking) {
-      const { event, span } = outranking;
+    for (const { event, span, leading } of eventDatings(e.datings)) {
+      const what = `the grade ${event.grade} ${event.method} dating ${formatRange(event.range)}`;
+      const longer = `the grade ${span.grade} dating ${formatRange(span.range)} is at least ${EVENT_SPAN_RATIO} times longer`;
       ctx.addIssue({
         code: 'custom',
         path: ['datings', e.datings.indexOf(event)],
-        message: `the grade ${event.grade} ${event.method} dating ${formatRange(event.range)} would stand for ${e.id}, but the grade ${span.grade} dating ${formatRange(span.range)} is at least ${EVENT_SPAN_RATIO} times longer; record that event as a claim and keep the span as the dating, or give a primaryReason when the shorter dating dates the entity itself`,
+        message: leading
+          ? `${what} would stand for ${e.id}, but ${longer}; record that event as a claim and keep the span as the dating, or give a primaryReason when the shorter dating dates the entity itself`
+          : `${what} reads as a single event in the history of ${e.id}: ${longer}; record that event as a claim, or give a primaryReason when the shorter dating dates the entity itself`,
       });
     }
     if (e.aliases.includes(e.id)) ctx.addIssue({ code: 'custom', path: ['aliases'], message: `alias ${e.id} is the entity's own id` });
@@ -312,8 +318,16 @@ export const SourceSchema = z
     url: z.string().url().optional(),
     corpus: z.string().optional(),
     note: z.string().optional(),
+    /**
+     * Former ids of this source, such as an id that named the wrong author or year. Each keeps its old
+     * /sources/<slug> URL working: the build turns it into a permanent redirect to this source. Content must
+     * cite the live id; citing an alias is an error.
+     */
+    aliases: z.array(z.string().regex(SOURCE_ID, 'an alias is a former source id, such as src.author-year-title')).optional(),
   })
   .superRefine((s, ctx) => {
+    if (s.aliases?.includes(s.id)) ctx.addIssue({ code: 'custom', path: ['aliases'], message: `alias ${s.id} is the source's own id` });
+    for (const a of (s.aliases ?? []).filter((x, i, all) => all.indexOf(x) !== i)) ctx.addIssue({ code: 'custom', path: ['aliases'], message: `alias ${a} is listed twice` });
     if (s.type === 'journal-article' && !s.doi && !s.url) {
       ctx.addIssue({ code: 'custom', message: 'journal articles need a DOI (or a stable URL such as JSTOR for pre-DOI articles)' });
     }
@@ -411,6 +425,12 @@ export const DebateSchema = z
   .strictObject({
     id: z.string().regex(DEBATE_ID, 'debate ids look like debate.<slug>'),
     title: z.string().min(3),
+    /**
+     * Other names a reader searches the debate by, such as "Ram Setu" for "Ram Setu (Adam's Bridge): geology and
+     * tradition". Search pins the debate first when a query is exactly one of them, after any record titled with
+     * the query, so add only a name that no entity or article is titled with.
+     */
+    alternates: z.array(z.string().min(1)).optional(),
     question: z.string().min(10).regex(/\?$/, 'the question ends with a question mark'),
     summary: z.string().min(20).max(1200),
     /**

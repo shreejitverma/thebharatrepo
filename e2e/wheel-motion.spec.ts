@@ -13,7 +13,7 @@ const JWALAPURAM = 'site.jwalapuram';
 
 async function openWheel(page: Page, query = '') {
   await page.goto(`/kaalchakra${query}`);
-  await expect(page.locator('.kc-toolbar')).toBeVisible();
+  await expect(page.locator('.kc-toolbar:not(.kc-skeleton)')).toBeVisible();
   await expect(page.locator('.kc-canvas .kc-wheel')).toBeVisible();
 }
 
@@ -340,8 +340,10 @@ test.describe('wheel motion', () => {
       await expect(page.locator('.kc-panel h2')).toHaveText('Ashoka');
       const entries = await page.evaluate(() => window.history.length);
       await page.getByRole('navigation', { name: 'Main' }).getByRole('link', { name: 'Kaalchakra' }).click();
-      // The link opens /kaalchakra; its canonical form for this reader names the List view, in place.
-      await expect(page).toHaveURL(/\/kaalchakra\?view=list$/);
+      // The link opens /kaalchakra; its canonical form for this reader names the List view, in place. The soft
+      // navigation first downloads the page's RSC payload, which carries the prerendered wheel (about 0.6 MB), and in
+      // Firefox on a loaded machine that alone took over 5 s, so this wait allows for it.
+      await expect(page).toHaveURL(/\/kaalchakra\?view=list$/, { timeout: 15_000 });
       await page.waitForTimeout(400);
       expect(await page.evaluate(() => window.history.length)).toBe(entries + 1);
 
@@ -366,7 +368,7 @@ async function centreWheel(page: Page) {
 
 async function openWheelOrView(page: Page, q: string) {
   await page.goto(`/kaalchakra${q}`);
-  await expect(page.locator('.kc-toolbar')).toBeVisible();
+  await expect(page.locator('.kc-toolbar:not(.kc-skeleton)')).toBeVisible();
 }
 
 /** A point inside an era sector, near its outer edge and between marks, relative to the sector's bounding box. */

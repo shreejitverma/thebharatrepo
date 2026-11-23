@@ -24,19 +24,6 @@ datings:
     label: "Early Historic urban occupation through Early Medieval brick temple phases"
     sources:
       - "src.kennet-2020-paithan-excavations"
-  - method: "numismatic"
-    range:
-      earliest: "100 BCE"
-      latest: "100 CE"
-      precision: "century"
-      circa: true
-    grade: "B"
-    label: "Approximate span indicated by identifiable Satavahana coins"
-    sources:
-      - id: "src.kennet-2020-paithan-excavations"
-        locator: "Chapter 6"
-    note: "Most identifiable Satavahana coins in the report were recovered outside the principal
-      excavated sequence."
 claims:
   - text: "The Periplus names Paithana among inland trading places in the Deccan."
     grade: "A"
@@ -46,6 +33,11 @@ claims:
   - text: "The excavators compared coin contexts, pottery and stratigraphy to establish their proposed
       site sequence."
     grade: "A"
+    sources:
+      - id: "src.kennet-2020-paithan-excavations"
+        locator: "Chapter 6"
+  - text: "Identifiable Satavahana coins in the excavation report, most of them recovered outside the principal excavated sequence, indicate activity at the site between about 100 BCE and 100 CE."
+    grade: "B"
     sources:
       - id: "src.kennet-2020-paithan-excavations"
         locator: "Chapter 6"

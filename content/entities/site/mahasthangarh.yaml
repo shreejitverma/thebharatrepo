@@ -23,14 +23,6 @@ datings:
       - src.alam-salles-2001-mahasthangarh
       - src.chattopadhyay-2018-archaeology-of-coastal-bengal
     note: Radiocarbon assays and stratigraphic sequences from the France-Bangladesh mission establish pre-Mauryan/NBPW occupation from the 4th century BCE through Gupta, Pala and Sena levels.
-  - method: epigraphic
-    range: { earliest: "300 BCE", latest: "200 BCE", precision: century, circa: true }
-    grade: B
-    label: Mahasthan Brahmi limestone inscription (Mauryan script)
-    sources:
-      - src.salomon-1998-indian-epigraphy
-      - src.singh-2008-ancient-early-medieval-india
-    note: Dated palaeographically to the Mauryan period (c. 3rd century BCE), the Prakrit inscription explicitly names the city as Pudanagala (Pundranagara).
 claims:
   - text: The Mahasthan Brahmi plaque directs a royal mahamatra at Pudanagala (Pundranagara) to distribute paddy and coins (gandaka and kakani) from the royal granary to relieve distress among the Samvangiyas.
     grade: A
@@ -41,6 +33,11 @@ claims:
     grade: A
     sources:
       - src.alam-salles-2001-mahasthangarh
+  - text: "The Prakrit inscription on the Mahasthan Brahmi plaque, dated palaeographically to the Mauryan period (about the third century BCE), names the city Pudanagala (Pundranagara)."
+    grade: "B"
+    sources:
+      - "src.salomon-1998-indian-epigraphy"
+      - "src.singh-2008-ancient-early-medieval-india"
 relations:
   - { kind: part-of, target: polity.maurya-empire }
   - { kind: related-to, target: polity.pala-empire }

@@ -1,11 +1,15 @@
 /**
- * Runs against the owner's preview server (DEBATES_PREVIEW=1, see playwright.config.ts), the only
- * place unpublished debate drafts render. The public build is covered in learning.spec.ts.
+ * Runs against the owner's preview server (DEBATES_PREVIEW=1, see playwright.config.ts), the only place unpublished
+ * debate drafts render. The server also loads e2e/fixtures/content, so the draft here is the test fixture
+ * e2e/fixtures/content/debates/e2e-unpublished-fixture.yaml, never real content. The public build is covered in
+ * debates.spec.ts.
  */
 import { expect, test, type Page } from '@playwright/test';
 import AxeBuilder from '@axe-core/playwright';
 
-const DEBATE = '/debates/date-of-the-buddha';
+const DRAFT = '/debates/e2e-unpublished-fixture';
+const PUBLISHED = '/debates/date-of-the-buddha';
+const BUDDHA = '/archive/person/gautama-buddha';
 
 async function noSeriousA11yViolations(page: Page) {
   // The dev-mode tools overlay is not part of the page.
@@ -16,36 +20,41 @@ async function noSeriousA11yViolations(page: Page) {
 
 test.describe.configure({ timeout: 90_000 });
 
-test('the preview index lists the draft and says it is a preview', async ({ page }) => {
+test('the preview index lists the draft as unpublished, beside the published debates, and says it is a preview', async ({ page }) => {
   await page.goto('/debates');
   await expect(page.locator('.unpublished-banner')).toContainText('Preview build.');
-  const card = page.locator(`a.card[href="${DEBATE}"]`);
-  await expect(card).toContainText('The date of the Buddha');
-  await expect(card).toContainText('unpublished draft');
+  const draft = page.locator(`a.card[href="${DRAFT}"]`);
+  await expect(draft).toContainText('Test fixture: an unpublished debate draft');
+  await expect(draft).toContainText('unpublished draft');
+  const published = page.locator(`a.card[href="${PUBLISHED}"]`);
+  await expect(published).toContainText('The date of the Buddha');
+  await expect(published).not.toContainText('unpublished draft');
 });
 
-test('the draft debate page shows steelmanned positions with proponents, graded cited evidence and what would change it', async ({ page }) => {
-  await page.goto(DEBATE);
-  await expect(page.locator('h1')).toHaveText('The date of the Buddha');
+test('the draft page is marked, kept out of search engines, and shows positions with proponents, graded cited evidence and what would change it', async ({ page }) => {
+  await page.goto(DRAFT);
+  await expect(page.locator('h1')).toHaveText('Test fixture: an unpublished debate draft');
   await expect(page.locator('.unpublished-banner')).toContainText('Unpublished draft.');
   await expect(page.locator('meta[name="robots"]')).toHaveAttribute('content', /noindex/);
+  // Not marked for the search index, even in a preview build.
+  await expect(page.locator('[data-pagefind-body]')).toHaveCount(0);
 
   const positions = page.locator('section.position');
-  expect(await positions.count()).toBeGreaterThanOrEqual(2);
-  for (let i = 0; i < (await positions.count()); i++) {
-    const p = positions.nth(i);
+  await expect(positions).toHaveCount(2);
+  for (const p of await positions.all()) {
     expect(await p.locator('ul.proponents > li').count()).toBeGreaterThan(0);
     expect(await p.locator('ul.evidence-list > li').count()).toBeGreaterThan(0);
     await expect(p.locator('ul.evidence-list > li .grade').first()).toBeVisible();
-    await expect(p.locator('ul.evidence-list > li .dating__sources li').first()).toContainText(/pp\.|Edict|inscription/);
+    await expect(p.locator('ul.evidence-list > li .dating__sources li').first()).toContainText(/pp?\./);
   }
-  await expect(page.locator('#theravada-buddhist-era .lens-tag')).toHaveText('Tradition');
-  await expect(page.locator('#theravada-buddhist-era .position__meta .grade--D')).toBeVisible();
+  await expect(page.locator('#tradition-fixture .lens-tag')).toHaveText('Tradition');
+  await expect(page.locator('#tradition-fixture .position__meta .grade--D')).toBeVisible();
   await expect(page.getByRole('heading', { name: 'What would change this' })).toBeVisible();
-  await expect(page.getByRole('heading', { name: 'What every position accepts' })).toBeVisible();
-  await expect(page.locator('.position-chart li')).toHaveCount(3);
+  // Only the scholarship position proposes a range.
+  await expect(page.locator('.position-chart li')).toHaveCount(1);
   await expect(page.locator('.kc-strip')).toBeVisible();
-  await expect(page.locator('a.card[href="/archive/person/gautama-buddha"] .name-native')).toHaveAttribute('lang', 'sa-Deva');
+  await expect(page.locator(`a.card[href="${BUDDHA}"] .name-native`)).toHaveAttribute('lang', 'sa-Deva');
+  await expect(page.locator('.review-note')).toContainText('Not yet approved for publication.');
 
   const overflow = await page.evaluate(() => document.documentElement.scrollWidth - document.documentElement.clientWidth);
   expect(overflow).toBeLessThanOrEqual(0);
@@ -53,21 +62,38 @@ test('the draft debate page shows steelmanned positions with proponents, graded 
 });
 
 test('the draft debate states its review status in the same words as an entity page', async ({ page }) => {
-  // The debate and the Buddha's entry are both drafts, so the entity page's wording is the expected wording.
+  // The fixture and the Buddha's entry are both drafts, so the entity page's wording is the expected wording.
   const clause = async (path: string) => {
     await page.goto(path, { waitUntil: 'domcontentloaded' });
     const text = (await page.locator('.review-note').first().textContent()) ?? '';
     return /Review status: ([^.]*)\./.exec(text)?.[1];
   };
-  const entity = await clause('/archive/person/gautama-buddha');
+  const entity = await clause(BUDDHA);
   expect(entity).toMatch(/^draft, .*awaiting editor review$/);
-  expect(await clause(DEBATE)).toBe(entity);
+  expect(await clause(DRAFT)).toBe(entity);
 });
 
-test('related entity pages link the draft in the preview build', async ({ page }) => {
-  await page.goto('/archive/person/gautama-buddha');
+test('a published debate in the preview build carries no draft marking', async ({ page }) => {
+  await page.goto(PUBLISHED);
+  await expect(page.locator('.unpublished-banner')).toHaveCount(0);
+  await expect(page.locator('meta[name="robots"][content*="noindex"]')).toHaveCount(0);
+  await expect(page.locator('.review-note')).toContainText('Approved for publication by');
+});
+
+test('related entity pages link the draft in the preview build, marked as a draft', async ({ page }) => {
+  await page.goto(BUDDHA);
   await expect(page.getByRole('heading', { name: 'Debates' })).toBeVisible();
-  await page.locator(`a[href="${DEBATE}"]`).click();
+  await expect(page.locator(`a[href="${DRAFT}"]`)).toContainText('unpublished draft');
+  await expect(page.locator(`a[href="${PUBLISHED}"]`)).not.toContainText('unpublished draft');
+  await page.locator(`a[href="${DRAFT}"]`).click();
   // The dev server compiles the route on first navigation.
-  await expect(page).toHaveURL(DEBATE, { timeout: 30_000 });
+  await expect(page).toHaveURL(DRAFT, { timeout: 30_000 });
+});
+
+test('a source cited by the draft never lists it, even in the preview build', async ({ page }) => {
+  // The fixture draft cites this source; published debates may cite it too, and are listed.
+  await page.goto('/sources/cousins-1996-dating-historical-buddha');
+  await expect(page.getByRole('heading', { name: 'Cited in the archive' })).toBeVisible();
+  await expect(page.locator(`.cited-by a[href="${DRAFT}"]`)).toHaveCount(0);
+  await expect(page.locator('.cited-by')).not.toContainText('unpublished');
 });

@@ -1,26 +1,33 @@
 'use client';
 
-import { use, useCallback, useEffect, useId, useMemo, useRef, useState } from 'react';
-import dynamic from 'next/dynamic';
+import { Suspense, use, useCallback, useEffect, useId, useMemo, useRef, useState } from 'react';
 import { useSearchParams } from 'next/navigation';
-import { KINDS, KIND_LABELS, type Kind } from '@/lib/content/labels';
+import { KINDS, type Kind } from '@/lib/content/labels';
 import type { KcItem } from '@/lib/content/kaalchakra';
-import { LENSES, LENS_LABELS, type Lens } from '@/lib/content/lens';
+import type { Lens } from '@/lib/content/lens';
 import type { Size } from '@/lib/geo/projection';
-import type { CalendarSystem } from '@/lib/time';
 import { panWindow, zoomWindow, type UnitWindow } from '@/lib/time/scale';
 import Wheel from './Wheel';
 import River from './River';
 import ListView from './ListView';
 import Panel from './Panel';
+import Toolbar, { WheelScaleNote } from './Toolbar';
+import type { MapViewProps } from './MapView';
 import { setReadingLevel, useReadingLevel } from '@/components/ReadingLevel';
 import { loadItems } from './data';
 import { entriesAt, panRegion, resolveRegion, revealPlace, zoomRegion, type MapRegion, type TimeZoom } from './mapState';
-import { SEGMENTS, SHORT_SEGMENT_LABELS, formatDating, kindColor, orderedItems, primaryAnchor, primaryDating, segmentUnitBounds, yearToUnit } from './shared';
-import { CALENDARS, VIEWS, hrefFor, parseState, serialise, type State } from './urlState';
+import { SEGMENTS, formatDating, orderedItems, primaryAnchor, primaryDating, segmentUnitBounds, yearToUnit } from './shared';
+import { hrefFor, parseState, serialise, type State } from './urlState';
 
 // The map and its basemap load only when the Map view is opened, so the other views do not pay for them.
-const MapView = dynamic(() => import('./MapView'), { ssr: false, loading: () => <p className="empty">Loading the map.</p> });
+let mapViewModule: Promise<typeof import('./MapView')> | undefined;
+const loadMapView = () => (mapViewModule ??= import('./MapView'));
+
+/** Reads the map's code with use(): already loaded on a link into the Map view (see Kaalchakra), else behind "Loading the map.". */
+function LoadedMapView(props: MapViewProps) {
+  const { default: MapView } = use(loadMapView());
+  return <MapView {...props} />;
+}
 
 /** Canvas size assumed until the map has measured itself. */
 const INITIAL_MAP_SIZE: Size = { width: 900, height: 580 };
@@ -57,6 +64,9 @@ interface Mount {
 export default function Kaalchakra({ aliases = NO_ALIASES }: { aliases?: Readonly<Record<string, string>> }) {
   const search = useSearchParams().toString();
   const result = use(loadItems());
+  // A link into the Map view waits for the map's code as well, so the server wheel gives way to the map itself. Showing
+  // "Loading the map." first put the panel on screen just under it, then the map pushed it down: a layout shift.
+  if (new URLSearchParams(search).get('view') === 'map') use(loadMapView());
   if (!result.ok) {
     return (
       <div className="kc">
@@ -184,6 +194,9 @@ function KaalchakraInner({ items, byId, external, epoch, onWrite }: { items: KcI
 
   // Map view: the same filtered entries, narrowed to the scrubber's moment and to those with a place.
   const [mapSize, setMapSize] = useState<Size>(INITIAL_MAP_SIZE);
+  // The map reports its width before its first paint and again in its ResizeObserver's first callback; keeping the same
+  // object for an unchanged size makes that second report re-render nothing.
+  const onMapSize = useCallback((next: Size) => setMapSize((prev) => (prev.width === next.width && prev.height === next.height ? prev : next)), []);
   const atMoment = useMemo(() => entriesAt(visible, s.lens, s.t, s.zoom), [visible, s.lens, s.t, s.zoom]);
   const mapItems = useMemo(() => atMoment.filter((i) => i.place), [atMoment]);
   const extentItems = useMemo(() => atMoment.filter((i) => i.extents?.length), [atMoment]);
@@ -306,51 +319,26 @@ function KaalchakraInner({ items, byId, external, epoch, onWrite }: { items: KcI
     update({ kinds: next.length ? next : [...KINDS] });
   };
 
+  // On a phone the text filter and the kind chips fold into a Filters disclosure, so the wheel starts on the first
+  // screen; the button counts the filters in force while they are folded away. Wider screens always show them.
+  const [filtersOpen, setFiltersOpen] = useState(false);
+  const activeFilters = (s.q.trim() ? 1 : 0) + (s.kinds.length < KINDS.length ? 1 : 0);
+
   const hoverItem = hover ? visible.find((i) => i.id === hover.id) : undefined;
   const hoverDating = hoverItem ? primaryDating(hoverItem, s.lens) : undefined;
 
   return (
-    <div className="kc">
-      <div className="kc-toolbar">
-        <div className="segmented" role="group" aria-label="View">
-          {VIEWS.map((v) => (
-            <button key={v.id} type="button" aria-pressed={s.view === v.id} onClick={() => update({ view: v.id })}>
-              {v.label}
-            </button>
-          ))}
-        </div>
-        <div className="segmented" role="group" aria-label="Lens">
-          {LENSES.map((l) => (
-            <button key={l} type="button" aria-pressed={s.lens === l} onClick={() => update({ lens: l })}>
-              {LENS_LABELS[l]}
-            </button>
-          ))}
-        </div>
-        <div className="kc-toolbar__group">
-          <label className="visually-hidden" htmlFor="kc-cal">
-            Calendar
-          </label>
-          <select id="kc-cal" className="select" value={s.cal} onChange={(e) => update({ cal: e.target.value as CalendarSystem })}>
-            {CALENDARS.map((c) => (
-              <option key={c.id} value={c.id}>
-                {c.label}
-              </option>
-            ))}
-          </select>
-          <label className="visually-hidden" htmlFor="kc-q">
-            Filter entries
-          </label>
-          <input id="kc-q" className="input" type="search" placeholder="Filter, e.g. Ashoka" value={s.q} onChange={(e) => update({ q: e.target.value })} />
-        </div>
-      </div>
-      <div className="kc-kinds" role="group" aria-label="Kinds of entry">
-        {KINDS.map((k) => (
-          <button key={k} type="button" className="chip" aria-pressed={kindSet.has(k)} onClick={() => toggleKind(k)} style={{ color: kindColor(k) }}>
-            <span className="chip__dot" aria-hidden="true" />
-            <span style={{ color: 'var(--ink-soft)' }}>{KIND_LABELS[k]}</span>
-          </button>
-        ))}
-      </div>
+    <div className="kc" data-filters-open={filtersOpen || undefined}>
+      <Toolbar
+        view={s.view}
+        lens={s.lens}
+        cal={s.cal}
+        q={s.q}
+        kinds={kindSet}
+        filtersOpen={filtersOpen}
+        activeFilters={activeFilters}
+        on={{ view: (v) => update({ view: v }), lens: (l) => update({ lens: l }), cal: (c) => update({ cal: c }), q: (q) => update({ q }), toggleFilters: () => setFiltersOpen((o) => !o), kind: toggleKind }}
+      />
 
       <p className="visually-hidden" aria-live="polite">
         {announcement}
@@ -365,39 +353,32 @@ function KaalchakraInner({ items, byId, external, epoch, onWrite }: { items: KcI
           {s.view === 'wheel' ? (
             <>
               <Wheel items={visible} kinds={ringKinds} lens={s.lens} selectedId={s.sel} cal={s.cal} onSelect={select} onHover={onHover} onStep={onWheelStep} onSettled={setSettledSel} />
-              <div className="kc-scale-note">
-                <div className="kc-kinds" role="group" aria-label="Zoom into an era">
-                  {SEGMENTS.map((seg) => (
-                    <button key={seg.id} type="button" className="chip" onClick={() => onSegment(seg.id)}>
-                      {SHORT_SEGMENT_LABELS[seg.id]}
-                    </button>
-                  ))}
-                </div>
-                Each era has its own scale: deep time is logarithmic, history is linear. Tap an era to zoom into it.
-              </div>
+              <WheelScaleNote onSegment={onSegment} />
             </>
           ) : s.view === 'river' ? (
             <River items={visible} kinds={ringKinds} lens={s.lens} selectedId={s.sel} win={s.win} onWindow={onWindow} onSelect={select} onHover={onHover} />
           ) : isMap ? (
-            <MapView
-              items={mapItems}
-              extentItems={extentItems}
-              unplaced={atMoment.length - mapItems.length}
-              lens={s.lens}
-              cal={s.cal}
-              selectedId={s.sel}
-              t={s.t}
-              zoom={s.zoom}
-              region={s.region}
-              view={mapView}
-              size={mapSize}
-              onSize={setMapSize}
-              onTime={onTime}
-              onZoom={onTimeZoom}
-              onRegion={onRegion}
-              onSelect={selectOnMap}
-              onHover={onHover}
-            />
+            <Suspense fallback={<p className="empty">Loading the map.</p>}>
+              <LoadedMapView
+                items={mapItems}
+                extentItems={extentItems}
+                unplaced={atMoment.length - mapItems.length}
+                lens={s.lens}
+                cal={s.cal}
+                selectedId={s.sel}
+                t={s.t}
+                zoom={s.zoom}
+                region={s.region}
+                view={mapView}
+                size={mapSize}
+                onSize={onMapSize}
+                onTime={onTime}
+                onZoom={onTimeZoom}
+                onRegion={onRegion}
+                onSelect={selectOnMap}
+                onHover={onHover}
+              />
+            </Suspense>
           ) : (
             <ListView items={visible} lens={s.lens} cal={s.cal} selectedId={s.sel} onSelect={select} />
           )}

@@ -2,16 +2,19 @@
  * Screen-space clustering for map markers, in two deterministic passes.
  *
  * 1. Greedy: points are taken in input order, and each joins the nearest existing cluster whose seed
- *    (the first point of that cluster) lies within `radius` pixels, or starts a new cluster. Seeds
- *    never move, so a uniform grid of cell size `radius` finds every candidate seed by looking at the
- *    3 x 3 block of cells around a point; the pass is O(n) for evenly spread points.
+ *    (the first point of that cluster) lies within `radius` pixels, or starts a new cluster. Of two
+ *    seeds at the same distance the earlier one (in input order) wins. Seeds never move, so a uniform
+ *    grid of cell size `radius` finds every candidate seed by looking at the 3 x 3 block of cells
+ *    around a point; the pass is O(n) for evenly spread points.
  * 2. Merge: a cluster is drawn at the centroid of its members, and centroids can end up closer than
- *    the seeds were. Clusters whose centroids are within `radius` are merged, nearest pair first in
- *    scan order, until none are. This is O(k^2) per merge in the number of clusters, which is small.
+ *    the seeds were. Clusters are kept in seed order. The first cluster that has another within
+ *    `radius` absorbs its nearest one (the earlier on a tie), and the scan starts again, until no two
+ *    are within `radius`. This is O(k^2) per merge in the number of clusters, which is small.
  *
  * After both passes no two clusters are closer than `radius`, so markers drawn with a radius of at
- * most `radius / 2` never overlap. The result depends only on input order and pairwise distances, so
- * panning the map (which shifts every point by the same amount) never changes the clusters.
+ * most `radius / 2` never overlap. Every choice and tie-break depends only on input order and pairwise
+ * distances, never on grid cells or coordinates, so panning the map (which shifts every point by the
+ * same amount) never changes the clusters, and each cluster lists its members in input order.
  */
 
 export interface ScreenPoint {
@@ -30,10 +33,11 @@ export interface Cluster {
 
 export function clusterPoints(points: readonly ScreenPoint[], radius: number): Cluster[] {
   if (!(radius > 0)) return points.map((p) => ({ ids: [p.id], x: p.x, y: p.y }));
-  const seeds: { x: number; y: number; ids: string[]; sx: number; sy: number }[] = [];
+  /** Members are held as input indices, so merged clusters can be put back in input order. */
+  const seeds: { x: number; y: number; members: number[]; sx: number; sy: number }[] = [];
   const grid = new Map<string, number[]>();
   const r2 = radius * radius;
-  for (const p of points) {
+  points.forEach((p, n) => {
     const cx = Math.floor(p.x / radius);
     const cy = Math.floor(p.y / radius);
     let best = -1;
@@ -42,8 +46,8 @@ export function clusterPoints(points: readonly ScreenPoint[], radius: number): C
       for (let gy = cy - 1; gy <= cy + 1; gy++) {
         for (const i of grid.get(`${gx},${gy}`) ?? []) {
           const d = (seeds[i].x - p.x) ** 2 + (seeds[i].y - p.y) ** 2;
-          // Strict comparison keeps the earliest seed on a tie, so the result is stable.
-          if (d <= r2 && d < bestD) {
+          // Cells are scanned in grid order, which a pan can change, so a tie goes to the earlier seed explicitly.
+          if (d <= r2 && (d < bestD || (d === bestD && i < best))) {
             best = i;
             bestD = d;
           }
@@ -52,7 +56,7 @@ export function clusterPoints(points: readonly ScreenPoint[], radius: number): C
     }
     if (best >= 0) {
       const s = seeds[best];
-      s.ids.push(p.id);
+      s.members.push(n);
       s.sx += p.x;
       s.sy += p.y;
     } else {
@@ -60,10 +64,10 @@ export function clusterPoints(points: readonly ScreenPoint[], radius: number): C
       const cell = grid.get(key);
       if (cell) cell.push(seeds.length);
       else grid.set(key, [seeds.length]);
-      seeds.push({ x: p.x, y: p.y, ids: [p.id], sx: p.x, sy: p.y });
+      seeds.push({ x: p.x, y: p.y, members: [n], sx: p.x, sy: p.y });
     }
-  }
-  const clusters = seeds.map((s, order) => ({ ids: s.ids, sx: s.sx, sy: s.sy, order }));
+  });
+  const clusters = seeds.map((s) => ({ members: s.members, sx: s.sx, sy: s.sy }));
   for (let merged = true; merged; ) {
     merged = false;
     for (let i = 0; i < clusters.length && !merged; i++) {
@@ -72,7 +76,8 @@ export function clusterPoints(points: readonly ScreenPoint[], radius: number): C
       let bestD = r2;
       for (let j = i + 1; j < clusters.length; j++) {
         const b = clusters[j];
-        const d = (a.sx / a.ids.length - b.sx / b.ids.length) ** 2 + (a.sy / a.ids.length - b.sy / b.ids.length) ** 2;
+        const d = (a.sx / a.members.length - b.sx / b.members.length) ** 2 + (a.sy / a.members.length - b.sy / b.members.length) ** 2;
+        // Strict, so of two clusters at the same distance the earlier (lower j) is merged.
         if (d < bestD) {
           best = j;
           bestD = d;
@@ -80,7 +85,8 @@ export function clusterPoints(points: readonly ScreenPoint[], radius: number): C
       }
       if (best >= 0) {
         const b = clusters[best];
-        a.ids.push(...b.ids);
+        // Both lists are in input order; merging them keeps the cluster in input (time) order.
+        a.members = mergeSorted(a.members, b.members);
         a.sx += b.sx;
         a.sy += b.sy;
         clusters.splice(best, 1);
@@ -88,5 +94,14 @@ export function clusterPoints(points: readonly ScreenPoint[], radius: number): C
       }
     }
   }
-  return clusters.map((c) => ({ ids: c.ids, x: c.sx / c.ids.length, y: c.sy / c.ids.length }));
+  return clusters.map((c) => ({ ids: c.members.map((n) => points[n].id), x: c.sx / c.members.length, y: c.sy / c.members.length }));
+}
+
+/** Two ascending lists of distinct indices as one ascending list. */
+function mergeSorted(a: readonly number[], b: readonly number[]): number[] {
+  const out: number[] = [];
+  let i = 0;
+  let j = 0;
+  while (i < a.length || j < b.length) out.push(j >= b.length || (i < a.length && a[i] < b[j]) ? a[i++] : b[j++]);
+  return out;
 }

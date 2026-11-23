@@ -1,9 +1,10 @@
 /**
- * Permanent redirects for entities merged into another one. The single source of truth is the `aliases`
- * field on the surviving entity; next.config.ts turns these into 308 redirects, which Vercel serves at the edge.
+ * Permanent redirects for entities merged into another one and for renamed sources. The single source of truth
+ * is the `aliases` field on the surviving entity or source; next.config.ts turns these into 308 redirects, which
+ * Vercel serves at the edge.
  */
 
-import { entityHref } from './kaalchakra';
+import { entityHref, sourceHref } from './kaalchakra';
 
 export interface AliasRedirect {
   source: string;
@@ -30,4 +31,9 @@ export function aliasRedirects(aliases: ReadonlyMap<string, string>): AliasRedir
         permanent: true as const,
       },
     ]);
+}
+
+/** Redirects for every former source id: its source page. */
+export function sourceAliasRedirects(aliases: ReadonlyMap<string, string>): AliasRedirect[] {
+  return [...aliases].sort(([a], [b]) => a.localeCompare(b)).map(([from, to]) => ({ source: sourceHref(from), destination: sourceHref(to), permanent: true as const }));
 }

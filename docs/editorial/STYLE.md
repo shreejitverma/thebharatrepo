@@ -71,7 +71,9 @@ A dating describes the entity's own existence: a person's lifespan or active per
 A single dated event in its history is a claim, whether it falls inside or outside that span: a speech, a capture, a founding, an end or transfer, a revival, a recognition, a survey, an inscription or text that names it, or the completion of one work.
 Keep the entity's span as its dating, even when the span is only graded B or C.
 The validator rejects a scholarship dating that ranks first (see rankDatings) when another scholarship dating of the entity is at least five times longer, inside or outside it, because the shorter one would otherwise stand for the entity on cards and in sort order.
-When the shorter dating does date the entity itself, such as a competing dating of the same deposit, give it a `primaryReason` that says so.
+It rejects a shorter scholarship dating that ranks below the span in the same way, because the entity page would still list the event as a dating of the entity.
+When the shorter dating does date the entity itself, give it a `primaryReason` that says so: a competing dating of the same deposit or composition, a person's active period beside the lifespan, or a building or occupation phase of a site.
+The length rule cannot catch an event as long as the span (a 2016 Act beside a 2010 launch), so check every dating against the list above.
 Give an entity several datings when methods disagree.
 For example, a text can have a `linguistic` dating graded C and a `traditional-puranic` dating graded D.
 Use the `label` field to name the position, for example `label: "Mainstream Indology"` or `label: "Kanchi and Dwaraka matha tradition"`, and the `note` field to explain the basis in one or two sentences.
@@ -115,6 +117,10 @@ Types: `primary-text`, `translation`, `inscription`, `excavation-report`, `coin-
 Journal articles need a `doi` (or a stable `url`, such as JSTOR, for pre-DOI articles).
 Books need an `isbn` (digits only, no hyphens, quoted), `oclc`, `doi` or stable `url` such as archive.org for out-of-copyright editions.
 Web sources need a `url`.
+`aliases` (optional) lists former ids of a renamed source, for example an id that named the wrong author or year.
+The build turns each into a permanent (308) redirect from `/sources/<old-slug>`, so published URLs keep working.
+An alias must not be a live source id, and content cites the live id: citing an alias is an error.
+When you rename a source, add its old id here and record the change in `corrections.yaml`.
 
 ## 6. Entities
 
@@ -283,6 +289,10 @@ Write `published: false` (the default).
 Unpublished debates are validated by `content:validate` but are left out of the built site, the sitemap, search and every link.
 Only the owner sets `published: true`, and the schema then requires an `approval` record.
 Preview drafts locally with `npm run dev:debates-preview`.
+Owner approval is not an editorial review: `review` keeps its truthful status (section 10), so a published debate that no human editor has reviewed stays `draft` and its page says so.
+Record how the text was produced in `approval.note`, for example "Drafted by Codex; reviewed for fairness, accuracy and sources by Gemini (a machine review)."
+Set `review.status` to `reviewed` or `published` only with a human editor's name and date.
+The test suites prove the rule with their own fixture draft in `e2e/fixtures/content/debates/`, so no real draft needs to be kept for them; never add a test fixture to `content/debates/`.
 
 ```yaml
 id: debate.date-of-the-buddha

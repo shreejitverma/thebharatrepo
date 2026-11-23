@@ -25,17 +25,6 @@ datings:
     sources:
       - "src.baladhuri-1968-origins-islamic-state"
       - "src.asif-2016-book-of-conquest"
-  - method: "scholarly-consensus"
-    range:
-      earliest: 712
-      latest: 712
-      precision: "year"
-      circa: false
-    grade: "B"
-    label: "Defeat of Dahir"
-    sources:
-      - "src.baladhuri-1968-origins-islamic-state"
-      - "src.asif-2016-book-of-conquest"
 claims:
   - text: "Al-Baladhuri describes a campaign directed by al-Hajjaj and led in Sindh by Muhammad ibn
       Qasim."
@@ -43,6 +32,11 @@ claims:
     sources:
       - "src.baladhuri-1968-origins-islamic-state"
   - text: "The campaign included the capture of Daybul and advanced up the Indus towards Multan."
+    grade: "B"
+    sources:
+      - "src.baladhuri-1968-origins-islamic-state"
+      - "src.asif-2016-book-of-conquest"
+  - text: "Muhammad ibn Qasim defeated and killed Dahir, the ruler of Sindh, in 712."
     grade: "B"
     sources:
       - "src.baladhuri-1968-origins-islamic-state"
