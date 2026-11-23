@@ -230,6 +230,41 @@ test.describe('Map view', () => {
     expect(widths!.drawn).toBe(widths!.shown);
   });
 
+  test('a link into the Map view goes from the server placeholder to the map without a layout shift', async ({ page, browserName }) => {
+    test.skip(browserName !== 'chromium', 'only Chromium reports layout-shift entries');
+    // Lighthouse's phone, where the panel under the canvas starts on screen.
+    await page.setViewportSize({ width: 412, height: 823 });
+    await page.addInitScript(() => {
+      const w = window as unknown as { __shifts: number[] };
+      w.__shifts = [];
+      new PerformanceObserver((list) => {
+        for (const e of list.getEntries()) w.__shifts.push((e as unknown as { value: number }).value);
+      }).observe({ type: 'layout-shift', buffered: true });
+    });
+    // Every script loads as usual except the map's own chunk (the one that draws .kc-map-svg), which is held back.
+    let release = () => {};
+    const held = new Promise<void>((resolve) => (release = resolve));
+    let mapRequested = () => {};
+    const requested = new Promise<void>((resolve) => (mapRequested = resolve));
+    await page.route(/\/_next\/static\/chunks\/.*\.js(\?|$)/, async (route) => {
+      const response = await route.fetch();
+      const body = await response.text();
+      if (body.includes('kc-map-svg')) {
+        mapRequested();
+        await held;
+      }
+      await route.fulfill({ response, body });
+    });
+    await page.goto('/kaalchakra?view=map', { waitUntil: 'commit' });
+    await requested;
+    // Two frames, so whatever the page shows while the map's code is on its way is painted before it arrives.
+    await page.evaluate(() => new Promise((resolve) => requestAnimationFrame(() => requestAnimationFrame(resolve))));
+    release();
+    await expect(page.locator('.kc-map-svg .kc-map-cluster').first()).toBeVisible();
+    await page.waitForFunction(() => document.fonts.status === 'loaded');
+    expect(await page.evaluate(() => (window as unknown as { __shifts: number[] }).__shifts)).toEqual([]);
+  });
+
   test('zoom, pan and stepping work from the keyboard', async ({ page }) => {
     await page.goto('/kaalchakra?view=map');
     await expect(page.locator('.kc-map-svg')).toBeVisible();

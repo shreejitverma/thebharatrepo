@@ -1,7 +1,6 @@
 'use client';
 
-import { use, useCallback, useEffect, useId, useMemo, useRef, useState } from 'react';
-import dynamic from 'next/dynamic';
+import { Suspense, use, useCallback, useEffect, useId, useMemo, useRef, useState } from 'react';
 import { useSearchParams } from 'next/navigation';
 import { KINDS, type Kind } from '@/lib/content/labels';
 import type { KcItem } from '@/lib/content/kaalchakra';
@@ -13,6 +12,7 @@ import River from './River';
 import ListView from './ListView';
 import Panel from './Panel';
 import Toolbar, { WheelScaleNote } from './Toolbar';
+import type { MapViewProps } from './MapView';
 import { setReadingLevel, useReadingLevel } from '@/components/ReadingLevel';
 import { loadItems } from './data';
 import { entriesAt, panRegion, resolveRegion, revealPlace, zoomRegion, type MapRegion, type TimeZoom } from './mapState';
@@ -20,7 +20,14 @@ import { SEGMENTS, formatDating, orderedItems, primaryAnchor, primaryDating, seg
 import { hrefFor, parseState, serialise, type State } from './urlState';
 
 // The map and its basemap load only when the Map view is opened, so the other views do not pay for them.
-const MapView = dynamic(() => import('./MapView'), { ssr: false, loading: () => <p className="empty">Loading the map.</p> });
+let mapViewModule: Promise<typeof import('./MapView')> | undefined;
+const loadMapView = () => (mapViewModule ??= import('./MapView'));
+
+/** Reads the map's code with use(): already loaded on a link into the Map view (see Kaalchakra), else behind "Loading the map.". */
+function LoadedMapView(props: MapViewProps) {
+  const { default: MapView } = use(loadMapView());
+  return <MapView {...props} />;
+}
 
 /** Canvas size assumed until the map has measured itself. */
 const INITIAL_MAP_SIZE: Size = { width: 900, height: 580 };
@@ -57,6 +64,9 @@ interface Mount {
 export default function Kaalchakra({ aliases = NO_ALIASES }: { aliases?: Readonly<Record<string, string>> }) {
   const search = useSearchParams().toString();
   const result = use(loadItems());
+  // A link into the Map view waits for the map's code as well, so the server wheel gives way to the map itself. Showing
+  // "Loading the map." first put the panel on screen just under it, then the map pushed it down: a layout shift.
+  if (new URLSearchParams(search).get('view') === 'map') use(loadMapView());
   if (!result.ok) {
     return (
       <div className="kc">
@@ -184,6 +194,9 @@ function KaalchakraInner({ items, byId, external, epoch, onWrite }: { items: KcI
 
   // Map view: the same filtered entries, narrowed to the scrubber's moment and to those with a place.
   const [mapSize, setMapSize] = useState<Size>(INITIAL_MAP_SIZE);
+  // The map reports its width before its first paint and again in its ResizeObserver's first callback; keeping the same
+  // object for an unchanged size makes that second report re-render nothing.
+  const onMapSize = useCallback((next: Size) => setMapSize((prev) => (prev.width === next.width && prev.height === next.height ? prev : next)), []);
   const atMoment = useMemo(() => entriesAt(visible, s.lens, s.t, s.zoom), [visible, s.lens, s.t, s.zoom]);
   const mapItems = useMemo(() => atMoment.filter((i) => i.place), [atMoment]);
   const extentItems = useMemo(() => atMoment.filter((i) => i.extents?.length), [atMoment]);
@@ -345,25 +358,27 @@ function KaalchakraInner({ items, byId, external, epoch, onWrite }: { items: KcI
           ) : s.view === 'river' ? (
             <River items={visible} kinds={ringKinds} lens={s.lens} selectedId={s.sel} win={s.win} onWindow={onWindow} onSelect={select} onHover={onHover} />
           ) : isMap ? (
-            <MapView
-              items={mapItems}
-              extentItems={extentItems}
-              unplaced={atMoment.length - mapItems.length}
-              lens={s.lens}
-              cal={s.cal}
-              selectedId={s.sel}
-              t={s.t}
-              zoom={s.zoom}
-              region={s.region}
-              view={mapView}
-              size={mapSize}
-              onSize={setMapSize}
-              onTime={onTime}
-              onZoom={onTimeZoom}
-              onRegion={onRegion}
-              onSelect={selectOnMap}
-              onHover={onHover}
-            />
+            <Suspense fallback={<p className="empty">Loading the map.</p>}>
+              <LoadedMapView
+                items={mapItems}
+                extentItems={extentItems}
+                unplaced={atMoment.length - mapItems.length}
+                lens={s.lens}
+                cal={s.cal}
+                selectedId={s.sel}
+                t={s.t}
+                zoom={s.zoom}
+                region={s.region}
+                view={mapView}
+                size={mapSize}
+                onSize={onMapSize}
+                onTime={onTime}
+                onZoom={onTimeZoom}
+                onRegion={onRegion}
+                onSelect={selectOnMap}
+                onHover={onHover}
+              />
+            </Suspense>
           ) : (
             <ListView items={visible} lens={s.lens} cal={s.cal} selectedId={s.sel} onSelect={select} />
           )}

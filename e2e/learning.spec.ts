@@ -19,7 +19,8 @@ function collectErrors(page: Page): string[] {
   const errors: string[] = [];
   // WebKit reports every prefetch that a navigation cancels as a failed load "due to access control checks", in the
   // console and as a rejected fetch; that is the browser describing its own cancellation, not an error on the page.
-  const cancelledPrefetch = (text: string) => /[?&]_rsc=\w+ due to access control checks\.?\s*$/.test(text);
+  // The _rsc value is a URL-safe hash, so it can hold '-' as well as word characters.
+  const cancelledPrefetch = (text: string) => /[?&]_rsc=[\w-]+ due to access control checks\.?\s*$/.test(text);
   page.on('pageerror', (e) => !cancelledPrefetch(e.message) && errors.push(e.message));
   page.on('console', (m) => m.type() === 'error' && !cancelledPrefetch(m.text()) && errors.push(m.text()));
   return errors;
