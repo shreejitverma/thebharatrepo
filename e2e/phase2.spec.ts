@@ -438,6 +438,9 @@ test.describe('Map view', () => {
     const x = b.x + b.width / 2;
     await touch('touchStart', [[x, y]]);
     for (let i = 1; i <= 8; i++) await touch('touchMove', [[x - i * 20, y]]);
+    // The finger comes to rest before it lifts. A finger that lifts while still moving starts a fling, and Chromium
+    // swallows the click of a tap that stops a running fling, so the tap below would depend on how long it ran.
+    await page.waitForTimeout(150);
     await touch('touchEnd', []);
     await page.waitForTimeout(400);
     expect(page.url()).not.toMatch(/region=/);
