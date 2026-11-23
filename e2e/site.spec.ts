@@ -334,7 +334,8 @@ test.describe('Kaalchakra server placeholder', () => {
       });
       await page.goto('/kaalchakra', { waitUntil: 'commit' });
       await expect(page.locator('.kc-toolbar.kc-skeleton')).toBeVisible();
-      await page.evaluate(() => document.fonts.ready);
+      // Not document.fonts.ready: WebKit settles it only once the document has loaded, which the held scripts prevent.
+      await page.waitForFunction(() => document.fonts.status === 'loaded');
       const placeholder = await layout(page);
       // The compact phone toolbar (view and lens rows, calendar beside Filters) and the desktop one both have a skeleton.
       expect(placeholder['.kc-toolbar']).not.toBeNull();
@@ -343,7 +344,7 @@ test.describe('Kaalchakra server placeholder', () => {
       release();
       await expect(page.locator('.kc-toolbar:not(.kc-skeleton)')).toBeVisible();
       await expect(page.locator('.kc-canvas .kc-wheel')).toBeVisible();
-      await page.evaluate(() => document.fonts.ready);
+      await page.waitForFunction(() => document.fonts.status === 'loaded');
       expect(await layout(page)).toEqual(placeholder);
       expect(await page.evaluate(() => (window as unknown as { __shifts: number[] }).__shifts)).toEqual([]);
     });
