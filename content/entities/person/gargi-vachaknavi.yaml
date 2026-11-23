@@ -1,0 +1,59 @@
+id: person.gargi-vachaknavi
+type: person
+kind: person
+names:
+  en: Gargi Vachaknavi
+  iast: Gārgī Vācaknavī
+  native: गार्गी वाचक्नवी
+summary: Gargi Vachaknavi is an interlocutor in the Brihadaranyaka Upanishad who questions
+  Yajnavalkya at King Janaka’s assembly. Scholars can date the text that portrays her, while her
+  lifetime is unknown.
+summaries:
+  kids: In an ancient dialogue, Gargi asks the teacher Yajnavalkya what holds the world together. She
+    puts her questions to him before a gathering of scholars.
+  teen: At Janaka’s assembly in the Brihadaranyaka Upanishad, Gargi pursues a series of questions
+    about what underlies the cosmos. The dialogue gives her a prominent voice, while the date of the
+    text does not establish historical life dates for her.
+region: Videha in the narrative
+datings:
+  - method: traditional-puranic
+    range:
+      earliest: 3102 BCE
+      latest: 3102 BCE
+      precision: century
+      circa: true
+    grade: D
+    label: Traditional Puranic reckoning (Dvapara-Kali transition)
+    sources:
+      - src.wilson-1840-vishnu-purana
+      - src.olivelle-1998-early-upanisads
+    note: Tradition places Gargi with Yajnavalkya at Janaka's court. The Vishnu Purana makes Yajnavalkya
+      a pupil of Vaishampayana, the disciple of Vyasa, which places that generation at the traditional
+      transition from the Dvapara to the Kali Yuga. The calendar year is the conventional epoch used for
+      that transition.
+claims:
+  - text: The Brihadaranyaka Upanishad gives Gargi two exchanges with Yajnavalkya. In the second
+      exchange she asks what space is woven upon.
+    grade: A
+    sources:
+      - id: src.olivelle-1998-early-upanisads
+        locator: Brihadaranyaka Upanishad 3.6 and 3.8
+  - text: Patrick Olivelle places the earliest prose Upanishads around the seventh to sixth centuries
+      BCE, allowing roughly a century on either side (about 800 BCE to 400 BCE); these are dates for
+      the texts, not for Gargi Vachaknavi.
+    grade: C
+    sources:
+      - id: src.olivelle-1998-early-upanisads
+        locator: Introduction
+relations:
+  - kind: related-to
+    target: text.brihadaranyaka-upanishad
+  - kind: related-to
+    target: person.yajnavalkya
+tags:
+  - upanishads
+  - vedic-philosophy
+  - women
+review:
+  status: draft
+  author: codex-gpt-6

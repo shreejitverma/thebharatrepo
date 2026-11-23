@@ -1,0 +1,56 @@
+id: person.tiruvalluvar
+type: person
+kind: person
+names:
+  en: Tiruvalluvar
+  iast: Tiruvaḷḷuvar
+  native: திருவள்ளுவர்
+summary: >-
+  Tiruvalluvar is the classical Tamil poet-philosopher celebrated as the author of the Tirukkural, one of the Eighteen Lesser Classics (Patinenkirkkanakku). Virtually no contemporary biographical record survives outside later legends compiled in the Tiruvalluvamalai and medieval hagiographies. Most modern scholars place his lifetime in the post-Sangam era (c. 450 to 550 CE) based on the language and intertextual links of the Tirukkural, while Tamil tradition and the official Tiruvalluvar Era set his birth in 31 BCE.
+summaries:
+  kids: >-
+    Tiruvalluvar was the wise Tamil poet who wrote the Tirukkural, 1,330 short verses on honesty, kindness, and good ruling. Almost nothing certain is known about his life, and scholars debate when he lived.
+  teen: >-
+    Honoured as the author of the Tirukkural, Tiruvalluvar is known mainly through his work and later legends linking him to Mylapore or Madurai. Scholars usually date him around 450 to 550 CE, while Tamil tradition places him in 31 BCE.
+region: Tamilakam (traditionally associated with Mylapore, Chennai, or Madurai)
+location: { name: "Mylapore, Chennai, Tamil Nadu", lat: 13.03, lon: 80.27 }
+datings:
+  - method: linguistic
+    range: { earliest: "400 CE", latest: "550 CE", best: "450 CE", precision: century, circa: true }
+    grade: C
+    label: Mainstream philological dating of Tirukkural's author (Zvelebil, Blackburn)
+    sources:
+      - src.zvelebil-1973-smile-of-murugan
+      - src.blackburn-2000-legend-of-valluvar
+    note: Inferred from the post-Sangam Tamil morphology, Sanskrit lexical borrowings, and engagement with Arthashastra and Dharmashastra ideas in the Tirukkural, which is cited in 6th-century epics.
+  - method: traditional-sampradaya
+    range: { earliest: "31 BCE", latest: "31 BCE", precision: year, circa: false }
+    grade: D
+    label: Tiruvalluvar Year (31 BCE) reckoning
+    sources:
+      - src.blackburn-2000-legend-of-valluvar
+    note: Adopted at a 1935 conference led by Maraimalai Adigal and used officially by the Government of Tamil Nadu since 1971, setting Tiruvalluvar's birth thirty-one years before the Common Era.
+claims:
+  - text: Contemporary inscriptions and early Sangam anthologies preserve no verifiable biography of Tiruvalluvar; medieval traditions collected in the Tiruvalluvamalai and later hagiographies portray him variously as a Mylapore weaver or paraiyar sage.
+    grade: B
+    sources:
+      - src.blackburn-2000-legend-of-valluvar
+      - src.zvelebil-1973-smile-of-murugan
+  - text: Because the Tirukkural avoids narrow sectarian markers, Jain, Shaiva, Vaishnava, and modern secular traditions each claimed Tiruvalluvar as their own.
+    grade: B
+    sources:
+      - src.blackburn-2000-legend-of-valluvar
+      - src.zvelebil-1992-companion-studies
+debate: >-
+  Because no dated historical record names Tiruvalluvar during his lifetime, his chronology follows that of the Tirukkural itself. Kamil Zvelebil and most modern philologists place him around 450 to 550 CE on linguistic and intertextual grounds, whereas earlier Tamil scholars and the official Tamil Nadu calendar (adopted following Maraimalai Adigal's 1935 proposal) reckon an era starting in 31 BCE.
+relations:
+  - { kind: authored, target: text.tirukkural }
+  - { kind: related-to, target: text.sangam-literature }
+wikidata: Q2353373
+image:
+  commons: "File:Thiruvalluvar Statue Full view.jpg"
+  alt: Monumental stone statue of the Tamil poet-philosopher Tiruvalluvar overlooking the sea at Kanyakumari
+  credit: Sugeesh
+  license: CC BY-SA 4.0
+tags: [tiruvalluvar, tirukkural, tamil-literature, ethics, contested-chronology]
+review: { status: draft, author: "gemini-4-hydrogen-xhigh" }

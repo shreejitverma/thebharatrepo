@@ -1,0 +1,72 @@
+id: tradition.kathak
+type: tradition
+kind: art
+names:
+  en: Kathak
+  iast: Kathak
+  native: कथक
+summary: Kathak is the major classical dance tradition of northern India, distinguished by intricate rhythmic footwork
+  (tatkar), rapid pirouettes (chakkars) and expressive storytelling (abhinaya). Named after the kathakas (hereditary
+  storytellers), its modern gharanas at Lucknow, Jaipur and Banaras took shape across Bhakti devotional, Rajput and
+  Indo-Persian courtly settings before twentieth-century classicisation.
+summaries:
+  kids: Kathak is a classical dance from North India famous for fast spinning turns, rhythmic footwork with rows of ankle
+    bells and expressive stories.
+  teen: Taking its name from the kathakas (storytellers) of North India, Kathak developed across Rajput, Mughal and Awadhi
+    courts into major lineages (Lucknow, Jaipur, Banaras) before being staged as a modern classical form.
+region: Northern India (Lucknow, Jaipur, Banaras, Delhi)
+location:
+  name: Lucknow, Uttar Pradesh
+  lat: 26.847
+  lon: 80.946
+datings:
+  - method: scholarly-consensus
+    range:
+      earliest: 1750
+      latest: 1950
+      precision: century
+      circa: true
+    grade: B
+    label: Formation of the Lucknow, Jaipur and Banaras Kathak gharanas and modern stage form
+    sources:
+      - src.walker-2014-kathak-historical-perspective
+      - src.chakravorty-2008-bells-of-change
+    note: Margaret Walker traces the consolidation of named hereditary lineages and court repertoire from late-eighteenth-
+      and nineteenth-century courts, especially Wajid Ali Shah's Lucknow and Jaipur, into twentieth-century national
+      classicisation.
+claims:
+  - text: Hereditary dancing and storytelling families (kathaks) performed at Rajput and Indo-Persian courts and shaped
+      distinct regional gharanas in Lucknow, Jaipur and Banaras.
+    grade: B
+    sources:
+      - src.walker-2014-kathak-historical-perspective
+      - src.chakravorty-2008-bells-of-change
+  - text: Twentieth-century cultural nationalism and state patronage transformed Kathak from a diverse courtesan and
+      hereditary repertoire into a standardised classical concert dance.
+    grade: B
+    sources:
+      - src.walker-2014-kathak-historical-perspective
+      - src.chakravorty-2008-bells-of-change
+relations:
+  - kind: related-to
+    target: tradition.hindustani-classical-music
+  - kind: related-to
+    target: text.natyashastra
+  - kind: related-to
+    target: polity.mughal-empire
+wikidata: Q949256
+image:
+  commons: File:Namrata Rai Kathak Dancer.jpg
+  alt: Kathak dancer performing a spinning posture with ghungroo ankle bells
+  credit: Nishasinghrai
+  license: CC BY-SA 4.0
+tags:
+  - kathak
+  - dance
+  - north-india
+  - gharana
+  - lucknow
+  - jaipur
+review:
+  status: draft
+  author: gemini-4-hydrogen-xhigh

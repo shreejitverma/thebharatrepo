@@ -1,0 +1,49 @@
+id: event.second-anglo-maratha-war
+type: event
+kind: event
+names:
+  en: Second Anglo-Maratha War
+summary: After Peshwa Baji Rao II accepted British protection in the Treaty of Bassein, the East
+  India Company fought opposing Maratha powers. Campaigns against the Sindia and Bhonsle houses
+  in 1803 were followed by war with Holkar.
+summaries:
+  kids: One Maratha leader signed a treaty with the Company. Other Maratha leaders resisted, and
+    the Company fought them across several regions.
+  teen: Bassein gave the Company a client's claim to defend, while other Maratha leaders rejected
+    the new balance of power. The war expanded Company influence in northern and central India.
+region: Deccan, central India and northern India
+datings:
+  - method: scholarly-consensus
+    range:
+      earliest: "1803"
+      latest: "1805"
+      precision: year
+      circa: false
+    grade: B
+    label: Campaigns against Sindia, Bhonsle and Holkar
+    sources:
+      - src.cooper-2003-anglo-maratha-campaigns
+      - src.gordon-1993-marathas-1600-1818
+claims:
+  - text: The war of 1803 was fought against Maratha leaders who opposed the political settlement
+      created by Baji Rao II's Treaty of Bassein.
+    grade: B
+    sources:
+      - src.cooper-2003-anglo-maratha-campaigns
+  - text: Company victories in 1803 included Assaye in the Deccan and campaigns that brought Delhi
+      under Company protection.
+    grade: B
+    sources:
+      - src.cooper-2003-anglo-maratha-campaigns
+      - src.gordon-1993-marathas-1600-1818
+relations:
+  - kind: related-to
+    target: polity.maratha-empire
+  - kind: preceded
+    target: event.third-anglo-maratha-war
+tags:
+  - maratha
+  - company-rule
+review:
+  status: draft
+  author: codex-gpt-6

@@ -1,0 +1,54 @@
+id: text.charyapada
+type: text
+kind: text
+names:
+  en: Charyapada
+  iast: Caryāpada (Caryāgīti)
+  native: চর্যাপদ
+summary: >-
+  The Charyapada (Caryagiti) is an anthology of forty-seven to fifty Tantric Buddhist mystic songs
+  (charyagiti) composed by Siddhacharyas such as Luipada, Kahnapada and Saraha, preserved in a
+  manuscript discovered by Haraprasad Shastri in Nepal in 1907. Written in an eastern Late
+  Apabhramsha / New Indo-Aryan vernacular, it represents the earliest surviving literary specimen
+  claimed by Bengali, Assamese, Maithili and Odia traditions.
+summaries:
+  kids: >-
+    Found in Nepal in 1907, the Charyapada is a collection of mystical Buddhist songs over 800 years
+    old that preserves the earliest known poetry in the eastern Indian languages related to Bengali,
+    Assamese, Odia and Maithili.
+  teen: >-
+    Preserved in a Nepalese palm-leaf manuscript with a Sanskrit commentary by Munidatta, the
+    Charyapada songs use symbolic "twilight language" (sandhabhasha) and anchor the early history of
+    eastern Neo-Indo-Aryan vernaculars.
+region: Eastern India (Bengal, Bihar, Odisha and Assam)
+datings:
+  - method: linguistic
+    range: { earliest: 750, latest: 1150, precision: century, circa: true }
+    grade: C
+    label: Pala-era linguistic and Siddha lineage dating
+    sources:
+      - src.kvaerne-1986-anthology-buddhist-tantric-songs
+      - src.sen-1992-history-of-bengali-literature
+      - src.davidson-2002-indian-esoteric-buddhism
+    note: Scholars date the songs between the 8th and 12th centuries CE based on historical linguistics and Tibetan lineages of the Mahasiddhas; Munidatta's Sanskrit commentary is later.
+claims:
+  - text: Haraprasad Shastri recovered the manuscript of the Charyacharyavinishchaya in the Nepal Darbar Library in 1907 and published it in 1916 alongside Munidatta's Sanskrit commentary.
+    grade: A
+    sources:
+      - src.kvaerne-1986-anthology-buddhist-tantric-songs
+      - src.sen-1992-history-of-bengali-literature
+  - text: Comparative philologists note that the songs display transitional morphological features shared by proto-Bengali, Assamese, Maithili and Odia rather than a single modern standard language.
+    grade: B
+    sources:
+      - src.kvaerne-1986-anthology-buddhist-tantric-songs
+      - src.sen-1992-history-of-bengali-literature
+debate: >-
+  While early Bengali philologists classified the Charyapada purely as Old Bengali, later linguistic
+  scholarship and regional historians from Assam, Odisha and Mithila highlight shared eastern
+  Magadhi-Apabhramsha features that predate the strict separation of Bengali, Assamese, Odia and
+  Maithili.
+relations:
+  - { kind: related-to, target: polity.pala-empire }
+wikidata: Q2580743
+tags: [charyapada, bengali, assamese, odia, maithili, vajrayana, literature]
+review: { status: draft, author: "gemini-4-hydrogen-xhigh" }

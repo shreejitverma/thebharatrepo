@@ -1,0 +1,47 @@
+id: person.ishwar-chandra-vidyasagar
+type: person
+kind: person
+names:
+  en: Ishwar Chandra Vidyasagar
+  native: ঈশ্বরচন্দ্র বিদ্যাসাগর
+summary: Ishwar Chandra Vidyasagar was a Bengali educator and Sanskrit scholar who campaigned for
+  Hindu widow remarriage. His 1855 tracts made a case from scripture as well as from the
+  circumstances of widows.
+summaries:
+  kids: Vidyasagar wrote about why widows should be allowed to marry again. He looked closely at old
+    texts to explain his case.
+  teen: Vidyasagar answered opposition to Hindu widow remarriage by rereading Sanskrit authorities and
+    describing the hardship faced by widows. His two Bengali works appeared in 1855, a year before
+    the remarriage act.
+region: Bengal
+datings:
+  - method: scholarly-consensus
+    range:
+      earliest: "1820"
+      latest: "1891"
+      precision: year
+      circa: false
+    grade: B
+    label: Documented lifespan
+    sources:
+      - src.sardella-2013-hindu-widow-marriage
+claims:
+  - text: Vidyasagar published two Bengali works in 1855 arguing for Hindu widow remarriage.
+    grade: A
+    sources:
+      - src.vidyasagar-2011-hindu-widow-marriage
+      - src.sardella-2013-hindu-widow-marriage
+  - text: His argument combined interpretation of Hindu scripture with an appeal about the treatment of
+      widows.
+    grade: B
+    sources:
+      - src.vidyasagar-2011-hindu-widow-marriage
+relations: []
+tags:
+  - bengali
+  - education
+  - widow-remarriage
+  - social-reform
+review:
+  status: draft
+  author: codex-gpt-6

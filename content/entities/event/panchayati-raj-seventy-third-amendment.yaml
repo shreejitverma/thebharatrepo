@@ -1,0 +1,29 @@
+id: event.panchayati-raj-seventy-third-amendment
+type: event
+kind: polity
+names:
+  en: "Panchayati Raj and the Seventy-third Amendment"
+summary: "The Constitution (Seventy-third Amendment) Act, 1992, came into force on 24 April 1993. It added constitutional provisions for rural local government, covering elections, terms of office and reserved seats in panchayats."
+summaries:
+  kids: "A change to India's Constitution in 1993 set out how rural councils called panchayats would elect their members. It also set aside seats for women and for certain communities."
+  teen: "Part IX of the Constitution sets rules for panchayat elections, terms of office and representation. The amendment reserves seats for Scheduled Castes and Scheduled Tribes and requires at least one-third of directly elected seats to be reserved for women."
+region: "India"
+datings:
+  - method: documentary
+    range: { earliest: "1993", latest: "1993", precision: day, circa: false }
+    grade: A
+    label: "Commencement of the Seventy-third Amendment"
+    sources: ["src.india-1992-seventy-third-amendment", "src.constitution-of-india"]
+    note: "The Act bears the year 1992 in its title and came into force on 24 April 1993."
+claims:
+  - text: "The amendment inserted Part IX on panchayats and added the Eleventh Schedule to the Constitution."
+    grade: A
+    sources: ["src.india-1992-seventy-third-amendment"]
+  - text: "Article 243D requires reservations for Scheduled Castes and Scheduled Tribes and at least one-third of all directly elected panchayat seats for women."
+    grade: A
+    sources: ["src.india-1992-seventy-third-amendment"]
+relations:
+  - kind: related-to
+    target: event.constitution-adopted-and-commenced
+tags: ["republic","local-government","legislation"]
+review: { status: draft, author: codex-gpt-6 }

@@ -1,0 +1,93 @@
+id: polity.eastern-chalukya-dynasty-of-vengi
+type: polity
+kind: polity
+names:
+  en: Eastern Chalukya Dynasty of Vengi
+  iast: Veṅgī Cāḷukya
+  native: వేంగి చాళుక్యులు
+aliases:
+  - polity.eastern-chalukya-dynasty
+summary: >-
+  The Eastern Chalukyas ruled coastal Andhra from Vengi (Pedavegi) and later Rajamahendravaram (Rajahmundry).
+  The line began when Pulakeshin II of Badami installed his brother Kubja Vishnuvardhana in the region,
+  conventionally around 624, though the starting date is disputed. After long rivalry with the Rashtrakutas,
+  marriages tied the Vengi court to the Cholas, and in 1070 a Vengi prince became the Chola emperor
+  Kulottunga I.
+summaries:
+  kids: >-
+    A branch of the Chalukya family ruled on the east coast of Andhra from Vengi. In time its rulers married
+    into the Chola royal family, and Telugu poetry flourished at their court.
+  teen: >-
+    Copperplate grants give a sequence of Eastern Chalukya rulers, though readings of regnal totals and
+    eclipse dates affect the early chronology. Marriages linked the later dynasty to the Chola throne, and
+    Nannaya began the Telugu Mahabharata under Rajaraja Narendra.
+region: Krishna-Godavari delta and coastal Andhra
+location:
+  name: Pedavegi (ancient Vengi)
+  lat: 16.82
+  lon: 81.11
+datings:
+  - method: epigraphic
+    range:
+      earliest: "624"
+      latest: "1075"
+      precision: decade
+      circa: true
+    grade: B
+    label: Conventional chronology from Kubja Vishnuvardhana to the Chola succession of Kulottunga I
+    sources:
+      - src.yazdani-1960-early-history-deccan-part1
+      - src.singh-2008-ancient-early-medieval-india
+      - src.karashima-2014-concise-history-south-india
+    note: The range ends around Kulottunga I's accession to the Chola throne in 1070. Vengi was afterwards
+      governed by Chola viceroys and local branches into the twelfth century.
+  - method: astronomical-reference
+    range:
+      earliest: "615"
+      latest: "1075"
+      precision: decade
+      circa: true
+    grade: C
+    label: Fleet and Sewell's earlier reckoning for the founding ruler
+    sources:
+      - src.sewell-1932-historical-inscriptions-southern-india
+    note: Fleet's calculation from the eclipse in the eighteenth regnal year treats 615 as the first counted
+      year of the founder.
+claims:
+  - text: Kubja Vishnuvardhana, brother of Pulakeshin II of Badami, established the Vengi line after the
+      Chalukya conquest of coastal Andhra.
+    grade: B
+    sources:
+      - src.yazdani-1960-early-history-deccan-part1
+      - src.singh-2008-ancient-early-medieval-india
+  - text: Repeated marriages between Eastern Chalukya princes and Chola princesses culminated in 1070, when
+      the Vengi prince Rajendra became the Chola emperor Kulottunga I.
+    grade: B
+    sources:
+      - src.sastri-1955-the-colas
+      - src.karashima-2014-concise-history-south-india
+  - text: Under Rajaraja Narendra (r. 1019-1061) at Rajahmundry, Nannaya began rendering the Sanskrit
+      Mahabharata into Telugu.
+    grade: B
+    sources:
+      - src.pollock-2003-literary-cultures-in-history
+      - src.narayanarao-2002-classical-telugu-poetry
+relations:
+  - kind: related-to
+    target: polity.chalukya-dynasty-of-badami
+    note: Originated as an eastern branch of the Badami Chalukyas.
+  - kind: related-to
+    target: polity.rashtrakuta-dynasty
+    note: Frequent rivals over Vengi.
+  - kind: related-to
+    target: polity.chola-dynasty
+    note: Allied by marriage and joined under Kulottunga I.
+debate: Fleet placed the first counted year around 615, while the conventional chronology starts the Vengi
+  line around 624. The stages of Vishnuvardhana's appointment and independence may also have differed.
+tags:
+  - eastern-chalukya
+  - vengi
+  - andhra
+review:
+  status: draft
+  author: gemini-4-hydrogen-xhigh

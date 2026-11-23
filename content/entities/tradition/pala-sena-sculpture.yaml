@@ -1,0 +1,55 @@
+id: tradition.pala-sena-sculpture
+type: tradition
+kind: art
+names:
+  en: Pala-Sena Sculpture
+  iast: Pāla-Sena Śilpakalā
+  native: পাল-সেন ভাস্কর্য
+summary: >-
+  The Pala-Sena school of sculpture flourished across Bihar and Bengal from the eighth to the twelfth
+  centuries CE under Pala, Chandra and Sena patronage. Working chiefly in dark Rajmahal phyllite
+  schist (black basalt) and cast bronze (notably from Kurkihar and Nalanda), workshops produced
+  elaborate stele icons of Buddhist and Brahmanical deities that strongly influenced Nepalese,
+  Tibetan and Southeast Asian art.
+summaries:
+  kids: >-
+    Artists in Bihar and Bengal under the Pala and Sena kings carved shiny black-stone statues and
+    cast bronze figures of Buddhas, Bodhisattvas and Hindu gods, inspiring art across Tibet and
+    Southeast Asia.
+  teen: >-
+    Spanning roughly 750-1200 CE across Bihar and Bengal, Pala-Sena workshops refined high-relief black
+    stone steles and lost-wax bronzes whose iconography travelled along monastic networks to Nepal,
+    Tibet, Myanmar and Java.
+region: Bihar and Bengal (eastern India and Bangladesh)
+location: { name: "Nalanda and Varendra", lat: 25.136, lon: 85.443 }
+datings:
+  - method: epigraphic
+    range: { earliest: 750, latest: 1200, precision: century, circa: true }
+    grade: B
+    label: Dated inscribed stone steles and bronze hoards across Pala-Sena reigns
+    sources:
+      - src.huntington-1984-pala-sena-sculpture
+      - src.huntington-1985-art-ancient-india
+      - src.harle-1994-art-architecture-indian-subcontinent
+    note: Susan L. Huntington anchored the stylistic sequence using dozens of stone and bronze images bearing regnal-year inscriptions of Pala, Chandra, Varman and Sena monarchs.
+claims:
+  - text: Dated image inscriptions from Bihar and Bengal allow art historians to trace a continuous stylistic evolution from eighth-century Gupta-derived volumes to crisp, intricately framed twelfth-century Sena steles.
+    grade: B
+    sources:
+      - src.huntington-1984-pala-sena-sculpture
+  - text: Pala-period bronze hoards from Nalanda and Kurkihar demonstrate advanced lost-wax casting and served as portable models that influenced Tibetan and Southeast Asian Buddhist iconography.
+    grade: B
+    sources:
+      - src.huntington-1984-pala-sena-sculpture
+      - src.harle-1994-art-architecture-indian-subcontinent
+relations:
+  - { kind: patronised-by, target: polity.pala-empire }
+  - { kind: patronised-by, target: polity.sena-dynasty }
+  - { kind: related-to, target: site.nalanda-mahavihara }
+image:
+  commons: "File:Buddha MET 30 32 96.JPG"
+  alt: Pala-period black stone stele of the seated Buddha in earth-touching gesture from eastern India, Metropolitan Museum of Art
+  credit: anonymous
+  license: CC0
+tags: [pala, sena, sculpture, bronze, iconography, bengal, bihar, art]
+review: { status: draft, author: "gemini-4-hydrogen-xhigh" }

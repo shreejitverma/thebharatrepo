@@ -1,0 +1,45 @@
+id: event.bengal-famine-of-1770
+type: event
+kind: event
+names:
+  en: Bengal famine of 1770
+summary: Food shortages developed after poor rains in 1769 and famine became severe in 1770. The
+  crisis struck Bengal and Bihar in the early years of East India Company control over their
+  revenues.
+summaries:
+  kids: When crops failed in parts of eastern India, many people could no longer get enough food.
+    The famine was especially severe in 1770.
+  teen: The 1770 famine followed crop failures during the Company's early years as Bengal's
+    revenue collector. Records document a severe crisis, while the total loss of life is
+    difficult to reconstruct.
+region: Bengal and Bihar
+datings:
+  - method: scholarly-consensus
+    range:
+      earliest: "1769"
+      latest: "1770"
+      precision: year
+      circa: false
+    grade: B
+    label: Onset and acute famine
+    sources:
+      - src.marshall-1987-bengal-british-bridgehead
+      - src.travers-2007-crisis-in-bengal
+    note: This range covers the onset and acute phase. Its consequences extended beyond 1770.
+claims:
+  - text: The famine intervened between the Company's acquisition of the diwani in 1765 and its
+      direct assumption of revenue administration in 1772.
+    grade: B
+    sources:
+      - src.marshall-1987-bengal-british-bridgehead
+      - src.travers-2007-crisis-in-bengal
+relations:
+  - kind: related-to
+    target: event.diwani-grant-of-1765
+tags:
+  - bengal
+  - famine
+  - company-rule
+review:
+  status: draft
+  author: codex-gpt-6

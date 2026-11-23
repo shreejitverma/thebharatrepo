@@ -1,0 +1,77 @@
+id: text.jain-agamas
+type: text
+kind: text
+names:
+  en: Jain Agamas
+  iast: Jaina Āgama
+  native: जैन आगम
+summary: The Jain Agamas are canonical texts on teachings, conduct and monastic discipline.
+  Shvetambara communities preserve a Prakrit canon, while Digambara tradition holds that the
+  original canon was lost. The stages of redaction are uncertain.
+summaries:
+  kids: Jain communities have handed down teachings about how to live, including rules for monks and
+    nuns. Different Jain traditions tell the story of these books differently.
+  teen: The Shvetambara Agamas comprise several categories, including the Angas. Jain communities
+    differ over which texts they recognise and over the survival of materials transmitted from
+    Mahavira.
+datings:
+  - method: linguistic
+    range:
+      earliest: "400 BCE"
+      latest: 600
+      precision: century
+      circa: true
+    grade: C
+    label: Early oral strata through late ancient written collections
+    sources:
+      - src.dundas-2002-the-jains
+      - src.jaini-1979-jaina-path-of-purification
+      - src.wiles-2006-dating-jaina-councils
+    note: Language and genre place some materials centuries earlier than the written canon. These are
+      bounds for different processes of transmission.
+  - method: traditional-sampradaya
+    range:
+      earliest: 450
+      latest: 550
+      precision: century
+      circa: true
+    grade: D
+    label: "Shvetambara tradition: redaction at Valabhi"
+    sources:
+      - src.wiles-2006-dating-jaina-councils
+      - src.dundas-2002-the-jains
+    note: This tradition dates Devarddhigani’s work at Valabhi to 980 years after Mahavira’s death.
+      Wiles reports conversions of that year ranging from 454 to 543 CE.
+  - method: traditional-sampradaya
+    range: { earliest: 460, latest: 560, precision: century, circa: true }
+    grade: D
+    label: Alternative recension traditions associated with the year 993 of the Vira era
+    sources: [src.wiles-2006-dating-jaina-councils]
+    note: Wiles discusses accounts using 993 years after Mahavira’s death, including one which
+      associates the year with Skandilacharya and a council in Mathura.
+claims:
+  - text: The transmitted Shvetambara canon contains Prakrit works of different ages, including the
+      Acharanga.
+    grade: B
+    sources:
+      - src.dundas-2002-the-jains
+      - src.jaini-1979-jaina-path-of-purification
+  - text: Digambara tradition holds that the original Angas and Purvas were lost.
+    grade: D
+    sources:
+      - src.dundas-2002-the-jains
+      - src.jaini-1979-jaina-path-of-purification
+relations:
+  - kind: related-to
+    target: person.mahavira
+debate: Dundas and Jaini summarise the traditional accounts of councils and writing. Wiles finds
+  that the surviving chronological notices are late and ambiguous, so they give weak grounds for
+  assigning a firm year to a council.
+tags:
+  - jainism
+  - prakrit
+  - shvetambara
+  - canon
+review:
+  status: draft
+  author: codex-gpt-6

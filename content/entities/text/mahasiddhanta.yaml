@@ -1,0 +1,60 @@
+id: text.mahasiddhanta
+type: text
+kind: science
+names:
+  en: Mahasiddhanta of Aryabhata II
+  iast: Mahāsiddhānta
+  native: महासिद्धान्त
+summary: Aryabhata II’s Mahasiddhanta uses syllables to encode numerical constants for astronomy. Textual
+  references point to a medieval work, while an analysis of its numerical constants suggests a much later
+  configuration.
+summaries:
+  kids: This astronomy book turns large numbers into strings of sounds, making them fit into Sanskrit verse.
+  teen: The author uses a form of alphabetic number notation to encode astronomical constants. A twelfth-century
+    reference and a later numerical fit give different clues to the history of the text.
+datings:
+  - method: textual-internal
+    range:
+      earliest: 950
+      latest: 1100
+      precision: century
+      circa: true
+    grade: C
+    label: Medieval composition (Pingree and Plofker)
+    sources:
+      - id: src.pingree-1970-census-exact-sciences
+        locator: Vol. 1, pp. 53-54
+      - id: src.plofker-2009-mathematics-in-india
+        locator: Appendix B
+    note: Bhaskara II mentions a distinctive feature of this work.
+  - method: astronomical-reference
+    range:
+      earliest: 1500
+      latest: 1550
+      precision: decade
+      circa: true
+    grade: C
+    label: Early sixteenth-century parameter fit (Billard)
+    sources:
+      - id: src.billard-1971-astronomie-indienne
+        locator: pp. 161-162
+      - id: src.plofker-2009-mathematics-in-india
+        locator: Section 4.6
+    note: This is the fit of astronomical constants in the surviving text.
+claims:
+  - text: Verses 1.2 and 1.7 give a variant alphabetic encoding and apply it to numbers of revolutions in an
+      astronomical cycle.
+    grade: A
+    sources:
+      - id: src.plofker-2009-mathematics-in-india
+        locator: Section 4.3
+relations: []
+debate: The distinctive method attributed to Aryabhata in Bhaskara II supports a medieval composition. Billard
+  found an early sixteenth-century fit for the transmitted parameters. The two lines of evidence date
+  different features of the work.
+tags:
+  - astronomy
+  - numerical-notation
+review:
+  status: draft
+  author: codex-gpt-6

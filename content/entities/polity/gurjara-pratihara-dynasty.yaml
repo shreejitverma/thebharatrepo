@@ -1,0 +1,55 @@
+id: polity.gurjara-pratihara-dynasty
+type: polity
+kind: polity
+names:
+  en: Gurjara-Pratihara Dynasty
+  iast: Gurjara-Pratīhāra
+summary: The Gurjara-Pratiharas rose in western India and made Kannauj a seat of power under
+  Nagabhata II. Their inscriptions and those of rival dynasties trace a long struggle for influence
+  across northern India.
+summaries:
+  kids: The Pratiharas began in western India and later ruled from Kannauj. Stone and copper records
+    tell us about their rulers and their rivals.
+  teen: The Pratiharas, Palas and Rashtrakutas competed for influence around Kannauj. Reading records
+    from all three houses helps historians compare their claims.
+region: Western and northern India
+location:
+  name: Kannauj (imperial seat)
+  lat: 27.05
+  lon: 79.92
+datings:
+  - method: scholarly-consensus
+    range:
+      earliest: "725"
+      latest: "1030"
+      precision: decade
+      circa: true
+    grade: B
+    label: Period of rule
+    sources:
+      - src.singh-2008-ancient-early-medieval-india
+      - src.thapar-2002-early-india
+    note: The range covers the imperial line from the early Nagabhata to the decline of its Kannauj
+      court.
+claims:
+  - text: The eulogy of Mihira Bhoja at Gwalior gives a genealogy of the Pratihara ruling line and
+      records claims about its early kings.
+    grade: A
+    sources:
+      - src.singh-2008-ancient-early-medieval-india
+      - src.salomon-1998-indian-epigraphy
+  - text: The court established at Kannauj competed with both the Palas and the Rashtrakutas for
+      influence in northern India.
+    grade: B
+    sources:
+      - src.singh-2008-ancient-early-medieval-india
+      - src.thapar-2002-early-india
+relations:
+  - kind: related-to
+    target: polity.pala-empire
+  - kind: related-to
+    target: polity.rashtrakuta-dynasty
+tags: []
+review:
+  status: draft
+  author: codex-gpt-6

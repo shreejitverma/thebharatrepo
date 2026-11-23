@@ -1,0 +1,49 @@
+id: event.third-anglo-mysore-war
+type: event
+kind: event
+names:
+  en: Third Anglo-Mysore War
+summary: After conflict between Mysore and Travancore, the East India Company allied with the
+  Nizam of Hyderabad and the Marathas against Tipu Sultan. The 1792 Treaty of Seringapatam
+  forced Mysore to cede extensive territory.
+summaries:
+  kids: Three powers joined against Tipu Sultan. After making peace, he had to give up much of the
+    land he ruled.
+  teen: The coalition of the Company, Hyderabad and the Marathas compelled Tipu to cede territory
+    and pay an indemnity. Two of his sons were handed over as hostages to guarantee payment.
+region: Mysore, Travancore and the southern Deccan
+datings:
+  - method: scholarly-consensus
+    range:
+      earliest: "1790"
+      latest: "1792"
+      precision: year
+      circa: false
+    grade: B
+    label: Company-led war
+    sources:
+      - src.national-army-museum-tipu-war-turban
+      - src.bayly-1988-making-of-british-empire
+    note: The fighting between Mysore and Travancore that precipitated the wider war began in late
+      1789.
+claims:
+  - text: The peace in 1792 redistributed Mysore's territory among the allies and required Tipu to
+      provide two of his sons as surety.
+    grade: B
+    sources:
+      - src.aitchison-1909-mysore-treaties
+      - src.bayly-1988-making-of-british-empire
+      - src.national-army-museum-tipu-war-turban
+relations:
+  - kind: related-to
+    target: person.tipu-sultan
+  - kind: related-to
+    target: polity.maratha-empire
+  - kind: preceded
+    target: event.fourth-anglo-mysore-war
+tags:
+  - mysore
+  - company-rule
+review:
+  status: draft
+  author: codex-gpt-6

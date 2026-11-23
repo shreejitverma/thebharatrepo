@@ -1,0 +1,79 @@
+id: tradition.sattriya
+type: tradition
+kind: art
+names:
+  en: Sattriya
+  iast: Sattrīyā
+  native: সত্ৰীয়া নৃত্য
+summary: "Sattriya is the neo-Vaishnava dance and dance-drama tradition nurtured since the sixteenth century inside the sattras (monasteries) of Assam. Originating in the Ankiya Nat plays and Borgeet devotional songs of Srimanta Sankardev and Madhavdev, it was transmitted by monastic performers (bhakats) before receiving Sangeet Natak Akademi recognition as a classical dance in 2000."
+summaries:
+  kids: "Sattriya is a classical dance from Assam that began in Vaishnava monasteries about five hundred years ago to enact devotional plays created by the saint Sankardev."
+  teen: Rooted in the Ekasarana Vaishnava monasteries (sattras) of Assam and the fifteenth-sixteenth-century Ankiya Nat
+    plays of Sankardev, Sattriya entered the national classical canon in 2000.
+region: Assam (Majuli and Brahmaputra valley sattras)
+location:
+  name: Majuli, Assam
+  lat: 26.95
+  lon: 94.167
+datings:
+  - method: traditional-sampradaya
+    range:
+      earliest: 1449
+      latest: 1568
+      precision: year
+      circa: true
+    grade: D
+    label: Ekasarana monastic tradition attributing origins to Srimanta Sankardev
+    sources:
+      - src.sarma-1966-neo-vaisnavite-movement
+      - src.neog-1973-sattriya-dances
+    note: Assamese hagiographies place founder Sankardev at 1449-1568 CE (with 1463 CE as an alternate birth year),
+      crediting him with initiating Ankiya Nat performances such as Cihna Yatra.
+  - method: scholarly-consensus
+    range:
+      earliest: 1550
+      latest: 2000
+      precision: century
+      circa: true
+    grade: B
+    label: Institutionalisation in Assamese sattras through modern stage transition
+    sources:
+      - src.neog-1973-sattriya-dances
+      - src.cantlie-1984-the-assamese
+      - src.kothari-2013-sattriya
+    note: Maheswar Neog and S. N. Sarma document how sattra monasteries codified distinct dance numbers, khol percussion
+      rhythms and hand mudras over the 16th-20th centuries.
+claims:
+  - text: Sattriya combines devotional narrative drama (Ankiya Nat / Bhaona) with Borgeet musical compositions and the khol
+      drum and bhortal cymbals.
+    grade: A
+    sources:
+      - src.neog-1973-sattriya-dances
+      - src.sarma-1966-neo-vaisnavite-movement
+  - text: In November 2000 the Sangeet Natak Akademi recognised Sattriya as a classical dance of India, after Maheswar
+      Neog had documented its sattra rhythmic and movement lineages.
+    grade: A
+    sources:
+      - src.kothari-2013-sattriya
+      - src.neog-1973-sattriya-dances
+relations:
+  - kind: founded-by
+    target: person.sankardev
+  - kind: related-to
+    target: text.natyashastra
+wikidata: Q2724537
+image:
+  commons: File:Priyakshee Kataky.jpg
+  alt: Sattriya dancer in traditional Assamese pat silk costume displaying symmetrical hand mudras
+  credit: Sattriyadance
+  license: CC BY-SA 4.0
+tags:
+  - sattriya
+  - dance
+  - assam
+  - sankardev
+  - satra
+  - ankiya-nat
+review:
+  status: draft
+  author: gemini-4-hydrogen-xhigh

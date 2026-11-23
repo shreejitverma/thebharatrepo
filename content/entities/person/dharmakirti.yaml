@@ -1,0 +1,58 @@
+id: person.dharmakirti
+type: person
+kind: person
+names:
+  en: Dharmakirti
+  iast: Dharmakīrti
+  native: धर्मकीर्ति
+summary: Dharmakirti developed Buddhist theories of perception, inference and reliable knowledge in
+  works including the Pramanavarttika. His dating remains contested between a sixth-century and a
+  seventh-century placement.
+summaries:
+  kids: Dharmakirti asked what makes a belief reliable. He built on Dignaga’s work about seeing things
+    and reasoning from clues.
+  teen: Dharmakirti uses Dignaga’s theory of knowledge as a point of departure, developing detailed
+    arguments about perception and inference. Scholars reconstruct his dates partly from how
+    neighboring traditions responded to his ideas.
+datings:
+  - method: textual-internal
+    range:
+      earliest: "550"
+      latest: "610"
+      precision: decade
+      circa: true
+    grade: C
+    label: Piotr Balcerowicz’s relative chronology
+    sources:
+      - src.balcerowicz-2016-dharmakirti-samantabhadra
+    note: Balcerowicz compares Dharmakirti’s arguments with those of Jain philosophers, including
+      Samantabhadra.
+  - method: textual-internal
+    range:
+      earliest: "600"
+      latest: "660"
+      precision: decade
+      circa: true
+    grade: C
+    label: Erich Frauwallner’s later chronology
+    sources:
+      - src.balcerowicz-2016-dharmakirti-samantabhadra
+      - src.arnold-2012-dignaga-dharmakirti
+    note: Frauwallner’s reconstruction, followed in much scholarship, gives greater weight to the later
+      record of his reception.
+claims:
+  - text: The Pramanavarttika is framed as a commentary on Dignaga’s Pramanasamuccaya and elaborates its
+      account of reliable knowledge.
+    grade: B
+    sources:
+      - src.arnold-2012-dignaga-dharmakirti
+relations: []
+debate: The earlier dating emphasizes textual relationships across Buddhist and Jain authors. The
+  later dating depends in part on when Dharmakirti can be identified in the surviving record.
+tags:
+  - buddhist-philosophy
+  - logic
+  - epistemology
+review:
+  status: draft
+  author: codex-gpt-6

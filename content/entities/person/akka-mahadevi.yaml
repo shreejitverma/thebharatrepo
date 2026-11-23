@@ -1,0 +1,45 @@
+id: person.akka-mahadevi
+type: person
+kind: person
+names:
+  en: Akka Mahadevi
+  iast: Akka Mahādēvi
+  native: ಅಕ್ಕ ಮಹಾದೇವಿ
+summary: Akka Mahadevi is a Kannada vachana poet associated with the twelfth-century Virashaiva
+  tradition. Her verse addresses Shiva as Chennamallikarjuna and uses the language of love and
+  separation.
+summaries:
+  kids: Akka Mahadevi wrote short poems in Kannada. In them she speaks to Shiva with the affection and
+    longing of someone talking to a beloved.
+  teen: Akka Mahadevi’s vachanas use the voice of a bride or lover to express a bond with Shiva. The
+    poems are a firmer basis for describing her teaching than the details found in later stories
+    about her life.
+region: Karnataka
+datings:
+  - method: scholarly-consensus
+    range:
+      earliest: "1100"
+      latest: "1200"
+      precision: century
+      circa: true
+    grade: B
+    label: Twelfth-century Kannada vachana milieu
+    sources:
+      - src.ramanujan-1973-speaking-of-siva
+      - src.barua-2024-bhakti
+claims:
+  - text: The vachanas translated by Ramanujan repeatedly address Shiva by the name Chennamallikarjuna.
+    grade: A
+    sources:
+      - src.ramanujan-1973-speaking-of-siva
+relations:
+  - kind: related-to
+    target: text.vachana-sahitya
+tags:
+  - kannada
+  - vachana
+  - shaiva-bhakti
+  - women
+review:
+  status: draft
+  author: codex-gpt-6

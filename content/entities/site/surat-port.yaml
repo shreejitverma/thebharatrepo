@@ -1,0 +1,46 @@
+id: "site.surat-port"
+type: "site"
+kind: "site"
+names:
+  en: "Surat port"
+summary: "Surat grew into a major port of Mughal India. Its merchants and shippers connected western
+  India to the Red Sea and Persian Gulf, and Surat served pilgrims travelling to Mecca."
+summaries:
+  kids: "Ships sailed from Surat with goods and passengers. Some carried pilgrims on the sea journey
+    towards Mecca."
+  teen: "Mughal rule widened Surat's inland commercial links, while Indian Ocean networks connected it
+    to West Asia. European trading companies entered a port economy already served by established
+    merchants."
+region: "Surat, Gujarat"
+datings:
+  - method: "scholarly-consensus"
+    range:
+      earliest: 1572
+      latest: 1730
+      precision: "century"
+      circa: true
+    grade: "B"
+    label: "Surat's expansion as a Mughal port"
+    sources:
+      - "src.hasan-2004-state-and-locality"
+    note: "The range covers the period studied by Hasan and does not imply that trade began or ended on
+      these dates."
+claims:
+  - text: "Hasan links Surat's seventeenth-century rise to its expanding hinterland after the Mughal
+      conquest."
+    grade: "B"
+    sources:
+      - "src.hasan-2004-state-and-locality"
+  - text: "The English East India Company established a trading station in the Mughal port in the early
+      seventeenth century."
+    grade: "A"
+    sources:
+      - "src.british-library-east-india-company-voyages"
+relations: []
+tags:
+  - "gujarat"
+  - "indian-ocean"
+  - "trade"
+review:
+  status: "draft"
+  author: "codex-gpt-6"

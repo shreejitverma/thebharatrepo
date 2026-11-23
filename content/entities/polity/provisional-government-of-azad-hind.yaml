@@ -1,0 +1,51 @@
+id: polity.provisional-government-of-azad-hind
+type: polity
+kind: polity
+names:
+  en: Provisional Government of Azad Hind
+summary: Subhas Chandra Bose proclaimed the Provisional Government of Azad Hind in Singapore in
+  October 1943. It claimed to represent an independent India, worked with Japan and directed the
+  Indian National Army's campaign against British rule.
+summaries:
+  kids: From Singapore, Bose announced a government that claimed to speak for a free India. It
+    worked with Japan during the Second World War.
+  teen: Azad Hind was an anti-colonial government in exile established with Japanese backing. It
+    gave Bose's military campaign a political and diplomatic framework and continued until
+    Japan's defeat in 1945.
+region: Singapore, Japanese-occupied Southeast Asia and the Andaman and Nicobar Islands
+datings:
+  - method: scholarly-consensus
+    range:
+      earliest: "1943"
+      latest: "1945"
+      precision: year
+      circa: false
+    grade: B
+    label: Proclamation to the end of the war
+    sources:
+      - src.yellen-2019-wartime-wilsonianism
+      - src.bose-2011-his-majestys-opponent
+claims:
+  - text: Bose proclaimed Azad Hind on 21 October 1943 and attended the Greater East Asia Conference
+      in Tokyo the following month as an observer.
+    grade: B
+    sources:
+      - src.yellen-2019-wartime-wilsonianism
+      - src.bose-2011-his-majestys-opponent
+  - text: The Indian National Army served as the military arm of the provisional government.
+    grade: B
+    sources:
+      - src.mukherjee-2019-indian-national-army-trial
+      - src.bose-2011-his-majestys-opponent
+relations:
+  - kind: founded-by
+    target: person.subhas-chandra-bose
+  - kind: related-to
+    target: polity.indian-national-army
+tags:
+  - azad-hind
+  - second-world-war
+  - government-in-exile
+review:
+  status: draft
+  author: codex-gpt-6

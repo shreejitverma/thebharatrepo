@@ -1,0 +1,41 @@
+id: person.bahlul-lodi
+type: person
+kind: person
+names:
+  en: Bahlul Lodi
+summary: Bahlul Lodi founded the Lodi line of Delhi in 1451. The conflict with the Sharqi rulers of
+  Jaunpur occupied much of his reign before he extended his control there.
+summaries:
+  kids: Bahlul began the Lodi line of rulers. He brought Jaunpur under his rule after years of rivalry.
+  teen: Bahlul came to power through an Afghan political network. His reign expanded the Sultanate's
+    reach eastward before the succession of Sikandar Lodi.
+region: Delhi, Punjab and north India
+datings:
+  - method: documentary
+    range:
+      earliest: "1451"
+      latest: "1489"
+      precision: year
+      circa: false
+    grade: B
+    label: Reign or recorded political activity
+    sources:
+      - src.jackson-1999-delhi-sultanate
+      - src.asher-talbot-2006-india-before-europe
+    note: The dated succession fixes the reign of the first Lodi ruler.
+claims:
+  - text: The first Lodi sultan acceded in 1451 and died in 1489.
+    grade: B
+    sources:
+      - src.jackson-1999-delhi-sultanate
+  - text: Bahlul ultimately brought Jaunpur into his realm.
+    grade: B
+    sources:
+      - src.jackson-1999-delhi-sultanate
+relations:
+  - kind: founded
+    target: polity.lodi-dynasty
+tags: []
+review:
+  status: draft
+  author: codex-gpt-6

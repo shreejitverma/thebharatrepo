@@ -1,0 +1,45 @@
+id: event.battle-of-buxar
+type: event
+kind: event
+names:
+  en: Battle of Buxar
+summary: In October 1764 the East India Company defeated forces associated with Mir Qasim, Shuja
+  ud-Daula of Awadh and the Mughal emperor Shah Alam II. The victory helped the Company secure
+  the Bengal revenue grant the following year.
+summaries:
+  kids: Three rulers joined forces against the East India Company. The Company won at Buxar and
+    gained a stronger position in eastern India.
+  teen: Buxar followed Mir Qasim's conflict with the Company in Bengal. The victory gave the
+    Company leverage over Awadh and Shah Alam II in the settlements of 1765.
+region: Buxar, present-day Bihar
+datings:
+  - method: scholarly-consensus
+    range:
+      earliest: "1764"
+      latest: "1764"
+      precision: year
+      circa: false
+    grade: B
+    label: Battle in October 1764
+    sources:
+      - src.travers-2007-crisis-in-bengal
+      - src.marshall-1987-bengal-british-bridgehead
+claims:
+  - text: The defeated coalition included the former nawab of Bengal, the nawab of Awadh and the
+      Mughal emperor.
+    grade: B
+    sources:
+      - src.travers-2007-crisis-in-bengal
+      - src.marshall-1987-bengal-british-bridgehead
+relations:
+  - kind: related-to
+    target: event.battle-of-plassey
+  - kind: preceded
+    target: event.diwani-grant-of-1765
+tags:
+  - company-rule
+  - bengal
+  - awadh
+review:
+  status: draft
+  author: codex-gpt-6

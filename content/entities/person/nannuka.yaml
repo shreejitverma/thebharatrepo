@@ -1,0 +1,39 @@
+id: person.nannuka
+type: person
+kind: person
+names:
+  en: Nannuka
+summary: Nannuka is the earliest human ruler named in the Chandela genealogy at Khajuraho. The
+  retrospective record supports an early ninth-century placement, although his exact reign is
+  uncertain.
+summaries:
+  kids: A stone record at Khajuraho remembers Nannuka as an early Chandela ruler. It was carved
+    generations after him.
+  teen: Nannuka's name comes from later Chandela genealogies. A dated inscription can establish when a
+    genealogy was carved while leaving the dates of its earliest names uncertain.
+region: Bundelkhand
+datings:
+  - method: epigraphic
+    range:
+      earliest: "800"
+      latest: "855"
+      precision: decade
+      circa: true
+    grade: C
+    label: Reign or recorded political activity
+    sources:
+      - src.singh-2008-ancient-early-medieval-india
+      - src.burgess-1892-epigraphia-indica-vol-1
+    note: Generational estimates from later Chandela records supply the broad date.
+claims:
+  - text: The dated Lakshmana temple inscription at Khajuraho includes Nannuka in the Chandela genealogy.
+    grade: A
+    sources:
+      - src.burgess-1892-epigraphia-indica-vol-1
+relations:
+  - kind: founded
+    target: polity.chandela-dynasty
+tags: []
+review:
+  status: draft
+  author: codex-gpt-6

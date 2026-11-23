@@ -1,0 +1,45 @@
+id: person.alauddin-husain-shah
+type: person
+kind: person
+names:
+  en: Alauddin Husain Shah
+  native: আলাউদ্দিন হোসেন শাহ
+summary: "Alauddin Husain Shah (r. 1494-1519 CE) founded the Husain Shahi dynasty of the Bengal Sultanate after overthrowing the Habshi regime and restoring stability across Bengal. Attested by numerous Arabic inscriptions and silver coins, his reign is often regarded as the cultural height of the Sultanate, with royal patronage extending to Bengali poets, administrative appointments across communities, and the era of Chaitanya Mahaprabhu."
+summaries:
+  kids: >-
+    Sultan Alauddin Husain Shah ruled Bengal from 1494 to 1519 CE, bringing peace after years of
+    unrest, building bridges and mosques, and supporting writers in the Bengali language.
+  teen: >-
+    Founder of the Husain Shahi dynasty (1494-1519 CE), Alauddin Husain Shah expanded Bengal's borders
+    toward Kamata and Odisha, integrated Bengali Hindus such as Rupa and Sanatana Goswami into senior
+    administration, and presided over a golden age of Middle Bengali literature.
+region: Bengal, Kamata and Bihar frontier
+location: { name: "Gaur (Lakhnauti), Malda", lat: 24.867, lon: 88.137 }
+datings:
+  - method: numismatic
+    range: { earliest: 1494, latest: 1519, precision: year, circa: false }
+    grade: A
+    label: Dated coinage and architectural inscriptions (899-925 AH)
+    sources:
+      - src.tarafdar-1965-husain-shahi-bengal
+      - src.hussain-2003-bengal-sultanate
+      - src.eaton-1996-rise-of-islam-bengal-frontier
+    note: Silver tankas and over a hundred Arabic stone inscriptions unambiguously span his reign from 1494 CE (899 AH) to his death in 1519 CE (925 AH).
+claims:
+  - text: Contemporary inscriptions and coins confirm Husain Shah's campaigns into Kamata (1498 CE) and border conflicts with Orissa and Tripura, alongside a diplomatic agreement with Sikandar Lodi of Delhi.
+    grade: A
+    sources:
+      - src.tarafdar-1965-husain-shahi-bengal
+      - src.hussain-2003-bengal-sultanate
+  - text: Under Husain Shah, Bengali scholars and officials held high state offices (such as Rupa and Sanatana Goswami prior to joining Chaitanya) and vernacular works including Maladhar Basu's Srikrishnavijaya and Vipradasa's Manasamangala flourished.
+    grade: B
+    sources:
+      - src.eaton-1996-rise-of-islam-bengal-frontier
+      - src.sen-1992-history-of-bengali-literature
+relations:
+  - { kind: contemporary-of, target: person.chaitanya-mahaprabhu }
+  - { kind: related-to, target: polity.koch-dynasty }
+  - { kind: ruled, target: polity.bengal-sultanate }
+wikidata: Q4060542
+tags: [husain-shah, bengal-sultanate, gaur, coins, bengali-literature]
+review: { status: draft, author: "gemini-4-hydrogen-xhigh" }

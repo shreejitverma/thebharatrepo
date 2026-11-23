@@ -1,0 +1,75 @@
+id: person.nimbarka
+type: person
+kind: person
+names:
+  en: Nimbarka
+  iast: Nimbārka
+  native: निम्बार्क
+summary: Nimbarka is the Vedanta teacher associated with the Vedanta-Parijata-Saurabha, a commentary
+  on the Brahma Sutra. His school teaches difference and non-difference and reveres Radha and
+  Krishna. His chronology is contested.
+summaries:
+  kids: Nimbarka explained an old book about the deepest reality. The tradition that grew around his
+    teaching honors Radha and Krishna together.
+  teen: Nimbarka’s commentary presents souls and the world as dependent on Brahman while retaining
+    their distinct characteristics. Comparing Vedanta commentaries has led scholars to widely
+    different dates.
+datings:
+  - method: textual-internal
+    range:
+      earliest: "620"
+      latest: "690"
+      precision: decade
+      circa: true
+    grade: C
+    label: Vijay Ramnarace’s seventh-century reconstruction
+    sources:
+      - src.ramnarace-2015-vedantic-debut
+    note: Ramnarace uses comparative study of the Brahma Sutra commentarial tradition.
+  - method: textual-internal
+    range:
+      earliest: "1100"
+      latest: "1200"
+      precision: century
+      circa: true
+    grade: C
+    label: R. G. Bhandarkar’s twelfth-century estimate
+    sources:
+      - src.uskokov-2018-nimbarka
+    note: Bhandarkar placed Nimbarka after Ramanuja.
+  - method: textual-internal
+    range:
+      earliest: "1250"
+      latest: "1400"
+      precision: century
+      circa: true
+    grade: C
+    label: Later medieval placement discussed by Aleksandar Uskokov
+    sources:
+      - src.uskokov-2018-nimbarka
+    note: Uskokov favors placing him after Madhva. The range gives a broad horizon for that relative
+      placement.
+claims:
+  - text: The Vedanta-Parijata-Saurabha is Nimbarka’s commentary on the Brahma Sutra.
+    grade: B
+    sources:
+      - src.uskokov-2018-nimbarka
+  - text: Early texts of the Nimbarka Sampradaya combine Vedanta interpretation with a theology of Radha
+      and Krishna.
+    grade: B
+    sources:
+      - src.ramnarace-2016-brahman-between-lines
+      - src.ramnarace-2015-vedantic-debut
+relations:
+  - kind: related-to
+    target: person.badarayana
+debate: The debate turns partly on how to read Nimbarka’s relationship to other Vedanta
+  commentators. Ramnarace argues for the seventh century, Bhandarkar proposed the twelfth, and
+  Uskokov favors a relative placement after Madhva.
+tags:
+  - vedanta
+  - bhedabheda
+  - radha-krishna
+review:
+  status: draft
+  author: codex-gpt-6

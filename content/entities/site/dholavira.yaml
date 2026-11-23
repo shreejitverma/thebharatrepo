@@ -43,19 +43,6 @@ datings:
       years, from the beginning of the third millennium BCE: Early Harappan (Stages I-II), Mature Harappan (Stages
       III-V), Late Harappan (Stage VI) and a deurbanised final occupation (Stage VII), after which the site was
       not reoccupied.
-  - method: documentary
-    range:
-      earliest: 2021
-      latest: 2021
-      precision: year
-      circa: false
-    grade: A
-    label: UNESCO World Heritage Inscription
-    sources:
-      - src.unesco-2021-dholavira
-    note: >-
-      Inscribed on the UNESCO World Heritage List in July 2021 under criteria (iii) and (iv) as "Dholavira: a
-      Harappan City".
 claims:
   - text: >-
       On Khadir island, which receives only about 260 mm of rain a year and has no perennial river, Dholavira's

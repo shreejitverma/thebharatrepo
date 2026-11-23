@@ -1,0 +1,49 @@
+id: polity.zamorins-of-calicut
+type: polity
+kind: polity
+names:
+  en: Zamorins of Calicut
+  iast: Sāmūtiri
+  native: കോഴിക്കോട് സാമൂതിരി
+summary: >-
+  The Zamorins (Samoothiri or Nediyiruppu Swaroopam) were the hereditary rulers of Kozhikode (Calicut) on Kerala's Malabar Coast from the post-Chera fragmentation of the 12th century until British annexation in 1792 CE. Transforming Calicut into one of the Indian Ocean's wealthiest pepper and spice emporia through maritime partnerships with Arab, Mappila, Chinese, and Gujarati merchants, the Zamorins presided over the Mamankam festival, resisted Portuguese naval supremacy throughout the 16th century with the Kunjali Marakkar admirals, and later fought Mysorean invasions.
+summaries:
+  kids: >-
+    The Zamorins were the kings of Calicut in Kerala, who grew wealthy from sea trade in black pepper and spices and fought long sea battles against the Portuguese in the 1500s.
+  teen: >-
+    Emerging after the Chera Perumal kingdom broke up in the 12th century, the Zamorins made Calicut a cosmopolitan Indian Ocean spice hub and spearheaded century-long maritime resistance to Portuguese fleets alongside the Kunjali Marakkars.
+region: Northern Kerala (Malabar Coast, centered on Kozhikode / Calicut)
+location: { name: "Kozhikode (Calicut), Kerala", lat: 11.25, lon: 75.78 }
+datings:
+  - method: documentary
+    range: { earliest: "1150 CE", latest: "1792 CE", precision: decade, circa: true }
+    grade: C
+    label: Post-Perumal rise in Malabar to East India Company pensioning (1792 CE)
+    sources:
+      - src.krishnaayyar-1938-zamorins-of-calicut
+      - src.menon-2007-survey-of-kerala-history
+      - src.subrahmanyam-1997-career-legend-vasco-da-gama
+    note: The Zamorins emerged from Eranad chiefs in the wake of Chera Perumal dissolution in the 12th century, hosted Ibn Battuta (1340s) and Vasco da Gama (1498), fell to Mysorean conquest in 1766 CE, and surrendered sovereignty to the British after 1792 CE.
+claims:
+  - text: Calicut under the Zamorins functioned as an open Indian Ocean free port frequented by Arab, Mappila, Jewish, Gujarati, and Chinese Ming fleets (including Zheng He's expeditions), famous for fair customs administration.
+    grade: B
+    sources:
+      - src.krishnaayyar-1938-zamorins-of-calicut
+      - src.subrahmanyam-1997-career-legend-vasco-da-gama
+  - text: After Vasco da Gama's 1498 arrival and subsequent Portuguese attempts to monopolise the spice trade, the Zamorins and their hereditary Muslim naval commanders (the Kunjali Marakkars) waged prolonged warfare against the Estado da India.
+    grade: A
+    sources:
+      - src.subrahmanyam-1997-career-legend-vasco-da-gama
+      - src.menon-2007-survey-of-kerala-history
+  - text: The Zamorin court patronised Sanskrit and Malayalam learning, including the Revathi Pattathanam scholarly assembly at Tali temple and the royal Krishna devotional drama Krishnanattam.
+    grade: B
+    sources:
+      - src.krishnaayyar-1938-zamorins-of-calicut
+      - src.menon-2007-survey-of-kerala-history
+relations:
+  - { kind: related-to, target: person.haidar-ali, note: Mysorean forces conquered Calicut in 1766 CE }
+  - { kind: contemporary-of, target: polity.kingdom-of-travancore }
+  - { kind: related-to, target: event.vasco-da-gama-arrives-in-calicut, note: Received Vasco da Gama at Calicut in 1498 CE }
+wikidata: Q2122988
+tags: [zamorin, samoothiri, calicut, kozhikode, kerala, indian-ocean-trade]
+review: { status: draft, author: "gemini-4-hydrogen-xhigh" }

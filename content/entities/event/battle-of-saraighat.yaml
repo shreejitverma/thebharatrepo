@@ -1,0 +1,48 @@
+id: event.battle-of-saraighat
+type: event
+kind: event
+names:
+  en: Battle of Saraighat
+  native: শৰাইঘাটৰ যুদ্ধ
+summary: >-
+  The Battle of Saraighat, fought in 1671 CE on the Brahmaputra River near Guwahati, was a decisive
+  naval victory by the Ahom kingdom under Lachit Borphukan over a larger Mughal expedition commanded
+  by Raja Ram Singh I of Amber. Exploiting the narrow river gorge, fortified banks and fast war-boats,
+  the Ahoms thwarted imperial Mughal conquest of the Brahmaputra valley.
+summaries:
+  kids: >-
+    In 1671, on a narrow stretch of the Brahmaputra River near Guwahati, Ahom commander Lachit
+    Borphukan led fast war-boats to defeat a much larger Mughal army and navy at Saraighat.
+  teen: >-
+    Fought in March 1671 on the Brahmaputra at Saraighat, the riverine clash ended Raja Ram Singh's
+    Mughal campaign to retake Guwahati, securing Ahom autonomy in lower Assam until the 19th century.
+region: Kamrup (Guwahati), Brahmaputra River, Assam
+location: { name: "Saraighat, Guwahati, Assam", lat: 26.178, lon: 91.674 }
+datings:
+  - method: documentary
+    range: { earliest: 1671, latest: 1671, precision: year, circa: false }
+    grade: A
+    label: Contemporary Ahom buranjis and Mughal court records (1671 CE)
+    sources:
+      - src.bhuyan-1947-lachit-barphukan
+      - src.gait-1906-history-of-assam
+      - src.saikia-2019-unquiet-river
+    note: Independently confirmed in both Ahom buranji chronicles and Mughal akhbarat / Alamgirnama narratives following Mir Jumla's 1662-1663 campaign and Chakradhvaj Singha's counter-offensive.
+claims:
+  - text: Following the 1663 Treaty of Ghilajharighat and the 1667 Ahom recovery of Guwahati, Aurangzeb dispatched Raja Ram Singh I with Mughal and Rajput forces, which the Ahoms checked in riverine warfare culminating at Saraighat in 1671.
+    grade: A
+    sources:
+      - src.bhuyan-1947-lachit-barphukan
+      - src.gait-1906-history-of-assam
+  - text: Despite illness, Lachit Borphukan rallied the Ahom fleet into a concentrated riverine counterattack in the narrow Brahmaputra channel between Kamakhya and Ashwakranta hills, forcing the Mughal withdrawal to Rangamati.
+    grade: B
+    sources:
+      - src.bhuyan-1947-lachit-barphukan
+      - src.saikia-2019-unquiet-river
+relations:
+  - { kind: related-to, target: person.lachit-borphukan }
+  - { kind: related-to, target: polity.mughal-empire }
+  - { kind: related-to, target: polity.ahom-kingdom, note: "Ahom victory over the Mughal expedition" }
+wikidata: Q4872317
+tags: [saraighat, ahom, mughal, naval-battle, assam, lachit-borphukan]
+review: { status: draft, author: "gemini-4-hydrogen-xhigh" }

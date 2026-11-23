@@ -1,0 +1,29 @@
+id: event.indian-emergency-1975-77
+type: event
+kind: polity
+names:
+  en: "The Emergency in India, 1975 to 1977"
+summary: "India's internal Emergency began with a proclamation dated 25 June 1975 and ended in March 1977. The government censored the press and detained political opponents, and the March 1977 general election brought the Janata Party to power."
+summaries:
+  kids: "During the Emergency the government limited what newspapers could publish and jailed many of its opponents. Voters chose a different government in 1977."
+  teen: "During the internal Emergency, the government used extraordinary powers to restrict civil liberties and detain opponents. The Emergency was revoked in March 1977. The election that month led to a transfer of power from Congress to the Janata Party."
+region: "India"
+datings:
+  - method: scholarly-consensus
+    range: { earliest: "1975", latest: "1977", precision: year, circa: false }
+    grade: B
+    label: "Internal Emergency"
+    sources: ["src.bose-jalal-2024-indian-emergency"]
+    note: "The proclamation was dated 25 June 1975 and the Emergency ended in March 1977."
+claims:
+  - text: "During the Emergency the government censored the press and used preventive detention against political opponents."
+    grade: B
+    sources: ["src.bose-jalal-2024-indian-emergency"]
+  - text: "The Congress government lost the 1977 general election to the Janata Party."
+    grade: B
+    sources: ["src.bose-jalal-2024-indian-emergency"]
+relations:
+  - kind: related-to
+    target: event.constitution-adopted-and-commenced
+tags: ["republic","civil-liberties","elections"]
+review: { status: draft, author: codex-gpt-6 }

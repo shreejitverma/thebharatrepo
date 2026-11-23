@@ -1,0 +1,57 @@
+id: person.vasudeva-kanva
+type: person
+kind: person
+names:
+  en: Vasudeva Kanva
+  iast: Vāsudeva Kāṇva
+summary: Vasudeva Kanva is named as the first Kanva ruler in Puranic genealogies. The accession
+  story describes him as a minister who displaced Devabhuti, the last Shunga king.
+summaries:
+  kids: Old royal lists name Vasudeva as the first Kanva king. A court story says he had served the
+    last Shunga ruler.
+  teen: The Puranic genealogy and Bana's later account preserve the transition from Devabhuti to
+    Vasudeva. They establish the received story more clearly than an exact date.
+region: Post-Shunga northern India
+datings:
+  - method: textual-internal
+    range:
+      earliest: 80 BCE
+      latest: 55 BCE
+      precision: decade
+      circa: true
+    grade: C
+    label: Approximate accession horizon
+    sources:
+      - src.singh-2008-ancient-early-medieval-india
+      - src.pargiter-1913-dynasties-kali-age
+    note: The date derives from the reconstructed transition out of the Shunga period.
+  - method: traditional-puranic
+    range:
+      earliest: 80 BCE
+      latest: 55 BCE
+      precision: decade
+      circa: true
+    grade: D
+    label: Puranic first Kanva ruler
+    sources:
+      - src.pargiter-1913-dynasties-kali-age
+    note: The king list gives Vasudeva nine years. The absolute window follows the conventional
+      placement of the list.
+claims:
+  - text: The Puranic lists place Vasudeva at the head of the Kanva line.
+    grade: D
+    sources:
+      - src.pargiter-1913-dynasties-kali-age
+  - text: Bana's Harshacharita preserves a court story of the last Shunga's death involving his minister
+      Vasudeva.
+    grade: C
+    sources:
+      - src.cowell-1897-harsa-carita
+      - src.singh-2008-ancient-early-medieval-india
+relations:
+  - kind: founded
+    target: polity.kanva-dynasty
+tags: []
+review:
+  status: draft
+  author: codex-gpt-6

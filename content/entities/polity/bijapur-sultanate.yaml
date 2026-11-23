@@ -1,0 +1,55 @@
+id: polity.bijapur-sultanate
+type: polity
+kind: polity
+names:
+  en: Bijapur Sultanate (Adil Shahi Dynasty)
+summary: The Adil Shahis established an independent sultanate at Bijapur during the breakup of
+  Bahmani authority. They sponsored a distinctive court culture, and their rule ended when the
+  Mughals took Bijapur in 1686.
+summaries:
+  kids: The Adil Shahi rulers built palaces, mosques and tombs in Bijapur. The Mughals captured their
+    capital in 1686.
+  teen: Bijapur grew from a Bahmani province into an independent power under Yusuf Adil Khan. Its
+    rulers made alliances with changing partners across the Deccan.
+region: Western Deccan
+location:
+  name: Vijayapura (Bijapur)
+  lat: 16.83
+  lon: 75.71
+datings:
+  - method: documentary
+    range:
+      earliest: "1490"
+      latest: "1686"
+      precision: decade
+      circa: true
+    grade: B
+    label: Period of rule
+    sources:
+      - src.michell-1995-architecture-art-southern-india
+      - src.eaton-2005-social-history-deccan
+      - src.eaton-2019-india-persianate-age
+    note: The start is approximate because provincial autonomy developed during the breakup of Bahmani
+      government. The Mughal conquest fixes the end.
+claims:
+  - text: Yusuf Adil Khan established the Adil Shahi line at Bijapur around 1490.
+    grade: B
+    sources:
+      - src.michell-1995-architecture-art-southern-india
+      - src.eaton-2005-social-history-deccan
+  - text: Aurangzeb's forces annexed Bijapur in 1686.
+    grade: B
+    sources:
+      - src.eaton-2019-india-persianate-age
+      - src.eaton-2005-social-history-deccan
+relations:
+  - kind: succeeded
+    target: polity.bahmani-sultanate
+    note: In the Bijapur region.
+  - kind: preceded
+    target: polity.mughal-empire
+    note: Mughal rule replaced the independent sultanate in Bijapur.
+tags: []
+review:
+  status: draft
+  author: codex-gpt-6

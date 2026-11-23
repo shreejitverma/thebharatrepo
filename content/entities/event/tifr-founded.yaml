@@ -1,0 +1,44 @@
+id: event.tifr-founded
+type: event
+kind: science
+names:
+  en: Founding of the Tata Institute of Fundamental Research
+summary: The Tata Institute of Fundamental Research began work in June 1945 under Homi Bhabha, with support
+  from the Sir Dorabji Tata Trust. It started within a cosmic-ray unit in Bangalore and moved to Bombay later
+  that year.
+summaries:
+  kids: Bhabha helped start a research institute in 1945. The first group studied cosmic rays and moved from
+    Bangalore to Bombay.
+  teen: TIFR grew from an existing cosmic-ray research unit. Its founding combined Bhabha’s scientific
+    leadership with support from the Sir Dorabji Tata Trust.
+region: Bengaluru and Mumbai
+datings:
+  - method: documentary
+    range:
+      earliest: 1945
+      latest: 1945
+      precision: year
+      circa: false
+    grade: A
+    label: Founding and move to Bombay
+    sources:
+      - src.tifr-history-and-vision
+      - src.penney-1967-homi-bhabha
+claims:
+  - text: TIFR began functioning on 1 June 1945 at the Indian Institute of Science campus in Bangalore.
+    grade: A
+    sources:
+      - src.tifr-history-and-vision
+  - text: The institute moved to Bombay in October and was formally inaugurated there in December 1945.
+    grade: A
+    sources:
+      - src.tifr-history-and-vision
+relations:
+  - kind: related-to
+    target: person.homi-bhabha
+tags:
+  - research-institutions
+  - cosmic-rays
+review:
+  status: draft
+  author: codex-gpt-6

@@ -1,0 +1,57 @@
+id: polity.hyderabad-state
+type: polity
+kind: polity
+names:
+  en: Hyderabad State (Asaf Jahi Dynasty)
+summary: Asaf Jah I established an effectively autonomous Deccan state within the late Mughal
+  political order. The Nizams later ruled from Hyderabad, and the state joined the Indian Union in
+  1948.
+summaries:
+  kids: The Nizams made a new state in the Deccan. Their court later moved to Hyderabad, the city from
+    which the state takes its name.
+  teen: Hyderabad developed through Mughal provincial offices and local political networks. Its
+    relationship to the Company and then the British Crown changed over time.
+region: Deccan
+location:
+  name: Hyderabad (later capital)
+  lat: 17.39
+  lon: 78.47
+datings:
+  - method: documentary
+    range:
+      earliest: "1724"
+      latest: "1948"
+      precision: decade
+      circa: true
+    grade: B
+    label: Period of rule
+    sources:
+      - src.hodges-2023-power-parwanas
+      - src.eaton-2019-india-persianate-age
+      - src.bandyopadhyay-2004-from-plassey-to-partition
+      - id: src.ministry-of-states-1950-white-paper-indian-states
+        locator: Part V
+    note: Historians conventionally date the autonomous state from Asaf Jah's consolidation in 1724.
+      Hyderabad was incorporated into India in 1948.
+claims:
+  - text: Asaf Jah preserved Mughal titles while developing substantial autonomy in the Deccan.
+    grade: B
+    sources:
+      - src.hodges-2023-power-parwanas
+      - src.eaton-2019-india-persianate-age
+  - text: Hyderabad became a major successor state to the Mughals and later a princely state under
+      British paramountcy.
+    grade: B
+    sources:
+      - src.hodges-2023-power-parwanas
+      - src.bandyopadhyay-2004-from-plassey-to-partition
+relations:
+  - kind: related-to
+    target: polity.mughal-empire
+  - kind: related-to
+    target: polity.golconda-sultanate
+    note: The Asaf Jahi court later moved to the city founded by the Qutb Shahis.
+tags: []
+review:
+  status: draft
+  author: codex-gpt-6

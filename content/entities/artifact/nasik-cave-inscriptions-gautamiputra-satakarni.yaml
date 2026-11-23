@@ -1,0 +1,91 @@
+id: artifact.nasik-cave-inscriptions-gautamiputra-satakarni
+type: artifact
+kind: polity
+names:
+  en: Nasik Cave Inscriptions of Gautamiputra Satakarni
+  iast: Nāsika Guhā Abhilekha (Gautamīputra Śātakarṇi)
+summary: >-
+  Prakrit Brahmi royal inscriptions carved on the walls of Cave 3 (the Queen's Cave) in the Trirashmi
+  (Pandavleni) Buddhist cave complex near Nashik, Maharashtra. Together with Cave 3 records dated Years 18 and
+  24 of Gautamiputra Satakarni, the long Year-19 prasasti of Vasishthiputra Pulumavi commissioned by Queen
+  Mother Gautami Balasri celebrates Gautamiputra's victory over the Kshaharata Shaka king Nahapana.
+summaries:
+  kids: >-
+    Carved inside Buddhist hillside caves near Nashik, ancient Prakrit inscriptions put up by a Satavahana
+    king and his mother Gautami Balasri celebrate defeating the Shaka ruler Nahapana and granting village land
+    to monks.
+  teen: >-
+    Located in Cave 3 at Pandavleni (Nashik), inscriptions of Gautamiputra Satakarni (Years 18 and 24) and
+    Gautami Balasri's famous Year-19 eulogy under Pulumavi are primary sources for Satavahana-Shaka warfare,
+    royal land grants, and early Deccan patronage of Buddhist sanghas.
+region: Trirashmi (Pandavleni) Caves, Nashik District, Maharashtra, India
+location:
+  name: Cave 3, Pandavleni Buddhist Caves, Nashik
+  lat: 19.9412
+  lon: 73.7486
+datings:
+  - method: epigraphic
+    range:
+      earliest: 100
+      latest: 165
+      best: 130
+      precision: decade
+      circa: true
+    grade: B
+    label: Years 18 and 24 of Gautamiputra Satakarni; Year 19 of Vasishthiputra Pulumavi
+    sources:
+      - src.hultzsch-1906-epigraphia-indica-vol-8
+      - src.mirashi-1981-history-inscriptions-satavahanas
+    note: >-
+      Absolute CE correlation varies slightly across Satavahana chronologies (late 1st to mid-2nd century CE);
+      synchronism with Rudradaman's Junagadh record (150 CE) anchors Vasishthiputra Pulumavi in the
+      early-to-mid 2nd century CE.
+claims:
+  - text: >-
+      Published by E. Senart in Epigraphia Indica Vol. 8 and V. V. Mirashi, Nasik Cave 3 Inscription No. 4
+      (Year 18 of Gautamiputra Satakarni) is issued from the victorious military camp at Vaijayanti and
+      transfers land formerly held by Nahapana's son-in-law Ushavadata to the Tekirasi monks.
+    grade: A
+    sources:
+      - src.hultzsch-1906-epigraphia-indica-vol-8
+      - src.mirashi-1981-history-inscriptions-satavahanas
+  - text: >-
+      Cave 3 Inscription No. 2 (dated Year 19 of Vasishthiputra Pulumavi) records the dedication of the cave
+      by Gautami Balasri and eulogises her deceased son Gautamiputra Satakarni as "extirpator of the
+      Kshaharata race" (Khakharata-vasa-niravasesa-karasa), protector of Brahmans (eka-bamhana), and conqueror
+      of Shakas, Yavanas, and Pahlavas.
+    grade: A
+    sources:
+      - src.hultzsch-1906-epigraphia-indica-vol-8
+      - src.mirashi-1981-history-inscriptions-satavahanas
+  - text: >-
+      Cross-referenced with Ushavadata's Cave 10 inscriptions and the Jogalthembi coin hoard, the Nasik cave
+      epigraphs anchor the chronological rivalry between the Satavahanas and Western Kshatrapas.
+    grade: B
+    sources:
+      - src.salomon-1998-indian-epigraphy
+      - src.singh-2008-ancient-early-medieval-india
+relations:
+  - kind: part-of
+    target: polity.satavahana-dynasty
+  - kind: related-to
+    target: artifact.satavahana-coins
+    note: Corroborates Jogalthembi coin overstrikes of Gautamiputra over Nahapana
+wikidata: null
+image:
+  commons: File:Pandavleni Caves Nashik.jpg
+  alt: >-
+    Rock-cut Buddhist Cave 3 facade at Pandavleni (Trirashmi), Nashik, housing the Satavahana royal
+    inscriptions
+  credit: Katyare
+  license: CC BY-SA 3.0
+tags:
+  - inscription
+  - satavahana
+  - nasik
+  - prakrit
+  - brahmi
+  - nahapana
+review:
+  status: draft
+  author: gemini-4-hydrogen-xhigh

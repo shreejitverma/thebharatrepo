@@ -1,0 +1,42 @@
+id: concept.mahalanobis-distance
+type: concept
+kind: science
+names:
+  en: Mahalanobis Distance
+summary: Mahalanobis distance measures how far observations or groups are apart when the scales and
+  correlations of several variables are taken into account. Mahalanobis set out the generalized measure in a
+  1936 paper.
+summaries:
+  kids: This way of measuring difference looks at several things together. It allows for measurements that
+    usually change together.
+  teen: The distance scales differences by the covariance structure of the variables. This gives a way to
+    compare multivariate observations when the variables have different units or move together.
+datings:
+  - method: documentary
+    range:
+      earliest: 1936
+      latest: 1936
+      precision: year
+      circa: false
+    grade: A
+    label: Mahalanobis's generalized-distance paper
+    sources:
+      - src.mahalanobis-2018-generalised-distance
+claims:
+  - text: The 1936 paper defines a generalized measure of separation for multivariate comparisons.
+    grade: A
+    sources:
+      - src.mahalanobis-2018-generalised-distance
+  - text: The measure uses information about both variance and correlation across the variables.
+    grade: A
+    sources:
+      - src.mahalanobis-2018-generalised-distance
+relations:
+  - kind: related-to
+    target: person.p-c-mahalanobis
+tags:
+  - statistics
+  - multivariate-analysis
+review:
+  status: draft
+  author: codex-gpt-6

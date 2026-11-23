@@ -1,0 +1,55 @@
+id: polity.somavamshi-dynasty
+type: polity
+kind: polity
+names:
+  en: Somavamshi Dynasty
+  iast: Somavaṃśī
+  native: ସୋମବଂଶୀ ରାଜବଂଶ
+summary: >-
+  The Somavamshi (Somavamsi) dynasty ruled Dakshina Kosala (western Odisha and Chhattisgarh) before
+  expanding eastward across coastal Utkala in the tenth and eleventh centuries CE, uniting much of
+  Odisha. Great patrons of Shaivism and Sanskrit copper-plate administration, rulers such as Yayati II
+  and Uddyotakeshari oversaw major phases of temple architecture at Bhubaneswar, including the
+  Brahmeshvara and Lingaraja temples.
+summaries:
+  kids: >-
+    The Somavamshi kings united western and coastal Odisha over 900 years ago and helped build many
+    of Bhubaneswar's great stone Shiva temples, including the famous Lingaraja Temple.
+  teen: >-
+    Originating in Dakshina Kosala, the Somavamshi kings absorbed Bhaumakara territory in coastal
+    Odisha and patronised mature Kalinga-style temples in Bhubaneswar before yielding to the Eastern
+    Gangas around 1112 CE.
+region: Dakshina Kosala and Utkala (Odisha)
+location: { name: "Bhubaneswar, Odisha", lat: 20.238, lon: 85.834 }
+datings:
+  - method: epigraphic
+    range: { earliest: 880, latest: 1115, precision: decade, circa: true }
+    grade: B
+    label: Epigraphic span from Janamejaya I to Karnadeva
+    sources:
+      - src.nema-1978-political-history-somavamsi
+      - src.panigrahi-1961-chronology-bhauma-karas-somavamsis
+      - src.tripathy-2010-catalogue-orissan-inscriptions
+    note: Anchored by dated copper-plate charters, the Brahmeshvara temple inscription of Uddyotakeshari's 18th year, and Eastern Ganga conquest records under Anantavarman Chodaganga around 1112-1115 CE.
+claims:
+  - text: Somavamshi kings alternated the coronation titles Mahabhavagupta and Mahashivagupta across generations, documenting their expansion from Suvarnapura and Vinitapura into Yayatinagara (Jajpur).
+    grade: A
+    sources:
+      - src.nema-1978-political-history-somavamsi
+      - src.tripathy-2010-catalogue-orissan-inscriptions
+  - text: The Brahmeshvara temple inscription of Uddyotakeshari's reign records the dedication of the Bhubaneswar temple by his mother Kolavati Devi and credits his father Yayati II with reuniting Kosala and Utkala.
+    grade: A
+    sources:
+      - src.panigrahi-1961-chronology-bhauma-karas-somavamsis
+      - src.donaldson-1985-hindu-temple-art-orissa
+  - text: Art-historical and epigraphic consensus attributes the construction of the main Lingaraja Temple at Bhubaneswar to Somavamshi patronage in the eleventh century CE.
+    grade: B
+    sources:
+      - src.donaldson-1985-hindu-temple-art-orissa
+      - src.michell-1988-hindu-temple
+relations:
+  - { kind: patronised, target: site.lingaraja-temple }
+  - { kind: preceded, target: polity.eastern-ganga-dynasty }
+wikidata: Q48726517
+tags: [somavamshi, odisha, bhubaneswar, shaivism, kalinga-architecture]
+review: { status: draft, author: "gemini-4-hydrogen-xhigh" }

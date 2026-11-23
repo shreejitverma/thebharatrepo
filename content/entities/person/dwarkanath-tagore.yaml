@@ -1,0 +1,53 @@
+id: person.dwarkanath-tagore
+type: person
+kind: person
+names:
+  en: Dwarkanath Tagore
+  native: দ্বারকানাথ ঠাকুর
+summary: >-
+  Dwarkanath Tagore (1794-1846) was an early nineteenth-century Bengali entrepreneur, civic reformer
+  and close associate of Raja Ram Mohan Roy in Calcutta. Co-founder of Carr, Tagore and Company
+  (1834) and a major promoter of the Union Bank, coal mining, indigo and steam navigation, he funded
+  the Brahmo Sabha, press freedom campaigns and Hindu College before dying in London in 1846.
+summaries:
+  kids: >-
+    Dwarkanath Tagore (1794-1846), grandfather of poet Rabindranath Tagore, was a pioneering Bengali
+    businessman and reformer who helped fund schools, newspapers and the Brahmo Sabha in Calcutta.
+  teen: >-
+    A leading figure of the early Bengal Renaissance before 1857, Dwarkanath Tagore partnered with
+    Raja Ram Mohan Roy on social and press reforms while building Carr, Tagore and Company into a
+    major Indo-British commercial house.
+region: Calcutta (Kolkata), Bengal
+location: { name: "Jorasanko, Kolkata", lat: 22.585, lon: 88.358 }
+datings:
+  - method: documentary
+    range: { earliest: 1794, latest: 1846, precision: year, circa: false }
+    grade: A
+    label: Documentary birth (1794) and death in London (1 August 1846)
+    sources:
+      - src.kling-2021-partner-in-empire
+      - src.marshall-1987-bengal-british-bridgehead
+    note: Family, commercial and British press records establish Dwarkanath Tagore's life from 1794 to 1 August 1846.
+claims:
+  - text: In 1834 Dwarkanath Tagore established Carr, Tagore and Company, one of the earliest equal-partnership Indo-British managing agency houses in Calcutta, investing in banking, coal (Raniganj) and steamships.
+    grade: A
+    sources:
+      - src.kling-2021-partner-in-empire
+      - src.marshall-1987-bengal-british-bridgehead
+  - text: Tagore supported Ram Mohan Roy's abolition-of-sati petitions, financed the Brahmo Sabha and helped establish the Landholders' Society (1838) and Calcutta Medical College.
+    grade: A
+    sources:
+      - src.kling-2021-partner-in-empire
+      - src.kopf-1969-british-orientalism-bengal-renaissance
+relations:
+  - { kind: contemporary-of, target: person.raja-ram-mohan-roy }
+  - { kind: patronised, target: tradition.brahmo-sabha }
+  - { kind: related-to, target: event.sati-abolition-regulation }
+wikidata: Q1268423
+image:
+  commons: "File:Dwarkanath Tagore - grandfather of Rabindranath Tagore.jpg"
+  alt: Nineteenth-century portrait of Bengali reformer and industrialist Dwarkanath Tagore
+  credit: Unknown author
+  license: Public domain
+tags: [dwarkanath-tagore, bengal-renaissance, calcutta, brahmo-sabha, economy]
+review: { status: draft, author: "gemini-4-hydrogen-xhigh" }

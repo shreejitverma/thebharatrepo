@@ -1,0 +1,44 @@
+id: person.vindhyashakti
+type: person
+kind: person
+names:
+  en: Vindhyashakti
+  iast: Vindhyaśakti
+summary: Vindhyashakti appears as an ancestor of the Vakataka ruling house in later dynastic
+  records. His place in the genealogy is clearer than the year in which he began to rule.
+summaries:
+  kids: An Ajanta inscription remembers Vindhyashakti as an early member of the Vakataka royal family.
+    It was carved long after he lived.
+  teen: Vindhyashakti is known through a later Vakataka genealogy. Historians place him around the
+    third century CE by working back from better-attested successors.
+region: Central Deccan
+datings:
+  - method: epigraphic
+    range:
+      earliest: "225"
+      latest: "300"
+      precision: century
+      circa: true
+    grade: C
+    label: Broad placement of the first named ancestor
+    sources:
+      - src.singh-2008-ancient-early-medieval-india
+      - src.spink-2005-ajanta-end-of-golden-age
+    note: The date is a backward reconstruction from later dynastic records.
+claims:
+  - text: The Ajanta Cave 16 royal genealogy names Vindhyashakti as an ancestor of the Vakataka line.
+    grade: A
+    sources:
+      - src.spink-2005-ajanta-end-of-golden-age
+  - text: Conventional reconstructions place him before Pravarasena I, who extended the family's
+      political power.
+    grade: C
+    sources:
+      - src.singh-2008-ancient-early-medieval-india
+relations:
+  - kind: founded
+    target: polity.vakataka-dynasty
+tags: []
+review:
+  status: draft
+  author: codex-gpt-6

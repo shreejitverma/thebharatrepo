@@ -1,0 +1,57 @@
+id: person.mandana-mishra
+type: person
+kind: person
+names:
+  en: Mandana Mishra
+  iast: Maṇḍana Miśra
+  native: मण्डन मिश्र
+summary: Mandana Mishra wrote about both Vedic injunctions and nondual Vedanta. His Brahmasiddhi
+  defends nondualism, and his chronology relative to Shankara is debated.
+summaries:
+  kids: Mandana wrote about what old religious texts ask people to do and about how they describe the
+    deepest reality.
+  teen: Mandana’s Brahmasiddhi defends nondualism, while the Vidhiviveka examines injunctions. The
+    sequence of early Vedanta texts bears on whether he wrote before or after Shankara’s major
+    commentary.
+datings:
+  - method: textual-internal
+    range:
+      earliest: "660"
+      latest: "720"
+      precision: decade
+      circa: true
+    grade: C
+    label: Early chronology discussed by Gavin Flood
+    sources:
+      - src.flood-2021-mandana-misra
+      - src.stanford-language-india-chronology
+  - method: textual-internal
+    range:
+      earliest: "700"
+      latest: "800"
+      precision: century
+      circa: true
+    grade: C
+    label: Aleksandar Uskokov’s eighth-century relative chronology
+    sources:
+      - id: src.uskokov-2026-deciphering-hidden-meaning
+        locator: Introduction
+    note: Uskokov places the authors close in time and argues that the Brahmasiddhi presupposes
+      Shankara’s Brahma Sutra commentary.
+claims:
+  - text: In the Brahmasiddhi Mandana defends nondualism against rival philosophical accounts.
+    grade: B
+    sources:
+      - src.flood-2021-mandana-misra
+relations:
+  - kind: related-to
+    target: person.adi-shankara
+debate: Flood gives a lifespan of about 660 to 720 and calls Mandana an older contemporary of
+  Shankara. Uskokov argues that Mandana’s Brahmasiddhi follows Shankara’s commentary.
+tags:
+  - advaita
+  - mimamsa
+  - vedanta
+review:
+  status: draft
+  author: codex-gpt-6

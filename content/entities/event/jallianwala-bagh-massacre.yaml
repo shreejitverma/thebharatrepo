@@ -1,0 +1,45 @@
+id: event.jallianwala-bagh-massacre
+type: event
+kind: event
+names:
+  en: Jallianwala Bagh massacre
+summary: On 13 April 1919, troops under Brigadier-General Reginald Dyer fired on a crowd at
+  Jallianwala Bagh in Amritsar, killing hundreds. The attack took place on Vaisakhi during
+  unrest over colonial repression in Punjab. The exact death toll remains disputed.
+summaries:
+  kids: British Indian Army soldiers fired on people gathered in a public space in Amritsar.
+    Hundreds were killed.
+  teen: The crowd included people attending a meeting and visitors in Amritsar for Vaisakhi. Dyer
+    ordered troops to fire without warning, and estimates of the death toll differ.
+region: Amritsar, Punjab
+datings:
+  - method: documentary
+    range:
+      earliest: "1919"
+      latest: "1919"
+      precision: day
+      circa: false
+    grade: A
+    label: Attack on 13 April 1919
+    sources:
+      - src.uk-parliament-1920-case-of-general-dyer
+      - src.wagner-2019-amritsar-1919
+claims:
+  - text: Dyer's troops opened fire on the crowd at the Bagh without first warning the people
+      assembled there.
+    grade: A
+    sources:
+      - src.uk-parliament-1920-case-of-general-dyer
+      - src.wagner-2019-amritsar-1919
+  - text: Available records establish that hundreds were killed, while the exact total remains
+      uncertain.
+    grade: B
+    sources:
+      - src.wagner-2019-amritsar-1919
+relations: []
+tags:
+  - punjab
+  - colonial-violence
+review:
+  status: draft
+  author: codex-gpt-6

@@ -1,0 +1,53 @@
+id: person.badarayana
+type: person
+kind: person
+names:
+  en: Badarayana
+  iast: Bādarāyaṇa
+  native: बादरायण
+summary: Badarayana is the traditional author of the Brahma Sutra, a concise work that became a
+  basis for Vedanta commentary. The date and formation of the text are debated, and Badarayana’s own
+  lifetime is uncertain.
+summaries:
+  kids: A book linked to Badarayana brings together ideas about the deepest reality in the Upanishads.
+    Later teachers wrote longer books to explain its short lines.
+  teen: The Brahma Sutra organizes teachings on Brahman and became a shared reference for divergent
+    Vedanta schools. Scholars reconstruct the history of the sutras from their contents and later
+    reception.
+datings:
+  - method: textual-internal
+    range:
+      earliest: 250 BCE
+      latest: "50 CE"
+      precision: century
+      circa: true
+    grade: C
+    label: Earlier estimated horizon for the attributed author
+    sources:
+      - id: src.ganeri-2017-oxford-handbook-indian-philosophy
+        locator: "Timeline: Indian Philosophy in a Hundred Thinkers"
+    note: Reflects the Oxford Handbook's approximate horizon for the sutra tradition attributed to
+      Badarayana; his personal life dates are unrecorded.
+claims:
+  - text: Hajime Nakamura and Andrew Nicholson place the compilation of the received Brahma Sutra
+      around 400 to 450 CE, though core material attributed to Badarayana may be much older.
+    grade: C
+    sources:
+      - src.nicholson-2010-unifying-hinduism
+  - text: The Brahma Sutra became the subject of commentaries in different Vedanta lineages.
+    grade: B
+    sources:
+      - src.ganeri-2017-oxford-handbook-indian-philosophy
+relations:
+  - kind: related-to
+    target: text.upanishads
+tags:
+  - vedanta
+  - brahma-sutra
+  - upanishads
+review:
+  status: draft
+  author: codex-gpt-6
+debate: The Oxford Handbook gives an earlier horizon for the work traditionally assigned to
+  Badarayana. Nakamura and Nicholson place the compilation of the received text around 400 to 450
+  CE.

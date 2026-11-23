@@ -1,0 +1,50 @@
+id: text.silappatikaram
+type: text
+kind: text
+names:
+  en: Silappatikaram
+  iast: Cilappatikāram
+  native: சிலப்பதிகாரம்
+summary: "The Silappatikaram (\"The Tale of an Anklet\"), attributed to the ascetic-prince Ilango Adigal, is generally regarded as the earliest and most celebrated of the Five Great Epics (Aimperunkappiyam) of Tamil literature. Structured in three cantos set in the Chola port of Puhar, Pandya Madurai, and Chera Vanci, it tells the tragic story of Kannagi and Kovalan while weaving together Tamil akam-puram poetics, Jain ethics, folk music, and kingship ideals; scholars generally date it to the 5th or 6th century CE."
+summaries:
+  kids: >-
+    Silappatikaram means "The Story of the Anklet". It tells how a brave woman named Kannagi proved her husband was innocent before the Pandya king, travelling across the ancient Chola, Pandya, and Chera lands.
+  teen: >-
+    Set across all three Tamil kingdoms - Puhar, Madurai, and Vanci - Ilango Adigal's epic follows Kannagi and Kovalan, blending Tamil classical poetry, dance, Jain moral philosophy, and early goddess worship.
+region: Tamilakam (Chola, Pandya, and Chera realms)
+datings:
+  - method: linguistic
+    range: { earliest: "400 CE", latest: "600 CE", best: "450 CE", precision: century, circa: true }
+    grade: C
+    label: Mainstream scholarly dating (Zvelebil, Parthasarathy)
+    sources:
+      - src.parthasarathy-1993-cilappatikaram
+      - src.zvelebil-1973-smile-of-murugan
+    note: Although the narrative frames Ilango Adigal as brother to the Sangam Chera king Senguttuvan (c. 2nd century CE), linguistic features, Jain motifs, and cultural references place the surviving text in the 5th or 6th century CE.
+  - method: textual-internal
+    range: { earliest: "100 CE", latest: "250 CE", precision: century, circa: true }
+    grade: C
+    label: Traditional internal synchronism with Senguttuvan and Gajabahu I
+    sources:
+      - src.parthasarathy-1993-cilappatikaram
+      - src.zvelebil-1992-companion-studies
+    note: The text mentions King Gajabahu of Lanka (Gajabahu I, 2nd century CE) attending Kannagi's consecration under Senguttuvan; earlier historians used this synchronism to date the poem to the 2nd century CE, though most scholars treat it as a literary retrojection.
+claims:
+  - text: The epic is organized into three cantos - Pukarkkantam (Chola), Maturaikkantam (Pandya), and Vancikkantam (Chera) - encompassing thirty sections of verse and prose links.
+    grade: A
+    sources:
+      - src.parthasarathy-1993-cilappatikaram
+      - src.zvelebil-1973-smile-of-murugan
+  - text: The poem incorporates important technical passages on early Tamil music (pan), dance, and folk songs alongside a Jain-inflected moral critique of unjust kingship.
+    grade: B
+    sources:
+      - src.parthasarathy-1993-cilappatikaram
+      - src.zvelebil-1973-smile-of-murugan
+debate: >-
+  Earlier twentieth-century scholars such as V. R. Ramachandra Dikshitar dated the Silappatikaram to the 2nd century CE on the basis of the Gajabahu synchronism with Chera Senguttuvan. Kamil Zvelebil, R. Parthasarathy, and most modern philologists argue that its language, metre, and religious vocabulary belong to the 5th or 6th century CE, framing a memory of the earlier Sangam age.
+relations:
+  - { kind: related-to, target: text.sangam-literature }
+  - { kind: related-to, target: polity.early-cheras }
+wikidata: Q3115588
+tags: [silappatikaram, cilappatikaram, tamil-epic, kannagi, jainism, tamil-literature]
+review: { status: draft, author: "gemini-4-hydrogen-xhigh" }

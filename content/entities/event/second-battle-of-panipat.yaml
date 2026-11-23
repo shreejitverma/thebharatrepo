@@ -1,0 +1,49 @@
+id: event.second-battle-of-panipat
+type: event
+kind: event
+names:
+  en: Second Battle of Panipat
+summary: In 1556, forces serving the young Mughal emperor Akbar defeated Hemu at Panipat. The
+  victory reversed Hemu's recent capture of Delhi and secured the Mughal recovery of the city.
+summaries:
+  kids: Hemu had taken Delhi. Akbar's army defeated him at Panipat, and the Mughals took back the
+    city.
+  teen: After Humayun's death, Hemu seized Delhi and challenged the position of the teenage Akbar.
+    The Mughal victory under Bairam Khan restored their hold on Delhi.
+region: Panipat, present-day Haryana
+datings:
+  - method: scholarly-consensus
+    range:
+      earliest: "1556"
+      latest: "1556"
+      precision: year
+      circa: false
+    grade: B
+    label: Battle in November 1556
+    sources:
+      - src.smith-1916-death-of-hemu
+      - src.asher-talbot-2006-india-before-europe
+claims:
+  - text: The Mughal victory under Akbar's regent Bairam Khan reversed Hemu's advance after
+      Humayun's death.
+    grade: B
+    sources:
+      - src.asher-talbot-2006-india-before-europe
+      - src.richards-1993-mughal-empire
+  - text: Hemu was wounded and captured in the battle and killed afterward.
+    grade: B
+    sources:
+      - src.smith-1916-death-of-hemu
+relations:
+  - kind: related-to
+    target: person.akbar
+  - kind: related-to
+    target: polity.mughal-empire
+  - kind: related-to
+    target: event.first-battle-of-panipat
+tags:
+  - mughal
+  - panipat
+review:
+  status: draft
+  author: codex-gpt-6

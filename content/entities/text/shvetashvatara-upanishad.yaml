@@ -1,0 +1,58 @@
+id: text.shvetashvatara-upanishad
+type: text
+kind: text
+names:
+  en: Shvetashvatara Upanishad
+  iast: Śvetāśvatara Upaniṣad
+  native: श्वेताश्वतरोपनिषद्
+summary: The Shvetashvatara Upanishad asks about the cause of the world and identifies Rudra with
+  supreme divine power. It contains instructions for meditation and yoga. Its exact date is
+  disputed.
+summaries:
+  kids: The poem asks where the world comes from and describes a quiet place where someone can sit and
+    practise meditation.
+  teen: This verse Upanishad combines a search for the world’s cause, praise of Rudra and instructions
+    for contemplative practice. The closing verses connect understanding with devotion.
+datings:
+  - method: linguistic
+    range:
+      earliest: "400 BCE"
+      latest: "1 BCE"
+      precision: century
+      circa: true
+    grade: C
+    label: "Patrick Olivelle: verse stratum"
+    sources:
+      - id: src.olivelle-1998-early-upanisads
+        locator: Introduction, Chronology
+      - id: src.cohen-2024-classical-upanisads
+        locator: Dating and Authorship
+    note: Olivelle places the text after the Katha and Isha in his tentative relative sequence; the
+      language and parallels support a broad window.
+claims:
+  - text: The second chapter gives directions for posture, breath and the setting of contemplative
+      practice.
+    grade: A
+    sources:
+      - id: src.olivelle-1998-early-upanisads
+        locator: Svetasvatara Upanisad 2
+  - text: The epilogue presents Shvetashvatara as the sage who proclaimed this teaching.
+    grade: D
+    sources:
+      - id: src.olivelle-1998-early-upanisads
+        locator: Svetasvatara Upanisad 6.21
+relations:
+  - kind: part-of
+    target: text.upanishads
+  - kind: related-to
+    target: text.krishna-yajurveda
+debate: Olivelle’s sequence puts the Shvetashvatara before the Mundaka, while Cohen places it
+  after the Mundaka and the Katha. Cohen also distinguishes an older metrical core from probable
+  later stanzas.
+tags:
+  - upanishad
+  - veda
+  - vedanta
+review:
+  status: draft
+  author: codex-gpt-6

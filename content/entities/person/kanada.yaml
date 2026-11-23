@@ -1,0 +1,57 @@
+id: person.kanada
+type: person
+kind: person
+names:
+  en: Kanada
+  iast: Kaṇāda
+  native: कणाद
+summary: Kanada, also known as Uluka, is traditionally credited with the Vaisheshika Sutra, a
+  Sanskrit text that classifies what exists. Scholars differ on the dating of the text associated
+  with him.
+summaries:
+  kids: A book linked to Kanada groups things and their features. For example, a clay pot is a thing,
+    and the color of that pot is one of its features.
+  teen: The Vaisheshika Sutra distinguishes categories such as substance, quality and action. Its
+    dates are reconstructed from textual evidence, and the author traditionally called Kanada
+    remains difficult to place.
+datings:
+  - method: textual-internal
+    range:
+      earliest: 200 BCE
+      latest: 101 BCE
+      precision: century
+      circa: true
+    grade: C
+    label: Earlier floruit placement in the Stanford chronology
+    sources:
+      - src.stanford-language-india-chronology
+    note: Places the thinker traditionally linked to Vaisheshika in the second century BCE.
+  - method: textual-internal
+    range:
+      earliest: "1 CE"
+      latest: "250 CE"
+      precision: century
+      circa: true
+    grade: C
+    label: Estimated floruit horizon associated with the Vaisheshika Sutra
+    sources:
+      - id: src.ganeri-2017-oxford-handbook-indian-philosophy
+        locator: "Timeline: Indian Philosophy in a Hundred Thinkers"
+    note: Reflects the Oxford Handbook placement of the attributed Vaisheshika Sutra in the early
+      centuries CE; Kanada’s personal life dates are unrecorded.
+claims:
+  - text: Vaisheshika distinguishes substances, their qualities and actions among its basic categories.
+    grade: B
+    sources:
+      - src.ganeri-2017-oxford-handbook-indian-philosophy
+relations: []
+debate: The Stanford chronology assigns Kanada to the second century BCE. The Oxford Handbook gives
+  an early CE window for the attributed work. The estimates reflect different reconstructions of the
+  textual history.
+tags:
+  - vaisheshika
+  - metaphysics
+  - atomism
+review:
+  status: draft
+  author: codex-gpt-6

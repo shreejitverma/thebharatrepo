@@ -1,0 +1,64 @@
+id: "person.hemachandra"
+type: "person"
+kind: "person"
+names:
+  en: "Hemachandra"
+  iast: "Hemacandra"
+  native: "हेमचन्द्र"
+summary: "Hemachandra was a Shvetambara Jain monk, grammarian and writer associated with the
+  Chaulukya court of Gujarat. His works include a grammar treating Sanskrit and Prakrit, a poem that
+  uses dynastic history to illustrate grammatical forms, and the Yogashastra, a Jain guide to conduct
+  and meditation."
+summaries:
+  kids: "Hemachandra was a Jain monk who wrote about how languages work and how to live and meditate.
+    In one poem, he used stories of Gujarat's rulers to show the rules of grammar."
+  teen: "Hemachandra worked in the courts of Jayasimha Siddharaja and Kumarapala. His Dvyashraya poem
+    combined a royal narrative with examples of grammar, and his Yogashastra sets out Jain conduct and
+    meditation."
+region: "Patan, Gujarat"
+datings:
+  - method: "scholarly-consensus"
+    range:
+      earliest: 1088
+      latest: 1172
+      precision: "year"
+      circa: true
+    grade: "B"
+    label: "Conventional life dates, with a one-year variation at birth"
+    sources:
+      - "src.cort-2001-jains-in-patan"
+      - "src.dundas-2002-the-jains"
+      - "src.hemacandra-2002-yogasastra"
+    note: "Scholarly accounts give 1088 or 1089 for his birth and 1172 for his death."
+claims:
+  - text: "Hemachandra's grammar treats Sanskrit and Prakrit, and the Dvyashraya illustrates grammatical
+      forms through verse."
+    grade: "B"
+    sources:
+      - "src.dundas-2002-the-jains"
+      - "src.singh-2008-ancient-early-medieval-india"
+  - text: "Hemachandra connects the composition of the Yogashastra with a request from Kumarapala in its
+      concluding verse."
+    grade: "A"
+    sources:
+      - "src.hemacandra-2002-yogasastra"
+  - text: "Jain accounts emphasise the monk's relationship with the Chaulukya ruler Kumarapala."
+    grade: "B"
+    sources:
+      - "src.cort-2001-jains-in-patan"
+  - text: "Hemachandra also composed Sanskrit praise hymns in the setting of the Chaulukya court."
+    grade: "B"
+    sources:
+      - "src.dhanani-2022-polemics-dispassion"
+relations:
+  - kind: "related-to"
+    target: "site.patan-chaulukya-capital"
+tags:
+  - "gujarat"
+  - "jainism"
+  - "jain-philosophy"
+  - "shvetambara"
+  - "grammar"
+review:
+  status: "draft"
+  author: "codex-gpt-6"

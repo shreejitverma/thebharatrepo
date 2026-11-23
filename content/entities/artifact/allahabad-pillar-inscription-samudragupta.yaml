@@ -1,0 +1,98 @@
+id: artifact.allahabad-pillar-inscription-samudragupta
+type: artifact
+kind: polity
+names:
+  en: Allahabad Pillar Inscription of Samudragupta
+  iast: Prayāga Praśasti (Samudragupta)
+summary: >-
+  A 33-line Sanskrit eulogy (Prayaga Prasasti) composed by court poet and general Harishena in early Gupta
+  Brahmi on an Ashokan sandstone column now standing inside Allahabad Fort, Prayagraj. Written in alternating
+  verse and ornate prose (champu), it chronicles Samudragupta's military campaigns across Aryavarta and
+  Dakshinapatha, tributary frontier states, and diplomatic relations with Kushan and Sri Lankan rulers.
+summaries:
+  kids: >-
+    Standing inside Allahabad Fort, a single tall sandstone column holds three eras of Indian history: edicts
+    of Ashoka, a sweeping poem celebrating Samudragupta's conquests, and a later family tree carved for Mughal
+    Emperor Jahangir.
+  teen: >-
+    Harishena's 33-line Prayaga Prasasti on the Allahabad Ashokan pillar is the single most detailed political
+    record of the early Gupta Empire (c. 350-375 CE), classifying Samudragupta's campaigns by annexed northern
+    kingdoms, defeated-and-reinstated southern kings, frontier republics, and foreign embassies.
+region: Allahabad Fort, Prayagraj, Uttar Pradesh (possibly moved from Kaushambi)
+location:
+  name: Ashokan Pillar, Allahabad Fort, Prayagraj
+  lat: 25.4318
+  lon: 81.8751
+datings:
+  - method: epigraphic
+    range:
+      earliest: 350
+      latest: 380
+      best: 370
+      precision: decade
+      circa: true
+    grade: B
+    label: Late reign of Samudragupta (c. mid-4th century CE, early Gupta Brahmi)
+    sources:
+      - src.fleet-1888-inscriptions-early-gupta-kings
+      - src.bhandarkar-1981-inscriptions-early-gupta-kings
+      - src.salomon-1998-indian-epigraphy
+    note: >-
+      Undated itself; internal genealogy reaches Samudragupta's post-campaign zenith (likely c. 365-375 CE)
+      and lacks mention of an Ashvamedha sacrifice known from his later coins.
+claims:
+  - text: >-
+      The same polished Chunar sandstone shaft preserves Ashoka's Pillar Edicts I-VI, Queen's Edict, and
+      Kosambi Schism Edict, Harishena's 33-line Gupta Sanskrit prasasti, and a 1605 CE Persian genealogy of
+      Jahangir carved by Mir Abdullah Mushkin Qalam.
+    grade: A
+    sources:
+      - src.fleet-1888-inscriptions-early-gupta-kings
+      - src.hultzsch-1925-inscriptions-of-asoka
+  - text: >-
+      Composed by Sandhivigrahika Harishena (son of Mahadandanayaka Dhruvabhuti), the text switches from eight
+      introductory Arya/Shardulavikridita stanzas into long prose sentences (lines 13-30) and closing verse,
+      calling Samudragupta both a poet-king (Kaviraja) and an accomplished lyre player.
+    grade: A
+    sources:
+      - src.fleet-1888-inscriptions-early-gupta-kings
+      - src.bhandarkar-1981-inscriptions-early-gupta-kings
+  - text: >-
+      Harishena carefully differentiates Samudragupta's policies: uprooting nine northern rulers of Aryavarta;
+      capturing and releasing twelve southern kings of Dakshinapatha (from Kosala to Kanchi); exacting tribute
+      from eastern kingdoms (Samatata, Davaka, Kamarupa, Nepala, Kartripura) and western ganas (Malavas,
+      Yaudheyas, Madrakas); and receiving homage from Daivaputra Shahi Shahanushahi and Simhala (Sri Lanka).
+    grade: A
+    sources:
+      - src.fleet-1888-inscriptions-early-gupta-kings
+      - src.singh-2008-ancient-early-medieval-india
+relations:
+  - kind: part-of
+    target: polity.gupta-empire
+  - kind: related-to
+    target: person.ashoka
+    note: Carved onto an Ashokan pillar column
+  - kind: contemporary-of
+    target: artifact.gupta-gold-dinars
+    note: Gold coinage of Samudragupta corroborates titles and musical imagery
+  - kind: related-to
+    target: artifact.bhitari-pillar-inscription-skandagupta
+    note: Continues imperial Gupta genealogical epigraphy
+wikidata: Q4730345
+image:
+  commons: File:Samudragupta inscription on the Allahabad pillar of Ashoka.jpg
+  alt: >-
+    Impression showing Gupta Brahmi lines of Harishena's Prayaga Prasasti beneath Ashokan lines on the
+    Allahabad Pillar
+  credit: Thomas A. Rust and J. F. Fleet
+  license: Public domain
+tags:
+  - inscription
+  - gupta
+  - samudragupta
+  - sanskrit
+  - prasasti
+  - prayagraj
+review:
+  status: draft
+  author: gemini-4-hydrogen-xhigh

@@ -1,0 +1,41 @@
+id: person.anantavarman-chodaganga
+type: person
+kind: person
+names:
+  en: Anantavarman Chodaganga
+  iast: Anantavarman Coḍagaṅga
+summary: Anantavarman Chodaganga expanded Eastern Ganga power in Odisha. The great Jagannath temple
+  at Puri is associated with his royal patronage and the work of later Ganga rulers.
+summaries:
+  kids: Anantavarman ruled on the east coast. The great Jagannath temple at Puri is linked to his
+    family and his reign.
+  teen: Anantavarman's career links the Eastern Gangas' Kalinga base to their expansion in coastal
+    Odisha. The temple's patronage developed over successive reigns.
+region: Kalinga and coastal Odisha
+datings:
+  - method: scholarly-consensus
+    range:
+      earliest: "1070"
+      latest: "1150"
+      precision: decade
+      circa: true
+    grade: B
+    label: Reign or recorded political activity
+    sources:
+      - src.singh-2008-ancient-early-medieval-india
+      - src.devadevan-2020-early-medieval-origins-india
+    note: The interval brackets his late eleventh- to mid-twelfth-century reign.
+claims:
+  - text: Anantavarman Chodaganga was a major consolidator of Eastern Ganga rule and is associated with
+      the Jagannath temple at Puri.
+    grade: B
+    sources:
+      - src.singh-2008-ancient-early-medieval-india
+      - src.devadevan-2020-early-medieval-origins-india
+relations:
+  - kind: ruled
+    target: polity.eastern-ganga-dynasty
+tags: []
+review:
+  status: draft
+  author: codex-gpt-6

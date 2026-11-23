@@ -1,0 +1,58 @@
+id: "polity.kingdom-of-ladakh"
+type: "polity"
+kind: "polity"
+names:
+  en: "Kingdom of Ladakh"
+summary: "The kingdom of Ladakh linked settlements along the upper Indus with wider Himalayan trade
+  and religious networks. The Namgyal court patronised monasteries, including Hemis. Dogra conquest
+  and a treaty in 1842 ended Ladakh's independent kingdom."
+summaries:
+  kids: "Ladakh had its own kings. Their kingdom joined settlements and trade routes in the mountains,
+    and some of the kings supported Buddhist monasteries."
+  teen: "Luciano Petech reconstructs Ladakh's dynasties and their external relations from Tibetan
+    chronicles and other records. Earlier dates are approximate, while the seventeenth-century
+    Namgyal court and the Dogra conquest are better documented."
+region: "Upper Indus, western Himalaya"
+datings:
+  - method: "scholarly-consensus"
+    range:
+      earliest: 950
+      latest: 1842
+      precision: "century"
+      circa: true
+    grade: "B"
+    label: "Broad kingdom chronology used by Petech"
+    sources:
+      - "src.petech-1977-kingdom-ladakh"
+    note: "The initial date is a reconstruction of the early dynasty."
+  - method: "documentary"
+    range:
+      earliest: 1834
+      latest: 1842
+      precision: "year"
+      circa: false
+    grade: "B"
+    label: "Dogra conquest and the 1842 settlement"
+    sources:
+      - "src.petech-1977-kingdom-ladakh"
+claims:
+  - text: "The Namgyal rulers supported Buddhist institutions, including the royal monastery at Hemis."
+    grade: "B"
+    sources:
+      - "src.petech-1977-kingdom-ladakh"
+  - text: "Dogra forces invaded in 1834. The settlement of 1842 followed the conflict with Tibet."
+    grade: "B"
+    sources:
+      - "src.petech-1977-kingdom-ladakh"
+relations:
+  - kind: "related-to"
+    target: "site.hemis-monastery"
+  - kind: "related-to"
+    target: "site.alchi-monastery"
+tags:
+  - "ladakh"
+  - "himalaya"
+  - "namgyal"
+review:
+  status: "draft"
+  author: "codex-gpt-6"

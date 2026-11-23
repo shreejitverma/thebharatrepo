@@ -1,0 +1,50 @@
+id: person.c-v-raman
+type: person
+kind: science
+names:
+  en: C. V. Raman
+  native: சி. வி. ராமன்
+summary: Chandrasekhara Venkata Raman was an experimental physicist. His work with K. S. Krishnan on light
+  scattering in 1928 helped establish the effect that bears his name. He received the 1930 Nobel Prize in
+  Physics.
+summaries:
+  kids: Raman studied what happens to light when it passes through different materials. His experiments helped
+    show that some scattered light changes colour.
+  teen: Raman and Krishnan investigated weak changes in the spectrum of scattered light. Raman later established
+    a research institute in Bangalore to continue experimental work.
+region: Kolkata and Bengaluru
+datings:
+  - method: documentary
+    range:
+      earliest: 1888
+      latest: 1970
+      precision: year
+      circa: false
+    grade: A
+    label: Documented lifespan
+    sources:
+      - src.bhagavantam-1971-raman-memoir
+claims:
+  - text: Raman and K. S. Krishnan jointly reported a new form of secondary radiation in Nature in 1928.
+    grade: A
+    sources:
+      - src.raman-krishnan-1928-secondary-radiation
+  - text: Raman received the 1930 Nobel Prize in Physics for work on light scattering and the effect named after
+      him.
+    grade: A
+    sources:
+      - src.nobel-raman-1930
+  - text: Raman established the Raman Research Institute at Bangalore in 1948.
+    grade: B
+    sources:
+      - src.rri-overview
+relations:
+  - kind: related-to
+    target: event.raman-effect-and-nobel-1930
+tags:
+  - physics
+  - optics
+  - spectroscopy
+review:
+  status: draft
+  author: codex-gpt-6

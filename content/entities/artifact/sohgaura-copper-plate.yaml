@@ -1,0 +1,89 @@
+id: artifact.sohgaura-copper-plate
+type: artifact
+kind: polity
+names:
+  en: Sohgaura Copper Plate Inscription
+  iast: Sohagaurā Tāmrapatra Abhilekha
+summary: >-
+  A small cast-bronze plaque (State Museum, Lucknow) unearthed near Sohgaura in Gorakhpur district, Uttar
+  Pradesh, bearing four lines of Prakrit in pre-Ashokan or early Mauryan Brahmi beneath five symbolic emblems
+  including two double-roofed granaries. Issued by the Mahamatras of Sravasti, it regulates grain distribution
+  from state storehouses during famine.
+summaries:
+  kids: >-
+    This tiny bronze plaque from eastern Uttar Pradesh shows pictures of two royal storehouses above four
+    lines of ancient writing explaining when grain should be handed out during food shortages.
+  teen: >-
+    Probably the earliest known inscribed copper or bronze plaque from South Asia (c. 3rd century BCE), the
+    Sohgaura plate records administrative orders from the officials of Sravasti concerning two twin-gabled
+    granaries kept stocked for emergency famine relief.
+region: Sohgaura, Gorakhpur District, Uttar Pradesh (housed in State Museum, Lucknow)
+location:
+  name: Sohgaura village, Gorakhpur district
+  lat: 26.5411
+  lon: 83.435
+datings:
+  - method: epigraphic
+    range:
+      earliest: 320 BCE
+      latest: 220 BCE
+      best: 275 BCE
+      precision: century
+      circa: true
+    grade: B
+    label: Early Mauryan or pre-Ashokan Brahmi palaeography
+    sources:
+      - src.fleet-1907-sohgaura-plate
+      - src.sircar-1942-select-inscriptions-vol-1
+      - src.salomon-1998-indian-epigraphy
+    note: >-
+      Archaisms such as early o/e forms and absence of royal Mauryan title place it in the 3rd century BCE or
+      slightly earlier, alongside the Mahasthan limestone plaque.
+claims:
+  - text: >-
+      Cast in high-tin bronze or copper (about 6.3 x 4.8 cm) with pierced corners for mounting, the plate
+      carries five symbols along the top register, two representing elevated twin-gabled storehouses
+      (kothagalani), above four lines of raised-cast Brahmi letters.
+    grade: A
+    sources:
+      - src.fleet-1907-sohgaura-plate
+      - src.chakravarti-1933-epigraphia-indica-vol-22
+  - text: >-
+      The Prakrit order issued by the Mahamatras (officials) of Sravasti (Savatiyana) instructs keepers of
+      storehouses at Manavasitikada and Vamagrama to issue provisions strictly in times of extreme scarcity
+      (atiyaika / famine), not otherwise.
+    grade: B
+    sources:
+      - src.sircar-1942-select-inscriptions-vol-1
+      - src.chakravarti-1933-epigraphia-indica-vol-22
+  - text: >-
+      Alongside the Mahasthan fragment, it corroborates textual accounts such as the Arthashastra regarding
+      Mauryan-era state granary reserves and local bureaucratic governance.
+    grade: B
+    sources:
+      - src.salomon-1998-indian-epigraphy
+      - src.thapar-2002-early-india
+relations:
+  - kind: part-of
+    target: polity.maurya-empire
+  - kind: related-to
+    target: text.arthashastra
+    note: Parallel administrative record of state granaries and Mahamatras
+wikidata: Q55633437
+image:
+  commons: File:Soghaura inscription.jpg
+  alt: >-
+    Reproduction of the Sohgaura copper plaque showing two storehouse emblems above four lines of early Brahmi
+    text
+  credit: Asiatic Society of Bengal
+  license: Public domain
+tags:
+  - inscription
+  - copper-plate
+  - brahmi
+  - maurya
+  - granary
+  - prakrit
+review:
+  status: draft
+  author: gemini-4-hydrogen-xhigh

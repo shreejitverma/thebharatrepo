@@ -1,0 +1,49 @@
+id: text.chhandahsutra
+type: text
+kind: science
+names:
+  en: Chhandahsutra
+  iast: Chandaḥsūtra
+  native: छन्दःसूत्र
+summary: This Sanskrit prosody treatise attributed to Pingala sets out rules for counting and indexing
+  patterns of heavy and light syllables. Its two-symbol procedures can be expressed in modern binary terms.
+  Its date remains approximate.
+summaries:
+  kids: Every syllable in these patterns has one of two weights. The book explains how to list the possible
+    patterns without losing track.
+  teen: The treatise gives algorithms for moving between a pattern and its place in an ordered list. Later
+    commentary helps historians interpret the brief original rules.
+datings:
+  - method: textual-internal
+    range:
+      earliest: 300 BCE
+      latest: 100 BCE
+      precision: century
+      circa: true
+    grade: C
+    label: Early classical estimate (Plofker)
+    sources:
+      - id: src.plofker-2009-mathematics-in-india
+        locator: Section 3.3
+    note: Plofker tentatively places the work in the third or second century BCE.
+claims:
+  - text: The prastara orders possible syllable-weight patterns for a fixed length.
+    grade: A
+    sources:
+      - src.van-nooten-1993-binary-numbers
+      - id: src.plofker-2009-mathematics-in-india
+        locator: Section 3.3
+  - text: The rules for converting between a pattern and its serial number use a two-way choice at each step.
+    grade: A
+    sources:
+      - src.van-nooten-1993-binary-numbers
+relations:
+  - kind: related-to
+    target: text.vedangas
+tags:
+  - prosody
+  - binary-enumeration
+  - algorithms
+review:
+  status: draft
+  author: codex-gpt-6

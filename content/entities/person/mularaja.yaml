@@ -1,0 +1,39 @@
+id: person.mularaja
+type: person
+kind: person
+names:
+  en: Mularaja
+  iast: Mūlarāja
+summary: Mularaja established the Chaulukya line in Gujarat in the tenth century. The dynasty's
+  capital at Anahilapataka remained central to its successors.
+summaries:
+  kids: Mularaja began a royal line in Gujarat. Its kings ruled from the city now called Patan.
+  teen: Mularaja anchors the early Chaulukya sequence in Gujarat. His chronology is easier to
+    establish than the details of later stories about how he took power.
+region: Gujarat
+datings:
+  - method: scholarly-consensus
+    range:
+      earliest: "935"
+      latest: "1000"
+      precision: decade
+      circa: true
+    grade: B
+    label: Reign or recorded political activity
+    sources:
+      - src.singh-2008-ancient-early-medieval-india
+      - src.thapar-2002-early-india
+    note: The interval brackets the conventional accession and death dates and the dated grant record.
+claims:
+  - text: The early Chaulukya court of Mularaja was based at Anahilapataka.
+    grade: B
+    sources:
+      - src.singh-2008-ancient-early-medieval-india
+      - src.thapar-2002-early-india
+relations:
+  - kind: founded
+    target: polity.chaulukya-dynasty-gujarat
+tags: []
+review:
+  status: draft
+  author: codex-gpt-6

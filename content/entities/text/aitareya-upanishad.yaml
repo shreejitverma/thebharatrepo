@@ -1,0 +1,60 @@
+id: text.aitareya-upanishad
+type: text
+kind: text
+names:
+  en: Aitareya Upanishad
+  iast: Aitareya Upaniṣad
+  native: ऐतरेयोपनिषद्
+summary: The Aitareya Upanishad is a short prose text within the Aitareya Aranyaka of the Rigveda.
+  It links an account of creation and embodiment to an inquiry into consciousness.
+  Scholars differ on its date.
+summaries:
+  kids: This Upanishad imagines how the world and living bodies came to be. It then asks what lets us
+    see, hear and understand.
+  teen: In the opening account, the self fashions worlds and enters a human body. The final section
+    asks what the self is and identifies brahman with consciousness.
+datings:
+  - method: linguistic
+    range:
+      earliest: "600 BCE"
+      latest: "401 BCE"
+      precision: century
+      circa: true
+    grade: C
+    label: "Patrick Olivelle: early prose stratum"
+    sources:
+      - id: src.olivelle-1998-early-upanisads
+        locator: Introduction, Chronology
+      - id: src.cohen-2024-classical-upanisads
+        locator: Dating and Authorship
+    note: The Aitareya Upanishad belongs to the prose group Olivelle places after the Brihadaranyaka and
+      Chandogya, probably before the emergence of Buddhism.
+  - method: textual-internal
+    range: { earliest: "800 BCE", latest: "601 BCE", precision: century, circa: true }
+    grade: C
+    label: "Sarvepalli Radhakrishnan and Charles A. Moore: earlier pre-Buddhist placement"
+    sources:
+      - id: src.radhakrishnan-1957-source-book-indian-philosophy
+        locator: "Chapter II, The Upaniṣads"
+    note: Their source book assigns this text to the eighth or seventh century BCE in its
+      chronology of the principal Upanishads.
+claims:
+  - text: The third section names consciousness in its account of brahman.
+    grade: A
+    sources:
+      - id: src.olivelle-1998-early-upanisads
+        locator: Aitareya Upanisad 3
+relations:
+  - kind: part-of
+    target: text.upanishads
+  - kind: related-to
+    target: text.rigveda
+debate: Olivelle places it after the earliest prose Upanishads. Cohen also finds that the first
+  chapter is likely older than the other two.
+tags:
+  - upanishad
+  - veda
+  - vedanta
+review:
+  status: draft
+  author: codex-gpt-6

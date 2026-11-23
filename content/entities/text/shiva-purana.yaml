@@ -1,0 +1,60 @@
+id: text.shiva-purana
+type: text
+kind: text
+names:
+  en: Shiva Purana
+  iast: Śivapurāṇa
+  native: शिवपुराण
+summary: The Shiva Purana collects stories about Shiva and teachings about worship, devotion and
+  liberation. The Sanskrit text survives in substantially different recensions. The dating of its
+  constituent collections remains uncertain.
+summaries:
+  kids: This book tells stories about Shiva, Sati and Parvati and explains ways people honour Shiva.
+  teen: The Shiva Purana includes myths about Shiva’s family and teachings about the linga. Modern
+    editions draw on different textual traditions and contain different sets of books.
+datings:
+  - method: textual-internal
+    range:
+      earliest: 1000
+      latest: 1500
+      precision: century
+      circa: true
+    grade: C
+    label: "R. C. Hazra: medieval strata of surviving recensions"
+    sources:
+      - src.kotler-2025-persian-sivapurana
+      - src.rocher-1986-puranas
+    note: Hazra’s reconstruction includes a fourteenth-century estimate for several books in the
+      seven-book recension. The interval is for medieval formation and revision, with different
+      dates possible for individual materials.
+  - method: traditional-puranic
+    range:
+      earliest: "3102 BCE"
+      latest: "3102 BCE"
+      precision: year
+      circa: true
+    grade: D
+    label: Traditional Vyasa attribution and Kali Yuga epoch
+    sources:
+      - src.rocher-1986-puranas
+      - src.gonzalezreimann-2002-mahabharata-yugas
+    note: The traditional Vyasa attribution belongs to the wider narrative of Puranic transmission. The
+      calendar year is the conventional epoch used for that transition.
+claims:
+  - text: The Vangavasi and Venkateshvara Press editions contain six and seven collections respectively,
+      with only three collection titles in common.
+    grade: B
+    sources:
+      - src.kotler-2025-persian-sivapurana
+relations:
+  - kind: part-of
+    target: text.puranas
+debate: Rocher stresses the difficulty of dating a Purana as a whole. The date of any one samhita or
+  recension cannot establish the age of the others.
+tags:
+  - purana
+  - shaiva
+  - shiva
+review:
+  status: draft
+  author: codex-gpt-6

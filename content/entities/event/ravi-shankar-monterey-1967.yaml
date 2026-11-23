@@ -1,0 +1,26 @@
+id: event.ravi-shankar-monterey-1967
+type: event
+kind: art
+names:
+  en: "Ravi Shankar at the Monterey Pop Festival"
+summary: "Ravi Shankar performed Hindustani classical music at the Monterey International Pop Festival in 1967. The live recording credits him on sitar, Alla Rakha on tabla and Kamala on tanpura."
+summaries:
+  kids: "Ravi Shankar played the sitar at a music festival in California in 1967. Alla Rakha played the tabla, and a tanpura supplied a steady background sound."
+  teen: "At the 1967 Monterey festival, Shankar presented a Hindustani classical performance to an international pop festival audience. A photograph and the released recording document the performance and its instrumental ensemble."
+region: "Monterey, California, United States"
+datings:
+  - method: documentary
+    range: { earliest: "1967", latest: "1967", precision: year, circa: false }
+    grade: A
+    label: "Monterey festival performance"
+    sources: ["src.law-1967-ravi-shankar-at-monterey", "src.jazz-discography-pacific-jazz-1967-1968"]
+    note: "Lisa Law's photograph and the live recording document Shankar's appearance in 1967."
+claims:
+  - text: "Lisa Law photographed Ravi Shankar performing at the 1967 Monterey Pop Festival in California."
+    grade: A
+    sources: ["src.law-1967-ravi-shankar-at-monterey"]
+  - text: "The recording credits Ravi Shankar on sitar, Alla Rakha on tabla and Kamala on tanpura."
+    grade: B
+    sources: ["src.jazz-discography-pacific-jazz-1967-1968"]
+tags: ["republic","hindustani-music","performance"]
+review: { status: draft, author: codex-gpt-6 }

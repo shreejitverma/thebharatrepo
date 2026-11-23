@@ -1,0 +1,82 @@
+id: site.udayagiri-khandagiri-caves
+type: site
+kind: site
+names:
+  en: Udayagiri and Khandagiri Caves
+  iast: Udayagiri-Khaṇḍagiri Guhāḥ
+  native: ଉଦୟଗିରି ଓ ଖଣ୍ଡଗିରି ଗୁମ୍ଫା
+summary: >-
+  The Udayagiri and Khandagiri hills near Bhubaneswar, Odisha, contain sandstone caves associated with
+  Jain ascetic communities. Udayagiri has the two-storeyed Rani Gumpha and the Hathigumpha inscription
+  of Kharavela. The date of the main ancient excavation is debated, and some Khandagiri caves were
+  reused in the medieval period.
+summaries:
+  kids: >-
+    Near Bhubaneswar in Odisha, caves were cut into two sandstone hills. Jain ascetics used them, and
+    one cave entrance bears an inscription about a king called Kharavela.
+  teen: >-
+    Udayagiri and Khandagiri preserve early Jain caves and inscriptions in Brahmi script. The
+    Hathigumpha inscription recounts Kharavela's reign. Scholars disagree on how to translate some of
+    its damaged lines and how to date his reign.
+region: Kalinga (Khordha district, near Bhubaneswar, Odisha)
+location: { name: "Udayagiri and Khandagiri, Odisha", lat: 20.263, lon: 85.786 }
+datings:
+  - method: epigraphic
+    range: { earliest: "100 BCE", latest: "1 BCE", precision: century, circa: true }
+    grade: B
+    label: "First-century BCE palaeographic dating of the main phase"
+    sources:
+      - src.mitra-1975-udayagiri-khandagiri
+      - src.salomon-1998-indian-epigraphy
+    note: >-
+      Comparison of the Brahmi letter forms supports dating the Kharavela-related cave records to the
+      first century BCE.
+  - method: epigraphic
+    range: { earliest: "200 BCE", latest: "151 BCE", precision: century, circa: true }
+    grade: C
+    label: "Jayaswal and Banerji's earlier chronology"
+    sources:
+      - { id: src.stewart-2025-classical-art-and-ancient-india, locator: "Upinder Singh, Yavanas in Early Indian Inscriptions" }
+      - src.salomon-1998-indian-epigraphy
+    note: >-
+      K. P. Jayaswal and R. D. Banerji proposed an early second-century BCE date based on identifying a
+      damaged royal name with Demetrius. Both the reading and identification are disputed.
+  - method: epigraphic
+    range: { earliest: "1000 CE", latest: "1100 CE", precision: century, circa: true }
+    grade: B
+    label: "Medieval Jain reuse at Khandagiri"
+    sources:
+      - src.mitra-1975-udayagiri-khandagiri
+    note: >-
+      Inscriptions associated with the Somavamshi ruler Udyotakesarin attest to later activity in the
+      Khandagiri caves.
+claims:
+  - text: >-
+      The seventeen-line Prakrit Hathigumpha inscription records Kharavela's deeds through his
+      thirteenth regnal year and opens with a Jain salutation.
+    grade: A
+    sources:
+      - src.fleet-1910-hathigumpha-inscription
+      - src.mitra-1975-udayagiri-khandagiri
+  - text: >-
+      An inscription at Manchapuri records a cave dedication by Kharavela's chief queen for Jain
+      ascetics.
+    grade: A
+    sources:
+      - src.mitra-1975-udayagiri-khandagiri
+      - src.singh-2008-ancient-early-medieval-india
+debate: >-
+  Richard Salomon places the Hathigumpha inscription in the first century BCE on palaeographic grounds.
+  K. P. Jayaswal and R. D. Banerji proposed an early second-century BCE chronology based on a disputed
+  reading of a damaged name in the same inscription.
+relations:
+  - { kind: patronised-by, target: person.kharavela }
+  - { kind: related-to, target: artifact.hathigumpha-inscription }
+wikidata: Q3536413
+image:
+  commons: "File:Udayagiri Caves - Rani Gumpha 01.jpg"
+  alt: Two-storey rock-cut sandstone facade and pillared verandas of Rani Gumpha (Cave 1) at Udayagiri, Bhubaneswar
+  credit: Bernard Gagnon
+  license: CC BY-SA 3.0
+tags: [udayagiri, khandagiri, jainism, kharavela, rock-cut, odisha]
+review: { status: draft, author: "gemini-4-hydrogen-xhigh" }

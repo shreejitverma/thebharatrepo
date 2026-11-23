@@ -1,0 +1,50 @@
+id: person.dadabhai-naoroji
+type: person
+kind: person
+names:
+  en: Dadabhai Naoroji
+  native: દાદાભાઈ નવરોજી
+summary: Dadabhai Naoroji argued that British rule impoverished India through a continuing
+  transfer of resources to Britain. He advanced this drain theory through economic writing and
+  public office, and in 1906 he called for swaraj as Congress president.
+summaries:
+  kids: Naoroji studied how money earned in India was sent to Britain. He argued that this made it
+    harder for people in India to prosper.
+  teen: Naoroji pointed to government payments abroad and remittances by British officials as
+    channels of economic drain. He brought that argument into British and Indian political
+    debate and linked it to the demand for self-government.
+region: India and Britain
+datings:
+  - method: scholarly-consensus
+    range:
+      earliest: "1825"
+      latest: "1917"
+      precision: year
+      circa: false
+    grade: B
+    label: Lifespan
+    sources:
+      - src.patel-2020-naoroji
+      - src.sarkar-1989-modern-india
+claims:
+  - text: In Poverty and Un-British Rule in India, Naoroji argued that transfers to Britain drained
+      resources from India.
+    grade: A
+    sources:
+      - src.naoroji-1901-poverty-and-un-british-rule
+  - text: Naoroji was elected to the British House of Commons in 1892 and made swaraj the objective
+      of his 1906 Congress presidential address.
+    grade: B
+    sources:
+      - src.patel-2020-naoroji
+      - src.sarkar-1989-modern-india
+relations:
+  - kind: related-to
+    target: event.indian-national-congress
+tags:
+  - congress
+  - colonial-economy
+  - drain-theory
+review:
+  status: draft
+  author: codex-gpt-6

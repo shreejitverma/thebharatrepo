@@ -1,0 +1,43 @@
+id: text.drigganita
+type: text
+kind: science
+names:
+  en: Drigganita
+  iast: Dṛggaṇita
+  native: दृग्गणित
+summary: The Drigganita is Parameshvara’s Sanskrit astronomical handbook dated 1431. Its parameters reflect a
+  program of bringing astronomical calculations into closer agreement with observation.
+summaries:
+  kids: Parameshvara’s handbook gives revised rules for predicting what people would see in the sky.
+  teen: The Drigganita belongs to a Kerala program of updating astronomical parameters. The title associates
+    calculation with what can be observed.
+region: Kerala
+datings:
+  - method: textual-internal
+    range:
+      earliest: 1431
+      latest: 1431
+      precision: year
+      circa: false
+    grade: A
+    label: Text dated to Shaka 1353
+    sources:
+      - id: src.plofker-2009-mathematics-in-india
+        locator: Appendix B
+claims:
+  - text: Parameshvara’s Drigganita revises an inherited system of astronomical computation in light of observed
+      discrepancies.
+    grade: B
+    sources:
+      - id: src.plofker-2009-mathematics-in-india
+        locator: Section 7.4
+relations:
+  - kind: part-of
+    target: tradition.kerala-school-of-mathematics
+tags:
+  - kerala-school
+  - astronomy
+  - astronomical-parameters
+review:
+  status: draft
+  author: codex-gpt-6

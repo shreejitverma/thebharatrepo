@@ -1,0 +1,52 @@
+id: text.yuktibhasha
+type: text
+kind: science
+names:
+  en: Yuktibhasha
+  iast: Yuktibhāṣā
+  native: യുക്തിഭാഷ
+summary: The Yuktibhasha is Jyeshthadeva’s Malayalam exposition of mathematical astronomy, usually dated
+  around 1530. It gives arguments for calculation rules, including infinite series used to approximate circle
+  lengths and trigonometric quantities.
+summaries:
+  kids: This Malayalam book explains how adding more and more terms helps work out the circumference of a circle.
+  teen: The work gives reasons for procedures inherited by the Kerala school. Its mathematics and astronomy
+    sections cover topics from fractions and infinite series to planetary models.
+region: Kerala
+datings:
+  - method: textual-internal
+    range:
+      earliest: 1510
+      latest: 1560
+      precision: decade
+      circa: true
+    grade: C
+    label: Approximate composition (Sarma and colleagues)
+    sources:
+      - src.sarma-2008-ganita-yukti-bhasa
+      - id: src.plofker-2009-mathematics-in-india
+        locator: Section 7.2
+    note: The edition conventionally places the work around 1530.
+claims:
+  - text: The text is written in Malayalam prose and gives derivations for results in mathematical astronomy.
+    grade: A
+    sources:
+      - src.sarma-2008-ganita-yukti-bhasa
+  - text: Its mathematics section gives infinite-series procedures for the circumference of a circle and for sines.
+    grade: A
+    sources:
+      - src.sarma-2008-ganita-yukti-bhasa
+      - id: src.plofker-2009-mathematics-in-india
+        locator: Section 7.3
+relations:
+  - kind: related-to
+    target: text.tantrasangraha
+  - kind: part-of
+    target: tradition.kerala-school-of-mathematics
+tags:
+  - kerala-school
+  - infinite-series
+  - malayalam
+review:
+  status: draft
+  author: codex-gpt-6

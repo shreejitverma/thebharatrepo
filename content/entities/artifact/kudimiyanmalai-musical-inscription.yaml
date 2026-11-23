@@ -1,0 +1,89 @@
+id: artifact.kudimiyanmalai-musical-inscription
+type: artifact
+kind: art
+names:
+  en: Kudumiyanmalai Musical Inscription
+  iast: Kuṭumiyāṉmalai Caṅkīta Kalveṭṭu
+summary: "A unique 38-line Sanskrit musical notation inscription engraved in Pallava Grantha script on the hill face behind the Sikhanathaswami temple at Kudumiyanmalai in Pudukkottai district, Tamil Nadu (7th-8th century CE). Structured into seven sections named after early melodic modes (grama-ragas) and set out as groups of note syllables, attributed to a royal disciple of the master Rudracharya, it is the earliest known inscription in India recording musical notation."
+summaries:
+  kids: >-
+    Carved onto a rocky hillside behind a temple in Tamil Nadu more than 1,200 years ago, this stone
+    inscription is written not as stories or royal laws, but as sheet music - rows of musical note syllables
+    for students playing a stringed veena.
+  teen: >-
+    Etched in 7th-8th century Pallava Grantha script at Kudumiyanmalai, this thirty-eight-line epigraph
+    preserves the oldest physical musical notation in India, organizing exercises across seven classical scale
+    types (gramaragas) composed by a pupil of the music master Rudracharya.
+region: Kudumiyanmalai, Pudukkottai District, Tamil Nadu, India
+location:
+  name: Rock face behind Sikhanathaswami Temple, Kudumiyanmalai
+  lat: 10.417
+  lon: 78.6529
+datings:
+  - method: epigraphic
+    range:
+      earliest: 600
+      latest: 800
+      best: 700
+      precision: century
+      circa: true
+    grade: B
+    label: Pallava Grantha palaeography (7th-8th century CE)
+    sources:
+      - src.konow-1914-epigraphia-indica-vol-12
+      - src.widdess-1995-ragas-early-indian-music
+    note: >-
+      Often linked to Pallava king Mahendravarman I (r. c. 600-630 CE) from his title Sankirnajati and musical
+      expertise; P. R. Bhandarkar, C. Sivaramamurti, and Richard Widdess place the Grantha script forms
+      between the early 7th and 8th centuries CE.
+claims:
+  - text: >-
+      Edited by P. R. Bhandarkar in Epigraphia Indica Vol. 12 (1914) and analysed deeply by Richard Widdess,
+      the inscription consists of seven main horizontal blocks arranged across 38 carved lines in early
+      Pallava-Grantha script.
+    grade: A
+    sources:
+      - src.konow-1914-epigraphia-indica-vol-12
+      - src.widdess-1995-ragas-early-indian-music
+  - text: >-
+      Each line sets out sequences of four-note groups using the seven ancient svara syllables (sa, ri, ga,
+      ma, pa, dha, ni) modified with vowel endings (-a, -i, -u, -e) and concluding anusvara dots over seven
+      named scale modes (madhyamagrama, sadjagrama, sadava, sadharita, pancama, kaisikamadhyama, and kaisika).
+    grade: A
+    sources:
+      - src.konow-1914-epigraphia-indica-vol-12
+      - src.widdess-1995-ragas-early-indian-music
+  - text: >-
+      A Sanskrit colophon credits the musical exercises to an unnamed Parama-Mahesvara ruler, pupil of Acharya
+      Rudracharya ("rudracarya-sisyena... krtah svaragamah"), with an added Tamil note referring to playing on
+      a parivadini-veena ("eight and seven").
+    grade: B
+    sources:
+      - src.widdess-1995-ragas-early-indian-music
+      - src.hultzsch-1897-epigraphia-indica-vol-4
+relations:
+  - kind: part-of
+    target: polity.pallava-dynasty
+  - kind: contemporary-of
+    target: site.mamallapuram
+    note: Contemporary Pallava Grantha epigraphy and rock-cut temple culture
+  - kind: related-to
+    target: concept.brahmi-to-gupta-script
+    note: Early Pallava-Grantha script monument
+wikidata: null
+image:
+  commons: File:N-TN-C126 Musical Inscription Kudumiyanmalai.jpg
+  alt: Pallava Grantha rock inscription recording svara musical notation blocks at Kudumiyanmalai, Tamil Nadu
+  credit: R. K. Lakshmi
+  license: CC BY-SA 4.0
+tags:
+  - inscription
+  - music
+  - pallava
+  - grantha
+  - svara
+  - kudumiyanmalai
+  - tamil-nadu
+review:
+  status: draft
+  author: gemini-4-hydrogen-xhigh

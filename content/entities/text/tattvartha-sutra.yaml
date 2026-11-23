@@ -1,0 +1,64 @@
+id: text.tattvartha-sutra
+type: text
+kind: text
+names:
+  en: Tattvartha Sutra
+  iast: Tattvārthasūtra
+  native: तत्त्वार्थसूत्र
+summary: The Tattvartha Sutra systematises Jain teachings on knowledge, living beings, karma and
+  liberation. Shvetambara and Digambara traditions both value it and transmit distinct textual
+  versions. The date of its compilation is disputed.
+summaries:
+  kids: This short Jain book explains what lives, what actions do, and how Jain teachings describe the
+    path to freedom.
+  teen: The Sanskrit aphorisms organise Jain teachings into categories and link right view, knowledge
+    and conduct with liberation. Commentators from different Jain traditions interpret the work.
+datings:
+  - method: textual-internal
+    range:
+      earliest: 100
+      latest: 250
+      precision: century
+      circa: true
+    grade: C
+    label: "Nathmal Tatia: early placement of the attributed author"
+    sources:
+      - src.tatia-2011-that-which-is
+    note: Tatia places Umasvati around the second century. The composition date in this chronology
+      follows the traditional attribution.
+  - method: textual-internal
+    range:
+      earliest: 300
+      latest: 450
+      precision: century
+      circa: true
+    grade: C
+    label: "Piotr Balcerowicz and Ana Bajželj: fourth-century placement"
+    sources:
+      - src.bajzelj-2024-selfhood-jaina-philosophy
+    note: The later estimate uses comparison with the form and content of other Sanskrit philosophical
+      texts and distinguishes the root text from its commentaries.
+claims:
+  - text: The opening sutra jointly identifies right view, right knowledge and right conduct as the path
+      to liberation.
+    grade: A
+    sources:
+      - id: src.tatia-2011-that-which-is
+        locator: "1.1"
+  - text: The text is traditionally attributed to Umasvati or Umasvamin, with the names differently
+      preferred across Jain traditions.
+    grade: D
+    sources:
+      - src.tatia-2011-that-which-is
+      - src.bajzelj-2024-selfhood-jaina-philosophy
+relations:
+  - kind: related-to
+    target: text.jain-agamas
+tags:
+  - jainism
+  - sanskrit
+  - darshana
+  - karma
+review:
+  status: draft
+  author: codex-gpt-6

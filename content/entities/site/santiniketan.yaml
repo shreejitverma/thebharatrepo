@@ -1,0 +1,59 @@
+id: site.santiniketan
+type: site
+kind: site
+names:
+  en: Santiniketan
+  iast: Śāntiniketana
+  native: শান্তিনিকেতন
+summary: >-
+  Santiniketan in Birbhum, West Bengal, grew from a retreat established by Debendranath Tagore in 1863
+  into Rabindranath Tagore's school and Visva-Bharati. Its buildings and grounds reflect Tagore's
+  educational ideas and include Kala Bhavana, a centre for the visual arts. UNESCO inscribed the site in
+  2023.
+summaries:
+  kids: >-
+    At Santiniketan in West Bengal, the poet Rabindranath Tagore started a school where some lessons
+    took place outdoors. Students also learned painting, music and crafts.
+  teen: >-
+    Santiniketan grew from Debendranath Tagore's retreat into Rabindranath Tagore's school and
+    Visva-Bharati. Art teaching at Kala Bhavana and work by artists such as Nandalal Bose and Ramkinkar
+    Baij helped shape the campus.
+region: Rarh Bengal (Birbhum district, West Bengal)
+location: { name: "Santiniketan, Birbhum, West Bengal", lat: 23.678, lon: 87.685 }
+datings:
+  - method: documentary
+    range: { earliest: "1863 CE", latest: "1941 CE", precision: year, circa: false }
+    grade: B
+    label: "From Debendranath's retreat through Rabindranath Tagore's campus development"
+    sources:
+      - src.santiniketan-unesco-2023
+      - src.oconnell-2020-tagores-santiniketan
+      - src.sivakumar-2017-santiniketan
+    note: >-
+      Debendranath established the retreat in 1863. Rabindranath founded the school in 1901 and
+      Visva-Bharati in 1921. Campus development continued after his death in 1941.
+claims:
+  - text: >-
+      Kala Bhavana, established in 1919, helped shape Santiniketan's artistic life. Work by Nandalal
+      Bose and Ramkinkar Baij survives on the campus.
+    grade: B
+    sources:
+      - src.sivakumar-2017-santiniketan
+      - src.oconnell-2020-tagores-santiniketan
+      - src.santiniketan-unesco-2023
+  - text: >-
+      UNESCO inscribed Santiniketan on the World Heritage List in 2023.
+    grade: A
+    sources:
+      - src.santiniketan-unesco-2023
+relations:
+  - { kind: related-to, target: event.santiniketan-unesco-inscription }
+  - { kind: related-to, target: event.tagore-nobel-1913 }
+wikidata: Q1026431
+image:
+  commons: "File:Santiniketan - Kala Bhavan.jpg"
+  alt: Buildings at Kala Bhavana, the visual arts centre at Santiniketan
+  credit: SuparnaRoyChowdhury
+  license: CC BY-SA 4.0
+tags: [santiniketan, tagore, visva-bharati, unesco, west-bengal, education, art]
+review: { status: draft, author: "gemini-4-hydrogen-xhigh" }

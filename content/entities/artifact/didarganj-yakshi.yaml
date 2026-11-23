@@ -1,0 +1,108 @@
+id: artifact.didarganj-yakshi
+type: artifact
+kind: art
+names:
+  en: Didarganj Yakshi (Chauri Bearer)
+  iast: Dīdāragañja Yakṣī
+summary: >-
+  A life-size polished Chunar sandstone female figure (Bihar Museum, Patna, Arch. No. 134; figure c. 1.57 m
+  high, total height with pedestal c. 2.03 m) recovered in October 1917 from the banks of the Ganga at
+  Didarganj, Patna. Holding a fly-whisk (chauri) over her right shoulder, she is famous both for Mauryan
+  mirror-like polish and an unresolved art-historical debate over whether she dates to the 3rd century BCE or
+  the 1st-2nd century CE.
+summaries:
+  kids: >-
+    Found along the riverbank near Patna in 1917, this tall, gleaming sandstone statue shows a graceful woman
+    holding a ceremonial fly-whisk and wearing heavy anklets and beaded jewellery.
+  teen: >-
+    Carved from Chunar sandstone with an unmistakable mirror-like finish, the Didarganj Yakshi stands at the
+    centre of a famous chronological dispute: her polish recalls 3rd-century BCE Mauryan columns, whereas her
+    naturalism, hairstyle, and drapery align closely with 1st-2nd century CE Kushan art.
+region: Didarganj, Patna District, Bihar (housed at Bihar Museum, Patna)
+location:
+  name: Didarganj riverfront findspot, Patna
+  lat: 25.5717
+  lon: 85.2625
+datings:
+  - method: art-historical
+    range:
+      earliest: 300 BCE
+      latest: 185 BCE
+      best: 250 BCE
+      precision: century
+      circa: true
+    grade: C
+    label: Mauryan dating (material and mirror polish)
+    sources:
+      - src.gupta-1965-patna-museum-catalogue-antiquities
+      - src.harle-1994-art-architecture-indian-subcontinent
+    note: >-
+      Early and traditional art-historical position tying its Chunar sandstone and high mirror polish directly
+      to imperial Mauryan workshops near Pataliputra.
+  - method: art-historical
+    range:
+      earliest: 50
+      latest: 200
+      best: 120
+      precision: century
+      circa: true
+    grade: C
+    label: Early Historic / Kushan re-dating (stylistic revisionism)
+    sources:
+      - src.huntington-1985-art-ancient-india
+      - src.singh-2008-ancient-early-medieval-india
+    note: >-
+      Revisionist view (Pratapaditya Pal, Frederick Asher, Susan Huntington) arguing that the pleated
+      diaphanous dhoti, waist-beads, coif, and relaxed posture belong to the 1st-2nd century CE even if
+      Mauryan-style polish persisted or was revived.
+claims:
+  - text: >-
+      Discovered in October 1917 embedded face-down in alluvial clay on the Ganga bank at Didarganj, Patna,
+      the sculpture (Patna Museum Arch. No. 134, now Bihar Museum) measures about 1.57 m (5 ft 2 in) for the
+      figure and 2.03 m (6 ft 4 in) with its pedestal.
+    grade: A
+    sources:
+      - src.gupta-1965-patna-museum-catalogue-antiquities
+      - src.singh-2008-ancient-early-medieval-india
+  - text: >-
+      Carved in the round from buff Chunar sandstone, the figure holds a chauri (fly-whisk) in her right hand
+      while her left arm is broken below the wrist, and wears a multi-strand pearl necklace, heavy anklets,
+      and pleated lower garment.
+    grade: A
+    sources:
+      - src.gupta-1965-patna-museum-catalogue-antiquities
+      - src.harle-1994-art-architecture-indian-subcontinent
+  - text: >-
+      No internal inscription survives; attributing her either to Mauryan royal patronage or to post-Mauryan /
+      Kushan workshops remains an active stylistic debate in South Asian art history.
+    grade: B
+    sources:
+      - src.huntington-1985-art-ancient-india
+      - src.harle-1994-art-architecture-indian-subcontinent
+relations:
+  - kind: contemporary-of
+    target: artifact.parkham-yaksha-manibhadra
+    note: Monumental free-standing yaksha/yakshi figural tradition
+  - kind: related-to
+    target: polity.maurya-empire
+wikidata: Q5274083
+image:
+  commons: File:Didarganj-Yakshi-3bc-Patna.jpg
+  alt: Front view of the polished Chunar sandstone Didarganj Yakshi holding a chauri fly-whisk
+  credit: Anandajoti
+  license: CC BY 3.0
+debate: >-
+  There is no inscription on the Didarganj Yakshi. While P. L. Gupta and many Indian scholars assign her to
+  the 3rd century BCE Mauryan court on the strength of Chunar sandstone and lustrous polish, several art
+  historians point to Mathura Kushan parallels for her coiffure, hip-sash, and organic volume to argue for a
+  1st-2nd century CE date.
+tags:
+  - sculpture
+  - yakshi
+  - chunar-sandstone
+  - maurya
+  - patna
+  - bihar
+review:
+  status: draft
+  author: gemini-4-hydrogen-xhigh

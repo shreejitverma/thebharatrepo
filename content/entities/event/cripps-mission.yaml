@@ -1,0 +1,50 @@
+id: event.cripps-mission
+type: event
+kind: event
+names:
+  en: Cripps Mission
+summary: In 1942 the British government sent Stafford Cripps to offer a new constitutional
+  process after the war. The negotiations failed amid disagreements over wartime authority and
+  the future position of the provinces.
+summaries:
+  kids: Stafford Cripps came from Britain with proposals for how India might be governed after the
+    war. The talks ended without an agreement.
+  teen: The draft offered dominion status after the war and allowed provinces to stay outside the
+    proposed new union. The talks also foundered over who would control government and defence
+    during the war.
+region: New Delhi and Westminster
+datings:
+  - method: documentary
+    range:
+      earliest: "1942"
+      latest: "1942"
+      precision: year
+      circa: false
+    grade: A
+    label: Wartime mission, March and April 1942
+    sources:
+      - src.national-archives-1942-cripps-broadcast
+      - src.sarkar-1989-modern-india
+claims:
+  - text: In July 1942, Cripps said that his mission had offered Indians the opportunity to frame
+      their own system of government after the war.
+    grade: A
+    sources:
+      - src.national-archives-1942-cripps-broadcast
+  - text: Disagreement over the immediate transfer of power, including wartime defence, helped
+      prevent an agreement.
+    grade: B
+    sources:
+      - src.sarkar-1989-modern-india
+      - src.bose-jalal-2004-modern-south-asia
+relations:
+  - kind: preceded
+    target: event.quit-india-movement
+  - kind: related-to
+    target: event.cabinet-mission-plan
+tags:
+  - second-world-war
+  - constitutional-reform
+review:
+  status: draft
+  author: codex-gpt-6

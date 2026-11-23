@@ -1,0 +1,50 @@
+id: text.mimamsa-sutras
+type: text
+kind: text
+names:
+  en: Mimamsa Sutras
+  iast: Mīmāṃsāsūtra
+  native: मीमांसासूत्र
+summary: The Mimamsa Sutras, attributed to Jaimini, set out principles for reading Vedic injunctions
+  and determining ritual obligations. Their date is uncertain, and later commentators developed the
+  arguments in different directions.
+summaries:
+  kids: If two instructions seem to disagree, how do you decide what to do? This Sanskrit work asks
+    that question about instructions for Vedic rites.
+  teen: Jaimini’s sutras treat Vedic injunctions as a source for knowing dharma. They develop rules
+    for deciding when a passage gives an instruction and when it explains one.
+datings:
+  - method: textual-internal
+    range:
+      earliest: "400 BCE"
+      latest: "101 BCE"
+      precision: century
+      circa: true
+    grade: C
+    label: "Francis X. Clooney: fourth to second century BCE"
+    sources:
+      - src.clooney-1990-thinking-ritually
+    note: Clooney uses this interval as a working estimate and compares the structure and concerns of
+      the sutras with earlier Vedic ritual literature.
+claims:
+  - text: The opening defines dharma in relation to an injunction.
+    grade: A
+    sources:
+      - id: src.clooney-1990-thinking-ritually
+        locator: Mimamsa Sutra 1.1.2
+  - text: Shabara’s commentary is a major witness to the interpretation of the early sutras.
+    grade: B
+    sources:
+      - src.clooney-1990-thinking-ritually
+      - src.freschi-2018-paribhasas-mimamsa
+relations:
+  - kind: related-to
+    target: text.brahmanas
+tags:
+  - mimamsa
+  - darshana
+  - ritual
+  - hermeneutics
+review:
+  status: draft
+  author: codex-gpt-6

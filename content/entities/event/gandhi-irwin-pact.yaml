@@ -1,0 +1,47 @@
+id: event.gandhi-irwin-pact
+type: event
+kind: event
+names:
+  en: Gandhi-Irwin Pact
+summary: In March 1931 Gandhi and Viceroy Lord Irwin reached an agreement under which Congress
+  suspended civil disobedience and agreed to attend the next Round Table Conference. The
+  government agreed to release prisoners convicted of offences unconnected with violence.
+summaries:
+  kids: Gandhi and the viceroy agreed to pause the protests and hold talks. The government agreed
+    to free many people who had been jailed.
+  teen: The agreement offered limited concessions, including release of qualifying prisoners and
+    some local salt-making. In return, Congress suspended civil disobedience and took part in
+    renewed constitutional talks.
+region: Delhi
+datings:
+  - method: scholarly-consensus
+    range:
+      earliest: "1931"
+      latest: "1931"
+      precision: year
+      circa: false
+    grade: B
+    label: Settlement announced on 5 March 1931
+    sources:
+      - src.rajghat-life-events-of-gandhi
+      - src.sarkar-1989-modern-india
+claims:
+  - text: Congress suspended civil disobedience in return for concessions including the release of
+      prisoners whose offences did not involve violence.
+    grade: B
+    sources:
+      - src.sarkar-1989-modern-india
+      - src.chandra-1989-indias-struggle-for-independence
+relations:
+  - kind: related-to
+    target: event.salt-march
+  - kind: related-to
+    target: event.round-table-conferences
+  - kind: related-to
+    target: person.mahatma-gandhi
+tags:
+  - civil-disobedience
+  - constitutional-reform
+review:
+  status: draft
+  author: codex-gpt-6

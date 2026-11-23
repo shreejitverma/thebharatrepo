@@ -1,0 +1,53 @@
+id: text.harivamsha
+type: text
+kind: text
+names:
+  en: Harivamsha
+  iast: Harivaṃśa
+  native: हरिवंश
+summary: The Harivamsha is a Sanskrit supplement to the Mahabharata. It gives accounts of creation
+  and lineages, including the ancestry and early life of Krishna. The date of its principal layers
+  is uncertain.
+summaries:
+  kids: The Mahabharata tells many stories about Krishna as an adult. The Harivamsha adds stories
+    about his ancestors and his childhood among cowherds.
+  teen: The Harivamsha extends the epic into Krishna’s family history and childhood. Comparing its
+    manuscripts reveals how later transmitters expanded the text.
+datings:
+  - method: textual-internal
+    range:
+      earliest: 100
+      latest: 450
+      precision: century
+      circa: true
+    grade: C
+    label: "John Brockington: early centuries CE for main epic supplement"
+    sources:
+      - src.brockington-1998-sanskrit-epics
+      - src.brodbeck-2019-krishnas-lineage
+    note: Relative chronology rests on its relationship to late epic material and the growth of the
+      Krishna narrative across Sanskrit works.
+claims:
+  - text: The text preserves stories of Krishna’s upbringing among cowherds and of his encounter with
+      Kamsa.
+    grade: A
+    sources:
+      - src.brodbeck-2019-krishnas-lineage
+  - text: Brodbeck translates the Sanskrit text reconstructed by the Bhandarkar Oriental Research
+      Institute critical edition.
+    grade: B
+    sources:
+      - src.brodbeck-2019-krishnas-lineage
+  - text: The traditional attribution to Vyasa extends to the Harivamsha as the epic’s supplement.
+    grade: D
+    sources: [src.brodbeck-2019-krishnas-lineage]
+relations:
+  - kind: part-of
+    target: text.mahabharata
+tags:
+  - itihasa
+  - sanskrit
+  - krishna
+review:
+  status: draft
+  author: codex-gpt-6

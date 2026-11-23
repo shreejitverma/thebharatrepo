@@ -1,0 +1,58 @@
+id: polity.pandya-dynasty
+type: polity
+kind: polity
+names:
+  en: Medieval Pandya Dynasty
+  iast: Pāṇḍya
+  native: பாண்டியர்
+summary: >-
+  The medieval Pandyas ruled the southern Tamil country from Madurai, beginning with the revival credited to
+  Kadungon in the late sixth century and including the thirteenth-century expansion, until Madurai's
+  ascendancy waned in the fourteenth century. The early Pandyas of the Sangam age, known from Ashoka's
+  edicts and Tamil-Brahmi inscriptions, are treated as a separate polity.
+summaries:
+  kids: >-
+    Medieval Pandya kings ruled around Madurai. Later copper records remember King Kadungon as the one who
+    brought the family back to power.
+  teen: >-
+    Dated copperplates let historians trace medieval Pandya rulers and their long rivalry with the Cholas.
+    The much earlier Pandyas of the Sangam age belong to a separate chapter of history.
+region: Southern Tamil country
+location:
+  name: Madurai
+  lat: 9.92
+  lon: 78.12
+datings:
+  - method: scholarly-consensus
+    range:
+      earliest: "550"
+      latest: "1350"
+      precision: decade
+      circa: true
+    grade: B
+    label: Period of rule
+    sources:
+      - src.karashima-2014-concise-history-south-india
+      - src.singh-2008-ancient-early-medieval-india
+    note: Medieval royal lines include interruptions and changes of power. Later regional branches continued
+      after the Madurai ascendancy waned.
+claims:
+  - text: Madurai was the political centre of medieval Pandya rule.
+    grade: B
+    sources:
+      - src.karashima-2014-concise-history-south-india
+      - src.singh-2008-ancient-early-medieval-india
+  - text: Later Pandya charters remember Kadungon as restoring the royal line after Kalabhra rule.
+    grade: C
+    sources:
+      - src.karashima-2014-concise-history-south-india
+      - src.singh-2008-ancient-early-medieval-india
+relations:
+  - kind: related-to
+    target: polity.chola-dynasty
+tags:
+  - pandya
+  - madurai
+review:
+  status: draft
+  author: codex-gpt-6

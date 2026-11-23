@@ -1,0 +1,44 @@
+id: person.aryadeva
+type: person
+kind: person
+names:
+  en: Aryadeva
+  iast: Āryadeva
+  native: आर्यदेव
+summary: Aryadeva was an early Madhyamaka philosopher associated with Nagarjuna. His Four Hundred
+  Verses connect philosophical argument with Buddhist training.
+summaries:
+  kids: Aryadeva wrote verses about how habits and mistaken beliefs can lead to suffering. The verses
+    invite readers to examine their own ideas.
+  teen: The Four Hundred Verses treats ethical and practical concerns alongside arguments against
+    fixed views about reality. Commentators later elaborated the text in several Buddhist
+    traditions.
+datings:
+  - method: textual-internal
+    range:
+      earliest: "180"
+      latest: "280"
+      precision: century
+      circa: true
+    grade: C
+    label: Oxford Handbook estimate for early Madhyamaka activity
+    sources:
+      - id: src.ganeri-2017-oxford-handbook-indian-philosophy
+        locator: "Timeline: Indian Philosophy in a Hundred Thinkers"
+      - src.westerhoff-2018-golden-age-indian-buddhist-philosophy
+claims:
+  - text: The Four Hundred Verses, or Catuhshataka, is attributed to Aryadeva and discusses both
+      practical training and philosophical views.
+    grade: B
+    sources:
+      - id: src.ganeri-2017-oxford-handbook-indian-philosophy
+        locator: "Timeline: Indian Philosophy in a Hundred Thinkers"
+      - src.westerhoff-2018-golden-age-indian-buddhist-philosophy
+relations: []
+tags:
+  - buddhist-philosophy
+  - madhyamaka
+  - mahayana
+review:
+  status: draft
+  author: codex-gpt-6

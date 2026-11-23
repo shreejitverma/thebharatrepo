@@ -1,0 +1,61 @@
+id: person.lalla
+type: person
+kind: science
+names:
+  en: Lalla
+  iast: Lalla
+  native: लल्ल
+summary: Lalla was a Sanskrit astronomer usually placed in the eighth century. His Shishyadhivriddhida Tantra
+  develops astronomy in the Aryabhata school. An alternative chronology based on its numerical parameters has
+  been proposed.
+summaries:
+  kids: Lalla wrote a guide for students of astronomy. Astronomers use clues inside the guide to work out when
+    he may have lived.
+  teen: Lalla’s treatise gives procedures for astronomy, including eclipse geometry. One date comes from
+    correction rules, while a later estimate comes from fitting the text’s numerical parameters.
+datings:
+  - method: astronomical-reference
+    range:
+      earliest: 700
+      latest: "800 CE"
+      precision: century
+      circa: true
+    grade: C
+    label: Eighth-century placement (Plofker)
+    sources:
+      - id: src.plofker-2009-mathematics-in-india
+        locator: Sections 4.2 and 4.6
+    note: Lalla’s correction rules refer to 748 CE.
+  - method: astronomical-reference
+    range:
+      earliest: 875
+      latest: 925
+      precision: decade
+      circa: true
+    grade: C
+    label: Later parameter fit (Billard)
+    sources:
+      - id: src.billard-1971-astronomie-indienne
+        locator: pp. 139-146
+      - id: src.plofker-2009-mathematics-in-india
+        locator: Section 4.6
+    note: Billard inferred a later version using parameters that fit about 898 CE and proposed that it
+      incorporated earlier material.
+claims:
+  - text: Lalla’s major surviving astronomical work is the Shishyadhivriddhida Tantra, which describes how to
+      construct eclipse diagrams.
+    grade: A
+    sources:
+      - id: src.plofker-2009-mathematics-in-india
+        locator: Sections 4.2 and 4.3
+relations:
+  - kind: authored
+    target: text.shishyadhivriddhida-tantra
+debate: Plofker follows the eighth-century placement indicated by a correction linked to 748 CE. Billard’s
+  numerical analysis favors a later form of the text and posits an earlier source for some of its data.
+tags:
+  - astronomy
+  - eclipses
+review:
+  status: draft
+  author: codex-gpt-6

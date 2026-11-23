@@ -47,6 +47,7 @@ datings:
       circa: true
     grade: B
     label: Youngest Toba Tuff geochemical correlation (Westgate et al. 1998)
+    primaryReason: A competing dating of the same tephra, not an event in the site's history; it supersedes the older 39Ar-40Ar age.
     sources:
       - src.westgate-1998-toba-tephra-peninsular-india
     note: >-

@@ -1,0 +1,29 @@
+id: event.first-general-election-1951-52
+type: event
+kind: polity
+names:
+  en: "India's first general election"
+summary: "India held its first general election in 1951 and 1952 under universal adult suffrage. The Election Commission records elections for 489 seats in the first Lok Sabha."
+summaries:
+  kids: "In 1951 and 1952, adults across India voted to choose members of the country's first Lok Sabha, the elected house of Parliament."
+  teen: "India's first general election put universal adult suffrage into practice. Voting took place in stages across 1951 and 1952, filling 489 elected seats in the first Lok Sabha."
+region: "India"
+datings:
+  - method: documentary
+    range: { earliest: "1951", latest: "1952", precision: year, circa: false }
+    grade: A
+    label: "First Lok Sabha election"
+    sources: ["src.eci-1955-first-general-election", "src.eci-about-eci"]
+    note: "The Election Commission records 2 April 1952 as the constitution date of the first Lok Sabha."
+claims:
+  - text: "The Election Commission's official report describes the 1951-52 election as conducted on the basis of adult franchise."
+    grade: A
+    sources: ["src.eci-1955-first-general-election"]
+  - text: "The Election Commission records 489 elected seats across 401 constituencies in the first Lok Sabha election."
+    grade: A
+    sources: ["src.eci-about-eci"]
+relations:
+  - kind: related-to
+    target: event.constitution-adopted-and-commenced
+tags: ["republic","elections","democracy"]
+review: { status: draft, author: codex-gpt-6 }

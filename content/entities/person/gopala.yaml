@@ -1,0 +1,52 @@
+id: person.gopala
+type: person
+kind: person
+names:
+  en: Gopala
+  iast: Gopāla
+  native: গোপাল
+summary: >-
+  Gopala was the founder of the Pala dynasty of Bengal and Bihar in the mid-eighth century CE.
+  According to the Khalimpur copper-plate inscription of his son Dharmapala, regional notables
+  (prakritis) placed Gopala on the throne to end a prolonged period of political anarchy known as
+  matsyanyaya ("the law of the fishes"), and Tibetan tradition credits him with founding Odantapuri.
+summaries:
+  kids: >-
+    Around 750 CE, after years of fighting and disorder in Bengal, local leaders chose Gopala as
+    king to restore peace, starting the famous Pala dynasty.
+  teen: >-
+    Recorded in his son Dharmapala's Khalimpur inscription as having ended matsyanyaya ("big fish
+    eating small fish") with the consent of regional chiefs (prakritis), Gopala founded the Pala
+    dynasty of eastern India.
+region: Bengal and Bihar
+datings:
+  - method: epigraphic
+    range: { earliest: 745, latest: 780, best: 750, precision: decade, circa: true }
+    grade: B
+    label: Reign of Gopala as founder of the Pala dynasty
+    sources:
+      - src.chowdhury-1967-dynastic-history-bengal
+      - src.majumdar-1943-history-of-bengal-vol1
+      - src.singh-2008-ancient-early-medieval-india
+    note: Pala charters record regnal years rather than an absolute era, so historians reconstruct Gopala's accession around 750 CE by counting back from his successors' synchronisms.
+claims:
+  - text: Verse 4 of Dharmapala's Khalimpur copper-plate inscription states that the prakritis caused Gopala to take the hand of Fortune to put an end to matsyanyaya in Bengal.
+    grade: A
+    sources:
+      - src.hultzsch-1897-epigraphia-indica-vol-4
+      - src.chowdhury-1967-dynastic-history-bengal
+  - text: Later Tibetan Buddhist histories by Taranatha and Sumpa Mkhan-po attribute the founding of the Odantapuri monastery in Bihar to Gopala, though no contemporary Pala epigraph directly confirms this.
+    grade: C
+    sources:
+      - src.dutt-1988-buddhist-monks-monasteries
+      - src.majumdar-1943-history-of-bengal-vol1
+debate: >-
+  Historians debate whether the Khalimpur plate's phrase "prakritibhih" describes a formal popular
+  election, an agreement among leading feudal chiefs and military magnates, or retrospective royal
+  panegyric legitimising a military takeover.
+relations:
+  - { kind: founded, target: polity.pala-empire }
+  - { kind: related-to, target: site.odantapuri }
+wikidata: Q3352284
+tags: [gopala, pala, bengal, bihar, matsyanyaya, khalimpur]
+review: { status: draft, author: "gemini-4-hydrogen-xhigh" }

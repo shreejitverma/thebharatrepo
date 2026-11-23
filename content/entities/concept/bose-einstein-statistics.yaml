@@ -1,0 +1,45 @@
+id: concept.bose-einstein-statistics
+type: concept
+kind: science
+names:
+  en: Bose-Einstein Statistics
+summary: Bose-Einstein statistics describe how indistinguishable bosons occupy quantum states. Bose introduced
+  the counting method for light quanta in 1924, and Einstein extended it to a gas of massive particles in
+  papers published in 1924 and 1925.
+summaries:
+  kids: Many particles of the same kind can share the same quantum state. Bose and Einstein helped work out how
+    to count the possibilities.
+  teen: Bose’s radiation calculation counts the occupations of quantum states. Einstein carried that approach
+    over to material particles, developing the quantum ideal gas and predicting condensation.
+datings:
+  - method: documentary
+    range:
+      earliest: 1924
+      latest: 1925
+      precision: year
+      circa: false
+    grade: A
+    label: Bose’s radiation paper and Einstein’s gas papers
+    sources:
+      - src.bose-1924-plancks-gesetz
+      - src.perez-2010-einstein-monatomic-gas
+claims:
+  - text: Bose used a new counting procedure for light quanta to derive Planck’s radiation law.
+    grade: A
+    sources:
+      - src.bose-1924-plancks-gesetz
+  - text: Einstein extended the approach to a monatomic ideal gas and found a regime in which many particles
+      occupy the lowest energy state.
+    grade: A
+    sources:
+      - src.perez-2010-einstein-monatomic-gas
+relations:
+  - kind: related-to
+    target: person.satyendra-nath-bose
+tags:
+  - physics
+  - quantum-statistics
+  - bosons
+review:
+  status: draft
+  author: codex-gpt-6

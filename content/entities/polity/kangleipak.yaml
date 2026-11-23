@@ -1,0 +1,66 @@
+id: polity.kangleipak
+type: polity
+kind: polity
+names:
+  en: Kangleipak
+  native: কংলৈপাক (ꯀꯪꯂꯩꯄꯥꯛ)
+summary: >-
+  Kangleipak is the indigenous Meitei name for the valley polity centred at the sacred citadel of
+  Kangla in Imphal before the wider Sanskritised designation Manipur came into use in the eighteenth
+  century. Rooted in the seven-clan (yek-salai) synthesis under the Ningthouja lineage, its history
+  is documented in the Cheitharol Kumbaba and archaic Meitei puya texts such as the Loiyamba Shinyen.
+summaries:
+  kids: >-
+    Before it was widely called Manipur, the Meitei people knew their valley kingdom centred at
+    Kangla as Kangleipak, recorded in royal chronicles and ancient clan decrees.
+  teen: >-
+    Kangleipak denotes the pre-18th-century Meitei state around Kangla, where the Ningthouja clan
+    gradually unified seven valley principalities, codified duties in the Loiyamba Shinyen, and
+    practised Sanamahi and Pakhangba traditions.
+region: Imphal Valley, Manipur
+location: { name: "Kangla, Imphal, Manipur", lat: 24.807, lon: 93.941 }
+datings:
+  - method: scholarly-consensus
+    range: { earliest: 1074, latest: 1709, precision: century, circa: true }
+    grade: B
+    label: Historical valley consolidation from Loiyamba to pre-Pamheiba Kangleipak
+    sources:
+      - src.kamei-1991-history-of-manipur
+      - src.parratt-2013-cheitharon-kumpapa
+      - src.hodson-1908-the-meitheis
+    note: Historians place reliable administrative consolidation around King Loiyamba (r. 1074-1122 CE) and clearer contemporaneous chronology from Kyamba (1467-1508 CE) down to Pamheiba's early-18th-century Vaishnava reforms.
+  - method: traditional-sampradaya
+    range: { earliest: 33, latest: 1709, precision: year, circa: true }
+    grade: D
+    label: Cheitharol Kumbaba traditional Pakhangba epoch (33 CE)
+    sources:
+      - src.parratt-2013-cheitharon-kumpapa
+      - src.kamei-1991-history-of-manipur
+    note: The Cheitharol Kumbaba and Meitei puyas open the Ningthouja dynasty at Kangla with Nongda Lairen Pakhangba in 33 CE.
+claims:
+  - text: The Loiyamba Shinyen attributed to King Loiyamba (r. 1074-1122 CE) codifies the administrative allocation of occupational duties and deities among the Meitei clans in Kangleipak.
+    grade: B
+    sources:
+      - src.kamei-1991-history-of-manipur
+      - src.parratt-2013-cheitharon-kumpapa
+  - text: Prior to eighteenth-century Gaudiya Vaishnava adoption, Meitei state ritual centred on the ancestral serpent deity Pakhangba at Kangla and the Sanamahi and Umang Lai traditions.
+    grade: B
+    sources:
+      - src.hodson-1908-the-meitheis
+      - src.parratt-2013-cheitharon-kumpapa
+debate: >-
+  The royal chronicle Cheitharol Kumbaba begins its regnal list in 33 CE with Nongda Lairen
+  Pakhangba. Modern historians such as Gangmumei Kamei and Saroj Nalini Arambam Parratt view dates
+  prior to the late eleventh or fifteenth century as reconstructed clan memory rather than
+  contemporaneous year-by-year records.
+relations:
+  - { kind: preceded, target: polity.manipur-kingdom }
+  - { kind: related-to, target: text.cheitharol-kumbaba }
+wikidata: Q106369135
+image:
+  commons: "File:Kangla Sanathong (Kangla Grand Gate or Kangla Royal Gate) - Classical Meitei architecture - in the western side of the Kangla Fort (Kangla Palace) in Imphal West district of Manipur state (Kangleipak) 02.jpg"
+  alt: Restored Kangla Sanathong western royal gateway of the ancient Kangla citadel in Imphal, Manipur
+  credit: Haoreima
+  license: CC BY-SA 4.0
+tags: [kangleipak, manipur, kangla, meitei, sanamahism, northeast-india]
+review: { status: draft, author: "gemini-4-hydrogen-xhigh" }

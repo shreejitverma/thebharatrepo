@@ -1,0 +1,57 @@
+id: polity.delhi-sultanate
+type: polity
+kind: polity
+names:
+  en: Delhi Sultanate
+summary: The Delhi Sultanate developed from the Ghurid conquests and was ruled by successive
+  military and dynastic houses. Its territorial extent changed substantially over three centuries,
+  ending with Babur's defeat of Ibrahim Lodi at Panipat.
+summaries:
+  kids: For more than three centuries, sultans ruled from Delhi and other nearby capitals. Their
+    kingdoms grew and shrank under different ruling families.
+  teen: Aybak based his early authority at Lahore, and Iltutmish consolidated Delhi. Later dynasties
+    controlled widely varying territories before the Mughal conquest of 1526.
+region: Indo-Gangetic plain, with changing domains across the subcontinent
+location:
+  name: Delhi
+  lat: 28.61
+  lon: 77.21
+datings:
+  - method: documentary
+    range:
+      earliest: "1206"
+      latest: "1526"
+      precision: year
+      circa: false
+    grade: B
+    label: Period of rule
+    sources:
+      - src.jackson-1999-delhi-sultanate
+      - src.jackson-2010-muslim-india-delhi-sultanate
+      - src.asher-talbot-2006-india-before-europe
+    note: The conventional period starts with the Ghurid succession crisis and closes at the First
+      Battle of Panipat.
+claims:
+  - text: Aybak asserted de facto autonomy after the death of the Ghurid ruler Muizz al-Din in 1206.
+    grade: B
+    sources:
+      - src.jackson-2010-muslim-india-delhi-sultanate
+      - src.jackson-1999-delhi-sultanate
+  - text: Iltutmish established Delhi as the enduring centre of his successors' rule.
+    grade: B
+    sources:
+      - src.jackson-2010-muslim-india-delhi-sultanate
+      - src.jackson-1999-delhi-sultanate
+  - text: Babur's memoir recounts the defeat of Ibrahim Lodi at Panipat in 1526.
+    grade: A
+    sources:
+      - src.babur-1921-memoirs
+relations:
+  - kind: related-to
+    target: event.founding-of-delhi-sultanate
+  - kind: preceded
+    target: polity.mughal-empire
+tags: []
+review:
+  status: draft
+  author: codex-gpt-6

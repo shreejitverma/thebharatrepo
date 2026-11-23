@@ -1,0 +1,109 @@
+id: artifact.piprahwa-inscribed-reliquary-urn
+type: artifact
+kind: dharma
+names:
+  en: Piprahwa Inscribed Reliquary Urn
+  iast: Piparahavā Śākya Dhātu Kalaśa
+summary: >-
+  A carved steatite (soapstone) vase excavated in January 1898 by estate manager William Claxton Peppe inside
+  a massive sandstone coffer in the Piprahwa stupa, Siddharthnagar district, Uttar Pradesh (preserved with
+  coffer and companion vessels in the Indian Museum, Kolkata). Its single-line early Brahmi Prakrit
+  inscription names "Budhasa bhagavate sakiyanam", sparking a century-long scholarly debate over its date and
+  exact translation.
+summaries:
+  kids: >-
+    Excavated inside a huge stone chest in northern Uttar Pradesh in 1898, this smooth soapstone jar carries
+    an early Brahmi sentence naming the Shakyas and the Blessed Buddha, kept today in Kolkata's Indian Museum.
+  teen: >-
+    Found by W. C. Peppe at Piprahwa (near ancient Kapilavastu) in 1898 and placed in the Indian Museum,
+    Kolkata, this inscribed soapstone relic urn divides scholars over both grammar and date: does it mark the
+    original Shakya share of the Buddha's ashes or a 3rd-century BCE reburial?
+region: Piprahwa, Siddharthnagar District, Uttar Pradesh (housed in Indian Museum, Kolkata)
+location:
+  name: Piprahwa brick stupa site
+  lat: 27.443
+  lon: 83.1278
+datings:
+  - method: epigraphic
+    range:
+      earliest: 300 BCE
+      latest: 180 BCE
+      best: 240 BCE
+      precision: century
+      circa: true
+    grade: B
+    label: Mauryan or early post-Mauryan Brahmi palaeography (Harry Falk, Richard Salomon)
+    sources:
+      - src.salomon-1998-indian-epigraphy
+      - src.coningham-2015-archaeology-south-asia
+    note: >-
+      Paleographers such as Buhler, Fleet, Dani, Salomon, and Falk note standard Ashokan/slightly post-Ashokan
+      Brahmi forms (c. mid-3rd to early 2nd century BCE) and note the absence of earlier pre-Mauryan inscribed
+      stone deposits.
+  - method: "epigraphic"
+    range:
+      earliest: 480 BCE
+      latest: 300 BCE
+      best: 380 BCE
+      precision: century
+      circa: true
+    grade: C
+    label: "Pre-Ashokan reading of the script (Buhler and early scholars), now a minority view"
+    sources:
+      - src.fleet-1907-piprahwa-vase-inscription
+      - src.coningham-2015-archaeology-south-asia
+    note: "Buhler and other early scholars read the script as pre-Ashokan, which would place the deposit in the 5th-4th century BCE. K. M. Srivastava's 1971-1977 excavations found uninscribed relic caskets at a lower, earlier level, but these date the first phase of the stupa rather than this inscribed urn."
+claims:
+  - text: "Excavated by W. C. Peppe in 1898 inside a large sandstone coffer containing five vessels (four of steatite and one of crystal), jewels, and gold foil impressions (deposited at the Indian Museum, Kolkata, while bone fragments were gifted to Siam), the inscribed urn carries 37 early Brahmi characters around its shoulder."
+    grade: A
+    sources:
+      - src.fleet-1907-piprahwa-vase-inscription
+      - src.salomon-1998-indian-epigraphy
+  - text: >-
+      The inscription reads in eastern Prakrit: "Sukiti bhatinam sabhaginikanam sa-putadalanam iyam
+      salilanidhane budhasa bhagavate sakiyanam", translated either as the Shakya kinsmen's share of the
+      Buddha's bodily relics or (by Fleet) as a shrine of slaughtered Shakyas.
+    grade: B
+    sources:
+      - src.fleet-1907-piprahwa-vase-inscription
+      - src.salomon-1998-indian-epigraphy
+  - text: >-
+      Stratigraphic work at Piprahwa and nearby Ganwaria also recovered terracotta sealings naming "Om
+      Devaputra Vihare Kapilavastu Bhikshu Sanghasa", linking the site closely to ancient Kapilavastu.
+    grade: B
+    sources:
+      - src.coningham-2015-archaeology-south-asia
+      - src.singh-2008-ancient-early-medieval-india
+relations:
+  - kind: related-to
+    target: person.gautama-buddha
+    note: Inscribed as containing relics associated with the Buddha and the Shakyas
+  - kind: related-to
+    target: artifact.lumbini-pillar-inscription
+    note: Part of the Kapilavastu-Terai sacred Buddhist landscape
+  - kind: related-to
+    target: concept.northern-black-polished-ware-culture
+    note: Deeper Piprahwa stupa strata sit on NBPW levels
+wikidata: null
+image:
+  commons: File:Relic offerings 10.jpg
+  alt: >-
+    Precious relic offerings and steatite caskets from the Piprahwa sandstone coffer preserved in the Indian
+    Museum, Kolkata
+  credit: Kalagon
+  license: CC BY-SA 4.0
+debate: >-
+  Scholars remain divided on two fronts: first, whether the early Brahmi script can pre-date Ashoka (against
+  the 3rd-2nd century BCE epigraphic consensus); second, whether J. F. Fleet (1907) was right to read the
+  Prakrit syntax as "relics of the Shakya kinsmen of the Buddha" rather than "relics of the Buddha, Lord of
+  the Shakyas," though modern consensus largely prefers a Mauryan/post-Mauryan shrine honouring Buddha relics.
+tags:
+  - reliquary
+  - piprahwa
+  - buddha
+  - brahmi
+  - kapilavastu
+  - indian-museum
+review:
+  status: draft
+  author: gemini-4-hydrogen-xhigh

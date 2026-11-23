@@ -1,0 +1,56 @@
+id: site.bhaja-caves
+type: site
+kind: site
+names:
+  en: Bhaja Caves
+  iast: Bhājā Guhāḥ
+  native: भाजा लेणी
+summary: >-
+  The Bhaja Caves near Lonavala in Maharashtra are a group of early Buddhist rock-cut monuments.
+  Excavated mainly in the second and first centuries BCE, they include a vaulted worship hall with
+  surviving timber ribs and a group of rock-cut stupas.
+summaries:
+  kids: >-
+    At Bhaja in Maharashtra, workers carved a large Buddhist worship hall into a hillside. Wooden ribs
+    still line its stone ceiling, and a group of carved stone stupas stands nearby.
+  teen: >-
+    Bhaja's Buddhist caves preserve a rock-cut worship hall fitted with timber ribs, monastic cells and
+    carved stupas. Two panels in Cave 19 are often interpreted as Surya in a chariot and Indra on an
+    elephant.
+region: Sahyadri / Western Ghats (Pune district, Maharashtra)
+location: { name: "Bhaja, Maharashtra", lat: 18.728, lon: 73.482 }
+datings:
+  - method: art-historical
+    range: { earliest: "200 BCE", latest: "50 BCE", precision: decade, circa: true }
+    grade: B
+    label: "Main early Buddhist cave excavation"
+    sources:
+      - src.dehejia-1972-early-buddhist-rock-temples
+      - src.fergusson-burgess-1880-cave-temples-india
+    note: >-
+      The main group is dated through its plan, sloping columns, timber features and early Brahmi letter
+      forms.
+claims:
+  - text: >-
+      Cave 12 contains an apsidal worship hall with timber ribs fitted to its rock-cut barrel vault.
+    grade: B
+    sources:
+      - src.dehejia-1972-early-buddhist-rock-temples
+      - src.huntington-1985-art-ancient-india
+  - text: >-
+      Two reliefs in Cave 19 show a chariot rider and an elephant rider. They have often been identified
+      as Surya and Indra.
+    grade: C
+    sources:
+      - src.fergusson-burgess-1880-cave-temples-india
+      - src.harle-1994-art-architecture-indian-subcontinent
+relations:
+  - { kind: related-to, target: site.karla-caves }
+wikidata: Q854709
+image:
+  commons: "File:Bhaja Caves Entrance Side View.jpg"
+  alt: Rock-cut basalt facade of the Bhaja Caves in Maharashtra showing the arched chaitya hall entrance and flanking monastery galleries
+  credit: KSeraphin
+  license: CC BY-SA 4.0
+tags: [bhaja, caves, rock-cut, buddhism, western-ghats, maharashtra]
+review: { status: draft, author: "gemini-4-hydrogen-xhigh" }

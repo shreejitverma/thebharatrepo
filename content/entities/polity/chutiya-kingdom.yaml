@@ -1,0 +1,62 @@
+id: polity.chutiya-kingdom
+type: polity
+kind: polity
+names:
+  en: Chutiya Kingdom
+  native: চুতীয়া ৰাজ্য
+summary: >-
+  The Chutiya (Sutiya) kingdom ruled northeastern Assam and adjacent Arunachal foothills centred at
+  Sadiya from the medieval period until its annexation by the Ahom kingdom in 1524 CE. Attested by
+  fourteenth-to-sixteenth-century Sanskrit copper-plate grants, brick temple ruins such as Tamreshvari,
+  and Assam chronicles, the Chutiyas transformed from a Bodo-Kachari-speaking Tibeto-Burman polity
+  into a Sanskritised monarchy patronising the goddess Kechai-khati (Tamreshvari).
+summaries:
+  kids: >-
+    Centred around Sadiya in far eastern Assam, the Chutiya Kingdom ruled for centuries and built
+    shrines to Goddess Tamreshvari before being conquered by the Ahom king Suhungmung in 1524 CE.
+  teen: >-
+    Documented in copper-plate grants from 1392-1522 CE and Ahom chronicles, the Chutiya state at
+    Sadiya integrated Tibeto-Burman clan traditions with Brahmanical temple patronage before Ahom
+    conquest in 1524 CE.
+region: Upper Assam (Sadiya, Lakhimpur and adjacent Arunachal Pradesh foothills)
+location: { name: "Sadiya, Tinsukia district, Assam", lat: 27.832, lon: 95.662 }
+datings:
+  - method: epigraphic
+    range: { earliest: 1392, latest: 1524, precision: year, circa: false }
+    grade: A
+    label: Dated Chutiya copper-plate grants (1392-1522 CE) and Ahom conquest (1524 CE)
+    sources:
+      - src.shin-2019-descending-from-demons
+      - src.gait-1906-history-of-assam
+      - src.baruah-1985-comprehensive-history-assam
+    note: Copper plates of Satyanarayana, Lakshminarayana and Dhirnarayana span 1392 to 1522 CE; Ahom buranjis document Suhungmung's annexation of Sadiya in 1524 CE.
+  - method: textual-internal
+    range: { earliest: 1187, latest: 1524, precision: year, circa: true }
+    grade: C
+    label: Later Chutiya chronicle tradition (Birpal in 1187 CE)
+    sources:
+      - src.baruah-1985-comprehensive-history-assam
+      - src.shin-2019-descending-from-demons
+    note: Later local chronicles date the founder Birpal to 1187 CE (1109 Shaka), though contemporary epigraphic records begin only in the late 14th century.
+claims:
+  - text: Chutiya copper plates (1392-1522 CE) show rulers adopting Sanskritic genealogies and land grants to Brahmins while worshipping Kechai-khati (Tamreshvari) at the Copper Temple near Sadiya.
+    grade: A
+    sources:
+      - src.shin-2019-descending-from-demons
+      - src.choudhury-1985-archaeology-brahmaputra-valley
+  - text: In 1524 CE the Ahom king Suhungmung defeated the last Chutiya king Nityapala and created the frontier office of Sadiyakhowa Gohain, absorbing Chutiya artisans and elites into Ahom statecraft.
+    grade: B
+    sources:
+      - src.gait-1906-history-of-assam
+      - src.baruah-1985-comprehensive-history-assam
+debate: >-
+  Later vernacular chronicles date the Chutiya dynasty's founding under Birpal to 1187 CE, whereas
+  epigraphic evidence (copper plates from Dhenukhana, Sadiya and Paya) begins in 1392 CE, leading
+  modern historians like Jae-Eun Shin to distinguish later genealogical reconstruction from
+  dated 14th-16th century state consolidation.
+relations:
+  - { kind: related-to, target: polity.kachari-kingdom }
+  - { kind: related-to, target: polity.ahom-kingdom, note: "Annexed by the Ahom kingdom in 1524" }
+wikidata: Q7650054
+tags: [chutiya, sadiya, assam, tamreshvari, copper-plates, state-formation]
+review: { status: draft, author: "gemini-4-hydrogen-xhigh" }

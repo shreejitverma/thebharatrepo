@@ -1,0 +1,49 @@
+id: event.morley-minto-reforms
+type: event
+kind: event
+names:
+  en: Morley-Minto reforms
+summary: The Indian Councils Act of 1909 enlarged legislative councils and authorised elected
+  membership under regulations. The regulations introduced separate Muslim electorates in parts
+  of the council system.
+summaries:
+  kids: The British changed the rules for choosing members of lawmaking councils. Some seats were
+    set aside for Muslim voters to choose representatives.
+  teen: The Act authorised election alongside nomination. Its implementing rules institutionalised
+    separate Muslim electorates, while voting remained limited to people who met eligibility
+    rules.
+region: British India and Westminster
+datings:
+  - method: documentary
+    range:
+      earliest: "1909"
+      latest: "1909"
+      precision: day
+      circa: false
+    grade: A
+    label: Indian Councils Act, assented to on 25 May 1909
+    sources:
+      - src.uk-parliament-1909-indian-councils-act
+claims:
+  - text: The Act provided for both elected and nominated members on the legislative councils it
+      covered.
+    grade: A
+    sources:
+      - id: src.uk-parliament-1909-indian-councils-act
+        locator: Section 1
+  - text: The implementing regulations introduced separate electorates for Muslims.
+    grade: B
+    sources:
+      - src.jalal-1985-sole-spokesman
+      - src.sarkar-1989-modern-india
+relations:
+  - kind: related-to
+    target: event.all-india-muslim-league-founded
+  - kind: preceded
+    target: event.government-of-india-act-1919
+tags:
+  - colonial-law
+  - political-representation
+review:
+  status: draft
+  author: codex-gpt-6

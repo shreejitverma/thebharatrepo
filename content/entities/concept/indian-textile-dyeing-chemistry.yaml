@@ -1,0 +1,45 @@
+id: concept.indian-textile-dyeing-chemistry
+type: concept
+kind: science
+names:
+  en: Dye Chemistry in Indian Painted Cotton
+summary: Indian painted cottons preserve evidence of skilled control over dyes. Artisans applied mordants to
+  fix colours in selected areas and used resists to keep dye away from others. Analyses of early modern
+  textiles help identify the materials behind particular colours.
+summaries:
+  kids: Dyers used plant colours and painted patterns onto cotton. Some treatments helped the colour stick,
+    while others kept it out of parts of the cloth.
+  teen: In chintz, mordants and resists control where colour appears. Museum analyses of surviving cottons can
+    distinguish red dye sources and suggest how materials travelled between textile-producing regions.
+region: Coromandel Coast and other Indian textile-producing regions
+datings:
+  - method: art-historical
+    range:
+      earliest: 1600
+      latest: "1800 CE"
+      precision: century
+      circa: true
+    grade: B
+    label: Seventeenth- and eighteenth-century painted cottons
+    sources:
+      - src.houghteling-2019-tools-master-dyer
+    note: This range dates the textiles in the published study and gives a window onto the techniques.
+claims:
+  - text: Painted cottons can combine dye fixed using a mordant with areas protected by a resist.
+    grade: B
+    sources:
+      - src.houghteling-2019-tools-master-dyer
+  - text: Analyses reported by Houghteling and Shibayama suggest that chay-root dye was used in some textiles
+      associated with central India as well as along the Coromandel Coast.
+    grade: C
+    sources:
+      - src.houghteling-2019-tools-master-dyer
+relations: []
+tags:
+  - textiles
+  - dyes
+  - chintz
+  - materials-analysis
+review:
+  status: draft
+  author: codex-gpt-6

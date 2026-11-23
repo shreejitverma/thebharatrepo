@@ -147,6 +147,12 @@ export default function MapView({ items, extentItems, unplaced, lens, cal, selec
   const openListRef = useRef<HTMLUListElement>(null);
   /** The "use two fingers" hint, shown briefly when one finger drags across the map on a touch screen. */
   const [gestureHint, setGestureHint] = useState(false);
+  /**
+   * Whether the list of every entry on the map is expanded. Its rows are rendered only then: the list holds every
+   * matching entry, several thousand nodes at the full archive, and keeping them in the DOM while collapsed made
+   * every zoom, pan and selection re-render them.
+   */
+  const [listOpen, setListOpen] = useState(false);
   const hintTimer = useRef<ReturnType<typeof setTimeout> | undefined>(undefined);
   const selectedDomId = `${useId()}-selected`;
 
@@ -762,11 +768,11 @@ export default function MapView({ items, extentItems, unplaced, lens, cal, selec
           </ul>
         </div>
       ) : null}
-      <details className="kc-map-list">
+      <details className="kc-map-list" onToggle={(e) => setListOpen(e.currentTarget.open)}>
         <summary>
           List of the {items.length} {items.length === 1 ? 'entry' : 'entries'} on this map
         </summary>
-        {items.length === 0 ? (
+        {!listOpen ? null : items.length === 0 ? (
           <p className="empty">0 entries with a recorded place match these filters and this moment.</p>
         ) : (
           <ol className="kc-list kc-map-list__items">

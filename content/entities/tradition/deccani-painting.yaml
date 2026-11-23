@@ -1,0 +1,68 @@
+id: tradition.deccani-painting
+type: tradition
+kind: art
+names:
+  en: Deccani Painting
+  iast: Dakkanī Citrakalā
+  native: दक्खिनी चित्रकला
+summary: Deccani painting flourished between the sixteenth and early eighteenth centuries at the Deccan sultanates of
+  Ahmadnagar, Bijapur and Golconda, and later at Hyderabad. Combining Persian, Ottoman, European and South Indian
+  Vijayanagara visual traditions, it is celebrated for dreamlike lavender-and-gold colour harmonies, lyrical portraiture
+  (notably under Ibrahim Adil Shah II) and lush fantasy landscapes.
+summaries:
+  kids: Deccani painting grew in royal workshops at Bijapur, Golconda and Ahmadnagar, creating dreamy, fantastical
+    pictures full of rich purple, gold and glowing gardens.
+  teen: Distinct from Mughal naturalism, the courts of Bijapur, Ahmadnagar and Golconda forged Deccani miniature art with
+    Persianate ornament, Vijayanagara heritage and poetic, atmospheric colour.
+region: Deccan plateau (Bijapur, Golconda, Ahmadnagar, Hyderabad)
+location:
+  name: Bijapur (Vijayapura), Karnataka
+  lat: 16.83
+  lon: 75.71
+datings:
+  - method: art-historical
+    range:
+      earliest: 1560
+      latest: 1750
+      precision: decade
+      circa: true
+    grade: B
+    label: Dated manuscripts such as Tarif-i Husain Shahi and Nujum al-Ulum through Hyderabad works
+    sources:
+      - src.zebrowski-1983-deccani-painting
+      - src.haidar-sardar-2015-sultans-deccan
+      - src.dallapiccola-2003-deccani-south-grove
+    note: Anchored by the Ahmadnagar Tarif-i Husain Shahi (c. 1565), Bijapur's 1570 Nujum al-Ulum, royal works under Ibrahim
+      Adil Shah II (r. 1580-1627), and 17th-century Golconda ateliers.
+claims:
+  - text: At Bijapur, Sultan Ibrahim Adil Shah II (author of the Kitab-i Nauras) patronised masters such as the Bodleian and
+      St. Petersburg painters, producing poetic images of rulers, ascetics and ragamalas.
+    grade: B
+    sources:
+      - src.zebrowski-1983-deccani-painting
+      - src.haidar-sardar-2015-sultans-deccan
+  - text: Golconda workshops blended Persianate, Indian and Dutch-inspired botanical elements in works like the Kulliyat of
+      Muhammad Quli Qutb Shah and marbled or fantastical flora paintings.
+    grade: B
+    sources:
+      - src.haidar-sardar-2015-sultans-deccan
+      - src.dallapiccola-2003-deccani-south-grove
+relations:
+  - kind: related-to
+    target: tradition.kalamkari
+image:
+  commons: File:Tree on the Island of Waqwaq. Golconda, early 17th century Ink, opaque watercolor, and gold on paper
+    Museum für Islamische Kunst, Staatliche Museen zu Berlin.Crop.jpg
+  alt: Early seventeenth-century Golconda Deccani painting depicting the fantastical talking tree of Waqwaq with animal
+    and human heads
+  credit: Museum fur Islamische Kunst, Berlin (public domain scan)
+  license: Public domain
+tags:
+  - deccani-painting
+  - bijapur
+  - golconda
+  - ahmadnagar
+  - miniature
+review:
+  status: draft
+  author: gemini-4-hydrogen-xhigh

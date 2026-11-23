@@ -1,0 +1,82 @@
+id: text.bhagavata-purana
+type: text
+kind: text
+names:
+  en: Bhagavata Purana
+  iast: Bhāgavata Purāṇa
+  native: भागवतपुराण
+summary: The Bhagavata Purana is a Sanskrit scripture of devotion to Vishnu, with its tenth book
+  devoted to Krishna. Scholars debate when the received work took shape and how early its
+  constituent narratives circulated.
+summaries:
+  kids: A king listens to a sage tell stories about Vishnu. One whole book follows Krishna, from his
+    childhood in a village to his life as an adult.
+  teen: The Bhagavata combines devotion, cosmology and stories of Vishnu’s incarnations. Krishna’s
+    childhood in Vraja and his relationships with the cowherds became influential in performance and
+    worship.
+datings:
+  - method: textual-internal
+    range:
+      earliest: 800
+      latest: 1025
+      precision: century
+      circa: true
+    grade: C
+    label: "Friedhelm Hardy and Gupta and Valpey: later redaction"
+    sources:
+      - src.hardy-1983-viraha-bhakti
+      - src.gupta-2013-bhagavata-purana
+    note: This placement draws on the text’s relationship with southern devotional poetry and its early
+      reception.
+  - method: art-historical
+    range:
+      earliest: 300
+      latest: 800
+      precision: century
+      circa: true
+    grade: C
+    label: "D. Dennis Hudson: early circulation of substantial narrative material"
+    sources:
+      - src.hudson-2008-body-of-god
+      - src.gupta-2013-bhagavata-purana
+    note: Hudson reads the eighth-century Vaikuntha Perumal temple at Kanchipuram alongside Bhagavata
+      narratives. The broad interval concerns material underlying the received work.
+  - method: traditional-puranic
+    range:
+      earliest: "3102 BCE"
+      latest: "3102 BCE"
+      precision: year
+      circa: true
+    grade: D
+    label: Traditional Vyasa attribution and Kali Yuga epoch
+    sources:
+      - src.rocher-1986-puranas
+      - src.gonzalezreimann-2002-mahabharata-yugas
+    note: The work’s traditional attribution to Vyasa places its transmission near the transition from
+      Dvapara to Kali. The calendar year is the conventional epoch used for that transition.
+claims:
+  - text: The twelve-book work’s narrative framework has Shuka reciting to King Parikshit.
+    grade: B
+    sources:
+      - src.gupta-2013-bhagavata-purana
+  - text: The tenth book supplied narratives and imagery for several Krishna devotional and performance
+      traditions.
+    grade: B
+    sources:
+      - src.gupta-2013-bhagavata-purana
+relations:
+  - kind: part-of
+    target: text.puranas
+  - kind: related-to
+    target: text.harivamsha
+debate: The dating hinges in part on how to read parallels between temple reliefs and the text.
+  Hudson links the eighth-century sculpture to substantial Bhagavata material, while later redaction
+  remains compatible with earlier circulation of the narratives.
+tags:
+  - purana
+  - vaishnava
+  - bhakti
+  - krishna
+review:
+  status: draft
+  author: codex-gpt-6

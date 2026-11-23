@@ -1,0 +1,26 @@
+id: event.operation-flood
+type: event
+kind: polity
+names:
+  en: "Operation Flood"
+summary: "The National Dairy Development Board launched Operation Flood in 1970. The programme linked village dairy cooperatives to urban markets and expanded milk collection, processing and distribution through three phases ending in 1996."
+summaries:
+  kids: "Operation Flood helped dairy farmers form cooperatives, or groups that worked together, to collect and sell milk to people in cities."
+  teen: "Operation Flood built a network between village dairy cooperatives and urban markets. Its first phase used proceeds from donated milk powder and butter oil to support development of the dairy system."
+region: "India"
+datings:
+  - method: documentary
+    range: { earliest: "1970", latest: "1996", precision: year, circa: false }
+    grade: A
+    label: "Three programme phases"
+    sources: ["src.nddb-operation-flood"]
+    note: "The National Dairy Development Board records the launch in 1970 and the closing year of phase III as 1996."
+claims:
+  - text: "The programme developed a national milk grid to connect producing regions with consumers in towns and cities."
+    grade: A
+    sources: ["src.nddb-operation-flood"]
+  - text: "Phase I was financed through the sale of donated skimmed milk powder and butter oil supplied through the World Food Programme."
+    grade: A
+    sources: ["src.nddb-operation-flood"]
+tags: ["republic","dairy","cooperatives"]
+review: { status: draft, author: codex-gpt-6 }

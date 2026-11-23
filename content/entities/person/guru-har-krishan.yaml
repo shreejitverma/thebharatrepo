@@ -1,0 +1,56 @@
+id: person.guru-har-krishan
+type: person
+kind: person
+names:
+  en: Guru Har Krishan
+  native: ਗੁਰੂ ਹਰਿ ਕ੍ਰਿਸ਼ਨ
+summary: Guru Har Krishan succeeded his father, Guru Har Rai, as the eighth Sikh Guru while still a
+  child. He died in Delhi in 1664.
+summaries:
+  kids: Har Krishan was still a child when he became the eighth Sikh Guru after his father.
+  teen: Har Krishan led the Sikh community from 1661 to 1664. After his death, Guru Tegh Bahadur
+    succeeded him amid competing claims to leadership.
+region: Punjab and Delhi
+datings:
+  - method: scholarly-consensus
+    range:
+      earliest: "1656"
+      latest: "1664"
+      precision: year
+      circa: true
+    grade: B
+    label: Conventional birth and death years
+    sources:
+      - src.singh-2004-history-of-the-sikhs-vol-1
+      - id: src.grewal-1990-sikhs-of-the-punjab
+        locator: Transformation of the Sikh Panth (1606-1708)
+  - method: scholarly-consensus
+    range:
+      earliest: "1661"
+      latest: "1664"
+      precision: year
+      circa: false
+    grade: B
+    label: Years as Sikh Guru
+    sources:
+      - id: src.grewal-1990-sikhs-of-the-punjab
+        locator: Transformation of the Sikh Panth (1606-1708)
+claims:
+  - text: Guru Har Krishan succeeded his father Guru Har Rai in 1661 and died in Delhi in 1664.
+    grade: B
+    sources:
+      - id: src.grewal-1990-sikhs-of-the-punjab
+        locator: Transformation of the Sikh Panth (1606-1708)
+      - src.singh-2004-history-of-the-sikhs-vol-1
+relations:
+  - kind: succeeded
+    target: person.guru-har-rai
+  - kind: part-of
+    target: tradition.sikh-gurus
+tags:
+  - sikhism
+  - sikh-gurus
+  - mughal-period
+review:
+  status: draft
+  author: codex-gpt-6

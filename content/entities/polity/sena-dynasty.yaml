@@ -1,0 +1,76 @@
+id: polity.sena-dynasty
+type: polity
+kind: polity
+names:
+  en: Sena Dynasty of Bengal
+  iast: Sena
+  native: সেন রাজবংশ
+summary: >-
+  The Sena dynasty ruled Bengal from the late eleventh to the early thirteenth century, displacing the Palas
+  across most of the region. Its inscriptions describe the family as Brahma-Kshatriyas connected with
+  Karnata, and Vijayasena, Ballalasena and Lakshmanasena patronised Brahmanical scholarship and Sanskrit
+  poetry. After Bakhtiyar Khalji took Nadia around 1204, Sena kings continued to rule in eastern Bengal for
+  some decades.
+summaries:
+  kids: >-
+    After the Palas, the Sena kings ruled Bengal. Sanskrit poets and scholars worked at their court, and
+    the family kept ruling eastern Bengal after losing Nadia.
+  teen: >-
+    The Deopara inscription supplies Vijayasena's genealogy. After the Turkic raid on Nadia around 1204,
+    later charters show Sena kings still ruling in eastern Bengal.
+region: Bengal and adjacent areas
+location:
+  name: Nadia (Navadvip, a late court centre)
+  lat: 23.41
+  lon: 88.37
+datings:
+  - method: epigraphic
+    range:
+      earliest: "1070"
+      latest: "1230"
+      precision: decade
+      circa: true
+    grade: B
+    label: Epigraphic span from Samantasena and Vijayasena to Vishvarupasena and Keshavasena
+    sources:
+      - src.majumdar-1929-inscriptions-of-bengal-vol3
+      - src.chowdhury-1967-dynastic-history-bengal
+      - src.singh-2008-ancient-early-medieval-india
+    note: Anchored by the Deopara prashasti, the copper plates of Ballalasena and Lakshmanasena, the Persian
+      account of the Nadia raid around 1204 and later charters from eastern Bengal. How long the line
+      survived there after about 1230 is uncertain.
+claims:
+  - text: The Deopara eulogy records Vijayasena's genealogy, including Samantasena and Hemantasena.
+    grade: A
+    sources:
+      - src.dharma-deopara-inscription
+  - text: Sena inscriptions describe the family as Brahma-Kshatriyas and connect it with Karnata in the
+      Deccan.
+    grade: A
+    sources:
+      - src.majumdar-1929-inscriptions-of-bengal-vol3
+      - src.chowdhury-1967-dynastic-history-bengal
+  - text: The Senas extended their authority as Pala power fragmented.
+    grade: B
+    sources:
+      - src.singh-2008-ancient-early-medieval-india
+  - text: Lakshmanasena's court included the poet Dhoyi and the scholar Halayudha, and later tradition
+      associates Jayadeva, author of the Gita Govinda, with the same court.
+    grade: B
+    sources:
+      - src.majumdar-1943-history-of-bengal-vol1
+      - src.miller-1977-love-song-dark-lord
+relations:
+  - kind: succeeded
+    target: polity.pala-empire
+    note: In much of Bengal.
+  - kind: patronised
+    target: person.jayadeva
+    note: A traditional association of Jayadeva with Lakshmanasena's court.
+wikidata: Q2428714
+tags:
+  - sena
+  - bengal
+review:
+  status: draft
+  author: codex-gpt-6

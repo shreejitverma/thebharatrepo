@@ -1,0 +1,44 @@
+id: event.delhi-uprising-1857
+type: event
+kind: event
+names:
+  en: Delhi uprising and siege of 1857
+summary: Rebel soldiers entered Delhi in May 1857 and rallied around the Mughal emperor Bahadur
+  Shah II. British-led forces retook the city in September after a siege, and Bahadur Shah was
+  subsequently tried and exiled.
+summaries:
+  kids: Rebels took Delhi and turned to the Mughal emperor for leadership. British-led troops
+    captured the city after months of fighting.
+  teen: Delhi gave the rebellion a political centre under Bahadur Shah II. Its recapture in
+    September reversed that gain, and the emperor's trial and exile ended Mughal rule.
+region: Delhi
+datings:
+  - method: scholarly-consensus
+    range:
+      earliest: "1857"
+      latest: "1857"
+      precision: year
+      circa: false
+    grade: B
+    label: Rebel occupation and Company recapture, May to September
+    sources:
+      - src.bender-2016-indian-uprising
+      - src.national-army-museum-decisive-events-indian-rebellion
+claims:
+  - text: Rebels from Meerut reached Delhi in May, and British-led troops stormed the city in
+      September.
+    grade: B
+    sources:
+      - src.bender-2016-indian-uprising
+      - src.national-army-museum-decisive-events-indian-rebellion
+relations:
+  - kind: part-of
+    target: event.indian-revolt-of-1857
+  - kind: related-to
+    target: polity.mughal-empire
+tags:
+  - revolt-of-1857
+  - mughal
+review:
+  status: draft
+  author: codex-gpt-6

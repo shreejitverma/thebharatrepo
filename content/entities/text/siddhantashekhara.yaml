@@ -1,0 +1,43 @@
+id: text.siddhantashekhara
+type: text
+kind: science
+names:
+  en: Siddhantashekhara
+  iast: Siddhāntaśekhara
+  native: सिद्धान्तशेखर
+summary: Shripati’s Sanskrit Siddhantashekhara sets out methods of mathematical astronomy alongside chapters
+  on arithmetic and algebra. Its structure shows how computation was taught as part of astronomy.
+summaries:
+  kids: This astronomy book includes mathematics for readers learning to calculate movements in the sky.
+  teen: The Siddhantashekhara places arithmetic and algebra within a larger astronomical system. It can be
+    compared with Shripati’s more specialized arithmetic and astronomical texts.
+region: Maharashtra
+datings:
+  - method: textual-internal
+    range:
+      earliest: 1000
+      latest: "1100 CE"
+      precision: century
+      circa: true
+    grade: B
+    label: Eleventh-century authorship
+    sources:
+      - src.srinivas-2019-untapped-wealth
+      - id: src.plofker-2009-mathematics-in-india
+        locator: Appendix B
+    note: Shripati’s other dated works anchor his activity in the eleventh century.
+claims:
+  - text: The treatise pairs astronomical instruction with mathematical material on known and unknown quantities.
+    grade: A
+    sources:
+      - src.srinivas-2019-untapped-wealth
+      - id: src.plofker-2009-mathematics-in-india
+        locator: Chapter 5
+relations: []
+tags:
+  - astronomy
+  - algebra
+  - arithmetic
+review:
+  status: draft
+  author: codex-gpt-6

@@ -1,0 +1,42 @@
+id: person.vishnuvardhana-hoysala
+type: person
+kind: person
+names:
+  en: Vishnuvardhana Hoysala
+  iast: Viṣṇuvardhana
+summary: Vishnuvardhana was an early consolidator of Hoysala power. His association with the
+  Channakeshava Temple at Belur connects the history of the kingdom to one of its major surviving
+  monuments.
+summaries:
+  kids: King Vishnuvardhana supported the building of the Channakeshava Temple at Belur, where people
+    can still see Hoysala carvings.
+  teen: Vishnuvardhana expanded the reach of the early Hoysala kingdom. Belur's Channakeshava Temple
+    records a major expression of royal patronage under him.
+region: Southern Karnataka
+datings:
+  - method: scholarly-consensus
+    range:
+      earliest: "1100"
+      latest: "1155"
+      precision: decade
+      circa: true
+    grade: B
+    label: Reign or recorded political activity
+    sources:
+      - src.karashima-2014-concise-history-south-india
+      - src.unesco-2023-hoysala-sacred-ensembles
+    note: The window covers the reign and the dated construction at Belur.
+claims:
+  - text: The Channakeshava Temple at Belur was established under Vishnuvardhana in the early twelfth
+      century.
+    grade: B
+    sources:
+      - src.karashima-2014-concise-history-south-india
+      - src.unesco-2023-hoysala-sacred-ensembles
+relations:
+  - kind: ruled
+    target: polity.hoysala-dynasty
+tags: []
+review:
+  status: draft
+  author: codex-gpt-6

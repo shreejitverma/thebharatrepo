@@ -1,0 +1,49 @@
+id: text.mulamadhyamakakarika
+type: text
+kind: text
+names:
+  en: Mulamadhyamakakarika
+  iast: Mūlamadhyamakakārikā
+  native: मूलमध्यमककारिका
+summary: Nagarjuna’s Mulamadhyamakakarika is a foundational work of Madhyamaka Buddhist philosophy.
+  Its verses examine how things come to be and argue that what arises dependently lacks an intrinsic
+  nature.
+summaries:
+  kids: Nagarjuna asks whether anything exists entirely on its own. His short verses use careful
+    arguments about causes and changes.
+  teen: Nagarjuna tests ideas such as causation, motion and identity. He relates dependent arising to
+    emptiness, the absence of an independent nature.
+datings:
+  - method: scholarly-consensus
+    range:
+      earliest: 150
+      latest: 300
+      precision: century
+      circa: true
+    grade: B
+    label: Mainstream placement in the second to third century CE
+    sources:
+      - src.siderits-2013-nagarjunas-middle-way
+      - src.westerhoff-2018-golden-age-indian-buddhist-philosophy
+    note: The approximate placement follows reconstructions of Nagarjuna’s activity and the work’s place
+      in Indian Buddhist philosophical literature.
+claims:
+  - text: Chapter 24 connects dependent arising, emptiness and designation by dependence.
+    grade: A
+    sources:
+      - id: src.siderits-2013-nagarjunas-middle-way
+        locator: "24.18"
+  - text: The work’s 27 chapters became the basis of a long Madhyamaka commentarial tradition.
+    grade: B
+    sources:
+      - src.siderits-2013-nagarjunas-middle-way
+      - src.westerhoff-2018-golden-age-indian-buddhist-philosophy
+relations: []
+tags:
+  - buddhism
+  - mahayana
+  - madhyamaka
+  - philosophy
+review:
+  status: draft
+  author: codex-gpt-6

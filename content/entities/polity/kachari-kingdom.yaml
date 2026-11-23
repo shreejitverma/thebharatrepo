@@ -1,0 +1,53 @@
+id: polity.kachari-kingdom
+type: polity
+kind: polity
+names:
+  en: Kachari Kingdom
+  native: ডিমাছা-কছাৰী ৰাজ্য
+summary: >-
+  The Kachari (Dimasa-Kachari) kingdom was a major medieval and early modern state of Assam and
+  Nagaland, ruled successively from Dimapur on the Dhansiri River, Maibang in the North Cachar Hills,
+  and Khaspur in the Barak (Cachar) plains. Known for the carved sandstone mushroom-pillars of Dimapur
+  and Maibang's rock-cut temples, the kingdom endured until British annexations in 1832 and 1854 CE.
+summaries:
+  kids: >-
+    The Kachari (Dimasa) kings built a remarkable stone capital at Dimapur with giant carved pillars,
+    then moved into the hills at Maibang and later to Khaspur in Cachar before British annexation in
+    the 1800s.
+  teen: >-
+    Rising in the Dhansiri valley before Ahom attacks forced moves to Maibang (1536) and later Khaspur
+    (mid-18th century), the Dimasa-Kachari kingdom combined megalithic-style royal monuments with
+    Sanskritic court traditions and coins.
+region: Dhansiri valley (Dimapur), Dima Hasao (Maibang) and Cachar plains (Khaspur)
+location: { name: "Dimapur / Maibang, Northeast India", lat: 25.912, lon: 93.726 }
+datings:
+  - method: documentary
+    range: { earliest: 1200, latest: 1854, precision: decade, circa: true }
+    grade: C
+    label: Medieval emergence at Dimapur through Maibang and Khaspur to 1832/1854 annexation
+    sources:
+      - src.gait-1906-history-of-assam
+      - src.shin-2019-descending-from-demons
+      - src.sinha-1987-tribal-polities-northeast
+    note: Ahom buranjis document Kachari resistance from the 15th century and the sack of Dimapur in 1536; coins and inscriptions run through Maibang and Khaspur until British annexation of southern Cachar (1832) and northern Cachar (1854).
+claims:
+  - text: After Ahom forces sacked Dimapur in 1536 CE, the Dimasa rulers relocated their capital to Maibang in the North Cachar hills, where they issued silver coins and rock-cut inscriptions claiming Ghatotkacha descent.
+    grade: B
+    sources:
+      - src.gait-1906-history-of-assam
+      - src.shin-2019-descending-from-demons
+  - text: The monumental carved sandstone V-pillars and cylindrical monoliths at Dimapur reflect indigenous Dimasa memorial-pillar traditions integrated with brick citadel architecture.
+    grade: B
+    sources:
+      - src.sinha-1987-tribal-polities-northeast
+      - src.choudhury-1985-archaeology-brahmaputra-valley
+relations:
+  - { kind: related-to, target: polity.ahom-kingdom }
+wikidata: Q3632862
+image:
+  commons: "File:Dimapur Ruins 6.jpg"
+  alt: Carved sandstone monolith pillars at the medieval Kachari capital ruins in Dimapur, Nagaland
+  credit: Shyamal
+  license: CC BY-SA 4.0
+tags: [kachari, dimasa, dimapur, maibang, khaspur, assam, nagaland]
+review: { status: draft, author: "gemini-4-hydrogen-xhigh" }

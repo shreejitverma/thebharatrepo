@@ -1,0 +1,71 @@
+id: polity.eastern-ganga-dynasty
+type: polity
+kind: polity
+names:
+  en: Eastern Ganga Dynasty
+  iast: Gaṅga
+  native: ପୂର୍ବ ଗଙ୍ଗ ବଂଶ
+summary: >-
+  The Eastern Gangas ruled Kalinga from around the sixth century, dating their charters in their own Ganga
+  era, and rose to power over all of Odisha after Anantavarman Chodaganga (r. 1078-1147) overcame the
+  Somavamshis. Later kings, including Anangabhima III and Narasimhadeva I, tied their kingship to the cult
+  of Jagannath at Puri and built the Sun Temple at Konark, until Kapilendra Deva founded the Gajapati line
+  in 1434 to 1435.
+summaries:
+  kids: >-
+    The Eastern Ganga kings ruled Odisha for centuries. Their dynasty built the Jagannath Temple at Puri
+    and the Sun Temple at Konark, which is shaped like a giant chariot.
+  teen: >-
+    Early Eastern Ganga kings ruled Kalinga and counted years in their own Ganga era. Anantavarman
+    Chodaganga unified Odisha, and his successors presented Jagannath as the kingdom's true sovereign.
+region: Kalinga and coastal Odisha
+location:
+  name: Cuttack (later royal seat)
+  lat: 20.48
+  lon: 85.88
+datings:
+  - method: epigraphic
+    range:
+      earliest: "498"
+      latest: "1435"
+      precision: decade
+      circa: true
+    grade: B
+    label: Ganga-era charters to the accession of Kapilendra Deva
+    sources:
+      - src.rajaguru-1958-inscriptions-of-orissa
+      - src.kulke-1993-kings-and-cults
+      - src.singh-2008-ancient-early-medieval-india
+    note: Early charters are dated in the Ganga era, whose epoch is placed around 496 to 498. The imperial
+      phase ran from Chodaganga's accession in 1078 until Kapilendra Deva took power in 1434 to 1435. The
+      continuity between the early and imperial lines rests on their own genealogies.
+claims:
+  - text: Anantavarman Chodaganga (r. 1078-1147) annexed central Odisha from the Somavamshis and began the
+      Jagannath temple at Puri.
+    grade: B
+    sources:
+      - src.rao-1991-kalinga-eastern-gangas
+      - src.eschmann-2014-cult-of-jagannatha
+  - text: Around 1230, Anangabhima III declared himself the deputy (rauta) of Purushottama-Jagannath,
+      presenting the deity as the kingdom's sovereign.
+    grade: B
+    sources:
+      - src.kulke-1993-kings-and-cults
+      - src.eschmann-2014-cult-of-jagannatha
+  - text: The thirteenth-century Konark Sun Temple is associated with the Eastern Ganga ruler Narasimhadeva
+      I (r. 1238-1264), who also campaigned against the Muslim governors of Bengal.
+    grade: B
+    sources:
+      - src.unesco-1984-konark-sun-temple
+      - src.donaldson-1985-hindu-temple-art-orissa
+      - src.kulke-2004-history-of-india
+relations:
+  - kind: patronised
+    target: site.konark-sun-temple
+wikidata: Q250515
+tags:
+  - eastern-ganga
+  - odisha
+review:
+  status: draft
+  author: codex-gpt-6

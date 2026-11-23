@@ -1,0 +1,61 @@
+id: polity.mewar
+type: polity
+kind: polity
+names:
+  en: Kingdom of Mewar
+  iast: Mevāṛa
+  native: मेवाड़
+summary: Mewar developed from the Guhila polity, with its Sisodia line rising to power at Chittor
+  under Hammir. The Mewar court later ruled from Udaipur and continued as a princely state until
+  integration into Rajasthan in 1948.
+summaries:
+  kids: Mewar's rulers held the fort of Chittor and later made Udaipur their capital. Forts and
+    palaces still show where they governed.
+  teen: Mewar took shape over centuries under the Guhilas and Sisodias. Udaipur continued as the
+    court's capital through changing relationships with the Mughals and the British.
+region: Southern Rajasthan
+location:
+  name: Udaipur (later capital)
+  lat: 24.58
+  lon: 73.69
+datings:
+  - method: scholarly-consensus
+    range:
+      earliest: "1300"
+      latest: "1948"
+      precision: decade
+      circa: true
+    grade: B
+    label: Period of rule
+    sources:
+      - src.kapur-2002-state-formation-rajasthan
+      - src.unesco-2013-hill-forts-rajasthan
+      - src.asher-talbot-2006-india-before-europe
+      - &a1
+        id: src.ministry-of-states-1950-white-paper-indian-states
+        locator: Part V
+    note: This range tracks the Sisodia phase and its princely-state continuation. The earlier Guhila
+      political formation predates it.
+claims:
+  - text: The Sisodia ascent at Chittor is conventionally associated with Hammir in the fourteenth
+      century.
+    grade: B
+    sources:
+      - src.kapur-2002-state-formation-rajasthan
+      - src.unesco-2013-hill-forts-rajasthan
+  - text: Chittor and Kumbhalgarh preserve major fortified centres of Mewar.
+    grade: B
+    sources:
+      - src.kapur-2002-state-formation-rajasthan
+      - src.unesco-2013-hill-forts-rajasthan
+  - text: Udaipur joined the Rajasthan Union in 1948.
+    grade: A
+    sources:
+      - *a1
+relations:
+  - kind: related-to
+    target: polity.mughal-empire
+tags: []
+review:
+  status: draft
+  author: codex-gpt-6

@@ -1,0 +1,56 @@
+id: site.somapura-mahavihara
+type: site
+kind: site
+names:
+  en: Somapura Mahavihara
+  iast: Somapura Mahāvihāra
+  native: সোমপুর মহাবিহার
+summary: >-
+  Somapura Mahavihara at Paharpur in Naogaon district, Bangladesh, was one of the largest Buddhist
+  monastic complexes in the Indian subcontinent, built under the Pala emperor Dharmapala in the late
+  eighth century CE. Its 274-metre quadrangular enclosure of 177 monastic cells surrounds a terraced
+  cruciform central stupa decorated with over 2,000 terracotta plaques. UNESCO listed it in 1985.
+summaries:
+  kids: >-
+    At Paharpur in Bangladesh stands Somapura Mahavihara, a huge square Buddhist monastery with 177
+    monk rooms built around a cross-shaped brick temple covered in thousands of clay relief plaques.
+  teen: >-
+    Founded by Pala king Dharmapala in the late 8th century CE, Somapura Mahavihara at Paharpur
+    became a major hub of Mahayana-Vajrayana learning whose terraced cruciform shrine influenced
+    monumental architecture in Southeast Asia.
+region: Naogaon district, Rajshahi division, Bangladesh (ancient Varendra)
+location: { name: "Paharpur, Naogaon, Bangladesh", lat: 25.031, lon: 88.977 }
+datings:
+  - method: epigraphic
+    range: { earliest: 780, latest: 1200, precision: century, circa: true }
+    grade: B
+    label: Clay sealings of Dharmapala and monastic stratigraphy
+    sources:
+      - src.dikshit-1938-excavations-at-paharpur
+      - src.unesco-1985-paharpur
+      - src.chowdhury-1967-dynastic-history-bengal
+    note: Excavated terracotta sealings naming the community of Shri-Dharmapaladeva-Mahavihara at Somapura anchor the foundation to Dharmapala (late 8th century), with major repairs into the 11th-12th centuries.
+claims:
+  - text: Excavations led by K. N. Dikshit recovered clay seals inscribed "Shri-Somapure-Shri-Dharmapaladeva-Mahavihariyarya-bhikshu-sanghasya", confirming Dharmapala as founder.
+    grade: A
+    sources:
+      - src.dikshit-1938-excavations-at-paharpur
+      - src.dutt-1988-buddhist-monks-monasteries
+  - text: The central terraced cruciform temple carries carved stone sculptures around its basement and hundreds of terracotta narrative plaques depicting Buddhist, Brahmanical and folk subjects.
+    grade: A
+    sources:
+      - src.dikshit-1938-excavations-at-paharpur
+      - src.huntington-1984-pala-sena-sculpture
+  - text: Ruins of the Buddhist Vihara at Paharpur was inscribed on the UNESCO World Heritage List in 1985.
+    grade: A
+    sources:
+      - src.unesco-1985-paharpur
+relations:
+  - { kind: patronised-by, target: polity.pala-empire }
+image:
+  commons: "File:Aerial view of Somapura Mahavihara.jpg"
+  alt: Aerial view of the quadrangular monastic enclosure and central cruciform brick stupa at Somapura Mahavihara, Paharpur, Bangladesh
+  credit: Md. Ahsanul Haque Nayem
+  license: CC BY-SA 4.0
+tags: [somapura, paharpur, unesco, pala, buddhism, bangladesh]
+review: { status: draft, author: "gemini-4-hydrogen-xhigh" }

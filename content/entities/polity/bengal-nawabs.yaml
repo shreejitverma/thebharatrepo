@@ -1,0 +1,55 @@
+id: polity.bengal-nawabs
+type: polity
+kind: polity
+names:
+  en: Nawabs of Bengal
+summary: Bengal's nawabs developed hereditary power from Mughal provincial offices, with their court
+  at Murshidabad. Company intervention after Plassey and the grant of revenue rights in 1765 ended
+  the nawabs' effective fiscal autonomy.
+summaries:
+  kids: Bengal's nawabs ruled from Murshidabad. After the Battle of Plassey, the East India Company
+    gained power over the region.
+  teen: Murshid Quli Khan reorganised Bengal's administration and helped create a regional ruling
+    group. The nawab's title survived after the Company secured the diwani in 1765.
+region: Bengal, Bihar and Odisha
+location:
+  name: Murshidabad
+  lat: 24.18
+  lon: 88.27
+datings:
+  - method: documentary
+    range:
+      earliest: "1717"
+      latest: "1765"
+      precision: year
+      circa: false
+    grade: B
+    label: Period of rule
+    sources:
+      - src.calkins-1970-bengal-ruling-group
+      - src.eaton-1996-rise-of-islam-bengal-frontier
+      - src.bandyopadhyay-2004-from-plassey-to-partition
+    note: The range begins with Murshid Quli Khan's recognised tenure as nawab and ends with the
+      transfer of revenue authority to the Company.
+claims:
+  - text: Murshid Quli Khan built an administration based on regional revenue networks.
+    grade: B
+    sources:
+      - src.calkins-1970-bengal-ruling-group
+  - text: The Company acquired Bengal's diwani in 1765, while nawabs continued to hold a formal office.
+    grade: B
+    sources:
+      - src.bandyopadhyay-2004-from-plassey-to-partition
+      - src.eaton-1996-rise-of-islam-bengal-frontier
+relations:
+  - kind: related-to
+    target: polity.mughal-empire
+  - kind: related-to
+    target: event.battle-of-plassey
+  - kind: preceded
+    target: polity.east-india-company-rule
+    note: As the effective fiscal authority in Bengal.
+tags: []
+review:
+  status: draft
+  author: codex-gpt-6

@@ -1,0 +1,34 @@
+id: event.ramappa-temple-unesco-inscription
+type: event
+kind: site
+names:
+  en: Ramappa Temple inscribed on the World Heritage List
+summary: >-
+  The World Heritage Committee inscribed the Ramappa Temple at Palampet, Telangana, on 25 July 2021.
+  The decision recognised the Kakatiya temple's architecture and engineering and called for an updated conservation and management plan.
+summaries:
+  kids: >-
+    Ramappa Temple in Telangana joined the World Heritage List in 2021.
+    The committee drew attention to its carvings and the lightweight bricks used to build the tower.
+  teen: >-
+    The 2021 decision recognised the artistic and engineering achievements of the Kakatiya temple at Palampet.
+    The committee also asked India to complete a conservation and management plan for the property.
+region: Palampet, Telangana
+datings:
+  - method: documentary
+    range: { earliest: "2021", latest: "2021", precision: day, circa: false }
+    grade: A
+    label: World Heritage inscription
+    sources: [src.unesco-2021-ramappa-inscription-decision, src.unesco-2021-ramappa-temple]
+    note: UNESCO announced the inscription on 25 July 2021 during the extended 44th session.
+claims:
+  - text: The Committee inscribed the Kakatiya Rudreshwara (Ramappa) Temple under World Heritage criteria (i) and (iii).
+    grade: A
+    sources: [src.unesco-2021-ramappa-inscription-decision]
+  - text: The decision records the temple's lightweight bricks and requests completion of its integrated conservation and management plan.
+    grade: A
+    sources: [src.unesco-2021-ramappa-inscription-decision]
+relations:
+  - { kind: related-to, target: site.ramappa-temple }
+tags: [republic, unesco, heritage]
+review: { status: draft, author: codex-gpt-6 }

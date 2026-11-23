@@ -1,0 +1,52 @@
+id: text.narayaniya
+type: text
+kind: text
+names:
+  en: Narayaniya of the Mahabharata
+  iast: Nārāyaṇīya
+  native: नारायणीय
+summary: The Narayaniya is a section of the Mahabharata’s Shanti Parvan that presents Narayana as
+  supreme. It includes Narada’s journey to Shvetadvipa and preserves an early literary witness to
+  Pancaratra. Its composition date is approximate.
+summaries:
+  kids: The sage Narada travels to an island where people worship Narayana. The story is part of the
+    Mahabharata.
+  teen: The Narayaniya connects epic narrative with worship of Narayana and gives evidence for
+    Pancaratra before the better-known tantric Samhitas took shape.
+datings:
+  - method: textual-internal
+    range:
+      earliest: 200
+      latest: 500
+      precision: century
+      circa: true
+    grade: C
+    label: "Marion Rastelli: third- to fifth-century epic stratum"
+    sources:
+      - src.rastelli-2019-vaisnava-pancaratra
+      - src.brockington-1998-sanskrit-epics
+    note: This estimate concerns the Narayaniya section of the Shanti Parvan, whose incorporation into
+      the epic has a distinct history.
+claims:
+  - text: The section includes Narada’s journey to Shvetadvipa.
+    grade: B
+    sources:
+      - id: src.brockington-1998-sanskrit-epics
+        locator: Discussion of the Narayaniya
+  - text: The Narayaniya provides an early witness to Pancaratra with a different ritual emphasis from
+      the later Samhitas.
+    grade: B
+    sources:
+      - src.rastelli-2019-vaisnava-pancaratra
+relations:
+  - kind: part-of
+    target: text.mahabharata
+  - kind: related-to
+    target: text.pancaratra-samhitas
+tags:
+  - itihasa
+  - vaishnava
+  - pancaratra
+review:
+  status: draft
+  author: codex-gpt-6

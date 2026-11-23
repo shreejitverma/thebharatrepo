@@ -1,0 +1,26 @@
+id: event.pokhran-i-nuclear-test
+type: event
+kind: science
+names:
+  en: "Pokhran-I nuclear test"
+summary: "India conducted its first nuclear test at Pokhran on 18 May 1974. The Indian government described the underground detonation as a peaceful nuclear explosion."
+summaries:
+  kids: "India tested a nuclear device underground in Rajasthan in 1974. It was India's first nuclear test."
+  teen: "The 1974 Pokhran test, code-named Smiling Buddha, was India's first nuclear detonation. Officials called it a peaceful nuclear explosion, a description recorded in contemporary diplomatic correspondence."
+region: "Pokhran, Rajasthan"
+datings:
+  - method: documentary
+    range: { earliest: "1974", latest: "1974", precision: day, circa: false }
+    grade: A
+    label: "Underground test"
+    sources: ["src.burr-2022-us-canada-indian-nuclear-program"]
+    note: "The detonation took place on 18 May 1974."
+claims:
+  - text: "The Indian government reported its first nuclear detonation on 18 May 1974 and described it as a peaceful nuclear explosion."
+    grade: A
+    sources: ["src.burr-2022-us-canada-indian-nuclear-program"]
+relations:
+  - kind: preceded
+    target: event.pokhran-ii-tests
+tags: ["republic","nuclear-history","rajasthan"]
+review: { status: draft, author: codex-gpt-6 }

@@ -1,0 +1,40 @@
+id: person.ilyas-shah
+type: person
+kind: person
+names:
+  en: Shams al-Din Ilyas Shah
+  native: ইলিয়াস শাহ
+summary: Ilyas Shah established an independent ruling house in Bengal and held court at Pandua. He
+  resisted Firuz Shah Tughluq's attempt to recover the region for Delhi.
+summaries:
+  kids: Ilyas Shah made Pandua the centre of an independent kingdom in Bengal. Delhi's sultan tried to
+    take the region back.
+  teen: Ilyas Shah began the independent Bengal political order described by Richard Eaton. Delhi's
+    campaign against him did not restore lasting control over the delta.
+region: Bengal
+datings:
+  - method: documentary
+    range:
+      earliest: "1342"
+      latest: "1357"
+      precision: decade
+      circa: true
+    grade: B
+    label: Reign or recorded political activity
+    sources:
+      - src.eaton-1996-rise-of-islam-bengal-frontier
+      - src.asher-talbot-2006-india-before-europe
+    note: The dates cover his rule in Eaton's reconstruction of the early Bengal Sultanate.
+claims:
+  - text: Ilyas Shah established independence from Delhi and ruled from Pandua.
+    grade: B
+    sources:
+      - src.eaton-1996-rise-of-islam-bengal-frontier
+      - src.asher-talbot-2006-india-before-europe
+relations:
+  - kind: founded
+    target: polity.bengal-sultanate
+tags: []
+review:
+  status: draft
+  author: codex-gpt-6

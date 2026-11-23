@@ -1,0 +1,57 @@
+id: site.kailasanathar-temple-kanchipuram
+type: site
+kind: site
+names:
+  en: Kailasanathar Temple, Kanchipuram
+  iast: Kailāsanāthar Mandira, Kāñcīpuram
+  native: கைலாசநாதர் கோவில், காஞ்சிபுரம்
+summary: >-
+  The Kailasanathar Temple at Kanchipuram, Tamil Nadu, is an early eighth-century CE Pallava temple to
+  Shiva. Inscriptions name Rajasimha and his son Mahendravarman III as patrons of separate shrines.
+  Smaller shrines line the sandstone complex's enclosure.
+summaries:
+  kids: >-
+    At Kanchipuram in Tamil Nadu, Pallava builders made a sandstone temple for Shiva. Rows of small
+    shrines surround the central shrine and its tall, stepped tower.
+  teen: >-
+    The Kailasanathar Temple at Kanchipuram was built under the Pallavas in the early eighth century CE.
+    Inscriptions name Rajasimha and his son Mahendravarman III as patrons of two different shrines.
+region: Tondaimandalam (Kanchipuram district, Tamil Nadu)
+location: { name: "Kanchipuram, Tamil Nadu", lat: 12.842, lon: 79.690 }
+datings:
+  - method: epigraphic
+    range: { earliest: "700 CE", latest: "730 CE", precision: decade, circa: true }
+    grade: B
+    label: "Early eighth-century Pallava construction"
+    sources:
+      - src.kaimal-2021-opening-kailasanatha
+      - src.michell-1988-hindu-temple
+    note: >-
+      Foundation inscriptions identify Rajasimha and Mahendravarman III. The approximate range comes
+      from their dynastic chronology and the sequence of the buildings.
+claims:
+  - text: >-
+      Inscriptions attribute the main shrine to Rajasimha and the shrine just inside the eastern gateway
+      to his son Mahendravarman III.
+    grade: A
+    sources:
+      - src.kaimal-2021-opening-kailasanatha
+  - text: >-
+      The Virupaksha Temple at Pattadakal is often compared with the Kailasanathar Temple for its plan
+      and architectural forms.
+    grade: B
+    sources:
+      - src.kaimal-2021-opening-kailasanatha
+      - src.michell-2014-badami-aihole-pattadakal
+relations:
+  - { kind: patronised-by, target: polity.pallava-dynasty }
+  - { kind: contemporary-of, target: site.shore-temple-mamallapuram }
+  - { kind: related-to, target: site.pattadakal }
+wikidata: Q2728976
+image:
+  commons: "File:Kanchi Kailasanathar Temple at Kanchipuram, Tamil Nadu 01.jpg"
+  alt: The Kailasanathar Temple complex and its grounds at Kanchipuram
+  credit: Pinakpani
+  license: CC BY 4.0
+tags: [kanchipuram, kailasanathar, pallava, dravida, shaiva, temple-architecture, tamil-nadu]
+review: { status: draft, author: "gemini-4-hydrogen-xhigh" }

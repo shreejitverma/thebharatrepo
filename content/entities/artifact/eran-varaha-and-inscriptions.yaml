@@ -1,0 +1,86 @@
+id: artifact.eran-varaha-and-inscriptions
+type: artifact
+kind: art
+names:
+  en: Eran Varaha Sculpture and Epigraphic Complex
+  iast: Eraṇa Varāha evaṃ Guptakālīna Abhilekha
+summary: "A monolithic red-sandstone image of Vishnu as the Cosmic Boar (Varaha) raising goddess Prithvi on his tusk at Eran (ancient Airikina) in Sagar district, Madhya Pradesh, standing beside a cluster of landmark Gupta and Huna inscriptions. Together, the Eran monuments preserve Budhagupta's Garuda pillar (Gupta Year 165 = 484-485 CE), Toramana's Year 1 Boar inscription, and Bhanugupta's Year 191 pillar (510 CE) bearing the earliest known dated epigraphic mention of sati in India."
+summaries:
+  kids: >-
+    At the ruined temple complex of Eran in Madhya Pradesh stands a giant sandstone boar representing Vishnu
+    lifting Earth on his tusk, covered in miniature carvings and accompanied by Gupta-era stone pillars.
+  teen: >-
+    Eran preserves a unique dated sequence spanning the late Gupta transition: Budhagupta's 484-485 CE Vishnu
+    pillar, the colossal monolithic Varaha inscribed in Year 1 of the Huna king Toramana, and Bhanugupta's 510
+    CE memorial pillar recording a general's widow ascending his funeral pyre.
+region: Eran, Sagar District, Madhya Pradesh, India
+location:
+  name: Eran Gupta temple ruins and Varaha shrine
+  lat: 24.0938
+  lon: 78.1727
+datings:
+  - method: epigraphic
+    range:
+      earliest: 484
+      latest: 511
+      best: 500
+      precision: year
+      circa: false
+    grade: A
+    label: Dated Gupta-era pillars (484-485 CE & 510 CE) and Year 1 of Toramana
+    sources:
+      - src.fleet-1888-inscriptions-early-gupta-kings
+      - src.willis-1997-inscriptions-of-gopaksetra
+      - src.willis-2009-archaeology-of-hindu-ritual
+    note: >-
+      Budhagupta's Garuda pillar is explicitly dated Gupta Year 165 (484-485 CE), Goparaja's memorial pillar
+      Gupta Year 191 (510-511 CE), and Toramana's Boar inscription falls shortly after 484-485 CE (around c.
+      500-515 CE).
+claims:
+  - text: >-
+      An 8-line Sanskrit inscription on the chest of the colossal zoomorphic sandstone Varaha (covered in rows
+      of carved sages sheltering within its body) records the dedication of the temple in the first regnal
+      year of Maharajadhiraja Toramana by Dhanyavishnu, younger brother of the deceased Matrivishnu.
+    grade: A
+    sources:
+      - src.fleet-1888-inscriptions-early-gupta-kings
+      - src.willis-1997-inscriptions-of-gopaksetra
+  - text: >-
+      The same two brothers, Matrivishnu and Dhanyavishnu, had earlier erected the adjacent 13-metre monolith
+      pillar in Ashadha, Gupta Year 165 (484-485 CE) under Budhagupta, demonstrating rapid political shift in
+      eastern Malwa from Gupta rule to Huna overlordship.
+    grade: A
+    sources:
+      - src.fleet-1888-inscriptions-early-gupta-kings
+      - src.willis-2009-archaeology-of-hindu-ritual
+  - text: "A third pillar at Eran dated Gupta Year 191 (510 CE) under Bhanugupta commemorates his ally Goparaja fighting in battle and records that his wife \"followed him onto the funeral pyre\" - the earliest known securely dated stone inscription mentioning sati in South Asia."
+    grade: B
+    sources:
+      - src.fleet-1888-inscriptions-early-gupta-kings
+      - src.singh-2008-ancient-early-medieval-india
+relations:
+  - kind: part-of
+    target: polity.gupta-empire
+  - kind: related-to
+    target: site.udayagiri-caves
+    note: Parallel Gupta-era Varaha iconography in eastern Malwa
+  - kind: contemporary-of
+    target: artifact.bhitari-pillar-inscription-skandagupta
+    note: Late Gupta-Huna confrontation records
+wikidata: null
+image:
+  commons: File:Eran - Monolithic Varaha and ruined Vishnu Temple in background.jpg
+  alt: Colossal sandstone zoomorphic Varaha sculpture at Eran with ruined Gupta Vishnu temple pillars behind it
+  credit: Itsmalay
+  license: CC BY-SA 4.0
+tags:
+  - sculpture
+  - varaha
+  - gupta
+  - toramana
+  - eran
+  - epigraphy
+  - vishnu
+review:
+  status: draft
+  author: gemini-4-hydrogen-xhigh

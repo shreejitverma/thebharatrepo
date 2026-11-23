@@ -1,0 +1,87 @@
+id: tradition.ajanta-painting
+type: tradition
+kind: art
+names:
+  en: Ajanta Painting Tradition
+  iast: Ajaṇṭā Citrakalā
+  native: अजन्ता चित्रकला
+summary: The Ajanta painting tradition comprises the surviving classical Buddhist mural cycles executed on prepared
+  mud-and-lime plaster across the basalt caves of Ajanta in Maharashtra. Spanning an early Satavahana phase (Caves 9 and
+  10) and a high Vakataka Mahayana phase in the fifth century CE (Caves 1, 2, 16 and 17), the murals exemplify Indian
+  chiaroscuro modelling (vartana), expressive gesture and Jataka narrative.
+summaries:
+  kids: Inside the rock-cut Ajanta Caves in Maharashtra, ancient artists painted glowing stories of the Buddha's past
+    lives on mud-and-lime walls using mineral colours like red ochre and lapis blue.
+  teen: Executed in dry-plaster tempera during Satavahana (c. 1st c. BCE-1st c. CE) and Vakataka (5th c. CE) phases,
+    Ajanta's murals showcase graceful shading, mineral pigments and courtly Jataka storytelling.
+region: Northern Deccan (Ajanta, Maharashtra)
+location:
+  name: Ajanta, Maharashtra
+  lat: 20.552
+  lon: 75.703
+datings:
+  - method: art-historical
+    range:
+      earliest: 150 BCE
+      latest: 480
+      precision: decade
+      circa: true
+    grade: B
+    label: Early Satavahana murals and Walter M. Spink's Vakataka short chronology
+    sources:
+      - src.spink-2005-ajanta-end-of-golden-age
+      - src.tartakov-2003-ajanta-grove
+    note: Fragmentary murals in Caves 9 and 10 date to c. 100 BCE-100 CE; Walter Spink places the major Vakataka mural
+      program of Caves 1, 2, 16 and 17 within c. 462-480 CE under Harishena.
+  - method: art-historical
+    range:
+      earliest: 150 BCE
+      latest: 550
+      precision: century
+      circa: true
+    grade: C
+    label: Extended fifth- to mid-sixth-century CE chronology for the later caves
+    sources:
+      - src.dallapiccola-2003-early-indian-painting-grove
+      - src.harle-1994-art-architecture-indian-subcontinent
+    note: Several art historians allow a longer span from the mid-fifth into the early sixth century CE for the completion
+      of the later Mahayana murals.
+claims:
+  - text: Ajanta painters applied earth and mineral pigments (red and yellow ochres, terre verte, lampblack, lime white and
+      imported lapis lazuli) over dry mud plaster coated with a thin lime wash (secco/tempera, not true buon fresco).
+    grade: A
+    sources:
+      - src.tartakov-2003-ajanta-grove
+      - src.dallapiccola-2003-early-indian-painting-grove
+      - src.ehnbom-losty-2003-indian-painting-grove
+  - text: Donative inscriptions and paintings in Caves 1, 2, 16 and 17 preserve iconic Bodhisattva figures such as Padmapani
+      and Vajrapani alongside Jataka narratives with continuous space and volume shading.
+    grade: A
+    sources:
+      - src.spink-2005-ajanta-end-of-golden-age
+      - src.spink-2006-ajanta-cave-by-cave
+debate: While the early Satavahana paintings (Caves 9 and 10) are widely dated around the first century BCE to first
+  century CE, scholars debate whether the great Vakataka Mahayana mural cycle was executed in a compressed burst of
+  under twenty years (c. 462-480 CE, as argued by Walter Spink) or over a broader fifth- to mid-sixth-century span.
+relations:
+  - kind: located-at
+    target: site.ajanta-caves
+  - kind: patronised-by
+    target: polity.satavahana-dynasty
+  - kind: influenced
+    target: tradition.bengal-school-of-art
+image:
+  commons: File:Bodhisattva Padmapani, cave 1, Ajanta, India.jpg
+  alt: Fifth-century mural painting of Bodhisattva Padmapani holding a blue lotus in Cave 1 at Ajanta
+  credit: Unknown Vakataka-period artist (public domain photograph)
+  license: Public domain
+tags:
+  - ajanta
+  - murals
+  - painting
+  - vakataka
+  - buddhism
+  - jataka
+review:
+  status: draft
+  author: gemini-4-hydrogen-xhigh

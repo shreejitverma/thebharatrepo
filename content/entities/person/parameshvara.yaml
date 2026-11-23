@@ -1,0 +1,48 @@
+id: person.parameshvara
+type: person
+kind: science
+names:
+  en: Parameshvara
+  iast: Parameśvara
+  native: പരമേശ്വരൻ
+summary: Parameshvara was a Kerala astronomer who recorded eclipse observations and wrote the Drigganita in
+  1431. His work connects mathematical predictions with repeated observations of the sky.
+summaries:
+  kids: Parameshvara watched eclipses and used what he saw to check rules for predicting them.
+  teen: Parameshvara reported observations in his astronomical writing and composed works on eclipses and
+    spherical astronomy. His dated Drigganita anchors his scholarly activity.
+region: Kerala
+datings:
+  - method: textual-internal
+    range:
+      earliest: "1360 CE"
+      latest: "1460 CE"
+      precision: decade
+      circa: true
+    grade: B
+    label: Approximate lifespan (Plofker)
+    sources:
+      - id: src.plofker-2009-mathematics-in-india
+        locator: Appendix B
+    note: Scholars place his life roughly between 1360/1380 and 1455/1460 CE; his dated writings span 1431-1443 CE, including the Drigganita.
+claims:
+  - text: Parameshvara preserved observations of eclipses in his writings and discussed techniques for calculating
+      them.
+    grade: A
+    sources:
+      - id: src.plofker-2009-mathematics-in-india
+        locator: Section 7.4 and Appendix B
+relations:
+  - kind: authored
+    target: text.drigganita
+  - kind: student-of
+    target: person.madhava-of-sangamagrama
+  - kind: part-of
+    target: tradition.kerala-school-of-mathematics
+tags:
+  - kerala-school
+  - astronomy
+  - eclipses
+review:
+  status: draft
+  author: codex-gpt-6

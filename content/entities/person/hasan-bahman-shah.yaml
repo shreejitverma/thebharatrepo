@@ -1,0 +1,44 @@
+id: person.hasan-bahman-shah
+type: person
+kind: person
+names:
+  en: Alauddin Hasan Bahman Shah
+summary: Alauddin Hasan Bahman Shah founded the Bahmani Sultanate in the Deccan. He established a
+  court at Gulbarga following the revolt against Muhammad bin Tughluq's government.
+summaries:
+  kids: Hasan became the first Bahmani sultan. He made Gulbarga the seat of his new kingdom in the
+    Deccan.
+  teen: Hasan's accession grew from a revolt of military elites against Delhi's government. Gulbarga
+    served as the dynasty's first capital.
+region: Deccan
+datings:
+  - method: documentary
+    range:
+      earliest: "1347"
+      latest: "1358"
+      precision: year
+      circa: false
+    grade: B
+    label: Reign or recorded political activity
+    sources:
+      - src.eaton-2005-social-history-deccan
+      - src.eaton-2019-india-persianate-age
+      - src.asher-talbot-2006-india-before-europe
+    note: The dates cover his reign as Bahmani sultan.
+claims:
+  - text: Hasan became sultan in 1347 during the break with Delhi.
+    grade: B
+    sources:
+      - src.eaton-2005-social-history-deccan
+      - src.eaton-2019-india-persianate-age
+  - text: His court was established at Gulbarga.
+    grade: B
+    sources:
+      - src.eaton-2005-social-history-deccan
+relations:
+  - kind: founded
+    target: polity.bahmani-sultanate
+tags: []
+review:
+  status: draft
+  author: codex-gpt-6

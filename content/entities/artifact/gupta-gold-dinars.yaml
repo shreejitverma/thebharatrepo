@@ -1,0 +1,78 @@
+id: artifact.gupta-gold-dinars
+type: artifact
+kind: polity
+names:
+  en: Gupta Gold Dinars
+  iast: Gupta Suvarṇa Dīnāra
+summary: "Classical Sanskrit-inscribed gold coins issued by the Imperial Guptas from Chandragupta I and Samudragupta to Skandagupta (c. 320-480 CE), preserved most famously in the 1946 Bayana Hoard of 1,821 gold pieces. Developing out of the ~7.8 g Kushan dinar weight before rising to the heavier ~9.2 g Indian suvarna standard under Skandagupta, they are often ranked among the finest artistic coinages of ancient South Asia."
+summaries:
+  kids: >-
+    Gupta gold coins look like tiny metal paintings: they show kings playing the vina lyre, riding horses,
+    fighting lions with bows, or holding battleaxes, surrounded by poetry written in Sanskrit.
+  teen: >-
+    Known from spectacular finds such as the 1,821-coin Bayana Hoard (1946), Gupta gold dinars transformed
+    earlier Kushan prototypes into distinctively Indian artworks with metrical Sanskrit verse legends
+    celebrating Chandragupta II, Kumaragupta I, and Skandagupta.
+region: Gangetic Heartland (e.g. Bayana Hoard, Bharatpur, Rajasthan; National Museum, New Delhi and British Museum)
+datings:
+  - method: numismatic
+    range:
+      earliest: 320
+      latest: 550
+      best: 400
+      precision: decade
+      circa: true
+    grade: B
+    label: Imperial Gupta period (Chandragupta I to later Guptas)
+    sources:
+      - src.altekar-1957-coinage-gupta-empire
+      - src.altekar-1954-bayana-hoard-gupta-gold-coins
+      - src.allan-1914-gupta-coins
+    note: >-
+      Anchored via dated Gupta inscriptions (e.g. Udayagiri Year 82 = 401 CE under Chandragupta II;
+      Bhitari/Junagadh under Skandagupta) and hoard stratigraphy.
+claims:
+  - text: >-
+      Discovered near Bayana in Bharatpur district in February 1946 and catalogued by A. S. Altekar, the
+      Bayana Hoard yielded 1,821 Gupta gold coins spanning Chandragupta I, Kacha, Samudragupta, Chandragupta
+      II, Kumaragupta I, and Skandagupta.
+    grade: A
+    sources:
+      - src.altekar-1954-bayana-hoard-gupta-gold-coins
+      - src.altekar-1957-coinage-gupta-empire
+  - text: "Obverse designs evolved from Samudragupta's Javelin/Standard, Archer, Battleaxe, Lyrist (playing a vina), and Ashvamedha horse types to Chandragupta II's Lion-Slayer and Horseman issues, typically paired with the goddess Lakshmi on the reverse and a Garuda royal banner."
+    grade: A
+    sources:
+      - src.allan-1914-gupta-coins
+      - src.raven-1994-gupta-gold-coins-garuda-banner
+  - text: >-
+      Weights began near the Roman/Kushan ~7.6-7.9 g dinar under Samudragupta, rose steadily through ~8.0-8.6
+      g under Kumaragupta I, and reached the ~9.2 g (80-ratti) Indian suvarna standard under Skandagupta.
+    grade: A
+    sources:
+      - src.altekar-1957-coinage-gupta-empire
+      - src.allan-1914-gupta-coins
+relations:
+  - kind: part-of
+    target: polity.gupta-empire
+  - kind: related-to
+    target: person.chandragupta-ii
+wikidata: null
+image:
+  commons: File:Gupta Empire, Samudragupta, 335-380 AD, Gold Dinar, 7.9g, Javelin Type.jpg
+  alt: >-
+    Gold dinar (7.9 g, Javelin/Standard type) of Gupta emperor Samudragupta holding a royal standard beside a
+    Garuda banner
+  credit: Mitresh66
+  license: CC BY-SA 4.0
+tags:
+  - coins
+  - numismatics
+  - gold
+  - gupta
+  - bayana-hoard
+  - dinar
+  - sanskrit
+review:
+  status: draft
+  author: gemini-4-hydrogen-xhigh

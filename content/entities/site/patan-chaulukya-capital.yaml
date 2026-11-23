@@ -1,0 +1,50 @@
+id: "site.patan-chaulukya-capital"
+type: "site"
+kind: "site"
+names:
+  en: "Patan and the Chaulukya court"
+  iast: "Aṇahilapāṭaka"
+summary: "Patan, historically Anahilapataka or Anahilavada, was the capital of the Chaulukyas of
+  Gujarat. Jain scholars and communities flourished there, and the court patronage of Hemachandra is
+  especially well remembered."
+summaries:
+  kids: "Patan was the capital of rulers called the Chaulukyas. Scholars such as Hemachandra worked
+    there, and the city is also known for a richly carved stepwell."
+  teen: "The city linked royal patronage, Jain scholarship and merchant communities. Its surviving
+    stepwell and literary records provide different kinds of evidence for the Chaulukya period."
+region: "Patan, Gujarat"
+datings:
+  - method: "scholarly-consensus"
+    range:
+      earliest: 940
+      latest: 1250
+      precision: "century"
+      circa: true
+    grade: "B"
+    label: "Chaulukya capital and court"
+    sources:
+      - "src.cort-2001-jains-in-patan"
+      - "src.singh-2008-ancient-early-medieval-india"
+claims:
+  - text: "Patan served as the capital of the Chaulukyas, also called the Solankis."
+    grade: "B"
+    sources:
+      - "src.cort-2001-jains-in-patan"
+      - "src.singh-2008-ancient-early-medieval-india"
+  - text: "The Jain monk Hemachandra was associated with the court of Kumarapala in the twelfth century."
+    grade: "B"
+    sources:
+      - "src.cort-2001-jains-in-patan"
+relations:
+  - kind: "related-to"
+    target: "event.rani-ki-vav-unesco-inscription"
+  - kind: "related-to"
+    target: "site.modhera-sun-temple"
+    note: "Modhera's Sun Temple is a Chaulukya-period monument of the same court milieu."
+tags:
+  - "gujarat"
+  - "chaulukya"
+  - "jainism"
+review:
+  status: "draft"
+  author: "codex-gpt-6"

@@ -1,0 +1,42 @@
+id: person.jalaluddin-khalji
+type: person
+kind: person
+names:
+  en: Jalaluddin Khalji
+summary: Jalaluddin Khalji established his line at Delhi in 1290. His nephew and son-in-law Alauddin
+  displaced him in 1296 and took the throne.
+summaries:
+  kids: Jalaluddin became the first Khalji ruler of Delhi. His nephew Alauddin took over six years later.
+  teen: Jalaluddin's accession changed the ruling household of the Sultanate. Persian chronicles
+    describe the transfer of power to Alauddin in 1296.
+region: Delhi and northern India
+datings:
+  - method: documentary
+    range:
+      earliest: "1290"
+      latest: "1296"
+      precision: year
+      circa: false
+    grade: B
+    label: Reign or recorded political activity
+    sources:
+      - src.jackson-1999-delhi-sultanate
+      - src.asher-talbot-2006-india-before-europe
+    note: The accession and assassination establish the reign.
+claims:
+  - text: Jalaluddin founded the Khalji ruling line of Delhi in 1290.
+    grade: B
+    sources:
+      - src.jackson-1999-delhi-sultanate
+  - text: Alauddin had Jalaluddin killed in 1296 and secured the throne.
+    grade: B
+    sources:
+      - src.jackson-1999-delhi-sultanate
+      - src.asher-talbot-2006-india-before-europe
+relations:
+  - kind: founded
+    target: polity.khalji-dynasty
+tags: []
+review:
+  status: draft
+  author: codex-gpt-6

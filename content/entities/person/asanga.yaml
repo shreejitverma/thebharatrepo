@@ -1,0 +1,44 @@
+id: person.asanga
+type: person
+kind: person
+names:
+  en: Asanga
+  iast: Asaṅga
+  native: असङ्ग
+summary: Asanga was an early systematizer of Indian Yogacara Buddhism. His Mahayanasamgraha connects
+  an account of how experience arises with a path of Buddhist training.
+summaries:
+  kids: Asanga wrote about how habits shape what people experience and how Buddhist practice can
+    change those habits.
+  teen: The Mahayanasamgraha explains how past actions can shape later experience through the notion
+    of a storehouse consciousness. Asanga uses this account as part of a wider description of the
+    Buddhist path.
+datings:
+  - method: scholarly-consensus
+    range:
+      earliest: "300"
+      latest: "450"
+      precision: century
+      circa: true
+    grade: B
+    label: Fourth- and early fifth-century scholarly horizon
+    sources:
+      - id: src.ganeri-2017-oxford-handbook-indian-philosophy
+        locator: "Timeline: Indian Philosophy in a Hundred Thinkers"
+      - src.szanyi-2024-yogacara
+    note: The Oxford Handbook estimates about 340 to 420 CE. A wider range reflects the limited
+      biographical record.
+claims:
+  - text: The Mahayanasamgraha, attributed to Asanga, presents storehouse consciousness as part of its
+      account of karmic continuity.
+    grade: B
+    sources:
+      - src.szanyi-2024-yogacara
+relations: []
+tags:
+  - buddhist-philosophy
+  - yogacara
+  - mahayana
+review:
+  status: draft
+  author: codex-gpt-6

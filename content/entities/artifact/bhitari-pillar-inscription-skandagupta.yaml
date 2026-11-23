@@ -1,0 +1,91 @@
+id: artifact.bhitari-pillar-inscription-skandagupta
+type: artifact
+kind: polity
+names:
+  en: Bhitari Pillar Inscription of Skandagupta
+  iast: Bhītarī Stambha Abhilekha (Skandagupta)
+summary: >-
+  A 19-line Sanskrit inscription engraved in Gupta Brahmi on a red sandstone column at Bhitari in Ghazipur
+  district, Uttar Pradesh, during the reign of Emperor Skandagupta (r. c. 455-467 CE). Following the imperial
+  Gupta genealogy from Shrigupta, it records Skandagupta's hard-fought victories over the Pushyamitras and the
+  Hunas and his installation of a Vishnu (Sarngin) image in merit of his late father Kumaragupta I.
+summaries:
+  kids: >-
+    Standing in a village in eastern Uttar Pradesh, this red sandstone pillar preserves Emperor Skandagupta's
+    5th-century Sanskrit account of defending the Gupta Empire against fierce invaders and dedicating a temple
+    to Vishnu.
+  teen: >-
+    Skandagupta's Bhitari pillar inscription is a primary eyewitness record of the crisis of the mid-5th
+    century CE, detailing the Gupta imperial pedigree, night-long battlefield hardships against the
+    Pushyamitras, and early military resistance to the Huna invasions.
+region: Bhitari, Saidpur Tehsil, Ghazipur District, Uttar Pradesh, India
+location:
+  name: Bhitari red sandstone Gupta pillar site
+  lat: 25.58
+  lon: 83.25
+datings:
+  - method: epigraphic
+    range:
+      earliest: 455
+      latest: 467
+      best: 460
+      precision: decade
+      circa: true
+    grade: B
+    label: Reign of Gupta Emperor Skandagupta (mid-5th century CE)
+    sources:
+      - src.fleet-1888-inscriptions-early-gupta-kings
+      - src.bhandarkar-1981-inscriptions-early-gupta-kings
+      - src.sircar-1942-select-inscriptions-vol-1
+    note: >-
+      Undated itself, but securely bracketed within Skandagupta's reign (known from Junagadh and silver/gold
+      coins to span Gupta Years 136-148 = 455-467 CE) after his father Kumaragupta I's death.
+claims:
+  - text: >-
+      Published by J. F. Fleet in CII Vol. 3 and revised by D. R. Bhandarkar, the 19-line Gupta-script
+      inscription opens in prose reciting the Gupta succession (Gupta, Ghatotkacha, Chandragupta I,
+      Samudragupta, Chandragupta II, Kumaragupta I, Skandagupta) before continuing in 12 Sanskrit verses.
+    grade: A
+    sources:
+      - src.fleet-1888-inscriptions-early-gupta-kings
+      - src.bhandarkar-1981-inscriptions-early-gupta-kings
+  - text: >-
+      The text recounts that when his father Kumaragupta I died and enemies (variously read as the
+      Pushyamitras or Yuddhyamitra wealth-allies) shook the empire's fortune, Skandagupta spent a night on the
+      bare earth, defeated them, and later clashed in violent battle with the Hunas ("Hunair yasya samagatasya
+      samare...").
+    grade: A
+    sources:
+      - src.fleet-1888-inscriptions-early-gupta-kings
+      - src.sircar-1942-select-inscriptions-vol-1
+  - text: >-
+      It concludes by recording the installation of an image of Sarngin (Vishnu) and the endowment of a
+      village for the spiritual merit of Skandagupta's deceased father, illuminating Vaishnava royal piety in
+      the late Gupta heartland.
+    grade: A
+    sources:
+      - src.fleet-1888-inscriptions-early-gupta-kings
+      - src.singh-2008-ancient-early-medieval-india
+relations:
+  - kind: part-of
+    target: polity.gupta-empire
+  - kind: related-to
+    target: person.chandragupta-ii
+    note: Traces Skandagupta's direct imperial descent from Chandragupta II
+wikidata: Q48724528
+image:
+  commons: File:Bhitari pillar inscription of Skandagupta.jpg
+  alt: Impression of the 19-line Sanskrit Brahmi inscription of Skandagupta from the Bhitari sandstone pillar
+  credit: J. F. Fleet
+  license: Public domain
+tags:
+  - inscription
+  - gupta
+  - skandagupta
+  - hunas
+  - sanskrit
+  - bhitari
+  - vishnu
+review:
+  status: draft
+  author: gemini-4-hydrogen-xhigh

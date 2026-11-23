@@ -1,0 +1,39 @@
+id: person.saadat-khan
+type: person
+kind: person
+names:
+  en: Saadat Khan Burhan al-Mulk
+summary: Saadat Khan was appointed Mughal governor of Awadh and founded its hereditary ruling line.
+  He consolidated authority through dealings with landholders and control of provincial revenue.
+summaries:
+  kids: Saadat Khan was sent to govern Awadh. He built up power there, and a member of his family took
+    over after him.
+  teen: The Mughal appointment of Saadat Khan began a long political transformation. His provincial
+    revenue networks helped his family retain authority under his successor Safdar Jang.
+region: Awadh
+datings:
+  - method: documentary
+    range:
+      earliest: "1722"
+      latest: "1739"
+      precision: year
+      circa: false
+    grade: B
+    label: Reign or recorded political activity
+    sources:
+      - src.abbott-2023-bahu-begam
+      - src.eaton-2019-india-persianate-age
+    note: The range covers his governorship and the early formation of the Awadh state.
+claims:
+  - text: Saadat Khan governed Awadh from 1722 to 1739 and was succeeded by Safdar Jang.
+    grade: B
+    sources:
+      - src.abbott-2023-bahu-begam
+      - src.eaton-2019-india-persianate-age
+relations:
+  - kind: founded
+    target: polity.awadh-state
+tags: []
+review:
+  status: draft
+  author: codex-gpt-6

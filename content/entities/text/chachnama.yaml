@@ -1,0 +1,75 @@
+id: "text.chachnama"
+type: "text"
+kind: "text"
+names:
+  en: "Chachnama"
+  native: "چچ نامہ"
+summary: "The Chachnama is a Persian account of Chach’s rule and the Umayyad conquest, written by
+  Ali Kufi in the early thirteenth century. Scholars differ on its date and relationship to a
+  proposed Arabic source."
+summaries:
+  kids: "Ali Kufi wrote a book in Persian about rulers and wars that happened centuries earlier. He
+    says he worked from an Arabic book, which scholars can no longer examine."
+  teen: "Ali Kufi presented his work as a translation. Manan Ahmed Asif reads it in the political
+    setting of thirteenth-century Uch and stresses its arguments about ethical rule and
+    accommodation."
+region: "Uch and Sindh, Pakistan"
+datings:
+  - method: "textual-internal"
+    range:
+      earliest: 800
+      latest: 900
+      precision: "century"
+      circa: true
+    grade: "C"
+    label: "Derryl N. MacLean’s ninth-century compilation hypothesis"
+    sources:
+      - "src.maclean-1990-chachnama"
+    note: "This is the proposed date of the lost Arabic compilation, whose existence Asif disputes."
+  - method: "textual-internal"
+    range:
+      earliest: 1216
+      latest: 1228
+      precision: "decade"
+      circa: true
+    grade: "C"
+    label: "Persian translation after 1216 in MacLean’s account"
+    sources:
+      - "src.maclean-1990-chachnama"
+      - id: "src.khuhro-1981-sind-through-the-centuries"
+        locator: "P. Hardy, pp. 111-117"
+    note: "MacLean uses the text’s reference to 613 AH and places the work in the context of Qabacha’s
+      court. Hardy gives 1216 to 1217."
+  - method: "textual-internal"
+    range:
+      earliest: 1226
+      latest: 1226
+      precision: "year"
+      circa: false
+    grade: "C"
+    label: "Manan Ahmed Asif’s 1226 date for the Persian work"
+    sources:
+      - "src.asif-2012-long-thirteenth-century"
+      - "src.asif-2016-book-of-conquest"
+claims:
+  - text: "The narrative follows Chach's rise and the later conquest under Muhammad ibn Qasim."
+    grade: "A"
+    sources:
+      - "src.kufi-1985-chachnamah"
+  - text: "Asif argues that the text should be read as a thirteenth-century work of political thought in
+      its own right."
+    grade: "B"
+    sources:
+      - "src.asif-2016-book-of-conquest"
+relations: []
+debate: "MacLean reads the Chachnama as Ali Kufi’s Persian rendering of a ninth-century Arabic
+  compilation. Asif dates the book to 1226 and reads it as a work of political thought shaped by
+  thirteenth-century Uch. Peter Hardy also studied its political arguments, while dating the Persian
+  text to 1216 or 1217."
+tags:
+  - "sindh"
+  - "persian"
+  - "historiography"
+review:
+  status: "draft"
+  author: "codex-gpt-6"

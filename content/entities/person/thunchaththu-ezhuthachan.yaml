@@ -1,0 +1,43 @@
+id: person.thunchaththu-ezhuthachan
+type: person
+kind: person
+names:
+  en: Thunchaththu Ezhuthachan
+  iast: Tuñcattu Eḻuttacchan
+  native: തുഞ്ചത്ത് എഴുത്തച്ഛൻ
+summary: >-
+  Thunchaththu Ramanujan Ezhuthachan (active in the 16th century CE) was the Kerala bhakti poet and scholar widely regarded as the father of modern Malayalam literature. Moving away from the heavily Sanskritized Manipravalam court style, he composed the Adhyatma Ramayanam Kilippattu and Sri Mahabharatam Kilippattu in the accessible "parrot-song" (kilippattu) metre using the 51-letter Malayalam script, helping standardize literary Malayalam and popularizing Rama and Krishna bhakti across Kerala.
+summaries:
+  kids: >-
+    Thunchaththu Ezhuthachan was a sixteenth-century poet from Kerala known as the father of modern Malayalam, who retold the Ramayana and Mahabharata as musical "parrot songs" everyone could enjoy.
+  teen: >-
+    Composing his Adhyatma Ramayanam and Mahabharatam in the accessible kilippattu ("parrot-song") verse form during the 16th century CE, Ezhuthachan helped unify Malayalam language and script beyond elite Sanskritized Manipravalam circles.
+region: Tirur (Thunchan Parambu, Malappuram district) and Palakkad, Kerala
+location: { name: "Tirur, Kerala", lat: 10.90, lon: 75.92 }
+datings:
+  - method: textual-internal
+    range: { earliest: "1495 CE", latest: "1600 CE", precision: century, circa: true }
+    grade: C
+    label: Literary-historical dating in 16th-century Kerala
+    sources:
+      - src.pollock-2003-literary-cultures-in-history
+      - src.chaitanya-1971-history-of-malayalam-literature
+      - src.menon-2007-survey-of-kerala-history
+    note: No contemporary dated inscription records Ezhuthachan's birth or death; allusions to Portuguese firearms, Chembakasseri patronage, and contemporary poets such as Melpathur Narayana Bhattathiri place his career in the 16th century (often estimated c. 1495-1575 CE or c. 1525-1600 CE).
+claims:
+  - text: Ezhuthachan popularized the kilippattu ("parrot-song") genre, framing the Adhyatma Ramayanam and Mahabharatam as devotional songs recited by a parrot in indigenous Dravidian metres.
+    grade: B
+    sources:
+      - src.chaitanya-1971-history-of-malayalam-literature
+      - src.pollock-2003-literary-cultures-in-history
+  - text: His works played a central role in consolidating modern literary Malayalam and spreading the 51-letter Arya-Eluttu (modern Malayalam) script across Kerala households.
+    grade: B
+    sources:
+      - src.menon-2007-survey-of-kerala-history
+      - src.chaitanya-1971-history-of-malayalam-literature
+relations:
+  - { kind: related-to, target: text.valmiki-ramayana }
+  - { kind: related-to, target: text.mahabharata }
+wikidata: Q2506919
+tags: [ezhuthachan, malayalam-literature, kilippattu, bhakti, kerala]
+review: { status: draft, author: "gemini-4-hydrogen-xhigh" }

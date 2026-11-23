@@ -1,0 +1,55 @@
+id: person.kallar
+type: person
+kind: person
+names:
+  en: Kallar
+summary: Kallar is the founder of the Late Shahi line in Al-Biruni's account. His accession is
+  debated, and identifying his name with any particular issue of Shahi coins remains difficult.
+summaries:
+  kids: Al-Biruni tells how Kallar came to rule in the northwest. Scholars are still working out when
+    he took power.
+  teen: Historians use Al-Biruni's list along with records of ninth-century Kabul. Competing
+    chronologies date Kallar's accession several decades apart.
+region: Kabul and Gandhara
+datings:
+  - method: epigraphic
+    range:
+      earliest: "815"
+      latest: "835"
+      precision: decade
+      circa: true
+    grade: C
+    label: Abdur Rehman’s proposed Shahi era, applied to the dynastic transition
+    sources:
+      - src.inaba-2017-across-hindukush
+      - src.rehman-1976-last-two-dynasties-sahis
+    note: Inaba discusses Abdur Rehman’s revised date of 822 CE for the transition at Kabul, based on
+      the Zalamkot inscription and other evidence. The link between the era and the accession
+      remains inferential.
+  - method: textual-internal
+    range:
+      earliest: "840"
+      latest: "855"
+      precision: decade
+      circa: true
+    grade: C
+    label: Abdur Rehman’s earlier reconstruction of Kallar’s accession
+    sources:
+      - src.rehman-1976-last-two-dynasties-sahis
+    note: Rehman situates Kallar's rule around 843 to 850 CE.
+claims:
+  - text: Al-Biruni reports that a Brahmin minister named Kallar replaced the last ruler of the previous
+      Shahi line.
+    grade: C
+    sources:
+      - src.rehman-1976-last-two-dynasties-sahis
+relations:
+  - kind: founded
+    target: polity.hindu-shahi-dynasty
+debate: Rehman’s 1976 reconstruction placed Kallar’s accession around 843. In later work discussed
+  by Inaba, he proposed 822 on inscriptional grounds. The association of the Shahi era with Kallar’s
+  accession remains uncertain.
+tags: []
+review:
+  status: draft
+  author: codex-gpt-6

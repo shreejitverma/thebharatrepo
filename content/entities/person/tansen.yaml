@@ -1,0 +1,75 @@
+id: person.tansen
+type: person
+kind: art
+names:
+  en: Tansen
+  iast: Tānsen
+  native: तानसेन
+summary: Miyan Tansen (born Ramtanu, died c. 1586-1589 CE) was the foremost court musician and dhrupad composer of
+  Mughal emperor Akbar's reign. Born near Gwalior and trained earlier at regional courts including Rewa, he joined
+  Akbar's court in 1562, earned fame in Abu'l Fazl's Ain-i Akbari, and is revered in Hindustani tradition as a creator
+  of ragas such as Miyan ki Todi and Darbari Kanada.
+summaries:
+  kids: Miyan Tansen was the most famous singer and composer at Emperor Akbar's court, remembered for his mastery of
+    dhrupad singing and many classic ragas.
+  teen: Originally serving at Gwalior and Rewa before joining Akbar's court in 1562, Miyan Tansen became a towering figure
+    in Hindustani dhrupad, remembered through preserved Brajbhasha song lyrics and Mughal histories.
+region: Gwalior, Rewa and Agra (Mughal Empire)
+location:
+  name: Gwalior, Madhya Pradesh
+  lat: 26.241
+  lon: 78.187
+datings:
+  - method: documentary
+    range:
+      earliest: 1490
+      latest: 1589
+      precision: year
+      circa: true
+    grade: B
+    label: Birth estimate and death attested in Mughal chronicles
+    sources:
+      - src.abulfazl-1873-ain-i-akbari
+      - src.delvoye-1996-tansen-dhrupad
+      - src.wade-1998-imaging-sound
+    note: Birth year is uncertain (often placed c. 1493-1506 CE); the Akbarnama records his death in 1589 CE, though some
+      chronicles cite 1586 CE.
+claims:
+  - text: Abu'l Fazl's Ain-i Akbari lists Miyan Tansen of Gwalior first among Akbar's thirty-six imperial musicians,
+      praising his unmatched command of North Indian vocal art.
+    grade: A
+    sources:
+      - src.abulfazl-1873-ain-i-akbari
+      - src.wade-1998-imaging-sound
+  - text: Francoise Delvoye's philological studies trace hundreds of Brajbhasha dhrupad compositions (padas) bearing
+      Tansen's signature (chhap) alongside the theoretical treatises Sangitasara and Ragamala attributed to him.
+    grade: B
+    sources:
+      - src.delvoye-1996-tansen-dhrupad
+      - src.sanyal-widdess-2004-dhrupad
+relations:
+  - kind: patronised-by
+    target: person.akbar
+  - kind: patronised-by
+    target: polity.mughal-empire
+  - kind: influenced
+    target: tradition.dhrupad
+  - kind: influenced
+    target: tradition.hindustani-classical-music
+wikidata: Q469894
+image:
+  commons: File:Portrait of Miyan Kalawant Tansen, one of the Nine Jewels of Akbar's Court, circa 1590 CE, National
+    Museum, New Delhi.jpg
+  alt: Mughal miniature portrait of Miyan Tansen in white jama inscribed above in Devanagari, National Museum, New Delhi
+  credit: SpeakingArch
+  license: CC BY-SA 4.0
+tags:
+  - tansen
+  - dhrupad
+  - akbar
+  - mughal
+  - gwalior
+  - hindustani-music
+review:
+  status: draft
+  author: gemini-4-hydrogen-xhigh

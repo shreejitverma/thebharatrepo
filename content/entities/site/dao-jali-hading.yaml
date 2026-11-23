@@ -1,0 +1,54 @@
+id: site.dao-jali-hading
+type: site
+kind: prehistory
+names:
+  en: Daojali Hading
+  native: দাওজালি হাদিং
+summary: >-
+  Daojali Hading, in the Dima Hasao (North Cachar) hills of Assam, was the first stratified Neolithic
+  site excavated in Northeast India (1961-1963 by M. C. Goswami and T. C. Sharma). Its single
+  cultural layer yielded cord-marked and stamped pottery, shouldered stone celts and jadeite tools
+  showing East and Southeast Asian affinities, later dated by OSL to roughly 700 BCE.
+summaries:
+  kids: >-
+    High in the hills of Assam, Daojali Hading was the first layered Stone Age village excavated in
+    Northeast India, revealing cord-marked clay pots and polished stone axes like those in Southeast
+    Asia.
+  teen: >-
+    Excavated in 1961-1963, Daojali Hading established the Neolithic horizon of Northeast India with
+    double-shouldered stone celts, jadeite and cord-impressed pottery, anchored by OSL dates around
+    2.7 ka (c. 700 BCE).
+region: Dima Hasao district, Assam
+location: { name: "Daojali Hading, Dima Hasao, Assam", lat: 25.197, lon: 93.095 }
+datings:
+  - method: luminescence
+    range: { earliest: "1000 BCE", latest: "400 BCE", best: "700 BCE", precision: century, circa: true }
+    grade: B
+    label: OSL dating of Neolithic pottery and sediments (c. 2.7 +/- 0.3 ka)
+    sources:
+      - src.hazarika-2017-prehistory-northeast-india
+      - src.jamir-hazarika-2014-daojali-hading
+    note: Optically stimulated luminescence dating of Daojali Hading pottery and sediments (reported by Sukanya Sharma and colleagues and reviewed by Manjil Hazarika) yielded c. 2.7 +/- 0.3 ka, indicating a late Neolithic persistence in the eastern hills.
+  - method: archaeological-stratigraphic
+    range: { earliest: "2500 BCE", latest: "500 BCE", precision: millennium, circa: true }
+    grade: C
+    label: Typological Eastern Asiatic Neolithic comparison (Goswami and Sharma)
+    sources:
+      - src.jamir-hazarika-2014-daojali-hading
+      - src.hazarika-2017-prehistory-northeast-india
+    note: Earlier comparative typologies equated the shouldered celts and cord-marked pottery broadly with Southeast Asian and southwestern Chinese Neolithic traditions prior to chronometric testing.
+claims:
+  - text: Excavations in 1961-1963 recovered polished shouldered celts, quadrangular adzes, grinding stones and cord-marked pottery from an undisturbed cultural layer roughly 75 cm thick.
+    grade: A
+    sources:
+      - src.jamir-hazarika-2014-daojali-hading
+      - src.hazarika-2017-prehistory-northeast-india
+  - text: The presence of cord-impressed ceramics and jadeite tools links prehistoric Assam technologically to wider East and Southeast Asian Neolithic interaction networks.
+    grade: B
+    sources:
+      - src.hazarika-2017-prehistory-northeast-india
+      - src.jamir-hazarika-2014-daojali-hading
+relations: []
+wikidata: Q27963242
+tags: [daojali-hading, neolithic, assam, northeast-india, prehistory, osl]
+review: { status: draft, author: "gemini-4-hydrogen-xhigh" }

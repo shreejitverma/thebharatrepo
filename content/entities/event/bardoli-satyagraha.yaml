@@ -1,0 +1,43 @@
+id: event.bardoli-satyagraha
+type: event
+kind: event
+names:
+  en: Bardoli Satyagraha
+summary: Cultivators in Bardoli refused to pay an increased land revenue assessment in 1928
+  under the leadership of Vallabhbhai Patel. The campaign secured an inquiry and a reduction in
+  the increase.
+summaries:
+  kids: Farmers in Bardoli refused to pay a higher land tax. They stuck together and won a review
+    of how much they owed.
+  teen: The Bardoli campaign challenged the official valuation of agricultural land. A coordinated
+    refusal to pay, backed by village organising, pushed the Bombay government toward an inquiry
+    and a revised assessment.
+region: Bardoli taluka, present-day Gujarat
+datings:
+  - method: scholarly-consensus
+    range:
+      earliest: "1928"
+      latest: "1928"
+      precision: year
+      circa: false
+    grade: B
+    label: Bardoli land revenue campaign
+    sources:
+      - src.gandhi-1991-patel-a-life
+      - src.sarkar-1989-modern-india
+claims:
+  - text: The cultivators withheld payment of the increased assessment, and the resulting inquiry
+      led to a reduced increase.
+    grade: B
+    sources:
+      - src.sarkar-1989-modern-india
+      - src.chandra-1989-indias-struggle-for-independence
+relations:
+  - kind: related-to
+    target: person.vallabhbhai-patel
+tags:
+  - land-revenue
+  - satyagraha
+review:
+  status: draft
+  author: codex-gpt-6

@@ -1,0 +1,63 @@
+id: text.rasaratnasamuccaya
+type: text
+kind: science
+names:
+  en: Rasaratnasamuccaya
+  iast: Rasaratnasamuccaya
+  native: रसरत्नसमुच्चय
+summary: The Rasaratnasamuccaya is a Sanskrit work on alchemy and the medical use of mineral substances. It
+  discusses metals, laboratory apparatus and the hazards associated with mercury. Its date is contested.
+summaries:
+  kids: This old book describes how people studied and processed metals and minerals. It also records harmful
+    effects associated with mercury.
+  teen: The Rasaratnasamuccaya brings together techniques for processing minerals and historical medical uses.
+    Scholars disagree on when its surviving form was compiled.
+datings:
+  - method: textual-internal
+    range:
+      earliest: 1200
+      latest: 1300
+      precision: century
+      circa: true
+    grade: C
+    label: Thirteenth-century placement (Stein)
+    sources:
+      - src.stein-2012-smelting-zinc-jawar
+    note: Stein follows a chronology used in the history of zinc metallurgy.
+  - method: textual-internal
+    range:
+      earliest: 1500
+      latest: "1600 CE"
+      precision: century
+      circa: true
+    grade: C
+    label: Sixteenth-century placement (Dagmar Wujastyk)
+    sources:
+      - src.wujastyk-2013-perfect-medicine
+      - id: src.meulenbeld-1999-history-indian-medical-literature
+        locator: Volume IIA, section on Rasaratnasamuccaya
+    note: Wujastyk places the text about the sixteenth century in her study of mercury in Sanskrit medical
+      literature.
+claims:
+  - text: The text describes materials and apparatus associated with processing metals, including passages read by
+      historians as accounts of zinc distillation.
+    grade: B
+    sources:
+      - src.stein-2012-smelting-zinc-jawar
+  - text: It records symptoms attributed to mercury poisoning, including salivation and trembling.
+    grade: A
+    sources:
+      - src.wujastyk-2013-perfect-medicine
+relations:
+  - kind: related-to
+    target: site.zawar-zinc-distillation
+debate: Stein cites a thirteenth-century chronology in her discussion of the history of zinc. Dagmar Wujastyk
+  places the work around the sixteenth century. The work’s attribution to a Vagbhata cannot by itself
+  establish a date.
+tags:
+  - alchemy
+  - ayurveda
+  - metallurgy
+review:
+  status: draft
+  author: codex-gpt-6

@@ -1,0 +1,26 @@
+id: event.green-revolution-in-india
+type: event
+kind: science
+names:
+  en: "Green Revolution in India"
+summary: "From the 1960s, India introduced high-yielding crop varieties, including new wheats promoted alongside fertiliser and irrigation. The changes increased wheat production and reshaped farming in regions able to adopt the new methods."
+summaries:
+  kids: "Farmers in parts of India began planting new kinds of wheat in the 1960s. With enough water and fertiliser, the plants could produce more grain."
+  teen: "The Indian Green Revolution combined plant breeding with changes in farm practice and policy. High-yielding wheat varieties spread in the 1960s, alongside investment in irrigation and the use of fertiliser."
+region: "India"
+datings:
+  - method: scholarly-consensus
+    range: { earliest: "1960", latest: "1970", precision: decade, circa: true }
+    grade: B
+    label: "Spread of new wheat varieties in the 1960s"
+    sources: ["src.baranski-2015-green-revolution-wheat"]
+    note: "This range describes the early wheat transition studied by Marci R. Baranski. The introduction and uptake of new crop varieties continued beyond this period."
+claims:
+  - text: "India promoted modern wheat varieties in the 1960s alongside fertiliser and irrigation as a package of technologies and practices."
+    grade: B
+    sources: ["src.baranski-2015-green-revolution-wheat"]
+  - text: "Baranski traces the breeding ideal of adaptation across environments to international research and its testing in the Indian context."
+    grade: B
+    sources: ["src.baranski-2015-green-revolution-wheat"]
+tags: ["republic","agriculture","wheat"]
+review: { status: draft, author: codex-gpt-6 }

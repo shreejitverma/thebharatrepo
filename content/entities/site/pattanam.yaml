@@ -1,0 +1,42 @@
+id: site.pattanam
+type: site
+kind: site
+names:
+  en: Pattanam Archaeological Site
+  iast: Paṭṭaṇam
+  native: പട്ടണം
+summary: >-
+  Pattanam, near North Paravur in Ernakulam district, Kerala, is an Early Historic urban port site excavated by the Kerala Council for Historical Research (KCHR) beginning in 2007 under P. J. Cherian. Excavations revealed a burnt-brick wharf, a wooden dugout canoe, Mediterranean Roman amphorae, terra sigillata, West Asian turquoise-glazed pottery, and Indian Rouletted Ware, making Pattanam the strongest archaeological candidate for the ancient Chera emporium of Muziris.
+summaries:
+  kids: >-
+    At Pattanam in Kerala, archaeologists dug up an old brick boat dock, a wooden canoe, Roman wine jars, and glass beads, giving physical proof of ancient sea trade along the Malabar Coast.
+  teen: >-
+    Excavated from 2007 onward, Pattanam yielded Roman amphorae, Sasanian glazed wares, a brick wharf, and a preserved wooden canoe dating from the early centuries BCE through the 4th century CE, widely linked to ancient Muziris.
+region: Lower Periyar basin, Ernakulam District, Kerala
+location: { name: "Pattanam, Kerala", lat: 10.16, lon: 76.21 }
+datings:
+  - method: archaeological-radiocarbon
+    range: { earliest: "1000 BCE", latest: "500 CE", precision: century, circa: true }
+    grade: B
+    label: Radiocarbon and ceramic sequence (Iron Age to Early Historic peak)
+    sources:
+      - src.shajan-2004-locating-ancient-muziris
+      - src.shajan-2008-external-connections-pattanam
+      - src.tomber-2008-indo-roman-trade
+    note: Stratified deposits begin with an Iron Age Megalithic phase (c. 1000-300 BCE), peak in an Early Historic urban maritime phase (c. 1st century BCE to 4th century CE) anchored by Roman amphorae and radiocarbon dates on the canoe and wharf wood, and show medieval reuse.
+claims:
+  - text: Excavations at Pattanam recovered Roman Dressel 2-4 amphora sherds, terra sigillata, Yemenite and Mesopotamian ceramics, alongside Indian Rouletted Ware and Chera coins.
+    grade: A
+    sources:
+      - src.shajan-2004-locating-ancient-muziris
+      - src.shajan-2008-external-connections-pattanam
+  - text: Excavators uncovered a fired-brick wharf structure accompanied by teakwood bollards and a 6-metre dugout canoe in waterlogged estuarine strata.
+    grade: A
+    sources:
+      - src.shajan-2008-external-connections-pattanam
+      - src.cobb-2023-indian-merchants-abroad
+relations:
+  - { kind: related-to, target: polity.early-cheras }
+wikidata: Q7148318
+tags: [pattanam, muziris, kerala, archaeology, indo-roman-trade, kchr]
+review: { status: draft, author: "gemini-4-hydrogen-xhigh" }

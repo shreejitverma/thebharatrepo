@@ -1,0 +1,42 @@
+id: person.kokalla-i
+type: person
+kind: person
+names:
+  en: Kokalla I
+  iast: Kokalla
+summary: Kokalla I was an early ruler of the Tripuri Kalachuris, remembered in the family's
+  inscriptions. His dates are reconstructed from the genealogy and relationships with other ruling
+  houses.
+summaries:
+  kids: The Kalachuri kings remembered Kokalla as an early ruler of their family. They named him in
+    inscriptions.
+  teen: Later Kalachuri inscriptions establish Kokalla's place in the line. Their claims about his
+    victories and alliances also served to praise the dynasty.
+region: Central India
+datings:
+  - method: epigraphic
+    range:
+      earliest: "800"
+      latest: "875"
+      precision: decade
+      circa: true
+    grade: C
+    label: Reign or recorded political activity
+    sources:
+      - src.mirashi-1955-kalachuri-chedi-inscriptions
+      - src.singh-2008-ancient-early-medieval-india
+    note: This bracket reflects an early ninth-century placement with uncertain accession and reign
+      length.
+claims:
+  - text: The Tripuri Kalachuri genealogy preserved in dated inscriptions names Kokalla among its early
+      rulers.
+    grade: A
+    sources:
+      - src.mirashi-1955-kalachuri-chedi-inscriptions
+relations:
+  - kind: ruled
+    target: polity.kalachuri-dynasty-tripuri
+tags: []
+review:
+  status: draft
+  author: codex-gpt-6

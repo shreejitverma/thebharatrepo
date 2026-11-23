@@ -1,0 +1,62 @@
+id: site.rani-ki-vav
+type: site
+kind: site
+names:
+  en: Rani ki Vav
+  iast: Rāṇī kī Vāv
+  native: રાણકી વાવ
+summary: >-
+  Rani ki Vav, the Queen's Stepwell at Patan in Gujarat, dates to the eleventh century CE and is
+  attributed to Queen Udayamati. Its seven levels descend past carved walls and pillared pavilions to a
+  well. UNESCO inscribed it in 2014.
+summaries:
+  kids: >-
+    At Patan in Gujarat, steps lead down through seven levels to a well. Hundreds of carvings decorate
+    the walls and pillars along the way.
+  teen: >-
+    Rani ki Vav combines a water supply structure with pillared galleries and stone sculpture.
+    Architectural study places it in the eleventh century CE, and a later account credits Queen
+    Udayamati.
+region: North Gujarat (Patan district, Gujarat)
+location: { name: "Patan, Gujarat", lat: 23.859, lon: 72.102 }
+datings:
+  - method: art-historical
+    range: { earliest: "1000 CE", latest: "1100 CE", precision: century, circa: true }
+    grade: B
+    label: "Eleventh-century Chaulukya stepwell"
+    sources:
+      - src.mankodi-1991-queens-stepwell-patan
+      - src.livingston-2002-steps-to-water
+      - src.rani-ki-vav-unesco
+    note: >-
+      The architecture and sculpture place the stepwell in the eleventh century CE. Merutunga's later
+      Prabandhacintamani attributes it to Queen Udayamati.
+claims:
+  - text: >-
+      The seven-level stepwell has been attributed to Queen Udayamati, wife of the Chaulukya ruler Bhima
+      I, on the basis of a later account.
+    grade: B
+    sources:
+      - src.mankodi-1991-queens-stepwell-patan
+      - src.burgess-cousens-1903-northern-gujarat
+  - text: >-
+      The sculptural program includes Vishnu reclining on the serpent Shesha and images of his avatars.
+    grade: B
+    sources:
+      - src.mankodi-1991-queens-stepwell-patan
+      - src.rani-ki-vav-unesco
+  - text: >-
+      UNESCO inscribed the stepwell on the World Heritage List in 2014.
+    grade: A
+    sources:
+      - src.rani-ki-vav-unesco
+relations:
+  - { kind: related-to, target: event.rani-ki-vav-unesco-inscription }
+wikidata: Q7293002
+image:
+  commons: "File:Rani ki vav 02.jpg"
+  alt: Subterranean pillared galleries and stepped terracotta-toned sandstone terraces descending into Rani ki Vav at Patan
+  credit: Bernard Gagnon
+  license: CC BY-SA 3.0
+tags: [rani-ki-vav, stepwell, patan, gujarat, chaulukya, unesco, water-management]
+review: { status: draft, author: "gemini-4-hydrogen-xhigh" }

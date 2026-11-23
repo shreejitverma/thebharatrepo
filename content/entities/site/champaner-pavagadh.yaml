@@ -1,0 +1,71 @@
+id: site.champaner-pavagadh
+type: site
+kind: site
+names:
+  en: Champaner-Pavagadh Archaeological Park
+  iast: Cāmpānera-Pāvāgaḍha
+  native: ચાંપાનેર-પાવાગઢ પુરાતત્વીય ઉદ્યાન
+summary: >-
+  Champaner-Pavagadh Archaeological Park in Gujarat brings together the remains of a Gujarat Sultanate
+  capital and the older fortifications and shrines of Pavagadh Hill. Mahmud Begada developed the capital
+  after taking Pavagadh in 1484 CE. UNESCO inscribed the park in 2004.
+summaries:
+  kids: >-
+    In Gujarat, paths lead up Pavagadh Hill past fort walls and shrines. Below the hill stand the
+    remains of a walled city with carved stone mosques and stepwells.
+  teen: >-
+    Champaner-Pavagadh combines the Kalika Mata pilgrimage and older fortifications on Pavagadh Hill
+    with the remains of a city built below it by the Gujarat Sultanate. The Jami Masjid combines a
+    congregational mosque plan with local stone carving.
+region: Eastern Gujarat (Panchmahal district, Gujarat)
+location: { name: "Champaner-Pavagadh, Gujarat", lat: 22.483, lon: 73.533 }
+datings:
+  - method: scholarly-consensus
+    range: { earliest: "700 CE", latest: "1400 CE", precision: century, circa: true }
+    grade: B
+    label: "Pre-Sultanate hill fortress, temples and waterworks"
+    sources:
+      - src.unesco-2004-champaner-pavagadh
+    note: >-
+      UNESCO describes pre-Sultanate fortifications, religious structures and water installations of the
+      eighth to fourteenth centuries on and around the hill, alongside earlier prehistoric remains.
+  - method: scholarly-consensus
+    range: { earliest: "1484 CE", latest: "1535 CE", precision: decade, circa: true }
+    grade: B
+    label: "Gujarat Sultanate capital phase"
+    sources:
+      - src.mehta-2003-champaner
+      - src.unesco-2004-champaner-pavagadh
+      - src.ruggles-sinha-2009-champaner-pavagadh
+    note: >-
+      Mahmud Begada took Pavagadh in 1484 CE and developed Champaner as a capital. Older and later
+      phases of the hill settlement and pilgrimage landscape extend beyond this span.
+claims:
+  - text: >-
+      The Jami Masjid at Champaner combines a congregational mosque plan with carved stonework that
+      draws on regional building traditions.
+    grade: B
+    sources:
+      - src.mehta-2003-champaner
+      - src.asher-talbot-2006-india-before-europe
+  - text: >-
+      The archaeological park includes mosques, water installations and the active Kalika Mata shrine
+      on Pavagadh Hill.
+    grade: B
+    sources:
+      - src.unesco-2004-champaner-pavagadh
+  - text: >-
+      In 2004 UNESCO inscribed the archaeological park, including the Sultanate city and the pilgrimage
+      landscape on Pavagadh Hill.
+    grade: A
+    sources:
+      - src.unesco-2004-champaner-pavagadh
+relations: []
+wikidata: Q844427
+image:
+  commons: "File:Jama masjid in Champaner.JPG"
+  alt: The Jami Masjid at Champaner, a component of Champaner-Pavagadh Archaeological Park
+  credit: Phso2
+  license: CC BY 3.0
+tags: [champaner, pavagadh, gujarat, unesco, sultanate, architecture, archaeology]
+review: { status: draft, author: "gemini-4-hydrogen-xhigh" }

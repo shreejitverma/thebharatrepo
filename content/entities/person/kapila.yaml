@@ -1,0 +1,49 @@
+id: person.kapila
+type: person
+kind: person
+names:
+  en: Kapila
+  iast: Kapila
+  native: कपिल
+summary: Kapila is revered as an early teacher of Samkhya. The Bhagavata Purana portrays him as an
+  incarnation of Vishnu who teaches his mother Devahuti. His placement in the age of the first Manu
+  belongs to Puranic cosmology.
+summaries:
+  kids: In a story from the Bhagavata Purana, the sage Kapila teaches his mother Devahuti about how
+    people can become free from suffering.
+  teen: The Bhagavata Purana portrays Kapila as a form of Vishnu and links his teaching to Samkhya and
+    devotion. It sets the story in the age of the first Manu, part of the Purana’s sacred
+    chronology.
+datings:
+  - method: traditional-puranic
+    range:
+      earliest: 1971219102 BCE
+      latest: 1664499102 BCE
+      precision: cosmological
+      circa: true
+    grade: D
+    label: "Bhagavata Purana: age of Svayambhuva Manu"
+    sources:
+      - id: src.gretil-bhagavata-purana-8
+        locator: Bhagavata Purana 8.1.5-6
+      - src.burgess-1860-surya-siddhanta
+    note: The Purana places Kapila under the first Manu. The interval maps that full manvantara using
+      the Surya Siddhanta’s lengths and the Kali epoch. It is a traditional placement in cosmic
+      time.
+claims:
+  - text: The Bhagavata Purana names Kapila as the son of Devahuti and Kardama and presents his teaching
+      to Devahuti.
+    grade: A
+    sources:
+      - id: src.gretil-bhagavata-purana-3
+        locator: Bhagavata Purana 3.24-33
+relations:
+  - kind: related-to
+    target: cosmology.manvantara
+tags:
+  - samkhya
+  - purana
+  - traditional-figure
+review:
+  status: draft
+  author: codex-gpt-6

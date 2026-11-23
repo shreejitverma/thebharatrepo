@@ -1,0 +1,59 @@
+id: text.ettuttokai
+type: text
+kind: text
+names:
+  en: Ettuttokai (The Eight Anthologies)
+  iast: Eṭṭuttokai
+  native: எட்டுத்தொகை
+summary: >-
+  The Ettuttokai ("Eight Anthologies") forms one of the two principal divisions of classical Sangam Tamil poetry alongside the Pattuppattu. It comprises eight collections - Natrinai, Kuruntokai, Ainkurunuru, Patirruppattu, Paripatal, Kalittokai, Akananuru, and Purananuru - preserving over 2,300 short and medium-length poems on interior love (akam) and public heroism, kingship, and ethics (puram), mostly dated between the 1st century BCE and 3rd century CE with two later collections reaching the 4th to 6th centuries CE.
+summaries:
+  kids: >-
+    Ettuttokai means "Eight Anthologies" - eight ancient collections of short Tamil poems about nature, love, friendship, generous chiefs, and brave warriors.
+  teen: >-
+    Comprising eight distinct collections from the concise Kuruntokai love lyrics to the heroic Purananuru and dynastic Patirruppattu, the Ettuttokai preserves the core voices of classical Sangam Tamil poetry.
+region: Tamilakam (Tamil Nadu and Kerala)
+datings:
+  - method: textual-internal
+    range: { earliest: "100 BCE", latest: "300 CE", precision: century, circa: true }
+    grade: C
+    label: Mainstream philological dating of the six older anthologies
+    sources:
+      - src.zvelebil-1973-smile-of-murugan
+      - src.hart-heifetz-1999-purananuru
+      - src.wilden-2014-manuscript-print-memory
+    note: Six anthologies (Natrinai, Kuruntokai, Ainkurunuru, Patirruppattu, Akananuru, Purananuru) show early Old Tamil akaval/vanci metres and reflect the pre-Pallava Chera, Chola, and Pandya political world.
+  - method: linguistic
+    range: { earliest: "300 CE", latest: "600 CE", precision: century, circa: true }
+    grade: C
+    label: Later stratum (Kalittokai and Paripatal) and anthology compilation
+    sources:
+      - src.zvelebil-1973-smile-of-murugan
+      - src.wilden-2014-manuscript-print-memory
+    note: Kalittokai and Paripatal display later linguistic forms, kali and paripatal metres, and Puranic bhakti themes; compilation of the eight anthologies occurred later still.
+  - method: textual-internal
+    range: { earliest: "750 CE", latest: "950 CE", precision: century, circa: true }
+    grade: C
+    label: Late Pandya archaising hypothesis (Herman Tieken)
+    sources:
+      - src.tieken-2001-kavya-south-india
+    note: Herman Tieken dates the Sangam anthologies to a 9th-century Pandya court literary project, a minority view rejected by most Tamil philologists.
+claims:
+  - text: Five collections (Natrinai, Kuruntokai, Ainkurunuru, Kalittokai, and Akananuru) belong to the akam genre of interior love poetry, two (Purananuru and Patirruppattu) belong to puram public and heroic poetry, and Paripatal blends both with devotional hymns to Vishnu, Murugan, and the Vaigai river.
+    grade: A
+    sources:
+      - src.zvelebil-1973-smile-of-murugan
+      - src.ramanujan-1985-poems-love-war
+  - text: The Patirruppattu ("Ten Tens") is dedicated exclusively to Chera kings, while the Purananuru preserves roughly 400 poems addressed to Chera, Chola, Pandya kings and minor chieftains (velir).
+    grade: A
+    sources:
+      - src.hart-heifetz-1999-purananuru
+      - src.kailasapathy-1968-tamil-heroic-poetry
+debate: >-
+  Most Tamil scholars place the six older anthologies between the 1st century BCE and 3rd century CE and treat Kalittokai and Paripatal as post-Sangam compositions of the 4th to 6th centuries CE before medieval redaction. Herman Tieken argues instead for a 9th-century Pandya court composition, while the Tamil Nadu Department of Archaeology cites 6th-century BCE radiocarbon dates for Tamil-Brahmi writing at Keezhadi to suggest an earlier start for the Sangam milieu.
+relations:
+  - { kind: part-of, target: text.sangam-literature }
+  - { kind: related-to, target: text.pattuppattu }
+  - { kind: related-to, target: text.tolkappiyam }
+tags: [ettuttokai, sangam, tamil-literature, purananuru, kuruntokai, akananuru]
+review: { status: draft, author: "gemini-4-hydrogen-xhigh" }

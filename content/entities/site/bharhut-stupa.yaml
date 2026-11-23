@@ -1,0 +1,69 @@
+id: site.bharhut-stupa
+type: site
+kind: site
+names:
+  en: Bharhut Stupa
+  iast: Bhārhut Stūpa
+  native: भरहुत स्तूप
+summary: >-
+  Bharhut in Madhya Pradesh is the site of a Buddhist stupa with a carved red sandstone railing and
+  gateway. Many reliefs carry short inscriptions, including labels for stories of the Buddha's past
+  lives. Scholars disagree about how closely the surviving stonework can be tied to the Shunga dynasty.
+summaries:
+  kids: >-
+    Bharhut was a large Buddhist dome monument in Madhya Pradesh surrounded by red sandstone railings
+    carved with stories of the Buddha's past lives, animals, and protective spirits.
+  teen: >-
+    The Bharhut stupa was excavated in the 1870s, and much of its surviving stone railing and gateway is
+    now in Kolkata. A gateway inscription names the patron Dhanabhuti, and the dynasty or territory
+    named in the same inscription is disputed.
+region: Baghelkhand (Satna district, Madhya Pradesh)
+location: { name: "Bharhut, Madhya Pradesh", lat: 24.447, lon: 80.845 }
+datings:
+  - method: epigraphic
+    range: { earliest: "150 BCE", latest: "75 BCE", precision: decade, circa: true }
+    grade: B
+    label: "Conventional late Shunga-period dating of the carved stonework"
+    sources:
+      - src.luders-1963-bharhut-inscriptions
+      - src.dehejia-1997-discourse-early-buddhist-art
+    note: >-
+      The conventional date combines palaeography, sculptural comparisons and the reading of the gateway
+      inscription as referring to the Shungas.
+  - method: epigraphic
+    range: { earliest: "1 CE", latest: "30 CE", precision: decade, circa: true }
+    grade: C
+    label: "Ajit Kumar's early first-century CE redating"
+    sources:
+      - src.lo-muzio-2018-gandharan-toilet-trays
+    note: >-
+      Kumar identifies the Sugas named in the inscription with Srughna and evaluates the gateway and railings
+      alongside associated inscriptions, coins and sculpture.
+claims:
+  - text: >-
+      The inscription on the eastern gateway names Dhanabhuti as the donor responsible for the gateway
+      and its stonework.
+    grade: A
+    sources:
+      - { id: src.luders-1963-bharhut-inscriptions, locator: "A 1" }
+  - text: >-
+      Carvings on the railing include scenes conventionally identified as episodes from the Buddha's
+      life and Jataka stories. Some carry short Prakrit labels.
+    grade: B
+    sources:
+      - src.cunningham-1879-stupa-of-bharhut
+      - src.dehejia-1997-discourse-early-buddhist-art
+debate: >-
+  The edition of Heinrich Luders's corpus follows Georg Buhler in reading the gateway's Sugas as the
+  Shungas. Ajit Kumar revives the reading of Suga as Srughna and dates the sculpture to the early first
+  century CE.
+relations:
+  - { kind: related-to, target: artifact.bharhut-stupa-railings-and-torana }
+  - { kind: contemporary-of, target: site.sanchi-stupa }
+image:
+  commons: "File:Bharhut Stupa.JPG"
+  alt: The archaeological site of the Bharhut Stupa in Madhya Pradesh
+  credit: LRBurdak
+  license: CC BY-SA 3.0
+tags: [bharhut, stupa, shunga, buddhism, inscriptions, madhya-pradesh]
+review: { status: draft, author: "gemini-4-hydrogen-xhigh" }

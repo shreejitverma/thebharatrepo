@@ -1,0 +1,42 @@
+id: event.radcliffe-boundary-awards
+type: event
+kind: event
+names:
+  en: Publication of the Radcliffe boundary awards
+summary: The boundary awards for Punjab and Bengal were made public on 17 August 1947, after the
+  independence ceremonies in Pakistan and India. They determined which parts of the two
+  provinces would belong to each new dominion.
+summaries:
+  kids: A few days after the independence celebrations, people learned where the new border ran
+    through Punjab and Bengal.
+  teen: Two boundary commissions chaired by Cyril Radcliffe drew borders through Punjab and
+    Bengal. Delayed publication meant that residents of some areas did not know which country
+    they were in at the time of the independence ceremonies.
+region: Punjab and Bengal
+datings:
+  - method: documentary
+    range:
+      earliest: "1947"
+      latest: "1947"
+      precision: day
+      circa: false
+    grade: A
+    label: Public release on 17 August 1947
+    sources:
+      - src.national-archives-partition-of-british-india
+claims:
+  - text: The awards divided Punjab and Bengal between India and Pakistan and were announced after
+      the independence ceremonies.
+    grade: B
+    sources:
+      - src.national-archives-partition-of-british-india
+      - src.khan-2007-the-great-partition
+relations:
+  - kind: part-of
+    target: event.independence-and-partition-1947
+tags:
+  - partition
+  - boundaries
+review:
+  status: draft
+  author: codex-gpt-6

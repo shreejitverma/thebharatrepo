@@ -1,0 +1,61 @@
+id: "concept.gurjara-pratihara-origins"
+type: "concept"
+kind: "polity"
+names:
+  en: "Gurjara-Pratihara origins debate"
+summary: "Historians disagree about what Gurjara signified in early medieval records and how it
+  relates to the origins of the imperial Pratiharas. Inscriptions supply evidence for the political
+  geography and for dynastic claims about descent."
+summaries:
+  kids: "Old records use the name Gurjara in several ways. Historians study the words around it to see
+    when it describes a land, a people, or a ruler."
+  teen: "R. C. Majumdar read Gurjara as an ethnonym connected to the imperial Pratiharas. Shanta Rani
+    Sharma argues that many uses are geographical or political and cannot establish the dynasty's
+    ancestry."
+region: "Rajasthan, Gujarat and northern India"
+datings:
+  - method: "epigraphic"
+    range:
+      earliest: 700
+      latest: 1000
+      precision: "century"
+      circa: true
+    grade: "C"
+    label: "Territorial interpretation of the imperial-period attestations"
+    sources:
+      - "src.sharma-2012-pratihara-identity"
+    note: "Sharma treats the relevant uses in relation to political geography."
+  - method: "textual-internal"
+    range:
+      earliest: 550
+      latest: 800
+      precision: "century"
+      circa: true
+    grade: "C"
+    label: "Ethnic interpretation of the formation of early Gurjara power"
+    sources:
+      - "src.sharma-2012-pratihara-identity"
+      - "src.puri-1957-gurjara-pratiharas"
+    note: "The range situates the early attestations and rise of the imperial line. The sources do not
+      provide a dated ethnic origin."
+claims:
+  - text: "Some Pratihara dynastic records traced their lineage to Lakshmana, Rama's brother."
+    grade: "B"
+    sources:
+      - "src.puri-1957-gurjara-pratiharas"
+  - text: "Sharma argues that calling a ruler Gurjara in a source does not by itself prove an ethnic
+      genealogy."
+    grade: "C"
+    sources:
+      - "src.sharma-2012-pratihara-identity"
+relations: []
+debate: "R. C. Majumdar interpreted Gurjara as a people from whom the imperial line emerged. D. C.
+  Ganguly and Shanta Rani Sharma placed greater weight on geographical and political usages. The
+  Lakshmana genealogy records how rulers represented their lineage."
+tags:
+  - "gurjara"
+  - "pratihara"
+  - "historiography"
+review:
+  status: "draft"
+  author: "codex-gpt-6"

@@ -1,0 +1,80 @@
+id: artifact.satavahana-coins
+type: artifact
+kind: polity
+names:
+  en: Satavahana Coins
+  iast: Sātavāhana Mudrā
+summary: "Lead, potin, copper, and rare silver portrait coins minted across the Deccan and coastal Andhra by the Satavahana dynasty (c. 1st century BCE to early 3rd century CE). Famous for motifs including the Ujjain cross-and-orb symbol, three- and six-arched hills, elephants, and double-masted ships, late Satavahana silver portrait issues carry bilingual inscriptions in Prakrit and a Dravidian language."
+summaries:
+  kids: >-
+    Found all over central and southern India, Satavahana coins were cast in lead, copper, potin, and silver,
+    stamped with elephants, hills, the four-circle Ujjain sign, and ocean-going ships with two masts.
+  teen: >-
+    Satavahana coinage illuminates Deccan statecraft and maritime trade: from the Jogalthembi hoard showing
+    Gautamiputra Satakarni restamping coins of defeated Shaka king Nahapana to double-masted ship coins and
+    rare silver portrait drachms inscribed in both northern Prakrit and southern Dravidian.
+region: Deccan, Malwa, and Coastal Andhra (Western and Southern India)
+datings:
+  - method: numismatic
+    range:
+      earliest: 100 BCE
+      latest: 250
+      best: 125
+      precision: century
+      circa: true
+    grade: B
+    label: Early Satavahana lead/copper through late silver portrait issues
+    sources:
+      - src.rapson-1908-coins-andhra-dynasty
+      - src.mirashi-1981-history-inscriptions-satavahanas
+      - src.singh-2008-ancient-early-medieval-india
+    note: >-
+      Dated by Jogalthembi overstrikes on Nahapana, Indo-Roman hoard links, and Brahmi script changes from the
+      1st century BCE to Yajna Sri Satakarni (late 2nd-early 3rd century CE).
+claims:
+  - text: >-
+      As catalogued by E. J. Rapson (BMC) and V. V. Mirashi, Satavahana mints struck regional base-metal
+      issues predominantly in lead and potin (copper-tin-lead alloy) featuring elephants, lions, bulls,
+      chaitya arched hills, and the four-orbed Ujjain symbol.
+    grade: A
+    sources:
+      - src.rapson-1908-coins-andhra-dynasty
+      - src.mirashi-1981-history-inscriptions-satavahanas
+  - text: >-
+      The Jogalthembi hoard (Nashik district) contained over 9,000 silver drachms of Kshaharata king Nahapana
+      restruck with Gautamiputra Satakarni's name over arched-hill and Ujjain symbols, providing direct
+      numismatic confirmation of the Nasik cave inscriptions.
+    grade: A
+    sources:
+      - src.rapson-1908-coins-andhra-dynasty
+      - src.mirashi-1981-history-inscriptions-satavahanas
+  - text: >-
+      Rare silver portrait drachms of Vasishthiputra Pulumavi and Yajna Sri Satakarni carry a northern Prakrit
+      obverse legend paired with a southern Dravidian-Prakrit reverse legend (e.g. "Arahanaku..."), while late
+      lead coins of Yajna Sri display two-masted ocean ships.
+    grade: A
+    sources:
+      - src.rapson-1908-coins-andhra-dynasty
+      - src.singh-2008-ancient-early-medieval-india
+relations:
+  - kind: part-of
+    target: polity.satavahana-dynasty
+  - kind: related-to
+    target: artifact.naneghat-cave-inscription
+wikidata: null
+image:
+  commons: File:Elephant type Coin of Pulmavi, Satvahan Period, Bhopal State Museum.jpg
+  alt: Satavahana elephant-type coin of Vasishthiputra Pulumavi preserved in the Bhopal State Museum
+  credit: SpeakingArch
+  license: CC BY-SA 4.0
+tags:
+  - coins
+  - numismatics
+  - satavahana
+  - lead
+  - silver
+  - maritime-trade
+  - deccan
+review:
+  status: draft
+  author: gemini-4-hydrogen-xhigh

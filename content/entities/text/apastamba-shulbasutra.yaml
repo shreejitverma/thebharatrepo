@@ -1,0 +1,54 @@
+id: text.apastamba-shulbasutra
+type: text
+kind: science
+names:
+  en: Apastamba Shulbasutra
+  iast: Āpastamba Śulbasūtra
+  native: आपस्तम्बशुल्बसूत्र
+summary: A Sanskrit manual of fire-altar geometry in the Apastamba ritual tradition. Its rules use cords to
+  construct and transform shapes, including a particularly close approximation to the diagonal of a square.
+  Its exact date is uncertain.
+summaries:
+  kids: Builders could stretch cords to lay out an altar. This book tells them how to shape an altar and how to
+    estimate the length of a square’s diagonal.
+  teen: The text joins ritual instructions to geometry. Its rule for increasing a unit length to the diagonal
+    gives 577/408, within about two millionths of the modern value of the square root of two.
+datings:
+  - method: linguistic
+    range:
+      earliest: 800 BCE
+      latest: 200 BCE
+      precision: century
+      circa: true
+    grade: C
+    label: Late Vedic Shulba corpus (Plofker)
+    sources:
+      - id: src.plofker-2009-mathematics-in-india
+        locator: Section 2.2
+    note: Relative dating rests partly on language. Plofker places Apastamba later than the earliest Shulba
+      material within the broader corpus window.
+claims:
+  - text: The text gives a rule for the diagonal of a square equivalent to 1 + 1/3 + 1/(3 × 4) minus 1/(3 × 4 ×
+      34).
+    grade: A
+    sources:
+      - src.scharf-2010-apastamba-shulbasutra
+      - id: src.plofker-2009-mathematics-in-india
+        locator: Section 2.2
+  - text: The instructions prescribe altar layouts and geometric constructions using measured cords.
+    grade: A
+    sources:
+      - src.scharf-2010-apastamba-shulbasutra
+      - id: src.plofker-2009-mathematics-in-india
+        locator: Section 2.2
+relations:
+  - kind: part-of
+    target: text.shulba-sutras
+  - kind: related-to
+    target: tradition.agnicayana
+tags:
+  - altar-geometry
+  - shulba-sutras
+review:
+  status: draft
+  author: codex-gpt-6

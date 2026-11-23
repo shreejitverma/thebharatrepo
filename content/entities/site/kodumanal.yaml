@@ -1,0 +1,51 @@
+id: site.kodumanal
+type: site
+kind: site
+names:
+  en: Kodumanal Archaeological Site
+  iast: Koṭumaṇal
+  native: கொடுமணல்
+summary: >-
+  Kodumanal is a major Iron Age and Early Historic industrial, habitation, and megalithic burial site on the northern bank of the Noyyal River in Erode district, Tamil Nadu. Identified with Kotumanam of the Sangam anthology Patirruppattu, it stood on the ancient trade route linking Karur and the Palghat Gap to Muziris, yielding gemstone bead-making workshops, crucible-steel furnaces, Roman silver coins, and hundreds of potsherds inscribed with graffiti marks and Tamil-Brahmi script.
+summaries:
+  kids: >-
+    Kodumanal was a bustling ancient workshop town in Tamil Nadu where craftspeople made sparkling gemstone beads, forged high-grade steel, and scratched early Tamil names onto clay pots.
+  teen: >-
+    Identified with Sangam Kotumanam along the Noyyal River, Kodumanal preserves both a craft-manufacturing town (quartz and beryl beads, crucible steel) and megalithic cairn-circle burials, plus over 300 Tamil-Brahmi inscribed sherds.
+region: Noyyal River basin (Kongu Nadu), Erode District, Tamil Nadu
+location: { name: "Kodumanal, Tamil Nadu", lat: 11.11, lon: 77.52 }
+datings:
+  - method: archaeological-radiocarbon
+    range: { earliest: "500 BCE", latest: "300 CE", precision: century, circa: true }
+    grade: B
+    label: Mainstream Iron Age to Early Historic occupation and megalithic phase
+    sources:
+      - src.rajan-2015-early-writing-system
+      - src.champakalakshmi-1996-trade-ideology-urbanization
+      - src.coningham-2015-archaeology-south-asia
+    note: Excavations led by Tamil University and the Tamil Nadu Archaeology Department recovered Black-and-Red Ware, Roman Republican and Imperial silver coins, and inscribed sherds spanning roughly the late 1st millennium BCE to the 3rd century CE; K. Rajan reports AMS radiocarbon dates extending back to the 5th-6th century BCE for lower Tamil-Brahmi levels.
+claims:
+  - text: Excavations at Kodumanal uncovered specialized lapidary workshops manufacturing beads of quartz, carnelian, agate, and beryl alongside evidence of crucible-steel (wootz) production.
+    grade: A
+    sources:
+      - src.srinivasan-1997-crucible-steel-south-india
+      - src.rajan-2015-early-writing-system
+  - text: Hundreds of Black-and-Red Ware sherds from Kodumanal carry post-firing Tamil-Brahmi inscriptions and non-scriptural graffiti marks, making it one of the richest early Tamil epigraphic sites.
+    grade: A
+    sources:
+      - src.mahadevan-2003-early-tamil-epigraphy
+      - src.rajan-2015-early-writing-system
+  - text: The site lies on the overland trade corridor through the Kongu region connecting the Chera port of Muziris via the Palghat Gap to inland Karur.
+    grade: B
+    sources:
+      - src.champakalakshmi-1996-trade-ideology-urbanization
+      - src.cobb-2023-indian-merchants-abroad
+debate: >-
+  K. Rajan argues from AMS radiocarbon dates on charcoal and paddy associated with lower strata at Kodumanal and Porunthal that Tamil-Brahmi literacy began by the 5th century BCE. Other epigraphists and archaeologists treat these early dates cautiously, noting the risk of old-wood effects or stratigraphic disturbance in megalithic-early historic contexts and awaiting direct dating of organic temper in inscribed sherds.
+relations:
+  - { kind: related-to, target: artifact.tamil-brahmi-inscriptions }
+  - { kind: related-to, target: concept.iron-metallurgy-in-india }
+  - { kind: related-to, target: site.pattanam }
+wikidata: Q6425451
+tags: [kodumanal, kongu, tamil-brahmi, bead-making, wootz-steel, megalithic]
+review: { status: draft, author: "gemini-4-hydrogen-xhigh" }

@@ -1,0 +1,66 @@
+id: site.taj-mahal
+type: site
+kind: site
+names:
+  en: Taj Mahal
+  native: ताज महल
+summary: >-
+  The Taj Mahal in Agra is a white marble mausoleum commissioned by Shah Jahan for Mumtaz Mahal.
+  Construction began in 1632 CE. The mausoleum stands on a terrace above the Yamuna at the end of a
+  four-part garden, flanked by a mosque and a matching building.
+summaries:
+  kids: >-
+    Emperor Shah Jahan built the Taj Mahal in Agra as a tomb for Mumtaz Mahal. Its white marble walls
+    have stone flowers and bands of writing set into them.
+  teen: >-
+    Shah Jahan commissioned the Taj Mahal for Mumtaz Mahal. Amanat Khan signed some of its calligraphy,
+    including a dated inscription on the main gateway. The tomb stands beside the Yamuna at the north
+    end of the garden.
+region: Agra district, Uttar Pradesh
+location: { name: "Agra, Uttar Pradesh", lat: 27.175, lon: 78.042 }
+datings:
+  - method: scholarly-consensus
+    range: { earliest: "1632 CE", latest: "1655 CE", precision: decade, circa: true }
+    grade: B
+    label: "Main construction and decoration of the complex"
+    sources:
+      - src.koch-2006-complete-taj-mahal
+      - src.asher-1992-architecture-of-mughal-india
+      - src.unesco-1983-taj-mahal
+    note: >-
+      The tomb and gateway were built in stages, followed by continued work on the complex into the
+      1650s.
+claims:
+  - text: >-
+      An inscription on the main gateway bears the signature of Amanat Khan and the date Hijri 1057,
+      corresponding to 1647 to 1648 CE.
+    grade: A
+    sources:
+      - src.koch-2006-complete-taj-mahal
+  - text: >-
+      The marble mausoleum stands at the northern end of the garden on a terrace flanked by a mosque and
+      a matching building.
+    grade: B
+    sources:
+      - src.koch-2006-complete-taj-mahal
+      - src.koch-1991-mughal-architecture
+  - text: >-
+      The Taj Mahal was inscribed on the UNESCO World Heritage List in 1983.
+    grade: A
+    sources:
+      - src.unesco-1983-taj-mahal
+  - text: Court chronicles place the laying of the foundations in 1632 CE, after Mumtaz Mahal's death in 1631.
+    grade: A
+    sources:
+      - src.koch-2006-complete-taj-mahal
+      - src.asher-1992-architecture-of-mughal-india
+relations:
+  - { kind: part-of, target: polity.mughal-empire }
+wikidata: Q9141
+image:
+  commons: "File:Taj Mahal (Edited).jpeg"
+  alt: The white marble Taj Mahal and its four minarets seen across the garden
+  credit: Yann; edited by Jim Carter
+  license: CC BY-SA 4.0
+tags: [taj-mahal, mughal, shah-jahan, agra, unesco, uttar-pradesh]
+review: { status: draft, author: "gemini-4-hydrogen-xhigh" }

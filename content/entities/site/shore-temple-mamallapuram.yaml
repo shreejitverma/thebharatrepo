@@ -1,0 +1,61 @@
+id: site.shore-temple-mamallapuram
+type: site
+kind: site
+names:
+  en: Shore Temple, Mamallapuram
+  iast: Kaṭarkarai Kōyil, Māmallapuram
+  native: கடற்கரைக் கோயில், மாமல்லபுரம்
+summary: >-
+  The Shore Temple at Mamallapuram, Tamil Nadu, is a Pallava temple complex built on the Bay of Bengal
+  coast in the early eighth century CE. Its two structural Shiva shrines stand beside a chamber
+  containing a rock-cut image of reclining Vishnu.
+summaries:
+  kids: >-
+    The Shore Temple in Tamil Nadu stands beside the sea. Two shrines are dedicated to Shiva, and an
+    image of Vishnu reclining was carved from the rock.
+  teen: >-
+    Attributed to the Pallava ruler Rajasimha, the Shore Temple includes dressed-granite towers and a
+    reclining Vishnu carved in bedrock. It belongs to the UNESCO-listed monument group at Mamallapuram.
+region: Coromandel Coast (Chengalpattu district, Tamil Nadu)
+location: { name: "Mamallapuram, Tamil Nadu", lat: 12.616, lon: 80.199 }
+datings:
+  - method: epigraphic
+    range: { earliest: "700 CE", latest: "730 CE", precision: decade, circa: true }
+    grade: B
+    label: "Early eighth-century Pallava construction"
+    sources:
+      - src.rabe-2003-mamallapuram
+      - src.unesco-1984-mahabalipuram
+      - src.michell-1988-hindu-temple
+    note: >-
+      Inscriptions and architectural comparisons support the attribution of the granite shrines to
+      Rajasimha. The image of reclining Vishnu may be earlier.
+claims:
+  - text: >-
+      Two structural Shiva shrines flank a chamber containing a rock-cut image of reclining Vishnu.
+    grade: B
+    sources:
+      - src.rabe-2003-mamallapuram
+      - src.michell-1988-hindu-temple
+  - text: >-
+      Excavations begun in 1990 beside the Shore Temple exposed an apsidal feature, a small shrine and a
+      rock-cut boar image.
+    grade: B
+    sources:
+      - src.marr-1991-shore-temple-excavations
+  - text: >-
+      The Shore Temple is part of the Group of Monuments at Mahabalipuram, inscribed by UNESCO in 1984.
+    grade: A
+    sources:
+      - src.unesco-1984-mahabalipuram
+relations:
+  - { kind: part-of, target: site.mamallapuram }
+  - { kind: patronised-by, target: polity.pallava-dynasty }
+wikidata: Q1144279
+image:
+  commons: "File:Shore Temple 01.jpg"
+  alt: Twin granite stepped Dravida towers and Nandi-lined perimeter wall of the Shore Temple at Mamallapuram
+  credit: Bernard Gagnon
+  license: CC BY-SA 3.0
+tags: [shore-temple, mamallapuram, pallava, unesco, dravida, tamil-nadu]
+review: { status: draft, author: "gemini-4-hydrogen-xhigh" }

@@ -1,0 +1,53 @@
+id: artifact.ramanujan-lost-notebook
+type: artifact
+kind: science
+names:
+  en: Ramanujan’s Lost Notebook
+summary: The collection known as Ramanujan’s Lost Notebook is a set of loose sheets from the final period of
+  his life. George Andrews identified it among G. N. Watson’s papers at Trinity College, Cambridge, in 1976.
+summaries:
+  kids: Ramanujan left loose sheets full of math. Decades later, George Andrews recognized them in a Cambridge
+    library.
+  teen: Ramanujan’s late sheets contain results on mock theta functions and other topics. Their identification
+    in 1976 opened a new line of work on the formulas he left.
+region: India and Cambridge, England
+datings:
+  - method: documentary
+    range:
+      earliest: 1919
+      latest: 1920
+      precision: year
+      circa: true
+    grade: B
+    label: Final period of Ramanujan’s life
+    sources:
+      - src.berndt-2019-living-with-ramanujan
+      - src.andrews-2005-ramanujan-lost-notebook
+    note: The dating rests on the content and its links to his late correspondence.
+claims:
+  - text: The papers are a set of loose sheets with results that include mock theta functions.
+    grade: A
+    sources:
+      - src.berndt-2019-living-with-ramanujan
+      - src.andrews-2005-ramanujan-lost-notebook
+  - text: A facsimile edition was published in 1987.
+    grade: A
+    sources:
+      - src.berndt-2019-living-with-ramanujan
+  - text: George Andrews identified the sheets at Trinity College in 1976 while examining Watson’s papers.
+    grade: A
+    sources:
+      - src.berndt-2019-living-with-ramanujan
+      - src.andrews-2005-ramanujan-lost-notebook
+relations:
+  - kind: authored-by
+    target: person.srinivasa-ramanujan
+  - kind: related-to
+    target: artifact.ramanujan-notebooks
+tags:
+  - mathematics
+  - manuscripts
+  - mock-theta-functions
+review:
+  status: draft
+  author: codex-gpt-6

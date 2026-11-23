@@ -1,0 +1,32 @@
+id: concept.aadhaar
+type: concept
+kind: polity
+names:
+  en: "Aadhaar"
+summary: "Aadhaar assigns unique identification numbers to residents who enrol. Issuance began in 2010, and the Aadhaar Act of 2016 placed the identity system and its administering authority on a statutory footing."
+summaries:
+  kids: "People who sign up for Aadhaar can receive a number that helps prove their identity. The first number was issued in 2010, and a law set out rules for the system in 2016."
+  teen: "India began issuing Aadhaar numbers in 2010. The 2016 Aadhaar Act established the statutory framework for UIDAI and for identifying individuals in the delivery of specified subsidies, benefits and services."
+region: "India"
+datings:
+  - method: documentary
+    range: { earliest: "2010", latest: "2010", precision: year, circa: false }
+    grade: A
+    label: "Initial issuance"
+    sources: ["src.uidai-about-uidai"]
+    note: "The UIDAI's institutional history dates the first Aadhaar issuance to 2010."
+  - method: documentary
+    range: { earliest: "2016", latest: "2016", precision: day, circa: false }
+    grade: A
+    label: "Presidential assent to the Aadhaar Act"
+    sources: ["src.india-2016-aadhaar-act"]
+    note: "The Act received assent on 25 March 2016. This dating marks the legislation and the shift towards a statutory authority."
+claims:
+  - text: "UIDAI was established as an attached office in 2009 and became a statutory authority under the Aadhaar Act in 2016."
+    grade: A
+    sources: ["src.uidai-about-uidai", "src.india-2016-aadhaar-act"]
+  - text: "The Act authorises a system assigning unique identity numbers to individuals residing in India and sets out their use in the delivery of covered public subsidies, benefits and services."
+    grade: A
+    sources: ["src.india-2016-aadhaar-act"]
+tags: ["republic","digital-identity","governance"]
+review: { status: draft, author: codex-gpt-6 }

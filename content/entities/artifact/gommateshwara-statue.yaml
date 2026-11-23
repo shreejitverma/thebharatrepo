@@ -1,0 +1,48 @@
+id: artifact.gommateshwara-statue
+type: artifact
+kind: art
+names:
+  en: Gommateshwara Statue at Shravanabelagola
+  iast: Gommaṭeśvara
+  native: ಗೊಮ್ಮಟೇಶ್ವರ
+summary: >-
+  Carved from a single outcrop of fine-grained grey granite atop Vindhyagiri hill at Shravanabelagola, the 17.7-metre (58-foot) freestanding monolith of the Jain figure Bahubali (Gommateshwara) was commissioned around 981 CE by Chavundaraya, general and minister of the Western Ganga king Rachamalla IV. Multilingual inscriptions at its base in Kannada, Tamil, and Marathi record Chavundaraya's patronage and later Ganga and Hoysala maintenance, and every twelve years it hosts the Mahamastakabhisheka anointing ceremony.
+summaries:
+  kids: >-
+    Standing 17.7 metres tall at Shravanabelagola in Karnataka, the Gommateshwara statue was carved from one giant granite boulder over a thousand years ago to show Bahubali standing still in deep meditation.
+  teen: >-
+    Commissioned c. 981 CE by the Western Ganga minister Chavundaraya, the 58-foot monolithic Bahubali statue at Shravanabelagola is inscribed at its feet in Kannada, Tamil, and Marathi and remains a major Jain pilgrimage monument.
+region: Shravanabelagola, Hassan District, Karnataka
+location: { name: "Vindhyagiri Hill, Shravanabelagola", lat: 12.857, lon: 76.489 }
+datings:
+  - method: epigraphic
+    range: { earliest: "978 CE", latest: "993 CE", best: "981 CE", precision: year, circa: true }
+    grade: B
+    label: Chavundaraya foundation inscriptions at the pedestal
+    sources:
+      - src.rice-1889-inscriptions-sravana-belgola
+      - src.settar-1989-inviting-death
+      - src.dundas-2002-the-jains
+    note: "Inscriptions carved beside the feet in Old Kannada, Nagari (Marathi) and Grantha/Tamil credit Chavundaraya (minister to Western Ganga Rachamalla IV) with creating the image but carry no date; the consecration is usually placed in 981 CE, with proposals ranging from 978 to 993 CE."
+claims:
+  - text: Pedestal inscriptions record that Chavundaraya caused the image of Gommateshwara to be carved, while a 12th-century Hoysala record attributes the protective enclosure (suttalaya) around it to Gangaraja, general of Vishnuvardhana.
+    grade: A
+    sources:
+      - src.rice-1889-inscriptions-sravana-belgola
+      - src.harle-1994-art-architecture-indian-subcontinent
+  - text: The monolith stands roughly 17.7 metres tall, carved in the kayotsarga standing meditation posture with climbing madhavi vines depicted twining up Bahubali's arms and legs.
+    grade: A
+    sources:
+      - src.dundas-2002-the-jains
+      - src.settar-1989-inviting-death
+relations:
+  - { kind: located-at, target: site.shravanabelagola }
+  - { kind: patronised-by, target: polity.western-ganga-dynasty, note: "Commissioned by the Ganga minister Chavundaraya" }
+wikidata: Q22330289
+image:
+  commons: "File:Gommateshwara, Shravanabelagola.jpg"
+  alt: Monolithic granite statue of Bahubali (Gommateshwara) standing atop Vindhyagiri hill at Shravanabelagola
+  credit: Kuldeep S
+  license: CC BY-SA 4.0
+tags: [gommateshwara, bahubali, shravanabelagola, western-ganga, jainism, sculpture]
+review: { status: draft, author: "gemini-4-hydrogen-xhigh" }

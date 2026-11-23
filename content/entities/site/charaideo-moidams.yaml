@@ -1,0 +1,51 @@
+id: site.charaideo-moidams
+type: site
+kind: site
+names:
+  en: Charaideo Moidams
+  native: চৰাইদেউ মৈদাম
+summary: >-
+  The Moidams at Charaideo in eastern Assam are the royal necropolis of the Tai-Ahom dynasty, used
+  from the thirteenth to the nineteenth centuries CE across the Patkai foothills. Over ninety earthen
+  tumuli cover vaulted brick, stone and timber burial chambers housing Ahom monarchs and elites, and
+  UNESCO inscribed the property as a World Heritage Site in July 2024.
+summaries:
+  kids: >-
+    At Charaideo in Assam stand the Moidams, giant grassy burial mounds built over brick-and-stone
+    chambers for the kings and queens of the Ahom dynasty. In 2024 they became a UNESCO World
+    Heritage Site.
+  teen: >-
+    Serving as the sacred funerary landscape of the Ahom kings for 600 years, the Charaideo Moidams
+    preserve vaulted burial chambers beneath earthen tumuli and earned UNESCO World Heritage listing
+    in 2024 as Northeast India's first cultural World Heritage property.
+region: Charaideo district, Upper Assam
+location: { name: "Charaideo, Assam", lat: 26.935, lon: 94.889 }
+datings:
+  - method: documentary
+    range: { earliest: 1253, latest: 1826, precision: century, circa: true }
+    grade: B
+    label: Six-century Tai-Ahom royal burial tradition at Charaideo
+    sources:
+      - src.unesco-2024-moidams-charaideo
+      - src.baruah-1985-comprehensive-history-assam
+    note: Buranji records link royal inhumations at Charaideo from Sukaphaa (d. 1268) onward until the shift toward Hindu cremation rites in the late Ahom era and end of the monarchy in 1826.
+claims:
+  - text: Excavated moidams at Charaideo reveal multi-tiered hemispherical earthen mounds sealing vaulted masonry chambers (garbhagriha) reached by arched gateways and enclosed by octagonal brick dwarf walls.
+    grade: A
+    sources:
+      - src.unesco-2024-moidams-charaideo
+  - text: The property was inscribed on the UNESCO World Heritage List in July 2024 as India's 43rd World Heritage Site.
+    grade: A
+    sources:
+      - src.unesco-2024-moidams-charaideo
+relations:
+  - kind: related-to
+    target: polity.ahom-kingdom
+    note: "Royal necropolis of the Ahom dynasty"
+image:
+  commons: "File:Charaideo Moidams, Charaideo district, Assam.jpg"
+  alt: Lush grass-covered hemispherical royal burial mound (moidam) of the Ahom dynasty at Charaideo, Assam
+  credit: BhuyanBhaskar
+  license: CC BY 4.0
+tags: [charaideo, moidams, unesco, ahom, assam, funerary-architecture]
+review: { status: draft, author: "gemini-4-hydrogen-xhigh" }

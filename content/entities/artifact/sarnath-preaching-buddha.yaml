@@ -1,0 +1,93 @@
+id: artifact.sarnath-preaching-buddha
+type: artifact
+kind: art
+names:
+  en: Sarnath Preaching Buddha
+  iast: Sāranātha Dharmacakrapravartana Buddha
+summary: >-
+  A classic Gupta Chunar sandstone image of Sakyamuni seated in padmasana turning the Wheel of Dharma
+  (dharmachakra-pravartana mudra), excavated at Sarnath by F. O. Oertel in 1904-1905 and preserved in the
+  Sarnath Archaeological Museum (Acc. No. B(b)181, height c. 1.60 m). Dating to the third quarter of the 5th
+  century CE, it defines the mature Sarnath school of Indian sculpture.
+summaries:
+  kids: >-
+    Carved in pale sandstone at Sarnath around 475 CE, this peaceful seated statue shows the Buddha teaching
+    his first sermon with five disciples, a wheel, and two deer carved below his seat.
+  teen: >-
+    Housed in Sarnath Archaeological Museum (B(b)181), the Preaching Buddha is the masterpiece of Gupta-period
+    Sarnath workshops: its sheer, foldless robe, floral halo, and carved pedestal illustrating the First
+    Sermon at the Deer Park became the archetype for Buddhist sculpture across Asia.
+region: Sarnath, Varanasi District, Uttar Pradesh (housed in Sarnath Archaeological Museum)
+location:
+  name: Sarnath Archaeological Museum (Oertel excavations, Jagat Singh Stupa area)
+  lat: 25.3815
+  lon: 83.0232
+datings:
+  - method: art-historical
+    range:
+      earliest: 460
+      latest: 500
+      best: 475
+      precision: decade
+      circa: true
+    grade: B
+    label: Mature Sarnath Gupta style (c. third quarter of the 5th century CE)
+    sources:
+      - src.sahni-1914-catalogue-museum-archaeology-sarnath
+      - src.harle-1994-art-architecture-indian-subcontinent
+      - src.huntington-1985-art-ancient-india
+    note: >-
+      Dated by close stylistic comparison with the Sarnath standing Buddhas inscribed in Gupta Years 154 and
+      157 (473-477 CE) under Kumaragupta II and Budhagupta.
+claims:
+  - text: >-
+      Catalogued as Sarnath Museum B(b)181, the cream-buff Chunar sandstone stele stands c. 1.60 m (5 ft 3 in)
+      tall, with the Buddha seated cross-legged in vajraparyankasana and hands forming the dharmachakra mudra
+      before his chest.
+    grade: A
+    sources:
+      - src.sahni-1914-catalogue-museum-archaeology-sarnath
+      - src.huntington-1985-art-ancient-india
+  - text: >-
+      An elaborately carved circular prabhamandala halo features beaded borders, scrolling foliage, and flying
+      vidyadharas, while the pedestal beneath shows the Dharmachakra flanked by two gazelles, five attentive
+      ascetic disciples, and a kneeling donor.
+    grade: A
+    sources:
+      - src.sahni-1914-catalogue-museum-archaeology-sarnath
+      - src.harle-1994-art-architecture-indian-subcontinent
+  - text: >-
+      Unlike Mathura's striated drapery or Gandhara's deep Classical folds, Sarnath's transparent robe hangs
+      close to the torso without incised folds, a hallmark that deeply influenced post-Gupta Indian, Southeast
+      Asian, and East Asian Buddhist sculpture.
+    grade: B
+    sources:
+      - src.harle-1994-art-architecture-indian-subcontinent
+      - src.huntington-1985-art-ancient-india
+relations:
+  - kind: part-of
+    target: polity.gupta-empire
+  - kind: contemporary-of
+    target: artifact.sultanganj-buddha
+    note: Shares the foldless clinging-robe Sarnath aesthetic
+  - kind: related-to
+    target: person.gautama-buddha
+    note: Depicts the First Sermon at Sarnath Deer Park
+wikidata: null
+image:
+  commons: File:Buddha in Sarnath Museum (Dhammajak Mutra).jpg
+  alt: >-
+    Gupta Chunar sandstone statue of the Buddha preaching his First Sermon in Sarnath Archaeological Museum
+    (Acc. No. B(b)181)
+  credit: Phramaha Thewapraphat Wachirayanamethi
+  license: CC BY-SA 3.0
+tags:
+  - sculpture
+  - buddha
+  - gupta
+  - sarnath
+  - sandstone
+  - dharmachakra
+review:
+  status: draft
+  author: gemini-4-hydrogen-xhigh

@@ -1,0 +1,72 @@
+id: tradition.chhau-dance
+type: tradition
+kind: art
+names:
+  en: Chhau Dance
+  iast: Chhau
+  native: छऊ / ছৌ / ଛଉ
+summary: "Chhau is a martial and dramatic dance tradition of eastern India performed during regional spring festivals
+  such as Chaitra Parva across three primary styles: Seraikella (Jharkhand) and Purulia (West Bengal), which use
+  expressive masks, and Mayurbhanj (Odisha), performed unmasked. Blending mock-combat movements with epic narratives, it
+  was inscribed on the UNESCO Representative List in 2010."
+summaries:
+  kids: Chhau is an energetic dance from Jharkhand, West Bengal and Odisha that mixes martial-arts leaps with epic
+    stories; dancers in Seraikella and Purulia wear colourful masks.
+  teen: Practised in three distinct regional idioms (Seraikella, Purulia and Mayurbhanj), Chhau fuses indigenous martial
+    exercise (pharikhanda) with epic and folk themes and earned UNESCO heritage status in 2010.
+region: Eastern India (Jharkhand, West Bengal, Odisha)
+location:
+  name: Seraikella, Jharkhand
+  lat: 22.704
+  lon: 85.932
+datings:
+  - method: scholarly-consensus
+    range:
+      earliest: 1750
+      latest: 1950
+      precision: century
+      circa: true
+    grade: B
+    label: Formation of Seraikella, Mayurbhanj and Purulia Chhau traditions
+    sources:
+      - src.bhattacharya-1972-chhau-purulia
+      - src.mahapatra-1993-chhau-mayurbhanj
+      - src.chakravorty-2025-adivasi-chhau
+    note: Historical accounts trace patronage by regional estates in Seraikella and Mayurbhanj alongside village ritual
+      traditions across Purulia, Singhbhum and northern Odisha from the 18th-20th centuries.
+claims:
+  - text: UNESCO inscribed Chhau dance in 2010, highlighting its three regional branches in Seraikella, Purulia and
+      Mayurbhanj.
+    grade: A
+    sources:
+      - src.unesco-2010-chhau-dance
+  - text: Chhau draws movement techniques from martial mock-combat drills (such as pharikhanda), acrobatics and agricultural
+      rhythms accompanied by the dhol, dhumsa and shehnai.
+    grade: A
+    sources:
+      - src.unesco-2010-chhau-dance
+      - src.bhattacharya-1972-chhau-purulia
+relations:
+  - kind: related-to
+    target: tradition.odissi
+  - kind: related-to
+    target: text.mahabharata
+  - kind: related-to
+    target: text.valmiki-ramayana
+wikidata: Q1071518
+image:
+  commons: File:Performance of Chhau dance of Purulia.jpg
+  alt: Masked Purulia Chhau dancers performing an outdoor battle scene with bow and ornate headpieces
+  credit: Skasish
+  license: CC BY-SA 4.0
+tags:
+  - chhau
+  - dance
+  - jharkhand
+  - bengal
+  - odisha
+  - unesco
+  - masks
+review:
+  status: draft
+  author: gemini-4-hydrogen-xhigh

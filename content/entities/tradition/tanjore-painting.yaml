@@ -1,0 +1,67 @@
+id: tradition.tanjore-painting
+type: tradition
+kind: art
+names:
+  en: Tanjore Painting
+  iast: Tañjāvūr Citrakalā
+  native: தஞ்சாவூர் ஓவியம்
+summary: Tanjore (Thanjavur) painting is a South Indian panel-painting tradition that matured under the Maratha court of
+  Thanjavur from the late seventeenth through nineteenth centuries. Executed on cloth-backed jackfruit or teak wood
+  planks with gesso relief (sukku/mavu), gold leaf and inset semi-precious stones or coloured glass, its iconic
+  devotional panels depict Bala Krishna, Rama and temple deities.
+summaries:
+  kids: Tanjore paintings from Tamil Nadu are sparkling pictures of gods painted on wood panels and decorated with real
+    gold foil and bright gemstones or coloured glass.
+  teen: Developed in Maratha-era Thanjavur (late 17th-19th centuries), Tanjore panel art combines raised gesso borders,
+    22-karat gold leaf and inlaid stones around richly modelled Hindu deities.
+region: Thanjavur and Kaveri delta, Tamil Nadu
+location:
+  name: Thanjavur, Tamil Nadu
+  lat: 10.787
+  lon: 79.138
+datings:
+  - method: art-historical
+    range:
+      earliest: 1676
+      latest: 1900
+      precision: century
+      circa: true
+    grade: B
+    label: Maratha-period patronage in Thanjavur following Nayaka antecedents
+    sources:
+      - src.appasamy-1980-tanjavur-painting
+      - src.dallapiccola-2003-deccani-south-grove
+    note: Jaya Appasamy traces the classical gold-and-gesso Thanjavur panel style to the Maratha rulers of Thanjavur
+      (1676-1855 CE) and their Raju and Naidu painter communities.
+claims:
+  - text: Artists build raised architectural arches and ornaments using a lime-and-gum paste (gesso) over cotton cloth
+      pasted onto wooden boards, gilding the relief with gold leaf and setting cut glass or Jaipur stones.
+    grade: A
+    sources:
+      - src.appasamy-1980-tanjavur-painting
+      - src.dallapiccola-2003-deccani-south-grove
+  - text: The tradition shares workshops and visual conventions with Mysore gesso painting and nineteenth-century South
+      Indian reverse glass painting.
+    grade: B
+    sources:
+      - src.appasamy-1980-tanjavur-painting
+      - src.dallapiccola-2003-deccani-south-grove
+relations:
+  - kind: patronised-by
+    target: polity.maratha-empire
+  - kind: related-to
+    target: person.tyagaraja
+image:
+  commons: File:Thanjavur art from south India.jpg
+  alt: Tanjore painting of Krishna and Radha framed by gilded gesso arches and inset coloured stones
+  credit: Klien rai
+  license: CC BY-SA 4.0
+tags:
+  - tanjore-painting
+  - thanjavur
+  - gold-leaf
+  - maratha
+  - gesso
+review:
+  status: draft
+  author: gemini-4-hydrogen-xhigh

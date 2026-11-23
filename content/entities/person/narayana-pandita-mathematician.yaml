@@ -1,0 +1,43 @@
+id: person.narayana-pandita-mathematician
+type: person
+kind: science
+names:
+  en: Narayana Pandita (mathematician)
+  iast: Nārāyaṇa Paṇḍita
+  native: नारायण पण्डित
+summary: Narayana Pandita was a fourteenth-century Sanskrit mathematician. His two known treatises are the
+  Ganita Kaumudi on arithmetic and the Bijaganitavatamsa on algebra.
+summaries:
+  kids: Narayana wrote about numbers, how to arrange them, and how to make squares whose rows and columns add up
+    to the same total.
+  teen: The Ganita Kaumudi dates Narayana’s activity to 1356. Alongside standard arithmetic, he worked on
+    arranging objects, solving equations in integers and constructing magic squares.
+datings:
+  - method: textual-internal
+    range:
+      earliest: "1301 CE"
+      latest: "1400 CE"
+      best: "1356 CE"
+      precision: century
+      circa: true
+    grade: B
+    label: Fourteenth-century activity anchored at 1356 CE
+    sources:
+      - id: src.plofker-2009-mathematics-in-india
+        locator: Section 6.3
+    note: The final verse of the Ganita Kaumudi records completion in 1356 CE; Narayana’s birth and death dates are unrecorded.
+claims:
+  - text: Narayana wrote the Ganita Kaumudi and a separate algebraic work, the Bijaganitavatamsa.
+    grade: B
+    sources:
+      - id: src.plofker-2009-mathematics-in-india
+        locator: Section 6.3
+relations:
+  - kind: authored
+    target: text.ganita-kaumudi
+tags:
+  - mathematics
+  - combinatorics
+review:
+  status: draft
+  author: codex-gpt-6

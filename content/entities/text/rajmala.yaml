@@ -1,0 +1,52 @@
+id: text.rajmala
+type: text
+kind: text
+names:
+  en: Rajmala
+  iast: Rājamālā
+  native: রাজমালা
+summary: >-
+  The Rajmala ("Garland of Kings") is the multi-layered Bengali verse chronicle of the Manikya rulers
+  of Tripura, compiled at the royal court in four major sections (laharas) beginning in the fifteenth
+  century under Dharma Manikya I and continued through the eighteenth and nineteenth centuries. Combining
+  epic Puranic genealogies with dated wars, temple endowments and diplomacy, it is a primary literary
+  source for Tripura's history.
+summaries:
+  kids: >-
+    Written in Bengali verse at the kings' court, the Rajmala is the traditional history of Tripura's
+    Manikya rulers, telling stories of ancient ancestors, battles and temple-building.
+  teen: >-
+    Compiled in four poetic sections starting under Dharma Manikya in the 15th century and updated
+    into the 19th century, the Rajmala records the political, religious and military history of the
+    Tripura Manikya dynasty.
+region: Tripura
+location: { name: "Udaipur and Agartala, Tripura", lat: 23.831, lon: 91.287 }
+datings:
+  - method: textual-internal
+    range: { earliest: 1430, latest: 1850, precision: century, circa: true }
+    grade: C
+    label: Layered court compilation across four laharas (15th to 19th centuries)
+    sources:
+      - src.sinha-1896-rajmala-tripurar-itihas
+      - src.long-1978-rajmala
+      - src.sen-1992-history-of-bengali-literature
+    note: The first section is traditionally dated to Dharma Manikya I's court (15th century, composed by Durlabhendra with Brahmin scribes), while later sections cover Dhanya Manikya, Vijaya Manikya and rulers down to the 19th century.
+claims:
+  - text: The Rajmala is structured into four books (laharas) and ranks among the earliest surviving Bengali dynastic chronicles compiled under a Tibeto-Burman royal house.
+    grade: B
+    sources:
+      - src.sen-1992-history-of-bengali-literature
+      - src.long-1978-rajmala
+  - text: Historians cross-check the Rajmala's accounts of Dhanya Manikya, Vijaya Manikya and Amar Manikya against dated Manikya silver coins, copper plates and Mughal chronicles, treating pre-fifteenth-century genealogies cautiously.
+    grade: B
+    sources:
+      - src.sinha-1896-rajmala-tripurar-itihas
+      - src.sinha-1987-tribal-polities-northeast
+debate: >-
+  While court tradition assigns the composition of the first lahara strictly to the mid-fifteenth
+  century under Dharma Manikya I, linguistic and textual historians note that surviving manuscripts
+  reflect eighteenth- and nineteenth-century redactions alongside earlier layers.
+relations: []
+wikidata: Q7286310
+tags: [rajmala, tripura, chronicle, bengali, manikya-dynasty, literature]
+review: { status: draft, author: "gemini-4-hydrogen-xhigh" }

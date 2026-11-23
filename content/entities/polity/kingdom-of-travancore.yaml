@@ -1,0 +1,70 @@
+id: polity.kingdom-of-travancore
+type: polity
+kind: polity
+names:
+  en: Kingdom of Travancore
+  iast: Tiruvitāṃkūr
+  native: തിരുവിതാംകൂർ
+aliases:
+  - polity.travancore
+summary: >-
+  Travancore grew out of the southern Kerala principality of Venad under Marthanda Varma (r. 1729-1758),
+  who centralised royal power, annexed neighbouring principalities and defeated the Dutch at Colachel in
+  1741. Later rulers resisted Tipu Sultan, entered a subsidiary alliance with the East India Company in 1795
+  and issued the Temple Entry Proclamation of 1936, and the state merged with Cochin in 1949.
+summaries:
+  kids: >-
+    Marthanda Varma brought smaller territories together to build Travancore. Its later capital was
+    Thiruvananthapuram, and in 1936 its temples were opened to people of all castes.
+  teen: >-
+    Travancore became more centralised under Marthanda Varma. Its relationship to the British was
+    formalised through treaties, and its royal government continued until the merger with Cochin in 1949.
+region: Southern Kerala and adjoining parts of the Tamil country
+location:
+  name: Thiruvananthapuram (later capital)
+  lat: 8.49
+  lon: 76.95
+datings:
+  - method: documentary
+    range:
+      earliest: "1729"
+      latest: "1949"
+      precision: year
+      circa: false
+    grade: B
+    label: Accession of Marthanda Varma to the merger of Travancore and Cochin
+    sources:
+      - src.lannoy-1997-kulasekhara-perumals-travancore
+      - src.menon-2007-survey-of-kerala-history
+      - id: src.ministry-of-states-1950-white-paper-indian-states
+        locator: Part V
+    note: The older Venad ruling house predates 1729. The endpoint is the merger of Travancore and Cochin in
+      July 1949.
+claims:
+  - text: Marthanda Varma brought much of southern Kerala under a more centralised Travancore state and
+      consecrated it to Padmanabha in 1750.
+    grade: B
+    sources:
+      - src.ramachandran-1997-kerala-development
+      - src.lannoy-1997-kulasekhara-perumals-travancore
+  - text: Under Dharma Raja (r. 1758-1798), Travancore resisted Tipu Sultan's attack on its northern lines in
+      1789 to 1790 and entered a subsidiary alliance with the East India Company in 1795.
+    grade: B
+    sources:
+      - src.menon-2007-survey-of-kerala-history
+      - src.bayly-1989-saints-goddesses-kings
+  - text: In 1936 the Travancore government issued the Temple Entry Proclamation, opening state temples to
+      Hindus of all castes.
+    grade: B
+    sources:
+      - src.menon-2007-survey-of-kerala-history
+relations:
+  - kind: related-to
+    target: polity.east-india-company-rule
+wikidata: Q150058
+tags:
+  - travancore
+  - kerala
+review:
+  status: draft
+  author: codex-gpt-6

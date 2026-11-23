@@ -1,0 +1,55 @@
+id: site.mahasthangarh
+type: site
+kind: site
+names:
+  en: Mahasthangarh
+  iast: Mahāsthānagaṛh
+  native: মহাস্থানগড়
+summary: "Mahasthangarh, on the western bank of the Karatoya River in Bogra district of Bangladesh, is among the earliest documented urban archaeological sites in Bengal, identified with ancient Pundranagara. Excavations by the France-Bangladesh Joint Venture and the 1931 discovery of the Mauryan Prakrit Brahmi limestone plaque demonstrate fortified urban settlement from at least the fourth to third centuries BCE through the medieval period."
+summaries:
+  kids: "In northern Bangladesh, Mahasthangarh holds the brick walls of ancient Pundranagara, one of the oldest known cities in Bengal, where an ancient stone inscription records emergency grain and coin relief for villagers."
+  teen: >-
+    Identified with ancient Pundranagara, Mahasthangarh preserves urban ramparts from the 4th-3rd
+    century BCE onward and yielded the famous Mauryan Brahmi plaque recording famine relief orders to
+    a royal official.
+region: Bogra district, Bangladesh (ancient Pundravardhana)
+location: { name: "Mahasthangarh, Bogra, Bangladesh", lat: 24.961, lon: 89.343 }
+datings:
+  - method: archaeological-radiocarbon
+    range: { earliest: "400 BCE", latest: 1200, precision: century, circa: true }
+    grade: A
+    label: France-Bangladesh excavations (radiocarbon and NBPW stratigraphy)
+    sources:
+      - src.alam-salles-2001-mahasthangarh
+      - src.chattopadhyay-2018-archaeology-of-coastal-bengal
+    note: Radiocarbon assays and stratigraphic sequences from the France-Bangladesh mission establish pre-Mauryan/NBPW occupation from the 4th century BCE through Gupta, Pala and Sena levels.
+  - method: epigraphic
+    range: { earliest: "300 BCE", latest: "200 BCE", precision: century, circa: true }
+    grade: B
+    label: Mahasthan Brahmi limestone inscription (Mauryan script)
+    sources:
+      - src.salomon-1998-indian-epigraphy
+      - src.singh-2008-ancient-early-medieval-india
+    note: Dated palaeographically to the Mauryan period (c. 3rd century BCE), the Prakrit inscription explicitly names the city as Pudanagala (Pundranagara).
+claims:
+  - text: The Mahasthan Brahmi plaque directs a royal mahamatra at Pudanagala (Pundranagara) to distribute paddy and coins (gandaka and kakani) from the royal granary to relieve distress among the Samvangiyas.
+    grade: A
+    sources:
+      - src.salomon-1998-indian-epigraphy
+      - src.singh-2008-ancient-early-medieval-india
+  - text: Joint France-Bangladesh excavations traced massive brick-and-mud defensive ramparts, Northern Black Polished Ware layers and successive Gupta and Pala structural phases.
+    grade: A
+    sources:
+      - src.alam-salles-2001-mahasthangarh
+relations:
+  - { kind: part-of, target: polity.maurya-empire }
+  - { kind: related-to, target: polity.pala-empire }
+  - { kind: related-to, target: site.somapura-mahavihara }
+wikidata: Q3085127
+image:
+  commons: "File:Walls of Mahasthangarh.jpg"
+  alt: Ancient brick defensive rampart walls of the Mahasthangarh citadel in Bogra, Bangladesh
+  credit: Zaheed Sarwer Khan
+  license: CC BY 4.0
+tags: [mahasthangarh, pundranagara, maurya, brahmi, bangladesh, urbanism]
+review: { status: draft, author: "gemini-4-hydrogen-xhigh" }

@@ -1,0 +1,64 @@
+id: text.katha-upanishad
+type: text
+kind: text
+names:
+  en: Katha Upanishad
+  iast: Kaṭha Upaniṣad
+  native: कठोपनिषद्
+summary: The Katha Upanishad tells of Nachiketas, who asks Death what happens beyond death. Its
+  verse dialogue explores the self, disciplined attention and liberation. Its dating is contested.
+summaries:
+  kids: A boy named Nachiketas visits Yama, the lord of death, and asks a question that even the gods
+    have found hard to answer.
+  teen: Yama offers Nachiketas wealth and a long life. The boy persists in asking about death,
+    prompting a teaching that compares the body to a chariot and the senses to horses.
+datings:
+  - method: linguistic
+    range:
+      earliest: "400 BCE"
+      latest: "1 BCE"
+      precision: century
+      circa: true
+    grade: C
+    label: "Patrick Olivelle: verse stratum"
+    sources:
+      - id: src.olivelle-1998-early-upanisads
+        locator: Introduction, Chronology
+      - id: src.cohen-2024-classical-upanisads
+        locator: Dating and Authorship
+    note: Olivelle places the Katha after the Kena and before the Isha, Shvetashvatara and Mundaka in
+      his reconstruction of the verse group.
+  - method: textual-internal
+    range: { earliest: "800 BCE", latest: "601 BCE", precision: century, circa: true }
+    grade: C
+    label: "Sarvepalli Radhakrishnan and Charles A. Moore: earlier pre-Buddhist placement"
+    sources:
+      - id: src.radhakrishnan-1957-source-book-indian-philosophy
+        locator: "Chapter II, The Upaniṣads"
+    note: Their source book assigns this text to the eighth or seventh century BCE in its
+      chronology of the principal Upanishads.
+claims:
+  - text: The chariot image assigns the body, self, intellect, mind and senses distinct roles.
+    grade: A
+    sources:
+      - id: src.olivelle-1998-early-upanisads
+        locator: Katha Upanisad 3.3-9
+relations:
+  - kind: part-of
+    target: text.upanishads
+  - kind: related-to
+    target: text.krishna-yajurveda
+image:
+  commons: File:Katha Upanishad 1.1.1 to 1.1.3 verses, Krishna Yajurveda.jpg
+  alt: Manuscript folio with the opening Sanskrit verses of the Katha Upanishad and marginal glosses
+  credit: Ms Sarah Welch
+  license: CC BY-SA 4.0
+debate: Olivelle puts the Katha before the Isha and Mundaka. Cohen reverses that order. Her
+  metrical analysis places both longer and shorter verse forms in the Katha’s early layer.
+tags:
+  - upanishad
+  - veda
+  - vedanta
+review:
+  status: draft
+  author: codex-gpt-6

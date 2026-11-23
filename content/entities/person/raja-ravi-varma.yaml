@@ -1,0 +1,70 @@
+id: person.raja-ravi-varma
+type: person
+kind: art
+names:
+  en: Raja Ravi Varma
+  iast: Rājā Ravi Varmā
+  native: രാജാ രവിവർമ്മ
+summary: Raja Ravi Varma (1848-1906 CE) of Kilimanoor in Travancore was a pioneering modern Indian painter who fused
+  European academic oil painting and perspective with themes from the Mahabharata, Ramayana, Kalidasa and Indian
+  regional portraiture. In 1894 he established the Ravi Varma Fine Art Lithographic Press near Bombay, mass-circulating
+  affordable chromolithographs that reshaped popular Indian visual culture.
+summaries:
+  kids: Raja Ravi Varma (1848-1906) was a painter from Kerala who used European oil-painting styles to paint Indian epics
+    and everyday life, and started a printing press so ordinary families could own his pictures.
+  teen: Combining Victorian academic realism with Indian mythological and court portraiture, Raja Ravi Varma won prizes in
+    Vienna and Chicago and transformed popular visual imagery through his 1894 chromolithographic press.
+region: Travancore (Kilimanoor, Kerala), Baroda and Bombay
+location:
+  name: Kilimanoor, Kerala
+  lat: 8.77
+  lon: 76.875
+datings:
+  - method: documentary
+    range:
+      earliest: 1848
+      latest: 1906
+      precision: year
+      circa: false
+    grade: A
+    label: Documented lifespan (1848-1906 CE)
+    sources:
+      - src.sivakumar-2003-ravi-varma-grove
+      - src.chawla-2010-raja-ravi-varma
+      - src.mitter-1994-art-and-nationalism
+    note: Born 29 April 1848 at Kilimanoor Palace in Travancore and died 2 October 1906.
+claims:
+  - text: Supported by Baroda state and Travancore patrons, Ravi Varma won international awards including the 1873 Vienna
+      exhibition and exhibited ten paintings at the 1893 World's Columbian Exposition in Chicago.
+    grade: A
+    sources:
+      - src.mitter-1994-art-and-nationalism
+      - src.chawla-2010-raja-ravi-varma
+  - text: Opening his Bombay lithographic press in 1894 (later moved to Malavli-Lonavala and sold to Fritz Schleicher in
+      1901), he made oleograph prints of Hindu deities and heroines like Shakuntala ubiquitous across India.
+    grade: A
+    sources:
+      - src.sivakumar-2003-ravi-varma-grove
+      - src.guhathakurta-1992-making-new-indian-art
+relations:
+  - kind: related-to
+    target: person.kalidasa
+  - kind: related-to
+    target: text.mahabharata
+  - kind: related-to
+    target: text.valmiki-ramayana
+wikidata: Q333453
+image:
+  commons: File:Ravivarma1b.jpg
+  alt: 1890s photograph of painter Raja Ravi Varma seated in a chair wearing traditional turban and coat
+  credit: Bhawani Ram (1890s)
+  license: Public domain
+tags:
+  - ravi-varma
+  - modern-art
+  - oil-painting
+  - oleographs
+  - kerala
+review:
+  status: draft
+  author: gemini-4-hydrogen-xhigh

@@ -1,0 +1,57 @@
+id: text.mahavamsa
+type: text
+kind: text
+names:
+  en: Mahavamsa
+  iast: Mahāvaṃsa
+  native: महावंस
+summary: The Mahavamsa is a Pali verse chronicle of Sri Lanka that recounts royal lineages and the
+  establishment of Buddhism on the island. Its early portion ends with King Mahasena and later
+  writers continued the chronicle.
+summaries:
+  kids: This long poem tells stories about Sri Lanka’s kings and about how Buddhist teachings reached
+    the island.
+  teen: The chronicle tells Sri Lanka’s past from the viewpoint of the Mahavihara monastic tradition.
+    Its accounts of Ashoka’s family, relics and royal patrons combine historical memory with
+    religious narrative.
+datings:
+  - method: textual-internal
+    range:
+      earliest: 400
+      latest: 600
+      precision: century
+      circa: true
+    grade: C
+    label: Formation of the early Pali chronicle
+    sources:
+      - src.hinuber-1996-handbook-of-pali-literature
+      - src.geiger-1912-mahavamsa
+    note: The earlier portion is usually placed around the fifth or sixth century CE. Later
+      continuations have their own history.
+claims:
+  - text: The chronicle describes Mahinda’s mission to Sri Lanka and Sanghamitta’s bringing of a branch
+      of the Bodhi tree.
+    grade: A
+    sources:
+      - id: src.geiger-1912-mahavamsa
+        locator: Chapters 13-19
+  - text: The chronicle records a tradition that the Buddhist scriptures and commentaries were committed
+      to writing in Vattagamani’s reign.
+    grade: D
+    sources:
+      - id: src.geiger-1912-mahavamsa
+        locator: 33.100-101
+relations:
+  - kind: related-to
+    target: text.pali-canon
+  - kind: related-to
+    target: person.ashoka
+region: Sri Lanka
+tags:
+  - buddhism
+  - theravada
+  - pali
+  - chronicle
+review:
+  status: draft
+  author: codex-gpt-6

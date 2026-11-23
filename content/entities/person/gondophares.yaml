@@ -1,0 +1,58 @@
+id: person.gondophares
+type: person
+kind: person
+names:
+  en: Gondophares I
+summary: Gondophares founded the Indo-Parthian dynasty and issued coins in several regions. Scholars
+  dispute whether the Gondophares named in the Takht-i Bahi inscription is the founder or a later
+  king using the same name.
+summaries:
+  kids: Gondophares was a king whose name survives on coins. An old stone inscription names a ruler
+    called Gondophares too, and scholars compare the two kinds of evidence.
+  teen: The Takht-i Bahi inscription gives a regnal year and an era year for a Gondophares. Both the
+    identity of that ruler and the conversion of the era affect the founder's chronology.
+region: Sistan, Arachosia and the northwestern subcontinent
+datings:
+  - method: epigraphic
+    range:
+      earliest: "20"
+      latest: "46"
+      precision: year
+      circa: true
+    grade: C
+    label: A. D. H. Bivar's inscription-based dating
+    sources:
+      - src.bivar-2002-gondophares
+    note: Conversion of the Takht-i Bahi era on a 57 BCE epoch yields these conventional years.
+  - method: numismatic
+    range:
+      earliest: 50 BCE
+      latest: 1 BCE
+      precision: decade
+      circa: true
+    grade: C
+    label: Robert C. Senior's coin-based placement
+    sources:
+      - src.senior-2005-indo-scythian-dynasty
+    note: Senior argues that the founder reigned in the later first century BCE and that the inscription
+      may describe a namesake.
+claims:
+  - text: Coins bear Gondophares's name in forms of both Greek and Kharoshthi legends.
+    grade: A
+    sources:
+      - src.frohlich-2004-indo-parthian-dynasty
+  - text: The Takht-i Bahi inscription names Gondophares and records regnal year 26 alongside year 103
+      of an unnamed era.
+    grade: A
+    sources:
+      - src.bivar-2002-gondophares
+      - src.falk-2009-era-of-azes
+relations:
+  - kind: founded
+    target: polity.indo-parthian-dynasty
+debate: Bivar assigns Takht-i Bahi to the founder. Senior distinguishes the ruler reconstructed from
+  earlier coins from the possible namesake in the inscription.
+tags: []
+review:
+  status: draft
+  author: codex-gpt-6

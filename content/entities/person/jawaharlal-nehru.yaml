@@ -1,0 +1,52 @@
+id: person.jawaharlal-nehru
+type: person
+kind: person
+names:
+  en: Jawaharlal Nehru
+  native: जवाहरलाल नेहरू
+summary: Jawaharlal Nehru presided over the Congress session at Lahore that committed the party
+  to complete independence in 1929. He moved the Objectives Resolution in the Constituent
+  Assembly in 1946 and became prime minister at independence.
+summaries:
+  kids: Nehru helped lead the campaign for independence. In 1947 he became the first prime
+    minister of independent India.
+  teen: Nehru chaired the Congress session that adopted complete independence as its goal and
+    presented the Objectives Resolution for India's constitution. He served as prime minister
+    from independence until his death in 1964.
+region: India
+datings:
+  - method: scholarly-consensus
+    range:
+      earliest: "1889"
+      latest: "1964"
+      precision: year
+      circa: false
+    grade: B
+    label: Lifespan
+    sources:
+      - src.brown-2003-nehru-a-political-life
+claims:
+  - text: Nehru introduced the Objectives Resolution in the Constituent Assembly on 13 December 1946.
+    grade: A
+    sources:
+      - src.constituent-assembly-1946-objectives-debate
+  - text: Nehru presided over the Lahore Congress session of 1929 and became India's prime minister
+      on 15 August 1947.
+    grade: B
+    sources:
+      - src.brown-2003-nehru-a-political-life
+      - src.chandra-1989-indias-struggle-for-independence
+relations:
+  - kind: related-to
+    target: event.independence-and-partition-1947
+image:
+  commons: File:Jawaharlal Nehru 1949.jpg
+  alt: Jawaharlal Nehru during a visit to Washington in 1949
+  credit: Abbie Rowe
+  license: Public domain (U.S. federal government work)
+tags:
+  - congress
+  - independence
+review:
+  status: draft
+  author: codex-gpt-6

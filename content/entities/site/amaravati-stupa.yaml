@@ -1,0 +1,69 @@
+id: site.amaravati-stupa
+type: site
+kind: site
+names:
+  en: Amaravati Stupa
+  iast: Amarāvatī Mahācaitya
+  native: అమరావతి మహాచైత్యం
+summary: >-
+  The Great Stupa at Amaravati in Andhra Pradesh developed over several centuries. By about 200 BCE work
+  was under way, and later patrons gave carved limestone panels and railings. Its precise foundation
+  date remains uncertain.
+summaries:
+  kids: >-
+    A large Buddhist monument once stood near the Krishna River in Amaravati. Carvers decorated it with
+    limestone panels showing stories about the Buddha and his past lives.
+  teen: >-
+    Amaravati's Great Stupa was enlarged and decorated in several phases. Archaeological evidence for
+    construction is clearer from around 200 BCE, and inscriptions name a range of donors.
+region: Lower Krishna Valley (Palnadu district, Andhra Pradesh)
+location: { name: "Amaravati, Andhra Pradesh", lat: 16.576, lon: 80.357 }
+datings:
+  - method: archaeological-stratigraphic
+    range: { earliest: "200 BCE", latest: "300 CE", precision: century, circa: true }
+    grade: B
+    label: "Main phases of construction and limestone decoration"
+    sources:
+      - src.shimada-2013-amaravati-stupa
+      - src.burgess-1887-buddhist-stupas-amaravati
+    note: >-
+      Akira Shimada places the early building phase around 200 to 100 BCE and the major limestone
+      embellishments in the subsequent centuries.
+  - method: archaeological-stratigraphic
+    range: { earliest: "300 BCE", latest: "200 BCE", precision: century, circa: true }
+    grade: C
+    label: "Possible Mauryan-period foundation of the stupa"
+    sources:
+      - src.shimada-2013-amaravati-stupa
+    note: >-
+      A fragmentary inscribed pillar and evidence of early occupation have been used to suggest a
+      Mauryan-period origin. The fragment does not securely establish the age of the first stupa.
+claims:
+  - text: >-
+      Donative inscriptions on surviving architectural fragments name monks, nuns and lay donors. A
+      separate inscription names the Satavahana ruler Vasishthiputra Pulumavi.
+    grade: A
+    sources:
+      - src.shimada-2013-amaravati-stupa
+      - src.burgess-1887-buddhist-stupas-amaravati
+  - text: >-
+      Sculptures and architectural fragments from the stupa are held at Amaravati, the Government Museum
+      in Chennai and the British Museum in London.
+    grade: B
+    sources:
+      - src.shimada-2013-amaravati-stupa
+      - src.howes-2002-mackenzie-amaravati
+debate: >-
+  The date of the first stupa is uncertain. Akira Shimada's reconstruction distinguishes possible
+  activity in the Mauryan period from the building phases attested from around 200 BCE.
+relations:
+  - { kind: patronised-by, target: polity.satavahana-dynasty }
+  - { kind: contemporary-of, target: site.sanchi-stupa }
+wikidata: Q17351111
+image:
+  commons: "File:Partial Side View of Maha Stupa at Amaravati.jpg"
+  alt: Excavated circular brick drum and lower platform of the Great Stupa (Mahachaitya) at Amaravati, Andhra Pradesh
+  credit: Adityamadhav83
+  license: CC BY-SA 3.0
+tags: [amaravati, stupa, satavahana, buddhism, andhra-pradesh, sculpture]
+review: { status: draft, author: "gemini-4-hydrogen-xhigh" }

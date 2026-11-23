@@ -1,0 +1,52 @@
+id: person.bhaskara-i
+type: person
+kind: science
+names:
+  en: Bhaskara I
+  iast: Bhāskara I
+  native: भास्कर
+summary: Bhaskara I was a seventh-century mathematician and astronomer in the tradition of Aryabhata. His 629
+  CE commentary explains terse mathematical verses through worked examples and extended discussion.
+summaries:
+  kids: Bhaskara wrote explanations that helped readers work through difficult rules in Aryabhata’s mathematics
+    book.
+  teen: Bhaskara’s commentary expands short verse rules into detailed mathematical prose. He also wrote the
+    Mahabhaskariya and Laghubhaskariya on astronomy.
+datings:
+  - method: textual-internal
+    range:
+      earliest: "600 CE"
+      latest: "680 CE"
+      best: "629 CE"
+      precision: century
+      circa: true
+    grade: B
+    label: Seventh-century activity anchored by 629 CE commentary
+    sources:
+      - id: src.plofker-2009-mathematics-in-india
+        locator: Appendix B
+      - src.keller-2006-mathematical-seed
+    note: His Aryabhatiya commentary is explicitly dated to 629 CE; his birth and death years are unrecorded.
+claims:
+  - text: Bhaskara I wrote the Mahabhaskariya and the Laghubhaskariya as well as his commentary on the Aryabhatiya.
+    grade: A
+    sources:
+      - id: src.plofker-2009-mathematics-in-india
+        locator: Appendix B
+      - src.keller-2006-mathematical-seed
+  - text: The mathematical commentary gives worked numerical examples that clarify Aryabhata’s compact algorithms.
+    grade: A
+    sources:
+      - src.keller-2006-mathematical-seed
+relations:
+  - kind: commented-on
+    target: text.aryabhatiya
+  - kind: authored
+    target: text.aryabhatiya-bhashya
+tags:
+  - astronomy
+  - mathematics
+  - commentary
+review:
+  status: draft
+  author: codex-gpt-6

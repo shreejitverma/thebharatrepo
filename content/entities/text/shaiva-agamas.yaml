@@ -1,0 +1,49 @@
+id: text.shaiva-agamas
+type: text
+kind: text
+names:
+  en: Shaiva Agamas
+  iast: Śaiva Āgama
+  native: शैव आगम
+summary: The Shaiva Agamas are Sanskrit scriptural collections on initiation, religious practice,
+  worship and liberation. Shaiva Siddhanta recognises a canon of 28 principal Agamas. The surviving
+  works took shape over several centuries.
+summaries:
+  kids: These writings explain how people honour Shiva, how teachers guide students, and how sacred
+    spaces are used.
+  teen: Shaiva Agamas describe rites and religious authority for initiates and temple communities.
+    Manuscripts and quotations allow historians to follow the growth of several different
+    collections.
+datings:
+  - method: textual-internal
+    range:
+      earliest: 450
+      latest: 1200
+      precision: century
+      circa: true
+    grade: C
+    label: Formation and transmission of Shaiva Mantramarga scriptures
+    sources:
+      - src.goodall-2015-nisvasatattvasamhita
+      - src.simini-2016-of-gods-and-books
+    note: The range starts with early extant tantric layers and extends into medieval Siddhanta
+      transmission. Individual Agamas and recensions have different dates.
+claims:
+  - text: Shaiva Siddhanta tradition recognises 28 principal scriptures, alongside subsidiary works.
+    grade: B
+    sources:
+      - src.simini-2016-of-gods-and-books
+  - text: Shaiva scriptural tradition presents the teachings as revelation transmitted from Shiva.
+    grade: D
+    sources:
+      - src.goodall-2015-nisvasatattvasamhita
+      - src.simini-2016-of-gods-and-books
+relations: []
+tags:
+  - agama
+  - tantra
+  - shaiva
+  - shaiva-siddhanta
+review:
+  status: draft
+  author: codex-gpt-6

@@ -1,0 +1,47 @@
+id: polity.kamarupa-kingdom
+type: polity
+kind: polity
+names:
+  en: Kamarupa Kingdom
+  iast: Kāmarūpa
+  native: কামৰূপ ৰাজ্য
+summary: "Kamarupa (also known as Pragjyotisha in epigraphs and Puranic texts) was the earliest known historical state in the Brahmaputra valley of Assam and adjacent parts of northern Bengal and Bangladesh, attested from the fourth to twelfth centuries CE. Ruled sequentially by the Varman, Mlechchha (Salastambha) and Pala dynasties of Kamarupa, it left a major corpus of Sanskrit copper-plate grants and rock inscriptions."
+summaries:
+  kids: >-
+    From the 4th to 12th centuries CE, Kamarupa was the major ancient kingdom of Assam, named on an
+    emperor's pillar inscription in Allahabad and known for copper-plate grants and Hindu and
+    Shakta temples.
+  teen: >-
+    First attested in Samudragupta's Allahabad pillar inscription (mid-4th century CE), Kamarupa
+    united the Brahmaputra valley under three successive dynasties - the Varmans, Salastambhas and
+    Kamarupa Palas - down to the twelfth century.
+region: Brahmaputra Valley (Assam) and northern Bengal / Sylhet frontier
+location: { name: "Pragjyotishapura (Guwahati), Assam", lat: 26.183, lon: 91.746 }
+datings:
+  - method: epigraphic
+    range: { earliest: 350, latest: 1140, precision: decade, circa: true }
+    grade: B
+    label: Samudragupta's Allahabad pillar to Kamauli copper plate of Vaidyadeva
+    sources:
+      - src.barua-1933-early-history-kamarupa
+      - src.shin-2022-bhauma-to-varaha-kamarupa
+      - src.choudhury-1985-archaeology-brahmaputra-valley
+    note: First epigraphically named as a frontier kingdom in Samudragupta's 4th-century Allahabad prashasti and enduring through the Varman, Mlechchha and Kamarupa Pala lines until c. 1140 CE.
+claims:
+  - text: Kamarupa is named alongside Davaka in Samudragupta's fourth-century Allahabad pillar inscription as a frontier kingdom paying tribute to the Gupta empire.
+    grade: A
+    sources:
+      - src.fleet-1888-inscriptions-early-gupta-kings
+      - src.barua-1933-early-history-kamarupa
+  - text: Three successive early medieval dynasties - the Varmans (c. 350-650), Salastambhas (c. 655-900) and Kamarupa Palas (c. 900-1100) - traced mythical descent from Naraka and Bhagadatta in their Sanskrit copper plates while adapting lineage rhetoric over time.
+    grade: B
+    sources:
+      - src.shin-2022-bhauma-to-varaha-kamarupa
+      - src.konow-1914-epigraphia-indica-vol-12
+relations:
+  - { kind: ruled-by, target: polity.varman-dynasty-of-kamarupa }
+  - { kind: contemporary-of, target: polity.gupta-empire }
+  - { kind: related-to, target: site.kamakhya-temple }
+wikidata: Q1194765
+tags: [kamarupa, assam, pragjyotisha, epigraphy, early-medieval]
+review: { status: draft, author: "gemini-4-hydrogen-xhigh" }

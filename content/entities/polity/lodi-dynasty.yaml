@@ -1,0 +1,54 @@
+id: polity.lodi-dynasty
+type: polity
+kind: polity
+names:
+  en: Lodi Dynasty
+summary: The Lodis were an Afghan ruling house of the Delhi Sultanate, founded by Bahlul Lodi.
+  Sikandar made Agra a centre of government, and Ibrahim's defeat at Panipat ended the dynasty's
+  rule.
+summaries:
+  kids: The Lodis ruled from Delhi and Agra. Babur defeated their last sultan, Ibrahim Lodi, at
+    Panipat in 1526.
+  teen: Bahlul built authority through Afghan political networks and the conquest of Jaunpur. The
+    house lost the sultanate when Ibrahim faced Babur at Panipat.
+region: Delhi, Punjab and the Indo-Gangetic plain
+location:
+  name: Agra (later Lodi seat)
+  lat: 27.18
+  lon: 78.02
+datings:
+  - method: documentary
+    range:
+      earliest: "1451"
+      latest: "1526"
+      precision: year
+      circa: false
+    grade: B
+    label: Period of rule
+    sources:
+      - src.jackson-1999-delhi-sultanate
+      - src.asher-talbot-2006-india-before-europe
+      - src.richards-1993-mughal-empire
+    note: The reigns run from Bahlul's accession to Ibrahim's death at Panipat.
+claims:
+  - text: Bahlul Lodi made Jaunpur part of his domains.
+    grade: B
+    sources:
+      - src.jackson-1999-delhi-sultanate
+  - text: Babur describes his battle against Ibrahim Lodi at Panipat in 1526.
+    grade: A
+    sources:
+      - src.babur-1921-memoirs
+relations:
+  - kind: part-of
+    target: polity.delhi-sultanate
+  - kind: succeeded
+    target: polity.sayyid-dynasty
+  - kind: preceded
+    target: polity.mughal-empire
+  - kind: related-to
+    target: event.first-battle-of-panipat
+tags: []
+review:
+  status: draft
+  author: codex-gpt-6

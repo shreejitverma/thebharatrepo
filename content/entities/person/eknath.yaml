@@ -1,0 +1,59 @@
+id: person.eknath
+type: person
+kind: person
+names:
+  en: Eknath
+  iast: Eknātha
+  native: एकनाथ
+summary: Eknath was a Marathi devotional author associated with Paithan. His Eknathi Bhagavata
+  interprets the eleventh book of the Bhagavata Purana in Marathi, and his exact life dates remain
+  uncertain.
+summaries:
+  kids: Eknath explained an important Sanskrit story and teaching in Marathi so people could hear it
+    in a language they knew.
+  teen: Eknath’s Marathi commentary makes the eleventh book of the Bhagavata Purana available in a
+    vernacular literary form. Historians often give 1533 and 1599 as his life dates, with some
+    uncertainty.
+region: Paithan, Maharashtra
+datings:
+  - method: textual-internal
+    range:
+      earliest: "1533"
+      latest: "1599"
+      precision: decade
+      circa: true
+    grade: C
+    label: Jon Keune’s commonly cited chronology
+    sources:
+      - src.keune-2017-eknath
+      - src.barua-2024-bhakti
+      - src.keune-2015-eknath-in-context
+  - method: textual-internal
+    range:
+      earliest: "1548"
+      latest: "1610"
+      precision: decade
+      circa: true
+    grade: C
+    label: M. K. Nadkarni’s older chronology
+    sources:
+      - src.nadkarni-1921-short-history-marathi-literature
+    note: Nadkarni gives 1548 for the birth and Shaka 1531 for the death, corresponding to 1609 or 1610
+      CE.
+claims:
+  - text: The Eknathi Bhagavata is a Marathi exposition of the eleventh book of the Bhagavata Purana.
+    grade: B
+    sources:
+      - src.keune-2017-eknath
+      - src.eaton-2005-social-history-deccan
+relations: []
+tags:
+  - marathi
+  - varkari
+  - bhakti
+review:
+  status: draft
+  author: codex-gpt-6
+debate: Keune follows the commonly cited years 1533 and 1599. Nadkarni’s literary history gives a
+  later birth and death. Early biographies preserve traditions about Eknath and leave his exact
+  lifespan open.

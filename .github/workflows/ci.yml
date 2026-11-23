@@ -15,7 +15,7 @@ concurrency:
 env:
   NEXT_TELEMETRY_DISABLED: 1
 
-# Three parallel jobs. Lighthouse runs alone on its runner so Playwright never competes with it for CPU,
+# Parallel jobs: verify, one e2e job per Playwright project, and Lighthouse. Lighthouse runs alone on its runner so Playwright never competes with it for CPU,
 # which would skew the simulated-throttling metrics its budgets gate on.
 jobs:
   verify:
@@ -37,10 +37,23 @@ jobs:
       - name: Offline source verification gate
         run: npx tsx scripts/content-verify-sources.ts --offline
 
+  # One job per Playwright project, so each browser's run has its own timeout and the suite's wall time is the slowest
+  # project rather than the sum. Every job builds for itself, since `next start` serves the production build to all projects.
   e2e:
-    name: Playwright and axe (Chromium, Firefox, WebKit, Pixel 7, iPhone 14)
+    name: Playwright and axe (${{ matrix.label }})
     runs-on: ubuntu-latest
-    timeout-minutes: 20
+    timeout-minutes: 25
+    strategy:
+      fail-fast: false
+      matrix:
+        include:
+          - { project: desktop, label: Chromium }
+          - { project: firefox, label: Firefox }
+          - { project: webkit, label: WebKit }
+          - { project: mobile, label: Pixel 7 }
+          - { project: iphone, label: iPhone 14 }
+          - { project: preview-desktop, label: debates preview on Chromium }
+          - { project: preview-mobile, label: debates preview on Pixel 7 }
     # The visual snapshots in e2e/visual.spec.ts-snapshots were recorded in this image; any other Linux would rasterise text differently.
     container:
       image: mcr.microsoft.com/playwright:v1.65.1-noble
@@ -59,13 +72,13 @@ jobs:
       - name: Build (validation, offline verification gate, data export and its round trip, next build, search index)
         run: npm run build
       # The container runs as root but $HOME is owned by pwuser, and Firefox refuses to start in that state.
-      - run: npx playwright test
+      - run: npx playwright test --project=${{ matrix.project }}
         env:
           HOME: /root
       - if: failure()
         uses: actions/upload-artifact@v4
         with:
-          name: playwright-report
+          name: playwright-report-${{ matrix.project }}
           path: |
             playwright-report/
             test-results/

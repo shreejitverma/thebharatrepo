@@ -1,0 +1,83 @@
+id: polity.hoysala-dynasty
+type: polity
+kind: polity
+names:
+  en: Hoysala Dynasty
+  iast: Hoysaḷa
+  native: ಹೊಯ್ಸಳ
+summary: >-
+  The Hoysalas rose from hill chiefs of the Malnad, subordinate to the Kalyani Chalukyas, to rule southern
+  Karnataka from Dorasamudra (Halebidu) between the early eleventh century and 1343. Vishnuvardhana and
+  Veera Ballala II enlarged the kingdom, and the dynasty is known for richly carved temples at Belur,
+  Halebidu and Somanathapura.
+summaries:
+  kids: >-
+    Hoysala rulers built temples covered with stone carvings of dancers, animals and gods. Their capital
+    at Dorasamudra is now called Halebidu.
+  teen: >-
+    Inscriptions trace the Hoysalas from local chiefs in the 1020s to an independent kingdom under Veera
+    Ballala II. Their temples at Belur, Halebidu and Somanathapura are inscribed together on the UNESCO
+    World Heritage List.
+region: Southern Karnataka and parts of the Tamil country
+location:
+  name: Halebidu (Dorasamudra)
+  lat: 13.21
+  lon: 75.99
+datings:
+  - method: epigraphic
+    range:
+      earliest: "1026"
+      latest: "1343"
+      precision: decade
+      circa: true
+    grade: B
+    label: Nripa Kama II to the death of Veera Ballala III
+    sources:
+      - src.derrett-1957-the-hoysalas
+      - src.sastri-1976-history-of-south-india
+      - src.unesco-2023-hoysala-sacred-ensembles
+    note: Inscriptions trace Hoysala chiefs from the 1020s under Kalyani Chalukya overlordship and an
+      independent kingdom from the late twelfth century. Veera Ballala III was killed fighting the Madurai
+      Sultanate in 1342 or 1343.
+claims:
+  - text: Vishnuvardhana took Gangavadi from Chola governors around 1116, and the Chennakeshava temple at
+      Belur was consecrated in his reign in 1117.
+    grade: B
+    sources:
+      - src.derrett-1957-the-hoysalas
+      - src.unesco-2023-hoysala-sacred-ensembles
+  - text: Veera Ballala II (r. 1173-1220) ended Hoysala subordination to the Kalyani Chalukyas and fought the
+      Seunas for the northern frontier.
+    grade: B
+    sources:
+      - src.derrett-1957-the-hoysalas
+      - src.sastri-1976-history-of-south-india
+  - text: Hoysala temple complexes at Belur, Halebidu and Somanathapura retain extensive carved programmes
+      from the twelfth and thirteenth centuries.
+    grade: A
+    sources:
+      - src.unesco-2023-hoysala-sacred-ensembles
+  - text: Srivaishnava hagiographies relate that Ramanuja found refuge in Hoysala territory during the reign
+      of Vishnuvardhana.
+    grade: D
+    sources:
+      - src.carman-1974-theology-of-ramanuja
+relations:
+  - kind: patronised
+    target: site.hoysala-sacred-ensembles
+  - kind: succeeded
+    target: polity.chalukya-dynasty-of-kalyani
+    note: Hoysala independence followed the collapse of Kalyani Chalukya overlordship in southern Karnataka.
+  - kind: related-to
+    target: person.ramanuja
+    note: Srivaishnava tradition places Ramanuja in Hoysala territory under Vishnuvardhana.
+  - kind: preceded
+    target: polity.vijayanagara-empire
+    note: Vijayanagara expanded into former Hoysala territories after 1343.
+wikidata: Q466581
+tags:
+  - hoysala
+  - karnataka
+review:
+  status: draft
+  author: codex-gpt-6

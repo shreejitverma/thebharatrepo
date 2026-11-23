@@ -1,0 +1,55 @@
+id: polity.golconda-sultanate
+type: polity
+kind: polity
+names:
+  en: Golconda Sultanate (Qutb Shahi Dynasty)
+summary: The Qutb Shahis emerged at Golconda under Sultan Quli during the waning of Bahmani
+  government. Muhammad Quli founded Hyderabad as a new seat, and Aurangzeb annexed the sultanate in
+  1687.
+summaries:
+  kids: The Qutb Shahis ruled from Golconda and built the city of Hyderabad. The Charminar still
+    stands in the city they founded.
+  teen: Golconda became an independent centre as the Bahmani state fragmented. The dynasty's move to
+    Hyderabad changed its capital, while the old fort remained important.
+region: Eastern Deccan and parts of the Coromandel coast
+location:
+  name: Golconda Fort (early capital)
+  lat: 17.38
+  lon: 78.4
+datings:
+  - method: documentary
+    range:
+      earliest: "1500"
+      latest: "1687"
+      precision: decade
+      circa: true
+    grade: B
+    label: Period of rule
+    sources:
+      - src.michell-1995-architecture-art-southern-india
+      - src.eaton-2005-social-history-deccan
+      - src.eaton-2019-india-persianate-age
+    note: The opening marks emerging autonomy under Sultan Quli, whose formal independence date is less
+      certain than the Mughal conquest in 1687.
+claims:
+  - text: Sultan Quli Qutb al-Mulk established power at Golconda as the Bahmani kingdom fragmented.
+    grade: B
+    sources:
+      - src.michell-1995-architecture-art-southern-india
+      - src.eaton-2005-social-history-deccan
+  - text: Muhammad Quli Qutb Shah founded Hyderabad as a new city and capital in 1591.
+    grade: B
+    sources:
+      - src.eaton-2005-social-history-deccan
+      - src.michell-1995-architecture-art-southern-india
+relations:
+  - kind: succeeded
+    target: polity.bahmani-sultanate
+    note: In the Golconda region.
+  - kind: preceded
+    target: polity.mughal-empire
+    note: Mughal rule followed the 1687 conquest.
+tags: []
+review:
+  status: draft
+  author: codex-gpt-6

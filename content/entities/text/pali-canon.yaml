@@ -1,0 +1,72 @@
+id: text.pali-canon
+type: text
+kind: text
+names:
+  en: Tripitaka (Pali Canon)
+  iast: Tipiṭaka
+  native: तिपिटक
+summary: The Pali Canon is the Theravada collection of monastic discipline, discourses and
+  analytical texts. Its materials accumulated during oral transmission, and the dates of the
+  separate collections and their written consolidation are uncertain.
+summaries:
+  kids: Theravada Buddhists group these teachings into three baskets. One contains rules for monks and
+    nuns, one contains teachings, and one analyses how experience works.
+  teen: The Vinaya, Sutta and Abhidhamma baskets contain texts of different ages. Repeated structures
+    and comparisons with other Buddhist recensions help scholars reconstruct stages of oral
+    transmission.
+datings:
+  - method: linguistic
+    range:
+      earliest: "500 BCE"
+      latest: "1 BCE"
+      precision: century
+      circa: true
+    grade: C
+    label: Formation of early oral collections
+    sources:
+      - src.allon-2022-early-buddhist-texts
+      - src.hinuber-1996-handbook-of-pali-literature
+    note: Comparative work on discourses and monastic texts points to early shared strata. The interval
+      describes the formation of material within the corpus, which continued to grow.
+  - method: traditional-sampradaya
+    range:
+      earliest: "100 BCE"
+      latest: "1 BCE"
+      precision: century
+      circa: true
+    grade: D
+    label: "Sri Lankan chronicle tradition: writing down under Vattagamani"
+    sources:
+      - id: src.geiger-1912-mahavamsa
+        locator: 33.100-101
+      - src.hinuber-1996-handbook-of-pali-literature
+    note: The Mahavamsa reports that monks committed scriptures and commentaries to writing in
+      Vattagamani’s reign, traditionally placed in the first century BCE.
+claims:
+  - text: The three baskets are the Vinaya, Sutta and Abhidhamma Pitakas.
+    grade: B
+    sources:
+      - src.hinuber-1996-handbook-of-pali-literature
+  - text: Several early Buddhist discourses have parallels in canonical collections preserved in other
+      languages.
+    grade: B
+    sources:
+      - src.allon-2022-early-buddhist-texts
+      - src.hinuber-1996-handbook-of-pali-literature
+  - text: Ashoka’s Calcutta-Bairat edict (c. 270-230 BCE) recommends seven Buddhist teachings, including the Munigatha, commonly compared with the Muni Sutta in the Pali Sutta Nipata.
+    grade: B
+    sources:
+      - id: src.hultzsch-1925-inscriptions-of-asoka
+        locator: "Calcutta-Bairat rock inscription, pp. 172-173"
+relations:
+  - kind: related-to
+    target: person.gautama-buddha
+region: South Asia, especially India and Sri Lanka
+tags:
+  - buddhism
+  - theravada
+  - pali
+  - canon
+review:
+  status: draft
+  author: codex-gpt-6

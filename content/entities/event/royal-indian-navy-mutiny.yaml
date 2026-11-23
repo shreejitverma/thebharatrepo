@@ -1,0 +1,46 @@
+id: event.royal-indian-navy-mutiny
+type: event
+kind: event
+names:
+  en: Royal Indian Navy strike and mutiny
+summary: Royal Indian Navy ratings at HMIS Talwar in Bombay refused duty on 18 February 1946.
+  The strike spread to ships and shore establishments, drawing on complaints about conditions
+  and treatment and taking on wider political demands.
+summaries:
+  kids: Sailors in Bombay stopped work to protest poor treatment and conditions. Sailors elsewhere
+    joined them, and the protest also called attention to British rule.
+  teen: The ratings combined demands over food, pay and discriminatory treatment with political
+    slogans. The strike attracted civilian support in Bombay and ended within days.
+region: Bombay and other naval stations in British India
+datings:
+  - method: documentary
+    range:
+      earliest: "1946"
+      latest: "1946"
+      precision: day
+      circa: false
+    grade: A
+    label: Outbreak on 18 February 1946
+    sources:
+      - src.uk-parliament-1946-royal-indian-navy-mutiny
+claims:
+  - text: Ratings at the Talwar signal school refused duty, and the protest spread to other naval
+      establishments and ships in Bombay harbour.
+    grade: A
+    sources:
+      - src.uk-parliament-1946-royal-indian-navy-mutiny
+  - text: The demands combined complaints about service conditions with broader nationalist concerns.
+    grade: B
+    sources:
+      - src.marston-2014-question-of-loyalty
+      - src.sarkar-1989-modern-india
+relations:
+  - kind: related-to
+    target: event.indian-national-army-red-fort-trial
+tags:
+  - navy
+  - labour
+  - independence
+review:
+  status: draft
+  author: codex-gpt-6

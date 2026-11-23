@@ -1,0 +1,57 @@
+id: site.gangaikonda-cholapuram
+type: site
+kind: site
+names:
+  en: Brihadisvara Temple, Gangaikondacholapuram
+  iast: Gaṅgaikoṇḍacōḻapuram Bṛhadīśvara
+  native: கங்கைகொண்ட சோழபுரம் பெருவுடையார் கோயில்
+summary: >-
+  The Brihadisvara Temple at Gangaikondacholapuram in Tamil Nadu was built under Rajendra Chola I in the
+  first half of the eleventh century CE. The temple in his new capital has a tall pyramidal tower with a
+  concave profile. It forms part of UNESCO's Great Living Chola Temples.
+summaries:
+  kids: >-
+    Built nearly a thousand years ago by King Rajendra Chola I in his new capital city, this grand
+    granite Shiva temple has a curved stone tower and carved reliefs of Shiva blessing his devotees.
+  teen: >-
+    Rajendra Chola I built the temple at his new capital, Gangaikondacholapuram. The Esalam copper
+    plates attest the temple by 1036 CE, and its concave tower profile differs from the tower at
+    Thanjavur.
+region: Lower Kaveri Delta (Ariyalur district, Tamil Nadu)
+location: { name: "Gangaikondacholapuram, Tamil Nadu", lat: 11.206, lon: 79.448 }
+datings:
+  - method: epigraphic
+    range: { earliest: "1020 CE", latest: "1036 CE", precision: decade, circa: true }
+    grade: B
+    label: "Building under Rajendra Chola I"
+    sources:
+      - src.nagaswamy-1987-esalam-bronzes-and-copper-plates
+      - src.balasubrahmanyam-1975-middle-chola-temples
+      - src.unesco-1987-great-living-chola-temples
+    note: >-
+      The temple belongs to Rajendra I's development of the capital after his northern campaign. The
+      Esalam charter attests the temple by 1036 CE.
+claims:
+  - text: >-
+      Rajendra Chola I's Esalam copper-plate charter records a temple he built at Gangaikondacholapuram.
+    grade: A
+    sources:
+      - src.nagaswamy-1987-esalam-bronzes-and-copper-plates
+  - text: >-
+      UNESCO added the temple at Gangaikondacholapuram to the Great Living Chola Temples World Heritage
+      property in 2004.
+    grade: A
+    sources:
+      - src.unesco-1987-great-living-chola-temples
+relations:
+  - { kind: patronised-by, target: person.rajendra-chola-i }
+  - { kind: patronised-by, target: polity.chola-dynasty }
+  - { kind: related-to, target: site.brihadisvara-temple-thanjavur }
+wikidata: Q5521034
+image:
+  commons: "File:Gangaikondacholapuram Temple 4.jpg"
+  alt: Ruined stone gopuram gateway framing Nandi and the curved granite pyramidal vimana of the Brihadisvara temple at Gangaikondacholapuram
+  credit: QiNi
+  license: CC BY-SA 4.0
+tags: [gangaikonda-cholapuram, chola, unesco, dravida, shaiva, tamil-nadu]
+review: { status: draft, author: "gemini-4-hydrogen-xhigh" }

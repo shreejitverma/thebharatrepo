@@ -1,0 +1,61 @@
+id: site.ellora-caves
+type: site
+kind: site
+names:
+  en: Ellora Caves
+  iast: Elūrā Guhāḥ
+  native: वेरूळ लेणी
+summary: >-
+  The Ellora Caves near Chhatrapati Sambhajinagar, Maharashtra, include 34 numbered Buddhist, Hindu and
+  Jain monuments cut into a basalt escarpment. The principal cave groups were excavated between roughly
+  the sixth and tenth centuries CE. UNESCO inscribed them in 1983.
+summaries:
+  kids: >-
+    At Ellora in Maharashtra, carvers cut Buddhist halls, Hindu shrines and Jain temples into a long
+    cliff. Visitors can still walk through their stone rooms and courtyards.
+  teen: >-
+    Ellora's numbered monuments include Buddhist monasteries, Hindu shrines such as the Kailasa Temple,
+    and Jain caves. Their plans and sculpture show several centuries of rock-cut building.
+region: Deccan Plateau (Chhatrapati Sambhajinagar district, Maharashtra)
+location: { name: "Ellora, Maharashtra", lat: 20.026, lon: 75.179 }
+datings:
+  - method: art-historical
+    range: { earliest: "550 CE", latest: "1000 CE", precision: century, circa: true }
+    grade: B
+    label: "Main phases of rock-cut construction"
+    sources:
+      - src.unesco-1983-ellora-caves
+      - src.burgess-1883-elura-cave-temples
+      - src.huntington-1985-art-ancient-india
+    note: >-
+      The Hindu and Buddhist groups include work from the earlier phases. Major Rashtrakuta-period
+      projects include the Kailasa Temple, and much of the Jain group belongs to the later phases.
+claims:
+  - text: >-
+      Among the numbered monuments are twelve Buddhist caves, seventeen Hindu caves and five Jain caves.
+    grade: B
+    sources:
+      - src.unesco-1983-ellora-caves
+      - src.burgess-1883-elura-cave-temples
+  - text: >-
+      UNESCO inscribed Ellora Caves on the World Heritage List in 1983.
+    grade: A
+    sources:
+      - src.unesco-1983-ellora-caves
+  - text: >-
+      In Buddhist Cave 10, a vaulted hall with stone ribs leads to a stupa fronted by a seated Buddha.
+    grade: B
+    sources:
+      - src.fergusson-burgess-1880-cave-temples-india
+      - src.burgess-1883-elura-cave-temples
+relations:
+  - { kind: related-to, target: site.kailasa-temple-ellora, note: The Kailasa Temple is Cave 16 within Ellora. }
+  - { kind: related-to, target: site.ajanta-caves }
+wikidata: Q189616
+image:
+  commons: "File:Lascar Ellora caves - Cave 10 (Vishwakarma cave) (4558324543).jpg"
+  alt: Interior of Buddhist Cave 10 (Vishvakarma) at Ellora showing the ribbed rock-cut chaitya vault and monolithic stupa with seated teaching Buddha
+  credit: Jorge Láscar from Australia
+  license: CC BY 2.0
+tags: [ellora, caves, rock-cut, unesco, buddhism, hinduism, jainism, rashtrakuta, maharashtra]
+review: { status: draft, author: "gemini-4-hydrogen-xhigh" }

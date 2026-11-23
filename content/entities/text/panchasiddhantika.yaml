@@ -1,0 +1,52 @@
+id: text.panchasiddhantika
+type: text
+kind: science
+names:
+  en: Panchasiddhantika
+  iast: Pañcasiddhāntikā
+  native: पञ्चसिद्धान्तिका
+summary: Varahamihira’s Panchasiddhantika compares procedures from five astronomical traditions. Its 505 CE
+  computational epoch provides a chronological reference for a work generally placed in the sixth century.
+summaries:
+  kids: Varahamihira collected rules from five astronomy traditions in one book. The rules helped readers keep
+    track of cycles in the sky.
+  teen: This compilation is evidence for earlier astronomical works whose original forms are largely lost. Its
+    reference year of 505 CE is an epoch used for calculation.
+region: Ujjain and central India
+datings:
+  - method: textual-internal
+    range:
+      earliest: 500
+      latest: "600 CE"
+      precision: century
+      circa: true
+    grade: B
+    label: Sixth-century compilation (Neugebauer, Pingree and Plofker)
+    sources:
+      - src.neugebauer-1970-pancasiddhantika
+      - id: src.plofker-2009-mathematics-in-india
+        locator: Section 4.2
+    note: The text uses an epoch equivalent to 505 CE for computation. The epoch alone cannot establish its year
+      of composition.
+claims:
+  - text: The five named traditions are Paitamaha, Vasishtha, Romaka, Paulisha and Saura, also called Surya.
+    grade: A
+    sources:
+      - src.neugebauer-1970-pancasiddhantika
+  - text: The compilation preserves computational procedures that let historians compare different approaches to
+      calendrics and astronomy.
+    grade: B
+    sources:
+      - src.neugebauer-1970-pancasiddhantika
+      - id: src.plofker-2009-mathematics-in-india
+        locator: Section 4.2
+relations:
+  - kind: authored-by
+    target: person.varahamihira
+tags:
+  - astronomy
+  - sanskrit
+  - siddhanta
+review:
+  status: draft
+  author: codex-gpt-6

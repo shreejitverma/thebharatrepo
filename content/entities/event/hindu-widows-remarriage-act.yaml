@@ -1,0 +1,47 @@
+id: event.hindu-widows-remarriage-act
+type: event
+kind: event
+names:
+  en: Hindu Widows' Remarriage Act, 1856
+  native: হিন্দু বিধবা পুনর্বিবাহ আইন, ১৮৫৬
+summary: >-
+  Act XV of 1856 (the Hindu Widows' Remarriage Act), enacted on 26 July 1856 by the Legislative
+  Council of India, legalised the remarriage of Hindu widows across East India Company territories.
+  The legislation was the culmination of an intensive Bengali petition and Sanskritic textual
+  campaign led by Sanskrit College principal Ishwar Chandra Vidyasagar in 1855.
+summaries:
+  kids: >-
+    Passed in 1856 after a tireless campaign by Bengali scholar Ishwar Chandra Vidyasagar, this law
+    made it legal for Hindu widows to marry again if they wished.
+  teen: >-
+    Enacted on 26 July 1856, Act XV legalised Hindu widow remarriage following Ishwar Chandra
+    Vidyasagar's 1855 Sanskritic treatises citing Parashara Smriti and petitions signed by over a
+    thousand supporters alongside vigorous counter-petitions.
+region: Calcutta and Bengal Presidency (applicable across Company India)
+location: { name: "Kolkata, West Bengal", lat: 22.573, lon: 88.364 }
+datings:
+  - method: documentary
+    range: { earliest: 1856, latest: 1856, precision: day, circa: false }
+    grade: A
+    label: Enactment of Act XV of 1856 on 26 July 1856
+    sources:
+      - src.vidyasagar-2011-hindu-widow-marriage
+      - src.jones-1989-socio-religious-reform-movements
+      - src.hatcher-2008-bourgeois-hinduism
+    note: Legislative Council proceedings and Gazette records fix the Governor-General's assent on 26 July 1856.
+claims:
+  - text: Ishwar Chandra Vidyasagar's 1855 tracts argued from Parashara Smriti that widow remarriage was permissible under Hindu dharma-shastra in the Kali Yuga, prompting counter-petitions signed by tens of thousands of orthodox opponents.
+    grade: A
+    sources:
+      - src.vidyasagar-2011-hindu-widow-marriage
+      - src.jones-1989-socio-religious-reform-movements
+  - text: Act XV of 1856 declared marriages of Hindu widows legal and their children legitimate, while terminating a remarrying widow's inheritance rights in her deceased husband's property unless expressly provided.
+    grade: A
+    sources:
+      - src.vidyasagar-2011-hindu-widow-marriage
+relations:
+  - { kind: related-to, target: event.sati-abolition-regulation }
+  - { kind: related-to, target: event.founding-of-hindu-college }
+wikidata: Q12974486
+tags: [vidyasagar, widow-remarriage, bengal-renaissance, social-reform]
+review: { status: draft, author: "gemini-4-hydrogen-xhigh" }

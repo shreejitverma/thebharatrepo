@@ -1,0 +1,67 @@
+id: tradition.pahari-painting
+type: tradition
+kind: art
+names:
+  en: Pahari Painting
+  iast: Pahāṛī Citrakalā
+  native: पहाड़ी चित्रकला
+summary: "Pahari painting ('painting of the hills') refers to miniature schools nurtured in the Himalayan foothill states of Himachal Pradesh and Jammu (such as Basohli, Guler, Kangra, Chamba, Nurpur and Mandi) from the seventeenth to nineteenth centuries. Its styles range from the jewel-like primary colours of early Basohli Rasamanjari series to the lyrical naturalism of Guler and Kangra under Sansar Chand."
+summaries:
+  kids: Pahari painting comes from small mountain kingdoms in the Himalayan foothills like Basohli and Kangra, famous for
+    glowing colours and tender scenes of Krishna and nature.
+  teen: Flourishing across Himalayan hill courts from the 1660s to the 1840s, Pahari painting evolved from the bold reds
+    and beetle-wing highlights of Basohli to the lyrical naturalism of Nainsukh, Guler and Kangra.
+region: Western Himalayan foothills (Himachal Pradesh, Jammu and Punjab Hills)
+location:
+  name: Kangra, Himachal Pradesh
+  lat: 32.1
+  lon: 76.27
+datings:
+  - method: art-historical
+    range:
+      earliest: 1660
+      latest: 1850
+      precision: decade
+      circa: true
+    grade: B
+    label: Basohli Rasamanjari era through Kangra patronage under Raja Sansar Chand
+    sources:
+      - src.archer-1973-pahari-painting
+      - src.glynn-goswamy-2003-pahari-eastern-grove
+      - src.beach-1992-mughal-rajput-painting
+    note: Anchored by dated works including the 1694-1695 Basohli Rasamanjari by Devidasa, mid-18th c. Guler/Jasrota works
+      by Pandit Seu's family (Manaku and Nainsukh), and Kangra series under Sansar Chand (r. 1775-1823).
+claims:
+  - text: Early Basohli workshops under Raja Kirpal Pal produced saturated-yellow and red miniatures accented with
+      iridescent green beetle-wing cases, notably the 1694-1695 Rasamanjari and 1730 Gita Govinda.
+    grade: A
+    sources:
+      - src.archer-1973-pahari-painting
+      - src.glynn-goswamy-2003-pahari-eastern-grove
+  - text: From the mid-eighteenth century, Pandit Seu's sons Manaku and Nainsukh pioneered naturalistic space, delicate line
+      and atmospheric landscape that culminated in the Kangra Gita Govinda and Bhagavata Purana series.
+    grade: B
+    sources:
+      - src.glynn-goswamy-2003-pahari-eastern-grove
+      - src.goswamy-2011-nainsukh-of-guler
+relations:
+  - kind: related-to
+    target: tradition.rajput-painting
+  - kind: related-to
+    target: text.gita-govinda
+wikidata: Q3631050
+image:
+  commons: File:Radha imagines Krishna with other women, from Gita Govinda, attributed to Purkhu.jpg
+  alt: Kangra Pahari miniature painting from the Gita Govinda showing Krishna and Radha in a forest clearing
+  credit: Attributed to Purkhu of Kangra (c. 1780)
+  license: Public domain
+tags:
+  - pahari-painting
+  - basohli
+  - kangra
+  - guler
+  - nainsukh
+  - miniature
+review:
+  status: draft
+  author: gemini-4-hydrogen-xhigh

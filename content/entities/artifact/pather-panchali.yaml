@@ -1,0 +1,65 @@
+id: artifact.pather-panchali
+type: artifact
+kind: art
+names:
+  en: Pather Panchali
+  iast: Pathera Pāñcālī
+  native: পথের পাঁচালী
+summary: "Pather Panchali ('Song of the Little Road', 1955) is the landmark Bengali debut feature directed by Satyajit Ray from Bibhutibhushan Bandyopadhyay's 1929 novel. Shot largely on location in rural Boral with non-professional actors, Subrata Mitra's natural-light cinematography and Ravi Shankar's score, it won the Best Human Document award at Cannes in 1956 and is widely credited with launching Indian parallel cinema."
+summaries:
+  kids: Pather Panchali (1955) is Satyajit Ray's famous first film about a young village boy named Apu and his sister
+    Durga growing up in rural Bengal.
+  teen: Filmed on real locations in Bengal on a shoestring budget with music by Ravi Shankar, Satyajit Ray's 1955 debut
+    Pather Panchali won Best Human Document at Cannes and reshaped Indian realist cinema.
+region: Boral and Kolkata, West Bengal
+location:
+  name: Boral, South 24 Parganas, West Bengal
+  lat: 22.444
+  lon: 88.362
+datings:
+  - method: documentary
+    range:
+      earliest: 1955
+      latest: 1956
+      precision: year
+      circa: false
+    grade: A
+    label: Theatrical release in Calcutta (1955) and Cannes award (1956)
+    sources:
+      - src.robinson-1989-satyajit-ray
+      - src.rajadhyaksha-1999-encyclopaedia-indian-cinema
+      - src.cardullo-2019-pather-panchali
+    note: Financed in its final stages by the Government of West Bengal, the film premiered in Calcutta on 26 August 1955
+      and won Best Human Document at Cannes in 1956.
+claims:
+  - text: Adapted from Bibhutibhushan Bandyopadhyay's novel, the film features Subrata Mitra's pioneering bounce-lighting
+      cinematography, Bansi Chandragupta's art direction and music composed by sitar virtuoso Ravi Shankar.
+    grade: A
+    sources:
+      - src.robinson-1989-satyajit-ray
+      - src.cooper-2000-cinema-satyajit-ray
+  - text: Pather Panchali won the President's Gold Medal for Best Feature Film in India and the Prix du Document Humain
+      (Best Human Document) at the 1956 Cannes Film Festival.
+    grade: A
+    sources:
+      - src.rajadhyaksha-1999-encyclopaedia-indian-cinema
+      - src.cardullo-2019-pather-panchali
+relations:
+  - kind: authored-by
+    target: person.satyajit-ray
+wikidata: Q622380
+image:
+  commons: File:Publicity still from Pather Panchali.jpg
+  alt: Publicity still from Satyajit Ray's 1955 film Pather Panchali showing Sarbajaya, Durga and young Apu
+  credit: Satyajit Ray / Government of West Bengal
+  license: Public domain
+tags:
+  - pather-panchali
+  - satyajit-ray
+  - cinema
+  - "1955"
+  - bengal
+  - apu-trilogy
+review:
+  status: draft
+  author: gemini-4-hydrogen-xhigh

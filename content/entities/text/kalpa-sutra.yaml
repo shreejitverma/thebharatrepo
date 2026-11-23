@@ -1,0 +1,82 @@
+id: text.kalpa-sutra
+type: text
+kind: text
+names:
+  en: Kalpa Sutra (Jain)
+  iast: Kalpasūtra
+  native: कल्पसूत्र
+summary: The Jain Kalpa Sutra recounts the lives of Jinas, gives a lineage of teachers and sets out
+  rules for the rains retreat. Shvetambara communities recite it during Paryushana. The date of the
+  composite text is uncertain.
+summaries:
+  kids: During the Jain festival of Paryushana, people listen to stories from this book about Mahavira
+    and other teachers.
+  teen: The Kalpa Sutra brings together sacred biographies, a succession of teachers and rules for
+    monastic life during the rainy season. Illustrated copies became an important medium for its
+    transmission.
+datings:
+  - method: textual-internal
+    range:
+      earliest: 350
+      latest: 550
+      precision: century
+      circa: true
+    grade: C
+    label: Late ancient compilation and redaction
+    sources:
+      - src.jacobi-1884-jaina-sutras-part-1
+      - src.wiles-2006-dating-jaina-councils
+      - src.dundas-2002-the-jains
+    note: The dating concerns the transmitted collection and allows for older constituents. Wiles
+      cautions that commentators disagreed over what the dates in its biographies referred to.
+  - method: traditional-sampradaya
+    range:
+      earliest: "400 BCE"
+      latest: "250 BCE"
+      precision: century
+      circa: true
+    grade: D
+    label: Shvetambara attribution to Bhadrabahu
+    sources:
+      - src.jacobi-1884-jaina-sutras-part-1
+      - src.dundas-2002-the-jains
+      - src.wiles-2006-dating-jaina-councils
+    note: The approximate date follows the traditional association of Bhadrabahu with the early Mauryan
+      period and concerns the attributed original.
+  - method: traditional-sampradaya
+    range: { earliest: 450, latest: 560, precision: century, circa: true }
+    grade: D
+    label: Shvetambara traditions linking the text to late ancient recitation or redaction
+    sources:
+      - id: src.jacobi-1884-jaina-sutras-part-1
+        locator: "Kalpa Sutra, Lives of the Jinas, section 148"
+      - src.wiles-2006-dating-jaina-councils
+    note: The transmitted biography gives 980 or 993 years after Mahavira’s death.
+      Commentators differ over which event this records, and the conversion to CE depends on the era used.
+claims:
+  - text: The text contains biographies of Jinas, a lineage of teachers and monastic rules.
+    grade: A
+    sources:
+      - src.jacobi-1884-jaina-sutras-part-1
+  - text: Recitation is a feature of Shvetambara Paryushana observance.
+    grade: B
+    sources:
+      - src.dundas-2002-the-jains
+relations:
+  - kind: part-of
+    target: text.jain-agamas
+  - kind: related-to
+    target: person.mahavira
+image:
+  commons: File:MET DP154789.jpg
+  alt: Illustrated Kalpa Sutra folio showing Mahavira preaching to monks and nuns
+  credit: Unknown artist; digital image by The Metropolitan Museum of Art
+  license: CC0 1.0
+tags:
+  - jainism
+  - shvetambara
+  - prakrit
+  - paryushana
+review:
+  status: draft
+  author: codex-gpt-6
