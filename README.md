@@ -119,6 +119,8 @@ docker run --rm -v "$PWD":/work -v /work/node_modules -v /work/.next -w /work -e
 
 From a git worktree, also mount the main repository's `.git` directory at its own path (`-v "$GIT_DIR":"$GIT_DIR":ro`), because the export reads the content commit date from git and a worktree's `.git` file points there.
 
+Tests that run axe match labelled landmarks by their attributes, not by a named `getByRole` query, because in Playwright's Firefox that query and an axe scan crash the page; [`docs/testing/firefox-axe-crash.md`](docs/testing/firefox-axe-crash.md) has the reproduction.
+
 ## Search
 
 Search is [Pagefind](https://pagefind.app), built inside `npm run build` itself, after content validation, the offline verification gate, the open data export and its round trip, and `next build`; none of these is a lifecycle script, so a package manager that ignores lifecycle scripts cannot skip them.

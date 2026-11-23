@@ -252,8 +252,8 @@ test.describe('search', () => {
 test.describe('references', () => {
   test('an article shows its evidence summary and numbered, deduplicated references', async ({ page }) => {
     await page.goto('/history/maurya-empire');
-    // The labelled aside is matched by its attributes, not getByRole('complementary'): in Playwright's Firefox a landmark
-    // role query that resolves an aria-labelledby name, followed by an axe scan, crashes the page (see phase2.spec.ts).
+    // The labelled aside is matched by its attributes, not getByRole('complementary'): in Playwright's Firefox a named
+    // role query that resolves an aria-labelledby name, before or after an axe scan, crashes the page (docs/testing/firefox-axe-crash.md).
     const summary = page.locator('aside.evidence-summary[aria-labelledby="evidence-summary-title"]');
     await expect(page.locator('#evidence-summary-title')).toHaveText('Evidence at a glance');
     await expect(summary).toBeVisible();

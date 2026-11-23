@@ -661,8 +661,9 @@ test.describe('Entity pages', () => {
       await expect(page.getByRole('heading', { name: 'Connections' })).toBeVisible();
       await expect(page.getByRole('heading', { name: 'Sources', exact: true })).toBeVisible();
       expect(await page.locator('.entity-sources li').count()).toBeGreaterThan(0);
-      // A labelled section is a region. Matched by its attributes, not with getByRole('region'): Playwright's Firefox
-      // crashes the page ("Page crashed") when axe runs after a region role query, on any page with labelled sections.
+      // A labelled section is a region. Matched by its attributes, not with getByRole('region', { name }): the query reads
+      // the names of the page's aria-labelledby sections too, and in Playwright's Firefox that and an axe scan crash the
+      // page ("Page crashed"). See docs/testing/firefox-axe-crash.md.
       const strip = page.locator('section.kc-strip[aria-label="Place in the Kaalchakra"]');
       await expect(strip).toBeVisible();
       for (const group of ['before', 'during', 'after']) await expect(strip.locator(`[data-neighbours="${group}"]`)).toBeVisible();

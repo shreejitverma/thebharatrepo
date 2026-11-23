@@ -139,8 +139,8 @@ test.describe('content pages', () => {
     await expect(flood).toBeVisible();
     await expect(flood).toContainText('The Blackwell Companion to Hinduism');
     // Two sources cited in the text and one cited only for a dating: all three are numbered references.
-    // The labelled aside is matched by its attributes, not getByRole('complementary'): in Playwright's Firefox a landmark
-    // role query that resolves an aria-labelledby name, followed by an axe scan, crashes the page (see phase2.spec.ts).
+    // The labelled aside is matched by its attributes, not getByRole('complementary'): in Playwright's Firefox a named
+    // role query that resolves an aria-labelledby name, before or after an axe scan, crashes the page (docs/testing/firefox-axe-crash.md).
     await expect(page.locator('aside.evidence-summary[aria-labelledby="evidence-summary-title"]').getByRole('link', { name: '3 references' })).toBeVisible();
     await expect(page.locator('#evidence-summary-title')).toHaveText('Evidence at a glance');
     await expect(page.locator('.references ol > li')).toHaveCount(3);
