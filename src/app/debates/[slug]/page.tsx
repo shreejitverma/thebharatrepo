@@ -11,7 +11,7 @@ import { debatePlacement, placementLabel, visibleDebates } from '@/lib/content/d
 import { formatDating, primaryDating } from '@/components/kaalchakra/shared';
 import { toKcItem } from '@/lib/content/kaalchakra';
 import { citationId, reviewStatusText, type CitationRef } from '@/lib/content/schema';
-import { formatRange } from '@/lib/time';
+import { formatRange, formatYear } from '@/lib/time';
 import { yearToUnit } from '@/lib/time/scale';
 
 export const dynamicParams = false;
@@ -60,6 +60,11 @@ export default async function DebatePage({ params }: { params: Promise<{ slug: s
   const hi = Math.max(...ranged.map((p) => p.range!.latest));
   const pad = Math.max(10, (hi - lo) * 0.06);
   const x = (year: number) => ((year - (lo - pad)) / (hi - lo + 2 * pad)) * 100;
+  // Each axis end is labelled in the units of the range it ends, so a "8.5 ka to 7 ka" bar is not read against BCE years.
+  const axisLabel = (year: number) => {
+    const r = ranged.map((p) => p.range!).find((r) => r.earliest === year || r.latest === year);
+    return formatYear(year, r && (r.precision === 'ka' || r.precision === 'Ma') ? r.precision : 'year');
+  };
   const related = d.relatedEntities.map((id) => toKcItem(g.entities.get(id)!));
   const articles = d.relatedArticles.map((ref) => g.articles.find((a) => `${a.category}/${a.slug}` === ref)!);
   const u = place ? yearToUnit(place.range.best ?? (place.range.earliest + place.range.latest) / 2) : 0;
@@ -90,7 +95,7 @@ export default async function DebatePage({ params }: { params: Promise<{ slug: s
             Positions at a glance
           </h2>
           <p className="muted" style={{ margin: '0 0 12px', fontSize: '0.85rem' }}>
-            Each bar spans the lifetime that the position implies, on one shared scale.
+            Each bar spans the dates that the position proposes, on one shared scale.
           </p>
           <ol>
             {ranged.map((p) => (
@@ -111,8 +116,8 @@ export default async function DebatePage({ params }: { params: Promise<{ slug: s
             ))}
           </ol>
           <div className="position-chart__axis" aria-hidden="true">
-            <span style={{ left: `${x(lo).toFixed(2)}%` }}>{formatRange({ earliest: lo, latest: lo, precision: 'year', circa: false })}</span>
-            <span style={{ left: `${x(hi).toFixed(2)}%` }}>{formatRange({ earliest: hi, latest: hi, precision: 'year', circa: false })}</span>
+            <span style={{ left: `${x(lo).toFixed(2)}%` }}>{axisLabel(lo)}</span>
+            <span style={{ left: `${x(hi).toFixed(2)}%` }}>{axisLabel(hi)}</span>
           </div>
         </section>
       ) : null}
