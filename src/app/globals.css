@@ -726,6 +726,11 @@ a:hover {
   text-wrap: pretty;
 }
 
+/* "How we check" stays on one line rather than splitting across the wrap. */
+.draft-notice a {
+  white-space: nowrap;
+}
+
 .review-note {
   font-size: 0.85rem;
   color: var(--ink-faint);
