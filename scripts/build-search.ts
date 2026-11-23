@@ -26,7 +26,7 @@ import { contentRoots, loadContentUncached } from '../src/lib/content/load';
 import { debateHref, debateSearchHrefs, debatesPreview } from '../src/lib/content/debates';
 import { entityHref, sourceHref } from '../src/lib/content/kaalchakra';
 import { learningSearchHrefs } from '../src/lib/content/learning';
-import { EXACT_FILTER, exactHash, exactKeys } from '../src/lib/search/normalise';
+import { EXACT_FILTER, exactFilterValues, exactHash, exactKeys } from '../src/lib/search/normalise';
 
 const ROOT = process.cwd();
 const APP_DIR = path.join(ROOT, '.next', 'server', 'app');
@@ -112,7 +112,7 @@ async function main() {
     else {
       const names = pageNames.get(url) ?? [];
       const keys = exactKeys([res.file.meta.title, ...names]);
-      const want = [...new Set(keys.map(exactHash))].sort().join(' ');
+      const want = [...new Set(exactFilterValues(res.file.meta.title, names))].sort().join(' ');
       const got = [...new Set([...content.matchAll(EXACT_VALUE)].map((m) => m[1]))].sort().join(' ');
       if (got !== want) problems.push(`${url}: exact-name filter [${got}] does not match its title and names [${want}]`);
       for (const k of keys) {

@@ -19,7 +19,7 @@ import {
   type Facet,
   type SearchState,
 } from '@/lib/search/facets';
-import { EXACT_FILTER, exactHash, exactKey } from '@/lib/search/normalise';
+import { EXACT_FILTER, aliasValue, exactHash, exactKey } from '@/lib/search/normalise';
 import {
   excerptWithEllipses,
   facetCounts,
@@ -126,7 +126,7 @@ export default function Search() {
       // in memory, and all of them (and their result fragments) are issued together.
       await Promise.all([filtersReady, term ? pagefind.preload(term) : null]);
       const selected = FACETS.filter((f) => state.filters[f].length);
-      const [probe, res, lookup, ...others] = await Promise.all([
+      const [probe, res, lookup, titled, ...others] = await Promise.all([
         // Pagefind's fallback for an unknown term is decided per term, so probe it once without filters:
         // if the top hit is only a short-prefix fallback, the honest answer is 0 results, with no counts.
         term ? pagefind.search(term) : null,
@@ -135,8 +135,9 @@ export default function Search() {
           // With no query there is no relevance to rank by, so browse alphabetically.
           sort: state.q ? undefined : { title: 'asc' },
         }),
-        // The records whose title or alternate name is exactly the query, within the selected filters. A
-        // filter-only lookup in the loaded filter index: no index chunk to fetch.
+        // The records whose title or alternate name is exactly the query, within the selected filters, and of
+        // those the ones whose title it is. Filter-only lookups in the loaded filter index: no index chunk to fetch.
+        exact ? pagefind.search(null, { filters: { ...toPagefindFilters(state.filters), [EXACT_FILTER]: { any: [exact, aliasValue(exact)] } } }) : null,
         exact ? pagefind.search(null, { filters: { ...toPagefindFilters(state.filters), [EXACT_FILTER]: exact } }) : null,
         // A facet with a selection is counted as if its own selection were cleared, so its other options
         // show how many results they would add instead of a misleading 0.
@@ -144,7 +145,7 @@ export default function Search() {
       ]);
       const pinnedHits = lookup?.results ?? [];
       // Exact hits go first, so their fragments load with the first batch and the first paint is in final order.
-      const ranked = pinExact(res.results, pinnedHits);
+      const ranked = pinExact(res.results, pinnedHits, titled?.results ?? []);
       const firstData = ranked.slice(0, FIRST_BATCH).map((r) => r.data());
       // Without filters the probe's top hit is usually among the first batch: reuse its fragment.
       const probeTop = probe?.results[0];

@@ -182,6 +182,14 @@ test.describe('search', () => {
     }
   });
 
+  test('a record titled with the query comes before one that has it only as an alternate name', async ({ page }) => {
+    // person.mahavira is titled Mahavira; person.mahavira-mathematician has the IAST name Mahāvīra.
+    await page.goto('/search?q=mahavira');
+    await expect(status(page)).toHaveText(/results? for “mahavira”/);
+    await expect(results(page).nth(0).locator('a[data-result]')).toHaveAttribute('href', '/archive/person/mahavira');
+    await expect(results(page).nth(1).locator('a[data-result]')).toHaveAttribute('href', '/archive/person/mahavira-mathematician');
+  });
+
   test('the exact-name lookup is not a facet and leaves the facet counts alone', async ({ page }) => {
     await page.goto('/search?q=ashoka');
     await expect(results(page).first().locator('a[data-result]')).toHaveText('Ashoka');

@@ -3,7 +3,7 @@ import { FACET_OPTIONS, activeFilterCount, parseSearchParams, toPagefindFilters,
 import { createElement } from 'react';
 import { renderToStaticMarkup } from 'react-dom/server';
 import SearchIndexMeta from '@/components/SearchIndexMeta';
-import { EXACT_FILTER, exactFilterValues, exactHash, exactKey, exactKeys, normaliseWord } from './normalise';
+import { ALIAS_MARK, EXACT_FILTER, aliasValue, exactFilterValues, exactHash, exactKey, exactKeys, normaliseWord } from './normalise';
 import { exactHits, excerptParts, excerptWithEllipses, facetCounts, isGenuineMatch, matchedWords, pinExact } from './pagefind';
 
 describe('search URL state', () => {
@@ -162,17 +162,25 @@ describe('the exact filter written at index time', () => {
     expect(exactHash('ashoka')).toMatch(/^[0-9a-z]{1,7}$/);
   });
 
-  it('carries the hashed title and alternate names, which the query hash matches', () => {
+  it('carries the hashed title and the marked hashed alternate names, which the query hash matches', () => {
     const html = renderToStaticMarkup(createElement(SearchIndexMeta, { title: 'Ashoka', names: ['Aśoka'], kind: 'person', filters: { kind: ['person'] } }));
-    expect(valuesIn(html)).toEqual([exactHash('ashoka'), exactHash('asoka')]);
-    for (const q of ['asoka', 'aśoka', 'Ashoka', ' ASHOKA. ']) expect(valuesIn(html)).toContain(exactHash(exactKey(q)));
+    expect(valuesIn(html)).toEqual([exactHash('ashoka'), aliasValue(exactHash('asoka'))]);
+    for (const q of ['Ashoka', ' ASHOKA. ']) expect(valuesIn(html)).toContain(exactHash(exactKey(q)));
+    for (const q of ['asoka', 'aśoka']) expect(valuesIn(html)).toContain(aliasValue(exactHash(exactKey(q))));
     expect(valuesIn(html)).not.toContain(exactHash(exactKey('ashoka edicts')));
+  });
+
+  it('marks alternate names so they never collide with a title hash', () => {
+    expect(ALIAS_MARK).not.toMatch(/[0-9a-z]/);
+    expect(aliasValue('abc')).toBe(`${ALIAS_MARK}abc`);
+    expect(exactFilterValues('Mahavira (mathematician)', ['Mahāvīra'])).toEqual([exactHash('mahavira mathematician'), aliasValue(exactHash('mahavira'))]);
   });
 
   it('writes one value when the alternate name folds to the title, and none for an empty name', () => {
     const html = renderToStaticMarkup(createElement(SearchIndexMeta, { title: 'Gautama Buddha', names: [undefined, 'Gautama  Buddha'], kind: 'person', filters: {} }));
     expect(valuesIn(html)).toEqual([exactHash('gautama buddha')]);
-    expect(exactFilterValues(['', ' . '])).toEqual([]);
+    expect(exactFilterValues(' . ', [''])).toEqual([]);
+    expect(exactFilterValues(' . ', ['Ashoka'])).toEqual([aliasValue(exactHash('ashoka'))]);
   });
 
   it('gives a debate titled "The ..." the key a reader types without "the"', () => {
@@ -236,6 +244,24 @@ describe('exact-name pinning', () => {
   it('counts an exact hit listed twice once', () => {
     const exact = [r('b', 'exact'), r('b', 'exact')];
     expect(ids(exactHits(pinExact([r('a'), r('b')], exact), exact))).toEqual(['b']);
+  });
+
+  it('puts hits titled with the query before hits that have it only as an alternate name', () => {
+    // "mahavira": the Jain teacher is titled Mahavira; the mathematician's IAST name is Mahāvīra, and he ranks higher.
+    const ranked = [r('src.mahavira-ganita'), r('person.mahavira-mathematician'), r('person.mahavira')];
+    const exact = [r('person.mahavira-mathematician', 'exact'), r('person.mahavira', 'exact')];
+    const titled = [r('person.mahavira', 'exact')];
+    expect(ids(pinExact(ranked, exact, titled))).toEqual(['person.mahavira', 'person.mahavira-mathematician', 'src.mahavira-ganita']);
+    // Without the title lookup every hit counts as one group, ordered by rank.
+    expect(ids(pinExact(ranked, exact))).toEqual(['person.mahavira-mathematician', 'person.mahavira', 'src.mahavira-ganita']);
+  });
+
+  it('orders titled hits the ranked results lack before ranked alternate-name hits', () => {
+    const ranked = [r('alias-a'), r('other')];
+    const exact = [r('alias-a', 'exact'), r('titled-x', 'exact')];
+    const out = pinExact(ranked, exact, [r('titled-x', 'exact')]);
+    expect(ids(out)).toEqual(['titled-x', 'alias-a', 'other']);
+    expect(ids(exactHits(out, exact))).toEqual(['titled-x', 'alias-a']);
   });
 
   it('changes nothing without an exact hit', () => {

@@ -86,19 +86,22 @@ export function facetCounts(counts: FilterCounts): FilterCounts {
 }
 
 /**
- * Puts the exact-name hits first, then the ranked results without them. Exact hits keep the order the ranked
- * results give them, as the ranked result objects; one the ranked results lack (a name matched only through an
- * alternate spelling) follows those, in the order the lookup returned it. A reader who types a name expects that record first, even when
- * shorter pages that mention the name in their own titles score higher.
+ * Puts the exact-name hits first, then the ranked results without them. Hits whose title is the query (`titled`, a
+ * subset of `exact`) come before hits that have it only as an alternate name, so "mahavira" pins the Jain teacher
+ * titled Mahavira before the mathematician whose IAST name is Mahāvīra. Within each group, hits keep the order the
+ * ranked results give them, as the ranked result objects; one the ranked results lack (a name matched only through
+ * an alternate spelling) follows those, in the order the lookup returned it. A reader who types a name expects
+ * that record first, even when shorter pages that mention the name in their own titles score higher.
  */
-export function pinExact<T extends { id: string }>(ranked: T[], exact: T[]): T[] {
+export function pinExact<T extends { id: string }>(ranked: T[], exact: T[], titled: T[] = []): T[] {
   if (!exact.length) return ranked;
   const rank = new Map(ranked.map((r, i) => [r.id, i]));
   const ids = [...new Set(exact.map((r) => r.id))];
   const lookup = new Map(exact.map((r) => [r.id, r]));
+  const isTitled = new Set(titled.map((r) => r.id));
   const pinned = ids
-    .map((id, i) => ({ id, at: rank.get(id) ?? ranked.length + i }))
-    .sort((a, b) => a.at - b.at)
+    .map((id, i) => ({ id, group: isTitled.has(id) ? 0 : 1, at: rank.get(id) ?? ranked.length + i }))
+    .sort((a, b) => a.group - b.group || a.at - b.at)
     // The ranked result, where there is one, carries the query's matched words for excerpts and the
     // genuine-match check; a filter-only lookup result has none.
     .map(({ id, at }) => (at < ranked.length ? ranked[at] : lookup.get(id)!));
