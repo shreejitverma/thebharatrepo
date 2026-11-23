@@ -40,21 +40,6 @@ datings:
     note: >-
       Internal text explicitly dates Pillar Edicts I-VI to the 26th year after Ashoka's consecration and
       Pillar Edict VII to his 27th year.
-  - method: epigraphic
-    range:
-      earliest: 1164
-      latest: 1164
-      best: 1164
-      precision: year
-      circa: false
-    grade: A
-    label: Vikrama Samvat 1220 inscriptions of Chahamana Vigraharaja IV (Visaladeva)
-    sources:
-      - src.hultzsch-1925-inscriptions-of-asoka
-      - src.falk-2006-asokan-sites-and-artefacts
-    note: >-
-      Three Nagari-script Sanskrit inscriptions carved onto the same column explicitly carry the date Vaisakha
-      sudi 15, Vikrama Samvat 1220 (9 April 1164 CE).
 claims:
   - text: >-
       Measured at roughly 13 m above its Firozabad masonry base, the Delhi-Topra shaft bears Ashoka's Major

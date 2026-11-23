@@ -24,18 +24,6 @@ datings:
       - src.berndt-2019-living-with-ramanujan
       - src.andrews-2005-ramanujan-lost-notebook
     note: The dating rests on the content and its links to his late correspondence.
-  - method: documentary
-    range:
-      earliest: 1976
-      latest: 1976
-      precision: year
-      circa: false
-    grade: A
-    label: Identification at Trinity College
-    sources:
-      - src.berndt-2019-living-with-ramanujan
-      - src.andrews-2005-ramanujan-lost-notebook
-    note: George Andrews identified the sheets while examining Watson’s papers.
 claims:
   - text: The papers are a set of loose sheets with results that include mock theta functions.
     grade: A
@@ -46,6 +34,11 @@ claims:
     grade: A
     sources:
       - src.berndt-2019-living-with-ramanujan
+  - text: George Andrews identified the sheets at Trinity College in 1976 while examining Watson’s papers.
+    grade: A
+    sources:
+      - src.berndt-2019-living-with-ramanujan
+      - src.andrews-2005-ramanujan-lost-notebook
 relations:
   - kind: authored-by
     target: person.srinivasa-ramanujan

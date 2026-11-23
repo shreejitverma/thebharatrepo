@@ -107,6 +107,14 @@ export function pinExact<T extends { id: string }>(ranked: T[], exact: T[]): T[]
 }
 
 /**
+ * The exact hits alone, in the order pinExact put them at the front of `pinned` (its result), so the results kept
+ * when the query term itself matched nothing are in the same order as the fragments already loaded from `pinned`.
+ */
+export function exactHits<T extends { id: string }>(pinned: T[], exact: T[]): T[] {
+  return pinned.slice(0, new Set(exact.map((r) => r.id)).size);
+}
+
+/**
  * Splits a Pagefind excerpt into plain text and highlighted parts. Pagefind escapes indexed text and adds
  * only <mark> tags, so after splitting on those tags every part is decoded as text and rendered by React,
  * never injected as HTML.

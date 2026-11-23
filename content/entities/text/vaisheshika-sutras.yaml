@@ -28,13 +28,6 @@ datings:
         locator: "Timeline: Indian Philosophy in a Hundred Thinkers"
     note: A broad interval allows for the development of a layered work. The surviving Candrananda
       version reflects a later stage of transmission.
-  - method: textual-internal
-    range: { earliest: 600, latest: 700, precision: century, circa: true }
-    grade: C
-    label: "Ionut Moise and Ganesh U. Thite: seventh-century commentary"
-    sources: [src.moise-2022-vaisesikasutra]
-    note: The translators place Candrananda’s commentary in the seventh century CE.
-      It preserves one early version of the sutras.
 claims:
   - text: The sutras enumerate categories including substance, quality, action, generality,
       particularity and inherence.
@@ -45,6 +38,9 @@ claims:
     grade: D
     sources:
       - src.moise-2022-vaisesikasutra
+  - text: Ionut Moise and Ganesh U. Thite place Candrananda’s commentary, which preserves one early version of the sutras, in the seventh century CE.
+    grade: C
+    sources: [src.moise-2022-vaisesikasutra]
 relations: []
 tags:
   - vaisheshika

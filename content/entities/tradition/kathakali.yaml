@@ -33,18 +33,6 @@ datings:
       - src.zarrilli-2000-kathakali-dance-drama
     note: Phillip Zarrilli traces Kathakali's crystallisation from seventeenth-century Krishnanattam and Ramanattam through
       the major attakkatha playwrights of the seventeenth and eighteenth centuries.
-  - method: documentary
-    range:
-      earliest: 1930
-      latest: 1930
-      precision: year
-      circa: false
-    grade: A
-    label: Founding of Kerala Kalamandalam by Vallathol Narayana Menon
-    sources:
-      - src.zarrilli-2000-kathakali-dance-drama
-      - src.madhavan-2025-slowness-kathakali
-    note: Kerala Kalamandalam was founded in 1930 to institutionalise Kathakali training and stage presentation.
 claims:
   - text: Kathakali draws martial body training (kalarippayattu) and Sanskrit gesture conventions from Koodiyattam into a
       silent actor's theatre accompanied by chenda, maddalam and vocalists.
@@ -54,6 +42,12 @@ claims:
       - src.zarrilli-1998-when-the-body-becomes-all-eyes
   - text: Its makeup (vesham) classifies characters visually using colour codes such as pacha (green) for noble heroes and
       kathi (knife) for anti-heroes.
+    grade: A
+    sources:
+      - src.zarrilli-2000-kathakali-dance-drama
+      - src.madhavan-2025-slowness-kathakali
+  - text: Vallathol Narayana Menon founded Kerala Kalamandalam in 1930 to institutionalise Kathakali training and stage
+      presentation.
     grade: A
     sources:
       - src.zarrilli-2000-kathakali-dance-drama

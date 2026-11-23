@@ -37,16 +37,6 @@ datings:
         locator: Part V
     note: The interval takes Mandore's consolidation as its opening and includes the princely state
       until integration into Rajasthan.
-  - method: documentary
-    range:
-      earliest: "1949"
-      latest: "1949"
-      precision: year
-      circa: false
-    grade: A
-    label: Integration into Rajasthan
-    sources:
-      - *a1
 claims:
   - text: Rao Jodha established the new Rathor seat at Jodhpur in 1459.
     grade: B

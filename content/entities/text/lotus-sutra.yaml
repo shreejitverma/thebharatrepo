@@ -28,17 +28,6 @@ datings:
       - src.williams-2009-mahayana-buddhism
     note: The range concerns the growth of the Indian text before its surviving third-century Chinese
       translation. Individual chapters need separate dating.
-  - method: documentary
-    range:
-      earliest: 286
-      latest: 286
-      precision: year
-      circa: false
-    grade: B
-    label: Dharmaraksha’s Chinese translation
-    sources:
-      - src.lopez-2016-lotus-sutra
-    note: The translation supplies a dated witness for the form known to Dharmaraksha.
 claims:
   - text: The parable of the burning house illustrates how the Buddha adapts his teaching to his
       listeners.
@@ -47,6 +36,11 @@ claims:
       - src.lopez-2016-lotus-sutra
       - src.williams-2009-mahayana-buddhism
   - text: Kumarajiva’s 406 CE translation became particularly influential in East Asia.
+    grade: B
+    sources:
+      - src.lopez-2016-lotus-sutra
+  - text: Dharmaraksha’s Chinese translation of 286 CE is a dated witness for the form of the text
+      known to him.
     grade: B
     sources:
       - src.lopez-2016-lotus-sutra

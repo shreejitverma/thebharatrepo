@@ -30,14 +30,6 @@ datings:
       - src.sen-1992-history-of-bengali-literature
       - src.bose-2004-ramayana-revisited
     note: Based on autobiographical verses mentioning an unnamed Sultan of Gauda (variously identified with Raja Ganesha, Jalaluddin or Ruknuddin Barbak Shah), scholars date Krittibas's composition to the early-to-mid 15th century; no contemporary manuscript survives.
-  - method: documentary
-    range: { earliest: 1802, latest: 1834, precision: year, circa: false }
-    grade: A
-    label: Early Serampore printed editions and Jaygopal Tarkalankar recension
-    sources:
-      - src.sen-1992-history-of-bengali-literature
-      - src.bose-2004-ramayana-revisited
-    note: The earliest printed edition appeared at Serampore in 1802-1803, followed by Jaygopal Tarkalankar's heavily edited 1834 recension that shaped modern reception.
 claims:
   - text: The Krittivasi Ramayana adapts Valmiki's plot to medieval Bengali devotional tastes, notably incorporating Rama's untimely autumn worship of Devi (Akalbodhan) prior to slaying Ravana.
     grade: B
@@ -49,6 +41,11 @@ claims:
     sources:
       - src.bose-2004-ramayana-revisited
       - src.richman-1991-many-ramayanas
+  - text: The earliest printed edition appeared at Serampore in 1802-1803, and Jaygopal Tarkalankar's heavily edited 1834 recension shaped the text's modern reception.
+    grade: A
+    sources:
+      - src.sen-1992-history-of-bengali-literature
+      - src.bose-2004-ramayana-revisited
 debate: >-
   Scholars debate both which Gauda ruler honoured Krittibas Ojha in his autobiographical verses (with
   proposals spanning Raja Ganesha, Jalaluddin Muhammad Shah and Ruknuddin Barbak Shah) and how much

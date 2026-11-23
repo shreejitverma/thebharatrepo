@@ -24,14 +24,6 @@ datings:
       - src.mahadevan-2003-early-tamil-epigraphy
       - src.karashima-2014-concise-history-south-india
     note: Ashoka's Major Rock Edict II (mid-3rd century BCE) names Ketalaputo among southern neighbours, while the Pugalur (Aranattarmalai) Tamil-Brahmi inscriptions naming Chera rulers of the Irumporai line are dated palaeographically to roughly the 2nd to 3rd century CE.
-  - method: textual-internal
-    range: { earliest: "100 BCE", latest: "300 CE", precision: century, circa: true }
-    grade: C
-    label: Sangam poetic corpus (Patirruppattu and Akananuru)
-    sources:
-      - src.zvelebil-1973-smile-of-murugan
-      - src.gurukkal-2010-social-formations-early-south-india
-    note: Sangam poems preserve genealogies and battles of Early Chera rulers such as Utiyan Cheralatan, Imayavaramban Netuncheralatan, and Senguttuvan.
 claims:
   - text: Ashoka's Major Rock Edict II (c. 256 BCE) lists Ketalaputo alongside Choda, Pada, and Satiyaputo as independent realms beyond the Mauryan southern frontier.
     grade: A
@@ -48,6 +40,11 @@ claims:
     sources:
       - src.casson-1989-periplus-maris-erythraei
       - src.champakalakshmi-1996-trade-ideology-urbanization
+  - text: Sangam poems, notably the Patirruppattu and Akananuru, preserve genealogies and battles of Early Chera rulers such as Utiyan Cheralatan, Imayavaramban Netuncheralatan and Senguttuvan; the corpus is generally placed between about 100 BCE and 300 CE.
+    grade: C
+    sources:
+      - src.zvelebil-1973-smile-of-murugan
+      - src.gurukkal-2010-social-formations-early-south-india
 relations:
   - { kind: related-to, target: text.sangam-literature }
   - { kind: related-to, target: artifact.tamil-brahmi-inscriptions }

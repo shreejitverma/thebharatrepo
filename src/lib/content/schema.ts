@@ -9,7 +9,8 @@
  */
 
 import { z } from 'zod';
-import { PRESENT_YEAR } from '../time';
+import { PRESENT_YEAR, formatRange } from '../time';
+import { rankDatings } from './lens';
 
 import {
   PRECISIONS,
@@ -169,6 +170,30 @@ export const ImageSchema = z.strictObject({
   license: z.string().min(2),
 });
 
+/** Methods that date one recorded event, such as a founding, a transfer, a recognition or a later inscription. */
+const EVENT_METHODS: readonly string[] = ['documentary', 'epigraphic'];
+/** How many times longer than the leading dating a dating must be for the leading one to read as a single event beside it. */
+const EVENT_SPAN_RATIO = 5;
+
+/**
+ * The scholarship dating that ranks first stands for the entity everywhere (see rankDatings). When it is a dated event
+ * that outranks, by grade, a much longer dating of the entity and lies wholly before or after it, it is one event in the
+ * entity's history, not the entity's span, and the item would be labelled and sorted by it. Returns that longer dating.
+ */
+function eventOutrankingSpan(datings: readonly Dating[]): { event: Dating; span: Dating } | null {
+  const scholarly = datings.filter((d) => !isTraditional(d.method));
+  const [event] = rankDatings(scholarly, () => false);
+  if (!event || !EVENT_METHODS.includes(event.method)) return null;
+  const years = (d: Dating) => d.range.latest - d.range.earliest + 1;
+  const span = scholarly.find(
+    (d) =>
+      GRADES.indexOf(d.grade) > GRADES.indexOf(event.grade) &&
+      years(d) >= EVENT_SPAN_RATIO * years(event) &&
+      (event.range.earliest > d.range.latest || event.range.latest < d.range.earliest),
+  );
+  return span ? { event, span } : null;
+}
+
 /** Wording that marks a dating as the date of a text, or of a text's statement or attestation, rather than of the entity. */
 const TEXT_DATE = /\b(?:date of the texts?|dates? the texts?|earliest (?:known )?(?:statement|mention|attestation|reference)|first (?:attested|stated|mentioned) in)\b/i;
 
@@ -226,6 +251,15 @@ export const EntitySchema = z
         ctx.addIssue({ code: 'custom', path: ['datings', i], message: `this ${d.method} dating dates a text, not ${e.id}; record the attestation as a claim or on the text entity` });
       }
     });
+    const outranking = eventOutrankingSpan(e.datings);
+    if (outranking) {
+      const { event, span } = outranking;
+      ctx.addIssue({
+        code: 'custom',
+        path: ['datings', e.datings.indexOf(event)],
+        message: `the grade ${event.grade} ${event.method} dating ${formatRange(event.range)} would stand for ${e.id}, but it lies outside the grade ${span.grade} dating ${formatRange(span.range)}, which is at least ${EVENT_SPAN_RATIO} times longer; record that event as a claim and keep the span as the dating`,
+      });
+    }
     if (e.aliases.includes(e.id)) ctx.addIssue({ code: 'custom', path: ['aliases'], message: `alias ${e.id} is the entity's own id` });
     const seen = new Set<string>();
     for (const a of e.aliases) {

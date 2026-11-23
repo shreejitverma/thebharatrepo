@@ -43,18 +43,6 @@ datings:
       - id: src.karashima-2014-concise-history-south-india
         locator: Section 3.3, note 15
     note: Karashima cites Subramanian for a date around the late fifteenth century in a study of irrigation history.
-  - method: documentary
-    range:
-      earliest: 1804
-      latest: 1836
-      precision: year
-      circa: false
-    grade: A
-    label: Documented surveys and engineering works
-    sources:
-      - src.ramesh-2021-indian-rivers-dams
-      - src.icid-2021-grand-anicut
-    note: A survey in 1804 and irrigation initiatives beginning in 1836 document work on the Kaveri system.
 claims:
   - text: Chitra Krishnan reconstructed how the precolonial weir diverted high flows into the Kollidam through a
       short connecting channel.
@@ -73,6 +61,12 @@ claims:
     sources:
       - id: src.karashima-2014-concise-history-south-india
         locator: p. 52, note 7
+  - text: A survey in 1804 and irrigation initiatives beginning in 1836 document colonial engineering work on the
+      Kaveri system at the Grand Anicut.
+    grade: A
+    sources:
+      - src.ramesh-2021-indian-rivers-dams
+      - src.icid-2021-grand-anicut
 relations:
   - kind: related-to
     target: concept.south-indian-tank-irrigation

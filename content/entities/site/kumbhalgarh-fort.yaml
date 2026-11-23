@@ -34,22 +34,13 @@ datings:
     label: "Temple inscription"
     sources:
       - "src.vyas-1937-kumbhalgarh-inscription"
-  - method: "documentary"
-    range:
-      earliest: 2013
-      latest: 2013
-      precision: "year"
-      circa: false
-    grade: "A"
-    label: "World Heritage inscription as a component of the Hill Forts of Rajasthan"
-    sources:
-      - "src.unesco-2013-hill-forts-rajasthan"
 claims:
   - text: "The Kumbhalgarh temple inscription names Maharana Kumbhakarna, known as Kumbha."
     grade: "A"
     sources:
       - "src.vyas-1937-kumbhalgarh-inscription"
-  - text: "Kumbhalgarh is part of the serial Hill Forts of Rajasthan World Heritage property."
+  - text: "Kumbhalgarh is part of the serial Hill Forts of Rajasthan World Heritage property,
+      inscribed in 2013."
     grade: "A"
     sources:
       - "src.unesco-2013-hill-forts-rajasthan"

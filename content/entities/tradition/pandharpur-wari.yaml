@@ -27,19 +27,8 @@ datings:
         locator: "p. 152"
     note: "Eaton places the pilgrimage tradition in the thirteenth century. Its processions took more
       organised forms in later centuries."
-  - method: "documentary"
-    range:
-      earliest: 1962
-      latest: 1962
-      precision: "year"
-      circa: false
-    grade: "A"
-    label: "Contemporary ethnographic record by Irawati Karve"
-    sources:
-      - "src.karve-1962-maharashtrian-pilgrimage"
-    note: "This dates a documented account of the practice. The pilgrimage is older."
 claims:
-  - text: "Karve's account records the pilgrimage on foot and the worship of Vithoba at Pandharpur."
+  - text: "Karve's 1962 ethnography records the pilgrimage on foot and the worship of Vithoba at Pandharpur."
     grade: "A"
     sources:
       - "src.karve-1962-maharashtrian-pilgrimage"

@@ -30,22 +30,9 @@ datings:
         locator: AN 8.42
     note: This is the early historic horizon of the Buddhist list and linguistic evidence. Exact
       boundaries and the duration of the polity remain uncertain.
-  - method: epigraphic
-    range:
-      earliest: 270 BCE
-      latest: 230 BCE
-      precision: decade
-      circa: true
-    grade: A
-    label: Kambojas in Ashoka's Major Rock Edicts V and XIII
-    sources:
-      - src.schmitt-2021-kamboja
-      - src.hultzsch-1925-inscriptions-of-asoka
-    note: The edicts attest the people in the Mauryan horizon. Their date does not measure the life of
-      an independent kingdom.
 claims:
-  - text: Major Rock Edicts V and XIII name the Kambojas among the frontier peoples addressed in
-      Ashoka's proclamations.
+  - text: Major Rock Edicts V and XIII (c. 270-230 BCE) name the Kambojas among the frontier peoples
+      addressed in Ashoka's proclamations.
     grade: A
     sources:
       - src.schmitt-2021-kamboja

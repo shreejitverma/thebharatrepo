@@ -34,19 +34,6 @@ datings:
       - src.subramanian-2006-tanjore-court-madras-music-academy
     note: The Thanjavur Quartet brothers (Chinnayya, Ponnayya, Sivanandam and Vadivelu) are credited with structuring the
       sadir repertoire at the Maratha court of Thanjavur.
-  - method: documentary
-    range:
-      earliest: 1930
-      latest: 1947
-      precision: decade
-      circa: true
-    grade: A
-    label: 1930s naming and institutionalisation as Bharatanatyam
-    sources:
-      - src.allen-1997-rewriting-script-south-indian-dance
-      - src.soneji-2012-unfinished-gestures
-    note: In the 1930s E. Krishna Iyer, the Music Academy in Madras and Rukmini Devi Arundale (who founded Kalakshetra in
-      1936) renamed sadir as Bharatanatyam; the Madras Devadasis Act of 1947 abolished temple dedication.
 claims:
   - text: Before the 1930s, the dance repertoire was known as sadir, dasiattam or chinna melam and was sustained by
       hereditary women performers (devadasis) and male nattuvanar teachers.
@@ -57,6 +44,12 @@ claims:
   - text: Historians Matthew Harp Allen and Davesh Soneji show that the 1930s revival reframed sadir around Sanskrit textual
       authority while displacing many hereditary performers.
     grade: B
+    sources:
+      - src.allen-1997-rewriting-script-south-indian-dance
+      - src.soneji-2012-unfinished-gestures
+  - text: In the 1930s E. Krishna Iyer, the Music Academy in Madras and Rukmini Devi Arundale, who founded Kalakshetra in
+      1936, renamed sadir as Bharatanatyam; the Madras Devadasis Act of 1947 abolished temple dedication.
+    grade: A
     sources:
       - src.allen-1997-rewriting-script-south-indian-dance
       - src.soneji-2012-unfinished-gestures

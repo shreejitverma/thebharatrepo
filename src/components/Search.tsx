@@ -26,6 +26,7 @@ import {
   isGenuineMatch,
   loadPagefind,
   matchedWords,
+  exactHits,
   pinExact,
   type FilterCounts,
   type PagefindHandle,
@@ -156,7 +157,7 @@ export default function Search() {
       let counts: FilterCounts;
       if (term && top && !isGenuineMatch(term, matchedWords(top))) {
         // The term itself matched nothing. A record named by it is still an honest answer; the fallback is not.
-        results = pinnedHits;
+        results = exactHits(ranked, pinnedHits);
         items = first.slice(0, Math.min(pinnedHits.length, FIRST_BATCH));
         counts = lookup && pinnedHits.length ? facetCounts(lookup.filters) : {};
       } else {

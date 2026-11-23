@@ -4,7 +4,7 @@ import { createElement } from 'react';
 import { renderToStaticMarkup } from 'react-dom/server';
 import SearchIndexMeta from '@/components/SearchIndexMeta';
 import { EXACT_FILTER, exactFilterValues, exactHash, exactKey, exactKeys, normaliseWord } from './normalise';
-import { excerptParts, excerptWithEllipses, facetCounts, isGenuineMatch, matchedWords, pinExact } from './pagefind';
+import { exactHits, excerptParts, excerptWithEllipses, facetCounts, isGenuineMatch, matchedWords, pinExact } from './pagefind';
 
 describe('search URL state', () => {
   it('keeps the legacy ?q= contract', () => {
@@ -196,6 +196,30 @@ describe('exact-name pinning', () => {
     const out = pinExact(ranked, [r('person.ashoka', 'exact'), r('person.ashoka', 'exact')]);
     expect(ids(out)).toEqual(['person.ashoka', 'src.asoka-and-the-decline', 'src.asoka-edicts']);
     expect(out[0].from).toBe('exact');
+  });
+
+  it('keeps only the exact hits in the pinned order, not the lookup order', () => {
+    // The term matched nothing: the lookup returns its hits in index order, while pinExact orders them by the
+    // fallback rank, and the first fragments rendered come from the pinned list.
+    const ranked = [r('a'), r('b'), r('c'), r('d')];
+    const exact = [r('x', 'exact'), r('d', 'exact'), r('b', 'exact'), r('y', 'exact')];
+    expect(ids(exactHits(pinExact(ranked, exact), exact))).toEqual(['b', 'd', 'x', 'y']);
+    expect(exactHits(pinExact(ranked, []), [])).toEqual([]);
+  });
+
+  it('pages through more exact hits than the first batch without repeating or skipping one', () => {
+    const exact = ['h', 'g', 'f', 'e', 'd', 'c', 'b', 'a'].map((id) => r(id, 'exact'));
+    const pinned = pinExact(['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'z'].map((id) => r(id)), exact);
+    const results = exactHits(pinned, exact);
+    const firstBatch = pinned.slice(0, 6);
+    // "Show more" continues from the number of results already shown.
+    const shown = [...firstBatch, ...results.slice(firstBatch.length)];
+    expect(ids(shown)).toEqual(['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h']);
+  });
+
+  it('counts an exact hit listed twice once', () => {
+    const exact = [r('b', 'exact'), r('b', 'exact')];
+    expect(ids(exactHits(pinExact([r('a'), r('b')], exact), exact))).toEqual(['b']);
   });
 
   it('changes nothing without an exact hit', () => {

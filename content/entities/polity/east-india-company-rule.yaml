@@ -49,17 +49,6 @@ datings:
       - src.marshall-1987-bengal-british-bridgehead
     note: This periodisation begins with the fiscal turning point of 1765. The Company held settlements and
       territory before then.
-  - method: documentary
-    range:
-      earliest: "1858"
-      latest: "1858"
-      precision: year
-      circa: false
-    grade: A
-    label: Transfer under the Government of India Act
-    sources:
-      - src.uk-parliament-1858-government-of-india-act
-    note: The Act transferred the Company's governing authority to the Crown.
 claims:
   - text: The Mughal emperor granted the Company the diwani of Bengal, Bihar and Odisha in 1765.
     grade: B

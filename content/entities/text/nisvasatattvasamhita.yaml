@@ -26,25 +26,14 @@ datings:
       - src.simini-2016-of-gods-and-books
     note: The editors compare archaic language, religious institutions and other textual evidence. This
       estimate applies to the earliest layer.
-  - method: documentary
-    range:
-      earliest: 800
-      latest: 900
-      precision: century
-      circa: true
-    grade: B
-    label: Nepalese palm-leaf manuscript
-    sources:
-      - src.goodall-2015-nisvasatattvasamhita
-    note: The surviving early manuscript is assigned to the ninth century. Its date provides a separate
-      limit for the text that it transmits.
 claims:
   - text: The critical edition distinguishes the Mulasutra from the other layers of the collection.
     grade: B
     sources:
       - src.goodall-2015-nisvasatattvasamhita
       - src.simini-2016-of-gods-and-books
-  - text: The early Nepalese manuscript is a principal witness to the text’s transmission.
+  - text: The early Nepalese palm-leaf manuscript, assigned to the ninth century, is a principal
+      witness to the text’s transmission.
     grade: B
     sources:
       - src.goodall-2015-nisvasatattvasamhita

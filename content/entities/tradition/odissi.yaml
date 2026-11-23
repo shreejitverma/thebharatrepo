@@ -33,26 +33,14 @@ datings:
       - src.pathy-2007-rethinking-odissi
     note: Temple reliefs at Konark and Bhubaneswar, Jagannath temple inscriptions and living mahari and gotipua lineages
       attest to Odisha's dance traditions across the second millennium CE.
-  - method: documentary
-    range:
-      earliest: 1950
-      latest: 1965
-      precision: decade
-      circa: true
-    grade: A
-    label: Mid-twentieth-century codification by the Jayantika collective
-    sources:
-      - src.pathy-2007-rethinking-odissi
-      - src.lopez-y-royo-2007-reinvention-odissi
-    note: Founded in 1958, the Jayantika group of gurus and scholars standardised the modern Odissi repertoire, technique
-      and Sanskrit nomenclature.
 claims:
   - text: Modern Odissi was codified in the late 1950s by gurus including Pankaj Charan Das, Kelucharan Mohapatra and Deba
-      Prasad Das alongside scholars in the Jayantika collective.
+      Prasad Das alongside scholars in the Jayantika collective, founded in 1958.
     grade: A
     sources:
       - src.pathy-2007-rethinking-odissi
       - src.kothari-1990-odissi
+      - src.lopez-y-royo-2007-reinvention-odissi
   - text: Its movement grammar synthesises hereditary mahari and gotipua practice with sculptural poses from Odishan temples
       and Sanskrit treatises such as the Abhinaya Chandrika.
     grade: B

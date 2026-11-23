@@ -14,19 +14,20 @@ summaries:
     teachers, pupils and monasteries."
 region: "Punjab, Pakistan"
 datings:
-  - method: "textual-internal"
+  - method: "archaeological-stratigraphic"
     range:
       earliest: "500 BCE"
       latest: "200 CE"
       precision: "century"
       circa: true
     grade: "C"
-    label: "Broad period associated with Taxila's educational reputation"
+    label: "Ancient city of Taxila, from the Bhir Mound to Sirkap and Sirsukh"
     sources:
-      - "src.scharfe-2002-education-in-ancient-india"
       - "src.unesco-1980-taxila"
-    note: "This is the period of the ancient centre in the UNESCO account. Literary episodes can be much
-      later than the events they depict."
+      - "src.marshall-1951-taxila"
+    note: "The range dates the ancient centre that the debate concerns, from its excavated city
+      phases. It does not date the literary episodes about its teachers, which can be much later
+      than the events they depict."
 claims:
   - text: "Altekar understood the oldest literary accounts as depicting groups of pupils attached to
       individual teachers."

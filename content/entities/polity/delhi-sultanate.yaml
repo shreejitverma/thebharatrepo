@@ -31,17 +31,6 @@ datings:
       - src.asher-talbot-2006-india-before-europe
     note: The conventional period starts with the Ghurid succession crisis and closes at the First
       Battle of Panipat.
-  - method: documentary
-    range:
-      earliest: "1526"
-      latest: "1526"
-      precision: year
-      circa: false
-    grade: A
-    label: Panipat in Babur's memoir
-    sources:
-      - src.babur-1921-memoirs
-    note: Babur describes the battle that ended Ibrahim Lodi's reign.
 claims:
   - text: Aybak asserted de facto autonomy after the death of the Ghurid ruler Muizz al-Din in 1206.
     grade: B

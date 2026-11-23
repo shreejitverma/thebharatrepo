@@ -30,15 +30,6 @@ datings:
       - src.choudhury-1985-archaeology-brahmaputra-valley
       - src.shin-2010-yoni-yoginis-mahavidyas
     note: Carved stone blocks, plinth mouldings and deity reliefs surviving around the hill date the original Kamarupa-period sanctuary structures to the 8th-11th centuries CE.
-  - method: epigraphic
-    range: { earliest: 1565, latest: 1565, precision: year, circa: false }
-    grade: A
-    label: Stone inscription of Koch king Nara Narayan and Shukladhvaja (Chilarai)
-    sources:
-      - src.gait-1906-history-of-assam
-      - src.shin-2010-yoni-yoginis-mahavidyas
-      - src.baruah-1985-comprehensive-history-assam
-    note: A Sanskrit stone inscription inside the temple dated Shaka 1487 (1565 CE) records its reconstruction by Shukladhvaja under King Malla Narayana (Nara Narayan).
 claims:
   - text: The 1565 CE Sanskrit inscription inside the temple records that General Shukladhvaja (Chilarai) rebuilt the brick sanctuary on Nilachal Hill under the orders of Koch king Nara Narayan.
     grade: A

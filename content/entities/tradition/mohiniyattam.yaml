@@ -33,18 +33,6 @@ datings:
       - src.shivaji-2004-mohiniyattam
     note: Mentioned in early-modern Kerala texts such as Vyavaharamala (16th-18th c.) and patronised at Travancore under
       Swati Tirunal (1813-1846) and Vadivelu of the Thanjavur Quartet.
-  - method: documentary
-    range:
-      earliest: 1932
-      latest: 1960
-      precision: decade
-      circa: true
-    grade: A
-    label: Institutional revival at Kerala Kalamandalam
-    sources:
-      - src.lemos-2022-mohiniyattam
-    note: Vallathol Narayana Menon and teachers such as Kalyani Amma and Chinnammu Amma rebuilt Mohiniyattam at Kerala
-      Kalamandalam in the 1930s-1950s.
 claims:
   - text: Mohiniyattam draws musical accompaniment from Kerala's sopana sangeetam as well as Carnatic music, featuring the
       edakka hourglass drum alongside vocal, veena or flute.
@@ -55,6 +43,11 @@ claims:
   - text: Ethnographic history by Justine Lemos traces how the form moved from stigmatised nineteenth-century temple and
       salon settings into a respected state-supported classical discipline.
     grade: B
+    sources:
+      - src.lemos-2022-mohiniyattam
+  - text: Vallathol Narayana Menon and teachers such as Kalyani Amma and Chinnammu Amma rebuilt Mohiniyattam at Kerala
+      Kalamandalam from the 1930s to the 1950s.
+    grade: A
     sources:
       - src.lemos-2022-mohiniyattam
 relations:

@@ -43,17 +43,6 @@ datings:
       - src.kothari-2013-sattriya
     note: Maheswar Neog and S. N. Sarma document how sattra monasteries codified distinct dance numbers, khol percussion
       rhythms and hand mudras over the 16th-20th centuries.
-  - method: documentary
-    range:
-      earliest: 2000
-      latest: 2000
-      precision: year
-      circa: false
-    grade: A
-    label: Sangeet Natak Akademi recognition as a classical dance of India
-    sources:
-      - src.kothari-2013-sattriya
-    note: In November 2000, the Sangeet Natak Akademi officially recognised Sattriya as a classical dance form.
 claims:
   - text: Sattriya combines devotional narrative drama (Ankiya Nat / Bhaona) with Borgeet musical compositions and the khol
       drum and bhortal cymbals.
@@ -66,6 +55,10 @@ claims:
     grade: B
     sources:
       - src.neog-1973-sattriya-dances
+      - src.kothari-2013-sattriya
+  - text: In November 2000 the Sangeet Natak Akademi recognised Sattriya as a classical dance of India.
+    grade: A
+    sources:
       - src.kothari-2013-sattriya
 relations:
   - kind: founded-by

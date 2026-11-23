@@ -36,16 +36,6 @@ datings:
         locator: Part V
     note: This range tracks the Sisodia phase and its princely-state continuation. The earlier Guhila
       political formation predates it.
-  - method: documentary
-    range:
-      earliest: "1948"
-      latest: "1948"
-      precision: year
-      circa: false
-    grade: A
-    label: Integration into Rajasthan
-    sources:
-      - *a1
 claims:
   - text: The Sisodia ascent at Chittor is conventionally associated with Hammir in the fourteenth
       century.

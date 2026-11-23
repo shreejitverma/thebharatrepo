@@ -34,18 +34,8 @@ datings:
     label: "Construction of Shalamar Gardens under Shah Jahan"
     sources:
       - "src.unesco-1981-lahore-fort-shalamar"
-  - method: "documentary"
-    range:
-      earliest: 1981
-      latest: 1981
-      precision: "year"
-      circa: false
-    grade: "A"
-    label: "World Heritage inscription"
-    sources:
-      - "src.unesco-1981-lahore-fort-shalamar"
 claims:
-  - text: "The World Heritage property groups Lahore Fort and the Shalamar Gardens as two distinct
+  - text: "The World Heritage property, inscribed in 1981, groups Lahore Fort and the Shalamar Gardens as two distinct
       complexes."
     grade: "A"
     sources:

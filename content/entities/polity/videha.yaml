@@ -21,15 +21,15 @@ summaries:
 region: North Bihar (Mithila) and southeastern Nepal Terai
 location: { name: "Mithila (Darbhanga-Janakpur zone), North Bihar", lat: 26.154, lon: 85.892 }
 datings:
-  - method: textual-internal
+  - method: scholarly-consensus
     range: { earliest: "900 BCE", latest: "550 BCE", precision: century, circa: true }
     grade: C
-    label: Late Vedic Brahmana and early Upanishadic horizon
+    label: Later Vedic kingdom, before its absorption into the Vajji confederacy
     sources:
       - src.witzel-1997-early-sanskritization-kuru
       - src.singh-2008-ancient-early-medieval-india
       - src.thapar-2002-early-india
-    note: The Shatapatha Brahmana (1.4.1) portrays Videha east of the Sadanira (Gandak) as newly Sanskritised, while the Brihadaranyaka Upanishad centres on Janaka of Videha prior to the sixth-century BCE rise of the Vajji confederacy.
+    note: Historians place the Videha kingdom in the later Vedic period and its end before the sixth-century BCE rise of the Vajji confederacy. The range is graded C because the kingdom is known mainly from the Shatapatha Brahmana and the Brihadaranyaka Upanishad, whose own dates are uncertain; it is the historians' period for the kingdom, not a date of those texts.
 claims:
   - text: The Shatapatha Brahmana narrates the eastward movement of sacrificial fire under Videgha Mathava across the Sadanira River (identified with the Gandak) into Videha.
     grade: A

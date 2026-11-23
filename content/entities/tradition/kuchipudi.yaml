@@ -45,19 +45,6 @@ datings:
       - src.kamath-2019-impersonations
       - src.putcha-2013-historiography-kuchipudi
     note: "Kuchipudi tradition and later local records report a grant of Kuchipudi village to the performing families by the Golconda ruler Abul Hasan Qutb Shah (Tana Shah, r. 1672-1687); the year is variously reported and the grant is known through later accounts."
-  - method: documentary
-    range:
-      earliest: 1950
-      latest: 1970
-      precision: decade
-      circa: true
-    grade: A
-    label: Twentieth-century solo concert reconstruction and national classical recognition
-    sources:
-      - src.putcha-2013-historiography-kuchipudi
-      - src.soneji-2012-unfinished-gestures
-    note: Vempati Chinna Satyam, Vedantam Lakshminarayana Sastri and contemporaries adapted the dance-drama into a solo
-      concert format in the mid-twentieth century.
 claims:
   - text: Kuchipudi's historical core repertoire consisted of Telugu kalapam and yakshagana dance-dramas, notably Bhama
       Kalapam, staged by hereditary Brahmin male actors.
@@ -68,6 +55,12 @@ claims:
   - text: Twentieth-century classicisation blended Kuchipudi troupe drama with Telugu female courtesan dance repertoires
       (kalavantulu) and solo stage conventions.
     grade: B
+    sources:
+      - src.putcha-2013-historiography-kuchipudi
+      - src.soneji-2012-unfinished-gestures
+  - text: Between about 1950 and 1970 Vempati Chinna Satyam, Vedantam Lakshminarayana Sastri and contemporaries adapted
+      the dance-drama into a solo concert format.
+    grade: A
     sources:
       - src.putcha-2013-historiography-kuchipudi
       - src.soneji-2012-unfinished-gestures

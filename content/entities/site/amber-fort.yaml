@@ -25,18 +25,9 @@ datings:
     sources:
       - "src.unesco-2013-hill-forts-rajasthan"
       - "src.asher-1992-architecture-of-mughal-india"
-  - method: "documentary"
-    range:
-      earliest: 2013
-      latest: 2013
-      precision: "year"
-      circa: false
-    grade: "A"
-    label: "World Heritage inscription as a component of the Hill Forts of Rajasthan"
-    sources:
-      - "src.unesco-2013-hill-forts-rajasthan"
 claims:
-  - text: "Amber's palace complex is one of six components of the Hill Forts of Rajasthan inscription."
+  - text: "Amber's palace complex is one of six components of the Hill Forts of Rajasthan,
+      inscribed on the World Heritage List in 2013."
     grade: "A"
     sources:
       - "src.unesco-2013-hill-forts-rajasthan"

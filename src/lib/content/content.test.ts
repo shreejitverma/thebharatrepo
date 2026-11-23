@@ -74,6 +74,51 @@ describe('entity and source rules', () => {
     const kalidasa = { ...entity, id: 'person.kalidasa', type: 'person', kind: 'person' };
     expect(EntitySchema.safeParse({ ...kalidasa, datings: [{ ...baseDating, method: 'textual-internal', grade: 'C', note: 'His name is securely attested in the Aihole inscription of 634 CE.' }] }).success).toBe(true);
   });
+  describe('a dated event that would stand for a much longer span', () => {
+    const fort = { ...entity, id: 'site.fort', type: 'site', kind: 'art' };
+    const dating = (method: string, grade: string, earliest: number, latest: number) => ({
+      method,
+      grade,
+      range: { earliest, latest, precision: 'year', circa: false },
+      sources: ['src.x-2000-y'],
+    });
+    const issues = (datings: unknown[]) => EntitySchema.safeParse({ ...fort, datings }).error?.issues ?? [];
+
+    it('rejects a grade A event after the end of the grade B building span, and accepts the span alone', () => {
+      // Amber Fort: building phases c. 1590-1730 (B) and the 2013 World Heritage inscription (A).
+      const found = issues([dating('art-historical', 'B', 1590, 1730), dating('documentary', 'A', 2013, 2013)]);
+      expect(found.map((i) => i.path)).toEqual([['datings', 1]]);
+      expect(found[0].message).toMatch(/^the grade A documentary dating .* would stand for site\.fort, .* record that event as a claim/);
+      expect(issues([dating('art-historical', 'B', 1590, 1730)])).toEqual([]);
+    });
+
+    it('rejects a grade A event before the start of the span', () => {
+      expect(issues([dating('epigraphic', 'A', -260, -260), dating('archaeological-stratigraphic', 'B', 100, 400)]).map((i) => i.path)).toEqual([['datings', 0]]);
+    });
+
+    it('needs the span to be at least five times longer', () => {
+      expect(issues([dating('scholarly-consensus', 'B', 1950, 1953), dating('documentary', 'A', 1960, 1960)])).toEqual([]);
+      expect(issues([dating('scholarly-consensus', 'B', 1950, 1954), dating('documentary', 'A', 1960, 1960)])).toHaveLength(1);
+    });
+
+    it('accepts an event inside the span, such as a construction phase within the occupation', () => {
+      expect(issues([dating('archaeological-stratigraphic', 'B', -500, 1200), dating('epigraphic', 'A', 1010, 1010)])).toEqual([]);
+    });
+
+    it('accepts an event that only leads by the author order, at the same grade', () => {
+      expect(issues([dating('documentary', 'B', 1459, 1459), dating('scholarly-consensus', 'B', 1500, 1900)])).toEqual([]);
+    });
+
+    it('accepts competing scientific datings, which are not dated events', () => {
+      // Bori: the Youngest Toba Tuff correlation (B) against an older 39Ar-40Ar hypothesis (C).
+      expect(issues([dating('geological', 'C', -737974, -597974), dating('geological', 'B', -77974, -67974)])).toEqual([]);
+    });
+
+    it('ignores traditional reckoning', () => {
+      expect(issues([{ ...dating('traditional-sampradaya', 'D', 1000, 1600), range: { earliest: 1000, latest: 1600, precision: 'century', circa: true } }, dating('documentary', 'A', 1950, 1950)])).toEqual([]);
+    });
+  });
+
   it('requires the id prefix to match the type', () => {
     expect(EntitySchema.safeParse({ ...entity, id: 'event.kalpa', datings: [{ ...baseDating, method: 'traditional-puranic', grade: 'D' }] }).success).toBe(false);
   });
