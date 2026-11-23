@@ -43,7 +43,7 @@
     "@lhci/cli": "^0.16.1",
     "@playwright/test": "^1.65.1",
     "@tailwindcss/postcss": "^4",
-    "@types/node": "^20",
+    "@types/node": "^22",
     "@types/react": "^19",
     "@types/react-dom": "^19",
     "babel-plugin-react-compiler": "1.0.0",
