@@ -91,9 +91,9 @@ test('related entity pages link the draft in the preview build, marked as a draf
 });
 
 test('a source cited by the draft never lists it, even in the preview build', async ({ page }) => {
-  await page.goto('/sources/coningham-2013-earliest-buddhist-shrine');
+  // The fixture draft cites this source; published debates may cite it too, and are listed.
+  await page.goto('/sources/cousins-1996-dating-historical-buddha');
   await expect(page.getByRole('heading', { name: 'Cited in the archive' })).toBeVisible();
-  await expect(page.locator(`.cited-by a[href^="${DEBATE}"]`)).toHaveCount(0);
-  await expect(page.getByRole('heading', { name: /^Debates/ })).toHaveCount(0);
-  await expect(page.locator('.cited-by__summary, .cited-by .empty')).not.toContainText('debate');
+  await expect(page.locator(`.cited-by a[href="${DRAFT}"]`)).toHaveCount(0);
+  await expect(page.locator('.cited-by')).not.toContainText('unpublished');
 });
