@@ -2,143 +2,218 @@ id: debate.date-of-the-mahabharata-war
 title: The date of the Mahabharata war
 question: Can the war narrated in the Mahabharata be placed in calendar time?
 summary: >-
-  Late Vedic texts and excavations give the epic a plausible setting among the early Kurus.
-  Astronomical reconstructions test whether the epic's descriptions of the sky can date a
-  single campaign and arrive at different years. Traditional chronologies link the war
-  with the transition to Kali Yuga. The event and the formation of the text pose distinct
-  dating questions.
+  Archaeology and Late Vedic texts place a possible Kuru polity and Painted Grey Ware
+  settlements around 1200 to 800 BCE, while textual historians emphasize that the
+  surviving epic was compiled over centuries (about 400 BCE to 400 CE) without
+  independent proof of a pan-Indian war. Planetarium-software reconstructions test the
+  epic's sky descriptions and yield conflicting dates such as 3067 BCE and 1793 BCE
+  (grade E). Traditional reckonings connect the war to the Kali Yuga epoch (3102 or
+  3138 BCE) or to Varahamihira's Yudhishthira era (about 2449 BCE).
 published: false
 commonGround:
   - text: >-
-      The epic centres on a succession conflict in the Kuru family, and its narrative names
-      places including Hastinapura. Excavation at Hastinapura found an early settlement with
-      Painted Grey Ware.
+      The Mahabharata centres on a succession conflict in the Kuru lineage at Kurukshetra
+      and names Hastinapura, where B. B. Lal's 1950-52 excavation documented an Iron Age
+      Painted Grey Ware settlement (Period II) terminated by a flood deposit.
     grade: A
     sources:
-      - { id: src.lal-1955-excavation-hastinapura, locator: "pp. 5-6; Stratigraphy, Period II" }
-      - { id: src.witzel-1997-early-sanskritization-kuru, locator: "Introduction" }
+      - { id: src.lal-1955-excavation-hastinapura, locator: "pp. 5-6; Stratigraphy, Period II; pp. 147-151" }
+      - { id: src.witzel-1997-early-sanskritization-kuru, locator: "pp. 27-52, Introduction" }
+  - text: >-
+      The surviving eighteen-book Sanskrit epic reached its 100,000-verse scale only by
+      the fifth to sixth century CE, and no contemporary inscription or verifiable
+      destruction layer from any proposed earlier period directly attests the war itself.
+    grade: B
+    sources:
+      - { id: src.brockington-1998-sanskrit-epics, locator: "p. 26" }
+      - { id: src.thapar-2002-early-india, locator: "ch. 4, pp. 120-133" }
 positions:
   - id: early-kuru-setting
-    label: A possible conflict in the early Kuru world
+    label: "Early Iron Age Kuru horizon: about 1200 to 800 BCE"
     lens: scholarship
     grade: C
+    range: { earliest: "1200 BCE", latest: "800 BCE", precision: century, circa: true }
     statement: >-
-      Some memory of a Kuru conflict may underlie the epic. The later Vedic texts give the
-      Kurus a political and geographical setting in Haryana and western Uttar Pradesh.
-      Parikshit appears in Vedic material as a Kuru king, and the epic also makes him part of
-      its dynastic succession. The early settlement at Hastinapura and related sites makes
-      the late second to early first millennium BCE a plausible horizon for the background
-      of the story.
+      Late Vedic texts and upper Gangetic archaeology give a plausible Iron Age setting
+      for an ancestral Kuru conflict. Michael Witzel notes that the Atharvaveda's Kuntapa
+      hymns and the Brahmanas depict the Kuru realm and king Parikshit in Haryana and
+      western Uttar Pradesh, using figures who also appear in the epic's succession.
+      B. B. Lal linked Painted Grey Ware occupation levels at Hastinapura and other sites
+      named in the narrative to this horizon, arguing that later bardic memory expanded
+      around an earlier Kuru-Panchala struggle.
     proponents:
       - name: Michael Witzel
-        work: { id: src.witzel-1997-early-sanskritization-kuru, locator: "Introduction; discussion of the Kuntapa hymns" }
+        role: Indologist, analyzed the Late Vedic Kuru polity and Parikshit hymns
+        work: { id: src.witzel-1997-early-sanskritization-kuru, locator: "pp. 27-52, Introduction and Kuntapa hymns" }
       - name: B. B. Lal
+        role: Archaeologist, excavator of Hastinapura
         work: { id: src.lal-1955-excavation-hastinapura, locator: "pp. 147-151" }
     evidence:
       - text: >-
-          Witzel draws on the post-Rigvedic praise of Parikshit's Kuru realm to reconstruct the
-          early polity and the setting behind characters also known to the epic.
+          Witzel draws on post-Rigvedic praise of Parikshit's Kuru realm in Atharvaveda
+          20.127 and the Brahmanas to reconstruct an early Kuru state behind characters
+          later remembered in the epic.
         grade: C
         sources:
-          - { id: src.witzel-1997-early-sanskritization-kuru, locator: "discussion of the Kuntapa hymns, Atharvaveda 20.127" }
+          - { id: src.witzel-1997-early-sanskritization-kuru, locator: "pp. 27-52, discussion of Atharvaveda 20.127" }
       - text: >-
-          Lal identified Painted Grey Ware in occupation layers at Hastinapura and in explorations
-          at other localities connected with the story. The finds establish occupation in the region.
+          Lal documented Painted Grey Ware occupation in Period II at Hastinapura and at
+          other localities named in the Mahabharata, establishing Iron Age settlement in the
+          region before the Northern Black Polished Ware phase.
         grade: A
         sources:
           - { id: src.lal-1955-excavation-hastinapura, locator: "Stratigraphy, Period II; pp. 147-151" }
     objections:
       - >-
-        A pottery horizon does not identify the belligerents or a single battle. A historical
-        name can survive in a later narrative whose plot developed around it.
-  - id: achar-astronomical-reconstruction
-    label: Achar's astronomical reconstruction of 3067 BCE
+        A regional pottery horizon confirms settlement rather than identifying a single
+        eighteen-day war or its participants.
+      - >-
+        Historical Kuru royal names could survive in bardic memory while the epic plot
+        itself took shape centuries later.
+  - id: multi-layered-epic-no-datable-war
+    label: "Composite epic tradition without a datable historical war"
     lens: scholarship
-    grade: E
-    range: { earliest: "3067 BCE", latest: "3067 BCE", precision: year, circa: true }
+    grade: B
     statement: >-
-      Sky references in the Udyoga and Bhishma books may preserve observations made around a
-      single campaign. Achar uses matching planetary and eclipse references to test the 3067 BCE
-      date proposed by K. S. Raghavan. On this reading, the combination of observations has
-      more chronological value than any one omen on its own.
+      The Mahabharata cannot be used to assign a calendar date to a single battle because
+      the surviving poem grew across many centuries as a work of heroic memory, statecraft
+      and dharma. John Brockington places the compilation of the surviving Sanskrit text
+      between roughly 400 BCE and 400 CE, long after the Painted Grey Ware horizon. Romila
+      Thapar emphasizes that neither Late Vedic ritual literature nor archaeology records a
+      pan-Indian war of epic scale, so scholarship separates the datable history of the
+      text from any undatable bardic kernel.
     proponents:
-      - name: B. N. Narahari Achar
-        work: { id: src.achar-2018-date-mahabharata-war-correspondence, locator: "pp. 108-115, correspondence and reply" }
+      - name: John Brockington
+        role: Sanskritist, historian of the Sanskrit epics
+        work: { id: src.brockington-1998-sanskrit-epics, locator: "p. 26" }
+      - name: Romila Thapar
+        role: Historian of early India
+        work: { id: src.thapar-2002-early-india, locator: "ch. 4, pp. 120-133" }
     evidence:
       - text: >-
-          Achar reports a match at 3067 BCE for selected astronomical notices in the Udyoga
-          and Bhishma books, including eclipse and planetary descriptions.
+          Linguistic, metrical and structural stratification shows the surviving Sanskrit
+          Mahabharata took shape from about 400 BCE to 400 CE, with Gupta-period inscriptions
+          first attesting its 100,000-verse form.
+        grade: B
+        sources:
+          - { id: src.brockington-1998-sanskrit-epics, locator: "p. 26" }
+      - text: >-
+          Thapar notes that archaeological levels at Painted Grey Ware sites show modest
+          chieftaincies rather than imperial warfare and lack any contemporary inscription
+          corroborating the epic war.
+        grade: B
+        sources:
+          - { id: src.thapar-2002-early-india, locator: "ch. 4, pp. 120-133" }
+    objections:
+      - >-
+        Long literary growth does not preclude an older oral memory of an intra-Kuru
+        conflict rooted in the Late Vedic geography of Haryana and western Uttar Pradesh.
+  - id: planetarium-astronomical-reconstructions
+    label: "Planetarium-software sky reconstructions (3067 BCE, 1793 BCE and others)"
+    lens: scholarship
+    grade: E
+    statement: >-
+      Several modern researchers treat planetary positions, eclipses and solstice notices
+      scattered through the Udyoga and Bhishma books as eyewitness sky records from a single
+      war year and test them with planetarium software. B. N. Narahari Achar (building on
+      K. S. Raghavan) matched selected planetary and eclipse combinations to 3067 BCE,
+      whereas Ashok K. Bhatnagar reassessed seasonal markers, the autumn full moon and
+      eclipses with Stellarium to propose 14 October 1793 BCE. Because different models use
+      different verse selections and yield dates over a millennium apart, historians of
+      astronomy and Indologists regard these reconstructions as speculative.
+    proponents:
+      - name: B. N. Narahari Achar
+        role: Physicist, argued for 3067 BCE from planetarium simulations
+        work: { id: src.achar-2018-date-mahabharata-war-correspondence, locator: "pp. 108-115" }
+      - name: Ashok K. Bhatnagar
+        role: Positional astronomer, argued for 1793 BCE using seasonal and eclipse checks
+        work: { id: src.bhatnagar-2017-date-mahabharata-war, locator: "pp. 369-394, sections 5-6" }
+    evidence:
+      - text: >-
+          Achar reports a 3067 BCE match for selected planetary and eclipse notices in the
+          Udyoga and Bhishma books and defends it against Bhatnagar's later date.
         grade: E
         sources:
           - { id: src.achar-2018-date-mahabharata-war-correspondence, locator: "pp. 108-115" }
-          - { id: src.bhatnagar-2017-date-mahabharata-war, locator: "section 5, Discussion" }
-    objections:
-      - >-
-        Bhatnagar argues that the proposal fails some seasonal and solstitial checks. The larger
-        issue is whether the textual notices are observations from one period and were transmitted
-        together before the epic took shape.
-  - id: bhatnagar-astronomical-reconstruction
-    label: Bhatnagar's astronomical reconstruction of 1793 BCE
-    lens: scholarship
-    grade: E
-    range: { earliest: "1793 BCE", latest: "1793 BCE", precision: year, circa: true }
-    statement: >-
-      Seasonal markers can help distinguish repeated celestial configurations. Bhatnagar uses
-      the autumn full moon and the interval to the winter solstice, then tests candidate years
-      against a sequence of eclipses and lunar positions. He argues that 1793 BCE best fits
-      that combined sequence.
-    proponents:
-      - name: Ashok K. Bhatnagar
-        work: { id: src.bhatnagar-2017-date-mahabharata-war, locator: "sections 5-6" }
-    evidence:
       - text: >-
-          Bhatnagar uses an inferred position of the autumn equinox to limit the search and a
-          proposed eclipse pair in one lunation to narrow the candidates to 1793 BCE.
+          Bhatnagar narrows candidate years using an inferred autumn equinox and an eclipse
+          pair in one lunation to propose 1793 BCE.
         grade: E
         sources:
-          - { id: src.bhatnagar-2017-date-mahabharata-war, locator: "section 6, Conclusion" }
+          - { id: src.bhatnagar-2017-date-mahabharata-war, locator: "sections 5-6, Conclusion" }
     objections:
       - >-
-        Achar disputes which notices count as observations and how the seasonal and astronomical
-        terms should be read. A fit to selected verses needs an independent historical check.
+        Researchers applying planetarium software to the same epic produce incompatible
+        dates (such as 3067 BCE, 1793 BCE and 1478 BCE) because the text contains mutually
+        conflicting omens that each model resolves by selecting or reinterpreting verses.
+      - >-
+        Textual scholars point out that the Mahabharata grew over centuries as literary
+        poetry and used celestial portents rhetorically rather than as calibrated
+        astronomical ephemerides, while pre-Siddhantic planetary models lack independent
+        observational controls.
   - id: kali-yuga-reckoning
-    label: The Bharata war and the Kali Yuga epoch
+    label: "Traditional Kali Yuga and Yudhishthira reckonings: 3138, 3102 and 2449 BCE"
     lens: tradition
     grade: D
+    range: { earliest: "3138 BCE", latest: "2449 BCE", precision: year, circa: false }
     statement: >-
-      In traditional reckoning the Bharata war marks the close of Dvapara and the approach
-      of Kali Yuga. Ravikirti's inscription counts 3,735 elapsed years since the war in
-      Śaka 556, relating the war to the epoch conventionally expressed as 3102 BCE.
-      Some traditional chronologies put the battle before the epoch by counting forward
-      from the war to Krishna's departure and the beginning of Kali.
+      In traditional Indian reckoning, the Bharata war marks the transition from Dvapara
+      to Kali Yuga. Aryabhata's 499 CE astronomical epoch puts the start of Kali Yuga at
+      3102 BCE, and Ravikirti's 634 CE Aihole inscription counts 3,735 elapsed years since
+      the war in Saka 556, equating the war with that 3102 BCE epoch. Some Puranic
+      reckonings count 36 years back from Krishna's departure at the start of Kali Yuga
+      (based on the Mausala Parva) to place the war in 3138 BCE, while Varahamihira's
+      Brihat Samhita places Yudhishthira 2,526 years before the Shaka era (about 2449 BCE).
     proponents:
-      - name: Ravikirti's Aihole reckoning
+      - name: Aryabhata and Aihole Kali-epoch tradition
+        role: Ties the Bharata war to the 3102 BCE Kali Yuga epoch
         work: { id: src.balogh-2026-aihole-inscription, locator: "vv. 33-34" }
+      - name: Puranic and Mausala Parva reckoning
+        role: Counts 36 years between the war and Krishna's departure at the Kali epoch
+        work: { id: src.doniger-2022-after-the-war, locator: "Book 16, chs. 1 and 8" }
+      - name: Varahamihira's Brihat Samhita tradition
+        role: Places Yudhishthira 2,526 years before the Shaka era (about 2449 BCE)
+        work: { id: src.saha-1955-calendar-reform-committee-report, locator: "Part C" }
     evidence:
       - text: >-
-          Ravikirti expresses the date in two reckonings, one measured from the Bharata war and
-          one in the Śaka era. The parallel preserves a seventh-century use of the traditional count.
+          The 634 CE Aihole inscription states its date both in the Saka era (556) and as
+          3,735 years elapsed since the Bharata war, matching Aryabhata's 3102 BCE epoch.
         grade: D
         sources:
           - { id: src.balogh-2026-aihole-inscription, locator: "vv. 33-34" }
+          - { id: src.plofker-2009-mathematics-in-india, locator: "ch. 3, pp. 58-60" }
       - text: >-
-          The epic places the destruction of Krishna's clan in the thirty-sixth year after
-          the war, a basis for keeping the war and the start of Kali distinct in traditional reckoning.
+          The Mausala Parva places the destruction of Krishna's clan in the thirty-sixth year
+          after the war, yielding 3138 BCE where Krishna's departure marks the start of Kali.
         grade: D
         sources:
           - { id: src.doniger-2022-after-the-war, locator: "Book 16, ch. 1" }
           - { id: src.bhatnagar-2017-date-mahabharata-war, locator: "section 5, Discussion" }
+      - text: >-
+          The Calendar Reform Committee documents the parallel classical tradition in
+          Varahamihira's Brihat Samhita that sets Yudhishthira 2,526 years before the Shaka
+          era (about 2449 BCE).
+        grade: D
+        sources:
+          - { id: src.saha-1955-calendar-reform-committee-report, locator: "Part C" }
     objections:
       - >-
-        The Aihole inscription directly attests a seventh-century reckoning. Its long elapsed
-        count has no independent contemporary record from the time assigned to the war.
+        Historians of astronomy note that the 3102 BCE Kali epoch is first attested in 499 CE
+        and corresponds to no actual planetary conjunction in 3102 BCE, indicating a backward
+        mathematical computation rather than an ancient observation.
+      - >-
+        Classical Indian traditions themselves preserve mutually conflicting intervals
+        (3138 or 3102 BCE versus 2449 BCE), and neither has contemporary fourth- or
+        third-millennium BCE documentation.
 whatWouldChangeThis:
   - >-
-    An independently dated record naming the rulers and conflict would give the event an anchor
-    that pottery and later retellings cannot supply on their own.
+    An independently dated inscription or foreign record from the late second or early
+    first millennium BCE naming the Kuru rulers and conflict would supply an anchor that
+    pottery and later epic poetry cannot provide on their own.
   - >-
-    An early manuscript with a well-preserved sequence of astronomical notices could test whether
-    the competing readings depend on passages added or altered during transmission.
+    Stratified radiocarbon dates tied to unambiguous battle destruction horizons across
+    Kurukshetra and Hastinapura would clarify whether any Iron Age conflict occurred there.
 relatedEntities: [event.kurukshetra-war, text.mahabharata, polity.kuru-kingdom, site.hastinapura, event.kali-yuga-epoch]
+relatedArticles: [literature/mahabharata]
 tags: [mahabharata, kurukshetra, astronomy, chronology]
-review: { status: draft, author: Codex }
+review: { status: draft, author: senior-editor-review }

@@ -934,6 +934,11 @@
     "checkedAt": "2026-11-22T02:50:38.127Z",
     "matched": "Prehistoric human colonization of India"
   },
+  "doi:10.1007/bf03007343": {
+    "ok": true,
+    "checkedAt": "2026-11-23T01:06:13.725Z",
+    "matched": "IRS views the Adams bridge (bridging India and Sri Lanka)"
+  },
   "doi:10.1007/s10781-004-8652-3": {
     "ok": true,
     "checkedAt": "2026-11-22T02:51:27.101Z",
@@ -1613,6 +1618,11 @@
     "ok": true,
     "checkedAt": "2026-11-22T13:52:15.439Z",
     "matched": "A group of 20 stone anchors from the waters of Dwarka, on the Gujarat Coast, India"
+  },
+  "doi:10.1111/j.1095-9270.2005.00080.x": {
+    "ok": true,
+    "checkedAt": "2026-11-23T01:06:13.736Z",
+    "matched": "Evidence for Indo‐Roman Trade from Bet Dwarka Waters, West Coast of India"
   },
   "doi:10.1111/j.1467-8306.2005.00489.x": {
     "ok": true,
@@ -2971,10 +2981,20 @@
     "checkedAt": "2026-11-22T02:49:30.369Z",
     "matched": "From Plassey to partition: a history of modern India"
   },
+  "isbn:9788129104984": {
+    "ok": true,
+    "checkedAt": "2026-11-23T01:06:14.119Z",
+    "matched": "Dating the era of Lord Rama"
+  },
   "isbn:9788170173120": {
     "ok": true,
     "checkedAt": "2026-11-22T02:50:05.029Z",
     "matched": "Indian temple architecture: form and transformation : the Karnāta Drāvida tradition, 7th to 13th centuries"
+  },
+  "isbn:9788173053498": {
+    "ok": true,
+    "checkedAt": "2026-11-23T01:06:14.306Z",
+    "matched": "Underwater archaeology of Dwarka and Somnath, 1997-2002"
   },
   "isbn:9788178240886": {
     "ok": true,

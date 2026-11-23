@@ -2,135 +2,199 @@ id: debate.sarasvati-and-ghaggar-hakra
 title: The Sarasvati and the Ghaggar-Hakra system
 question: Which rivers do the Sarasvati hymns describe, and how did the Ghaggar-Hakra flow?
 summary: >-
-  A Rigvedic river list points to the Ghaggar-Hakra region. Scholars differ over whether the older
-  praise hymns describe that same system or reflect a river farther west. Sediment studies agree
-  that the main Sutlej changed course before the Harappan cities arose and differ on the continued
-  supply of Himalayan water to parts of its former valley.
+  Rigveda 10.75.5 names Sarasvati between the Yamuna and the Sutlej, matching the
+  Ghaggar-Hakra basin, while scholars disagree on whether older hymns refer exclusively
+  to that system or include a western river cognate with Avestan Haraxvaiti. Separately,
+  sediment cores show that the Yamuna and the trunk Sutlej left the palaeovalley before
+  Mature Harappan urbanism; geologists debate whether Harappan-era settlements relied
+  solely on monsoon-fed rivers or also received perennial water from Sutlej
+  distributaries until about 4,500 years ago.
 published: false
 commonGround:
   - text: >-
-      The river list in Rigveda 10.75.5 names Sarasvati between the Yamuna and the Shutudri, the Sutlej.
+      The river list in Rigveda 10.75.5 places Sarasvati between the Yamuna and the
+      Shutudri (Sutlej), and Rigveda 3.23.4 pairs Sarasvati with the Drishadvati and
+      Apaya in northwestern India.
     grade: A
     sources:
-      - { id: src.jamison-brereton-2014-rigveda, locator: "10.75.5" }
+      - { id: src.jamison-brereton-2014-rigveda, locator: "3.23.4; 10.75.5" }
   - text: >-
-      Harappan settlements clustered along parts of the Ghaggar-Hakra palaeochannel. Sediment cores
-      establish that the trunk Sutlej once occupied the palaeovalley.
+      Harappan settlements clustered along the Ghaggar-Hakra palaeochannel, and dated
+      sediment cores show that the Yamuna (departed 49 to 10 ka) and the trunk Sutlej
+      (diverted shortly after ~8 ka) abandoned the valley before Harappan cities arose.
     grade: B
     sources:
-      - { id: src.singh-2017-himalayan-river-morphodynamics, locator: "Figs. 2 and 10; Discussion" }
+      - { id: src.clift-2012-zircon-dating-sarasvati, locator: "pp. 211-214" }
+      - { id: src.singh-2017-himalayan-river-morphodynamics, locator: "Abstract; Figs. 2 and 10; Discussion" }
 positions:
   - id: ghaggar-hakra-identification
-    label: A Ghaggar-Hakra river behind the praise hymns
+    label: "Textual identification: a Ghaggar-Hakra river behind the hymns"
     lens: scholarship
     grade: C
     statement: >-
-      The river list gives a location between two identifiable rivers, and the association of
-      Sarasvati with the Drishadvati and Apaya in Rigveda 3.23 fits the same region. Lal identifies
-      the local rivers and the downstream Hakra as parts of the system remembered in the hymns.
-      The praise of a powerful river can preserve conditions from a wetter phase, while the
-      settlement pattern makes a strong regional water source plausible.
+      Both the Nadistuti river list (10.75.5) and the Bharata fire-kindling hymn (3.23.4)
+      place Sarasvati in the Haryana-Punjab-Rajasthan region between the Yamuna and the
+      Sutlej, matching the Ghaggar-Hakra and Chautang channels. B. B. Lal and Michel
+      Danino identify the praise of a mighty river flowing from mountains to sea (7.95.2)
+      with a stronger Holocene Ghaggar-Hakra and link later Brahmana accounts of Sarasvati
+      disappearing in the desert at Vinashana to the drying of the lower channel.
     proponents:
       - name: B. B. Lal
+        role: Archaeologist, correlated Harappan sites and Rigvedic Sarasvati geography
         work: { id: src.lal-2002-saraswati-flows-on, locator: "chs. I-III" }
+      - name: Michel Danino
+        role: Author of a synthesis of Sarasvati textual and hydrological evidence
+        work: { id: src.danino-2010-lost-river-sarasvati, locator: "chs. 2-3" }
     evidence:
       - text: >-
-          Besides the later river list, a hymn in Book 3 places the kindling of the Bharatas' fire
-          by the Sarasvati, Drishadvati and Apaya. Book 7 describes Sarasvati in terms of mountains and sea.
+          Rigveda 3.23.4 locates the Bharatas' ritual fire by the Sarasvati, Drishadvati
+          and Apaya, 7.95.2 describes Sarasvati flowing from mountains to samudra, and
+          10.75.5 lists her between Yamuna and Sutlej.
         grade: A
         sources:
           - { id: src.jamison-brereton-2014-rigveda, locator: "3.23.4; 7.95.2; 10.75.5" }
+      - text: >-
+          Lal and Danino combine these hymns with later Panchavimsha and Jaiminiya Brahmana
+          accounts of Sarasvati's disappearance at Vinashana to argue for continuous memory
+          of the Ghaggar-Hakra from its active phase into decline.
+        grade: C
+        sources:
+          - { id: src.lal-2002-saraswati-flows-on, locator: "chs. I-III" }
+          - { id: src.danino-2010-lost-river-sarasvati, locator: "chs. 2-3" }
+          - { id: src.witzel-1997-early-sanskritization-kuru, locator: "pp. 27-52" }
     objections:
       - >-
-        Himalayan sediment in sampled reaches does not establish year-round discharge all the way to
-        the sea. The phase of renewed Himalayan supply proposed by Chatterjee and colleagues
-        ends near the start of Mature Harappan urbanism.
+        Locating Sarasvati in Rigveda 10.75.5 does not establish that all earlier hymns
+        describe the same physical river or that a single poet observed a glacial river
+        reaching the Arabian Sea.
       - >-
-        A good identification for the river list cannot fix the referent of every hymn or tell us
-        how long a poetic description was transmitted before the surviving hymn took shape.
+        Identifying Rigveda 7.95.2 with a pre-2000 BCE perennial Ghaggar-Hakra conflicts
+        with mainstream linguistic dates for the Rigveda (c. 1500 to 1000 BCE), unless the
+        verse refers to monsoon flooding, a terminal basin (samudra) or an inherited
+        river tradition.
   - id: helmand-and-local-sarasvati
-    label: A western river remembered alongside the local Sarasvati
+    label: "Textual identification: a western river alongside the local Sarasvati"
     lens: scholarship
     grade: C
     statement: >-
-      The hymns need not always refer to the same physical river. Parpola identifies the river of
-      Rigveda 6.61 with the Arghandab-Helmand system, whose steep upper course suits the image of a
-      powerful mountain river and whose region bore the cognate name Haraxvaiti. The Punjab-Haryana
-      setting of the river list can then reflect the same name applied to a different river.
+      Earlier and later Rigvedic hymns need not share a single physical referent for
+      Sarasvati. Asko Parpola connects the steep mountain-breaking river praised in
+      Rigveda 6.61 with the Arghandab-Helmand system of southern Afghanistan, whose region
+      bore the cognate Old Iranian name Haraxvaiti (Arachosia). As Indo-Aryan speakers
+      moved east into the Punjab-Haryana plains, the sacred name was also applied to the
+      local Ghaggar stream recorded between the Yamuna and Sutlej in Rigveda 10.75.5.
     proponents:
       - name: Asko Parpola
+        role: Indologist, argued for a dual geographical reference across older and later hymns
         work: { id: src.parpola-2015-roots-of-hinduism, locator: "The Rigvedic Indo-Aryans and the Dāsas" }
     evidence:
       - text: >-
-          Parpola connects the valley of the Arghandab and Helmand with Avestan Haraxvaiti and
-          compares the terrain with the mountain imagery of Rigveda 6.61.2.
+          Parpola links the Helmand-Arghandab basin to Avestan Haraxvaiti (phonologically
+          cognate with Sanskrit Sarasvati) and argues that its steep mountain descent fits
+          the imagery of Rigveda 6.61.2 better than the flat Haryana plain.
         grade: C
         sources:
           - { id: src.parpola-2015-roots-of-hinduism, locator: "The Rigvedic Indo-Aryans and the Dāsas, discussion of Rigveda 6.61" }
           - { id: src.jamison-brereton-2014-rigveda, locator: "6.61.1-3" }
     objections:
       - >-
-        A cognate name and a plausible landscape leave the direction of any name transfer open.
-        The mountain imagery describes a goddess as well as a river and admits more than one reading.
+        A shared Indo-Iranian cognate name does not by itself prove an eastbound transfer
+        from Helmand to Ghaggar rather than an earlier common heritage or opposite shift.
+      - >-
+        Poetic imagery of mountain-shattering force praises Sarasvati as a deity as well as
+        a river, while Book 3 (3.23.4) already links Sarasvati to the Drishadvati in India.
   - id: seasonal-valley
-    label: Harappan settlements in a valley left by the trunk Sutlej
+    label: "Hydrology: monsoon-fed seasonal flow in an abandoned Sutlej valley (c. 3500 to 1900 BCE)"
     lens: scholarship
     grade: B
+    range: { earliest: "3500 BCE", latest: "1900 BCE", precision: century, circa: true }
     statement: >-
-      The former Sutlej valley was already a stable landform by the time Harappan towns developed.
-      Seasonal streams, local flooding and ponded water could exploit the old valley without a
-      trunk Himalayan river. From this perspective the cluster of settlements is evidence that
-      the valley offered dependable opportunities for settlement, even with varying water supply.
+      By the time Harappan towns arose in the fourth and third millennia BCE, the
+      Ghaggar-Hakra occupied a stabilized valley already abandoned by major glacial rivers.
+      Clift and colleagues showed that the Yamuna departed by 10 ka, and Singh and
+      colleagues placed the main Sutlej diversion shortly after ~8 ka, reducing avulsion
+      hazards. Giosan and colleagues found that only monsoonal-fed streams operated on the
+      interfluve during the Holocene, becoming seasonal and declining as summer monsoons
+      weakened after about 5,000 to 4,000 years ago.
     proponents:
       - name: Ajit Singh and colleagues
-        work: { id: src.singh-2017-himalayan-river-morphodynamics, locator: "Discussion; Fig. 10" }
+        role: Geomorphologists, dated Sutlej abandonment of the palaeochannel
+        work: { id: src.singh-2017-himalayan-river-morphodynamics, locator: "Abstract; Discussion; Fig. 10" }
       - name: Liviu Giosan and colleagues
-        work: { id: src.giosan-2012-fluvial-landscapes-harappan, locator: "Results and Discussion" }
+        role: Geoscientists, reconstructed Holocene monsoon-fed Harappan river landscapes
+        work: { id: src.giosan-2012-fluvial-landscapes-harappan, locator: "pp. E1688-E1694, Results and Discussion" }
+      - name: Peter D. Clift and colleagues
+        role: Geologists, traced Yamuna capture via detrital zircon dating
+        work: { id: src.clift-2012-zircon-dating-sarasvati, locator: "pp. 211-214" }
     evidence:
       - text: >-
-          Luminescence ages and sand provenance led Singh and colleagues to place the final
-          abandonment by the trunk Sutlej shortly after about 8,000 years ago. Younger fine
-          sediments record lower-energy conditions.
+          OSL dates and sand provenance led Singh and colleagues to date trunk Sutlej
+          diversion shortly after ~8 ka, with younger fine-grained deposits recording
+          low-energy seasonal and ponded conditions during Harappan settlement.
         grade: B
         sources:
-          - { id: src.singh-2017-himalayan-river-morphodynamics, locator: "Discussion; Fig. 10" }
+          - { id: src.singh-2017-himalayan-river-morphodynamics, locator: "Abstract; Discussion; Fig. 10" }
+          - { id: src.clift-2012-zircon-dating-sarasvati, locator: "pp. 211-214" }
+      - text: >-
+          Fluvial geomorphology across the Indus-Ganga interfluve shows Holocene activity
+          was sustained by monsoon-fed channels whose weakening after c. 5,000 to 3,900 BP
+          paralleled Harappan settlement contraction and eastward shift.
+        grade: B
+        sources:
+          - { id: src.giosan-2012-fluvial-landscapes-harappan, locator: "pp. E1688-E1694" }
     objections:
       - >-
-        Dates from former trunk-channel deposits cannot rule out later water supplied by a
-        distributary elsewhere in the system. Extrapolating a flow regime across the full valley
-        requires more cores from comparable intervals.
+        Core chronologies from main trunk-channel reaches cannot exclude later water inputs
+        carried into parts of the Ghaggar basin by smaller Himalayan distributaries during
+        mid-Holocene intervals.
   - id: perennial-flow-in-sampled-reaches
-    label: Perennial flow supplied by Sutlej distributaries
+    label: "Hydrology: renewed perennial supply via Sutlej distributaries (c. 7000 to 2500 BCE)"
     lens: scholarship
     grade: C
+    range: { earliest: "7000 BCE", latest: "2500 BCE", precision: ka, circa: true }
     statement: >-
-      The trunk Sutlej could leave its old valley while smaller branches still supplied the
-      Ghaggar. Chatterjee and colleagues infer that distributaries sustained a perennial
-      river in the reaches they studied between about 9,000 and 4,500 years ago. The overlap
-      with Early Harappan settlement suggests that these communities had access to more
-      dependable water than seasonal rainfall alone would provide.
+      Even after the trunk Sutlej shifted away, smaller distributaries could still feed
+      reaches of the Ghaggar system. Chatterjee and colleagues analysed sediments along a
+      300-kilometre transect and inferred renewed Higher and Lesser Himalayan water supply
+      sustaining perennial flow between about 9 and 4.5 ka (roughly 7000 to 2500 BCE).
+      On this model, reliable Himalayan-fed water persisted into the Early Harappan period
+      before declining around the ~4.2 ka aridification event.
     proponents:
       - name: Anirban Chatterjee and colleagues
-        work: { id: src.chatterjee-2019-perennial-river-harappan-heartland, locator: "The evolving river system; Dynamics of the Harappan settlements" }
+        role: Geochemists and geologists, analysed 40Ar/39Ar and Sr-Nd sediment provenance
+        work: { id: src.chatterjee-2019-perennial-river-harappan-heartland, locator: "Abstract; The evolving river system; Dynamics of the Harappan settlements" }
     evidence:
       - text: >-
-          Dated deposits contain renewed inputs of Higher Himalayan sands. The authors compare
-          their isotopic and mineral signatures with sediments and waters from the Sutlej
-          to infer renewed supply through distributaries.
+          Radiocarbon- and luminescence-dated fluvial layers from 9 to 4.5 ka contain
+          40Ar/39Ar muscovite and Sr-Nd signatures matching Higher and Lesser Himalayan
+          sources, attributed to reactivation by Sutlej distributaries before ~4.2 ka.
         grade: C
         sources:
-          - { id: src.chatterjee-2019-perennial-river-harappan-heartland, locator: "Fig. 3; The evolving river system" }
+          - { id: src.chatterjee-2019-perennial-river-harappan-heartland, locator: "Abstract; Fig. 3; The evolving river system" }
     objections:
       - >-
-        Sediment provenance identifies a source more securely than it identifies how water
-        reached the sampling site or whether the flow persisted year-round.
+        Isotopic provenance identifies the ultimate rock source of alluvial sediments more
+        securely than whether surface flow remained continuously perennial down to the
+        sea, and reworking of older Himalayan sands must be ruled out.
+      - >-
+        Because this inferred phase ends by ~4.5 ka (~2500 BCE), it covers Early Harappan
+        settlement rather than demonstrating a perennial Himalayan river at Mature Harappan
+        decline or in the later second millennium BCE.
 whatWouldChangeThis:
   - >-
-    Dated cores spanning upper, middle and lower reaches, with comparable provenance and discharge
-    indicators, would test whether Himalayan-fed perennial flow persisted across the system or only locally.
+    Dense transects of OSL- and radiocarbon-dated cores spanning upper, middle and lower
+    reaches of the Ghaggar-Hakra with discharge proxies would test whether Holocene
+    Himalayan-fed flow was basin-wide or localized and when it ceased.
   - >-
-    An independently dated text naming the Sarasvati alongside identifiable landmarks in either
-    region would help test whether the older hymns refer to one river or several.
-relatedEntities: [concept.ghaggar-hakra-sarasvati-debate, text.rigveda, site.kalibangan, tradition.harappan-civilisation]
+    An independently dated second- or early first-millennium BCE textual record pairing
+    Sarasvati with unmistakable regional landmarks would clarify whether early hymns denote
+    one river or multiple waterways.
+relatedEntities:
+  - concept.ghaggar-hakra-sarasvati-debate
+  - text.rigveda
+  - site.kalibangan
+  - tradition.harappan-civilisation
+  - event.4-2-ka-climate-aridification
+relatedArticles: [history/indus-valley-civilisation, history/vedic-period]
 tags: [sarasvati, ghaggar-hakra, hydrology, rigveda]
-review: { status: draft, author: Codex }
+review: { status: draft, author: senior-editor-review }
