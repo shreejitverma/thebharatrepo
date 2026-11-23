@@ -10,7 +10,8 @@ summary: >-
   jetty remains and Indo-Roman amphorae belong mainly to historical and medieval
   anchorage phases, distinct from Bet Dwarka's protohistoric settlement. The Mahabharata
   preserves the sacred account of Dvaraka's submergence.
-published: false
+published: true
+approval: { by: Shreejit Verma, date: "2026-11-22" }
 commonGround:
   - text: >-
       Marine archaeologists documented stone anchors in a submerged channel off modern
@@ -146,4 +147,4 @@ whatWouldChangeThis:
 relatedEntities: [person.krishna, text.mahabharata, tradition.harappan-civilisation, site.lothal]
 relatedArticles: [literature/mahabharata]
 tags: [dwarka, bet-dwarka, maritime-archaeology, krishna, mahabharata]
-review: { status: draft, author: senior-editor-review }
+review: { status: published, reviewer: Shreejit Verma, lastReviewed: "2026-11-22", author: senior-editor-review }

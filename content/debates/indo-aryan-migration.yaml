@@ -10,7 +10,8 @@ summary: >-
   the Rakhigarhi I6113 genome and Rigvedic river geography to argue for local origins.
   Modern scholarship rejects nineteenth-century theories of a violent Aryan invasion and
   distinguishes biological ancestry, material culture and speech.
-published: false
+published: true
+approval: { by: Shreejit Verma, date: "2026-11-22" }
 commonGround:
   - text: >-
       Modern archaeology and historiography reject the older hypothesis of a violent
@@ -185,4 +186,4 @@ relatedArticles:
   - history/vedic-period
   - history/indus-valley-civilisation
 tags: [indo-aryan, linguistics, archaeogenetics, harappan]
-review: { status: draft, author: senior-editor-review }
+review: { status: published, reviewer: Shreejit Verma, lastReviewed: "2026-11-22", author: senior-editor-review }

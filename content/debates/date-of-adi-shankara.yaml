@@ -9,7 +9,8 @@ summary: >-
   histories adopted 788 to 820 CE from later notices and manuscripts, a span also kept by
   some traditions, while the Kanchi and Dwaraka matha lineages reckon his life as 509 to
   477 BCE.
-published: false
+published: true
+approval: { by: Shreejit Verma, date: "2026-11-22" }
 commonGround:
   - text: >-
       Shankara's commentary on the Brahmasutras, together with his commentaries on ten
@@ -153,4 +154,4 @@ whatWouldChangeThis:
 relatedEntities: [person.adi-shankara, person.kumarila-bhatta, text.upanishads, text.bhagavad-gita]
 relatedArticles: [philosophy/advaita-vedanta]
 tags: [adi-shankara, advaita, vedanta, chronology]
-review: { status: draft, author: senior-editor-review }
+review: { status: published, reviewer: Shreejit Verma, lastReviewed: "2026-11-22", author: senior-editor-review }

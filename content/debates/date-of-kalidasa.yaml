@@ -9,7 +9,8 @@ summary: >-
   from literary development and possible echoes in the 473 CE Mandasor inscription, a
   minority hypothesis reads Malavikagnimitra as contemporary with Agnimitra, and Sanskrit
   tradition links him with a first-century BCE Vikramaditya of Ujjain.
-published: false
+published: true
+approval: { by: Shreejit Verma, date: "2026-11-22" }
 commonGround:
   - text: >-
       The Aihole inscription of Saka 556 (634 CE), composed by Ravikirti for the Chalukya
@@ -150,4 +151,4 @@ whatWouldChangeThis:
 relatedEntities: [person.kalidasa, person.chandragupta-ii, polity.gupta-empire, polity.shunga-dynasty, artifact.aihole-inscription, text.natyashastra]
 relatedArticles: [literature/kalidasa]
 tags: [kalidasa, sanskrit, drama, chronology]
-review: { status: draft, author: senior-editor-review }
+review: { status: published, reviewer: Shreejit Verma, lastReviewed: "2026-11-22", author: senior-editor-review }

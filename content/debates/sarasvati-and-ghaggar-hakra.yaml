@@ -9,7 +9,8 @@ summary: >-
   Mature Harappan urbanism; geologists debate whether Harappan-era settlements relied
   solely on monsoon-fed rivers or also received perennial water from Sutlej
   distributaries until about 4,500 years ago.
-published: false
+published: true
+approval: { by: Shreejit Verma, date: "2026-11-22" }
 commonGround:
   - text: >-
       The river list in Rigveda 10.75.5 places Sarasvati between the Yamuna and the
@@ -197,4 +198,4 @@ relatedEntities:
   - event.4-2-ka-climate-aridification
 relatedArticles: [history/indus-valley-civilisation, history/vedic-period]
 tags: [sarasvati, ghaggar-hakra, hydrology, rigveda]
-review: { status: draft, author: senior-editor-review }
+review: { status: published, reviewer: Shreejit Verma, lastReviewed: "2026-11-22", author: senior-editor-review }

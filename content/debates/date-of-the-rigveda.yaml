@@ -9,7 +9,8 @@ summary: >-
   vocabulary. An alternative reconstruction (grade E) proposes a third- or multi-millennium
   BCE timeline from poet attributions and Ghaggar-Hakra river imagery. Puranic tradition
   treats the Veda as eternal and places Vyasa's arrangement in Dvapara Yuga.
-published: false
+published: true
+approval: { by: Shreejit Verma, date: "2026-11-22" }
 commonGround:
   - text: >-
       The transmitted Shakala Rigveda comprises 1,028 hymns in ten books (mandalas), whose
@@ -176,4 +177,4 @@ whatWouldChangeThis:
 relatedEntities: [text.rigveda, event.mitanni-treaty, concept.ghaggar-hakra-sarasvati-debate, tradition.vedic-oral-transmission, cosmology.dvapara-yuga]
 relatedArticles: [philosophy/the-vedas, language/vedic-and-classical-sanskrit]
 tags: [rigveda, veda, oral-transmission, contested-chronology]
-review: { status: draft, author: senior-editor-review }
+review: { status: published, reviewer: Shreejit Verma, lastReviewed: "2026-11-22", author: senior-editor-review }

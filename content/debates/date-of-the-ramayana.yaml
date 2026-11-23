@@ -9,7 +9,8 @@ summary: >-
   to about 300 CE. Modern planetarium-software reconstructions of Rama's horoscope propose
   sixth-millennium BCE dates (grade E). Puranic and vernacular traditions place Rama's
   reign in Treta Yuga in sacred chronology.
-published: false
+published: true
+approval: { by: Shreejit Verma, date: "2026-11-22" }
 commonGround:
   - text: >-
       The transmitted Sanskrit epic consists of seven books (kandas) attributing the poem
@@ -190,4 +191,4 @@ relatedEntities:
   - text.ramcharitmanas
 relatedArticles: [literature/the-ramayana]
 tags: [ramayana, valmiki, oral-transmission, chronology]
-review: { status: draft, author: senior-editor-review }
+review: { status: published, reviewer: Shreejit Verma, lastReviewed: "2026-11-22", author: senior-editor-review }
