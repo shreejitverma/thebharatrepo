@@ -289,6 +289,24 @@ test.describe('references', () => {
     await noSeriousA11yViolations(page);
   });
 
+  test('the Mauryan Empire article links its archive records and grades them in its summary', async ({ page }) => {
+    await page.goto('/history/maurya-empire');
+    const summary = page.locator('aside.evidence-summary');
+    await expect(summary.locator('.evidence-summary__lead')).toHaveText(/^\d+ graded datings and claims across the \d+ archive records this article covers:$/);
+    await expect(summary.locator('.grade-counts li').first()).toBeVisible();
+    // The body links its people, texts and inscriptions on first mention, and the same records are listed below it.
+    const body = page.locator('.article-content');
+    for (const [name, href] of [
+      ['Ashoka', '/archive/person/ashoka'],
+      ['Chandragupta', '/archive/person/chandragupta-maurya'],
+      ['Major Rock Edict XIII', '/archive/artifact/ashoka-major-rock-edict-xiii'],
+      ['Arthashastra', '/archive/text/arthashastra'],
+    ]) {
+      await expect(body.getByRole('link', { name, exact: true })).toHaveAttribute('href', href);
+      await expect(page.locator(`.relations a[href="${href}"]`)).toHaveCount(1);
+    }
+  });
+
   test('a source record lists the article, entities and corrections that cite it', async ({ page }) => {
     await page.goto('/history/maurya-empire');
     const title = await page.locator('h1').textContent();
