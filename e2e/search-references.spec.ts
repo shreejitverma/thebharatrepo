@@ -370,8 +370,9 @@ test.describe('references', () => {
     const link = page.locator('.cited-by a[href="/learn/how-we-date-ashoka#quiz"]');
     await expect(link).toHaveText('How do we know when Ashoka lived?');
     await expect(link.locator('xpath=..').locator('.cited-by__contexts li').first()).toContainText('Question');
-    // The only debate citing this source is an unpublished draft, which a public build never shows.
-    await expect(page.locator('.cited-by a[href^="/debates/"]')).toHaveCount(0);
+    // The published debate that cites it is listed beside the quizzes; the e2e fixture draft never is.
+    await expect(page.locator('.cited-by a[href="/debates/date-of-the-buddha"]').first()).toBeVisible();
+    await expect(page.locator('.cited-by a[href*="e2e-unpublished-fixture"]')).toHaveCount(0);
     await noHorizontalScroll(page);
     await noSeriousA11yViolations(page);
   });

@@ -127,10 +127,12 @@ test.describe('search finds published debates', () => {
     expect(top).toContain('/debates/indo-aryan-migration');
   });
 
-  test('"buddha" ranks the person first and the debate second', async ({ page }) => {
+  // With 1,027 entities, the artifacts and texts titled with the Buddha's name outrank the debate, which still
+  // appears on the first page of results; "date of the buddha" names it exactly (above).
+  test('"buddha" ranks the person first and the debate on the first page', async ({ page }) => {
     await page.goto('/search?q=buddha');
     await expect(results(page).first()).toHaveAttribute('href', BUDDHA);
-    await expect(results(page).nth(1)).toHaveAttribute('href', '/debates/date-of-the-buddha');
+    await expect(page.locator('.search-results a[data-result][href="/debates/date-of-the-buddha"]')).toHaveCount(1);
   });
 
   test('the Debates kind filter narrows results to debates', async ({ page }) => {
