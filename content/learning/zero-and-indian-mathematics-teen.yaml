@@ -1,0 +1,161 @@
+id: learn.zero-and-indian-mathematics-teen
+title: Zero, numerals and Indian mathematics
+level: teen
+audience: Ages 13 to 17, in class or at home
+summary: >-
+  The digits we use every day, with a zero to mark an empty place, reached the world from India through
+  Arabic-speaking scholars. This path looks at the evidence: altar geometry, Aryabhata and Brahmagupta,
+  a birch-bark manuscript whose age is disputed, a dated zero carved at Gwalior, and the Kerala
+  mathematicians. Along the way it asks how we know when each idea appears.
+focus: { earliest: "200 CE", latest: "1600 CE", precision: century, circa: true }
+goals:
+  - Explain what a zero does in a place-value number.
+  - Explain why Brahmagupta's rules for zero matter.
+  - Explain why the Bakhshali manuscript's age is debated.
+  - Explain why some results are described as "attributed to" a mathematician.
+steps:
+  - entity: text.baudhayana-shulba-sutra
+    title: Geometry with ropes
+    note: >-
+      Vedic priests used cords to lay out fire altars, and the Baudhayana Shulba Sutra states what we call
+      the Pythagorean rule. Notice that its date is an estimate from its language.
+  - entity: person.aryabhata
+    title: Aryabhata
+    note: >-
+      Aryabhata wrote the Aryabhatiya in 499 CE and dated it himself. Look at his value for pi, which he
+      calls approximate, and his idea that the Earth turns on its axis.
+  - entity: person.brahmagupta
+    title: Brahmagupta and zero as a number
+    note: >-
+      In 628 CE Brahmagupta gave rules for adding, subtracting and multiplying with zero, and for "debts"
+      and "fortunes", that is negative and positive numbers. Notice that zero here is a number, not just a
+      gap.
+  - entity: artifact.bakhshali-manuscript
+    title: A birch-bark puzzle
+    note: >-
+      The Bakhshali manuscript uses a dot for zero. Look at why a 2017 radiocarbon test gave three different
+      dates, and why experts on old scripts think it is a single copy made later.
+  - entity: artifact.gwalior-chaturbhuj-zero-inscription
+    title: A zero carved in stone
+    note: >-
+      At Gwalior, the number 270 was carved with a small round zero in an inscription that gives its own date
+      in the 870s CE. Notice why a dated inscription is such useful evidence.
+  - entity: text.lilavati
+    title: Maths in verse
+    note: >-
+      Bhaskara II's Lilavati teaches arithmetic through problems in verse. Notice how the site treats the
+      popular story about the book's title and his daughter.
+  - entity: person.madhava-of-sangamagrama
+    title: Madhava and infinite series
+    note: >-
+      Later Kerala scholars credit Madhava with series for pi and for trigonometry. Notice that most of his
+      own writing is lost, so we know his results through other people's books.
+  - article: science/zero-and-the-decimal-system
+    title: Going further, zero and the decimal system
+    note: >-
+      Read the full article to see what was new in India, where the oldest dated zeros are, and why the
+      Bakhshali manuscript is debated.
+quiz:
+  - id: placeholder
+    question: In the number 305, what job does the 0 do?
+    choices:
+      - text: It marks the empty tens place, so the 3 means three hundreds.
+        correct: true
+        explanation: >-
+          In a place-value system the position of a digit gives its value, and a zero shows that a place is
+          empty.
+      - text: It adds nothing, so 305 means the same as 35.
+        explanation: >-
+          Without the zero the 3 would move into the tens place, and the number would be thirty-five.
+      - text: It shows that the number is negative.
+        explanation: >-
+          Zero marks an empty place; it says nothing about whether a number is negative.
+    sources:
+      - src.plofker-2009-mathematics-in-india
+  - id: brahmagupta
+    question: Why are Brahmagupta's rules for zero important?
+    choices:
+      - text: They were the first time anyone used a sign for an empty place.
+        explanation: >-
+          Babylonian scribes had a sign for an empty place much earlier. Brahmagupta's step was to calculate
+          with zero.
+      - text: Every one of them is still used unchanged today.
+        explanation: >-
+          His rule that zero divided by zero is zero is not accepted in modern mathematics.
+      - text: They are the earliest surviving rules that treat zero as a number you can calculate with.
+        correct: true
+        explanation: >-
+          His Brahmasphutasiddhanta of 628 CE explains sums, differences and products with zero, and with
+          negative numbers.
+    sources:
+      - src.plofker-2009-mathematics-in-india
+      - src.colebrooke-1817-algebra-brahmegupta-bhascara
+  - id: bakhshali
+    question: Why is the age of the Bakhshali manuscript debated?
+    choices:
+      - text: Nobody has ever tried to date it.
+        explanation: >-
+          It has been dated both by its script and, in 2017, by radiocarbon.
+      - text: Radiocarbon tests on three pieces gave three dates centuries apart, but its handwriting and layout look like one copy made at one time.
+        correct: true
+        explanation: >-
+          The tests gave ranges in the 3rd to 4th, 7th to 8th and 9th to 10th centuries CE. Historians of
+          Indian mathematics argue that the copy was made later, in the 8th to 12th centuries.
+      - text: It has a date written on its first page that cannot be read.
+        explanation: >-
+          The debate is between radiocarbon results and the evidence of its script, not about a written date.
+    sources:
+      - src.plofker-2017-bakhshali-radiocarbon
+      - src.bodleian-2017-bakhshali-carbon-dating
+  - id: gwalior
+    question: Why is the zero in the Gwalior inscription such useful evidence?
+    choices:
+      - text: The inscription gives its own date, so we know the round zero was in use by then.
+        correct: true
+        explanation: >-
+          It is dated Vikrama Samvat 933, about 876 CE, and writes numbers such as 270 and 50 with a round
+          zero.
+      - text: It proves that zero was invented at Gwalior.
+        explanation: >-
+          A carving shows a symbol already in use; zero appears earlier in mathematical texts, and in a dated
+          Cambodian inscription of 683 CE.
+      - text: It is the only zero ever found in India.
+        explanation: >-
+          Zeros appear in many later inscriptions and manuscripts; Gwalior is valuable because it is early and
+          securely dated.
+    sources:
+      - src.burgess-1892-epigraphia-indica-vol-1
+      - src.plofker-2009-mathematics-in-india
+  - id: lilavati
+    question: What does the evidence say about the story that Bhaskara II wrote the Lilavati for his daughter?
+    choices:
+      - text: Bhaskara says so clearly in the first verse.
+        explanation: >-
+          The text does not establish this; that is why the story is treated cautiously.
+      - text: The text itself does not establish the story, so it should be treated with caution.
+        correct: true
+        explanation: >-
+          The story is popular, but it comes from later tradition rather than from the Lilavati.
+      - text: A dated inscription records the daughter's name.
+        explanation: >-
+          No inscription is known that records such a story.
+    sources:
+      - src.plofker-2009-mathematics-in-india
+  - id: madhava
+    question: Why are Madhava's series described as "attributed to" him?
+    choices:
+      - text: Because he used a false name
+        explanation: >-
+          There is no evidence of this; the issue is that his own works mostly do not survive.
+      - text: Because European mathematicians wrote them down first
+        explanation: >-
+          The attributions come from the Kerala school's own writings.
+      - text: Most of his own writing is lost, and later Kerala mathematicians recorded the results and named him.
+        correct: true
+        explanation: >-
+          Scholars such as Nilakantha Somayaji preserved results credited to Madhava in their own works.
+    sources:
+      - src.plofker-2009-mathematics-in-india
+      - src.ramasubramanian-2011-tantrasangraha
+tags: [mathematics, zero, science]
+review: { status: draft, author: "claude-opus-5-5" }

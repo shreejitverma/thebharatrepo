@@ -1,33 +1,41 @@
 /**
  * Markdown (GitHub Flavored, for tables) rendering for articles, with numbered inline citations.
- * [@src.id, locator] groups become superscript links to a generated references list.
+ * [@src.id, locator] groups become superscript links (id cite-<k>) to a generated references list
+ * (id ref-<n>); see references.ts for numbering and deduplication.
  */
 
 import { remark } from 'remark';
 import html from 'remark-html';
 import remarkGfm from 'remark-gfm';
 import type { Source } from './schema';
-import { CITATION_GROUP, parseCitationGroup } from './load';
+import { CITATION_GROUP, extractCitations, parseCitationGroup } from './load';
 import { formatSource } from './kaalchakra';
+import { buildReferences, type CitationUse, type Reference } from './references';
+
+export interface RenderedReference extends Reference {
+  source: Source;
+}
 
 export interface RenderedArticle {
   html: string;
-  references: { n: number; source: Source; locators: string[] }[];
+  references: RenderedReference[];
 }
 
 function escapeAttr(s: string): string {
   return s.replace(/&/g, '&amp;').replace(/"/g, '&quot;').replace(/</g, '&lt;').replace(/>/g, '&gt;');
 }
 
-export async function renderArticle(markdown: string, sources: Map<string, Source>): Promise<RenderedArticle> {
-  const order = new Map<string, number>();
-  const locators = new Map<string, Set<string>>();
-  for (const m of markdown.matchAll(CITATION_GROUP)) {
-    for (const c of parseCitationGroup(m[1])) {
-      if (!order.has(c.id)) order.set(c.id, order.size + 1);
-      if (c.locator) (locators.get(c.id) ?? locators.set(c.id, new Set()).get(c.id)!).add(c.locator);
-    }
-  }
+/**
+ * Renders an article body. `datingCitations` (the frontmatter datings' sources) are appended to the
+ * references after the in-text ones. Throws on a citation of an unknown source: the loader rejects
+ * those, so reaching one here means the build is rendering unvalidated content.
+ */
+export async function renderArticle(markdown: string, sources: Map<string, Source>, datingCitations: CitationUse[] = []): Promise<RenderedArticle> {
+  const refs = buildReferences(extractCitations(markdown), datingCitations);
+  const unknown = refs.filter((r) => !sources.has(r.id)).map((r) => r.id);
+  if (unknown.length) throw new Error(`renderArticle: unknown or malformed source citations: ${unknown.join(', ')}`);
+  const number = new Map(refs.map((r) => [r.id, r.n]));
+
   // Protect citation groups from Markdown processing with placeholders, then substitute after.
   const groups: string[] = [];
   const protectedMd = markdown.replace(CITATION_GROUP, (_all, inner: string) => {
@@ -42,17 +50,13 @@ export async function renderArticle(markdown: string, sources: Map<string, Sourc
   out = out.replace(/CITEGROUP(\d+)X/g, (_all, idx: string) => {
     const cites = parseCitationGroup(groups[Number(idx)]);
     const sups = cites.map((c) => {
-      const n = order.get(c.id)!;
-      const s = sources.get(c.id);
-      const title = s ? `${formatSource(s)}${c.locator ? `, ${c.locator}` : ''}` : c.id;
+      const n = number.get(c.id)!;
+      const s = sources.get(c.id)!;
+      const title = `${formatSource(s)}${c.locator ? `, ${c.locator}` : ''}`;
       useCount++;
       return `<a href="#ref-${n}" id="cite-${useCount}" title="${escapeAttr(title)}" aria-label="Reference ${n}">${n}</a>`;
     });
     return `<sup class="cite">[${sups.join(', ')}]</sup>`;
   });
-  const references = [...order.entries()]
-    .sort((a, b) => a[1] - b[1])
-    .filter(([id]) => sources.has(id))
-    .map(([id, n]) => ({ n, source: sources.get(id)!, locators: [...(locators.get(id) ?? [])] }));
-  return { html: out, references };
+  return { html: out, references: refs.map((r) => ({ ...r, source: sources.get(r.id)! })) };
 }

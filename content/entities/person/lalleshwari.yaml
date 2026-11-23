@@ -3,7 +3,9 @@ type: person
 kind: dharma
 names:
   en: Lalleshwari
+  iast: Lalleśvarī
   native: लल्लेश्वरी
+  nativeLang: sa-Deva
 summary: >-
   Lalleshwari (Lal Ded, Lalla) was a 14th-century Kashmiri yogini whose short verse sayings (vakh) are
   among the earliest works of Kashmiri literature. Her verses draw on Shaiva yoga and are cherished by
@@ -32,8 +34,7 @@ claims:
   - text: Her verses express a Shaiva yoga of inner realisation rather than external ritual.
     grade: B
     sources: [src.grierson-1920-lalla-vakyani]
-relations:
-  - { kind: related-to, target: tradition.kashmir-shaivism }
+relations: []
 wikidata: Q2667861
 tags: [kashmiri, poetry, yogini, women-poets, bhakti]
 review: { status: draft, author: "claude-opus-5-5" }

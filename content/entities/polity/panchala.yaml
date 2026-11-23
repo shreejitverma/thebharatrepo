@@ -57,10 +57,8 @@ claims:
       - src.olivelle-1998-early-upanisads
       - src.witzel-1997-early-sanskritization-kuru
 relations:
-  - { kind: contemporary-of, target: polity.kuru-kingdom }
   - { kind: located-at, target: site.ahichhatra }
   - { kind: located-at, target: site.atranjikhera }
-  - { kind: related-to, target: concept.painted-grey-ware-culture }
   - { kind: related-to, target: text.chandogya-upanishad }
   - { kind: related-to, target: text.shatapatha-brahmana }
 wikidata: Q558603

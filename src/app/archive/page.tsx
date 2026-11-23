@@ -1,5 +1,6 @@
 import type { Metadata } from 'next';
 import Link from 'next/link';
+import EntityNames from '@/components/EntityNames';
 import { getIndex } from '@/lib/content/site';
 import { KINDS, KIND_LABELS } from '@/lib/content/labels';
 import { datingSummary, primaryAnchor, primaryDating } from '@/lib/content/lens';
@@ -34,6 +35,8 @@ export default function ArchivePage() {
                 return (
                   <Link key={i.id} href={i.href} className="card">
                     <h3>{i.name}</h3>
+                    <EntityNames native={i.native} iast={i.iast} nativeLang={i.nativeLang} iastLang={i.iastLang} className="card__names" />
+                    {/* Adult summary only: teen and kids versions on all cards would double this page's weight. Entity pages switch level. */}
                     <p>{i.summary.length > 140 ? `${i.summary.slice(0, 137).replace(/\s+\S*$/, '')}...` : i.summary}</p>
                     <p className="card__meta">
                       {datingSummary(d, d.method)}

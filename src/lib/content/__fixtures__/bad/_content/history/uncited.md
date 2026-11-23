@@ -10,4 +10,4 @@ datings:
 review: { status: draft }
 ---
 
-No citations here.
+No citations here. See [the toba entry](/archive/event/former-toba), [a missing article](/history/nothing), [the history index](/history), [a live entry](/archive/event/toba) and [the wheel](/kaalchakra?id=event.toba).

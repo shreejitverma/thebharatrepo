@@ -3,7 +3,6 @@ type: event
 kind: event
 names:
   en: Hittite-Mitanni Treaty of Suppiluliuma I and Shattiwaza
-  iast: Mitrāvaruṇa-Indra-Nāsatya
 summary: >-
   The cuneiform treaty from the later 14th century BCE between the Hittite king Suppiluliuma I and the
   Mitanni prince Shattiwaza (Kurtiwaza), discovered at Hattusa (Bogazkoy), invokes four Vedic
@@ -58,8 +57,5 @@ claims:
       - src.thieme-1960-aryan-gods-mitanni-treaties
 relations:
   - { kind: related-to, target: text.rigveda }
-  - { kind: related-to, target: concept.vedic-sanskrit }
-  - { kind: related-to, target: concept.indo-aryan-migration }
-  - { kind: related-to, target: concept.sintashta-steppe-chariot-question }
 tags: [mitanni, hattusa, cuneiform, synchronism, indra, mitra, varuna, nasatya]
 review: { status: draft, author: "gemini-4-argon" }

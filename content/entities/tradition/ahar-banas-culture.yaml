@@ -51,17 +51,7 @@ claims:
     sources:
       - src.misra-2001-prehistoric-colonization-india
       - src.fuller-2006-agricultural-origins-south-asia
-relations:
-  - kind: related-to
-    target: site.ahar
-  - kind: related-to
-    target: site.balathal
-  - kind: related-to
-    target: site.gilund
-  - kind: related-to
-    target: site.bagor
-  - kind: preceded
-    target: tradition.malwa-culture
+relations: []
 wikidata: Q399951
 image:
   commons: "File:Topographic map of Ahar-Banas culture 1.svg"

@@ -61,11 +61,6 @@ claims:
       - src.lal-1955-excavation-hastinapura
       - src.singh-2008-ancient-early-medieval-india
       - src.thapar-2002-early-india
-relations:
-  - { kind: related-to, target: polity.kuru-kingdom }
-  - { kind: related-to, target: concept.painted-grey-ware-culture }
-  - { kind: related-to, target: concept.northern-black-polished-ware-culture }
-  - { kind: contemporary-of, target: site.ahichhatra }
-  - { kind: contemporary-of, target: site.atranjikhera }
+relations: []
 tags: [hastinapura, archaeology, bb-lal, painted-grey-ware, kuru, ganga]
 review: { status: draft, author: "gemini-4-argon" }

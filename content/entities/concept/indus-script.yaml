@@ -21,6 +21,18 @@ region: Pan-Harappan (with examples discovered in Mesopotamia and the Persian Gu
 datings:
   - method: archaeological-radiocarbon
     range:
+      earliest: "2600 BCE"
+      latest: "1900 BCE"
+      precision: century
+      circa: true
+    grade: B
+    label: Mature Harappan Inscriptions
+    sources:
+      - src.kenoyer-1998-ancient-cities-indus
+      - src.wright-2010-ancient-indus
+    note: The range refers to the Mature Harappan archaeological contexts in which inscribed objects are found.
+  - method: archaeological-radiocarbon
+    range:
       earliest: "3300 BCE"
       latest: "2600 BCE"
       precision: century
@@ -33,18 +45,6 @@ datings:
     note: >-
       Pre-firing and post-firing potters' marks and single or paired graphic signs on pottery from Harappa Periods 1
       and 2 (c. 3300-2600 BCE) that prefigure Mature Harappan sign forms.
-  - method: archaeological-radiocarbon
-    range:
-      earliest: "2600 BCE"
-      latest: "1900 BCE"
-      precision: century
-      circa: true
-    grade: B
-    label: Mature Harappan Inscriptions
-    sources:
-      - src.kenoyer-1998-ancient-cities-indus
-      - src.wright-2010-ancient-indus
-    note: The range refers to the Mature Harappan archaeological contexts in which inscribed objects are found.
   - method: linguistic
     range:
       earliest: "2600 BCE"
@@ -127,12 +127,6 @@ claims:
 relations:
   - kind: part-of
     target: tradition.harappan-civilisation
-  - kind: related-to
-    target: artifact.harappan-steatite-seals
-  - kind: related-to
-    target: artifact.dholavira-signboard
-  - kind: related-to
-    target: artifact.pashupati-seal
 wikidata: Q601388
 debate: >-
   The Indus script is contested along two axes: (1) whether it encodes spoken language (the majority position,

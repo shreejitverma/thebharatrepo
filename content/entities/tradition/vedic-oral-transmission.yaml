@@ -54,8 +54,5 @@ claims:
       - src.flood-2003-blackwell-companion-hinduism
 relations:
   - { kind: related-to, target: tradition.vedic-chanting, note: UNESCO recognition of the living recitation tradition }
-  - { kind: related-to, target: text.rigveda }
-  - { kind: related-to, target: text.vedangas }
-  - { kind: related-to, target: concept.vedic-sanskrit }
 tags: [oral-tradition, patha, ghanapatha, jatapatha, unesco, shiksha]
 review: { status: draft, author: "gemini-4-argon" }

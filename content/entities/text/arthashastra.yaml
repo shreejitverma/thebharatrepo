@@ -25,7 +25,7 @@ datings:
   - method: textual-internal
     range: { earliest: "321 BCE", latest: "290 BCE", precision: decade, circa: true }
     grade: C
-    label: Traditional Mauryan attribution (R. P. Kangle; Romila Thapar for a Mauryan core)
+    label: Mauryan attribution (R. P. Kangle; Romila Thapar for a Mauryan core)
     sources:
       - src.thapar-2012-asoka-decline-mauryas
       - src.trautmann-1971-kautilya-arthasastra
@@ -43,7 +43,6 @@ claims:
 debate: >-
   After R. Shamasastry published the text in 1909, many scholars read it as a description of Chandragupta Maurya's government, and R. P. Kangle defended a Mauryan date. Thomas Trautmann's statistical study (1971) showed several authors at work, and Patrick Olivelle (2013) places the earliest source material around 50 BCE, Kautilya’s recension around 50 to 125 CE, and the final redaction around 175 to 300 CE.
 relations:
-  - { kind: authored-by, target: person.kautilya }
   - { kind: related-to, target: polity.maurya-empire }
   - { kind: related-to, target: text.manusmriti }
 wikidata: Q323133

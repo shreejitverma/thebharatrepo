@@ -3,6 +3,9 @@ type: site
 kind: prehistory
 names:
   en: Mehrgarh Neolithic and Chalcolithic Site
+  iast: Mehrgaṛh
+  native: مہرگڑھ
+  nativeLang: ur
 summary: >-
   A foundational 200-hectare prehistoric settlement complex on the Kachi Plain at the foot of the Bolan Pass
   in Balochistan, documenting an unbroken transition from aceramic Neolithic mud-brick farming villages
@@ -60,11 +63,7 @@ claims:
     sources:
       - src.fuller-2006-agricultural-origins-south-asia
       - src.chen-2010-zebu-cattle-south-asia-neolithic
-relations:
-  - kind: related-to
-    target: event.domestication-of-zebu-cattle
-  - kind: related-to
-    target: event.earliest-cotton-mehrgarh
+relations: []
 image:
   commons: "File:Mehrgarh ruins.jpg"
   alt: Excavated mud-brick cellular compartments and walls at Neolithic Mehrgarh

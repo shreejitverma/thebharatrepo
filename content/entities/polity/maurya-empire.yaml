@@ -37,10 +37,7 @@ claims:
       - src.thapar-2012-asoka-decline-mauryas
       - src.kulke-2004-history-of-india
 relations:
-  - { kind: founded-by, target: person.chandragupta-maurya }
-  - { kind: ruled-by, target: person.ashoka }
   - { kind: succeeded, target: polity.nanda-dynasty }
-  - { kind: preceded, target: polity.shunga-dynasty }
 wikidata: Q62943
 tags: [maurya, empire, pataliputra, ashoka]
 review: { status: draft, author: "gemini-4-argon" }

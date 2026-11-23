@@ -1,0 +1,30 @@
+name: Suggest a new entity
+description: Propose a dated, sourced entry for the archive.
+title: "[Entity] "
+body:
+  - type: input
+    id: entity
+    attributes:
+      label: Entity name and type
+      placeholder: Example event, person, text, or site
+    validations:
+      required: true
+  - type: textarea
+    id: evidence
+    attributes:
+      label: Evidence and citations
+      description: Link the sources that support the proposed record and include locators if known.
+    validations:
+      required: true
+  - type: textarea
+    id: dating
+    attributes:
+      label: Dating and grades
+      description: Give the proposed range, method, and grades with a brief explanation of the evidence.
+    validations:
+      required: true
+  - type: textarea
+    id: context
+    attributes:
+      label: Related entries or competing positions
+      description: List related archive IDs and any other sourced dates or interpretations.

@@ -3,7 +3,7 @@ type: site
 kind: site
 names:
   en: Brihadisvara Temple, Thanjavur
-  iast: Bṛhadīśvara
+  iast: Peruvuṭaiyār Kōyil
   native: பெருவுடையார் கோயில்
 summary: >-
   The Rajarajeshvara or Brihadisvara temple at Thanjavur was built by the Chola king Rajaraja I and
@@ -40,7 +40,6 @@ claims:
     grade: B
     sources: [src.sastri-1955-the-colas]
 relations:
-  - { kind: patronised-by, target: person.rajaraja-i }
   - { kind: patronised-by, target: polity.chola-dynasty }
 tags: [unesco, chola, temple-architecture, shaiva]
 review: { status: draft, author: "claude-opus-5-5" }

@@ -35,9 +35,7 @@ claims:
 relations:
   - { kind: related-to, target: event.brahmi-decipherment-prinsep }
   - { kind: related-to, target: artifact.ashoka-major-rock-edict-xiii }
-  - { kind: related-to, target: artifact.tamil-brahmi-inscriptions }
   - { kind: related-to, target: polity.gupta-empire }
-  - { kind: related-to, target: artifact.bakhshali-manuscript }
 wikidata: Q1992659
 tags: [brahmi, gupta-script, palaeography, epigraphy, abugida, writing-systems]
 review: { status: draft, author: "gemini-4-argon" }

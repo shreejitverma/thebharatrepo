@@ -3,6 +3,9 @@ type: site
 kind: prehistory
 names:
   en: Inamgaon Chalcolithic Settlement
+  iast: Ināmgāv
+  native: इनामगाव
+  nativeLang: mr
 summary: >-
   A benchmark 5-hectare Chalcolithic settlement on the right bank of the Ghod River in Pune district,
   Maharashtra, excavated horizontally by M. K. Dhavalikar, H. D. Sankalia and Z. D. Ansari (1968-1983),
@@ -59,8 +62,6 @@ relations:
     target: tradition.jorwe-culture
   - kind: part-of
     target: tradition.malwa-culture
-  - kind: contemporary-of
-    target: site.daimabad
 tags:
   - chalcolithic
   - jorwe-culture

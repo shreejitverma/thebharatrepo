@@ -4,7 +4,7 @@ import { primaryAnchor, rankDatings, withTraditionMark, type Lens } from '@/lib/
 import type { KcDating, KcItem } from '@/lib/content/kaalchakra';
 import type { Kind } from '@/lib/content/labels';
 
-export type View = 'wheel' | 'river' | 'list';
+export type View = 'wheel' | 'river' | 'list' | 'map';
 export type Level = 'adult' | 'teen' | 'kids';
 
 export const SHORT_SEGMENT_LABELS: Record<string, string> = {

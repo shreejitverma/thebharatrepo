@@ -3,6 +3,8 @@ type: site
 kind: prehistory
 names:
   en: Hunsgi-Baichbal Valley Palaeolithic Complex
+  iast: Huṇasagi-Baicabāḷa
+  native: ಹುಣಸಗಿ-ಬೈಚಬಾಳ
 summary: >-
   A tertiary drainage basin in the Shorapur Doab of northern Karnataka containing over two hundred Lower
   and Middle Palaeolithic sites, documenting hominin raw-material procurement, seasonal aggregation near
@@ -43,9 +45,7 @@ claims:
     sources:
       - src.petraglia-1999-isampur-acheulian-quarry
       - src.misra-2001-prehistoric-colonization-india
-relations:
-  - kind: related-to
-    target: site.isampur
+relations: []
 tags:
   - palaeolithic
   - acheulian

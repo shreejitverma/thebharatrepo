@@ -5,6 +5,7 @@ names:
   en: Dholavira
   iast: Dholāvīrā
   native: धोलावीरा
+  nativeLang: hi
 summary: >-
   A monumental Harappan city on Khadir Bet island in the Rann of Kutch, Gujarat, occupied across seven cultural
   stages (c. 3000-1500 BCE), celebrated for its dressed-stone architecture, tripartite urban plan (Citadel, Middle
@@ -87,8 +88,8 @@ relations:
     target: site.mohenjo-daro
   - kind: contemporary-of
     target: site.lothal
-  - kind: related-to
-    target: concept.harappan-town-planning-and-drainage
+aliases:
+  - event.dholavira-unesco-inscription
 wikidata: Q9468
 image:
   commons: "File:Water reservoir at Dholavira site.jpg"

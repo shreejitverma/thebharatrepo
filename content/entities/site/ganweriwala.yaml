@@ -3,7 +3,9 @@ type: site
 kind: site
 names:
   en: Ganweriwala
-  iast: Gaṇverīvālā
+  iast: Ganverīvālā
+  native: گنویریوالا
+  nativeLang: ur
 summary: >-
   A large Mature Harappan urban centre in the Cholistan desert of Bahawalpur, Punjab, Pakistan, situated along
   the dry bed of the Hakra River roughly equidistant between Mohenjo-daro and Harappa, surveyed by M. Rafique Mughal
@@ -59,8 +61,6 @@ relations:
     target: site.mohenjo-daro
   - kind: contemporary-of
     target: site.harappa
-  - kind: related-to
-    target: concept.ghaggar-hakra-sarasvati-debate
 wikidata: Q3095220
 tags:
   - harappan

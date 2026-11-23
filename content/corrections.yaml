@@ -2675,3 +2675,221 @@
   sources:
     - src.mutin-2025-mehrgarh-radiocarbon
     - src.fuller-2006-agricultural-origins-south-asia
+- date: 2026-11-22
+  target: cosmology.kalpa
+  before: "The Kalpa page listed Lifespan of Brahma twice under Connections: Kalpa part of Lifespan of Brahma, and Lifespan of Brahma related to this. Pralaya and the Shveta Varaha Kalpa were also listed twice."
+  after: "Each connection is listed once. Kalpa is part of Lifespan of Brahma, and the Shveta Varaha Kalpa is part of Lifespan of Brahma; the reverse related-to entries on Lifespan of Brahma, Pralaya and the Shveta Varaha Kalpa were removed."
+  reason: "The entity page shows inbound relations automatically, so a relation authored on both entities appears twice on both pages. The validator now rejects a second relation between the same two entities."
+- date: 2026-11-22
+  target: "Relations on 146 entities: artifact.kalibangan-ploughed-field, artifact.priest-king-mohenjo-daro, concept.black-and-red-ware-culture, concept.brahmi-to-gupta-script, concept.harappan-mesopotamian-trade, concept.harappan-weights-and-measures, concept.indo-aryan-migration, concept.indus-script, concept.iron-metallurgy-in-india, concept.neolithic-of-the-vindhyas, concept.northern-black-polished-ware-culture, concept.painted-grey-ware-culture, concept.rakhigarhi-i6113-genome, concept.shaka-era, concept.sintashta-steppe-chariot-question, concept.southern-neolithic-ash-mounds, concept.vedic-sanskrit, concept.vikram-samvat, concept.yuga-chronology-of-the-itihasa, cosmology.brahma-lifespan, cosmology.dvapara-yuga, cosmology.kali-yuga, cosmology.mahayuga, cosmology.pralaya, cosmology.satya-yuga, cosmology.shveta-varaha-kalpa, cosmology.treta-yuga, cosmology.vaivasvata-manvantara, event.4-2-ka-climate-aridification, event.brahmi-decipherment-prinsep, event.kali-yuga-epoch, event.matsya-flood-narrative, event.mitanni-treaty, person.banabhatta, person.chandragupta-ii, person.chandragupta-maurya, person.gautama-buddha, person.harshavardhana, person.kalidasa, person.kanishka-i, person.kharavela, person.krishna, person.kumarila-bhatta, person.lalleshwari, person.mahavira, person.rama, person.vaivasvata-manu, person.varahamihira, polity.chalukya-dynasty-of-badami, polity.gupta-empire, polity.indo-greek-kingdom, polity.kuru-kingdom, polity.kushan-empire, polity.magadha, polity.maurya-empire, polity.nanda-dynasty, polity.pala-empire, polity.pallava-dynasty, polity.panchala, polity.satavahana-dynasty, polity.shunga-dynasty, site.ahichhatra, site.ajanta-caves, site.atranjikhera, site.attirampakkam, site.balathal, site.brihadisvara-temple-thanjavur, site.chanhudaro, site.dhaba, site.dholavira, site.didwana, site.ganweriwala, site.gilund, site.great-bath-mohenjo-daro, site.gufkral, site.hampi, site.hastinapura, site.hunsgi-baichbal-valley, site.inamgaon, site.isampur, site.jwalapuram, site.kalibangan, site.keezhadi, site.kot-diji, site.lahuradewa, site.langhnaj, site.lothal, site.mehrgarh, site.mohenjo-daro, site.nalanda-mahavihara, site.paiyampalli, site.rakhigarhi, site.sanauli, site.sanchi-stupa, site.sanganakallu, site.shortugai, site.udayagiri-caves, text.aranyakas, text.arthashastra, text.aryabhatiya, text.ashtadhyayi, text.atharvaveda, text.bhagavad-gita, text.brahmanas, text.brahmasphutasiddhanta, text.chandogya-upanishad, text.gita-govinda, text.harshacharita, text.jnaneshwari, text.kitab-al-hind, text.krishna-yajurveda, text.lilavati, text.mahabharata, text.manusmriti, text.milindapanha, text.nirukta, text.rigveda, text.samaveda, text.sangam-literature, text.shatapatha-brahmana, text.shukla-yajurveda, text.shulba-sutras, text.sushruta-samhita, text.tirukkural, text.tolkappiyam, text.upanishads, text.valmiki-ramayana, text.vedangas, text.yajurveda, text.yoga-sutras, tradition.agnicayana, tradition.ahar-banas-culture, tradition.cemetery-h-culture, tradition.gandhara-art, tradition.hakra-ware-phase, tradition.jhukar-phase, tradition.jorwe-culture, tradition.kumbha-mela, tradition.malwa-culture, tradition.mathura-art, tradition.ochre-coloured-pottery-culture, tradition.rangpur-late-harappan, tradition.shrauta-ritual, tradition.soma-ritual, tradition.vedic-chanting, tradition.vedic-oral-transmission"
+  before: "271 pairs of entities were linked by two or more relations, usually the same relation authored from both sides (for example A authored B and B authored-by A, or A related-to B and B related-to A)."
+  after: "272 redundant relations were removed so each pair is linked once. Where one relation was a generic related-to or contemporary-of and the other was specific, the specific one was kept; between inverse forms, the active form (authored, ruled, patronised, founded, succeeded) was kept."
+  reason: "Each pair is shown on both entities' pages from a single relation, so the duplicates repeated the same connection. No connection between two entities was removed."
+- date: 2026-11-22
+  target: person.chandragupta-maurya
+  before: "Chandragupta Maurya founded the Maurya Empire, ruled the Maurya Empire, and the Maurya Empire was founded by Chandragupta Maurya."
+  after: "Chandragupta Maurya founded the Maurya Empire."
+  reason: "Three relations described one link between the same two entities. Founding the empire is the most specific of them."
+- date: 2026-11-22
+  target: tradition.mathura-art and tradition.gandhara-art
+  before: "Gandhara art influenced Mathura art, and Mathura art was contemporary of Gandhara art."
+  after: "Gandhara art influenced Mathura art."
+  reason: "Two relations linked the same pair. The influence relation is the more specific statement."
+- date: 2026-11-22
+  target: site.udayagiri-caves and polity.gupta-empire
+  before: "The Gupta Empire patronised the Udayagiri Caves, and the Udayagiri Caves were part of the Gupta Empire."
+  after: "The Gupta Empire patronised the Udayagiri Caves."
+  reason: "Two relations linked the same pair, and part-of describes a component rather than a site within a polity's territory."
+- date: 2026-11-22
+  target: site.brihadisvara-temple-thanjavur and person.rajaraja-i
+  before: "Rajaraja I founded the Brihadisvara Temple, and the temple was patronised by Rajaraja I."
+  after: "Rajaraja I founded the Brihadisvara Temple."
+  reason: "Two relations linked the same pair; founding the temple is the more specific statement."
+- date: 2026-11-22
+  target: polity.chola-dynasty and polity.pallava-dynasty
+  before: "The Cholas succeeded the Pallavas as the dominant power in the Tamil country, and the Pallavas preceded the Cholas, who displaced them in the late 9th century."
+  after: "One relation: the Cholas succeeded the Pallavas as the dominant power in the Tamil country, displacing them in the late 9th century."
+  reason: "Both relations described the same succession; their notes were combined on the one kept."
+- date: 2026-11-22
+  target: person.rama
+  before: "Rama carried a grade C linguistic dating of 750 BCE to 300 CE, the composition of the Valmiki Ramayana, which placed him on the Kaalchakra as a scholarly-dated marker in the 3rd century BCE."
+  after: "Rama carries only the traditional Treta Yuga placement. The composition window of the poem is recorded as a grade C claim, and the Valmiki Ramayana entity keeps its own dating."
+  reason: "The dating was of the text, not of Rama. No inscription or excavated layer attests Rama, so scholarship offers no date for him and the marker presented the poem's date as his."
+  sources:
+    - src.goldman-1984-ramayana-balakanda
+    - src.brockington-1998-sanskrit-epics
+- date: 2026-11-22
+  target: person.krishna
+  before: "Krishna carried a grade C linguistic dating from the Chandogya Upanishad (700 to 500 BCE) and a grade B epigraphic dating from the Heliodorus pillar (120 to 100 BCE), which placed him on the Kaalchakra as a scholarly-dated marker in the late 2nd century BCE."
+  after: "Krishna carries only the two traditional datings. The Chandogya reference and the Heliodorus pillar remain as claims, and the pillar claim gives its date by the reign of Antialcidas."
+  reason: "Both datings dated evidence about Krishna, a text and the worship of Vasudeva, not Krishna himself, whose historicity the evidence cannot settle."
+  sources:
+    - src.olivelle-1998-early-upanisads
+    - src.salomon-1998-indian-epigraphy
+    - src.malinar-2007-bhagavadgita-doctrines-contexts
+- date: 2026-11-22
+  target: person.vaivasvata-manu
+  before: "Vaivasvata Manu carried a grade B linguistic dating of 1500 to 600 BCE, the dates of the Rigveda and the Shatapatha Brahmana."
+  after: "Vaivasvata Manu carries only the traditional manvantara placement, and the dates of the texts that tell of him are a grade B claim."
+  reason: "The dating was of the texts, not of the figure, and placed a traditional progenitor on the Kaalchakra as if scholarship dated him."
+  sources:
+    - src.jamison-brereton-2014-rigveda
+    - src.eggeling-1882-satapatha-brahmana-part-1
+- date: 2026-11-22
+  target: event.matsya-flood-narrative
+  before: "The flood carried a grade C linguistic dating of 800 to 600 BCE, the date of the Shatapatha Brahmana."
+  after: "The flood carries only the traditional Puranic placement, and the date of its earliest known telling is a grade C claim."
+  reason: "The dating's own note said it dated the text, not any event, but the Kaalchakra showed it as a scholarly date for the flood."
+  sources:
+    - src.eggeling-1882-satapatha-brahmana-part-1
+    - src.flood-2003-blackwell-companion-hinduism
+- date: 2026-11-22
+  target: event.samudra-manthana
+  before: "The churning carried a grade B textual-internal dating of 300 BCE to 400 CE, the dates of the epics and early Puranas."
+  after: "The churning carries only the traditional Chakshusha manvantara placement, and the dates of the epic tellings are a grade B claim."
+  reason: "The dating was of the texts that tell the story, not of the event, which is known only from tradition."
+  sources:
+    - src.brockington-1998-sanskrit-epics
+    - src.rocher-1986-puranas
+- date: 2026-11-22
+  target: person.kautilya
+  before: "The grade C textual-internal dating of 350 to 280 BCE was labelled \"Traditional identification as Chandragupta Maurya's minister\"."
+  after: "The same dating is labelled as the Mauryan identification held by R. P. Kangle and, for an original core, by Romila Thapar."
+  reason: "The label called a scholarly position held by named scholars a traditional one, which mixed the two lenses."
+  sources:
+    - src.thapar-2012-asoka-decline-mauryas
+    - src.trautmann-1971-kautilya-arthasastra
+- date: 2026-11-22
+  target: person.ashoka
+  before: "The summary, teen summary and dating label gave his reign as about 268 to 232 BCE, while the displayed dating runs from about 273 BCE."
+  after: "The texts say he came to the throne a few years before his consecration in about 268 BCE and reigned until about 232 BCE, and the label names the accession and the consecration, so they agree with the 273 to 232 BCE range."
+  reason: "The dating's note already distinguishes the consecration fixed by Major Rock Edict XIII from an accession a few years earlier in the Buddhist chronicles; the summaries gave the consecration year as the start of the reign."
+  sources:
+    - src.thapar-2012-asoka-decline-mauryas
+    - src.hultzsch-1925-inscriptions-of-asoka
+- date: 2026-11-22
+  target: person.menander-i
+  before: "The teen summary gave his reign as c. 155 to 130 BCE."
+  after: "The teen summary gives c. 165 or 155 to 130 BCE, as the summary and the displayed dating do."
+  reason: "The dating and the summary keep both proposed starting years; the teen summary dropped the earlier one."
+  sources:
+    - src.stoneman-2019-greek-experience-of-india
+    - src.kulke-2004-history-of-india
+- date: 2026-11-22
+  target: artifact.dancing-girl-mohenjo-daro
+  before: "The summary placed the Mature Harappan period at c. 2500-1900 BCE."
+  after: "The summary places it at c. 2600-1900 BCE, the range of the displayed dating."
+  reason: "The summary and the dating described the same Mature Harappan context with different start years."
+  sources:
+    - src.kenoyer-1998-ancient-cities-indus
+    - src.possehl-2002-indus-civilization
+- date: 2026-11-22
+  target: concept.southern-neolithic-ash-mounds
+  before: "The summary dated the ash-mound tradition to c. 3000-1200 BCE."
+  after: "The summary gives c. 2900-1200 BCE, as the teen summary and the displayed dating do."
+  reason: "The cited Bayesian AMS chronology places the start at about 2900 or 2800 BCE, not 3000 BCE."
+  sources:
+    - src.fuller-2007-dating-neolithic-south-india
+- date: 2026-11-22
+  target: site.sanganakallu
+  before: "The teen summary placed the complex between c. 2200 and 1200 BCE."
+  after: "The teen summary gives c. 2200 to 1100 BCE, the range of the displayed dating."
+  reason: "The cited AMS sequence runs to the Late Neolithic and Megalithic transition at about 1400 to 1100 BCE."
+  sources:
+    - src.fuller-2007-dating-neolithic-south-india
+- date: 2026-11-22
+  target: tradition.harappan-civilisation and concept.indus-script
+  before: "Both entries were displayed by their Early Harappan dating (c. 3300 to 2600 BCE), the first of several equally graded datings."
+  after: "Both are displayed by their Mature Harappan dating (c. 2600 to 1900 BCE); the Early and Late phase datings are unchanged."
+  reason: "The summaries describe an urban civilisation and a script known mainly from Mature Harappan objects, so the pre-urban phase misplaced both on cards and on the Kaalchakra."
+  sources:
+    - src.kenoyer-1998-ancient-cities-indus
+    - src.wright-2010-ancient-indus
+- date: 2026-11-22
+  target: tradition.vedic-chanting, tradition.kumbha-mela and concept.rakhigarhi-i6113-genome
+  before: "Grade A documentary datings for UNESCO recognition (2003 and 2008, and 2017) and for the 2019 publication of the genome outranked the entities' own datings, so Vedic chanting was displayed as 2003 CE, the Kumbh Mela as 2017 CE and a Harappan burial as 2019 CE."
+  after: "The milestones are recorded in each entity's existing claims and no longer as datings; the entries are displayed by the Vedic-period practice, the documented emergence of the twelve-year Kumbha cycle, and the Mature Harappan burial context."
+  reason: "A dating places the entity itself in time. Recognition and publication dates are facts about the entity, and as top-graded datings they contradicted the summaries."
+  sources:
+    - src.unesco-2003-tradition-vedic-chanting
+    - src.unesco-2017-kumbh-mela
+    - src.shinde-2019-ancient-harappan-genome
+- date: 2026-11-22
+  target: text.arthashastra
+  before: "The grade C textual-internal dating of 321 to 290 BCE was labelled \"Traditional Mauryan attribution\"."
+  after: "The same dating is labelled \"Mauryan attribution\", held by R. P. Kangle and, for a Mauryan core, by Romila Thapar."
+  reason: "The label called a scholarly position held by named scholars a traditional one, which mixed the two lenses."
+  sources:
+    - src.thapar-2012-asoka-decline-mauryas
+- date: 2026-11-22
+  target: /language/paninian-grammar
+  before: "The link to the article on verbal roots pointed at /archive/article/language/dhatu-the-verbal-roots, which does not exist."
+  after: "The link points at /language/dhatu-the-verbal-roots."
+  reason: "Articles live at /<category>/<slug>; the archive only holds entities. The validator now checks internal links in article bodies."
+- date: 2026-11-22
+  target: site.rupnagar
+  before: "The summary dated Period I to c. 2100-1400 BCE while the dating gave c. 2400 to 1400 BCE."
+  after: "The summary gives c. 2400-1400 BCE, and the note records what the excavation reports say and why the broader window is kept."
+  reason: "The 1953-54 and 1954-55 ASI reviews describe a late Mature Harappan phase, a later Harappan phase, an occupation of about half a millennium and Painted Grey Ware reoccupation around 1000 BC, but give no calendar dates for Period I; the cited syntheses could not be rechecked, so the more conservative range is kept."
+  sources:
+    - src.asi-1954-indian-archaeology-1953-54
+    - src.asi-1955-indian-archaeology-1954-55
+- date: 2026-11-22
+  target: site.shortugai
+  before: "The summary gave c. 2200-1800 BCE, the dating c. 2300 to 1800 BCE, and the note assigned the colony and later levels to periods with dates reaching c. 1800/1700 BCE, while the label grouped the periods differently."
+  after: "The summary, label, note and dating all give the broader span of about 2300 to 1800 BCE for the Mature Harappan colony and its later levels, and the note says the period-by-period dates could not be checked."
+  reason: "The period dates in the note could not be confirmed in the cited syntheses, and the label and note disagreed on which periods were Harappan, so the more conservative range is kept without the unconfirmed detail."
+  sources:
+    - src.possehl-2002-indus-civilization
+    - src.kenoyer-1998-ancient-cities-indus
+- date: 2026-11-22
+  target: site.kayatha
+  before: "The summary and teen summary gave c. 2400-2000 BCE, the note cited calibrated dates of c. 2400/2350-2000 BCE, and the dating ran from 2450 to 1800 BCE with a best estimate of 2100 BCE."
+  after: "The summaries give c. 2450-1800 BCE. The note quotes Misra's 2000 to 1800 BC for the Kayatha culture and says the earlier start of about 2400 BCE could not be confirmed, and the unsupported best estimate is removed."
+  reason: "Misra (2001, p. 515) states that radiocarbon dates suggest 2000 to 1800 B.C. for the Kayatha culture, which the earlier note contradicted; Coningham and Young (2015) could not be checked, so the more conservative range is kept."
+  sources:
+    - { id: src.misra-2001-prehistoric-colonization-india, locator: "p. 515" }
+    - src.coningham-2015-archaeology-south-asia
+- date: 2026-11-22
+  target: site.shortugai
+  before: "The radiocarbon dating of about 2300 to 1800 BCE was graded A."
+  after: "The same dating is graded B."
+  reason: "The style guide reserves grade A for directly attested evidence such as a calibrated radiocarbon series from a stratified excavation. The period-by-period series for Shortugai could not be confirmed in the cited syntheses, so the grade follows that definition."
+  sources:
+    - src.possehl-2002-indus-civilization
+    - src.kenoyer-1998-ancient-cities-indus
+- date: 2026-11-22
+  target: site.kayatha
+  before: "The radiocarbon dating of about 2450 to 1800 BCE was graded A."
+  after: "The same dating is graded B."
+  reason: "The style guide reserves grade A for directly attested evidence such as a calibrated radiocarbon series from a stratified excavation. Misra (2001) reports radiocarbon dates without a confirmed calibrated series, and the earlier start could not be checked, so the grade follows that definition."
+  sources:
+    - { id: src.misra-2001-prehistoric-colonization-india, locator: "p. 515" }
+- date: 2026-11-21
+  target: event.rakhigarhi-genome-publication
+  before: The publication of the 2019 Rakhigarhi ancient genome study had its own record, separate from the record of the genome itself.
+  after: The record is merged into concept.rakhigarhi-i6113-genome, and its old address redirects there.
+  reason: Both records described the same study of the same individual, so the archive kept two versions of one set of claims.
+  sources:
+    - src.shinde-2019-ancient-harappan-genome
+- date: 2026-11-21
+  target: event.dholavira-unesco-inscription
+  before: Dholavira's 2021 inscription on the World Heritage List had its own record, separate from the site.
+  after: The record is merged into site.dholavira, and its old address redirects there.
+  reason: The inscription is a fact about the site and is recorded with it, so a separate stub duplicated the site's claims.
+  sources:
+    - src.unesco-2021-dholavira
+- date: 2026-11-21
+  target: tradition.vedic-chanting-unesco-inscription
+  before: UNESCO's 2003 proclamation and 2008 inscription of the Tradition of Vedic chanting had their own record, separate from the tradition.
+  after: The record is merged into tradition.vedic-chanting, and its old address redirects there.
+  reason: The proclamation and inscription are facts about the tradition and are recorded with it, so a separate stub duplicated its claims.
+  sources:
+    - src.unesco-2003-tradition-vedic-chanting
+- date: 2026-11-21
+  target: tradition.kumbh-mela-unesco-inscription
+  before: The 2017 inscription of Kumbh Mela on UNESCO's Representative List had its own record, separate from the festival.
+  after: The record is merged into tradition.kumbha-mela, and its old address redirects there.
+  reason: The inscription is a fact about the festival and is recorded with it, so a separate stub duplicated its claims.
+  sources:
+    - src.unesco-2017-kumbh-mela

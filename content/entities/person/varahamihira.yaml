@@ -33,10 +33,7 @@ claims:
     sources:
       - src.plofker-2009-mathematics-in-india
 relations:
-  - { kind: related-to, target: person.aryabhata }
-  - { kind: related-to, target: text.aryabhatiya }
   - { kind: related-to, target: polity.gupta-empire }
-  - { kind: related-to, target: event.kurukshetra-war }
 wikidata: Q858348
 tags: [varahamihira, astronomy, mathematics, panchasiddhantika, brihat-samhita, ujjain]
 review: { status: draft, author: "gemini-4-argon" }

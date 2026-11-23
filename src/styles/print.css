@@ -1,0 +1,111 @@
+/*
+ * Print stylesheet, site-wide. Every page prints as black text on white with the site chrome removed;
+ * the editorial draft notice stays, because a printout must not look more authoritative than the page.
+ * Printable learning packs (/learn/<slug>/print) add page breaks before the answer key.
+ */
+
+@media print {
+  :root,
+  :root:not([data-theme='light']),
+  :root[data-theme='dark'] {
+    color-scheme: light;
+    --bg: #fff;
+    --bg-elev: #fff;
+    --bg-sunk: #f3f3f3;
+    --ink: #000;
+    --ink-soft: #222;
+    --ink-faint: #444;
+    --line: #bbb;
+    --line-strong: #888;
+    --accent: #000;
+    --accent-ink: #fff;
+    --gold: #000;
+    --indigo: #000;
+    /* Grades and lenses print in the light palette's values, whatever theme the screen uses (docs/design/palette.md). */
+    --grade-a: #1b3f73;
+    --grade-b: #2a6390;
+    --grade-c: #4a6a37;
+    --grade-d: #9a430f;
+    --grade-e: #6a5d61;
+    --lens-scholarship: #22508f;
+    --lens-tradition: #9a430f;
+    --shadow: none;
+  }
+
+  @page {
+    margin: 16mm 14mm;
+  }
+
+  html,
+  body {
+    background: var(--bg) !important;
+    color: var(--ink) !important;
+    font-size: 11pt;
+  }
+
+  .site-header,
+  .site-footer,
+  .skip-link,
+  .breadcrumbs,
+  .reading-level,
+  .social-share,
+  .no-print,
+  .kc-strip svg,
+  .step__check,
+  .print-toolbar,
+  button {
+    display: none !important;
+  }
+
+  .draft-notice {
+    border: 1px solid var(--line-strong);
+    background: var(--bg) !important;
+    font-size: 9pt;
+  }
+
+  .main-content {
+    max-width: none;
+    padding: 0;
+  }
+
+  a {
+    color: var(--ink);
+    text-decoration: none;
+  }
+
+  h1,
+  h2,
+  h3 {
+    break-after: avoid-page;
+  }
+
+  .card,
+  .dating,
+  .claims li,
+  .position,
+  .step,
+  .print-card,
+  .print-quiz > li,
+  .answer-key > li,
+  .quiz__q {
+    break-inside: avoid;
+    box-shadow: none !important;
+  }
+
+  /* Backgrounds do not print by default: badges become outlined text. */
+  .level-badge {
+    background: none;
+    color: var(--ink);
+    border: 1px solid var(--ink);
+  }
+
+  .print-break {
+    break-before: page;
+  }
+
+  .grade__letter {
+    color: var(--bg) !important;
+    print-color-adjust: exact;
+    -webkit-print-color-adjust: exact;
+  }
+}

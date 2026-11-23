@@ -3,6 +3,8 @@ type: event
 kind: event
 names:
   en: Partition of Bengal
+  iast: Baṅgabhaṅga
+  native: বঙ্গভঙ্গ
 summary: The colonial government partitioned Bengal in 1905, creating new
   provinces. The decision provoked protest and was annulled in 1911.
 summaries:

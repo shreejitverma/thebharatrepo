@@ -62,6 +62,10 @@ Use the widest range the evidence supports, not the narrowest one you have seen 
 
 `archaeological-radiocarbon`, `archaeological-stratigraphic`, `luminescence`, `epigraphic`, `numismatic`, `foreign-synchronism`, `textual-internal`, `linguistic`, `astronomical-reference`, `art-historical`, `genetic`, `geological`, `documentary`, `scholarly-consensus`, `traditional-puranic`, `traditional-siddhantic`, `traditional-sampradaya`.
 
+A dating places the entity itself.
+Never date a figure or event by the composition date of a text about it.
+For a figure or event known only from tradition (Rama, Krishna, Manu, the churning of the ocean), scholarship dates the texts and inscriptions that tell of it, not the figure, so it carries only traditional datings and records those dates as graded claims; the texts carry their own datings.
+The validator rejects a non-traditional dating on a non-text entity whose label or note calls it the date of the text.
 Give an entity several datings when methods disagree.
 For example, a text can have a `linguistic` dating graded C and a `traditional-puranic` dating graded D.
 Use the `label` field to name the position, for example `label: "Mainstream Indology"` or `label: "Kanchi and Dwaraka matha tradition"`, and the `note` field to explain the basis in one or two sentences.
@@ -165,7 +169,31 @@ Rules:
   A relation always reads as a sentence with this entity as the subject: `<this entity> <kind> <target>`.
   For example, on `text.aitareya-brahmana` write `{ kind: commented-on, target: text.rigveda }` (the Brahmana comments on the Rigveda), and on `person.ashoka` write `{ kind: ruled, target: polity.maurya-empire }`.
   Never use a kind in the reverse sense; the site shows inbound relations automatically.
+  Author each connection once, on one of the two entities: the validator rejects a second relation between the same pair, in either direction and of any kind, because the page would list the other entity twice.
+  Keep the most specific kind and put any further detail in `note`.
   Relation kinds: `part-of`, `authored`, `authored-by`, `ruled`, `ruled-by`, `patronised`, `patronised-by`, `succeeded`, `preceded`, `commented-on`, `located-at`, `excavated-at`, `issued-by`, `founded`, `founded-by`, `taught`, `student-of`, `influenced`, `contemporary-of`, `related-to`.
+- `aliases` (optional) lists former ids of entities merged into this one, for example `aliases: [concept.rigvedic-sarasvati]` on `concept.ghaggar-hakra-sarasvati-debate`.
+  The build turns each alias into a permanent (308) redirect from `/archive/<type>/<slug>` and from the Kaalchakra deep link `/kaalchakra?id=<id>`, so published URLs keep working.
+  An alias must not be a live entity id and may be claimed by only one entity; relations and articles link to the surviving id, never to an alias.
+  When you merge or rename an entity, add its old id here and record the merge in `corrections.yaml`.
+- `extents` (optional) gives approximate territorial extents for the Map view, usually for a polity.
+  Each extent is a claim: it carries a `grade` and at least one source, and the map draws nothing where no extent is authored.
+  `polygon` is one ring of `[longitude, latitude]` vertices (3 to 400; the last joins the first).
+  `from` and `to` are optional years, given together, for an extent that held only part of the entity's span; `label` names it.
+  Grade D marks an extent from traditional geography, shown in the Tradition lens.
+
+  ```yaml
+  extents:
+    - label: Under Ashoka
+      from: "260 BCE"
+      to: "232 BCE"
+      polygon: [[66.0, 34.5], [72.5, 36.0], [88.5, 26.5], [77.0, 14.0]]
+      grade: C
+      sources: [src.example-a]
+      note: Outline follows the find-spots of the edicts; the frontier is not known precisely.
+  ```
+
+  The coordinates above are illustrative, not data.
 - `debate` (optional) is a short neutral paragraph, shown under "Where scholars disagree", summarising the positions for a contested entity.
 - `wikidata` and `image` are optional; include them only when verified.
 - `review.status` is `draft` for new content.
@@ -217,6 +245,140 @@ Never dismiss a traditional position with mockery, and never present it as estab
 - "First", "oldest", "earliest" and "greatest" each need a citation and a qualifier ("earliest known", "among the earliest").
 - No emojis, no em dashes.
 
-## 10. Corrections
+## 10. Editorial review
+
+New entities and articles use `review.status: draft`.
+After reviewing the claims, citations, dating methods, and grades, the subject editor sets `reviewed` and records their name and the calendar date.
+When releasing the approved revision, editors may change the status to `published` and keep the sign-off details.
+Return a record to `draft` if substantive changes require a fresh sign-off.
+
+```yaml
+review:
+  status: reviewed
+  reviewer: Reviewer Name
+  lastReviewed: "2026-11-22"
+```
+
+`npm run content:review-queue` groups entities and articles awaiting human review.
+Legacy `machine-checked` records also appear in the queue.
+
+## 11. Corrections
 
 Every substantive change to an existing published claim is recorded in `content/corrections.yaml` with the date, the target, the text before and after, the reason, and sources.
+
+## 12. Debates
+
+Debate pages live at `content/debates/<slug>.yaml`, id `debate.<slug>`.
+They present every serious position on a contested question at its strongest.
+
+**Owner rule: no debate page is published without the owner's approval.**
+Write `published: false` (the default).
+Unpublished debates are validated by `content:validate` but are left out of the built site, the sitemap, search and every link.
+Only the owner sets `published: true`, and the schema then requires an `approval` record.
+Preview drafts locally with `npm run dev:debates-preview`.
+
+```yaml
+id: debate.date-of-the-buddha
+title: The date of the Buddha
+question: When did the Buddha live, and when did he die?   # ends with "?"
+summary: >-                       # 20 to 1200 characters, neutral, says what the positions disagree about
+  ...
+published: false                  # owner rule; true requires approval
+approval: { by: "<owner>", date: "2026-12-01", note: "optional" }   # only when published
+commonGround:                     # optional: evidence every position accepts
+  - text: ...                     # at least 20 characters
+    grade: A                      # A to E
+    sources:
+      - { id: src.hultzsch-1925-inscriptions-of-asoka, locator: "Rock Edict XIII" }
+positions:                        # at least two
+  - id: short-chronology          # slug, unique within the debate (also the page anchor)
+    label: "Short chronology: death about 400 BCE"
+    lens: scholarship             # scholarship or tradition
+    statement: >-                 # 40 to 1500 characters: the position as its proponents would state it
+      ...
+    grade: C                      # overall standing; tradition positions are D, and only they are D
+    range: { earliest: "490 BCE", latest: "380 BCE", best: "400 BCE", precision: decade, circa: true }   # optional
+    proponents:                   # at least one, each named
+      - name: Heinz Bechert
+        role: Indologist, organiser of the 1988 symposium   # optional
+        work: { id: src.example, locator: "pp. 1-20" }      # optional: their own statement, if in the bibliography
+    evidence:                     # at least one
+      - text: ...
+        grade: C
+        sources:                  # at least one; every citation needs a locator
+          - { id: src.cousins-1996-dating-historical-buddha, locator: "pp. 57-63" }
+    objections:                   # optional: the strongest objections this position must answer
+      - ...
+whatWouldChangeThis:              # at least one: the evidence that would move the conclusion
+  - ...
+relatedEntities: [person.gautama-buddha]   # at least one; places the debate on the Kaalchakra and links it from those entity pages
+relatedArticles: [philosophy/buddhism]     # optional, "<category>/<slug>"
+tags: [buddhism]
+review: { status: draft, author: "<model or person>" }
+```
+
+Rules:
+
+- Steelman every position: state it as its best proponents would, with their strongest evidence, before any objection.
+- Name real proponents. A tradition may be the proponent of a tradition position ("Theravada chronicle tradition").
+- A `locator` is required on debate evidence; give the most precise one you are sure of (an article's page range, an edict number, a chapter), and never invent one.
+- `range` is the span the position proposes; ranges are drawn on one shared scale, and the Kaalchakra placement is the span of the scholarship positions' ranges (or, without ranges, of the related entities' datings).
+- The loader rejects unknown sources, entities and articles, duplicate position ids, and a file whose id does not match its filename.
+
+## 13. Learning paths and quizzes
+
+Learning paths live at `content/learning/<slug>.yaml`, id `learn.<slug>`.
+A path tells a story across the archive, one step at a time, and ends with a quiz that rewards reasoning about evidence.
+
+```yaml
+id: learn.how-we-date-ashoka
+title: How do we know when Ashoka lived?
+level: teen                       # adult, teen (ages 13 to 17) or kids (ages 8 to 12)
+audience: Ages 13 to 17, in class or at home
+summary: >-                       # 20 to 600 characters
+  ...
+focus: { earliest: "324 BCE", latest: "232 BCE", precision: decade, circa: true }   # optional: Kaalchakra placement, in the scholarship lens, when steps span more than the subject
+goals:                            # at least one: what the learner will be able to do
+  - Explain why Rock Edict XIII lets historians date Ashoka using Greek records.
+steps:                            # at least two, in order; each references exactly one entity or article
+  - entity: artifact.ashoka-major-rock-edict-xiii
+    title: The key clue, five Greek kings     # optional; defaults to the entity name or article title
+    note: >-                      # 20 to 600 characters, at the path's level: what to look for in this step
+      ...
+  - article: history/maurya-empire
+    note: ...
+quiz:                             # optional
+  - id: edict-xiii                # slug, unique within the path
+    question: Which inscription names five Greek kings whose dates are known?
+    choices:                      # 2 to 5, distinct; exactly one has correct: true
+      - text: Major Rock Edict XIII
+        correct: true
+        explanation: Why this is right.     # every choice is explained
+      - text: The Lumbini pillar inscription
+        explanation: Why this is wrong.
+    sources:                      # at least one source that supports the correct answer
+      - { id: src.hultzsch-1925-inscriptions-of-asoka, locator: "Rock Edict XIII" }
+      - src.thapar-2012-asoka-decline-mauryas
+tags: [ashoka]
+review: { status: draft, author: "<model or person>" }
+```
+
+Rules:
+
+- Every entity step on a `teen` or `kids` path must have that level's summary (`summaries.teen` or `summaries.kids`); the loader rejects the path otherwise.
+- Story first, then evidence: the step page shows the entity's summary at the path's level, then its first claim under "How do we know?".
+- No trick questions: no "all of the above" or "none of the above", no emphasised NOT, EXCEPT or NEVER, and no choice that is partly true.
+- Choices are shown in the order written, so vary where the correct answer sits; `content:validate` rejects a quiz of three or more questions whose correct answers all share one position.
+  Ask what the evidence shows, not for a memorised date.
+- Every correct answer cites a source that supports it; add a locator when you are sure of it.
+- Progress and quiz answers stay in the viewer's browser; nothing is sent or tracked.
+- Every path has a printable pack at `/learn/<slug>/print`: summary, goals, entity cards, the quiz, and the answer key on its own page.
+
+## 14. Names in native script and IAST
+
+- `names.native` is tagged by its script: Devanagari as Sanskrit (`sa-Deva`) for entities placed before 1200 CE and as Hindi (`hi`) after, Tamil as `ta`, Kannada as `kn`, Perso-Arabic as `fa` or `ar`, and so on.
+- When the default is wrong, set `names.nativeLang` to a BCP 47 tag, for example `nativeLang: mr` for a Marathi name in Devanagari.
+  Tag the language the name is written in, not the entity's era: a modern Hindi place name for an ancient site is `hi` (the default would call it Sanskrit), and a Sanskrit-form name of a later figure is `sa-Deva`.
+  Others in use: `awa` (Awadhi), `pi` (Pali), `as` (Assamese in the Bengali-Assamese script), and for Perso-Arabic script `ur` (Urdu), `sd` (Sindhi) and `ks` (Kashmiri), where the default would be `fa` or `ar`.
+- `names.iast` is tagged as the romanisation of the same language (`sa-Latn`, `ta-Latn`): IAST for Sanskrit, ISO 15919 conventions for Dravidian names (`Tirukkuṟaḷ`).
+- `content:validate` prints a warning with the number of entities missing `names.iast` or `names.native`; it is not an error, but new entities should carry both where they exist.

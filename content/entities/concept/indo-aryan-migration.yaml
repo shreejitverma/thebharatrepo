@@ -3,7 +3,6 @@ type: concept
 kind: civilisation
 names:
   en: Indo-Aryan Migration Debate
-  iast: Ārya
 summary: >-
   The origin and dispersal of Indo-Aryan speakers into the Indian subcontinent is a central,
   contested question in South Asian historiography. Mainstream historical linguistics, archaeology,
@@ -91,7 +90,6 @@ relations:
   - { kind: related-to, target: text.rigveda }
   - { kind: related-to, target: concept.vedic-sanskrit }
   - { kind: related-to, target: event.mitanni-treaty }
-  - { kind: related-to, target: concept.gandhara-grave-culture }
   - { kind: related-to, target: concept.sintashta-steppe-chariot-question }
   - { kind: related-to, target: concept.ghaggar-hakra-sarasvati-debate }
 wikidata: Q269145

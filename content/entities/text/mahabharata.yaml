@@ -43,10 +43,7 @@ claims:
       - src.fleet-1888-inscriptions-early-gupta-kings
       - src.brockington-1998-sanskrit-epics
 relations:
-  - { kind: related-to, target: event.kurukshetra-war }
-  - { kind: related-to, target: text.bhagavad-gita }
   - { kind: related-to, target: text.valmiki-ramayana }
-  - { kind: related-to, target: artifact.heliodorus-pillar }
 wikidata: Q8276
 tags: [mahabharata, vyasa, itihasa, sanskrit-epic, dharma, contested-chronology]
 review: { status: draft, author: "gemini-4-argon" }

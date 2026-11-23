@@ -3,6 +3,8 @@ type: site
 kind: site
 names:
   en: Jantar Mantar, Jaipur
+  iast: Jantar Mantar
+  native: जंतर मंतर
 summary: The Jantar Mantar at Jaipur is an early 18th-century observatory built
   under Jai Singh II. UNESCO inscribed it on the World Heritage List in 2010.
 summaries:

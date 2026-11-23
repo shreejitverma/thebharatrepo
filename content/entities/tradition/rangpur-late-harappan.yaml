@@ -59,8 +59,6 @@ relations:
     target: tradition.cemetery-h-culture
   - kind: contemporary-of
     target: tradition.jhukar-phase
-  - kind: related-to
-    target: event.harappan-deurbanisation
 wikidata: null
 tags:
   - harappan

@@ -68,8 +68,6 @@ claims:
 relations:
   - kind: part-of
     target: tradition.harappan-civilisation
-  - kind: preceded
-    target: tradition.kot-diji-phase
 wikidata: null
 tags:
   - harappan

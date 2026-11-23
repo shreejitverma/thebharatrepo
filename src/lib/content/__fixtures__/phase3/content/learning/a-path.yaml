@@ -1,0 +1,17 @@
+id: learn.a-path
+title: A fixture path
+level: teen
+audience: Ages 13 to 17
+summary: A fixture learning path with one entity step, one article step and a quiz.
+goals: [Explain how the fixture person is dated.]
+steps:
+  - { entity: person.someone, note: Look at how the fixture person is dated by an inscription. }
+  - { article: history/fixture, note: Read the fixture article to see the citation in context. }
+quiz:
+  - id: q1
+    question: How is the fixture person dated?
+    choices:
+      - { text: By an inscription, correct: true, explanation: The dating method is epigraphic. }
+      - { text: By a guess, explanation: Every dating cites a source. }
+    sources: [{ id: src.doe-2001-a-book, locator: "p. 4" }]
+review: { status: draft }

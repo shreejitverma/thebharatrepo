@@ -53,10 +53,6 @@ claims:
       - src.burgess-1860-surya-siddhanta
 relations:
   - kind: related-to
-    target: cosmology.kalpa
-  - kind: related-to
-    target: cosmology.shveta-varaha-kalpa
-  - kind: related-to
     target: cosmology.pralaya
 wikidata: null
 tags:

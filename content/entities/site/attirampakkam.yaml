@@ -3,6 +3,8 @@ type: site
 kind: prehistory
 names:
   en: Attirampakkam Palaeolithic Site
+  iast: Attirampākkam
+  native: அத்திரம்பாக்கம்
 summary: >-
   An open-air stratified Palaeolithic site in the Kortallayar river basin of Tamil Nadu yielding both some
   of the earliest known Acheulian bifaces in South Asia (dated to c. 1.51 million years ago) and an early
@@ -64,8 +66,6 @@ claims:
 relations:
   - kind: contemporary-of
     target: site.isampur
-  - kind: related-to
-    target: event.arrival-of-modern-humans-south-asia
 tags:
   - palaeolithic
   - acheulian

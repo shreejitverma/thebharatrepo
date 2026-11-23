@@ -51,7 +51,6 @@ claims:
 relations:
   - { kind: related-to, target: person.krishna, note: "In the text, Krishna instructs Arjuna" }
   - { kind: part-of, target: text.mahabharata }
-  - { kind: related-to, target: event.kurukshetra-war }
   - { kind: related-to, target: text.yoga-sutras }
 wikidata: Q46802
 tags: [bhagavad-gita, mahabharata, krishna, arjuna, vedanta, karma-yoga, bhakti]

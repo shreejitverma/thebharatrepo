@@ -29,7 +29,6 @@ claims:
   - text: Its central narrative concerns Radha and Krishna's love, separation, and reunion.
     grade: B
     sources: [src.miller-1977-love-song-dark-lord]
-relations:
-  - { kind: authored-by, target: person.jayadeva }
+relations: []
 tags: [sanskrit, poetry, bhakti, music]
 review: { status: draft, author: "codex-gpt-6" }

@@ -5,6 +5,7 @@ names:
   en: Bakhshali Manuscript
   iast: Bakhśālī Hastalipi
   native: बख्शाली हस्तलिपि
+  nativeLang: hi
 summary: >-
   The Bakhshali manuscript is a fragmentary mathematical treatise on seventy birch-bark folios written in northwestern Sanskrit using the Sharada script, discovered in 1881 near Bakhshali (Mardan district, Pakistan) and housed in the Bodleian Library, Oxford. Famous for using a solid dot (bindu) as a placeholder zero in decimal positional notation alongside fractions and algebraic rules, its dating is contested between a 2017 Bodleian radiocarbon study yielding three dates across centuries and paleographic analysis placing the manuscript in the eighth to twelfth centuries CE.
 summaries:

@@ -69,7 +69,6 @@ claims:
 relations:
   - { kind: part-of, target: text.brahmanas }
   - { kind: commented-on, target: text.shukla-yajurveda }
-  - { kind: related-to, target: text.brihadaranyaka-upanishad }
   - { kind: related-to, target: tradition.agnicayana }
   - { kind: related-to, target: tradition.shrauta-ritual }
 wikidata: Q676774

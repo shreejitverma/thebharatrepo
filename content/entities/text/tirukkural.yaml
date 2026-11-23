@@ -41,7 +41,6 @@ claims:
       - src.zvelebil-1973-smile-of-murugan
       - src.blackburn-2000-legend-of-valluvar
 relations:
-  - { kind: related-to, target: text.sangam-literature }
   - { kind: related-to, target: text.arthashastra }
   - { kind: related-to, target: text.manusmriti }
 wikidata: Q2167085

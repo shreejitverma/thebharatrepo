@@ -5,6 +5,7 @@ names:
   en: Ghaggar-Hakra Palaeochannel and the Sarasvati Identification
   iast: Sarasvatī-Ghaggara-Hākrā
   native: सरस्वती (घग्गर-हाकरा)
+  nativeLang: hi
 summary: >-
   Many Harappan settlements stood along the Ghaggar-Hakra palaeochannel in present-day India and Pakistan.
   The Rigveda celebrates Sarasvati as both a river and a goddess. The river list in Rigveda 10.75.5
@@ -171,6 +172,8 @@ relations:
     target: event.4-2-ka-climate-aridification
   - kind: related-to
     target: polity.kuru-kingdom
+aliases:
+  - concept.rigvedic-sarasvati
 image:
   commons: "File:Sarasvati river.jpg"
   alt: Schematic river diagram comparing pre-Harappan, Harappan, and modern courses of the Indus, Sutlej, Ghaggar-Hakra, and Yamuna rivers

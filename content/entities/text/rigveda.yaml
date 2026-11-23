@@ -92,13 +92,9 @@ claims:
       - src.jamison-brereton-2014-rigveda
       - src.singh-2008-ancient-early-medieval-india
 relations:
-  - { kind: related-to, target: concept.vedic-sanskrit }
-  - { kind: related-to, target: event.mitanni-treaty }
-  - { kind: related-to, target: event.dasarajna }
   - { kind: related-to, target: concept.ghaggar-hakra-sarasvati-debate }
   - { kind: related-to, target: tradition.soma-ritual }
   - { kind: related-to, target: tradition.vedic-oral-transmission }
-  - { kind: preceded, target: text.samaveda }
 wikidata: Q727413
 image:
   commons: "File:Rigveda MS2097.jpg"

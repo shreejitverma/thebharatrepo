@@ -41,7 +41,6 @@ claims:
       - src.olivelle-2005-manus-code-of-law
       - src.hiltebeitel-2011-dharma
 relations:
-  - { kind: related-to, target: text.arthashastra }
   - { kind: related-to, target: text.mahabharata }
 wikidata: Q321526
 tags: [manusmriti, dharmashastra, law, varna, ashrama, olivelle]

@@ -1,0 +1,142 @@
+id: learn.harappan-evidence-kids
+title: How do we know about the Harappan cities?
+level: kids
+audience: Ages 8 to 12, with a parent or teacher
+summary: >-
+  More than four thousand years ago, people built brick cities along the Indus and Ghaggar-Hakra rivers.
+  They left no books we can read, so archaeologists work like detectives, studying bricks, drains, seals
+  and water tanks. Follow the clues and find out what they tell us.
+focus: { earliest: "3300 BCE", latest: "1300 BCE", precision: century, circa: true }
+goals:
+  - Say why the civilisation is called Harappan.
+  - Describe two clues archaeologists use, such as seals and city drains.
+  - Explain that the Harappan script has not been read yet.
+steps:
+  - entity: site.harappa
+    title: The city that gave its name
+    note: >-
+      Harappa was the first city of this civilisation that archaeologists dug up, so the whole civilisation
+      is named after it. Look for how old the city is.
+  - entity: site.mohenjo-daro
+    title: A big brick city
+    note: >-
+      Mohenjo-daro had straight streets, houses with their own wells and bathrooms, and covered drains.
+      What does that tell you about the people who planned it?
+  - entity: site.great-bath-mohenjo-daro
+    title: The Great Bath
+    note: >-
+      This big brick pool was sealed with natural tar so the water would not leak out. Look at how the
+      builders made it waterproof.
+  - entity: artifact.harappan-steatite-seals
+    title: Little stone seals
+    note: >-
+      These small square seals show animals like the unicorn, the bull and the elephant. People pressed them
+      into wet clay to seal packages. Look at the clue on the back of the clay.
+  - entity: concept.indus-script
+    title: A mystery script
+    note: >-
+      The seals have signs on them, and there are more than 400 different signs. Nobody has been able to
+      read them yet. Can you think why that is hard?
+  - entity: site.dholavira
+    title: A city that saved rain
+    note: >-
+      Dholavira was built on an island in a dry land. Its people dammed streams and stored rainwater in huge
+      stone tanks. Look at how they solved their water problem.
+  - entity: event.harappan-deurbanisation
+    title: Where did everyone go?
+    note: >-
+      After about 1900 BCE, people slowly left the big cities and lived in many smaller farming villages.
+      Notice that this happened gradually, over a long time.
+quiz:
+  - id: name
+    question: Why is this civilisation called Harappan?
+    choices:
+      - text: Because its people wrote the word Harappa on their seals
+        explanation: >-
+          Nobody can read the signs on the seals, so we do not know what the people called themselves.
+      - text: Because Harappa was the only city
+        explanation: >-
+          There were many cities and over a thousand known settlements, including Mohenjo-daro, Dholavira
+          and Rakhigarhi.
+      - text: Because Harappa was the first of its cities that archaeologists dug up
+        correct: true
+        explanation: >-
+          Harappa was excavated first, in 1920 and 1921, so archaeologists named the whole civilisation
+          after it.
+    sources:
+      - src.kenoyer-1998-ancient-cities-indus
+      - src.possehl-2002-indus-civilization
+  - id: seals
+    question: What did Harappan people do with their small stone seals?
+    choices:
+      - text: They pressed them into wet clay to seal packages and doors.
+        correct: true
+        explanation: >-
+          Pieces of clay have been found with a seal picture on the front and marks of string, mats or doors
+          on the back.
+      - text: They used them as coins to buy food.
+        explanation: >-
+          There is no evidence that the seals were used as money; the clay pieces show they were used for
+          sealing.
+      - text: They threw them like dice in games.
+        explanation: >-
+          The clay sealings show what the seals were for: closing and marking goods.
+    sources:
+      - src.rao-1979-lothal-harappan-port
+      - src.kenoyer-1998-ancient-cities-indus
+  - id: script
+    question: Can anyone read the Harappan signs today?
+    choices:
+      - text: Yes, they were read in 1924.
+        explanation: >-
+          In 1924 John Marshall announced the discovery of the civilisation, but the script was not read then
+          and has not been read since.
+      - text: Yes, they are the same as Brahmi, the script of Emperor Ashoka.
+        explanation: >-
+          Brahmi appears much later, in Ashoka's time, and it is a different script. Nobody has shown what
+          language the Harappan signs record.
+      - text: No, nobody has been able to read them yet.
+        correct: true
+        explanation: >-
+          The inscriptions are very short, and no stone has been found with the same message in a language
+          we know, so the script is still a mystery.
+    sources:
+      - src.possehl-2002-indus-civilization
+      - src.kenoyer-1998-ancient-cities-indus
+  - id: water
+    question: How did the people of Dholavira get enough water in a dry land?
+    choices:
+      - text: They brought water by ship from Mesopotamia.
+        explanation: >-
+          Ships traded goods like beads, not water; Dholavira collected its own rainwater.
+      - text: They dammed seasonal streams and stored rainwater in big stone tanks.
+        correct: true
+        explanation: >-
+          Archaeologists found sixteen or more reservoirs inside the city walls, fed by dams on two seasonal
+          streams.
+      - text: A big river flowed through the middle of the city all year.
+        explanation: >-
+          Dholavira's island has no river that flows all year, which is why its people saved rainwater.
+    sources:
+      - src.asi-2020-dholavira-nomination-dossier
+      - src.unesco-2021-dholavira
+  - id: villages
+    question: What happened to the big Harappan cities after about 1900 BCE?
+    choices:
+      - text: People slowly moved out and lived in many smaller farming villages.
+        correct: true
+        explanation: >-
+          The change took a long time. The number of villages grew, especially near the Yamuna and in
+          Gujarat.
+      - text: An enemy army destroyed them all in one day.
+        explanation: >-
+          This was an old idea. Archaeologists checked the evidence again and found the change was slow, not
+          a single attack.
+      - text: The cities are still full of people today.
+        explanation: >-
+          The ancient cities were left long ago and are now archaeological sites.
+    sources:
+      - src.kenoyer-1998-ancient-cities-indus
+      - src.possehl-2002-indus-civilization
+tags: [harappan, archaeology, evidence]
+review: { status: draft, author: "claude-opus-5-5" }

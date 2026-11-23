@@ -9,4 +9,8 @@ datings:
     grade: B
     sources: [src.roe-1990-a-work]
     note: Occupation begins around 7000 BCE.
+relations:
+  - { kind: contemporary-of, target: event.toba }
+  - { kind: contemporary-of, target: event.toba }
+aliases: [event.toba]
 review: { status: draft }

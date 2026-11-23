@@ -53,9 +53,6 @@ claims:
       - src.singh-2008-ancient-early-medieval-india
       - src.allchin-1995-archaeology-early-historic-south-asia
 relations:
-  - { kind: related-to, target: polity.panchala }
-  - { kind: related-to, target: concept.painted-grey-ware-culture }
-  - { kind: related-to, target: concept.northern-black-polished-ware-culture }
   - { kind: contemporary-of, target: site.hastinapura }
   - { kind: contemporary-of, target: site.atranjikhera }
 image:

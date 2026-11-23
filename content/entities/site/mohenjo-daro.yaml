@@ -3,7 +3,9 @@ type: site
 kind: site
 names:
   en: Mohenjo-daro
-  iast: Mohenjo-dāro
+  iast: Moen jo Daṛo
+  native: موئن جو دڙو
+  nativeLang: sd
 summary: >-
   The largest excavated Mature Harappan metropolis (over 200 hectares), situated on the right bank of the Indus
   River in Larkana District, Sindh, renowned for its elevated mud-brick citadel platform, the Great Bath, massive
@@ -66,10 +68,6 @@ claims:
 relations:
   - kind: part-of
     target: tradition.harappan-civilisation
-  - kind: contemporary-of
-    target: site.harappa
-  - kind: contemporary-of
-    target: site.dholavira
   - kind: contemporary-of
     target: site.rakhigarhi
 wikidata: Q5725

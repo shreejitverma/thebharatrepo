@@ -34,7 +34,6 @@ claims:
       - src.unesco-2016-nalanda-mahavihara
       - src.kulke-2004-history-of-india
 relations:
-  - { kind: patronised-by, target: polity.gupta-empire }
   - { kind: related-to, target: polity.magadha, note: In the historical Magadha region }
   - { kind: patronised-by, target: polity.pala-empire }
 wikidata: Q216243

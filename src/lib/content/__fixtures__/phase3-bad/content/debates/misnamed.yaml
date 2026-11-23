@@ -1,0 +1,16 @@
+id: debate.another-name
+title: A misnamed debate
+question: Does the id match the filename?
+summary: A fixture debate whose id does not match its filename, and with one position only.
+positions:
+  - id: only
+    label: Only position
+    lens: scholarship
+    statement: A single position is not a debate, so the schema must reject this file.
+    grade: C
+    proponents: [{ name: Jane Doe }]
+    evidence:
+      - { text: Evidence that cites a known source., grade: C, sources: [{ id: src.doe-2001-a-book, locator: "p. 2" }] }
+whatWouldChangeThis: [A dated inscription naming the fixture person would settle it.]
+relatedEntities: [person.someone]
+review: { status: draft }

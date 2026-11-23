@@ -57,8 +57,6 @@ claims:
       - src.singh-2008-ancient-early-medieval-india
 relations:
   - { kind: succeeded, target: text.rigveda }
-  - { kind: related-to, target: polity.kuru-kingdom }
-  - { kind: related-to, target: concept.iron-metallurgy-in-india }
   - { kind: related-to, target: concept.vedic-sanskrit }
 wikidata: Q236092
 image:

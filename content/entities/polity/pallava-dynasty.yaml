@@ -43,9 +43,7 @@ claims:
       at Kanchipuram, built under Narasimhavarman II (Rajasimha).
     grade: B
     sources: [src.michell-1988-hindu-temple, src.unesco-1984-mahabalipuram]
-relations:
-  - { kind: related-to, target: polity.chalukya-dynasty-of-badami, note: Long-running rivals }
-  - { kind: preceded, target: polity.chola-dynasty, note: The Cholas displaced the Pallavas in the late 9th century }
+relations: []
 wikidata: Q466803
 tags: [tamil-nadu, kanchipuram, dynasty, temple-architecture]
 review: { status: draft, author: "claude-opus-5-5" }

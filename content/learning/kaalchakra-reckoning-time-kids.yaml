@@ -1,0 +1,141 @@
+id: learn.kaalchakra-reckoning-time-kids
+title: "Kaalchakra: counting time, from a blink to a kalpa"
+level: kids
+audience: Ages 8 to 12, with a parent or teacher
+summary: >-
+  Indian traditions count time from the tiny blink of an eye to giant ages called yugas and kalpas.
+  Historians count time in a different way, using old carvings and clues from the ground. Explore both
+  kinds of counting and see how they are different.
+# The yuga steps are cosmological; this span covers the historical evidence the path examines.
+focus: { earliest: "3300 BCE", latest: "700 CE", precision: century, circa: true }
+goals:
+  - Name the four yugas in traditional Hindu cosmology.
+  - Explain that the yugas are a traditional way of counting time.
+  - Explain one way historians find out when something happened.
+steps:
+  - entity: concept.hindu-time-units
+    title: A ladder of time
+    note: >-
+      Old Indian books measured time with a ladder of units, from the nimesha, a blink of an eye, up to the
+      kalpa. Which unit is the smallest you can find?
+  - entity: cosmology.mahayuga
+    title: Four ages in a cycle
+    note: >-
+      In traditional Hindu cosmology, four ages called yugas make one great cycle. Look at their names and
+      how their lengths get shorter.
+  - entity: cosmology.kali-yuga
+    title: Kali Yuga
+    note: >-
+      Tradition says we live in Kali Yuga, the fourth and shortest age. Notice the year tradition gives for
+      its start.
+  - entity: cosmology.kalpa
+    title: A day of Brahma
+    note: >-
+      In traditional cosmology one daytime of the creator god Brahma is a kalpa, 4.32 billion years long.
+      Try to imagine a number that big.
+  - entity: artifact.aihole-inscription
+    title: A poem with a date
+    note: >-
+      A poet carved a long poem on a temple wall at Aihole in Karnataka. It even tells us the year it was
+      written, in two different ways.
+  - entity: concept.shaka-era
+    title: Counting years from 78 CE
+    note: >-
+      The Shaka era starts in 78 CE. Indian astronomers used it for centuries, and India's national calendar
+      still counts its years this way.
+  - entity: artifact.ashoka-major-rock-edict-xiii
+    title: Clues from Greek kings
+    note: >-
+      Emperor Ashoka named five Greek kings in one of his messages. Historians know when those kings lived,
+      so they can work out when Ashoka lived.
+  - entity: tradition.harappan-civilisation
+    title: Clues from the ground
+    note: >-
+      The Harappan cities left no dates we can read. Archaeologists test old material found in each layer of
+      earth to find out how old it is.
+quiz:
+  - id: nimesha
+    question: What is a nimesha in the old Indian ladder of time?
+    choices:
+      - text: A whole year
+        explanation: >-
+          A year is much longer. The nimesha is a tiny moment.
+      - text: The blink of an eye
+        correct: true
+        explanation: >-
+          The nimesha is one of the smallest units, about as long as one blink.
+      - text: One full day and night
+        explanation: >-
+          A day and night is made of many muhurtas, and each muhurta of many smaller units like the nimesha.
+    sources:
+      - src.olivelle-2005-manus-code-of-law
+      - src.wilson-1840-vishnu-purana
+  - id: longest-yuga
+    question: In traditional Hindu cosmology, which of the four yugas is the longest?
+    choices:
+      - text: Satya Yuga
+        correct: true
+        explanation: >-
+          Satya Yuga comes first and is the longest. Each age after it is shorter, and Kali Yuga is the
+          shortest.
+      - text: Kali Yuga
+        explanation: >-
+          Kali Yuga is the shortest of the four ages.
+      - text: Dvapara Yuga
+        explanation: >-
+          Dvapara Yuga is the third age, shorter than Satya and Treta.
+    sources:
+      - src.olivelle-2005-manus-code-of-law
+      - src.wilson-1840-vishnu-purana
+  - id: kali-start
+    question: Where does the date 3102 BCE for the start of Kali Yuga come from?
+    choices:
+      - text: From a stone carved in 3102 BCE
+        explanation: >-
+          No carving from that time gives this date. It comes from later astronomy books.
+      - text: From traditional astronomy books; the oldest known one that gives it was written in 499 CE.
+        correct: true
+        explanation: >-
+          The oldest known book that gives it is Aryabhata's, from 499 CE, and historians think the start was
+          worked out by counting backward. It is a traditional date, not one found by digging.
+      - text: From a test of old bones in a laboratory
+        explanation: >-
+          Laboratory tests date old materials, but this date comes from traditional astronomy.
+    sources:
+      - { id: src.shukla-sarma-1976-aryabhatiya, locator: "Kalakriyapada 10" }
+      - src.plofker-2009-mathematics-in-india
+  - id: aihole
+    question: How did the poet Ravikirti give the date of his Aihole poem?
+    choices:
+      - text: He did not give any date.
+        explanation: >-
+          The inscription gives its date very clearly, which is why it is so useful.
+      - text: By drawing the moon on the wall
+        explanation: >-
+          The date is written in words in the poem.
+      - text: In two ways at once, as years since the Bharata war and as a year of the Shaka kings
+        correct: true
+        explanation: >-
+          He wrote 3,735 years since the Bharata war and year 556 of the Shaka kings, which is 634 to 635 CE.
+    sources:
+      - { id: src.kielhorn-1900-aihole-inscription, locator: "verses 33-34" }
+      - src.salomon-1998-indian-epigraphy
+  - id: greek-kings
+    question: How do five Greek kings help us know when Ashoka lived?
+    choices:
+      - text: Ashoka named them in a stone message, and Greek records tell us when they ruled.
+        correct: true
+        explanation: >-
+          Since those kings ruled at the same time as Ashoka, historians can work out that he lived in the
+          3rd century BCE.
+      - text: The Greek kings carved Ashoka's birthday on a pillar.
+        explanation: >-
+          The kings did not carve anything for Ashoka; Ashoka named them in his own message.
+      - text: The Greek kings visited Ashoka every year.
+        explanation: >-
+          Ashoka says he sent messengers to these kings. We do not know of yearly visits.
+    sources:
+      - { id: src.hultzsch-1925-inscriptions-of-asoka, locator: "Rock Edict XIII" }
+      - src.thapar-2012-asoka-decline-mauryas
+tags: [kaalchakra, time, tradition]
+review: { status: draft, author: "claude-opus-5-5" }

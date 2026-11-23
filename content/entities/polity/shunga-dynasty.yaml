@@ -38,7 +38,5 @@ claims:
 relations:
   - { kind: succeeded, target: polity.maurya-empire }
   - { kind: related-to, target: site.sanchi-stupa }
-  - { kind: related-to, target: artifact.heliodorus-pillar }
-  - { kind: contemporary-of, target: polity.indo-greek-kingdom }
 tags: [shunga, pushyamitra, vidisha, bharhut, sanchi]
 review: { status: draft, author: "gemini-4-argon" }

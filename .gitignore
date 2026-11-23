@@ -42,8 +42,14 @@ next-env.d.ts
 
 # content staging batches (merged into content/ after validation)
 /staging/
-/public/search.json
+/public/pagefind/
 /public/data/
+# staging directories of the open data export, left behind only if the export is killed
+/public/.data-export-*/
+# staging directories of content:check --write-cache, left behind only if it is killed
+/content/.verification-*/
 /test-results/
+# local scratch directories, never part of the product
+.tmp*/
 /playwright-report/
 /.lighthouseci/

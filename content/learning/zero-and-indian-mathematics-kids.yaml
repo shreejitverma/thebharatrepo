@@ -1,0 +1,131 @@
+id: learn.zero-and-indian-mathematics-kids
+title: The story of zero
+level: kids
+audience: Ages 8 to 12, with a parent or teacher
+summary: >-
+  Zero is a small sign with a big job. Indian mathematicians wrote numbers with ten digits and a zero, and
+  worked out how to add, take away and multiply with zero. Meet the mathematicians and the old books and
+  stones that tell the story.
+focus: { earliest: "200 CE", latest: "1600 CE", precision: century, circa: true }
+goals:
+  - Explain what zero does in a number like 270.
+  - Name two Indian mathematicians and one thing each of them did.
+  - Explain why a carving with a date is a useful clue.
+steps:
+  - entity: text.baudhayana-shulba-sutra
+    title: Geometry with ropes
+    note: >-
+      Long ago, priests used ropes to measure out fire altars in exact shapes. Look at the rule this old
+      handbook gives about squares and diagonals.
+  - entity: person.aryabhata
+    title: Aryabhata
+    note: >-
+      Aryabhata was a mathematician and astronomer. Look at his number for pi and what he said about the
+      Earth spinning.
+  - entity: artifact.bakhshali-manuscript
+    title: A maths workbook on birch bark
+    note: >-
+      This old workbook was found buried in a field in 1881. It uses a solid dot for zero. Experts still
+      argue about how old it is.
+  - entity: person.brahmagupta
+    title: Brahmagupta's rules for zero
+    note: >-
+      Brahmagupta wrote down rules for what happens when you add, take away or multiply with zero. Try one:
+      what is 5 plus 0?
+  - entity: artifact.gwalior-chaturbhuj-zero-inscription
+    title: A zero carved in stone
+    note: >-
+      In a little temple in Gwalior fort, someone carved the number 270 more than 1,100 years ago. Look at
+      the shape of the zero.
+  - entity: text.lilavati
+    title: Maths problems in poems
+    note: >-
+      Bhaskara II wrote the Lilavati, a book that gives maths problems in verse. Would you like to solve a
+      problem written as a poem?
+  - entity: person.madhava-of-sangamagrama
+    title: Madhava of Kerala
+    note: >-
+      Madhava was a mathematician from Kerala. Later scholars wrote down his ideas about infinite series in
+      their own books.
+quiz:
+  - id: zero-job
+    question: In the number 270, what does the 0 tell you?
+    choices:
+      - text: That the number is very small
+        explanation: >-
+          270 is a fairly big number. The zero keeps the other digits in the right places.
+      - text: That you should ignore the whole number
+        explanation: >-
+          The zero is an important part of the number; it shows that a place is empty.
+      - text: That there are no ones, so the 7 means seven tens
+        correct: true
+        explanation: >-
+          The zero holds the ones place empty. Without it, 270 would become 27.
+    sources:
+      - src.plofker-2009-mathematics-in-india
+  - id: bakhshali-dot
+    question: What sign does the Bakhshali manuscript use for zero?
+    choices:
+      - text: A solid dot
+        correct: true
+        explanation: >-
+          All through the workbook, a dot marks an empty place in a number.
+      - text: A small star
+        explanation: >-
+          The Bakhshali manuscript uses a dot, not a star.
+      - text: The word "nothing" written out each time
+        explanation: >-
+          The manuscript uses a dot sign for zero inside its numbers.
+    sources:
+      - src.plofker-2009-mathematics-in-india
+      - src.plofker-2017-bakhshali-radiocarbon
+  - id: brahmagupta
+    question: Using Brahmagupta's rule, what is 5 plus 0?
+    choices:
+      - text: "0"
+        explanation: >-
+          That is the rule for multiplying by zero. Adding zero leaves the number the same.
+      - text: "50"
+        explanation: >-
+          Adding zero does not put a zero on the end. Writing 5 and then 0 makes fifty, but that is not adding.
+      - text: "5"
+        correct: true
+        explanation: >-
+          Brahmagupta's rule says a number plus zero is that same number.
+    sources:
+      - src.plofker-2009-mathematics-in-india
+      - src.colebrooke-1817-algebra-brahmegupta-bhascara
+  - id: dated-stone
+    question: Why is the Gwalior carving of 270 a useful clue?
+    choices:
+      - text: It was carved by Brahmagupta himself.
+        explanation: >-
+          Brahmagupta lived about 250 years earlier. The Gwalior carving was made for a temple gift.
+      - text: The carving tells us its own date, so we know people used the round zero by then.
+        correct: true
+        explanation: >-
+          The inscription gives a year in the Vikrama calendar that matches 876 CE.
+      - text: It is the only zero in the world.
+        explanation: >-
+          Zero appears in many books and carvings. This one is useful because it is old and has a date.
+    sources:
+      - src.burgess-1892-epigraphia-indica-vol-1
+      - src.plofker-2009-mathematics-in-india
+  - id: earth
+    question: What did Aryabhata say about why the stars seem to move across the night sky?
+    choices:
+      - text: That the Earth turns, the way the riverbank seems to move to someone on a boat
+        correct: true
+        explanation: >-
+          Aryabhata compared the stars to things on a riverbank that seem to slide backward when you are in a
+          moving boat.
+      - text: That the stars are pulled by a giant rope
+        explanation: >-
+          Aryabhata explained the movement by the Earth turning on its axis.
+      - text: That the stars move only on festival days
+        explanation: >-
+          The stars seem to move every night, and Aryabhata explained this by the Earth's rotation.
+    sources:
+      - src.plofker-2009-mathematics-in-india
+tags: [mathematics, zero, science]
+review: { status: draft, author: "claude-opus-5-5" }

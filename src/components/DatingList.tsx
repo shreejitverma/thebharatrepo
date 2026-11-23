@@ -3,6 +3,7 @@ import SourceCitation from '@/components/SourceCitation';
 import { METHOD_LABELS, citationId, isTraditional, type Dating, type Source } from '@/lib/content/schema';
 import { formatRange } from '@/lib/time';
 
+/** Every dating in the order given, each with its grade, lens, method and sources (linked to their records). */
 export default function DatingList({ datings, sources }: { datings: readonly Dating[]; sources: Map<string, Source> }) {
   return (
     <div className="datings">
@@ -20,10 +21,10 @@ export default function DatingList({ datings, sources }: { datings: readonly Dat
               {d.label ? `: ${d.label}` : ''}
             </div>
             {d.note ? <p>{d.note}</p> : null}
-            <ul className="dating__sources">
+            <ul className="dating__sources" data-pagefind-ignore>
               {d.sources.map((ref, j) => {
                 const s = sources.get(citationId(ref));
-                return <li key={j}>{s ? <SourceCitation source={s} locator={typeof ref === 'string' ? undefined : ref.locator} /> : citationId(ref)}</li>;
+                return <li key={j}>{s ? <SourceCitation source={s} locator={typeof ref === 'string' ? undefined : ref.locator} record /> : citationId(ref)}</li>;
               })}
             </ul>
           </div>

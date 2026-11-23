@@ -65,7 +65,6 @@ claims:
 relations:
   - { kind: contemporary-of, target: polity.panchala }
   - { kind: located-at, target: site.hastinapura }
-  - { kind: related-to, target: concept.painted-grey-ware-culture }
   - { kind: patronised, target: tradition.shrauta-ritual }
   - { kind: related-to, target: text.atharvaveda }
   - { kind: related-to, target: text.yajurveda }

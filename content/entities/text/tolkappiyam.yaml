@@ -44,7 +44,6 @@ claims:
 relations:
   - { kind: part-of, target: text.sangam-literature }
   - { kind: related-to, target: artifact.tamil-brahmi-inscriptions }
-  - { kind: related-to, target: text.natyashastra }
 wikidata: Q2418484
 tags: [tolkappiyam, tamil, grammar, poetics, sangam, tinai]
 review: { status: draft, author: "gemini-4-argon" }

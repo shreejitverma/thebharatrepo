@@ -25,6 +25,13 @@ describe('palette', () => {
     }
   });
 
+  it('prints grades and lenses in the light palette', () => {
+    const print = fs.readFileSync(path.join(ROOT, 'src/styles/print.css'), 'utf8');
+    const printed = [...print.matchAll(/(--(?:grade|lens)-[a-z]+):\s*(#[0-9a-f]{6});/g)];
+    expect(printed.map((m) => m[1]).sort()).toEqual(colourTokens.filter((t) => /^--(grade|lens)-/.test(t)).sort());
+    for (const [, token, value] of printed) expect(value, `${token} in print.css`).toBe(resolve(themes.light, token));
+  });
+
   const pairs = documentedPairs(doc, themes.light);
   it('documents the contrast pairs', () => {
     expect(pairs.length).toBeGreaterThan(100);

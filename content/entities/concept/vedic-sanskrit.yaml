@@ -66,7 +66,6 @@ relations:
   - { kind: related-to, target: text.ashtadhyayi }
   - { kind: related-to, target: text.nirukta }
   - { kind: related-to, target: event.mitanni-treaty }
-  - { kind: related-to, target: concept.indo-aryan-migration }
   - { kind: related-to, target: tradition.vedic-oral-transmission }
 wikidata: Q36858
 tags: [vedic-sanskrit, old-indo-aryan, linguistics, grammar, pitch-accent, rigveda]

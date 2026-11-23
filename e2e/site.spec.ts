@@ -1,3 +1,4 @@
+import { createHash } from 'node:crypto';
 import { expect, test, type Page } from '@playwright/test';
 import AxeBuilder from '@axe-core/playwright';
 
@@ -71,8 +72,9 @@ const ROUTES: { name: string; path: string; ready?: string }[] = [
   { name: 'sources', path: '/sources' },
   { name: 'corrections', path: '/corrections' },
   { name: 'methodology', path: '/methodology' },
+  { name: 'open data', path: '/data', ready: '.data-file' },
   { name: 'search', path: '/search' },
-  { name: 'search results', path: '/search?q=Harappa', ready: 'a.card' },
+  { name: 'search results', path: '/search?q=Harappa', ready: '.search-result' },
   { name: 'not found', path: '/no-such-page' },
 ];
 
@@ -136,8 +138,12 @@ test.describe('content pages', () => {
     const flood = page.locator('.article-header .dating__sources a[href="https://doi.org/10.1111/b.9780631215356.2005.00005.x"]');
     await expect(flood).toBeVisible();
     await expect(flood).toContainText('The Blackwell Companion to Hinduism');
-    await expect(page.locator('.article-meta')).toContainText('3 sources cited');
-    await expect(page.locator('.references li')).toHaveCount(2);
+    // Two sources cited in the text and one cited only for a dating: all three are numbered references.
+    // The labelled aside is matched by its attributes, not getByRole('complementary'): in Playwright's Firefox a landmark
+    // role query that resolves an aria-labelledby name, followed by an axe scan, crashes the page (see phase2.spec.ts).
+    await expect(page.locator('aside.evidence-summary[aria-labelledby="evidence-summary-title"]').getByRole('link', { name: '3 references' })).toBeVisible();
+    await expect(page.locator('#evidence-summary-title')).toHaveText('Evidence at a glance');
+    await expect(page.locator('.references ol > li')).toHaveCount(3);
     await noHorizontalScroll(page);
     await noSeriousA11yViolations(page);
   });
@@ -155,10 +161,10 @@ test.describe('content pages', () => {
 
   test('search finds entities and articles, and says so when nothing matches', async ({ page }) => {
     await page.goto('/search?q=Harappa');
-    await expect(page.locator('.card').first()).toBeVisible();
-    await expect(page.getByText(/^(?:Showing \d+ of )?\d+ results?$/)).toBeVisible();
+    await expect(page.locator('.search-result').first()).toBeVisible();
+    await expect(page.locator('.search-status')).toHaveText(/^\d+ results? for “Harappa”\.$/);
     await page.goto('/search?q=zzzzqqqq');
-    await expect(page.getByText('0 results for')).toBeVisible();
+    await expect(page.locator('.search-status')).toContainText('0 results for');
   });
 
   test('the header search box opens results', async ({ page }) => {
@@ -166,7 +172,7 @@ test.describe('content pages', () => {
     await page.getByRole('searchbox', { name: 'Search the archive' }).fill('Ashoka');
     await page.getByRole('searchbox', { name: 'Search the archive' }).press('Enter');
     await expect(page).toHaveURL(/\/search\?q=Ashoka/);
-    await expect(page.locator('.card').first()).toBeVisible();
+    await expect(page.locator('.search-result').first()).toBeVisible();
   });
 });
 
@@ -505,4 +511,47 @@ test.describe('Kaalchakra', () => {
       });
     });
   });
+});
+
+test.describe('merged entities keep their old URLs', () => {
+  const OLD = '/archive/concept/rigvedic-sarasvati';
+  const NEW = '/archive/concept/ghaggar-hakra-sarasvati-debate';
+
+  test('an old archive URL redirects permanently to the surviving entity', async ({ page, request }) => {
+    const res = await request.get(OLD, { maxRedirects: 0 });
+    expect(res.status()).toBe(308);
+    expect(new URL(res.headers()['location'], 'http://x').pathname).toBe(NEW);
+    await page.goto(OLD);
+    await expect(page).toHaveURL(NEW);
+    await expect(page.locator('h1')).toHaveText('Ghaggar-Hakra Palaeochannel and the Sarasvati Identification');
+  });
+
+  test('an old Kaalchakra deep link selects the surviving entity', async ({ page, request }) => {
+    const res = await request.get('/kaalchakra?view=list&id=event.dholavira-unesco-inscription', { maxRedirects: 0 });
+    expect(res.status()).toBe(308);
+    const loc = new URL(res.headers()['location'], 'http://x');
+    expect(loc.searchParams.get('id')).toBe('site.dholavira');
+    expect(loc.searchParams.get('view')).toBe('list');
+    await page.goto('/kaalchakra?view=list&id=event.dholavira-unesco-inscription');
+    await expect(page.locator('.kc-list button[aria-current="true"]')).toHaveCount(1);
+    await expect(page.locator('.kc-panel .btn--primary')).toHaveAttribute('href', '/archive/site/dholavira');
+    await expect(page).toHaveURL(/[?&]id=site\.dholavira(&|$)/);
+  });
+});
+
+test('open data page links every export file, each matching its manifest checksum', async ({ page, request }) => {
+  await page.goto('/data');
+  await expect(page.getByRole('heading', { level: 1, name: 'Download the archive' })).toBeVisible();
+  const manifest = await (await request.get('/data/manifest.json')).json();
+  const downloads = page.locator('.data-file a[download]');
+  const hrefs = await downloads.evaluateAll((links) => links.map((a) => a.getAttribute('href')));
+  expect(hrefs.sort()).toEqual([...Object.keys(manifest.sha256), 'manifest.json'].map((name) => `/data/${name}`).sort());
+  for (const [name, sha256] of Object.entries(manifest.sha256)) {
+    const response = await request.get(`/data/${name}`);
+    expect(response.status()).toBe(200);
+    expect(createHash('sha256').update(await response.body()).digest('hex')).toBe(sha256);
+    await expect(page.locator('.data-file', { hasText: `Download ${name}` }).locator('code')).toHaveText(sha256 as string);
+  }
+  await expect(page.locator('.data-counts')).toContainText(String(manifest.counts.entities));
+  await expect(page.locator('.site-footer').getByRole('link', { name: 'Open data' })).toHaveAttribute('href', '/data');
 });

@@ -52,9 +52,7 @@ claims:
     grade: B
     sources:
       - src.coningham-2015-archaeology-south-asia
-relations:
-  - kind: contemporary-of
-    target: tradition.copper-hoard-culture
+relations: []
 wikidata: Q2663163
 tags:
   - chalcolithic

@@ -24,7 +24,7 @@ datings:
   - method: textual-internal
     range: { earliest: "350 BCE", latest: "280 BCE", precision: decade, circa: true }
     grade: C
-    label: Traditional identification as Chandragupta Maurya's minister
+    label: Mauryan identification as Chandragupta Maurya's minister (R. P. Kangle; Romila Thapar for an original core)
     sources:
       - src.thapar-2012-asoka-decline-mauryas
       - src.trautmann-1971-kautilya-arthasastra

@@ -68,10 +68,7 @@ claims:
 debate: >-
   Most philologists, following Kamil Zvelebil, date the older anthologies to roughly the 1st century BCE to the 3rd century CE and treat Kalittokai, Paripatal and the compilation of the anthologies as later. Herman Tieken argues instead for a 9th-century Pandya court origin, a view most specialists reject. The Tamil Nadu Department of Archaeology argues, from Keezhadi's 6th-century BCE dates for Tamil-Brahmi writing, that the Sangam age began earlier than usually thought. The medieval legend of three academies spanning nearly ten thousand years is a traditional account, not a historical chronology.
 relations:
-  - { kind: related-to, target: text.tolkappiyam }
   - { kind: related-to, target: text.tirukkural }
-  - { kind: related-to, target: artifact.tamil-brahmi-inscriptions }
-  - { kind: related-to, target: site.keezhadi }
 wikidata: Q3219940
 tags: [sangam, tamil-literature, ettuthokai, pattuppattu, akam, puram, contested-chronology]
 review: { status: draft, author: "gemini-4-argon" }
