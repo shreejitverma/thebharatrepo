@@ -19,7 +19,7 @@ import matter from 'gray-matter';
 import YAML from 'yaml';
 import { checkRelations, type RelationStats } from './relations';
 import { unfinishedFields } from './scaffold-markers';
-import { sameTitle } from './similarity';
+import { sameTitle, volumesMatch } from './similarity';
 import type { z } from 'zod';
 import {
   ArticleFrontmatterSchema,
@@ -271,7 +271,8 @@ export function deepTimeBceYears(datings: unknown): string[] {
 
 /**
  * Two source records describe the same work: no identifier of the same type conflicts (archive.org and
- * other URLs compare by host and first path segment pair) and the titles match.
+ * other URLs compare by host and first path segment pair), the titles match, and both name the same volume
+ * or neither names one, so a single volume is never merged with the whole work.
  */
 export function sameWork(a: Source, b: Source): boolean {
   const urlKey = (u?: string) => {
@@ -290,7 +291,7 @@ export function sameWork(a: Source, b: Source): boolean {
     [urlKey(a.url), urlKey(b.url)],
   ];
   if (pairs.some(([x, y]) => x && y && x !== y)) return false;
-  return sameTitle(a.title, b.title);
+  return sameTitle(a.title, b.title) && sameTitle(b.title, a.title) && volumesMatch(a.title, b.title);
 }
 
 /** Registry identifiers of a source; two source ids sharing one are the same work registered twice. */
