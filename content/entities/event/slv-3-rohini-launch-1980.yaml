@@ -1,0 +1,28 @@
+id: event.slv-3-rohini-launch-1980
+type: event
+kind: science
+names:
+  en: "SLV-3 places Rohini RS-1 in orbit"
+summary: "On 18 July 1980, ISRO's SLV-3 placed Rohini RS-1 in Earth orbit from Sriharikota. This was the first successful satellite launch by an Indian-built launch vehicle."
+summaries:
+  kids: "An Indian-built rocket carried the Rohini satellite into orbit in July 1980. It was India's first successful satellite launch using its own rocket."
+  teen: "The SLV-3 E2 flight placed Rohini RS-1 in Earth orbit on 18 July 1980. The earlier SLV-3 E1 attempt had failed to put its payload in orbit."
+region: "Sriharikota, Andhra Pradesh"
+datings:
+  - method: documentary
+    range: { earliest: "1980", latest: "1980", precision: day, circa: false }
+    grade: A
+    label: "Successful SLV-3 E2 flight"
+    sources: ["src.isro-list-of-slv-launches"]
+    note: "ISRO records the flight on 18 July 1980."
+claims:
+  - text: "ISRO lists the 18 July 1980 SLV-3 E2 flight with Rohini RS-1 and identifies the previous SLV-3 E1 flight of 10 August 1979 as unsuccessful."
+    grade: A
+    sources: ["src.isro-list-of-slv-launches"]
+relations:
+  - kind: related-to
+    target: event.isro-founded
+  - kind: related-to
+    target: event.aryabhata-satellite-launched
+tags: ["republic","space","isro"]
+review: { status: draft, author: codex-gpt-6 }

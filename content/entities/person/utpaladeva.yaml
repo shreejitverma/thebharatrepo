@@ -1,0 +1,64 @@
+id: "person.utpaladeva"
+type: "person"
+kind: "person"
+names:
+  en: "Utpaladeva"
+  iast: "Utpaladeva"
+  native: "उत्पलदेव"
+summary: "Utpaladeva developed the Recognition school of Kashmiri Shaiva philosophy. In his Verses
+  on the Recognition of the Lord he argues that liberation involves recognising one's own
+  consciousness as Shiva."
+summaries:
+  kids: "Utpaladeva wrote verses that ask readers to pay attention to what it is like to be aware. In
+    his teaching, knowing that awareness properly is a way to recognise Shiva."
+  teen: "Utpaladeva turned the Shaiva doctrine of recognition into a sustained philosophical argument.
+    He also commented on his teacher Somananda's Shivadrishti."
+region: "Kashmir Valley"
+datings:
+  - method: "textual-internal"
+    range:
+      earliest: 925
+      latest: 975
+      precision: "century"
+      circa: true
+    grade: "C"
+    label: "Sanderson and Nemec’s chronology of Utpaladeva"
+    sources:
+      - "src.nemec-2021-ubiquitous-siva-ii"
+  - method: "textual-internal"
+    range:
+      earliest: 900
+      latest: 950
+      precision: "century"
+      circa: true
+    grade: "C"
+    label: "Torella’s early tenth-century placement of the Verses"
+    sources:
+      - "src.torella-2002-recognition-of-the-lord"
+    note: "The placement applies to the composition of the Verses on the Recognition of the Lord."
+claims:
+  - text: "Utpaladeva argued that individual awareness can be recognised as the universal consciousness
+      of Shiva."
+    grade: "B"
+    sources:
+      - "src.torella-2002-recognition-of-the-lord"
+      - "src.nemec-2021-ubiquitous-siva-ii"
+  - text: "He wrote a commentary on Somananda's Shivadrishti, portions of which survive."
+    grade: "B"
+    sources:
+      - "src.nemec-2021-ubiquitous-siva-ii"
+relations:
+  - kind: "part-of"
+    target: "tradition.kashmir-shaivism"
+  - kind: "influenced"
+    target: "person.abhinavagupta"
+tags:
+  - "shaiva"
+  - "recognition"
+  - "philosophy"
+review:
+  status: "draft"
+  author: "codex-gpt-6"
+debate: "Torella places the Verses early in the tenth century. Nemec gives a wider period of
+  activity extending into the third quarter of that century. The distinction is between the date of
+  a work and the span of the author’s career."

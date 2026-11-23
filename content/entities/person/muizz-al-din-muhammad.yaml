@@ -1,0 +1,47 @@
+id: person.muizz-al-din-muhammad
+type: person
+kind: person
+names:
+  en: Muizz al-Din Muhammad of Ghur
+summary: Muizz al-Din Muhammad ruled the eastern Ghurid domains from Ghazni and led campaigns into
+  northern India. His death in 1206 initiated a succession crisis from which autonomous regional
+  states emerged.
+summaries:
+  kids: Muhammad of Ghur led campaigns into northern India. After he died, some of his commanders
+    became independent rulers.
+  teen: Muizz al-Din governed the eastern part of an empire shared with his brother Ghiyath al-Din.
+    After 1206 the commanders' hold over individual provinces became the basis of successor states.
+region: Afghanistan and northern South Asia
+datings:
+  - method: documentary
+    range:
+      earliest: "1173"
+      latest: "1206"
+      precision: year
+      circa: false
+    grade: B
+    label: Reign or recorded political activity
+    sources:
+      - src.bosworth-2001-ghurids
+      - src.jackson-1999-delhi-sultanate
+      - src.jackson-2010-muslim-india-delhi-sultanate
+    note: The range begins with his installation at Ghazni and ends with his death.
+claims:
+  - text: Muizz al-Din's victory at the second battle of Tarain in 1192 opened the way to expanded
+      Ghurid rule in northern India.
+    grade: B
+    sources:
+      - src.bosworth-2001-ghurids
+      - src.jackson-1999-delhi-sultanate
+  - text: The Ghurid succession was contested after his death in 1206.
+    grade: B
+    sources:
+      - src.bosworth-2001-ghurids
+      - src.jackson-2010-muslim-india-delhi-sultanate
+relations:
+  - kind: ruled
+    target: polity.ghurid-empire
+tags: []
+review:
+  status: draft
+  author: codex-gpt-6

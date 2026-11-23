@@ -1,0 +1,43 @@
+id: person.homi-bhabha
+type: person
+kind: science
+names:
+  en: Homi Jehangir Bhabha
+summary: Homi Jehangir Bhabha was a theoretical physicist who studied particle scattering and cosmic-ray
+  showers. He founded the Tata Institute of Fundamental Research and became the first chair of India’s Atomic
+  Energy Commission.
+summaries:
+  kids: Bhabha studied tiny particles and how they can produce showers of other particles. He also helped build
+    places for scientists to work.
+  teen: Bhabha and Walter Heitler modeled particle cascades in matter. Bhabha later helped establish
+    institutions for fundamental research and atomic energy in India.
+region: Cambridge, Bengaluru and Mumbai
+datings:
+  - method: documentary
+    range:
+      earliest: 1909
+      latest: 1966
+      precision: year
+      circa: false
+    grade: A
+    label: Documented lifespan
+    sources:
+      - src.penney-1967-homi-bhabha
+claims:
+  - text: Bhabha and Walter Heitler published a theory of electron and photon cascades in 1937.
+    grade: A
+    sources:
+      - src.bhabha-1937-theory-cosmic-showers
+  - text: Bhabha led the founding of the Tata Institute of Fundamental Research in 1945.
+    grade: A
+    sources:
+      - src.penney-1967-homi-bhabha
+      - src.tifr-history-and-vision
+relations: []
+tags:
+  - physics
+  - cosmic-rays
+  - research-institutions
+review:
+  status: draft
+  author: codex-gpt-6

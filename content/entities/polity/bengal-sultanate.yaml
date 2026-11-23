@@ -1,0 +1,87 @@
+id: polity.bengal-sultanate
+type: polity
+kind: polity
+names:
+  en: Bengal Sultanate
+  native: বাংলা সালতানাত
+summary: >-
+  The Bengal Sultanate coalesced in 1342, when Shamsuddin Ilyas Shah broke with Delhi. Ruled from Pandua and
+  later Gaur by the Ilyas Shahi, Raja Ganesha's, Habshi and Husain Shahi houses, it issued an extensive
+  silver coinage, developed a regional mosque architecture and patronised Persian and Bengali letters.
+  After Sher Shah's conquest in 1538, Afghan rulers held Bengal until the Mughal victory of 1576.
+summaries:
+  kids: >-
+    The sultans of Bengal ruled from cities including Pandua and Gaur. Their coins and mosques help
+    historians learn about their kingdom.
+  teen: >-
+    Independent of Delhi from 1342, the Bengal Sultanate minted silver coins in its sultans' names,
+    developed a distinctive mosque architecture and supported Bengali literature alongside Persian court
+    culture. Later Afghan rulers held Bengal until Mughal armies defeated them in 1576.
+region: Bengal delta and adjoining territories
+location:
+  name: Pandua (early capital)
+  lat: 25.13
+  lon: 88.15
+datings:
+  - method: documentary
+    range:
+      earliest: "1342"
+      latest: "1576"
+      precision: decade
+      circa: true
+    grade: B
+    label: Period of rule
+    sources:
+      - src.eaton-1996-rise-of-islam-bengal-frontier
+      - src.hussain-2003-bengal-sultanate
+      - src.richards-1993-mughal-empire
+    note: The first date marks Ilyas Shah's break with Delhi. The final date includes the Afghan Karrani
+      phase and its defeat by the Mughals at Rajmahal in 1576.
+  - method: documentary
+    range:
+      earliest: "1342"
+      latest: "1538"
+      precision: year
+      circa: false
+    grade: B
+    label: Independent Bengal Sultanate before the Afghan age in Richard Eaton's periodisation
+    sources:
+      - src.eaton-1996-rise-of-islam-bengal-frontier
+    note: Eaton treats the fall of the Husain Shahi court and onset of the Afghan age as a distinct
+      transition.
+claims:
+  - text: Ilyas Shah established an independent court at Pandua in the mid-fourteenth century.
+    grade: B
+    sources:
+      - src.eaton-1996-rise-of-islam-bengal-frontier
+      - src.asher-talbot-2006-india-before-europe
+  - text: Dated silver coins struck in the sultans' own names at mints across the delta document sovereign
+      rule from the 1340s through the Husain Shahi period.
+    grade: A
+    sources:
+      - src.hussain-2003-bengal-sultanate
+      - src.eaton-1996-rise-of-islam-bengal-frontier
+  - text: Sultans and nobles built mosques in a regional idiom, in brick and in stone facing, with curved
+      cornices, as seen at the Adina, Eklakhi, Shat Gumbad and Choto Sona mosques.
+    grade: B
+    sources:
+      - src.hasan-2007-sultans-and-mosques
+      - src.asher-talbot-2006-india-before-europe
+relations:
+  - kind: related-to
+    target: polity.delhi-sultanate
+  - kind: preceded
+    target: polity.mughal-empire
+    note: In Bengal after the Afghan period.
+wikidata: Q4083686
+image:
+  commons: File:Choto Sona Mosque 04.jpg
+  alt: Facade of the stone-faced Choto Sona Mosque at Gaur, built in the Husain Shahi period
+  credit: Nahid Hossain
+  license: CC BY-SA 4.0
+tags:
+  - bengal-sultanate
+  - bengal
+review:
+  status: draft
+  author: codex-gpt-6

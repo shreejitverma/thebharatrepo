@@ -1,0 +1,68 @@
+id: tradition.madhubani-painting
+type: tradition
+kind: art
+names:
+  en: Madhubani Painting
+  iast: Madhubanī / Mithilā Citrakalā
+  native: मधुबनी / मिथिला चित्रकला
+summary: Madhubani (Mithila) painting is a ritual wall- and floor-painting tradition practised primarily by women of the
+  Mithila region of northern Bihar (Madhubani and Darbhanga). Historically painted with natural pigments on mud walls of
+  nuptial chambers (kohbar-ghar) and domestic shrines, it transitioned onto paper and cloth in the late 1960s, gaining
+  acclaim through masters such as Sita Devi and Ganga Devi.
+summaries:
+  kids: Madhubani painting from Bihar fills every inch of the page or wall with double-lined patterns, lotus flowers,
+    fish, peacocks and wedding stories.
+  teen: Originating in women's ritual wall and floor paintings (aripan and kohbar) across Mithila in Bihar, Madhubani art
+    shifted onto handmade paper after the late-1960s drought relief projects.
+region: Mithila (Madhubani and Darbhanga, northern Bihar)
+location:
+  name: Madhubani, Bihar
+  lat: 26.353
+  lon: 86.071
+datings:
+  - method: documentary
+    range:
+      earliest: 1934
+      latest: 1980
+      precision: decade
+      circa: true
+    grade: A
+    label: First photographic documentation (1934) and 1966-1968 paper transition
+    sources:
+      - src.jain-1997-ganga-devi-mithila
+      - src.jain-1989-ganga-devi-third-text
+    note: W. G. Archer first documented Mithila wall paintings after the 1934 Bihar earthquake; during the 1966-1968
+      drought, Pupul Jayakar and Bhaskar Kulkarni encouraged women to paint on paper for livelihood.
+claims:
+  - text: Traditional Mithila painting encompasses Kayastha line-work (kachni), Brahmin colour-filled work (bharni), Tantric
+      motifs, and Dusadh Godna and Gobar styles, characterised by double borders and zero empty space.
+    grade: B
+    sources:
+      - src.jain-1997-ganga-devi-mithila
+      - src.jain-1989-ganga-devi-third-text
+  - text: Artist Ganga Devi expanded the Mithila idiom beyond wedding and mythological motifs to create personal narrative
+      cycles such as her American travel series and Cancer Series.
+    grade: A
+    sources:
+      - src.jain-1997-ganga-devi-mithila
+      - src.jain-1989-ganga-devi-third-text
+relations:
+  - kind: related-to
+    target: tradition.warli-painting
+  - kind: related-to
+    target: tradition.pattachitra
+wikidata: Q2547125
+image:
+  commons: File:Madhubani painting by Bhuvana Meenakshi.jpg
+  alt: Madhubani painting with intricate geometric border, tree branches, peacock and fish motifs
+  credit: Bhuvana Meenakshi
+  license: CC BY-SA 3.0
+tags:
+  - madhubani
+  - mithila
+  - bihar
+  - folk-art
+  - ganga-devi
+review:
+  status: draft
+  author: gemini-4-hydrogen-xhigh

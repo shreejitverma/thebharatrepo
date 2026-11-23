@@ -1,0 +1,50 @@
+id: event.diwani-grant-of-1765
+type: event
+kind: event
+names:
+  en: Diwani grant of 1765
+summary: In 1765 the Mughal emperor Shah Alam II granted the East India Company the diwani, or
+  right to receive imperial revenue, in Bengal, Bihar and Orissa. The nawab of Bengal retained a
+  formal governing role under the new arrangement.
+summaries:
+  kids: The Mughal emperor gave the East India Company the right to collect taxes in a large part
+    of eastern India. That gave the Company much more power.
+  teen: The diwani made the Company the recipient of imperial revenues. It left the nawab with
+    formal duties while the Company gained a powerful means of financing its rule.
+region: Allahabad (Prayagraj), Bengal, Bihar and Orissa
+datings:
+  - method: scholarly-consensus
+    range:
+      earliest: "1765"
+      latest: "1765"
+      precision: year
+      circa: false
+    grade: B
+    label: Grant by Shah Alam II
+    sources:
+      - src.travers-2007-crisis-in-bengal
+      - src.marshall-1987-bengal-british-bridgehead
+claims:
+  - text: The emperor appointed the Company diwan in 1765, while the nawab continued to hold the
+      office of nazim.
+    grade: B
+    sources:
+      - src.travers-2007-crisis-in-bengal
+  - text: The grant covered Bengal, Bihar and Orissa as understood in the Mughal fiscal
+      administration.
+    grade: B
+    sources:
+      - src.marshall-1987-bengal-british-bridgehead
+relations:
+  - kind: related-to
+    target: polity.mughal-empire
+  - kind: related-to
+    target: polity.east-india-company-rule
+    note: The grant made the Company the recipient of the revenues of Bengal, Bihar and Orissa.
+tags:
+  - company-rule
+  - revenue
+  - mughal
+review:
+  status: draft
+  author: codex-gpt-6

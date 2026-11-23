@@ -1,0 +1,72 @@
+id: text.abhinaya-darpana
+type: text
+kind: art
+names:
+  en: Abhinaya Darpana
+  iast: Abhinaya Darpaṇa
+  native: अभिनयदर्पण
+summary: "The Abhinaya Darpana ('Mirror of Gesture') is a concise Sanskrit treatise on expressive gesture and dance attributed to Nandikeshvara. Presenting a compact classification of head, eye, neck and hand movements (28 single-hand asamyuta and some two dozen double-hand samyuta hastas, the count varying between versions), it serves alongside the Natyashastra as a primary pedagogical manual for modern Bharatanatyam, Kuchipudi and Odissi."
+summaries:
+  kids: The Abhinaya Darpana is a Sanskrit handbook on dance gestures that teaches how to move the eyes, neck, head and
+    hands to communicate meaning on stage.
+  teen: Attributed to Nandikeshvara, the Abhinaya Darpana systematically catalogues hand gestures (mudras), glances and
+    body movements; its date is debated between early antiquity and the medieval period.
+region: Pan-Indian
+datings:
+  - method: textual-internal
+    range:
+      earliest: 400
+      latest: 1300
+      precision: century
+      circa: true
+    grade: C
+    label: Debated medieval compilation window of the surviving text
+    sources:
+      - src.coomaraswamy-1970-mirror-of-gesture
+      - src.soneji-2012-unfinished-gestures
+    note: Manuscripts are relatively late and scholars debate when the surviving concise recension took shape, placing it
+      broadly between the mid-first millennium and the thirteenth century CE.
+  - method: traditional-sampradaya
+    range:
+      earliest: 200 BCE
+      latest: 200
+      precision: century
+      circa: true
+    grade: D
+    label: Traditional attribution to an ancient sage Nandikeshvara
+    sources:
+      - src.coomaraswamy-1970-mirror-of-gesture
+    note: Traditional Sanskrit dramaturgical accounts regard Nandikeshvara as an early authority predating or contemporary
+      with Bharata's Natyashastra tradition.
+claims:
+  - text: "The treatise systematises fourfold abhinaya and catalogues 28 single-hand (asamyuta) and some two dozen double-hand (samyuta) gestures along with movements of the head, eyes and neck."
+    grade: B
+    sources:
+      - src.coomaraswamy-1970-mirror-of-gesture
+  - text: Ananda Coomaraswamy and Gopala Kristnayya Duggirala's 1917 English translation (The Mirror of Gesture) helped make
+      the text a standard textbook in twentieth-century classical dance revival.
+    grade: B
+    sources:
+      - src.coomaraswamy-1970-mirror-of-gesture
+      - src.allen-1997-rewriting-script-south-indian-dance
+debate: While traditional dancers and early twentieth-century commentators viewed Nandikeshvara as an ancient sage from
+  the early centuries BCE or CE, philologists point out that the surviving Abhinaya Darpana omits dramaturgical
+  machinery of the Natyashastra, compresses its gesture lists, and appears to be a later early-medieval or
+  second-millennium digest.
+relations:
+  - kind: related-to
+    target: text.natyashastra
+  - kind: influenced
+    target: tradition.bharatanatyam
+  - kind: influenced
+    target: tradition.odissi
+wikidata: Q22085047
+tags:
+  - abhinaya-darpana
+  - nandikeshvara
+  - dance
+  - mudras
+  - sanskrit
+review:
+  status: draft
+  author: gemini-4-hydrogen-xhigh

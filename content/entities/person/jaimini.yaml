@@ -1,0 +1,42 @@
+id: person.jaimini
+type: person
+kind: person
+names:
+  en: Jaimini
+  iast: Jaimini
+  native: जैमिनि
+summary: Jaimini is traditionally credited with the Mimamsa Sutra, which examines how Vedic
+  statements guide ritual action. The text supplies a broad chronological horizon for an author
+  whose lifetime is uncertain.
+summaries:
+  kids: A book passed down under Jaimini’s name asks how to work out what the Vedas tell people to do
+    during a ritual.
+  teen: The Mimamsa Sutra opens by asking about dharma and examines how to interpret Vedic
+    injunctions. The school developed techniques for resolving apparent conflicts among ritual
+    instructions.
+datings:
+  - method: textual-internal
+    range:
+      earliest: 250 BCE
+      latest: "50 CE"
+      precision: century
+      circa: true
+    grade: C
+    label: Estimated floruit horizon associated with the Mimamsa Sutra
+    sources:
+      - id: src.ganeri-2017-oxford-handbook-indian-philosophy
+        locator: "Timeline: Indian Philosophy in a Hundred Thinkers"
+    note: Reflects the Oxford Handbook placement of the early Mimamsa Sutra tradition attributed to
+      Jaimini; his personal life dates are unrecorded.
+claims:
+  - text: The Mimamsa Sutra makes Vedic injunctions central to inquiry about dharma and ritual action.
+    grade: B
+    sources:
+      - src.ganeri-2017-oxford-handbook-indian-philosophy
+relations: []
+tags:
+  - mimamsa
+  - vedic-interpretation
+review:
+  status: draft
+  author: codex-gpt-6

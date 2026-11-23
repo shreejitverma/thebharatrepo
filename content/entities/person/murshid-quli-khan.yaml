@@ -1,0 +1,46 @@
+id: person.murshid-quli-khan
+type: person
+kind: person
+names:
+  en: Murshid Quli Khan
+  native: মুর্শিদ কুলি খান
+summary: Murshid Quli Khan reorganised Bengal's revenue collection as diwan and later became nawab.
+  His administration strengthened a regional ruling network based at Murshidabad.
+summaries:
+  kids: Murshid Quli Khan collected taxes for Bengal's government and later became its nawab. His
+    court was at Murshidabad.
+  teen: His career shows how Mughal provincial offices became the basis of a regional state. Calkins
+    traces the revenue officials and landholders who supported the new administration.
+region: Bengal
+datings:
+  - method: documentary
+    range:
+      earliest: "1700"
+      latest: "1727"
+      precision: decade
+      circa: true
+    grade: B
+    label: Reign or recorded political activity
+    sources:
+      - src.calkins-1970-bengal-ruling-group
+      - src.eaton-1996-rise-of-islam-bengal-frontier
+      - src.eaton-2019-india-persianate-age
+    note: The range covers his early work as diwan through his death as nawab.
+claims:
+  - text: Murshid Quli Khan first exercised authority as diwan and later as nawab.
+    grade: B
+    sources:
+      - src.calkins-1970-bengal-ruling-group
+      - src.eaton-1996-rise-of-islam-bengal-frontier
+  - text: Murshidabad became the centre of his provincial administration.
+    grade: B
+    sources:
+      - src.eaton-1996-rise-of-islam-bengal-frontier
+      - src.eaton-2019-india-persianate-age
+relations:
+  - kind: founded
+    target: polity.bengal-nawabs
+tags: []
+review:
+  status: draft
+  author: codex-gpt-6

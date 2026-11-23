@@ -1,0 +1,64 @@
+id: person.nainsukh
+type: person
+kind: art
+names:
+  en: Nainsukh
+  iast: Nainasukha
+  native: नैनसुख
+summary: "Nainsukh of Guler (c. 1710-1778 CE) was a leading master of Pahari miniature painting. Younger son of Pandit Seu and brother of Manaku, he worked primarily for Raja Balwant Singh of Jasrota (c. 1740-1763) before serving in Basohli, introducing penetrating psychological portraiture, architectural perspective and intimate observation of everyday courtly life into hill painting."
+summaries:
+  kids: Nainsukh (c. 1710-1778) was a master painter from Guler in the Himalayan hills who painted wonderfully lifelike
+    scenes of his patron Raja Balwant Singh.
+  teen: Working mainly for Raja Balwant Singh of Jasrota, Nainsukh transformed Pahari painting with expressive ink
+    sketches, fine portraiture and quiet observation of daily royal life.
+region: Punjab Hills (Guler, Jasrota and Basohli)
+location:
+  name: Guler (Haripur), Himachal Pradesh
+  lat: 32.006
+  lon: 76.161
+datings:
+  - method: documentary
+    range:
+      earliest: 1710
+      latest: 1778
+      precision: year
+      circa: true
+    grade: B
+    label: Estimated birth, Jasrota activity and 1778 pilgrim-register death record
+    sources:
+      - src.goswamy-2003-nainsukh-grove
+      - src.goswamy-2011-nainsukh-of-guler
+    note: B. N. Goswamy discovered Haridwar pandas' (bahi) family entries documenting Nainsukh's lineage from Pandit Seu and
+      recording his death in 1778 CE.
+claims:
+  - text: Inscribed paintings and family priest registers (bahis) studied by B. N. Goswamy confirm Nainsukh as son of Pandit
+      Seu and principal painter to Raja Balwant Singh of Jasrota from around 1740 to 1763.
+    grade: A
+    sources:
+      - src.goswamy-2003-nainsukh-grove
+      - src.goswamy-2011-nainsukh-of-guler
+  - text: His surviving drawings and paintings (such as Raja Balwant Singh Looking at a Painting and Balwant Singh in
+      Prayer) depart from heroic stereotype to depict unguarded private moments with subtle grey-white palettes.
+    grade: A
+    sources:
+      - src.goswamy-2003-nainsukh-grove
+      - src.goswamy-2011-nainsukh-of-guler
+relations:
+  - kind: influenced
+    target: tradition.pahari-painting
+wikidata: Q1252229
+image:
+  commons: File:Raja Balwant Singh of Jasrota examining a painting with Nainsukh.jpg
+  alt: Painting attributed to Nainsukh showing Raja Balwant Singh seated on a terrace examining a miniature while the
+    artist watches
+  credit: Nainsukh of Guler (c. 1745-1750)
+  license: Public domain
+tags:
+  - nainsukh
+  - pahari-painting
+  - guler
+  - jasrota
+  - miniature
+review:
+  status: draft
+  author: gemini-4-hydrogen-xhigh

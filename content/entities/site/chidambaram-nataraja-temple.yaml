@@ -1,0 +1,59 @@
+id: site.chidambaram-nataraja-temple
+type: site
+kind: site
+names:
+  en: Thillai Nataraja Temple, Chidambaram
+  iast: Tillai Naṭarājar Kōyil, Citamparam
+  native: தில்லை நடராஜர் கோயில், சிதம்பரம்
+summary: >-
+  At the Thillai Nataraja Temple in Chidambaram, Tamil Nadu, Shiva is worshipped as Nataraja, the cosmic
+  dancer. The shrine is celebrated in Tamil Shaiva hymns. The surviving complex grew through Chola,
+  Pandya and Vijayanagara building phases.
+summaries:
+  kids: >-
+    At Chidambaram in Tamil Nadu, a gold-roofed hall houses Shiva as the cosmic dancer. The temple's
+    tall gateway towers carry carvings of dance movements.
+  teen: >-
+    Chidambaram's Nataraja shrine is praised in medieval Tamil Tevaram hymns. Later rulers enlarged the
+    temple complex, and its gateways preserve sequences of dance movements described in the Natya
+    Shastra.
+region: Coromandel Coast (Cuddalore district, Tamil Nadu)
+location: { name: "Chidambaram, Tamil Nadu", lat: 11.399, lon: 79.693 }
+datings:
+  - method: scholarly-consensus
+    range: { earliest: "900 CE", latest: "1600 CE", precision: century, circa: true }
+    grade: B
+    label: "Chola through Vijayanagara building phases"
+    sources:
+      - src.nagaswamy-2003-chidambaram
+      - src.balasubrahmanyam-1975-middle-chola-temples
+      - src.sastri-1955-the-colas
+    note: >-
+      Chola accounts associate Parantaka I with gilding the temple. Inscriptions and architectural study
+      show several later phases of enlargement, including work under Vijayanagara rulers.
+claims:
+  - text: >-
+      Reliefs on the temple gateways depict karanas, or dance movements described in the Natya Shastra.
+    grade: B
+    sources:
+      - src.nagaswamy-2003-chidambaram
+      - src.michell-1993-temple-towns-tamil-nadu
+  - text: >-
+      The temple precinct contains the Shivaganga tank and a shrine to Vishnu as Govindaraja, as well as
+      the main Shiva shrine.
+    grade: B
+    sources:
+      - src.michell-1993-temple-towns-tamil-nadu
+      - src.wenta-2013-ardra-darsanam-chidambaram
+relations:
+  - { kind: patronised-by, target: polity.chola-dynasty }
+  - { kind: related-to, target: tradition.nayanars }
+  - { kind: related-to, target: text.natyashastra }
+wikidata: Q1966341
+image:
+  commons: "File:Le temple de Shiva Nataraja (Chidambaram, Inde) (14037020332).jpg"
+  alt: Sculpted gopuram tower of the Thillai Nataraja Temple rising above the Shivaganga stepped temple tank at Chidambaram
+  credit: Jean-Pierre Dalbéra from Paris, France
+  license: CC BY 2.0
+tags: [chidambaram, nataraja, chola, shaiva, dravida, tamil-nadu, dance]
+review: { status: draft, author: "gemini-4-hydrogen-xhigh" }

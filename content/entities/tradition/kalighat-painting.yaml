@@ -1,0 +1,68 @@
+id: tradition.kalighat-painting
+type: tradition
+kind: art
+names:
+  en: Kalighat Painting
+  iast: Kālīghāṭa Paṭa
+  native: কালীঘাটের পটচিত্র
+summary: Kalighat painting arose in nineteenth-century Calcutta around the Kalighat Kali temple as rural patua scroll
+  painters adapted their craft for urban pilgrims on cheap machine-made paper. Marked by bold, sweeping brush contours,
+  volumetric shading and witty social satire alongside Hindu deities, it declined around 1930 under competition from
+  printed chromolithographs while inspiring modernists like Jamini Roy.
+summaries:
+  kids: In nineteenth-century Kolkata, folk painters near the Kalighat temple created bold, fast watercolours on paper
+    showing both gods and funny scenes of city life.
+  teen: Transitioning from rural Bengal cloth scrolls to single-sheet watercolours for urban pilgrims around 1830-1930,
+    Kalighat pat painting blended folk rhythm, European paper shading and sharp social satire.
+region: Kolkata (Kalighat), West Bengal
+location:
+  name: Kalighat, Kolkata, West Bengal
+  lat: 22.52
+  lon: 88.342
+datings:
+  - method: art-historical
+    range:
+      earliest: 1830
+      latest: 1930
+      precision: decade
+      circa: true
+    grade: B
+    label: Urban production around Kalighat Temple in colonial Calcutta
+    sources:
+      - src.jain-1999-kalighat-painting
+      - src.subramanyan-2003-modern-painting-grove
+    note: Jyotindra Jain documents Kalighat's rise after the 1809 temple rebuilding and rapid urban growth from the 1830s
+      until competition from Battala woodcuts and chromolithographs ended the workshop tradition c. 1930.
+claims:
+  - text: Moving from long narrative cloth scrolls (patas) to single-sheet paper watercolours sold to pilgrims for a few
+      pice, Kalighat artists pioneered rapid assembly-line brushwork and bold cylindrical shading.
+    grade: B
+    sources:
+      - src.jain-1999-kalighat-painting
+  - text: Kalighat sheets juxtaposed Hindu iconography (Kali, Shiva, Rama) with topical scandals such as the 1873
+      Tarakeshwar murder trial and satires of anglicised Kolkata 'babus'.
+    grade: A
+    sources:
+      - src.jain-1999-kalighat-painting
+      - src.subramanyan-2003-modern-painting-grove
+relations:
+  - kind: related-to
+    target: tradition.pattachitra
+  - kind: influenced
+    target: tradition.bengal-school-of-art
+wikidata: Q6352595
+image:
+  commons: File:India, Calcutta, Kalighat painting, 19th century - Trivikramapada (Three Steps of Vishnu) - 2003.165 -
+    Cleveland Museum of Art.jpg
+  alt: Nineteenth-century Kalighat watercolour of Vishnu as Trivikrama taking three cosmic strides, Cleveland Museum of Art
+  credit: Unknown Calcutta artist (Cleveland Museum of Art)
+  license: CC0
+tags:
+  - kalighat
+  - kolkata
+  - patua
+  - painting
+  - folk-urban
+review:
+  status: draft
+  author: gemini-4-hydrogen-xhigh

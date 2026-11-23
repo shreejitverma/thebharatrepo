@@ -1,0 +1,58 @@
+id: person.ghosha-kakshivati
+type: person
+kind: person
+names:
+  en: Ghosha Kakshivati
+  iast: Ghoṣā Kākṣīvatī
+  native: घोषा काक्षीवती
+summary: The traditional Rigvedic index attributes two hymns to Ghosha Kakshivati. The hymns address
+  the Ashvins, divine twins, and the chronology concerns their textual setting. Ghosha’s lifetime is
+  unknown.
+summaries:
+  kids: Two Rigvedic hymns asking help from the twin gods called the Ashvins were passed down under
+    Ghosha’s name.
+  teen: The traditional index assigns Rigveda 10.39 and 10.40 to Ghosha Kakshivati. This records how
+    the tradition attributed the hymns. Her biography remains uncertain.
+datings:
+  - method: traditional-puranic
+    range:
+      earliest: 3102 BCE
+      latest: 3000 BCE
+      precision: century
+      circa: true
+    grade: D
+    label: Traditional Puranic and sampradaya reckoning
+    sources:
+      - src.bryant-2001-quest-origins-vedic-culture
+      - src.flood-2003-blackwell-companion-hinduism
+    note: Traditional accounts place the Rigvedic seers and the compilation of the hymns before or near
+      the onset of the Kali Yuga.
+claims:
+  - text: Rigveda 10.39 and 10.40 address the Ashvins.
+    grade: A
+    sources:
+      - id: src.jamison-brereton-2014-rigveda
+        locator: Rigveda 10.39 and 10.40
+  - text: The traditional index attributes Rigveda 10.39 and 10.40 to Ghosha Kakshivati.
+    grade: D
+    sources:
+      - id: src.jamison-brereton-2014-rigveda
+        locator: Rigveda 10.39 and 10.40
+  - text: Linguistic scholarship places the Rigvedic collection broadly around 1500 BCE to 1000 BCE,
+      with Book 10 containing relatively late hymns; these are dates for the texts, not for Ghosha
+      Kakshivati.
+    grade: C
+    sources:
+      - id: src.jamison-brereton-2014-rigveda
+        locator: Introduction
+      - src.elby-2014-contemporary-guide-vedas
+relations:
+  - kind: related-to
+    target: text.rigveda
+tags:
+  - rigveda
+  - vedic-poetry
+  - women
+review:
+  status: draft
+  author: codex-gpt-6

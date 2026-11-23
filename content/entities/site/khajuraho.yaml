@@ -27,11 +27,6 @@ datings:
     grade: B
     label: Main Chandela building phase
     sources: [src.unesco-1986-khajuraho, src.michell-1988-hindu-temple]
-  - method: epigraphic
-    range: { earliest: "954 CE", latest: "954 CE", precision: year, circa: false }
-    grade: A
-    label: Lakshmana temple inscription (Vikrama Samvat 1011)
-    sources: [src.burgess-1892-epigraphia-indica-vol-1]
 claims:
   - text: The Khajuraho Group of Monuments was inscribed on the UNESCO World Heritage List in 1986.
     grade: A
@@ -39,6 +34,10 @@ claims:
   - text: The group includes both Hindu and Jain temples built under Chandela rule.
     grade: A
     sources: [src.unesco-1986-khajuraho]
+  - text: The Lakshmana temple inscription is dated Vikrama Samvat 1011 (954 CE).
+    grade: A
+    sources:
+      - src.burgess-1892-epigraphia-indica-vol-1
 relations: []
 wikidata: Q167298
 tags: [unesco, chandela, nagara, temple-architecture]

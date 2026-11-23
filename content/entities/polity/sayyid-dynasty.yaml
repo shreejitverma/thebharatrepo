@@ -1,0 +1,48 @@
+id: polity.sayyid-dynasty
+type: polity
+kind: polity
+names:
+  en: Sayyid Dynasty of Delhi
+summary: The Sayyids ruled Delhi from Khizr Khan's seizure of the city in 1414 to the accession of
+  Bahlul Lodi in 1451. Their authority was more regional than that of the Tughlaqs at their height.
+summaries:
+  kids: Khizr Khan and his successors ruled Delhi after the Tughlaqs. They competed with other rulers
+    in nearby regions.
+  teen: The Sayyids held Delhi in a period of strong regional powers. The Tarikh-i Mubarak Shahi is an
+    important contemporary source for the early decades of their rule.
+region: Delhi and nearby territories
+location:
+  name: Delhi
+  lat: 28.61
+  lon: 77.21
+datings:
+  - method: documentary
+    range:
+      earliest: "1414"
+      latest: "1451"
+      precision: year
+      circa: false
+    grade: B
+    label: Period of rule
+    sources:
+      - src.jackson-1999-delhi-sultanate
+      - src.asher-talbot-2006-india-before-europe
+    note: The range follows Khizr Khan's accession and Bahlul Lodi's takeover.
+claims:
+  - text: Khizr Khan took Delhi in 1414 after the collapse of effective Tughlaq rule.
+    grade: B
+    sources:
+      - src.jackson-1999-delhi-sultanate
+  - text: Mubarak Shah's reign is a major subject of Yahya Sirhindi's Persian chronicle.
+    grade: B
+    sources:
+      - src.jackson-1999-delhi-sultanate
+relations:
+  - kind: part-of
+    target: polity.delhi-sultanate
+  - kind: succeeded
+    target: polity.tughlaq-dynasty
+tags: []
+review:
+  status: draft
+  author: codex-gpt-6

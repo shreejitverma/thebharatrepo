@@ -1,0 +1,55 @@
+id: text.maitri-upanishad
+type: text
+kind: text
+names:
+  en: Maitri Upanishad
+  iast: Maitrī Upaniṣad
+  native: मैत्र्युपनिषद्
+summary: The Maitri, also called the Maitrayaniya Upanishad, belongs to a school of the Black
+  Yajurveda. Its surviving text includes a dialogue about the self, reflections on time and a
+  six-part account of yoga. Its layers are difficult to date.
+summaries:
+  kids: A king named Brihadratha leaves his throne to ask a sage about the self. Other parts of the
+    book consider time and meditation.
+  teen: The Maitri brings together philosophical dialogues and sections on time, the sun and yoga. Its
+    uneven composition and varying manuscript forms complicate the question of when it took shape.
+datings:
+  - method: linguistic
+    range:
+      earliest: "400 BCE"
+      latest: 200
+      precision: century
+      circa: true
+    grade: C
+    label: Broad placement of a layered classical Upanishad
+    sources:
+      - id: src.cohen-2018-upanishads-complete-guide
+        locator: The Maitrī Upaniṣad
+      - src.cohen-2024-classical-upanisads
+      - src.vanbuitenen-1962-maitrayaniya-upanisad
+    note: The wide interval situates the transmitted materials among the later classical Upanishads.
+      Individual passages and compilations may belong to different periods.
+claims:
+  - text: One passage presents a six-part discipline including breath control, withdrawal of the senses,
+      meditation, concentration, reflection and absorption.
+    grade: A
+    sources:
+      - id: src.cohen-2018-upanishads-complete-guide
+        locator: The Maitrī Upaniṣad
+      - id: src.vanbuitenen-1962-maitrayaniya-upanisad
+        locator: "6.18"
+relations:
+  - kind: part-of
+    target: text.upanishads
+  - kind: related-to
+    target: text.krishna-yajurveda
+debate: Van Buitenen distinguishes a core shared with the shorter Southern Maitrayaniya from later
+  material in the expanded text. The six-part yoga passage belongs to the expanded text, so this
+  passage and the core may have different dates.
+tags:
+  - upanishad
+  - veda
+  - vedanta
+review:
+  status: draft
+  author: codex-gpt-6

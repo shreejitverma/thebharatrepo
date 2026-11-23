@@ -100,6 +100,7 @@ export default async function EntityPage({ params }: { params: Promise<{ type: s
     <div className="main-content" data-pagefind-body>
       <SearchIndexMeta
         title={e.names.en}
+        names={[e.names.iast, ...(e.names.alternates ?? [])]}
         kind={e.kind}
         when={summarizeDatings(e.datings)}
         filters={{

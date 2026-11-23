@@ -1,0 +1,47 @@
+id: text.mandukya-upanishad
+type: text
+kind: text
+names:
+  en: Mandukya Upanishad
+  iast: Māṇḍūkya Upaniṣad
+  native: माण्डूक्योपनिषद्
+summary: The Mandukya Upanishad links the syllable Om with the self and sets out four quarters of
+  the self. Its date near the turn of the Common Era is uncertain.
+summaries:
+  kids: This short text starts with the sound Om and asks how being awake, dreaming and sleeping are
+    connected to the self.
+  teen: The text compares the self’s quarters with waking, dreaming and deep sleep and describes a
+    fourth beyond those familiar states. It also interprets the sounds of Om.
+datings:
+  - method: linguistic
+    range:
+      earliest: "100 BCE"
+      latest: 200
+      precision: century
+      circa: true
+    grade: C
+    label: "Patrick Olivelle: late prose stratum"
+    sources:
+      - id: src.olivelle-1998-early-upanisads
+        locator: Introduction, Chronology
+    note: Olivelle assigns the Mandukya and Prashna to a late prose group close to the turn of the
+      Common Era.
+claims:
+  - text: The text links the sounds a, u and m and the soundless aspect of Om to the four quarters of
+      the self.
+    grade: A
+    sources:
+      - id: src.olivelle-1998-early-upanisads
+        locator: Mandukya Upanisad 8-12
+relations:
+  - kind: part-of
+    target: text.upanishads
+  - kind: related-to
+    target: text.atharvaveda
+tags:
+  - upanishad
+  - veda
+  - vedanta
+review:
+  status: draft
+  author: codex-gpt-6

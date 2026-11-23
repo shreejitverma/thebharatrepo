@@ -1,0 +1,68 @@
+id: polity.karkota-dynasty
+type: polity
+kind: polity
+names:
+  en: Karkota Dynasty of Kashmir
+  iast: Kārkoṭa
+summary: The Karkotas ruled Kashmir from the seventh to ninth centuries. Kalhana's chronicle names
+  Durlabhavardhana as the first ruler and attributes the Martand Sun Temple to Lalitaditya. The
+  dynasty's starting date is disputed.
+summaries:
+  kids: The Karkotas ruled Kashmir many centuries ago. A later historian says one of their kings,
+    Lalitaditya, built the Sun Temple at Martand.
+  teen: Scholars compare the reign lengths in the Rajatarangini with foreign records and archaeology.
+    They agree on the broad Karkota period but differ on the date at which it began.
+region: Kashmir Valley
+location:
+  name: Srinagar (urban area of Pravarapura)
+  lat: 34.09
+  lon: 74.8
+datings:
+  - method: textual-internal
+    range:
+      earliest: "620"
+      latest: "856"
+      precision: decade
+      circa: true
+    grade: C
+    label: Conventional early seventh-century reconstruction
+    sources:
+      - src.stein-1900-rajatarangini
+      - src.singh-2008-ancient-early-medieval-india
+    note: This bracket represents the conventional early seventh-century foundation using Kalhana's
+      sequence and the mid-ninth-century Utpala transition.
+  - method: textual-internal
+    range:
+      earliest: "600"
+      latest: "855"
+      precision: decade
+      circa: true
+    grade: C
+    label: Harald Hauptmann's earlier starting date
+    sources:
+      - src.hauptmann-2024-lords-mountains
+    note: Hauptmann follows the chronology that places Durlabhavardhana around 600 CE.
+claims:
+  - text: Kalhana places Durlabhavardhana at the beginning of the Karkota succession.
+    grade: C
+    sources:
+      - id: src.stein-1900-rajatarangini
+        locator: Book IV
+  - text: The Martand Sun Temple is conventionally attributed to the eighth-century Karkota king
+      Lalitaditya.
+    grade: B
+    sources:
+      - src.stein-1900-rajatarangini
+      - src.hauptmann-2024-lords-mountains
+relations: []
+debate: The conventional chronology places Durlabhavardhana around the 620s. Hauptmann dates his
+  accession around 600 CE, following a different reconstruction of Kalhana's reign sequence.
+image:
+  commons: File:Martand Sun Temple, J&K 02.jpg
+  alt: Ruins of the Martand Sun Temple in the Kashmir Valley
+  credit: Deepank Ranka
+  license: CC BY-SA 4.0
+tags: []
+review:
+  status: draft
+  author: codex-gpt-6

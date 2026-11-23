@@ -1,0 +1,63 @@
+id: person.guru-hargobind
+type: person
+kind: person
+names:
+  en: Guru Hargobind
+  native: ਗੁਰੂ ਹਰਿਗੋਬਿੰਦ
+summary: Guru Hargobind was the sixth Sikh Guru. His leadership took on a more explicit temporal and
+  military role, and Sikh tradition associates him with founding the Akal Takht at Amritsar.
+summaries:
+  kids: Guru Hargobind led the Sikhs after his father, Guru Arjan. Sikhs remember him for bringing
+    spiritual and public leadership together.
+  teen: After succeeding Guru Arjan, Hargobind maintained an armed following. The Akal Takht at
+    Amritsar became associated with the temporal authority of Sikh leadership.
+region: Amritsar and Kiratpur, Punjab
+datings:
+  - method: scholarly-consensus
+    range:
+      earliest: "1595"
+      latest: "1644"
+      precision: year
+      circa: true
+    grade: B
+    label: Conventional birth and death years
+    sources:
+      - src.singh-2004-history-of-the-sikhs-vol-1
+      - id: src.grewal-1990-sikhs-of-the-punjab
+        locator: Transformation of the Sikh Panth (1606-1708)
+  - method: scholarly-consensus
+    range:
+      earliest: "1606"
+      latest: "1644"
+      precision: year
+      circa: false
+    grade: B
+    label: Years as Sikh Guru
+    sources:
+      - id: src.grewal-1990-sikhs-of-the-punjab
+        locator: Transformation of the Sikh Panth (1606-1708)
+claims:
+  - text: Guru Hargobind succeeded his father Guru Arjan and maintained an armed following.
+    grade: B
+    sources:
+      - id: src.grewal-1990-sikhs-of-the-punjab
+        locator: Transformation of the Sikh Panth (1606-1708)
+      - src.singh-2004-history-of-the-sikhs-vol-1
+  - text: Sikh historical accounts associate the establishment of the Akal Takht with Hargobind.
+    grade: B
+    sources:
+      - id: src.grewal-1990-sikhs-of-the-punjab
+        locator: Transformation of the Sikh Panth (1606-1708)
+      - src.singh-2004-history-of-the-sikhs-vol-1
+relations:
+  - kind: succeeded
+    target: person.guru-arjan
+  - kind: part-of
+    target: tradition.sikh-gurus
+tags:
+  - sikhism
+  - sikh-gurus
+  - mughal-period
+review:
+  status: draft
+  author: codex-gpt-6

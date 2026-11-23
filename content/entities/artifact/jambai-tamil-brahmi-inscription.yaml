@@ -1,0 +1,85 @@
+id: artifact.jambai-tamil-brahmi-inscription
+type: artifact
+kind: text
+names:
+  en: Jambai Tamil-Brahmi Inscription of Atiyaman
+  iast: Jampai Tamiḻ-Brāhmī Kalveṭṭu
+summary: >-
+  A single-line 1st-century CE Tamil-Brahmi inscription discovered in 1981 on a boulder cavern near Jambai in
+  Villupuram (now Kallakurichi) district, Tamil Nadu. Reading "Satiyaputo Atiyan Neduman Anci itta pali", it
+  solved a long historical puzzle by directly identifying the "Satiyaputa" kingdom named in Ashoka's Second
+  Rock Edict with the Sangam chieftain dynasty of Atiyaman.
+summaries:
+  kids: >-
+    Discovered in Tamil Nadu in 1981, this one-line rock carving uses the ancient clan title "Satiyaputo" for
+    the chieftain Atiyaman Neduman Anci, matching a name Ashoka had carved on rocks centuries earlier.
+  teen: >-
+    Though only one sentence long, the Jambai cavern inscription (c. 1st century CE) revolutionized early
+    South Indian history: by styling the Sangam hero Atiyaman Neduman Anci as "Satiyaputo," it definitively
+    identified the "Satiyaputra" realm named alongside the Cholas, Pandyas, and Cheras in Ashoka's Rock Edict
+    II.
+region: Jambai near Tirukkoyilur, Kallakurichi/Villupuram District, Tamil Nadu, India
+location:
+  name: Jambai hillock cavern site
+  lat: 12.0147
+  lon: 79.2203
+datings:
+  - method: epigraphic
+    range:
+      earliest: 1
+      latest: 100
+      best: 50
+      precision: century
+      circa: true
+    grade: B
+    label: Middle Tamil-Brahmi palaeography (Mahadevan Corpus No. 59)
+    sources:
+      - src.mahadevan-2003-early-tamil-epigraphy
+      - src.singh-2008-ancient-early-medieval-india
+    note: >-
+      Characterised by the early appearance of the pulli (virama dot) and transitional Tamil-Brahmi letter
+      shapes placed in the 1st century CE by Iravatham Mahadevan.
+claims:
+  - text: >-
+      Discovered by the Tamil Nadu State Department of Archaeology in 1981 and numbered No. 59 in Mahadevan's
+      corpus, the inscription reads: "Satiyaputo Atiyan Netuman Anci itta pali" ("The hermitage given by
+      Atiyan Neduman Anci, the Satiyaputra").
+    grade: A
+    sources:
+      - src.mahadevan-2003-early-tamil-epigraphy
+      - src.singh-2008-ancient-early-medieval-india
+  - text: >-
+      It established that the "Satiyaputa" ("Satyaputra") listed among Ashoka's southern neighbours in Rock
+      Edict II refers to the Adigaiman/Atiyaman ruling clan centred around Tagadur (Dharmapuri) and praised in
+      Purananuru Sangam poetry.
+    grade: B
+    sources:
+      - src.mahadevan-2003-early-tamil-epigraphy
+      - src.thapar-2002-early-india
+relations:
+  - kind: part-of
+    target: artifact.tamil-brahmi-inscriptions
+  - kind: related-to
+    target: text.sangam-literature
+    note: Names the celebrated Sangam Velir chieftain Atiyaman Neduman Anci
+  - kind: related-to
+    target: person.ashoka
+    note: Matches the Satiyaputa polity named in Ashoka's Rock Edict II
+wikidata: null
+image:
+  commons: File:Jambai inscription on Adhiyamaan Nedumaan Anji.jpg
+  alt: >-
+    Single-line Tamil-Brahmi inscription of Satiyaputo Atiyan Neduman Anci carved on the boulder cavern at
+    Jambai
+  credit: Karkotagan
+  license: CC BY-SA 4.0
+tags:
+  - inscription
+  - tamil-brahmi
+  - atiyaman
+  - satiyaputra
+  - sangam
+  - jambai
+review:
+  status: draft
+  author: gemini-4-hydrogen-xhigh

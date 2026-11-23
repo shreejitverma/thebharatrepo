@@ -1,0 +1,43 @@
+id: person.buddhaghosa
+type: person
+kind: person
+names:
+  en: Buddhaghosa
+  iast: Buddhaghosa
+summary: Buddhaghosa was a Pali commentator active in fifth-century Sri Lanka. His Visuddhimagga
+  organizes the Theravada path through ethical discipline, concentration and understanding.
+summaries:
+  kids: Buddhaghosa wrote a guide to Buddhist practice that brings together how you act, how you train
+    your attention and how you understand your experience.
+  teen: The Visuddhimagga, or Path of Purification, gathers Theravada teachings into an account of
+    ethical conduct, concentration and wisdom. Buddhaghosa’s commentaries also examine intention and
+    how the mind works.
+region: Sri Lanka
+datings:
+  - method: scholarly-consensus
+    range:
+      earliest: "400"
+      latest: "500"
+      precision: century
+      circa: true
+    grade: B
+    label: Fifth-century Pali commentarial activity
+    sources:
+      - src.heim-2013-forerunner-all-things
+      - id: src.ganeri-2017-oxford-handbook-indian-philosophy
+        locator: "Timeline: Indian Philosophy in a Hundred Thinkers"
+claims:
+  - text: The Visuddhimagga presents ethical discipline, concentration and wisdom as the major divisions
+      of the path.
+    grade: B
+    sources:
+      - src.heim-2013-forerunner-all-things
+      - src.ganeri-2017-oxford-handbook-indian-philosophy
+relations: []
+tags:
+  - theravada
+  - pali
+  - commentary
+review:
+  status: draft
+  author: codex-gpt-6

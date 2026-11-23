@@ -1,0 +1,51 @@
+id: "site.valabhi-centre-of-learning"
+type: "site"
+kind: "site"
+names:
+  en: "Valabhi centre of learning"
+  iast: "Valabhī"
+summary: "Valabhi was a Maitraka capital and an important centre of Buddhist learning. The Chinese
+  pilgrim Yijing mentions it alongside Nalanda, and Maitraka copper plates document royal gifts to
+  monasteries in the region."
+summaries:
+  kids: "Valabhi was a place where people studied Buddhist teachings. A traveller from China mentioned
+    it alongside another well-known place of learning, Nalanda."
+  teen: "Chinese pilgrims and copper-plate grants give complementary evidence for Buddhist
+    institutions at Valabhi. The expression university is often used for its scholarly role, while
+    the records describe monasteries and their patronage."
+region: "Vallabhipur, Saurashtra, Gujarat"
+datings:
+  - method: "epigraphic"
+    range:
+      earliest: 500
+      latest: 770
+      precision: "century"
+      circa: true
+    grade: "B"
+    label: "Maitraka-period religious establishments"
+    sources:
+      - "src.schmiedchen-2021-maitrakas"
+claims:
+  - text: "Yijing, who travelled between 671 and 695 CE, names Valabhi and Nalanda among the principal centres of Buddhist scholarship in
+      India."
+    grade: "A"
+    sources:
+      - "src.takakusu-1896-buddhist-religion"
+      - "src.schmiedchen-2021-maitrakas"
+  - text: "Maitraka charters document royal support for Buddhist monasteries as well as grants to
+      Brahmins."
+    grade: "B"
+    sources:
+      - "src.schmiedchen-2021-maitrakas"
+relations:
+  - kind: "related-to"
+    target: "polity.maitraka-dynasty"
+  - kind: "related-to"
+    target: "site.nalanda-mahavihara"
+tags:
+  - "gujarat"
+  - "buddhism"
+  - "education"
+review:
+  status: "draft"
+  author: "codex-gpt-6"

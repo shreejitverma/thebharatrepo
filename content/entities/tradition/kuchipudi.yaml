@@ -1,0 +1,88 @@
+id: tradition.kuchipudi
+type: tradition
+kind: art
+names:
+  en: Kuchipudi
+  iast: Kūcipūḍi
+  native: కూచిపూడి
+summary: Kuchipudi is a classical dance and dance-drama tradition named after the village of Kuchipudi in Andhra
+  Pradesh. Historically performed as Telugu yakshagana-style dance-dramas by travelling Brahmin male troupes who also
+  impersonated female roles such as Satyabhama in Bhama Kalapam, it expanded in the twentieth century into a solo
+  concert form performed widely by women as well as men.
+summaries:
+  kids: Kuchipudi is a lively classical dance-drama from Andhra Pradesh named after a village where troupes combine quick
+    footwork, expressive acting and spoken dialogue.
+  teen: Originating in village dance-dramas such as Bhama Kalapam performed by male troupes in Andhra Pradesh, Kuchipudi
+    was reframed as a solo and ensemble classical dance form in the mid-twentieth century.
+region: Andhra Pradesh and Telangana
+location:
+  name: Kuchipudi, Krishna District, Andhra Pradesh
+  lat: 16.25
+  lon: 80.983
+datings:
+  - method: traditional-sampradaya
+    range:
+      earliest: 1350
+      latest: 1675
+      precision: century
+      circa: true
+    grade: D
+    label: Tradition of founder-saint Siddhendra Yogi
+    sources:
+      - src.kamath-2019-impersonations
+      - src.putcha-2013-historiography-kuchipudi
+    note: Kuchipudi lineage tradition attributes the dance-drama Bhama Kalapam and the Brahman male troupe system to
+      Siddhendra Yogi, whose dates vary across accounts between the 14th and 17th centuries.
+  - method: documentary
+    range:
+      earliest: 1672
+      latest: 1687
+      precision: "decade"
+      circa: false
+    grade: C
+    label: "Reported grant of Kuchipudi village under Abul Hasan Qutb Shah"
+    sources:
+      - src.kamath-2019-impersonations
+      - src.putcha-2013-historiography-kuchipudi
+    note: "Kuchipudi tradition and later local records report a grant of Kuchipudi village to the performing families by the Golconda ruler Abul Hasan Qutb Shah (Tana Shah, r. 1672-1687); the year is variously reported and the grant is known through later accounts."
+claims:
+  - text: Kuchipudi's historical core repertoire consisted of Telugu kalapam and yakshagana dance-dramas, notably Bhama
+      Kalapam, staged by hereditary Brahmin male actors.
+    grade: B
+    sources:
+      - src.kamath-2019-impersonations
+      - src.putcha-2013-historiography-kuchipudi
+  - text: Twentieth-century classicisation blended Kuchipudi troupe drama with Telugu female courtesan dance repertoires
+      (kalavantulu) and solo stage conventions.
+    grade: B
+    sources:
+      - src.putcha-2013-historiography-kuchipudi
+      - src.soneji-2012-unfinished-gestures
+  - text: Between about 1950 and 1970 Vempati Chinna Satyam, Vedantam Lakshminarayana Sastri and contemporaries adapted
+      the dance-drama into a solo concert format.
+    grade: A
+    sources:
+      - src.putcha-2013-historiography-kuchipudi
+      - src.soneji-2012-unfinished-gestures
+relations:
+  - kind: related-to
+    target: tradition.carnatic-music
+  - kind: related-to
+    target: text.natyashastra
+  - kind: related-to
+    target: tradition.yakshagana
+wikidata: Q1145471
+image:
+  commons: File:Kuchipudi Performer DS.jpg
+  alt: Kuchipudi classical dancer in white-and-red silk sari holding a poised stance
+  credit: Augustus Binu
+  license: CC BY-SA 3.0
+tags:
+  - kuchipudi
+  - dance
+  - andhra-pradesh
+  - bhama-kalapam
+  - dance-drama
+review:
+  status: draft
+  author: gemini-4-hydrogen-xhigh

@@ -1,0 +1,39 @@
+id: person.bhatarka
+type: person
+kind: person
+names:
+  en: Bhatarka
+  iast: Bhaṭārka
+summary: Bhatarka was the military commander named at the head of the Maitraka genealogy. The later
+  grants preserve his title and distinguish it from the royal titles used by his successors.
+summaries:
+  kids: The name of Bhatarka appears on copper records made by later rulers. They remember him as a
+    commander and ancestor.
+  teen: Maitraka charters use the title senapati for Bhatarka. The sequence of titles in these records
+    helps trace how his family became royal.
+region: Saurashtra
+datings:
+  - method: epigraphic
+    range:
+      earliest: "465"
+      latest: "505"
+      precision: decade
+      circa: true
+    grade: C
+    label: Reign or recorded political activity
+    sources:
+      - src.singh-2008-ancient-early-medieval-india
+      - src.schmiedchen-maliya-plates
+    note: The founding generation is inferred from later dated charters.
+claims:
+  - text: The Maliya plates name Bhatarka in the dynastic genealogy and use the title senapati for him.
+    grade: A
+    sources:
+      - src.schmiedchen-maliya-plates
+relations:
+  - kind: founded
+    target: polity.maitraka-dynasty
+tags: []
+review:
+  status: draft
+  author: codex-gpt-6

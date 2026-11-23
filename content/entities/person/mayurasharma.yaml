@@ -1,0 +1,71 @@
+id: person.mayurasharma
+type: person
+kind: person
+names:
+  en: Mayurasharma
+  iast: Mayūraśarman
+  native: ಮಯೂರಶರ್ಮ
+aliases:
+  - person.mayurasharman
+summary: >-
+  Mayurasharma is the founder of the Kadamba dynasty of Banavasi in the dynasty's own records. The
+  Talagunda pillar inscription of his descendant Kakusthavarman relates that this Brahmin of Talagunda went
+  to the ghatika at Kanchipuram for Vedic study, quarrelled with Pallava officials, took up arms and forced
+  the Pallavas to recognise his rule. He is usually placed in the mid-fourth century.
+summaries:
+  kids: >-
+    A stone pillar remembers Mayurasharma as a Brahmin student who became a warrior after a quarrel at
+    Kanchipuram and began the Kadamba kingdom at Banavasi.
+  teen: >-
+    The Talagunda inscription gives the dynasty's own account of Mayurasharma's rise from student to king.
+    It was carved about a century after him, so his exact dates are uncertain, and his successors changed
+    the family name ending from -sharman to -varman.
+region: Talagunda and Banavasi, Karnataka
+location:
+  name: Talagunda, Karnataka
+  lat: 14.43
+  lon: 75.24
+datings:
+  - method: epigraphic
+    range:
+      earliest: "330"
+      latest: "375"
+      best: "345"
+      precision: decade
+      circa: true
+    grade: C
+    label: Mid-fourth-century placement from the Kadamba genealogy
+    sources:
+      - src.hultzsch-1906-epigraphia-indica-vol-8
+      - src.moraes-1931-kadamba-kula
+      - src.singh-2008-ancient-early-medieval-india
+    note: Reconstructed by counting generations back from the mid-fifth-century Talagunda inscription,
+      together with the script and language of the Chandravalli record attributed to him.
+claims:
+  - text: The Talagunda pillar inscription relates that Mayurasharma, a Brahmin student at the Kanchipuram
+      ghatika, took up arms after a quarrel with Pallava officials and was later recognised by the Pallavas.
+    grade: A
+    sources:
+      - src.hultzsch-1906-epigraphia-indica-vol-8
+      - src.cecil-2021-kadamba-court
+  - text: A Prakrit inscription at Chandravalli attributed to Mayurasharma records a water tank and lists
+      peoples including the Traikutas, Abhiras and Pallavas.
+    grade: C
+    sources:
+      - src.moraes-1931-kadamba-kula
+      - src.salomon-1998-indian-epigraphy
+relations:
+  - kind: founded
+    target: polity.kadamba-dynasty
+    note: Founder and first ruler.
+  - kind: related-to
+    target: site.kanchipuram
+    note: Studied at the Kanchipuram ghatika.
+tags:
+  - mayurasharma
+  - kadamba
+  - talagunda
+  - karnataka
+review:
+  status: draft
+  author: gemini-4-hydrogen-xhigh

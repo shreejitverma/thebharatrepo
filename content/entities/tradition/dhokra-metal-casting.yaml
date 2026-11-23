@@ -1,0 +1,73 @@
+id: tradition.dhokra-metal-casting
+type: tradition
+kind: art
+names:
+  en: Dhokra Metal Casting
+  iast: Ḍhokrā Dhātukalā
+  native: ढोकरा / ডোকরা
+summary: Dhokra (Dokra) is a traditional non-ferrous lost-wax (cire perdue) metal-casting craft practised by
+  semi-nomadic and settled artisan communities across West Bengal (Bankura, Bikna), Odisha, Jharkhand, Chhattisgarh
+  (Bastar) and Telangana. Using clay cores wrapped in hand-rolled beeswax threads and moulded in clay before pouring
+  molten brass or bell metal, artisans make hollow ritual lamps, bowls and figurines.
+summaries:
+  kids: Dhokra craftspeople shape thin threads of beeswax around a clay core, coat it with clay and pour in melted brass
+    to create textured statues, bells and lamps.
+  teen: Practised across eastern and central India, Dhokra is a hollow lost-wax casting technique using coiled beeswax
+    wires over clay cores, producing distinctive grooved brass sculptures and ritual objects.
+region: Eastern and central India (West Bengal, Odisha, Chhattisgarh, Jharkhand, Telangana)
+location:
+  name: Bikna (Bankura), West Bengal
+  lat: 23.255
+  lon: 87.092
+datings:
+  - method: documentary
+    range:
+      earliest: 1800
+      latest: 2020
+      precision: century
+      circa: true
+    grade: B
+    label: Surviving museum specimens and ethnographic documentation across eastern and central India
+    sources:
+      - src.reeves-1962-cire-perdue-casting
+      - src.mukherjee-1978-metalcraftsmen-india
+      - src.samanta-2022-dhokra-metallurgy
+    note: Although India's lost-wax metallurgy goes back to the Harappan period, surviving attributed Dhokra brass objects
+      and ethnographies date from the nineteenth and twentieth centuries.
+claims:
+  - text: Unlike solid South Indian bronze casting, Dhokra employs a hollow-casting process in which fine coiled beeswax or
+      resin threads are laid over a sun-dried clay core before investment in outer clay layers.
+    grade: A
+    sources:
+      - src.reeves-1962-cire-perdue-casting
+      - src.mukherjee-1978-metalcraftsmen-india
+  - text: Metallurgical studies of Bankura Dhokra objects document copper-zinc brass and copper-tin alloys poured at around
+      950-1050 degrees C into pre-fired clay moulds.
+    grade: B
+    sources:
+      - src.samanta-2022-dhokra-metallurgy
+debate: Popular writing often calls Dhokra an unbroken 4,000-year survival from the Mohenjo-daro Dancing Girl.
+  Archaeometallurgists note that while both employ lost-wax casting, Dhokra uses coiled-wire hollow casting over a core
+  rather than solid casting, and there is no continuous dated archaeological sequence linking Bronze Age Harappan
+  workshops directly to modern Dhokra guilds.
+relations:
+  - kind: related-to
+    target: artifact.dancing-girl-mohenjo-daro
+  - kind: related-to
+    target: artifact.chola-bronzes
+image:
+  commons: File:God astride an owl, Dhokra (Dokra) craftsmen, Bankura, West Bengal, 19th century, lost-wax cast brass, HAA.JPG
+  alt: Nineteenth-century Dhokra lost-wax cast brass figure of a deity riding an owl from Bankura, West Bengal
+  credit: Hiart (Honolulu Museum of Art)
+  license: CC0
+tags:
+  - dhokra
+  - dokra
+  - lost-wax
+  - bankura
+  - bastar
+  - brass
+  - craft
+review:
+  status: draft
+  author: gemini-4-hydrogen-xhigh

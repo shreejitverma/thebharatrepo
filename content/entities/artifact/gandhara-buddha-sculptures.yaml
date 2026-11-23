@@ -1,0 +1,83 @@
+id: artifact.gandhara-buddha-sculptures
+type: artifact
+kind: art
+names:
+  en: Gandhara Schist and Stucco Buddha Sculptures
+  iast: Gāndhāra Buddha Śilpa
+summary: >-
+  Standing and seated stone, blue-grey phyllite/schist, and stucco Buddha images carved across ancient
+  Gandhara (Peshawar Valley, Swat, and Taxila) between the 1st and 5th centuries CE. Blending Buddhist
+  auspicious marks (lakshanas) with Hellenistic-Roman drapery folds, wavy hair tied in an ushnisha, and
+  Corinthian pilasters, major collections survive in Peshawar, Lahore, the British Museum, and NUS Museum.
+summaries:
+  kids: >-
+    Sculptors in northwestern India and Pakistan carved lifelike grey stone statues of the Buddha wearing
+    flowing pleated robes and wavy hair inspired by Greek and Roman art.
+  teen: >-
+    Emerging in Kushan Gandhara around the 1st-2nd century CE, Gandharan Buddha sculptures fused Indian
+    Buddhist iconography (halo, urna, ushnisha, monastic robes) with classical Mediterranean naturalism and
+    deeply undercut robe folds.
+region: Gandhara (Peshawar Basin, Swat Valley, and Taxila, northern Pakistan and eastern Afghanistan)
+datings:
+  - method: art-historical
+    range:
+      earliest: 50
+      latest: 400
+      best: 180
+      precision: century
+      circa: true
+    grade: B
+    label: Peak Gandharan schist and later stucco phases (1st-4th century CE)
+    sources:
+      - src.zwalf-1996-gandhara-sculpture-british-museum
+      - src.behrendt-2004-buddhist-architecture-gandhara
+    note: >-
+      Dated via architectural phasing of Takht-i-Bahi and Dharmarajika complexes, reliquary synchronisms, and
+      dated Kharoshthi pedestal inscriptions (e.g. Loriyan Tangai Year 318).
+claims:
+  - text: >-
+      W. Zwalf's British Museum catalogue and Kurt Behrendt's monastic architecture studies document thousands
+      of grey-blue schist, green phyllite, and later lime-stucco Buddha statues from sites such as Jamalgarhi,
+      Takht-i-Bahi, and Loriyan Tangai.
+    grade: A
+    sources:
+      - src.zwalf-1996-gandhara-sculpture-british-museum
+      - src.behrendt-2004-buddhist-architecture-gandhara
+  - text: >-
+      Iconographically, Gandharan Buddhas combine monastic samghati robes with deeply carved Hellenistic-Roman
+      catenary folds, wavy Apollo-like hair covering the cranial ushnisha, an urna forehead mark, and mudras
+      such as abhaya, dhyana, and dharmachakra.
+    grade: B
+    sources:
+      - src.zwalf-1996-gandhara-sculpture-british-museum
+      - src.harle-1994-art-architecture-indian-subcontinent
+  - text: >-
+      Debate continues between scholars who locate the earliest anthropomorphic Buddha in Gandhara via
+      Indo-Parthian/early Kushan syncretism and those who favour simultaneous or earlier emergence in Mathura.
+    grade: B
+    sources:
+      - src.errington-cribb-1992-crossroads-of-asia
+      - src.quintanilla-2007-sculpture-at-mathura
+relations:
+  - kind: part-of
+    target: tradition.gandhara-art
+  - kind: part-of
+    target: polity.kushan-empire
+  - kind: contemporary-of
+    target: artifact.mathura-buddha-images
+wikidata: null
+image:
+  commons: File:Gandaran Buddha, NUS Museum (113016).jpg
+  alt: Schist Gandharan Buddha sculpture in NUS Museum showing flowing pleated drapery, wavy hair, and halo
+  credit: Moheen Reeyad
+  license: CC BY-SA 4.0
+tags:
+  - sculpture
+  - gandhara
+  - buddha
+  - kushan
+  - schist
+  - hellenistic
+review:
+  status: draft
+  author: gemini-4-hydrogen-xhigh

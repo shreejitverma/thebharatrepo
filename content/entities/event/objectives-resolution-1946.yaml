@@ -1,0 +1,53 @@
+id: event.objectives-resolution-1946
+type: event
+kind: event
+names:
+  en: Constituent Assembly Objectives Resolution
+summary: Jawaharlal Nehru moved the Objectives Resolution in the Constituent Assembly in
+  December 1946. The Assembly adopted it on 22 January 1947, setting out commitments including
+  popular sovereignty, equality and safeguards for minorities.
+summaries:
+  kids: Nehru proposed goals for India's new constitution. The goals included equality and the
+    idea that the government's authority comes from the people.
+  teen: The resolution set out principles for a sovereign republic, social and political justice,
+    and safeguards for minorities and other groups. It guided the Assembly's work and
+    anticipated principles in the Constitution's preamble.
+region: New Delhi
+datings:
+  - method: documentary
+    range:
+      earliest: "1946"
+      latest: "1946"
+      precision: day
+      circa: false
+    grade: A
+    label: Introduced on 13 December 1946
+    sources:
+      - src.constituent-assembly-1946-objectives-debate
+  - method: documentary
+    range:
+      earliest: "1947"
+      latest: "1947"
+      precision: day
+      circa: false
+    grade: A
+    label: Adopted on 22 January 1947
+    sources:
+      - src.constituent-assembly-1947-objectives-adoption
+claims:
+  - text: Nehru's motion said that the authority of independent India would derive from the people
+      and called for guarantees of justice and equality.
+    grade: A
+    sources:
+      - src.constituent-assembly-1946-objectives-debate
+relations:
+  - kind: related-to
+    target: person.jawaharlal-nehru
+  - kind: preceded
+    target: event.constitution-adopted-and-commenced
+tags:
+  - constitution
+  - independence
+review:
+  status: draft
+  author: codex-gpt-6

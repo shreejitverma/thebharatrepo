@@ -1,0 +1,46 @@
+id: "event.battle-of-khanwa"
+type: "event"
+kind: "event"
+names:
+  en: "Battle of Khanwa"
+summary: "Babur defeated a coalition headed by Rana Sanga at Khanwa in 1527. The victory helped
+  secure Mughal power in northern India after Panipat."
+summaries:
+  kids: "Rana Sanga and his allies faced Babur near a place called Khanwa. Babur's army won the battle
+    in 1527."
+  teen: "The battle brought Babur's army against a coalition led by Mewar that included Hasan Khan of
+    Mewat. Babur's account provides direct testimony shaped by his role in the conflict."
+region: "Khanwa, Rajasthan"
+datings:
+  - method: "documentary"
+    range:
+      earliest: 1527
+      latest: 1527
+      precision: "year"
+      circa: false
+    grade: "A"
+    label: "Battle recorded in Babur's memoir"
+    sources:
+      - "src.babur-1922-baburnama"
+      - "src.asher-talbot-2006-india-before-europe"
+claims:
+  - text: "Babur's account identifies Rana Sanga and Hasan Khan Mewati among the opposing leaders."
+    grade: "A"
+    sources:
+      - "src.babur-1922-baburnama"
+  - text: "The victory came the year after Babur's defeat of Ibrahim Lodi at Panipat."
+    grade: "A"
+    sources:
+      - "src.babur-1922-baburnama"
+      - "src.asher-talbot-2006-india-before-europe"
+relations:
+  - kind: "related-to"
+    target: "person.rana-sanga"
+  - kind: "related-to"
+    target: "event.first-battle-of-panipat"
+tags:
+  - "mewar"
+  - "mughal"
+review:
+  status: "draft"
+  author: "codex-gpt-6"

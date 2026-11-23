@@ -1,0 +1,44 @@
+id: person.p-c-mahalanobis
+type: person
+kind: science
+names:
+  en: Prasanta Chandra Mahalanobis
+  native: প্রশান্তচন্দ্র মহলানবিশ
+summary: Prasanta Chandra Mahalanobis developed a generalized statistical distance and founded the Indian
+  Statistical Institute. He also helped develop large-scale sample surveys for measuring agricultural and
+  social conditions in India.
+summaries:
+  kids: Mahalanobis worked out better ways to compare measurements and learn about a large population by
+    studying a smaller sample.
+  teen: Mahalanobis combined mathematical statistics with fieldwork. His research included a distance that
+    accounts for correlations between measurements and methods for large sample surveys.
+region: Kolkata
+datings:
+  - method: documentary
+    range:
+      earliest: 1893
+      latest: 1972
+      precision: year
+      circa: false
+    grade: A
+    label: Documented lifespan
+    sources:
+      - src.rao-1973-mahalanobis
+claims:
+  - text: Mahalanobis published his generalized distance in the Proceedings of the National Institute of Sciences
+      of India in 1936.
+    grade: A
+    sources:
+      - src.mahalanobis-2018-generalised-distance
+  - text: He founded the Indian Statistical Institute and developed survey methods for estimating crop acreage and
+      output.
+    grade: B
+    sources:
+      - src.rao-1973-mahalanobis
+relations: []
+tags:
+  - statistics
+  - sample-surveys
+review:
+  status: draft
+  author: codex-gpt-6

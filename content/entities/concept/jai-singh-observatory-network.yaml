@@ -1,0 +1,51 @@
+id: concept.jai-singh-observatory-network
+type: concept
+kind: science
+names:
+  en: Sawai Jai Singh II’s Observatories
+summary: In the eighteenth century, Sawai Jai Singh II commissioned five observatories across northern and
+  central India. Their monumental instruments made architectural surfaces part of the process of observing and
+  measuring the sky.
+summaries:
+  kids: Jai Singh had tall stone and masonry instruments built in five cities so astronomers could make
+    measurements of the sky.
+  teen: Observatories at Delhi, Jaipur, Ujjain, Varanasi and Mathura supported a court-sponsored program of
+    positional astronomy. Four of the sites survive.
+region: Delhi, Rajasthan, Madhya Pradesh and Uttar Pradesh
+datings:
+  - method: documentary
+    range:
+      earliest: 1720
+      latest: 1740
+      precision: decade
+      circa: true
+    grade: B
+    label: Eighteenth-century building program
+    sources:
+      - src.perlus-2020-celestial-mirror
+      - src.macdougall-1996-jantar-mantar
+      - id: src.plofker-2009-mathematics-in-india
+        locator: Section 9.2
+    note: Studies agree on the sequence beginning at Delhi and vary on the endpoints for the entire network.
+claims:
+  - text: Jai Singh II commissioned observatories at Delhi, Jaipur, Ujjain, Varanasi and Mathura.
+    grade: B
+    sources:
+      - src.perlus-2020-celestial-mirror
+      - src.macdougall-1996-jantar-mantar
+  - text: Instruments such as the Samrat Yantra turn the movement of a shadow into a measurement of time.
+    grade: B
+    sources:
+      - src.perlus-2020-celestial-mirror
+      - src.macdougall-1996-jantar-mantar
+relations:
+  - kind: patronised-by
+    target: person.sawai-jai-singh-ii
+  - kind: related-to
+    target: site.jantar-mantar-jaipur
+tags:
+  - observatories
+  - masonry-instruments
+review:
+  status: draft
+  author: codex-gpt-6

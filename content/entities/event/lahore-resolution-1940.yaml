@@ -1,0 +1,45 @@
+id: event.lahore-resolution-1940
+type: event
+kind: event
+names:
+  en: Lahore Resolution of 1940
+summary: The All-India Muslim League adopted the Lahore Resolution in March 1940. It called for
+  Muslim-majority areas in the northwest and east to be grouped into independent states, while
+  leaving the form of those states open to interpretation.
+summaries:
+  kids: At a meeting in Lahore, the Muslim League called for regions with Muslim majorities to
+    form their own states.
+  teen: The resolution called for Muslim-majority regions in the northwest and east to form
+    independent states. Its wording left room for different readings of the relationship between
+    their constituent units.
+region: Lahore, Punjab, British India
+datings:
+  - method: scholarly-consensus
+    range:
+      earliest: "1940"
+      latest: "1940"
+      precision: year
+      circa: false
+    grade: B
+    label: Adoption at the March Lahore session
+    sources:
+      - src.jalal-1985-sole-spokesman
+      - src.sarkar-1989-modern-india
+claims:
+  - text: The resolution called for the grouping of Muslim-majority areas in the northwest and east
+      into independent states with autonomous constituent units.
+    grade: B
+    sources:
+      - src.jalal-1985-sole-spokesman
+      - src.metcalf-2012-concise-history-modern-india
+relations:
+  - kind: related-to
+    target: event.all-india-muslim-league-founded
+  - kind: related-to
+    target: event.independence-and-partition-1947
+tags:
+  - muslim-league
+  - partition
+review:
+  status: draft
+  author: codex-gpt-6

@@ -1,0 +1,57 @@
+id: site.red-fort-delhi
+type: site
+kind: site
+names:
+  en: Red Fort, Delhi
+  iast: Lāla Qilā, Dillī
+  native: लाल क़िला, दिल्ली
+summary: >-
+  Shah Jahan built the Red Fort in Delhi as the palace-fortress of his capital, Shahjahanabad, from 1639
+  to 1648 CE. The sandstone walls enclose audience halls and marble pavilions, some linked by a water
+  channel. UNESCO inscribed the Red Fort Complex in 2007.
+summaries:
+  kids: >-
+    Delhi's Red Fort was built for Emperor Shah Jahan. Behind its red sandstone walls are audience
+    halls, marble buildings and the remains of a channel that once carried water through the palace.
+  teen: >-
+    Shah Jahan's fortified palace in Delhi was inaugurated in 1648 CE. Its riverfront pavilions were
+    linked by a water channel, and later Mughal and British work altered the complex.
+region: Delhi (Central Delhi)
+location: { name: "Old Delhi, Delhi", lat: 28.656, lon: 77.240 }
+datings:
+  - method: documentary
+    range: { earliest: "1639 CE", latest: "1648 CE", precision: year, circa: false }
+    grade: A
+    label: "Shah Jahan's foundation and inauguration of the palace-fortress"
+    sources:
+      - src.asher-1992-architecture-of-mughal-india
+      - src.koch-1991-mughal-architecture
+    note: >-
+      Mughal court histories record the foundation in 1639 CE and Shah Jahan's ceremonial entry into the
+      fort in 1648 CE.
+claims:
+  - text: >-
+      The Nahr-i-Bihisht, or Stream of Paradise, carried water through the riverfront palace pavilions,
+      including the Rang Mahal and Diwan-i-Khas.
+    grade: B
+    sources:
+      - src.asher-1992-architecture-of-mughal-india
+      - src.koch-1991-mughal-architecture
+  - text: >-
+      UNESCO inscribed the Red Fort Complex, including the adjacent Salimgarh Fort, in 2007.
+    grade: A
+    sources:
+      - src.unesco-2007-red-fort-complex
+relations:
+  - { kind: related-to, target: event.indian-national-army-red-fort-trial, note: The fort was the venue for the trial. }
+  - { kind: part-of, target: polity.mughal-empire }
+  - { kind: related-to, target: site.taj-mahal }
+  - { kind: related-to, target: site.humayuns-tomb }
+wikidata: Q45957
+image:
+  commons: "File:Red Fort in Delhi 03-2016 img3.jpg"
+  alt: Red sandstone Lahori Gate entrance, chhatri domes, and crenellated ramparts of the Red Fort in Delhi
+  credit: A.Savin
+  license: FAL
+tags: [red-fort, lal-qila, shahjahanabad, mughal, delhi, unesco]
+review: { status: draft, author: "gemini-4-hydrogen-xhigh" }

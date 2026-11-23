@@ -1,0 +1,50 @@
+id: person.qutb-al-din-aybak
+type: person
+kind: person
+names:
+  en: Qutb al-Din Aybak
+summary: Aybak was a Ghurid commander who became effectively autonomous at Lahore after the Ghurid
+  succession crisis of 1206. His career marks the beginning of the Delhi Sultanate, whose Delhi
+  court was consolidated by Iltutmish.
+summaries:
+  kids: Aybak was a commander who became a ruler in his own right. Iltutmish, one of his successors,
+    made Delhi his seat.
+  teen: Aybak's authority was effectively independent after 1206. Peter Jackson uses coins and the
+    Ghurid relationship to qualify which formal title Aybak held.
+region: Lahore and Delhi
+location:
+  name: Lahore
+  lat: 31.55
+  lon: 74.36
+datings:
+  - method: documentary
+    range:
+      earliest: "1206"
+      latest: "1210"
+      precision: year
+      circa: false
+    grade: B
+    label: Reign or recorded political activity
+    sources:
+      - src.jackson-1999-delhi-sultanate
+      - src.jackson-2010-muslim-india-delhi-sultanate
+    note: The conventional period of Aybak's autonomous rule begins at the death of his Ghurid patron.
+claims:
+  - text: Aybak established an effectively autonomous power based at Lahore in 1206.
+    grade: B
+    sources:
+      - src.jackson-1999-delhi-sultanate
+      - src.jackson-2010-muslim-india-delhi-sultanate
+  - text: The numismatic evidence discussed by Jackson supports the title malik for Aybak.
+    grade: B
+    sources:
+      - src.jackson-2010-muslim-india-delhi-sultanate
+relations:
+  - kind: founded
+    target: polity.delhi-sultanate
+  - kind: founded
+    target: polity.mamluk-dynasty-delhi
+tags: []
+review:
+  status: draft
+  author: codex-gpt-6

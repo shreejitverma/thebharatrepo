@@ -1,0 +1,51 @@
+id: site.kanchipuram
+type: site
+kind: site
+names:
+  en: Kanchipuram (Centre of Learning)
+  iast: Kāñcīpuram
+  native: காஞ்சிபுரம்
+summary: "Kanchipuram (Kanchi), on the Palar River basin in northern Tamil Nadu, served for over a millennium as a political capital and leading South Indian centre of scholarship across Vedic, Vedantic, Buddhist, and Jain traditions. Famous for its Brahmanical ghatika (higher academy) visited by the Kadamba founder Mayurasharma in the 4th century CE, Kanchipuram was also home to Buddhist logicians and commentators such as Dignaga, Dharmapala, and Buddhadatta, documented by Manimekalai and the 7th-century Chinese pilgrim Xuanzang."
+summaries:
+  kids: "Kanchipuram in Tamil Nadu was not just a capital of great temples and silk weavers, but also an important ancient centre of learning where scholars studied Sanskrit, Buddhism, Jainism, and philosophy."
+  teen: >-
+    Home to the royal ghatika academy described in Kadamba and Pallava inscriptions as well as thriving Buddhist and Jain monasteries noted by Xuanzang, Kanchipuram linked northern and southern Indian scholarly networks.
+region: Tondaimandalam (Palar basin), Kanchipuram District, Tamil Nadu
+location: { name: "Kanchipuram, Tamil Nadu", lat: 12.83, lon: 79.70 }
+datings:
+  - method: epigraphic
+    range: { earliest: "300 CE", latest: "1300 CE", precision: century, circa: true }
+    grade: B
+    label: Pallava, Chola, and early historic scholarly prominence
+    sources:
+      - src.minakshi-1938-administration-social-life-pallavas
+      - src.scharfe-2002-education-in-ancient-india
+      - src.hultzsch-1906-epigraphia-indica-vol-8
+    note: The 5th-century Talagunda pillar inscription records Mayurasharma travelling to Kanchi's ghatika in the 4th century CE; Pallava, Chola, and Chinese accounts confirm continuous scholarly institutions into the late medieval era.
+claims:
+  - text: The Talagunda pillar inscription states that the Brahmin Mayurasharma went to the ghatika (academy of Vedic learning) at Kanchipuram with his teacher Virasharma to complete his studies.
+    grade: A
+    sources:
+      - src.hultzsch-1906-epigraphia-indica-vol-8
+      - src.scharfe-2002-education-in-ancient-india
+  - text: Buddhist sources and Xuanzang's 7th-century account record Kanchipuram as a major Theravada and Mahayana centre associated with scholars including Buddhadatta, Dignaga, and Dharmapala, and the Tamil epic Manimekalai culminates there.
+    grade: B
+    sources:
+      - src.monius-2001-imagining-place-for-buddhism
+      - src.minakshi-1938-administration-social-life-pallavas
+  - text: Pallava royal patronage established structural shrines such as the Kailasanatha and Vaikuntha Perumal temples and supported Sanskrit poets and grammarians including Bharavi and Dandin.
+    grade: B
+    sources:
+      - src.minakshi-1938-administration-social-life-pallavas
+      - src.champakalakshmi-1996-trade-ideology-urbanization
+relations:
+  - { kind: related-to, target: polity.pallava-dynasty }
+  - { kind: related-to, target: text.manimekalai }
+  - { kind: related-to, target: site.nalanda-mahavihara, note: Dharmapala of Kanchipuram later became abbot of Nalanda }
+image:
+  commons: "File:Kailasanathar Temple, Kanchipuram.jpeg"
+  alt: Sandstone towers and courtyard shrines of the 8th-century Pallava Kailasanatha Temple at Kanchipuram
+  credit: tshrinivasan
+  license: CC BY-SA 3.0
+tags: [kanchipuram, ghatika, education, pallava, buddhism, jainism, tamil-nadu]
+review: { status: draft, author: "gemini-4-hydrogen-xhigh" }

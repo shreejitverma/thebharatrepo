@@ -1,0 +1,83 @@
+id: polity.kadamba-dynasty
+type: polity
+kind: polity
+names:
+  en: Kadamba Dynasty of Banavasi
+  iast: Kadamba
+  native: ಕದಂಬ
+aliases:
+  - polity.kadamba-dynasty-banavasi
+summary: >-
+  The early Kadambas ruled from Banavasi (Vaijayanti) in western Karnataka from about the mid-fourth to the
+  mid-sixth century, when the Badami Chalukyas absorbed the region; later Kadamba branches ruled at Hangal
+  and Goa. Founded according to their own inscriptions by Mayurasharma after a break with the Pallavas, the
+  dynasty formed marriage ties with other royal houses, including the Guptas, and the Halmidi inscription, generally
+  regarded as the earliest known Kannada inscription, is attributed to their period.
+summaries:
+  kids: >-
+    The Kadambas ruled from Banavasi in Karnataka. Pillars carved with writing tell us about their family,
+    and one stone from their time is thought to be the oldest known record in Kannada.
+  teen: >-
+    The Talagunda pillar tells the dynasty's story about Mayurasharma. Kakusthavarman's inscription records
+    marriage ties with other royal houses, and the Gudnapur inscription records temple building and the land that supported
+    it.
+region: Western Karnataka, with its capital at Banavasi
+location:
+  name: Banavasi (Vaijayanti)
+  lat: 14.54
+  lon: 75.02
+datings:
+  - method: epigraphic
+    range:
+      earliest: "340"
+      latest: "550"
+      precision: decade
+      circa: true
+    grade: B
+    label: Main Banavasi line, Mayurasharma to the Badami Chalukya takeover
+    sources:
+      - src.hultzsch-1906-epigraphia-indica-vol-8
+      - src.moraes-1931-kadamba-kula
+      - src.singh-2008-ancient-early-medieval-india
+    note: Reconstructed from the Talagunda pillar inscription of Kakusthavarman, copper-plate charters and
+      synchronisms with the Pallavas, Vakatakas and Badami Chalukyas, who took Banavasi in the mid-sixth
+      century. The earliest generations are dated from retrospective genealogy.
+claims:
+  - text: The Talagunda pillar inscription of Kakusthavarman names Mayurasharma as founder of the dynasty
+      and recounts his rise after a dispute with the Pallavas at Kanchipuram.
+    grade: A
+    sources:
+      - src.hultzsch-1906-epigraphia-indica-vol-8
+      - src.cecil-2021-kadamba-court
+  - text: The Halmidi stone inscription, usually dated to the fifth century in the Kadamba period, is
+      generally regarded as the earliest known epigraphic record in Kannada.
+    grade: B
+    sources:
+      - src.pollock-2006-language-of-the-gods
+      - src.singh-2008-ancient-early-medieval-india
+  - text: Kakusthavarman's Talagunda inscription records marriage alliances that linked the Kadambas with
+      other royal houses, including the Guptas.
+    grade: B
+    sources:
+      - src.hultzsch-1906-epigraphia-indica-vol-8
+      - src.singh-2008-ancient-early-medieval-india
+  - text: Ravivarman's Gudnapur inscription describes land endowments for a temple at Banavasi.
+    grade: A
+    sources:
+      - src.cecil-2021-kadamba-court
+relations:
+  - kind: preceded
+    target: polity.chalukya-dynasty-of-badami
+    note: The Badami Chalukyas took Banavasi in the mid-sixth century.
+  - kind: related-to
+    target: polity.pallava-dynasty
+  - kind: contemporary-of
+    target: polity.western-ganga-dynasty
+wikidata: Q1479952
+tags:
+  - kadamba
+  - banavasi
+  - karnataka
+review:
+  status: draft
+  author: gemini-4-hydrogen-xhigh

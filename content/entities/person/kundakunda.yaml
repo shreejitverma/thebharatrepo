@@ -1,0 +1,55 @@
+id: person.kundakunda
+type: person
+kind: person
+names:
+  en: Kundakunda
+  iast: Kundakunda
+  native: कुन्दकुन्द
+summary: Kundakunda is the name attached to influential Digambara Jain works such as the Samayasara.
+  The date and unity of the attributed Prakrit corpus are contested.
+summaries:
+  kids: Jain books passed down under Kundakunda’s name ask how the soul can become free. Scholars
+    study the books to learn when their different parts were written.
+  teen: The Samayasara distinguishes the soul’s intrinsic nature from its entanglement in karma.
+    Digambara tradition honors Kundakunda, and scholars disagree about how many authors contributed
+    to the surviving corpus.
+datings:
+  - method: textual-internal
+    range:
+      earliest: "100"
+      latest: "300"
+      precision: century
+      circa: true
+    grade: C
+    label: Walther Schubring’s early dating
+    sources:
+      - src.soni-2023-conundrum-kundakunda
+    note: Schubring places the author in the second or third century.
+  - method: textual-internal
+    range:
+      earliest: "200"
+      latest: "800"
+      precision: century
+      circa: true
+    grade: C
+    label: Piotr Balcerowicz’s layered corpus
+    sources:
+      - src.soni-2023-conundrum-kundakunda
+    note: Balcerowicz proposes multiple authors or layers spanning the third to the seventh or eighth
+      century.
+claims:
+  - text: The Samayasara is conventionally attributed to Kundakunda and is central to his prominence in
+      the Digambara tradition.
+    grade: B
+    sources:
+      - src.soni-2023-conundrum-kundakunda
+relations: []
+debate: Early single-author datings and later layered datings describe different reconstructions.
+  The age of an early core cannot establish the age of the whole surviving corpus.
+tags:
+  - jain-philosophy
+  - digambara
+  - prakrit
+review:
+  status: draft
+  author: codex-gpt-6

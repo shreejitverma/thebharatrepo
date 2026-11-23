@@ -1,0 +1,48 @@
+id: event.founding-of-hindu-college
+type: event
+kind: event
+names:
+  en: Founding of Hindu College, Calcutta
+  native: হিন্দু কলেজ প্রতিষ্ঠা (১৮১৭)
+summary: >-
+  Hindu College opened in Calcutta on 20 January 1817 through an initiative of prominent Bengali
+  gentry (including Radhakanta Deb and members linked with Raja Ram Mohan Roy's circle) alongside
+  David Hare and Chief Justice Edward Hyde East. Offering English, European science and Western
+  humanities alongside Indian learning, it became the crucible of the early Bengal Renaissance and
+  the Young Bengal movement before becoming Presidency College in 1855.
+summaries:
+  kids: >-
+    In 1817, leaders in Calcutta founded Hindu College so students could study modern science,
+    history and literature alongside Indian subjects, sparking a wave of new ideas in Bengal.
+  teen: >-
+    Established in Calcutta in January 1817 by Indian patrons and British educationists, Hindu College
+    trained the Young Bengal generation under Henry Louis Vivian Derozio and became Presidency
+    College in 1855.
+region: Calcutta (Kolkata), Bengal
+location: { name: "College Street, Kolkata", lat: 22.576, lon: 88.363 }
+datings:
+  - method: documentary
+    range: { earliest: 1817, latest: 1817, precision: day, circa: false }
+    grade: A
+    label: Opening of the Mahavidyalaya (Hindu College) on 20 January 1817
+    sources:
+      - src.kopf-1969-british-orientalism-bengal-renaissance
+      - src.suman-shanu-2024-hindu-college-calcutta
+    note: Contemporary committee minutes and institutional records establish the formal opening of Hindu College on 20 January 1817 and its reorganisation into Presidency College in 1855.
+claims:
+  - text: Hindu College was funded and co-governed initially by wealthy Hindu citizens of Calcutta with the support of David Hare and Chief Justice Sir Edward Hyde East, though Ram Mohan Roy stepped back from the managing committee to avoid conservative boycott.
+    grade: B
+    sources:
+      - src.kopf-1969-british-orientalism-bengal-renaissance
+      - src.suman-shanu-2024-hindu-college-calcutta
+  - text: In 1855 the colonial government converted the senior department into Presidency College, an early secular public institution open to all communities.
+    grade: A
+    sources:
+      - src.suman-shanu-2024-hindu-college-calcutta
+      - src.marshall-1987-bengal-british-bridgehead
+relations:
+  - { kind: related-to, target: person.raja-ram-mohan-roy }
+  - { kind: related-to, target: person.henry-louis-vivian-derozio }
+  - { kind: related-to, target: person.dwarkanath-tagore }
+tags: [hindu-college, calcutta, bengal-renaissance, education, 19th-century]
+review: { status: draft, author: "gemini-4-hydrogen-xhigh" }

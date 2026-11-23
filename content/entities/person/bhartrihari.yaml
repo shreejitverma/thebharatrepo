@@ -1,0 +1,41 @@
+id: person.bhartrihari
+type: person
+kind: person
+names:
+  en: Bhartrihari
+  iast: Bhartṛhari
+  native: भर्तृहरि
+summary: Bhartrihari was a Sanskrit grammarian and philosopher of language whose Vakyapadiya
+  examines how speech, meaning and thought are related. The identification of the grammarian with
+  the poet of the Three Centuries is uncertain.
+summaries:
+  kids: Bhartrihari asked how the sounds in a sentence become a thought you can understand.
+  teen: In the Vakyapadiya, Bhartrihari looks at how we grasp an utterance as a whole even though its
+    sounds arrive one after another. He also explores how language shapes perception.
+datings:
+  - method: scholarly-consensus
+    range:
+      earliest: "400"
+      latest: "500"
+      precision: century
+      circa: true
+    grade: B
+    label: Fifth-century placement of the grammarian
+    sources:
+      - id: src.ganeri-2017-oxford-handbook-indian-philosophy
+        locator: "Timeline: Indian Philosophy in a Hundred Thinkers"
+      - id: src.ganeri-2017-oxford-handbook-indian-philosophy
+        locator: Bhartṛhari on Language, Perception, and Consciousness
+claims:
+  - text: The Vakyapadiya examines the unity of sentence meaning and the role of language in cognition.
+    grade: B
+    sources:
+      - id: src.ganeri-2017-oxford-handbook-indian-philosophy
+        locator: Bhartṛhari on Language, Perception, and Consciousness
+relations: []
+tags:
+  - sanskrit-grammar
+  - philosophy-of-language
+review:
+  status: draft
+  author: codex-gpt-6

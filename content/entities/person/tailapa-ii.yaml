@@ -1,0 +1,41 @@
+id: person.tailapa-ii
+type: person
+kind: person
+names:
+  en: Tailapa II
+  iast: Tailapa
+summary: Tailapa II founded the later Chalukya ruling line in the western Deccan after defeating the
+  last effective Rashtrakuta king. Inscriptions made during his reign attest the emergence of his
+  power.
+summaries:
+  kids: Tailapa took power after the Rashtrakutas. The royal family he began became known for its
+    capital at Kalyani.
+  teen: Tailapa's rise in the late tenth century marks the transition from Rashtrakuta to later
+    Chalukya rule. The dynasty subsequently shifted its seat to Kalyani.
+region: Western Deccan
+datings:
+  - method: scholarly-consensus
+    range:
+      earliest: "970"
+      latest: "1000"
+      precision: decade
+      circa: true
+    grade: B
+    label: Reign or recorded political activity
+    sources:
+      - src.singh-2008-ancient-early-medieval-india
+      - src.karashima-2014-concise-history-south-india
+    note: The window brackets the takeover and the late tenth-century reign.
+claims:
+  - text: Tailapa II displaced Rashtrakuta ruler Karka II and founded the later western Chalukya line.
+    grade: B
+    sources:
+      - src.singh-2008-ancient-early-medieval-india
+      - src.karashima-2014-concise-history-south-india
+relations:
+  - kind: founded
+    target: polity.chalukya-dynasty-of-kalyani
+tags: []
+review:
+  status: draft
+  author: codex-gpt-6

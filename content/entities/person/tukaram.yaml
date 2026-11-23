@@ -1,0 +1,45 @@
+id: person.tukaram
+type: person
+kind: person
+names:
+  en: Tukaram
+  iast: Tukārāma
+  native: तुकाराम
+summary: Tukaram was a Marathi poet of the Varkari tradition. His abhangs address Vitthal and give
+  voice to personal struggle, everyday experience and religious devotion.
+summaries:
+  kids: Tukaram sang to Vitthal in Marathi. His poems talk about troubles people know well and the
+    comfort he found in devotion.
+  teen: Tukaram’s abhangs became part of the Varkari repertoire of songs and pilgrimage. The poems
+    address Vitthal and give a voice to experience outside the learned Sanskrit traditions.
+region: Dehu, Maharashtra
+datings:
+  - method: scholarly-consensus
+    range:
+      earliest: "1608"
+      latest: "1650"
+      precision: year
+      circa: true
+    grade: B
+    label: Received lifespan, with a one-year variation at death
+    sources:
+      - id: src.eaton-2005-social-history-deccan
+        locator: "Tukaram (1608-1649): non-brahmin religious movements"
+      - src.barua-2024-bhakti
+    note: Eaton gives 1649, while other accounts give about 1650.
+claims:
+  - text: The Marathi poems attributed to Tukaram belong to the Varkari tradition centered on Vitthal.
+    grade: B
+    sources:
+      - id: src.eaton-2005-social-history-deccan
+        locator: "Tukaram (1608-1649): non-brahmin religious movements"
+      - src.barua-2024-bhakti
+relations: []
+tags:
+  - marathi
+  - varkari
+  - vitthal
+  - abhang
+review:
+  status: draft
+  author: codex-gpt-6

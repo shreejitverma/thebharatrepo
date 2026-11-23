@@ -1,0 +1,44 @@
+id: event.home-rule-leagues
+type: event
+kind: event
+names:
+  en: Indian Home Rule Leagues
+summary: In 1916 Bal Gangadhar Tilak and Annie Besant launched separate Home Rule Leagues. They
+  used public meetings, pamphlets and local branches to build support for Indian self-government
+  within the empire.
+summaries:
+  kids: Tilak and Annie Besant started groups that called for Indians to govern themselves. They
+    spread their message through local meetings and printed leaflets.
+  teen: The two leagues gave sustained organisational form to a demand for self-government. Their
+    work linked constitutional campaigning to a broader network of local political activity.
+region: British India
+datings:
+  - method: scholarly-consensus
+    range:
+      earliest: "1916"
+      latest: "1916"
+      precision: year
+      circa: false
+    grade: B
+    label: Founding of the two leagues
+    sources:
+      - src.sarkar-1989-modern-india
+      - src.chandra-1989-indias-struggle-for-independence
+    note: This date marks the launch of the leagues, whose campaigning continued in subsequent years.
+claims:
+  - text: Tilak and Besant organised separate leagues in 1916 to build support for home rule.
+    grade: B
+    sources:
+      - src.sarkar-1989-modern-india
+      - src.chandra-1989-indias-struggle-for-independence
+relations:
+  - kind: related-to
+    target: person.bal-gangadhar-tilak
+  - kind: related-to
+    target: event.lucknow-pact
+tags:
+  - home-rule
+  - congress
+review:
+  status: draft
+  author: codex-gpt-6

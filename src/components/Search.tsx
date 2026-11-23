@@ -19,12 +19,15 @@ import {
   type Facet,
   type SearchState,
 } from '@/lib/search/facets';
+import { EXACT_FILTER, exactHash, exactKey } from '@/lib/search/normalise';
 import {
   excerptWithEllipses,
+  facetCounts,
   isGenuineMatch,
   loadPagefind,
   matchedWords,
-  promoteExactTitle,
+  exactHits,
+  pinExact,
   type FilterCounts,
   type PagefindHandle,
   type PagefindResult,
@@ -110,17 +113,20 @@ export default function Search() {
       setError(null);
       if (!isActive(state)) {
         await filtersReady;
-        const counts = await pagefind.filters();
+        const counts = facetCounts(await pagefind.filters());
         if (!cancelled) setOutcome({ status: 'idle', counts });
         return;
       }
       const term = state.q || null;
+      // The exact-name lookup value: the hash of the query's normalised form, as SearchIndexMeta writes it.
+      const named = term ? exactKey(term) : '';
+      const exact = named ? exactHash(named) : '';
       const nFilters = activeFilterCount(state.filters);
       // Fetch the filter index and this query's index chunks in parallel; every search below then runs
       // in memory, and all of them (and their result fragments) are issued together.
       await Promise.all([filtersReady, term ? pagefind.preload(term) : null]);
       const selected = FACETS.filter((f) => state.filters[f].length);
-      const [probe, res, ...others] = await Promise.all([
+      const [probe, res, lookup, ...others] = await Promise.all([
         // Pagefind's fallback for an unknown term is decided per term, so probe it once without filters:
         // if the top hit is only a short-prefix fallback, the honest answer is 0 results, with no counts.
         term ? pagefind.search(term) : null,
@@ -129,29 +135,42 @@ export default function Search() {
           // With no query there is no relevance to rank by, so browse alphabetically.
           sort: state.q ? undefined : { title: 'asc' },
         }),
+        // The records whose title or alternate name is exactly the query, within the selected filters. A
+        // filter-only lookup in the loaded filter index: no index chunk to fetch.
+        exact ? pagefind.search(null, { filters: { ...toPagefindFilters(state.filters), [EXACT_FILTER]: exact } }) : null,
         // A facet with a selection is counted as if its own selection were cleared, so its other options
         // show how many results they would add instead of a misleading 0.
         ...selected.map((f) => pagefind.search(term, { filters: toPagefindFilters(withoutFacet(state.filters, f)) })),
       ]);
-      const firstData = res.results.slice(0, FIRST_BATCH).map((r) => r.data());
-      // Without filters the probe's top hit is usually the main search's top hit: reuse its fragment.
+      const pinnedHits = lookup?.results ?? [];
+      // Exact hits go first, so their fragments load with the first batch and the first paint is in final order.
+      const ranked = pinExact(res.results, pinnedHits);
+      const firstData = ranked.slice(0, FIRST_BATCH).map((r) => r.data());
+      // Without filters the probe's top hit is usually among the first batch: reuse its fragment.
       const probeTop = probe?.results[0];
-      const topData = !probeTop ? null : probeTop.id === res.results[0]?.id ? firstData[0] : probeTop.data();
+      const probeAt = probeTop ? ranked.slice(0, FIRST_BATCH).findIndex((r) => r.id === probeTop.id) : -1;
+      const topData = !probeTop ? null : probeAt >= 0 ? firstData[probeAt] : probeTop.data();
       const [top, first] = await Promise.all([topData, Promise.all(firstData)]);
       if (cancelled) return;
+      let results = ranked;
+      let items = first;
+      let counts: FilterCounts;
       if (term && top && !isGenuineMatch(term, matchedWords(top))) {
-        setOutcome({ status: 'done', for: key, q: state.q, nFilters, results: [], items: [], complete: true, counts: {} });
-        return;
+        // The term itself matched nothing. A record named by it is still an honest answer; the fallback is not.
+        results = exactHits(ranked, pinnedHits);
+        items = first.slice(0, Math.min(pinnedHits.length, FIRST_BATCH));
+        counts = lookup && pinnedHits.length ? facetCounts(lookup.filters) : {};
+      } else {
+        counts = facetCounts(res.filters);
+        selected.forEach((f, i) => {
+          counts[f] = others[i].filters[f] ?? {};
+        });
       }
-      const counts: FilterCounts = { ...res.filters };
-      selected.forEach((f, i) => {
-        counts[f] = others[i].filters[f] ?? {};
-      });
-      const complete = res.results.length <= FIRST_BATCH;
-      setOutcome({ status: 'done', for: key, q: state.q, nFilters, results: res.results, items: promoteExactTitle(first, state.q), complete, counts });
+      const complete = results.length <= FIRST_BATCH;
+      setOutcome({ status: 'done', for: key, q: state.q, nFilters, results, items, complete, counts });
       if (complete) return;
       // The rest of the first page renders below the first batch, so nothing visible moves.
-      const rest = await Promise.all(res.results.slice(FIRST_BATCH, PAGE_SIZE).map((r) => r.data()));
+      const rest = await Promise.all(results.slice(FIRST_BATCH, PAGE_SIZE).map((r) => r.data()));
       if (!cancelled) setOutcome((o) => (o && o.status === 'done' && o.for === key ? { ...o, items: [...o.items, ...rest], complete: true } : o));
     })().catch((e: Error) => {
       if (!cancelled) setError(e.message || 'the search failed');

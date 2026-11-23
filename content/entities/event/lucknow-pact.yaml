@@ -1,0 +1,46 @@
+id: event.lucknow-pact
+type: event
+kind: event
+names:
+  en: Lucknow Pact
+summary: The Indian National Congress and the All-India Muslim League agreed on a common scheme
+  of constitutional reforms at Lucknow in 1916. Congress accepted separate Muslim electorates as
+  part of the agreement.
+summaries:
+  kids: Two large political organisations agreed on changes they wanted the British to make. The
+    agreement also set out how Muslim voters would elect representatives to some seats.
+  teen: The pact brought Congress and League leaders together around constitutional demands. It
+    retained separate Muslim electorates and agreed on shares of legislative seats in different
+    provinces.
+region: Lucknow, United Provinces
+datings:
+  - method: scholarly-consensus
+    range:
+      earliest: "1916"
+      latest: "1916"
+      precision: year
+      circa: false
+    grade: B
+    label: Agreement at the December Lucknow sessions
+    sources:
+      - src.jalal-1985-sole-spokesman
+      - src.sarkar-1989-modern-india
+claims:
+  - text: The Congress and League agreed to press for common reforms and accepted separate Muslim
+      electorates with negotiated seat shares.
+    grade: B
+    sources:
+      - src.jalal-1985-sole-spokesman
+      - src.chandra-1989-indias-struggle-for-independence
+relations:
+  - kind: related-to
+    target: event.indian-national-congress
+  - kind: related-to
+    target: event.all-india-muslim-league-founded
+tags:
+  - congress
+  - muslim-league
+  - political-representation
+review:
+  status: draft
+  author: codex-gpt-6

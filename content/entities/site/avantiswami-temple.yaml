@@ -1,0 +1,57 @@
+id: site.avantiswami-temple
+type: site
+kind: site
+names:
+  en: Avantiswami Temple
+  iast: Avantisvāmī Mandira
+  native: अवंतिस्वामी मंदिर
+summary: >-
+  The Avantiswami Temple at Awantipora in Kashmir is a ninth-century CE Vishnu temple attributed to
+  Avantivarman of the Utpala dynasty. Excavations exposed its carved gateway and the remains of a
+  colonnaded courtyard.
+summaries:
+  kids: >-
+    The Avantiswami Temple in Kashmir was built for Vishnu more than a thousand years ago.
+    Archaeologists uncovered its stone steps, carvings and courtyard.
+  teen: >-
+    Kalhana's Rajatarangini attributes the Vishnu temple at Awantipora to Avantivarman before he became
+    king. The excavated ruins preserve the stone platform, carved gateway and colonnaded courtyard.
+region: Kashmir Valley (Pulwama district, Jammu and Kashmir)
+location: { name: "Awantipora, Jammu and Kashmir", lat: 33.923, lon: 75.013 }
+datings:
+  - method: scholarly-consensus
+    range: { earliest: "825 CE", latest: "855 CE", precision: decade, circa: true }
+    grade: B
+    label: "Mid-ninth-century Utpala foundation"
+    sources:
+      - src.kak-1933-ancient-monuments-kashmir
+      - src.stein-1900-rajatarangini
+    note: >-
+      Kalhana's later chronicle places the Vishnu temple before Avantivarman's accession in 855 CE. The
+      temple's architecture supports a ninth-century attribution.
+claims:
+  - text: >-
+      Kalhana attributes the Avantiswami temple to Avantivarman before his accession and the nearby
+      Shiva temple of Avantishvara to him after he became king.
+    grade: B
+    sources:
+      - src.stein-1900-rajatarangini
+      - src.kak-1933-ancient-monuments-kashmir
+  - text: >-
+      Daya Ram Sahni excavated the site in 1913 to 1914. The remains include carved gateway panels and a
+      courtyard lined with a colonnade.
+    grade: B
+    sources:
+      - src.kak-1933-ancient-monuments-kashmir
+      - src.harle-1994-art-architecture-indian-subcontinent
+relations:
+  - { kind: founded-by, target: person.avantivarman, note: Attributed to him in Kalhana’s Rajatarangini. }
+  - { kind: related-to, target: site.martand-sun-temple }
+wikidata: Q24950973
+image:
+  commons: "File:Avantiswami Temple entrance (6134257460).jpg"
+  alt: Excavated limestone gateway, stepped stair, and colonnaded courtyard walls of the ninth-century Avantiswami Temple at Awantipora, Kashmir
+  credit: Varun Shiv Kapur from New Delhi, India
+  license: CC BY 2.0
+tags: [avantiswami, avantipora, kashmir, utpala, vaishnava, temple-architecture]
+review: { status: draft, author: "gemini-4-hydrogen-xhigh" }

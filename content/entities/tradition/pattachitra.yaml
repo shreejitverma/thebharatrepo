@@ -1,0 +1,70 @@
+id: tradition.pattachitra
+type: tradition
+kind: art
+names:
+  en: Pattachitra
+  iast: Paṭṭacitra
+  native: ପଟ୍ଟଚିତ୍ର
+summary: Pattachitra ('cloth-picture') is the traditional narrative scroll and icon painting craft of Odisha, centred at
+  Puri and the artisan village of Raghurajpur (with related traditions in West Bengal). Chitrakara painters prepare
+  tamarind-seed and chalk-stiffened cotton cloth (pata) and use mineral and stone pigments to depict Jagannath icons,
+  Dashavatara, Krishna Lila and the ritual Anasara panels.
+summaries:
+  kids: Pattachitra artists in Odisha paint colourful stories on stiffened cotton cloth using natural colours from stones,
+    shells and soot, especially showing Lord Jagannath of Puri.
+  teen: Practised by chitrakara families in Puri and Raghurajpur, Odishan Pattachitra combines cloth-based mineral
+    painting and palm-leaf etching (talapatra) closely tied to the Jagannath temple calendar.
+region: Odisha (Puri and Raghurajpur) and eastern India
+location:
+  name: Raghurajpur (Puri), Odisha
+  lat: 19.883
+  lon: 85.826
+datings:
+  - method: art-historical
+    range:
+      earliest: 1600
+      latest: 1950
+      precision: century
+      circa: true
+    grade: B
+    label: Surviving Odishan chitrakara patas, talapatra manuscripts and Jagannath temple ritual records
+    sources:
+      - src.williams-1996-two-headed-deer
+      - src.fischer-pathy-2012-absence-jagannatha
+      - src.glynn-goswamy-2003-pahari-eastern-grove
+    note: Although cloth-painting references are much older, surviving dated Odishan palm-leaf (talapatra) works and Puri
+      yatri-patas span the 17th-20th centuries.
+claims:
+  - text: During the annual Anasara period when the wooden Jagannath icons are withdrawn for renewal, chitrakara painters
+      supply painted cloth substitute icons (anasara patti) for worship at Puri and across Odisha.
+    grade: A
+    sources:
+      - src.fischer-pathy-2012-absence-jagannatha
+  - text: Traditional pigments include conch-shell white (sankha), lampblack, cinnabar/vermilion (hingula), yellow orpiment
+      (haritala) and lac-resin red, sealed with wood-apple gum and lacquered.
+    grade: A
+    sources:
+      - src.fischer-pathy-2012-absence-jagannatha
+      - src.williams-1996-two-headed-deer
+relations:
+  - kind: related-to
+    target: tradition.odissi
+  - kind: related-to
+    target: text.gita-govinda
+  - kind: related-to
+    target: text.valmiki-ramayana
+wikidata: Q2624660
+image:
+  commons: File:Jagannath Theme in Pattachitra-2.jpg
+  alt: Pattachitra cloth painting depicting the Jagannath Temple at Puri with Balabhadra, Subhadra and Jagannath
+  credit: Wellcome Collection (public domain)
+  license: Public domain
+tags:
+  - pattachitra
+  - odisha
+  - puri
+  - raghurajpur
+  - jagannath
+review:
+  status: draft
+  author: gemini-4-hydrogen-xhigh

@@ -1,0 +1,47 @@
+id: "site.ellora-jain-caves"
+type: "site"
+kind: "art"
+names:
+  en: "Jain caves at Ellora"
+summary: "The Jain monuments at Ellora include rock-cut shrines and halls with images of Jinas,
+  attendant figures and devotional scenes. Their sculpture and layout link them to other phases of
+  activity at the site."
+summaries:
+  kids: "At Ellora people carved halls, pillars and holy figures out of the rock. Some of the caves
+    were made for Jain worship."
+  teen: "The northern Jain group includes Indra Sabha and Jagannatha Sabha. Lisa Owen analyses
+    architecture, images and inscriptions together to reconstruct devotional practices."
+region: "Ellora, Maharashtra"
+datings:
+  - method: "art-historical"
+    range:
+      earliest: 800
+      latest: 1050
+      precision: "century"
+      circa: true
+    grade: "B"
+    label: "Main phases of Jain cave excavation and sculpture"
+    sources:
+      - "src.owen-2012-jain-caves-ellora"
+      - "src.unesco-1983-ellora-caves"
+claims:
+  - text: "The Jain complex includes shrines with Jina images and representations of attendants such as
+      yakshas and yakshis."
+    grade: "B"
+    sources:
+      - "src.owen-2012-jain-caves-ellora"
+  - text: "Owen identifies links in design and practice across the Jain, Buddhist and Hindu monuments at
+      Ellora."
+    grade: "B"
+    sources:
+      - "src.owen-2012-jain-caves-ellora"
+relations:
+  - kind: "related-to"
+    target: "site.kailasa-temple-ellora"
+tags:
+  - "maharashtra"
+  - "jainism"
+  - "rock-cut"
+review:
+  status: "draft"
+  author: "codex-gpt-6"

@@ -1,0 +1,65 @@
+id: tradition.warli-painting
+type: tradition
+kind: art
+names:
+  en: Warli Painting
+  iast: Vārlī Citrakalā
+  native: वारली चित्रकला
+summary: Warli painting is the geometric mural art of the indigenous Warli community of the North Sahyadri foothills
+  (Palghar and Thane districts of Maharashtra and adjacent Gujarat). Painted traditionally by married women (suvasinis)
+  for weddings using rice-flour paste on red-ochre or cow-dung-plastered walls, it builds human, animal and cosmic
+  scenes from circles, triangles and squares, pioneered onto canvas by Jivya Soma Mashe.
+summaries:
+  kids: Warli art uses white rice paste on brown mud walls to draw dancing circles, animals and village life using only
+    simple triangles, circles and lines.
+  teen: Created by Warli women for marriage rituals (chowk) in Maharashtra, Warli wall art builds lively scenes from
+    triangles and circles and entered contemporary galleries through master artist Jivya Soma Mashe.
+region: North Sahyadri (Palghar and Thane, Maharashtra, and southern Gujarat)
+location:
+  name: Dahanu (Palghar), Maharashtra
+  lat: 19.97
+  lon: 72.73
+datings:
+  - method: documentary
+    range:
+      earliest: 1970
+      latest: 2020
+      precision: decade
+      circa: true
+    grade: B
+    label: Ethnographic documentation and transition to paper/canvas in the 1970s
+    sources:
+      - src.dalmia-1988-painted-world-warlis
+      - src.rao-2022-warli-painting
+    note: While the ritual marriage chowk tradition predates modern records, ethnographic study and secular canvas painting
+      began in the 1970s, led by Jivya Soma Mashe.
+claims:
+  - text: The core traditional composition is the sacred wedding mural (lagna chauk) depicting the fertility goddess
+      Palaghata inside a square frame surrounded by daily farming, hunting and tarpa circle-dance scenes.
+    grade: A
+    sources:
+      - src.dalmia-1988-painted-world-warlis
+  - text: Unlike multi-coloured Mithila art, classical Warli painting relies on monochrome white rice-flour pigment brushed
+      with chewed bamboo twigs onto earth-plastered walls.
+    grade: A
+    sources:
+      - src.dalmia-1988-painted-world-warlis
+      - src.rao-2022-warli-painting
+relations:
+  - kind: related-to
+    target: site.bhimbetka
+wikidata: Q7969499
+image:
+  commons: File:Warli painting.jpg
+  alt: Monochrome white Warli painting on an earth wall showing human figures dancing around a tarpa player
+  credit: Omrmankar
+  license: CC BY-SA 4.0
+tags:
+  - warli
+  - maharashtra
+  - adivasi-art
+  - tarpa
+  - mural
+review:
+  status: draft
+  author: gemini-4-hydrogen-xhigh

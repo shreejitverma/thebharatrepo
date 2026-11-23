@@ -1,0 +1,57 @@
+id: person.jyotirao-phule
+type: person
+kind: person
+names:
+  en: Jyotirao Phule
+  native: ज्योतिराव फुले
+summary: Jyotirao Phule was an anti-caste writer and organizer who worked with Savitribai Phule to
+  expand education in western India. He wrote Gulamgiri and founded the Satyashodhak Samaj in 1873.
+summaries:
+  kids: Jyotirao Phule helped open schools and wrote about unfair rules that kept people apart by caste.
+  teen: Phule’s Gulamgiri compares caste oppression to slavery. Through schools and the Satyashodhak
+    Samaj he linked his criticism of hierarchy to collective reform.
+region: Pune, Maharashtra
+datings:
+  - method: scholarly-consensus
+    range:
+      earliest: "1827"
+      latest: "1890"
+      precision: year
+      circa: true
+    grade: C
+    label: INFLIBNET chronology
+    sources:
+      - src.inflibnet-jyotiba-savitribai-phule
+    note: The INFLIBNET account dates his birth to 1827.
+  - method: scholarly-consensus
+    range:
+      earliest: "1826"
+      latest: "1890"
+      precision: year
+      circa: true
+    grade: C
+    label: Earlier birth year in the Oxford Handbook chapter
+    sources:
+      - src.gorringe-2024-dalit-movements-india
+    note: This account gives 1826 for his birth and agrees on his death in 1890.
+claims:
+  - text: In Gulamgiri, published in 1873, Phule used the language of slavery to criticize caste hierarchy.
+    grade: B
+    sources:
+      - src.ohanlon-1985-caste-conflict-ideology
+  - text: He founded the Satyashodhak Samaj in 1873.
+    grade: B
+    sources:
+      - src.ohanlon-1985-caste-conflict-ideology
+      - src.inflibnet-jyotiba-savitribai-phule
+relations: []
+tags:
+  - education
+  - anti-caste
+  - social-reform
+  - marathi
+review:
+  status: draft
+  author: codex-gpt-6
+debate: The accounts consulted give 1826 or 1827 for Phule’s birth. His nineteenth-century
+  publications and organizing provide dated anchors for his public work.

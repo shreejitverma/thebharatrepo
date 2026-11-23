@@ -1,0 +1,29 @@
+id: event.kargil-war-1999
+type: event
+kind: event
+names:
+  en: "Kargil War"
+summary: "India and Pakistan fought along the Line of Control near Kargil in 1999 after Pakistani forces occupied positions on the Indian side. India recovered the positions, and the fighting was officially declared over on 26 July."
+summaries:
+  kids: "In 1999, Indian and Pakistani forces fought in the mountains around Kargil. India regained positions along the Line of Control."
+  teen: "Fighting began in May 1999 after Pakistani forces occupied heights on the Indian side of the Line of Control. India fought to recover the positions. As Pakistani forces withdrew, the fighting ended in July."
+region: "Kargil and Drass, Ladakh"
+datings:
+  - method: documentary
+    range: { earliest: "1999", latest: "1999", precision: year, circa: false }
+    grade: A
+    label: "May to July 1999 fighting"
+    sources: ["src.clinton-library-kargil-war"]
+    note: "The fighting was officially declared over on 26 July 1999."
+claims:
+  - text: "Fighting centred on positions occupied by Pakistani forces on the Indian side of the Line of Control near Kargil and Drass."
+    grade: B
+    sources: ["src.lavoy-2009-importance-of-kargil"]
+  - text: "The fighting was officially declared over on 26 July 1999."
+    grade: A
+    sources: ["src.clinton-library-kargil-war"]
+relations:
+  - kind: related-to
+    target: event.simla-agreement-1972
+tags: ["republic","war","ladakh"]
+review: { status: draft, author: codex-gpt-6 }

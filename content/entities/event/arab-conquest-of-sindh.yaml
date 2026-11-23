@@ -1,0 +1,61 @@
+id: "event.arab-conquest-of-sindh"
+type: "event"
+kind: "event"
+names:
+  en: "Arab conquest of Sindh"
+summary: "An Umayyad expedition under Muhammad ibn Qasim defeated Dahir in 712 CE and established
+  control over major centres in Sindh. The campaigns unfolded over several years, and the surviving
+  accounts were written later."
+summaries:
+  kids: "In 712 an army led by Muhammad ibn Qasim defeated the ruler Dahir. The army then took control
+    of other places along the Indus."
+  teen: "Arabic and Persian narratives describe the conquest from different periods. The defeat of
+    Dahir in 712 is the conventional turning point in a campaign that began on the coast and
+    extended north towards Multan."
+region: "Lower Indus Valley and Multan"
+datings:
+  - method: "scholarly-consensus"
+    range:
+      earliest: 711
+      latest: 715
+      precision: "year"
+      circa: true
+    grade: "B"
+    label: "Campaign and early consolidation under Muhammad ibn Qasim"
+    sources:
+      - "src.baladhuri-1968-origins-islamic-state"
+      - "src.asif-2016-book-of-conquest"
+  - method: "scholarly-consensus"
+    range:
+      earliest: 712
+      latest: 712
+      precision: "year"
+      circa: false
+    grade: "B"
+    label: "Defeat of Dahir"
+    sources:
+      - "src.baladhuri-1968-origins-islamic-state"
+      - "src.asif-2016-book-of-conquest"
+claims:
+  - text: "Al-Baladhuri describes a campaign directed by al-Hajjaj and led in Sindh by Muhammad ibn
+      Qasim."
+    grade: "B"
+    sources:
+      - "src.baladhuri-1968-origins-islamic-state"
+  - text: "The campaign included the capture of Daybul and advanced up the Indus towards Multan."
+    grade: "B"
+    sources:
+      - "src.baladhuri-1968-origins-islamic-state"
+      - "src.asif-2016-book-of-conquest"
+relations:
+  - kind: "related-to"
+    target: "text.chachnama"
+  - kind: "related-to"
+    target: "site.aror"
+tags:
+  - "sindh"
+  - "umayyad"
+  - "conquest"
+review:
+  status: "draft"
+  author: "codex-gpt-6"

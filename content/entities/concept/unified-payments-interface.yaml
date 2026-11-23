@@ -1,0 +1,26 @@
+id: concept.unified-payments-interface
+type: concept
+kind: science
+names:
+  en: "Unified Payments Interface (UPI)"
+summary: "The National Payments Corporation of India piloted the Unified Payments Interface in April 2016. In August, participating banks made UPI-enabled apps publicly available, allowing users to make instant transfers between banks."
+summaries:
+  kids: "UPI lets people send money from one bank account to another using an app. Banks began trying it in 2016 and made it available to the public later that year."
+  teen: "UPI is an interoperable payment system developed by the National Payments Corporation of India. Its April 2016 pilot preceded a public rollout through participating banks in August."
+region: "India"
+datings:
+  - method: documentary
+    range: { earliest: "2016", latest: "2016", precision: year, circa: false }
+    grade: A
+    label: "Pilot and public rollout"
+    sources: ["src.npci-milestones"]
+    note: "NPCI distinguishes the pilot in April from the public availability of participating banks' apps in August."
+claims:
+  - text: "NPCI records a UPI pilot in April 2016 and public availability through bank apps in August 2016."
+    grade: A
+    sources: ["src.npci-milestones"]
+  - text: "NPCI added BHIM in December 2016 as an app for instant bank-to-bank payments through UPI."
+    grade: A
+    sources: ["src.npci-milestones"]
+tags: ["republic","digital-payments","banking"]
+review: { status: draft, author: codex-gpt-6 }

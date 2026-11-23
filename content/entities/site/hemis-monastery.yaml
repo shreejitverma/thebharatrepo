@@ -1,0 +1,43 @@
+id: "site.hemis-monastery"
+type: "site"
+kind: "dharma"
+names:
+  en: "Hemis Monastery"
+summary: "Hemis became a royal Drukpa Kagyu monastery under Sengge Namgyal in the seventeenth
+  century. The teacher Taktsang Repa oversaw its development from a hermitage into a major
+  institution."
+summaries:
+  kids: "Hemis grew from a small place for religious retreat into a monastery. A king of Ladakh helped
+    the Buddhist teacher Taktsang Repa build it."
+  teen: "Hemis illustrates the ties between the Namgyal court and the Drukpa Kagyu lineage. Petech
+    distinguishes the early hermitage from the main temple and its later consecration."
+region: "Hemis, Ladakh"
+datings:
+  - method: "scholarly-consensus"
+    range:
+      earliest: 1630
+      latest: 1638
+      precision: "year"
+      circa: true
+    grade: "B"
+    label: "Main temple construction and consecration in Petech's reconstruction"
+    sources:
+      - "src.petech-1977-kingdom-ladakh"
+claims:
+  - text: "Petech describes the development of Hemis from a hermitage into a royal monastery under
+      Sengge Namgyal and Taktsang Repa."
+    grade: "B"
+    sources:
+      - "src.petech-1977-kingdom-ladakh"
+  - text: "Petech places the main temple's construction in 1630 and the consecration in 1638."
+    grade: "B"
+    sources:
+      - "src.petech-1977-kingdom-ladakh"
+relations: []
+tags:
+  - "ladakh"
+  - "buddhism"
+  - "drukpa"
+review:
+  status: "draft"
+  author: "codex-gpt-6"

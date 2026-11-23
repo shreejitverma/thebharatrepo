@@ -1,0 +1,48 @@
+id: polity.madurai-nayak-dynasty
+type: polity
+kind: polity
+names:
+  en: Madurai Nayak Kingdom
+  iast: Maturai Nāyakkar
+  native: மதுரை நாயக்கர்கள்
+summary: >-
+  The Madurai Nayaks were a Telugu-origin warrior dynasty that governed southern Tamil Nadu from Madurai and Tiruchirappalli between c. 1529 and 1736 CE. Originating as Vijayanagara provincial governors (amara-nayakas) under Nagama and Viswanatha Nayaka, they evolved into autonomous rulers after 1565 CE, instituted the palayakkarar (poligar) defensive-fiscal system, patronised Sanskrit, Telugu, and Tamil scholarship, and built the towering gopurams and mandapas of the Meenakshi-Sundareshvara temple and Thirumalai Nayakkar Mahal.
+summaries:
+  kids: >-
+    The Madurai Nayaks ruled southern Tamil Nadu from Madurai for two centuries, building the soaring painted towers of the Meenakshi temple and grand palaces like Thirumalai Nayakkar Mahal.
+  teen: >-
+    Founded as Vijayanagara governors under Viswanatha Nayaka, the Madurai Nayaks became independent after Talikota, created the palayakkarar (poligar) military estate network, and reached their cultural peak under Tirumala Nayaka and Queen Mangammal.
+region: Southern Tamil Nadu (Madurai, Tiruchirappalli, Tirunelveli, and Dindigul)
+location: { name: "Madurai, Tamil Nadu", lat: 9.92, lon: 78.12 }
+datings:
+  - method: documentary
+    range: { earliest: "1529 CE", latest: "1736 CE", precision: year, circa: true }
+    grade: B
+    label: Viswanatha Nayaka's governorship to Queen Minakshi's fall (1736 CE)
+    sources:
+      - src.aiyar-1924-history-nayaks-of-madura
+      - src.narayanarao-1992-symbols-of-substance
+      - src.michell-1995-architecture-art-southern-india
+    note: Viswanatha Nayaka assumed the Madurai viceroyalty c. 1529-1535 CE under Achyuta Deva Raya; Chanda Sahib's capture of Tiruchirappalli ended Queen Minakshi's rule in 1736 CE.
+claims:
+  - text: Viswanatha Nayaka and his minister Ariyanatha Mudaliar organized southern Tamil Nadu into seventy-two palaiyams (military-tributary chieftaincies) whose palayakkarars later resisted British expansion.
+    grade: B
+    sources:
+      - src.aiyar-1924-history-nayaks-of-madura
+      - src.karashima-2014-concise-history-south-india
+  - text: Tirumala Nayaka (r. 1623-1659 CE) rebuilt Madurai's palace complex blending Vijayanagara and Deccani-Sultanate arched vaulting, expanded the Meenakshi-Sundareshvara temple corridors, and moved the court's primary seat between Madurai and Tiruchirappalli.
+    grade: B
+    sources:
+      - src.michell-1995-architecture-art-southern-india
+      - src.narayanarao-1992-symbols-of-substance
+  - text: Women played decisive political roles in the later Madurai state, notably Regent Queen Mangammal (r. 1689-1706 CE) and the last ruler Queen Minakshi (r. 1732-1736 CE).
+    grade: B
+    sources:
+      - src.aiyar-1924-history-nayaks-of-madura
+      - src.narayanarao-1992-symbols-of-substance
+relations:
+  - { kind: contemporary-of, target: polity.thanjavur-nayak-kingdom }
+  - { kind: succeeded, target: polity.vijayanagara-empire }
+wikidata: Q28058158
+tags: [madurai-nayaks, tamil-nadu, madurai, palayakkarar, temple-architecture]
+review: { status: draft, author: "gemini-4-hydrogen-xhigh" }

@@ -1,0 +1,29 @@
+id: event.konark-unesco-inscription
+type: event
+kind: site
+names:
+  en: "Konark Sun Temple inscribed on the World Heritage List"
+summary: "The World Heritage Committee inscribed the Sun Temple at Konark in 1984. UNESCO identifies its sculpted representation of Surya's chariot as central to the monument's design."
+summaries:
+  kids: "In 1984 the Konark Sun Temple joined the World Heritage List. Its stone wheels make the temple look like a huge chariot for the Sun god."
+  teen: "The 1984 World Heritage inscription recognised a thirteenth-century temple designed as the chariot of Surya. Carved wheels and horses express that design in stone."
+region: "Konark, Odisha"
+datings:
+  - method: documentary
+    range: { earliest: "1984", latest: "1984", precision: year, circa: false }
+    grade: A
+    label: "World Heritage inscription"
+    sources: ["src.unesco-1984-konark-sun-temple"]
+    note: "UNESCO records the inscription of the Sun Temple, Konarak, in 1984."
+claims:
+  - text: "The Committee inscribed the Sun Temple at Konark in 1984 under cultural criteria (i), (iii) and (vi)."
+    grade: A
+    sources: ["src.unesco-1984-konark-sun-temple"]
+  - text: "UNESCO describes the temple's twenty-four sculpted wheels as elements of Surya's chariot."
+    grade: A
+    sources: ["src.unesco-1984-konark-sun-temple"]
+relations:
+  - kind: related-to
+    target: site.konark-sun-temple
+tags: ["republic","unesco","heritage"]
+review: { status: draft, author: codex-gpt-6 }

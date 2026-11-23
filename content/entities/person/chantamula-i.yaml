@@ -1,0 +1,40 @@
+id: person.chantamula-i
+type: person
+kind: person
+names:
+  en: Chantamula I
+  iast: Cāntamūla
+summary: Chantamula I founded the Andhra Ikshvaku line at Vijayapuri. The memorial record of his son
+  calls him a great king and credits him with major sacrifices.
+summaries:
+  kids: A stone pillar names Chantamula as the father of another king. It also records ceremonies that
+    celebrated his power.
+  teen: The regnal inscription of Virapurushadatta preserves his father's name and royal
+    accomplishments. Chantamula's calendar dates are reconstructed from the regional dynastic
+    sequence.
+region: Lower Krishna valley
+datings:
+  - method: epigraphic
+    range:
+      earliest: "220"
+      latest: "270"
+      precision: decade
+      circa: true
+    grade: C
+    label: Reign or recorded political activity
+    sources:
+      - src.singh-2008-ancient-early-medieval-india
+      - src.ollett-2025-deccan-memorial-stones
+    note: The chronology is reconstructed from the post-Satavahana sequence and later Ikshvaku records.
+claims:
+  - text: A memorial pillar from Nagarjunakonda names Chantamula and his son Virapurushadatta.
+    grade: A
+    sources:
+      - src.ollett-2025-deccan-memorial-stones
+relations:
+  - kind: founded
+    target: polity.andhra-ikshvaku-dynasty
+tags: []
+review:
+  status: draft
+  author: codex-gpt-6

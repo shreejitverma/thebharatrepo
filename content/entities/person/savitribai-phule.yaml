@@ -1,0 +1,55 @@
+id: person.savitribai-phule
+type: person
+kind: person
+names:
+  en: Savitribai Phule
+  native: सावित्रीबाई फुले
+summary: Savitribai Phule was a Marathi poet, teacher and reformer. She helped establish a girls’
+  school at Bhide Wada in Pune in 1848 and published the poetry collection Kavya Phule in 1854.
+summaries:
+  kids: Savitribai Phule helped open a school for girls in Pune at a time when many girls had few
+    chances to study. She also wrote poems in Marathi.
+  teen: Savitribai’s teaching and poetry were part of a nineteenth-century effort to widen access to
+    education across gender and caste. She helped found a girls’ school in Pune and published Kavya
+    Phule in 1854.
+region: Pune and Satara, Maharashtra
+datings:
+  - method: scholarly-consensus
+    range:
+      earliest: "1831"
+      latest: "1897"
+      precision: year
+      circa: false
+    grade: B
+    label: Documented lifespan
+    sources:
+      - src.bagchi-2020-gendered-social-capital
+      - src.inflibnet-jyotiba-savitribai-phule
+claims:
+  - text: Savitribai Phule helped establish a girls’ school at Bhide Wada in Pune in 1848.
+    grade: B
+    sources:
+      - src.bagchi-2020-gendered-social-capital
+      - src.inflibnet-jyotiba-savitribai-phule
+  - text: Her first poetry collection, Kavya Phule, appeared in 1854.
+    grade: B
+    sources:
+      - src.bagchi-2020-gendered-social-capital
+      - src.inflibnet-jyotiba-savitribai-phule
+relations:
+  - kind: related-to
+    target: person.jyotirao-phule
+wikidata: Q2645692
+image:
+  commons: File:Jotirao Phule Savitribai Phule Phulewada Pune.jpg
+  alt: Statue of Savitribai and Jyotirao Phule at Phule Wada in Pune
+  credit: Wander-earth
+  license: CC BY-SA 4.0
+tags:
+  - education
+  - social-reform
+  - marathi-poetry
+  - women
+review:
+  status: draft
+  author: codex-gpt-6

@@ -1,0 +1,44 @@
+id: "person.vasugupta"
+type: "person"
+kind: "person"
+names:
+  en: "Vasugupta"
+  iast: "Vasugupta"
+  native: "वसुगुप्त"
+summary: "Vasugupta is the Kashmiri teacher to whom the Shaiva tradition traces the Shiva Sutras.
+  Later commentators preserve different accounts of how he received these aphorisms about
+  consciousness and spiritual practice."
+summaries:
+  kids: "Vasugupta is remembered for passing on short teachings about Shiva and the mind. Kashmiri
+    teachers told stories about how he received them."
+  teen: "Commentators placed Vasugupta at the start of the Shiva Sutras' teaching lineage. Their
+    revelation accounts explain the authority of the text within the tradition, while its historical
+    date is inferred from other authors."
+region: "Kashmir Valley"
+datings:
+  - method: "textual-internal"
+    range:
+      earliest: 800
+      latest: 875
+      precision: "century"
+      circa: true
+    grade: "C"
+    label: "Approximate period of activity"
+    sources:
+      - "src.dyczkowski-1992-aphorisms-of-siva"
+    note: "The date is inferred from the relative sequence of early Kashmiri Shaiva authors."
+claims:
+  - text: "Bhaskara and Kshemaraja transmitted accounts connecting Vasugupta to the revelation of the
+      Shiva Sutras."
+    grade: "B"
+    sources:
+      - "src.dyczkowski-1992-aphorisms-of-siva"
+relations:
+  - kind: "part-of"
+    target: "tradition.kashmir-shaivism"
+tags:
+  - "kashmir"
+  - "shaiva"
+review:
+  status: "draft"
+  author: "codex-gpt-6"

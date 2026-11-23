@@ -1,0 +1,40 @@
+id: person.sultan-quli-qutb-al-mulk
+type: person
+kind: person
+names:
+  en: Sultan Quli Qutb al-Mulk
+summary: Sultan Quli Qutb al-Mulk established the Qutb Shahi ruling house at Golconda. His power
+  grew while he held provincial office under the Bahmanis, and the date of a formal break is
+  uncertain.
+summaries:
+  kids: Sultan Quli was a governor at Golconda who made it the centre of his own ruling family.
+  teen: Sultan Quli's authority emerged out of a Bahmani governorship. Historians can trace his
+    effective autonomy more readily than a formal declaration of independence.
+region: Eastern Deccan
+datings:
+  - method: documentary
+    range:
+      earliest: "1500"
+      latest: "1543"
+      precision: decade
+      circa: true
+    grade: B
+    label: Reign or recorded political activity
+    sources:
+      - src.michell-1995-architecture-art-southern-india
+      - src.eaton-2005-social-history-deccan
+      - src.eaton-2019-india-persianate-age
+    note: The range covers effective autonomy and rule until his death.
+claims:
+  - text: Sultan Quli established the ruling house that governed Golconda and later Hyderabad.
+    grade: B
+    sources:
+      - src.michell-1995-architecture-art-southern-india
+      - src.eaton-2005-social-history-deccan
+relations:
+  - kind: founded
+    target: polity.golconda-sultanate
+tags: []
+review:
+  status: draft
+  author: codex-gpt-6

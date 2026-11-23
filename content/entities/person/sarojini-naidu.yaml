@@ -1,0 +1,52 @@
+id: person.sarojini-naidu
+type: person
+kind: person
+names:
+  en: Sarojini Naidu
+  native: సరోజినీ నాయుడు
+summary: Sarojini Naidu wrote poetry in English and organised for Indian independence and
+  women's political rights. She presided over the Congress session at Kanpur in 1925 and led
+  protesters during the 1930 salt campaign.
+summaries:
+  kids: Sarojini Naidu wrote poems and spoke up for India's freedom and for women's rights. She
+    also helped lead protests against British salt laws.
+  teen: Naidu combined a literary career with work for women's rights and Congress organising. She
+    presided over the 1925 Kanpur session and led salt protesters at Dharasana after Gandhi's
+    arrest.
+region: Hyderabad, British India and the United Provinces
+datings:
+  - method: scholarly-consensus
+    range:
+      earliest: "1879"
+      latest: "1949"
+      precision: year
+      circa: false
+    grade: B
+    label: Lifespan
+    sources:
+      - src.sengupta-1966-sarojini-naidu
+claims:
+  - text: Naidu published The Golden Threshold in 1905 and presided over the Indian National
+      Congress session at Kanpur in 1925.
+    grade: B
+    sources:
+      - src.sengupta-1966-sarojini-naidu
+      - src.reddy-2010-cosmopolitan-nationalism-of-naidu
+  - text: Naidu helped lead the Dharasana salt protest during the Civil Disobedience Movement in
+      1930.
+    grade: B
+    sources:
+      - src.sengupta-1966-sarojini-naidu
+      - src.chandra-1989-indias-struggle-for-independence
+relations:
+  - kind: related-to
+    target: event.indian-national-congress
+  - kind: related-to
+    target: event.salt-march
+tags:
+  - congress
+  - poetry
+  - independence
+review:
+  status: draft
+  author: codex-gpt-6

@@ -1,0 +1,60 @@
+id: text.isha-upanishad
+type: text
+kind: text
+names:
+  en: Isha Upanishad
+  iast: Īśā Upaniṣad
+  native: ईशोपनिषद्
+summary: The Isha is a short verse Upanishad transmitted at the end of the White Yajurveda’s
+  Vajasaneyi Samhita. Its poems consider action, knowledge and seeing the self in all beings. Its
+  date is disputed.
+summaries:
+  kids: This short Sanskrit poem asks readers to see a shared self in all living beings.
+  teen: The Isha places reflections on acting in the world alongside a vision of the self in all
+    beings. Its preservation inside a Vedic collection helps explain its distinctive place among the
+    Upanishads.
+datings:
+  - method: linguistic
+    range:
+      earliest: "400 BCE"
+      latest: "1 BCE"
+      precision: century
+      circa: true
+    grade: C
+    label: "Patrick Olivelle: verse stratum"
+    sources:
+      - id: src.olivelle-1998-early-upanisads
+        locator: Introduction, Chronology
+      - id: src.cohen-2024-classical-upanisads
+        locator: Dating and Authorship
+    note: Olivelle places the Isha among the relatively late verse Upanishads and tentatively after the
+      Katha.
+  - method: textual-internal
+    range: { earliest: "800 BCE", latest: "601 BCE", precision: century, circa: true }
+    grade: C
+    label: "Sarvepalli Radhakrishnan and Charles A. Moore: earlier pre-Buddhist placement"
+    sources:
+      - id: src.radhakrishnan-1957-source-book-indian-philosophy
+        locator: "Chapter II, The Upaniṣads"
+    note: Their source book assigns this text to the eighth or seventh century BCE in its
+      chronology of the principal Upanishads.
+claims:
+  - text: The poem appears in both Vajasaneyi recensions, with differences in readings and verse order.
+    grade: A
+    sources:
+      - id: src.olivelle-1998-early-upanisads
+        locator: Isa Upanisad, introduction
+relations:
+  - kind: part-of
+    target: text.upanishads
+  - kind: part-of
+    target: text.shukla-yajurveda
+debate: Olivelle tentatively places the Isha after the Katha. Cohen reverses that order on
+  linguistic and metrical grounds. Its transmission in the Vajasaneyi Samhita is secure.
+tags:
+  - upanishad
+  - veda
+  - vedanta
+review:
+  status: draft
+  author: codex-gpt-6

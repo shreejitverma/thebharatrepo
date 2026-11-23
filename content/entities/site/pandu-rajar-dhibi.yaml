@@ -1,0 +1,53 @@
+id: site.pandu-rajar-dhibi
+type: site
+kind: prehistory
+names:
+  en: Pandu Rajar Dhibi
+  iast: Pāṇḍu Rājār Ḍhibi
+  native: পাণ্ডু রাজার ঢিবি
+summary: >-
+  Pandu Rajar Dhibi, on the Ajay River in Purba Bardhaman district, West Bengal, is the type-site
+  for the Chalcolithic Black-and-Red Ware culture of the Rarh plain. Excavations initiated by
+  Paresh Chandra Das Gupta in 1962 uncovered a multi-period sequence spanning second-millennium BCE
+  rice-farming villages, copper artifacts, burials and an Iron Age transition.
+summaries:
+  kids: >-
+    Along the Ajay River in West Bengal lies Pandu Rajar Dhibi, an ancient village mound over 3,000
+    years old where early farmers grew rice, made black-and-red painted pottery and used copper tools.
+  teen: >-
+    Excavated from 1962 by the West Bengal Directorate of Archaeology, Pandu Rajar Dhibi established
+    the first stratified Chalcolithic Black-and-Red Ware sequence in Bengal, linking rice agriculture,
+    copper metallurgy and early Iron Age settlement.
+region: Ajay River valley, Purba Bardhaman district, West Bengal
+location: { name: "Pandu Rajar Dhibi, Purba Bardhaman", lat: 23.583, lon: 87.648 }
+datings:
+  - method: archaeological-radiocarbon
+    range: { earliest: "1600 BCE", latest: "700 BCE", precision: century, circa: true }
+    grade: B
+    label: Chalcolithic Black-and-Red Ware to early Iron Age sequence
+    sources:
+      - src.dasgupta-1962-excavations-pandu-rajar-dhibi
+      - src.singh-2008-ancient-early-medieval-india
+      - src.chattopadhyay-2018-archaeology-of-coastal-bengal
+    note: Radiocarbon dates and comparative stratigraphy across Ajay valley Chalcolithic sites place the main BRW occupation from roughly the mid-second millennium BCE into the early first millennium BCE.
+claims:
+  - text: Excavations led by P. C. Das Gupta in the 1960s identified four occupational periods moving from Chalcolithic Black-and-Red Ware strata with rice remains and copper ornaments to Iron Age and early historic levels.
+    grade: A
+    sources:
+      - src.dasgupta-1962-excavations-pandu-rajar-dhibi
+      - src.singh-2008-ancient-early-medieval-india
+  - text: The site yielded extended and fractional human burials accompanied by pottery, stone microliths, bone tools and copper items.
+    grade: A
+    sources:
+      - src.dasgupta-1962-excavations-pandu-rajar-dhibi
+      - src.chattopadhyay-2018-archaeology-of-coastal-bengal
+relations:
+  - { kind: related-to, target: concept.black-and-red-ware-culture }
+wikidata: Q7130757
+image:
+  commons: "File:A group of burials in the Pandu Rajar Dhibi.png"
+  alt: Archaeological plan showing excavated burials from the Chalcolithic layers at Pandu Rajar Dhibi, West Bengal
+  credit: Ministry of Culture
+  license: GODL-India
+tags: [pandu-rajar-dhibi, chalcolithic, black-and-red-ware, bengal, prehistory]
+review: { status: draft, author: "gemini-4-hydrogen-xhigh" }

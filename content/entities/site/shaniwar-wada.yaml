@@ -1,0 +1,63 @@
+id: "site.shaniwar-wada"
+type: "site"
+kind: "art"
+names:
+  en: "Shaniwar Wada"
+  native: "शनिवार वाडा"
+summary: "Shaniwar Wada was the fortified residence and seat of the Peshwas in Pune, built under
+  Baji Rao I in the eighteenth century. A fire in 1828 destroyed much of the palace superstructure."
+summaries:
+  kids: "The Peshwas governed from a palace inside heavy walls. A fire destroyed much of the palace,
+    but visitors can still see the gates and walls."
+  teen: "Shaniwar Wada belonged to the growth of Pune as a centre of Maratha power. The surviving
+    enclosure and foundations record only part of the former palace complex."
+region: "Pune, Maharashtra"
+datings:
+  - method: "scholarly-consensus"
+    range:
+      earliest: 1730
+      latest: 1736
+      precision: "decade"
+      circa: true
+    grade: "B"
+    label: "Building under Peshwa Baji Rao I"
+    sources:
+      - "src.incredible-india-shaniwar-wada"
+      - "src.gordon-1993-marathas-1600-1818"
+    note: "Published government summaries give different years for early work. The range covers
+      construction in the 1730s."
+  - method: "documentary"
+    range:
+      earliest: 1828
+      latest: 1828
+      precision: "year"
+      circa: false
+    grade: "B"
+    label: "Fire that destroyed much of the palace"
+    sources:
+      - "src.incredible-india-shaniwar-wada"
+claims:
+  - text: "Shaniwar Wada was the principal seat of the Peshwas in Pune."
+    grade: "B"
+    sources:
+      - "src.incredible-india-shaniwar-wada"
+      - "src.gordon-1993-marathas-1600-1818"
+  - text: "The fire of 1828 severely damaged the palace buildings."
+    grade: "B"
+    sources:
+      - "src.incredible-india-shaniwar-wada"
+relations:
+  - kind: "related-to"
+    target: "polity.maratha-empire"
+image:
+  commons: "File:Shaniwar Wada, Pune.jpg"
+  alt: "Exterior walls and gateway of Shaniwar Wada in Pune"
+  credit: "Vasukrishnan57"
+  license: "CC BY-SA 4.0"
+tags:
+  - "maharashtra"
+  - "pune"
+  - "peshwa"
+review:
+  status: "draft"
+  author: "codex-gpt-6"

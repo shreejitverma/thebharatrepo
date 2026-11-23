@@ -1,0 +1,29 @@
+id: event.hampi-unesco-inscription
+type: event
+kind: site
+names:
+  en: "Monuments at Hampi inscribed on the World Heritage List"
+summary: "The World Heritage Committee inscribed the Group of Monuments at Hampi in 1986. The listed property includes remains of the Vijayanagara capital, among them religious monuments and parts of the royal complex."
+summaries:
+  kids: "Hampi joined the World Heritage List in 1986. Its ruins include temples and other buildings from the capital of Vijayanagara."
+  teen: "The 1986 inscription covers a group of monuments associated with Vijayanagara's capital. UNESCO includes religious and royal buildings among the remains that document the former city."
+region: "Hampi, Karnataka"
+datings:
+  - method: documentary
+    range: { earliest: "1986", latest: "1986", precision: year, circa: false }
+    grade: A
+    label: "World Heritage inscription"
+    sources: ["src.unesco-1986-hampi"]
+    note: "UNESCO gives 1986 as the year of inscription for the Group of Monuments at Hampi."
+claims:
+  - text: "The Committee inscribed the Group of Monuments at Hampi in 1986."
+    grade: A
+    sources: ["src.unesco-1986-hampi"]
+  - text: "The designated property includes temple complexes and remains associated with the royal centre of Vijayanagara."
+    grade: A
+    sources: ["src.unesco-1986-hampi"]
+relations:
+  - kind: related-to
+    target: site.hampi
+tags: ["republic","unesco","heritage"]
+review: { status: draft, author: codex-gpt-6 }

@@ -1,0 +1,70 @@
+id: tradition.pala-manuscript-painting
+type: tradition
+kind: art
+names:
+  en: Pala Manuscript Painting
+  iast: Pāla Pāṇḍulipi Citrakalā
+  native: পাল পুঁথিচিত্র
+summary: Pala manuscript painting is the eastern Indian Buddhist miniature tradition cultivated in monastic centres of
+  Bihar and Bengal such as Nalanda, Vikramashila and Odantapuri between the late tenth and twelfth centuries CE. Painted
+  in opaque watercolour on narrow oblong talipot palm-leaf folios of texts like the Ashtasahasrika Prajnaparamita, it
+  deeply influenced early painting in Nepal and Tibet.
+summaries:
+  kids: In medieval Bihar and Bengal, artists painted tiny colourful pictures of the Buddha and goddess Tara on long dried
+    palm-leaf books kept inside Buddhist monasteries.
+  teen: Flourishing in Buddhist monasteries of the Pala Empire (c. 980-1200 CE), Pala palm-leaf manuscript illuminations
+    adapted classical sculptural poise into miniature book art that spread to Nepal and Tibet.
+region: Bihar and Bengal (Eastern India)
+location:
+  name: Nalanda, Bihar
+  lat: 25.136
+  lon: 85.443
+datings:
+  - method: epigraphic
+    range:
+      earliest: 980
+      latest: 1200
+      precision: decade
+      circa: true
+    grade: B
+    label: Dated colophons in regnal years of Pala rulers (Mahipala I to Govindapala)
+    sources:
+      - src.kim-2013-receptacle-of-the-sacred
+      - src.losty-1982-art-of-the-book
+    note: Colophons dated in regnal years of Mahipala I (late 10th-early 11th c.), Ramapala, and later rulers anchor
+      surviving illustrated palm-leaf manuscripts to c. 980-1200 CE.
+claims:
+  - text: The earliest surviving dated Pala illustrated palm-leaf manuscripts are copies of the Ashtasahasrika
+      Prajnaparamita dated in the regnal years of Mahipala I (late tenth to early eleventh century CE).
+    grade: B
+    sources:
+      - src.kim-2013-receptacle-of-the-sacred
+      - src.losty-1982-art-of-the-book
+  - text: Jinah Kim shows that illuminated Prajnaparamita manuscripts served both as texts and as portable ritual shrines
+      (book cult), transmitting Pala iconography into Himalayan and Tibetan painting.
+    grade: B
+    sources:
+      - src.kim-2013-receptacle-of-the-sacred
+      - src.dallapiccola-2003-early-indian-painting-grove
+relations:
+  - kind: patronised-by
+    target: polity.pala-empire
+  - kind: located-at
+    target: site.nalanda-mahavihara
+  - kind: located-at
+    target: site.vikramashila
+image:
+  commons: File:Astasahasrika Prajnaparamita Queen Maya Birth.jpeg
+  alt: Pala palm-leaf manuscript illumination depicting the birth of the Buddha from Queen Maya's side
+  credit: Asia Society (anonymous ancient artist)
+  license: Public domain
+tags:
+  - pala
+  - manuscript
+  - painting
+  - palm-leaf
+  - buddhism
+  - nalanda
+review:
+  status: draft
+  author: gemini-4-hydrogen-xhigh

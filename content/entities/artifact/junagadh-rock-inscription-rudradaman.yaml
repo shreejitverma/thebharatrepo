@@ -1,0 +1,86 @@
+id: artifact.junagadh-rock-inscription-rudradaman
+type: artifact
+kind: polity
+names:
+  en: Junagadh Rock Inscription of Rudradaman I
+  iast: Jūnāgaḍha Śilālekha (Rudradāmana)
+summary: "A twenty-line Sanskrit prose inscription engraved on the western face of the great granite Girnar boulder at Junagadh, Gujarat (which also carries Ashoka's Fourteen Rock Edicts and a later Gupta record of Skandagupta). Dated Margashirsha, Shaka Year 72 (150 CE), it is among the earliest long kavya-style Sanskrit prasastis and records Rudradaman's restoration of the breached Sudarshana Lake."
+summaries:
+  kids: >-
+    Carved on the same famous boulder at Girnar as Emperor Ashoka's edicts, this long Sanskrit inscription
+    from 150 CE tells how King Rudradaman repaired a giant ancient dam after a terrible storm.
+  teen: >-
+    Dated 150 CE (Shaka Year 72), Rudradaman's Junagadh prasasti marks a turning point in Indian epigraphy: it
+    is the earliest surviving long political inscription in polished classical Sanskrit, detailing his
+    victories and the 400-year engineering history of Sudarshana Lake from Chandragupta Maurya to the Western
+    Kshatrapas.
+region: Girnar Hill, Junagadh District, Gujarat, India
+location:
+  name: Ashoka Rock Edict boulder, Junagadh
+  lat: 21.5283
+  lon: 70.485
+datings:
+  - method: epigraphic
+    range:
+      earliest: 150
+      latest: 151
+      best: 150
+      precision: year
+      circa: false
+    grade: A
+    label: Shaka Year 72 (Margashirsha, dark half, 1st tithi)
+    sources:
+      - src.hultzsch-1906-epigraphia-indica-vol-8
+      - src.sircar-1942-select-inscriptions-vol-1
+      - src.salomon-1998-indian-epigraphy
+    note: >-
+      Explicitly dated in the 72nd year of the Shaka era (equivalent to November-December 150 CE), immediately
+      following a catastrophic breach of the Sudarshana dam.
+claims:
+  - text: >-
+      Engraved in 20 long lines in western Kshatrapa Brahmi and published by F. Kielhorn in Epigraphia Indica
+      Vol. 8, the record is dated in Year 72 (150 CE) of Mahakshatrapa Rudradaman, grandson of Chashtana.
+    grade: A
+    sources:
+      - src.hultzsch-1906-epigraphia-indica-vol-8
+      - src.sircar-1942-select-inscriptions-vol-1
+  - text: >-
+      The inscription relates that the Sudarshana Lake embankment was originally constructed by Vaishya
+      Pushyagupta, governor under Chandragupta Maurya, fitted with canals by Yavanaraja Tushaspha for Ashoka
+      Maurya, and rebuilt three times stronger without extra forced labour by Rudradaman's Parthian (Pahlava)
+      minister Suvisakha.
+    grade: A
+    sources:
+      - src.hultzsch-1906-epigraphia-indica-vol-8
+      - src.singh-2008-ancient-early-medieval-india
+  - text: "Written in ornate, long-compounded gadya-kavya prose adhering to Sanskrit poetics, it is among the earliest extensive classical Sanskrit royal prasastis surviving on stone, preceding Gupta inscriptions by two centuries."
+    grade: B
+    sources:
+      - src.salomon-1998-indian-epigraphy
+      - src.sircar-1942-select-inscriptions-vol-1
+relations:
+  - kind: related-to
+    target: person.chandragupta-maurya
+    note: Records Pushyagupta's original construction of Sudarshana dam under Chandragupta
+  - kind: related-to
+    target: person.ashoka
+    note: Carved on the same rock as Ashoka's Fourteen Rock Edicts and records Tushaspha's canals
+  - kind: related-to
+    target: concept.shaka-era
+    note: Early dated anchor of the Shaka era (Year 72 = 150 CE)
+wikidata: Q41381828
+image:
+  commons: File:Junagadh inscription of Rudradaman (portion).jpg
+  alt: Portion of the Sanskrit Brahmi rock inscription of Mahakshatrapa Rudradaman I at Junagadh
+  credit: J. F. Fleet
+  license: Public domain
+tags:
+  - inscription
+  - sanskrit
+  - rudradaman
+  - kshatrapa
+  - sudarshana
+  - junagadh
+review:
+  status: draft
+  author: gemini-4-hydrogen-xhigh

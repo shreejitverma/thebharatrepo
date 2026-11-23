@@ -30,12 +30,6 @@ datings:
     note: >-
       The accession is placed in 606 CE, the epoch of the era associated with Harsha, and his death in
       about 647 CE from Chinese records of the Tang embassies.
-  - method: foreign-synchronism
-    range: { earliest: "636 CE", latest: "643 CE", precision: year, circa: true }
-    grade: A
-    label: Contemporary record of Xuanzang
-    sources: [src.beal-1906-si-yu-ki]
-    note: Xuanzang describes Harsha (Shiladitya) as the reigning king during his stay in India.
 claims:
   - text: >-
       The Aihole inscription of 634 to 635 CE claims that the Chalukya king Pulakeshin II defeated
@@ -52,6 +46,10 @@ claims:
       some scholars question whether he wrote them himself.
     grade: B
     sources: [src.devahuti-1970-harsha-political-study, src.thapar-2002-early-india]
+  - text: Xuanzang, in India between about 636 and 643 CE, describes Harsha (Shiladitya) as the reigning king.
+    grade: A
+    sources:
+      - src.beal-1906-si-yu-ki
 relations:
   - { kind: patronised, target: person.banabhatta }
   - { kind: related-to, target: polity.chalukya-dynasty-of-badami, note: Rival of Pulakeshin II }

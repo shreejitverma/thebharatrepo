@@ -1,0 +1,64 @@
+id: "event.suyya-jhelum-waterworks"
+type: "event"
+kind: "science"
+names:
+  en: "Suyya's Jhelum waterworks"
+summary: "Kalhana credits Suyya, working under Avantivarman, with clearing a blockage and improving
+  drainage and irrigation in the Kashmir Valley. A modern landslide explanation for the flood
+  remains a hypothesis."
+summaries:
+  kids: "A Kashmiri chronicle tells how Suyya helped water flow out of a flooded valley. It says
+    farmers could grow more rice after his work."
+  teen: "Kalhana describes an intervention on the Jhelum and links it to lower rice prices. Bilham and
+    Bali modelled the timing of drainage and proposed that a landslide at the valley outlet
+    contributed to the flooding."
+region: "Kashmir Valley"
+datings:
+  - method: "textual-internal"
+    range:
+      earliest: 855
+      latest: 883
+      precision: "decade"
+      circa: true
+    grade: "C"
+    label: "Waterworks during Avantivarman's reign"
+    sources:
+      - id: "src.stein-1900-rajatarangini"
+        locator: "Book V"
+  - method: "geological"
+    range:
+      earliest: 855
+      latest: 865
+      precision: "decade"
+      circa: true
+    grade: "C"
+    label: "Bilham and Bali's early-reign drainage reconstruction"
+    sources:
+      - "src.bilham-2013-kashmir-landslide"
+    note: "Discharge estimates and the chronicle favour clearance early in the reign. The landslide
+      itself has no field date."
+claims:
+  - text: "The Rajatarangini attributes river clearance, drainage and agricultural improvements to
+      Suyya."
+    grade: "C"
+    sources:
+      - id: "src.stein-1900-rajatarangini"
+        locator: "Book V"
+  - text: "Bilham and Bali argue that drainage at normal discharge would take too long for a flood
+      beginning in 883 to have been cleared during Avantivarman's reign."
+    grade: "C"
+    sources:
+      - "src.bilham-2013-kashmir-landslide"
+relations:
+  - kind: "related-to"
+    target: "person.avantivarman"
+debate: "Kalhana places the work within Avantivarman's reign. Pir Ghulam Hassan Khuihami reports an
+  earthquake and landslide under 883, which Bilham and Bali regard as either a misdated reference to
+  the same flood or a separate event."
+tags:
+  - "kashmir"
+  - "jhelum"
+  - "hydraulics"
+review:
+  status: "draft"
+  author: "codex-gpt-6"

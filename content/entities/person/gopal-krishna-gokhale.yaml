@@ -1,0 +1,45 @@
+id: person.gopal-krishna-gokhale
+type: person
+kind: person
+names:
+  en: Gopal Krishna Gokhale
+  native: गोपाळ कृष्ण गोखले
+summary: Gopal Krishna Gokhale pursued political reform through legislative work and the Indian
+  National Congress. He founded the Servants of India Society in 1905 to train workers for
+  public service and influenced Gandhi's early political work.
+summaries:
+  kids: Gokhale argued for fairer laws and better education. He founded a group that trained
+    people to serve their communities.
+  teen: Gokhale used the colonial legislative council to scrutinise public spending and press for
+    reform. He combined that work with organised public service and became a political mentor to
+    Gandhi.
+region: Bombay Presidency and British India
+datings:
+  - method: scholarly-consensus
+    range:
+      earliest: "1866"
+      latest: "1915"
+      precision: year
+      circa: false
+    grade: B
+    label: Lifespan
+    sources:
+      - src.wolpert-1989-tilak-and-gokhale
+claims:
+  - text: In 1905 Gokhale founded the Servants of India Society and presided over the Congress
+      session at Banaras.
+    grade: B
+    sources:
+      - src.wolpert-1989-tilak-and-gokhale
+relations:
+  - kind: influenced
+    target: person.mahatma-gandhi
+  - kind: related-to
+    target: event.indian-national-congress
+tags:
+  - congress
+  - constitutional-reform
+  - education
+review:
+  status: draft
+  author: codex-gpt-6

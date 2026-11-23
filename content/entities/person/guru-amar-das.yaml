@@ -1,0 +1,64 @@
+id: person.guru-amar-das
+type: person
+kind: person
+names:
+  en: Guru Amar Das
+  native: ਗੁਰੂ ਅਮਰ ਦਾਸ
+summary: Guru Amar Das was the third Sikh Guru and made Goindwal a center of the community. Hymns he
+  composed, including Anand, were transmitted in the Sikh canon.
+summaries:
+  kids: Guru Amar Das taught at Goindwal, where Sikhs came together. His hymn Anand is still sung.
+  teen: The third Guru developed Goindwal as a Sikh center. Scholarship on early Sikh manuscripts
+    connects his period with the collection of hymns that preceded the Adi Granth.
+region: Goindwal, Punjab
+datings:
+  - method: scholarly-consensus
+    range:
+      earliest: "1479"
+      latest: "1574"
+      precision: year
+      circa: true
+    grade: B
+    label: Conventional birth and death years
+    sources:
+      - src.singh-2004-history-of-the-sikhs-vol-1
+      - id: src.grewal-1990-sikhs-of-the-punjab
+        locator: Foundation of the Sikh Panth
+      - id: src.singh-2003-guru-granth-sahib
+        locator: Introduction
+  - method: scholarly-consensus
+    range:
+      earliest: "1552"
+      latest: "1574"
+      precision: year
+      circa: false
+    grade: B
+    label: Years as Sikh Guru
+    sources:
+      - id: src.grewal-1990-sikhs-of-the-punjab
+        locator: Foundation of the Sikh Panth
+      - id: src.singh-2003-guru-granth-sahib
+        locator: Introduction
+claims:
+  - text: Guru Amar Das’s compositions include the hymn Anand preserved in the Guru Granth Sahib.
+    grade: B
+    sources:
+      - src.singh-2003-guru-granth-sahib
+      - src.singh-2004-history-of-the-sikhs-vol-1
+  - text: Goindwal was an important Sikh center during his guruship.
+    grade: B
+    sources:
+      - id: src.grewal-1990-sikhs-of-the-punjab
+        locator: Foundation of the Sikh Panth
+relations:
+  - kind: succeeded
+    target: person.guru-angad
+  - kind: part-of
+    target: tradition.sikh-gurus
+tags:
+  - sikhism
+  - sikh-gurus
+  - mughal-period
+review:
+  status: draft
+  author: codex-gpt-6

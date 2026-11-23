@@ -1,0 +1,42 @@
+id: person.sridhara
+type: person
+kind: science
+names:
+  en: Sridhara
+  iast: Śrīdhara
+  native: श्रीधर
+summary: Sridhara wrote Sanskrit works on arithmetic, including the Patiganita and its shorter counterpart,
+  the Trishatika. The approximate date of his activity is inferred from textual relationships.
+summaries:
+  kids: Sridhara wrote a book on working with numbers and then made a shorter version of its rules.
+  teen: Sridhara’s verses link arithmetic to practical work. References and shared verses help place him among
+    early medieval mathematicians, although the evidence leaves room for uncertainty.
+datings:
+  - method: textual-internal
+    range:
+      earliest: 700
+      latest: "900 CE"
+      precision: century
+      circa: true
+    grade: C
+    label: Eighth- or ninth-century activity (Plofker)
+    sources:
+      - id: src.plofker-2009-mathematics-in-india
+        locator: Section 6.1 and Appendix B
+    note: A verse shared with Govindasvamin and possible links to Brahmagupta and Mahavira supply relative
+      evidence.
+claims:
+  - text: The Trishatika opens by saying that Sridhara drew its rules from his own Patiganita.
+    grade: A
+    sources:
+      - id: src.plofker-2009-mathematics-in-india
+        locator: Section 6.1
+relations:
+  - kind: authored
+    target: text.patiganita
+tags:
+  - arithmetic
+  - sanskrit
+review:
+  status: draft
+  author: codex-gpt-6

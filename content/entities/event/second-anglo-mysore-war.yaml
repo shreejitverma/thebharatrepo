@@ -1,0 +1,50 @@
+id: event.second-anglo-mysore-war
+type: event
+kind: event
+names:
+  en: Second Anglo-Mysore War
+summary: The East India Company fought Mysore again from 1780. Tipu Sultan succeeded Haidar Ali
+  during the war, which ended with the Treaty of Mangalore in 1784.
+summaries:
+  kids: Haidar Ali led Mysore at the start of the war. After he died, his son Tipu Sultan carried
+    on fighting and later made peace.
+  teen: Fighting spread across several fronts in southern India. The Treaty of Mangalore ended the
+    war in 1784 and provided for the restoration of conquests and return of prisoners.
+region: Mysore, Carnatic and Malabar Coast
+datings:
+  - method: scholarly-consensus
+    range:
+      earliest: "1780"
+      latest: "1784"
+      precision: year
+      circa: false
+    grade: B
+    label: Second war and Treaty of Mangalore
+    sources:
+      - src.bayly-1988-making-of-british-empire
+      - src.bandyopadhyay-2004-from-plassey-to-partition
+      - src.aitchison-1909-mysore-treaties
+claims:
+  - text: The Treaty of Mangalore ended the war in 1784 after Tipu had succeeded his father as ruler
+      of Mysore.
+    grade: B
+    sources:
+      - src.bayly-1988-making-of-british-empire
+      - src.bandyopadhyay-2004-from-plassey-to-partition
+  - text: The 1784 peace provided for the return of prisoners and the restoration of conquests.
+    grade: A
+    sources:
+      - src.aitchison-1909-mysore-treaties
+relations:
+  - kind: related-to
+    target: person.haidar-ali
+  - kind: related-to
+    target: person.tipu-sultan
+  - kind: preceded
+    target: event.third-anglo-mysore-war
+tags:
+  - mysore
+  - company-rule
+review:
+  status: draft
+  author: codex-gpt-6

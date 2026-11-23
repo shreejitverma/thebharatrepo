@@ -1,0 +1,62 @@
+id: tradition.dhrupad
+type: tradition
+kind: art
+names:
+  en: Dhrupad
+  iast: Dhrupada
+  native: ध्रुपद
+summary: "Dhrupad is generally regarded as the oldest surviving classical vocal genre of Hindustani music, distinguished by an extended unmetered alap using non-lexical syllables (nom-tom) followed by a four-part composition (bandish) in Braj or Sanskrit accompanied by the pakhawaj barrel drum. Flourishing from the late fifteenth century at Gwalior under Raja Man Singh Tomar and later at the Mughal court under Akbar, it continues through lineages such as the Dagar bani."
+summaries:
+  kids: Dhrupad is an ancient, meditative style of North Indian classical singing accompanied by the two-headed pakhawaj
+    drum and deep sustained notes.
+  teen: Patronised by Raja Man Singh Tomar of Gwalior and Emperor Akbar's court musician Tansen, dhrupad opens with a long
+    unmetered alap before moving into rhythmic compositions accompanied by the pakhawaj.
+region: Northern and central India (Gwalior, Agra, Delhi, Rajasthan)
+location:
+  name: Gwalior, Madhya Pradesh
+  lat: 26.218
+  lon: 78.183
+datings:
+  - method: documentary
+    range:
+      earliest: 1486
+      latest: 1600
+      precision: century
+      circa: true
+    grade: B
+    label: Courtly consolidation at Gwalior and Mughal Agra-Delhi
+    sources:
+      - src.sanyal-widdess-2004-dhrupad
+      - src.widdess-2001-dhrupad-grove
+    note: Ritwik Sanyal and Richard Widdess trace dhrupad's emergence from medieval prabandha song forms to the court of
+      Raja Man Singh Tomar of Gwalior (r. 1486-1516) and Akbar's imperial court.
+claims:
+  - text: A dhrupad recital typically unfolds an extended unaccompanied alap (in slow, medium and fast pulsations using
+      nom-tom syllables) before a composition accompanied by the pakhawaj.
+    grade: A
+    sources:
+      - src.sanyal-widdess-2004-dhrupad
+      - src.widdess-2001-dhrupad-grove
+  - text: Miyan Tansen, Swami Haridas and Nayak Baiju are recorded in Mughal and Braj tradition as foundational composers of
+      dhrupad texts and banis (stylistic traditions).
+    grade: B
+    sources:
+      - src.sanyal-widdess-2004-dhrupad
+      - src.delvoye-1996-tansen-dhrupad
+relations:
+  - kind: part-of
+    target: tradition.hindustani-classical-music
+  - kind: preceded
+    target: tradition.khayal
+  - kind: patronised-by
+    target: polity.mughal-empire
+wikidata: Q59158
+tags:
+  - dhrupad
+  - hindustani-music
+  - pakhawaj
+  - gwalior
+  - tansen
+review:
+  status: draft
+  author: gemini-4-hydrogen-xhigh

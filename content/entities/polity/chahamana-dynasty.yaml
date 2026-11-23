@@ -1,0 +1,54 @@
+id: polity.chahamana-dynasty
+type: polity
+kind: polity
+names:
+  en: Chahamanas of Shakambhari
+  iast: Cāhamāna
+summary: The Chahamanas of Shakambhari, also called Chauhans, developed a kingdom around Sambhar and
+  Ajmer. Their main line lost its position after Prithviraja III's defeat by the Ghurids, while
+  other Chahamana branches continued.
+summaries:
+  kids: The Chauhan kings ruled around Sambhar and Ajmer. Different branches of their family ruled
+    different towns and forts.
+  teen: Inscriptions trace the main Chahamana line and other branches. Prithviraja's defeat in 1192
+    ended its dominance, while related houses elsewhere remained active.
+region: Eastern Rajasthan and the Delhi-Ajmer corridor
+location:
+  name: Ajmer (later royal seat)
+  lat: 26.45
+  lon: 74.64
+datings:
+  - method: scholarly-consensus
+    range:
+      earliest: "800"
+      latest: "1193"
+      precision: decade
+      circa: true
+    grade: B
+    label: Period of rule
+    sources:
+      - src.singh-2008-ancient-early-medieval-india
+      - src.jackson-1999-delhi-sultanate
+    note: The range covers the historically recoverable period of the main line. Later genealogies name
+      earlier ancestors.
+claims:
+  - text: The Harsha stone inscription of Vikrama year 1030 preserves a genealogy for the Shakambhari
+      line.
+    grade: A
+    sources:
+      - src.singh-2008-ancient-early-medieval-india
+  - text: Ajmer was a central seat of the main line by the twelfth century.
+    grade: B
+    sources:
+      - src.singh-2008-ancient-early-medieval-india
+      - src.jackson-1999-delhi-sultanate
+relations:
+  - kind: related-to
+    target: polity.gurjara-pratihara-dynasty
+  - kind: preceded
+    target: polity.delhi-sultanate
+    note: Ghurid conquest preceded the formation of the Sultanate.
+tags: []
+review:
+  status: draft
+  author: codex-gpt-6

@@ -1,0 +1,66 @@
+id: site.modhera-sun-temple
+type: site
+kind: site
+names:
+  en: Modhera Sun Temple
+  iast: Moḍherā Sūrya Mandira
+  native: મોઢેરા સૂર્ય મંદિર
+summary: >-
+  The Sun Temple at Modhera in Gujarat is a Chaulukya-period shrine to Surya. The sanctuary, pillared
+  assembly hall and stepped reservoir stand on the same axis. The main sanctuary is usually dated to the
+  eleventh century CE, and the complex developed in phases.
+summaries:
+  kids: >-
+    At Modhera in Gujarat, stone steps lead past small shrines to a large pool. A carved hall and a
+    temple to Surya, the sun god, stand beyond it.
+  teen: >-
+    Modhera's Sun Temple brings the sanctuary, pillared assembly hall and stepped reservoir into one
+    layout. Its style is associated with the reign of Bhima I, and a dated block in the sanctuary wall
+    and architectural comparisons help date the buildings.
+region: North Gujarat (Mehsana district, Gujarat)
+location: { name: "Modhera, Gujarat", lat: 23.584, lon: 72.133 }
+datings:
+  - method: art-historical
+    range: { earliest: "1000 CE", latest: "1200 CE", precision: century, circa: true }
+    grade: B
+    label: "Chaulukya-period sanctuary and later additions"
+    sources:
+      - src.lobo-1982-sun-temple-modhera
+      - src.burgess-cousens-1903-northern-gujarat
+      - src.meister-dhaky-1991-encyclopaedia-indian-temple-architecture-north-2
+      - src.harle-1994-art-architecture-indian-subcontinent
+    note: >-
+      The main sanctuary is generally assigned to the eleventh century CE. The independent assembly hall
+      belongs to a later phase. The principal construction is associated with the reign of the Chaulukya
+      king Bhima I in the eleventh century. The inverted dated block cannot by itself fix the construction
+      date.
+claims:
+  - text: >-
+      An inverted block in the sanctuary bears the date Vikrama Samvat 1083, corresponding to 1026 to
+      1027 CE.
+    grade: A
+    sources:
+      - src.burgess-cousens-1903-northern-gujarat
+      - src.lobo-1982-sun-temple-modhera
+  - text: >-
+      Geometric flights of steps descend to the Surya Kund and are punctuated by small stone shrines.
+    grade: B
+    sources:
+      - src.livingston-2002-steps-to-water
+      - src.lobo-1982-sun-temple-modhera
+  - text: >-
+      India submitted the Sun Temple and its associated monuments at Modhera to UNESCO's Tentative List
+      in 2022.
+    grade: A
+    sources:
+      - src.unesco-2022-modhera-tentative
+relations:
+  - { kind: contemporary-of, target: site.rani-ki-vav }
+wikidata: Q2570737
+image:
+  commons: "File:Sun Temple, Modhera 03.jpg"
+  alt: Sun Temple at Modhera seen across the stepped geometric terraces and miniature shrines of the Surya Kund reservoir
+  credit: Bernard Gagnon
+  license: CC BY-SA 3.0
+tags: [modhera, sun-temple, surya, chaulukya, solanki, gujarat, stepwell]
+review: { status: draft, author: "gemini-4-hydrogen-xhigh" }

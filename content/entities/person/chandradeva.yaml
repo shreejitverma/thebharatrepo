@@ -1,0 +1,42 @@
+id: person.chandradeva
+type: person
+kind: person
+names:
+  en: Chandradeva
+  iast: Candradeva
+summary: Chandradeva established Gahadavala power around Kannauj and Varanasi. The Chandravati grant
+  places his rule in the closing years of the eleventh century.
+summaries:
+  kids: Chandradeva ruled lands around Kannauj and Varanasi. A dated record from his reign describes a
+    grant of land.
+  teen: Chandradeva's grants make him the earliest securely attested ruler of the Gahadavala kingdom.
+    Their dates help separate the line's history from its genealogy.
+region: Kannauj and the Varanasi region
+datings:
+  - method: scholarly-consensus
+    range:
+      earliest: "1080"
+      latest: "1105"
+      precision: decade
+      circa: true
+    grade: B
+    label: Reign or recorded political activity
+    sources:
+      - src.singh-2008-ancient-early-medieval-india
+      - src.devadevan-2020-early-medieval-origins-india
+      - src.jackson-1999-delhi-sultanate
+    note: Dated grants constrain his activity. The outer limits are approximate.
+claims:
+  - text: Chandradeva appears in dated records as a sovereign in northern India in the late eleventh
+      century.
+    grade: B
+    sources:
+      - src.singh-2008-ancient-early-medieval-india
+      - src.devadevan-2020-early-medieval-origins-india
+relations:
+  - kind: founded
+    target: polity.gahadavala-dynasty
+tags: []
+review:
+  status: draft
+  author: codex-gpt-6

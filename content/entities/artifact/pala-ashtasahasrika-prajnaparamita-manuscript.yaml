@@ -1,0 +1,95 @@
+id: artifact.pala-ashtasahasrika-prajnaparamita-manuscript
+type: artifact
+kind: art
+names:
+  en: Pala Illuminated Ashtasahasrika Prajnaparamita Codices
+  iast: Pāla Aṣṭasāhasrikā Prajñāpāramitā Tālapatra
+summary: >-
+  Illuminated palm-leaf (talapatra) Buddhist manuscripts of the Perfection of Wisdom in 8,000 Verses produced
+  at major eastern Indian monastic centres including Nalanda and Vikramashila during the Pala dynasty (late
+  10th to 12th centuries CE). Exemplified by Cambridge Add. 1464 (Year 5 of Mahipala), Bodleian MS. Sansk. a.
+  7 (Nalanda, Year 15 of Ramapala), and dispersed leaves in Cleveland (1938.301), they combine calligraphic
+  Siddhamatrika/Gaudi script with jewel-toned miniatures.
+summaries:
+  kids: >-
+    Copied onto narrow strips of dried palm leaf by monks at monasteries like Nalanda, Pala-era Perfection of
+    Wisdom books are decorated with tiny colourful paintings of the Buddha, Taras, and lotus goddess
+    Prajnaparamita.
+  teen: >-
+    Dated directly by royal Pala colophons (such as Year 15 of Ramapala at Nalanda in Bodleian MS. Sansk. a. 7
+    and Year 5 of Mahipala in Cambridge Add. 1464), these palm-leaf codices mark the golden age of eastern
+    Indian miniature book painting before the destruction of the great viharas.
+region: "Eastern India (Bihar and Bengal: Nalanda, Vikramashila, and Kurkihar monasteries)"
+datings:
+  - method: epigraphic
+    range:
+      earliest: 985
+      latest: 1200
+      best: 1095
+      precision: decade
+      circa: true
+    grade: B
+    label: Dated Pala regnal colophons (Mahipala Year 5 to Ramapala Year 15 and Govindapala)
+    sources:
+      - src.kim-2013-receptacle-of-the-sacred
+      - src.losty-1982-art-of-the-book
+    note: >-
+      Bodleian MS. Sansk. a. 7 carries a colophon written at Nalanda in the 15th year of Ramapala (late
+      11th-early 12th century CE); Cambridge Add. 1464 dates to Year 5 of Mahipala I (c. 985-1000 CE) or II.
+claims:
+  - text: >-
+      As studied by J. P. Losty and Jinah Kim, Bodleian Library MS. Sansk. a. 7 (copied at Sri-Nalanda in the
+      15th regnal year of Ramapala) and Cambridge University Library Add. 1464 (dated Year 5 of Mahipala)
+      preserve intact painted wooden covers and square miniature panels set across three narrow palm-leaf
+      columns.
+    grade: B
+    sources:
+      - src.kim-2013-receptacle-of-the-sacred
+      - src.losty-1982-art-of-the-book
+  - text: >-
+      Four illustrated leaves at the Cleveland Museum of Art (Acc. No. 1938.301) and parallel Pala folios
+      depict the Eight Great Events of the Buddha's life alongside goddess Prajnaparamita, Avalokiteshvara,
+      and Tara using mineral pigments (vermilion, indigo, orpiment yellow, and lapis).
+    grade: A
+    sources:
+      - src.kim-2013-receptacle-of-the-sacred
+      - src.losty-1982-art-of-the-book
+  - text: >-
+      Written in Siddhamatrika / early Gaudi calligraphic hand, the manuscripts functioned both as sacred
+      liturgical texts and portable ritual "receptacles of the Dharma," carrying the Pala painting idiom into
+      Nepal and Tibet after 1200 CE.
+    grade: B
+    sources:
+      - src.kim-2013-receptacle-of-the-sacred
+      - src.harle-1994-art-architecture-indian-subcontinent
+relations:
+  - kind: part-of
+    target: polity.pala-empire
+  - kind: located-at
+    target: site.nalanda-mahavihara
+    note: Bodleian MS. Sansk. a. 7 was copied at Nalanda in Year 15 of Ramapala
+  - kind: related-to
+    target: site.vikramashila
+    note: Major Pala monastery producing sister illuminated Ashtasahasrika codices
+  - kind: influenced
+    target: artifact.jain-kalpasutra-manuscripts
+    note: Palm-leaf horizontal format and panel layout carried over into Western Indian codices
+wikidata: null
+image:
+  commons: File:Four Leaves from an Ashtasahasrika Prajnaparamita Manuscript.jpg
+  alt: >-
+    Four illuminated Pala-period palm-leaf manuscript folios of the Ashtasahasrika Prajnaparamita in the
+    Cleveland Museum of Art
+  credit: Cleveland Museum of Art
+  license: Public domain
+tags:
+  - manuscript
+  - palm-leaf
+  - pala
+  - prajnaparamita
+  - nalanda
+  - miniature
+  - buddhism
+review:
+  status: draft
+  author: gemini-4-hydrogen-xhigh

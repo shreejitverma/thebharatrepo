@@ -1,0 +1,42 @@
+id: person.kadungon
+type: person
+kind: person
+names:
+  en: Kadungon
+  iast: Kaṭuṅkōṉ
+  native: கடுங்கோன்
+summary: Kadungon is remembered in later royal charters as the Pandya king who restored the
+  dynasty's power in southern Tamil country. His position in the succession is clearer than his
+  exact reign dates.
+summaries:
+  kids: Later stone and copper records remember Kadungon as a king who restored Pandya rule.
+  teen: The Velvikudi charter preserves the dynasty's account of Kadungon's rise. Because it was
+    composed generations later, historians use a broad date for his reign.
+region: Southern Tamil country
+datings:
+  - method: epigraphic
+    range:
+      earliest: "550"
+      latest: "620"
+      precision: decade
+      circa: true
+    grade: C
+    label: Reign or recorded political activity
+    sources:
+      - src.karashima-2014-concise-history-south-india
+      - src.singh-2008-ancient-early-medieval-india
+    note: The reign is reconstructed from later copperplate genealogies.
+claims:
+  - text: The Velvikudi charter credits Kadungon with overthrowing Kalabhra power and restoring Pandya
+      rule.
+    grade: C
+    sources:
+      - src.karashima-2014-concise-history-south-india
+      - src.singh-2008-ancient-early-medieval-india
+relations:
+  - kind: ruled
+    target: polity.pandya-dynasty
+tags: []
+review:
+  status: draft
+  author: codex-gpt-6

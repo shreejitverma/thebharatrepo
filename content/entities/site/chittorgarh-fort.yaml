@@ -1,0 +1,60 @@
+id: site.chittorgarh-fort
+type: site
+kind: site
+names:
+  en: Chittorgarh Fort
+  iast: Cittauṛagaṛha Durga
+  native: चित्तौड़गढ़ दुर्ग
+summary: >-
+  Chittorgarh Fort stands on a rocky plateau in southern Rajasthan. A former capital of Mewar, it
+  preserves temples, reservoirs, palaces and the fifteenth-century Vijay Stambha, or Victory Tower. It
+  is part of UNESCO's Hill Forts of Rajasthan.
+summaries:
+  kids: >-
+    Chittorgarh Fort sits on a flat-topped hill in Rajasthan. Its walls enclose reservoirs, temples and
+    a nine-storey Victory Tower built by the ruler Rana Kumbha.
+  teen: >-
+    Chittorgarh Fort preserves buildings from several periods of Mewar's history. The fort was captured
+    in major sieges in 1303, 1535 and 1568 CE. Rana Kumbha's Victory Tower stands within its walls.
+region: Mewar (Chittorgarh district, Rajasthan)
+location: { name: "Chittorgarh, Rajasthan", lat: 24.887, lon: 74.647 }
+datings:
+  - method: scholarly-consensus
+    range: { earliest: "700 CE", latest: "1568 CE", precision: century, circa: true }
+    grade: B
+    label: "Early medieval remains through the Mewar capital phase"
+    sources:
+      - src.hooja-2006-history-of-rajasthan
+      - src.tillotson-1987-rajput-palaces
+      - src.unesco-2013-hill-forts-rajasthan
+    note: >-
+      Early records associate the site with Mori rulers, while much of the surviving complex reflects
+      later Mewar patronage. Akbar captured the fort in 1568 CE.
+claims:
+  - text: >-
+      Alauddin Khalji took Chittorgarh in 1303 CE, Bahadur Shah of Gujarat in 1535 CE, and Akbar in 1568
+      CE after a siege that began the previous year.
+    grade: B
+    sources:
+      - src.hooja-2006-history-of-rajasthan
+      - src.asher-talbot-2006-india-before-europe
+  - text: >-
+      The nine-storey Vijay Stambha was erected under Rana Kumbha in the fifteenth century CE and
+      commemorates victory over Malwa.
+    grade: B
+    sources:
+      - src.tillotson-1987-rajput-palaces
+      - src.unesco-2013-hill-forts-rajasthan
+relations:
+  - { kind: part-of, target: site.hill-forts-of-rajasthan }
+  - { kind: related-to, target: person.alauddin-khalji }
+  - { kind: related-to, target: person.akbar }
+  - { kind: related-to, target: person.mirabai }
+wikidata: Q3695769
+image:
+  commons: "File:Chittorgarh fort.JPG"
+  alt: Ramparts, Gaumukh water reservoir, temples, and the nine-storey Vijay Stambha atop the Chittorgarh Fort plateau
+  credit: Ssjoshi111
+  license: CC BY-SA 3.0
+tags: [chittorgarh, mewar, rajput, fort, rajasthan, unesco]
+review: { status: draft, author: "gemini-4-hydrogen-xhigh" }

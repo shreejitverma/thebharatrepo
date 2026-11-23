@@ -1,0 +1,58 @@
+id: person.narayana-guru
+type: person
+kind: person
+names:
+  en: Narayana Guru
+  iast: Nārāyaṇa Guru
+  native: നാരായണ ഗുരു
+summary: Narayana Guru was a Kerala religious teacher and reformer whose teachings on human unity
+  challenged caste exclusion. He helped establish the SNDP Yogam in 1903. His exact birth year is
+  uncertain.
+summaries:
+  kids: Narayana Guru taught that people share a common humanity. He helped create a group that worked
+    to improve opportunities for people kept out by caste rules.
+  teen: Narayana Guru drew on Advaita while addressing the social exclusion faced by Ezhavas in
+    Kerala. In 1903 he worked with reformers including Dr. Palpu and the poet Kumaran Asan to
+    establish the SNDP Yogam.
+region: Kerala
+datings:
+  - method: scholarly-consensus
+    range:
+      earliest: "1856"
+      latest: "1928"
+      precision: year
+      circa: true
+    grade: C
+    label: George Pati’s approximate lifespan
+    sources:
+      - src.pati-2020-sree-narayana-guru
+    note: Pati gives 1856 as a possible birth year.
+  - method: scholarly-consensus
+    range:
+      earliest: "1854"
+      latest: "1928"
+      precision: year
+      circa: true
+    grade: C
+    label: K. V. Cybil’s lifespan estimate
+    sources:
+      - src.cybil-2022-narayana-guru-political-society
+    note: Cybil gives an earlier birth year and also dates the death to 1928.
+claims:
+  - text: Narayana Guru helped establish the Sri Narayana Dharma Paripalana Yogam in 1903.
+    grade: B
+    sources:
+      - src.pati-2020-sree-narayana-guru
+  - text: His teaching on unity linked spiritual self-knowledge with social emancipation.
+    grade: B
+    sources:
+      - src.pati-2020-sree-narayana-guru
+relations: []
+tags:
+  - social-reform
+  - kerala
+  - advaita
+  - anti-caste
+review:
+  status: draft
+  author: codex-gpt-6

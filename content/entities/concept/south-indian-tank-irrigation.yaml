@@ -1,0 +1,48 @@
+id: concept.south-indian-tank-irrigation
+type: concept
+kind: science
+names:
+  en: South Indian Tank Irrigation
+summary: South Indian irrigation tanks store rainwater or diverted river water behind embankments and release
+  it to fields. Tanks may form chains in which overflow from one reservoir enters the next. Historical
+  networks depended on construction, maintenance and negotiated access to water.
+summaries:
+  kids: Farmers could store water behind a bank and let it out when crops needed it. Extra water could flow into
+    another tank farther downhill.
+  teen: An irrigation tank is a reservoir with a sluice for controlled release and a spillway for surplus water.
+    Archaeology around Vijayanagara documents varied networks of reservoirs and canals.
+region: Southern India
+datings:
+  - method: archaeological-stratigraphic
+    range:
+      earliest: 1000
+      latest: 1600
+      precision: century
+      circa: true
+    grade: B
+    label: Medieval tank landscapes
+    sources:
+      - src.morrison-2015-archaeologies-of-flow
+      - src.bijker-2007-dikes-and-dams
+    note: This dates a documented regional phase, including intensive construction in the Vijayanagara region.
+claims:
+  - text: South Indian tanks can collect runoff or canal water and use sluices and spillways to control its
+      release.
+    grade: B
+    sources:
+      - src.morrison-2015-archaeologies-of-flow
+      - src.bijker-2007-dikes-and-dams
+  - text: Studies around Vijayanagara document reservoirs serving agriculture alongside domestic and ritual uses.
+    grade: B
+    sources:
+      - src.morrison-2015-archaeologies-of-flow
+relations:
+  - kind: related-to
+    target: site.hampi
+tags:
+  - hydraulic-engineering
+  - irrigation
+  - reservoirs
+review:
+  status: draft
+  author: codex-gpt-6

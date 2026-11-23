@@ -1,0 +1,47 @@
+id: event.battle-of-haldighati
+type: event
+kind: event
+names:
+  en: Battle of Haldighati
+summary: A Mughal army led by Man Singh of Amber defeated Maharana Pratap of Mewar at Haldighati
+  in 1576. Pratap escaped and continued to resist Mughal rule.
+summaries:
+  kids: Two armies fought at a pass in Mewar. Maharana Pratap lost the battle, escaped and carried
+    on resisting the Mughal empire.
+  teen: Man Singh's army won the field for Akbar, but it failed to capture Pratap. The outcome of
+    the battle and the longer struggle for control of Mewar were different questions.
+region: Haldighati, Mewar, present-day Rajasthan
+datings:
+  - method: scholarly-consensus
+    range:
+      earliest: "1576"
+      latest: "1576"
+      precision: year
+      circa: false
+    grade: B
+    label: Battle in the Mewar campaign
+    sources:
+      - src.nath-2023-akbar-journeys-to-ajmer
+      - src.asher-talbot-2006-india-before-europe
+claims:
+  - text: The Mughal army under Man Singh defeated Pratap's forces at Haldighati, and Pratap escaped
+      into the Aravallis.
+    grade: B
+    sources:
+      - src.nath-2023-akbar-journeys-to-ajmer
+  - text: The campaign formed part of Akbar's effort to extend Mughal control in western India.
+    grade: B
+    sources:
+      - src.nath-2023-akbar-journeys-to-ajmer
+      - src.richards-1993-mughal-empire
+relations:
+  - kind: related-to
+    target: person.akbar
+  - kind: related-to
+    target: polity.mughal-empire
+tags:
+  - mewar
+  - mughal
+review:
+  status: draft
+  author: codex-gpt-6

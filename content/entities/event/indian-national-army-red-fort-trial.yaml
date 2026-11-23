@@ -1,0 +1,47 @@
+id: event.indian-national-army-red-fort-trial
+type: event
+kind: event
+names:
+  en: Indian National Army trial at the Red Fort
+summary: The British Indian Army brought three Indian National Army officers before a court
+  martial at Delhi's Red Fort in November 1945. The trial drew wide public support for the
+  defendants and intensified debate over military loyalty and colonial authority.
+summaries:
+  kids: Three officers who had fought for the Indian National Army were put on trial. Many people
+    protested and supported them.
+  teen: The defence argued that the officers had served a government entitled to fight for Indian
+    independence. Public attention turned a military prosecution into a broader dispute over the
+    legitimacy of British rule.
+region: Red Fort, Delhi
+datings:
+  - method: scholarly-consensus
+    range:
+      earliest: "1945"
+      latest: "1946"
+      precision: year
+      circa: false
+    grade: B
+    label: First Red Fort trial and its immediate outcome
+    sources:
+      - src.mukherjee-2019-indian-national-army-trial
+      - src.marston-2014-question-of-loyalty
+    note: The court martial opened in November 1945, and the sentences were remitted in early
+      January 1946.
+claims:
+  - text: Shah Nawaz Khan, Prem Kumar Sahgal and Gurbaksh Singh Dhillon were tried for waging war
+      against the king-emperor.
+    grade: B
+    sources:
+      - src.mukherjee-2019-indian-national-army-trial
+      - src.marston-2014-question-of-loyalty
+relations:
+  - kind: related-to
+    target: polity.indian-national-army
+  - kind: related-to
+    target: polity.provisional-government-of-azad-hind
+tags:
+  - indian-national-army
+  - colonial-law
+review:
+  status: draft
+  author: codex-gpt-6

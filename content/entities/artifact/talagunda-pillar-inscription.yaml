@@ -1,0 +1,92 @@
+id: artifact.talagunda-pillar-inscription
+type: artifact
+kind: polity
+names:
+  en: Talagunda Pillar Inscription of Kakusthavarman
+  iast: Tāḷagunda Stambha Abhilekha
+summary: >-
+  A slender granite pillar at the Pranavesvara temple in Talagunda (ancient Sthanakundura), Shivamogga
+  district, Karnataka, engraved vertically with 34 Sanskrit verses by poet Kubja during the reign of Kadamba
+  king Santivarman (c. 455-470 CE). Written in southern box-headed Brahmi, it gives the origin story of the
+  Kadamba dynasty, telling how Brahmin scholar Mayurasharman broke with the Pallavas of Kanchi to found an
+  independent kingdom.
+summaries:
+  kids: >-
+    Carved vertically up the shaft of a stone pillar in Karnataka, this 5th-century Sanskrit poem tells how a
+    Brahmin student named Mayurasharman argued with Pallava horsemen at Kanchi and became the first Kadamba
+    king.
+  teen: >-
+    Commissioned under Santivarman to commemorate a tank built by his father Kakusthavarman, Kubja's Talagunda
+    inscription is the chief literary and political record of early Karnataka's Kadamba dynasty, notable for
+    its crisp Sanskrit verse and account of Mayurasharman's break with Kanchi.
+region: Talagunda, Shikaripura Taluk, Shivamogga District, Karnataka, India
+location:
+  name: Pranavesvara Temple, Talagunda
+  lat: 14.42
+  lon: 75.26
+datings:
+  - method: epigraphic
+    range:
+      earliest: 450
+      latest: 475
+      best: 460
+      precision: decade
+      circa: true
+    grade: B
+    label: Reign of Kadamba Santivarman (box-headed Brahmi palaeography)
+    sources:
+      - src.hultzsch-1906-epigraphia-indica-vol-8
+      - src.gai-1996-inscriptions-early-kadambas
+      - src.moraes-1931-kadamba-kula
+    note: >-
+      Dated by Kadamba genealogy from Mayurasharman (mid-4th century) down to Kakusthavarman and Santivarman
+      alongside late 5th-century Deccan Brahmi palaeography.
+claims:
+  - text: >-
+      Edited by F. Kielhorn in Epigraphia Indica Vol. 8 and G. S. Gai in Inscriptions of the Early Kadambas,
+      the inscription runs vertically upward on a square-octagonal granite pillar in front of the Pranavesvara
+      temple and names its composer Kubja ("Kubjena svam kavyamidam").
+    grade: A
+    sources:
+      - src.hultzsch-1906-epigraphia-indica-vol-8
+      - src.gai-1996-inscriptions-early-kadambas
+  - text: >-
+      It narrates that Mayurasharman, a Brahmin of the Manavya gotra from Sthanakundura, travelled to the
+      Pallava capital Kanchipuram for Vedic study, clashed with Pallava mounted guards, took up the sword
+      instead of kusha grass, and carved out a kingdom from Banavasi.
+    grade: A
+    sources:
+      - src.hultzsch-1906-epigraphia-indica-vol-8
+      - src.moraes-1931-kadamba-kula
+  - text: >-
+      The pillar also mentions marriage alliances linking Kakusthavarman's daughters to royal houses "such as
+      the Guptas and others," confirming Kadamba diplomacy across India in the 5th century CE.
+    grade: B
+    sources:
+      - src.gai-1996-inscriptions-early-kadambas
+      - src.singh-2008-ancient-early-medieval-india
+relations:
+  - kind: related-to
+    target: polity.pallava-dynasty
+    note: Describes Mayurasharman's conflict and settlement with the Pallavas of Kanchi
+  - kind: related-to
+    target: polity.gupta-empire
+    note: Mentions marriage alliance with the Gupta dynasty
+wikidata: Q7678799
+image:
+  commons: File:Talagunda Pillar inscription (455-460 AD) at Talagunda.JPG
+  alt: >-
+    Box-headed Brahmi Sanskrit lines carved vertically on the Talagunda granite pillar in Shivamogga district,
+    Karnataka
+  credit: Dineshkannambadi
+  license: CC BY-SA 3.0
+tags:
+  - inscription
+  - kadamba
+  - talagunda
+  - sanskrit
+  - mayurasharman
+  - karnataka
+review:
+  status: draft
+  author: gemini-4-hydrogen-xhigh

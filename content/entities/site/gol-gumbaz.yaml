@@ -1,0 +1,54 @@
+id: site.gol-gumbaz
+type: site
+kind: site
+names:
+  en: Gol Gumbaz
+  native: ಗೋಲ್ ಗುಂಬಜ್
+summary: >-
+  Gol Gumbaz at Vijayapura (Bijapur) in Karnataka is the seventeenth-century mausoleum of the Adil Shahi
+  ruler Muhammad Adil Shah. Intersecting arches carry a large dome over a square chamber, and a gallery
+  around the dome is known for its echoes.
+summaries:
+  kids: >-
+    Inside the Gol Gumbaz tomb in Karnataka, a huge dome rises over an open hall. Along the high
+    gallery, even quiet sounds can travel across the chamber.
+  teen: >-
+    Muhammad Adil Shah's mausoleum in Bijapur uses intersecting masonry arches to support a dome over a
+    large square hall. The projecting gallery inside the dome is known as the Whispering Gallery.
+region: Northern Karnataka (Vijayapura district, Karnataka)
+location: { name: "Vijayapura (Bijapur), Karnataka", lat: 16.830, lon: 75.736 }
+datings:
+  - method: scholarly-consensus
+    range: { earliest: "1626 CE", latest: "1656 CE", precision: decade, circa: true }
+    grade: B
+    label: "Construction under Muhammad Adil Shah"
+    sources:
+      - src.michell-2003-bijapur
+      - src.cousens-1907-bijapur
+      - src.lahiri-2021-gol-gumbad
+    note: >-
+      The tomb was built in the second quarter of the seventeenth century for Muhammad Adil Shah, who
+      died in 1656 CE.
+claims:
+  - text: >-
+      Intersecting arches support the dome above a square burial chamber without freestanding interior
+      columns.
+    grade: B
+    sources:
+      - src.cousens-1907-bijapur
+      - src.michell-zebrowski-1999-architecture-art-deccan-sultanates
+  - text: >-
+      A projecting gallery near the base of the dome is known for carrying sound around its curved wall.
+    grade: B
+    sources:
+      - src.michell-2003-bijapur
+      - src.lahiri-2021-gol-gumbad
+relations: []
+wikidata: Q192295
+image:
+  commons: "File:Gol Gumbaj2.JPG"
+  alt: Monumental domed mausoleum of Gol Gumbaz at Vijayapura flanked by octagonal seven-storey corner towers
+  credit: Meesanjay
+  license: CC BY-SA 3.0
+tags: [gol-gumbaz, bijapur, adil-shahi, deccan, karnataka, dome, architecture]
+review: { status: draft, author: "gemini-4-hydrogen-xhigh" }

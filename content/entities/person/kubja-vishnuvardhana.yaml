@@ -1,0 +1,54 @@
+id: person.kubja-vishnuvardhana
+type: person
+kind: person
+names:
+  en: Kubja Vishnuvardhana
+  iast: Kubja Viṣṇuvardhana
+summary: Kubja Vishnuvardhana, brother of Pulakeshin II, established the Eastern Chalukya line.
+  Inscriptions date his own grants in regnal years, and scholars differ on how to align those years
+  with the CE calendar.
+summaries:
+  kids: Vishnuvardhana went from the Deccan to rule on the east coast. His family kept ruling there
+    for many generations.
+  teen: Some of Vishnuvardhana's charters use regnal years and refer to eclipses. Fleet's calculation
+    and the more familiar dating give different starting years.
+region: Coastal Andhra
+datings:
+  - method: epigraphic
+    range:
+      earliest: "620"
+      latest: "645"
+      precision: decade
+      circa: true
+    grade: C
+    label: Conventional regnal chronology
+    sources:
+      - src.singh-2008-ancient-early-medieval-india
+      - src.karashima-2014-concise-history-south-india
+    note: This interval brackets the conventional 624 to 641 reconstruction.
+  - method: astronomical-reference
+    range:
+      earliest: "615"
+      latest: "633"
+      precision: year
+      circa: true
+    grade: C
+    label: Fleet and Sewell's eclipse-based chronology
+    sources:
+      - src.sewell-1932-historical-inscriptions-southern-india
+    note: The dates depend on Fleet's identification of the eclipse in the eighteenth regnal year.
+claims:
+  - text: Vishnuvardhana established the Chalukya branch that ruled Vengi.
+    grade: B
+    sources:
+      - src.singh-2008-ancient-early-medieval-india
+      - src.karashima-2014-concise-history-south-india
+relations:
+  - kind: founded
+    target: polity.eastern-chalukya-dynasty-of-vengi
+debate: Fleet dated the counted reign from 615 to 633, while another reconstruction assigns it to
+  about 624 to 641.
+tags: []
+review:
+  status: draft
+  author: codex-gpt-6

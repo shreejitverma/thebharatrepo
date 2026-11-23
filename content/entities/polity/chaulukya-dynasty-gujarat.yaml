@@ -1,0 +1,51 @@
+id: polity.chaulukya-dynasty-gujarat
+type: polity
+kind: polity
+names:
+  en: Chaulukya Dynasty of Gujarat (Solanki)
+  iast: Caulukya
+summary: The Chaulukyas, or Solankis, ruled Gujarat from Anahilapataka, modern Patan. The line
+  begins with Mularaja in historical reconstructions, and its later rulers included Jayasimha
+  Siddharaja and Kumarapala.
+summaries:
+  kids: The Solankis made Patan their capital. Inscriptions and Jain books preserve stories and
+    records about their rulers.
+  teen: The Chaulukyas of Gujarat built their power around Anahilapataka. Royal inscriptions and Jain
+    writings help reconstruct their court, including the association of Hemachandra with Kumarapala.
+region: Gujarat and adjacent western India
+location:
+  name: Patan (Anahilapataka)
+  lat: 23.85
+  lon: 72.12
+datings:
+  - method: scholarly-consensus
+    range:
+      earliest: "940"
+      latest: "1250"
+      precision: decade
+      circa: true
+    grade: B
+    label: Period of rule
+    sources:
+      - src.singh-2008-ancient-early-medieval-india
+      - src.thapar-2002-early-india
+    note: The range brackets Mularaja and the transition to Vaghela power in the thirteenth century.
+claims:
+  - text: Mularaja established the Chaulukya line of Gujarat at Anahilapataka.
+    grade: B
+    sources:
+      - src.singh-2008-ancient-early-medieval-india
+      - src.thapar-2002-early-india
+  - text: Kumarapala was associated with the Jain scholar Hemachandra, whose writings and later Jain
+      narratives illuminate the court.
+    grade: B
+    sources:
+      - src.singh-2008-ancient-early-medieval-india
+      - src.dundas-2002-the-jains
+relations:
+  - kind: related-to
+    target: polity.paramara-dynasty
+tags: []
+review:
+  status: draft
+  author: codex-gpt-6

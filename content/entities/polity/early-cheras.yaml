@@ -1,0 +1,56 @@
+id: polity.early-cheras
+type: polity
+kind: polity
+names:
+  en: Early Chera Dynasty
+  iast: Cēra
+  native: சேரர்
+summary: >-
+  The Early Cheras (Ceralar) were one of the three crowned lineages (muventar) of Sangam-era Tamilakam, ruling parts of present-day Kerala and western Tamil Nadu from capitals at Vanci (often identified with Karur) and the port of Muciri (Muziris). Mentioned as Ketalaputo in Ashoka's Major Rock Edict II and celebrated in the Patirruppattu anthology, they are directly attested by Tamil-Brahmi inscriptions at Pugalur and silver portrait coins.
+summaries:
+  kids: >-
+    The Early Cheras were ancient kings who ruled much of Kerala and western Tamil Nadu over 2,000 years ago, trading black pepper and gemstones from their port at Muziris.
+  teen: >-
+    Named as Ketalaputo in Ashoka's edicts and praised in the Patirruppattu poems, the Early Cheras controlled the Kongu region and Malabar ports, leaving Tamil-Brahmi rock inscriptions at Pugalur and coins at Karur.
+region: Central Kerala and Kongu region of western Tamil Nadu
+location: { name: "Karur (ancient Vanci), Tamil Nadu", lat: 10.96, lon: 78.08 }
+datings:
+  - method: epigraphic
+    range: { earliest: "300 BCE", latest: "300 CE", precision: century, circa: true }
+    grade: B
+    label: Ashokan synchronism to late Sangam-era Pugalur epigraphy
+    sources:
+      - src.hultzsch-1925-inscriptions-of-asoka
+      - src.mahadevan-2003-early-tamil-epigraphy
+      - src.karashima-2014-concise-history-south-india
+    note: Ashoka's Major Rock Edict II (mid-3rd century BCE) names Ketalaputo among southern neighbours, while the Pugalur (Aranattarmalai) Tamil-Brahmi inscriptions naming Chera rulers of the Irumporai line are dated palaeographically to roughly the 2nd to 3rd century CE.
+claims:
+  - text: Ashoka's Major Rock Edict II (c. 256 BCE) lists Ketalaputo alongside Choda, Pada, and Satiyaputo as independent realms beyond the Mauryan southern frontier.
+    grade: A
+    sources:
+      - src.hultzsch-1925-inscriptions-of-asoka
+      - src.singh-2008-ancient-early-medieval-india
+  - text: "Two Tamil-Brahmi inscriptions at Pugalur near Karur record rock-cut beds donated to Jain ascetics by Ko Atan Cellirumporai and his successors, whom epigraphists identify with three generations of Chera kings named in the Patirruppattu."
+    grade: B
+    sources:
+      - src.mahadevan-2003-early-tamil-epigraphy
+      - src.karashima-2014-concise-history-south-india
+  - text: "Classical Mediterranean accounts, including the Periplus Maris Erythraei and Pliny, describe the Chera port of Muziris as a major outlet for Malabar black pepper and inland beryl from the Kongu region."
+    grade: B
+    sources:
+      - src.casson-1989-periplus-maris-erythraei
+      - src.champakalakshmi-1996-trade-ideology-urbanization
+  - text: Sangam poems, notably the Patirruppattu and Akananuru, preserve genealogies and battles of Early Chera rulers such as Utiyan Cheralatan, Imayavaramban Netuncheralatan and Senguttuvan; the corpus is generally placed between about 100 BCE and 300 CE.
+    grade: C
+    sources:
+      - src.zvelebil-1973-smile-of-murugan
+      - src.gurukkal-2010-social-formations-early-south-india
+relations:
+  - { kind: related-to, target: text.sangam-literature }
+  - { kind: related-to, target: artifact.tamil-brahmi-inscriptions }
+  - { kind: related-to, target: polity.early-cholas }
+  - { kind: related-to, target: polity.early-pandyas }
+  - { kind: related-to, target: site.kodumanal }
+  - { kind: related-to, target: polity.chera-dynasty, note: The later Chera Perumals of Makotai are treated as a separate polity }
+tags: [chera, sangam, tamilakam, kerala, pugalur, muziris, epigraphy]
+review: { status: draft, author: "gemini-4-hydrogen-xhigh" }

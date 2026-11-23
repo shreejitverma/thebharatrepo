@@ -1,0 +1,62 @@
+id: person.vachaspati-mishra
+type: person
+kind: person
+names:
+  en: Vachaspati Mishra
+  iast: Vācaspati Miśra
+  native: वाचस्पति मिश्र
+summary: Vachaspati Mishra wrote commentaries across several Sanskrit philosophical schools,
+  including the Bhamati on Shankara’s Brahma Sutra commentary. An unspecified calendar era in a
+  dated work leaves two plausible centuries for his activity.
+summaries:
+  kids: Vachaspati explained difficult books from several schools of thought. A number he wrote gives
+    scholars two possible years for one of his works.
+  teen: The Nyayasuchinibandha gives the year 898 without naming a calendar era. Reading it as Vikrama
+    or Shaka changes the proposed date by 135 years.
+datings:
+  - method: textual-internal
+    range:
+      earliest: "800 CE"
+      latest: "880 CE"
+      best: "841 CE"
+      precision: century
+      circa: true
+    grade: C
+    label: Estimated floruit horizon under the Vikrama era reading
+    sources:
+      - src.carpenter-2014-indian-buddhist-philosophy
+    note: Broad ninth-century floruit anchored to 841 CE under the Vikrama-era reading of the year
+      898 in the Nyayasuchinibandha; his personal life dates are unrecorded.
+  - method: textual-internal
+    range:
+      earliest: "940 CE"
+      latest: "1000 CE"
+      best: "976 CE"
+      precision: century
+      circa: true
+    grade: C
+    label: Estimated floruit horizon under the Shaka era reading
+    sources:
+      - src.carpenter-2014-indian-buddhist-philosophy
+      - src.stanford-language-india-chronology
+    note: Broad tenth-century floruit anchored to 976 CE under the Shaka-era reading of the year 898
+      in the Nyayasuchinibandha; his personal life dates are unrecorded.
+claims:
+  - text: The Bhamati comments on Shankara’s Brahma Sutra commentary, and Vachaspati also wrote on Nyaya.
+    grade: B
+    sources:
+      - src.ganeri-2017-oxford-handbook-indian-philosophy
+relations:
+  - kind: related-to
+    target: person.adi-shankara
+  - kind: related-to
+    target: person.mandana-mishra
+debate: The transmitted year 898 yields 841 CE in the Vikrama era or 976 CE in the Shaka era. Both
+  are proposed dates for the work, rather than recorded life dates.
+tags:
+  - nyaya
+  - vedanta
+  - sanskrit-commentary
+review:
+  status: draft
+  author: codex-gpt-6

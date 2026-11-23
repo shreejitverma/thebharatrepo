@@ -1,0 +1,51 @@
+id: site.kamakhya-temple
+type: site
+kind: site
+names:
+  en: Kamakhya Temple
+  iast: Kāmākhyā Mandira
+  native: কামাখ্যা মন্দিৰ
+summary: >-
+  The Kamakhya Temple atop Nilachal Hill in Guwahati, Assam, is one of the pre-eminent Shakta Pithas
+  of eastern India, enshrining a natural rock-cleft yoni-pitha worshipped as Goddess Kamakhya.
+  Archaeological sculptures on Nilachal Hill date back to the seventh-tenth centuries CE under
+  Kamarupa dynasties, while the present brick-and-stone shikhara sanctuary was rebuilt in 1565 CE
+  under the Koch king Nara Narayan and his brother Chilarai.
+summaries:
+  kids: >-
+    Sitting on Nilachal Hill overlooking the Brahmaputra River in Guwahati, Kamakhya Temple is a major
+    temple of the Mother Goddess, with ancient stone carvings and a brick dome rebuilt in 1565 CE.
+  teen: >-
+    Tracing roots to early medieval Kamarupa Shakta worship and rebuilt in 1565 CE by Koch ruler Nara
+    Narayan after structural ruin, Kamakhya Temple is a central monument of Assamese Shaktism, tantra
+    and regional temple architecture.
+region: Guwahati, Kamrup Metropolitan district, Assam
+location: { name: "Nilachal Hill, Guwahati, Assam", lat: 26.166, lon: 91.705 }
+datings:
+  - method: art-historical
+    range: { earliest: 700, latest: 1100, precision: century, circa: true }
+    grade: B
+    label: Early medieval sculptural fragments and temple foundations on Nilachal Hill
+    sources:
+      - src.choudhury-1985-archaeology-brahmaputra-valley
+      - src.shin-2010-yoni-yoginis-mahavidyas
+    note: Carved stone blocks, plinth mouldings and deity reliefs surviving around the hill date the original Kamarupa-period sanctuary structures to the 8th-11th centuries CE.
+claims:
+  - text: The 1565 CE Sanskrit inscription inside the temple records that General Shukladhvaja (Chilarai) rebuilt the brick sanctuary on Nilachal Hill under the orders of Koch king Nara Narayan.
+    grade: A
+    sources:
+      - src.gait-1906-history-of-assam
+      - src.shin-2010-yoni-yoginis-mahavidyas
+  - text: The Kalika Purana and Yogini Tantra composed in medieval Kamarupa establish Kamakhya on Nilachal Hill as a major centre of Shakta and tantric worship.
+    grade: B
+    sources:
+      - src.shin-2010-yoni-yoginis-mahavidyas
+      - src.barua-1933-early-history-kamarupa
+relations: []
+image:
+  commons: "File:Kamakhya Temple, Guwahati, Assam.jpg"
+  alt: Multi-domed brick shikhara and complex of Kamakhya Temple atop Nilachal Hill in Guwahati, Assam
+  credit: BhuyanBhaskar
+  license: CC BY 4.0
+tags: [kamakhya, guwahati, assam, shakta, koch, kamarupa, temple]
+review: { status: draft, author: "gemini-4-hydrogen-xhigh" }

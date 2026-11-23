@@ -1,0 +1,44 @@
+id: event.first-anglo-mysore-war
+type: event
+kind: event
+names:
+  en: First Anglo-Mysore War
+summary: Haidar Ali fought the East India Company and its changing allies from 1767 to 1769. The
+  war ended with the Treaty of Madras, which provided for mutual restoration of conquests and
+  defensive assistance.
+summaries:
+  kids: Haidar Ali's Mysore army fought the East India Company. The two sides made peace in 1769
+    and agreed to help each other if attacked.
+  teen: Shifting alliances shaped the first war between Mysore and the Company. Haidar Ali's
+    advance near Madras helped bring the Company to terms.
+region: Mysore and the Carnatic, southern India
+datings:
+  - method: scholarly-consensus
+    range:
+      earliest: "1767"
+      latest: "1769"
+      precision: year
+      circa: false
+    grade: B
+    label: First war and Treaty of Madras
+    sources:
+      - src.bayly-1988-making-of-british-empire
+      - src.bandyopadhyay-2004-from-plassey-to-partition
+claims:
+  - text: The 1769 peace called for restitution of conquests and mutual assistance in defensive wars.
+    grade: A
+    sources:
+      - src.aitchison-1909-mysore-treaties
+      - src.bayly-1988-making-of-british-empire
+      - src.bandyopadhyay-2004-from-plassey-to-partition
+relations:
+  - kind: related-to
+    target: person.haidar-ali
+  - kind: preceded
+    target: event.second-anglo-mysore-war
+tags:
+  - mysore
+  - company-rule
+review:
+  status: draft
+  author: codex-gpt-6

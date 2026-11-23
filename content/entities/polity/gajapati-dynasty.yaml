@@ -1,0 +1,56 @@
+id: polity.gajapati-dynasty
+type: polity
+kind: polity
+names:
+  en: Suryavamshi Gajapati Dynasty
+  iast: Sūryavaṃśī Gajapati
+  native: ଗଜପତି
+summary: Kapilendra founded the Suryavamshi Gajapati house at Cuttack after the Eastern Gangas. Its
+  rulers extended their power along the east coast and associated their kingship with Jagannath at
+  Puri.
+summaries:
+  kids: The Gajapati kings ruled from Cuttack. Their kingdom stretched down the east coast and had
+    close ties to the Jagannath temple at Puri.
+  teen: The Gajapatis retained royal practices associated with the Eastern Gangas. Their inscriptions
+    and those of Vijayanagara help trace shifting authority on the coast.
+region: Odisha and parts of the eastern seaboard
+location:
+  name: Cuttack
+  lat: 20.48
+  lon: 85.88
+datings:
+  - method: scholarly-consensus
+    range:
+      earliest: "1430"
+      latest: "1545"
+      precision: decade
+      circa: true
+    grade: B
+    label: Period of rule
+    sources:
+      - src.mishra-2016-eastern-ganga-gajapati
+      - src.sewell-1932-historical-inscriptions-southern-india
+      - src.asher-talbot-2006-india-before-europe
+    note: The range covers Kapilendra's takeover and the loss of power by his line in the early 1540s.
+      Later rulers also used the title Gajapati.
+claims:
+  - text: Kapilendra succeeded the Eastern Gangas and established the new royal line at Cuttack.
+    grade: B
+    sources:
+      - src.mishra-2016-eastern-ganga-gajapati
+      - src.sewell-1932-historical-inscriptions-southern-india
+  - text: Gajapati rule drew on its connection to Jagannath at Puri and stretched south into parts of
+      coastal Andhra.
+    grade: B
+    sources:
+      - src.mishra-2016-eastern-ganga-gajapati
+      - src.asher-talbot-2006-india-before-europe
+relations:
+  - kind: succeeded
+    target: polity.eastern-ganga-dynasty
+  - kind: related-to
+    target: polity.vijayanagara-empire
+tags: []
+review:
+  status: draft
+  author: codex-gpt-6

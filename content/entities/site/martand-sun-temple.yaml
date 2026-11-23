@@ -1,0 +1,56 @@
+id: site.martand-sun-temple
+type: site
+kind: site
+names:
+  en: Martand Sun Temple
+  iast: Mārtāṇḍa Sūrya Mandira
+  native: मार्तण्ड सूर्य मंदिर
+summary: >-
+  The Martand Sun Temple near Anantnag in Kashmir is an early medieval shrine to Surya. Kalhana
+  attributes it to the eighth-century Karkota ruler Lalitaditya Muktapida. The stone ruins preserve a
+  central shrine surrounded by a colonnaded courtyard.
+summaries:
+  kids: >-
+    On a plateau in Kashmir stand the stone ruins of a temple dedicated to Surya, the sun god. A later
+    Kashmiri chronicle says that King Lalitaditya built it.
+  teen: >-
+    Kalhana's Rajatarangini attributes the Martand Sun Temple to the eighth-century ruler Lalitaditya.
+    Its stone sanctuary and column-lined enclosure are examples of early medieval Kashmiri architecture.
+region: Kashmir Valley (Anantnag district, Jammu and Kashmir)
+location: { name: "Martand (near Anantnag), Jammu and Kashmir", lat: 33.745, lon: 75.220 }
+datings:
+  - method: scholarly-consensus
+    range: { earliest: "700 CE", latest: "800 CE", precision: century, circa: true }
+    grade: B
+    label: "Eighth-century Karkota construction"
+    sources:
+      - src.kak-1933-ancient-monuments-kashmir
+      - src.stein-1900-rajatarangini
+      - src.meister-dhaky-1991-encyclopaedia-indian-temple-architecture-north-2
+    note: >-
+      The architecture is consistent with the eighth-century attribution to Lalitaditya in Kalhana's
+      later chronicle.
+claims:
+  - text: >-
+      Kalhana's Rajatarangini, composed in the twelfth century, attributes the temple and its enclosure
+      to Lalitaditya Muktapida.
+    grade: B
+    sources:
+      - { id: src.stein-1900-rajatarangini, locator: "Book IV" }
+      - src.kak-1933-ancient-monuments-kashmir
+  - text: >-
+      A rectangular colonnaded enclosure surrounds the limestone sanctuary, and the ruins include
+      trefoil arches and carved pilasters.
+    grade: B
+    sources:
+      - src.kak-1933-ancient-monuments-kashmir
+      - src.harle-1994-art-architecture-indian-subcontinent
+relations: []
+wikidata: Q6774201
+image:
+  commons: "File:Martand Sun Temple Central shrine (6133772365).jpg"
+  alt: Limestone central sanctuary ruins of the Martand Sun Temple in Kashmir showing towering trefoil arches and carved plinth reliefs
+  credit: Varun Shiv Kapur from New Delhi, India
+  license: CC BY 2.0
+tags: [martand, sun-temple, kashmir, karkota, lalitaditya, temple-architecture]
+review: { status: draft, author: "gemini-4-hydrogen-xhigh" }

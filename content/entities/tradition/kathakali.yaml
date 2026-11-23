@@ -1,0 +1,78 @@
+id: tradition.kathakali
+type: tradition
+kind: art
+names:
+  en: Kathakali
+  iast: Kathakaḷi
+  native: കഥകളി
+summary: Kathakali ('story-play') is a classical dance-drama of Kerala in which actor-dancers communicate epic and
+  Puranic narratives entirely through codified hand gestures (mudras), facial muscles and eye movements while vocalists
+  sing the Malayalam-Sanskrit attakkatha libretto. Crystallising in the seventeenth and eighteenth centuries from
+  Krishnanattam and Ramanattam, it was reorganised at Kerala Kalamandalam in 1930.
+summaries:
+  kids: Kathakali is a dramatic story-dance from Kerala where actors wear colourful painted faces and towering crowns,
+    acting out epic tales without speaking a single word.
+  teen: Developed in Kerala between the seventeenth and eighteenth centuries out of temple traditions like Krishnanattam
+    and Koodiyattam, Kathakali combines vigorous martial training, colour-coded makeup and elaborate sign-language
+    storytelling.
+region: Kerala
+location:
+  name: Cheruthuruthy, Thrissur, Kerala
+  lat: 10.749
+  lon: 76.271
+datings:
+  - method: scholarly-consensus
+    range:
+      earliest: 1650
+      latest: 1800
+      precision: century
+      circa: true
+    grade: B
+    label: Emergence and literary consolidation of attakkatha plays in Kerala
+    sources:
+      - src.zarrilli-2000-kathakali-dance-drama
+    note: Phillip Zarrilli traces Kathakali's crystallisation from seventeenth-century Krishnanattam and Ramanattam through
+      the major attakkatha playwrights of the seventeenth and eighteenth centuries.
+claims:
+  - text: Kathakali draws martial body training (kalarippayattu) and Sanskrit gesture conventions from Koodiyattam into a
+      silent actor's theatre accompanied by chenda, maddalam and vocalists.
+    grade: B
+    sources:
+      - src.zarrilli-2000-kathakali-dance-drama
+      - src.zarrilli-1998-when-the-body-becomes-all-eyes
+  - text: Its makeup (vesham) classifies characters visually using colour codes such as pacha (green) for noble heroes and
+      kathi (knife) for anti-heroes.
+    grade: A
+    sources:
+      - src.zarrilli-2000-kathakali-dance-drama
+      - src.madhavan-2025-slowness-kathakali
+  - text: Vallathol Narayana Menon founded Kerala Kalamandalam in 1930 to institutionalise Kathakali training and stage
+      presentation.
+    grade: A
+    sources:
+      - src.zarrilli-2000-kathakali-dance-drama
+      - src.madhavan-2025-slowness-kathakali
+relations:
+  - kind: influenced
+    target: tradition.mohiniyattam
+  - kind: related-to
+    target: text.natyashastra
+  - kind: related-to
+    target: text.mahabharata
+  - kind: related-to
+    target: text.valmiki-ramayana
+wikidata: Q839500
+image:
+  commons: File:Gopiasan-and-harinarayanan (4506992629).jpg
+  alt: Two Kathakali performers in green pacha face makeup, tall crowns and wide pleated skirts
+  credit: Paul Varuni
+  license: CC BY 2.0
+tags:
+  - kathakali
+  - dance-drama
+  - kerala
+  - mudras
+  - kalamandalam
+review:
+  status: draft
+  author: gemini-4-hydrogen-xhigh

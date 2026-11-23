@@ -1,0 +1,51 @@
+id: polity.gahadavala-dynasty
+type: polity
+kind: polity
+names:
+  en: Gahadavala Dynasty
+  iast: Gāhaḍavāla
+summary: The Gahadavalas emerged in the late eleventh century, ruling Kannauj and the Varanasi
+  region. Chandradeva's grants attest the early line, and the death of Jayachandra in battle in 1194
+  weakened its hold on the region.
+summaries:
+  kids: The Gahadavalas ruled around Kannauj and Varanasi. Their copper records tell us about grants
+    of land and the places they governed.
+  teen: Chandradeva's charters anchor the rise of the line. Its central power weakened after 1194,
+    though grants show that members of the family retained some local authority.
+region: Middle Ganga valley and Kannauj
+location:
+  name: Kannauj (royal centre)
+  lat: 27.05
+  lon: 79.92
+datings:
+  - method: scholarly-consensus
+    range:
+      earliest: "1080"
+      latest: "1230"
+      precision: decade
+      circa: true
+    grade: B
+    label: Period of rule
+    sources:
+      - src.singh-2008-ancient-early-medieval-india
+      - src.jackson-1999-delhi-sultanate
+      - src.devadevan-2020-early-medieval-origins-india
+    note: Dated grants anchor Chandradeva and later rulers. The end includes the surviving line after
+      the Ghurid victory over Jayachandra.
+claims:
+  - text: Chandradeva was the earliest securely documented ruler of the established Gahadavala kingdom.
+    grade: B
+    sources:
+      - src.singh-2008-ancient-early-medieval-india
+      - src.devadevan-2020-early-medieval-origins-india
+  - text: Jayachandra was defeated and killed in the Ghurid campaign at Chandawar in 1194.
+    grade: B
+    sources:
+      - src.jackson-1999-delhi-sultanate
+relations:
+  - kind: related-to
+    target: polity.chahamana-dynasty
+tags: []
+review:
+  status: draft
+  author: codex-gpt-6

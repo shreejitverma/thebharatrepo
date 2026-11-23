@@ -1,0 +1,89 @@
+id: site.kallanai
+type: site
+kind: science
+names:
+  en: Kallanai (Grand Anicut)
+  native: கல்லணை
+summary: Kallanai is a stone weir in the Kaveri delta that helped divert floodwater toward the Kollidam.
+  Its construction date is disputed. Tradition credits the early Chola king Karikala, while nineteenth-century
+  surveys and records document later modifications.
+summaries:
+  kids: This stone barrier helped send floodwater toward another branch of the river and protect fields in the
+    delta.
+  teen: Kallanai worked with two river branches to manage seasonal flows in the Kaveri delta.
+    Historians debate whether accounts of an early Chola king raising the riverbanks also date the stone weir.
+region: Kaveri delta, Tamil Nadu
+datings:
+  - method: textual-internal
+    range: { earliest: "200 BCE", latest: "101 BCE", precision: century, circa: true }
+    grade: E
+    label: Second century BCE (Deivanayagam and Paranthaman)
+    sources:
+      - id: src.ambach-2022-temples-texts-networks
+        locator: "Czerniak-Drożdżowicz and Sathyanarayanan, pp. 129-130"
+    note: The authors infer an early date from literary descriptions of abundant water in the Chola region.
+      The accounts provide indirect evidence for the stone structure.
+  - method: traditional-sampradaya
+    range:
+      earliest: 101
+      latest: 200
+      precision: century
+      circa: true
+    grade: D
+    label: Traditional attribution to Karikala Chola (cited by ICID and Bijker)
+    sources:
+      - src.icid-2021-grand-anicut
+      - src.bijker-2007-dikes-and-dams
+    note: Tradition and engineering accounts attribute the weir to the early Chola king Karikala in the second century CE; contemporary inscriptions do not attest the stone structure.
+  - method: textual-internal
+    range: { earliest: 1450, latest: 1525, precision: century, circa: true }
+    grade: C
+    label: Late medieval construction (Subramanian and Karashima)
+    sources:
+      - id: src.karashima-2014-concise-history-south-india
+        locator: Section 3.3, note 15
+    note: Karashima cites Subramanian for a date around the late fifteenth century in a study of irrigation history.
+claims:
+  - text: Chitra Krishnan reconstructed how the precolonial weir diverted high flows into the Kollidam through a
+      short connecting channel.
+    grade: B
+    sources:
+      - src.bijker-2007-dikes-and-dams
+      - src.icid-2021-grand-anicut
+  - text: Early nineteenth-century engineering records identify silting at the Grand Anicut as a problem for the
+      irrigated delta.
+    grade: A
+    sources:
+      - src.ramesh-2021-indian-rivers-dams
+  - text: Subbarayalu reads the seventh-century charter of Punyakumara as evidence for the attribution of
+      Kaveri flood banks to Karikala and questions the identification of those banks with Kallanai.
+    grade: C
+    sources:
+      - id: src.karashima-2014-concise-history-south-india
+        locator: p. 52, note 7
+  - text: A survey in 1804 and irrigation initiatives beginning in 1836 document colonial engineering work on the
+      Kaveri system at the Grand Anicut.
+    grade: A
+    sources:
+      - src.ramesh-2021-indian-rivers-dams
+      - src.icid-2021-grand-anicut
+relations:
+  - kind: related-to
+    target: concept.south-indian-tank-irrigation
+debate: >-
+  The conventional second-century CE date follows the attribution to Karikala.
+  Deivanayagam and Paranthaman propose an earlier date based on readings of Sangam literature.
+  Subbarayalu distinguishes the flood banks attributed to Karikala from the stone weir,
+  and Karashima cites evidence for a late-medieval construction date.
+image:
+  commons: File:Kallanai 1.jpg
+  alt: Kallanai on the Kaveri River near Tiruchirappalli
+  credit: Nittavinoda
+  license: CC BY-SA 4.0
+tags:
+  - hydraulic-engineering
+  - kaveri
+  - irrigation
+review:
+  status: draft
+  author: codex-gpt-6

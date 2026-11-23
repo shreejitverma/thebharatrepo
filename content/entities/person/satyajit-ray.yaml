@@ -1,0 +1,63 @@
+id: person.satyajit-ray
+type: person
+kind: art
+names:
+  en: Satyajit Ray
+  iast: Satyajit Rāẏa
+  native: সত্যজিৎ রায়
+summary: "Satyajit Ray (1921-1992 CE) was a Bengali filmmaker, graphic designer, composer and writer widely regarded as one of the foremost auteurs of world cinema. Trained briefly at Santiniketan under Nandalal Bose and Binode Behari Mukherjee before working in advertising, he debuted with Pather Panchali (1955) and directed nearly thirty feature films including Charulata and The Music Room, receiving an Honorary Academy Award in 1992."
+summaries:
+  kids: Satyajit Ray (1921-1992) was a famous Indian film director from Kolkata who made the Apu Trilogy and won an
+    Honorary Oscar for his lifelong contribution to cinema.
+  teen: Starting in graphic design after studying art at Santiniketan, Satyajit Ray inaugurated modern Indian art cinema
+    with Pather Panchali (1955), directing, writing and often scoring classics like Charulata.
+region: Kolkata, West Bengal
+location:
+  name: Kolkata, West Bengal
+  lat: 22.573
+  lon: 88.364
+datings:
+  - method: documentary
+    range:
+      earliest: 1921
+      latest: 1992
+      precision: year
+      circa: false
+    grade: A
+    label: Documented lifespan (1921-1992 CE)
+    sources:
+      - src.robinson-1989-satyajit-ray
+      - src.academy-1992-honorary-award-ray
+    note: Born 2 May 1921 in Calcutta and died 23 April 1992; received the Academy Honorary Award in March 1992.
+claims:
+  - text: Ray's debut Pather Panchali (1955), followed by Aparajito (1956) and Apur Sansar (1959), formed the Apu Trilogy
+      and placed Indian cinema prominently on the international festival circuit.
+    grade: A
+    sources:
+      - src.robinson-1989-satyajit-ray
+      - src.cooper-2000-cinema-satyajit-ray
+      - src.rajadhyaksha-1999-encyclopaedia-indian-cinema
+  - text: At the 64th Academy Awards in 1992, the Academy of Motion Picture Arts and Sciences conferred on Ray an Honorary
+      Award for his mastery of cinema and humanitarian outlook.
+    grade: A
+    sources:
+      - src.academy-1992-honorary-award-ray
+      - src.dasgupta-1994-cinema-satyajit-ray
+relations:
+  - kind: related-to
+    target: event.santiniketan-unesco-inscription
+wikidata: Q8873
+image:
+  commons: File:Satyajit Ray in New York (cropped).jpg
+  alt: Portrait photograph of Indian filmmaker Satyajit Ray in New York in 1981
+  credit: Dinu Alam
+  license: CC BY-SA 4.0
+tags:
+  - satyajit-ray
+  - cinema
+  - kolkata
+  - apu-trilogy
+  - oscar
+review:
+  status: draft
+  author: gemini-4-hydrogen-xhigh

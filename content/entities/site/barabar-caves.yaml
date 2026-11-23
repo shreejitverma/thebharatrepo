@@ -1,0 +1,74 @@
+id: site.barabar-caves
+type: site
+kind: site
+names:
+  en: Barabar and Nagarjuni Caves
+  iast: Barābara Guhāḥ
+  native: बराबर की गुफाएँ
+summary: >-
+  Seven granite caves survive in the Barabar and Nagarjuni hills in Bihar. Third-century BCE
+  inscriptions record gifts by Ashoka and Dasharatha to Ajivika ascetics. Lomas Rishi has a carved
+  entrance with a curved arch, and the date of its carving is uncertain.
+summaries:
+  kids: >-
+    Workers carved these caves into solid granite in Bihar over two thousand years ago. Some walls were
+    polished until they shone, and inscriptions tell of caves given by Mauryan rulers to Ajivika
+    ascetics.
+  teen: >-
+    Mauryan inscriptions date several of the Barabar and Nagarjuni caves and record gifts to Ajivika
+    ascetics. The carved entrance at Lomas Rishi has no Mauryan dedication, so its date is estimated
+    from the structure and carving.
+region: Magadha (Jehanabad district, Bihar)
+location: { name: "Barabar Hills, Bihar", lat: 25.005, lon: 85.063 }
+datings:
+  - method: epigraphic
+    range: { earliest: "260 BCE", latest: "220 BCE", precision: decade, circa: true }
+    grade: A
+    label: "Ashokan and Dasharatha cave dedications"
+    sources:
+      - src.hultzsch-1925-inscriptions-of-asoka
+      - src.falk-2006-asokan-sites-and-artefacts
+    note: >-
+      Sudama and Visvakarma carry records from Ashoka's twelfth regnal year, and Karan Chaupar bears a
+      record from his nineteenth year. Dasharatha's accession inscriptions are on the three Nagarjuni
+      caves. The BCE equivalents of Mauryan regnal dates are approximate.
+  - method: art-historical
+    range: { earliest: "260 BCE", latest: "200 BCE", precision: decade, circa: true }
+    grade: C
+    label: "Estimated date of the Lomas Rishi excavation"
+    sources:
+      - src.dehejia-1972-early-buddhist-rock-temples
+      - src.tartakov-2003-barabar-nagarjuni
+    note: >-
+      The chamber and polish suggest the Mauryan period. An inscription above the entrance belongs to
+      the later ruler Anantavarman and records a later use of the cave.
+claims:
+  - text: >-
+      Inscriptions of Ashoka at Barabar and Dasharatha at Nagarjuni attest to Mauryan cave donations to
+      the Ajivikas.
+    grade: A
+    sources:
+      - src.hultzsch-1925-inscriptions-of-asoka
+      - src.falk-2006-asokan-sites-and-artefacts
+  - text: >-
+      Sudama and Gopika have polished granite walls. The Lomas Rishi entrance is carved with elephants
+      and a curved arch that resembles a timber structure.
+    grade: B
+    sources:
+      - src.tartakov-2003-barabar-nagarjuni
+      - src.huntington-1985-art-ancient-india
+debate: >-
+  The date of the Lomas Rishi cave and its carved facade is uncertain. Its plan and polished interior
+  support a Mauryan attribution. Anantavarman's later inscription records reuse of the cave.
+relations:
+  - { kind: patronised-by, target: person.ashoka }
+  - { kind: part-of, target: polity.maurya-empire }
+  - { kind: related-to, target: tradition.ajivika }
+wikidata: Q1311736
+image:
+  commons: "File:Sudama and Lomas Rishi Caves at Barabar, Bihar, 1870.jpg"
+  alt: An 1870 photograph of the entrances to the Sudama and Lomas Rishi caves in the granite hillside at Barabar
+  credit: Thomas Fraser Peppé
+  license: Public domain
+tags: [barabar-caves, nagarjuni, maurya, ashoka, ajivika, rock-cut, bihar]
+review: { status: draft, author: "gemini-4-hydrogen-xhigh" }

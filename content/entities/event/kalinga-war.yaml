@@ -1,0 +1,61 @@
+id: event.kalinga-war
+type: event
+kind: event
+names:
+  en: Kalinga War
+  iast: Kaliṅga Yuddha
+  native: कलिङ्ग युद्ध
+summary: >-
+  The Mauryan emperor Ashoka conquered Kalinga (coastal Odisha) in his eighth regnal year,
+  about 262 to 260 BCE. His Major Rock Edict XIII states that 150,000 people were deported,
+  100,000 were killed and many times more died, and presents the war as the turning point
+  behind his public policy of dhamma.
+summaries:
+  kids: >-
+    About 2,280 years ago, Emperor Ashoka fought a terrible war to conquer Kalinga in
+    present-day Odisha. He later carved stone inscriptions saying he felt deep sorrow and
+    would rule through dharma instead of war.
+  teen: >-
+    Fought in Ashoka's eighth regnal year (c. 262-260 BCE), the Kalinga War is attested directly
+    in Major Rock Edict XIII. While the edict's casualty figures cannot be independently verified,
+    the campaign anchored Ashoka's administrative shift toward dhamma.
+region: Kalinga (coastal Odisha)
+location: { name: "Dhauli, Bhubaneswar, Odisha", lat: 20.192, lon: 85.839 }
+datings:
+  - method: epigraphic
+    range: { earliest: "263 BCE", latest: "260 BCE", best: "261 BCE", precision: year, circa: true }
+    grade: B
+    label: Eighth regnal year of Ashoka (Major Rock Edict XIII)
+    sources:
+      - src.hultzsch-1925-inscriptions-of-asoka
+      - src.thapar-2012-asoka-decline-mauryas
+      - src.lahiri-2015-ashoka-ancient-india
+    note: Major Rock Edict XIII dates the conquest of Kalinga to Ashoka's eighth consecrated regnal year; absolute conversion depends on his accession date around 269-268 BCE.
+claims:
+  - text: Major Rock Edict XIII records that Kalinga was conquered eight years after Ashoka's consecration and lists 150,000 captives, 100,000 slain and many times that number dead from the war's aftermath.
+    grade: A
+    sources:
+      - src.hultzsch-1925-inscriptions-of-asoka
+      - src.lahiri-2015-ashoka-ancient-india
+  - text: Ashoka's Separate Rock Edicts at Dhauli and Jaugada in Kalinga omit Edict XIII's account of the war and instead instruct officials to govern the newly annexed province with impartiality and restraint.
+    grade: A
+    sources:
+      - src.hultzsch-1925-inscriptions-of-asoka
+      - src.singh-2008-ancient-early-medieval-india
+  - text: Historians note that the rounded casualty figures in Edict XIII likely reflect royal rhetorical emphasis alongside real demographic devastation in the Mahanadi delta.
+    grade: B
+    sources:
+      - src.thapar-2012-asoka-decline-mauryas
+      - src.lahiri-2015-ashoka-ancient-india
+debate: >-
+  While Major Rock Edict XIII anchors the Kalinga War to Ashoka's eighth regnal year, scholars
+  continue to debate the exact year of Ashoka's accession (c. 269-268 BCE) and whether the round
+  numbers of 100,000 slain and 150,000 deported should be read as administrative tallies or
+  imperial rhetoric.
+relations:
+  - { kind: related-to, target: person.ashoka }
+  - { kind: part-of, target: polity.maurya-empire }
+  - { kind: related-to, target: artifact.ashoka-major-rock-edict-xiii }
+wikidata: Q714557
+tags: [kalinga, ashoka, maurya, odisha, war, epigraphy]
+review: { status: draft, author: "gemini-4-hydrogen-xhigh" }

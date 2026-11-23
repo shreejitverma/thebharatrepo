@@ -1,0 +1,79 @@
+id: artifact.bajaur-gandhari-manuscripts
+type: artifact
+kind: text
+names:
+  en: Bajaur Collection of Gandhari Manuscripts
+  iast: Bājaura Gāndhārī Bhūrjapatra Saṅgraha
+summary: >-
+  A monastic library cache of nineteen Gandhari Prakrit birch-bark scrolls in Kharoshthi script discovered
+  around 1999 in a square stone-lined chamber in the Bajaur region of Khyber Pakhtunkhwa, Pakistan. Edited by
+  Ingo Strauch and scholars in Berlin and Munich, they date to the 1st-2nd centuries CE and contain some of
+  the earliest surviving manuscripts of Mahayana sutras and treatises alongside Vinaya and Abhidharma texts.
+summaries:
+  kids: >-
+    Discovered in an underground stone chamber in Bajaur in 1999, nineteen rolled birch-bark manuscripts from
+    around 1,900 years ago preserve some of the oldest known writings of Mahayana Buddhism.
+  teen: >-
+    Catalogued by Ingo Strauch since 2008, the nineteen Kharoshthi birch-bark scrolls from Bajaur bridge the
+    gap between early Gandharan Buddhism and Mahayana: Fragment 3 parallels the Aksobhyavyuha Sutra, while
+    other scrolls contain previously unknown local Mahayana treatises.
+region: Bajaur District, Khyber Pakhtunkhwa, Pakistan
+location:
+  name: Bajaur archaeological provenance
+  lat: 34.683
+  lon: 71.5
+datings:
+  - method: epigraphic
+    range:
+      earliest: 50
+      latest: 200
+      best: 125
+      precision: century
+      circa: true
+    grade: C
+    label: 1st-2nd century CE Kharoshthi palaeography and early Kushan context
+    sources:
+      - src.strauch-2014-bajaur-collection-kharoshthi
+      - src.salomon-1999-ancient-buddhist-scrolls-gandhara
+    note: >-
+      Dated by Kharoshthi script characteristics slightly more developed than the earliest British Library
+      scrolls, placing the Bajaur cache around the late 1st to 2nd century CE.
+claims:
+  - text: >-
+      Studied by Ingo Strauch and international collaborators, the Bajaur Collection comprises nineteen
+      multi-layered birch-bark scrolls discovered around 1999 inside a stone-lined chamber in a Buddhist ruin
+      in Bajaur, northern Pakistan.
+    grade: A
+    sources:
+      - src.strauch-2014-bajaur-collection-kharoshthi
+  - text: "Unlike earlier non-Mahayana Gandhari collections, the Bajaur corpus includes Mahayana works in Gandhari Prakrit, among them a sutra closely related to the Aksobhyavyuha and philosophical treatises without exact later Sanskrit, Chinese or Tibetan parallels."
+    grade: B
+    sources:
+      - src.strauch-2014-bajaur-collection-kharoshthi
+  - text: >-
+      The Bajaur scrolls provide direct physical evidence that Mahayana sutras and scholastic treatises
+      circulated in Kharoshthi Gandhari in 1st-2nd century CE northwestern South Asia.
+    grade: B
+    sources:
+      - src.strauch-2014-bajaur-collection-kharoshthi
+      - src.salomon-1999-ancient-buddhist-scrolls-gandhara
+relations:
+  - kind: related-to
+    target: artifact.gandhari-birch-bark-manuscripts
+    note: Companion Gandhari Kharoshthi birch-bark scroll corpus
+  - kind: related-to
+    target: artifact.shinkot-bajaur-reliquary-casket
+    note: From the same Bajaur frontier region of Gandhara
+  - kind: part-of
+    target: polity.kushan-empire
+wikidata: null
+tags:
+  - manuscript
+  - birch-bark
+  - bajaur
+  - gandhari
+  - kharoshthi
+  - mahayana
+review:
+  status: draft
+  author: gemini-4-hydrogen-xhigh

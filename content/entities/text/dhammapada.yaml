@@ -1,0 +1,50 @@
+id: text.dhammapada
+type: text
+kind: text
+names:
+  en: Dhammapada
+  iast: Dhammapada
+  native: धम्मपद
+summary: The Pali Dhammapada gathers Buddhist teaching verses on subjects such as attention, anger
+  and conduct. Related collections survive in other Indic languages, and the date of the Pali
+  arrangement is uncertain.
+summaries:
+  kids: This collection of short Buddhist poems asks how to pay attention, handle anger and act
+    kindly. The poems can be read one at a time.
+  teen: The Dhammapada groups verses by theme. Comparison with Gandhari, Sanskrit and other
+    collections shows that communities passed down many shared sayings in different orders.
+datings:
+  - method: textual-internal
+    range:
+      earliest: "350 BCE"
+      latest: 200
+      precision: century
+      circa: true
+    grade: C
+    label: "Oskar von Hinüber and Mark Allon: early verse tradition"
+    sources:
+      - src.hinuber-1996-handbook-of-pali-literature
+      - src.allon-2022-early-buddhist-texts
+      - src.carter-1998-dhammapada
+    note: A wide working range reflects the early circulation of individual verses. Parallels in other
+      collections cannot securely date the Pali arrangement.
+claims:
+  - text: The Pali collection has 423 verses arranged in 26 chapters.
+    grade: A
+    sources:
+      - src.carter-1998-dhammapada
+  - text: The Pali tradition treats its verses as teachings spoken by the Buddha.
+    grade: D
+    sources:
+      - src.carter-1998-dhammapada
+relations:
+  - kind: part-of
+    target: text.pali-canon
+tags:
+  - buddhism
+  - theravada
+  - pali
+  - verse
+review:
+  status: draft
+  author: codex-gpt-6

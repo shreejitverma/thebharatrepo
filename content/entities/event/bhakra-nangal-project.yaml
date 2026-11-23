@@ -1,0 +1,23 @@
+id: event.bhakra-nangal-project
+type: event
+kind: science
+names:
+  en: "Bhakra-Nangal project and Bhakra Dam"
+summary: "The Bhakra-Nangal project developed the Satluj for irrigation and hydroelectric power. Bhakra Dam, the major storage structure of the project, was completed by 1963."
+summaries:
+  kids: "India built the Bhakra Dam and other works on the Satluj River to send water to farms and make electricity."
+  teen: "Bhakra and Nangal formed parts of a multipurpose river project on the Satluj. Canal works supplied irrigation, while the project used river water to generate electricity. The Bhakra Dam feeds the downstream Nangal Dam and the Nangal Hydel Channel."
+region: "Satluj River, Himachal Pradesh and Punjab"
+datings:
+  - method: documentary
+    range: { earliest: "1962", latest: "1963", precision: year, circa: false }
+    grade: A
+    label: "Completion of the main dam"
+    sources: ["src.planning-commission-1963-punjab-plan-progress"]
+    note: "The Planning Commission recorded the completion of Bhakra Dam in its progress review for 1962-63."
+claims:
+  - text: "Nangal Dam is downstream of Bhakra Dam and diverts Satluj water into the Nangal Hydel Channel."
+    grade: A
+    sources: ["src.rupnagar-places-of-interest"]
+tags: ["republic","infrastructure","dams"]
+review: { status: draft, author: codex-gpt-6 }

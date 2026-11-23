@@ -1,0 +1,53 @@
+id: polity.chedi
+type: polity
+kind: polity
+names:
+  en: Chedi
+  iast: Cedi
+  native: चेदि
+summary: Chedi was a central Indian realm listed in early Buddhist texts. Literary sources name its
+  chief town as Suktimati or Sotthivati, and its modern identification remains uncertain.
+summaries:
+  kids: Chedi was a realm in central India. Old books name its main town, but scholars are still
+    unsure where that town stood.
+  teen: The Pali list names Chedi as a major realm. Its location in central India is more secure than
+    the proposed sites for its capital, Suktimati.
+region: Central India
+datings:
+  - method: textual-internal
+    range:
+      earliest: 600 BCE
+      latest: 350 BCE
+      precision: century
+      circa: true
+    grade: C
+    label: Mahajanapada period
+    sources:
+      - src.bivar-1988-indus-lands
+      - id: src.bodhi-2012-numerical-discourses-buddha
+        locator: AN 8.42
+    note: The range is contextual. A dated record of early Chedi's foundation or end has not been
+      established.
+claims:
+  - text: Literary traditions give the chief town as Sotthivati or Suktimati, whose site remains
+      uncertain.
+    grade: C
+    sources:
+      - src.singh-2008-ancient-early-medieval-india
+  - text: The early historic realm is placed in central India, east of Avanti.
+    grade: B
+    sources:
+      - src.bivar-1988-indus-lands
+      - src.singh-2008-ancient-early-medieval-india
+relations:
+  - kind: part-of
+    target: polity.sixteen-mahajanapadas
+    note: Listed among the great realms in the Anguttara Nikaya.
+  - kind: related-to
+    target: polity.avanti
+    note: Neighbouring realms in historical reconstructions.
+tags:
+  - mahajanapadas
+review:
+  status: draft
+  author: codex-gpt-6

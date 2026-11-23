@@ -1,0 +1,73 @@
+id: text.pancaratra-samhitas
+type: text
+kind: text
+names:
+  en: Pancaratra Samhitas
+  iast: Pāñcarātra Saṃhitā
+  native: पाञ्चरात्र संहिता
+summary: The Pancaratra Samhitas are Vaishnava Sanskrit scriptures on the worship of Vishnu,
+  theology, initiation and temple practice. Surviving texts span different periods. The dates of
+  prominent early Samhitas are disputed.
+summaries:
+  kids: These texts explain how communities worship Vishnu. Some describe worship at home and others
+    describe services at temples.
+  teen: Early Samhitas treat worship and initiation for individuals, while later works often describe
+    public temple ritual. Manuscript study and comparison with Shaiva scriptures have altered
+    proposed chronologies.
+datings:
+  - method: textual-internal
+    range:
+      earliest: 400
+      latest: 600
+      precision: century
+      circa: true
+    grade: C
+    label: "Mitsunori Matsubara: early estimate for the Jayakhya, Satvata and Paushkara"
+    sources:
+      - src.matsubara-1994-pancaratra-samhitas
+    note: Matsubara placed three traditionally prominent collections around 500 CE. The date concerns
+      those works, with a longer history for the corpus.
+  - method: textual-internal
+    range:
+      earliest: 800
+      latest: 1100
+      precision: century
+      circa: true
+    grade: C
+    label: "Alexis Sanderson and Marion Rastelli: early medieval formation"
+    sources:
+      - id: src.sanderson-2009-saiva-age
+        locator: pp. 61-63
+      - src.rastelli-2019-vaisnava-pancaratra
+    note: Sanderson places the Jayottara, Jayakhya and Satvata in or after the ninth century.
+      He compares their ritual procedures with Shaiva scriptures and dates the four-faced form
+      of Vasudeva against surviving images.
+claims:
+  - text: A Nepalese palm-leaf manuscript containing the Svayambhuvapancaratra and Ashtadashavidhana
+      bears a date corresponding to 1027 CE, a firm terminus for those works.
+    grade: A
+    sources:
+      - src.acharya-2015-early-tantric-vaisnavism
+  - text: The Samhitas address ritual as well as theology. Later works give greater attention to public
+      temple worship.
+    grade: B
+    sources:
+      - src.rastelli-2019-vaisnava-pancaratra
+  - text: Pancaratra traditions regard the Samhitas as revealed by Vishnu.
+    grade: D
+    sources:
+      - src.rastelli-2019-vaisnava-pancaratra
+relations:
+  - kind: related-to
+    target: text.shaiva-agamas
+debate: Matsubara’s early estimate for three named texts differs from Sanderson’s analysis of ritual
+  and iconographic parallels. Nepalese manuscript discoveries also show that the early corpus
+  contains works beyond those three.
+tags:
+  - agama
+  - tantra
+  - vaishnava
+  - pancaratra
+review:
+  status: draft
+  author: codex-gpt-6

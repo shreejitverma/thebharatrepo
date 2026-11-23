@@ -1,0 +1,44 @@
+id: event.third-anglo-maratha-war
+type: event
+kind: event
+names:
+  en: Third Anglo-Maratha War
+summary: The East India Company's war against Maratha powers in 1817 and 1818 ended the
+  peshwaship after Baji Rao II surrendered. Some former Maratha territories were annexed, while
+  several ruling houses remained in princely states under British paramountcy.
+summaries:
+  kids: The Company defeated the peshwa, a leading Maratha ruler. It took over much of his land,
+    while some other rulers kept their thrones under British control.
+  teen: The war grew out of Company expansion and an overlapping campaign against the Pindaris.
+    Baji Rao II's surrender ended the office of peshwa, and the terms imposed on other Maratha
+    houses varied.
+region: Western and central India
+datings:
+  - method: scholarly-consensus
+    range:
+      earliest: "1817"
+      latest: "1818"
+      precision: year
+      circa: false
+    grade: B
+    label: War ending the peshwaship
+    sources:
+      - src.gordon-1993-marathas-1600-1818
+      - src.cooper-2003-anglo-maratha-campaigns
+    note: This range ends with the surrender of Baji Rao II. Cooper's broader Maratha and Pindari
+      campaign chronology extends into 1819.
+claims:
+  - text: Baji Rao II surrendered in 1818, and the Company abolished the peshwaship.
+    grade: B
+    sources:
+      - src.gordon-1993-marathas-1600-1818
+      - src.cooper-2003-anglo-maratha-campaigns
+relations:
+  - kind: related-to
+    target: polity.maratha-empire
+tags:
+  - maratha
+  - company-rule
+review:
+  status: draft
+  author: codex-gpt-6

@@ -1,0 +1,78 @@
+id: tradition.khayal
+type: tradition
+kind: art
+names:
+  en: Khayal
+  iast: Khyāl
+  native: ख़याल / ख्याल
+summary: Khayal (from Persian-Arabic khayal, 'imagination' or 'thought') is the dominant vocal genre of modern
+  Hindustani classical music. Performed with tabla and melodic accompaniment, it pairs a short poetic composition
+  (bandish) with extensive melodic improvisation (alap, bol-bant, sargam and rapid taans). Documented clearly from
+  early-eighteenth-century Delhi under Sadarang and Adarang, its earlier origins are debated.
+summaries:
+  kids: Khayal is the main vocal style of North Indian classical music today, where singers take a short song and weave
+    imaginative slow melodies and fast musical runs around it.
+  teen: Meaning 'imagination', khayal rose to dominance in eighteenth-century Mughal Delhi under Sadarang and Adarang and
+    became the central form of the nineteenth- and twentieth-century Hindustani gharanas.
+region: Northern India
+location:
+  name: Delhi
+  lat: 28.65
+  lon: 77.23
+datings:
+  - method: documentary
+    range:
+      earliest: 1700
+      latest: 1800
+      precision: century
+      circa: true
+    grade: B
+    label: Clear historical attestation at Muhammad Shah's Delhi court
+    sources:
+      - src.wade-1984-khyal
+      - src.grove-2001-hindustani-music
+    note: Bonnie Wade notes that while earlier antecedents existed, khayal is securely documented as a major art form in
+      early-eighteenth-century Delhi under Niyamat Khan (Sadarang) and Firoz Khan (Adarang).
+  - method: traditional-sampradaya
+    range:
+      earliest: 1280
+      latest: 1480
+      precision: century
+      circa: true
+    grade: D
+    label: Oral tradition linking origins to Amir Khusrau or the Sharqi Sultans of Jaunpur
+    sources:
+      - src.wade-1984-khyal
+      - src.katz-2001-amir-khusrau-grove
+    note: Later musician lineages often credit Amir Khusrau (1253-1325) or the fifteenth-century Sharqi sultans of Jaunpur,
+      claims not corroborated by contemporary fourteenth-century records.
+claims:
+  - text: A full khayal presentation typically pairs a slow-tempo bada khayal with a faster chhota khayal, accompanied by
+      tabla and sarangi or harmonium.
+    grade: A
+    sources:
+      - src.wade-1984-khyal
+      - src.grove-2001-hindustani-music
+  - text: Eighteenth-century court composers Niyamat Khan (Sadarang) and Firoz Khan (Adarang) under Mughal emperor Muhammad
+      Shah are documented as key architects of classical khayal.
+    grade: B
+    sources:
+      - src.wade-1984-khyal
+      - src.schofield-2021-emotions-indian-music
+debate: Hereditary gharanas frequently trace khayal's invention either to Amir Khusrau around 1300 CE or to Sultan
+  Husain Shah Sharqi of Jaunpur in the fifteenth century. Musicologists such as Bonnie Wade and Jonathan Katz find no
+  contemporary fourteenth-century evidence for Amir Khusrau's authorship of khayal, placing the form's transformation
+  into high classical art in the late seventeenth and eighteenth centuries.
+relations:
+  - kind: part-of
+    target: tradition.hindustani-classical-music
+wikidata: Q62128
+tags:
+  - khayal
+  - khyal
+  - hindustani-music
+  - gharana
+  - tabla
+review:
+  status: draft
+  author: gemini-4-hydrogen-xhigh

@@ -1,0 +1,51 @@
+id: text.madhava-nidana
+type: text
+kind: science
+names:
+  en: Madhava Nidana
+  iast: Mādhavanidāna
+  native: माधवनिदान
+summary: The Madhava Nidana, also called Rogavinishchaya, is a Sanskrit compendium on recognizing and
+  classifying diseases. Its organization around diagnosis made it a distinct work within Ayurvedic literature.
+summaries:
+  kids: This old medical book sorts illnesses into groups and describes the signs physicians looked for.
+  teen: The Madhava Nidana brings together earlier descriptions of diseases, their causes and recognizable
+    signs. The Madhukosha commentary became an important part of its transmission.
+datings:
+  - method: textual-internal
+    range:
+      earliest: 650
+      latest: 800
+      precision: century
+      circa: true
+    grade: C
+    label: Early medieval dating (Meulenbeld)
+    sources:
+      - id: src.meulenbeld-1974-madhavanidana
+        locator: Introduction
+      - src.meulenbeld-1999-history-indian-medical-literature
+    note: Relative chronology is based on the work’s use of earlier medical writing and its reception.
+claims:
+  - text: The opening chapter sets out five diagnostic categories, including causes, early signs and developed
+      symptoms.
+    grade: A
+    sources:
+      - id: src.meulenbeld-1974-madhavanidana
+        locator: Chapter 1
+  - text: Meulenbeld’s edition translates the opening ten chapters along with material from the principal
+      commentary.
+    grade: A
+    sources:
+      - src.meulenbeld-1974-madhavanidana
+relations:
+  - kind: related-to
+    target: text.ashtanga-hridaya
+  - kind: related-to
+    target: text.charaka-samhita
+tags:
+  - ayurveda
+  - medical-classification
+  - sanskrit
+review:
+  status: draft
+  author: codex-gpt-6

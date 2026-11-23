@@ -1,0 +1,50 @@
+id: person.shashanka
+type: person
+kind: person
+names:
+  en: Shashanka
+  iast: Śaśāṅka
+  native: শশাঙ্ক
+summary: "Shashanka is often described as the first major independent ruler of a unified Gauda kingdom in Bengal during the late sixth and early seventh centuries CE, ruling from Karnasuvarna (Murshidabad) across Bengal, parts of Bihar and northern Odisha. Contemporary inscriptions in Midnapore and Ganjam attest his authority, while hostile Buddhist and Pushyabhuti accounts portray him as an adversary of Harsha and Bhaskaravarman."
+summaries:
+  kids: "Around 600 CE, King Shashanka became one of the first powerful independent rulers of Bengal, uniting lands from his capital Karnasuvarna and clashing with Emperor Harsha of north India."
+  teen: >-
+    Shashanka carved out a large eastern Indian kingdom from Karnasuvarna in the early 7th century CE.
+    His gold coins and Midnapore and Ganjam copper plates counterbalance hostile portraits in
+    Harshacharita and Xuanzang's travelogue.
+region: Gauda (Bengal, parts of Bihar and Odisha)
+location: { name: "Karnasuvarna (Murshidabad), West Bengal", lat: 24.022, lon: 88.189 }
+datings:
+  - method: epigraphic
+    range: { earliest: 590, latest: 637, precision: decade, circa: true }
+    grade: B
+    label: Midnapore and Ganjam copper plates and Xuanzang synchronism
+    sources:
+      - src.majumdar-1943-history-of-bengal-vol1
+      - src.furui-2019-land-society-eastern-india
+      - src.sengupta-2011-land-of-two-rivers
+      - src.devahuti-1970-harsha-political-study
+    note: The Rohtasgarh seal, Midnapore plates of Shashanka's regnal years 8 and 10, the Ganjam plate of Gupta year 300 (619-620 CE) acknowledging his suzerainty, and Xuanzang's notice c. 637 CE place his death shortly before 637 CE.
+claims:
+  - text: The Ganjam copper-plate inscription dated Gupta year 300 (619-620 CE) names Maharajadhiraja Shashanka as suzerain of coastal Odisha's Shailodbhava ruler Madhavaraja II.
+    grade: A
+    sources:
+      - src.majumdar-1943-history-of-bengal-vol1
+      - src.singh-2008-ancient-early-medieval-india
+  - text: Banabhatta's Harshacharita and Xuanzang's travelogue accuse Shashanka of killing Rajyavardhana of Kanauj and persecuting Buddhism at Bodh Gaya, claims whose scale historians evaluate cautiously given partisan hostility.
+    grade: B
+    sources:
+      - src.beal-1906-si-yu-ki
+      - src.majumdar-1943-history-of-bengal-vol1
+      - src.devahuti-1970-harsha-political-study
+debate: >-
+  Buddhist sources led by Xuanzang and the Manjushrimulakalpa accuse Shashanka of destroying Buddhist
+  monuments and cutting down the Bodhi tree at Bodh Gaya. Historians such as R. C. Majumdar note that
+  contemporary inscriptions and Xuanzang's own account of flourishing monasteries at Karnasuvarna
+  complicate the picture, suggesting a mix of wartime political rivalry and later sectarian memory.
+relations:
+  - { kind: contemporary-of, target: person.harshavardhana }
+  - { kind: related-to, target: text.harshacharita }
+wikidata: Q2599441
+tags: [shashanka, gauda, bengal, karnasuvarna, shaivism, early-medieval]
+review: { status: draft, author: "gemini-4-hydrogen-xhigh" }

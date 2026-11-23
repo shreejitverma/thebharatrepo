@@ -1,0 +1,29 @@
+id: event.first-india-pakistan-war-1947
+type: event
+kind: event
+names:
+  en: "First India-Pakistan War"
+summary: "Fighting over the former princely state of Jammu and Kashmir began in 1947 following Partition. A UN-mediated ceasefire ended the fighting, and military representatives of India and Pakistan agreed on a ceasefire line in July 1949."
+summaries:
+  kids: "Soon after Partition, India and Pakistan fought over Jammu and Kashmir. A United Nations effort helped stop the fighting."
+  teen: "The first India-Pakistan war began in 1947 amid a dispute over Jammu and Kashmir's accession. The ceasefire and the later agreement on the ceasefire line were separate steps in the UN-mediated process."
+region: "Jammu and Kashmir"
+datings:
+  - method: documentary
+    range: { earliest: "1947", latest: "1949", precision: year, circa: false }
+    grade: A
+    label: "War and ceasefire"
+    sources: ["src.state-department-1965-india-pakistan-war", "src.united-nations-1965-unipom-background"]
+    note: "Fighting began in 1947. The range includes the ceasefire at the turn of 1948 to 1949."
+claims:
+  - text: "The United Nations established a commission in January 1948 to investigate and mediate the dispute between India and Pakistan."
+    grade: A
+    sources: ["src.united-nations-1965-unipom-background"]
+  - text: "The Karachi Agreement of July 1949 established a ceasefire line to be supervised by United Nations military observers."
+    grade: A
+    sources: ["src.united-nations-1949-karachi-agreement", "src.united-nations-1965-unipom-background"]
+relations:
+  - kind: related-to
+    target: event.independence-and-partition-1947
+tags: ["republic","war","kashmir"]
+review: { status: draft, author: codex-gpt-6 }

@@ -1,0 +1,29 @@
+id: event.ellora-unesco-inscription
+type: event
+kind: site
+names:
+  en: "Ellora Caves inscribed on the World Heritage List"
+summary: "The World Heritage Committee inscribed the Ellora Caves in 1983. The designation encompasses Buddhist, Hindu and Jain rock-cut monuments, including the Kailasa temple."
+summaries:
+  kids: "In 1983 the Ellora Caves joined the World Heritage List. People carved Buddhist, Hindu and Jain places of worship into the rock there."
+  teen: "Ellora's 1983 inscription covers the wider basalt-cliff complex. The property contains monuments of three religious traditions, including the Hindu Kailasa temple."
+region: "Ellora, Maharashtra"
+datings:
+  - method: documentary
+    range: { earliest: "1983", latest: "1983", precision: year, circa: false }
+    grade: A
+    label: "World Heritage inscription"
+    sources: ["src.unesco-1983-ellora-caves"]
+    note: "UNESCO records Ellora as inscribed in 1983."
+claims:
+  - text: "The World Heritage Committee inscribed the Ellora Caves in 1983."
+    grade: A
+    sources: ["src.unesco-1983-ellora-caves"]
+  - text: "The listed complex includes 34 rock-cut monuments associated with Buddhism, Hinduism and Jainism."
+    grade: A
+    sources: ["src.unesco-1983-ellora-caves"]
+relations:
+  - kind: related-to
+    target: site.kailasa-temple-ellora
+tags: ["republic","unesco","heritage"]
+review: { status: draft, author: codex-gpt-6 }

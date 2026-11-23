@@ -1,0 +1,55 @@
+id: polity.pushyabhuti-dynasty
+type: polity
+kind: polity
+names:
+  en: Pushyabhuti Dynasty
+  iast: Puṣyabhūti
+summary: The Pushyabhutis rose at Thanesar and extended their reach under Harsha, who came to rule
+  from Kannauj. Royal charters, Bana's court biography and Xuanzang's account illuminate different
+  aspects of their history.
+summaries:
+  kids: Harsha came from a family that ruled at Thanesar. He later made Kannauj a centre of his
+    kingdom and left written records of gifts.
+  teen: Bana's court biography gives the family a literary origin story. Seals and copperplates
+    provide evidence for the dynasty's later genealogy and administration.
+region: Thanesar and the upper Gangetic plain
+location:
+  name: Kannauj (seat under Harsha)
+  lat: 27.05
+  lon: 79.92
+datings:
+  - method: scholarly-consensus
+    range:
+      earliest: "550"
+      latest: "650"
+      precision: decade
+      circa: true
+    grade: B
+    label: Period of rule
+    sources:
+      - src.singh-2008-ancient-early-medieval-india
+      - src.agrawal-2003-harsa-copper-plate
+      - src.devahuti-1970-harsha-political-study
+    note: The beginning brackets the family's early named rulers. Harsha's charters give an anchored
+      seventh-century phase.
+claims:
+  - text: Harsha's year-eight copperplate, which its editor dates to 614-615 CE, records a grant to a Brahmin and names family members honoured
+      by it.
+    grade: A
+    sources:
+      - src.agrawal-2003-harsa-copper-plate
+  - text: The family was based at Thanesar before Harsha established his court at Kannauj.
+    grade: B
+    sources:
+      - src.singh-2008-ancient-early-medieval-india
+      - src.devahuti-1970-harsha-political-study
+relations:
+  - kind: ruled-by
+    target: person.harshavardhana
+  - kind: preceded
+    target: polity.gurjara-pratihara-dynasty
+    note: Both held Kannauj in different periods, with intervening rulers.
+tags: []
+review:
+  status: draft
+  author: codex-gpt-6

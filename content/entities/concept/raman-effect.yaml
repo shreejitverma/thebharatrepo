@@ -1,0 +1,65 @@
+id: concept.raman-effect
+type: concept
+kind: science
+names:
+  en: Raman Effect
+summary: The Raman effect is the change in frequency that can occur when light scatters from matter and
+  exchanges energy with it. Raman and K. S. Krishnan reported the effect in 1928. Grigory Landsberg and Leonid
+  Mandelstam also observed shifted lines in crystals that year.
+summaries:
+  kids: Most scattered light keeps its colour. In some cases its colour changes slightly, giving clues about the
+    material it hit.
+  teen: When a scattered photon gains or loses energy, its frequency changes. The shifts can reveal molecular
+    vibrations. The 1928 reports came from experiments with liquids in India and crystals in the Soviet Union.
+region: Kolkata and Moscow
+datings:
+  - method: documentary
+    range:
+      earliest: 1928
+      latest: 1928
+      precision: year
+      circa: false
+    grade: A
+    label: Raman and Krishnan’s experimental report
+    sources:
+      - src.raman-krishnan-1928-secondary-radiation
+      - src.mallik-2000-raman-effect-krishnan-diary
+    note: The 1928 Nature paper reports new lines in light scattered by liquids.
+  - method: documentary
+    range:
+      earliest: 1928
+      latest: 1928
+      precision: year
+      circa: false
+    grade: A
+    label: Landsberg and Mandelstam’s crystal observations
+    sources:
+      - src.fabelinskii-1998-combination-scattering
+    note: The Moscow experiments on crystalline materials were published separately in 1928.
+claims:
+  - text: Raman and Krishnan’s report distinguishes the shifted component from the ordinary scattering at the
+      incident frequency.
+    grade: A
+    sources:
+      - src.raman-krishnan-1928-secondary-radiation
+      - src.mallik-2000-raman-effect-krishnan-diary
+  - text: Landsberg and Mandelstam reported shifted lines from light scattered by crystals in 1928.
+    grade: A
+    sources:
+      - src.fabelinskii-1998-combination-scattering
+  - text: Frequency shifts in scattered light provide information about molecular vibrations.
+    grade: B
+    sources:
+      - src.hamann-2018-introduction-raman-spectroscopy
+relations:
+  - kind: related-to
+    target: person.c-v-raman
+  - kind: related-to
+    target: event.raman-effect-and-nobel-1930
+tags:
+  - physics
+  - light-scattering
+  - spectroscopy
+review:
+  status: draft
+  author: codex-gpt-6

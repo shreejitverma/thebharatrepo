@@ -1,0 +1,68 @@
+id: text.brahma-sutras
+type: text
+kind: text
+names:
+  en: Brahma Sutras
+  iast: Brahmasūtra
+  native: ब्रह्मसूत्र
+summary: The Brahma Sutras interpret Upanishadic teachings on brahman, the self and liberation
+  through concise aphorisms. Vedanta traditions attribute the work to Badarayana. Scholars disagree
+  on when its surviving form was compiled.
+summaries:
+  kids: Short statements in this book gather ideas from the Upanishads. Later teachers wrote much
+    longer books explaining what those statements meant.
+  teen: The Brahma Sutras coordinate teachings from different Upanishads and argue with rival views.
+    Shankara and Ramanuja wrote commentaries that helped form different Vedanta traditions.
+datings:
+  - method: textual-internal
+    range:
+      earliest: "200 BCE"
+      latest: 200
+      precision: century
+      circa: true
+    grade: C
+    label: "Natalia Isayeva: second century BCE to second century CE"
+    sources:
+      - id: src.isayeva-1993-shankara-indian-philosophy
+        locator: The Beginning of Vedanta
+    note: In her survey of the early history of Vedanta, Isayeva favours this span for the
+      Brahma Sutras.
+  - method: textual-internal
+    range:
+      earliest: 350
+      latest: 500
+      precision: century
+      circa: true
+    grade: C
+    label: "Hajime Nakamura: later redaction"
+    sources:
+      - src.nakamura-1983-early-vedanta
+    note: Nakamura places the surviving arrangement around 400 to 450 CE, allowing for substantially
+      earlier materials.
+claims:
+  - text: The work is transmitted in four chapters and its sutras became the basis of distinct
+      commentaries by Shankara and Ramanuja.
+    grade: A
+    sources:
+      - src.thibaut-1890-vedanta-sutras-shankara
+      - src.thibaut-1904-vedanta-sutras-ramanuja
+  - text: The traditional author is Badarayana, whom some Vedanta accounts identify with Vyasa.
+    grade: D
+    sources:
+      - src.thibaut-1890-vedanta-sutras-shankara
+      - src.nakamura-1983-early-vedanta
+relations:
+  - kind: commented-on
+    target: text.upanishads
+  - kind: related-to
+    target: text.mimamsa-sutras
+debate: The earlier chronology and Nakamura’s later reconstruction differ over the date of the
+  received arrangement. Both leave room for earlier teachings, and neither fixes the lifetime of the
+  traditionally named author.
+tags:
+  - vedanta
+  - darshana
+  - sutra
+review:
+  status: draft
+  author: codex-gpt-6

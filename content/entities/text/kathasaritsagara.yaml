@@ -1,0 +1,52 @@
+id: text.kathasaritsagara
+type: text
+kind: text
+names:
+  en: Kathasaritsagara
+  iast: Kathāsaritsāgara
+  native: कथासरित्सागर
+summary: Somadeva’s Kathasaritsagara is a Kashmiri Sanskrit verse collection of nested stories. The
+  adventures of prince Naravahanadatta provide a framework for tales told within tales.
+summaries:
+  kids: A prince’s adventures are the starting point for hundreds of other stories. Sometimes a
+    character stops to tell a tale that has another tale inside it.
+  teen: Somadeva recasts material attributed to the Brihatkatha into a long Sanskrit poem. Its nested
+    narratives bring together adventures, riddles, folklore and courtly life.
+datings:
+  - method: textual-internal
+    range:
+      earliest: 1063
+      latest: 1081
+      precision: decade
+      circa: true
+    grade: B
+    label: Somadeva’s late eleventh-century Kashmiri court setting
+    sources:
+      - src.tawney-1880-katha-sarit-sagara
+      - src.lienhard-1984-history-classical-poetry
+    note: The poem associates its composition with Queen Suryamati; the court chronology provides a
+      range rather than a precise year.
+claims:
+  - text: The Sanskrit collection identifies itself with a retelling of the Brihatkatha tradition.
+    grade: A
+    sources:
+      - src.tawney-1880-katha-sarit-sagara
+  - text: Its narrative frame follows the fortunes of Naravahanadatta, son of Udayana.
+    grade: B
+    sources:
+      - src.tawney-1880-katha-sarit-sagara
+relations:
+  - kind: related-to
+    target: text.pancatantra
+    note: Book 10 preserves an influential Sanskrit recension of the Pancatantra fables.
+  - kind: related-to
+    target: text.rajatarangini
+    note: Both are major Sanskrit literary works composed in medieval Kashmir.
+region: Kashmir
+tags:
+  - sanskrit
+  - kathā
+  - kashmir
+review:
+  status: draft
+  author: codex-gpt-6

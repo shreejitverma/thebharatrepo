@@ -1,0 +1,59 @@
+id: text.prashna-upanishad
+type: text
+kind: text
+names:
+  en: Prashna Upanishad
+  iast: Praśna Upaniṣad
+  native: प्रश्नोपनिषद्
+summary: The Prashna Upanishad is arranged as six questions to the teacher Pippalada. The questions
+  concern the origin of beings, vital breath, sleep, the syllable Om and the person with sixteen
+  parts. Its date is uncertain.
+summaries:
+  kids: Six students bring questions to a teacher. One asks why we dream and another asks what happens
+    when we meditate on Om.
+  teen: The six dialogues connect questions about the origin of creatures with questions about how
+    breath, waking, dreaming and deep sleep work. They also discuss meditation on Om.
+datings:
+  - method: linguistic
+    range:
+      earliest: "100 BCE"
+      latest: 200
+      precision: century
+      circa: true
+    grade: C
+    label: "Patrick Olivelle: late prose stratum"
+    sources:
+      - id: src.olivelle-1998-early-upanisads
+        locator: Introduction, Chronology
+    note: Olivelle groups the Prashna with the Mandukya as late prose and argues that neither can be
+      much older than the start of the Common Era.
+  - method: linguistic
+    range: { earliest: "500 BCE", latest: "1 BCE", precision: century, circa: true }
+    grade: C
+    label: "Signe Cohen: earlier relative placement"
+    sources:
+      - id: src.cohen-2024-classical-upanisads
+        locator: Dating and Authorship
+    note: Cohen’s linguistic and metrical sequence puts the received Prashna after the Isha and
+      before the Mundaka and Katha. The broad interval situates that relative sequence.
+claims:
+  - text: Pippalada asks the seekers to spend a year in disciplined study before putting their questions
+      to him.
+    grade: A
+    sources:
+      - id: src.olivelle-1998-early-upanisads
+        locator: Prasna Upanisad 1.1-2
+relations:
+  - kind: part-of
+    target: text.upanishads
+  - kind: related-to
+    target: text.atharvaveda
+debate: Olivelle’s chronology places the Prashna among the late prose works. Cohen puts it
+  before several of the classical verse Upanishads.
+tags:
+  - upanishad
+  - veda
+  - vedanta
+review:
+  status: draft
+  author: codex-gpt-6

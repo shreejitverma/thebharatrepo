@@ -1,0 +1,43 @@
+id: event.government-of-india-act-1858
+type: event
+kind: event
+names:
+  en: Government of India Act 1858
+summary: The United Kingdom Parliament transferred the East India Company's governing powers to
+  the Crown in 1858. The Act established a secretary of state for India assisted by a council in
+  London.
+summaries:
+  kids: The British Parliament took away the Company's power to govern India and put the British
+    Crown in charge.
+  teen: Parliament ended Company government after the uprising of 1857. The new secretary of state
+    and Council of India supervised the Crown's Indian administration from London.
+region: British India and Westminster
+datings:
+  - method: documentary
+    range:
+      earliest: "1858"
+      latest: "1858"
+      precision: day
+      circa: false
+    grade: A
+    label: Royal assent on 2 August 1858
+    sources:
+      - src.uk-parliament-1858-government-of-india-act
+claims:
+  - text: The Act vested the Company's territories and governing powers in the Crown and constituted
+      a Council of India.
+    grade: A
+    sources:
+      - src.uk-parliament-1858-government-of-india-act
+relations:
+  - kind: related-to
+    target: event.indian-revolt-of-1857
+  - kind: related-to
+    target: polity.east-india-company-rule
+    note: The Act ended Company government in India.
+tags:
+  - colonial-law
+  - crown-rule
+review:
+  status: draft
+  author: codex-gpt-6

@@ -1,0 +1,39 @@
+id: person.rudradeva-kakatiya
+type: person
+kind: person
+names:
+  en: Rudradeva Kakatiya
+  iast: Rudradeva
+summary: Rudradeva was a Kakatiya king whose reign marked the emergence of the dynasty as an
+  independent power. His inscription at Hanamkonda helps date this transition.
+summaries:
+  kids: Rudradeva helped make the Kakatiyas an independent kingdom. A stone inscription at Hanamkonda
+    tells about his reign.
+  teen: The Hanamkonda record provides an anchor for the Kakatiyas' move from subordinate chiefs to
+    sovereign rulers in the twelfth century.
+region: Telangana
+datings:
+  - method: scholarly-consensus
+    range:
+      earliest: "1155"
+      latest: "1200"
+      precision: decade
+      circa: true
+    grade: B
+    label: Reign or recorded political activity
+    sources:
+      - src.talbot-2001-precolonial-india-in-practice
+      - src.singh-2008-ancient-early-medieval-india
+    note: The range brackets the period of known activity, including the dated Hanamkonda record.
+claims:
+  - text: Rudradeva's twelfth-century records document the assertion of Kakatiya sovereignty.
+    grade: B
+    sources:
+      - src.talbot-2001-precolonial-india-in-practice
+relations:
+  - kind: ruled
+    target: polity.kakatiya-dynasty
+tags: []
+review:
+  status: draft
+  author: codex-gpt-6

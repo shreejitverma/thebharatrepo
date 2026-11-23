@@ -1,0 +1,56 @@
+id: site.kedarnath-temple
+type: site
+kind: site
+names:
+  en: Kedarnath Temple
+  iast: Kedāranātha Mandira
+  native: केदारनाथ मंदिर
+summary: >-
+  Kedarnath Temple in the Garhwal Himalayas of Uttarakhand is a Shiva shrine in the Jyotirlinga and
+  Himalayan Chota Char Dham pilgrimage traditions. The date of the standing stone temple is uncertain.
+  Pilgrimage traditions connect the shrine with the Pandavas and Adi Shankara.
+summaries:
+  kids: >-
+    High in the mountains of Uttarakhand stands Kedarnath, a stone temple to Shiva. Pilgrims tell
+    stories connecting the shrine with the Pandavas and Adi Shankara.
+  teen: >-
+    Kedarnath is a Shiva pilgrimage shrine in the upper Mandakini valley. Estimates for the surviving
+    stone temple span parts of the early medieval period. The Pandavas and Adi Shankara figure in
+    pilgrimage traditions about the site.
+region: Garhwal Himalaya (Rudraprayag district, Uttarakhand)
+location: { name: "Kedarnath, Uttarakhand", lat: 30.733, lon: 79.067 }
+datings:
+  - method: art-historical
+    range: { earliest: "700 CE", latest: "1200 CE", precision: century, circa: true }
+    grade: C
+    label: "Estimated date of the standing stone temple"
+    sources:
+      - src.chanchani-2019-mountain-temples
+      - src.rajendran-2013-central-himalaya-earthquakes
+    note: >-
+      The temple belongs to the region's stone temple tradition. Rajendran and colleagues give an
+      eighth- to twelfth-century CE range in their survey of Garhwal temples.
+claims:
+  - text: >-
+      The main stone temple remained standing after the June 2013 floods and debris flows caused
+      extensive damage in Kedarnath.
+    grade: B
+    sources:
+      - src.sati-gahalaut-2013-kedarnath-floods
+  - text: >-
+      Pilgrimage traditions credit the Pandavas with founding a shrine at Kedarnath and associate Adi
+      Shankara with its later history.
+    grade: D
+    sources:
+      - src.eck-2012-india-sacred-geography
+      - src.pinkney-2014-ever-present-history-uttarakhand
+relations:
+  - { kind: related-to, target: person.adi-shankara, note: Pilgrimage traditions associate Shankara with the shrine }
+wikidata: Q866014
+image:
+  commons: "File:Kedarnath Temple in Rainy season.jpg"
+  alt: Stone shikhara and front mandapa of the Kedarnath Temple framed against steep snow-capped Himalayan peaks
+  credit: Shivam Kumar 766
+  license: CC BY-SA 4.0
+tags: [kedarnath, uttarakhand, himalaya, shaiva, jyotirlinga, char-dham, temple-architecture]
+review: { status: draft, author: "gemini-4-hydrogen-xhigh" }

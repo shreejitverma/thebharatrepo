@@ -1,0 +1,29 @@
+id: event.elephanta-unesco-inscription
+type: event
+kind: site
+names:
+  en: "Elephanta Caves inscribed on the World Heritage List"
+summary: "The World Heritage Committee inscribed the Elephanta Caves in 1987. The island complex near Mumbai is recognised for rock-cut sculpture associated with Shiva."
+summaries:
+  kids: "The Elephanta Caves joined the World Heritage List in 1987. On the island near Mumbai, artists carved large images of Shiva into the rock."
+  teen: "The World Heritage listing recognises the rock-cut complex at Elephanta and the high reliefs of its main cave, including its monumental representation of Shiva."
+region: "Elephanta Island, Maharashtra"
+datings:
+  - method: documentary
+    range: { earliest: "1987", latest: "1987", precision: year, circa: false }
+    grade: A
+    label: "World Heritage inscription"
+    sources: ["src.unesco-1987-elephanta-caves"]
+    note: "UNESCO dates the inscription of the Elephanta Caves to 1987."
+claims:
+  - text: "The Committee inscribed the Elephanta Caves in 1987."
+    grade: A
+    sources: ["src.unesco-1987-elephanta-caves"]
+  - text: "UNESCO identifies the main cave's large reliefs associated with Shiva as central to the site's artistic significance."
+    grade: A
+    sources: ["src.unesco-1987-elephanta-caves"]
+relations:
+  - kind: related-to
+    target: site.elephanta-caves
+tags: ["republic","unesco","heritage"]
+review: { status: draft, author: codex-gpt-6 }

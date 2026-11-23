@@ -1,0 +1,49 @@
+id: person.avantivarman
+type: person
+kind: person
+names:
+  en: Avantivarman
+  iast: Avantivarman
+summary: Avantivarman founded the Utpala ruling house. Kalhana links him to temple foundations and
+  to Suyya's work on the waterways of the Kashmir Valley.
+summaries:
+  kids: Avantivarman became king after the Karkotas. An old chronicle tells of his temples and work to
+    protect farmland from floods.
+  teen: Kalhana presents Avantivarman's reign as a period of political and agricultural recovery. The
+    surviving remains at Avantipura give physical context to his account.
+region: Kashmir Valley
+location:
+  name: Avantipura (temple foundations)
+  lat: 33.92
+  lon: 75.01
+datings:
+  - method: scholarly-consensus
+    range:
+      earliest: "855"
+      latest: "883"
+      precision: decade
+      circa: true
+    grade: B
+    label: Reign or recorded political activity
+    sources:
+      - src.stein-1900-rajatarangini
+      - src.hauptmann-2024-lords-mountains
+    note: The conventional interval is anchored by Kalhana's Utpala succession.
+claims:
+  - text: Kalhana associates Suyya's river works with Avantivarman's reign.
+    grade: C
+    sources:
+      - id: src.stein-1900-rajatarangini
+        locator: Book V
+  - text: Avantipura's temple complex is associated with Avantivarman.
+    grade: B
+    sources:
+      - src.hauptmann-2024-lords-mountains
+      - src.stein-1900-rajatarangini
+relations:
+  - kind: founded
+    target: polity.utpala-dynasty
+tags: []
+review:
+  status: draft
+  author: codex-gpt-6

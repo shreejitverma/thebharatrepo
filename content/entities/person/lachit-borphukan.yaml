@@ -1,0 +1,46 @@
+id: person.lachit-borphukan
+type: person
+kind: person
+names:
+  en: Lachit Borphukan
+  native: লাচিত বৰফুকন
+summary: >-
+  Lachit Borphukan (d. 1672 CE) was the celebrated Ahom military commander (Borphukan) appointed by
+  Swargadeo Chakradhvaj Singha in 1667 CE to expel Mughal garrisons from lower Assam. Mastering
+  guerrilla containment, earthen rampart engineering and Brahmaputra naval tactics, he retook Guwahati
+  in 1667 and led the Ahom fleet to victory at Saraighat in 1671 CE before dying about a year later.
+summaries:
+  kids: >-
+    Lachit Borphukan was a brave Ahom general who recaptured Guwahati in 1667 and, though gravely ill,
+    led Ahom war-boats to defeat the Mughal fleet at the Battle of Saraighat in 1671.
+  teen: >-
+    Appointed Borphukan of lower Assam in 1667, Lachit rebuilt Guwahati's river-and-hill defences and
+    commanded the Ahom victory over Raja Ram Singh's Mughal forces at Saraighat in 1671 before his
+    death in 1672.
+region: Assam (lower and upper Brahmaputra Valley)
+location: { name: "Jorhat (Lachit Maidam) / Guwahati, Assam", lat: 26.757, lon: 94.203 }
+datings:
+  - method: documentary
+    range: { earliest: 1622, latest: 1672, precision: year, circa: true }
+    grade: B
+    label: Documentary career as Borphukan (1667-1672 CE) and traditional birth estimate (1622 CE)
+    sources:
+      - src.bhuyan-1947-lachit-barphukan
+      - src.gait-1906-history-of-assam
+    note: His appointment as Borphukan (1667), victory at Saraighat (1671) and death at Kaliabor c. 1672 are firmly attested in Ahom buranjis; his 1622 birth year is a widely cited biographical reconstruction.
+claims:
+  - text: Son of the Ahom statesman Momai Tamuli Borbarua, Lachit was appointed Borphukan in 1667 and recaptured Guwahati and Pandu from Mughal command before fortifying the surrounding hills.
+    grade: A
+    sources:
+      - src.bhuyan-1947-lachit-barphukan
+      - src.baruah-1985-comprehensive-history-assam
+  - text: Leaving his sickbed during the 1671 Battle of Saraighat, Lachit commanded the Ahom flotilla in person to break the Mughal naval advance and secured the Brahmaputra frontier.
+    grade: B
+    sources:
+      - src.bhuyan-1947-lachit-barphukan
+      - src.gait-1906-history-of-assam
+relations:
+  - { kind: related-to, target: polity.ahom-kingdom }
+wikidata: Q3631757
+tags: [lachit-borphukan, ahom, saraighat, assam, military-history]
+review: { status: draft, author: "gemini-4-hydrogen-xhigh" }

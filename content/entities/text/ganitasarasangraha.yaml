@@ -1,0 +1,50 @@
+id: text.ganitasarasangraha
+type: text
+kind: science
+names:
+  en: Ganitasarasangraha
+  iast: Gaṇitasārasaṅgraha
+  native: गणितसारसङ्ग्रह
+summary: Mahavira’s ninth-century Sanskrit compendium treats arithmetic and mensuration, including fractions,
+  series, combinations and geometrical figures. It uses verse rules followed by practice problems.
+summaries:
+  kids: This math book asks readers to calculate shares, measure shapes and work out how many choices are possible.
+  teen: The book brings together procedures usually associated with practical calculation. Its examples include
+    commercial questions and methods for counting combinations of objects.
+region: Rashtrakuta Deccan
+datings:
+  - method: textual-internal
+    range:
+      earliest: 814
+      latest: 878
+      precision: decade
+      circa: true
+    grade: B
+    label: Ninth-century composition under Amoghavarsha I
+    sources:
+      - src.rangacharya-1912-ganita-sara-sangraha
+      - src.srinivas-2019-untapped-wealth
+      - id: src.plofker-2009-mathematics-in-india
+        locator: Section 5.3
+    note: The praise of the king places the work within his reign.
+claims:
+  - text: The treatise is organized around arithmetic and practical calculation, with separate treatments of
+      fractions, mixtures and measurement.
+    grade: A
+    sources:
+      - src.rangacharya-1912-ganita-sara-sangraha
+  - text: Mahavira gives a rule for counting combinations formed by choosing a fixed number of objects from a
+      group.
+    grade: A
+    sources:
+      - src.rangacharya-1912-ganita-sara-sangraha
+      - id: src.plofker-2009-mathematics-in-india
+        locator: Section 5.3
+relations: []
+tags:
+  - arithmetic
+  - mensuration
+  - combinatorics
+review:
+  status: draft
+  author: codex-gpt-6

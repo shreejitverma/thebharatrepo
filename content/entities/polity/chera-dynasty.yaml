@@ -1,0 +1,54 @@
+id: polity.chera-dynasty
+type: polity
+kind: polity
+names:
+  en: Chera Perumals of Makotai
+  iast: Cēra
+  native: சேரர்
+summary: >-
+  The Chera Perumals were a medieval dynasty that ruled much of present-day Kerala from Makotai
+  (Mahodayapuram) in the Kodungallur region from about the ninth to the early twelfth century. They are
+  known from inscriptions and charters distinct from the evidence for the early, Sangam-age Chera lineages,
+  which are treated as a separate polity.
+summaries:
+  kids: >-
+    The Chera Perumals were kings who ruled much of Kerala from a city near Kodungallur more than a thousand
+    years ago. Stone and copper records tell us about them.
+  teen: >-
+    The medieval Perumals at Makotai are known from inscriptions and charters. They shared the Chera name
+    with much earlier rulers of the Sangam age, but the two belong to different periods of political
+    history.
+region: Kerala
+location:
+  name: Kodungallur (area of Makotai)
+  lat: 10.22
+  lon: 76.2
+datings:
+  - method: epigraphic
+    range:
+      earliest: "800"
+      latest: "1125"
+      precision: decade
+      circa: true
+    grade: B
+    label: Medieval Chera Perumals of Makotai
+    sources:
+      - src.karashima-2014-concise-history-south-india
+    note: The range follows the inscriptions of the Perumal kings. The early Chera lineages of the Sangam age
+      are dated separately.
+claims:
+  - text: The medieval Chera Perumals governed from Makotai in the Kodungallur region.
+    grade: B
+    sources:
+      - src.karashima-2014-concise-history-south-india
+relations:
+  - kind: related-to
+    target: polity.chola-dynasty
+  - kind: related-to
+    target: polity.pandya-dynasty
+tags:
+  - chera
+  - kerala
+review:
+  status: draft
+  author: codex-gpt-6

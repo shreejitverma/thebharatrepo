@@ -1,0 +1,46 @@
+id: event.portuguese-conquest-of-goa
+type: event
+kind: event
+names:
+  en: Portuguese conquest of Goa
+summary: Afonso de Albuquerque's forces took Goa from the Adil Shahi sultanate of Bijapur in
+  1510. Goa developed into the administrative centre of Portugal's Asian empire and a major
+  centre of Indo-Portuguese religious architecture.
+summaries:
+  kids: A Portuguese fleet took Goa in 1510. Old Goa later became a city where builders used both
+    European designs and local materials.
+  teen: Portuguese control of Goa anchored an empire connected by sea. Old Goa's churches show how
+    European building styles were adapted to local materials and craft traditions.
+region: Goa, Konkan coast
+datings:
+  - method: scholarly-consensus
+    range:
+      earliest: "1510"
+      latest: "1510"
+      precision: year
+      circa: false
+    grade: B
+    label: Portuguese capture of Goa
+    sources:
+      - src.kabir-2021-mando-of-goa
+      - src.prakash-1998-portuguese-in-india
+    note: The date refers to the conquest of Goa, whose present-day territory took shape over a
+      longer period.
+claims:
+  - text: Albuquerque took Goa from Bijapur's Adil Shahi rulers in 1510.
+    grade: B
+    sources:
+      - src.kabir-2021-mando-of-goa
+      - src.prakash-1998-portuguese-in-india
+  - text: The surviving churches and convents of Old Goa document the adaptation of European
+      architectural forms to local conditions.
+    grade: B
+    sources:
+      - src.unesco-1986-churches-and-convents-of-goa
+relations: []
+tags:
+  - goa
+  - portuguese-expansion
+review:
+  status: draft
+  author: codex-gpt-6

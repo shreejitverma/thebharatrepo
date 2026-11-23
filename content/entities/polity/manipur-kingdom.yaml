@@ -1,0 +1,48 @@
+id: polity.manipur-kingdom
+type: polity
+kind: polity
+names:
+  en: Manipur Kingdom
+  native: মণিপুর (ꯃꯅꯤꯄꯨꯔ)
+summary: >-
+  The Kingdom of Manipur was a sovereign frontier state of Northeast India ruled by the Ningthouja
+  dynasty from Imphal, expanding into a regional power across the Chindwin-Irrawaddy corridor in the
+  eighteenth century under Garib Niwaz (Pamheiba). Following Burmese occupation (the Seven Years'
+  Devastation, 1819-1826), Gambhir Singh regained the throne with British backing under the 1826
+  Treaty of Yandabo.
+summaries:
+  kids: >-
+    Ruled by the Ningthouja kings from Imphal, the Kingdom of Manipur became a major power in the
+    1700s under King Garib Niwaz, adopted Vaishnava devotion and later survived wars with Burma to
+    become a distinct kingdom in Northeast India.
+  teen: >-
+    Emerging as "Manipur" during Pamheiba's 18th-century Vaishnava and military reforms, the kingdom
+    expanded into upper Burma before suffering Burmese devastation (1819-1826) and regaining autonomy
+    under Gambhir Singh in 1826.
+region: Manipur (Imphal Valley and surrounding hills)
+location: { name: "Imphal (Kangla), Manipur", lat: 24.807, lon: 93.941 }
+datings:
+  - method: documentary
+    range: { earliest: 1709, latest: 1949, precision: year, circa: false }
+    grade: A
+    label: Eighteenth-century Sanskritised Manipur state through 1826 Treaty of Yandabo to 1949 merger
+    sources:
+      - src.parratt-2013-cheitharon-kumpapa
+      - src.kamei-1991-history-of-manipur
+      - src.gait-1906-history-of-assam
+    note: Garib Niwaz (Pamheiba, r. 1709-1748) adopted the name Manipur and Chaitanya Vaishnavism; Bhagyachandra (1763-1798) shaped Manipuri Ras Lila, and the kingdom survived until its 1949 accession to India.
+claims:
+  - text: "Under Pamheiba (Garib Niwaz, r. 1709-1748), Manipuri forces raided deep into Upper Burma towards the Toungoo capital Ava while the court adopted Bengali-style Gaudiya Vaishnavism alongside indigenous institutions."
+    grade: B
+    sources:
+      - src.parratt-2013-cheitharon-kumpapa
+      - src.kamei-1991-history-of-manipur
+  - text: Rajarshi Bhagyachandra (Jai Singh, late 18th century) consecrated the Govindaji image and systematised the classical Manipuri Ras Lila dance tradition.
+    grade: B
+    sources:
+      - src.kamei-1991-history-of-manipur
+      - src.parratt-2013-cheitharon-kumpapa
+relations:
+  - { kind: related-to, target: person.chaitanya-mahaprabhu }
+tags: [manipur, ningthouja, garib-niwaz, bhagyachandra, northeast-india, ras-lila]
+review: { status: draft, author: "gemini-4-hydrogen-xhigh" }

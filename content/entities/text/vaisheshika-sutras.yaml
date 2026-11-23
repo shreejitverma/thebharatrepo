@@ -1,0 +1,52 @@
+id: text.vaisheshika-sutras
+type: text
+kind: text
+names:
+  en: Vaisheshika Sutras
+  iast: Vaiśeṣikasūtra
+  native: वैशेषिकसूत्र
+summary: The Vaisheshika Sutras classify substances, qualities and motions and develop an account of
+  atoms. The work is traditionally attributed to Kanada. Its transmission in different versions
+  leaves its dating uncertain.
+summaries:
+  kids: This book sorts what we experience into groups, such as things, their qualities and their
+    movements. It asks what larger objects might be made of.
+  teen: Vaisheshika asks which kinds of thing exist and how to distinguish them. Comparing manuscripts
+    and commentaries helps scholars see how the classifications were transmitted.
+datings:
+  - method: textual-internal
+    range:
+      earliest: "200 BCE"
+      latest: 300
+      precision: century
+      circa: true
+    grade: C
+    label: Early formation of the Kanada sutras
+    sources:
+      - src.moise-2022-vaisesikasutra
+      - id: src.ganeri-2017-oxford-handbook-indian-philosophy
+        locator: "Timeline: Indian Philosophy in a Hundred Thinkers"
+    note: A broad interval allows for the development of a layered work. The surviving Candrananda
+      version reflects a later stage of transmission.
+claims:
+  - text: The sutras enumerate categories including substance, quality, action, generality,
+      particularity and inherence.
+    grade: A
+    sources:
+      - src.moise-2022-vaisesikasutra
+  - text: The sutras are traditionally attributed to Kanada.
+    grade: D
+    sources:
+      - src.moise-2022-vaisesikasutra
+  - text: Ionut Moise and Ganesh U. Thite place Candrananda’s commentary, which preserves one early version of the sutras, in the seventh century CE.
+    grade: C
+    sources: [src.moise-2022-vaisesikasutra]
+relations: []
+tags:
+  - vaisheshika
+  - darshana
+  - metaphysics
+  - atomism
+review:
+  status: draft
+  author: codex-gpt-6

@@ -1,0 +1,81 @@
+id: polity.vajji-confederacy
+type: polity
+kind: polity
+names:
+  en: Vajji Confederacy
+  iast: Vajji (Vṛji)
+  native: वज्जि
+aliases:
+  - polity.vajji
+summary: >-
+  The Vajji (Vrijji) confederacy was a gana-sangha, a polity governed by assemblies of leading clans, north
+  of the Ganga in present-day north Bihar, with its principal centre at Vaishali. Buddhist texts describe a
+  league of clans led by the Licchavis, and the confederacy figures prominently in early Buddhist and Jain
+  tradition before its conquest by Ajatashatru of Magadha.
+summaries:
+  kids: >-
+    North of the Ganga in Bihar, the Vajji Confederacy was a league of clans whose leaders met in assemblies
+    at Vaishali instead of obeying a single king, until Magadha conquered it.
+  teen: >-
+    One of the sixteen great realms of Buddhist texts, the Vajji confederacy was governed by councils of
+    Licchavi and allied clan leaders at Vaishali. The Buddhist account of Ajatashatru's plans against it
+    treats regular assemblies as a source of its strength.
+region: North Bihar (Vaishali and the Mithila plain)
+location:
+  name: Vaishali (Basarh), Bihar
+  lat: 25.99
+  lon: 85.13
+datings:
+  - method: scholarly-consensus
+    range:
+      earliest: "600 BCE"
+      latest: "400 BCE"
+      precision: century
+      circa: true
+    grade: B
+    label: Mahajanapada period to conquest by Magadha
+    sources:
+      - src.singh-2008-ancient-early-medieval-india
+      - src.thapar-2002-early-india
+      - src.mishra-1962-early-history-vaisali
+    note: Early Buddhist and Jain texts depict the confederacy at its height before its conquest by
+      Ajatashatru. The end date depends on the contested chronology of the Buddha.
+claims:
+  - text: Early Buddhist texts describe the Vajjis as a confederation of clans, led prominently by the
+      Licchavis of Vaishali and governed through collective assemblies.
+    grade: B
+    sources:
+      - src.singh-2008-ancient-early-medieval-india
+      - src.mishra-1962-early-history-vaisali
+  - text: The Mahaparinibbana Sutta presents frequent assemblies and concord as conditions for the Vajji
+      confederacy to prosper.
+    grade: C
+    sources:
+      - id: src.walshe-1995-long-discourses-buddha
+        locator: DN 16
+  - text: Excavations at Vaishali uncovered fortifications, punch-marked coins, Northern Black Polished Ware
+      and a stupa that the excavators identified with a Licchavi relic stupa.
+    grade: B
+    sources:
+      - src.sinha-roy-1969-vaisali-excavations
+      - src.deva-1961-vaisali-excavations
+relations:
+  - kind: part-of
+    target: polity.sixteen-mahajanapadas
+  - kind: succeeded
+    target: polity.videha
+  - kind: related-to
+    target: polity.magadha
+    note: The early Buddhist narrative describes Ajatashatru planning war against the Vajjis.
+  - kind: related-to
+    target: person.mahavira
+  - kind: related-to
+    target: person.gautama-buddha
+wikidata: Q605199
+tags:
+  - vajji
+  - vaishali
+  - mahajanapada
+review:
+  status: draft
+  author: gemini-4-hydrogen-xhigh

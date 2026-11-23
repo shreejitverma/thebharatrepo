@@ -1,0 +1,47 @@
+id: "polity.rai-dynasty-of-sindh"
+type: "polity"
+kind: "polity"
+names:
+  en: "Rai dynasty of Sindh"
+summary: "Later chronicles describe the Rai rulers as a dynasty in Sindh that preceded Chach and his
+  successors. The sequence and dates are reconstructed from limited evidence and remain uncertain."
+summaries:
+  kids: "An old book tells about a family of rulers called the Rais. Historians use the book carefully
+    because it was written long after they lived."
+  teen: "The Chachnama places the Rai rulers before Chach. The dynasty's broad chronology is
+    reconstructed from later texts, whose claims about territory and succession are difficult to
+    check."
+region: "Sindh, Pakistan"
+datings:
+  - method: "textual-internal"
+    range:
+      earliest: 400
+      latest: 650
+      precision: "century"
+      circa: true
+    grade: "C"
+    label: "Approximate dynastic span in Sayantani Pal's synthesis"
+    sources:
+      - "src.pal-2016-rai-dynasty"
+      - "src.kufi-1985-chachnamah"
+    note: "The endpoints represent a broad placement from the fifth to the seventh century."
+claims:
+  - text: "The Chachnama describes Chach as taking power after the reign of the last Rai ruler."
+    grade: "B"
+    sources:
+      - "src.kufi-1985-chachnamah"
+  - text: "Pal treats the claimed extension of Rai authority to Kanauj as debatable."
+    grade: "C"
+    sources:
+      - "src.pal-2016-rai-dynasty"
+relations:
+  - kind: "related-to"
+    target: "site.aror"
+  - kind: "related-to"
+    target: "text.chachnama"
+tags:
+  - "sindh"
+  - "dynasty"
+review:
+  status: "draft"
+  author: "codex-gpt-6"

@@ -1,0 +1,63 @@
+id: person.maitreyi
+type: person
+kind: person
+names:
+  en: Maitreyi
+  iast: Maitreyī
+  native: मैत्रेयी
+summary: Maitreyi appears in two versions of a dialogue with Yajnavalkya in the Brihadaranyaka
+  Upanishad. She asks whether wealth can make her immortal, prompting a discussion of the self. Her
+  lifetime is unknown.
+summaries:
+  kids: In an old Indian dialogue, Maitreyi asks whether owning all the wealth in the world could make
+    her live forever. Her question starts a lesson about the self.
+  teen: Two versions of Maitreyi’s exchange with Yajnavalkya survive. When offered a share of his
+    property, she asks about immortality and redirects the discussion toward knowledge of the self.
+datings:
+  - method: traditional-puranic
+    range:
+      earliest: 3102 BCE
+      latest: 3102 BCE
+      precision: century
+      circa: true
+    grade: D
+    label: Traditional Puranic reckoning (Dvapara-Kali transition)
+    sources:
+      - src.wilson-1840-vishnu-purana
+      - src.olivelle-1998-early-upanisads
+    note: Maitreyi appears as Yajnavalkya's wife in the Brihadaranyaka Upanishad. The Vishnu Purana makes Yajnavalkya
+      a pupil of Vaishampayana, the disciple of Vyasa, which places that generation at the traditional
+      transition from the Dvapara to the Kali Yuga. The calendar year is the conventional epoch used for
+      that transition.
+claims:
+  - text: Maitreyi asks for Yajnavalkya’s teaching after he tells her that even great wealth offers no
+      hope of immortality.
+    grade: A
+    sources:
+      - id: src.olivelle-1998-early-upanisads
+        locator: Brihadaranyaka Upanishad 2.4 and 4.5
+  - text: In their dialogue Yajnavalkya tells Maitreyi that the self is to be heard about, reflected on
+      and understood.
+    grade: A
+    sources:
+      - id: src.olivelle-1998-early-upanisads
+        locator: Brihadaranyaka Upanishad 2.4 and 4.5
+  - text: Patrick Olivelle places the earliest prose Upanishads around the seventh to sixth centuries
+      BCE, allowing roughly a century on either side (about 800 BCE to 400 BCE); these are dates for
+      the texts, not for Maitreyi.
+    grade: C
+    sources:
+      - id: src.olivelle-1998-early-upanisads
+        locator: Introduction
+relations:
+  - kind: related-to
+    target: text.brihadaranyaka-upanishad
+  - kind: related-to
+    target: person.yajnavalkya
+tags:
+  - upanishads
+  - vedic-philosophy
+  - women
+review:
+  status: draft
+  author: codex-gpt-6

@@ -1,0 +1,75 @@
+id: person.mahapadma-nanda
+type: person
+kind: person
+names:
+  en: Mahapadma Nanda
+  iast: Mahāpadma Nanda
+summary: The Puranas name Mahapadma as the founder of the Nanda line of Magadha. Early Indian
+  traditions disagree about the length and details of the Nanda succession.
+summaries:
+  kids: Old royal lists remember Mahapadma as the man who began the Nanda line of kings in Magadha.
+  teen: Mahapadma is the Puranic founder of the Nandas. Greek accounts independently point to a
+    powerful eastern kingdom late in the dynasty, while the founder's dates depend on Indian king
+    lists.
+region: Magadha and the Gangetic plain
+location:
+  name: Patna (Pataliputra)
+  lat: 25.61
+  lon: 85.14
+datings:
+  - method: textual-internal
+    range:
+      earliest: 390 BCE
+      latest: 330 BCE
+      precision: decade
+      circa: true
+    grade: C
+    label: Fourth-century historical placement
+    sources:
+      - src.singh-2008-ancient-early-medieval-india
+      - src.kulke-2004-history-of-india
+    note: The rise of the dynasty is generally placed in the fourth century. The traditions give
+      incompatible regnal totals.
+  - method: traditional-puranic
+    range:
+      earliest: 425 BCE
+      latest: 330 BCE
+      precision: century
+      circa: true
+    grade: D
+    label: Long Puranic regnal reckoning
+    sources:
+      - src.pargiter-1913-dynasties-kali-age
+    note: Some Puranic witnesses allot Mahapadma eighty-eight years. The broad window represents the
+      long reckoning counted back from the Mauryan transition.
+  - method: traditional-puranic
+    range:
+      earliest: 365 BCE
+      latest: 330 BCE
+      precision: decade
+      circa: true
+    grade: D
+    label: Short Puranic regnal reckoning
+    sources:
+      - src.pargiter-1913-dynasties-kali-age
+    note: Other Puranic witnesses allot Mahapadma twenty-eight years. The absolute placement is
+      approximate.
+claims:
+  - text: Puranic lists represent Mahapadma as the founder and differ in the length they give his reign.
+    grade: D
+    sources:
+      - src.pargiter-1913-dynasties-kali-age
+  - text: The Nandas ruled Magadha before the Mauryan takeover in the late fourth century BCE.
+    grade: B
+    sources:
+      - src.singh-2008-ancient-early-medieval-india
+      - src.kulke-2004-history-of-india
+relations:
+  - kind: founded
+    target: polity.nanda-dynasty
+debate: Puranic variants give reign lengths of twenty-eight and eighty-eight years. Historians place
+  the Nanda rise broadly in the fourth century BCE.
+tags: []
+review:
+  status: draft
+  author: codex-gpt-6

@@ -1,0 +1,82 @@
+id: tradition.bidriware
+type: tradition
+kind: art
+names:
+  en: Bidriware
+  iast: Bīdarī
+  native: "ಬಿದರಿ ಕಲೆ / بیدری"
+summary: Bidriware is the silver- and brass-inlaid blackened alloy metalwork of Bidar in northern Karnataka. Cast
+  primarily from a zinc-rich alloy with a small copper content, engraved objects are inlaid with pure silver or brass
+  wire and sheet (tarkashi, teh-nishan, aftabi, zarbuland) and treated with a potassium-nitrate-rich paste made from
+  Bidar fort soil that turns the base black without darkening the silver.
+summaries:
+  kids: Bidriware from Bidar in Karnataka is shiny silver artwork inlaid into pitch-black metal vessels, darkened with
+    special mineral-rich soil from Bidar fort.
+  teen: Cast in a zinc-copper alloy at Bidar and inlaid with silver wire or sheet, Bidri vessels achieve their signature
+    matte-black contrast when treated with saltpetre-rich fort earth.
+region: Bidar, Karnataka (with historical workshops also at Hyderabad, Purnea and Lucknow)
+location:
+  name: Bidar, Karnataka
+  lat: 17.913
+  lon: 77.52
+datings:
+  - method: traditional-sampradaya
+    range:
+      earliest: 1350
+      latest: 1500
+      precision: century
+      circa: true
+    grade: D
+    label: Local workshop tradition tracing Bidriware to the Bahmani Sultanate at Bidar
+    sources:
+      - src.stronge-1985-bidri-ware
+    note: Bidar craft tradition attributes the arrival of the inlay technique to Persian artisans invited under Bahmani
+      rulers (14th-15th centuries).
+  - method: art-historical
+    range:
+      earliest: 1600
+      latest: 1900
+      precision: century
+      circa: true
+    grade: B
+    label: Earliest surviving dated Bidriware vessels (17th century onwards)
+    sources:
+      - src.stronge-1985-bidri-ware
+      - src.stronge-2003-other-arts-grove
+      - src.haidar-sardar-2015-sultans-deccan
+    note: Susan Stronge notes that no surviving piece can be securely dated before the late 16th or 17th century (Barid
+      Shahi and Mughal-Deccan periods), with production continuing through the 18th-19th centuries.
+claims:
+  - text: Chemical and metallurgical tests show Bidri metal is predominantly zinc (typically around 85-95%) alloyed with
+      copper, which darkens cleanly when heated with sal ammoniac and nitrate-rich Bidar soil.
+    grade: A
+    sources:
+      - src.stronge-1985-bidri-ware
+      - src.stronge-2003-other-arts-grove
+  - text: Inlay styles include tarkashi (wire inlay), teh-nishan (flush sheet inlay), zarnishan (low-relief silver),
+      zarbuland (high-relief silver) and aftabi (cut-out darkened motifs against a silver ground).
+    grade: A
+    sources:
+      - src.stronge-1985-bidri-ware
+debate: While local Bidar tradition dates the craft to the Bahmani rulers of the fourteenth and fifteenth centuries,
+  museum scholars such as Susan Stronge observe that the earliest surviving Bidri huqqa bases, ewers and trays date
+  stylistically from the seventeenth century.
+relations:
+  - kind: related-to
+    target: tradition.deccani-painting
+wikidata: Q1931229
+image:
+  commons: File:Bidriware vases and decanter.jpg
+  alt: Blackened zinc-alloy Bidriware ewer and vases inlaid with intricate geometric silver work
+  credit: Randhirreddy
+  license: CC BY-SA 3.0
+tags:
+  - bidriware
+  - bidar
+  - karnataka
+  - metalwork
+  - silver-inlay
+  - deccan
+review:
+  status: draft
+  author: gemini-4-hydrogen-xhigh

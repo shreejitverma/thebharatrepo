@@ -1,0 +1,29 @@
+id: event.mamallapuram-unesco-inscription
+type: event
+kind: site
+names:
+  en: "Monuments at Mamallapuram inscribed on the World Heritage List"
+summary: "The World Heritage Committee inscribed the Group of Monuments at Mahabalipuram in 1984. The designation covers Pallava-period monuments such as rock-cut shrines, open-air reliefs and the Shore Temple."
+summaries:
+  kids: "Mamallapuram's monuments joined the World Heritage List in 1984. The group includes temples, shrines and giant scenes carved into rock."
+  teen: "UNESCO inscribed the Pallava-period group at Mamallapuram in 1984. The property contains several forms of architecture and sculpture, from monolithic rathas to the structural Shore Temple."
+region: "Mamallapuram, Tamil Nadu"
+datings:
+  - method: documentary
+    range: { earliest: "1984", latest: "1984", precision: year, circa: false }
+    grade: A
+    label: "World Heritage inscription"
+    sources: ["src.unesco-1984-mahabalipuram"]
+    note: "The World Heritage List gives 1984 and uses the place name Mahabalipuram."
+claims:
+  - text: "The Committee inscribed the Group of Monuments at Mahabalipuram in 1984."
+    grade: A
+    sources: ["src.unesco-1984-mahabalipuram"]
+  - text: "The listed group includes rathas, cave sanctuaries, large open-air reliefs and the Shore Temple."
+    grade: A
+    sources: ["src.unesco-1984-mahabalipuram"]
+relations:
+  - kind: related-to
+    target: site.mamallapuram
+tags: ["republic","unesco","heritage"]
+review: { status: draft, author: codex-gpt-6 }

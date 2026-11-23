@@ -1,0 +1,54 @@
+id: text.tantrasangraha
+type: text
+kind: science
+names:
+  en: Tantrasangraha
+  iast: Tantrasaṅgraha
+  native: तन्त्रसङ्ग्रह
+summary: Nilakantha Somayaji’s Tantrasangraha is a Sanskrit astronomical treatise completed around 1500. It
+  sets out procedures for computing planetary positions and other celestial phenomena, and later Kerala works
+  explain its mathematics.
+summaries:
+  kids: Nilakantha’s book gives rules for working out where planets will appear in the sky.
+  teen: The Tantrasangraha presents computational rules for planetary astronomy and trigonometry. The Malayalam
+    Yuktibhasha and Sanskrit commentaries explain much of the underlying reasoning.
+region: Kerala
+datings:
+  - method: textual-internal
+    range:
+      earliest: 1500
+      latest: 1501
+      precision: year
+      circa: true
+    grade: B
+    label: Date encoded in the work
+    sources:
+      - id: src.plofker-2009-mathematics-in-india
+        locator: Section 7.2 and Appendix B
+      - src.ramasubramanian-2026-tantrasangraha
+    note: The encoded calendrical date places the treatise around 1500 CE.
+claims:
+  - text: The work gives procedures for planetary motion and includes rules for computing sines and cosines.
+    grade: A
+    sources:
+      - src.ramasubramanian-2026-tantrasangraha
+      - id: src.plofker-2009-mathematics-in-india
+        locator: Section 7.3
+  - text: Jyeshthadeva’s Yuktibhasha explains mathematical procedures stated in the Tantrasangraha.
+    grade: A
+    sources:
+      - src.sarma-2008-ganita-yukti-bhasa
+      - id: src.plofker-2009-mathematics-in-india
+        locator: Section 7.2
+relations:
+  - kind: authored-by
+    target: person.nilakantha-somayaji
+  - kind: part-of
+    target: tradition.kerala-school-of-mathematics
+tags:
+  - kerala-school
+  - planetary-theory
+  - trigonometry
+review:
+  status: draft
+  author: codex-gpt-6

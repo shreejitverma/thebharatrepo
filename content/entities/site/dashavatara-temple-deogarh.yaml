@@ -1,0 +1,57 @@
+id: site.dashavatara-temple-deogarh
+type: site
+kind: site
+names:
+  en: Dashavatara Temple, Deogarh
+  iast: Daśāvatāra Mandira, Devagaṛh
+  native: दशावतार मंदिर, देवगढ़
+summary: >-
+  The Dashavatara Temple at Deogarh in Uttar Pradesh is a late Gupta-period sandstone temple dedicated
+  to Vishnu. The square sanctuary stands on a raised platform and is known for large reliefs on three
+  outer walls.
+summaries:
+  kids: >-
+    At Deogarh in Uttar Pradesh, carved stone panels around an old Vishnu temple show stories of the
+    god. One shows Vishnu resting on a many-headed serpent.
+  teen: >-
+    Usually dated to around the turn of the sixth century CE, the Dashavatara Temple at Deogarh has a
+    square sanctuary, a carved doorway and large reliefs of Vishnu on its outer walls.
+region: Bundelkhand (Lalitpur district, Uttar Pradesh)
+location: { name: "Deogarh, Uttar Pradesh", lat: 24.527, lon: 78.240 }
+datings:
+  - method: art-historical
+    range: { earliest: "475 CE", latest: "550 CE", precision: decade, circa: true }
+    grade: B
+    label: "Late Gupta dating from sculpture and architecture"
+    sources:
+      - src.vats-1952-gupta-temple-deogarh
+      - src.williams-1982-art-of-gupta-india
+      - src.meister-1988-encyclopaedia-indian-temple-architecture-north-1
+    note: >-
+      The main structure is placed around the turn of the sixth century CE through comparisons of its
+      sculptural and architectural forms.
+claims:
+  - text: >-
+      The plan is reconstructed with four smaller corner shrines around the main square sanctuary on a
+      raised platform.
+    grade: B
+    sources:
+      - src.vats-1952-gupta-temple-deogarh
+      - src.meister-1988-encyclopaedia-indian-temple-architecture-north-1
+  - text: >-
+      The outer wall panels show Vishnu resting on the serpent Ananta, Vishnu rescuing the elephant
+      Gajendra, and the sages Nara and Narayana.
+    grade: B
+    sources:
+      - src.vats-1952-gupta-temple-deogarh
+      - src.williams-1982-art-of-gupta-india
+relations:
+  - { kind: part-of, target: polity.gupta-empire }
+wikidata: Q1171865
+image:
+  commons: "File:Deogarh01.jpg"
+  alt: The sandstone sanctuary and surviving tower of the Dashavatara Temple at Deogarh
+  credit: byron aihara
+  license: CC BY-SA 2.0
+tags: [deogarh, gupta, vaishnavism, nagara, temple-architecture, uttar-pradesh]
+review: { status: draft, author: "gemini-4-hydrogen-xhigh" }

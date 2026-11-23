@@ -1,0 +1,75 @@
+id: artifact.hamzanama-folios
+type: artifact
+kind: art
+names:
+  en: Akbar's Hamzanama Folios
+  iast: Hamzanāmā Citrapaṭa
+summary: "Giant narrative paintings on sized cotton cloth backed with Persian paper text from Emperor Akbar's landmark project illustrating the Dastan-i Amir Hamza (c. 1557-1577 CE). Originally comprising 1,400 large folios (~68 x 52 cm) bound in 14 volumes under Persian masters Mir Sayyid Ali and Abd al-Samad, roughly 140-200 folios survive across Vienna's MAK museum (~60-61 folios), the V&A, Metropolitan Museum, and Brooklyn."
+summaries:
+  kids: >-
+    Emperor Akbar ordered artists to paint 1,400 giant colourful battle and adventure pictures on cloth for
+    his storytelling books of Amir Hamza, with Persian text written on the back so people could listen while
+    looking at the paintings.
+  teen: >-
+    Produced at the Mughal court between 1562 and 1577 under Mir Sayyid Ali and Abd al-Samad, the 1,400
+    oversized cloth paintings of the Hamzanama fused Persian miniature delicacy with dynamic Indian brushwork,
+    colour, and spatial drama to inaugurate the imperial Mughal school.
+region: Agra and Fatehpur Sikri Mughal atelier (dispersed across MAK Vienna, V&A London, Met New York)
+datings:
+  - method: documentary
+    range:
+      earliest: 1557
+      latest: 1577
+      best: 1570
+      precision: year
+      circa: true
+    grade: B
+    label: "Contemporary court chronicles; start and end years debated"
+    sources:
+      - src.seyller-2002-adventures-of-hamza
+      - src.beach-1992-mughal-rajput-painting
+      - src.losty-1982-art-of-the-book
+    note: "Mughal chroniclers describe a project of about fifteen years directed first by Mir Sayyid Ali and completed under Abd al-Samad; scholars place it variously between c. 1557 and 1577 CE (John Seyller favours c. 1557-1572)."
+claims:
+  - text: >-
+      John Seyller's comprehensive 2002 exhibition catalogue documents the original 14-volume, 1,400-painting
+      scale (~68 x 52 cm opaque watercolour and gold on cotton cloth pasted to paper backing bearing Nastaliq
+      Persian narration on the reverse) and lists over 140 surviving folios, with 60-61 concentrated in the
+      MAK, Vienna and major groups in the V&A (e.g. IS.1508-1883).
+    grade: A
+    sources:
+      - src.seyller-2002-adventures-of-hamza
+      - src.losty-1982-art-of-the-book
+  - text: >-
+      Commissioned when Akbar was a young ruler, the vast atelier recruited dozens of Indian painters from
+      regional centres alongside Safavid masters, merging Persian architectural patterning with bold Indian
+      motion, expressive gestures, and naturalistic foliage.
+    grade: B
+    sources:
+      - src.seyller-2002-adventures-of-hamza
+      - src.beach-1992-mughal-rajput-painting
+relations:
+  - kind: patronised-by
+    target: person.akbar
+  - kind: part-of
+    target: polity.mughal-empire
+wikidata: Q17629698
+image:
+  commons: >-
+    File:Prince Sa'id Farrukh Nizhad lifts an elephant, Hamzanama, 1562-77 CE, Museum of Applied Arts
+    Vienna.jpg
+  alt: >-
+    Oversized cloth painting from Akbar's Hamzanama showing Prince Said Farrukh Nizhad lifting an elephant, in
+    MAK Vienna
+  credit: SpeakingArch
+  license: CC BY-SA 4.0
+tags:
+  - manuscript
+  - mughal
+  - painting
+  - akbar
+  - hamzanama
+  - mak-vienna
+review:
+  status: draft
+  author: gemini-4-hydrogen-xhigh

@@ -1,0 +1,77 @@
+id: tradition.mughal-miniature-painting
+type: tradition
+kind: art
+names:
+  en: Mughal Miniature Painting
+  iast: Mughal Laghucitra
+  native: मुग़ल लघुचित्र
+summary: The Mughal miniature school developed from the mid-sixteenth century in the imperial ateliers (tasvirkhana) of
+  Humayun, Akbar, Jahangir and Shah Jahan. Uniting Safavid Persian manuscript craft with Indian indigenous painters
+  (such as Basawan and Daswanth) and European naturalism, Mughal workshops produced illustrated histories (Hamzanama,
+  Akbarnama), naturalistic flora and fauna studies, and formal court portraits.
+summaries:
+  kids: Mughal miniature paintings are tiny, jewel-like pictures painted for Mughal emperors showing battles, royal
+    courts, birds, flowers and stories with astonishing detail.
+  teen: Beginning under Humayun and Akbar in the 1550s, the Mughal imperial workshop blended Persian technique, Indian
+    painters and European perspective into narrative histories and meticulous portraits under Jahangir and Shah Jahan.
+region: Northern India (Delhi, Agra, Fatehpur Sikri, Lahore)
+location:
+  name: Agra, Uttar Pradesh
+  lat: 27.179
+  lon: 78.021
+datings:
+  - method: documentary
+    range:
+      earliest: 1550
+      latest: 1857
+      precision: decade
+      circa: true
+    grade: A
+    label: Imperial atelier founding under Humayun and Akbar through late Mughal Delhi
+    sources:
+      - src.beach-1992-mughal-rajput-painting
+      - src.beach-2003-mughal-painting-grove
+      - src.ehnbom-losty-2003-indian-painting-grove
+    note: Humayun recruited Safavid masters Mir Sayyid Ali and Abd al-Samad in the 1550s; imperial production peaked under
+      Akbar, Jahangir and Shah Jahan and continued in provincial and late Mughal workshops until 1857.
+claims:
+  - text: Akbar's imperial atelier employed both Persian masters and numerous Indian artists such as Daswanth, Basawan, Kesu
+      Das and Lal on collaborative projects like the 1,400-folio Hamzanama and Akbarnama.
+    grade: A
+    sources:
+      - src.beach-1992-mughal-rajput-painting
+      - src.abulfazl-1873-ain-i-akbari
+  - text: Under Jahangir (r. 1605-1627), individual connoisseurship fostered solo masterworks by artists such as Mansur,
+      Abu'l Hasan and Bichitr, known for natural history studies and allegorical royal portraits.
+    grade: A
+    sources:
+      - src.beach-1992-mughal-rajput-painting
+      - src.beach-2003-mughal-painting-grove
+      - src.ehnbom-losty-2003-indian-painting-grove
+relations:
+  - kind: patronised-by
+    target: polity.mughal-empire
+  - kind: patronised-by
+    target: person.akbar
+  - kind: influenced
+    target: tradition.rajput-painting
+  - kind: influenced
+    target: tradition.pahari-painting
+  - kind: influenced
+    target: tradition.deccani-painting
+wikidata: Q1049336
+image:
+  commons: File:AbulFazlPresentingAkbarnama.jpg
+  alt: Mughal miniature by Govardhan showing Abu'l Fazl presenting the Akbarnama to Emperor Akbar
+  credit: Govardhan (early 17th century)
+  license: Public domain
+tags:
+  - mughal
+  - miniature
+  - painting
+  - akbarnama
+  - hamzanama
+  - jahangir
+review:
+  status: draft
+  author: gemini-4-hydrogen-xhigh

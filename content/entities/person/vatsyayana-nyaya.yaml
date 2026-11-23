@@ -1,0 +1,43 @@
+id: person.vatsyayana-nyaya
+type: person
+kind: person
+names:
+  en: Vatsyayana (Nyaya commentator)
+  iast: Vātsyāyana
+  native: वात्स्यायन
+summary: Vatsyayana wrote the Nyayabhashya, an early surviving commentary on the Nyaya Sutra. Its
+  detailed arguments concern how people learn, reason and debate.
+summaries:
+  kids: Vatsyayana explained an older book about reasoning. He gave readers more detail about how
+    arguments work.
+  teen: The Nyayabhashya develops the terse Nyaya Sutra into a sustained account of inquiry. It
+    discusses reliable ways of knowing, the aims of debate and the kinds of mistakes that can arise
+    in argument.
+datings:
+  - method: scholarly-consensus
+    range:
+      earliest: "400"
+      latest: "500"
+      precision: century
+      circa: true
+    grade: B
+    label: Fifth-century setting for the Nyayabhashya
+    sources:
+      - id: src.ganeri-2017-oxford-handbook-indian-philosophy
+        locator: "Timeline: Indian Philosophy in a Hundred Thinkers"
+      - src.dasti-2023-vatsyayana-commentary
+claims:
+  - text: The Nyayabhashya comments on the Nyaya Sutra and develops accounts of knowledge and debate.
+    grade: B
+    sources:
+      - src.dasti-2023-vatsyayana-commentary
+relations:
+  - kind: related-to
+    target: person.gautama-akshapada
+tags:
+  - nyaya
+  - epistemology
+  - sanskrit-commentary
+review:
+  status: draft
+  author: codex-gpt-6

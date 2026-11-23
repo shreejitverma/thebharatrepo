@@ -1,0 +1,50 @@
+id: person.chashtana
+type: person
+kind: person
+names:
+  en: Chashtana
+  iast: Caṣṭana
+summary: Chashtana established the long-lived Kardamaka line among the Western Satraps. Coins bear
+  his name, and the Junagadh inscription of Rudradaman places him two generations before its issuer.
+summaries:
+  kids: Chashtana was a ruler remembered on coins. A stone inscription made for his grandson also
+    names him.
+  teen: The genealogy at Junagadh and coins bearing his name identify Chashtana as the ancestor of the
+    later Western Satrap line to which Rudradaman belonged.
+region: Malwa and western India
+location:
+  name: Ujjain (associated seat)
+  lat: 23.18
+  lon: 75.78
+datings:
+  - method: numismatic
+    range:
+      earliest: "100"
+      latest: "135"
+      precision: decade
+      circa: true
+    grade: B
+    label: Early second-century coin and inscription horizon
+    sources:
+      - src.singh-2008-ancient-early-medieval-india
+      - src.salomon-1998-indian-epigraphy
+      - src.kielhorn-1906-junagadh-inscription
+    note: The Andhau record and Junagadh genealogy constrain the placement of his rule.
+claims:
+  - text: The Junagadh inscription identifies Chashtana as the grandfather of Rudradaman.
+    grade: A
+    sources:
+      - src.kielhorn-1906-junagadh-inscription
+  - text: Coin issues bearing Chashtana's name attest his royal position in the Western Satrap sequence.
+    grade: A
+    sources:
+      - src.singh-2008-ancient-early-medieval-india
+      - src.salomon-1998-indian-epigraphy
+relations:
+  - kind: ruled
+    target: polity.western-satraps
+    note: Founder of its Kardamaka line.
+tags: []
+review:
+  status: draft
+  author: codex-gpt-6

@@ -1,0 +1,69 @@
+id: tradition.koodiyattam
+type: tradition
+kind: art
+names:
+  en: Koodiyattam
+  iast: Kūṭiyāṭṭam
+  native: കൂടിയാട്ടം
+summary: Koodiyattam ('combined acting') is the traditional Sanskrit temple theatre of Kerala, performed by Chakyar
+  actors and Nangiar actresses with Nambiar drummers on the copper mizhavu pot-drum inside temple playhouses
+  (koothambalams). Attested in Kerala from at least the Kulasekhara period around the ninth to eleventh centuries CE, it
+  was proclaimed a UNESCO Masterpiece in 2001 and inscribed on the Representative List in 2008.
+summaries:
+  kids: Koodiyattam is a very old Sanskrit theatre tradition from Kerala performed in temple halls with giant copper
+    drums, expressive eye movements and detailed hand gestures.
+  teen: India's oldest surviving Sanskrit theatre tradition, Koodiyattam pairs classical plays by Bhasa, Harsha and
+    Kulasekhara Varman with elaborate Malayalam commentary and mizhavu drumming; UNESCO inscribed it in 2008.
+region: Kerala
+location:
+  name: Thrissur, Kerala
+  lat: 10.527
+  lon: 76.214
+datings:
+  - method: scholarly-consensus
+    range:
+      earliest: 850
+      latest: 1100
+      precision: century
+      circa: true
+    grade: B
+    label: Kulasekhara-era attestation and koothambalam temple theatre tradition
+    sources:
+      - src.richmond-2002-kutiyattam
+      - src.gopalakrishnan-2011-kutiyattam
+    note: Theatre historians place the structural consolidation of Koodiyattam in the second Chera (Kulasekhara) era of
+      Kerala (c. 9th-11th centuries CE), while noting older Sangam and temple koothu antecedents.
+claims:
+  - text: UNESCO proclaimed Koodiyattam (Kutiyattam, Sanskrit theatre) a Masterpiece in 2001 and inscribed it on the
+      Representative List of Intangible Cultural Heritage in 2008.
+    grade: A
+    sources:
+      - src.unesco-2008-kutiyattam
+  - text: Performances stretch a single act of a Sanskrit play (such as works attributed to Bhasa or Shaktibhadra) over many
+      nights using codified eye acting (netrabhinaya), hand mudras and stage manuals (attaprakaram).
+    grade: A
+    sources:
+      - src.richmond-2002-kutiyattam
+      - src.gopalakrishnan-2011-kutiyattam
+relations:
+  - kind: related-to
+    target: text.natyashastra
+  - kind: influenced
+    target: tradition.kathakali
+  - kind: related-to
+    target: person.kalidasa
+wikidata: Q1641463
+image:
+  commons: File:Kalamandalam Girija 2.jpg
+  alt: Koodiyattam artist Kalamandalam Girija in Nangiar Koothu stage costume and traditional crown
+  credit: Orbismedia
+  license: CC BY-SA 4.0
+tags:
+  - koodiyattam
+  - kutiyattam
+  - sanskrit-theatre
+  - kerala
+  - unesco
+review:
+  status: draft
+  author: gemini-4-hydrogen-xhigh

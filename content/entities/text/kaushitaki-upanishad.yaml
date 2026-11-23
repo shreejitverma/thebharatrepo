@@ -1,0 +1,64 @@
+id: text.kaushitaki-upanishad
+type: text
+kind: text
+names:
+  en: Kaushitaki Upanishad
+  iast: Kauṣītaki Upaniṣad
+  native: कौषीतक्युपनिषद्
+summary: The Kaushitaki Upanishad is a prose text of a Rigvedic school. It includes an account of
+  the path after death and dialogues in which breath and consciousness are central.
+  Its date is uncertain.
+summaries:
+  kids: In this old book, kings and seekers ask what keeps a person alive and what happens after death.
+  teen: In one dialogue, Indra identifies vital breath with conscious awareness. Other episodes
+    describe a journey after death and put a king in the role of teacher.
+datings:
+  - method: linguistic
+    range:
+      earliest: "600 BCE"
+      latest: "401 BCE"
+      precision: century
+      circa: true
+    grade: C
+    label: "Patrick Olivelle: early prose stratum"
+    sources:
+      - id: src.olivelle-1998-early-upanisads
+        locator: Introduction, Chronology
+      - id: src.cohen-2024-classical-upanisads
+        locator: Dating and Authorship
+    note: The Kaushitaki Upanishad belongs to the prose group Olivelle places after the Brihadaranyaka
+      and Chandogya, probably before the emergence of Buddhism.
+  - method: textual-internal
+    range: { earliest: "800 BCE", latest: "601 BCE", precision: century, circa: true }
+    grade: C
+    label: "Sarvepalli Radhakrishnan and Charles A. Moore: earlier pre-Buddhist placement"
+    sources:
+      - id: src.radhakrishnan-1957-source-book-indian-philosophy
+        locator: "Chapter II, The Upaniṣads"
+    note: Their source book assigns this text to the eighth or seventh century BCE in its
+      chronology of the principal Upanishads.
+claims:
+  - text: Indra instructs Pratardana in the identification of vital breath with consciousness.
+    grade: A
+    sources:
+      - id: src.olivelle-1998-early-upanisads
+        locator: Kausitaki Upanisad 3
+  - text: The fourth chapter presents a dialogue between Balaki and King Ajatashatru.
+    grade: A
+    sources:
+      - id: src.olivelle-1998-early-upanisads
+        locator: Kausitaki Upanisad 4
+relations:
+  - kind: part-of
+    target: text.upanishads
+  - kind: related-to
+    target: text.rigveda
+debate: Cohen places the text among the earlier prose Upanishads on linguistic grounds. Olivelle
+  puts it in a prose group after the Chandogya and Brihadaranyaka.
+tags:
+  - upanishad
+  - veda
+  - vedanta
+review:
+  status: draft
+  author: codex-gpt-6

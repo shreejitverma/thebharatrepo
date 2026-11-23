@@ -1,0 +1,34 @@
+id: event.princely-states-integration
+type: event
+kind: polity
+names:
+  en: "Integration of the princely states into India"
+summary: "Between independence and the inauguration of the Constitution, the Government of India incorporated princely states through instruments of accession, merger agreements and covenants forming unions of states. Hyderabad and Junagadh illustrate the role of coercion and armed force in some cases."
+summaries:
+  kids: "When British rule ended, many territories were governed by princes. They became part of India through agreements, mergers and, in some cases, force."
+  teen: "Accession initially transferred specific powers, including defence and external affairs. Merger agreements and covenants later reorganised many princely territories. Hyderabad and Junagadh followed distinct and more coercive paths."
+region: "India"
+datings:
+  - method: documentary
+    range: { earliest: "1947", latest: "1950", precision: year, circa: false }
+    grade: A
+    label: "Accession and territorial integration"
+    sources: ["src.ministry-of-states-1950-white-paper-indian-states"]
+    note: "The Ministry of States traces the process from the creation of the States Department in July 1947 through the constitutional settlement of 1950."
+claims:
+  - text: "The standard instruments of accession assigned legislative authority to the Dominion on defence, external affairs and communications and specified ancillary matters."
+    grade: A
+    sources: ["src.ministry-of-states-1950-white-paper-indian-states"]
+  - text: "Rulers signed covenants to combine several princely states into unions including Saurashtra and Madhya Bharat."
+    grade: A
+    sources: ["src.ministry-of-states-1950-white-paper-indian-states"]
+  - text: "Studies of Hyderabad and Junagadh document coercion and communal violence amid the formation of the postcolonial state."
+    grade: B
+    sources: ["src.purushotham-2015-internal-violence-hyderabad", "src.ankit-2016-accession-of-junagadh"]
+relations:
+  - kind: related-to
+    target: event.independence-and-partition-1947
+  - kind: related-to
+    target: event.constitution-adopted-and-commenced
+tags: ["republic","princely-states","state-formation"]
+review: { status: draft, author: codex-gpt-6 }

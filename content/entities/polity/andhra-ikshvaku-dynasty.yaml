@@ -1,0 +1,53 @@
+id: polity.andhra-ikshvaku-dynasty
+type: polity
+kind: polity
+names:
+  en: Andhra Ikshvaku Dynasty
+  iast: Ikṣvāku
+summary: The Andhra Ikshvakus ruled at Vijayapuri after the decline of Satavahana authority in the
+  lower Krishna valley. Inscriptions from Nagarjunakonda record royal sacrifices and Buddhist gifts
+  made by members of the court and other donors.
+summaries:
+  kids: At Vijayapuri, the Ikshvakus left records on stone. Some honour kings, and others describe
+    gifts to Buddhist shrines.
+  teen: Dated by regnal years, the Vijayapuri inscriptions help reconstruct the Ikshvaku succession.
+    Records of donors show how the court was connected to Buddhist institutions.
+region: Lower Krishna valley, Andhra Pradesh
+location:
+  name: Nagarjunakonda (ancient Vijayapuri area)
+  lat: 16.52
+  lon: 79.24
+datings:
+  - method: scholarly-consensus
+    range:
+      earliest: "220"
+      latest: "340"
+      precision: decade
+      circa: true
+    grade: B
+    label: Period of rule
+    sources:
+      - src.singh-2008-ancient-early-medieval-india
+      - src.ollett-2025-deccan-memorial-stones
+    note: Relative order is inscribed. The absolute limits of the dynasty depend on its position in the
+      post-Satavahana sequence.
+claims:
+  - text: A memorial pillar from Nagarjunakonda names Chantamula I as father of Virapurushadatta and
+      records his ashvamedha.
+    grade: A
+    sources:
+      - src.ollett-2025-deccan-memorial-stones
+  - text: Ikshvaku-period remains at Nagarjunakonda include Buddhist monasteries and monuments supported
+      by varied donors.
+    grade: B
+    sources:
+      - src.singh-2008-ancient-early-medieval-india
+      - src.ollett-2025-deccan-memorial-stones
+relations:
+  - kind: succeeded
+    target: polity.satavahana-dynasty
+    note: In the lower Krishna valley.
+tags: []
+review:
+  status: draft
+  author: codex-gpt-6

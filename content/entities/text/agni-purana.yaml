@@ -1,0 +1,64 @@
+id: text.agni-purana
+type: text
+kind: text
+names:
+  en: Agni Purana
+  iast: Agnipurāṇa
+  native: अग्निपुराण
+summary: The Agni Purana presents teaching from the fire god Agni to Vasistha and contains material
+  on ritual, iconography, poetics and other disciplines. Its textual layers are difficult to date.
+summaries:
+  kids: Agni, the god of fire, teaches a sage. The collection includes instructions for worship and
+    for making sacred images, along with lessons about poetry.
+  teen: This Purana gathers many kinds of Sanskrit knowledge, including statecraft, literary theory
+    and temple rites. References in earlier works can help date individual passages.
+datings:
+  - method: textual-internal
+    range:
+      earliest: 700
+      latest: 1200
+      precision: century
+      circa: true
+    grade: C
+    label: "R. C. Hazra: earlier material and medieval reworking"
+    sources:
+      - src.hazra-1940-puranic-records
+      - src.rocher-1986-puranas
+    note: Medieval writers quote material attributed to the Agni Purana, sometimes in forms different
+      from the surviving text. The range reflects several stages of compilation.
+  - method: traditional-puranic
+    range:
+      earliest: "3102 BCE"
+      latest: "3102 BCE"
+      precision: year
+      circa: true
+    grade: D
+    label: Traditional Vyasa attribution and Kali Yuga epoch
+    sources:
+      - src.rocher-1986-puranas
+      - src.gonzalezreimann-2002-mahabharata-yugas
+    note: Agni Purana is counted among the great Puranas in the traditional scheme of transmission. The
+      calendar year is the conventional epoch used for that transition.
+claims:
+  - text: Medieval citations of material attributed to the Agni Purana sometimes differ from
+      corresponding passages in its surviving versions.
+    grade: B
+    sources:
+      - src.hazra-1940-puranic-records
+      - src.rocher-1986-puranas
+  - text: The text includes sections on images, architecture, metre and poetics alongside accounts of
+      religious rites.
+    grade: B
+    sources:
+      - src.rocher-1986-puranas
+      - src.hazra-1940-puranic-records
+relations:
+  - kind: part-of
+    target: text.puranas
+tags:
+  - purana
+  - ritual
+  - poetics
+review:
+  status: draft
+  author: codex-gpt-6

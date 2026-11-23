@@ -9,7 +9,8 @@
  */
 
 import { z } from 'zod';
-import { PRESENT_YEAR } from '../time';
+import { PRESENT_YEAR, formatRange } from '../time';
+import { rankDatings } from './lens';
 
 import {
   PRECISIONS,
@@ -87,6 +88,12 @@ export const DatingSchema = z
     label: z.string().optional(),
     sources: z.array(CitationRef).min(1, 'every dating needs at least one source'),
     note: z.string().optional(),
+    /**
+     * Why this dating stands for the entity although a dating of it at least five times longer exists, such as a
+     * competing dating of the same deposit. Without it the validator treats such a dating as a single event in the
+     * entity's history, which belongs in a claim.
+     */
+    primaryReason: z.string().min(10).optional(),
   })
   .superRefine((d, ctx) => {
     const trad = isTraditional(d.method);
@@ -169,6 +176,25 @@ export const ImageSchema = z.strictObject({
   license: z.string().min(2),
 });
 
+/** How many times longer than the leading dating another dating must be for the leading one to read as a single event. */
+const EVENT_SPAN_RATIO = 5;
+
+/**
+ * The scholarship dating that ranks first stands for the entity everywhere (see rankDatings). A dating describes the
+ * entity's own existence, so when the leading dating is at most a fifth as long as another dating of the entity, inside
+ * or outside it, it reads as one event in the entity's history (a speech, a capture, an inscription, the completion of
+ * one work) and the item would be labelled and sorted by it. Returns that event and the longer dating, unless the
+ * leading dating gives a primaryReason.
+ */
+function eventOutrankingSpan(datings: readonly Dating[]): { event: Dating; span: Dating } | null {
+  const scholarly = datings.filter((d) => !isTraditional(d.method));
+  const [event] = rankDatings(scholarly, () => false);
+  if (!event || event.primaryReason) return null;
+  const years = (d: Dating) => d.range.latest - d.range.earliest + 1;
+  const span = scholarly.find((d) => d !== event && years(d) >= EVENT_SPAN_RATIO * years(event));
+  return span ? { event, span } : null;
+}
+
 /** Wording that marks a dating as the date of a text, or of a text's statement or attestation, rather than of the entity. */
 const TEXT_DATE = /\b(?:date of the texts?|dates? the texts?|earliest (?:known )?(?:statement|mention|attestation|reference)|first (?:attested|stated|mentioned) in)\b/i;
 
@@ -183,6 +209,11 @@ export const EntitySchema = z
       native: z.string().optional(),
       /** BCP 47 tag for `native` when the script default is wrong, e.g. "mr" for a Marathi name in Devanagari. */
       nativeLang: z.string().regex(BCP47, 'a BCP 47 tag such as "hi", "mr", "sa-Deva" or "ta"').optional(),
+      /**
+       * Other names a reader searches by, such as "Buddha" for Gautama Buddha. Search pins the entity first when a
+       * query is exactly one of them (or its title, or its IAST name), so add only a name that means this entity.
+       */
+      alternates: z.array(z.string().min(1)).optional(),
     }),
     summary: z.string().min(20).max(600),
     summaries: z
@@ -221,6 +252,15 @@ export const EntitySchema = z
         ctx.addIssue({ code: 'custom', path: ['datings', i], message: `this ${d.method} dating dates a text, not ${e.id}; record the attestation as a claim or on the text entity` });
       }
     });
+    const outranking = eventOutrankingSpan(e.datings);
+    if (outranking) {
+      const { event, span } = outranking;
+      ctx.addIssue({
+        code: 'custom',
+        path: ['datings', e.datings.indexOf(event)],
+        message: `the grade ${event.grade} ${event.method} dating ${formatRange(event.range)} would stand for ${e.id}, but the grade ${span.grade} dating ${formatRange(span.range)} is at least ${EVENT_SPAN_RATIO} times longer; record that event as a claim and keep the span as the dating, or give a primaryReason when the shorter dating dates the entity itself`,
+      });
+    }
     if (e.aliases.includes(e.id)) ctx.addIssue({ code: 'custom', path: ['aliases'], message: `alias ${e.id} is the entity's own id` });
     const seen = new Set<string>();
     for (const a of e.aliases) {

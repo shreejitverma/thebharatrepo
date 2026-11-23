@@ -1,0 +1,48 @@
+id: "event.surat-english-factory"
+type: "event"
+kind: "event"
+names:
+  en: "English East India Company factory at Surat"
+summary: "The English East India Company established a trading station at Surat in 1613 after
+  negotiations during Thomas Best's voyage. The station operated within an existing Mughal port."
+summaries:
+  kids: "In 1613 English merchants set up an office at Surat. A trading office like this was called a
+    factory, and its workers bought and sold goods."
+  teen: "The Company's tenth voyage helped consolidate access to Surat. Papers from Best's voyage and
+    the India Office catalogue place the development within negotiations over trading rights in
+    Mughal Gujarat."
+region: "Surat, Gujarat"
+datings:
+  - method: "documentary"
+    range:
+      earliest: 1612
+      latest: 1613
+      precision: "year"
+      circa: false
+    grade: "A"
+    label: "Negotiations and establishment of the Surat factory"
+    sources:
+      - "src.british-library-east-india-company-voyages"
+      - "src.british-library-thomas-best-journals"
+claims:
+  - text: "The British Library catalogue links the Company's tenth voyage to a Mughal grant permitting
+      factories at Surat and other Gujarat ports."
+    grade: "A"
+    sources:
+      - "src.british-library-east-india-company-voyages"
+  - text: "Records from Best's voyage document Company shipping from Surat in January 1613, using the
+      modern calendar year."
+    grade: "A"
+    sources:
+      - id: "src.british-library-thomas-best-journals"
+        locator: "Folios 2-4"
+relations:
+  - kind: "located-at"
+    target: "site.surat-port"
+tags:
+  - "gujarat"
+  - "trade"
+  - "east-india-company"
+review:
+  status: "draft"
+  author: "codex-gpt-6"

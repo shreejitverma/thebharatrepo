@@ -1,0 +1,56 @@
+id: site.humayuns-tomb
+type: site
+kind: site
+names:
+  en: Humayun's Tomb
+  native: हुमायूँ का मक़बरा
+summary: >-
+  Humayun's Tomb in Delhi was built in the 1560s CE under Akbar and completed around 1570 CE. The red
+  sandstone and white marble mausoleum stands in a four-part garden crossed by water channels. UNESCO
+  inscribed the site in 1993.
+summaries:
+  kids: >-
+    Humayun's Tomb in Delhi has red sandstone walls and a white marble dome. Paths and water channels
+    divide the large garden around it into four parts.
+  teen: >-
+    Built under Akbar for his father Humayun, the Delhi mausoleum sits on a raised platform in a
+    four-part charbagh garden. The plan helped shape later Mughal tomb architecture.
+region: Delhi (South East Delhi)
+location: { name: "Nizamuddin East, Delhi", lat: 28.593, lon: 77.251 }
+datings:
+  - method: documentary
+    range: { earliest: "1560 CE", latest: "1571 CE", precision: decade, circa: true }
+    grade: B
+    label: "Construction of Humayun's garden tomb under Akbar"
+    sources:
+      - src.lowry-1987-humayuns-tomb
+      - src.asher-1992-architecture-of-mughal-india
+      - src.unesco-1993-humayuns-tomb
+    note: >-
+      Accounts and modern studies place construction in the 1560s, with completion around 1570 CE.
+claims:
+  - text: >-
+      The raised mausoleum stands at the centre of a four-part garden crossed by paths and water
+      channels. It was an architectural precedent for later Mughal garden tombs.
+    grade: B
+    sources:
+      - src.lowry-1987-humayuns-tomb
+      - src.koch-1991-mughal-architecture
+      - src.unesco-1993-humayuns-tomb
+  - text: >-
+      UNESCO inscribed Humayun's Tomb in Delhi on the World Heritage List in 1993.
+    grade: A
+    sources:
+      - src.unesco-1993-humayuns-tomb
+relations:
+  - { kind: part-of, target: polity.mughal-empire }
+  - { kind: patronised-by, target: person.akbar }
+  - { kind: related-to, target: site.taj-mahal }
+wikidata: Q189648
+image:
+  commons: "File:Tomb of Humayun, Delhi.jpg"
+  alt: Symmetrical red sandstone and white marble elevation of Humayun's Tomb framed by water channels and gardens in Delhi
+  credit: Muhammad Mahdi Karim
+  license: GFDL 1.2
+tags: [humayuns-tomb, mughal, delhi, unesco, charbagh, architecture]
+review: { status: draft, author: "gemini-4-hydrogen-xhigh" }

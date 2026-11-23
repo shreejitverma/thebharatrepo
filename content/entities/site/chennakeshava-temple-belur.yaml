@@ -1,0 +1,56 @@
+id: site.chennakeshava-temple-belur
+type: site
+kind: site
+names:
+  en: Chennakeshava Temple, Belur
+  iast: Cennakeśava Mandira, Belūr
+  native: ಚೆನ್ನಕೇಶವ ದೇವಸ್ಥಾನ, ಬೇಲೂರು
+summary: >-
+  The Chennakeshava Temple at Belur in Karnataka is a Hoysala temple dedicated to Vishnu and consecrated
+  in 1117 CE under Vishnuvardhana. It stands on a raised platform and preserves carved bracket figures,
+  turned stone pillars and pierced stone screens.
+summaries:
+  kids: >-
+    At Belur in Karnataka, Hoysala builders carved dancers and musicians on brackets and rows of
+    elephants along the walls. Smooth, round stone pillars stand inside the temple hall.
+  teen: >-
+    A dated inscription records the consecration of Belur's Chennakeshava Temple in 1117 CE. Its
+    sculptured bracket figures and pierced screens show the work of Hoysala artists across several
+    building phases.
+region: Malnad Foothills (Hassan district, Karnataka)
+location: { name: "Belur, Karnataka", lat: 13.163, lon: 75.861 }
+datings:
+  - method: epigraphic
+    range: { earliest: "1117 CE", latest: "1117 CE", precision: year, circa: false }
+    grade: A
+    label: "Consecration of Vijayanarayana under Vishnuvardhana"
+    sources:
+      - src.foekema-1996-complete-guide-hoysala-temples
+      - src.unesco-2023-hoysala-sacred-ensembles
+    note: >-
+      Inscriptions place the consecration in Shaka 1039. Later work includes the screens around the
+      temple hall.
+claims:
+  - text: >-
+      Inscriptions on sculptures at Belur preserve artists' names, including Dasoja and Chavana.
+    grade: A
+    sources:
+      - src.foekema-1996-complete-guide-hoysala-temples
+      - src.hardy-1995-indian-temple-architecture
+  - text: >-
+      The Chennakeshava Temple at Belur was inscribed on the UNESCO World Heritage List in 2023 as part
+      of the Sacred Ensembles of the Hoysalas.
+    grade: A
+    sources:
+      - src.unesco-2023-hoysala-sacred-ensembles
+relations:
+  - { kind: part-of, target: site.hoysala-sacred-ensembles }
+  - { kind: contemporary-of, target: site.hoysaleswara-temple-halebidu }
+wikidata: Q3536222
+image:
+  commons: "File:Chennakeshava Temple at Belur.jpg"
+  alt: The entrance steps, raised platform and carved exterior of the Chennakeshava Temple at Belur
+  credit: Dineshkannambadi (talk)
+  license: CC BY-SA 3.0
+tags: [belur, chennakeshava, hoysala, unesco, soapstone, vaishnava, karnataka]
+review: { status: draft, author: "gemini-4-hydrogen-xhigh" }

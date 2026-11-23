@@ -1,0 +1,76 @@
+id: polity.ahom-kingdom
+type: polity
+kind: polity
+names:
+  en: Ahom Kingdom
+  native: আহোম ৰাজ্য
+summary: >-
+  The Ahom kingdom ruled much of the Brahmaputra valley in Assam from 1228, when, according to the buranji
+  chronicles, the Tai prince Sukapha crossed the Patkai hills, until the Burmese invasions and the Treaty of
+  Yandabo in 1826. Organised around the paik labour-service system, it absorbed neighbouring polities and
+  repelled Mughal invasions, notably at Saraighat in 1671.
+summaries:
+  kids: >-
+    Sukapha led Tai people across the mountains into Assam. The Ahom kings who followed ruled the
+    Brahmaputra valley for about 600 years and recorded events in chronicles called buranjis.
+  teen: >-
+    The Ahom state organised its subjects through the paik labour-service system, absorbed the Chutiya
+    kingdom and fought off Mughal armies, including at Saraighat in 1671. Burmese invasions and the Treaty
+    of Yandabo in 1826 ended its independence.
+region: Brahmaputra valley, Assam
+location:
+  name: Charaideo (first permanent capital)
+  lat: 26.94
+  lon: 94.88
+datings:
+  - method: documentary
+    range:
+      earliest: "1228"
+      latest: "1826"
+      precision: year
+      circa: true
+    grade: B
+    label: Buranji foundation date to the Treaty of Yandabo
+    sources:
+      - src.gait-1906-history-of-assam
+      - src.baruah-1985-comprehensive-history-assam
+      - src.unesco-2024-moidams-charaideo
+    note: The opening follows the chronicle chronology for Sukapha's arrival. The 1826 treaty marks the
+      conventional end of independence. The British later restored a ruler over part of Upper Assam for a
+      limited period.
+claims:
+  - text: Sukapha established Charaideo as the first permanent royal seat.
+    grade: B
+    sources:
+      - src.gait-1906-history-of-assam
+      - src.unesco-2024-moidams-charaideo
+  - text: The Ahom state mobilised adult men through the paik system, organising them in groups for
+      cultivation, embankment building and military service.
+    grade: B
+    sources:
+      - src.baruah-1985-comprehensive-history-assam
+  - text: Ahom rulers annexed the Chutiya kingdom in the 1520s, sacked the Kachari capital at Dimapur in 1536
+      and defeated a Mughal fleet at Saraighat in 1671.
+    grade: B
+    sources:
+      - src.gait-1906-history-of-assam
+      - src.bhuyan-1947-lachit-barphukan
+  - text: The 1826 Treaty of Yandabo ended Burmese intervention in Assam and accompanied the consolidation of
+      British control.
+    grade: B
+    sources:
+      - src.gait-1906-history-of-assam
+relations:
+  - kind: preceded
+    target: polity.east-india-company-rule
+    note: In Assam, after Burmese occupation.
+  - kind: related-to
+    target: polity.mughal-empire
+    note: Mughal-Ahom wars of the seventeenth century.
+wikidata: Q2308237
+tags:
+  - ahom
+  - assam
+review:
+  status: draft
+  author: codex-gpt-6

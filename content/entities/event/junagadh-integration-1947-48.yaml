@@ -1,0 +1,29 @@
+id: event.junagadh-integration-1947-48
+type: event
+kind: polity
+names:
+  en: "Junagadh accession crisis and referendum"
+summary: "Junagadh's nawab opted for Pakistan in 1947. India took over the administration in November, then held a referendum in February 1948 that officially returned a large majority for joining India."
+summaries:
+  kids: "Junagadh's ruler chose to join Pakistan. India took control, then organised a vote in which the official count showed most voters chose India."
+  teen: "Junagadh's accession to Pakistan set off a dispute involving India and smaller neighbouring states. India took over the administration in November 1947. Its referendum in February 1948 recorded an overwhelming vote for accession to India."
+region: "Junagadh and Kathiawar, Gujarat"
+datings:
+  - method: documentary
+    range: { earliest: "1947", latest: "1948", precision: year, circa: false }
+    grade: A
+    label: "Accession crisis and referendum"
+    sources: ["src.ministry-of-states-1950-white-paper-indian-states", "src.ankit-2016-accession-of-junagadh"]
+    note: "The crisis extended from the decisions of 1947 to the Indian-administered referendum of February 1948."
+claims:
+  - text: "Junagadh's ruler opted for Pakistan, and India took over the administration in November 1947."
+    grade: A
+    sources: ["src.ministry-of-states-1950-white-paper-indian-states", "src.ankit-2016-accession-of-junagadh"]
+  - text: "India's Ministry of States reported a near-unanimous vote for India. Rakesh Ankit's archival study situates the vote in a crisis marked by coercion and disputes over the autonomy of smaller states."
+    grade: B
+    sources: ["src.ministry-of-states-1950-white-paper-indian-states", "src.ankit-2016-accession-of-junagadh"]
+relations:
+  - kind: part-of
+    target: event.princely-states-integration
+tags: ["republic","princely-states","gujarat"]
+review: { status: draft, author: codex-gpt-6 }

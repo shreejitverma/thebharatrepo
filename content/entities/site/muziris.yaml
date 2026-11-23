@@ -1,0 +1,45 @@
+id: site.muziris
+type: site
+kind: site
+names:
+  en: Muziris
+  iast: Muciṟi
+  native: മുസിരിസ്
+summary: >-
+  Muziris (Muciri) was the premier port of the Chera kingdom on the Malabar Coast in the early centuries BCE and CE, famed in Sangam poems (Akananuru, Purananuru), the Periplus Maris Erythraei, Pliny the Elder, the Tabula Peutingeriana, and the 2nd-century CE Muziris Papyrus. Ships carried black pepper, malabathrum, ivory, textiles, and gemstones from Muziris to Red Sea ports in Roman Egypt in exchange for gold and silver bullion and Mediterranean wine. Its precise location near the Periyar mouth was long sought until excavations began at Pattanam.
+summaries:
+  kids: >-
+    Muziris was an ancient harbour on the Kerala coast where Roman ships arrived every monsoon to trade gold coins and wine jars for black pepper and ivory.
+  teen: >-
+    Celebrated in Tamil Sangam poetry and documented in the 2nd-century CE Muziris Papyrus, Muziris was the hub of Chera maritime trade with the Roman world; archaeologists debate its physical footprint around Pattanam and Kodungallur.
+region: Lower Periyar delta (Cranganore / Kodungallur region), Kerala
+location: { name: "Kodungallur / Lower Periyar delta, Kerala", lat: 10.20, lon: 76.20 }
+datings:
+  - method: foreign-synchronism
+    range: { earliest: "100 BCE", latest: "400 CE", precision: century, circa: true }
+    grade: A
+    label: Classical Greco-Roman and Sangam textual horizon
+    sources:
+      - src.casson-1989-periplus-maris-erythraei
+      - src.deromanis-2020-indo-roman-pepper-trade
+    note: Attested in the 1st-century CE Periplus Maris Erythraei and Pliny's Natural History, the 2nd-century CE Muziris Papyrus (P. Vindob. G 40822), Sangam poetry, and the 4th-century Tabula Peutingeriana showing a Templum Augusti.
+claims:
+  - text: "The 2nd-century CE Muziris Papyrus preserves a maritime loan contract for a cargo shipped from Muziris to Alexandria on the vessel Hermapollon, listing Gangetic nard, ivory and textiles; scholars reconstruct the lost part of the cargo as largely pepper."
+    grade: B
+    sources:
+      - src.deromanis-2020-indo-roman-pepper-trade
+      - src.casson-1989-periplus-maris-erythraei
+  - text: Sangam poems in the Akananuru and Purananuru describe Yavana ships bringing gold to Muciri on the Periyar river and returning laden with pepper.
+    grade: B
+    sources:
+      - src.gurukkal-2010-social-formations-early-south-india
+      - src.champakalakshmi-1996-trade-ideology-urbanization
+debate: >-
+  Since 2004, K. P. Shajan, P. J. Cherian, and Roberta Tomber have identified the excavated port settlement at Pattanam, near North Paravur, as part of ancient Muziris. Some archaeologists and historians caution that Muziris may have encompassed a multi-nodal estuarine complex extending toward Kodungallur or that Pattanam's exact ancient toponym remains unconfirmed by an inscription naming Muciri.
+relations:
+  - { kind: related-to, target: site.pattanam }
+  - { kind: related-to, target: polity.early-cheras }
+  - { kind: related-to, target: site.arikamedu }
+wikidata: Q2974112
+tags: [muziris, muciri, indo-roman-trade, chera, kerala, pepper-trade]
+review: { status: draft, author: "gemini-4-hydrogen-xhigh" }

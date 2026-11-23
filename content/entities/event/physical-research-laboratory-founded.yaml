@@ -1,0 +1,40 @@
+id: event.physical-research-laboratory-founded
+type: event
+kind: science
+names:
+  en: Founding of the Physical Research Laboratory
+summary: Vikram Sarabhai established the Physical Research Laboratory in Ahmedabad in 1947. It began with
+  cosmic-ray research and was formally established at M. G. Science Institute in November.
+summaries:
+  kids: Sarabhai started a laboratory in Ahmedabad so researchers could study cosmic rays, particles that reach
+    Earth from space.
+  teen: The Physical Research Laboratory began with cosmic-ray investigations at Sarabhai’s residence and took
+    institutional form in November 1947. It later broadened its research into other areas of physical science.
+region: Ahmedabad, Gujarat
+datings:
+  - method: documentary
+    range:
+      earliest: 1947
+      latest: 1947
+      precision: year
+      circa: false
+    grade: A
+    label: Formal establishment on 11 November 1947
+    sources:
+      - src.prl-institutional-history
+      - src.prl-vikram-sarabhai
+claims:
+  - text: The laboratory began with cosmic-ray research and was formally established at M. G. Science Institute on
+      11 November 1947.
+    grade: A
+    sources:
+      - src.prl-institutional-history
+relations:
+  - kind: related-to
+    target: person.vikram-sarabhai
+tags:
+  - cosmic-rays
+  - research-institutions
+review:
+  status: draft
+  author: codex-gpt-6

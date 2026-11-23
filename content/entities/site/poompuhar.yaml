@@ -1,0 +1,56 @@
+id: site.poompuhar
+type: site
+kind: site
+names:
+  en: Poompuhar (Kaveripattinam)
+  iast: Kāvirippūmpaṭṭiṉam
+  native: பூம்புகார்
+summary: >-
+  Poompuhar (ancient Kaveripattinam or Puhar), at the mouth of the Kaveri River in Mayiladuthurai district, Tamil Nadu, was the chief coastal port of the Early Cholas and the opening setting of Pattinappalai, Silappatikaram, and Manimekalai. Archaeological excavations at Kilaiyur, Vanagiri, and Pallavanesvaram uncovered a brick wharf, water reservoirs, and a Buddhist vihara, while marine surveys have mapped submerged coastal features and palaeo-channels offshore.
+summaries:
+  kids: >-
+    Poompuhar (Kaveripattinam) was the great seaside harbour of the ancient Chola kings, praised in Tamil poems and partly washed under the sea over the centuries.
+  teen: >-
+    Celebrated as Puhar in Pattinappalai and Silappatikaram, Kaveripattinam yielded a brick wharf, Chola coins, and a Buddhist monastery on land, while marine surveys reveal submerged harbour features off the coast.
+region: Kaveri mouth, Mayiladuthurai District, Tamil Nadu
+location: { name: "Poompuhar, Tamil Nadu", lat: 11.15, lon: 79.85 }
+datings:
+  - method: archaeological-stratigraphic
+    range: { earliest: "300 BCE", latest: "600 CE", precision: century, circa: true }
+    grade: B
+    label: Excavated wharf, reservoir, and Buddhist vihara phases (3rd c. BCE to 6th c. CE)
+    sources:
+      - src.champakalakshmi-1996-trade-ideology-urbanization
+      - src.manguin-2011-early-interactions-south-southeast-asia
+    note: ASI excavations between 1963 and 1973 recovered Early Historic Black-and-Red Ware, Rouletted Ware, an early brick wharf at Kilaiyur (radiocarbon dated to the 3rd-2nd century BCE), and a 4th-6th century CE Buddhist vihara at Pallavanesvaram.
+  - method: geological
+    range: { earliest: "1000 BCE", latest: "500 CE", precision: century, circa: true }
+    grade: C
+    label: Offshore bathymetric and coastal evolution assessments
+    sources:
+      - src.ramasamy-2020-poompuhar-submerged-harbour
+    note: Bathymetric and geophysical surveys identify submerged channel and harbour-like anomalies offshore, though claims linking deep offshore anomalies to multi-millennium dates remain debated compared to historical coastal erosion.
+claims:
+  - text: Excavations at Kilaiyur uncovered an Early Historic baked-brick jetty or wharf structure alongside wooden posts, Rouletted Ware, and Chola square copper coins.
+    grade: A
+    sources:
+      - src.champakalakshmi-1996-trade-ideology-urbanization
+      - src.sastri-1976-history-of-south-india
+  - text: Excavations at Pallavanesvaram revealed a brick Buddhist monastery (vihara) and bronze Buddha image corroborating Puhar's prominence in Pali and Tamil Buddhist texts such as Manimekalai.
+    grade: B
+    sources:
+      - src.monius-2001-imagining-place-for-buddhism
+      - src.champakalakshmi-1996-trade-ideology-urbanization
+  - text: Kaveripattinam appears as Kamara in the Periplus Maris Erythraei and Khaberis emporion in Ptolemy's Geography.
+    grade: B
+    sources:
+      - src.casson-1989-periplus-maris-erythraei
+      - src.champakalakshmi-1996-trade-ideology-urbanization
+relations:
+  - { kind: related-to, target: polity.early-cholas }
+  - { kind: related-to, target: text.pattuppattu }
+  - { kind: related-to, target: text.silappatikaram }
+  - { kind: related-to, target: text.manimekalai }
+wikidata: Q2135463
+tags: [poompuhar, kaveripattinam, port, early-chola, marine-archaeology, tamil-nadu]
+review: { status: draft, author: "gemini-4-hydrogen-xhigh" }

@@ -1,0 +1,66 @@
+id: person.m-f-husain
+type: person
+kind: art
+names:
+  en: M. F. Husain
+  iast: Maqabūla Fidā Husaina
+  native: मक़बूल फ़िदा हुसैन
+summary: Maqbool Fida Husain (1915-2011 CE) was one of India's most prominent twentieth-century modernist painters and a
+  founding member of the Bombay Progressive Artists' Group (1947). Starting out painting cinema billboards in Bombay, he
+  synthesized Cubist-inflected bold outlines and vibrant colour with Indian sculpture, village life, galloping horses
+  and epic narratives from the Mahabharata and Ramayana.
+summaries:
+  kids: M. F. Husain (1915-2011) was a famous Indian modern artist who began by painting movie posters and went on to
+    paint bold, colourful canvases of galloping horses, Mother Teresa and Indian epics.
+  teen: Co-founder of the 1947 Progressive Artists' Group in Bombay, M. F. Husain fused bold modernist line and colour
+    with classical Indian sculpture and epic themes, later facing fierce political controversy in India.
+region: Pandharpur, Indore, Mumbai, Delhi and Doha
+location:
+  name: Mumbai, Maharashtra
+  lat: 19.076
+  lon: 72.878
+datings:
+  - method: documentary
+    range:
+      earliest: 1915
+      latest: 2011
+      precision: year
+      circa: false
+    grade: A
+    label: Documented lifespan (1915-2011 CE)
+    sources:
+      - src.farooqi-2003-husain-grove
+      - src.herwitz-2006-husain-national-hero
+      - src.dalmia-2001-progressives
+    note: Born 17 September 1915 in Pandharpur, Maharashtra, and died 9 June 2011 in London.
+claims:
+  - text: Alongside F. N. Souza, S. H. Raza, K. H. Ara, H. A. Gade and S. K. Bakre, Husain co-founded the Progressive
+      Artists' Group in Bombay in 1947 to forge a post-independence modernist visual language.
+    grade: A
+    sources:
+      - src.farooqi-2003-husain-grove
+      - src.dalmia-2001-progressives
+  - text: Landmark series such as Zameen (1955), horses, Mother Teresa and Mahabharata paintings brought him international
+      recognition (including a Golden Bear for his short film Through the Eyes of a Painter in 1967) alongside late-life
+      legal controversies.
+    grade: A
+    sources:
+      - src.farooqi-2003-husain-grove
+      - src.herwitz-2006-husain-national-hero
+relations:
+  - kind: related-to
+    target: text.mahabharata
+wikidata: Q558522
+image:
+  commons: File:Husain with Rammanohar (cropped).jpg
+  alt: Portrait photograph of Indian modernist painter M. F. Husain with white beard and waistcoat
+  credit: Abrsinha
+  license: CC BY-SA 4.0
+tags:
+  - m-f-husain
+  - progressive-artists-group
+  - modern-art
+  - mumbai
+review:
+  status: draft
+  author: gemini-4-hydrogen-xhigh

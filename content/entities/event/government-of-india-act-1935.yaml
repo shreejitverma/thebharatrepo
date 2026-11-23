@@ -1,0 +1,46 @@
+id: event.government-of-india-act-1935
+type: event
+kind: event
+names:
+  en: Government of India Act 1935
+summary: The Government of India Act 1935 provided for greater provincial autonomy and proposed
+  a federation of British Indian provinces and princely states. Provincial provisions took
+  effect, while the proposed federation was never inaugurated.
+summaries:
+  kids: A new law gave elected ministries in India's provinces more work to do. Its plan to unite
+    the provinces and princely states in a federation never took effect.
+  teen: The Act replaced provincial dyarchy with a system of provincial ministries while retaining
+    important powers for colonial governors. The 1937 elections took place under its provisions.
+region: British India and Westminster
+datings:
+  - method: documentary
+    range:
+      earliest: "1935"
+      latest: "1935"
+      precision: day
+      circa: false
+    grade: A
+    label: Royal assent on 2 August 1935
+    sources:
+      - src.uk-parliament-1935-government-of-india-act
+claims:
+  - text: The Act set out the terms of a proposed federation and a separate framework for governing
+      the provinces.
+    grade: A
+    sources:
+      - src.uk-parliament-1935-government-of-india-act
+  - text: The provincial provisions took effect in 1937, while the federation specified by the Act
+      was never established.
+    grade: B
+    sources:
+      - src.sarkar-1989-modern-india
+      - src.bose-jalal-2004-modern-south-asia
+relations:
+  - kind: related-to
+    target: event.government-of-india-act-1919
+tags:
+  - colonial-law
+  - provincial-autonomy
+review:
+  status: draft
+  author: codex-gpt-6

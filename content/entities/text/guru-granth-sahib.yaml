@@ -1,0 +1,83 @@
+id: text.guru-granth-sahib
+type: text
+kind: text
+names:
+  en: Guru Granth Sahib
+  native: ਗੁਰੂ ਗ੍ਰੰਥ ਸਾਹਿਬ
+summary: The Guru Granth Sahib is the central scripture and enduring Guru of the Sikhs. Guru Arjan’s
+  Adi Granth was compiled in 1604 CE. The received canon also includes hymns of Guru Tegh Bahadur.
+summaries:
+  kids: The Guru Granth Sahib brings together hymns that Sikhs read and sing. Sikh communities honour
+    the scripture as their Guru.
+  teen: Guru Arjan’s compilation gathered hymns of the Sikh Gurus and other devotional poets. Many
+    hymns are organised by raga, linking the scripture with a living practice of sung worship.
+datings:
+  - method: documentary
+    range:
+      earliest: 1604
+      latest: 1604
+      precision: year
+      circa: false
+    grade: B
+    label: Compilation of the Adi Granth by Guru Arjan
+    primaryReason: The 1604 compilation of the Adi Granth is the composition of the text; the longer range adds the ninth Guru's hymns to it.
+    sources:
+      - id: src.singh-2003-guru-granth-sahib
+        locator: Introduction
+    note: Pashaura Singh identifies the Kartarpur manuscript, which bears the year 1604 CE in its
+      colophon, as Guru Arjan’s canonical Adi Granth compilation while noting later scribal revisions.
+  - method: scholarly-consensus
+    range:
+      earliest: 1604
+      latest: 1708
+      precision: year
+      circa: true
+    grade: B
+    label: Canonical formation from the Adi Granth to the inclusion of Guru Tegh Bahadur’s hymns
+    sources:
+      - src.singh-2003-guru-granth-sahib
+      - src.singh-fenech-2014-oxford-handbook-sikh-studies
+    note: The received Guru Granth Sahib expanded the 1604 Adi Granth by incorporating the hymns of
+      the ninth Guru, Tegh Bahadur (d. 1675), in the Damdama Sahib recension prior to 1708.
+  - method: traditional-sampradaya
+    range:
+      earliest: 1708
+      latest: 1708
+      precision: year
+      circa: false
+    grade: D
+    label: "Sikh tradition: Guruship conferred on the scripture"
+    sources:
+      - src.singh-2003-guru-granth-sahib
+      - src.singh-fenech-2014-oxford-handbook-sikh-studies
+    note: Sikh tradition associates the conferral of enduring Guruship on the scripture with Guru Gobind
+      Singh in 1708.
+claims:
+  - text: The Adi Granth brought together compositions of Sikh Gurus and devotional poets known as
+      Bhagats.
+    grade: B
+    sources:
+      - src.singh-2003-guru-granth-sahib
+  - text: The received text includes hymns attributed to the ninth Guru, Tegh Bahadur.
+    grade: B
+    sources:
+      - src.singh-2003-guru-granth-sahib
+relations:
+  - kind: related-to
+    target: tradition.sikh-gurus
+  - kind: related-to
+    target: person.guru-gobind-singh
+region: Punjab
+image:
+  commons: File:Kartarpur Bir (manuscript or codex) of the Guru Granth Sahib.jpg
+  alt: Photographic reproduction of the Kartarpur Bir manuscript of the Adi Granth
+  credit: Gurdas Bhalla (scribe), Pashaura Singh (photograph)
+  license: Public domain (PD-scan)
+tags:
+  - sikh
+  - scripture
+  - gurmukhi
+  - kirtan
+review:
+  status: draft
+  author: codex-gpt-6

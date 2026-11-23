@@ -1,0 +1,81 @@
+id: polity.chalukya-dynasty-of-kalyani
+type: polity
+kind: polity
+names:
+  en: Western Chalukya Dynasty of Kalyani
+  iast: Kalyāṇī Cāḷukya
+  native: ಕಲ್ಯಾಣಿ ಚಾಳುಕ್ಯರು
+aliases:
+  - polity.western-chalukya-dynasty-kalyani
+summary: >-
+  The Western Chalukyas of Kalyani (Basavakalyan) ruled much of the western and central Deccan from 973,
+  when Tailapa II overthrew the Rashtrakutas, to about 1189. At their height under Someshvara I and
+  Vikramaditya VI they fought the Cholas over Vengi and the Raichur Doab, built ornate temples such as those
+  at Lakkundi, Itagi and Gadag, and patronised Sanskrit and Kannada letters.
+summaries:
+  kids: >-
+    The Chalukyas of Kalyani ruled much of the Deccan for about two hundred years. They left stone records
+    and built carved temples that still stand.
+  teen: >-
+    Tailapa II restored Chalukya rule in 973 by displacing the Rashtrakutas. His successors competed with
+    the Cholas for the eastern Deccan and supported Kannada literature, Sanskrit law and temple building
+    before the kingdom broke up among the Hoysalas, Seunas and Kakatiyas.
+region: Western and central Deccan
+location:
+  name: Basavakalyan (Kalyani)
+  lat: 17.87
+  lon: 76.95
+datings:
+  - method: epigraphic
+    range:
+      earliest: "973"
+      latest: "1189"
+      precision: decade
+      circa: true
+    grade: B
+    label: Tailapa II's overthrow of the Rashtrakutas to the end of the line
+    sources:
+      - src.yazdani-1960-early-history-deccan-part1
+      - src.singh-2008-ancient-early-medieval-india
+      - src.karashima-2014-concise-history-south-india
+    note: Dated inscriptions fix Tailapa II's rise in 973. After a Kalachuri interlude under Bijjala II, the
+      kingdom fractured by about 1189 among the Hoysalas, Seuna Yadavas and Kakatiyas.
+claims:
+  - text: Tailapa II displaced Rashtrakuta rule at Manyakheta in 973, and Someshvara I later established
+      Kalyani as the royal capital.
+    grade: B
+    sources:
+      - src.yazdani-1960-early-history-deccan-part1
+      - src.sastri-1976-history-of-south-india
+  - text: Kalyani Chalukya patronage produced temples at Lakkundi, Itagi and Gadag that bridge Badami Chalukya
+      and Hoysala architectural idioms.
+    grade: B
+    sources:
+      - src.hardy-1995-indian-temple-architecture
+      - src.michell-1988-hindu-temple
+  - text: The court and its provincial centres sponsored Vijnaneshvara's Mitakshara, Someshvara III's
+      Manasollasa, Bilhana's Sanskrit poetry and the Kannada works of Ranna.
+    grade: B
+    sources:
+      - src.yazdani-1960-early-history-deccan-part1
+      - src.pollock-2006-language-of-the-gods
+  - text: Kalyani was later remembered as a symbol of imperial rule at Vijayanagara.
+    grade: B
+    sources:
+      - src.eaton-2013-power-memory-architecture
+relations:
+  - kind: succeeded
+    target: polity.rashtrakuta-dynasty
+  - kind: related-to
+    target: polity.chalukya-dynasty-of-badami
+    note: Claimed descent from the Chalukyas of Badami.
+  - kind: related-to
+    target: polity.chola-dynasty
+    note: Long-standing military rivals across the Tungabhadra and over Vengi.
+tags:
+  - chalukya
+  - kalyani
+  - deccan
+review:
+  status: draft
+  author: codex-gpt-6

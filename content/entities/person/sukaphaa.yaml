@@ -1,0 +1,66 @@
+id: person.sukaphaa
+type: person
+kind: person
+names:
+  en: Sukaphaa
+  native: চাওলুং চুকাফা
+aliases:
+  - person.sukapha
+summary: >-
+  Chaolung Sukaphaa, also spelled Sukapha, was a Tai prince who, according to the Ahom buranji chronicles,
+  crossed the Patkai range into the upper Brahmaputra valley in 1228 and founded the Ahom kingdom. The
+  chronicles place his permanent seat at Charaideo around 1253, and scholars describe his early polity as
+  built through alliances and intermarriage with Moran and Barahi communities.
+summaries:
+  kids: >-
+    Sukaphaa led a group of Tai people across the Patkai mountains into Assam. He made friends with local
+    communities and began the Ahom kingdom, with its early capital at Charaideo.
+  teen: >-
+    The Ahom chronicles place Sukaphaa's arrival in 1228. He blended Tai statecraft with alliances among
+    local Moran and Barahi groups, and the royal site at Charaideo gives archaeological context to the
+    dynasty he founded.
+region: Upper Brahmaputra valley (Charaideo and Sivasagar, Assam)
+location:
+  name: Charaideo, Assam
+  lat: 26.94
+  lon: 94.88
+datings:
+  - method: documentary
+    range:
+      earliest: "1228"
+      latest: "1268"
+      precision: year
+      circa: true
+    grade: B
+    label: Reign in the Ahom buranji chronology
+    sources:
+      - src.gait-1906-history-of-assam
+      - src.baruah-1985-comprehensive-history-assam
+    note: The buranji chronicles date his arrival in upper Assam to 1228, his settlement at Charaideo to
+      about 1253 and his death to 1268.
+claims:
+  - text: Ahom buranjis record Sukaphaa's entry into the Brahmaputra basin across the Patkai hills in 1228
+      and his establishment of a permanent capital at Charaideo after years of movement along the rivers.
+    grade: B
+    sources:
+      - src.gait-1906-history-of-assam
+      - src.baruah-1985-comprehensive-history-assam
+  - text: Historical scholarship describes Sukaphaa's early polity as integrating Moran and Barahi groups
+      through diplomacy, wet-rice cultivation and intermarriage.
+    grade: B
+    sources:
+      - src.saikia-2004-fragmented-memories
+relations:
+  - kind: related-to
+    target: site.charaideo-moidams
+  - kind: founded
+    target: polity.ahom-kingdom
+wikidata: Q4921391
+tags:
+  - sukaphaa
+  - ahom
+  - charaideo
+  - assam
+review:
+  status: draft
+  author: gemini-4-hydrogen-xhigh
