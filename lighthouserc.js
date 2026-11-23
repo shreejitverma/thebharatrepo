@@ -22,7 +22,7 @@
  *   the search requests). The search page itself (/search) meets every other budget.
  *
  * Page types measured: home, Kaalchakra (wheel and Map view), entity, article, search and search results, a source
- * record, the learning index and a learning path, and the open data page.
+ * record, the learning index and a learning path, a debate (the longest, the Mahabharata war), and the open data page.
  *
  * Run locally after `npm run build`: `npm run test:lighthouse` (port 3118 unless LHCI_PORT is set).
  */
@@ -41,6 +41,7 @@ const pages = {
   source: `${base}/sources/thapar-2012-asoka-decline-mauryas`,
   learn: `${base}/learn`,
   learningPath: `${base}/learn/how-we-date-ashoka`,
+  debate: `${base}/debates/date-of-the-mahabharata-war`,
   data: `${base}/data`,
 };
 

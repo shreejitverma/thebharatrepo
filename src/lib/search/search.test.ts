@@ -36,8 +36,9 @@ describe('search URL state', () => {
     expect(f.grade).toEqual(['A']);
   });
 
-  it('offers every entity kind plus articles and sources, and all five grades', () => {
-    expect(FACET_OPTIONS.kind.map((o) => o.value)).toEqual(expect.arrayContaining(['text', 'person', 'cosmology', 'article', 'source']));
+  it('offers every entity kind plus articles, sources, learning paths and debates, and all five grades', () => {
+    expect(FACET_OPTIONS.kind.map((o) => o.value)).toEqual(expect.arrayContaining(['text', 'person', 'cosmology', 'article', 'source', 'learning-path', 'debate']));
+    expect(FACET_OPTIONS.kind.find((o) => o.value === 'debate')?.label).toBe('Debates');
     expect(FACET_OPTIONS.grade.map((o) => o.value)).toEqual(['A', 'B', 'C', 'D', 'E']);
   });
 });
@@ -101,6 +102,14 @@ describe('exact title promotion', () => {
   it('ignores case, diacritics, punctuation and extra spaces', () => {
     const items = [r('Other'), r('Āryabhaṭa.')];
     expect(titles(promoteExactTitle(items, '  aryabhata '))).toEqual(['Āryabhaṭa.', 'Other']);
+  });
+
+  it('ignores a leading "The" on either side, but not a "the" inside the title', () => {
+    const items = [r('The Dating of the Historical Buddha'), r('The date of the Buddha'), r('Gautama Buddha')];
+    expect(titles(promoteExactTitle(items, 'date of the buddha'))).toEqual(['The date of the Buddha', 'The Dating of the Historical Buddha', 'Gautama Buddha']);
+    expect(titles(promoteExactTitle([r('Other'), r('Ramayana')], 'the ramayana'))).toEqual(['Ramayana', 'Other']);
+    const none = [r('Date of the Buddha, the')];
+    expect(promoteExactTitle(none, 'date of buddha')).toBe(none);
   });
 
   it('keeps every exact match, in order, and changes nothing without one', () => {

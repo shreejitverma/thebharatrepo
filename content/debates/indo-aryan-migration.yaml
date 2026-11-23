@@ -1,0 +1,191 @@
+id: debate.indo-aryan-migration
+title: Indo-Aryan migration versus indigenous origin
+question: How did Indo-Aryan languages come to be spoken in South Asia?
+summary: >-
+  Mainstream historical linguistics, Bronze Age archaeology and ancient DNA studies model
+  the spread of Indo-Aryan languages into northwestern South Asia through second-millennium
+  BCE migrations via Central Asia, mixing with local populations who contributed the
+  largest share of South Asian ancestry. Indigenous-origin and Out-of-India proponents
+  point to long-term Harappan cultural continuity, pre-farming demographic divergence in
+  the Rakhigarhi I6113 genome and Rigvedic river geography to argue for local origins.
+  Modern scholarship rejects nineteenth-century theories of a violent Aryan invasion and
+  distinguishes biological ancestry, material culture and speech.
+published: true
+approval: { by: Shreejit Verma, date: "2026-11-22", note: "Drafted by Codex; reviewed for fairness, accuracy and sources by Gemini (a machine review). No human editorial review yet." }
+commonGround:
+  - text: >-
+      Modern archaeology and historiography reject the older hypothesis of a violent
+      military "Aryan invasion" destroying Harappan cities; the live debate compares
+      gradual migration and language shift with indigenous continuity.
+    grade: B
+    sources:
+      - { id: src.bryant-2001-quest-origins-vedic-culture, locator: "ch. 9, The Indus Valley Civilization" }
+  - text: >-
+      Vedic Sanskrit and Old Avestan share systematic sound correspondences, grammatical
+      structures, ritual vocabulary and poetic formulas, establishing descent from a common
+      Indo-Iranian ancestor.
+    grade: B
+    sources:
+      - { id: src.jamison-brereton-2014-rigveda, locator: "Introduction, sections A and B" }
+      - { id: src.fortson-2010-indo-european-language-culture, locator: "chs. 10-11, Indo-Iranian" }
+  - text: >-
+      Shinde and colleagues (2019) sequenced one Mature Harappan nuclear genome from
+      Rakhigarhi (individual I6113), finding South Asian hunter-gatherer and pre-farming
+      Iranian-related ancestry with no detectable Steppe pastoralist or Anatolian farmer
+      ancestry.
+    grade: A
+    sources:
+      - { id: src.shinde-2019-ancient-harappan-genome, locator: "Results, Figure 2" }
+positions:
+  - id: migration-and-admixture
+    label: "Steppe migration and admixture: about 2000 to 1200 BCE"
+    lens: scholarship
+    grade: B
+    range: { earliest: "2000 BCE", latest: "1200 BCE", best: "1500 BCE", precision: century, circa: true }
+    statement: >-
+      Comparative linguistics, archaeogenetics and steppe archaeology converge on a
+      second-millennium BCE movement of Indo-Iranian speakers from the Eurasian steppe
+      through Central Asia into northwestern South Asia. In Narasimhan and colleagues'
+      2019 analysis of 523 ancient genomes, Middle-to-Late Bronze Age steppe ancestry
+      spread south after 2000 BCE and mixed with Indus Periphery populations between
+      roughly 1900 and 1500 BCE to form the Ancestral North Indian (ANI) cline, while local
+      Indus-Periphery and South Asian hunter-gatherer ancestry still supplies the majority
+      of present-day South Asian DNA. Linguists pair this dispersal with shared Indo-Iranian
+      and Balto-Slavic innovations (satem and Ruki), fourteenth-century BCE Mitanni names
+      and South Asian substrata in Vedic.
+    proponents:
+      - name: Vagheesh M. Narasimhan and colleagues
+        role: Archaeogeneticists, analysed 523 ancient South and Central Asian genomes
+        work: { id: src.narasimhan-2019-formation-human-populations, locator: "Three Ancestry Clines That Succeeded Each Other in Time; Discussion" }
+      - name: David W. Anthony
+        role: Archaeologist, connected Sintashta steppe chariots with Indo-Iranian dispersal
+        work: { id: src.anthony-2007-horse-wheel-language, locator: "ch. 15, pp. 371-411" }
+      - name: Asko Parpola
+        role: Indologist, linked linguistic strata and archaeology across Central and South Asia
+        work: { id: src.parpola-2015-roots-of-hinduism, locator: "The Rigvedic Indo-Aryans and the Dāsas" }
+    evidence:
+      - text: >-
+          Narasimhan and colleagues (2019) tracked Steppe_MLBA ancestry moving into southern
+          Central Asia around 2000 to 1500 BCE and estimated that ancestors of Swat Valley
+          samples acquired it around 1900 to 1500 BCE, while showing South Asians derive
+          most ancestry from Indus Periphery and AASI groups.
+        grade: B
+        sources:
+          - { id: src.narasimhan-2019-formation-human-populations, locator: "Fig. 2; Three Ancestry Clines That Succeeded Each Other in Time" }
+      - text: >-
+          Comparative linguistics traces Indo-Iranian sound laws (such as Ruki and satem)
+          shared with Balto-Slavic, early Indo-Aryan deity names in fourteenth-century BCE
+          Mitanni treaties, and non-Indo-Aryan loanwords in Vedic texts.
+        grade: B
+        sources:
+          - { id: src.fortson-2010-indo-european-language-culture, locator: "chs. 10-11 and 18" }
+          - { id: src.thieme-1960-aryan-gods-mitanni-treaties, locator: "pp. 301-317" }
+          - { id: src.narasimhan-2019-formation-human-populations, locator: "Discussion, linguistic implications" }
+      - text: >-
+          Bronze Age Sintashta-Petrovka sites (c. 2100 to 1800 BCE) preserve spoke-wheeled
+          chariots and horse-burial rituals matching early Indo-Iranian vocabulary.
+        grade: C
+        sources:
+          - { id: src.anthony-2007-horse-wheel-language, locator: "ch. 15, pp. 371-411" }
+    objections:
+      - >-
+        Ancient DNA tracks biological ancestry rather than language; the Swat Valley
+        admixture dates are statistical models on post-Harappan samples, and early Swat
+        individuals initially carried low rates of paternal haplogroup R1a-Z93.
+      - >-
+        Distinctive steppe archaeological assemblages are scarce inside northwestern South
+        Asia compared with local cultural continuity from Mature into Late Harappan sites
+        (such as copper-inlaid wheeled carts at Sanauli).
+      - >-
+        Mitanni Indo-Aryan vocabulary proves an early presence in western Asia by the
+        fourteenth century BCE without directly settling migration direction on its own.
+  - id: indigenous-origin
+    label: "Indigenous origin and outward dispersal"
+    lens: scholarship
+    grade: E
+    range: { earliest: "3300 BCE", latest: "1500 BCE", precision: century, circa: true }
+    statement: >-
+      Proponents of indigenous origin argue that northwestern South Asia shows deep
+      cultural and biological continuity incompatible with a late outside language
+      replacement. Shinde and colleagues (2019) found that the Iranian-related ancestry of
+      the Rakhigarhi individual I6113 split from the lineage of Iranian farmers before
+      farming began on the Iranian plateau, which proponents read as deep local population
+      continuity rather than a later influx of western farmers. B. B. Lal stresses
+      material continuity from Harappan into later North Indian culture and links
+      Rigvedic Sarasvati (10.75.5) with the Ghaggar-Hakra valley. Shrikant Talageri sequences
+      the Rigvedic mandalas from east to west to argue for outward Indo-European dispersal
+      from India, treating second-millennium BCE steppe gene flow as later admixture that
+      did not introduce Indo-Aryan speech.
+    proponents:
+      - name: B. B. Lal
+        role: Archaeologist who argued for Harappan and Vedic cultural continuity
+        work: { id: src.lal-2002-saraswati-flows-on, locator: "chs. I and IV" }
+      - name: Shrikant G. Talageri
+        role: Author of an outward-dispersal reconstruction of the Rigveda
+        work: { id: src.talageri-2000-rigveda-historical-analysis, locator: "Preface; chs. 3-4" }
+    evidence:
+      - text: >-
+          Shinde and colleagues (2019) report that the Iranian-related lineage in Rakhigarhi
+          I6113 split before farming began in Iran, so this Harappan individual's
+          Iranian-related ancestry did not come from a later spread of Iranian farmers. The
+          finding concerns ancestry and the spread of farming, not language: it does not by
+          itself show where Indo-Aryan speech arose, I6113 carried no steppe ancestry, and a
+          single genome cannot capture all Harappan diversity.
+        grade: B
+        sources:
+          - { id: src.shinde-2019-ancient-harappan-genome, locator: "Results and Discussion" }
+      - text: >-
+          Lal highlights archaeological continuities across Harappan and post-Harappan levels
+          and cites Rigveda 10.75.5 placing Sarasvati between the Yamuna and Sutlej. Edwin
+          Bryant, who examines the critiques of both the migration and the indigenous models
+          without endorsing either, sets out the indigenist argument that a steppe
+          archaeological intrusion and early non-Indo-Aryan substrata are hard to prove in
+          India.
+        grade: C
+        sources:
+          - { id: src.lal-2002-saraswati-flows-on, locator: "chs. I-IV" }
+          - { id: src.jamison-brereton-2014-rigveda, locator: "10.75.5" }
+          - { id: src.bryant-2001-quest-origins-vedic-culture, locator: "chs. 5 and 11" }
+      - text: >-
+          Talageri contends that western rivers grow more prominent in books he treats as
+          later, proposing an east-to-west expansion of Indo-Aryan speakers out of northern
+          India.
+        grade: E
+        sources:
+          - { id: src.talageri-2000-rigveda-historical-analysis, locator: "ch. 4, section II.A, The Westward Expansion in the Bharata Period" }
+    objections:
+      - >-
+        Local material continuity and pre-farming Iranian-related ancestry in Rakhigarhi
+        I6113 do not contradict second-millennium BCE language shift; I6113 itself lacked
+        Steppe_MLBA ancestry, aligning with Narasimhan et al.'s model of later steppe
+        arrival.
+      - >-
+        Out-of-India models struggle to explain why Indo-Iranian shares specific sound
+        innovations (satem, Ruki) with Balto-Slavic and early borrowings with Finno-Ugric,
+        why non-Indo-Aryan substrata appear in early Sanskrit, and why deeper Indo-European
+        branching diversity lies west of South Asia.
+      - >-
+        Talageri's westward movement rests on a contested Anukramani-based ordering of the
+        mandalas and treats uneven poetic river mentions as historical migration itineraries.
+whatWouldChangeThis:
+  - >-
+    A securely dated and deciphered Harappan inscription showing diagnostic Indo-Aryan
+    grammar would establish Indo-Aryan speech in the Indus basin prior to the Swat Valley
+    steppe admixture window.
+  - >-
+    Additional ancient nuclear genomes from securely dated Mature and Late Harappan burials
+    across Punjab, Haryana, Sindh and Gujarat would test whether Steppe_MLBA ancestry was
+    uniformly absent across Harappan cities and narrow the timing of later gene flow.
+relatedEntities:
+  - concept.indo-aryan-migration
+  - concept.rakhigarhi-i6113-genome
+  - concept.indus-periphery-cline
+  - text.rigveda
+  - event.mitanni-treaty
+  - tradition.harappan-civilisation
+relatedArticles:
+  - language/sanskrit-and-the-indo-european-family
+  - history/vedic-period
+  - history/indus-valley-civilisation
+tags: [indo-aryan, linguistics, archaeogenetics, harappan]
+review: { status: draft, author: codex }

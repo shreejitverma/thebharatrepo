@@ -11,18 +11,24 @@
  * What is indexed, and with which filters, is declared on the pages themselves (data-pagefind-body and
  * SearchIndexMeta). The build fails if any expected page is missing, unmarked or fails to index, so a
  * stale or partial index can never ship silently.
+ *
+ * Owner rule, checked on the build output itself: outside a DEBATES_PREVIEW build the build also fails if any
+ * unpublished debate has a prerendered page. It then records which debates the build loaded in
+ * .next/debates-build.json (not served), so the e2e suite can confirm that its fixture draft was in the build
+ * it is testing (npm run build:e2e) before it proves the draft is unreachable.
  */
 
 import fs from 'node:fs';
 import path from 'node:path';
-import { loadContentUncached } from '../src/lib/content/load';
-import { debateSearchHrefs } from '../src/lib/content/debates';
+import { contentRoots, loadContentUncached } from '../src/lib/content/load';
+import { debateSearchHrefs, debatesPreview } from '../src/lib/content/debates';
 import { entityHref, sourceHref } from '../src/lib/content/kaalchakra';
 import { learningSearchHrefs } from '../src/lib/content/learning';
 
 const ROOT = process.cwd();
 const APP_DIR = path.join(ROOT, '.next', 'server', 'app');
 const OUT_DIR = path.join(ROOT, 'public', 'pagefind');
+const DEBATES_BUILD = path.join(ROOT, '.next', 'debates-build.json');
 
 function fail(message: string): never {
   console.error(`build-search: ${message}`);
@@ -55,6 +61,14 @@ async function main() {
   if (!fs.existsSync(APP_DIR)) fail(`${path.relative(ROOT, APP_DIR)} not found; run next build first`);
   const g = loadContentUncached();
   if (g.errors.length) fail(`${g.errors.length} content problem(s); run npm run content:validate`);
+
+  const preview = debatesPreview();
+  if (!preview) {
+    const debatesDir = path.join(APP_DIR, 'debates');
+    const built = fs.existsSync(debatesDir) ? fs.readdirSync(debatesDir) : [];
+    const leaked = g.debates.filter((d) => !d.published).flatMap((d) => built.filter((f) => f === d.slug || f.startsWith(`${d.slug}.`)).map((f) => `debates/${f} (${d.id})`));
+    if (leaked.length) fail(`unpublished debate output in a public build, which must never ship:\n  ${leaked.join('\n  ')}`);
+  }
 
   type PageType = 'entity' | 'article' | 'source' | 'learning' | 'debate';
   const expected = new Map<string, PageType>();
@@ -96,6 +110,9 @@ async function main() {
   await pagefind.close();
   if (written.errors.length) fail(`writing the index failed: ${written.errors.join('; ')}`);
   if (!fs.existsSync(path.join(OUT_DIR, 'pagefind.js'))) fail('pagefind.js was not written');
+
+  const debates = { preview, roots: contentRoots().map((r) => path.relative(ROOT, r)), published: g.debates.filter((d) => d.published).map((d) => d.id), unpublished: g.debates.filter((d) => !d.published).map((d) => d.id) };
+  fs.writeFileSync(DEBATES_BUILD, `${JSON.stringify(debates, null, 2)}\n`);
 
   const size = dirSize(OUT_DIR);
   console.log(

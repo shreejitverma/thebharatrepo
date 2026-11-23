@@ -25,39 +25,6 @@ function collectErrors(page: Page): string[] {
   return errors;
 }
 
-test.describe('debates: unpublished drafts stay out of the public build', () => {
-  test('the index shows a definitive empty state and no draft link', async ({ page }) => {
-    const errors = collectErrors(page);
-    await page.goto('/debates');
-    await expect(page.locator('h1')).toHaveText('Where the evidence is contested');
-    await expect(page.getByText('0 debates published yet.')).toBeVisible();
-    await expect(page.locator('a[href^="/debates/"]')).toHaveCount(0);
-    // An empty index is kept out of search results and out of the site footer until a debate is approved.
-    await expect(page.locator('meta[name="robots"]')).toHaveAttribute('content', /noindex/);
-    await expect(page.locator('.site-footer a[href="/debates"]')).toHaveCount(0);
-    await noHorizontalScroll(page);
-    await noSeriousA11yViolations(page);
-    expect(errors).toEqual([]);
-  });
-
-  test('the draft page is not built', async ({ page }) => {
-    const res = await page.goto('/debates/date-of-the-buddha');
-    expect(res?.status()).toBe(404);
-  });
-
-  test('related entity pages and search do not link the draft', async ({ page }) => {
-    await page.goto(BUDDHA);
-    await expect(page.getByRole('heading', { name: 'Debates' })).toHaveCount(0);
-    await expect(page.locator('a[href^="/debates/"]')).toHaveCount(0);
-    // The Pagefind index holds the learning path and no debate: searching the draft's subject finds no debate page.
-    await page.goto('/search?q=How%20we%20date%20Ashoka');
-    await expect(page.locator('.search-results a[data-result][href="/learn/how-we-date-ashoka"]')).toBeVisible();
-    await page.goto('/search?q=date%20of%20the%20Buddha');
-    await expect(page.locator('.search-status')).toContainText('for');
-    await expect(page.locator('.search-results a[data-result][href^="/debates/"]')).toHaveCount(0);
-  });
-});
-
 test.describe('names in native script and IAST', () => {
   test('entity page tags Devanagari and IAST with their languages', async ({ page }) => {
     await page.goto(BUDDHA);

@@ -1,6 +1,8 @@
 import Link from 'next/link';
 import SearchBar from './SearchBar';
 import NavLinks from './NavLinks';
+import { getGraph } from '@/lib/content/site';
+import { visibleDebates } from '@/lib/content/debates';
 
 export function BrandMark({ className }: { className?: string }) {
   return (
@@ -16,6 +18,8 @@ export function BrandMark({ className }: { className?: string }) {
 }
 
 export default function Header() {
+  // As in the footer, the debates index is linked only once it lists something.
+  const debates = visibleDebates(getGraph().debates).length > 0;
   return (
     <header className="site-header">
       <div className="site-header__inner">
@@ -23,7 +27,7 @@ export default function Header() {
           <BrandMark className="brand__mark" />
           <span className="brand__name">The Bharat Repo</span>
         </Link>
-        <NavLinks />
+        <NavLinks debates={debates} />
         <SearchBar />
       </div>
     </header>

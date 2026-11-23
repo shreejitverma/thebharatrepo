@@ -239,6 +239,22 @@ test.describe('navigation', () => {
     expect(errors).toEqual([]);
   });
 
+  test('every main navigation link is shown whole, on one row from a 768 px tablet up', async ({ page }) => {
+    // On phone and touch projects this measures the touch sizes (44 px targets), on desktop ones the mouse sizes.
+    for (const width of [768, 1024, 1280, 1440]) {
+      await page.setViewportSize({ width, height: 900 });
+      await page.goto('/');
+      await page.evaluate(() => document.fonts.ready);
+      const nav = page.getByRole('navigation', { name: 'Main' });
+      await expect(nav.getByRole('link', { name: 'Debates' })).toBeVisible();
+      const fit = await nav.evaluate((el) => {
+        const links = [...el.querySelectorAll('a')];
+        return { overflow: el.scrollWidth - el.clientWidth, rows: new Set(links.map((a) => Math.round(a.getBoundingClientRect().top))).size, links: links.length };
+      });
+      expect(fit, `at ${width} px`).toEqual({ overflow: 0, rows: 1, links: 11 });
+    }
+  });
+
   test('the footer links to the evidence pages', async ({ page }) => {
     await page.goto('/');
     const footer = page.locator('footer');

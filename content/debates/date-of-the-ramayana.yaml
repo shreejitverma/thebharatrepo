@@ -1,0 +1,194 @@
+id: debate.date-of-the-ramayana
+title: The date of the Ramayana
+question: When did the Valmiki Ramayana take shape, and how does tradition place its story in time?
+summary: >-
+  Scholars separate dating the Valmiki Ramayana's poetic composition from dating any
+  historical event behind the narrative. Robert P. Goldman places the oral core (Books 2
+  to 6) around 750 to 500 BCE, whereas John Brockington dates the earliest oral stage to
+  the fifth or fourth century BCE and traces five stages extending through Books 1 and 7
+  to about 300 CE. Modern planetarium-software reconstructions of Rama's horoscope propose
+  sixth-millennium BCE dates (grade E). Puranic and vernacular traditions place Rama's
+  reign in Treta Yuga in sacred chronology.
+published: true
+approval: { by: Shreejit Verma, date: "2026-11-22", note: "Drafted by Codex; reviewed for fairness, accuracy and sources by Gemini (a machine review). No human editorial review yet." }
+commonGround:
+  - text: >-
+      The transmitted Sanskrit epic consists of seven books (kandas) attributing the poem
+      to Valmiki, with Books 2 to 6 forming the central narrative and Books 1 and 7
+      framing Rama's birth, divine status and later reign.
+    grade: A
+    sources:
+      - { id: src.goldman-1984-ramayana-balakanda, locator: "Balakanda, sargas 1-4" }
+      - { id: src.brockington-1998-sanskrit-epics, locator: "pp. 377-397" }
+  - text: >-
+      No contemporary inscription, coin or dated archaeological horizon directly attests
+      Rama, Ravana or Valmiki, so critical scholarship dates the composition and layered
+      growth of the poem rather than historical events.
+    grade: B
+    sources:
+      - { id: src.goldman-1984-ramayana-balakanda, locator: "General Introduction, pp. 14-24" }
+      - { id: src.brockington-1998-sanskrit-epics, locator: "pp. 379-383" }
+positions:
+  - id: goldman-early-core
+    label: "Goldman: an oral core around 750 to 500 BCE"
+    lens: scholarship
+    grade: C
+    range: { earliest: "750 BCE", latest: "500 BCE", precision: century, circa: true }
+    statement: >-
+      The oldest recoverable poem fits an early northern Indian political world in which
+      Kosala is prominent and Ayodhya is its chief royal city. In Books 2 to 6, Magadha's
+      later imperial dominance and clear references to Buddhism are absent, and the epic
+      Sanskrit retains pre-classical features. Together with the structural coherence of the
+      central story, these features point Goldman to an early oral core around 750 to 500
+      BCE, with Books 1 and 7 added in later centuries.
+    proponents:
+      - name: Robert P. Goldman
+        role: Sanskritist, general editor of the Princeton Valmiki Ramayana translation
+        work: { id: src.goldman-1984-ramayana-balakanda, locator: "General Introduction, pp. 14-24" }
+    evidence:
+      - text: >-
+          Goldman contrasts the political prominence of Kosala and Ayodhya in the central
+          narrative with the later imperial geography of Magadha and the eastern Ganga
+          plain.
+        grade: C
+        sources:
+          - { id: src.goldman-1984-ramayana-balakanda, locator: "General Introduction, pp. 20-23" }
+      - text: >-
+          The language and narrative unity of Books 2 to 6 distinguish the core oral epic
+          from the theological and framing expansions of Books 1 and 7.
+        grade: B
+        sources:
+          - { id: src.goldman-1984-ramayana-balakanda, locator: "General Introduction, pp. 14-24" }
+    objections:
+      - >-
+        A poet can set a story in an archaic political world centuries later, and the
+        absence of Magadha or Buddhism can reflect literary genre and theme rather than
+        chronological priority.
+      - >-
+        Excavations at Ayodhya under B. B. Lal found continuous settlement beginning only in
+        the Northern Black Polished Ware horizon rather than an earlier urban phase.
+  - id: brockington-layered-composition
+    label: "Brockington: five-stage composition from c. 500 BCE to 300 CE"
+    lens: scholarship
+    grade: C
+    range: { earliest: "500 BCE", latest: "300 CE", precision: century, circa: true }
+    statement: >-
+      The Valmiki Ramayana took shape through five identifiable compositional stages across
+      many centuries. John Brockington uses metrical shifts, formulaic diction and
+      theological development to assign Stage 1 (the shloka core of Books 2 to 6, where Rama
+      appears primarily as a human hero) to the fifth or fourth century BCE. Subsequent
+      oral expansions (Stage 2) and written redaction adding Books 1 and 7 (Stage 3)
+      brought the seven-book epic close to its received form by the third century CE.
+    proponents:
+      - name: John Brockington
+        role: Sanskritist, historian of the Sanskrit epics
+        work: { id: src.brockington-1998-sanskrit-epics, locator: "pp. 377-397" }
+    evidence:
+      - text: >-
+          Statistical analysis of metres, formulas and theology separates the shloka core
+          of Books 2 to 6 from longer-metre expansions and the framing Books 1 and 7.
+        grade: B
+        sources:
+          - { id: src.brockington-1998-sanskrit-epics, locator: "pp. 377-397" }
+      - text: >-
+          Brockington places Stage 1 in the fifth to fourth centuries BCE and Stage 3 in the
+          first to third centuries CE, aligning the earliest core roughly with early
+          Northern Black Polished Ware occupation at Ayodhya.
+        grade: C
+        sources:
+          - { id: src.brockington-1998-sanskrit-epics, locator: "pp. 379-383" }
+          - { id: src.ramayana-sites-lal, locator: "Results of the Excavations: Ayodhya" }
+    objections:
+      - >-
+        Linguistic and metrical strata establish a relative sequence more securely than
+        absolute centuries, because oral bards can retain archaic forms or update older
+        episodes.
+      - >-
+        Goldman argues that the pre-Magadhan cultural horizon of the core allows a slightly
+        earlier origin than the fifth century BCE.
+  - id: planetarium-horoscope-reconstructions
+    label: "Planetarium-software reconstructions of Rama's birth chart"
+    lens: scholarship
+    grade: E
+    statement: >-
+      Some modern authors treat the planetary and zodiacal positions in Balakanda 18
+      (such as the Sun in Aries, Saturn in Libra, Jupiter and the Moon in Cancer, Venus in
+      Pisces and Mars in Capricorn) as an observational sky record from Rama's birth. Using
+      planetarium software to search backwards for matching configurations, Pushkar
+      Bhatnagar proposed 10 January 5114 BCE and aligned other epic episodes with simulated
+      eclipses. Indologists and historians of astronomy regard this method as speculative
+      because Balakanda is a later framing book and its horoscope relies on classical
+      twelve-sign zodiacal astrology.
+    proponents:
+      - name: Pushkar Bhatnagar
+        role: Author of a planetarium-software dating of the Ramayana
+        work: { id: src.bhatnagar-2004-dating-era-lord-rama, locator: "chs. 4-5" }
+    evidence:
+      - text: >-
+          Bhatnagar matches the planetary placements at Rama's birth in Balakanda 18.8-9 to
+          10 January 5114 BCE using planetarium software.
+        grade: E
+        sources:
+          - { id: src.bhatnagar-2004-dating-era-lord-rama, locator: "chs. 4-5" }
+    objections:
+      - >-
+        Textual criticism places Balakanda in the later framing stratum of the Ramayana
+        (Books 1 and 7), added centuries after the Books 2 to 6 oral core.
+      - >-
+        Describing five exalted planets in named zodiacal signs reflects twelve-sign solar
+        horoscopy (rashi astrology), which historians of Indian astronomy trace to contact
+        with Hellenistic astrology in the early centuries CE rather than the sixth
+        millennium BCE.
+      - >-
+        Excavations at Ayodhya under B. B. Lal found no settlement earlier than the Northern
+        Black Polished Ware period, offering no material evidence for a sixth-millennium
+        BCE city.
+  - id: treta-yuga
+    label: "Rama's reign in Treta Yuga"
+    lens: tradition
+    grade: D
+    statement: >-
+      In Itihasa-Purana and bhakti traditions, Rama belongs to Treta Yuga, the second of
+      the four world ages before Dvapara and Kali Yuga (corresponding on the standard
+      4:3:2:1 yuga reckoning of the current mahayuga to a span ending hundreds of thousands
+      of years before Kali's 3102 BCE start). The Bhagavata Purana and Tulsidas's
+      Ramcharitmanas describe Rama's rule in Treta as restoring the dharma of Krita Yuga,
+      while some accounts place him at the Treta-Dvapara transition. Valmiki is revered
+      as the adi-kavi who gave the events their Sanskrit poetic form.
+    proponents:
+      - name: Bhagavata Purana tradition
+        role: Situates Rama in Treta Yuga while comparing his reign to Krita
+        work: { id: src.gonzalezreimann-2021-ramayana-and-yugas, locator: "pp. 258-260, citing Bhagavata Purana 9.10.52" }
+      - name: Tulsidas
+        role: Poet of the Ramcharitmanas
+        work: { id: src.gonzalezreimann-2021-ramayana-and-yugas, locator: "p. 258, citing Ramcharitmanas, Book 7, caupai 21" }
+    evidence:
+      - text: >-
+          Both the Bhagavata Purana and Ramcharitmanas place Rama in Treta Yuga and liken
+          his reign to Krita, while other traditional texts place him near the boundary of
+          Treta and Dvapara, showing internal variation within sacred chronology.
+        grade: D
+        sources:
+          - { id: src.gonzalezreimann-2021-ramayana-and-yugas, locator: "pp. 258-260" }
+          - { id: src.plofker-2009-mathematics-in-india, locator: "ch. 3, pp. 58-60" }
+    objections:
+      - >-
+        Treta Yuga places Rama within cosmological and devotional time rather than in a
+        calendar year corroborated by contemporary inscriptions or stratified archaeology.
+whatWouldChangeThis:
+  - >-
+    A securely dated pre-Mauryan inscription quoting an unmistakable verse from a specific
+    book of the Valmiki Ramayana would tighten the upper limit for that compositional layer.
+  - >-
+    An independent contemporary inscription or archival record naming the epic's rulers and
+    events would be required to connect the narrative to a datable historical episode.
+relatedEntities:
+  - text.valmiki-ramayana
+  - person.rama
+  - cosmology.treta-yuga
+  - concept.yuga-chronology-of-the-itihasa
+  - event.ramayana-sites-project
+  - text.ramcharitmanas
+relatedArticles: [literature/the-ramayana]
+tags: [ramayana, valmiki, oral-transmission, chronology]
+review: { status: draft, author: codex }
