@@ -3,8 +3,9 @@ type: site
 kind: site
 names:
   en: Sanauli (Sinauli)
-  iast: Sanaulī
+  iast: Sinaulī
   native: सिनौली
+  nativeLang: hi
 summary: >-
   A major Bronze Age necropolis in Baghpat District, western Uttar Pradesh, in the Ganga-Yamuna Doab (early second millennium BCE),
   excavated by the Archaeological Survey of India in 2005-2006 (D. V. Sharma) and 2018 (Sanjay Kumar Manjul), where

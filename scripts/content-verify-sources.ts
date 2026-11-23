@@ -19,8 +19,10 @@
 
 import fs from 'node:fs';
 import path from 'node:path';
+import { isDeepStrictEqual } from 'node:util';
 import { loadContentUncached, CONTENT_DIR } from '../src/lib/content/load';
-import type { Source } from '../src/lib/content/schema';
+import { checkArguments, scopedContent } from './content-check';
+import type { Entity, Source } from '../src/lib/content/schema';
 import { cachedTitleMatches, registryRecord, sameName, sameTitle, urlMatchKind } from '../src/lib/content/similarity';
 
 const CACHE_FILE = process.env.VERIFY_CACHE ? path.resolve(process.env.VERIFY_CACHE) : path.join(CONTENT_DIR, 'verification.json');
@@ -43,7 +45,8 @@ interface CacheEntry {
 }
 type Cache = Record<string, CacheEntry>;
 
-const args = new Set(process.argv.slice(2));
+const argv = process.argv.slice(2);
+const args = new Set(argv);
 const refresh = args.has('--refresh');
 const offline = args.has('--offline');
 
@@ -222,6 +225,93 @@ function sourceJobs(s: Source): Job[] {
   return jobs;
 }
 
+function entityJobs(e: Entity): Job[] {
+  const jobs: Job[] = [];
+  if (e.wikidata) {
+    const names = [e.names.en, e.names.iast ?? '', e.id.split('.')[1].replace(/-/g, ' ')].filter(Boolean);
+    const namedThing = ['site', 'person', 'polity', 'text'].includes(e.type);
+    jobs.push({
+      key: `qid:${e.wikidata}:${e.id}`,
+      where: e.id,
+      run: () => verifyQid(e.wikidata!, names, namedThing),
+      recheck: (c) => (c.labels && sameName(names, c.labels, { namedThing }) ? null : 'cached Wikidata labels do not identify this entity'),
+    });
+  }
+  if (e.image) {
+    jobs.push({
+      key: `commons:${e.image.commons}`,
+      where: e.id,
+      run: () => verifyCommons(e.image!.commons),
+      recheck: (c) =>
+        /^https:\/\/(upload|thumb)\.wikimedia\.org\//.test(c.thumb ?? '') && c.pageUrl?.startsWith('https://commons.wikimedia.org/') && c.thumbWidth && c.thumbHeight
+          ? null
+          : 'cached image record is incomplete or not from Wikimedia',
+    });
+  }
+  return jobs;
+}
+
+function cacheCheckedJobs(checked: Cache) {
+  const cache = loadCache(CACHE_FILE);
+  let changed = false;
+  for (const [key, entry] of Object.entries(checked)) {
+    const previous = cache[key];
+    const comparable = Object.fromEntries(Object.entries(entry).filter(([, value]) => value !== undefined));
+    if (!previous || !isDeepStrictEqual(previous, { ...comparable, checkedAt: previous.checkedAt })) {
+      cache[key] = entry;
+      changed = true;
+    }
+  }
+  if (!changed) return;
+  const dir = fs.mkdtempSync(path.join(path.dirname(CACHE_FILE), '.verification-'));
+  const file = path.join(dir, 'verification.json');
+  try {
+    const sorted = Object.fromEntries(Object.entries(cache).sort(([a], [b]) => a.localeCompare(b)));
+    fs.writeFileSync(file, JSON.stringify(sorted, null, 2) + '\n');
+    fs.renameSync(file, CACHE_FILE);
+  } finally {
+    fs.rmSync(dir, { recursive: true, force: true });
+  }
+}
+
+async function checkFiles(args: string[]) {
+  const options = checkArguments(args);
+  if (!options) return;
+  const { errors, entities, sources } = scopedContent(options.files);
+  if (errors.length) {
+    console.log(`error: Fix ${errors.length} content problem(s), then rerun content:check.`);
+    for (const { file, message } of errors) console.log(`  ${file}: ${message}`);
+    process.exitCode = 1;
+    return;
+  }
+
+  const jobs = [...sources.flatMap(sourceJobs), ...entities.flatMap(entityJobs)];
+  const checked: Cache = {};
+  let failed = 0;
+  for (const job of jobs) {
+    let entry: CacheEntry;
+    try {
+      entry = checked[job.key] ?? await job.run();
+    } catch (error) {
+      entry = { ok: false, checkedAt: now(), detail: `network error: ${(error as Error).message}. Check your connection and retry.` };
+    }
+    const detail = entry.ok ? job.recheck(entry) : entry.detail ?? 'could not verify this identifier';
+    if (detail) {
+      failed++;
+      console.log(`  ${job.where} (${job.key}): ${detail}${entry.matched ? `; found "${entry.matched}"` : ''}`);
+    } else {
+      checked[job.key] = entry;
+    }
+  }
+  if (failed) {
+    console.log(`error: ${failed} online check(s) failed. Check the identifier and cited title or name, then rerun content:check.`);
+    process.exitCode = 1;
+    return;
+  }
+  if (options.writeCache) cacheCheckedJobs(checked);
+  console.log(`content:check ok: ${new Set(options.files.map((file) => path.resolve(file))).size} file(s), ${Object.keys(checked).length} identifier(s) verified online`);
+}
+
 async function main() {
   const g = loadContentUncached();
   // A staging run (CONTENT_ROOTS=content:staging/<batch>) is blocked only by problems in its own files,
@@ -253,29 +343,7 @@ async function main() {
 
   const jobs: Job[] = [];
   for (const s of g.sources.values()) if (inScope(s.id)) jobs.push(...sourceJobs(s));
-  for (const e of [...g.entities.values()].filter((x) => inScope(x.id))) {
-    if (e.wikidata) {
-      const names = [e.names.en, e.names.iast ?? '', e.id.split('.')[1].replace(/-/g, ' ')].filter(Boolean);
-      const namedThing = ['site', 'person', 'polity', 'text'].includes(e.type);
-      jobs.push({
-        key: `qid:${e.wikidata}:${e.id}`,
-        where: e.id,
-        run: () => verifyQid(e.wikidata!, names, namedThing),
-        recheck: (c) => (c.labels && sameName(names, c.labels, { namedThing }) ? null : 'cached Wikidata labels do not identify this entity'),
-      });
-    }
-    if (e.image) {
-      jobs.push({
-        key: `commons:${e.image.commons}`,
-        where: e.id,
-        run: () => verifyCommons(e.image!.commons),
-        recheck: (c) =>
-          /^https:\/\/(upload|thumb)\.wikimedia\.org\//.test(c.thumb ?? '') && c.pageUrl?.startsWith('https://commons.wikimedia.org/') && c.thumbWidth && c.thumbHeight
-            ? null
-            : 'cached image record is incomplete or not from Wikimedia',
-      });
-    }
-  }
+  for (const e of g.entities.values()) if (inScope(e.id)) jobs.push(...entityJobs(e));
 
   const failures: { where: string; key: string; detail: string; matched?: string }[] = [];
   let fetched = 0;
@@ -305,6 +373,8 @@ async function main() {
     }
   };
   await Promise.all(Array.from({ length: offline ? 1 : 4 }, worker));
+  // A full run also drops Wikidata results kept for entity ids that no longer exist, such as merged-away records.
+  if (!stagingRoots.length) for (const key of Object.keys(cache)) if (key.startsWith('qid:') && !g.entities.has(key.slice(key.lastIndexOf(':') + 1))) delete cache[key];
   if (!offline) saveCache(cache);
 
   console.log(`verify-sources${offline ? ' (offline)' : ''}: ${jobs.length} identifiers, ${cached} cached, ${fetched} fetched, ${failures.length} failed`);
@@ -314,7 +384,9 @@ async function main() {
   if (failures.length > 0) process.exit(1);
 }
 
-main().catch((e) => {
-  console.error(e);
-  process.exit(1);
+const check = argv[0] === '--check';
+(check ? checkFiles(argv.slice(1)) : main()).catch((error: Error) => {
+  if (check) console.log(`error: ${JSON.stringify(error.message)}`);
+  else console.error(error);
+  process.exitCode = 1;
 });

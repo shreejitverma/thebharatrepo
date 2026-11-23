@@ -1,10 +1,10 @@
-import { formatInCalendar, formatRange, type CalendarSystem } from '@/lib/time';
+import { formatInCalendar, formatRange, formatYear, type CalendarSystem, type YearRange } from '@/lib/time';
 import { yearToUnit, unitToYear, SEGMENTS, type Segment } from '@/lib/time/scale';
 import { primaryAnchor, rankDatings, withTraditionMark, type Lens } from '@/lib/content/lens';
 import type { KcDating, KcItem } from '@/lib/content/kaalchakra';
 import type { Kind } from '@/lib/content/labels';
 
-export type View = 'wheel' | 'river' | 'list';
+export type View = 'wheel' | 'river' | 'list' | 'map';
 export type Level = 'adult' | 'teen' | 'kids';
 
 export const SHORT_SEGMENT_LABELS: Record<string, string> = {
@@ -67,11 +67,20 @@ export function visibleDatings<D extends PlacedDating>(item: { datings: D[] }, l
   );
 }
 
-/** The bare range in a calendar, for places that show the lens beside it. */
-export function formatDatingRange(d: KcDating, cal: CalendarSystem): string {
+/**
+ * The bare range in a calendar, for places that show the lens beside it.
+ * Outside CE/BCE the same collapse rules apply as in formatRange: when both endpoints fall before the era's
+ * epoch they print in CE/BCE anyway, so formatRange formats the whole range (one century is named once),
+ * and two endpoints that print the same are shown once rather than as "X to X".
+ */
+export function formatDatingRange(d: YearRange, cal: CalendarSystem): string {
   if (cal === 'ce') return formatRange(d);
   if (d.earliest === d.latest) return formatInCalendar(d.earliest, cal, d.precision, d.circa);
-  return `${formatInCalendar(d.earliest, cal, d.precision, d.circa)} to ${formatInCalendar(d.latest, cal, d.precision)}`;
+  const from = formatInCalendar(d.earliest, cal, d.precision);
+  const to = formatInCalendar(d.latest, cal, d.precision);
+  if (from === formatYear(d.earliest, d.precision) && to === formatYear(d.latest, d.precision)) return formatRange(d);
+  const c = d.circa ? 'c. ' : '';
+  return from === to ? `${c}${from}` : `${c}${from} to ${to}`;
 }
 
 /** One-line date label in a calendar, marked when the dating is a traditional reckoning. */

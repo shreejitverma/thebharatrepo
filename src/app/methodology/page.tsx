@@ -29,7 +29,7 @@ export default function MethodologyPage() {
           The authority of this archive rests on one rule: never overstate. Every claim carries its evidence and its grade, and where credible positions disagree, all of them are shown.
         </p>
 
-        <h2>Evidence grades</h2>
+        <h2 id="grades">Evidence grades</h2>
         <p>Each dating and each key claim receives one of five grades. The shape of the badge carries meaning as well as its colour: squares for scholarship, a circle for tradition, an outline for speculation.</p>
         <div style={{ display: 'grid', gap: 14 }}>
           {GRADES.map((g) => (
@@ -99,7 +99,7 @@ export default function MethodologyPage() {
 
         <h2>Corrections</h2>
         <p>
-          Every page has a link to report an error. Substantive changes are recorded in the public <Link href="/corrections">corrections log</Link>, and the full history of every page is public in the <a href="https://github.com/shreejitverma/thebharatrepo">source repository</a>.
+          Every page has a link to report an error. Substantive changes are recorded in the public <Link href="/corrections" prefetch={false}>corrections log</Link>, and the full history of every page is public in the <a href="https://github.com/shreejitverma/thebharatrepo">source repository</a>.
         </p>
         <p className="muted">
           Grade meanings at a glance: {GRADES.map((g) => `${g}, ${GRADE_LABELS[g].toLowerCase()}`).join('; ')}.

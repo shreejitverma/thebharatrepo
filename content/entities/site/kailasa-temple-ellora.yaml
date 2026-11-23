@@ -3,8 +3,9 @@ type: site
 kind: site
 names:
   en: Kailasa Temple, Ellora
-  iast: Kailāsa
+  iast: Kailāsa Mandira
   native: कैलास मंदिर
+  nativeLang: mr
 summary: >-
   The Kailasa temple (Cave 16) at Ellora is a complete Shiva temple carved downwards out of the basalt
   hillside, with its shrine, halls, courtyard and free-standing columns all cut from the living rock.

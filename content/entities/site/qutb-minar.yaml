@@ -3,6 +3,9 @@ type: site
 kind: site
 names:
   en: Qutb Minar and its Monuments
+  iast: Quṭb Mīnār
+  native: قطب مینار
+  nativeLang: ur
 summary: >-
   The Qutb complex in Delhi includes the Qutb Minar, the Quwwat-ul-Islam mosque, the tomb of Iltutmish,
   and later structures. Construction of the minar began under Qutb al-Din Aibak and continued under

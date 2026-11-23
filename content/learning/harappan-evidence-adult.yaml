@@ -1,0 +1,188 @@
+id: learn.harappan-evidence-adult
+title: How do we know about the Harappan civilisation?
+level: adult
+audience: Adult readers, for self-study or a seminar
+summary: >-
+  No one can yet read a Harappan sentence, so everything we know about the Indus cities comes from
+  excavated remains, scientific dating and records kept by their trading partners. This path follows
+  that evidence from the first excavations to the debate over decline, and asks at each step what the
+  evidence can show and where it stops.
+# The 1924 announcement step is modern; the path itself is about the Harappan phases.
+focus: { earliest: "3300 BCE", latest: "1300 BCE", precision: century, circa: true }
+goals:
+  - Explain how calibrated radiocarbon sequences and Mesopotamian synchronisms date the Harappan phases.
+  - Describe what seals and sealings show about Harappan administration and trade, and what they cannot show.
+  - Explain why the Indus script is still undeciphered and name the main competing hypotheses.
+  - Weigh the evidence for gradual de-urbanisation against the older theory of a sudden invasion.
+steps:
+  - entity: event.indus-civilisation-announcement-1924
+    title: A civilisation recognised by excavation
+    note: >-
+      The civilisation entered modern history through excavation, not through a text that could be read.
+      Notice that Marshall's 1924 announcement drew together finds from two sites hundreds of kilometres
+      apart, and that everything later in this path depends on archaeology rather than on a chronicle.
+  - entity: site.harappa
+    title: Harappa and the long sequence
+    note: >-
+      Harappa gives its name to the civilisation and preserves a stratified sequence from the Ravi phase to
+      Cemetery H. Look at how more than a hundred calibrated radiocarbon dates turn its five periods into a
+      timeline, and at the damage done by brick robbing before systematic excavation began.
+  - entity: site.mohenjo-daro
+    title: Mohenjo-daro, a planned city
+    note: >-
+      The largest excavated Mature Harappan city shows a high western mound, a lower town on cardinal
+      streets, and hundreds of brick-lined wells. Ask what a city plan can tell us about organisation, and
+      notice that it does not tell us who governed or how.
+  - entity: artifact.harappan-steatite-seals
+    title: Seals and sealings
+    note: >-
+      More than 3,700 stamp seals survive. The decisive evidence for their use is the clay sealings that
+      carry a seal impression on one face and the marks of cords, matting or doors on the other. Notice how
+      that reverse side, not the motif, tells us that goods and storerooms were being controlled.
+  - entity: concept.indus-script
+    title: A script no one can read
+    note: >-
+      The corpus is large in number but each text is very short, and no verified bilingual inscription has
+      been found. Compare the logo-syllabic Dravidian, Indo-Aryan and non-linguistic hypotheses, and look at
+      how the 2009 entropy study and Sproat's 2014 reply argue over the same statistics.
+  - entity: concept.harappan-mesopotamian-trade
+    title: Meluhha in the cuneiform record
+    note: >-
+      Mesopotamian texts name a land called Meluhha, widely identified with the Indus region, and Harappan
+      seals, beads and weights turn up in dated West Asian contexts. Notice how these finds give an outside
+      check on the radiocarbon dates, much as Greek records later do for the Mauryas.
+  - entity: event.4-2-ka-climate-aridification
+    title: A drying climate
+    note: >-
+      Oxygen isotopes in lake shells from Kotla Dahar in Haryana record an abrupt weakening of the monsoon
+      about 4,100 years ago. Separate what the climate record shows from what it is used to explain, and
+      note Petrie's evidence that farmers adapted by changing crops rather than collapsing at once.
+  - entity: event.harappan-deurbanisation
+    title: Decline as transformation
+    note: >-
+      Between about 1900 and 1300 BCE the large cities emptied, the script and cubical weights fell out of
+      use, and village settlements multiplied to the east and in Gujarat. Look at why the 1947 invasion
+      theory was abandoned once the skeletons of Mohenjo-daro were restudied.
+  - article: history/indus-valley-civilisation
+    title: Going further, the whole civilisation
+    note: >-
+      Read the full article for the roots, crafts and genetics of the civilisation, and for the open
+      questions it lists. Keep asking of each claim whether it rests on excavation, scientific dating,
+      foreign records or interpretation.
+quiz:
+  - id: phase-dating
+    question: What kind of evidence anchors the Mature Harappan phase to about 2600 to 1900 BCE?
+    choices:
+      - text: A king list written in the Indus script
+        explanation: >-
+          The Indus script is undeciphered, so no Harappan text can be read as a king list or as a date.
+      - text: Calibrated radiocarbon sequences from stratified excavations, cross-checked by finds in dated Mesopotamian contexts
+        correct: true
+        explanation: >-
+          Radiocarbon sequences from Harappa, Mohenjo-daro, Dholavira, Rakhigarhi and Kalibangan give the
+          span, and Akkadian and Ur III contexts that contain Harappan objects provide an independent check.
+      - text: The accounts of Greek historians
+        explanation: >-
+          Greek writers came into contact with India in the 4th century BCE, more than a thousand years after
+          the Harappan cities had been abandoned.
+    sources:
+      - src.kenoyer-1998-ancient-cities-indus
+      - src.possehl-2002-indus-civilization
+      - src.wright-2010-ancient-indus
+  - id: undeciphered
+    question: Why does the Indus script remain undeciphered?
+    choices:
+      - text: Fewer than a hundred inscriptions have survived.
+        explanation: >-
+          Roughly 4,000 to 5,000 inscribed objects are known. The difficulty is the brevity of each text, not
+          the size of the corpus.
+      - text: Scholars agree that it records an early Dravidian language but cannot yet read the words.
+        explanation: >-
+          The Dravidian hypothesis is one of several. Others propose an Indo-Aryan language or a
+          non-linguistic system of symbols, and there is no agreement on what the signs encode.
+      - text: No verified bilingual inscription has been found, and the surviving texts are very short, about five signs on average.
+        correct: true
+        explanation: >-
+          Decipherments of other ancient scripts relied on bilingual texts or long passages. The Indus corpus
+          has thousands of inscriptions but each is brief, so no proposed reading can be tested decisively.
+    sources:
+      - src.possehl-2002-indus-civilization
+      - src.kenoyer-1998-ancient-cities-indus
+      - src.parpola-1994-deciphering-indus-script
+  - id: sealings
+    question: What evidence shows that Harappan seals were used to control goods and storerooms?
+    choices:
+      - text: Clay sealings with a seal impression on one face and impressions of cords, matting or wooden doors on the other
+        correct: true
+        explanation: >-
+          Sealings from the Lothal warehouse and from Harappa show that clay was pressed over tied bundles and
+          door fastenings and then stamped, which is how sealing works in an administrative system.
+      - text: Inscriptions on the seals that read "property of the city"
+        explanation: >-
+          The inscriptions on the seals cannot be read, so no meaning of this kind can be taken from them.
+      - text: Mesopotamian letters describing how Harappan officials used their seals
+        explanation: >-
+          Cuneiform texts mention Meluhha, its ships and its goods, but they do not describe Harappan sealing
+          practice.
+    sources:
+      - src.rao-1979-lothal-harappan-port
+      - src.kenoyer-1998-ancient-cities-indus
+  - id: meluhha
+    question: How do Mesopotamian records help historians date the Harappan cities?
+    choices:
+      - text: They list the names and reign lengths of Harappan kings.
+        explanation: >-
+          No Harappan ruler is named in any surviving record, Mesopotamian or Harappan.
+      - text: They record the year in which Mohenjo-daro was founded.
+        explanation: >-
+          Mesopotamian texts refer to Meluhha as a trading land; they say nothing about the founding of any
+          Indus city.
+      - text: Inscriptions of Sargon of Akkad mention ships from Meluhha, widely identified with the Indus region, and Harappan objects are found in dated Mesopotamian contexts.
+        correct: true
+        explanation: >-
+          Sargon reigned about 2334 to 2279 BCE, so references to Meluhha and Harappan beads and seals in
+          Mesopotamia tie the Mature Harappan phase to a dated foreign chronology.
+    sources:
+      - src.possehl-2002-indus-civilization
+      - src.kenoyer-1998-ancient-cities-indus
+  - id: kotla-dahar
+    question: What does the oxygen-isotope record from the Kotla Dahar palaeolake in Haryana show?
+    choices:
+      - text: A single great flood that buried Harappa
+        explanation: >-
+          The lake record measures rainfall and evaporation over centuries, and Harappa lies far away on the
+          Ravi; it records no flood at the city.
+      - text: An abrupt weakening of the summer monsoon about 4,100 years ago
+        correct: true
+        explanation: >-
+          Dixit, Hodell and Petrie (2014) found a shift towards evaporation over rainfall in dated shells,
+          evidence of a weaker monsoon across the eastern Harappan region. On its own it shows climate stress,
+          not how each community responded.
+      - text: That farming in the region stopped in 2200 BCE
+        explanation: >-
+          Research on land and water use shows that farmers adapted to monsoon variability, for example by
+          combining winter and summer crops, rather than abandoning farming at one moment.
+    sources:
+      - src.dixit-2014-abrupt-weakening-monsoon
+  - id: decline
+    question: What does current evidence suggest about the end of the Harappan cities?
+    choices:
+      - text: A gradual de-urbanisation between about 1900 and 1300 BCE, while smaller village settlements grew in the east and in Gujarat
+        correct: true
+        explanation: >-
+          The cities emptied over generations and the script, seals and cubical weights fell out of use, but
+          the number of Late Harappan villages rose, carrying crafts and crops into later periods.
+      - text: A single military invasion that destroyed Mohenjo-daro
+        explanation: >-
+          This was Mortimer Wheeler's 1947 hypothesis. Restudy showed that the skeletons he relied on came from
+          different late levels and showed disease and healed injuries, not one massacre.
+      - text: The whole population left South Asia within a few years.
+        explanation: >-
+          Settlement shifted within South Asia, and Late Harappan sites in Haryana, Punjab, western Uttar
+          Pradesh and Saurashtra show continuity of population and craft.
+    sources:
+      - src.kenoyer-1998-ancient-cities-indus
+      - src.possehl-2002-indus-civilization
+      - src.giosan-2012-fluvial-landscapes-harappan
+tags: [harappan, archaeology, evidence, indus-script]
+review: { status: draft, author: "claude-opus-5-5" }

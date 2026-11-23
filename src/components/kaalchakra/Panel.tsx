@@ -3,12 +3,13 @@
 import Link from 'next/link';
 import { useState } from 'react';
 import DraftNotice from '@/components/DraftNotice';
+import EntityNames from '@/components/EntityNames';
 import GradeBadge, { LensTag } from '@/components/GradeBadge';
 import { KIND_LABELS, METHOD_LABELS } from '@/lib/content/labels';
 import type { KcItem } from '@/lib/content/kaalchakra';
 import type { Lens } from '@/lib/content/lens';
 import type { CalendarSystem } from '@/lib/time';
-import { formatDatingRange, summaryFor, visibleDatings, type Level } from './shared';
+import { formatDatingRange, summaryFor, visibleDatings, type Level, type View } from './shared';
 
 export interface PanelProps {
   item: KcItem | undefined;
@@ -19,24 +20,40 @@ export interface PanelProps {
   onPrev?: () => void;
   onNext?: () => void;
   total: number;
+  view: View;
   /** The selected item is filtered out of the current views. */
   filteredOut?: boolean;
+  /** Why it is filtered out, when the default wording does not fit the view. */
+  filteredNote?: string;
   /** Link to the current state; the address bar lags behind by a debounce. */
   shareUrl: () => string;
 }
 
-export default function Panel({ item, lens, cal, level, onLevel, onPrev, onNext, total, filteredOut, shareUrl }: PanelProps) {
+export default function Panel({ item, lens, cal, level, onLevel, onPrev, onNext, total, view, filteredOut, filteredNote, shareUrl }: PanelProps) {
   const [copied, setCopied] = useState(false);
 
   if (!item) {
     return (
       <aside className="kc-panel" aria-label="How to read the Kaalchakra">
-        <p className="eyebrow">How to read the wheel</p>
-        <h2>One wheel, two lenses</h2>
-        <p className="kc-panel__summary">
-          Time runs clockwise from the traditional start of the present kalpa, at the top, to today. Each ring holds one kind of entry. Select any point, or switch to the
-          River view to zoom, or the List view to read.
-        </p>
+        {view === 'map' ? (
+          <>
+            <p className="eyebrow">How to read the map</p>
+            <h2>Places in time</h2>
+            <p className="kc-panel__summary">
+              Each marker is an entry with a recorded place. A numbered circle stands for several entries close together: select it to zoom in. Move the time scrubber to see what is dated
+              to a moment, or keep All time. The list below the map gives the same entries.
+            </p>
+          </>
+        ) : (
+          <>
+            <p className="eyebrow">How to read the wheel</p>
+            <h2>One wheel, two lenses</h2>
+            <p className="kc-panel__summary">
+              Time runs clockwise from the traditional start of the present kalpa, at the top, to today. Each ring holds one kind of entry. Select any point, or switch to the River view to
+              zoom, the Map view to see places, or the List view to read.
+            </p>
+          </>
+        )}
         <div className="kc-legend" style={{ marginBottom: 12 }}>
           <span>
             <svg width="16" height="16" aria-hidden="true">
@@ -46,20 +63,34 @@ export default function Panel({ item, lens, cal, level, onLevel, onPrev, onNext,
           </span>
           <span>
             <svg width="16" height="16" aria-hidden="true">
-              <circle cx="8" cy="8" r="5" fill="var(--bg-elev)" stroke="var(--gold)" strokeWidth="2.2" />
+              <circle cx="8" cy="8" r="5" fill="var(--wheel-trad-fill)" stroke="var(--lens-tradition)" strokeWidth="2.2" />
             </svg>{' '}
             Traditional reckoning
           </span>
-          <span>
-            <svg width="30" height="16" aria-hidden="true">
-              <path d="M3 8h24" stroke="var(--k-text)" strokeWidth="7" strokeLinecap="round" opacity="0.85" />
-            </svg>{' '}
-            Date range
-          </span>
+          {view === 'map' ? (
+            <span>
+              <svg width="22" height="22" aria-hidden="true">
+                <circle cx="11" cy="11" r="10" fill="var(--map-cluster)" />
+                <text x="11" y="15" textAnchor="middle" fontSize="11" fontWeight="700" fill="var(--map-cluster-ink)">
+                  5
+                </text>
+              </svg>{' '}
+              Several entries
+            </span>
+          ) : (
+            <span>
+              <svg width="30" height="16" aria-hidden="true">
+                <path d="M3 8h24" stroke="var(--k-text)" strokeWidth="7" strokeLinecap="round" opacity="0.85" />
+              </svg>{' '}
+              Date range
+            </span>
+          )}
         </div>
-        <p className="muted" style={{ fontSize: '0.9rem' }}>
-          Distance is honest within each era, but the eras use different scales: deep time is logarithmic, history is linear. Dashed lines mark each change of scale.
-        </p>
+        {view === 'map' ? null : (
+          <p className="muted" style={{ fontSize: '0.9rem' }}>
+            Distance is honest within each era, but the eras use different scales: deep time is logarithmic, history is linear. Dashed lines mark each change of scale.
+          </p>
+        )}
         <div style={{ display: 'grid', gap: 6, marginTop: 12 }}>
           <GradeBadge grade="A" />
           <GradeBadge grade="B" />
@@ -96,15 +127,10 @@ export default function Panel({ item, lens, cal, level, onLevel, onPrev, onNext,
       <h2>{item.name}</h2>
       {filteredOut ? (
         <p className="muted" style={{ fontSize: '0.9rem' }}>
-          Hidden by the current filters or lens, so it is not drawn in the view.
+          {filteredNote ?? 'Hidden by the current filters or lens, so it is not drawn in the view.'}
         </p>
       ) : null}
-      {item.iast || item.native ? (
-        <div className="names">
-          {item.native ? <span lang="sa">{item.native}</span> : null}
-          {item.iast ? <span>{item.iast}</span> : null}
-        </div>
-      ) : null}
+      <EntityNames native={item.native} iast={item.iast} nativeLang={item.nativeLang} iastLang={item.iastLang} />
       <div className="segmented level-tabs" role="group" aria-label="Reading level">
         {(['adult', 'teen', 'kids'] as Level[]).map((l) => (
           <button key={l} type="button" aria-pressed={level === l} onClick={() => onLevel(l)}>

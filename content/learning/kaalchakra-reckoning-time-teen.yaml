@@ -1,0 +1,165 @@
+id: learn.kaalchakra-reckoning-time-teen
+title: "Kaalchakra: yugas, eras and how historians date the past"
+level: teen
+audience: Ages 13 to 17, in class or at home
+summary: >-
+  Indian traditions count time in yugas lasting hundreds of thousands of years, while historians date the
+  past from inscriptions, outside records and radiocarbon. This path shows both: the yugas as tradition
+  describes them, the calendar eras people actually used, and the methods behind the dates on the
+  historical timeline.
+# The yuga steps are cosmological; this span covers the historical evidence the path examines.
+focus: { earliest: "3300 BCE", latest: "1150 CE", precision: century, circa: true }
+goals:
+  - Describe the four yugas and their 4:3:2:1 pattern as traditional cosmology.
+  - Explain why yugas appear in the Tradition lens with grade D.
+  - Explain how Aryabhata and the Aihole inscription connect the Kali era to dated history.
+  - Explain how inscriptions, synchronisms and radiocarbon give dates on the historical timeline.
+steps:
+  - entity: concept.hindu-time-units
+    title: From a blink to a kalpa
+    note: >-
+      Sanskrit texts give a ladder of time units, from the nimesha, the blink of an eye, through the
+      muhurta of 48 minutes, up to the kalpa. Notice which units people used for daily time and which belong
+      to cosmology.
+  - entity: cosmology.mahayuga
+    title: Four ages in one cycle
+    note: >-
+      In traditional cosmology a mahayuga of 4,320,000 years is made of Satya, Treta, Dvapara and Kali in the
+      ratio 4:3:2:1. This is tradition, shown in the Tradition lens; notice that Aryabhata used a different
+      scheme with four equal parts.
+  - entity: cosmology.kali-yuga
+    title: Kali Yuga
+    note: >-
+      Kali Yuga is the shortest of the four ages, traditionally said to have begun in 3102 BCE. Notice where
+      its name comes from: a throw in the ancient game of dice.
+  - entity: event.kali-yuga-epoch
+    title: Where 3102 BCE comes from
+    note: >-
+      Aryabhata wrote in 499 CE that 3,600 years of Kali Yuga had passed when he was 23. Look at why
+      historians think astronomers calculated the starting point backward instead of observing it.
+  - entity: artifact.aihole-inscription
+    title: An inscription with two dates
+    note: >-
+      Ravikirti's Aihole inscription of 634 to 635 CE gives its date twice, in years after the Bharata war and
+      in Shaka years. Notice how that lets historians connect two counting systems.
+  - entity: concept.vikram-samvat
+    title: An era with a later legend
+    note: >-
+      The era of 57 BCE is still used for festivals. Look at what its earliest inscriptions call it, and
+      notice that the link with a king Vikramaditya appears only much later.
+  - entity: artifact.ashoka-major-rock-edict-xiii
+    title: Dating by Greek kings
+    note: >-
+      Ashoka named five Greek kings whose reigns are known from Greek records. This kind of link between two
+      histories is called a synchronism, and it gives one of the firmest dates in early Indian history.
+  - entity: tradition.harappan-civilisation
+    title: Dating by radiocarbon
+    note: >-
+      The Harappan phases have no written dates at all. Notice how radiocarbon dates from layers in the
+      ground give each phase a range of years.
+quiz:
+  - id: tradition-lens
+    question: Why does this site show the yugas in the Tradition lens with grade D?
+    choices:
+      - text: They come from traditional reckoning in the Puranas and Siddhantas, and are shown faithfully as tradition rather than as events dated by evidence.
+        correct: true
+        explanation: >-
+          Grade D marks traditional reckoning. It does not mock the tradition; it says what kind of source a
+          date comes from.
+      - text: Because they come from Greek writers
+        explanation: >-
+          The yugas are described in Sanskrit texts such as Manusmriti, the Vishnu Purana and the Surya
+          Siddhanta.
+      - text: Because radiocarbon dating measured them
+        explanation: >-
+          The yugas are cosmological cycles defined in texts; they are not measured by radiocarbon.
+    sources:
+      - src.olivelle-2005-manus-code-of-law
+      - src.burgess-1860-surya-siddhanta
+  - id: ratio
+    question: In the traditional scheme, how do the lengths of the four yugas compare?
+    choices:
+      - text: Each yuga is twice as long as the one before it.
+        explanation: >-
+          In the 4:3:2:1 scheme each yuga is shorter than the one before, so Satya is the longest and Kali
+          the shortest.
+      - text: They shrink in the ratio 4:3:2:1, from Satya Yuga to Kali Yuga.
+        correct: true
+        explanation: >-
+          Satya lasts 1,728,000 years, Treta 1,296,000, Dvapara 864,000 and Kali 432,000, together making a
+          mahayuga of 4,320,000 years.
+      - text: Kali Yuga is the longest.
+        explanation: >-
+          Kali Yuga is the shortest of the four in the traditional scheme.
+    sources:
+      - src.olivelle-2005-manus-code-of-law
+      - src.wilson-1840-vishnu-purana
+  - id: aryabhata
+    question: How does Aryabhata's own statement date the Aryabhatiya?
+    choices:
+      - text: He gives the date in the Vikram Samvat era.
+        explanation: >-
+          Aryabhata counts from the Kali epoch, not in Vikram Samvat.
+      - text: A radiocarbon test of his original manuscript dates it.
+        explanation: >-
+          No manuscript in Aryabhata's own hand survives; the date comes from his statement.
+      - text: He says he was 23 when 3,600 years of Kali Yuga had passed, which works out to 499 CE.
+        correct: true
+        explanation: >-
+          Kali year 3600 corresponds to Shaka 421, that is 499 CE, so the book dates itself.
+    sources:
+      - { id: src.shukla-sarma-1976-aryabhatiya, locator: "Kalakriyapada 10" }
+      - src.plofker-2009-mathematics-in-india
+  - id: aihole
+    question: Why is the double date in the Aihole inscription so useful?
+    choices:
+      - text: It gives the same year in two counting systems, so historians can convert between them.
+        correct: true
+        explanation: >-
+          It says 3,735 years after the Bharata war and Shaka 556. The 3,179-year difference matches the gap
+          between the Kali epoch and the Shaka epoch of 78 CE.
+      - text: It proves that the Bharata war happened in 3102 BCE.
+        explanation: >-
+          It shows how the war was dated by 634 CE, in traditional reckoning; other traditions gave other dates
+          for the war.
+      - text: It was carved in 3102 BCE.
+        explanation: >-
+          The inscription was carved in 634 to 635 CE, in the reign of Pulakeshin II.
+    sources:
+      - { id: src.kielhorn-1900-aihole-inscription, locator: "verses 33-34" }
+      - src.salomon-1998-indian-epigraphy
+  - id: vikram
+    question: What do the earliest inscriptions using the era of 57 BCE call it?
+    choices:
+      - text: The Vikrama era of King Vikramaditya
+        explanation: >-
+          This name is attested in inscriptions only from the 9th century CE, centuries after the era's start.
+      - text: The Kali era
+        explanation: >-
+          The Kali era counts from 3102 BCE, a different epoch.
+      - text: The Krita era, and later the era of the Malavas
+        correct: true
+        explanation: >-
+          Inscriptions of the 3rd to 5th centuries CE use these names; the name Vikrama appears only from the
+          9th century, which is why its link to a king Vikramaditya is debated.
+    sources:
+      - src.salomon-1998-indian-epigraphy
+  - id: synchronism
+    question: How does Rock Edict XIII help historians date Ashoka?
+    choices:
+      - text: It gives the year in the Shaka era.
+        explanation: >-
+          The Shaka era begins in 78 CE, more than three centuries after Ashoka.
+      - text: It names five Greek kings whose reigns are dated in Greek records, so Ashoka can be placed alongside them.
+        correct: true
+        explanation: >-
+          All five reigned together only for a few years after 261 BCE, which places the edict in the
+          mid-3rd century BCE.
+      - text: It was dated by radiocarbon.
+        explanation: >-
+          The edict is dated by the Greek kings it names, not by a laboratory test.
+    sources:
+      - { id: src.hultzsch-1925-inscriptions-of-asoka, locator: "Rock Edict XIII" }
+      - src.thapar-2012-asoka-decline-mauryas
+tags: [kaalchakra, time, chronology, tradition]
+review: { status: draft, author: "claude-opus-5-5" }

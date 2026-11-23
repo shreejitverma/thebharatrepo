@@ -1,0 +1,99 @@
+name: CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: ci-${{ github.ref }}
+  cancel-in-progress: true
+
+env:
+  NEXT_TELEMETRY_DISABLED: 1
+
+# Three parallel jobs. Lighthouse runs alone on its runner so Playwright never competes with it for CPU,
+# which would skew the simulated-throttling metrics its budgets gate on.
+jobs:
+  verify:
+    name: Lint, types, unit tests, content gates
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+      - run: npm ci
+      - run: npm run lint
+      - run: npm run typecheck
+      - run: npm test
+      - name: Content validation
+        run: npm run content:validate
+      - name: Offline source verification gate
+        run: npx tsx scripts/content-verify-sources.ts --offline
+
+  e2e:
+    name: Playwright and axe (Chromium, Firefox, WebKit, Pixel 7, iPhone 14)
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    # The visual snapshots in e2e/visual.spec.ts-snapshots were recorded in this image; any other Linux would rasterise text differently.
+    container:
+      image: mcr.microsoft.com/playwright:v1.65.1-noble
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+      - run: npm ci
+      - uses: actions/cache@v4
+        with:
+          path: .next/cache
+          key: next-${{ runner.os }}-${{ hashFiles('package-lock.json') }}-${{ hashFiles('src/**', 'content/**', '_content/**') }}
+          restore-keys: next-${{ runner.os }}-${{ hashFiles('package-lock.json') }}-
+      - name: Build (validation, offline verification gate, data export and its round trip, next build, search index)
+        run: npm run build
+      # The container runs as root but $HOME is owned by pwuser, and Firefox refuses to start in that state.
+      - run: npx playwright test
+        env:
+          HOME: /root
+      - if: failure()
+        uses: actions/upload-artifact@v4
+        with:
+          name: playwright-report
+          path: |
+            playwright-report/
+            test-results/
+          retention-days: 7
+
+  lighthouse:
+    name: Lighthouse CI budgets
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+      - run: npm ci
+      - uses: actions/cache@v4
+        with:
+          path: .next/cache
+          key: next-lhci-${{ runner.os }}-${{ hashFiles('package-lock.json') }}-${{ hashFiles('src/**', 'content/**', '_content/**') }}
+          restore-keys: next-lhci-${{ runner.os }}-${{ hashFiles('package-lock.json') }}-
+      - name: Build (validation, offline verification gate, data export and its round trip, next build, search index)
+        run: npm run build
+      - name: Lighthouse CI (mobile, simulated slow 4G, 4x CPU)
+        run: npm run test:lighthouse
+      - if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: lighthouse-reports
+          path: .lighthouseci/
+          retention-days: 14

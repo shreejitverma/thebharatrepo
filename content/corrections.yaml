@@ -2865,3 +2865,31 @@
   reason: "The style guide reserves grade A for directly attested evidence such as a calibrated radiocarbon series from a stratified excavation. Misra (2001) reports radiocarbon dates without a confirmed calibrated series, and the earlier start could not be checked, so the grade follows that definition."
   sources:
     - { id: src.misra-2001-prehistoric-colonization-india, locator: "p. 515" }
+- date: 2026-11-21
+  target: event.rakhigarhi-genome-publication
+  before: The publication of the 2019 Rakhigarhi ancient genome study had its own record, separate from the record of the genome itself.
+  after: The record is merged into concept.rakhigarhi-i6113-genome, and its old address redirects there.
+  reason: Both records described the same study of the same individual, so the archive kept two versions of one set of claims.
+  sources:
+    - src.shinde-2019-ancient-harappan-genome
+- date: 2026-11-21
+  target: event.dholavira-unesco-inscription
+  before: Dholavira's 2021 inscription on the World Heritage List had its own record, separate from the site.
+  after: The record is merged into site.dholavira, and its old address redirects there.
+  reason: The inscription is a fact about the site and is recorded with it, so a separate stub duplicated the site's claims.
+  sources:
+    - src.unesco-2021-dholavira
+- date: 2026-11-21
+  target: tradition.vedic-chanting-unesco-inscription
+  before: UNESCO's 2003 proclamation and 2008 inscription of the Tradition of Vedic chanting had their own record, separate from the tradition.
+  after: The record is merged into tradition.vedic-chanting, and its old address redirects there.
+  reason: The proclamation and inscription are facts about the tradition and are recorded with it, so a separate stub duplicated its claims.
+  sources:
+    - src.unesco-2003-tradition-vedic-chanting
+- date: 2026-11-21
+  target: tradition.kumbh-mela-unesco-inscription
+  before: The 2017 inscription of Kumbh Mela on UNESCO's Representative List had its own record, separate from the festival.
+  after: The record is merged into tradition.kumbha-mela, and its old address redirects there.
+  reason: The inscription is a fact about the festival and is recorded with it, so a separate stub duplicated its claims.
+  sources:
+    - src.unesco-2017-kumbh-mela

@@ -8,6 +8,7 @@ import { rangeAnchor, type Precision } from '../time';
 import { yearToUnit } from '../time/scale';
 import type { ContentGraph } from './load';
 import { primaryAnchor, rankDatings, type Lens } from './lens';
+import { nativeLang, romanisedLang } from './script';
 export { primaryAnchor };
 
 export interface KcDating {
@@ -23,6 +24,26 @@ export interface KcDating {
   note?: string;
 }
 
+/** A place on the map: one point per entity. */
+export interface KcPlace {
+  name: string;
+  lat: number;
+  lon: number;
+}
+
+/** A sourced, approximate territorial extent; the citations stay on the entity page. */
+export interface KcExtent {
+  label?: string;
+  /** When the extent applies; absent means "for as long as the entity is dated". */
+  from?: number;
+  to?: number;
+  /** One closed ring of [lon, lat] vertices. */
+  polygon: [number, number][];
+  grade: Grade;
+  lens: Exclude<Lens, 'both'>;
+  note?: string;
+}
+
 export interface KcItem {
   id: string;
   kind: Kind;
@@ -30,10 +51,16 @@ export interface KcItem {
   name: string;
   iast?: string;
   native?: string;
+  /** BCP 47 tags for `native` and `iast` (see script.ts). */
+  nativeLang?: string;
+  iastLang?: string;
   summary: string;
   kids?: string;
   teen?: string;
   region?: string;
+  /** Present only for entities with coordinates; these are the entities the Map view can show. */
+  place?: KcPlace;
+  extents?: KcExtent[];
   href: string;
   datings: KcDating[];
   /** Placement anchor per lens (astronomical year), null when the entity has no dating in that lens. */
@@ -45,9 +72,19 @@ export function entityHref(id: string): string {
   return `/archive/${type}/${slug}`;
 }
 
+/** Page of a source and everything that cites it: src.<slug> -> /sources/<slug>. */
+export function sourceHref(id: string): string {
+  return `/sources/${id.replace(/^src\./, '')}`;
+}
+
+/** The dating that places an entity in one lens: the archive's rankDatings order (best grade first, ties in the author's order). */
+function placingDating<D extends KcDating>(datings: readonly D[]): D | undefined {
+  return rankDatings(datings, (d) => d.lens === 'tradition')[0];
+}
+
 function anchorFor(datings: KcDating[]): number | null {
-  if (datings.length === 0) return null;
-  return rangeAnchor(rankDatings(datings, (d) => d.lens === 'tradition')[0]);
+  const best = placingDating(datings);
+  return best ? rangeAnchor(best) : null;
 }
 
 export function toKcItem(e: Entity): KcItem {
@@ -63,6 +100,11 @@ export function toKcItem(e: Entity): KcItem {
     label: d.label,
     note: d.note,
   }));
+  const anchor = {
+    scholarship: anchorFor(datings.filter((d) => d.lens === 'scholarship')),
+    tradition: anchorFor(datings.filter((d) => d.lens === 'tradition')),
+  };
+  const langs = nameLangs(e, anchor.scholarship ?? anchor.tradition);
   return {
     id: e.id,
     kind: e.kind,
@@ -70,17 +112,25 @@ export function toKcItem(e: Entity): KcItem {
     name: e.names.en,
     iast: e.names.iast ?? undefined,
     native: e.names.native ?? undefined,
+    nativeLang: e.names.native ? langs.native : undefined,
+    iastLang: e.names.iast ? langs.iast : undefined,
     summary: e.summary,
     kids: e.summaries?.kids,
     teen: e.summaries?.teen,
     region: e.region,
+    place: e.location ? { name: e.location.name, lat: e.location.lat, lon: e.location.lon } : undefined,
+    // Grade D is reserved for traditional reckoning, so it decides the lens of an extent as it does for datings.
+    extents: e.extents?.map((x) => ({ label: x.label, from: x.from, to: x.to, polygon: x.polygon, grade: x.grade, lens: x.grade === 'D' ? 'tradition' : 'scholarship', note: x.note })),
     href: entityHref(e.id),
     datings,
-    anchor: {
-      scholarship: anchorFor(datings.filter((d) => d.lens === 'scholarship')),
-      tradition: anchorFor(datings.filter((d) => d.lens === 'tradition')),
-    },
+    anchor,
   };
+}
+
+/** Language tags for an entity's native-script and romanised names. */
+export function nameLangs(e: Pick<Entity, 'names'>, anchorYear: number | null): { native: string; iast: string } {
+  const native = e.names.native ? nativeLang(e.names.native, { override: e.names.nativeLang, anchorYear }) : undefined;
+  return { native: native ?? 'und', iast: romanisedLang(native) };
 }
 
 export function buildKaalchakraIndex(g: ContentGraph): KcItem[] {
@@ -89,14 +139,40 @@ export function buildKaalchakraIndex(g: ContentGraph): KcItem[] {
     .sort((a, b) => (primaryAnchor(a, 'both') ?? 0) - (primaryAnchor(b, 'both') ?? 0));
 }
 
-/** Neighbours in time for the mini strip on entity and article pages. */
-export function neighbours(items: KcItem[], year: number, lens: 'scholarship' | 'tradition', excludeId: string | null, count = 3): { before: KcItem[]; after: KcItem[] } {
-  const sorted = items
-    .filter((i) => i.id !== excludeId && primaryAnchor(i, lens) !== null)
-    .sort((a, b) => primaryAnchor(a, lens)! - primaryAnchor(b, lens)!);
-  const before = sorted.filter((i) => primaryAnchor(i, lens)! <= year).slice(-count);
-  const after = sorted.filter((i) => primaryAnchor(i, lens)! > year).slice(0, count);
-  return { before, after };
+export interface Neighbours {
+  /** Entries that end before the range starts, nearest last. */
+  before: KcItem[];
+  /** Entries whose own range overlaps the range, in time order. */
+  during: KcItem[];
+  /** Entries that start after the range ends, nearest first. */
+  after: KcItem[];
+}
+
+/**
+ * Neighbours in time for the mini strip on entity and article pages.
+ *
+ * Each entry is placed by the same dating that anchors it on the Kaalchakra in the given lens, so a
+ * page dated by scholarship is compared with scholarly datings only and a page dated only by tradition
+ * with traditional reckoning only: the two layers are never interleaved. "During" keeps the `count`
+ * overlapping entries whose anchors are nearest to the anchor of the range.
+ */
+export function neighbours(items: KcItem[], range: { earliest: number; latest: number; best?: number }, excludeId: string | null, lens: Exclude<Lens, 'both'> = 'scholarship', count = 3): Neighbours {
+  const anchor = range.best ?? (range.earliest + range.latest) / 2;
+  const placed: { item: KcItem; anchor: number; earliest: number; latest: number }[] = [];
+  for (const item of items) {
+    if (item.id === excludeId) continue;
+    const d = placingDating(item.datings.filter((x) => x.lens === lens));
+    if (d) placed.push({ item, anchor: rangeAnchor(d), earliest: d.earliest, latest: d.latest });
+  }
+  placed.sort((a, b) => a.anchor - b.anchor);
+  const before = placed.filter((p) => p.latest < range.earliest).slice(-count);
+  const after = placed.filter((p) => p.earliest > range.latest).slice(0, count);
+  const during = placed
+    .filter((p) => p.latest >= range.earliest && p.earliest <= range.latest)
+    .sort((a, b) => Math.abs(a.anchor - anchor) - Math.abs(b.anchor - anchor))
+    .slice(0, count)
+    .sort((a, b) => a.anchor - b.anchor);
+  return { before: before.map((p) => p.item), during: during.map((p) => p.item), after: after.map((p) => p.item) };
 }
 
 export function unitOf(year: number): number {

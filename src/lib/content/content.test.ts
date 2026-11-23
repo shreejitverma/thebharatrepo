@@ -62,6 +62,18 @@ describe('entity and source rules', () => {
     // A text entity is dated by its own composition.
     expect(EntitySchema.safeParse({ ...rama, id: 'text.ramayana', type: 'text', kind: 'text' }).success).toBe(true);
   });
+  it('rejects a dating that dates the earliest statement or attestation of an event in a text', () => {
+    const epoch = { ...entity, id: 'event.epoch', type: 'event', kind: 'event' };
+    const traditional = { ...baseDating, method: 'traditional-siddhantic', grade: 'D' };
+    for (const label of ['Earliest known statement of the epoch, Aryabhatiya (499 CE)', 'First attested in the Rigveda', 'Earliest mention of the flood in a text']) {
+      const r = EntitySchema.safeParse({ ...epoch, datings: [traditional, { ...baseDating, method: 'textual-internal', grade: 'A', label }] });
+      expect(r.success, label).toBe(false);
+      expect(r.error?.issues.map((i) => i.message)).toEqual(['this textual-internal dating dates a text, not event.epoch; record the attestation as a claim or on the text entity']);
+    }
+    // Saying where a name is attested, in a note on a dating of the person, is not dating the person by a text.
+    const kalidasa = { ...entity, id: 'person.kalidasa', type: 'person', kind: 'person' };
+    expect(EntitySchema.safeParse({ ...kalidasa, datings: [{ ...baseDating, method: 'textual-internal', grade: 'C', note: 'His name is securely attested in the Aihole inscription of 634 CE.' }] }).success).toBe(true);
+  });
   it('requires the id prefix to match the type', () => {
     expect(EntitySchema.safeParse({ ...entity, id: 'event.kalpa', datings: [{ ...baseDating, method: 'traditional-puranic', grade: 'D' }] }).success).toBe(false);
   });
@@ -192,6 +204,8 @@ describe('loader against fixtures', () => {
       const { loadContentUncached } = await import('./load');
       const g = loadContentUncached();
       expect(g.errors).toEqual([]);
+      expect(g.warnings).toEqual([]);
+      expect(g.relationStats).toMatchObject({ declared: 1, facts: 1, symmetric: { bothSides: 0, oneSide: 1 } });
       expect(g.entities.size).toBe(2);
       expect(g.inbound.get('person.someone')).toEqual([{ from: 'event.thing', kind: 'related-to' }]);
       expect(g.articlesByEntity.get('person.someone')?.[0].slug).toBe('fixture');
@@ -212,8 +226,19 @@ describe('loader against fixtures', () => {
     vi.resetModules();
     try {
       const { loadContentUncached } = await import('./load');
-      const msgs = loadContentUncached().errors.map((e) => e.message);
+      const g = loadContentUncached();
+      const msgs = g.errors.map((e) => e.message);
       expect(msgs).toContain('datings[0]: unknown source src.nobody-1999-nothing');
+      expect(msgs).toContain('extents[0]: unknown source src.nobody-1999-nothing');
+      // The relation graph's own checks are advisory warnings; the loader separately rejects a self relation and
+      // a second relation between the same two entities as errors (duplicateRelations), so both lists name them.
+      expect(g.warnings).toEqual([
+        { file: 'content/entities/event/broken.yaml', message: 'relation part-of points at the entity itself' },
+        { file: 'content/entities/event/misdated.yaml', message: 'relation contemporary-of -> event.toba is declared twice' },
+        { file: 'content/entities/event/toba.yaml', message: 'relation related-to points at the entity itself' },
+      ]);
+      expect(msgs).toContain('relation part-of -> event.broken points at the entity itself');
+      expect(g.relationStats).toMatchObject({ declared: 7, unknownTargets: 2, selfRelations: 2, duplicates: 1, contradictions: 0 });
       expect(msgs).toContain('datings[0]: endpoint is written as "7001 BCE" but the text says "7000 BCE"; check which is meant');
       expect(msgs).toContain('datings[0].range.earliest: "74000 BCE" is a deep-time date; write it as years before present ("N ka" or "N Ma") as the cited source reports it');
       expect(msgs).toContain('relation related-to -> unknown entity person.ghost');
@@ -224,6 +249,8 @@ describe('loader against fixtures', () => {
       expect(msgs).toContain('relation related-to -> unknown entity event.former-toba (merged into event.toba; link to that id)');
       expect(msgs).toContain('link /archive/event/former-toba -> unknown entity event.former-toba (merged into event.toba; link to that id)');
       expect(msgs).toContain('link /history/nothing does not reach an entity or article');
+      // A category index is a real page (src/app/[category]), so a link to it is accepted.
+      expect(msgs).not.toContain('link /history does not reach an entity or article');
       expect(msgs.filter((m) => m.startsWith('link '))).toHaveLength(2);
       expect(msgs).toContain('relation contemporary-of -> event.toba is listed twice');
       expect(msgs).toContain("relation related-to -> event.misdated duplicates event.misdated's relation contemporary-of -> event.toba; the site shows inbound relations on both pages, so keep one");
@@ -331,5 +358,44 @@ describe('integrity checks', () => {
   it('finds citations hidden in comments or code', async () => {
     const { findHiddenCitations } = await import('./load');
     expect(findHiddenCitations('<!-- [@src.x] --> text `[@src.y]` ok [@src.z]')).toEqual(['[@src.x]', '[@src.y]']);
+  });
+});
+
+describe('extents', () => {
+  const extent = {
+    polygon: [
+      [70, 20],
+      [80, 20],
+      [80, 30],
+    ],
+    grade: 'C',
+    sources: ['src.x-2000-y'],
+  };
+  it('accepts a sourced polygon, with or without its own years', async () => {
+    const { ExtentSchema } = await import('./schema');
+    expect(ExtentSchema.safeParse(extent).success).toBe(true);
+    const dated = ExtentSchema.parse({ ...extent, label: 'Peak', from: '260 BCE', to: '232 BCE' });
+    expect([dated.from, dated.to]).toEqual([-259, -231]);
+  });
+  it('rejects an unsourced extent, a degenerate polygon, bad coordinates and half a range', async () => {
+    const { ExtentSchema } = await import('./schema');
+    expect(ExtentSchema.safeParse({ ...extent, sources: [] }).success).toBe(false);
+    expect(ExtentSchema.safeParse({ ...extent, polygon: extent.polygon.slice(0, 2) }).success).toBe(false);
+    expect(ExtentSchema.safeParse({ ...extent, polygon: [[70, 20], [80, 20], [80, 95]] }).success).toBe(false);
+    expect(ExtentSchema.safeParse({ ...extent, from: '260 BCE' }).success).toBe(false);
+    expect(ExtentSchema.safeParse({ ...extent, from: '232 BCE', to: '260 BCE' }).success).toBe(false);
+  });
+  it('is optional on an entity, so existing content is unaffected', () => {
+    const entity = {
+      id: 'polity.x',
+      type: 'polity',
+      kind: 'polity',
+      names: { en: 'X' },
+      summary: 'A polity used to check that extents are optional.',
+      datings: [{ ...baseDating, method: 'epigraphic', grade: 'A' }],
+      review: { status: 'draft' },
+    };
+    expect(EntitySchema.parse(entity).extents).toBeUndefined();
+    expect(EntitySchema.parse({ ...entity, extents: [extent] }).extents).toHaveLength(1);
   });
 });
