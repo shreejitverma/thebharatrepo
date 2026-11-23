@@ -326,6 +326,31 @@ test.describe('Kaalchakra', () => {
     expect(url.searchParams.get('kinds')!.split(',')).not.toContain('person');
   });
 
+  for (const colorScheme of ['light', 'dark'] as const) {
+    test(`river labels at whole-axis zoom never cover a mark or each other in the ${colorScheme} theme`, async ({ page }) => {
+      await page.emulateMedia({ colorScheme });
+      await openKaalchakra(page, '?view=river');
+      await expect(page.locator('.kc-river .kc-river__label').first()).toBeVisible();
+      // Measured from the rendered glyphs, so the layout's width estimate is checked against the real font.
+      const clashes = await page.locator('.kc-river').evaluate((svg) => {
+        const box = (el: SVGGraphicsElement) => {
+          const b = el.getBBox();
+          return { x0: b.x, y0: b.y, x1: b.x + b.width, y1: b.y + b.height, name: el.textContent ?? el.tagName };
+        };
+        const hit = (a: ReturnType<typeof box>, b: ReturnType<typeof box>) => a.x0 < b.x1 && a.x1 > b.x0 && a.y0 < b.y1 && a.y1 > b.y0;
+        const labels = [...svg.querySelectorAll<SVGTextElement>('.kc-river__label')].map(box);
+        const shapes = [...svg.querySelectorAll<SVGGraphicsElement>('.kc-river__shape')].map(box);
+        const out: string[] = [];
+        labels.forEach((l, i) => {
+          for (const m of labels.slice(i + 1)) if (hit(l, m)) out.push(`${l.name} overlaps label ${m.name}`);
+          for (const m of shapes) if (hit(l, m)) out.push(`${l.name} covers a mark at x=${m.x0.toFixed(0)}`);
+        });
+        return out;
+      });
+      expect(clashes).toEqual([]);
+    });
+  }
+
   test.describe('zoom', () => {
     test('the zoom buttons narrow and widen the river window', async ({ page }) => {
       await openKaalchakra(page, '?view=river');
