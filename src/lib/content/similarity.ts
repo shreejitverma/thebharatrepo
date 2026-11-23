@@ -187,6 +187,15 @@ const PACKAGING_WORDS = new Set(['set', 'vols', 'box', 'boxed', 'paperback', 'ha
 const VOLUME_WORDS = new Set(['volume', 'vol', 'part', 'book']);
 
 /**
+ * The volume or part numbers a title names ("Volume II", "Vol. 6", "Part 1"), anywhere in the title, as
+ * decimal strings. A title that names none is the whole work or its unnumbered first book.
+ */
+export function volumeNumbers(t: string): Set<string> {
+  const words = normalizeTitle(t);
+  return new Set(words.flatMap((w, i) => (VOLUME_WORDS.has(w) && i + 1 < words.length && /^\d+$/.test(words[i + 1]) ? [words[i + 1]] : [])));
+}
+
+/**
  * What everything after the main title names, when it is only a retail packaging or an edition: "packaging"
  * for a set, binding or edition ("The Rigveda: 3-Volume Set", "Hampi (Paperback)", "Third Revised Edition",
  * "Vols. 1-3"), "volume" for a single volume ("The Rigveda, Volume 1", "Part II"), otherwise null.

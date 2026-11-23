@@ -25,7 +25,7 @@ datings:
     sources:
       - id: src.ganeri-2017-oxford-handbook-indian-philosophy
         locator: "Timeline: Indian Philosophy in a Hundred Thinkers"
-      - src.gold-2014-paving-great-way
+      - src.gold-2015-paving-the-great-way
     note: The single-author reading places both Abhidharma and Yogacara works within one broad
       intellectual career.
   - method: textual-internal
@@ -55,12 +55,12 @@ claims:
       Abhidharma teachings.
     grade: B
     sources:
-      - src.gold-2014-paving-great-way
+      - src.gold-2015-paving-the-great-way
   - text: Gold argues that a single developing philosophical project can account for works across the
       two groups.
     grade: C
     sources:
-      - src.gold-2014-paving-great-way
+      - src.gold-2015-paving-the-great-way
 relations:
   - kind: related-to
     target: person.asanga

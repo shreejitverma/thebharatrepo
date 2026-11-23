@@ -25,17 +25,6 @@ datings:
     label: Documented lifespan
     sources:
       - src.sardella-2013-hindu-widow-marriage
-  - method: documentary
-    range:
-      earliest: "1855"
-      latest: "1855"
-      precision: year
-      circa: false
-    grade: A
-    label: Publication of the two Bengali tracts
-    sources:
-      - src.vidyasagar-2011-hindu-widow-marriage
-      - src.sardella-2013-hindu-widow-marriage
 claims:
   - text: Vidyasagar published two Bengali works in 1855 arguing for Hindu widow remarriage.
     grade: A

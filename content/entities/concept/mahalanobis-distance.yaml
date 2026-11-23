@@ -19,7 +19,7 @@ datings:
       precision: year
       circa: false
     grade: A
-    label: Publication of the generalized distance
+    label: Mahalanobis's generalized-distance paper
     sources:
       - src.mahalanobis-2018-generalised-distance
 claims:

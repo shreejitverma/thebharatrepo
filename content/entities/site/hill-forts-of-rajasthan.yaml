@@ -29,15 +29,12 @@ datings:
     note: >-
       The forts have different histories. The group includes early medieval remains and palaces and
       fortifications added over subsequent centuries.
-  - method: documentary
-    range: { earliest: "2013 CE", latest: "2013 CE", precision: year, circa: false }
+claims:
+  - text: >-
+      The World Heritage Committee inscribed the six forts as one property in 2013.
     grade: A
-    label: "UNESCO World Heritage inscription"
     sources:
       - src.unesco-2013-hill-forts-rajasthan
-    note: >-
-      The World Heritage Committee inscribed the six forts as one property.
-claims:
   - text: >-
       The six forts on the UNESCO listing are Chittorgarh, Kumbhalgarh, Ranthambore, Gagron, Amber and
       Jaisalmer.

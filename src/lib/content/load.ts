@@ -15,7 +15,7 @@ import fs from 'node:fs';
 import path from 'node:path';
 import matter from 'gray-matter';
 import YAML from 'yaml';
-import { sameTitle } from './similarity';
+import { sameTitle, volumeNumbers } from './similarity';
 import type { z } from 'zod';
 import {
   ArticleFrontmatterSchema,
@@ -257,6 +257,9 @@ export function sameWork(a: Source, b: Source): boolean {
   const sb = surnames(b);
   if (sa.size > 0 !== sb.size > 0) return false;
   if (sa.size > 0 && ![...sa].some((n) => sb.has(n))) return false;
+  // A numbered volume is not the unnumbered work beside it ("The Ubiquitous Siva" and "The Ubiquitous Siva
+  // Volume II"). Registry lookups may drop a volume number, so this applies only between two source records.
+  if (volumeNumbers(a.title).size > 0 !== volumeNumbers(b.title).size > 0) return false;
   return sameTitle(a.title, b.title);
 }
 

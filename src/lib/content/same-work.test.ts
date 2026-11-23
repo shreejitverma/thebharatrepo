@@ -28,4 +28,17 @@ describe('sameWork', () => {
     const b = src({ title: 'Indian Round Table Conference (Third Session)', authors: ['Great Britain. India Office'], url: 'https://books.google.com/books?id=OHsZAQAAIAAJ' });
     expect(sameWork(a, b)).toBe(false);
   });
+
+  it('separates a numbered volume from the unnumbered first book of a series by the same author', () => {
+    const a = src({ title: "The Ubiquitous Siva: Somananda's Sivadrsti and His Tantric Interlocutors", authors: ['John Nemec'], isbn: '9780199795451' });
+    const b = src({ title: "The Ubiquitous Siva Volume II: Somananda's Sivadrsti and His Philosophical Interlocutors", authors: ['John Nemec'], doi: '10.1093/oso/9780197566725.001.0001' });
+    expect(sameWork(a, b)).toBe(false);
+    expect(sameWork(b, a)).toBe(false);
+  });
+
+  it('keeps two records of the same numbered volume together', () => {
+    const a = src({ title: 'Epigraphia Indica, Vol. VI', authors: ['E. Hultzsch'], url: 'https://archive.org/details/epigraphiaindica06' });
+    const b = src({ title: 'Epigraphia Indica Vol 6', authors: ['E. Hultzsch'], oclc: '1567718' });
+    expect(sameWork(a, b)).toBe(true);
+  });
 });

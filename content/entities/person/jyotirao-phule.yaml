@@ -23,17 +23,6 @@ datings:
     sources:
       - src.inflibnet-jyotiba-savitribai-phule
     note: The INFLIBNET account dates his birth to 1827.
-  - method: documentary
-    range:
-      earliest: "1873"
-      latest: "1873"
-      precision: year
-      circa: false
-    grade: B
-    label: Publication of Gulamgiri and founding of the Satyashodhak Samaj
-    sources:
-      - src.ohanlon-1985-caste-conflict-ideology
-      - src.inflibnet-jyotiba-savitribai-phule
   - method: scholarly-consensus
     range:
       earliest: "1826"
@@ -46,7 +35,7 @@ datings:
       - src.gorringe-2024-dalit-movements-india
     note: This account gives 1826 for his birth and agrees on his death in 1890.
 claims:
-  - text: In Gulamgiri Phule used the language of slavery to criticize caste hierarchy.
+  - text: In Gulamgiri, published in 1873, Phule used the language of slavery to criticize caste hierarchy.
     grade: B
     sources:
       - src.ohanlon-1985-caste-conflict-ideology

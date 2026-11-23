@@ -27,17 +27,11 @@ datings:
     sources:
       - "src.marshall-1951-taxila"
       - "src.unesco-1980-taxila"
-  - method: "documentary"
-    range:
-      earliest: 1980
-      latest: 1980
-      precision: "year"
-      circa: false
+claims:
+  - text: "UNESCO inscribed Taxila on the World Heritage List in 1980."
     grade: "A"
-    label: "UNESCO World Heritage inscription"
     sources:
       - "src.unesco-1980-taxila"
-claims:
   - text: "The inscribed property includes the Bhir Mound, Sirkap and Sirsukh, as well as Buddhist
       archaeological remains."
     grade: "A"

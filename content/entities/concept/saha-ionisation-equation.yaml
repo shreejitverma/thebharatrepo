@@ -18,7 +18,7 @@ datings:
       precision: year
       circa: false
     grade: A
-    label: Publication on the solar chromosphere
+    label: Saha's paper on ionisation in the solar chromosphere
     sources:
       - src.saha-1920-ionization-solar-chromosphere
 claims:
