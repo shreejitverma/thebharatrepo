@@ -318,7 +318,7 @@ test.describe('Map view', () => {
     await page.keyboard.press('Shift+ArrowRight');
     await expect(list).toHaveCount(0);
     await page.keyboard.press('Shift+ArrowLeft');
-    await expect(page).toHaveURL(/region=68\.14%2C27\.33%2C1\.5/);
+    await expect.poll(() => new URL(page.url()).searchParams.get('region')).toBe('68.14,27.33,1.5');
     await page.waitForTimeout(300);
     await expect(list).toHaveCount(0);
   });
