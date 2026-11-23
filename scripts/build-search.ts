@@ -10,7 +10,9 @@
  *
  * What is indexed, and with which filters, is declared on the pages themselves (data-pagefind-body and
  * SearchIndexMeta). The build fails if any expected page is missing, unmarked or fails to index, so a
- * stale or partial index can never ship silently.
+ * stale or partial index can never ship silently. It also fails if a page's `exact` filter (hashes of its
+ * normalised title and alternate names, which Search uses to pin a named record first) does not match that
+ * page's title and names, or if two distinct names ever share a hash.
  *
  * Owner rule, checked on the build output itself: outside a DEBATES_PREVIEW build the build also fails if any
  * unpublished debate has a prerendered page. It then records which debates the build loaded in
@@ -21,14 +23,16 @@
 import fs from 'node:fs';
 import path from 'node:path';
 import { contentRoots, loadContentUncached } from '../src/lib/content/load';
-import { debateSearchHrefs, debatesPreview } from '../src/lib/content/debates';
+import { debateHref, debateSearchHrefs, debatesPreview } from '../src/lib/content/debates';
 import { entityHref, sourceHref } from '../src/lib/content/kaalchakra';
 import { learningSearchHrefs } from '../src/lib/content/learning';
+import { EXACT_FILTER, exactHash, exactKeys } from '../src/lib/search/normalise';
 
 const ROOT = process.cwd();
 const APP_DIR = path.join(ROOT, '.next', 'server', 'app');
 const OUT_DIR = path.join(ROOT, 'public', 'pagefind');
 const DEBATES_BUILD = path.join(ROOT, '.next', 'debates-build.json');
+const EXACT_VALUE = new RegExp(`data-pagefind-filter="${EXACT_FILTER}\\[data-v\\]" data-v="([^"]*)"`, 'g');
 
 function fail(message: string): never {
   console.error(`build-search: ${message}`);
@@ -82,6 +86,13 @@ async function main() {
   const { index, errors } = await pagefind.createIndex({ forceLanguage: 'en' });
   if (!index || errors.length) fail(`could not create the index: ${errors.join('; ')}`);
 
+  // Alternate names an entity or debate page adds to its title in the `exact` filter; other pages use their title alone.
+  const pageNames = new Map<string, (string | undefined)[]>([
+    ...[...g.entities.values()].map((e): [string, (string | undefined)[]] => [entityHref(e.id), [e.names.iast, ...(e.names.alternates ?? [])]]),
+    ...g.debates.map((d): [string, (string | undefined)[]] => [debateHref(d), d.alternates ?? []]),
+  ]);
+  const keyByHash = new Map<string, string>();
+
   const counts: Record<PageType, number> = { entity: 0, article: 0, source: 0, learning: 0, debate: 0 };
   const problems: string[] = [];
   for (const [url, type] of expected) {
@@ -98,7 +109,20 @@ async function main() {
     const res = await index.addHTMLFile({ url, content });
     if (res.errors.length) problems.push(`${url}: ${res.errors.join('; ')}`);
     else if (!res.file.meta.title || !res.file.meta.kind) problems.push(`${url}: indexed without title or kind metadata`);
-    else counts[type]++;
+    else {
+      const names = pageNames.get(url) ?? [];
+      const keys = exactKeys([res.file.meta.title, ...names]);
+      const want = [...new Set(keys.map(exactHash))].sort().join(' ');
+      const got = [...new Set([...content.matchAll(EXACT_VALUE)].map((m) => m[1]))].sort().join(' ');
+      if (got !== want) problems.push(`${url}: exact-name filter [${got}] does not match its title and names [${want}]`);
+      for (const k of keys) {
+        const h = exactHash(k);
+        const prior = keyByHash.get(h);
+        if (prior !== undefined && prior !== k) problems.push(`${url}: exact-name hash ${h} is shared by "${prior}" and "${k}"; widen exactHash in src/lib/search/normalise.ts`);
+        keyByHash.set(h, k);
+      }
+      counts[type]++;
+    }
   }
   if (problems.length) {
     await pagefind.close();
@@ -115,9 +139,11 @@ async function main() {
   fs.writeFileSync(DEBATES_BUILD, `${JSON.stringify(debates, null, 2)}\n`);
 
   const size = dirSize(OUT_DIR);
+  const filters = dirSize(path.join(OUT_DIR, 'filter'));
   console.log(
-    `build-search: indexed ${counts.entity} entities, ${counts.article} articles, ${counts.source} sources, ${counts.learning} learning paths, ${counts.debate} published debates; ` +
-      `${path.relative(ROOT, OUT_DIR)} has ${size.files} files, ${(size.bytes / 1024).toFixed(0)} KiB total`,
+    `build-search: indexed ${counts.entity} entities, ${counts.article} articles, ${counts.source} sources, ${counts.learning} learning paths, ${counts.debate} published debates ` +
+      `(${keyByHash.size} exact names); ${path.relative(ROOT, OUT_DIR)} has ${size.files} files, ${(size.bytes / 1024).toFixed(0)} KiB total, ` +
+      `of which the filter index (loaded by every search) is ${(filters.bytes / 1024).toFixed(1)} KiB`,
   );
 }
 

@@ -1,0 +1,72 @@
+id: polity.shishunaga-dynasty
+type: polity
+kind: polity
+names:
+  en: Shishunaga Dynasty
+  iast: Śiśunāga
+summary: The Shishunagas were a ruling house of Magadha placed by Buddhist tradition between the
+  Haryankas and Nandas. The Buddhist and Puranic successions differ, and the precise dates remain
+  contested.
+summaries:
+  kids: Old books tell of a family that ruled Magadha before the Nandas. The books name different
+    kings, so their dates are hard to fix.
+  teen: The Buddhist chronicles make Shishunaga a successor of the Haryankas. Puranic genealogy orders
+    the early kings differently, which complicates any reconstruction of the dynasty.
+region: Magadha, Bihar
+location:
+  name: Rajgir (Rajagriha, an early Magadhan seat)
+  lat: 25.03
+  lon: 85.42
+datings:
+  - method: textual-internal
+    range:
+      earliest: 425 BCE
+      latest: 340 BCE
+      precision: decade
+      circa: true
+    grade: C
+    label: Buddhist succession reconstructed by Upinder Singh
+    sources:
+      - src.singh-2008-ancient-early-medieval-india
+      - src.thapar-2002-early-india
+    note: The late fifth- to fourth-century window is approximate and uses the Buddhist sequence before
+      the rise of the Nandas.
+  - method: traditional-puranic
+    range:
+      earliest: 700 BCE
+      latest: 350 BCE
+      precision: century
+      circa: true
+    grade: D
+    label: Puranic sequence collated by F. E. Pargiter
+    sources:
+      - src.pargiter-1913-dynasties-kali-age
+    note: The Puranic lists place Shishunaga before Bimbisara and give their own regnal totals. The
+      broad placement is relative to the pre-Nanda horizon and has no independent absolute anchor.
+claims:
+  - text: Buddhist tradition says Shishunaga succeeded the last Haryanka ruler and credits his house
+      with extending Magadha's rule westward.
+    grade: C
+    sources:
+      - src.singh-2008-ancient-early-medieval-india
+      - src.thapar-2002-early-india
+  - text: Puranic dynastic lists put Shishunaga earlier in the genealogy than the Buddhist chronicles do.
+    grade: D
+    sources:
+      - src.pargiter-1913-dynasties-kali-age
+      - src.singh-2008-ancient-early-medieval-india
+relations:
+  - kind: part-of
+    target: polity.magadha
+  - kind: succeeded
+    target: polity.haryanka-dynasty
+    note: Buddhist succession.
+  - kind: preceded
+    target: polity.nanda-dynasty
+debate: The Pali chronicles used by Singh and the Puranic lists collated by Pargiter place
+  Shishunaga at different points in the Magadhan succession. A late fifth- to fourth-century BCE
+  window is a historical reconstruction of the Buddhist sequence.
+tags: []
+review:
+  status: draft
+  author: codex-gpt-6

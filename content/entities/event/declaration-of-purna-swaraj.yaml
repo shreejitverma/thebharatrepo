@@ -1,0 +1,56 @@
+id: event.declaration-of-purna-swaraj
+type: event
+kind: event
+names:
+  en: Declaration of Purna Swaraj
+summary: In December 1929 at Lahore, the Indian National Congress committed itself to Purna
+  Swaraj, or complete independence. It called for a public declaration and observances on 26
+  January 1930.
+summaries:
+  kids: Congress called for India to be fully independent. On 26 January 1930, people gathered to
+    affirm that goal.
+  teen: Under Jawaharlal Nehru's presidency, Congress moved from demands for dominion status to an
+    explicit demand for complete independence. The declaration explained how colonial rule had
+    harmed Indians economically and politically.
+region: Lahore and public meetings across British India
+datings:
+  - method: scholarly-consensus
+    range:
+      earliest: "1929"
+      latest: "1929"
+      precision: year
+      circa: false
+    grade: B
+    label: Resolution at the December Lahore session
+    sources:
+      - src.sarkar-1989-modern-india
+      - src.chandra-1989-indias-struggle-for-independence
+  - method: documentary
+    range:
+      earliest: "1930"
+      latest: "1930"
+      precision: day
+      circa: false
+    grade: A
+    label: Public declaration on 26 January 1930
+    sources:
+      - src.inc-1930-declaration-of-purna-swaraj
+claims:
+  - text: The declaration asserted a right to independence and identified British rule as a cause of
+      India's economic, political and cultural impoverishment.
+    grade: A
+    sources:
+      - src.inc-1930-declaration-of-purna-swaraj
+relations:
+  - kind: related-to
+    target: event.indian-national-congress
+  - kind: related-to
+    target: person.jawaharlal-nehru
+  - kind: preceded
+    target: event.salt-march
+tags:
+  - congress
+  - independence
+review:
+  status: draft
+  author: codex-gpt-6

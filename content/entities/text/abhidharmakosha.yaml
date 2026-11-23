@@ -1,0 +1,70 @@
+id: text.abhidharmakosha
+type: text
+kind: text
+names:
+  en: Abhidharmakosha
+  iast: Abhidharmakośa
+  native: अभिधर्मकोश
+summary: Vasubandhu’s Abhidharmakosha organizes Buddhist analysis of experience, karma and
+  liberation in Sanskrit verse. Its prose commentary both presents and contests positions of the
+  Sarvastivada school. Its date is debated.
+summaries:
+  kids: Vasubandhu gathers Buddhist explanations of the mind and world into short verses. His longer
+    explanations ask where those ideas agree or disagree.
+  teen: The Treasury of Abhidharma surveys Buddhist categories and arguments. In the commentary
+    Vasubandhu presents positions associated with the Vaibhashikas and often evaluates them
+    critically.
+datings:
+  - method: textual-internal
+    range:
+      earliest: 350
+      latest: 430
+      precision: century
+      circa: true
+    grade: C
+    label: "Jonathan C. Gold and the Oxford Handbook chronology: fourth to early fifth century"
+    sources:
+      - src.gold-2015-paving-the-great-way
+      - id: src.ganeri-2017-oxford-handbook-indian-philosophy
+        locator: "Timeline: Indian Philosophy in a Hundred Thinkers"
+    note: Gold argues for continuity between the Abhidharma work and writings commonly associated with
+      Yogachara, without requiring two authors named Vasubandhu.
+  - method: textual-internal
+    range:
+      earliest: 400
+      latest: 480
+      precision: century
+      circa: true
+    grade: C
+    label: "Erich Frauwallner: fifth-century author of the Treasury"
+    sources:
+      - src.frauwallner-1951-date-of-vasubandhu
+      - src.gold-2015-paving-the-great-way
+      - src.westerhoff-2018-golden-age-indian-buddhist-philosophy
+    note: Frauwallner separated the author of the Treasury from an earlier thinker of the same name and
+      placed the author in the fifth century.
+claims:
+  - text: The verses and commentary cover categories of phenomena, karma, meditation and stages of the
+      path.
+    grade: A
+    sources:
+      - src.pruden-1988-abhidharmakosabhasyam
+  - text: The commentary presents a number of critiques of Vaibhashika arguments.
+    grade: B
+    sources:
+      - src.pruden-1988-abhidharmakosabhasyam
+      - src.gold-2015-paving-the-great-way
+relations:
+  - kind: related-to
+    target: text.pali-canon
+debate: The work is attributed to Vasubandhu. Scholars differ on how to date him and on whether
+  Abhidharma and Yogachara texts attributed to that name represent one author’s career or more than
+  one author.
+tags:
+  - buddhism
+  - sanskrit
+  - abhidharma
+  - sarvastivada
+review:
+  status: draft
+  author: codex-gpt-6

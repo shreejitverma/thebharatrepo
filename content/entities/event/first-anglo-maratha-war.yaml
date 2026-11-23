@@ -1,0 +1,45 @@
+id: event.first-anglo-maratha-war
+type: event
+kind: event
+names:
+  en: First Anglo-Maratha War
+summary: The East India Company's Bombay government backed Raghunath Rao in a dispute over the
+  Maratha peshwaship. The prolonged war ended in a settlement negotiated at Salbai in 1782.
+summaries:
+  kids: When Maratha leaders disagreed about who should govern, the Company backed one claimant.
+    Years of fighting followed before a peace treaty was negotiated.
+  teen: The Bombay government's agreement with Raghunath Rao brought the Company into a Maratha
+    succession struggle. The Treaty of Salbai ended the war while leaving the Maratha
+    confederacy a major power.
+region: Western India and central India
+datings:
+  - method: scholarly-consensus
+    range:
+      earliest: "1775"
+      latest: "1782"
+      precision: year
+      circa: false
+    grade: B
+    label: Company intervention to the Treaty of Salbai
+    sources:
+      - src.cooper-2003-anglo-maratha-campaigns
+      - src.gordon-1993-marathas-1600-1818
+    note: The treaty was concluded in 1782. Ratification and implementation continued afterward.
+claims:
+  - text: The Bombay government intervened in support of Raghunath Rao, and the eventual settlement
+      withdrew Company support for his bid.
+    grade: B
+    sources:
+      - src.gordon-1993-marathas-1600-1818
+      - src.cooper-2003-anglo-maratha-campaigns
+relations:
+  - kind: related-to
+    target: polity.maratha-empire
+  - kind: preceded
+    target: event.second-anglo-maratha-war
+tags:
+  - maratha
+  - company-rule
+review:
+  status: draft
+  author: codex-gpt-6

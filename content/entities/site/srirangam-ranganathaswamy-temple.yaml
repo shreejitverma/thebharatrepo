@@ -1,0 +1,61 @@
+id: site.srirangam-ranganathaswamy-temple
+type: site
+kind: site
+names:
+  en: Sri Ranganathaswamy Temple, Srirangam
+  iast: Śrī Raṅganāthasvāmi Kōyil, Śrīraṅgam
+  native: ஸ்ரீரங்கம் ரங்கநாதசுவாமி கோயில்
+summary: >-
+  The Ranganathaswamy Temple at Srirangam near Tiruchirappalli, Tamil Nadu, is a major Sri Vaishnava
+  pilgrimage centre dedicated to reclining Vishnu. Seven nested enclosures surround the main shrine.
+  Inscriptions and architecture record patronage under the Chola, Pandya, Hoysala, Vijayanagara and
+  Nayaka rulers.
+summaries:
+  kids: >-
+    On an island between two rivers in Tamil Nadu, walls and tall gateways surround a temple to Vishnu.
+    Seven enclosures lead inward toward the main shrine.
+  teen: >-
+    Srirangam is both a temple and a town. Its enclosures surround the shrine of reclining Vishnu, and
+    inscriptions record gifts made under several dynasties. Hymns of the Alvars celebrate the shrine.
+region: Kaveri River Island (Tiruchirappalli district, Tamil Nadu)
+location: { name: "Srirangam, Tiruchirappalli, Tamil Nadu", lat: 10.862, lon: 78.690 }
+datings:
+  - method: scholarly-consensus
+    range: { earliest: "900 CE", latest: "1700 CE", precision: century, circa: true }
+    grade: B
+    label: "Principal medieval and early modern temple phases"
+    sources:
+      - src.harirao-1967-srirangam-temple
+      - src.michell-2003-srirangam
+      - src.michell-1993-temple-towns-tamil-nadu
+    note: >-
+      Chola and Pandya inscriptions document medieval patronage. Many pillared halls and gateways were
+      added under Vijayanagara and Nayaka rulers, and building continued in later periods.
+claims:
+  - text: >-
+      Seven concentric enclosures surround the central sanctum of reclining Vishnu. They contain gateway
+      towers and carved pillared halls.
+    grade: B
+    sources:
+      - src.michell-2003-srirangam
+      - src.michell-1995-architecture-art-southern-india
+  - text: >-
+      The Alvars praise the shrine in Tamil hymns. Inscriptions and the Koil Olugu temple chronicle
+      record its endowments and institutions.
+    grade: B
+    sources:
+      - src.harirao-1967-srirangam-temple
+      - src.michell-1993-temple-towns-tamil-nadu
+relations:
+  - { kind: related-to, target: tradition.alvars }
+  - { kind: related-to, target: person.ramanuja }
+  - { kind: related-to, target: person.nathamuni }
+  - { kind: patronised-by, target: polity.chola-dynasty }
+wikidata: Q2671548
+image:
+  commons: "File:Srirangam1.jpg"
+  alt: Thirteen-tiered painted southern Rajagopuram gateway rising above the temple town streets at Srirangam
+  credit: Ssriram mt
+  license: CC BY-SA 4.0
+tags: [srirangam, vaishnavism, sri-vaishnavism, dravida, gopuram, tamil-nadu]
+review: { status: draft, author: "gemini-4-hydrogen-xhigh" }

@@ -1,0 +1,43 @@
+id: event.rowlatt-act-and-satyagraha
+type: event
+kind: event
+names:
+  en: Rowlatt Act and satyagraha
+summary: The Rowlatt Act of 1919 extended emergency procedures for dealing with political
+  offences after the First World War. Gandhi called for satyagraha against the measure,
+  including a nationwide stoppage in April.
+summaries:
+  kids: A new law gave British rulers special powers over people they suspected of political
+    offences. Gandhi asked people to protest by closing shops and stopping work.
+  teen: Wartime emergency powers informed the Rowlatt legislation. Opposition drew Gandhi into a
+    national campaign whose local course varied sharply, especially in Punjab.
+region: British India
+datings:
+  - method: scholarly-consensus
+    range:
+      earliest: "1919"
+      latest: "1919"
+      precision: year
+      circa: false
+    grade: B
+    label: Legislation in March and protests in April
+    sources:
+      - src.sarkar-1989-modern-india
+      - src.wagner-2019-amritsar-1919
+claims:
+  - text: Gandhi organised opposition to the Rowlatt legislation, including a hartal on 6 April 1919.
+    grade: B
+    sources:
+      - src.wagner-2019-amritsar-1919
+      - src.sarkar-1989-modern-india
+relations:
+  - kind: related-to
+    target: person.mahatma-gandhi
+  - kind: preceded
+    target: event.jallianwala-bagh-massacre
+tags:
+  - colonial-law
+  - satyagraha
+review:
+  status: draft
+  author: codex-gpt-6

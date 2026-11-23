@@ -1,0 +1,89 @@
+id: artifact.sarnath-lion-capital
+type: artifact
+kind: art
+names:
+  en: Lion Capital of Ashoka at Sarnath
+  iast: Sāranātha Siṃha Śīrṣa
+summary: "A monolithic polished Chunar sandstone capital (Sarnath Archaeological Museum Acc. No. 355 / A 1, height c. 2.15 m) erected by Emperor Ashoka at Sarnath, where Buddhist tradition places the Buddha's first sermon. Four back-to-back lions sit on a drum abacus bearing four wheels alternated with an elephant, bull, horse, and lion, forming the model for the State Emblem of India."
+summaries:
+  kids: >-
+    Carved from shiny sandstone over 2,200 years ago at Sarnath, this statue of four roaring lions standing
+    above a wheel-carved drum is today India's national emblem.
+  teen: >-
+    Unearthed at Sarnath in 1904-1905 and preserved in Sarnath Museum (Acc. No. 355), Ashoka's Lion Capital
+    combines lustrous Mauryan stone polish, four addorsed lions, and a four-animal dharmachakra abacus that
+    was originally crowned by a monumental 32-spoke stone wheel.
+region: Sarnath, Varanasi District, Uttar Pradesh, India
+location:
+  name: Sarnath Archaeological Museum (Excavated west of Main Shrine)
+  lat: 25.3815
+  lon: 83.0232
+datings:
+  - method: epigraphic
+    range:
+      earliest: 260 BCE
+      latest: 232 BCE
+      best: 250 BCE
+      precision: decade
+      circa: true
+    grade: B
+    label: Reign of Emperor Ashoka (associated Schism Edict on shaft)
+    sources:
+      - src.sahni-1914-catalogue-museum-archaeology-sarnath
+      - src.hultzsch-1925-inscriptions-of-asoka
+    note: >-
+      Excavated directly alongside the inscribed stump bearing Ashoka's Sarnath Schism Edict; pillar style
+      aligns with late Ashokan monumental columns.
+claims:
+  - text: >-
+      Catalogued as Sarnath Museum A 1 (Acc. No. 355), the capital was excavated by F. O. Oertel in 1904-1905
+      beside the broken pillar shaft bearing Ashoka's Schism Edict and measures roughly 2.13 m (7 ft) high
+      without its lost crowning wheel.
+    grade: A
+    sources:
+      - src.sahni-1914-catalogue-museum-archaeology-sarnath
+      - src.hultzsch-1925-inscriptions-of-asoka
+  - text: >-
+      Four addorsed Asiatic lions rest upon a circular abacus carved in high relief with four
+      twenty-four-spoked dharmachakras separated by a striding elephant, humped bull, galloping horse, and
+      lion above an inverted bell-shaped lotus base.
+    grade: A
+    sources:
+      - src.sahni-1914-catalogue-museum-archaeology-sarnath
+      - src.huntington-1985-art-ancient-india
+  - text: >-
+      Fragments of a larger stone wheel recovered near the capital indicate that the four lions originally
+      supported a giant crowning Dharmachakra, reconstructed in museum catalogues as having 32 spokes.
+    grade: B
+    sources:
+      - src.sahni-1914-catalogue-museum-archaeology-sarnath
+      - src.harle-1994-art-architecture-indian-subcontinent
+  - text: >-
+      Adopted as the State Emblem of India on 26 January 1950 (with the Motto Satyameva Jayate below), the
+      capital's twenty-four-spoked wheel also inspired the central chakra of the Indian national flag.
+    grade: A
+    sources:
+      - src.huntington-1985-art-ancient-india
+      - src.lahiri-2015-ashoka-ancient-india
+relations:
+  - kind: patronised-by
+    target: person.ashoka
+    note: Mauryan imperial pillar monument at Sarnath
+  - kind: part-of
+    target: polity.maurya-empire
+wikidata: Q3595955
+image:
+  commons: File:Lion capital of Ashoka, Sarnath.jpg
+  alt: Polished Chunar sandstone Lion Capital of Ashoka on display at Sarnath Archaeological Museum
+  credit: lisa bat
+  license: CC BY 2.0
+tags:
+  - maurya
+  - sculpture
+  - ashoka
+  - sarnath
+  - emblem
+  - sandstone
+review:
+  status: draft
+  author: gemini-4-hydrogen-xhigh

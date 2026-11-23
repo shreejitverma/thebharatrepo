@@ -1,0 +1,44 @@
+id: site.adichanallur
+type: site
+kind: site
+names:
+  en: Adichanallur Urn-Burial Site
+  iast: Āticcanallūr
+  native: ஆதிச்சநல்லூர்
+summary: >-
+  Adichanallur (Adichchanallur), on the right bank of the Tamiraparani River in Thoothukudi district, Tamil Nadu, is one of the largest Iron Age megalithic urn-burial necropolises in South India. Excavated by Fedor Jagor (1876), Alexander Rea (1899-1905), and the Archaeological Survey of India (2004-2005), it has yielded hundreds of large terracotta burial urns containing human skeletons, Black-and-Red Ware, iron weapons, bronze vessels, and gold diadems, with calibrated AMS dates centering around 900 to 600 BCE.
+summaries:
+  kids: >-
+    Adichanallur is an ancient cemetery along the Tamiraparani river in Tamil Nadu where thousands of years ago people buried their dead inside huge clay jars along with bronze lids, iron tools, and gold bands.
+  teen: >-
+    Excavated since the late 19th century and re-examined by the ASI in 2004-2005, Adichanallur preserves an extensive Iron Age urn-burial complex with Black-and-Red Ware, fine bronzes, gold diadems, and radiocarbon dates reaching the early 1st millennium BCE.
+region: Tamiraparani River basin, Thoothukudi District, Tamil Nadu
+location: { name: "Adichanallur, Tamil Nadu", lat: 8.63, lon: 77.87 }
+datings:
+  - method: archaeological-radiocarbon
+    range: { earliest: "1000 BCE", latest: "500 BCE", best: "800 BCE", precision: century, circa: true }
+    grade: B
+    label: Radiocarbon and Iron Age Black-and-Red Ware horizon
+    sources:
+      - src.allchin-1995-archaeology-early-historic-south-asia
+      - src.coningham-2015-archaeology-south-asia
+      - src.rea-1915-adichanallur-perumbair
+    note: Typological comparison of Black-and-Red Ware, iron implements, and high-tin bronzes places the main urn-burial cemetery in the South Indian Iron Age (c. 1000-500 BCE), consistent with ASI Beta Analytic AMS dates from the 2004-2005 excavations spanning roughly the 10th to 7th centuries BCE.
+claims:
+  - text: Alexander Rea's 1899-1905 excavations recovered large pyriform burial urns, iron daggers and tridents, high-tin bronze bowls with animal finials, gold mouthpieces or diadems, and paddy husks.
+    grade: A
+    sources:
+      - src.rea-1915-adichanallur-perumbair
+      - src.coningham-2015-archaeology-south-asia
+  - text: The site demonstrates advanced early South Indian iron working and high-tin bronze metallurgy within a settled agricultural community cultivating rice and millets in the Tamiraparani valley.
+    grade: B
+    sources:
+      - src.champakalakshmi-1996-trade-ideology-urbanization
+      - src.coningham-2015-archaeology-south-asia
+relations:
+  - { kind: related-to, target: concept.black-and-red-ware-culture }
+  - { kind: related-to, target: concept.iron-metallurgy-in-india }
+  - { kind: related-to, target: site.kodumanal }
+wikidata: Q2824397
+tags: [adichanallur, urn-burial, megalithic, iron-age, tamiraparani, tamil-nadu]
+review: { status: draft, author: "gemini-4-hydrogen-xhigh" }

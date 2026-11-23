@@ -1,0 +1,46 @@
+id: artifact.mysore-rockets
+type: artifact
+kind: science
+names:
+  en: Mysore War Rockets
+  native: ಮೈಸೂರು ರಾಕೆಟ್
+summary: >-
+  Mysore war rockets were iron-cased black-powder artillery rockets developed and mass-deployed by Hyder Ali and Tipu Sultan during the Anglo-Mysore Wars (1767 to 1799 CE). Unlike European pasteboard fireworks rockets, Mysorean designs used hammered soft-iron cylindrical combustion tubes lashed to bamboo poles or sword blades, allowing higher chamber pressures and ranges of one to two kilometres. After capturing hundreds of examples at Srirangapatna in 1799 CE, British ordnance officer William Congreve reverse-engineered them into the Congreve rocket.
+summaries:
+  kids: "Engineers in Tipu Sultan's Mysore built iron-cased war rockets, launching fiery missiles up to two kilometres and inspiring European rocketry after 1799 CE."
+  teen: >-
+    Using hammered soft-iron cylinders instead of paper tubes to hold compacted black powder, Mysorean rocket brigades stunned British forces at Pollilur (1780) and Srirangapatna (1799), directly prompting William Congreve's British rocket programme.
+region: Kingdom of Mysore (Karnataka and Tamil Nadu)
+location: { name: "Srirangapatna, Karnataka", lat: 12.42, lon: 76.69 }
+datings:
+  - method: documentary
+    range: { earliest: "1767 CE", latest: "1799 CE", precision: decade, circa: true }
+    grade: A
+    label: Documented operational deployment across the four Anglo-Mysore Wars
+    sources:
+      - src.werrett-2012-technology-on-the-spot
+      - src.james-2009-congreves-rational-rockets
+      - src.balasubramaniam-2008-saga-of-indian-cannons
+    note: British battlefield accounts document Hyder Ali's rocket corps from the late 1760s, decisive action at Pollilur in 1780 CE, Tipu Sultan's expanded 5,000-strong Kushoon rocket units, and captured specimens transported to Woolwich Arsenal after 1799 CE.
+claims:
+  - text: By employing hammered iron casings rather than paper tubes, Mysorean rockets sustained higher internal pressures and achieved effective ranges exceeding 1,000 metres, often carrying attached bamboo shafts or sword blades.
+    grade: A
+    sources:
+      - src.balasubramaniam-2008-saga-of-indian-cannons
+      - src.werrett-2012-technology-on-the-spot
+  - text: Sir William Congreve studied captured Mysorean rockets sent from India to the Royal Arsenal at Woolwich after 1799 CE when developing his early 19th-century British rocket system.
+    grade: A
+    sources:
+      - src.james-2009-congreves-rational-rockets
+      - src.werrett-2012-technology-on-the-spot
+relations:
+  - { kind: patronised-by, target: polity.kingdom-of-mysore }
+  - { kind: related-to, target: person.haidar-ali }
+  - { kind: related-to, target: person.tipu-sultan }
+image:
+  commons: "File:Mysore rocket man, by Robert Home (watercolour).jpg"
+  alt: 1793-1794 watercolour painting by Robert Home showing a Mysorean soldier holding an iron-cased war rocket
+  credit: Robert Home
+  license: Public Domain
+tags: [mysore-rockets, rocketry, metallurgy, tipu-sultan, hyder-ali, science]
+review: { status: draft, author: "gemini-4-hydrogen-xhigh" }

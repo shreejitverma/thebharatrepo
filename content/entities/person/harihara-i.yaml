@@ -1,0 +1,53 @@
+id: person.harihara-i
+type: person
+kind: person
+names:
+  en: Harihara I
+  iast: Harihara
+summary: Harihara I was a Sangama ruler and co-founder of Vijayanagara with Bukka. His reign belongs
+  to the period in which the court established control around the Tungabhadra and into former
+  Hoysala territory.
+summaries:
+  kids: Harihara and his brother Bukka helped start Vijayanagara. Their kingdom grew around a city by
+    the Tungabhadra River.
+  teen: Harihara's dates combine a conventional founding year with inscriptional evidence for a court
+    taking shape over the 1330s and 1340s.
+region: Tungabhadra valley and southern Deccan
+datings:
+  - method: scholarly-consensus
+    range:
+      earliest: "1336"
+      latest: "1357"
+      precision: decade
+      circa: true
+    grade: B
+    label: Reign or recorded political activity
+    sources:
+      - src.stein-1989-vijayanagara
+      - src.asher-talbot-2006-india-before-europe
+    note: The interval follows the conventional dynastic chronology.
+  - method: documentary
+    range:
+      earliest: "1340"
+      latest: "1357"
+      precision: decade
+      circa: true
+    grade: C
+    label: Stein's fortified-capital chronology
+    sources:
+      - src.stein-1989-vijayanagara
+    note: Stein dates the foundation of the fortified city around 1340 while treating state formation as
+      a process.
+claims:
+  - text: Harihara was an early Sangama sovereign associated with the rise of Vijayanagara.
+    grade: B
+    sources:
+      - src.stein-1989-vijayanagara
+      - src.asher-talbot-2006-india-before-europe
+relations:
+  - kind: founded
+    target: polity.vijayanagara-empire
+tags: []
+review:
+  status: draft
+  author: codex-gpt-6

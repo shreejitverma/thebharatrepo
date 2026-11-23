@@ -1,0 +1,57 @@
+id: polity.avanti
+type: polity
+kind: polity
+names:
+  en: Avanti
+  iast: Avantī
+  native: अवन्ती
+summary: Avanti was a major kingdom of Malwa with a political centre at Ujjayini. Historical
+  accounts place its absorption by Magadha in the period of that kingdom's westward expansion.
+summaries:
+  kids: Avanti was a kingdom whose main city was Ujjain. It was one of the large realms that grew up
+    before the Maurya Empire.
+  teen: Ujjayini anchored Avanti in Malwa. Early historical traditions describe Avanti as one of the
+    strongest kingdoms before Magadha consolidated its control.
+region: Malwa and the Narmada corridor
+location:
+  name: Ujjain (Ujjayini)
+  lat: 23.18
+  lon: 75.78
+datings:
+  - method: scholarly-consensus
+    range:
+      earliest: 600 BCE
+      latest: 350 BCE
+      precision: century
+      circa: true
+    grade: B
+    label: Mahajanapada period
+    sources:
+      - src.bivar-1988-indus-lands
+      - src.singh-2008-ancient-early-medieval-india
+    note: The interval places Avanti in the period of early historic kingdoms. The date of the Magadhan
+      takeover is approximate.
+claims:
+  - text: Ujjayini in Malwa was one of the principal centres of the kingdom.
+    grade: B
+    sources:
+      - src.bivar-1988-indus-lands
+      - src.singh-2008-ancient-early-medieval-india
+  - text: The reconstruction that Shishunaga annexed Avanti rests chiefly on literary traditions about
+      Magadhan expansion.
+    grade: C
+    sources:
+      - src.singh-2008-ancient-early-medieval-india
+      - src.thapar-2002-early-india
+relations:
+  - kind: part-of
+    target: polity.sixteen-mahajanapadas
+    note: Listed among the great realms in the Anguttara Nikaya.
+  - kind: related-to
+    target: polity.shishunaga-dynasty
+    note: Tradition associates Shishunaga with Magadha's absorption of Avanti.
+tags:
+  - mahajanapadas
+review:
+  status: draft
+  author: codex-gpt-6

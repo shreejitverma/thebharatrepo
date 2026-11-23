@@ -1,0 +1,85 @@
+id: artifact.parkham-yaksha-manibhadra
+type: artifact
+kind: art
+names:
+  en: Parkham Yaksha (Manibhadra)
+  iast: Parakhama Yakṣa Maṇibhadra
+summary: >-
+  A colossal grey-buff sandstone male figure standing c. 2.62 m tall including pedestal (Government Museum,
+  Mathura, Acc. No. C.1), discovered by Alexander Cunningham at Parkham near Mathura in 1882-1883. Its
+  pedestal carries a 2nd-1st century BCE Brahmi inscription recording the image of Holy Manibhadra crafted by
+  Gomitaka, pupil of Kunika, for eight brothers of a Manibhadra guild.
+summaries:
+  kids: >-
+    Towering over two and a half metres high in Mathura's museum, this massive sandstone statue was carved by
+    a local sculptor named Gomitaka for worshippers of the protector spirit Manibhadra.
+  teen: >-
+    Standing c. 2.6 metres tall in the Mathura Museum (C.1), the Parkham Yaksha bridges Mauryan stone carving
+    and later Mathura sculpture; its Brahmi base inscription uniquely preserves both the names of the
+    sculptors (Gomitaka, student of Kunika) and the lay Manibhadra devotional congregation.
+region: Parkham, Mathura District, Uttar Pradesh (housed in Government Museum, Mathura)
+location:
+  name: Parkham village near Mathura
+  lat: 27.2757
+  lon: 77.7154
+datings:
+  - method: epigraphic
+    range:
+      earliest: 200 BCE
+      latest: 50 BCE
+      best: 150 BCE
+      precision: century
+      circa: true
+    grade: B
+    label: Shunga / post-Mauryan Brahmi pedestal inscription
+    sources:
+      - src.vogel-1910-catalogue-archaeological-museum-mathura
+      - src.quintanilla-2007-sculpture-at-mathura
+    note: >-
+      Vogel and later epigraphists read the pedestal Brahmi as 2nd to early 1st century BCE; earlier curators
+      sometimes suggested a late Mauryan origin.
+claims:
+  - text: >-
+      Catalogued as Mathura Museum C.1, the monolithic sculpture measures roughly 2.62 m in total height with
+      a broad torso, massive neck torque, heavy waist belt tying a lower dhoti, and broad standing posture.
+    grade: A
+    sources:
+      - src.vogel-1910-catalogue-archaeological-museum-mathura
+      - src.quintanilla-2007-sculpture-at-mathura
+  - text: >-
+      The damaged four-line Brahmi inscription between the feet names Gomitaka, pupil of Kunika
+      (Kunikatevasina Gomitakena), as the maker of an image of Bhagavan Manibhadra commissioned by eight
+      brothers of the Manibhadra congregation (Manibhadapuga).
+    grade: A
+    sources:
+      - src.vogel-1910-catalogue-archaeological-museum-mathura
+      - src.quintanilla-2007-sculpture-at-mathura
+  - text: >-
+      Art historians treat this colossal yaksha and its Mathura/Patna peers as structural prototypes for the
+      standing Kushan-period Bodhisattva and Jina statues later carved in the Mathura ateliers.
+    grade: B
+    sources:
+      - src.quintanilla-2007-sculpture-at-mathura
+      - src.huntington-1985-art-ancient-india
+relations:
+  - kind: part-of
+    target: tradition.mathura-art
+  - kind: influenced
+    target: artifact.mathura-buddha-images
+    note: Monolithic yaksha posture influenced Kushan Bodhisattvas at Mathura
+wikidata: Q85792261
+image:
+  commons: File:Yaksha Manibhadra - Parkham Mathura circa 150 BCE.jpg
+  alt: Colossal sandstone statue of Yaksha Manibhadra from Parkham in the Government Museum, Mathura
+  credit: Biswarup Ganguly and Gary Todd
+  license: CC BY 3.0
+tags:
+  - sculpture
+  - yaksha
+  - manibhadra
+  - mathura
+  - brahmi
+  - shunga
+review:
+  status: draft
+  author: gemini-4-hydrogen-xhigh

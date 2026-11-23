@@ -1,0 +1,60 @@
+id: site.airavatesvara-temple-darasuram
+type: site
+kind: site
+names:
+  en: Airavatesvara Temple, Darasuram
+  iast: Airāvateśvara Mandira, Tārācuram
+  native: ஐராவதேசுவரர் கோயில், தாராசுரம்
+summary: >-
+  The Airavatesvara Temple at Darasuram in Tamil Nadu was built in the twelfth century CE under the
+  Chola ruler Rajaraja II. Its front hall takes the form of a chariot with stone wheels and horses, and
+  reliefs depict the lives of Shaiva saints.
+summaries:
+  kids: >-
+    A Chola king named Rajaraja II built this temple in Tamil Nadu. Its stone entrance hall looks like a
+    chariot with carved wheels and horses.
+  teen: >-
+    The Airavatesvara Temple at Darasuram was built under Rajaraja II. A chariot-shaped hall and reliefs
+    of Shaiva saints are among the features of this Chola temple, which joined the UNESCO World Heritage
+    property in 2004.
+region: Kaveri Delta (Thanjavur district, Tamil Nadu)
+location: { name: "Darasuram (near Kumbakonam), Tamil Nadu", lat: 10.948, lon: 79.357 }
+datings:
+  - method: scholarly-consensus
+    range: { earliest: "1146 CE", latest: "1173 CE", precision: decade, circa: true }
+    grade: B
+    label: "Construction under Chola king Rajaraja II"
+    sources:
+      - src.tartakov-2003-darasuram
+      - src.unesco-1987-great-living-chola-temples
+      - src.sastri-1955-the-colas
+    note: >-
+      The surviving temple is assigned to Rajaraja II's reign. Later Chola inscriptions record the
+      temple under the name Rajarajesvaram.
+claims:
+  - text: >-
+      The front hall is carved as a chariot with stone wheels and horses. The temple also has reliefs
+      depicting episodes from the lives of the Nayanar saints.
+    grade: B
+    sources:
+      - src.tartakov-2003-darasuram
+      - src.harle-1994-art-architecture-indian-subcontinent
+  - text: >-
+      UNESCO added the Airavatesvara Temple at Darasuram to the Great Living Chola Temples World
+      Heritage property in 2004.
+    grade: A
+    sources:
+      - src.unesco-1987-great-living-chola-temples
+relations:
+  - { kind: patronised-by, target: polity.chola-dynasty }
+  - { kind: related-to, target: site.brihadisvara-temple-thanjavur }
+  - { kind: related-to, target: site.gangaikonda-cholapuram }
+  - { kind: related-to, target: tradition.nayanars }
+wikidata: Q3437182
+image:
+  commons: "File:Darasuram, Airavatesvara Temple, India.jpg"
+  alt: Courtyard view of the Airavatesvara Temple at Darasuram showing the ornate granite vimana, mandapa pillars, and colonnaded enclosure
+  credit: Vyacheslav Argenberg
+  license: CC BY 4.0
+tags: [darasuram, airavatesvara, chola, unesco, dravida, shaiva, tamil-nadu]
+review: { status: draft, author: "gemini-4-hydrogen-xhigh" }

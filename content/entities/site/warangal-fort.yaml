@@ -1,0 +1,47 @@
+id: site.warangal-fort
+type: site
+kind: site
+names:
+  en: Warangal Fort
+  iast: Ōrugallu
+  native: వరంగల్ కోట
+summary: "Warangal Fort (Orugallu, \"Single Stone\") was the fortified capital of the Kakatiya dynasty in Telangana, laid out from the late 12th through early 14th centuries around a central granite outcrop (Ekashilanagara) enclosed by three concentric defences: an outer earthen wall, a granite inner wall with 45 bastions and bent gateways, and an inner citadel. Today its centrepiece holds four monumental carved granite gateways (Kakatiya Kala Thoranams) flanking the ruined Swayambhu Shiva temple alongside the later Kush Mahal (Shitab Khan's Mahal) audience hall."
+summaries:
+  kids: >-
+    Warangal Fort was the capital of the Kakatiya rulers, built with three rings of earth and stone walls and famous today for its four giant carved stone temple arches.
+  teen: >-
+    Founded around a central granite hill by the Kakatiyas and strengthened by Rudrama Devi and Prataparudra, Warangal Fort displays circular concentric defences, four iconic stone torana gateways, and later Tughluq-era palace remains such as the Kush Mahal.
+region: Warangal District, Telangana
+location: { name: "Warangal Fort, Telangana", lat: 17.956, lon: 79.615 }
+datings:
+  - method: epigraphic
+    range: { earliest: "1199 CE", latest: "1330 CE", precision: decade, circa: true }
+    grade: B
+    label: Kakatiya citadel construction and early 14th-century fortifications
+    sources:
+      - src.eaton-2013-power-memory-architecture
+      - src.parabrahmasastry-1978-kakatiyas-of-warangal
+      - src.michell-1988-hindu-temple
+    note: Ganapatideva shifted the Kakatiya capital from Hanamkonda to Warangal in the early 13th century, Rudrama Devi raised the stone walls and bastions, and the Kush Mahal (Shitab Khan's Hall) was built during the post-Kakatiya Sultanate/Musunuri transition in the 14th to 16th centuries.
+claims:
+  - text: The fort was engineered with concentric defensive rings - an outer mud rampart roughly 2.4 km across, a moat, and an inner granite ashlar wall with circular bastions - enclosing the central Swayambhu Shiva temple precinct.
+    grade: A
+    sources:
+      - src.eaton-2013-power-memory-architecture
+      - src.parabrahmasastry-1978-kakatiyas-of-warangal
+  - text: Four freestanding monolithic granite gateways (toranas), inspired by Sanchi-style arched lintels and bracket sculptures, originally stood at the cardinal approaches to the Swayambhu temple before its 1323 CE destruction.
+    grade: B
+    sources:
+      - src.eaton-2013-power-memory-architecture
+      - src.michell-1988-hindu-temple
+relations:
+  - kind: patronised-by
+    target: polity.kakatiya-dynasty
+wikidata: Q7968796
+image:
+  commons: "File:Kakatiya Kala Thoranam, Warangal Fort.jpg"
+  alt: Carved granite Kakatiya Kala Thoranam archway standing inside the ruined Swayambhu temple complex at Warangal Fort
+  credit: Vasukrishnan57
+  license: CC BY-SA 4.0
+tags: [warangal, kakatiya, fort, toranam, telangana, architecture]
+review: { status: draft, author: "gemini-4-hydrogen-xhigh" }

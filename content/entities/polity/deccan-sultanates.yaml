@@ -1,0 +1,49 @@
+id: polity.deccan-sultanates
+type: polity
+kind: polity
+names:
+  en: Deccan Sultanates
+  iast: Dakkanī Sulṭānī
+  native: دکن کی سلطنتیں
+summary: >-
+  The Deccan Sultanates were the five late medieval and early modern Muslim kingdoms that emerged from the fragmentation of the Bahmani Sultanate between 1490 and 1527 CE: Bijapur (Adil Shahi), Golconda (Qutb Shahi), Ahmadnagar (Nizam Shahi), Bidar (Barid Shahi), and Berar (Imad Shahi). Alternately competing and forming alliances, four of them united in 1565 CE to defeat Vijayanagara at Talikota, and they cultivated Dakhni, Marathi, and Telugu court cultures as well as Gol Gumbaz and Golconda architecture before Mughal conquests by 1687 CE.
+summaries:
+  kids: >-
+    After the Bahmani kingdom split apart around 1500 CE, five smaller kingdoms called the Deccan Sultanates - including Bijapur and Golconda - built mighty forts, tombs like Gol Gumbaz, and bustling diamond and textile markets.
+  teen: >-
+    Successor states of the Bahmani Sultanate (Bijapur, Golconda, Ahmadnagar, Bidar, and Berar), the Deccan Sultanates defeated Vijayanagara at Talikota in 1565 CE and nourished Deccani painting, Dakhni Urdu, and Telugu/Marathi patronage until Mughal annexation in 1686-1687 CE.
+region: Deccan plateau (Maharashtra, northern Karnataka, Telangana, and coastal Andhra)
+location: { name: "Bijapur (Vijayapura), Karnataka", lat: 16.83, lon: 75.71 }
+datings:
+  - method: documentary
+    range: { earliest: "1490 CE", latest: "1687 CE", precision: year, circa: false }
+    grade: A
+    label: Emergence of Ahmadnagar, Bijapur, and Berar (1490) to Mughal conquest of Golconda (1687)
+    sources:
+      - src.michell-zebrowski-1999-architecture-art-deccan-sultanates
+      - src.eaton-2005-social-history-deccan
+      - src.eaton-2019-india-persianate-age
+    note: Ahmadnagar, Bijapur, and Berar declared autonomy in 1490 CE, followed by Bidar and Golconda in the early 16th century; Berar fell to Ahmadnagar (1574), Bidar to Bijapur (1619), Ahmadnagar to the Mughals (1636), and Bijapur and Golconda to Aurangzeb in 1686-1687 CE.
+claims:
+  - text: In January 1565 CE, the combined forces of Ahmadnagar, Bijapur, Golconda, and Bidar defeated Vijayanagara at the Battle of Talikota.
+    grade: A
+    sources:
+      - src.eaton-2005-social-history-deccan
+      - src.stein-1989-vijayanagara
+  - text: Bijapur under the Adil Shahis (producing Ibrahim Rauza and Gol Gumbaz) and Golconda under the Qutb Shahis (founding Hyderabad and Charminar in 1591 CE) patronised Deccani miniature painting, Dakhni Urdu, Marathi, and Telugu literature.
+    grade: B
+    sources:
+      - src.michell-zebrowski-1999-architecture-art-deccan-sultanates
+      - src.eaton-2019-india-persianate-age
+  - text: The Deccan Sultanates employed Maratha, Telugu, and Habshi (Ethiopian-origin, notably Malik Ambar) elites in high military and administrative office.
+    grade: A
+    sources:
+      - src.eaton-2005-social-history-deccan
+      - src.asher-talbot-2006-india-before-europe
+relations:
+  - { kind: related-to, target: event.battle-of-talikota }
+  - { kind: related-to, target: polity.vijayanagara-empire }
+  - { kind: related-to, target: polity.maratha-empire, note: Marathas served in Ahmadnagar and Bijapur before carving out independent power }
+  - { kind: succeeded, target: polity.bahmani-sultanate }
+tags: [deccan-sultanates, bijapur, golconda, ahmadnagar, bidar, talikota]
+review: { status: draft, author: "gemini-4-hydrogen-xhigh" }

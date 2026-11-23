@@ -1,0 +1,40 @@
+id: person.asaf-jah-i
+type: person
+kind: person
+names:
+  en: Asaf Jah I
+summary: Asaf Jah I, also known as Nizam al-Mulk, established durable provincial autonomy in the
+  Mughal Deccan. He became the first ruler of the Asaf Jahi line.
+summaries:
+  kids: Asaf Jah was a Mughal officer who made his own government in the Deccan. His family became
+    known as the Nizams.
+  teen: Asaf Jah built a regional state through control of appointments, relationships with local
+    elites and the use of Mughal forms of authority.
+region: Deccan
+datings:
+  - method: documentary
+    range:
+      earliest: "1724"
+      latest: "1748"
+      precision: year
+      circa: false
+    grade: B
+    label: Reign or recorded political activity
+    sources:
+      - src.hodges-2023-power-parwanas
+      - src.eaton-2019-india-persianate-age
+    note: These are the conventional years of leadership of the autonomous Deccan state.
+claims:
+  - text: From the 1720s, Asaf Jah issued grants and made appointments that established effective
+      provincial autonomy.
+    grade: B
+    sources:
+      - src.hodges-2023-power-parwanas
+      - src.eaton-2019-india-persianate-age
+relations:
+  - kind: founded
+    target: polity.hyderabad-state
+tags: []
+review:
+  status: draft
+  author: codex-gpt-6

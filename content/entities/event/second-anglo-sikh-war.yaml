@@ -1,0 +1,43 @@
+id: event.second-anglo-sikh-war
+type: event
+kind: event
+names:
+  en: Second Anglo-Sikh War
+summary: An uprising at Multan in 1848 grew into a wider war between the East India Company and
+  Sikh forces. The Company annexed the Punjab after its victory in 1849, ending the Lahore
+  kingdom.
+summaries:
+  kids: Fighting at Multan spread across the Punjab. After winning the war, the Company took
+    control of the Sikh kingdom.
+  teen: The Multan uprising broadened into a conflict that included Chillianwala and Gujrat. After
+    the Sikh forces surrendered, the Company deposed the young maharaja Duleep Singh and annexed
+    Punjab.
+region: Punjab, including Multan and Gujrat in present-day Pakistan
+datings:
+  - method: scholarly-consensus
+    range:
+      earliest: "1848"
+      latest: "1849"
+      precision: year
+      circa: false
+    grade: B
+    label: War from the Multan uprising to annexation
+    sources:
+      - src.grewal-1990-sikhs-of-the-punjab
+      - src.national-army-museum-second-sikh-war
+claims:
+  - text: The Company won a decisive victory at Gujrat in February 1849 and proclaimed annexation in
+      March.
+    grade: B
+    sources:
+      - src.national-army-museum-second-sikh-war
+      - src.grewal-1990-sikhs-of-the-punjab
+relations:
+  - kind: related-to
+    target: polity.sikh-empire
+tags:
+  - sikh-empire
+  - company-rule
+review:
+  status: draft
+  author: codex-gpt-6

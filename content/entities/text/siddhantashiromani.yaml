@@ -1,0 +1,50 @@
+id: text.siddhantashiromani
+type: text
+kind: science
+names:
+  en: Siddhantashiromani
+  iast: Siddhāntaśiromaṇi
+  native: सिद्धान्तशिरोमणि
+summary: Bhaskara II completed the Siddhantashiromani in 1150 CE. It brings arithmetic, algebra, planetary
+  computation and spherical astronomy together in a Sanskrit mathematical and astronomical treatise.
+summaries:
+  kids: Bhaskara’s book goes from number problems to calculating and picturing movements in the sky.
+  teen: The collection moves through arithmetic and algebra to computational and spherical astronomy. Its
+    Lilavati section later circulated widely as a work in its own right.
+region: Deccan
+datings:
+  - method: textual-internal
+    range:
+      earliest: 1150
+      latest: 1150
+      precision: year
+      circa: false
+    grade: A
+    label: Date stated by Bhaskara II
+    sources:
+      - id: src.plofker-2009-mathematics-in-india
+        locator: Section 6.2
+claims:
+  - text: Its sections are Lilavati, Bijaganita, Grahaganita and Goladhyaya.
+    grade: A
+    sources:
+      - id: src.plofker-2009-mathematics-in-india
+        locator: Section 6.2
+  - text: The spherical astronomy section includes geometric reasoning about eclipses and circles on the celestial
+      sphere.
+    grade: A
+    sources:
+      - id: src.plofker-2009-mathematics-in-india
+        locator: Section 6.2
+relations:
+  - kind: authored-by
+    target: person.bhaskara-ii
+  - kind: related-to
+    target: text.lilavati
+tags:
+  - astronomy
+  - algebra
+  - mensuration
+review:
+  status: draft
+  author: codex-gpt-6

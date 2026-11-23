@@ -1,0 +1,51 @@
+id: person.henry-louis-vivian-derozio
+type: person
+kind: person
+names:
+  en: Henry Louis Vivian Derozio
+  native: হেনরি লুই ভিভিয়ান ডিরোজিও
+summary: >-
+  Henry Louis Vivian Derozio (1809-1831) was an Anglo-Indian poet, journalist and assistant
+  headmaster at Hindu College, Calcutta from 1826 to 1831. Inspiring his students through the
+  Academic Association to question religious orthodoxy, caste restrictions and unexamined tradition,
+  he sparked the radical Young Bengal movement before conservative trustees forced his resignation in
+  April 1831 shortly before his death from cholera at age twenty-two.
+summaries:
+  kids: >-
+    Born in Calcutta in 1809, Henry Louis Vivian Derozio was a young poet and teacher at Hindu College
+    who encouraged his students to think freely, debate big ideas and question unfair customs.
+  teen: >-
+    Teaching at Hindu College between 1826 and 1831, Derozio mentored the Young Bengal circle in
+    rationalist debate and Indian patriotic poetry (such as "To India - My Native Land") before dying
+    of cholera in 1831 at twenty-two.
+region: Calcutta (Kolkata), Bengal
+location: { name: "Kolkata, West Bengal", lat: 22.573, lon: 88.364 }
+datings:
+  - method: documentary
+    range: { earliest: 1809, latest: 1831, precision: year, circa: false }
+    grade: A
+    label: Documentary birth (18 April 1809) and death (26 December 1831)
+    sources:
+      - src.chaudhuri-2008-derozio-poet-of-india
+      - src.kopf-1969-british-orientalism-bengal-renaissance
+    note: Parish, press and Hindu College records securely document Derozio's birth in Calcutta in April 1809, his teaching tenure (1826-1831) and his death in December 1831.
+claims:
+  - text: Appointed at age seventeen in 1826, Derozio founded the Academic Association (1828) and mentored students including Krishnamohan Banerjee, Ramgopal Ghosh and Pyarichand Mitra, known collectively as Young Bengal.
+    grade: A
+    sources:
+      - src.chaudhuri-2008-derozio-poet-of-india
+      - src.kopf-1969-british-orientalism-bengal-renaissance
+  - text: Conservative managers of Hindu College forced Derozio to resign in April 1831 over accusations that his teaching encouraged irreverence toward Hindu rites and parental authority.
+    grade: A
+    sources:
+      - src.chaudhuri-2008-derozio-poet-of-india
+      - src.suman-shanu-2024-hindu-college-calcutta
+relations: []
+wikidata: Q3345852
+image:
+  commons: "File:Henry Louis Vivian Derozio photo.jpg"
+  alt: Nineteenth-century portrait of poet and Hindu College teacher Henry Louis Vivian Derozio
+  credit: Unknown author
+  license: Public domain
+tags: [derozio, young-bengal, hindu-college, bengal-renaissance, calcutta, poetry]
+review: { status: draft, author: "gemini-4-hydrogen-xhigh" }

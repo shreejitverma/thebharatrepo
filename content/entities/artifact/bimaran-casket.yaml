@@ -1,0 +1,108 @@
+id: artifact.bimaran-casket
+type: artifact
+kind: art
+names:
+  en: Bimaran Reliquary Casket
+  iast: Bīmārāna Dhātu Mañjūṣā
+summary: >-
+  A small repousse gold Buddhist reliquary inlaid with almandine garnets (British Museum 1900,0209.1, height
+  c. 6.7 cm), excavated by Charles Masson in 1834 inside a steatite vase in Stupa No. 2 at Bimaran near
+  Jalalabad, Afghanistan. Depicting the Buddha standing in arched niches flanked by Brahma and Indra, it is
+  central to the debate over when the earliest human image of the Buddha appeared.
+summaries:
+  kids: "A palm-sized golden box set with red gems, found in Afghanistan in 1834 with four ancient coins inside, shows one of the earliest known images of the Buddha walking between two Hindu gods."
+  teen: >-
+    Housed in the British Museum (1900,0209.1), the garnet-inlaid gold Bimaran Casket depicts the standing
+    Buddha flanked by Brahma and Indra under Gandharan arches. Because it was buried with coins naming the
+    Indo-Scythian ruler Azes, specialists debate whether it dates to the early 1st century CE or later
+    posthumous Kushan issues.
+region: Bimaran, Nangarhar Province, Afghanistan (housed in the British Museum, London)
+location:
+  name: Stupa No. 2 at Bimaran near Jalalabad
+  lat: 34.4567
+  lon: 70.3474
+datings:
+  - method: numismatic
+    range:
+      earliest: 1
+      latest: 60
+      best: 30
+      precision: decade
+      circa: true
+    grade: C
+    label: Early 1st century CE (post-Azes II / Indo-Parthian horizon)
+    sources:
+      - src.errington-cribb-1992-crossroads-of-asia
+      - src.zwalf-1996-gandhara-sculpture-british-museum
+    note: >-
+      Buried alongside four copper-billon coins of "Azes" struck shortly after Azes II or under
+      Indo-Scythian/Indo-Parthian successors, which Joe Cribb and colleagues place in the first half of the
+      1st century CE.
+  - method: art-historical
+    range:
+      earliest: 80
+      latest: 200
+      best: 130
+      precision: century
+      circa: true
+    grade: C
+    label: Kushan-period re-dating (reliquary placed later than older Azes coins)
+    sources:
+      - src.behrendt-2004-buddhist-architecture-gandhara
+      - src.huntington-1985-art-ancient-india
+    note: >-
+      Several art historians argue that worn coins in relic deposits need not immediately date the casket,
+      placing its arcaded drapery style closer to 2nd-century CE Gandharan art.
+claims:
+  - text: >-
+      British Museum Reg. No. 1900,0209.1 measures 6.7 cm high and was hammered in gold repousse inlaid with
+      red garnets, depicting eight figures around its drum beneath pointed chaitya arches: two symmetrical
+      Buddhas, each flanked by Brahma and Indra, separated by two devotees.
+    grade: A
+    sources:
+      - src.zwalf-1996-gandhara-sculpture-british-museum
+      - src.errington-cribb-1992-crossroads-of-asia
+  - text: >-
+      Charles Masson recovered the gold casket inside an inscribed steatite vase mentioning Shivaraksita's
+      gift along with four billon coins bearing the name of the Indo-Scythian king Azes.
+    grade: A
+    sources:
+      - src.errington-cribb-1992-crossroads-of-asia
+      - src.konow-1929-kharoshthi-inscriptions-cii-2-1
+  - text: >-
+      Stylistically it combines Parthian-steppe goldsmithing (bezel-set garnets and frontal halos) with
+      Gandharan Buddhist iconography and Greek-derived arch columns.
+    grade: B
+    sources:
+      - src.errington-cribb-1992-crossroads-of-asia
+      - src.harle-1994-art-architecture-indian-subcontinent
+relations:
+  - kind: part-of
+    target: tradition.gandhara-art
+  - kind: contemporary-of
+    target: artifact.shinkot-bajaur-reliquary-casket
+  - kind: related-to
+    target: artifact.kanishka-reliquary-shah-ji-ki-dheri
+wikidata: Q863403
+image:
+  commons: File:BimaranCasket2.JPG
+  alt: >-
+    Gold repousse Bimaran Casket inlaid with garnets showing the standing Buddha inside an arched niche in the
+    British Museum
+  credit: World Imaging
+  license: CC BY-SA 3.0
+debate: >-
+  Because four coins in the name of Azes were discovered inside the same steatite container as the gold
+  casket, Joe Cribb places the casket in the early-to-mid 1st century CE (making it arguably the oldest
+  securely dated anthropomorphic Buddha image), whereas Kurt Behrendt and Susan Huntington favour a later
+  Kushan date.
+tags:
+  - reliquary
+  - gold
+  - gandhara
+  - buddha
+  - azes
+  - british-museum
+review:
+  status: draft
+  author: gemini-4-hydrogen-xhigh

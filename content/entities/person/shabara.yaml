@@ -1,0 +1,45 @@
+id: person.shabara
+type: person
+kind: person
+names:
+  en: Shabara
+  iast: Śabara
+  native: शबर
+summary: Shabara is the Mimamsa commentator associated with the Shabarabhashya on Jaimini’s Mimamsa
+  Sutra. The date is reconstructed from the text and its relation to later works.
+summaries:
+  kids: Shabara explained a book about how to read the instructions in the Vedas. His explanation
+    helped later students discuss difficult passages.
+  teen: Shabara’s commentary expands Jaimini’s short sutras into arguments about Vedic authority and
+    ritual. Later Mimamsa philosophers worked with the questions and interpretations he set out.
+datings:
+  - method: textual-internal
+    range:
+      earliest: "200"
+      latest: "400"
+      precision: century
+      circa: true
+    grade: C
+    label: Oxford Handbook placement of the Shabarabhashya
+    sources:
+      - id: src.ganeri-2017-oxford-handbook-indian-philosophy
+        locator: "Timeline: Indian Philosophy in a Hundred Thinkers"
+    note: The interval is an estimate for the commentary and its author’s activity.
+claims:
+  - text: The Shabarabhashya comments on the Mimamsa Sutra and is a major source for later Mimamsa
+      arguments.
+    grade: B
+    sources:
+      - src.ganeri-2017-oxford-handbook-indian-philosophy
+relations:
+  - kind: related-to
+    target: person.jaimini
+  - kind: influenced
+    target: person.kumarila-bhatta
+tags:
+  - mimamsa
+  - vedic-interpretation
+  - sanskrit-commentary
+review:
+  status: draft
+  author: codex-gpt-6

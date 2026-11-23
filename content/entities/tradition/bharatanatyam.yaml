@@ -1,0 +1,80 @@
+id: tradition.bharatanatyam
+type: tradition
+kind: art
+names:
+  en: Bharatanatyam
+  iast: Bharatanāṭyam
+  native: பரதநாட்டியம்
+summary: Bharatanatyam is a classical solo dance tradition of South India combining rhythmic footwork (nritta) and
+  expressive mimetic storytelling (abhinaya). Rooted in the hereditary repertoire of devadasi temple and court
+  performers known as sadir (or dasiattam) and the Thanjavur Quartet's nineteenth-century concert sequence, it was
+  renamed and reshaped in the 1930s for modern proscenium stages.
+summaries:
+  kids: Bharatanatyam is a classical dance from Tamil Nadu in which dancers use crisp footwork, geometric stances, hand
+    gestures and facial expressions to tell stories to Carnatic music.
+  teen: Emerging from the hereditary sadir tradition of Tamil Nadu temples and courts, Bharatanatyam received its modern
+    name and stage repertoire in the 1930s, drawing vocabulary from Sanskrit treatises such as the Natyashastra and
+    Abhinaya Darpana.
+region: Tamil Nadu and southern India
+location:
+  name: Chennai, Tamil Nadu
+  lat: 13.006
+  lon: 80.257
+datings:
+  - method: scholarly-consensus
+    range:
+      earliest: 1800
+      latest: 1860
+      precision: decade
+      circa: true
+    grade: B
+    label: Codification of the sadir margam concert repertoire at Thanjavur
+    sources:
+      - src.soneji-2012-unfinished-gestures
+      - src.subramanian-2006-tanjore-court-madras-music-academy
+    note: The Thanjavur Quartet brothers (Chinnayya, Ponnayya, Sivanandam and Vadivelu) are credited with structuring the
+      sadir repertoire at the Maratha court of Thanjavur.
+claims:
+  - text: Before the 1930s, the dance repertoire was known as sadir, dasiattam or chinna melam and was sustained by
+      hereditary women performers (devadasis) and male nattuvanar teachers.
+    grade: A
+    sources:
+      - src.soneji-2012-unfinished-gestures
+      - src.allen-1997-rewriting-script-south-indian-dance
+  - text: Historians Matthew Harp Allen and Davesh Soneji show that the 1930s revival reframed sadir around Sanskrit textual
+      authority while displacing many hereditary performers.
+    grade: B
+    sources:
+      - src.allen-1997-rewriting-script-south-indian-dance
+      - src.soneji-2012-unfinished-gestures
+  - text: In the 1930s E. Krishna Iyer, the Music Academy in Madras and Rukmini Devi Arundale, who founded Kalakshetra in
+      1936, renamed sadir as Bharatanatyam; the Madras Devadasis Act of 1947 abolished temple dedication.
+    grade: A
+    sources:
+      - src.allen-1997-rewriting-script-south-indian-dance
+      - src.soneji-2012-unfinished-gestures
+debate: While revivalists presented Bharatanatyam as the direct restoration of an ancient temple art described in the
+  Natyashastra, dance historians note that the modern name, concert format and institutional pedagogy were consciously
+  reconstructed in the 1930s out of early-modern Thanjavur court and temple practice.
+relations:
+  - kind: related-to
+    target: text.natyashastra
+  - kind: related-to
+    target: tradition.carnatic-music
+  - kind: related-to
+    target: tradition.kuchipudi
+wikidata: Q334156
+image:
+  commons: File:Bharata Natyam Performance DS.jpg
+  alt: Bharatanatyam dancer performing a balanced posture with ankle bells and hand mudras
+  credit: Augustus Binu
+  license: CC BY-SA 3.0
+tags:
+  - bharatanatyam
+  - dance
+  - tamil-nadu
+  - sadir
+  - abhinaya
+review:
+  status: draft
+  author: gemini-4-hydrogen-xhigh

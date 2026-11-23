@@ -1,0 +1,66 @@
+id: text.matsya-purana
+type: text
+kind: text
+names:
+  en: Matsya Purana
+  iast: Matsyapurāṇa
+  native: मत्स्यपुराण
+summary: The Matsya Purana frames teachings through Vishnu’s fish form and the flood survivor Manu.
+  It preserves royal genealogies alongside accounts of rites, sacred places and image-making. Its
+  compilation is layered and uncertain.
+summaries:
+  kids: A fish warns Manu about a flood. In the Purana, the fish is Vishnu, and the story opens a book
+    of teachings and tales.
+  teen: The flood story links the Matsya Purana to an older Vedic narrative. The Sanskrit compilation
+    also preserves genealogies that scholars compare with lists in other Puranas.
+datings:
+  - method: textual-internal
+    range:
+      earliest: 250
+      latest: 450
+      precision: century
+      circa: true
+    grade: C
+    label: "R. C. Hazra: early genealogical stratum"
+    sources:
+      - src.hazra-1940-puranic-records
+      - src.pargiter-1913-dynasties-kali-age
+    note: Hazra places the dynastic material around the late third or early fourth century. Other
+      subjects and sections accumulated across a longer period.
+  - method: traditional-puranic
+    range:
+      earliest: "3102 BCE"
+      latest: "3102 BCE"
+      precision: year
+      circa: true
+    grade: D
+    label: Traditional Vyasa attribution and Kali Yuga epoch
+    sources:
+      - src.rocher-1986-puranas
+      - src.gonzalezreimann-2002-mahabharata-yugas
+    note: Matsya Purana is traditionally classed among the eighteen great Puranas associated with Vyasa.
+      The calendar year is the conventional epoch used for that transition.
+claims:
+  - text: The dynastic chapters preserve a sequence of kings that can be compared with the Vayu and
+      Brahmanda Purana versions.
+    grade: B
+    sources:
+      - src.pargiter-1913-dynasties-kali-age
+      - src.hazra-1940-puranic-records
+  - text: The flood narrative takes the form of a conversation between Manu and Vishnu in his fish form.
+    grade: B
+    sources:
+      - src.rocher-1986-puranas
+relations:
+  - kind: part-of
+    target: text.puranas
+  - kind: related-to
+    target: text.shatapatha-brahmana
+tags:
+  - purana
+  - vishnu
+  - manu
+  - genealogy
+review:
+  status: draft
+  author: codex-gpt-6

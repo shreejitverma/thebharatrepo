@@ -1,0 +1,73 @@
+id: polity.western-ganga-dynasty
+type: polity
+kind: polity
+names:
+  en: Western Ganga Dynasty
+  iast: Gaṅga
+  native: ಗಂಗ
+summary: >-
+  The Western Gangas ruled Gangavadi in southern Karnataka from about the fourth century until the Chola
+  capture of Talakad around 1004, governing first from Kolar and later from Talakad, often as allies or
+  subordinates of the Badami Chalukyas and the Rashtrakutas. Their grants and monuments document support
+  for Jain institutions, including the colossal Bahubali image at Shravanabelagola commissioned by the
+  minister Chavundaraya.
+summaries:
+  kids: >-
+    The Western Gangas ruled around Talakad in southern Karnataka for about six centuries. Their minister
+    Chavundaraya had the giant Bahubali statue carved at Shravanabelagola.
+  teen: >-
+    The Western Gangas often dealt with larger powers in the Deccan. Their grants and monuments, including
+    those at Shravanabelagola, show how regional authority and religious patronage worked, until Chola
+    armies took Talakad around 1004.
+region: Southern Karnataka, especially Gangavadi
+location:
+  name: Talakad (royal seat)
+  lat: 12.19
+  lon: 77.03
+datings:
+  - method: scholarly-consensus
+    range:
+      earliest: "350"
+      latest: "1004"
+      precision: century
+      circa: true
+    grade: B
+    label: Konganivarman Madhava to the Chola capture of Talakad
+    sources:
+      - src.singh-2008-ancient-early-medieval-india
+      - src.karashima-2014-concise-history-south-india
+      - src.sastri-1976-history-of-south-india
+    note: The early genealogy is conjecturally dated from later copper-plate records. Dated inscriptions
+      secure the later kings, and the range ends with the Chola capture of Talakad around 1004.
+claims:
+  - text: Talakad was a principal seat of the Western Gangas in southern Karnataka.
+    grade: B
+    sources:
+      - src.singh-2008-ancient-early-medieval-india
+      - src.karashima-2014-concise-history-south-india
+  - text: Western Ganga rulers including Durvinita, Butuga II and Marasimha II were patrons of Jain
+      monasticism, Sanskrit learning and early Kannada literature.
+    grade: B
+    sources:
+      - src.rice-1921-history-of-kanarese-literature
+      - src.settar-1989-inviting-death
+  - text: Under Rachamalla IV, the minister Chavundaraya commissioned the colossal Bahubali image at
+      Shravanabelagola, conventionally dated around 981, and wrote the Kannada prose Chavundarayapurana.
+    grade: B
+    sources:
+      - src.rice-1889-inscriptions-sravana-belgola
+      - src.dundas-2002-the-jains
+relations:
+  - kind: related-to
+    target: polity.rashtrakuta-dynasty
+  - kind: preceded
+    target: polity.chola-dynasty
+    note: In much of Gangavadi after Chola expansion.
+wikidata: Q2018662
+tags:
+  - western-ganga
+  - talakad
+  - jainism
+review:
+  status: draft
+  author: codex-gpt-6

@@ -1,0 +1,65 @@
+id: event.vasco-da-gama-arrives-in-calicut
+type: event
+kind: event
+names:
+  en: Vasco da Gama's arrival at Calicut
+aliases:
+  - event.vasco-da-gama-at-kappad
+summary: >-
+  On 20 May 1498, Vasco da Gama's Portuguese fleet anchored off the Malabar coast near Calicut (Kozhikode),
+  having sailed around southern Africa and crossed the Arabian Sea from Malindi with an Indian Ocean pilot.
+  It entered a trading network that already linked Malabar to ports across Asia and Africa, and its
+  negotiations with the Zamorin of Calicut proved difficult.
+summaries:
+  kids: >-
+    Ships from Portugal reached the coast near Calicut in 1498 after sailing around Africa. Traders from
+    many places had already been sailing to the Malabar Coast for centuries.
+  teen: >-
+    The voyage connected Portugal to the Indian Ocean by sea around Africa. At Calicut the Portuguese
+    encountered established trading communities and the authority of the Zamorin, and their first talks
+    went badly.
+region: Malabar Coast, present-day Kerala
+location:
+  name: Kappad, near Kozhikode (traditional landing place)
+  lat: 11.39
+  lon: 75.72
+datings:
+  - method: documentary
+    range:
+      earliest: "1498"
+      latest: "1498"
+      precision: day
+      circa: false
+    grade: A
+    label: Arrival off Calicut on 20 May 1498
+    sources:
+      - src.subrahmanyam-1997-career-legend-vasco-da-gama
+      - src.prakash-1998-portuguese-in-india
+    note: The date rests on the contemporary Portuguese account of the voyage. The fleet left the Malabar
+      coast in late August 1498.
+claims:
+  - text: Guided across the Arabian Sea from Malindi by an Indian Ocean pilot, Gama's fleet reached the
+      Malabar coast near Calicut on 20 May 1498.
+    grade: B
+    sources:
+      - src.subrahmanyam-1997-career-legend-vasco-da-gama
+  - text: The expedition entered a long-established Indian Ocean network, and the new European sea route
+      changed the terms of competition in that network over time.
+    grade: B
+    sources:
+      - src.prakash-1998-portuguese-in-india
+  - text: Negotiations with the Zamorin stalled over the modest Portuguese gifts and over trade terms,
+      foreshadowing armed conflict during Gama's second voyage in 1502.
+    grade: B
+    sources:
+      - src.subrahmanyam-1997-career-legend-vasco-da-gama
+      - src.krishnaayyar-1938-zamorins-of-calicut
+relations:
+  - kind: preceded
+    target: event.portuguese-conquest-of-goa
+tags:
+  - portuguese
+  - malabar
+review:
+  status: draft
+  author: codex-gpt-6

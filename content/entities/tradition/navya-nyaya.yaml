@@ -1,0 +1,44 @@
+id: tradition.navya-nyaya
+type: tradition
+kind: dharma
+names:
+  en: Navya-Nyaya
+  iast: Navya-Nyāya
+  native: नव्यन्याय
+summary: "Navya-Nyaya (\"New Logic\") was a formal school of Indian epistemology, philosophical semantics and logic initiated in Mithila (northern Bihar) by Gangesha Upadhyaya around the early fourteenth century CE in his Tattvachintamani, building on Udayana. From the late fifteenth century onward, Raghunatha Shiromani and his successors established Navadvipa in Bengal as its leading centre, shaping scholarly debate across early modern India."
+summaries:
+  kids: >-
+    Starting in northern Bihar and later thriving at Navadvipa in Bengal, Navya-Nyaya developed a
+    super-precise system of Sanskrit logic to analyse how we know what is true.
+  teen: >-
+    Founded by Gangesha Upadhyaya in Mithila and expanded by Raghunatha Shiromani in Navadvipa,
+    Navya-Nyaya created a technical relational vocabulary for epistemology, inference and language
+    that dominated Indian scholarship through the early modern era.
+region: Mithila (north Bihar) and Navadvipa (Nadia district, West Bengal)
+location: { name: "Navadvipa, Nadia, West Bengal", lat: 23.404, lon: 88.366 }
+datings:
+  - method: textual-internal
+    range: { earliest: 1300, latest: 1700, precision: century, circa: true }
+    grade: B
+    label: Gangesha in Mithila through Raghunatha Shiromani and Gadadhara in Navadvipa
+    sources:
+      - src.potter-2015-nyaya-vaisesika-up-to-gangesa
+      - src.ganeri-2011-lost-age-of-reason
+      - src.matilal-2015-mind-language-world
+    note: Gangesha's Tattvachintamani is dated to the first half of the 14th century CE in Mithila; the Navadvipa phase flourished from Raghunatha Shiromani (c. 1460-1540) through Mathuranatha, Jagadisha and Gadadhara in the 17th century.
+claims:
+  - text: Gangesha Upadhyaya's Tattvachintamani in Mithila restructured classical Nyaya around the four sources of knowledge (pramana) - perception, inference, analogy and testimony.
+    grade: A
+    sources:
+      - src.potter-2015-nyaya-vaisesika-up-to-gangesa
+      - src.phillips-2012-epistemology-classical-india
+  - text: Raghunatha Shiromani brought Navya-Nyaya to prominence in Navadvipa, Bengal, initiating a technical analytical style whose terminology spread across Sanskrit philosophy, grammar and dharma-shastra.
+    grade: B
+    sources:
+      - src.ganeri-2011-lost-age-of-reason
+      - src.ganeri-2001-indian-logic
+relations:
+  - { kind: related-to, target: polity.videha }
+wikidata: Q3630544
+tags: [navya-nyaya, logic, philosophy, mithila, navadvipa, bihar, bengal]
+review: { status: draft, author: "gemini-4-hydrogen-xhigh" }

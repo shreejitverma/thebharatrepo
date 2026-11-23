@@ -1,0 +1,26 @@
+id: event.goa-liberation-1961
+type: event
+kind: polity
+names:
+  en: "End of Portuguese rule in Goa, Daman and Diu"
+summary: "Indian military action ended Portuguese rule in Goa, Daman and Diu in December 1961. Parliament subsequently gave the three territories Union Territory status through the Twelfth Amendment."
+summaries:
+  kids: "Indian forces ended Portuguese rule in Goa, Daman and Diu in 1961. The three places then became a Union Territory of India."
+  teen: "Operation Vijay ended Portuguese administration in Goa, Daman and Diu on 19 December 1961. The Twelfth Amendment gave the territories Union Territory status with effect from 20 December."
+region: "Goa, Daman and Diu"
+datings:
+  - method: documentary
+    range: { earliest: "1961", latest: "1961", precision: day, circa: false }
+    grade: A
+    label: "End of Portuguese administration"
+    sources: ["src.goa-dip-history-of-goa"]
+    note: "The Government of Goa dates the end of Portuguese rule to 19 December 1961."
+claims:
+  - text: "Indian military action ended Portuguese rule in Goa, Daman and Diu on 19 December 1961."
+    grade: A
+    sources: ["src.goa-dip-history-of-goa"]
+  - text: "The Twelfth Amendment established Union Territory status with retrospective effect from 20 December 1961."
+    grade: A
+    sources: ["src.goa-legislative-assembly-goa-after-liberation"]
+tags: ["republic","goa","decolonisation"]
+review: { status: draft, author: codex-gpt-6 }

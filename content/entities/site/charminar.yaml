@@ -1,0 +1,55 @@
+id: site.charminar
+type: site
+kind: site
+names:
+  en: Charminar
+  native: చార్మినార్
+summary: >-
+  The Charminar stands at a crossroads in Hyderabad's historic centre. Muhammad Quli Qutb Shah
+  commissioned it around 1591 CE as part of his new capital. Four pointed arches support an upper level
+  with a mosque and four corner minarets.
+summaries:
+  kids: >-
+    At the centre of old Hyderabad stands the Charminar. It has four big arches at street level, a
+    mosque above and a tall minaret at each corner.
+  teen: >-
+    Muhammad Quli Qutb Shah commissioned the Charminar around 1591 CE as part of the new capital of
+    Hyderabad. Its four pointed arches face the streets of the historic crossroads.
+region: Deccan Plateau (Hyderabad district, Telangana)
+location: { name: "Hyderabad, Telangana", lat: 17.362, lon: 78.475 }
+datings:
+  - method: documentary
+    range: { earliest: "1591 CE", latest: "1592 CE", precision: year, circa: true }
+    grade: B
+    label: "Construction in the first years of Hyderabad"
+    sources:
+      - src.sardar-2015-hyderabad-golconda
+      - src.michell-zebrowski-1999-architecture-art-deccan-sultanates
+    note: >-
+      The monument is assigned to Muhammad Quli Qutb Shah's establishment of Hyderabad around Hijri
+      1000.
+claims:
+  - text: >-
+      The square monument has four pointed arches, an upper-storey mosque and a minaret rising at each
+      corner.
+    grade: B
+    sources:
+      - src.michell-zebrowski-1999-architecture-art-deccan-sultanates
+      - src.sardar-2015-hyderabad-golconda
+  - text: >-
+      The Charminar was an urban focus of the new Qutb Shahi capital. A square to its north was framed
+      by the four Charkaman gateways.
+    grade: B
+    sources:
+      - src.sardar-2015-hyderabad-golconda
+      - src.asher-talbot-2006-india-before-europe
+relations:
+  - { kind: related-to, target: site.golconda-fort }
+wikidata: Q1771696
+image:
+  commons: "File:Charminar Hyderabad 1.jpg"
+  alt: The Charminar in Hyderabad viewed from the street, with a tall central arch and minarets
+  credit: DidierTais
+  license: CC BY-SA 3.0
+tags: [charminar, hyderabad, qutb-shahi, deccan, telangana, architecture]
+review: { status: draft, author: "gemini-4-hydrogen-xhigh" }

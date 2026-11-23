@@ -1,0 +1,57 @@
+id: polity.early-pandyas
+type: polity
+kind: polity
+names:
+  en: Early Pandya Dynasty
+  iast: Pāṇḍya
+  native: முற்காலப் பாண்டியர்
+summary: >-
+  The Early Pandyas ruled southern Tamil Nadu from inland Madurai and the pearl-fishery port of Korkai during the late centuries BCE and early centuries CE. Attested by Megasthenes, Ashoka's edicts (as Pada), Greco-Roman accounts, and Tamil-Brahmi inscriptions at Mangulam naming King Nedunchezhiyan, they were prominent patrons of Sangam Tamil poetry before their temporary eclipse under the Kalabhras.
+summaries:
+  kids: >-
+    The Early Pandyas were ancient kings of Madurai and the southern coast of Tamil Nadu, famous for pearl fishing at Korkai and for supporting early Tamil poets.
+  teen: >-
+    Mentioned by Megasthenes, Ashoka, and Roman geographers, the Early Pandyas left Tamil-Brahmi cave inscriptions near Madurai naming Nedunchezhiyan and sponsored the poets of the Sangam anthologies.
+region: Vaigai and Tamiraparani river basins (Madurai, Tirunelveli, and Thoothukudi districts), Tamil Nadu
+location: { name: "Madurai, Tamil Nadu", lat: 9.92, lon: 78.12 }
+datings:
+  - method: epigraphic
+    range: { earliest: "300 BCE", latest: "300 CE", precision: century, circa: true }
+    grade: B
+    label: Ashokan and Mangulam Tamil-Brahmi epigraphy to late Sangam era
+    sources:
+      - src.hultzsch-1925-inscriptions-of-asoka
+      - src.mahadevan-2003-early-tamil-epigraphy
+      - src.sastri-1929-pandyan-kingdom
+    note: Attested in Megasthenes (4th century BCE), Ashoka's Major Rock Edicts (3rd century BCE), and the Mangulam Tamil-Brahmi inscriptions of Nedunchezhiyan (dated palaeographically to c. 2nd century BCE).
+  - method: numismatic
+    range: { earliest: "200 BCE", latest: "300 CE", precision: century, circa: true }
+    grade: B
+    label: Square copper coins bearing Pandya fish emblem and Peruvaluti legends
+    sources:
+      - src.karashima-2014-concise-history-south-india
+      - src.singh-2008-ancient-early-medieval-india
+    note: Inscribed square copper issues of Peruvaluti and uninscribed fish-emblem coins confirm early Pandya state coinage.
+claims:
+  - text: The Mangulam Tamil-Brahmi cave inscriptions near Madurai record stone beds donated to a Jain monk by associates of the Pandya ruler Nedunchezhiyan.
+    grade: A
+    sources:
+      - src.mahadevan-2003-early-tamil-epigraphy
+      - src.singh-2008-ancient-early-medieval-india
+  - text: Classical Greek and Roman writers including Megasthenes, Strabo, Pliny, and the Periplus Maris Erythraei mention the Pandya kingdom, its pearl fisheries at Korkai, and an embassy sent to Augustus.
+    grade: B
+    sources:
+      - src.casson-1989-periplus-maris-erythraei
+      - src.sastri-1929-pandyan-kingdom
+  - text: Early Pandya sovereignty was interrupted in the post-Sangam centuries by the Kalabhras until Kadungon restored Pandya power in the late 6th century CE, as remembered in the later Velvikudi copper-plate grant.
+    grade: C
+    sources:
+      - src.krishnasastri-1924-epigraphia-indica-vol-17
+      - src.sastri-1929-pandyan-kingdom
+relations:
+  - { kind: related-to, target: text.sangam-literature }
+  - { kind: related-to, target: artifact.tamil-brahmi-inscriptions }
+  - { kind: preceded, target: polity.kalabhra-dynasty, note: Displaced in Tamilakam during the post-Sangam Kalabhra interregnum }
+  - { kind: related-to, target: polity.pandya-dynasty, note: The medieval Pandya revival is treated as a separate polity }
+tags: [pandya, sangam, madurai, korkai, mangulam, tamil-brahmi]
+review: { status: draft, author: "gemini-4-hydrogen-xhigh" }

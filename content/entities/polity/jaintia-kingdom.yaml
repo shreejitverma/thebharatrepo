@@ -1,0 +1,52 @@
+id: polity.jaintia-kingdom
+type: polity
+kind: polity
+names:
+  en: Jaintia Kingdom
+  native: জয়ন্তীয়া ৰাজ্য
+summary: >-
+  The Jaintia kingdom was a matrilineal Khasi-Pnar and plains polity straddling the Jaintia Hills
+  (Meghalaya) and the Surma valley plains around Jaintiapur (Sylhet, Bangladesh) from around 1500 to
+  1835 CE. Ruled by the Syiem Sutnga lineage with a winter capital at Jaintiapur and a summer seat at
+  Nartiang, it minted coins, patronised Shakta worship and stone megaliths, and was annexed by the
+  British East India Company in 1835.
+summaries:
+  kids: >-
+    Stretching between the cool Jaintia Hills in Meghalaya and the warm plains of Sylhet, the Jaintia
+    Kingdom had a summer seat at Nartiang (famous for giant standing stones) and a winter capital at
+    Jaintiapur until 1835.
+  teen: >-
+    Combining Pnar hill chieftainships with rice-producing plains in Sylhet, the Jaintia kings of the
+    Sutnga clan followed matrilineal succession, maintained diplomacy with the Ahoms and Koch, and
+    governed until British annexation in 1835.
+region: Jaintia Hills (Meghalaya) and Jaintiapur (Sylhet, Bangladesh)
+location: { name: "Jaintiapur (Sylhet) and Nartiang (Meghalaya)", lat: 25.136, lon: 92.123 }
+datings:
+  - method: numismatic
+    range: { earliest: 1500, latest: 1835, precision: decade, circa: true }
+    grade: B
+    label: Historical Sutnga kingship from Parbat Ray (c. 1500) to British annexation (1835)
+    sources:
+      - src.ali-1954-history-of-jaintia
+      - src.gait-1906-history-of-assam
+      - src.sinha-1987-tribal-polities-northeast
+    note: Anchored by Ahom buranjis, Koch conflict records, dated Jaintia silver coins (from the 16th-17th centuries onward in the Shaka era) and the British annexation of 1835 CE.
+claims:
+  - text: Jaintia royal succession followed Pnar matrilineal custom through the sister's son while the court at Jaintiapur adopted Bengali-Sanskritic administration and Shakta temple patronage.
+    grade: B
+    sources:
+      - src.ali-1954-history-of-jaintia
+      - src.sinha-1987-tribal-polities-northeast
+  - text: In 1835 the East India Company deposed Raja Rajendra Singh and annexed the Jaintiapur plains and hill territories following disputes over border tolls and alleged human sacrifices at Faljur.
+    grade: A
+    sources:
+      - src.ali-1954-history-of-jaintia
+      - src.gait-1906-history-of-assam
+relations:
+  - { kind: related-to, target: site.nartiang-monoliths }
+  - { kind: related-to, target: polity.ahom-kingdom }
+  - { kind: related-to, target: polity.koch-dynasty }
+  - { kind: related-to, target: polity.kachari-kingdom }
+wikidata: Q3825579
+tags: [jaintia, meghalaya, sylhet, pnar, matrilineal, monoliths]
+review: { status: draft, author: "gemini-4-hydrogen-xhigh" }

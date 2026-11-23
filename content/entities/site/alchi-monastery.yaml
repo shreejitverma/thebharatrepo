@@ -1,0 +1,77 @@
+id: "site.alchi-monastery"
+type: "site"
+kind: "art"
+names:
+  en: "Alchi Monastery"
+summary: "Alchi preserves Buddhist temples with murals, clay sculpture and inscriptions. The dates
+  of its early buildings are disputed, particularly those of the three-storeyed Sumtsek."
+summaries:
+  kids: "The old temples at Alchi contain painted walls and clay figures. Scholars compare the
+    paintings and written records to work out when the rooms were built."
+  teen: "The Sumtsek's chronology depends on how scholars interpret its inscriptions and painted
+    religious lineages. Philip Denwood defended an eleventh-century date, while Roger Goepper and
+    Christian Luczanits give greater weight to evidence for a later phase."
+region: "Alchi, Ladakh"
+datings:
+  - method: "epigraphic"
+    range:
+      earliest: 1065
+      latest: 1100
+      precision: "decade"
+      circa: true
+    grade: "C"
+    label: "Philip Denwood's late eleventh-century Sumtsek chronology"
+    sources:
+      - "src.denwood-2014-dating-sumtsek"
+    note: "Denwood weighs the mural inscriptions and script forms in favour of an earlier foundation."
+  - method: "art-historical"
+    range:
+      earliest: 1200
+      latest: 1240
+      precision: "decade"
+      circa: true
+    grade: "C"
+    label: "Goepper and Luczanits's later Sumtsek chronology"
+    sources:
+      - "src.luczanits-2005-early-buddhist-ladakh"
+    note: "The later position weighs the painted lineage, inscriptions and associations across the
+      complex."
+  - method: "traditional-sampradaya"
+    range:
+      earliest: 958
+      latest: 1055
+      precision: "century"
+      circa: true
+    grade: "D"
+    label: "Traditional attribution to Rinchen Zangpo"
+    sources:
+      - "src.luczanits-2005-early-buddhist-ladakh"
+    note: "The range gives the lifetime associated with the attribution, without specifying a foundation
+      year."
+claims:
+  - text: "The Sumtsek is a three-storeyed temple within the Alchi Choskhor complex."
+    grade: "B"
+    sources:
+      - "src.luczanits-2005-early-buddhist-ladakh"
+  - text: "Denwood and Goepper assign different dates to the Sumtsek based on how they interpret
+      evidence from the monument."
+    grade: "C"
+    sources:
+      - "src.denwood-2014-dating-sumtsek"
+      - "src.luczanits-2005-early-buddhist-ladakh"
+relations: []
+debate: "Denwood places the Sumtsek in the last part of the eleventh century. Goepper and Luczanits
+  favour an early thirteenth-century date, drawing on the depiction of Drigungpa and its
+  inscription. The local attribution of the foundation to Rinchen Zangpo predates both estimates."
+image:
+  commons: "File:Alchi Monastery Sumtsek Gompa.jpg"
+  alt: "Exterior of the Sumtsek temple at Alchi"
+  credit: "Prof Ranga Sai"
+  license: "CC BY-SA 4.0"
+tags:
+  - "ladakh"
+  - "buddhism"
+  - "murals"
+review:
+  status: "draft"
+  author: "codex-gpt-6"

@@ -1,0 +1,50 @@
+id: tradition.ekasarana-dharma
+type: tradition
+kind: dharma
+names:
+  en: Ekasarana Dharma
+  iast: Ekaśaraṇa Nāma Dharma
+  native: একশৰণ নাম ধৰ্ম
+summary: >-
+  Ekasarana Dharma ("shelter in the One", also called Mahapurushia Dharma) is the Assamese
+  Neo-Vaishnavite bhakti tradition propagated by Srimanta Sankardeva and his chief disciple Madhavdeva
+  in the late fifteenth and sixteenth centuries CE. Emphasising communal congregational singing
+  (nama-kirtana) of Krishna rather than blood sacrifice or image-ritualism, it reshaped Assamese
+  literature, Sattriya dance-drama and village namghar and satra institutions.
+summaries:
+  kids: >-
+    Started by Srimanta Sankardeva in Assam around 500 years ago, Ekasarana Dharma teaches devotion
+    to one God through community singing, prayer halls called namghars, plays and dance.
+  teen: >-
+    Founded by Sankardeva and systematised by Madhavdeva, Ekasarana Dharma rejected animal sacrifice
+    and rigid ritual hierarchies in favour of congregational singing, vernacular scripture (Kirtan
+    Ghosha) and monastic-community satras.
+region: Assam and Cooch Behar
+location: { name: "Bordowa / Majuli, Assam", lat: 26.404, lon: 92.607 }
+datings:
+  - method: scholarly-consensus
+    range: { earliest: 1490, latest: 1600, precision: decade, circa: true }
+    grade: B
+    label: Formation under Sankardeva (d. 1568) and Madhavdeva (d. 1596)
+    sources:
+      - src.neog-1965-sankaradeva-and-his-times
+      - src.sarma-1966-neo-vaisnavite-movement
+      - src.cantlie-1984-the-assamese
+    note: Anchored by the documented careers of Sankardeva (d. 1568 under Koch patronage) and Madhavdeva (d. 1596), whose texts and four-fold samhati satra network consolidated in the 16th-17th centuries.
+claims:
+  - text: Ekasarana theology focuses on dasya-bhava (servitude) toward a single supreme deity (Vishnu-Krishna) through listening (shravana) and chanting (kirtana), eschewing caste exclusions in congregation and Shakta animal sacrifice.
+    grade: B
+    sources:
+      - src.neog-1965-sankaradeva-and-his-times
+      - src.sarma-1966-neo-vaisnavite-movement
+  - text: Sankardeva and Madhavdeva authored foundational Assamese devotional works including the Kirtan Ghosha, Namghosha, Borgeet lyrics and Ankiya Nat plays performed at namghars and satras.
+    grade: A
+    sources:
+      - src.neog-1965-sankaradeva-and-his-times
+      - src.cantlie-1984-the-assamese
+relations:
+  - { kind: founded-by, target: person.sankardev }
+  - { kind: patronised-by, target: polity.koch-dynasty }
+wikidata: Q3277579
+tags: [ekasarana, sankardev, vaishnavism, bhakti, assam, namghar, satra]
+review: { status: draft, author: "gemini-4-hydrogen-xhigh" }

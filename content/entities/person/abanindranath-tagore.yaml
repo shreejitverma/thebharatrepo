@@ -1,0 +1,69 @@
+id: person.abanindranath-tagore
+type: person
+kind: art
+names:
+  en: Abanindranath Tagore
+  iast: Abanīndranātha Ṭhākura
+  native: অবনীন্দ্রনাথ ঠাকুর
+summary: Abanindranath Tagore (1871-1951 CE) was a pioneering Bengali painter, writer and founder of the Bengal School
+  of Art and the Indian Society of Oriental Art (1907). Rejecting British colonial academic realism, he developed a
+  delicate watercolour wash technique inspired by Mughal miniatures, Ajanta murals and Japanese ink painting (learned
+  from Okakura Kakuzo's pupils Yokoyama Taikan and Hishida Shunso).
+summaries:
+  kids: Abanindranath Tagore (1871-1951) was an artist and writer from Kolkata who created soft, dreamy watercolours
+    inspired by Indian miniatures, Ajanta murals and Japanese ink art.
+  teen: Nephew of Rabindranath Tagore and Vice-Principal of Calcutta's Government School of Art alongside E. B. Havell,
+    Abanindranath Tagore pioneered the Swadeshi-era Bengal School wash style.
+region: Kolkata (Jorasanko) and Santiniketan, Bengal
+location:
+  name: Kolkata, West Bengal
+  lat: 22.585
+  lon: 88.359
+datings:
+  - method: documentary
+    range:
+      earliest: 1871
+      latest: 1951
+      precision: year
+      circa: false
+    grade: A
+    label: Documented lifespan (1871-1951 CE)
+    sources:
+      - src.sivakumar-2003-abanindranath-grove
+      - src.mitter-1994-art-and-nationalism
+      - src.guhathakurta-1992-making-new-indian-art
+    note: Born 7 August 1871 at Jorasanko, Calcutta, and died 5 December 1951.
+claims:
+  - text: "Working with British art educator E. B. Havell at the Calcutta School of Art from 1905 and Japanese artists invited by Okakura Kakuzo, Abanindranath developed the layered watercolour 'wash' technique."
+    grade: B
+    sources:
+      - src.sivakumar-2003-abanindranath-grove
+      - src.guhathakurta-1992-making-new-indian-art
+  - text: His 1905 painting Bharat Mata became an iconic visual emblem of the Swadeshi movement, while his later Arabian
+      Nights series (1930) and wooden kutum-katam sculptures expanded his personal modernism.
+    grade: A
+    sources:
+      - src.mitter-1994-art-and-nationalism
+      - src.sivakumar-2003-abanindranath-grove
+relations:
+  - kind: founded
+    target: tradition.bengal-school-of-art
+  - kind: related-to
+    target: event.swadeshi-movement
+  - kind: related-to
+    target: person.raja-ravi-varma
+wikidata: Q691796
+image:
+  commons: File:Abanindranath Tagore.jpg
+  alt: Studio photograph of artist Abanindranath Tagore seated cross-legged in white shawl and dhoti
+  credit: Unknown photographer (public domain)
+  license: Public domain
+tags:
+  - abanindranath-tagore
+  - bengal-school
+  - wash-painting
+  - kolkata
+  - swadeshi
+review:
+  status: draft
+  author: gemini-4-hydrogen-xhigh

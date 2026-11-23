@@ -1,0 +1,72 @@
+id: polity.vakataka-dynasty
+type: polity
+kind: polity
+names:
+  en: Vakataka Dynasty
+  iast: Vākāṭaka
+summary: The Vakatakas ruled parts of the central Deccan through branches based at Nandivardhana and
+  Vatsagulma. Copperplates illuminate royal land grants and ties to the Guptas, and inscriptions
+  connect the Vatsagulma court to work at Ajanta.
+summaries:
+  kids: The Vakataka family ruled from several centres in the Deccan. Inscriptions show that some of
+    their court officials helped build caves at Ajanta.
+  teen: Copperplate grants document the Vakatakas' political and religious networks. Their eastern
+    branch had marriage ties with the Guptas, while Harishena's branch was associated with late
+    fifth-century work at Ajanta.
+region: Vidarbha and the central Deccan
+location:
+  name: Nagardhan (Nandivardhana, a seat of the main branch)
+  lat: 21.35
+  lon: 79.36
+datings:
+  - method: scholarly-consensus
+    range:
+      earliest: "250"
+      latest: "510"
+      precision: decade
+      circa: true
+    grade: B
+    label: Vakataka dynastic period
+    sources:
+      - src.singh-2008-ancient-early-medieval-india
+      - src.hawkes-2022-grounding-texts
+      - src.spink-2005-ajanta-end-of-golden-age
+    note: The approximate dynasty-wide range encompasses both major lines. The dated grants usually use
+      regnal years rather than a continuous absolute era.
+  - method: art-historical
+    range:
+      earliest: "462"
+      latest: "480"
+      precision: decade
+      circa: true
+    grade: C
+    label: Walter Spink's compressed chronology for the Ajanta court phase
+    sources:
+      - src.spink-2005-ajanta-end-of-golden-age
+    note: Spink uses cave sequences and inscriptions to place most later excavation within Harishena's
+      lifetime and immediate aftermath.
+claims:
+  - text: Inscriptions document royal grants of land to Brahmins in Vidarbha.
+    grade: A
+    sources:
+      - src.hawkes-2022-grounding-texts
+  - text: Ajanta Cave 16 names Varahadeva, minister of the Vakataka king Harishena, as a patron.
+    grade: A
+    sources:
+      - src.spink-2005-ajanta-end-of-golden-age
+      - src.salomon-1998-indian-epigraphy
+  - text: Prabhavatigupta, daughter of Chandragupta II, married into the main Vakataka line and issued
+      grants as regent.
+    grade: B
+    sources:
+      - src.singh-2008-ancient-early-medieval-india
+      - src.hawkes-2022-grounding-texts
+relations:
+  - kind: related-to
+    target: polity.gupta-empire
+  - kind: related-to
+    target: site.ajanta-caves
+tags: []
+review:
+  status: draft
+  author: codex-gpt-6

@@ -1,0 +1,49 @@
+id: person.aryabhata-ii
+type: person
+kind: science
+names:
+  en: Aryabhata II
+  iast: Āryabhaṭa II
+  native: आर्यभट
+summary: Aryabhata II was the author of the Mahasiddhanta, a work on mathematical astronomy conventionally
+  placed between the mid-tenth and eleventh centuries. The surviving text’s numerical parameters have prompted a
+  later dating hypothesis.
+summaries:
+  kids: A second astronomer named Aryabhata wrote his own astronomy book. Later writers help historians tell the
+    two scholars apart.
+  teen: Bhaskara II attributes a distinctive astronomical division to an Aryabhata. Its appearance in the
+    Mahasiddhanta helps distinguish the later author from the author of the Aryabhatiya.
+datings:
+  - method: textual-internal
+    range:
+      earliest: 950
+      latest: 1100
+      precision: century
+      circa: true
+    grade: C
+    label: Intertextual chronology (Pingree and Plofker)
+    sources:
+      - id: src.pingree-1970-census-exact-sciences
+        locator: Vol. 1, pp. 53-54
+      - id: src.plofker-2009-mathematics-in-india
+        locator: Appendix B
+    note: The estimate uses parallels with Sridhara and a matching attribution in Bhaskara II.
+claims:
+  - text: Bhaskara II credits an Aryabhata with dividing the ecliptic into ten-degree arcs, a feature present in
+      the Mahasiddhanta.
+    grade: B
+    sources:
+      - id: src.plofker-2009-mathematics-in-india
+        locator: Appendix B
+relations:
+  - kind: authored
+    target: text.mahasiddhanta
+debate: Pingree and Plofker treat the medieval reference as evidence for the author’s period. Billard’s later
+  date concerns the numerical constants of the surviving Mahasiddhanta. It has implications for the
+  transmission of the text.
+tags:
+  - astronomy
+  - siddhanta
+review:
+  status: draft
+  author: codex-gpt-6

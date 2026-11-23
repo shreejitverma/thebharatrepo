@@ -1,0 +1,47 @@
+id: person.ahilyabai-holkar
+type: person
+kind: person
+names:
+  en: Ahilyabai Holkar
+  iast: Ahilyābāī Hoḷakara
+  native: अहिल्याबाई होळकर
+summary: Ahilyabai Holkar ruled from Maheshwar in the late eighteenth century and sponsored temples
+  and pilgrimage infrastructure. An inscription at Ellora records her patronage of the
+  Shivalayatirtha tank.
+summaries:
+  kids: Ahilyabai ruled from Maheshwar. She paid for buildings people used when they visited sacred
+    places, including a large stone water tank at Ellora.
+  teen: Ahilyabai sponsored temples and facilities for pilgrims beyond her immediate territory. At
+    Ellora, a dated inscription provides direct evidence for her patronage of the Shivalayatirtha
+    tank.
+region: Malwa and Maheshwar
+datings:
+  - method: scholarly-consensus
+    range:
+      earliest: "1767"
+      latest: "1795"
+      precision: year
+      circa: false
+    grade: B
+    label: Reign of Ahilyabai Holkar
+    sources:
+      - src.green-2012-brahmins-and-sufis
+claims:
+  - text: An inscription at Shivalayatirtha identifies Ahilyabai Holkar as sponsor of the tank completed
+      in 1769.
+    grade: A
+    sources:
+      - src.michell-2012-maratha-complex-ellora
+  - text: Michell and Johar credit Ahilyabai with the Ghrishneshvara temple near the tank at Ellora.
+    grade: B
+    sources:
+      - src.michell-2012-maratha-complex-ellora
+relations: []
+tags:
+  - maratha
+  - holkar
+  - architecture
+  - women
+review:
+  status: draft
+  author: codex-gpt-6

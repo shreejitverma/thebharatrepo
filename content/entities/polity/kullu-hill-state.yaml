@@ -1,0 +1,49 @@
+id: "polity.kullu-hill-state"
+type: "polity"
+kind: "polity"
+names:
+  en: "Kullu hill state"
+summary: "The Kullu hill state occupied part of the upper Beas Valley. Its court is associated with
+  the Raghunath cult and Kullu Dussehra, and Sikh and British power reshaped the polity in the
+  nineteenth century."
+summaries:
+  kids: "Kullu was once ruled by its own rajas. People still gather there for Dussehra, a festival
+    remembered in stories about Raja Jagat Singh."
+  teen: "The court's association with Raghunath gave Kullu Dussehra a political as well as religious
+    setting. District records describe Sikh occupation in 1839 and the transfer to British
+    administration in 1846."
+region: "Beas Valley, Himachal Pradesh"
+datings:
+  - method: "textual-internal"
+    range:
+      earliest: 1500
+      latest: 1846
+      precision: "decade"
+      circa: true
+    grade: "C"
+    label: "Singh-Badani dynasty from Sidh Singh to British annexation in the district history"
+    sources:
+      - "src.kullu-district-history"
+      - "src.goswamy-2014-dussehra-of-kulu"
+    note: "The district account also records an earlier Pal dynasty (traditionally placed from the first century CE until c. 1450) before Sidh Singh's line began around 1500."
+claims:
+  - text: "The district history places the establishment of the Raghunath cult at Kullu in the reign of
+      Jagat Singh, 1637-1672."
+    grade: "B"
+    sources:
+      - "src.kullu-district-history"
+      - "src.goswamy-2014-dussehra-of-kulu"
+  - text: "The district account records Sikh occupation in 1839 and British administration from 1846."
+    grade: "B"
+    sources:
+      - "src.kullu-district-history"
+relations:
+  - kind: "related-to"
+    target: "polity.sikh-empire"
+tags:
+  - "himalaya"
+  - "beas"
+  - "kullu"
+review:
+  status: "draft"
+  author: "codex-gpt-6"

@@ -1,0 +1,65 @@
+id: tradition.hindustani-classical-music
+type: tradition
+kind: art
+names:
+  en: Hindustani Classical Music
+  iast: Hindustānī Śāstrīya Saṅgīta
+  native: हिन्दुस्तानी शास्त्रीय संगीत
+summary: Hindustani classical music is the art music tradition of northern India, built on improvisatory and composed
+  exploration of raga (melodic framework) and tala (rhythmic cycle). Emerging gradually over the second millennium CE
+  through the interaction of Sanskrit musicological theory, devotional Braj and Hindi song, and Delhi Sultanate and
+  Mughal court patronage, its main modern vocal genres are dhrupad and khayal.
+summaries:
+  kids: Hindustani music is the classical music of North India, played on instruments like sitar, sarod and tabla or sung
+    in slow and fast ragas.
+  teen: Sharing foundational raga and tala concepts with South Indian Carnatic music, Hindustani music evolved across
+    North Indian courts and hereditary gharana lineages into vocal forms like dhrupad, khayal and thumri.
+region: Northern, central, eastern and western Indian subcontinent
+location:
+  name: Delhi
+  lat: 28.613
+  lon: 77.209
+datings:
+  - method: scholarly-consensus
+    range:
+      earliest: 1250
+      latest: 1950
+      precision: century
+      circa: true
+    grade: B
+    label: Divergence from southern practice through formation of dhrupad, khayal and modern gharanas
+    sources:
+      - src.grove-2001-hindustani-music
+      - src.neuman-1990-life-of-music
+      - src.bakhle-2005-two-men-and-music
+    note: Northern and southern musical practices diverged gradually after the 13th century, with dhrupad (15th-16th c.),
+      khayal (18th c.) and named gharanas and Bhatkhande's 10-thaat system (19th-20th c.) shaping the modern concert
+      tradition.
+claims:
+  - text: Hindustani music shares early Sanskrit theoretical roots (Natyashastra, Brihaddeshi, Sangita Ratnakara) with
+      Carnatic music while incorporating Indo-Persian court genres, instruments and Brajbhasha lyric repertoires.
+    grade: B
+    sources:
+      - src.grove-2001-hindustani-music
+      - src.widdess-1995-ragas-early-indian-music
+  - text: In the early twentieth century, V. N. Bhatkhande and V. D. Paluskar codified notation, the ten-thaat scale
+      classification and public music schools that reshaped Hindustani classicism.
+    grade: A
+    sources:
+      - src.bakhle-2005-two-men-and-music
+      - src.powers-2001-bhatkhande
+relations:
+  - kind: related-to
+    target: text.brihaddeshi
+  - kind: related-to
+    target: polity.mughal-empire
+wikidata: Q1770695
+tags:
+  - hindustani-music
+  - classical-music
+  - raga
+  - tala
+  - gharana
+review:
+  status: draft
+  author: gemini-4-hydrogen-xhigh

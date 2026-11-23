@@ -1,0 +1,41 @@
+id: event.government-of-india-act-1919
+type: event
+kind: event
+names:
+  en: Government of India Act 1919
+summary: The Government of India Act 1919 restructured the central legislature and introduced
+  divided responsibility, known as dyarchy, in the provinces. Provincial ministers could
+  administer some subjects while governors retained others.
+summaries:
+  kids: The British changed the way India was governed. Indian ministers could make decisions
+    about some subjects, while colonial officials kept control of others.
+  teen: Dyarchy divided provincial subjects into transferred and reserved categories. Ministers
+    could administer certain areas, while governors and their executive councils kept fields
+    such as police and finance.
+region: British India and Westminster
+datings:
+  - method: documentary
+    range:
+      earliest: "1919"
+      latest: "1919"
+      precision: year
+      circa: false
+    grade: A
+    label: Enactment of the Montagu-Chelmsford reforms
+    sources:
+      - src.uk-parliament-1919-government-of-india-act
+claims:
+  - text: The Act provided for transferred and reserved provincial subjects and for a two-chamber
+      central legislature.
+    grade: A
+    sources:
+      - src.uk-parliament-1919-government-of-india-act
+relations:
+  - kind: preceded
+    target: event.simon-commission
+tags:
+  - colonial-law
+  - political-representation
+review:
+  status: draft
+  author: codex-gpt-6

@@ -1,0 +1,47 @@
+id: event.simon-commission
+type: event
+kind: event
+names:
+  en: Simon Commission
+summary: The British government appointed the Indian Statutory Commission in 1927 to review
+  constitutional arrangements. It included no Indian members, prompting boycotts and
+  demonstrations when it arrived in India in 1928.
+summaries:
+  kids: The British sent a group to study how India was governed. Many people protested because no
+    Indians had been appointed to the group.
+  teen: John Simon's commission reviewed the constitutional system established in 1919. Its
+    exclusion of Indian members drew organised opposition, and its 1930 report fed into later
+    constitutional discussions.
+region: British India and Westminster
+datings:
+  - method: scholarly-consensus
+    range:
+      earliest: "1927"
+      latest: "1930"
+      precision: year
+      circa: false
+    grade: B
+    label: Appointment to report
+    sources:
+      - src.sarkar-1989-modern-india
+      - src.chandra-1989-indias-struggle-for-independence
+claims:
+  - text: Sir John Simon reported that the commission had arrived in India in early February 1928.
+    grade: A
+    sources:
+      - src.uk-parliament-1928-indian-statutory-commission
+  - text: The all-British membership prompted Congress and other Indian political groups to boycott
+      the commission.
+    grade: B
+    sources:
+      - src.sarkar-1989-modern-india
+      - src.chandra-1989-indias-struggle-for-independence
+relations:
+  - kind: preceded
+    target: event.round-table-conferences
+tags:
+  - constitutional-reform
+  - colonial-rule
+review:
+  status: draft
+  author: codex-gpt-6

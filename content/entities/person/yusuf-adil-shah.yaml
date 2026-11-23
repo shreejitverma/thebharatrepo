@@ -1,0 +1,39 @@
+id: person.yusuf-adil-shah
+type: person
+kind: person
+names:
+  en: Yusuf Adil Shah
+summary: Yusuf Adil Shah established the Adil Shahi dynasty at Bijapur. His political base developed
+  from a Bahmani governorship into control of a regional sultanate.
+summaries:
+  kids: Yusuf was a governor who built up his own kingdom at Bijapur. His family ruled it after him.
+  teen: Yusuf's rise forms part of the breakup of Bahmani government. Bijapur remained the centre of
+    his successors' power.
+region: Western Deccan
+datings:
+  - method: documentary
+    range:
+      earliest: "1490"
+      latest: "1510"
+      precision: decade
+      circa: true
+    grade: B
+    label: Reign or recorded political activity
+    sources:
+      - src.michell-1995-architecture-art-southern-india
+      - src.eaton-2005-social-history-deccan
+      - src.eaton-2019-india-persianate-age
+    note: The opening date marks the conventional transition to independence.
+claims:
+  - text: Yusuf made Bijapur the centre of Adil Shahi rule around 1490.
+    grade: B
+    sources:
+      - src.michell-1995-architecture-art-southern-india
+      - src.eaton-2005-social-history-deccan
+relations:
+  - kind: founded
+    target: polity.bijapur-sultanate
+tags: []
+review:
+  status: draft
+  author: codex-gpt-6

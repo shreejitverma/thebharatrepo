@@ -1,0 +1,41 @@
+id: text.zij-i-muhammad-shahi
+type: text
+kind: science
+names:
+  en: Zij-i Muhammad Shahi
+  iast: Zīj-i Muḥammad Shāhī
+  native: زیج محمد شاهی
+summary: >-
+  Astronomers working under Sawai Jai Singh II compiled this Persian work of astronomical tables and
+  dedicated it to the Mughal emperor Muhammad Shah.
+  Surviving copies preserve more than one version of the work.
+summaries:
+  kids: >-
+    Jai Singh’s astronomers made tables to help people calculate where objects in the sky would appear.
+    They named the work for Emperor Muhammad Shah.
+  teen: >-
+    This Persian collection of astronomical tables was part of Jai Singh II’s court astronomy program.
+    Its surviving manuscripts preserve different versions, which scholars compare to trace how the work changed.
+region: Jaipur, Rajasthan
+datings:
+  - method: documentary
+    range: { earliest: 1727, latest: 1735, precision: year, circa: true }
+    grade: B
+    label: Compilation window (Virendra Nath Sharma)
+    sources: [src.sharma-1987-jai-singh-astronomical-efforts, src.jai-singh-1850-zij-or-5614]
+    note: Sharma gives this window for completion of the tables. The British Library catalog records a compilation date of 1140-1141 AH.
+claims:
+  - text: A team of astronomers prepared the tables under Jai Singh II’s direction and dedicated them to Muhammad Shah.
+    grade: B
+    sources: [src.sharma-1987-jai-singh-astronomical-efforts]
+  - text: Sharma identified at least two editions by comparing five surviving copies.
+    grade: B
+    sources: [src.sharma-1987-jai-singh-astronomical-efforts]
+  - text: The British Library holds a nineteenth-century Persian copy under shelfmark Or 5614.
+    grade: A
+    sources: [src.jai-singh-1850-zij-or-5614]
+relations:
+  - { kind: patronised-by, target: person.sawai-jai-singh-ii }
+  - { kind: related-to, target: concept.jai-singh-observatory-network }
+tags: [astronomy, astronomical-tables, persian]
+review: { status: draft, author: codex-gpt-6 }

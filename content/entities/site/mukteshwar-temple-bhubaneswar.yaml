@@ -1,0 +1,57 @@
+id: site.mukteshwar-temple-bhubaneswar
+type: site
+kind: site
+names:
+  en: Mukteshwar Temple, Bhubaneswar
+  iast: Mukteśvara Deuḷa, Bhubaneśvara
+  native: ମୁକ୍ତେଶ୍ଵର ଦେଉଳ, ଭୁବନେଶ୍ଵର
+summary: >-
+  The Mukteshwar Temple in Bhubaneswar, Odisha, is a Shiva shrine usually dated to the tenth century CE.
+  It pairs a curved sanctuary tower with a tiered porch roof. A freestanding carved stone arch marks the
+  entrance to the enclosure.
+summaries:
+  kids: >-
+    At the Mukteshwar Temple in Bhubaneswar, a carved stone arch leads into the courtyard of a
+    thousand-year-old shrine to Shiva.
+  teen: >-
+    The Mukteshwar Temple pairs a curved sanctuary tower with a porch beneath a stepped roof. Its carved
+    gateway and sculpture help historians place it within tenth-century Odisha temple architecture.
+region: Coastal Odisha (Bhubaneswar, Khordha district, Odisha)
+location: { name: "Bhubaneswar, Odisha", lat: 20.242, lon: 85.852 }
+datings:
+  - method: art-historical
+    range: { earliest: "925 CE", latest: "1000 CE", precision: century, circa: true }
+    grade: B
+    label: "Tenth-century stylistic dating"
+    sources:
+      - src.dehejia-1979-early-stone-temples-orissa
+      - src.donaldson-1985-hindu-temple-art-orissa
+      - src.meister-dhaky-1991-encyclopaedia-indian-temple-architecture-north-2
+    note: >-
+      The dating rests on comparisons of architecture and sculpture, including the form of the porch and
+      its carved decoration.
+claims:
+  - text: >-
+      A curving tower rises over the sanctum, while a tiered roof covers the porch, or jagamohana.
+    grade: B
+    sources:
+      - src.dehejia-1979-early-stone-temples-orissa
+      - src.donaldson-1985-hindu-temple-art-orissa
+  - text: >-
+      The entrance to the low-walled enclosure has a freestanding carved arch with makaras, or mythical
+      aquatic creatures.
+    grade: B
+    sources:
+      - src.donaldson-1985-hindu-temple-art-orissa
+      - src.michell-1988-hindu-temple
+relations:
+  - { kind: related-to, target: site.lingaraja-temple }
+  - { kind: related-to, target: site.konark-sun-temple }
+wikidata: Q3635669
+image:
+  commons: "File:Muktesvara deula.jpg"
+  alt: The freestanding carved gateway in front of the Mukteshwar Temple in Bhubaneswar
+  credit: Subhashish Panigrahi
+  license: CC BY-SA 3.0
+tags: [mukteshwar, bhubaneswar, odisha, kalinga-architecture, shaiva, somavamshi]
+review: { status: draft, author: "gemini-4-hydrogen-xhigh" }

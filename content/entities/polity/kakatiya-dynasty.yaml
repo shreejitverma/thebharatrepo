@@ -1,0 +1,93 @@
+id: polity.kakatiya-dynasty
+type: polity
+kind: polity
+names:
+  en: Kakatiya Dynasty
+  iast: Kākatīya
+  native: కాకతీయ
+summary: >-
+  The Kakatiyas rose from chiefs serving the Rashtrakutas and Kalyani Chalukyas to sovereign rulers of
+  Telangana and much of Andhra, governing from Hanamkonda and then Orugallu (Warangal). Rulers including
+  Rudradeva, Ganapatideva, Rudrama Devi and Prataparudra extended tank irrigation and temple building, and
+  Warangal fell to Tughluq forces in 1323.
+summaries:
+  kids: >-
+    The Kakatiya kings and Queen Rudrama Devi ruled Telangana and Andhra from Warangal. They built large
+    irrigation lakes and carved stone temples such as Ramappa.
+  teen: >-
+    Rudradeva's Hanamkonda inscription of 1163 is the conventional marker of sovereign Kakatiya rule. Under
+    Ganapatideva and Rudrama Devi the kingdom expanded into coastal Andhra, until Delhi Sultanate forces
+    took Warangal in 1323.
+region: Telangana and the eastern Deccan
+location:
+  name: Warangal (Orugallu)
+  lat: 17.96
+  lon: 79.61
+datings:
+  - method: epigraphic
+    range:
+      earliest: "1163"
+      latest: "1323"
+      precision: year
+      circa: true
+    grade: B
+    label: Sovereign Kakatiya kingdom, from Rudradeva's Hanamkonda inscription to the fall of Warangal
+    sources:
+      - src.talbot-2001-precolonial-india-in-practice
+      - src.parabrahmasastry-1978-kakatiyas-of-warangal
+      - src.eaton-2005-social-history-deccan
+    note: Rudradeva's Thousand Pillar Temple inscription at Hanamkonda (1163) is conventionally taken to mark
+      sovereign rule. Ulugh Khan, the future Muhammad bin Tughluq, captured Warangal in 1323.
+  - method: scholarly-consensus
+    range:
+      earliest: "1000"
+      latest: "1323"
+      precision: decade
+      circa: true
+    grade: B
+    label: Including the early Kakatiya chiefs
+    sources:
+      - src.talbot-2001-precolonial-india-in-practice
+      - src.eaton-2005-social-history-deccan
+    note: The opening includes the chiefs who served the Rashtrakutas and Kalyani Chalukyas before
+      independence.
+claims:
+  - text: Kakatiya inscriptions document an extensive political network of subordinate chiefs and officers.
+    grade: B
+    sources:
+      - src.talbot-2001-precolonial-india-in-practice
+  - text: Kakatiya-period inscriptions record the building of irrigation tanks across Telangana, which brought
+      new land under cultivation.
+    grade: B
+    sources:
+      - src.talbot-2001-precolonial-india-in-practice
+      - src.parabrahmasastry-1978-kakatiyas-of-warangal
+  - text: Ganapatideva (r. 1199-1262) issued the Motupalli inscription guaranteeing fixed customs duties and
+      protection to maritime merchants on the Andhra coast.
+    grade: A
+    sources:
+      - src.talbot-2001-precolonial-india-in-practice
+      - src.sastri-1976-history-of-south-india
+  - text: Delhi Sultanate forces captured Warangal in 1323, and former Kakatiya subordinates, including the
+      Musunuri Nayakas and the Reddis, later revived Telugu rule.
+    grade: B
+    sources:
+      - src.eaton-2005-social-history-deccan
+      - src.talbot-2001-precolonial-india-in-practice
+relations:
+  - kind: patronised
+    target: site.ramappa-temple
+  - kind: succeeded
+    target: polity.chalukya-dynasty-of-kalyani
+    note: The Kakatiya chiefs had been Kalyani Chalukya feudatories before independence.
+  - kind: preceded
+    target: polity.tughlaq-dynasty
+    note: Tughluq occupation replaced the Kakatiya court at Warangal.
+wikidata: Q2086556
+tags:
+  - kakatiya
+  - warangal
+  - telangana
+review:
+  status: draft
+  author: codex-gpt-6

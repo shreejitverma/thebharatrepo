@@ -1,0 +1,67 @@
+id: text.jataka-tales
+type: text
+kind: text
+names:
+  en: Jataka Tales
+  iast: Jātaka
+  native: जातक
+summary: Jataka tales recount past births of the Buddha. The Pali collection has canonical verses
+  and a prose commentary; related stories also circulate in other languages and appear in early
+  Buddhist art.
+summaries:
+  kids: In these stories, the Buddha-to-be lives many lives, sometimes as an animal and sometimes as a
+    human. The tales explore choices such as whether to act bravely or generously.
+  teen: The Pali verses and the prose stories that explain them belong to different layers. Jataka
+    images on Buddhist monuments give separate evidence for how early particular stories circulated.
+datings:
+  - method: art-historical
+    range:
+      earliest: "150 BCE"
+      latest: "1 BCE"
+      precision: century
+      circa: true
+    grade: B
+    label: Early visual witnesses at Bharhut and other stupas
+    sources:
+      - src.appleton-2010-jataka-stories
+      - src.shaw-2016-buddhist-landscapes-sanchi
+    note: Reliefs attest the circulation of some jataka narratives in the late centuries BCE. The images
+      cannot date the Pali anthology.
+  - method: textual-internal
+    range:
+      earliest: 400
+      latest: 650
+      precision: century
+      circa: true
+    grade: C
+    label: "Naomi Appleton: surviving Pali prose commentary"
+    sources:
+      - src.appleton-2010-jataka-stories
+      - src.hinuber-1996-handbook-of-pali-literature
+    note: The commentary is generally placed around the fifth or sixth century and elaborates older
+      verses and stories.
+claims:
+  - text: The Pali prose commentary commonly frames a past-life story with an episode from the Buddha’s
+      life and identifies the characters across the two lives.
+    grade: B
+    sources:
+      - src.appleton-2010-jataka-stories
+      - src.hinuber-1996-handbook-of-pali-literature
+  - text: The Theravada tradition reads the past lives as accounts of qualities cultivated by the
+      Buddha-to-be.
+    grade: D
+    sources:
+      - src.appleton-2010-jataka-stories
+relations:
+  - kind: related-to
+    target: text.pali-canon
+  - kind: related-to
+    target: person.gautama-buddha
+tags:
+  - buddhism
+  - theravada
+  - pali
+  - narrative
+review:
+  status: draft
+  author: codex-gpt-6

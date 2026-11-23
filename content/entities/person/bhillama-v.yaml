@@ -1,0 +1,57 @@
+id: person.bhillama-v
+type: person
+kind: person
+names:
+  en: Bhillama V
+  iast: Bhillama
+summary: Bhillama V consolidated independent Seuna Yadava power at Devagiri. Historians differ over
+  the date at which he first took power and how to arrange the reigns preceding his.
+summaries:
+  kids: Bhillama made Devagiri a centre of Yadava power. Inscriptions give firm dates for some of his
+    rule.
+  teen: Bhillama's own dated inscriptions begin in the late 1180s. Different readings of material from
+    the preceding years place the beginning of his authority differently.
+region: Northern Deccan
+datings:
+  - method: epigraphic
+    range:
+      earliest: "1185"
+      latest: "1195"
+      precision: decade
+      circa: true
+    grade: B
+    label: Core attested reign
+    sources:
+      - src.henige-1975-phantom-dynasties
+      - src.singh-2008-ancient-early-medieval-india
+      - src.eaton-2005-social-history-deccan
+    note: The window covers the securely dated core of Bhillama's political activity.
+  - method: epigraphic
+    range:
+      earliest: "1173"
+      latest: "1195"
+      precision: decade
+      circa: true
+    grade: C
+    label: A. V. Narasimha Murthy's earlier accession reconstruction
+    sources:
+      - src.henige-1975-phantom-dynasties
+    note: Murthy uses a Kalachuri reference to place his accession in 1173, before Bhillama's own known
+      grants.
+claims:
+  - text: Bhillama V is associated with the establishment of Devagiri as the political centre of the
+      independent Yadavas.
+    grade: B
+    sources:
+      - src.singh-2008-ancient-early-medieval-india
+      - src.eaton-2005-social-history-deccan
+relations:
+  - kind: ruled
+    target: polity.seuna-yadava-dynasty
+debate: Murthy assigns Bhillama an accession in 1173 by interpreting a Kalachuri reference. Henige
+  notes that Bhillama's own inscriptions begin in 1187 and regards Verma's reconstruction of the
+  sequence as more persuasive.
+tags: []
+review:
+  status: draft
+  author: codex-gpt-6

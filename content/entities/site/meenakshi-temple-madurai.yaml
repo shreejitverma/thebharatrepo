@@ -1,0 +1,59 @@
+id: site.meenakshi-temple-madurai
+type: site
+kind: site
+names:
+  en: Meenakshi Amman Temple, Madurai
+  iast: Mīnākṣī Sundareśvarar Kōyil, Maturai
+  native: மதுரை மீனாட்சி சுந்தரேசுவரர் கோயில்
+summary: >-
+  The Meenakshi Sundareshvara Temple in Madurai, Tamil Nadu, is dedicated to the goddess Meenakshi and
+  Shiva as Sundareshvara. Its gateways and pillared halls reflect several building phases, including
+  work under the Pandyas and a major expansion under the Madurai Nayakas in the sixteenth and
+  seventeenth centuries CE.
+summaries:
+  kids: >-
+    At the centre of Madurai, brightly painted towers rise over a temple to Meenakshi and Shiva. Inside
+    are stone-pillared halls and a large temple tank.
+  teen: >-
+    The Meenakshi Sundareshvara Temple grew around two sanctuaries. It retains work from the Pandya
+    period, while many of its halls and enclosures reflect the building campaigns of the Madurai
+    Nayakas.
+region: Vaigai Basin (Madurai district, Tamil Nadu)
+location: { name: "Madurai, Tamil Nadu", lat: 9.920, lon: 78.119 }
+datings:
+  - method: scholarly-consensus
+    range: { earliest: "1200 CE", latest: "1700 CE", precision: century, circa: true }
+    grade: B
+    label: "Pandya fabric and Madurai Nayaka expansion"
+    sources:
+      - src.marr-2003-madurai
+      - src.michell-1995-architecture-art-southern-india
+      - src.fuller-1984-servants-of-the-goddess
+    note: >-
+      The range covers surviving Pandya-period fabric and the principal Nayaka-period enlargement. Work
+      on the complex continued later.
+claims:
+  - text: >-
+      The precinct contains the Meenakshi and Sundareshvara sanctuaries, the Golden Lotus Tank and the
+      Thousand-Pillared Hall. Tirumala Nayaka's Pudu Mandapa stands outside the temple's eastern
+      gateway.
+    grade: B
+    sources:
+      - src.marr-2003-madurai
+      - src.michell-1993-temple-towns-tamil-nadu
+  - text: >-
+      The temple has hereditary Shaiva priests, and its Chithirai festival links temple worship with
+      public celebrations across Madurai.
+    grade: B
+    sources:
+      - src.fuller-1984-servants-of-the-goddess
+      - src.michell-1993-temple-towns-tamil-nadu
+relations: []
+wikidata: Q1424358
+image:
+  commons: "File:Madurai Meenakshi temple 2.jpg"
+  alt: Polychrome stucco sculpture-covered Dravida gopuram tower of the Meenakshi Sundareshvara Temple at Madurai
+  credit: Kumar Appaiah
+  license: CC BY-SA 2.5
+tags: [madurai, meenakshi, nayaka, pandya, shaiva, gopuram, tamil-nadu]
+review: { status: draft, author: "gemini-4-hydrogen-xhigh" }

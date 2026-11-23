@@ -79,7 +79,7 @@ export default async function DebatePage({ params }: { params: Promise<{ slug: s
   return (
     // Only a published debate is marked for the search index; the indexer also lists published debates only.
     <div className="main-content" data-pagefind-body={d.published ? true : undefined}>
-      {d.published ? <SearchIndexMeta title={d.title} kind="debate" when={place ? placementLabel(place) : undefined} filters={{ kind: ['debate'] }} /> : null}
+      {d.published ? <SearchIndexMeta title={d.title} names={d.alternates} kind="debate" when={place ? placementLabel(place) : undefined} filters={{ kind: ['debate'] }} /> : null}
       <nav className="breadcrumbs" aria-label="Breadcrumb" data-pagefind-ignore>
         <Link href="/debates">Debates</Link>
       </nav>

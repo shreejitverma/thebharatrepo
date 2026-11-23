@@ -1,0 +1,89 @@
+id: artifact.mathura-buddha-images
+type: artifact
+kind: art
+names:
+  en: Mathura Kushan Buddha and Bodhisattva Images
+  iast: Mathurā Kuṣāṇa Buddha Pratimā
+summary: >-
+  Reddish mottled Sikri sandstone anthropomorphic images of Sakyamuni produced by Mathura ateliers during the
+  early Kushan period (1st-2nd centuries CE). Key benchmarks include the Katra Keshav Dev seated image
+  (Government Museum, Mathura A.1) and Friar Bala's colossal standing Bodhisattva dedicated at Sarnath in Year
+  3 of Kanishka (Sarnath Museum B(a) 1).
+summaries:
+  kids: >-
+    Carved from warm speckled red sandstone at Mathura, early Kushan statues show the Buddha sitting boldly on
+    a lion throne or standing tall like a protective spirit, often called a "Bodhisattva" in their base
+    inscriptions.
+  teen: >-
+    Produced in the workshops of Mathura under the Kushans, sculptures like the Katra seated image (Mathura
+    Museum A.1) and Friar Bala's Year-3 Kanishka statue at Sarnath established an indigenous Indian
+    iconography for the Buddha rooted in earlier yaksha sculpture.
+region: Mathura, Uttar Pradesh (found across northern India from Sarnath to Kaushambi)
+datings:
+  - method: epigraphic
+    range:
+      earliest: 78
+      latest: 200
+      best: 130
+      precision: decade
+      circa: true
+    grade: B
+    label: Early Kushan period (including Friar Bala statue dated Year 3 of Kanishka)
+    sources:
+      - src.vogel-1910-catalogue-archaeological-museum-mathura
+      - src.sahni-1914-catalogue-museum-archaeology-sarnath
+      - src.quintanilla-2007-sculpture-at-mathura
+    note: >-
+      Year 3 of Kanishka corresponds to c. 130 CE on the widely accepted 127 CE accession (or c. 81 CE on the
+      older 78 CE hypothesis); Katra A.1 exhibits slightly earlier late 1st-early 2nd century CE Kushan Brahmi
+      palaeography.
+claims:
+  - text: >-
+      Mathura Museum Acc. No. A.1 (from Katra Keshav Dev) depicts the figure seated in padmasana on a
+      three-lion throne with his right hand in abhaya mudra, ushnisha coiled like a snail shell (kapardin),
+      and a scalloped halo; its inscription by Amohasi calls the image a "Bodhisattva".
+    grade: A
+    sources:
+      - src.vogel-1910-catalogue-archaeological-museum-mathura
+      - src.quintanilla-2007-sculpture-at-mathura
+  - text: >-
+      Sarnath Museum Acc. No. B(a) 1 (standing height c. 2.48 m in mottled Sikri sandstone) records dedication
+      in the 3rd regnal year of Maharaja Kanishka by the monk Bala from Mathura, proving export of Mathura
+      sculptures to major Gangetic pilgrimage centres.
+    grade: A
+    sources:
+      - src.sahni-1914-catalogue-museum-archaeology-sarnath
+      - src.quintanilla-2007-sculpture-at-mathura
+  - text: >-
+      Along with Gandharan workshops, Mathura created one of the two foundational traditions of
+      anthropomorphic Buddha portraiture, translating the monumental frontal torso of older yaksha carvings
+      into monastic garb and yogic lakshanas.
+    grade: B
+    sources:
+      - src.quintanilla-2007-sculpture-at-mathura
+      - src.huntington-1985-art-ancient-india
+relations:
+  - kind: part-of
+    target: tradition.mathura-art
+  - kind: part-of
+    target: polity.kushan-empire
+wikidata: null
+image:
+  commons: >-
+    File:Inscribed Seated Buddha Image in Abhaya Mudra - Kushan Period - Katra Keshav Dev - ACCN A-1 -
+    Government Museum - Mathura 2013-02-24 5972.JPG
+  alt: >-
+    Mottled red sandstone seated Buddha (Bodhisattva) image from Katra Keshav Dev in Government Museum,
+    Mathura (Acc. No. A.1)
+  credit: Biswarup Ganguly
+  license: CC BY 3.0
+tags:
+  - sculpture
+  - buddha
+  - mathura
+  - kushan
+  - sandstone
+  - kanishka
+review:
+  status: draft
+  author: gemini-4-hydrogen-xhigh

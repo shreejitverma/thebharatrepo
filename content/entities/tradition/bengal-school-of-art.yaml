@@ -1,0 +1,69 @@
+id: tradition.bengal-school-of-art
+type: tradition
+kind: art
+names:
+  en: Bengal School of Art
+  iast: Bāṅlā Citrakalā Āndolana
+  native: বেঙ্গল স্কুল অব আর্ট
+summary: The Bengal School of Art was an early twentieth-century nationalist and pan-Asian art movement centred in
+  Calcutta and Santiniketan, spearheaded by Abanindranath Tagore, E. B. Havell and disciples including Nandalal Bose,
+  Asit Kumar Haldar and Abdur Rahman Chughtai. Opposing colonial Victorian naturalism, it championed delicate
+  watercolour washes and Ajanta, Mughal and folk-inspired Indian aesthetics.
+summaries:
+  kids: The Bengal School of Art was a group of early 1900s Indian painters led by Abanindranath Tagore and Nandalal Bose
+    who turned to India's own murals and miniatures instead of European oil styles.
+  teen: Emerging alongside the 1905 Swadeshi movement in Calcutta and continuing at Kala Bhavana in Santiniketan, the
+    Bengal School forged an anti-colonial nationalist art rooted in Ajanta, miniatures and Asian wash.
+region: Kolkata and Santiniketan (West Bengal), spreading across Indian art schools
+location:
+  name: Santiniketan, West Bengal
+  lat: 23.678
+  lon: 87.685
+datings:
+  - method: documentary
+    range:
+      earliest: 1905
+      latest: 1945
+      precision: decade
+      circa: true
+    grade: B
+    label: Swadeshi emergence through the interwar Santiniketan Kala Bhavana era
+    sources:
+      - src.guhathakurta-1992-making-new-indian-art
+      - src.mitter-1994-art-and-nationalism
+      - src.subramanyan-2003-modern-painting-grove
+    note: Anchored by Abanindranath's appointment at Calcutta School of Art (1905), the Indian Society of Oriental Art
+      (1907), and Nandalal Bose's leadership at Santiniketan's Kala Bhavana from 1919.
+claims:
+  - text: Historians Tapati Guha-Thakurta and Partha Mitter show how the Bengal School joined the Swadeshi cultural
+      movement, deploying Ajanta copies, Mughal lines and East Asian ink wash to build an indigenous aesthetic.
+    grade: B
+    sources:
+      - src.guhathakurta-1992-making-new-indian-art
+      - src.mitter-1994-art-and-nationalism
+  - text: Led by Nandalal Bose at Santiniketan's Kala Bhavana, the movement's reach extended nationwide into art school
+      curricula and later shaped the illustrations of the Constitution of India.
+    grade: B
+    sources:
+      - src.mitter-1994-art-and-nationalism
+      - src.subramanyan-2003-modern-painting-grove
+relations:
+  - kind: related-to
+    target: event.swadeshi-movement
+  - kind: related-to
+    target: event.santiniketan-unesco-inscription
+wikidata: Q948504
+image:
+  commons: File:Bharat Mata by Abanindranath Tagore.jpg
+  alt: 1905 watercolour wash painting Bharat Mata by Abanindranath Tagore showing a four-armed saffron-clad figure
+  credit: Abanindranath Tagore (1905)
+  license: Public domain
+tags:
+  - bengal-school
+  - santiniketan
+  - nandalal-bose
+  - abanindranath
+  - modernism
+review:
+  status: draft
+  author: gemini-4-hydrogen-xhigh

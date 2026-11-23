@@ -1,0 +1,34 @@
+id: event.sanchi-unesco-inscription
+type: event
+kind: site
+names:
+  en: "Buddhist Monuments at Sanchi inscribed on the World Heritage List"
+summary: "The World Heritage Committee inscribed the Buddhist Monuments at Sanchi in 1989. The designation covers an ensemble of Buddhist structures, including stupas, temples and monasteries."
+summaries:
+  kids: "In 1989 Sanchi's Buddhist monuments joined the World Heritage List. The site includes stupas, temples and the remains of monasteries."
+  teen: "Sanchi was inscribed in 1989 as a group of Buddhist monuments. The property includes the Great Stupa and other structures that document a long history of Buddhist religious architecture."
+region: "Sanchi, Madhya Pradesh"
+datings:
+  - method: documentary
+    range: { earliest: "1989", latest: "1989", precision: year, circa: false }
+    grade: A
+    label: "World Heritage inscription"
+    sources: ["src.unesco-1989-sanchi-inscription-decision"]
+    note: "The Committee adopted Decision 13 COM XV.A in 1989."
+claims:
+  - text: "The Committee inscribed the Buddhist Monuments at Sanchi in 1989 under criteria (i), (ii), (iii), (iv) and (vi)."
+    grade: A
+    sources: ["src.unesco-1989-sanchi-inscription-decision"]
+  - text: "UNESCO describes the designated property as a complex containing Buddhist stupas, pillars, temples and monasteries."
+    grade: A
+    sources: ["src.unesco-1989-sanchi"]
+relations:
+  - kind: related-to
+    target: site.sanchi-stupa
+image:
+  commons: "File:Sanchi stupa gate.jpg"
+  alt: Carved stone gateway at the Buddhist monuments of Sanchi
+  credit: Roopam Sadh
+  license: CC BY-SA 4.0
+tags: ["republic","unesco","heritage"]
+review: { status: draft, author: codex-gpt-6 }

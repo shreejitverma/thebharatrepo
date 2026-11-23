@@ -1,0 +1,59 @@
+id: "site.daulatabad-fort"
+type: "site"
+kind: "art"
+names:
+  en: "Daulatabad Fort"
+summary: "Devagiri, later called Daulatabad, was a Yadava capital and a fortified centre used by the
+  Delhi Sultanate and later Deccan states. Its walls and scarped hill preserve defences built across
+  several periods."
+summaries:
+  kids: "The fort at Daulatabad stands on a steep hill. Yadava rulers used the site as their capital,
+    and later rulers built and repaired defences there."
+  teen: "The stronghold served different regimes and preserves several building phases. Muhammad bin
+    Tughluq used the renamed Daulatabad as a centre of government for the Deccan."
+region: "Daulatabad, Maharashtra"
+datings:
+  - method: "art-historical"
+    range:
+      earliest: 1180
+      latest: 1650
+      precision: "century"
+      circa: true
+    grade: "B"
+    label: "Successive phases of fortification and occupation"
+    sources:
+      - "src.eaton-2013-power-memory-architecture"
+      - id: "src.desai-epigraphia-indica-methi"
+        locator: "p. 315"
+  - method: "documentary"
+    range:
+      earliest: 1326
+      latest: 1328
+      precision: "year"
+      circa: true
+    grade: "B"
+    label: "Daulatabad becomes a Tughluq seat"
+    sources:
+      - "src.eaton-2013-power-memory-architecture"
+      - "src.jackson-1999-delhi-sultanate"
+claims:
+  - text: "Devagiri is named as a Yadava capital in a Jaitugi-era inscription."
+    grade: "A"
+    sources:
+      - id: "src.desai-epigraphia-indica-methi"
+        locator: "p. 315"
+  - text: "Muhammad bin Tughluq made Daulatabad a centre of government in the fourteenth century."
+    grade: "B"
+    sources:
+      - "src.eaton-2013-power-memory-architecture"
+      - "src.jackson-1999-delhi-sultanate"
+relations:
+  - kind: "related-to"
+    target: "polity.seuna-yadava-dynasty"
+tags:
+  - "maharashtra"
+  - "deccan"
+  - "fort"
+review:
+  status: "draft"
+  author: "codex-gpt-6"

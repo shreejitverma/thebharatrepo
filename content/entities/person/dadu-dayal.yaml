@@ -1,0 +1,41 @@
+id: person.dadu-dayal
+type: person
+kind: person
+names:
+  en: Dadu Dayal
+  iast: Dādū Dayāl
+  native: दादू दयाल
+summary: Dadu Dayal was a north Indian Sant teacher whose followers formed the Dadupanth. His songs
+  express devotion to the divine beyond form, and early biographies preserve differing accounts of
+  his life.
+summaries:
+  kids: People sang Dadu’s verses about finding the divine. His followers kept singing and teaching
+    them after his death.
+  teen: Dadu’s followers formed a community that transmitted his verse. The Dadu Janma Lila provides
+    early evidence about his life, and its manuscript versions also show how that life story
+    changed.
+region: Rajasthan
+datings:
+  - method: scholarly-consensus
+    range:
+      earliest: "1544"
+      latest: "1603"
+      precision: year
+      circa: true
+    grade: B
+    label: Common life dates in Dadupanth scholarship
+    sources:
+      - src.zapart-2022-early-dadupanth
+claims:
+  - text: Jangopal’s Dadu Janma Lila is an early biography of Dadu, preserved in more than one recension.
+    grade: B
+    sources:
+      - src.zapart-2022-early-dadupanth
+relations: []
+tags:
+  - sant
+  - nirguna-bhakti
+  - dadupanth
+review:
+  status: draft
+  author: codex-gpt-6

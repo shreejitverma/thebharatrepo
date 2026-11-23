@@ -1,0 +1,81 @@
+id: artifact.copper-hoard-harpoons
+type: artifact
+kind: prehistory
+names:
+  en: Copper Hoard Barbed Harpoons
+  iast: Tāmra Sañcaya Kaṇṭakita Matsyavedha
+summary: >-
+  Distinctive cast and hammered copper hunting or fishing harpoons featuring backward-curving barbs and basal
+  perforations/lugs, characteristic of the North Indian Copper Hoard tradition of the 2nd millennium BCE.
+  Examples are preserved at Lucknow, Indian Museum Kolkata, Ashmolean Museum, and LACMA (AC1996.149.1), while
+  a landmark 1971 excavation at Saipai in Etawah district recovered one directly in stratified Ochre Coloured
+  Pottery (OCP) levels.
+summaries:
+  kids: >-
+    Made of nearly pure copper thousands of years ago in northern India, these jagged, barbed spear-like
+    harpoons had little loops or holes near the handle so ropes could be tied onto them.
+  teen: >-
+    Iconic implements of the North Indian Copper Hoards (c. 2000-1300 BCE), barbed copper harpoons puzzled
+    archaeologists until B. B. Lal and M. L. Wahal excavated one directly inside a stratified Ochre Coloured
+    Pottery layer at Saipai in 1971.
+region: Upper Ganga-Yamuna Doab (Uttar Pradesh; examples from Bisauli, Rajpur Parsu, Saipai)
+datings:
+  - method: archaeological-stratigraphic
+    range:
+      earliest: 2000 BCE
+      latest: 1300 BCE
+      best: 1650 BCE
+      precision: century
+      circa: true
+    grade: C
+    label: Ganga-Yamuna Doab Ochre Coloured Pottery (OCP) horizon
+    sources:
+      - src.yule-1985-metalwork-bronze-age-india
+      - src.lal-1951-ancient-india-no-7
+    note: >-
+      Stratified find at Saipai (1971) linked harpoons with OCP pottery; TL and radiocarbon estimates on OCP
+      sites broadly span early-to-mid 2nd millennium BCE, though most museum harpoons are stray hoard finds.
+claims:
+  - text: >-
+      Paul Yule's corpus of prehistoric South Asian metalwork classifies barbed copper harpoons into
+      mould-cast and hammered Doab types weighing typically several hundred grams and fitted with two pairs of
+      recurrent barbs plus a basal lug or eyelet for a retrieving line.
+    grade: B
+    sources:
+      - src.yule-1985-metalwork-bronze-age-india
+      - src.lal-1951-ancient-india-no-7
+  - text: "For decades known only from unstratified hoards (such as Bisauli and Rajpur Parsu), a hooked copper harpoon was recovered in the 1971 excavation at Saipai inside an undisturbed Ochre Coloured Pottery deposit in Etawah district."
+    grade: A
+    sources:
+      - src.yule-1985-metalwork-bronze-age-india
+  - text: >-
+      Metallurgical analyses show low-arsenic or nearly pure copper distinct from Harappan tin bronzes,
+      indicating an independent Gangetic Chalcolithic metalworking tradition.
+    grade: B
+    sources:
+      - src.yule-1985-metalwork-bronze-age-india
+      - src.lal-1951-ancient-india-no-7
+relations:
+  - kind: part-of
+    target: tradition.copper-hoard-culture
+  - kind: related-to
+    target: tradition.ochre-coloured-pottery-culture
+    note: Stratigraphically associated at Saipai in 1971
+wikidata: null
+image:
+  commons: File:Harpoon Head LACMA AC1996.149.1.jpg
+  alt: >-
+    Prehistoric North Indian Copper Hoard barbed copper harpoon head in Los Angeles County Museum of Art
+    (AC1996.149.1)
+  credit: Los Angeles County Museum of Art
+  license: Public domain
+tags:
+  - copper-hoard
+  - harpoon
+  - prehistory
+  - ocp
+  - metallurgy
+  - ganga-doab
+review:
+  status: draft
+  author: gemini-4-hydrogen-xhigh

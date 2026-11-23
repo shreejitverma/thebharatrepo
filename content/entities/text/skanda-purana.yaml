@@ -1,0 +1,83 @@
+id: text.skanda-purana
+type: text
+kind: text
+names:
+  en: Skanda Purana
+  iast: Skandapurāṇa
+  native: स्कन्दपुराण
+summary: The Skanda Purana survives as an early Shaiva work preserved in Nepalese manuscripts and as
+  later collections under the same title. The early work narrates myths of Shiva, the Goddess and
+  Skanda and describes sacred sites. Its original setting and date are debated.
+summaries:
+  kids: This book tells stories about Shiva, the Goddess and Skanda and describes places people visit
+    on pilgrimage.
+  teen: Early Nepalese manuscripts preserve a Sanskrit text about gods, sacred places and Shaiva
+    communities. Later collections with the same title transmit much additional pilgrimage
+    literature.
+datings:
+  - method: textual-internal
+    range:
+      earliest: 550
+      latest: 650
+      precision: century
+      circa: true
+    grade: C
+    label: "Hans Bakker and Yuko Yokochi: early recension"
+    sources:
+      - src.bakker-2014-world-of-the-skandapurana
+      - src.yokochi-2004-warrior-goddess
+    note: Comparison with northern Indian religious and political history places the early form around
+      the late sixth or early seventh century.
+  - method: textual-internal
+    range: { earliest: 600, latest: 650, precision: century, circa: true }
+    grade: C
+    label: "Martine P. Kropman: core composed in the time of Harsha"
+    sources: [src.kropman-2019-consecration-of-kumara]
+    note: Kropman interprets Skanda’s consecration and defeat of Taraka as literary parallels
+      to Harsha’s accession and campaign and connects the early composition to Thanesar.
+  - method: traditional-puranic
+    range:
+      earliest: "3102 BCE"
+      latest: "3102 BCE"
+      precision: year
+      circa: true
+    grade: D
+    label: Traditional Vyasa attribution and Kali Yuga epoch
+    sources:
+      - src.rocher-1986-puranas
+      - src.gonzalezreimann-2002-mahabharata-yugas
+    note: Skanda Purana is among the great Puranas traditionally associated with Vyasa. The calendar
+      year is the conventional epoch used for that transition.
+claims:
+  - text: A Nepalese palm-leaf manuscript of the early recension gives the year 234 in its colophon,
+      which Bakker converts to 810 CE and the critical edition to 810 or 811 CE. The text was therefore
+      in circulation by then.
+    grade: A
+    sources:
+      - src.bakker-2014-world-of-the-skandapurana
+      - src.bisschop-2018-skandapurana-volume-iv
+  - text: The early recension describes Pashupata sacred geography and myth cycles including that of
+      Vindhyavasini.
+    grade: B
+    sources:
+      - src.bakker-2014-world-of-the-skandapurana
+      - src.yokochi-2004-warrior-goddess
+  - text: Many pilgrimage texts circulate under the Skanda Purana title outside the recension preserved
+      by the early Nepalese manuscripts.
+    grade: B
+    sources:
+      - src.rocher-1986-puranas
+      - src.bakker-2014-world-of-the-skandapurana
+relations:
+  - kind: part-of
+    target: text.puranas
+debate: Bakker allows composition to have begun under the Maukharis. Kropman argues that the core
+  took shape under Harsha. Both estimates rely on interpretations of textual and historical parallels.
+tags:
+  - purana
+  - shaiva
+  - pilgrimage
+  - manuscript
+review:
+  status: draft
+  author: codex-gpt-6

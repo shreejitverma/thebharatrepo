@@ -1,0 +1,60 @@
+id: site.keshava-temple-somanathapura
+type: site
+kind: site
+names:
+  en: Keshava Temple, Somanathapura
+  iast: Keśava Mandira, Sōmanāthapura
+  native: ಕೇಶವ ದೇವಸ್ಥಾನ, ಸೋಮನಾಥಪುರ
+summary: >-
+  The Keshava Temple at Somanathapura in Karnataka was consecrated in 1268 CE under Hoysala king
+  Narasimha III. Three carved towers rise over three Vishnu shrines set around a shared hall. The temple
+  forms part of UNESCO's Sacred Ensembles of the Hoysalas.
+summaries:
+  kids: >-
+    Built in 1268 CE, the Keshava Temple at Somanathapura in Karnataka has three carved stone towers
+    over its three shrines.
+  teen: >-
+    Somanathapura's Keshava Temple has three sanctuaries on a shared platform. An inscription records
+    its foundation by the Hoysala commander Somanatha, and inscriptions on sculptures preserve the names
+    of artists.
+region: Kaveri Valley (Mysuru district, Karnataka)
+location: { name: "Somanathapura, Karnataka", lat: 12.276, lon: 76.882 }
+datings:
+  - method: epigraphic
+    range: { earliest: "1268 CE", latest: "1268 CE", precision: year, circa: false }
+    grade: A
+    label: "Foundation inscription under Narasimha III"
+    sources:
+      - src.foekema-1996-complete-guide-hoysala-temples
+      - src.unesco-2023-hoysala-sacred-ensembles
+    note: >-
+      A dated inscription records the foundation of the temple by Somanatha during the reign of
+      Narasimha III.
+claims:
+  - text: >-
+      The three shrines are dedicated to Keshava, Janardana and Venugopala and open into a common hall.
+    grade: B
+    sources:
+      - src.foekema-1996-complete-guide-hoysala-temples
+      - src.hardy-1995-indian-temple-architecture
+  - text: >-
+      Some sculptures bear the name of the sculptor Mallitamma.
+    grade: A
+    sources:
+      - src.foekema-1996-complete-guide-hoysala-temples
+  - text: >-
+      UNESCO inscribed the temple in 2023 as part of the Sacred Ensembles of the Hoysalas.
+    grade: A
+    sources:
+      - src.unesco-2023-hoysala-sacred-ensembles
+relations:
+  - { kind: part-of, target: site.hoysala-sacred-ensembles }
+  - { kind: related-to, target: site.chennakeshava-temple-belur }
+wikidata: Q3537502
+image:
+  commons: "File:View of Chennakesava temple at Somanathpura, from the porch entrance.jpg"
+  alt: The stone towers of the Keshava Temple at Somanathapura seen from the porch
+  credit: Vedamurthy J
+  license: CC BY-SA 3.0
+tags: [somanathapura, keshava, hoysala, unesco, soapstone, vaishnava, karnataka]
+review: { status: draft, author: "gemini-4-hydrogen-xhigh" }

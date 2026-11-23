@@ -1,0 +1,58 @@
+id: text.mundaka-upanishad
+type: text
+kind: text
+names:
+  en: Mundaka Upanishad
+  iast: Muṇḍaka Upaniṣad
+  native: मुण्डकोपनिषद्
+summary: The Mundaka Upanishad distinguishes two kinds of knowledge and uses images such as two
+  birds on one tree to explore the self. Its precise place within the late Vedic verse texts is
+  uncertain.
+summaries:
+  kids: One bird eats fruit while another watches from the same tree. The Mundaka uses this picture to
+    help readers think about the self.
+  teen: The text distinguishes learning such as study of the Vedas from the higher knowledge by which
+    the imperishable is known. Later verses use images of an archer and of two birds.
+datings:
+  - method: linguistic
+    range:
+      earliest: "400 BCE"
+      latest: "1 BCE"
+      precision: century
+      circa: true
+    grade: C
+    label: "Patrick Olivelle: verse stratum"
+    sources:
+      - id: src.olivelle-1998-early-upanisads
+        locator: Introduction, Chronology
+      - id: src.cohen-2024-classical-upanisads
+        locator: Dating and Authorship
+    note: Olivelle tentatively puts the Mundaka last in his sequence of the five classical verse
+      Upanishads.
+claims:
+  - text: Angiras distinguishes higher knowledge, through which the imperishable is known, from lower
+      knowledge, which includes the four Vedas and their auxiliary disciplines.
+    grade: A
+    sources:
+      - id: src.olivelle-1998-early-upanisads
+        locator: Mundaka Upanisad 1.1.4-5
+  - text: The opening presents knowledge of brahman as a teaching passed from Brahma to Atharvan
+      and through a succession of teachers.
+    grade: D
+    sources:
+      - id: src.olivelle-1998-early-upanisads
+        locator: Mundaka Upanisad 1.1.1-3
+relations:
+  - kind: part-of
+    target: text.upanishads
+  - kind: related-to
+    target: text.atharvaveda
+debate: Signe Cohen, in Dating and Authorship, puts the Mundaka earlier than the Katha and
+  Shvetashvatara on linguistic and metrical grounds. Olivelle places it after both.
+tags:
+  - upanishad
+  - veda
+  - vedanta
+review:
+  status: draft
+  author: codex-gpt-6

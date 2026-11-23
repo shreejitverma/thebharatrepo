@@ -1,0 +1,44 @@
+id: concept.saha-ionisation-equation
+type: concept
+kind: science
+names:
+  en: Saha Ionisation Equation
+summary: The Saha equation relates the balance of successive ionisation states in a gas to its temperature and
+  electron density under equilibrium assumptions. Saha applied the underlying theory in 1920 to explain
+  features of the solar spectrum.
+summaries:
+  kids: Heat can make atoms lose electrons. Saha found a way to work out how many atoms in a hot gas would do that.
+  teen: The equation helps explain why spectral lines of the same element change with conditions in a star. It
+    relates the abundance of successive ionisation stages to temperature and electron density in equilibrium.
+datings:
+  - method: documentary
+    range:
+      earliest: 1920
+      latest: 1920
+      precision: year
+      circa: false
+    grade: A
+    label: Saha's paper on ionisation in the solar chromosphere
+    sources:
+      - src.saha-1920-ionization-solar-chromosphere
+claims:
+  - text: Saha’s paper applies an equilibrium treatment of thermal ionisation to the solar chromosphere.
+    grade: A
+    sources:
+      - src.saha-1920-ionization-solar-chromosphere
+  - text: The ionisation balance provides a physical explanation for changes in the relative strengths of lines
+      from different ionisation stages.
+    grade: B
+    sources:
+      - src.saha-1920-ionization-solar-chromosphere
+      - src.kothari-1960-meghnad-saha
+relations:
+  - kind: related-to
+    target: person.meghnad-saha
+tags:
+  - astrophysics
+  - equilibrium
+  - stellar-spectra
+review:
+  status: draft
+  author: codex-gpt-6

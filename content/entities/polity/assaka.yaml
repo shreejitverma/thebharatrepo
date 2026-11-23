@@ -1,0 +1,56 @@
+id: polity.assaka
+type: polity
+kind: polity
+names:
+  en: Assaka
+  iast: Aśmaka
+  native: अश्मक
+summary: Assaka was a realm of the Godavari valley and the southern entry in the Buddhist list of
+  sixteen great realms. Its literary capital, Potana, is conventionally identified with Bodhan, an
+  identification that remains provisional.
+summaries:
+  kids: Assaka lay near the Godavari River. Its old capital, Potana, may have been where Bodhan stands
+    today.
+  teen: Assaka links the Buddhist political geography of the sixteen realms with the Deccan. The
+    ancient name Potana can be placed on a map only provisionally.
+region: Godavari valley, Deccan
+location:
+  name: Bodhan (proposed identification of Potana)
+  lat: 18.67
+  lon: 77.89
+datings:
+  - method: textual-internal
+    range:
+      earliest: 600 BCE
+      latest: 350 BCE
+      precision: century
+      circa: true
+    grade: C
+    label: Mahajanapada period
+    sources:
+      - src.singh-2008-ancient-early-medieval-india
+      - src.thapar-2002-early-india
+      - id: src.bodhi-2012-numerical-discourses-buddha
+        locator: AN 8.42
+    note: Buddhist literary geography supplies the early historic context. It gives no secure absolute
+      dates for the realm's independence.
+claims:
+  - text: Early Indian sources place the Assaka of the Mahajanapada list in the Godavari valley.
+    grade: B
+    sources:
+      - src.singh-2008-ancient-early-medieval-india
+      - src.thapar-2002-early-india
+  - text: Potana or Potali is named in Buddhist literary tradition and commonly associated with modern
+      Bodhan.
+    grade: C
+    sources:
+      - src.singh-2008-ancient-early-medieval-india
+relations:
+  - kind: part-of
+    target: polity.sixteen-mahajanapadas
+    note: Listed among the great realms in the Anguttara Nikaya.
+tags:
+  - mahajanapadas
+review:
+  status: draft
+  author: codex-gpt-6

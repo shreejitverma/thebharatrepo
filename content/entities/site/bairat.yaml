@@ -1,0 +1,47 @@
+id: "site.bairat"
+type: "site"
+kind: "site"
+names:
+  en: "Bairat"
+summary: "Bairat, also called Viratnagar, preserves Ashokan inscriptions and Buddhist archaeological
+  remains. The Calcutta-Bairat edict addresses the Buddhist community and recommends specific
+  teachings for repeated study."
+summaries:
+  kids: "At Bairat, archaeologists found the remains of Buddhist buildings. A message from Ashoka
+    names teachings he wanted people to listen to and think about."
+  teen: "Ashoka's Calcutta-Bairat edict is unusual for its named Buddhist teachings and its address to
+    the monastic community. The site's excavated remains include a circular brick sanctuary."
+region: "Jaipur district, Rajasthan"
+datings:
+  - method: "epigraphic"
+    range:
+      earliest: "270 BCE"
+      latest: "230 BCE"
+      precision: "century"
+      circa: true
+    grade: "A"
+    label: "Ashokan inscriptions in the Mauryan period"
+    sources:
+      - id: "src.hultzsch-1925-inscriptions-of-asoka"
+        locator: "Bhabru Edict"
+claims:
+  - text: "The Calcutta-Bairat edict asks monks, nuns and lay followers to hear and reflect on a list of
+      teachings."
+    grade: "A"
+    sources:
+      - id: "src.hultzsch-1925-inscriptions-of-asoka"
+        locator: "Bhabru Edict"
+  - text: "Excavation on Bijak-ki-Pahari exposed remains interpreted as a circular sanctuary."
+    grade: "B"
+    sources:
+      - "src.singh-2008-ancient-early-medieval-india"
+relations:
+  - kind: "related-to"
+    target: "person.ashoka"
+tags:
+  - "rajasthan"
+  - "ashoka"
+  - "buddhism"
+review:
+  status: "draft"
+  author: "codex-gpt-6"

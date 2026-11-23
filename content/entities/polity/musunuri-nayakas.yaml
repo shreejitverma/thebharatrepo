@@ -1,0 +1,44 @@
+id: polity.musunuri-nayakas
+type: polity
+kind: polity
+names:
+  en: Musunuri Nayakas
+  iast: Musunūri Nāyaka
+  native: ముసునూరి నాయకులు
+summary: >-
+  The Musunuri Nayakas were a confederacy of Telugu warrior chiefs led by cousins Prolaya Nayaka and Kapaya Nayaka who expelled Delhi Sultanate garrisons from coastal Andhra and Telangana in the years following the fall of Warangal in 1323 CE. Attested in the Sanskrit Vilasa copper-plate grant of Prolaya Nayaka and Persian chronicles, Kapaya Nayaka retook Warangal around 1336 CE and ruled Telangana until his defeat and death in conflict with the Recherla Velamas and the Bahmani Sultanate around 1368-1370 CE.
+summaries:
+  kids: >-
+    After the Kakatiya kingdom fell in 1323 CE, warrior cousins Prolaya Nayaka and Kapaya Nayaka united local chiefs in Andhra and Telangana to win back Warangal.
+  teen: >-
+    Emerging in coastal Andhra in the 1320s, Prolaya and Kapaya Nayaka led a regional coalition that ended Delhi Sultanate control in Telangana and reclaimed Warangal, as recorded in the Vilasa copper-plate grant.
+region: Coastal Andhra and Telangana (Rajahmundry, Rekapalli, and Warangal)
+location: { name: "Warangal, Telangana", lat: 17.95, lon: 79.61 }
+datings:
+  - method: epigraphic
+    range: { earliest: "1325 CE", latest: "1368 CE", precision: decade, circa: true }
+    grade: B
+    label: Prolaya Nayaka's coastal revolt to Kapaya Nayaka's fall
+    sources:
+      - src.sircar-1958-epigraphia-indica-vol-32
+      - src.talbot-2001-precolonial-india-in-practice
+      - src.eaton-2013-power-memory-architecture
+    note: The Vilasa grant of Prolaya Nayaka (dated palaeographically to c. 1330 CE) and the Prolavaram/Kaluvacheru records document the liberation of the Andhra coast and Kapaya Nayaka's recapture of Warangal in 1336 CE; Recherla and Bahmani accounts place Kapaya's death around 1368-1370 CE.
+claims:
+  - text: "The Vilasa copper-plate grant of Prolaya Nayaka describes widespread disruption following the Tughluq conquest of Warangal and credits Prolaya with restoring traditional order and Brahmin grants along the Godavari."
+    grade: A
+    sources:
+      - src.sircar-1958-epigraphia-indica-vol-32
+      - src.talbot-1995-inscribing-the-other
+  - text: Kapaya Nayaka recaptured Warangal around 1336 CE, temporarily allied with Ala-ud-Din Bahman Shah against Muhammad bin Tughluq, and was later slain by Recherla Velama chiefs at Bhimavaram.
+    grade: B
+    sources:
+      - src.eaton-2013-power-memory-architecture
+      - src.sherwani-1953-bahmanis-of-deccan
+relations:
+  - { kind: related-to, target: polity.reddi-kingdom, note: Prolaya Vema Reddi fought alongside the Musunuri coalition }
+  - { kind: contemporary-of, target: polity.bahmani-sultanate }
+  - { kind: contemporary-of, target: polity.vijayanagara-empire }
+  - { kind: succeeded, target: polity.kakatiya-dynasty }
+tags: [musunuri, nayaka, andhra, telangana, warangal, vilasa-grant]
+review: { status: draft, author: "gemini-4-hydrogen-xhigh" }

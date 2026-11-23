@@ -1,0 +1,53 @@
+id: person.durlabhavardhana
+type: person
+kind: person
+names:
+  en: Durlabhavardhana
+  iast: Durlabhavardhana
+summary: Durlabhavardhana begins the Karkota succession in Kalhana's Rajatarangini. Chronological
+  reconstructions differ on his accession and on where the account of Xuanzang's visit fits.
+summaries:
+  kids: An old Kashmiri chronicle names Durlabhavardhana as the first Karkota king. Scholars compare
+    that account with other records to estimate when he lived.
+  teen: Kalhana supplies the succession, and Xuanzang supplies an external horizon for seventh-century
+    Kashmir. Scholars fit those sources together in different ways.
+region: Kashmir Valley
+datings:
+  - method: textual-internal
+    range:
+      earliest: "620"
+      latest: "665"
+      precision: decade
+      circa: true
+    grade: C
+    label: Conventional reconstruction from Kalhana's chronology
+    sources:
+      - src.stein-1900-rajatarangini
+      - src.singh-2008-ancient-early-medieval-india
+    note: The conventional reconstruction places the reign from the 620s into the 660s.
+  - method: textual-internal
+    range:
+      earliest: "600"
+      latest: "636"
+      precision: decade
+      circa: true
+    grade: C
+    label: Harald Hauptmann's reconstruction
+    sources:
+      - src.hauptmann-2024-lords-mountains
+    note: Hauptmann adopts an earlier accession placing the reign around 600 to 636 CE.
+claims:
+  - text: The Rajatarangini presents Durlabhavardhana as the beginning of the Karkota succession.
+    grade: C
+    sources:
+      - id: src.stein-1900-rajatarangini
+        locator: Book IV
+relations:
+  - kind: founded
+    target: polity.karkota-dynasty
+debate: Hauptmann dates the reign around 600 to 636, while the conventional sequence places it about
+  a generation later.
+tags: []
+review:
+  status: draft
+  author: codex-gpt-6

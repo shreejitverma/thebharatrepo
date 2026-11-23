@@ -1,0 +1,64 @@
+id: text.nyaya-sutras
+type: text
+kind: text
+names:
+  en: Nyaya Sutras
+  iast: Nyāyasūtra
+  native: न्यायसूत्र
+summary: The Nyaya Sutras investigate how people gain knowledge and conduct rational debate. The
+  Sanskrit work is traditionally attributed to Akshapada Gautama. The date of the received
+  compilation is debated.
+summaries:
+  kids: How can you tell whether an argument is sound? This book names ways to find things out and
+    mistakes people make when they argue.
+  teen: The Nyaya Sutras discuss reliable ways of knowing, the parts of an inference and errors in
+    debate. Short rules were passed down with commentaries that clarify their wording.
+datings:
+  - method: textual-internal
+    range:
+      earliest: 100
+      latest: 300
+      precision: century
+      circa: true
+    grade: C
+    label: "Matthew Dasti and Stephen Phillips: around 200 CE"
+    sources:
+      - src.dasti-2017-nyaya-sutra
+    note: Their translation places the foundational text around the second and third centuries.
+  - method: textual-internal
+    range:
+      earliest: 350
+      latest: 450
+      precision: century
+      circa: true
+    grade: C
+    label: "Karin Preisendanz: late fourth-century compilation"
+    sources:
+      - src.preisendanz-2005-nyayasutra-commentarial-tradition
+    note: Preisendanz places the compilation towards the end of the fourth century in her study of the
+      commentarial tradition.
+claims:
+  - text: The opening book counts perception, inference, comparison and testimony as four means of
+      knowledge.
+    grade: A
+    sources:
+      - id: src.dasti-2017-nyaya-sutra
+        locator: Nyaya Sutra 1.1.3
+  - text: The Sanskrit text is traditionally ascribed to Akshapada Gautama.
+    grade: D
+    sources:
+      - src.dasti-2017-nyaya-sutra
+      - src.preisendanz-2005-nyayasutra-commentarial-tradition
+relations:
+  - kind: related-to
+    target: text.vaisheshika-sutras
+debate: Early arguments and the compilation that received Vatsyayana’s commentary can have different
+  dates. Modern reconstructions differ on how early the surviving arrangement can be placed.
+tags:
+  - nyaya
+  - darshana
+  - logic
+  - epistemology
+review:
+  status: draft
+  author: codex-gpt-6

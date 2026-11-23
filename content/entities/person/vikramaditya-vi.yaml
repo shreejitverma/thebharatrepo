@@ -1,0 +1,43 @@
+id: person.vikramaditya-vi
+type: person
+kind: person
+names:
+  en: Vikramaditya VI
+  iast: Vikramāditya VI
+  native: ಆರನೆಯ ವಿಕ್ರಮಾದಿತ್ಯ
+summary: "Vikramaditya VI (Tribhuvanamalla, r. 1076 to 1126 CE) is often regarded as the most powerful ruler of the Western Chalukya dynasty of Kalyani. Ascending the throne after displacing his elder brother Someshvara II, he inaugurated the Chalukya Vikrama era in 1076 CE, maintained dominance across Karnataka, Maharashtra, and parts of Andhra against Chola and Hoysala pressure, and presided over a renowned intellectual court featuring the Kashmiri poet Bilhana and the jurist Vijnaneshvara."
+summaries:
+  kids: "Vikramaditya VI was one of the most powerful kings of the Kalyani Chalukyas. He ruled for fifty years, started his own calendar era in 1076 CE, and welcomed poets and law scholars to his court."
+  teen: >-
+    Ruling from Kalyani for half a century (1076 to 1126 CE), Vikramaditya VI launched the Chalukya Vikrama era and patronised Vijnaneshvara's Mitakshara law digest and Bilhana's Sanskrit biography Vikramankadevacharita.
+region: Deccan (capital Kalyani / Basavakalyan, Karnataka)
+location: { name: "Basavakalyan, Karnataka", lat: 17.87, lon: 76.95 }
+datings:
+  - method: epigraphic
+    range: { earliest: "1076 CE", latest: "1126 CE", precision: year, circa: false }
+    grade: A
+    label: Reign dated by Chalukya Vikrama era inscriptions
+    sources:
+      - src.yazdani-1960-early-history-deccan-part1
+      - src.salomon-1998-indian-epigraphy
+    note: Hundreds of Kannada and Sanskrit stone and copper-plate records date his fifty-year reign using the Chalukya Vikrama era reckoned from his coronation in 1076 CE.
+claims:
+  - text: "At his accession in 1076 CE, Vikramaditya VI introduced the Chalukya Vikrama era, which appears in official Chalukya records alongside the older Shaka era."
+    grade: A
+    sources:
+      - src.salomon-1998-indian-epigraphy
+      - src.yazdani-1960-early-history-deccan-part1
+  - text: The jurist Vijnaneshvara composed the Mitakshara, an authoritative Sanskrit commentary on the Yajnavalkya Smriti, at Kalyani during Vikramaditya VI's reign, praising both city and king.
+    grade: A
+    sources:
+      - src.yazdani-1960-early-history-deccan-part1
+      - src.sastri-1976-history-of-south-india
+  - text: He held off Chola expansion under Kulottunga I and checked early Hoysala assertions under Vishnuvardhana while patronising Shaiva, Vaishnava, and Jain temples including the Mahadeva temple at Itagi.
+    grade: B
+    sources:
+      - src.yazdani-1960-early-history-deccan-part1
+      - src.hardy-1995-indian-temple-architecture
+relations:
+  - { kind: ruled, target: polity.chalukya-dynasty-of-kalyani }
+tags: [vikramaditya-vi, kalyani-chalukya, mitakshara, chalukya-vikrama-era, karnataka]
+review: { status: draft, author: "gemini-4-hydrogen-xhigh" }

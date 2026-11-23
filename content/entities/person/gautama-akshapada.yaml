@@ -1,0 +1,44 @@
+id: person.gautama-akshapada
+type: person
+kind: person
+names:
+  en: Gautama Akshapada
+  iast: Gautama Akṣapāda
+  native: गौतम अक्षपाद
+summary: Gautama Akshapada is the author to whom tradition attributes the Nyaya Sutra, a
+  foundational text on knowledge, reasoning and debate. His dates are uncertain, and scholarship
+  chiefly dates the text.
+summaries:
+  kids: Gautama is the name linked to a book that teaches people how to test an argument and decide
+    what they have good reason to believe.
+  teen: "The Nyaya Sutra names four means of knowledge: perception, inference, comparison and
+    testimony. The sutras are traditionally associated with Akshapada Gautama, whose biography is
+    little known."
+datings:
+  - method: textual-internal
+    range:
+      earliest: "150 CE"
+      latest: "250 CE"
+      precision: century
+      circa: true
+    grade: C
+    label: Estimated floruit horizon associated with the Nyaya Sutra
+    sources:
+      - id: src.ganeri-2017-oxford-handbook-indian-philosophy
+        locator: "Timeline: Indian Philosophy in a Hundred Thinkers"
+      - src.dasti-2023-vatsyayana-commentary
+    note: Reflects the Oxford Handbook placement of the Nyaya Sutra attributed to Gautama Akshapada;
+      his personal life dates are unrecorded.
+claims:
+  - text: The Nyaya Sutra lists perception, inference, comparison and testimony as means of knowledge.
+    grade: A
+    sources:
+      - src.dasti-2023-vatsyayana-commentary
+relations: []
+tags:
+  - nyaya
+  - logic
+  - epistemology
+review:
+  status: draft
+  author: codex-gpt-6

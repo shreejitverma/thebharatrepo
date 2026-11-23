@@ -1,0 +1,55 @@
+id: polity.kashi
+type: polity
+kind: polity
+names:
+  en: Kashi
+  iast: Kāśī
+  native: काशी
+summary: Kashi was an early kingdom of the middle Ganga valley centred on Varanasi. Buddhist
+  accounts preserve memories of its rivalry with the neighbouring kingdom of Kosala.
+summaries:
+  kids: Kashi was a kingdom on the Ganga. Its main city was Varanasi, which is still a city today.
+  teen: Kashi's position on the middle Ganga put it among the competing kingdoms of the early historic
+    period. Buddhist texts remember a struggle between Kashi and Kosala.
+region: Middle Ganga valley, eastern Uttar Pradesh
+location:
+  name: Varanasi
+  lat: 25.31
+  lon: 83.01
+datings:
+  - method: scholarly-consensus
+    range:
+      earliest: 600 BCE
+      latest: 400 BCE
+      precision: century
+      circa: true
+    grade: B
+    label: Mahajanapada period to absorption by Kosala and Magadha
+    sources:
+      - src.bivar-1988-indus-lands
+      - src.singh-2008-ancient-early-medieval-india
+    note: This range places Kashi among the early historic states of the Ganga valley. Buddhist texts describe it under Kosalan control before Magadha absorbed the region, on dates that depend on the contested chronology of the Buddha.
+claims:
+  - text: The ancient kingdom centred on Varanasi in the middle Ganga valley.
+    grade: B
+    sources:
+      - src.bivar-1988-indus-lands
+      - src.singh-2008-ancient-early-medieval-india
+  - text: Buddhist literary traditions place Kashi in recurrent rivalry with Kosala and remember Kosalan
+      control of Kashi.
+    grade: C
+    sources:
+      - src.singh-2008-ancient-early-medieval-india
+      - src.thapar-2002-early-india
+relations:
+  - kind: part-of
+    target: polity.sixteen-mahajanapadas
+    note: Listed among the great realms in the Anguttara Nikaya.
+  - kind: related-to
+    target: polity.kosala
+    note: Buddhist texts associate their royal houses and record rivalry.
+tags:
+  - mahajanapadas
+review:
+  status: draft
+  author: codex-gpt-6

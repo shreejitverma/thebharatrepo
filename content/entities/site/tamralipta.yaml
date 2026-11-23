@@ -1,0 +1,48 @@
+id: site.tamralipta
+type: site
+kind: site
+names:
+  en: Tamralipta
+  iast: Tāmralipta
+  native: তাম্রলিপ্ত
+summary: "Tamralipta (modern Tamluk on the Rupnarayan River in Purba Medinipur, West Bengal) was a leading ancient maritime port of eastern India, linking the Gangetic plain with Sri Lanka, Southeast Asia and Indian Ocean trade networks. Attested by excavations, Greco-Roman geographies and Chinese pilgrims Faxian and Xuanzang, it flourished from the early historic period through roughly the eighth century CE."
+summaries:
+  kids: >-
+    Ancient Tamralipta, today's Tamluk in West Bengal, was a busy port where ships sailed between
+    India, Sri Lanka and Southeast Asia. The Chinese monk Faxian boarded a ship home from here.
+  teen: >-
+    Identified with Tamluk on the Rupnarayan River, Tamralipta served as the principal sea gateway of
+    eastern India from Mauryan to post-Gupta times, recorded in archaeological digs and in the travel
+    accounts of Faxian and Xuanzang.
+region: Purba Medinipur district, West Bengal
+location: { name: "Tamluk, Purba Medinipur, West Bengal", lat: 22.300, lon: 87.921 }
+datings:
+  - method: archaeological-stratigraphic
+    range: { earliest: "400 BCE", latest: 800, precision: century, circa: true }
+    grade: B
+    label: Early historic to early medieval port stratigraphy at Tamluk
+    sources:
+      - src.chattopadhyay-2018-archaeology-of-coastal-bengal
+      - src.sengupta-2007-eloquent-earth
+      - src.singh-2008-ancient-early-medieval-india
+    note: Excavations at Tamluk revealed an underlying Chalcolithic/Neolithic horizon followed by NBPW, Mauryan-Shunga terracotta, Rouletted Ware and Gupta levels before port decline in the 8th century CE.
+claims:
+  - text: The Chinese monk Faxian spent two years at Tamralipti around 409-411 CE copying sutras and painting images before embarking on a merchant vessel for Sri Lanka.
+    grade: A
+    sources:
+      - src.legge-1886-record-buddhistic-kingdoms
+  - text: Archaeological excavations at Tamluk uncovered Northern Black Polished Ware, Rouletted Ware, punch-marked and Kushan coins, and Shunga-period terracottas confirming long-distance maritime and riverine links.
+    grade: A
+    sources:
+      - src.chattopadhyay-2018-archaeology-of-coastal-bengal
+      - src.sengupta-2007-eloquent-earth
+  - text: Xuanzang described Tamralipti around 638 CE as a prosperous coastal kingdom and bay port.
+    grade: A
+    sources:
+      - src.beal-1906-si-yu-ki
+relations:
+  - { kind: related-to, target: event.faxian-travels }
+  - { kind: related-to, target: event.xuanzang-travels-in-india }
+wikidata: Q117731
+tags: [tamralipta, tamluk, port, maritime-trade, bengal, buddhism]
+review: { status: draft, author: "gemini-4-hydrogen-xhigh" }

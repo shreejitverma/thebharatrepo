@@ -1,0 +1,46 @@
+id: person.pandita-ramabai
+type: person
+kind: person
+names:
+  en: Pandita Ramabai
+  native: पंडिता रमाबाई
+summary: Pandita Ramabai was a Sanskrit scholar, writer and education reformer. She campaigned for
+  women’s education, established the Sharada Sadan and wrote The High-Caste Hindu Woman.
+summaries:
+  kids: Ramabai wrote about the difficulties girls and women faced. She started a school and home
+    where young women and widows could study.
+  teen: Ramabai connected women’s education with the circumstances of child widows. Her
+    English-language writing took this argument to an international audience, and the Sharada Sadan
+    put her educational ideas into practice.
+region: Western India
+datings:
+  - method: scholarly-consensus
+    range:
+      earliest: "1858"
+      latest: "1922"
+      precision: year
+      circa: false
+    grade: B
+    label: Documented lifespan
+    sources:
+      - src.kosambi-2004-tracing-the-voice
+      - src.bagchi-2020-gendered-social-capital
+claims:
+  - text: The Sharada Sadan provided education to Hindu widows.
+    grade: B
+    sources:
+      - src.kosambi-2004-tracing-the-voice
+      - src.bagchi-2020-gendered-social-capital
+  - text: Ramabai’s The High-Caste Hindu Woman examines the constraints of marriage and widowhood.
+    grade: B
+    sources:
+      - src.kosambi-2004-tracing-the-voice
+relations: []
+tags:
+  - education
+  - social-reform
+  - women
+  - marathi
+review:
+  status: draft
+  author: codex-gpt-6

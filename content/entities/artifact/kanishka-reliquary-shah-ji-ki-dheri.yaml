@@ -1,0 +1,93 @@
+id: artifact.kanishka-reliquary-shah-ji-ki-dheri
+type: artifact
+kind: art
+names:
+  en: Kanishka Casket
+  iast: Kaniṣka Dhātu Mañjūṣā (Śāh-jī-kī-Ḍherī)
+summary: >-
+  A gilded bronze (copper-alloy) cylindrical relic casket excavated by D. B. Spooner in 1908-1909 from the
+  relic chamber of the monumental stupa at Shah-ji-ki-Dheri near Peshawar (Peshawar Museum; electrotype
+  replica in the British Museum). Its Kharoshthi punctate inscriptions invoke "the vihara of Kanishka" and
+  name an overseer Agisala (often interpreted as Agesilaos).
+summaries:
+  kids: >-
+    Found deep under the ruins of a giant stupa in Peshawar in 1909, this golden-bronze relic box shows a
+    statue of the Kushan king Kanishka beneath a tiny Buddha and carries writing naming an artisan called
+    Agisala.
+  teen: >-
+    Unearthed at Shah-ji-ki-Dheri in 1908-1909, the Kanishka Reliquary portrays Emperor Kanishka flanked by
+    sun and moon deities below a small Buddha seated on the lid. Its Kharoshthi inscription names "Kanishka's
+    vihara" and "Agisala," sparking a long scholarly debate over Greek craftsmen and Kushan dates.
+region: Shah-ji-ki-Dheri, Peshawar, Khyber Pakhtunkhwa, Pakistan (housed in Peshawar Museum)
+location:
+  name: Shah-ji-ki-Dheri (Kanishka Stupa site), Peshawar
+  lat: 34
+  lon: 71.6
+datings:
+  - method: epigraphic
+    range:
+      earliest: 127
+      latest: 200
+      best: 150
+      precision: decade
+      circa: true
+    grade: B
+    label: Reign of Kanishka I or early post-Kanishka Kushan period
+    sources:
+      - src.konow-1929-kharoshthi-inscriptions-cii-2-1
+      - src.errington-cribb-1992-crossroads-of-asia
+    note: >-
+      Dated by association with the standing Kushan ruler identified in the Kharoshthi legend ("Kanishkapure"
+      / "Kanishkasa vihare"); Harry Falk and Joe Cribb place Kanishka's era at 127 CE, while some art
+      historians suggest a slightly later reign (e.g. Huvishka) for the casket style.
+claims:
+  - text: >-
+      D. B. Spooner excavated the casket in 1908-1909 beneath the cross-shaped base of the great stupa at
+      Shah-ji-ki-Dheri together with a six-sided crystal reliquary sealed by a clay seal bearing a standing
+      elephant and a copper coin of Kanishka.
+    grade: A
+    sources:
+      - src.marshall-1910-asi-annual-report-1908-09
+      - src.konow-1929-kharoshthi-inscriptions-cii-2-1
+  - text: >-
+      The lid bears a three-dimensional seated Buddha flanked by Brahma and Indra above a frieze of flying
+      geese (hamsas); the cylindrical body shows a standing crowned Kushan king between sun and moon deities
+      and garland-bearing cherubs.
+    grade: A
+    sources:
+      - src.marshall-1910-asi-annual-report-1908-09
+      - src.errington-cribb-1992-crossroads-of-asia
+  - text: >-
+      Sten Konow read the four dotted Kharoshthi lines as "the gift of the slave Agisala, architect in
+      Kanishka's vihara, in Mahasena's sangharama," identifying Agisala with the Greek name Agesilaos;
+      alternative readings (e.g. Prudence Myer reading "agnisala" fire-hall) remain debated.
+    grade: B
+    sources:
+      - src.konow-1929-kharoshthi-inscriptions-cii-2-1
+      - src.errington-cribb-1992-crossroads-of-asia
+relations:
+  - kind: related-to
+    target: person.kanishka-i
+  - kind: part-of
+    target: polity.kushan-empire
+  - kind: part-of
+    target: tradition.gandhara-art
+  - kind: related-to
+    target: artifact.rabatak-inscription
+    note: Epigraphic anchor for Kanishka I's era and royal ideology
+wikidata: Q3695467
+image:
+  commons: File:Kanishka casket, Asia, G33 South Asia.jpg
+  alt: British Museum electrotype replica of the gilded Kanishka reliquary excavated at Shah-ji-ki-Dheri
+  credit: Anthony Huan
+  license: CC BY-SA 2.0
+tags:
+  - reliquary
+  - kushan
+  - kanishka
+  - kharoshthi
+  - gandhara
+  - peshawar
+review:
+  status: draft
+  author: gemini-4-hydrogen-xhigh

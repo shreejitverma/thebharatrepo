@@ -1,0 +1,45 @@
+id: text.pattuppattu
+type: text
+kind: text
+names:
+  en: Pattuppattu (The Ten Long Poems)
+  iast: Pattuppāṭṭu
+  native: பத்துப்பாட்டு
+summary: >-
+  The Pattuppattu ("Ten Idylls" or "Ten Long Poems") is the second major division of the classical Sangam Tamil corpus alongside the Ettuttokai. Ranging from 103 to 782 lines each, its ten poems combine five "guide poems" (arruppatai) with court panegyrics and akam-puram narratives such as Pattinappalai (on the Chola port of Puhar), Maturaikkanci (on Pandya Madurai), and Mullaippattu, mostly dated from the 2nd to 5th centuries CE.
+summaries:
+  kids: >-
+    Pattuppattu means "Ten Songs" - ten longer ancient Tamil poems describing busy seaports like Poompuhar, lively markets in Madurai, mountain journeys, and royal courts.
+  teen: >-
+    Unlike the short lyrics of the Ettuttokai, the ten long poems of the Pattuppattu give vivid panoramic views of early Tamil cities, ports, forests, and courts, including the devotional Tirumurukarruppatai.
+region: Tamilakam (Tamil Nadu and Kerala)
+datings:
+  - method: textual-internal
+    range: { earliest: "150 CE", latest: "500 CE", precision: century, circa: true }
+    grade: C
+    label: Mainstream philological dating of the ten poems (Zvelebil, Wilden)
+    sources:
+      - src.zvelebil-1973-smile-of-murugan
+      - src.wilden-2014-manuscript-print-memory
+      - src.chelliah-1946-pattupattu
+    note: Nine of the poems reflect late Sangam poetic conventions (c. 2nd to 4th century CE), while Tirumurukarruppatai by Nakkirar is generally placed around the 5th to 6th century CE as a bridge to early Tamil bhakti.
+claims:
+  - text: The ten poems are Tirumurukarruppatai, Porunararruppatai, Cirupanarruppatai, Perumpanarruppatai, Mullaippattu, Maturaikkanci, Netunalvatai, Kurincippattu, Pattinappalai, and Malaipatukatam, totaling 3,552 lines.
+    grade: A
+    sources:
+      - src.zvelebil-1973-smile-of-murugan
+      - src.chelliah-1946-pattupattu
+  - text: Five poems follow the arruppatai convention in which a bard or devotee directs a fellow traveller toward a generous patron or, in Tirumurukarruppatai, toward the shrines of Murugan.
+    grade: A
+    sources:
+      - src.zvelebil-1973-smile-of-murugan
+      - src.ramanujan-1985-poems-love-war
+  - text: Pattinappalai by Uruttirankannanar offers a detailed contemporary literary picture of overseas trade, customs warehouses, and neighbourhoods at Kaveripattinam under Karikala Chola.
+    grade: B
+    sources:
+      - src.champakalakshmi-1996-trade-ideology-urbanization
+      - src.chelliah-1946-pattupattu
+relations:
+  - { kind: part-of, target: text.sangam-literature }
+tags: [pattuppattu, sangam, tamil-literature, pattinappalai, maturaikkanci]
+review: { status: draft, author: "gemini-4-hydrogen-xhigh" }

@@ -1,0 +1,46 @@
+id: text.ganita-kaumudi
+type: text
+kind: science
+names:
+  en: Ganita Kaumudi
+  iast: Gaṇitakaumudī
+  native: गणितकौमुदी
+summary: Completed by Narayana Pandita in 1356, the Ganita Kaumudi is a Sanskrit work on arithmetic that also
+  treats integer factorization, combinatorics and magic squares.
+summaries:
+  kids: This book teaches arithmetic and shows how to fill squares with numbers that make matching sums.
+  teen: The Ganita Kaumudi develops familiar arithmetic subjects and adds extensive material on combinations and
+    magic squares. Its final verse records its completion date.
+datings:
+  - method: textual-internal
+    range:
+      earliest: 1356
+      latest: 1356
+      precision: year
+      circa: false
+    grade: A
+    label: Author’s date in the final verse
+    sources:
+      - id: src.plofker-2009-mathematics-in-india
+        locator: Section 6.3.1
+claims:
+  - text: The final chapter discusses ways of constructing magic squares.
+    grade: A
+    sources:
+      - id: src.plofker-2009-mathematics-in-india
+        locator: Section 6.3.1
+  - text: The work includes procedures for factoring integers and for decomposing one into sums of unit fractions.
+    grade: A
+    sources:
+      - id: src.plofker-2009-mathematics-in-india
+        locator: Section 6.3.1
+relations:
+  - kind: related-to
+    target: text.lilavati
+tags:
+  - arithmetic
+  - combinatorics
+  - magic-squares
+review:
+  status: draft
+  author: codex-gpt-6

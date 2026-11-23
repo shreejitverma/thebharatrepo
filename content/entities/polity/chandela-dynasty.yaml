@@ -1,0 +1,55 @@
+id: polity.chandela-dynasty
+type: polity
+kind: polity
+names:
+  en: Chandela Dynasty
+  iast: Candela
+summary: The Chandelas ruled Jejakabhukti in Bundelkhand, with a major fortified seat at Kalinjar
+  and a temple centre at Khajuraho. The inscriptions of Khajuraho preserve a royal genealogy and
+  details of patronage.
+summaries:
+  kids: The Chandelas held the hill fort of Kalinjar. Their kings also helped build temples at
+    Khajuraho, where inscriptions still tell parts of their story.
+  teen: The royal inscriptions at Khajuraho give names and dates for some Chandela rulers. Their
+    stronghold at Kalinjar played a different role from Khajuraho's temple complex.
+region: Jejakabhukti, present-day Bundelkhand
+location:
+  name: Kalinjar Fort (a royal stronghold)
+  lat: 24.99
+  lon: 80.48
+datings:
+  - method: scholarly-consensus
+    range:
+      earliest: "825"
+      latest: "1320"
+      precision: decade
+      circa: true
+    grade: B
+    label: Period of rule
+    sources:
+      - src.singh-2008-ancient-early-medieval-india
+      - src.jackson-1999-delhi-sultanate
+      - src.burgess-1892-epigraphia-indica-vol-1
+    note: The range begins with the early dynasty reconstructed from later inscriptions and extends into
+      the period of reduced Chandela power.
+claims:
+  - text: The Lakshmana temple inscription at Khajuraho, dated Vikrama year 1011 (953-955 CE), names Nannuka in the lineage and credits
+      Yashovarman with the Vishnu temple.
+    grade: A
+    sources:
+      - src.burgess-1892-epigraphia-indica-vol-1
+  - text: Kalinjar was a principal stronghold of the Chandela kingdom in Jejakabhukti.
+    grade: B
+    sources:
+      - src.singh-2008-ancient-early-medieval-india
+      - src.jackson-1999-delhi-sultanate
+relations:
+  - kind: related-to
+    target: site.khajuraho
+  - kind: related-to
+    target: polity.gurjara-pratihara-dynasty
+    note: Chandela power first developed in a region of Pratihara influence.
+tags: []
+review:
+  status: draft
+  author: codex-gpt-6

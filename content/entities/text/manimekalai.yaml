@@ -1,0 +1,39 @@
+id: text.manimekalai
+type: text
+kind: text
+names:
+  en: Manimekalai
+  iast: Maṇimēkalai
+  native: மணிமேகலை
+summary: >-
+  The Manimekalai, attributed to the Madurai poet Chithalai Chathanar (Cattanar), is one of the Five Great Epics of Tamil literature and the only surviving full-length Tamil Buddhist kavya. Sequel to the Silappatikaram, it follows Manimekalai, daughter of Kovalan and the courtesan Madhavi, as she renounces courtly life, debates rival philosophical schools in Vanci and Kanchipuram, and adopts Buddhist monasticism; scholars usually date it to the 6th century CE.
+summaries:
+  kids: >-
+    Manimekalai is an ancient Tamil Buddhist story poem about a young woman who leaves behind wealth and fame to feed the hungry, debate wise teachers, and become a Buddhist nun.
+  teen: >-
+    Sequel to the Silappatikaram, Chathanar's 6th-century CE Buddhist epic Manimekalai sends its heroine through Puhar, Vanci, and Kanchipuram to engage with Nyaya logic, Samkhya, Jainism, and Mahayana-inflected Buddhism.
+region: Tamilakam (Puhar, Vanci, and Kanchipuram)
+datings:
+  - method: linguistic
+    range: { earliest: "500 CE", latest: "650 CE", best: "550 CE", precision: century, circa: true }
+    grade: C
+    label: Mainstream philological dating (Zvelebil, Monius)
+    sources:
+      - src.monius-2001-imagining-place-for-buddhism
+      - src.zvelebil-1973-smile-of-murugan
+    note: Dated to the 6th century CE (slightly later than or overlapping with Silappatikaram) based on its Tamil prose-verse idioms, knowledge of Dignaga's Buddhist logic in Cantos 27 and 29, and Pallava-era references to Kanchipuram.
+claims:
+  - text: Canto 29 of the Manimekalai presents an extended exposition of Buddhist epistemology and logic (pramana and hetu) closely linked to fifth- and sixth-century developments associated with Dignaga.
+    grade: B
+    sources:
+      - src.monius-2001-imagining-place-for-buddhism
+      - src.zvelebil-1973-smile-of-murugan
+  - text: In Canto 27, the heroine visits Vanci to question representatives of ten rival philosophical and religious traditions, including Lokayata, Mimamsa, Samkhya, Vaisheshika, and Jainism, before receiving final instruction at Kanchipuram.
+    grade: A
+    sources:
+      - src.monius-2001-imagining-place-for-buddhism
+relations:
+  - { kind: related-to, target: text.silappatikaram, note: Twin Tamil epic }
+  - { kind: related-to, target: text.tirukkural, note: Quotes the Tirukkural }
+tags: [manimekalai, tamil-epic, buddhism, kanchipuram, logic]
+review: { status: draft, author: "gemini-4-hydrogen-xhigh" }

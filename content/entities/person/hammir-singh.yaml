@@ -1,0 +1,43 @@
+id: person.hammir-singh
+type: person
+kind: person
+names:
+  en: Hammir Singh of Mewar
+summary: Hammir Singh established Sisodia authority at Chittor in the fourteenth century. His reign
+  marks an important stage in the longer history of the Mewar polity and the Guhila line.
+summaries:
+  kids: Hammir was an early Sisodia ruler of Mewar. The hill fort of Chittor became a centre of his
+    family again.
+  teen: Mewar existed before Hammir. His claim to Chittor re-established the power of a Guhila branch
+    that became identified with the Sisodias.
+region: Mewar, southern Rajasthan
+location:
+  name: Chittor Fort
+  lat: 24.89
+  lon: 74.65
+datings:
+  - method: scholarly-consensus
+    range:
+      earliest: "1320"
+      latest: "1370"
+      precision: decade
+      circa: true
+    grade: B
+    label: Reign or recorded political activity
+    sources:
+      - src.kapur-2002-state-formation-rajasthan
+      - src.unesco-2013-hill-forts-rajasthan
+    note: The interval brackets the conventional fourteenth-century placement of the reign.
+claims:
+  - text: Mewar's Sisodia phase at Chittor is associated with Hammir's rise.
+    grade: B
+    sources:
+      - src.kapur-2002-state-formation-rajasthan
+      - src.unesco-2013-hill-forts-rajasthan
+relations:
+  - kind: ruled
+    target: polity.mewar
+tags: []
+review:
+  status: draft
+  author: codex-gpt-6

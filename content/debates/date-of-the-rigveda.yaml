@@ -152,14 +152,14 @@ positions:
     proponents:
       - name: Vishnu Purana and orthodox sampradaya tradition
         role: Attributes the fourfold arrangement to Vyasa in the twenty-eighth Dvapara
-        work: { id: src.taylor-2021-vishnu-purana, locator: "Book 3, chs. 3-4" }
+        work: { id: src.taylor-2021-visnu-purana, locator: "Book 3, chs. 3-4" }
     evidence:
       - text: >-
           The Vishnu Purana identifies Krishna Dvaipayana Vyasa in the twenty-eighth
           Dvapara age as dividing the eternal Veda and assigning the Rigveda to Paila.
         grade: D
         sources:
-          - { id: src.taylor-2021-vishnu-purana, locator: "Book 3, chs. 3-4" }
+          - { id: src.taylor-2021-visnu-purana, locator: "Book 3, chs. 3-4" }
           - { id: src.flood-2003-blackwell-companion-hinduism, locator: "ch. 3, Witzel, Vedas and Upanisads, pp. 68-101" }
     objections:
       - >-

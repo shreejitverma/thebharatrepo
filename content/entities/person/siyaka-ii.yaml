@@ -1,0 +1,40 @@
+id: person.siyaka-ii
+type: person
+kind: person
+names:
+  en: Siyaka II
+  iast: Sīyaka
+summary: Siyaka II was an early securely attested Paramara ruler. His career marks a transition from
+  association with the Rashtrakutas to a more independent Malwa kingdom.
+summaries:
+  kids: Siyaka ruled in Malwa. Copper records from his time help historians learn when his family grew
+    more powerful.
+  teen: Siyaka's earlier predecessors are less securely dated. Early grants and the later account of
+    his challenge to Rashtrakuta power anchor the history of his own reign.
+region: Malwa
+datings:
+  - method: scholarly-consensus
+    range:
+      earliest: "945"
+      latest: "980"
+      precision: decade
+      circa: true
+    grade: B
+    label: Reign or recorded political activity
+    sources:
+      - src.singh-2008-ancient-early-medieval-india
+      - src.thapar-2002-early-india
+    note: The date bracket includes the Harsola grant and the later campaigns attributed to him.
+claims:
+  - text: Siyaka II challenged Rashtrakuta authority during the latter part of the tenth century.
+    grade: B
+    sources:
+      - src.singh-2008-ancient-early-medieval-india
+      - src.thapar-2002-early-india
+relations:
+  - kind: ruled
+    target: polity.paramara-dynasty
+tags: []
+review:
+  status: draft
+  author: codex-gpt-6

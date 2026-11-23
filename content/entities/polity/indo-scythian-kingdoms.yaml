@@ -1,0 +1,68 @@
+id: polity.indo-scythian-kingdoms
+type: polity
+kind: polity
+names:
+  en: Indo-Scythian Kingdoms
+summary: Saka rulers including Maues and Azes established power in the northwestern subcontinent,
+  where their coin issues overlapped with those of late Indo-Greek rulers. The ordering of issues
+  and conversion of the Azes era remain central to debates about their chronology.
+summaries:
+  kids: The Saka kings in the northwest left coins with their names. Comparing those coins helps
+    historians work out the order of the kings.
+  teen: Indo-Scythian rule encompassed overlapping kings and satraps. Overstruck coins help establish
+    relative order, and epigraphic synchronisms help test the era once identified with the Vikrama
+    era.
+region: Gandhara, Taxila and the northwestern subcontinent
+location:
+  name: Taxila (northwestern political centre)
+  lat: 33.74
+  lon: 72.82
+datings:
+  - method: numismatic
+    range:
+      earliest: 120 BCE
+      latest: "50"
+      precision: decade
+      circa: true
+    grade: C
+    label: Robert C. Senior's numismatic reconstruction of northwestern rule
+    sources:
+      - src.senior-2005-indo-scythian-dynasty
+    note: Coin sequences place Maues at the beginning of this reconstruction. Regional satrapal issues
+      continued after the principal royal line.
+  - method: epigraphic
+    range:
+      earliest: 58 BCE
+      latest: 56 BCE
+      precision: year
+      circa: true
+    grade: C
+    label: Older identification of the Azes and Vikrama eras
+    sources:
+      - src.bivar-2002-gondophares
+    note: Bivar used an epoch in the late 50s BCE to convert era dates.
+claims:
+  - text: Coins issued in the name of Maues employ Greek and Kharoshthi legends and royal titles.
+    grade: A
+    sources:
+      - src.senior-2005-indo-scythian-dynasty
+  - text: Overstrikes and bilingual legends are important evidence for the relationships between
+      Indo-Greek and Indo-Scythian issues.
+    grade: B
+    sources:
+      - src.senior-2005-indo-scythian-dynasty
+      - src.singh-2008-ancient-early-medieval-india
+  - text: Harry Falk and Chris Bennett place the epoch of the Azes era in 48-46 BCE, reading the intercalary month on a reliquary inscription with a system of Macedonian calendar intercalation.
+    grade: B
+    sources:
+      - src.falk-2009-era-of-azes
+relations:
+  - kind: related-to
+    target: polity.indo-greek-kingdom
+debate: Bivar used the older equation of the Azes era with the Vikrama era. Falk and Bennett argue
+  from a newly studied intercalary date for an epoch around 48 to 46 BCE. The choice affects how
+  several inscriptions are dated.
+tags: []
+review:
+  status: draft
+  author: codex-gpt-6

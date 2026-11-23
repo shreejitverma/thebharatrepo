@@ -84,12 +84,12 @@ The loader rejects raw negative years in datings; write BCE years as `"N BCE"` s
 
 ## Quality gates
 
-`.github/workflows/ci.yml` runs on every pull request and on `main`, as three parallel jobs on GitHub-hosted Ubuntu runners:
+`.github/workflows/ci.yml` runs on every pull request and on `main`, as parallel jobs on GitHub-hosted Ubuntu runners:
 
 | Job | What fails it |
 |---|---|
 | verify | ESLint, `tsc --noEmit`, Vitest, `content:validate`, the offline source verification gate |
-| e2e | The production build with the e2e fixture draft (`npm run build:e2e`), then Playwright on desktop Chromium, Firefox and WebKit and on Pixel 7 and iPhone 14 profiles: every route type in light and dark with zero serious or critical axe violations and no horizontal scroll, navigation, Kaalchakra zoom, lenses, kind filters, URL state round trips, the wheel's spin (click, era tap, drag, touch swipe, keyboard, scroll with intent, Back and Forward, one announcement at rest, reduced motion), the List fallback (including reduced motion making List the default) and visual snapshots of the Wheel and River (Chromium projects) |
+| e2e | One job per Playwright project (desktop Chromium, Firefox and WebKit, Pixel 7, iPhone 14, and the two debates preview projects), each running the production build with the e2e fixture draft (`npm run build:e2e`) and then its project: every route type in light and dark with zero serious or critical axe violations and no horizontal scroll, navigation, Kaalchakra zoom, lenses, kind filters, URL state round trips, the wheel's spin (click, era tap, drag, touch swipe, keyboard, scroll with intent, Back and Forward, one announcement at rest, reduced motion), the List fallback (including reduced motion making List the default), the never-ship-drafts rule (the fixture draft is in the build and unreachable) and visual snapshots of the Wheel and River (Chromium projects) |
 | lighthouse | The production build, then Lighthouse CI on a throttled mid-tier Android profile, with the budgets below as hard gates |
 
 Performance budgets (`lighthouserc.js`, median of three runs, Moto G Power class phone, simulated slow 4G, 4x CPU):
@@ -132,7 +132,11 @@ On Vercel this is served because the Next.js builder collects `public/` only aft
 Content-hashed chunks (`/pagefind/{index,filter,fragment}/`) are served as immutable (`next.config.ts`); `pagefind.js` and `pagefind-entry.json` keep the default revalidation.
 Pages declare what is indexed with `data-pagefind-body` and `data-pagefind-ignore`, and their filters (kind, article category, evidence grade, lens) through `src/components/SearchIndexMeta.tsx`.
 `/search` keeps its `?q=` contract and adds repeatable `kind`, `category`, `grade` and `lens` parameters (`src/lib/search/facets.ts`).
-Ranking lowers Pagefind's page-length penalty to 0.25 and puts an exact title match first (`src/lib/search/pagefind.ts`), so a name query finds its record before the shorter bibliography entries that mention it.
+Ranking lowers Pagefind's page-length penalty to 0.25 (`src/lib/search/pagefind.ts`), and a record whose title or alternate name is exactly the query goes first, so a name query finds its record before the shorter pages that mention the name in their own titles.
+Each page carries a hidden `exact` Pagefind filter: a 32-bit hash of its normalised title and of each alternate name (an entity's `names.iast` and `names.alternates`, a debate's `alternates`), normalised by `exactKey` in `src/lib/search/normalise.ts` (lowercase, diacritics folded, punctuation stripped, whitespace collapsed, a leading "The" dropped), so "asoka" and "aśoka" both find Ashoka and "date of the buddha" finds the debate The date of the Buddha.
+A debate's positions, common ground, what would change it and related records are indexed at Pagefind weight 0.5, so a debate that names a person in every line does not outrank that person's record for a name query.
+Search looks the query's hash up in that filter alongside the main search and fetches the hits' fragments with the first batch; the filter is not a facet and never appears in the filter panel or its counts.
+Hashes keep the filter index small (21.5 KB compressed for 2,822 names, against 48.9 KB as text), and `scripts/build-search.ts` fails the build if a page's hashes do not match its title and names or two names share a hash.
 `npm run dev` serves the index from the last production build; run `npm run build` once before testing search locally.
 
 ## References

@@ -1,0 +1,41 @@
+id: event.battle-of-colachel
+type: event
+kind: event
+names:
+  en: Battle of Colachel (1741)
+  native: കുളച്ചൽ യുദ്ധം (1741)
+summary: "The Battle of Colachel, fought on 10 August 1741 CE at the coastal port of Colachel in present-day Kanyakumari district, was a decisive victory by King Marthanda Varma's Travancore forces over a Dutch East India Company (VOC) expeditionary force. Alarmed by Travancore's conquest of pepper-producing Desinganadu and Kayamkulam, the Dutch attempted to force Travancore into spice-trade submission, but their garrison surrendered after siege and loss of supplies, effectively ending Dutch territorial ambitions in Kerala."
+summaries:
+  kids: >-
+    At Colachel in 1741 CE, King Marthanda Varma's Travancore army surrounded and defeated Dutch soldiers, stopping the Dutch from controlling southern Kerala's pepper trade.
+  teen: >-
+    In August 1741 CE, Travancore forces cut off and captured the Dutch East India Company landing force at Colachel, breaking Dutch political hegemony in Malabar and leading to the 1753 Treaty of Mavelikkara.
+region: Colachel, Kanyakumari District, Tamil Nadu (historic Travancore)
+location: { name: "Colachel, Tamil Nadu", lat: 8.17, lon: 77.25 }
+datings:
+  - method: documentary
+    range: { earliest: "1741 CE", latest: "1741 CE", precision: day, circa: false }
+    grade: A
+    label: Dutch VOC and Travancore palace records (August 1741 CE)
+    sources:
+      - src.koshy-1989-dutch-power-in-kerala
+      - src.lannoy-1997-kulasekhara-perumals-travancore
+      - src.panikkar-1929-malabar-and-the-dutch
+    note: Dated by Dutch East India Company dispatches from Cochin and Travancore chronicles to 10 August 1741 CE (NS).
+claims:
+  - text: Travancore forces surrounded the Dutch fort at Colachel, sank or drove off relief supplies, and forced the Dutch garrison to surrender after their powder store caught fire.
+    grade: B
+    sources:
+      - src.koshy-1989-dutch-power-in-kerala
+      - src.lannoy-1997-kulasekhara-perumals-travancore
+  - text: Captured Dutch officers including Eustachius De Lannoy entered Marthanda Varma's service to modernize Travancore's army, and the VOC abandoned intervention in Malabar politics under the 1753 Treaty of Mavelikkara.
+    grade: A
+    sources:
+      - src.panikkar-1929-malabar-and-the-dutch
+      - src.koshy-1989-dutch-power-in-kerala
+relations:
+  - { kind: related-to, target: polity.kingdom-of-travancore }
+  - { kind: related-to, target: person.marthanda-varma, note: "Travancore forces commanded by Marthanda Varma" }
+wikidata: Q2663849
+tags: [colachel, travancore, marthanda-varma, dutch-east-india-company, kerala]
+review: { status: draft, author: "gemini-4-hydrogen-xhigh" }

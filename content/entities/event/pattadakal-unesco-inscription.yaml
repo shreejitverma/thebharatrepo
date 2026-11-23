@@ -1,0 +1,29 @@
+id: event.pattadakal-unesco-inscription
+type: event
+kind: site
+names:
+  en: "Monuments at Pattadakal inscribed on the World Heritage List"
+summary: "The World Heritage Committee inscribed the Group of Monuments at Pattadakal in 1987. UNESCO highlights the blend of northern and southern Indian architectural forms in this Chalukya temple complex."
+summaries:
+  kids: "Pattadakal joined the World Heritage List in 1987. The group includes Hindu temples and a Jain shrine."
+  teen: "The 1987 inscription recognises Pattadakal's Chalukya monuments and their combination of architectural forms from northern and southern India. The listed group includes the Virupaksha temple."
+region: "Pattadakal, Karnataka"
+datings:
+  - method: documentary
+    range: { earliest: "1987", latest: "1987", precision: year, circa: false }
+    grade: A
+    label: "World Heritage inscription"
+    sources: ["src.unesco-1987-pattadakal"]
+    note: "UNESCO records Pattadakal's inscription in 1987."
+claims:
+  - text: "The Committee inscribed the Group of Monuments at Pattadakal in 1987."
+    grade: A
+    sources: ["src.unesco-1987-pattadakal"]
+  - text: "UNESCO describes the group as including nine Hindu temples and a Jain sanctuary."
+    grade: A
+    sources: ["src.unesco-1987-pattadakal"]
+relations:
+  - kind: related-to
+    target: site.pattadakal
+tags: ["republic","unesco","heritage"]
+review: { status: draft, author: codex-gpt-6 }

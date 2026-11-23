@@ -1,0 +1,56 @@
+id: text.lotus-sutra
+type: text
+kind: text
+names:
+  en: Lotus Sutra
+  iast: Saddharmapuṇḍarīkasūtra
+  native: सद्धर्मपुण्डरीकसूत्र
+summary: The Lotus Sutra is a Mahayana Buddhist scripture on the one vehicle to buddhahood and the
+  Buddha’s long lifespan. The text accumulated in stages. Chinese translations record its
+  circulation by the third century CE.
+summaries:
+  kids: In one story, a father uses promises to lead his children out of a burning house. The sutra
+    uses stories like this to show how teachers adapt to their listeners.
+  teen: The Lotus Sutra uses parables to discuss skilful means and presents apparently separate
+    teachings as leading toward buddhahood. Its Chinese translations shaped its reception in East
+    Asia.
+datings:
+  - method: textual-internal
+    range:
+      earliest: 1
+      latest: 250
+      precision: century
+      circa: true
+    grade: C
+    label: Early Mahayana formation in South Asia
+    sources:
+      - src.lopez-2016-lotus-sutra
+      - src.williams-2009-mahayana-buddhism
+    note: The range concerns the growth of the Indian text before its surviving third-century Chinese
+      translation. Individual chapters need separate dating.
+claims:
+  - text: The parable of the burning house illustrates how the Buddha adapts his teaching to his
+      listeners.
+    grade: B
+    sources:
+      - src.lopez-2016-lotus-sutra
+      - src.williams-2009-mahayana-buddhism
+  - text: Kumarajiva’s 406 CE translation became particularly influential in East Asia.
+    grade: B
+    sources:
+      - src.lopez-2016-lotus-sutra
+  - text: Dharmaraksha’s Chinese translation of 286 CE is a dated witness for the form of the text
+      known to him.
+    grade: B
+    sources:
+      - src.lopez-2016-lotus-sutra
+relations:
+  - kind: related-to
+    target: person.gautama-buddha
+tags:
+  - buddhism
+  - mahayana
+  - sutra
+review:
+  status: draft
+  author: codex-gpt-6

@@ -1,0 +1,45 @@
+id: person.mahavira-mathematician
+type: person
+kind: science
+names:
+  en: Mahavira (mathematician)
+  iast: Mahāvīra
+  native: महावीर
+summary: Mahavira was a Jain mathematician whose Ganitasarasangraha belongs to the reign of the Rashtrakuta
+  king Amoghavarsha I. The surviving work provides much of the evidence for his scholarly activity.
+summaries:
+  kids: Mahavira wrote a book of math rules and puzzles about sharing, measuring and counting.
+  teen: Mahavira’s ninth-century treatise gives arithmetic and geometry an independent format. Praise of
+    Amoghavarsha I supplies a historical anchor.
+region: Rashtrakuta Deccan
+datings:
+  - method: textual-internal
+    range:
+      earliest: 814
+      latest: 878
+      precision: decade
+      circa: true
+    grade: B
+    label: Amoghavarsha I’s reign
+    sources:
+      - src.rangacharya-1912-ganita-sara-sangraha
+      - id: src.plofker-2009-mathematics-in-india
+        locator: Section 5.3
+    note: The work praises Amoghavarsha. The range dates the known activity within the reign.
+claims:
+  - text: His Ganitasarasangraha gives rules for practical calculations and includes methods for counting
+      combinations.
+    grade: A
+    sources:
+      - src.rangacharya-1912-ganita-sara-sangraha
+      - id: src.plofker-2009-mathematics-in-india
+        locator: Section 5.3
+relations:
+  - kind: authored
+    target: text.ganitasarasangraha
+tags:
+  - jain-mathematics
+  - arithmetic
+review:
+  status: draft
+  author: codex-gpt-6

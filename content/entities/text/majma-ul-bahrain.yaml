@@ -1,0 +1,54 @@
+id: text.majma-ul-bahrain
+type: text
+kind: text
+names:
+  en: Majma-ul-Bahrain
+  native: مجمع البحرین
+summary: The Majma-ul-Bahrain is a Persian treatise by the Mughal prince Dara Shikoh. Its title
+  means the Mingling of the Two Oceans, and its sections compare concepts from Sufi and Indian
+  religious vocabularies.
+summaries:
+  kids: Dara Shikoh wrote a Persian book about ideas that Hindu and Muslim teachers used. He called it
+    the Mingling of the Two Oceans.
+  teen: Dara Shikoh compares Sufi and Indian accounts of subjects such as the soul and liberation. The
+    text belongs to the intellectual setting of the Mughal court and to Dara’s own search for common
+    terms.
+region: Mughal India
+datings:
+  - method: documentary
+    range:
+      earliest: "1654"
+      latest: "1655"
+      precision: year
+      circa: true
+    grade: B
+    label: Completion in the mid-1650s
+    sources:
+      - src.shikoh-1929-majma-ul-bahrain
+      - src.gandhi-2020-emperor-who-never-was
+    note: Gandhi places completion in 1655. The range allows for the year span given in accounts of the
+      edition.
+claims:
+  - text: The Persian treatise compares Sufi and Indian terminology for topics including the soul and
+      liberation.
+    grade: A
+    sources:
+      - src.shikoh-1929-majma-ul-bahrain
+  - text: The 1929 Bibliotheca Indica edition prints Persian text with an English translation and
+      variant readings.
+    grade: B
+    sources:
+      - src.shikoh-1929-majma-ul-bahrain
+relations:
+  - kind: authored-by
+    target: person.dara-shikoh
+  - kind: related-to
+    target: text.sirr-i-akbar
+tags:
+  - persian
+  - sufism
+  - vedanta
+  - mughal
+review:
+  status: draft
+  author: codex-gpt-6

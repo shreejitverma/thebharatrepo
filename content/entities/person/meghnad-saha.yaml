@@ -1,0 +1,42 @@
+id: person.meghnad-saha
+type: person
+kind: science
+names:
+  en: Meghnad Saha
+  native: মেঘনাদ সাহা
+summary: Meghnad Saha was a physicist who used thermal ionisation to explain patterns in solar and stellar
+  spectra. His 1920 paper on the solar chromosphere helped link the appearance of spectral lines to the
+  physical conditions of a gas.
+summaries:
+  kids: Saha used the patterns in sunlight to work out what heat does to atoms in the Sun’s atmosphere.
+  teen: Saha linked stellar spectra to the balance between atoms and ions at different temperatures and
+    pressures. This made spectra useful for interpreting physical conditions in stars.
+region: Bengal, Allahabad and Kolkata
+datings:
+  - method: documentary
+    range:
+      earliest: 1893
+      latest: 1956
+      precision: year
+      circa: false
+    grade: B
+    label: Lifespan in Kothari’s Royal Society memoir
+    sources:
+      - src.kothari-1960-meghnad-saha
+claims:
+  - text: In 1920, Saha applied thermal ionisation to observations of the solar chromosphere.
+    grade: A
+    sources:
+      - src.saha-1920-ionization-solar-chromosphere
+  - text: He was elected a Fellow of the Royal Society in 1927.
+    grade: A
+    sources:
+      - src.kothari-1960-meghnad-saha
+relations: []
+tags:
+  - astrophysics
+  - spectroscopy
+  - thermal-ionisation
+review:
+  status: draft
+  author: codex-gpt-6

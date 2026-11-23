@@ -1,0 +1,40 @@
+id: person.malik-ahmad-nizam-shah
+type: person
+kind: person
+names:
+  en: Malik Ahmad Nizam Shah
+summary: Malik Ahmad Nizam Shah transformed a Bahmani governorship into the Nizam Shahi Sultanate.
+  He founded a new court at Ahmadnagar.
+summaries:
+  kids: Malik Ahmad was a governor who established his own kingdom in the Deccan. Its capital was
+    called Ahmadnagar.
+  teen: Malik Ahmad's rise was one of several regional breaks from Bahmani authority. His house
+    remained a major power in the western Deccan.
+region: Western Deccan
+datings:
+  - method: documentary
+    range:
+      earliest: "1490"
+      latest: "1510"
+      precision: decade
+      circa: true
+    grade: B
+    label: Reign or recorded political activity
+    sources:
+      - src.eaton-2005-social-history-deccan
+      - src.michell-1995-architecture-art-southern-india
+      - src.eaton-2019-india-persianate-age
+    note: The interval brackets the first Nizam Shahi reign.
+claims:
+  - text: Malik Ahmad established the Nizam Shahi dynasty around 1490.
+    grade: B
+    sources:
+      - src.eaton-2005-social-history-deccan
+      - src.michell-1995-architecture-art-southern-india
+relations:
+  - kind: founded
+    target: polity.ahmadnagar-sultanate
+tags: []
+review:
+  status: draft
+  author: codex-gpt-6

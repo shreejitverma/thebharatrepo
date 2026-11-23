@@ -1,0 +1,47 @@
+id: person.jyeshthadeva
+type: person
+kind: science
+names:
+  en: Jyeshthadeva
+  iast: Jyeṣṭhadeva
+  native: ജ്യേഷ്ഠദേവൻ
+summary: Jyeshthadeva was a Kerala mathematician and astronomer whose Yuktibhasha explains mathematical and
+  astronomical procedures in Malayalam prose. The work is conventionally placed around 1530.
+summaries:
+  kids: Jyeshthadeva wrote a book in Malayalam that explains why rules for circles and astronomy work.
+  teen: Jyeshthadeva’s Yuktibhasha records detailed arguments from the Kerala school, including ways to compute
+    the circumference of a circle and calculate planetary positions.
+region: Kerala
+datings:
+  - method: textual-internal
+    range:
+      earliest: "1500 CE"
+      latest: "1580 CE"
+      precision: century
+      circa: true
+    grade: C
+    label: Approximate sixteenth-century activity (Sarma, Plofker)
+    sources:
+      - src.sarma-2008-ganita-yukti-bhasa
+      - id: src.plofker-2009-mathematics-in-india
+        locator: Section 7.2
+    note: Inferred from the Yuktibhasha (conventionally placed around 1530 CE) and Kerala school lineage links.
+claims:
+  - text: The Yuktibhasha expounds calculations used in Nilakantha Somayaji’s Tantrasangraha.
+    grade: A
+    sources:
+      - src.sarma-2008-ganita-yukti-bhasa
+      - id: src.plofker-2009-mathematics-in-india
+        locator: Section 7.2
+relations:
+  - kind: authored
+    target: text.yuktibhasha
+  - kind: part-of
+    target: tradition.kerala-school-of-mathematics
+tags:
+  - kerala-school
+  - mathematics
+  - astronomy
+review:
+  status: draft
+  author: codex-gpt-6

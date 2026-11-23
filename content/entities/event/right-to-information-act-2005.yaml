@@ -1,0 +1,26 @@
+id: event.right-to-information-act-2005
+type: event
+kind: polity
+names:
+  en: "Right to Information Act, 2005"
+summary: "The Right to Information Act gave citizens a statutory route to request information from public authorities. The 2005 law also provided for central and state information commissions and set out grounds for withholding certain information."
+summaries:
+  kids: "India passed a law in 2005 that lets citizens ask public offices for information. It also gives people a way to appeal if their request is refused."
+  teen: "The 2005 Act gives citizens a right to request information held by public authorities, subject to exemptions. It requires public information officers and creates a system of appeals and information commissions."
+region: "India"
+datings:
+  - method: documentary
+    range: { earliest: "2005", latest: "2005", precision: year, circa: false }
+    grade: A
+    label: "Enactment and phased commencement"
+    sources: ["src.india-2005-right-to-information-act"]
+    note: "The Act is dated 15 June 2005. Some provisions began immediately and others commenced on the 120th day after enactment."
+claims:
+  - text: "Sections 3 to 8 cover the right, the obligations of public authorities, the request process and exemptions from disclosure."
+    grade: A
+    sources: ["src.india-2005-right-to-information-act"]
+  - text: "The Act provides for the Central Information Commission and State Information Commissions and establishes a route for appeals."
+    grade: A
+    sources: ["src.india-2005-right-to-information-act"]
+tags: ["republic","transparency","legislation"]
+review: { status: draft, author: codex-gpt-6 }

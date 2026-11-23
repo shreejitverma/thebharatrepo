@@ -1,0 +1,63 @@
+id: polity.mahameghavahana-dynasty
+type: polity
+kind: polity
+names:
+  en: Mahameghavahana Dynasty
+  iast: Mahāmeghavāhana
+  native: महामेघवाहन
+summary: >-
+  The Mahameghavahana (Chedi) dynasty ruled Kalinga in present-day Odisha during the
+  post-Mauryan period, re-establishing an independent coastal kingdom after Mauryan decline.
+  Its best-known ruler, Kharavela, left the seventeen-line Hathigumpha inscription at Udayagiri
+  and patronised Jain cave monasteries alongside other orders.
+summaries:
+  kids: >-
+    After the Mauryan Empire faded, the Mahameghavahana kings ruled Kalinga in Odisha.
+    Their most famous ruler, Kharavela, repaired canals and carved cave homes for Jain monks.
+  teen: >-
+    Known mainly from Kharavela's Hathigumpha inscription and shorter cave records at Udayagiri
+    and Khandagiri, the Mahameghavahana dynasty revived Kalinga's political power in the late
+    first millennium BCE.
+region: Kalinga (Odisha)
+location: { name: "Udayagiri Hills, Bhubaneswar, Odisha", lat: 20.263, lon: 85.786 }
+datings:
+  - method: epigraphic
+    range: { earliest: "100 BCE", latest: 50, precision: century, circa: true }
+    grade: B
+    label: First century BCE to early first century CE palaeographic consensus
+    sources:
+      - src.salomon-1998-indian-epigraphy
+      - src.singh-2008-ancient-early-medieval-india
+      - src.kulke-2004-history-of-india
+    note: Post-Mauryan Brahmi palaeography of the Hathigumpha and Manchapuri cave inscriptions and synchronism with an early Satakarni place the dynasty's peak in the first century BCE.
+  - method: epigraphic
+    range: { earliest: "200 BCE", latest: "100 BCE", precision: century, circa: true }
+    grade: C
+    label: Early second-century BCE interpretation (Jayaswal and Banerji)
+    sources:
+      - src.salomon-1998-indian-epigraphy
+      - src.fleet-1910-hathigumpha-inscription
+    note: K. P. Jayaswal and R. D. Banerji placed Kharavela in the early second century BCE via a disputed reading of a Yavana king as Demetrius.
+claims:
+  - text: "Inscriptions at Udayagiri-Khandagiri link Kharavela to the Chedi lineage and the Mahameghavahana line of Kalinga; historians usually count him as its third ruler."
+    grade: B
+    sources:
+      - src.salomon-1998-indian-epigraphy
+      - src.fleet-1910-hathigumpha-inscription
+  - text: Under Mahameghavahana rule, twin hill complexes at Udayagiri and Khandagiri were excavated with rock-cut residential caves for Jain ascetics.
+    grade: B
+    sources:
+      - src.singh-2008-ancient-early-medieval-india
+      - src.huntington-1985-art-ancient-india
+debate: >-
+  Chronology for the Mahameghavahanas hinges on the damaged Hathigumpha inscription: most
+  epigraphists favour a mid-to-late first century BCE date on palaeographic grounds and the
+  Satakarni synchronism, whereas older scholarship argued for the second century BCE.
+relations:
+  - { kind: related-to, target: person.kharavela }
+  - { kind: related-to, target: artifact.hathigumpha-inscription }
+  - { kind: contemporary-of, target: polity.satavahana-dynasty }
+  - { kind: related-to, target: site.sisupalgarh }
+wikidata: Q6733051
+tags: [kalinga, mahameghavahana, kharavela, odisha, jainism, post-mauryan]
+review: { status: draft, author: "gemini-4-hydrogen-xhigh" }

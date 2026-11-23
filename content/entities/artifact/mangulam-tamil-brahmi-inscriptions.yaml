@@ -1,0 +1,85 @@
+id: artifact.mangulam-tamil-brahmi-inscriptions
+type: artifact
+kind: text
+names:
+  en: Mangulam Tamil-Brahmi Inscriptions
+  iast: Māṅkuḷam Tamiḻ-Brāhmī Kalveṭṭukaḷ
+summary: >-
+  Six early Tamil-Brahmi rock-cut inscriptions at Ovamalai hill near Mangulam (Meenakshipuram) in Madurai
+  district, Tamil Nadu, rediscovered in 1882 and systematically read by Iravatham Mahadevan. Dating
+  palaeographically to the 2nd-1st century BCE, two epigraphs record rock-cut beds donated to the Jain ascetic
+  Kaniy Nanta by Kadalan Vazhuthi, an official, and Chatikan, brother-in-law of the early Pandya king
+  Nedunjeliyan.
+summaries:
+  kids: "Carved on natural rock overhangs near Madurai more than 2,000 years ago, these short Tamil-Brahmi inscriptions record stone beds donated to Jain monks by relatives and officers of the Pandya king Nedunjeliyan."
+  teen: >-
+    Among the oldest datable Tamil-Brahmi inscriptions, the six Mangulam cavern records link early Jain
+    monastic patronage in Tamil Nadu directly to the Pandya king Nedunjeliyan, providing solid archaeological
+    anchorage for Sangam-era South India.
+region: Mangulam (Meenakshipuram), Madurai District, Tamil Nadu, India
+location:
+  name: Ovamalai rock-shelter cavern, Mangulam
+  lat: 10.0273
+  lon: 78.2118
+datings:
+  - method: epigraphic
+    range:
+      earliest: 220 BCE
+      latest: 100 BCE
+      best: 150 BCE
+      precision: century
+      circa: true
+    grade: B
+    label: Early Tamil-Brahmi palaeography (Iravatham Mahadevan)
+    sources:
+      - src.mahadevan-2003-early-tamil-epigraphy
+      - src.salomon-1998-indian-epigraphy
+    note: >-
+      Dated by archaic Tamil-Brahmi orthography (Mahadevan Corpus Nos. 1-6), closely comparable to
+      post-Ashokan Brahmi and Bhattiprolu features.
+claims:
+  - text: >-
+      Catalogued as Nos. 1-6 in Iravatham Mahadevan's Early Tamil Epigraphy, the six Tamil-Brahmi inscriptions
+      occupy the brow and drip-ledge of natural rock shelters containing carved stone beds at Mangulam.
+    grade: A
+    sources:
+      - src.mahadevan-2003-early-tamil-epigraphy
+      - src.salomon-1998-indian-epigraphy
+  - text: >-
+      Inscriptions 1 and 2 name the Pandya ruler Nedunjeliyan ("Netuncaliyan"), recording that his servant
+      Kadalan Vazhuthi and his brother-in-law Chatikan (son of Ilanchatikan) gifted stone abodes (palli /
+      adhiththanam) for the monk Kaniy Nanta.
+    grade: A
+    sources:
+      - src.mahadevan-2003-early-tamil-epigraphy
+  - text: >-
+      Mangulam demonstrates simultaneous use of early Tamil language alongside Prakrit loanwords ("kammam",
+      "palli", "dhammam") and confirms Sangam-period Pandya kingship in Madurai epigraphically.
+    grade: B
+    sources:
+      - src.mahadevan-2003-early-tamil-epigraphy
+      - src.singh-2008-ancient-early-medieval-india
+relations:
+  - kind: part-of
+    target: artifact.tamil-brahmi-inscriptions
+  - kind: related-to
+    target: text.sangam-literature
+    note: Mentions the early Pandya ruler Nedunjeliyan known from Sangam tradition
+  - kind: related-to
+    target: artifact.jambai-tamil-brahmi-inscription
+wikidata: null
+image:
+  commons: File:Mangulam inscription (south India).jpg
+  alt: Rock-cut Tamil-Brahmi inscription along the brow of a Jain cavern shelter at Mangulam near Madurai
+  credit: Rajesh of Raigad
+  license: CC BY-SA 4.0
+tags:
+  - inscription
+  - tamil-brahmi
+  - pandya
+  - jainism
+  - mangulam
+  - sangam
+review:
+  status: draft
+  author: gemini-4-hydrogen-xhigh

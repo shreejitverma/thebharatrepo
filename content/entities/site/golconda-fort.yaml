@@ -1,0 +1,56 @@
+id: site.golconda-fort
+type: site
+kind: site
+names:
+  en: Golconda Fort
+  iast: Golakoṇḍā Durga
+  native: గోల్కొండ కోట
+summary: >-
+  Golconda Fort is a granite hilltop citadel in Hyderabad, Telangana. The Qutb Shahi rulers enlarged
+  earlier fortifications and governed from Golconda before founding Hyderabad in 1591 CE. The citadel
+  remained in use until and after its capture by Mughal forces in 1687 CE.
+summaries:
+  kids: >-
+    Golconda Fort in Hyderabad climbs the sides of a rocky hill. Stone walls, gateways and the remains
+    of palaces show how people defended the fort and lived inside it.
+  teen: >-
+    Golconda Fort grew from an earlier hill stronghold into the Qutb Shahi capital. The rulers enlarged
+    its fortifications and palace buildings, and a Mughal siege ended in its capture in 1687 CE.
+region: Deccan Plateau (Hyderabad district, Telangana)
+location: { name: "Golconda, Hyderabad, Telangana", lat: 17.383, lon: 78.404 }
+datings:
+  - method: scholarly-consensus
+    range: { earliest: "1500 CE", latest: "1687 CE", precision: century, circa: true }
+    grade: B
+    label: "Major Qutb Shahi fortification phase"
+    sources:
+      - src.sardar-2015-hyderabad-golconda
+      - src.michell-zebrowski-1999-architecture-art-deccan-sultanates
+    note: >-
+      The Qutb Shahi rulers expanded an existing stronghold in the sixteenth and seventeenth centuries.
+      Mughal forces captured the citadel in 1687 CE.
+claims:
+  - text: >-
+      Golconda was the Qutb Shahi seat before the establishment of Hyderabad and was linked to the
+      Deccan's diamond trade.
+    grade: B
+    sources:
+      - src.sardar-2015-hyderabad-golconda
+      - src.asher-talbot-2006-india-before-europe
+  - text: >-
+      The citadel preserves multiple lines of granite fortifications, palace ruins and remains of a
+      water-supply system.
+    grade: B
+    sources:
+      - src.michell-zebrowski-1999-architecture-art-deccan-sultanates
+      - src.sardar-2015-hyderabad-golconda
+relations:
+  - { kind: patronised-by, target: polity.golconda-sultanate }
+wikidata: Q4141623
+image:
+  commons: "File:Golkonda Fort 12.jpg"
+  alt: Granite ramparts, stepped citadels, and arched Qutb Shahi palace ruins ascending the rocky hill of Golconda Fort
+  credit: Khadeeja Henna
+  license: CC BY-SA 4.0
+tags: [golconda, fort, qutb-shahi, deccan, hyderabad, telangana]
+review: { status: draft, author: "gemini-4-hydrogen-xhigh" }

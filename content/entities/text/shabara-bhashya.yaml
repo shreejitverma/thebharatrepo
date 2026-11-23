@@ -1,0 +1,45 @@
+id: text.shabara-bhashya
+type: text
+kind: text
+names:
+  en: Shabara Bhashya
+  iast: Śābarabhāṣya
+  native: शाबरभाष्य
+summary: The Shabara Bhashya is a Sanskrit commentary on Jaimini’s Mimamsa Sutras. It investigates
+  how words, sentences and injunctions convey obligations in Vedic ritual. The date of its author is
+  uncertain.
+summaries:
+  kids: Shabara works through short rules about Vedic rites and explains why the wording of an
+    instruction matters.
+  teen: Shabara’s commentary preserves earlier interpretations and sets out ways to read the terse
+    sutras. Later Mimamsa writers turned to it when debating the force of Vedic language.
+datings:
+  - method: textual-internal
+    range:
+      earliest: 350
+      latest: 550
+      precision: century
+      circa: true
+    grade: C
+    label: Early classical commentary attributed to Shabara
+    sources:
+      - src.freschi-2018-paribhasas-mimamsa
+      - src.clooney-1990-thinking-ritually
+    note: The interval covers the commonly proposed late ancient setting and allows for the uncertain
+      relative dates of early Mimamsa authors.
+claims:
+  - text: Kumarila and Prabhakara each developed their approaches to Mimamsa in works on Shabara’s
+      commentary.
+    grade: B
+    sources:
+      - src.freschi-2018-paribhasas-mimamsa
+relations:
+  - kind: commented-on
+    target: text.mimamsa-sutras
+tags:
+  - mimamsa
+  - darshana
+  - commentary
+review:
+  status: draft
+  author: codex-gpt-6

@@ -1,0 +1,42 @@
+id: event.kanpur-uprising-1857
+type: event
+kind: event
+names:
+  en: Kanpur uprising of 1857
+summary: Nana Sahib led rebel forces at Kanpur after the local garrison rose in June 1857.
+  Killings of British soldiers and civilians were followed by Company reprisals, and control of
+  Kanpur was contested again late that year.
+summaries:
+  kids: Rebels led by Nana Sahib fought the Company at Kanpur. Many soldiers and civilians were
+    killed in the fighting and in acts of revenge.
+  teen: The siege of the Company garrison and the killing of captives made Kanpur a focus of
+    British reprisals. Fighting for the city continued later in 1857.
+region: Kanpur (Cawnpore), present-day Uttar Pradesh
+datings:
+  - method: scholarly-consensus
+    range:
+      earliest: "1857"
+      latest: "1857"
+      precision: year
+      circa: false
+    grade: B
+    label: Uprising, sieges and fighting from June to December
+    sources:
+      - src.bender-2016-indian-uprising
+      - src.national-army-museum-decisive-events-indian-rebellion
+claims:
+  - text: Nana Sahib led the June rebellion at Kanpur, and Company forces carried out reprisals
+      after their return in July.
+    grade: B
+    sources:
+      - src.national-army-museum-decisive-events-indian-rebellion
+      - src.bender-2016-indian-uprising
+relations:
+  - kind: part-of
+    target: event.indian-revolt-of-1857
+tags:
+  - revolt-of-1857
+  - company-rule
+review:
+  status: draft
+  author: codex-gpt-6

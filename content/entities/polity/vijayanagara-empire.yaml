@@ -1,0 +1,100 @@
+id: polity.vijayanagara-empire
+type: polity
+kind: polity
+names:
+  en: Vijayanagara Empire
+  iast: Vijayanagara
+  native: ವಿಜಯನಗರ ಸಾಮ್ರಾಜ್ಯ
+summary: >-
+  Vijayanagara emerged around the Tungabhadra under the Sangama brothers Harihara I and Bukka I. The
+  conventional founding year is 1336, though the exact date is debated. Four successive dynasties, the
+  Sangama, Saluva, Tuluva and Aravidu, ruled much of the peninsula, and after the defeat at Talikota in
+  1565 the Aravidu court continued from Penukonda and Chandragiri until about the 1640s.
+summaries:
+  kids: >-
+    Harihara and Bukka helped build a new kingdom by the Tungabhadra River. Its old capital is now the
+    archaeological site of Hampi.
+  teen: >-
+    The conventional foundation year is 1336, though the fortified city may date from around 1340.
+    Krishnadevaraya was its best-known ruler, and after the 1565 defeat at Talikota the court moved to
+    other capitals while Nayaka governors grew autonomous.
+region: Southern Deccan and peninsular India
+location:
+  name: Hampi (Vijayanagara, principal imperial capital)
+  lat: 15.34
+  lon: 76.46
+datings:
+  - method: scholarly-consensus
+    range:
+      earliest: "1336"
+      latest: "1650"
+      precision: decade
+      circa: true
+    grade: B
+    label: Period of rule
+    sources:
+      - src.stein-1989-vijayanagara
+      - src.asher-talbot-2006-india-before-europe
+      - src.unesco-1986-hampi
+    note: The conventional starting date is 1336. After the sack of the capital in 1565, Aravidu kings ruled
+      from Penukonda, Chandragiri and Vellore until their authority collapsed in the 1640s.
+  - method: documentary
+    range:
+      earliest: "1336"
+      latest: "1346"
+      precision: decade
+      circa: true
+    grade: C
+    label: Foundation understood as a process in Burton Stein's account
+    sources:
+      - src.stein-1989-vijayanagara
+      - src.asher-talbot-2006-india-before-europe
+    note: Stein places the beginning of the fortified capital around 1340. Royal power and the city
+      developed over several years.
+claims:
+  - text: Harihara and Bukka of the Sangama family were central to the foundation of Vijayanagara.
+    grade: B
+    sources:
+      - src.stein-1989-vijayanagara
+      - src.asher-talbot-2006-india-before-europe
+  - text: Four dynasties, the Sangama, Saluva, Tuluva and Aravidu, ruled the empire in succession, and the
+      Tuluva king Krishnadevaraya (r. 1509-1529) campaigned in the Raichur Doab and against the Gajapatis.
+    grade: B
+    sources:
+      - src.stein-1989-vijayanagara
+      - src.karashima-2014-concise-history-south-india
+  - text: Military and provincial command relied on nayaka assignments, and the nayakas of Madurai, Thanjavur
+      and Gingee became autonomous states after 1565.
+    grade: B
+    sources:
+      - src.stein-1989-vijayanagara
+      - src.narayanarao-1992-symbols-of-substance
+  - text: In January 1565 a coalition of Deccan sultanates defeated Rama Raya at Talikota, after which the
+      capital was abandoned and sacked, while the empire continued under rulers who held court elsewhere.
+    grade: B
+    sources:
+      - src.stein-1989-vijayanagara
+      - src.eaton-2005-social-history-deccan
+relations:
+  - kind: located-at
+    target: site.hampi
+  - kind: related-to
+    target: event.founding-of-vijayanagara
+  - kind: related-to
+    target: event.battle-of-talikota
+  - kind: ruled-by
+    target: person.krishnadevaraya
+debate: The conventional year is 1336. Stein places the foundation of the fortified city around 1340,
+  allowing the political and urban beginnings to fall at different points.
+wikidata: Q167639
+image:
+  commons: File:Stone Chariot at Vittala temple, Hampi.jpg
+  credit: Corrector007
+  license: CC BY-SA 4.0
+  alt: The stone chariot at the Vittala temple complex in Hampi
+tags:
+  - vijayanagara
+  - hampi
+review:
+  status: draft
+  author: codex-gpt-6

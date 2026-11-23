@@ -1,0 +1,41 @@
+id: polity.reddi-kingdom
+type: polity
+kind: polity
+names:
+  en: Reddi Kingdom of Kondavidu and Rajahmundry
+  iast: Reḍḍi
+  native: రెడ్డి రాజ్యము
+summary: >-
+  The Reddi kingdom ruled coastal Andhra Pradesh from Addanki, Kondavidu, and later Rajahmundry from roughly 1325 to 1448 CE. Founded by Prolaya Vema Reddi - a former Kakatiya commander and ally of the Musunuri Nayakas - the dynasty secured coastal maritime trade through Motupalli, built hill forts, and sponsored a major efflorescence of Telugu and Sanskrit literature led by court poets Errapragada and Srinatha before succumbing to Vijayanagara and Gajapati expansion.
+summaries:
+  kids: >-
+    The Reddi kings ruled coastal Andhra Pradesh from hill forts like Kondavidu in the 1300s and 1400s, protecting sea ports and rewarding celebrated Telugu poets like Srinatha.
+  teen: >-
+    Founded by Prolaya Vema Reddi after the Kakatiya collapse, the Reddi kingdoms of Kondavidu and Rajahmundry rebuilt coastal Andhra trade and fostered a golden age of Telugu poetry under Errapragada and Srinatha.
+region: Coastal Andhra (Guntur, Prakasam, Krishna, and East Godavari districts), Andhra Pradesh
+location: { name: "Kondavidu, Andhra Pradesh", lat: 16.26, lon: 80.26 }
+datings:
+  - method: epigraphic
+    range: { earliest: "1325 CE", latest: "1448 CE", precision: year, circa: true }
+    grade: B
+    label: Prolaya Vema Reddi to the Gajapati annexation of Rajahmundry
+    sources:
+      - src.sarma-1948-history-of-reddi-kingdoms
+      - src.talbot-2001-precolonial-india-in-practice
+    note: Inscriptions track Prolaya Vema Reddi's rise in the 1320s, Kumaragiri's split with the Rajahmundry branch around 1395-1402 CE, Kondavidu's fall to Vijayanagara and Recherla chiefs around 1420-1424 CE, and the fall of Rajahmundry to Kapilendra Gajapati by 1448 CE.
+claims:
+  - text: Prolaya Vema Reddi renewed Kakatiya-era commercial guarantees at the port of Motupalli and built rock steps to shrines at Srisailam and Ahobilam.
+    grade: B
+    sources:
+      - src.sarma-1948-history-of-reddi-kingdoms
+      - src.talbot-2001-precolonial-india-in-practice
+  - text: Reddi court patronage supported Errapragada (who completed the Telugu Mahabharata begun by Nannaya and Tikkana), King Kumaragiri's dance treatise Vasantarajiyamu, and the poet Srinatha.
+    grade: B
+    sources:
+      - src.sarma-1948-history-of-reddi-kingdoms
+      - src.narayanarao-2002-classical-telugu-poetry
+relations:
+  - { kind: related-to, target: polity.vijayanagara-empire }
+  - { kind: succeeded, target: polity.kakatiya-dynasty }
+tags: [reddi, kondavidu, rajahmundry, andhra, telugu-literature, srinatha]
+review: { status: draft, author: "gemini-4-hydrogen-xhigh" }

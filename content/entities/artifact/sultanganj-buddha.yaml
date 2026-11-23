@@ -1,0 +1,77 @@
+id: artifact.sultanganj-buddha
+type: artifact
+kind: art
+names:
+  en: Sultanganj Buddha
+  iast: Sultānagañja Tāmra Buddha
+summary: "A monumental cast-copper standing Buddha measuring c. 2.3 m in height and weighing over 500 kg (Birmingham Museum and Art Gallery, Acc. No. 1885A1118), excavated by railway engineer E. B. Harris in 1861-1862 from a Buddhist monastic mound at Sultanganj, Bhagalpur district, Bihar. Dated between the late Gupta and early post-Gupta periods (c. 500-700 CE), it is among the largest surviving early Indian metal sculptures."
+summaries:
+  kids: "Discovered in Bihar during railway construction in 1861, this towering 2.3-metre copper statue of the Buddha weighs more than 500 kilograms and is one of the largest surviving metal sculptures from ancient India."
+  teen: >-
+    Excavated at Sultanganj in 1861-1862 and housed in Birmingham Museum and Art Gallery (1885A1118), the
+    Sultanganj Buddha showcases extraordinary late-Gupta/post-Gupta cire-perdue copper metallurgy poured in
+    thin sections around an earthen core with an iron armature.
+region: Sultanganj, Bhagalpur District, Bihar (housed in Birmingham Museum and Art Gallery)
+location:
+  name: Sultanganj monastic mound findspot, Bhagalpur
+  lat: 25.2458
+  lon: 86.7367
+datings:
+  - method: art-historical
+    range:
+      earliest: 500
+      latest: 700
+      best: 600
+      precision: century
+      circa: true
+    grade: C
+    label: Late Gupta to post-Gupta eastern Indian stylistic range
+    sources:
+      - src.macleod-2017-sultanganj-buddha
+      - src.harle-1994-art-architecture-indian-subcontinent
+      - src.huntington-1985-art-ancient-india
+    note: "Long assigned to the 5th-century Gupta height, modern metallurgy and stylistic studies (e.g. Sheila Weiner, J. C. Harle, Susan Huntington, Catherine MacLeod) place it in the 6th-7th century CE."
+claims:
+  - text: >-
+      Unearthed by East Indian Railway engineer E. B. Harris during 1861-1862 excavations at Sultanganj and
+      shipped to Birmingham (Acc. No. 1885A1118), the statue stands about 2.3 m high, spans 1 m across, and
+      weighs roughly 500 kg.
+    grade: A
+    sources:
+      - src.macleod-2017-sultanganj-buddha
+      - src.harle-1994-art-architecture-indian-subcontinent
+  - text: >-
+      Technical examination shows nearly unalloyed copper cast in multiple sections via lost-wax (cire perdue)
+      pouring over a dark sandy clay core reinforced by internal iron bars and chaplets, exemplifying
+      Gupta-post-Gupta eastern Indian bronze foundries.
+    grade: B
+    sources:
+      - src.macleod-2017-sultanganj-buddha
+      - src.huntington-1985-art-ancient-india
+  - text: >-
+      Stylistically it displays the sheer, unpleated clinging monastic robe (uttarasanga) characteristic of
+      the Sarnath aesthetic while showing serene abhaya mudra and early eastern Indian facial modelling.
+    grade: B
+    sources:
+      - src.harle-1994-art-architecture-indian-subcontinent
+      - src.macleod-2017-sultanganj-buddha
+relations:
+  - kind: related-to
+    target: polity.gupta-empire
+wikidata: Q7636803
+image:
+  commons: File:The Sultanganj Buddha.jpg
+  alt: Colossal cast-copper standing Buddha excavated at Sultanganj, now in Birmingham Museum and Art Gallery
+  credit: Unknown author
+  license: CC0
+tags:
+  - sculpture
+  - copper
+  - buddha
+  - gupta
+  - metallurgy
+  - sultanganj
+  - bihar
+review:
+  status: draft
+  author: gemini-4-hydrogen-xhigh

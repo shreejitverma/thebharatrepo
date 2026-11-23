@@ -1,0 +1,91 @@
+id: artifact.nigali-sagar-pillar-inscription
+type: artifact
+kind: dharma
+names:
+  en: Nigali Sagar Pillar Inscription
+  iast: Nigālī Sāgara Stambha Abhilekha
+summary: >-
+  A fragmentary Chunar sandstone pillar standing near Niglihawa in Kapilavastu district, Nepal, inscribed in
+  Magadhi Prakrit and Ashokan Brahmi during the twentieth regnal year of Emperor Ashoka. It records that
+  Ashoka doubled the stupa of the former Buddha Konakamana in his fourteenth regnal year and returned six
+  years later to worship and erect a stone pillar.
+summaries:
+  kids: >-
+    A broken stone pillar in southern Nepal carries a message from Emperor Ashoka about enlarging and visiting
+    the stupa of an earlier Buddha named Konakamana.
+  teen: >-
+    Inscribed in Ashokan Brahmi near ancient Kapilavastu, the Nigali Sagar pillar confirms that Ashoka
+    honoured a cult of previous Buddhas (specifically Konakamana), enlarging his stupa in his 14th regnal year
+    and revisiting it in his 20th year.
+region: Niglihawa, Kapilavastu District, Lumbini Province, Nepal
+location:
+  name: Nigali Sagar archaeological site, Niglihawa
+  lat: 27.5949
+  lon: 83.0958
+datings:
+  - method: epigraphic
+    range:
+      earliest: 255 BCE
+      latest: 240 BCE
+      best: 249 BCE
+      precision: year
+      circa: true
+    grade: B
+    label: Twentieth regnal year of Ashoka (Pillar Edict chronology)
+    sources:
+      - src.hultzsch-1925-inscriptions-of-asoka
+      - src.falk-2006-asokan-sites-and-artefacts
+    note: >-
+      Text explicitly dates the pillar erection and worship to Ashoka's 20th year after his consecration;
+      absolute BCE conversion reflects standard Ashokan chronology.
+claims:
+  - text: >-
+      Four surviving lines in Ashokan Brahmi and Magadhi Prakrit record that King Devanampiya Piyadassi
+      enlarged the stupa of Buddha Konakamana to double its size in his 14th regnal year and came in person in
+      his 20th year to worship and erect a stone pillar.
+    grade: A
+    sources:
+      - src.hultzsch-1925-inscriptions-of-asoka
+      - src.falk-2006-asokan-sites-and-artefacts
+  - text: >-
+      Together with the nearby Lumbini pillar, the monument provides direct 3rd-century BCE epigraphic proof
+      of pilgrimage traditions in the Nepalese Terai and of devotion to Buddhas preceding Gautama.
+    grade: B
+    sources:
+      - src.lahiri-2015-ashoka-ancient-india
+      - src.falk-2006-asokan-sites-and-artefacts
+  - text: >-
+      Discovered by Alois Anton Fuhrer in 1895 beside the Nigali Sagar tank, the lower pillar shaft is broken
+      into two pieces and lacks an in situ capital, so its original standing spot remains debated between the
+      tank bank and a nearby stupa mound.
+    grade: B
+    sources:
+      - src.falk-2006-asokan-sites-and-artefacts
+      - src.thapar-2012-asoka-decline-mauryas
+relations:
+  - kind: patronised-by
+    target: person.ashoka
+    note: Records Ashoka's 14th-year stupa enlargement and 20th-year pilgrimage
+  - kind: part-of
+    target: polity.maurya-empire
+  - kind: contemporary-of
+    target: artifact.lumbini-pillar-inscription
+    note: Sister 20th-regnal-year Ashokan pillar in the Nepalese Terai
+wikidata: null
+image:
+  commons: File:Nigali Sagar pillar inscriptions.jpg
+  alt: >-
+    Ashokan Brahmi inscription carved on the Nigali Sagar sandstone pillar shaft in Kapilavastu district,
+    Nepal
+  credit: David Lowry
+  license: CC BY 2.0
+tags:
+  - inscription
+  - ashoka
+  - brahmi
+  - maurya
+  - buddhism
+  - nepal
+review:
+  status: draft
+  author: gemini-4-hydrogen-xhigh

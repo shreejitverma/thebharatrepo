@@ -1,0 +1,80 @@
+id: site.somnath-temple
+type: site
+kind: site
+names:
+  en: Somnath Temple
+  iast: Somanātha Mandira
+  native: સોમનાથ મંદિર
+summary: >-
+  The Somnath Temple at Prabhas Patan, Gujarat, is revered in Shaiva tradition as a Jyotirlinga shrine.
+  Medieval sources record attacks and rebuilding at the site, including the raid by Mahmud of Ghazni in
+  1026 CE. The present temple was built after independence, and its shrine was consecrated in 1951.
+summaries:
+  kids: >-
+    Somnath is a temple to Shiva beside the sea in Gujarat. The temple has been rebuilt several times.
+    The shrine in the present temple was consecrated in 1951.
+  teen: >-
+    Somnath's medieval history is documented in Sanskrit inscriptions and Persian chronicles, including
+    evidence of rebuilding under Chaulukya rule. Excavations in 1950 preceded the consecration of the modern shrine
+    in 1951.
+region: Saurashtra (Gir Somnath district, Gujarat)
+location: { name: "Prabhas Patan (Somnath), Gujarat", lat: 20.888, lon: 70.401 }
+datings:
+  - method: archaeological-stratigraphic
+    range: { earliest: "1000 CE", latest: "1300 CE", precision: century, circa: true }
+    grade: B
+    label: "Main medieval temple phases"
+    sources:
+      - src.thapar-2005-somanatha
+      - src.cousens-1931-somanatha
+    note: >-
+      Remains and inscriptions document medieval building at the site. A twelfth-century inscription
+      records work under Kumarapala.
+  - method: epigraphic
+    range: { earliest: "1169 CE", latest: "1169 CE", precision: year, circa: false }
+    grade: B
+    label: "Inscription commemorating a twelfth-century restoration"
+    sources:
+      - src.thapar-2005-somanatha
+    note: >-
+      A Sanskrit inscription at Prabhas Patan records building work associated with Bhava Brihaspati
+      under Kumarapala.
+  - method: documentary
+    range: { earliest: "1947 CE", latest: "1951 CE", precision: year, circa: false }
+    grade: B
+    label: "Reconstruction project through consecration of the shrine"
+    sources:
+      - src.bobbio-2023-somnath-mandir
+      - src.somnath-pib-2026
+    note: >-
+      The project was proposed in 1947. The modern shrine was consecrated on 11 May 1951 in the presence
+      of President Rajendra Prasad.
+claims:
+  - text: >-
+      Medieval accounts record Mahmud of Ghazni's 1026 CE raid on Somnath. An inscription attests
+      rebuilding under the Chaulukya ruler Kumarapala in the twelfth century.
+    grade: B
+    sources:
+      - src.thapar-2005-somanatha
+      - src.cousens-1931-somanatha
+  - text: >-
+      B. K. Thapar excavated at the site in 1950 during preparations for the present temple.
+    grade: B
+    sources:
+      - src.bobbio-2023-somnath-mandir
+  - text: >-
+      The rebuilt shrine was consecrated on 11 May 1951 in the presence of President Rajendra Prasad.
+    grade: A
+    sources:
+      - src.somnath-pib-2026
+relations:
+  - { kind: related-to, target: event.ghaznavid-raid-on-somnath }
+  - { kind: related-to, target: event.somnath-reconstruction-consecrated }
+wikidata: Q1143887
+image:
+  commons: "File:2015 Somnath Jyotirlinga temple Prabhas Patan.jpg"
+  alt: The sandstone towers and halls of the Somnath Temple at Prabhas Patan
+  credit: Ms Sarah Welch
+  license: CC BY-SA 4.0
+tags: [somnath, jyotirlinga, shaiva, gujarat, chaulukya, temple-architecture]
+review: { status: draft, author: "gemini-4-hydrogen-xhigh" }

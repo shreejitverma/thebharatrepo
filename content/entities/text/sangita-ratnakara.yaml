@@ -1,0 +1,70 @@
+id: text.sangita-ratnakara
+type: text
+kind: art
+names:
+  en: Sangita Ratnakara
+  iast: Saṅgītaratnākara
+  native: संगीतरत्नाकर
+summary: "The Sangita Ratnakara ('Ocean of Music and Dance') is a seven-chapter Sanskrit treatise composed in the early thirteenth century CE by Sarngadeva at the Yadava (Seuna) court of Devagiri under King Singhana II. Systematising svara, raga, prabandha, tala, instruments and dance, it is treated as a foundational authority by both the Hindustani and Carnatic traditions."
+summaries:
+  kids: The Sangita Ratnakara ('Ocean of Music') is a famous thirteenth-century Sanskrit book by Sarngadeva that describes
+    Indian music, instruments and dance.
+  teen: Written by Sarngadeva at Devagiri in the early 1200s CE, the seven-chapter Sangita Ratnakara synthesises earlier
+    Sanskrit theory on melody, rhythm, instruments and dance before North and South Indian traditions diverged.
+region: Deccan (Devagiri / Daulatabad, Maharashtra) and Pan-Indian
+location:
+  name: Daulatabad (Devagiri), Maharashtra
+  lat: 19.943
+  lon: 75.213
+datings:
+  - method: textual-internal
+    range:
+      earliest: 1210
+      latest: 1247
+      precision: decade
+      circa: true
+    grade: B
+    label: Reign of Yadava king Singhana II at Devagiri
+    sources:
+      - src.shringy-1978-sangitaratnakara-vol1
+      - src.widdess-1995-ragas-early-indian-music
+      - src.powers-1984-sangitaratnakara-review
+    note: Sarngadeva served as royal accountant (shrikaranadhipa) to Yadava ruler Singhana II (r. c. 1210-1247 CE) and
+      dedicated the treatise to his court.
+claims:
+  - text: Known as Saptadhyayi ('Seven Chapters'), the Sangita Ratnakara treats pitch and scales (svara), raga,
+      miscellaneous forms (prakirnaka), song composition (prabandha), rhythm (tala), instruments (vadya) and dance
+      (nartana).
+    grade: A
+    sources:
+      - src.shringy-1978-sangitaratnakara-vol1
+      - src.shringy-1989-sangitaratnakara-vol2
+  - text: Important medieval commentaries by Simhabhupala (Sudhakara) and Kallinatha (Kalanidhi, Vijayanagara period)
+      preserved and interpreted Sarngadeva's work for later centuries.
+    grade: A
+    sources:
+      - src.tenijenhuis-1974-indian-music
+      - src.powers-1984-sangitaratnakara-review
+relations:
+  - kind: commented-on
+    target: text.natyashastra
+  - kind: influenced
+    target: tradition.hindustani-classical-music
+  - kind: influenced
+    target: tradition.carnatic-music
+wikidata: Q7418021
+image:
+  commons: File:13th century Sangita Ratnakara Hindu text on music in Sanskrit.jpg
+  alt: Printed Sanskrit folio opening of Sarngadeva's Sangita Ratnakara with Kallinatha's Kalanidhi commentary
+  credit: Ms Sarah Welch
+  license: CC BY-SA 4.0
+tags:
+  - sangita-ratnakara
+  - sarngadeva
+  - musicology
+  - yadava
+  - raga
+  - tala
+review:
+  status: draft
+  author: gemini-4-hydrogen-xhigh

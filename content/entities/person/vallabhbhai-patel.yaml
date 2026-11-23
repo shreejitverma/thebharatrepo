@@ -1,0 +1,48 @@
+id: person.vallabhbhai-patel
+type: person
+kind: person
+names:
+  en: Sardar Vallabhbhai Patel
+  native: વલ્લભભાઈ પટેલ
+summary: Vallabhbhai Patel led the Bardoli land revenue campaign in 1928 and became a senior
+  Congress organiser. In 1947 he took charge of the Home and States portfolios and helped
+  negotiate the accession of princely states to India.
+summaries:
+  kids: Patel helped farmers protest a tax increase. When India became independent, he helped
+    bring many territories ruled by princes into the new country.
+  teen: Patel combined experience in local nonviolent campaigns with leadership in Congress. As
+    minister responsible for the States Department in 1947, he oversaw negotiations over the
+    accession of princely states.
+region: Gujarat and Delhi
+datings:
+  - method: scholarly-consensus
+    range:
+      earliest: "1875"
+      latest: "1950"
+      precision: year
+      circa: false
+    grade: B
+    label: Lifespan
+    sources:
+      - src.gandhi-1991-patel-a-life
+claims:
+  - text: Patel led the Bardoli Satyagraha of 1928 against an increase in land revenue assessments.
+    grade: B
+    sources:
+      - src.gandhi-1991-patel-a-life
+      - src.chandra-1989-indias-struggle-for-independence
+  - text: As a minister at independence, Patel played a leading role in negotiating the integration
+      of princely states.
+    grade: B
+    sources:
+      - src.gandhi-1991-patel-a-life
+      - src.bose-jalal-2004-modern-south-asia
+relations:
+  - kind: related-to
+    target: event.independence-and-partition-1947
+tags:
+  - congress
+  - independence
+review:
+  status: draft
+  author: codex-gpt-6

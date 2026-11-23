@@ -1,0 +1,42 @@
+id: person.satyendra-nath-bose
+type: person
+kind: science
+names:
+  en: Satyendra Nath Bose
+  native: সত্যেন্দ্রনাথ বসু
+summary: Satyendra Nath Bose was a physicist whose 1924 paper derived Planck’s radiation law by counting light
+  quanta. Einstein translated the paper into German and extended Bose’s approach to an ideal gas of particles.
+summaries:
+  kids: Bose found a new way of counting tiny packets of light. Einstein used the idea to study particles in a gas.
+  teen: Bose’s derivation used the ways that light quanta could occupy states. The counting procedure became a
+    foundation of quantum statistics.
+region: Kolkata and Dhaka
+datings:
+  - method: documentary
+    range:
+      earliest: 1894
+      latest: 1974
+      precision: year
+      circa: false
+    grade: A
+    label: Documented lifespan
+    sources:
+      - src.mehra-1975-satyendra-nath-bose
+claims:
+  - text: Bose’s light-quanta paper appeared in Zeitschrift für Physik in 1924 in Einstein’s German translation.
+    grade: A
+    sources:
+      - src.bose-1924-plancks-gesetz
+      - src.mehra-1975-satyendra-nath-bose
+  - text: Einstein extended Bose’s approach from radiation to the quantum theory of an ideal material gas.
+    grade: A
+    sources:
+      - src.perez-2010-einstein-monatomic-gas
+relations: []
+tags:
+  - physics
+  - quantum-statistics
+  - radiation
+review:
+  status: draft
+  author: codex-gpt-6

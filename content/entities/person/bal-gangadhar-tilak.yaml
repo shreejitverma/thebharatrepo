@@ -1,0 +1,47 @@
+id: person.bal-gangadhar-tilak
+type: person
+kind: person
+names:
+  en: Bal Gangadhar Tilak
+  native: बाळ गंगाधर टिळक
+summary: Bal Gangadhar Tilak used journalism and public organising to campaign for Indian
+  self-government. Colonial courts prosecuted him for sedition, and after imprisonment in
+  Mandalay he helped launch the Home Rule movement.
+summaries:
+  kids: Tilak wrote for newspapers and urged Indians to seek the right to govern themselves. The
+    colonial government sent him to prison for his writings.
+  teen: Tilak used the newspapers Kesari and the Mahratta to build a political audience. After
+    serving a sentence in Mandalay, he returned to organise a Home Rule League in 1916.
+region: Bombay Presidency, British India
+datings:
+  - method: scholarly-consensus
+    range:
+      earliest: "1856"
+      latest: "1920"
+      precision: year
+      circa: false
+    grade: B
+    label: Lifespan
+    sources:
+      - src.wolpert-1989-tilak-and-gokhale
+claims:
+  - text: Tilak helped establish Kesari and the Mahratta and was sentenced to six years'
+      transportation in the 1908 sedition case.
+    grade: B
+    sources:
+      - src.wolpert-1989-tilak-and-gokhale
+  - text: Tilak organised a Home Rule League in 1916 alongside a separate league led by Annie Besant.
+    grade: B
+    sources:
+      - src.sarkar-1989-modern-india
+      - src.chandra-1989-indias-struggle-for-independence
+relations:
+  - kind: contemporary-of
+    target: person.gopal-krishna-gokhale
+tags:
+  - congress
+  - home-rule
+  - press
+review:
+  status: draft
+  author: codex-gpt-6

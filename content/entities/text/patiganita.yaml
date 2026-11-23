@@ -1,0 +1,44 @@
+id: text.patiganita
+type: text
+kind: science
+names:
+  en: Patiganita of Sridhara
+  iast: Pāṭīgaṇita
+  native: पाटीगणित
+summary: Sridhara’s Patiganita is an early medieval Sanskrit treatise on arithmetic and measurement, preserved
+  incompletely with a commentary. It connects rules for calculation to practical problems.
+summaries:
+  kids: This book explains how to use arithmetic to work out everyday questions involving amounts and measurements.
+  teen: The surviving Patiganita shows how rules and worked problems were taught together. Sridhara’s Trishatika
+    names the Patiganita as the basis of its shorter account.
+datings:
+  - method: textual-internal
+    range:
+      earliest: 700
+      latest: "900 CE"
+      precision: century
+      circa: true
+    grade: C
+    label: Relative chronology (Plofker and Shukla)
+    sources:
+      - id: src.plofker-2009-mathematics-in-india
+        locator: Section 6.1 and Appendix B
+      - src.shukla-1959-patiganita
+    note: Connections among extant texts provide the date range.
+claims:
+  - text: The surviving treatise gives rules for arithmetic with fractions and other practical computations.
+    grade: A
+    sources:
+      - src.shukla-1959-patiganita
+  - text: An old Sanskrit commentary accompanies the incomplete text in Shukla’s edition.
+    grade: A
+    sources:
+      - src.shukla-1959-patiganita
+relations: []
+tags:
+  - arithmetic
+  - fractions
+  - mensuration
+review:
+  status: draft
+  author: codex-gpt-6

@@ -1,0 +1,55 @@
+id: person.bhaskaravarman
+type: person
+kind: person
+names:
+  en: Bhaskaravarman
+  iast: Bhāskaravarman
+  native: ভাস্কৰবৰ্মন
+summary: >-
+  Bhaskaravarman (r. c. 600-650 CE) was the last and best-documented ruler of the Varman dynasty of
+  Kamarupa in Assam. Known from his Nidhanpur and Dubi copper plates, Nalanda clay seals,
+  Banabhatta's Harshacharita and Xuanzang's travel account, he allied with Harshavardhana of Kanauj
+  against Shashanka of Gauda and hosted Xuanzang at his court around 643 CE.
+summaries:
+  kids: >-
+    King Bhaskaravarman ruled Kamarupa in Assam around 600-650 CE. He made an alliance with Emperor
+    Harsha and invited the Chinese monk Xuanzang to visit his kingdom.
+  teen: >-
+    Documented in Sanskrit copper plates from Sylhet and Barpeta, clay seals at Nalanda, and Chinese
+    chronicles, Bhaskaravarman brought Kamarupa into north Indian diplomacy alongside Harshavardhana
+    against Shashanka of Gauda.
+region: Kamarupa (Brahmaputra Valley, Assam and northern Bengal / Sylhet)
+location: { name: "Guwahati (Pragjyotishapura), Assam", lat: 26.183, lon: 91.746 }
+datings:
+  - method: foreign-synchronism
+    range: { earliest: 600, latest: 650, precision: decade, circa: true }
+    grade: B
+    label: Xuanzang's visit (643 CE), Harsha alliance and Tang records
+    sources:
+      - src.beal-1906-si-yu-ki
+      - src.konow-1914-epigraphia-indica-vol-12
+      - src.barua-1933-early-history-kamarupa
+    note: Contemporaneity with Harsha (accession 606 CE), Xuanzang's stay at the Kamarupa court around 643 CE and Tang diplomatic reports after 648 CE anchor his half-century reign.
+claims:
+  - text: The Nidhanpur copper-plate charter, issued from his victorious camp at Karnasuvarna in Bengal, renewed an earlier revenue-free land grant of Bhutivarman to over two hundred Brahmins in Chandrapuri vishaya.
+    grade: A
+    sources:
+      - src.konow-1914-epigraphia-indica-vol-12
+      - src.shin-2022-bhauma-to-varaha-kamarupa
+  - text: Banabhatta's Harshacharita records Bhaskaravarman sending his envoy Hamsavega to seal a defensive alliance with Harshavardhana against the Gauda ruler Shashanka.
+    grade: A
+    sources:
+      - src.cowell-1897-harsa-carita
+      - src.devahuti-1970-harsha-political-study
+  - text: Clay sealings bearing Bhaskaravarman's genealogy have been excavated at Nalanda Mahavihara, corroborating his diplomatic ties with Magadha and Xuanzang's account.
+    grade: A
+    sources:
+      - src.barua-1933-early-history-kamarupa
+      - src.choudhury-1985-archaeology-brahmaputra-valley
+relations:
+  - { kind: ruled, target: polity.varman-dynasty-of-kamarupa }
+  - { kind: contemporary-of, target: person.harshavardhana }
+  - { kind: contemporary-of, target: person.shashanka }
+  - { kind: related-to, target: event.xuanzang-travels-in-india }
+tags: [bhaskaravarman, kamarupa, varman-dynasty, assam, nidhanpur, harsha]
+review: { status: draft, author: "gemini-4-hydrogen-xhigh" }

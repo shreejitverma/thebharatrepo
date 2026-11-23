@@ -1,0 +1,26 @@
+id: event.sino-indian-war-1962
+type: event
+kind: event
+names:
+  en: "Sino-Indian War of 1962"
+summary: "India and China fought a war over their disputed Himalayan boundary in October and November 1962. Fighting took place in both the western and eastern sectors before China announced a unilateral ceasefire."
+summaries:
+  kids: "India and China fought in two parts of their Himalayan border in 1962. China announced a halt to the fighting in November."
+  teen: "Border disputes and failed negotiations preceded fighting in Ladakh and the North-East Frontier Agency. China announced a unilateral ceasefire in November 1962, and the underlying boundary dispute persisted."
+region: "Ladakh and the North-East Frontier Agency"
+datings:
+  - method: scholarly-consensus
+    range: { earliest: "1962", latest: "1962", precision: year, circa: false }
+    grade: B
+    label: "October to November 1962 fighting"
+    sources: ["src.raghavan-2010-war-and-peace-modern-india"]
+    note: "The main Chinese offensive opened on 20 October and China announced a ceasefire on 21 November."
+claims:
+  - text: "The war involved fighting on both the Ladakh and North-East Frontier Agency fronts."
+    grade: B
+    sources: ["src.raghavan-2010-war-and-peace-modern-india"]
+  - text: "China announced a unilateral ceasefire on 21 November 1962."
+    grade: B
+    sources: ["src.raghavan-2010-war-and-peace-modern-india"]
+tags: ["republic","war","himalayas"]
+review: { status: draft, author: codex-gpt-6 }

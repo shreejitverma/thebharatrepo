@@ -1,0 +1,62 @@
+id: site.agra-fort
+type: site
+kind: site
+names:
+  en: Agra Fort
+  native: आगरा का क़िला
+summary: >-
+  Agra Fort is a red sandstone citadel beside the Yamuna in Agra. Akbar began rebuilding an earlier fort
+  in 1565 CE, and Shah Jahan later added white marble court buildings. UNESCO inscribed Agra Fort in
+  1983.
+summaries:
+  kids: >-
+    Beside the Yamuna River in Agra, Emperor Akbar rebuilt an older fort in red sandstone. His grandson
+    Shah Jahan later added white marble buildings inside the walls.
+  teen: >-
+    Akbar began rebuilding Agra Fort in 1565 CE. Its sandstone walls and palace buildings stand
+    alongside marble audience halls, residences and mosques added under Shah Jahan.
+region: Braj / Upper Ganga Plain (Agra district, Uttar Pradesh)
+location: { name: "Agra, Uttar Pradesh", lat: 27.180, lon: 78.021 }
+datings:
+  - method: scholarly-consensus
+    range: { earliest: "1565 CE", latest: "1655 CE", precision: decade, circa: true }
+    grade: B
+    label: "Major Mughal building phases"
+    sources:
+      - src.asher-1992-architecture-of-mughal-india
+      - src.koch-1991-mughal-architecture
+      - src.unesco-1983-agra-fort
+    note: >-
+      Akbar's sandstone rebuilding began in the 1560s. Marble palaces and mosques were added in stages
+      under Shah Jahan.
+claims:
+  - text: >-
+      The red sandstone fortifications and Jahangiri Mahal belong to the earlier Mughal building phase.
+      Shah Jahan's additions include the Khas Mahal and the Moti Masjid.
+    grade: B
+    sources:
+      - src.asher-1992-architecture-of-mughal-india
+      - src.koch-1991-mughal-architecture
+  - text: >-
+      Agra Fort was inscribed on the UNESCO World Heritage List in 1983.
+    grade: A
+    sources:
+      - src.unesco-1983-agra-fort
+  - text: Abu'l Fazl records that Akbar began rebuilding the fort at Agra in 1565.
+    grade: A
+    sources:
+      - src.asher-1992-architecture-of-mughal-india
+      - src.abulfazl-1907-akbarnama-vol-2
+relations:
+  - { kind: patronised-by, target: person.akbar }
+  - { kind: part-of, target: polity.mughal-empire }
+  - { kind: related-to, target: site.taj-mahal }
+  - { kind: related-to, target: site.fatehpur-sikri }
+wikidata: Q171857
+image:
+  commons: "File:Agra 03-2016 16 Agra Fort.jpg"
+  alt: Red sandstone walls and the walkway beside Agra Fort
+  credit: A.Savin
+  license: FAL
+tags: [agra-fort, mughal, akbar, unesco, fort, uttar-pradesh]
+review: { status: draft, author: "gemini-4-hydrogen-xhigh" }

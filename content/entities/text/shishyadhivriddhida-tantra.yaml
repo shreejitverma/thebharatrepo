@@ -1,0 +1,57 @@
+id: text.shishyadhivriddhida-tantra
+type: text
+kind: science
+names:
+  en: Shishyadhivriddhida Tantra
+  iast: Śiṣyadhīvṛddhidatantra
+  native: शिष्यधीवृद्धिदतन्त्र
+summary: Lalla’s textbook of astronomy describes calculations and diagrams for phenomena such as eclipses. The
+  date of the work’s surviving form has been debated.
+summaries:
+  kids: This astronomy book explains how to draw the path of a shadow during an eclipse.
+  teen: The book gives geometric instructions for working out contacts during eclipses. Its numerical tables
+    also supply clues for historians debating its date.
+datings:
+  - method: astronomical-reference
+    range:
+      earliest: 700
+      latest: "800 CE"
+      precision: century
+      circa: true
+    grade: C
+    label: Eighth-century text (Plofker)
+    sources:
+      - id: src.plofker-2009-mathematics-in-india
+        locator: Sections 4.2 and 4.6
+    note: One set of correction rules refers to 748 CE.
+  - method: astronomical-reference
+    range:
+      earliest: 875
+      latest: 925
+      precision: decade
+      circa: true
+    grade: C
+    label: Later redaction hypothesis (Billard)
+    sources:
+      - id: src.billard-1971-astronomie-indienne
+        locator: pp. 139-146
+      - id: src.plofker-2009-mathematics-in-india
+        locator: Section 4.6
+    note: Billard reconstructed a fit near 898 CE for the parameters in the surviving work.
+claims:
+  - text: The text describes geometric diagrams that express the apparent sizes of the eclipsed body and the
+      obscuring disk or shadow in comparable units.
+    grade: A
+    sources:
+      - id: src.plofker-2009-mathematics-in-india
+        locator: Section 4.3
+relations: []
+debate: The dating based on a stated correction year places the work in the eighth century. Billard’s fit to
+  its parameters led him to propose a later version incorporating eighth-century material.
+tags:
+  - astronomy
+  - eclipses
+  - astronomical-diagrams
+review:
+  status: draft
+  author: codex-gpt-6

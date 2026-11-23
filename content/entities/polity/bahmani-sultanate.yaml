@@ -1,0 +1,76 @@
+id: polity.bahmani-sultanate
+type: polity
+kind: polity
+names:
+  en: Bahmani Sultanate
+  native: بهمنی
+summary: >-
+  The Bahmani Sultanate was founded in 1347, when Alauddin Hasan Bahman Shah, leading a revolt of Deccan
+  nobles against Muhammad bin Tughluq, was proclaimed sultan at Daulatabad. Its court moved from Gulbarga
+  to Bidar in the fifteenth century. After the execution of the minister Mahmud Gawan in 1481, provincial
+  governors founded successor sultanates, while nominal sultans remained at Bidar until 1527.
+summaries:
+  kids: >-
+    The Bahmani sultans ruled much of the Deccan, first from Gulbarga and then from Bidar. Later, their
+    governors set up separate kingdoms of their own.
+  teen: >-
+    Created by a revolt against Delhi in 1347, the Bahmani state ruled parts of present-day Karnataka,
+    Telangana and Maharashtra and fought Vijayanagara over the Raichur Doab. Rivalry among its nobles
+    weakened it before it split into successor sultanates.
+region: Northern and central Deccan
+location:
+  name: Gulbarga (first Bahmani capital)
+  lat: 17.33
+  lon: 76.83
+datings:
+  - method: documentary
+    range:
+      earliest: "1347"
+      latest: "1527"
+      precision: year
+      circa: true
+    grade: B
+    label: Proclamation of Hasan Bahman Shah to the end of the nominal Bidar line
+    sources:
+      - src.sherwani-1953-bahmanis-of-deccan
+      - src.eaton-2005-social-history-deccan
+      - src.asher-talbot-2006-india-before-europe
+    note: The start is Hasan Bahman Shah's proclamation in August 1347. Provincial governors broke away
+      between about 1490 and 1518, and the final decades include rulers with nominal authority at Bidar.
+claims:
+  - text: Alauddin Hasan Bahman Shah was proclaimed sultan in 1347 after the revolt of Deccan nobles against
+      Muhammad bin Tughluq.
+    grade: B
+    sources:
+      - src.sherwani-1953-bahmanis-of-deccan
+      - src.eaton-2005-social-history-deccan
+  - text: The Bahmani seat moved from Gulbarga to Bidar under Ahmad Shah I in the 1420s.
+    grade: B
+    sources:
+      - src.eaton-2005-social-history-deccan
+      - src.michell-1995-architecture-art-southern-india
+  - text: Tension between long-settled Deccani nobles and newly arrived immigrants from Iran and Central Asia
+      shaped Bahmani court politics and culminated in the execution of the minister Mahmud Gawan in 1481.
+    grade: B
+    sources:
+      - src.eaton-2005-social-history-deccan
+      - src.sherwani-1942-mahmud-gawan
+  - text: Between about 1490 and 1527 the Bahmani state dissolved into the sultanates of Ahmadnagar, Berar,
+      Bidar, Bijapur and Golconda.
+    grade: B
+    sources:
+      - src.michell-zebrowski-1999-architecture-art-deccan-sultanates
+      - src.sherwani-1953-bahmanis-of-deccan
+relations:
+  - kind: related-to
+    target: polity.tughlaq-dynasty
+  - kind: related-to
+    target: polity.vijayanagara-empire
+    note: Principal southern rival.
+wikidata: Q374521
+tags:
+  - bahmani
+  - deccan
+review:
+  status: draft
+  author: codex-gpt-6

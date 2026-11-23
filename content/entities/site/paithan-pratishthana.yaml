@@ -1,0 +1,61 @@
+id: "site.paithan-pratishthana"
+type: "site"
+kind: "site"
+names:
+  en: "Pratishthana (Paithan)"
+  iast: "Pratiṣṭhāna"
+summary: "Ancient Pratishthana is identified with Paithan on the Godavari. Written sources and
+  Satavahana coins attest its early historic importance, while excavations date particular deposits
+  through pottery, coins and stratigraphy."
+summaries:
+  kids: "Paithan is a town on the Godavari. Coins and pottery found there help show when people lived
+    and traded at the site."
+  teen: "Pratishthana appears as Paithana in the Periplus. At Paithan, the excavation report
+    distinguishes coins recovered from dated layers from coins found outside controlled contexts."
+region: "Godavari Valley, Maharashtra"
+datings:
+  - method: "archaeological-stratigraphic"
+    range:
+      earliest: "300 BCE"
+      latest: "800 CE"
+      precision: "century"
+      circa: true
+    grade: "B"
+    label: "Early Historic urban occupation through Early Medieval brick temple phases"
+    sources:
+      - "src.kennet-2020-paithan-excavations"
+  - method: "numismatic"
+    range:
+      earliest: "100 BCE"
+      latest: "100 CE"
+      precision: "century"
+      circa: true
+    grade: "B"
+    label: "Approximate span indicated by identifiable Satavahana coins"
+    sources:
+      - id: "src.kennet-2020-paithan-excavations"
+        locator: "Chapter 6"
+    note: "Most identifiable Satavahana coins in the report were recovered outside the principal
+      excavated sequence."
+claims:
+  - text: "The Periplus names Paithana among inland trading places in the Deccan."
+    grade: "A"
+    sources:
+      - "src.casson-1989-periplus-maris-erythraei"
+      - "src.kennet-2020-paithan-excavations"
+  - text: "The excavators compared coin contexts, pottery and stratigraphy to establish their proposed
+      site sequence."
+    grade: "A"
+    sources:
+      - id: "src.kennet-2020-paithan-excavations"
+        locator: "Chapter 6"
+relations:
+  - kind: "related-to"
+    target: "polity.satavahana-dynasty"
+tags:
+  - "maharashtra"
+  - "satavahana"
+  - "godavari"
+review:
+  status: "draft"
+  author: "codex-gpt-6"

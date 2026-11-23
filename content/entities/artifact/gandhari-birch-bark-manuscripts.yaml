@@ -1,0 +1,81 @@
+id: artifact.gandhari-birch-bark-manuscripts
+type: artifact
+kind: text
+names:
+  en: Gandhari Birch-Bark Scrolls (British Library Collection)
+  iast: Gāndhārī Bhūrjapatra Grantha (British Library Or. 14915)
+summary: "Twenty-nine fragmentary birch-bark scrolls written in Gandhari Prakrit and Kharoshthi script (British Library Or. 14915), acquired in 1994 inside an inscribed clay jar linked to the Dharmaguptaka school in eastern Afghanistan (probably near Hadda). Dating palaeographically to the 1st century CE, they are among the oldest surviving Buddhist manuscripts."
+summaries:
+  kids: "Stored inside a clay jar in ancient Gandhara around the 1st century CE, fragile rolled-up strips of birch bark at the British Library are among the oldest Buddhist books ever discovered."
+  teen: >-
+    Preserved in the British Library (Or. 14915) since 1994, twenty-nine Kharoshthi birch-bark scrolls written
+    in Gandhari Prakrit (including the Rhinoceros Sutra and verse anthologies) offer rare 1st-century CE
+    material evidence of a northwest Indian Buddhist monastic library.
+region: Eastern Afghanistan / Gandhara (Hadda region; housed in British Library, London)
+location:
+  name: Hadda / Jalalabad area provenance, eastern Afghanistan
+  lat: 34.365
+  lon: 70.467
+datings:
+  - method: epigraphic
+    range:
+      earliest: 1
+      latest: 100
+      best: 50
+      precision: century
+      circa: true
+    grade: B
+    label: First century CE Kharoshthi palaeography and jar epigraphy
+    sources:
+      - src.salomon-1999-ancient-buddhist-scrolls-gandhara
+      - src.falk-1993-schrift-im-alten-indien
+    note: >-
+      Dated by Kharoshthi letterforms compared against dated Saka-Pahlava and early Kushan inscriptions (first
+      half to middle of the 1st century CE), corroborated by pot inscription naming Dharmaguptaka owners.
+claims:
+  - text: >-
+      Published in Richard Salomon's Ancient Buddhist Scrolls from Gandhara (1999), the 29 British Library
+      scrolls (Or. 14915) were reportedly recovered inside a ceramic pot inscribed with a Kharoshthi
+      dedication "to the Dharmaguptaka teachers".
+    grade: A
+    sources:
+      - src.salomon-1999-ancient-buddhist-scrolls-gandhara
+  - text: >-
+      The collection preserves sutras, verses, commentaries, and avadanas in Gandhari Prakrit, including the
+      Rhinoceros Sutra (Khaggavisana-sutta equivalent), Sangiti-sutra fragments, Songs of Lake Anavatapta, and
+      Dharmapada-type verses.
+    grade: A
+    sources:
+      - src.salomon-1999-ancient-buddhist-scrolls-gandhara
+  - text: >-
+      Because the brittle scrolls were folded, rolled, and ritually buried in earthen jars, they represent
+      what scholars compare to a Buddhist genizah of discarded worn manuscripts from the 1st century CE.
+    grade: B
+    sources:
+      - src.salomon-1999-ancient-buddhist-scrolls-gandhara
+      - src.falk-1993-schrift-im-alten-indien
+relations:
+  - kind: related-to
+    target: person.gautama-buddha
+    note: Oldest surviving physical Buddhist canonical texts
+  - kind: related-to
+    target: tradition.gandhara-art
+    note: Product of the same Gandharan Buddhist monastic milieu
+wikidata: null
+image:
+  commons: File:Fragmentary Buddhist text - Gandhara birchbark scrolls (1st C), part 31 - BL Or. 14915.jpg
+  alt: >-
+    Fragile Kharoshthi birch-bark scroll fragments in Gandhari Prakrit from the 1st century CE British Library
+    collection (Or. 14915)
+  credit: British Library
+  license: CC0
+tags:
+  - manuscript
+  - birch-bark
+  - gandhari
+  - kharoshthi
+  - buddhism
+  - british-library
+review:
+  status: draft
+  author: gemini-4-hydrogen-xhigh

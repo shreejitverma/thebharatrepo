@@ -1,0 +1,72 @@
+id: tradition.mohiniyattam
+type: tradition
+kind: art
+names:
+  en: Mohiniyattam
+  iast: Mōhiniyāṭṭam
+  native: മോഹിനിയാട്ടം
+summary: Mohiniyattam ('dance of the enchantress') is a classical solo women's dance tradition of Kerala characterised
+  by gentle swaying torso movements (andolika) and the lasya (graceful) aesthetic, performed in a cream-and-gold kasavu
+  costume. Documented at Travancore under Maharaja Swati Tirunal in the nineteenth century, it was revived at Kerala
+  Kalamandalam in the 1930s and expanded in the late twentieth century.
+summaries:
+  kids: Mohiniyattam is a graceful solo dance from Kerala in which dancers wear white-and-gold saris and move with gentle
+    swaying steps like palm trees in a breeze.
+  teen: Patronised at the nineteenth-century Travancore court of Swati Tirunal and revitalised at Kerala Kalamandalam in
+    the twentieth century, Mohiniyattam embodies the gentle lasya dance tradition of Kerala.
+region: Kerala
+location:
+  name: Thiruvananthapuram, Kerala
+  lat: 8.524
+  lon: 76.936
+datings:
+  - method: documentary
+    range:
+      earliest: 1550
+      latest: 1846
+      precision: century
+      circa: true
+    grade: C
+    label: Early textual attestations and Travancore court patronage under Swati Tirunal
+    sources:
+      - src.lemos-2022-mohiniyattam
+      - src.shivaji-2004-mohiniyattam
+    note: Mentioned in early-modern Kerala texts such as Vyavaharamala (16th-18th c.) and patronised at Travancore under
+      Swati Tirunal (1813-1846) and Vadivelu of the Thanjavur Quartet.
+claims:
+  - text: Mohiniyattam draws musical accompaniment from Kerala's sopana sangeetam as well as Carnatic music, featuring the
+      edakka hourglass drum alongside vocal, veena or flute.
+    grade: A
+    sources:
+      - src.lemos-2022-mohiniyattam
+      - src.shivaji-2004-mohiniyattam
+  - text: Ethnographic history by Justine Lemos traces how the form moved from stigmatised nineteenth-century temple and
+      salon settings into a respected state-supported classical discipline.
+    grade: B
+    sources:
+      - src.lemos-2022-mohiniyattam
+  - text: Vallathol Narayana Menon and teachers such as Kalyani Amma and Chinnammu Amma rebuilt Mohiniyattam at Kerala
+      Kalamandalam from the 1930s to the 1950s.
+    grade: A
+    sources:
+      - src.lemos-2022-mohiniyattam
+relations:
+  - kind: related-to
+    target: tradition.carnatic-music
+  - kind: related-to
+    target: tradition.bharatanatyam
+wikidata: Q940868
+image:
+  commons: File:Mohiniyattam at Kerala state school kalothsavam 2019.jpg
+  alt: Mohiniyattam dancer in white-and-gold kasavu costume performing graceful hand gestures
+  credit: Shagil Kannur
+  license: CC BY-SA 4.0
+tags:
+  - mohiniyattam
+  - dance
+  - kerala
+  - lasya
+  - swati-tirunal
+review:
+  status: draft
+  author: gemini-4-hydrogen-xhigh

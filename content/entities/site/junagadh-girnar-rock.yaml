@@ -1,0 +1,69 @@
+id: "site.junagadh-girnar-rock"
+type: "site"
+kind: "site"
+names:
+  en: "Junagadh and the Girnar inscription rock"
+summary: "A boulder at the foot of Girnar carries inscriptions from three periods of rule. Ashoka's
+  edicts share the rock with records of Rudradaman and Skandagupta that describe repairs to the
+  Sudarshana reservoir."
+summaries:
+  kids: "Three rulers had messages carved onto the same rock near Junagadh. Two of the messages tell
+    how people repaired a reservoir after floods."
+  teen: "Ashoka's Prakrit edicts and the Sanskrit records of Rudradaman and Skandagupta illustrate
+    changes in royal writing. The later inscriptions also record successive repairs to the same
+    reservoir."
+region: "Junagadh, Gujarat"
+datings:
+  - method: "epigraphic"
+    range:
+      earliest: "270 BCE"
+      latest: "230 BCE"
+      precision: "century"
+      circa: true
+    grade: "A"
+    label: "Ashoka's Major Rock Edicts at Girnar"
+    sources:
+      - "src.hultzsch-1925-inscriptions-of-asoka"
+  - method: "epigraphic"
+    range:
+      earliest: 150
+      latest: 151
+      precision: "year"
+      circa: true
+    grade: "A"
+    label: "Rudradaman's inscription dated to era year 72"
+    sources:
+      - "src.kielhorn-1906-junagadh-inscription"
+  - method: "epigraphic"
+    range:
+      earliest: 455
+      latest: 457
+      precision: "year"
+      circa: true
+    grade: "A"
+    label: "Skandagupta-period inscriptions on the repairs"
+    sources:
+      - "src.fleet-1888-inscriptions-early-gupta-kings"
+claims:
+  - text: "Rudradaman's inscription records a breach after heavy rain and the repair directed by his
+      governor Suvishakha."
+    grade: "A"
+    sources:
+      - "src.kielhorn-1906-junagadh-inscription"
+  - text: "A later inscription of Skandagupta's reign records another breach and restoration of the
+      reservoir."
+    grade: "A"
+    sources:
+      - "src.fleet-1888-inscriptions-early-gupta-kings"
+relations:
+  - kind: "related-to"
+    target: "artifact.ashoka-major-rock-edict-xiii"
+  - kind: "related-to"
+    target: "artifact.junagadh-rock-inscription-rudradaman"
+tags:
+  - "gujarat"
+  - "inscription"
+  - "water-management"
+review:
+  status: "draft"
+  author: "codex-gpt-6"

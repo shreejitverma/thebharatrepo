@@ -2,7 +2,7 @@ import fs from 'node:fs';
 import path from 'node:path';
 import type { Metadata } from 'next';
 import Link from 'next/link';
-import { DATA_DIR, DATA_FILES, DATA_LICENSE, DATA_LICENSE_URL, readManifest, type DataFile } from '@/lib/content/open-data';
+import { DATA_DIR, DATA_FILES, DATA_LICENSE, DATA_LICENSE_URL, formatCount, readManifest, type DataFile } from '@/lib/content/open-data';
 import { REPO_URL } from '@/lib/content/site-url';
 
 export const metadata: Metadata = {
@@ -50,7 +50,7 @@ export default function DataPage() {
         {totals.map(([n, label]) => (
           <div key={label}>
             <dt>{label}</dt>
-            <dd>{n.toLocaleString('en-IN')}</dd>
+            <dd>{formatCount(n)}</dd>
           </div>
         ))}
       </dl>

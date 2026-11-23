@@ -1,0 +1,97 @@
+id: artifact.mandsaur-silk-weavers-inscription
+type: artifact
+kind: civilisation
+names:
+  en: Mandsaur Silk Weavers Guild Inscription
+  iast: Daśapura Tantuvāya Śreṇī Abhilekha
+summary: >-
+  A 24-line (44-verse) Sanskrit stone prasasti from Dashapura (Mandsaur, Madhya Pradesh; now in the Gujari
+  Mahal Archaeological Museum, Gwalior) composed by poet Vatsabhatti. It records that a guild (shreni) of
+  silk-weavers who migrated from Lata (southern Gujarat) constructed a Sun temple in Malava Year 493 (436 CE)
+  under Kumaragupta I and Bandhuvarman, and repaired it thirty-six years later in Malava Year 529 (473 CE).
+summaries:
+  kids: >-
+    Written in graceful Sanskrit poetry in 473 CE, this stone slab from Mandsaur tells the story of a guild of
+    skilled silk weavers who moved from Gujarat to central India, built a grand temple to the Sun, and later
+    restored it.
+  teen: >-
+    Preserved in Gwalior's Gujari Mahal Museum, the Mandsaur Silk Weavers Inscription is an extraordinary
+    social-economic document: written in 44 classical Sanskrit stanzas by Vatsabhatti, it traces an artisan
+    guild's migration, diverse urban professions, and corporate religious patronage between 436 and 473 CE.
+region: Mandsaur (ancient Dashapura), Madhya Pradesh (housed in Gujari Mahal Museum, Gwalior)
+location:
+  name: Mandsaur (Dashapura), Madhya Pradesh
+  lat: 24.0718
+  lon: 75.0699
+datings:
+  - method: epigraphic
+    range:
+      earliest: 436
+      latest: 474
+      best: 473
+      precision: year
+      circa: false
+    grade: A
+    label: Malava (Vikrama) Years 493 (436 CE) and 529 (473 CE)
+    sources:
+      - src.fleet-1888-inscriptions-early-gupta-kings
+      - src.bhandarkar-1981-inscriptions-early-gupta-kings
+      - src.willis-1997-inscriptions-of-gopaksetra
+    note: >-
+      Text explicitly gives the date of temple consecration as Malava Year 493 (Margashirsha, bright 13th) and
+      repair as Malava Year 529 (Phalguna, bright 2nd), corresponding to 436 CE and 473 CE.
+claims:
+  - text: >-
+      Comprising 44 Sanskrit verses in varied classical metres signed "composed with effort by Vatsabhatti",
+      the slab was edited by J. F. Fleet in CII Vol. 3 and displays stylistic echoes of Kalidasa's Ritusamhara
+      and Meghaduta.
+    grade: B
+    sources:
+      - src.fleet-1888-inscriptions-early-gupta-kings
+      - src.bhandarkar-1981-inscriptions-early-gupta-kings
+  - text: >-
+      The inscription documents that members of the pattavaya (silk-weaver) guild migrated from Lata (Gujarat)
+      to Dashapura, diversified into archery, storytelling, astrology, and asceticism, yet retained collective
+      identity to build and repair the Surya temple.
+    grade: A
+    sources:
+      - src.fleet-1888-inscriptions-early-gupta-kings
+      - src.singh-2008-ancient-early-medieval-india
+  - text: >-
+      It is a cornerstone source for economic historians studying urban guild (shreni) mobility, occupational
+      diversification, and regional politics during the transition from Kumaragupta I's reign to
+      post-Bandhuvarman Malwa.
+    grade: B
+    sources:
+      - src.thapar-2002-early-india
+      - src.willis-1997-inscriptions-of-gopaksetra
+relations:
+  - kind: part-of
+    target: polity.gupta-empire
+  - kind: related-to
+    target: concept.vikram-samvat
+    note: Uses the Malava-gana era equivalent to Vikrama Samvat
+  - kind: related-to
+    target: person.kalidasa
+    note: Vatsabhatti's verses show literary parallels to Kalidasa's poetry
+wikidata: null
+image:
+  commons: >-
+    File:473 CE, Mandsaur inscription of the Silk Weavers Guild, now at Gujri Mahal Gwalior, Madhya
+    Pradesh.jpg
+  alt: >-
+    Inscribed sandstone slab of the 473 CE Mandsaur Silk Weavers Guild inscription displayed at Gujari Mahal
+    Museum, Gwalior
+  credit: Ms Sarah Welch
+  license: CC0
+tags:
+  - inscription
+  - gupta
+  - guild
+  - silk-weavers
+  - mandsaur
+  - sanskrit
+  - surya
+review:
+  status: draft
+  author: gemini-4-hydrogen-xhigh

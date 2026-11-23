@@ -1,0 +1,42 @@
+id: person.ranna
+type: person
+kind: person
+names:
+  en: Ranna
+  iast: Ranna
+  native: ರನ್ನ
+summary: >-
+  Ranna (born 949 CE, active c. 980 to 1010 CE) was one of the "three gems" (Ratnatraya) of classical Old Kannada literature alongside Pampa and Ponna. Born in Mudhol in Bagalkot district and trained by the Jain teacher Ajitasenacharya, he gained patronage under the Western Ganga minister Chavundaraya and the Kalyani Chalukya emperors Tailapa II and Satyashraya, composing the Ajitapurana (993 CE) and the dramatic Mahabharata epic Sahasabhima Vijaya (Gadayuddha).
+summaries:
+  kids: >-
+    Ranna was a tenth-century Kannada poet famous for his vivid poem Gadayuddha about the mace duel between Bhima and Duryodhana, earning the title "Emperor of Poets" from the Kalyani Chalukya king.
+  teen: >-
+    Named Kavichakravarti ("Emperor of Poets") by Tailapa II of Kalyani, Ranna wrote the Jain Ajitapurana (993 CE) and the dramatic Sahasabhima Vijaya (Gadayuddha), pairing his patron Satyashraya with the Mahabharata hero Bhima.
+region: Mudhol (Bagalkot district) and Kalyani realm, northern Karnataka
+location: { name: "Mudhol, Karnataka", lat: 16.33, lon: 75.29 }
+datings:
+  - method: textual-internal
+    range: { earliest: "949 CE", latest: "1015 CE", best: "993 CE", precision: year, circa: true }
+    grade: B
+    label: Self-dated birth year (949 CE) and Ajitapurana (993 CE)
+    sources:
+      - src.narasimhacharya-1988-history-of-kannada-literature
+      - src.rice-1921-history-of-kanarese-literature
+      - src.pollock-2003-literary-cultures-in-history
+    note: Ranna explicitly gives his birth date as 949 CE (Shaka 871) and dates his Ajitapurana to 993 CE; he wrote Sahasabhima Vijaya under Satyashraya (r. 997-1008 CE).
+claims:
+  - text: Ranna composed the Jain hagiographical champu Ajitapurana in 993 CE under the patronage of Attimabbe and the heroic Sahasabhima Vijaya (Gadayuddha) celebrating Prince Satyashraya alongside Bhima's final duel with Duryodhana.
+    grade: A
+    sources:
+      - src.narasimhacharya-1988-history-of-kannada-literature
+      - src.pollock-2003-literary-cultures-in-history
+  - text: The Kalyani Chalukya ruler Tailapa II conferred upon Ranna the royal title Kavichakravarti ("Emperor among Poets").
+    grade: B
+    sources:
+      - src.rice-1921-history-of-kanarese-literature
+      - src.narasimhacharya-1988-history-of-kannada-literature
+relations:
+  - { kind: patronised-by, target: polity.chalukya-dynasty-of-kalyani }
+  - { kind: related-to, target: text.mahabharata }
+tags: [ranna, kannada-literature, kalyani-chalukya, jainism, gadayuddha, karnataka]
+review: { status: draft, author: "gemini-4-hydrogen-xhigh" }

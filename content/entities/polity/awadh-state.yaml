@@ -1,0 +1,55 @@
+id: polity.awadh-state
+type: polity
+kind: polity
+names:
+  en: Awadh State
+  native: अवध
+summary: Awadh emerged as a hereditary successor state under Mughal governor Saadat Khan and his
+  successors. Its court moved from Faizabad to Lucknow, and the East India Company annexed the state
+  in 1856.
+summaries:
+  kids: The nawabs of Awadh made Lucknow their capital. The East India Company took over the state in
+    1856.
+  teen: Awadh's governors built hereditary power while retaining links to the Mughals. Company
+    treaties and territorial transfers progressively limited its autonomy before annexation.
+region: Middle Gangetic plain
+location:
+  name: Lucknow (later capital)
+  lat: 26.85
+  lon: 80.95
+datings:
+  - method: documentary
+    range:
+      earliest: "1722"
+      latest: "1856"
+      precision: year
+      circa: false
+    grade: B
+    label: Period of rule
+    sources:
+      - src.abbott-2023-bahu-begam
+      - src.eaton-2019-india-persianate-age
+      - src.bandyopadhyay-2004-from-plassey-to-partition
+    note: The range begins with Saadat Khan's appointment and ends with the annexation of the remaining
+      dominions.
+claims:
+  - text: Saadat Khan consolidated his provincial authority through negotiations and conflict with local
+      landholding groups.
+    grade: B
+    sources:
+      - src.abbott-2023-bahu-begam
+      - src.eaton-2019-india-persianate-age
+  - text: The East India Company annexed Awadh in 1856.
+    grade: B
+    sources:
+      - src.bandyopadhyay-2004-from-plassey-to-partition
+relations:
+  - kind: related-to
+    target: polity.mughal-empire
+  - kind: preceded
+    target: polity.east-india-company-rule
+    note: In Awadh after annexation.
+tags: []
+review:
+  status: draft
+  author: codex-gpt-6

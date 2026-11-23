@@ -1,0 +1,53 @@
+id: polity.sur-empire
+type: polity
+kind: polity
+names:
+  en: Sur Empire
+summary: Sher Shah Suri founded an Afghan empire after defeating the Mughal ruler Humayun. Its
+  administration is known for coinage and road infrastructure, and the main imperial line lost Delhi
+  when Humayun returned in 1555.
+summaries:
+  kids: Sher Shah ruled northern India for several years. His government issued silver coins, and
+    roads linked the places he ruled.
+  teen: The Sur state interrupted Mughal rule in northern India. Persian histories and dated coins
+    make it possible to compare its administrative legacy with later Mughal practice.
+region: Northern India from the Punjab into Bengal
+location:
+  name: Delhi
+  lat: 28.61
+  lon: 77.21
+datings:
+  - method: documentary
+    range:
+      earliest: "1540"
+      latest: "1555"
+      precision: year
+      circa: false
+    grade: B
+    label: Sur control of Delhi
+    sources:
+      - src.asher-talbot-2006-india-before-europe
+      - src.eaton-2019-india-persianate-age
+      - src.richards-1993-mughal-empire
+    note: The range begins with Sher Shah's victory over Humayun and ends with the Mughal recovery of
+      Delhi. Sur claimants remained active beyond 1555.
+claims:
+  - text: Sher Shah took control of Delhi after defeating Humayun in 1540.
+    grade: B
+    sources:
+      - src.asher-talbot-2006-india-before-europe
+      - src.richards-1993-mughal-empire
+  - text: The Sur administration issued silver rupees and supported routes and staging posts important
+      for travel and government.
+    grade: B
+    sources:
+      - src.asher-talbot-2006-india-before-europe
+      - src.eaton-2019-india-persianate-age
+relations:
+  - kind: related-to
+    target: polity.mughal-empire
+    note: Sur rule interrupted Mughal control of Delhi.
+tags: []
+review:
+  status: draft
+  author: codex-gpt-6

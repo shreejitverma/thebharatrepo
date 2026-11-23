@@ -1,0 +1,79 @@
+id: artifact.tiruvalangadu-copper-plates
+type: artifact
+kind: polity
+names:
+  en: Tiruvalangadu Copper Plates of Rajendra Chola I
+  iast: Tiruvālaṅkāṭu Cōḻa Ceppēṭukaḷ
+summary: "A monumental charter of thirty-one massive copper plates strung on a royal Chola ring seal (Government Museum, Chennai), unearthed in 1904-1905 at the Vataranyesvara temple at Tiruvalangadu, Tiruvallur district, Tamil Nadu. Issued in the 6th regnal year of Rajendra Chola I (c. 1018 CE), its ten Sanskrit plates and twenty-one Tamil plates preserve the fullest Chola royal genealogy and land grant administration."
+summaries:
+  kids: >-
+    Weighing over ninety kilograms, thirty-one giant copper sheets chained together by a royal seal ring were
+    dug up at a Tamil Nadu temple in 1905, recording Chola family history in Sanskrit and a village temple
+    gift in Tamil.
+  teen: >-
+    Issued under Rajendra Chola I (Year 6, c. 1018 CE) and housed in Government Museum, Chennai, the 31-plate
+    Tiruvalangadu charter pairs a poetic Sanskrit genealogy composed by Narayana with detailed Tamil revenue
+    schedules granting the village of Palaiyanur to the local Shiva temple.
+region: Tiruvalangadu, Tiruvallur District, Tamil Nadu (housed in Government Museum, Chennai)
+location:
+  name: Vataranyesvara Temple, Tiruvalangadu
+  lat: 13.13
+  lon: 79.775
+datings:
+  - method: epigraphic
+    range:
+      earliest: 1017
+      latest: 1019
+      best: 1018
+      precision: year
+      circa: false
+    grade: A
+    label: Regnal Year 6 of Rajendra Chola I (c. 1018 CE)
+    sources:
+      - src.shastri-1920-south-indian-inscriptions-vol-3-part-3
+      - src.sastri-1955-the-colas
+      - src.subbarayalu-2012-south-india-under-cholas
+    note: >-
+      Dated directly to the 6th regnal year of Parakesarivarman Rajendra Chola I (whose reign began in 1012
+      CE), though the engraving of the long Sanskrit portion extended slightly later into his reign.
+claims:
+  - text: >-
+      Edited by H. Krishna Sastri in South-Indian Inscriptions Vol. 3, Part 3, the Tiruvalangadu grant
+      comprises 31 copper plates fastened on a large bronze ring bearing the Chola tiger-and-fishes emblem and
+      weighing roughly 7,980 tolas (about 93 kg).
+    grade: A
+    sources:
+      - src.shastri-1920-south-indian-inscriptions-vol-3-part-3
+      - src.sastri-1955-the-colas
+  - text: >-
+      The first 10 plates contain 137 Sanskrit verses in Grantha script composed by poet Narayana, tracing
+      Chola lineage from mythological solar ancestors through Vijayalaya, Parantaka I, Rajaraja I, and early
+      exploits of Rajendra I; the remaining 21 plates record the Tamil administrative order converting
+      Palaiyanur into a devadana grant.
+    grade: A
+    sources:
+      - src.shastri-1920-south-indian-inscriptions-vol-3-part-3
+      - src.subbarayalu-2012-south-india-under-cholas
+relations:
+  - kind: patronised-by
+    target: person.rajendra-chola-i
+  - kind: part-of
+    target: polity.chola-dynasty
+  - kind: related-to
+    target: artifact.tiruvalangadu-shiva-nataraja
+    note: "Both associated with the Vataranyesvara temple at Tiruvalangadu"
+  - kind: related-to
+    target: person.rajaraja-i
+    note: Detailed Sanskrit prasasti on Rajaraja I's reign
+wikidata: null
+tags:
+  - inscription
+  - copper-plate
+  - chola
+  - rajendra-i
+  - tamil
+  - sanskrit
+  - tiruvalangadu
+review:
+  status: draft
+  author: gemini-4-hydrogen-xhigh

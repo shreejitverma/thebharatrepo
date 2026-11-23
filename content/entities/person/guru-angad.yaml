@@ -1,0 +1,65 @@
+id: person.guru-angad
+type: person
+kind: person
+names:
+  en: Guru Angad
+  native: ਗੁਰੂ ਅੰਗਦ
+summary: Guru Angad succeeded Guru Nanak as the second Sikh Guru. His verse forms part of Sikh
+  scripture, and his leadership is associated with the promotion of the Gurmukhi script.
+summaries:
+  kids: Guru Angad carried on Guru Nanak’s teaching. Verses he composed are still read and sung by Sikhs.
+  teen: The second Guru continued Nanak’s teaching and contributed short verses to the corpus later
+    gathered into the Adi Granth. He is closely associated with the transmission of Gurmukhi.
+region: Khadur, Punjab
+datings:
+  - method: scholarly-consensus
+    range:
+      earliest: "1504"
+      latest: "1552"
+      precision: year
+      circa: true
+    grade: B
+    label: Conventional birth and death years
+    sources:
+      - src.singh-2004-history-of-the-sikhs-vol-1
+      - id: src.grewal-1990-sikhs-of-the-punjab
+        locator: Foundation of the Sikh Panth
+      - id: src.singh-2003-guru-granth-sahib
+        locator: Introduction
+  - method: scholarly-consensus
+    range:
+      earliest: "1539"
+      latest: "1552"
+      precision: year
+      circa: false
+    grade: B
+    label: Years as Sikh Guru
+    sources:
+      - id: src.grewal-1990-sikhs-of-the-punjab
+        locator: Foundation of the Sikh Panth
+      - id: src.singh-2003-guru-granth-sahib
+        locator: Introduction
+claims:
+  - text: Guru Angad’s shaloks are preserved in the Sikh scriptural corpus.
+    grade: B
+    sources:
+      - id: src.singh-2003-guru-granth-sahib
+        locator: Introduction
+  - text: Tradition associates Angad with promoting Gurmukhi for recording Sikh compositions.
+    grade: B
+    sources:
+      - id: src.grewal-1990-sikhs-of-the-punjab
+        locator: Foundation of the Sikh Panth
+      - src.singh-2004-history-of-the-sikhs-vol-1
+relations:
+  - kind: succeeded
+    target: person.guru-nanak
+  - kind: part-of
+    target: tradition.sikh-gurus
+tags:
+  - sikhism
+  - sikh-gurus
+  - mughal-period
+review:
+  status: draft
+  author: codex-gpt-6

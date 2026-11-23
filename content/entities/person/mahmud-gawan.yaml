@@ -1,0 +1,47 @@
+id: person.mahmud-gawan
+type: person
+kind: person
+names:
+  en: Mahmud Gawan
+  iast: Maḥmūd Gāwān
+  native: محمود گاوان
+summary: >-
+  Khwaja Mahmud Gawan (1411 to 1481 CE) was an Iranian-born merchant, scholar, and statesman who rose to serve as chief minister (vakil-us-sultanat) of the Bahmani Sultanate at Bidar. From 1463 to 1481 CE he expanded Bahmani control over Konkan ports including Goa, reformed provincial revenue and military administration to curb factional power, wrote the Riyaz-ul-Insha collection of diplomatic letters, and built the monumental Madrasa at Bidar before falling victim to a court conspiracy and execution in 1481 CE.
+summaries:
+  kids: >-
+    Mahmud Gawan was a wise prime minister and scholar in the Bahmani kingdom of Bidar who wrote books, reformed taxes, and built a grand three-storey college.
+  teen: >-
+    Born in northern Iran and arriving in Bidar as a trader, Mahmud Gawan became the Bahmani Sultanate's greatest prime minister (1463-1481 CE), capturing Goa, reforming the army and land revenue, and founding the Madrasa of Bidar before his wrongful execution.
+region: Bidar, Karnataka (Deccan)
+location: { name: "Bidar, Karnataka", lat: 17.91, lon: 77.52 }
+datings:
+  - method: documentary
+    range: { earliest: "1411 CE", latest: "1481 CE", precision: year, circa: false }
+    grade: A
+    label: Birth in Gilan (1411 CE) to execution near Bidar (1481 CE)
+    sources:
+      - src.sherwani-1942-mahmud-gawan
+      - src.eaton-2005-social-history-deccan
+    note: Persian chronicles (Firishta, Burhan-i-Ma'asir) and his own letters (Riyaz-ul-Insha) document his arrival in Bidar in 1453 CE and execution on 5 April 1481 CE on forged treason charges under Muhammad Shah III.
+claims:
+  - text: Mahmud Gawan captured the Konkan ports of Dabhol and Goa (1470-1472 CE) from Vijayanagara, securing Bahmani access to Arabian Sea horse imports.
+    grade: B
+    sources:
+      - src.sherwani-1942-mahmud-gawan
+      - src.eaton-2005-social-history-deccan
+  - text: His administrative reforms subdivided the four large Bahmani provinces (tarafs) into eight smaller units, paid soldiers directly, and conducted systematic land-revenue assessments.
+    grade: B
+    sources:
+      - src.sherwani-1942-mahmud-gawan
+      - src.asher-talbot-2006-india-before-europe
+  - text: He endowed the Bidar Madrasa (completed 1472 CE) with a library of thousands of manuscripts and maintained correspondence with scholars across the Timurid and Ottoman worlds preserved in Riyaz-ul-Insha.
+    grade: A
+    sources:
+      - src.sherwani-1942-mahmud-gawan
+      - src.eaton-2005-social-history-deccan
+relations:
+  - { kind: founded, target: site.mahmud-gawan-madrasa }
+  - { kind: related-to, target: polity.bahmani-sultanate, note: "Chief minister (vakil-us-sultanat) 1463-1481" }
+wikidata: Q2151490
+tags: [mahmud-gawan, bahmani, bidar, karnataka, statesman, scholar]
+review: { status: draft, author: "gemini-4-hydrogen-xhigh" }

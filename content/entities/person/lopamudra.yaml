@@ -1,0 +1,53 @@
+id: person.lopamudra
+type: person
+kind: person
+names:
+  en: Lopamudra
+  iast: Lopāmudrā
+  native: लोपामुद्रा
+summary: Lopamudra is a named figure in a Rigvedic dialogue hymn involving the seer Agastya. The
+  hymn presents a wife speaking of age and desire. Its language supplies a textual horizon, while
+  her lifetime is unknown.
+summaries:
+  kids: In a poem in the Rigveda, Lopamudra speaks to Agastya about growing older and wanting to share
+    his affection.
+  teen: Rigveda 1.179 presents a dialogue about aging and desire. Lopamudra is named in the hymn, and
+    the assignment of individual voices draws on the text and its interpretive tradition.
+datings:
+  - method: traditional-puranic
+    range:
+      earliest: 3102 BCE
+      latest: 3000 BCE
+      precision: century
+      circa: true
+    grade: D
+    label: Traditional Puranic and sampradaya reckoning
+    sources:
+      - src.bryant-2001-quest-origins-vedic-culture
+      - src.flood-2003-blackwell-companion-hinduism
+    note: Traditional accounts place the Rigvedic seers and the compilation of the hymns before or near
+      the onset of the Kali Yuga.
+claims:
+  - text: Rigveda 1.179 names Lopamudra and Agastya and includes a speaker who reflects on the passing
+      of years and the effects of age.
+    grade: A
+    sources:
+      - id: src.jamison-brereton-2014-rigveda
+        locator: Rigveda 1.179
+  - text: Linguistic scholarship places the Rigvedic collection broadly around 1500 BCE to 1000 BCE;
+      these are dates for the texts, not for Lopamudra.
+    grade: C
+    sources:
+      - id: src.jamison-brereton-2014-rigveda
+        locator: Introduction
+      - src.elby-2014-contemporary-guide-vedas
+relations:
+  - kind: related-to
+    target: text.rigveda
+tags:
+  - rigveda
+  - dialogue-hymn
+  - women
+review:
+  status: draft
+  author: codex-gpt-6

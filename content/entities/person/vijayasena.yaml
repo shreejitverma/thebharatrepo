@@ -1,0 +1,40 @@
+id: person.vijayasena
+type: person
+kind: person
+names:
+  en: Vijayasena
+  iast: Vijayasena
+  native: বিজয় সেন
+summary: Vijayasena consolidated Sena power in Bengal. His Deopara inscription gives the history of
+  his lineage and praises his reign in the conventions of a court eulogy.
+summaries:
+  kids: Vijayasena was a king in Bengal. An inscription names his ancestors and praises his rule.
+  teen: The Deopara eulogy helps establish Vijayasena's place in Sena history. Its claims of conquest
+    are read alongside grants and evidence from neighbouring powers.
+region: Bengal
+datings:
+  - method: scholarly-consensus
+    range:
+      earliest: "1090"
+      latest: "1170"
+      precision: decade
+      circa: true
+    grade: B
+    label: Reign or recorded political activity
+    sources:
+      - src.singh-2008-ancient-early-medieval-india
+      - src.dharma-deopara-inscription
+    note: The range brackets the conventional reign without assigning exact dates to the reported
+      campaigns.
+claims:
+  - text: The Deopara inscription identifies Vijayasena and gives the names of earlier Sena ancestors.
+    grade: A
+    sources:
+      - src.dharma-deopara-inscription
+relations:
+  - kind: ruled
+    target: polity.sena-dynasty
+tags: []
+review:
+  status: draft
+  author: codex-gpt-6

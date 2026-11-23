@@ -1,0 +1,87 @@
+id: artifact.kushan-gold-dinars
+type: artifact
+kind: polity
+names:
+  en: Kushan Gold Dinars
+  iast: Kuṣāṇa Suvarṇa Dīnāra
+summary: >-
+  High-purity gold coins (c. 7.9-8.0 g, aligned to the Roman aureus standard) introduced into South and
+  Central Asia by Kushan ruler Vima Kadphises around the early 2nd century CE and issued lavishly by Kanishka
+  I, Huvishka, and Vasudeva I. Combining royal sacrificing or bust portraits with a pantheon of Greek,
+  Iranian, and Indian deities (such as Oesho/Shiva, Nana, Ardochsho, and Boddo/Buddha), their inscriptions
+  record Kanishka's switch from Greek to Bactrian.
+summaries:
+  kids: >-
+    Modeled on Roman gold weights around 100-250 CE, Kushan gold dinars show the king offering incense at a
+    small altar on one side and Greek, Persian, or Indian deities - including Shiva and the Buddha - on the
+    other.
+  teen: >-
+    First struck by Vima Kadphises on the ~8-gram Roman aureus weight standard, Kushan gold dinars document
+    imperial Silk Road trade and religious pluralism, depicting the Kushan king with cosmic flames or halo
+    opposite named deities from Mithra and Nana to Oesho and Boddo.
+region: Bactria, Gandhara, and northern India (major holdings in ANS, British Museum, and LACMA)
+datings:
+  - method: numismatic
+    range:
+      earliest: 100
+      latest: 250
+      best: 140
+      precision: decade
+      circa: true
+    grade: B
+    label: "Vima Kadphises through Vasudeva I"
+    sources:
+      - src.jongeward-cribb-2015-kushan-coins
+      - src.gardner-1886-coins-greek-scythic-kings
+    note: >-
+      Dated by the Kushan era of Kanishka I (now widely set at 127 CE per Falk and Cribb) and Roman aureus
+      weight parallels under Trajan and Hadrian.
+claims:
+  - text: "Vima Kadphises initiated the first sustained gold coinage of South Asia in double-dinars (~15.8 g), dinars (~7.9-8.0 g), and quarter-dinars (~2.0 g) matched to the Roman aureus, displaying the king sacrificing at a fire altar on the obverse and Shiva-Oesho with Nandi bull on the reverse."
+    grade: B
+    sources:
+      - src.jongeward-cribb-2015-kushan-coins
+      - src.gardner-1886-coins-greek-scythic-kings
+  - text: "Under Kanishka I (illustrated by gold dinar M.77.56.4 at LACMA and rare Boddo/Buddha coins in the British Museum), Greek legends (Basileus Basileon) were replaced early in his reign by the Bactrian title \"Shaonano Shao Kanishki Koshano\", paralleling the Rabatak inscription."
+    grade: B
+    sources:
+      - src.jongeward-cribb-2015-kushan-coins
+      - src.cribb-2023-kushan-royal-inscription
+  - text: >-
+      Reverse iconography spans more than thirty named deities across Iranian (Mithra, Mao, Nana, Ardochsho,
+      Pharro), Indian (Oesho, Skanda-Kumara, Vishakha, Boddo), and Hellenistic (Hephaistos, Helios)
+      traditions, alongside distinctive royal dynastic tamga marks.
+    grade: A
+    sources:
+      - src.jongeward-cribb-2015-kushan-coins
+      - src.singh-2008-ancient-early-medieval-india
+relations:
+  - kind: part-of
+    target: polity.kushan-empire
+  - kind: related-to
+    target: person.kanishka-i
+  - kind: related-to
+    target: artifact.rabatak-inscription
+    note: Parallel shift from Greek to Bactrian royal language
+  - kind: influenced
+    target: artifact.gupta-gold-dinars
+    note: Weight standard, fire-altar obverse, and Ardochsho reverse inspired early Gupta dinars
+wikidata: null
+image:
+  commons: File:Dinar of Kanishka I LACMA M.77.56.4 (1 of 2).jpg
+  alt: >-
+    Gold dinar of Kushan emperor Kanishka I at LACMA (M.77.56.4) depicting the standing ruler sacrificing at
+    an altar
+  credit: Los Angeles County Museum of Art
+  license: Public domain
+tags:
+  - coins
+  - numismatics
+  - gold
+  - kushan
+  - kanishka
+  - bactrian
+  - dinar
+review:
+  status: draft
+  author: gemini-4-hydrogen-xhigh

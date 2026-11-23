@@ -1,0 +1,29 @@
+id: event.khajuraho-unesco-inscription
+type: event
+kind: site
+names:
+  en: "Khajuraho temples inscribed on the World Heritage List"
+summary: "The World Heritage Committee inscribed the Khajuraho Group of Monuments in 1986. The group includes Hindu and Jain temples built during Chandella rule."
+summaries:
+  kids: "The Khajuraho temples joined the World Heritage List in 1986. Some of the temples are Hindu and others are Jain."
+  teen: "UNESCO inscribed the Chandella-era temples at Khajuraho as a group in 1986. The property is recognised for the close relationship between temple architecture and carved sculpture."
+region: "Khajuraho, Madhya Pradesh"
+datings:
+  - method: documentary
+    range: { earliest: "1986", latest: "1986", precision: year, circa: false }
+    grade: A
+    label: "World Heritage inscription"
+    sources: ["src.unesco-1986-khajuraho"]
+    note: "UNESCO records the inscription of the Khajuraho Group of Monuments in 1986."
+claims:
+  - text: "The Committee inscribed the Khajuraho Group of Monuments in 1986."
+    grade: A
+    sources: ["src.unesco-1986-khajuraho"]
+  - text: "The group contains Hindu and Jain temples dating to the Chandella dynasty."
+    grade: A
+    sources: ["src.unesco-1986-khajuraho"]
+relations:
+  - kind: related-to
+    target: site.khajuraho
+tags: ["republic","unesco","heritage"]
+review: { status: draft, author: codex-gpt-6 }

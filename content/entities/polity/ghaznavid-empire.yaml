@@ -1,0 +1,66 @@
+id: polity.ghaznavid-empire
+type: polity
+kind: polity
+names:
+  en: Ghaznavid Empire
+summary: The Ghaznavid dynasty gained power at Ghazni under Sabuktigin and expanded under Mahmud.
+  Its later rulers made Lahore a principal seat after losing much of their western territory. The
+  Ghurids took Lahore in 1186.
+summaries:
+  kids: The Ghaznavids first ruled from Ghazni and later from Lahore. The Ghurids captured Lahore in
+    1186.
+  teen: Sabuktigin established the durable ruling line. Coinage and Persian histories track its
+    expansion under Mahmud and its later shift toward the Punjab.
+region: Afghanistan, eastern Iran and northwestern South Asia
+location:
+  name: Lahore (later dynastic capital)
+  lat: 31.55
+  lon: 74.36
+datings:
+  - method: documentary
+    range:
+      earliest: "977"
+      latest: "1186"
+      precision: decade
+      circa: true
+    grade: B
+    label: Period of rule
+    sources:
+      - src.bosworth-2002-ghaznavids
+      - src.jackson-1999-delhi-sultanate
+      - src.wink-2002-al-hind-volume-2
+    note: This span begins with Sabuktigin's accession. The military regime at Ghazni conventionally
+      starts earlier, with Alptigin in 962.
+  - method: documentary
+    range:
+      earliest: "962"
+      latest: "1186"
+      precision: year
+      circa: false
+    grade: B
+    label: Military regime from Alptigin, as periodised by Peter Jackson
+    sources:
+      - src.jackson-1999-delhi-sultanate
+    note: Jackson includes the Ghazna-based military regime before Sabuktigin while identifying him as
+      the effective dynastic founder.
+claims:
+  - text: The hereditary Ghaznavid line took shape under Sabuktigin and his son Mahmud.
+    grade: B
+    sources:
+      - src.bosworth-2002-ghaznavids
+      - src.jackson-1999-delhi-sultanate
+  - text: The Ghaznavids established power in former Hindu Shahi domains and eventually made Lahore
+      their principal seat.
+    grade: B
+    sources:
+      - src.bosworth-2002-ghaznavids
+      - src.wink-2002-al-hind-volume-2
+relations:
+  - kind: related-to
+    target: polity.hindu-shahi-dynasty
+  - kind: related-to
+    target: event.ghaznavid-raid-on-somnath
+tags: []
+review:
+  status: draft
+  author: codex-gpt-6

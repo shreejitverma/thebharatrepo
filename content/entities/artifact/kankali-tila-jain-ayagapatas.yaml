@@ -1,0 +1,94 @@
+id: artifact.kankali-tila-jain-ayagapatas
+type: artifact
+kind: dharma
+names:
+  en: Kankali Tila Jain Ayagapatas
+  iast: Kaṅkālī Ṭīlā Jaina Āyāgapaṭṭa
+summary: >-
+  Carved red-sandstone Jain tablets of homage (ayagapatas) excavated by A. Fuhrer between 1888 and 1891 at the
+  Kankali Tila stupa complex in Mathura (now in State Museum, Lucknow and Government Museum, Mathura). Bearing
+  auspicious Ashtamangala emblems, stupas, and seated Tirthankaras with dated Kshatrapa and early Kushan
+  inscriptions (including Amohini's Year 42/72 tablet of Mahakshatrapa Sodasa), they provide vital early
+  evidence for Mathura Jainism.
+summaries:
+  kids: >-
+    Carved in warm red sandstone around two thousand years ago at Mathura, these square Jain "tablets of
+    homage" display tiny Tirthankara figures surrounded by lucky symbols like wheels, fish pairs, and
+    swastikas.
+  teen: >-
+    Unearthed from Kankali Tila in Mathura, sandstone ayagapatas such as the Sihanamdika and Vasu tablets
+    illustrate Jain stupa worship and sacred Ashtamangala emblems during the Shaka-Kshatrapa and early Kushan
+    transition, before standalone Tirthankara statues predominated.
+region: Kankali Tila, Mathura District, Uttar Pradesh (State Museum, Lucknow and Government Museum, Mathura)
+location:
+  name: Kankali Tila archaeological mound, Mathura
+  lat: 27.4955
+  lon: 77.6788
+datings:
+  - method: epigraphic
+    range:
+      earliest: 50 BCE
+      latest: 100
+      best: 25
+      precision: decade
+      circa: true
+    grade: B
+    label: Shaka-Kshatrapa (Sodasa) to early Kushan Mathura phases
+    sources:
+      - src.quintanilla-2007-sculpture-at-mathura
+      - src.vogel-1910-catalogue-archaeological-museum-mathura
+      - src.cort-2010-framing-the-jina
+    note: >-
+      Amohini's tablet is dated Year 42 or 72 of Mahakshatrapa Sodasa (often converted to c. 15-17 CE);
+      Sihanamdika and Vasu ayagapatas cluster c. 25-75 CE.
+claims:
+  - text: >-
+      Excavations at Kankali Tila uncovered nearly two dozen square red-sandstone ayagapatas ("tablets of
+      homage") commissioned largely by laywomen and merchants of Mathura and housed today in the State Museum,
+      Lucknow and Government Museum, Mathura.
+    grade: B
+    sources:
+      - src.quintanilla-2007-sculpture-at-mathura
+      - src.vogel-1910-catalogue-archaeological-museum-mathura
+  - text: >-
+      The Sihanamdika ayagapata (State Museum, Lucknow) depicts an eight-spoked wheel encircled by the eight
+      Jain auspicious marks (ashtamangala) and triratnas, while the Vasu tablet portrays a torana-gated Jain
+      stupa flanked by yakshis.
+    grade: A
+    sources:
+      - src.quintanilla-2007-sculpture-at-mathura
+      - src.cort-2010-framing-the-jina
+  - text: >-
+      Because seated Tirthankara icons appear at the centre of later Kankali Tila ayagapatas alongside
+      aniconic stupa and wheel emblems, the group documents the early formation of figurative Jina iconography
+      at Mathura.
+    grade: B
+    sources:
+      - src.quintanilla-2007-sculpture-at-mathura
+      - src.cort-2010-framing-the-jina
+relations:
+  - kind: part-of
+    target: tradition.mathura-art
+  - kind: related-to
+    target: person.mahavira
+    note: Devotional tablets venerating Jinas and the Jain stupa of Mathura
+  - kind: related-to
+    target: artifact.jain-kalpasutra-manuscripts
+wikidata: null
+image:
+  commons: File:"Sihanamdika ayagapata", Jain votive plate, Kankali Tila, Mathura dated 25-50 CE.jpg
+  alt: >-
+    Sandstone Sihanamdika ayagapata from Kankali Tila, Mathura showing the sacred wheel and Ashtamangala
+    emblems
+  credit: Nomu420
+  license: CC BY-SA 3.0
+tags:
+  - jainism
+  - ayagapata
+  - mathura
+  - sculpture
+  - ashtamangala
+  - kankali-tila
+review:
+  status: draft
+  author: gemini-4-hydrogen-xhigh

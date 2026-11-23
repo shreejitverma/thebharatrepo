@@ -1,0 +1,52 @@
+id: person.nagarjuna
+type: person
+kind: person
+names:
+  en: Nagarjuna
+  iast: Nāgārjuna
+  native: नागार्जुन
+summary: Nagarjuna was an Indian Buddhist philosopher whose Fundamental Verses on the Middle Way
+  became a foundational work of Madhyamaka. His arguments about emptiness examine whether things
+  could exist by their own nature.
+summaries:
+  kids: Nagarjuna asked whether anything could exist all by itself. His verses show how much depends
+    on causes, conditions and how we describe things.
+  teen: Nagarjuna uses arguments about causes, motion and the self to question the idea of an
+    independent nature. His Fundamental Verses became a starting point for Madhyamaka commentators.
+datings:
+  - method: scholarly-consensus
+    range:
+      earliest: "100"
+      latest: "300"
+      precision: century
+      circa: true
+    grade: B
+    label: Second- to third-century scholarly horizon
+    sources:
+      - src.westerhoff-2009-nagarjunas-madhyamaka
+      - id: src.ganeri-2017-oxford-handbook-indian-philosophy
+        locator: "Timeline: Indian Philosophy in a Hundred Thinkers"
+    note: Westerhoff places him in the second century and the Oxford Handbook allows an early
+      third-century horizon. Secure life dates are unavailable.
+claims:
+  - text: The Fundamental Verses on the Middle Way is a central work in the philosophical corpus
+      attributed to Nagarjuna.
+    grade: B
+    sources:
+      - src.westerhoff-2009-nagarjunas-madhyamaka
+      - id: src.ganeri-2017-oxford-handbook-indian-philosophy
+        locator: "Timeline: Indian Philosophy in a Hundred Thinkers"
+  - text: In the Fundamental Verses, Nagarjuna links dependent arising and emptiness.
+    grade: A
+    sources:
+      - src.westerhoff-2009-nagarjunas-madhyamaka
+relations:
+  - kind: influenced
+    target: person.aryadeva
+tags:
+  - buddhist-philosophy
+  - madhyamaka
+  - emptiness
+review:
+  status: draft
+  author: codex-gpt-6

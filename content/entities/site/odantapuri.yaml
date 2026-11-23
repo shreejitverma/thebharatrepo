@@ -1,0 +1,55 @@
+id: site.odantapuri
+type: site
+kind: site
+names:
+  en: Odantapuri
+  iast: Odantapurī (Uddaṇḍapura)
+  native: ओदन्तपुरी
+summary: >-
+  Odantapuri (also called Uddandapura or Odantapura), located in and around modern Bihar Sharif in
+  Nalanda district, Bihar, was one of the great Buddhist monastic universities (mahaviharas) of the
+  Pala era. Tibetan chronicles attribute its foundation to Gopala I in the eighth century CE and
+  record its layout as the architectural model for Tibet's Samye Monastery before Turkic raids
+  devastated it around 1200 CE.
+summaries:
+  kids: "Odantapuri in Bihar was one of the famous Pala-period Buddhist universities, and Tibetan tradition says its design was the model for Tibet's first great monastery at Samye."
+  teen: >-
+    Identified with Bihar Sharif in Bihar, the Odantapuri mahavihara flourished under Pala patronage
+    from the 8th century until Turkic raids around 1193-1202 CE, when Persian chroniclers noted its
+    fortified monastic walls.
+region: Nalanda district (Bihar Sharif), Bihar
+location: { name: "Bihar Sharif, Bihar", lat: 25.202, lon: 85.524 }
+datings:
+  - method: scholarly-consensus
+    range: { earliest: 750, latest: 1202, precision: decade, circa: true }
+    grade: B
+    label: Pala foundation to late twelfth-century raids
+    sources:
+      - src.dutt-1988-buddhist-monks-monasteries
+      - src.scharfe-2002-education-in-ancient-india
+      - src.raverty-1881-tabakat-i-nasiri
+    note: Tibetan histories connect its founding to Gopala (c. 750 CE); epigraphic finds name Uddandapura, and Minhaj-i-Siraj's Tabaqat-i-Nasiri records Bakhtiyar Khalji's raid on the fortified vihara of Bihar c. 1193-1202 CE.
+claims:
+  - text: A brass votive image inscription and other antiquities from Bihar Sharif confirm the site's medieval name as Uddandapura / Odantapuri.
+    grade: A
+    sources:
+      - src.dutt-1988-buddhist-monks-monasteries
+      - src.scharfe-2002-education-in-ancient-india
+  - text: Tibetan historical traditions state that Shantarakshita and Padmasambhava modelled Samye, Tibet's first monastery (c. 775 CE), on Odantapuri's design.
+    grade: C
+    sources:
+      - src.dutt-1988-buddhist-monks-monasteries
+      - src.davidson-2002-indian-esoteric-buddhism
+  - text: Minhaj-i-Siraj's Tabaqat-i-Nasiri describes Bakhtiyar Khalji capturing the fortified college (hisar-i-Bihar) around 1200 CE, widely identified by historians with Odantapuri at Bihar Sharif.
+    grade: B
+    sources:
+      - src.raverty-1881-tabakat-i-nasiri
+      - src.eaton-2000-temple-desecration
+relations:
+  - { kind: patronised-by, target: polity.pala-empire }
+  - { kind: related-to, target: site.nalanda-mahavihara }
+  - { kind: related-to, target: site.vikramashila }
+  - { kind: related-to, target: event.destruction-of-nalanda }
+wikidata: Q7077269
+tags: [odantapuri, bihar-sharif, mahavihara, pala, buddhism, vajrayana]
+review: { status: draft, author: "gemini-4-hydrogen-xhigh" }

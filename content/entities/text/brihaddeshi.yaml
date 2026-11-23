@@ -1,0 +1,66 @@
+id: text.brihaddeshi
+type: text
+kind: art
+names:
+  en: Brihaddeshi
+  iast: Bṛhaddeśī
+  native: बृहद्देशी
+summary: The Brihaddeshi, attributed to the musicologist Matanga Muni, is a landmark incomplete Sanskrit musicological
+  treatise bridging Bharata's Natyashastra and medieval raga theory. It provides the earliest surviving systematic
+  definition and classification of raga as a distinct melodic entity alongside regional (desi) musical practice, and is
+  dated by scholars between roughly the fifth and ninth centuries CE.
+summaries:
+  kids: The Brihaddeshi by Matanga is an ancient Sanskrit music book that gives the earliest clear explanation of what a
+    raga is.
+  teen: Dated variously between the sixth and ninth centuries CE, Matanga's Brihaddeshi is the first surviving Sanskrit
+    treatise to define raga systematically and relate classical marga theory to regional desi melodies.
+region: Pan-Indian
+datings:
+  - method: textual-internal
+    range:
+      earliest: 500
+      latest: 900
+      precision: century
+      circa: true
+    grade: C
+    label: Debated first-millennium dating between post-Dattilam era and Abhinavagupta
+    sources:
+      - src.sharma-1992-brhaddesi-matanga
+      - src.widdess-1995-ragas-early-indian-music
+      - src.rowell-1992-music-musical-thought-early-india
+    note: Internal citations of earlier authorities and references to Matanga by Abhinavagupta (c. 1000 CE) place the
+      Brihaddeshi broadly between the 6th and 9th centuries CE, though exact century remains debated.
+claims:
+  - text: The Brihaddeshi contains the earliest surviving explicit theoretical definition and classification of raga,
+      distinguishing grama-ragas, bhashas and regional desi idioms.
+    grade: B
+    sources:
+      - src.sharma-1992-brhaddesi-matanga
+      - src.widdess-1995-ragas-early-indian-music
+  - text: Surviving only in incomplete manuscripts (edited by K. Sambasiva Sastri in 1928 and Prem Lata Sharma in 1992), the
+      text also transmits early discussions of svara solfege and microtonal shrutis.
+    grade: A
+    sources:
+      - src.sharma-1992-brhaddesi-matanga
+      - src.tenijenhuis-1974-indian-music
+debate: Because the surviving text ends mid-work and carries no royal patron's colophon, scholars propose dates ranging
+  from the fifth-sixth centuries CE to the eighth-ninth centuries CE based on its relationship to Dattilam, the
+  Kudumiyanmalai inscription, and later citations in Abhinavagupta and Sarngadeva.
+relations:
+  - kind: related-to
+    target: text.natyashastra
+    note: Builds on Natyashastra theory of jati and grama while treating the regional desi forms; it is not a commentary
+  - kind: influenced
+    target: text.sangita-ratnakara
+  - kind: influenced
+    target: person.abhinavagupta
+wikidata: Q3595954
+tags:
+  - brihaddeshi
+  - matanga
+  - raga
+  - musicology
+  - sanskrit
+review:
+  status: draft
+  author: gemini-4-hydrogen-xhigh

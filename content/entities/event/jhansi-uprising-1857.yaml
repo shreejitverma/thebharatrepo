@@ -1,0 +1,42 @@
+id: event.jhansi-uprising-1857
+type: event
+kind: event
+names:
+  en: Jhansi uprising and siege, 1857-1858
+summary: After the June 1857 uprising at Jhansi, Rani Lakshmibai governed the city. She defended
+  it against Hugh Rose's forces in 1858 and escaped when they captured it in April.
+summaries:
+  kids: Rani Lakshmibai led the defence of Jhansi. After the Company captured the city, she
+    escaped and continued to resist.
+  teen: The Company had annexed Jhansi before the uprising. Lakshmibai took charge after the 1857
+    rebellion and defended the city against a renewed Company advance the following spring.
+region: Jhansi, Bundelkhand
+datings:
+  - method: scholarly-consensus
+    range:
+      earliest: "1857"
+      latest: "1858"
+      precision: year
+      circa: false
+    grade: B
+    label: Local uprising to the capture of Jhansi
+    sources:
+      - src.singh-2014-rani-of-jhansi
+      - src.roy-1993-visions-of-the-rebels
+claims:
+  - text: Hugh Rose's troops captured Jhansi in April 1858, and Lakshmibai escaped.
+    grade: B
+    sources:
+      - src.singh-2014-rani-of-jhansi
+      - src.national-army-museum-decisive-events-indian-rebellion
+relations:
+  - kind: part-of
+    target: event.indian-revolt-of-1857
+  - kind: related-to
+    target: person.rani-lakshmibai
+tags:
+  - revolt-of-1857
+  - bundelkhand
+review:
+  status: draft
+  author: codex-gpt-6

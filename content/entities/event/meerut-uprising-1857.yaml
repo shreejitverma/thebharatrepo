@@ -1,0 +1,41 @@
+id: event.meerut-uprising-1857
+type: event
+kind: event
+names:
+  en: Meerut uprising of 1857
+summary: On 10 May 1857 Indian soldiers at Meerut rose against East India Company officers and
+  released imprisoned cavalrymen. Rebels then marched to Delhi, where the uprising widened.
+summaries:
+  kids: Indian soldiers at Meerut rebelled and freed fellow soldiers from jail. Some marched to
+    Delhi, where more people joined the uprising.
+  teen: The uprising followed the public punishment of cavalrymen who had refused to handle the
+    new cartridges. By the following day, the revolt had spread from Meerut to Delhi.
+region: Meerut cantonment, present-day Uttar Pradesh
+datings:
+  - method: scholarly-consensus
+    range:
+      earliest: "1857"
+      latest: "1857"
+      precision: year
+      circa: false
+    grade: B
+    label: Uprising on 10 May 1857
+    sources:
+      - src.bender-2016-indian-uprising
+      - src.stokes-1986-peasant-armed-revolt-1857
+claims:
+  - text: Company cavalrymen were imprisoned on 9 May, and troops at Meerut rose the following day.
+    grade: B
+    sources:
+      - src.bender-2016-indian-uprising
+relations:
+  - kind: part-of
+    target: event.indian-revolt-of-1857
+  - kind: preceded
+    target: event.delhi-uprising-1857
+tags:
+  - revolt-of-1857
+  - company-rule
+review:
+  status: draft
+  author: codex-gpt-6

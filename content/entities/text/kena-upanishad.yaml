@@ -1,0 +1,60 @@
+id: text.kena-upanishad
+type: text
+kind: text
+names:
+  en: Kena Upanishad
+  iast: Kena Upaniṣad
+  native: केनोपनिषद्
+summary: The Kena Upanishad asks what directs thought, speech and the senses. Its verse inquiry is
+  followed by prose about the gods and a mysterious being whom Uma identifies as brahman. The dating
+  of its layers is disputed.
+summaries:
+  kids: What lets us hear, see and think? An old Sanskrit text starts with questions like these and
+    tells a story about gods puzzled by a stranger.
+  teen: Verse and prose do different work in the Kena. The opening asks how we can know the ground of
+    knowing, while the story uses the gods’ bewilderment to explore that limit.
+datings:
+  - method: linguistic
+    range:
+      earliest: "400 BCE"
+      latest: "1 BCE"
+      precision: century
+      circa: true
+    grade: C
+    label: "Patrick Olivelle: verse stratum"
+    sources:
+      - id: src.olivelle-1998-early-upanisads
+        locator: Introduction, Chronology
+      - id: src.cohen-2024-classical-upanisads
+        locator: Dating and Authorship
+    note: Olivelle places the Kena at the head of the verse group on literary grounds. The prose
+      narrative makes a single date for the whole text difficult.
+  - method: textual-internal
+    range: { earliest: "800 BCE", latest: "601 BCE", precision: century, circa: true }
+    grade: C
+    label: "Sarvepalli Radhakrishnan and Charles A. Moore: earlier pre-Buddhist placement"
+    sources:
+      - id: src.radhakrishnan-1957-source-book-indian-philosophy
+        locator: "Chapter II, The Upaniṣads"
+    note: Their source book assigns this text to the eighth or seventh century BCE in its
+      chronology of the principal Upanishads.
+claims:
+  - text: Uma tells Indra that the being the gods encountered was brahman.
+    grade: A
+    sources:
+      - id: src.olivelle-1998-early-upanisads
+        locator: Kena Upanisad 4.1
+relations:
+  - kind: part-of
+    target: text.upanishads
+  - kind: related-to
+    target: text.samaveda
+debate: Olivelle places the Kena first among the verse Upanishads. Cohen places the received
+  text after the Katha, Mundaka and Shvetashvatara, using linguistic and metrical evidence.
+tags:
+  - upanishad
+  - veda
+  - vedanta
+review:
+  status: draft
+  author: codex-gpt-6

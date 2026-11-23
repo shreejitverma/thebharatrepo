@@ -1,0 +1,54 @@
+id: site.chandraketugarh
+type: site
+kind: site
+names:
+  en: Chandraketugarh
+  iast: Candraketugaṛh
+  native: চন্দ্রকেতুগড়
+summary: >-
+  Chandraketugarh, near Berachampa in North 24 Parganas district of West Bengal on the Bidyadhari
+  palaeo-channel, was a major early historic urban and craft-production centre in the lower Ganga
+  delta. Excavations revealed fortified ramparts, punch-marked coins, Northern Black Polished Ware,
+  ship-motif sealings, and thousands of moulded terracotta plaques in Mauryan, Shunga and Kushan styles.
+summaries:
+  kids: >-
+    In Bengal's river delta, Chandraketugarh was a bustling ancient trading town famous for delicate
+    clay plaques showing dancers, deities, boats and daily life over 2,000 years ago.
+  teen: >-
+    Spanning from pre-Mauryan layers to the medieval period, Chandraketugarh preserves evidence of
+    deltaic urbanisation, Indian Ocean trade links and Bengal's richest corpus of early historic
+    moulded terracotta art.
+region: North 24 Parganas district, West Bengal
+location: { name: "Berachampa, North 24 Parganas", lat: 22.695, lon: 88.686 }
+datings:
+  - method: archaeological-stratigraphic
+    range: { earliest: "400 BCE", latest: 1200, precision: century, circa: true }
+    grade: B
+    label: Pre-Mauryan NBPW settlement through Gupta and Pala-era occupation
+    sources:
+      - src.chattopadhyay-2018-archaeology-of-coastal-bengal
+      - src.sengupta-2007-eloquent-earth
+      - src.allchin-1995-archaeology-early-historic-south-asia
+    note: Stratigraphic excavations at Chandraketugarh and Khana-Mihirer Dhipi trace five cultural phases from c. 4th-3rd century BCE NBPW levels, peaking in the 2nd century BCE to 2nd century CE, and continuing to the 12th century CE.
+claims:
+  - text: Excavations at Chandraketugarh recovered Northern Black Polished Ware, silver punch-marked coins, Rouletted Ware and terracotta sealings bearing ships and Kharoshthi-Brahmi legends.
+    grade: A
+    sources:
+      - src.chattopadhyay-2018-archaeology-of-coastal-bengal
+      - src.sengupta-2007-eloquent-earth
+  - text: Chandraketugarh is especially noted for finely moulded early historic terracotta plaques, though many stray specimens in museum collections lack controlled stratigraphic provenance.
+    grade: B
+    sources:
+      - src.sengupta-2007-eloquent-earth
+      - src.huntington-1985-art-ancient-india
+relations:
+  - { kind: related-to, target: site.tamralipta }
+  - { kind: related-to, target: concept.northern-black-polished-ware-culture }
+wikidata: Q5071385
+image:
+  commons: "File:Circular inscribed terracotta sealing showing image of ship from Chandraketugarh, between 400 BC and 100 BC.jpg"
+  alt: Circular inscribed terracotta sealing depicting an ancient ship from Chandraketugarh, West Bengal
+  credit: Indrajit Das
+  license: CC BY-SA 4.0
+tags: [chandraketugarh, bengal, terracotta, trade, early-historic, urbanism]
+review: { status: draft, author: "gemini-4-hydrogen-xhigh" }

@@ -1,0 +1,94 @@
+id: artifact.bower-manuscript
+type: artifact
+kind: science
+names:
+  en: Bower Manuscript
+  iast: Bower Pāṇḍulipi (Bodleian MS. Sansk. c. 17)
+summary: >-
+  A well-preserved pothi-format birch-bark manuscript acquired near Kucha in Xinjiang in 1890 by Lieutenant
+  Hamilton Bower and edited by A. F. R. Hoernle (Bodleian Library, Oxford, MS. Sansk. c. 17). Written in late
+  Gupta Brahmi of the 5th-6th century CE across 51 surviving leaves, it contains seven Sanskrit and Buddhist
+  Hybrid Sanskrit works, notably the Navanitaka medical compendium and the Mahamayuri protective text.
+summaries:
+  kids: >-
+    Bought near Kucha along the Silk Road in 1890, these fifty-one birch-bark pages written in 5th-century
+    Gupta script hold ancient Indian medical recipes (the Navanitaka), dice-fortune verses, and protective
+    charms.
+  teen: >-
+    Now in Oxford's Bodleian Library (MS. Sansk. c. 17), the 5th-6th century Bower Manuscript revealed seven
+    early Sanskrit works including the Navanitaka ("Cream of Medicine"), helping pioneer 19th-century
+    palaeographic study of the Gupta script along the Silk Road.
+region: Near Kucha, Xinjiang (housed in Bodleian Library, Oxford, MS. Sansk. c. 17)
+location:
+  name: Kucha oasis findspot, Xinjiang
+  lat: 41.7135
+  lon: 82.9544
+datings:
+  - method: epigraphic
+    range:
+      earliest: 450
+      latest: 550
+      best: 500
+      precision: century
+      circa: true
+    grade: B
+    label: Gupta / North-Western Gupta Brahmi palaeography (Hoernle)
+    sources:
+      - src.hoernle-1893-bower-manuscript
+      - src.hoernle-1909-caraka-samhita-bower-manuscript
+      - src.salomon-1998-indian-epigraphy
+    note: >-
+      Hoernle placed the four main scribes between c. 450 and 525 CE; Sander's later Central Asian Brahmi
+      studies align well with a 5th-6th century CE production.
+claims:
+  - text: >-
+      Bound in traditional Indian pothi style with a string-hole through 51 oblong birch-bark leaves (Bodleian
+      Library MS. Sansk. c. 17), the manuscript was edited by A. F. R. Hoernle in the Archaeological Survey of
+      India New Imperial Series (1893-1912).
+    grade: A
+    sources:
+      - src.hoernle-1893-bower-manuscript
+  - text: >-
+      Parts I-III preserve medical treatises - especially Part II, the Navanitaka, a compendium of powders,
+      elixirs, clarified butters, and pediatrics quoting the Bhela, Caraka, and Sushruta medical traditions
+      alongside an opening praise of garlic (lasuna-kalpa).
+    grade: A
+    sources:
+      - src.hoernle-1893-bower-manuscript
+      - src.hoernle-1909-caraka-samhita-bower-manuscript
+  - text: >-
+      Parts IV-VII contain two Pasakakevali dice-divination manuals and two versions of the Mahamayuri
+      Vidyarajni protective snake-bite charm in Buddhist Hybrid Sanskrit, showing simultaneous circulation of
+      Ayurveda and Buddhist ritual texts.
+    grade: A
+    sources:
+      - src.hoernle-1893-bower-manuscript
+relations:
+  - kind: related-to
+    target: text.charaka-samhita
+    note: Navanitaka quotes early Ayurvedic formulations overlapping Caraka
+  - kind: contemporary-of
+    target: artifact.gilgit-manuscripts
+    note: Contemporary birch-bark Gupta-era Sanskrit manuscript tradition
+  - kind: related-to
+    target: concept.brahmi-to-gupta-script
+    note: Landmark palaeographic specimen of Gupta-era book script
+wikidata: Q4950857
+image:
+  commons: File:5th to 6th century Bower manuscript, Sanskrit, early Gupta script, Kucha Xinjiang China, Leaf 1.jpg
+  alt: >-
+    Birch-bark Leaf 1 of the 5th-6th century CE Bower Manuscript written in early Gupta Sanskrit script
+    (Bodleian MS. Sansk. c. 17)
+  credit: Ms Sarah Welch
+  license: CC BY-SA 4.0
+tags:
+  - manuscript
+  - birch-bark
+  - bower
+  - navanitaka
+  - ayurveda
+  - gupta-script
+  - oxford
+review:
+  status: draft
+  author: gemini-4-hydrogen-xhigh

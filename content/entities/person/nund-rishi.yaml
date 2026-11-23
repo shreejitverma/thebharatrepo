@@ -1,0 +1,47 @@
+id: "person.nund-rishi"
+type: "person"
+kind: "person"
+names:
+  en: "Nund Rishi"
+summary: "Nund Rishi, also known as Sheikh Nur al-Din, was a Kashmiri Sufi poet associated with the
+  founding of the Rishi order. Verses attributed to him bring Quranic themes into conversation with
+  Kashmiri images and expressions."
+summaries:
+  kids: "Nund Rishi spoke about faith in Kashmiri, the language people around him used. His short
+    poems draw on images familiar to people in the valley."
+  teen: "The Kashmiri verses known as shruks draw on both the Quran and Kashmiri cultural memory. Abir
+    Bazaz reads them as expressions of a distinct mystical and ethical outlook within Islam."
+region: "Kashmir Valley"
+datings:
+  - method: "scholarly-consensus"
+    range:
+      earliest: 1378
+      latest: 1440
+      precision: "decade"
+      circa: true
+    grade: "B"
+    label: "Conventional life dates used by Abir Bazaz"
+    sources:
+      - "src.bazaz-2023-nund-rishi"
+claims:
+  - text: "The Rishi order is associated with Nund Rishi and became an important part of Kashmir's
+      religious history."
+    grade: "B"
+    sources:
+      - "src.bazaz-2023-nund-rishi"
+  - text: "The verse corpus attributed to Nund Rishi is in Kashmiri and reworks Quranic themes using
+      local imagery."
+    grade: "B"
+    sources:
+      - "src.bazaz-2023-nund-rishi"
+relations:
+  - kind: "related-to"
+    target: "person.lalleshwari"
+    note: "The two poets are remembered together in Kashmir."
+tags:
+  - "kashmir"
+  - "sufi"
+  - "poetry"
+review:
+  status: "draft"
+  author: "codex-gpt-6"

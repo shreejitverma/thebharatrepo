@@ -1,0 +1,64 @@
+id: person.guru-arjan
+type: person
+kind: person
+names:
+  en: Guru Arjan
+  native: ਗੁਰੂ ਅਰਜਨ
+summary: Guru Arjan was the fifth Sikh Guru. He oversaw compilation of the Adi Granth in 1604 and
+  was executed at Lahore under Jahangir in 1606.
+summaries:
+  kids: Guru Arjan brought together sacred hymns in a book called the Adi Granth. It became central to
+    Sikh worship.
+  teen: Guru Arjan compiled the Adi Granth from compositions by Sikh Gurus and other devotional poets.
+    His death under Jahangir is documented, while historians debate the circumstances and motives.
+region: Amritsar and Lahore, Punjab
+datings:
+  - method: scholarly-consensus
+    range:
+      earliest: "1563"
+      latest: "1606"
+      precision: year
+      circa: true
+    grade: B
+    label: Conventional birth and death years
+    sources:
+      - src.singh-2004-history-of-the-sikhs-vol-1
+      - src.singh-2006-life-work-guru-arjan
+      - id: src.grewal-1990-sikhs-of-the-punjab
+        locator: Foundation of the Sikh Panth
+  - method: scholarly-consensus
+    range:
+      earliest: "1581"
+      latest: "1606"
+      precision: year
+      circa: false
+    grade: B
+    label: Years as Sikh Guru
+    sources:
+      - src.singh-2006-life-work-guru-arjan
+      - id: src.grewal-1990-sikhs-of-the-punjab
+        locator: Foundation of the Sikh Panth
+claims:
+  - text: The Adi Granth was compiled under Guru Arjan in 1604.
+    grade: B
+    sources:
+      - src.singh-2006-life-work-guru-arjan
+      - src.singh-2003-guru-granth-sahib
+  - text: Guru Arjan died in 1606 after being taken into Mughal custody under Jahangir.
+    grade: B
+    sources:
+      - src.singh-2006-life-work-guru-arjan
+      - id: src.grewal-1990-sikhs-of-the-punjab
+        locator: Transformation of the Sikh Panth (1606-1708)
+relations:
+  - kind: succeeded
+    target: person.guru-ram-das
+  - kind: part-of
+    target: tradition.sikh-gurus
+tags:
+  - sikhism
+  - sikh-gurus
+  - mughal-period
+review:
+  status: draft
+  author: codex-gpt-6

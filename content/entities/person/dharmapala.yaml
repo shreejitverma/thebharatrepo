@@ -1,0 +1,46 @@
+id: person.dharmapala
+type: person
+kind: person
+names:
+  en: Dharmapala
+  iast: Dharmapāla
+  native: ধর্মপাল
+summary: "Dharmapala, son and successor of Gopala, ruled the Pala Empire from the late eighth into the early ninth century CE and transformed it into a major northern Indian power. He contested control of Kanyakubja (Kannauj) against the Gurjara-Pratiharas and Rashtrakutas, issued the Khalimpur copper plate, and founded the Buddhist monastery of Somapura; Tibetan tradition also credits him with founding Vikramashila."
+summaries:
+  kids: "Dharmapala was the great king who turned the Pala kingdom of Bengal and Bihar into an empire and built the huge Buddhist monastery of Somapura; later Tibetan histories say he also founded Vikramashila."
+  teen: >-
+    Reigning c. 770-810 CE, Dharmapala projected Pala power into north India during the Tripartite
+    Struggle for Kannauj and anchored eastern Indian Mahayana-Vajrayana scholarship through major
+    monastic foundations.
+region: Bengal and Bihar (extending into the Ganga plain)
+datings:
+  - method: epigraphic
+    range: { earliest: 770, latest: 815, precision: decade, circa: true }
+    grade: B
+    label: Epigraphic chronology from regnal charters and Rashtrakuta synchronisms
+    sources:
+      - src.chowdhury-1967-dynastic-history-bengal
+      - src.hultzsch-1897-epigraphia-indica-vol-4
+      - src.singh-2008-ancient-early-medieval-india
+    note: The Khalimpur plate reaches Dharmapala's 32nd regnal year; synchronisms with Pratihara Vatsaraja/Nagabhata II and Rashtrakuta Dhruva/Govinda III place his reign roughly 770-810 or 783-815 CE.
+claims:
+  - text: Dharmapala intervened in the succession of Kanyakubja, installing Chakrayudha before facing defeats by Rashtrakuta and Gurjara-Pratihara rulers as attested in Sanjan and Gwalior inscriptions.
+    grade: A
+    sources:
+      - src.hultzsch-1897-epigraphia-indica-vol-4
+      - src.chowdhury-1967-dynastic-history-bengal
+      - src.thapar-2002-early-india
+  - text: Inscribed clay sealings recovered from Paharpur (Somapura) bear Dharmapala's name as founder of the Dharmapala Mahavihara at Somapura, and Tibetan sources credit him with founding Vikramashila.
+    grade: B
+    sources:
+      - src.dikshit-1938-excavations-at-paharpur
+      - src.davidson-2002-indian-esoteric-buddhism
+relations:
+  - { kind: ruled, target: polity.pala-empire }
+  - { kind: succeeded, target: person.gopala }
+  - { kind: founded, target: site.somapura-mahavihara }
+  - { kind: founded, target: site.vikramashila }
+  - { kind: related-to, target: polity.rashtrakuta-dynasty }
+wikidata: Q3183804
+tags: [dharmapala, pala, buddhism, somapura, vikramashila, tripartite-struggle]
+review: { status: draft, author: "gemini-4-hydrogen-xhigh" }

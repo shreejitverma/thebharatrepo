@@ -1,0 +1,55 @@
+id: polity.khalji-dynasty
+type: polity
+kind: polity
+names:
+  en: Khalji Dynasty
+summary: The Khalji line began with Jalaluddin in 1290 and expanded under Alauddin. The dynasty's
+  rulers defended northern India against Mongol incursions and extended Delhi's power toward
+  Gujarat, Rajasthan and the Deccan.
+summaries:
+  kids: The Khaljis ruled from Delhi. Under Alauddin their armies reached lands far to the south, and
+    they fought against Mongol incursions.
+  teen: Khalji campaigns extended Delhi's reach in several directions. The direct annexation of some
+    regions differed from arrangements for tribute in parts of the Deccan.
+region: Delhi, north India and tributary territories in the Deccan
+location:
+  name: Delhi (including Siri under Alauddin)
+  lat: 28.55
+  lon: 77.21
+datings:
+  - method: documentary
+    range:
+      earliest: "1290"
+      latest: "1320"
+      precision: year
+      circa: false
+    grade: B
+    label: Period of rule
+    sources:
+      - src.jackson-1999-delhi-sultanate
+      - src.eaton-2019-india-persianate-age
+      - src.asher-talbot-2006-india-before-europe
+    note: Jalaluddin's accession and the crisis that brought Ghiyasuddin Tughluq to power bound the
+      documented dynasty.
+claims:
+  - text: Jalaluddin Khalji established the dynasty in 1290.
+    grade: B
+    sources:
+      - src.jackson-1999-delhi-sultanate
+  - text: Alauddin's campaigns produced a mix of annexation and tributary rule across western and
+      peninsular India.
+    grade: B
+    sources:
+      - src.jackson-1999-delhi-sultanate
+      - src.eaton-2019-india-persianate-age
+relations:
+  - kind: part-of
+    target: polity.delhi-sultanate
+  - kind: succeeded
+    target: polity.mamluk-dynasty-delhi
+  - kind: ruled-by
+    target: person.alauddin-khalji
+tags: []
+review:
+  status: draft
+  author: codex-gpt-6

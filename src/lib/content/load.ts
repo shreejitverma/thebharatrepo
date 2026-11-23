@@ -271,15 +271,18 @@ export function deepTimeBceYears(datings: unknown): string[] {
 
 /**
  * Two source records describe the same work: no identifier of the same type conflicts (archive.org and
- * other URLs compare by host and first path segment pair), the titles match, and both name the same volume
- * or neither names one, so a single volume is never merged with the whole work.
+ * other URLs compare by host and first path segment pair), they share an author or editor (or both have
+ * none), both name the same volume or neither names one, so a single volume is never merged with the whole
+ * work, and the titles match.
  */
 export function sameWork(a: Source, b: Source): boolean {
   const urlKey = (u?: string) => {
     if (!u) return '';
     try {
       const x = new URL(u);
-      return `${x.hostname}/${x.pathname.split('/').filter(Boolean).slice(0, 2).join('/')}`.toLowerCase();
+      // Google Books names the volume in its query string, so two different volumes share a path.
+      const volume = /(^|\.)books\.google\./.test(x.hostname) ? (x.searchParams.get('id') ?? '') : '';
+      return `${x.hostname}/${x.pathname.split('/').filter(Boolean).slice(0, 2).join('/')}${volume && `?id=${volume}`}`.toLowerCase();
     } catch {
       return u;
     }
@@ -291,7 +294,20 @@ export function sameWork(a: Source, b: Source): boolean {
     [urlKey(a.url), urlKey(b.url)],
   ];
   if (pairs.some(([x, y]) => x && y && x !== y)) return false;
-  return sameTitle(a.title, b.title) && sameTitle(b.title, a.title) && volumesMatch(a.title, b.title);
+  // Similar titles by different people are different works ("Early India" by Thapar is not Devadevan's
+  // "'Early Medieval' Origins of India"). Editions keep at least one author or editor, and a record with
+  // named creators is not the same work as one credited only to an institution.
+  const surnames = (s: Source) => new Set([...s.authors, ...s.editors].map((n) => n.trim().split(/\s+/).pop()!.toLowerCase()));
+  const sa = surnames(a);
+  const sb = surnames(b);
+  if (sa.size > 0 !== sb.size > 0) return false;
+  if (sa.size > 0 && ![...sa].some((n) => sb.has(n))) return false;
+  // Both records are unnumbered or both name the same volume: a numbered volume is never the unnumbered work
+  // beside it ("The Ubiquitous Siva" and "The Ubiquitous Siva Volume II"), nor another volume. Unlike a registry
+  // lookup, neither record has dropped a volume number, so the rule is strict in both directions. The titles must
+  // also match both ways, since sameTitle lets a cited volume match a registry record that omits its number.
+  if (!volumesMatch(a.title, b.title)) return false;
+  return sameTitle(a.title, b.title) && sameTitle(b.title, a.title);
 }
 
 /** Registry identifiers of a source; two source ids sharing one are the same work registered twice. */

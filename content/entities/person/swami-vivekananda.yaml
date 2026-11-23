@@ -1,0 +1,55 @@
+id: person.swami-vivekananda
+type: person
+kind: person
+names:
+  en: Swami Vivekananda
+  iast: Svāmī Vivekānanda
+  native: স্বামী বিবেকানন্দ
+summary: Swami Vivekananda, born Narendranath Datta, was a disciple of Ramakrishna and a public
+  teacher of Vedanta. At the 1893 World’s Parliament of Religions in Chicago he spoke about
+  religious acceptance.
+summaries:
+  kids: Vivekananda was a monk who traveled from India to Chicago. There he spoke to people from many
+    faiths about respecting different religious paths.
+  teen: Vivekananda’s addresses at Chicago introduced his presentation of Hindu ideas to an
+    international audience. In his opening response he emphasized tolerance and acceptance.
+region: Bengal, India, and Chicago, United States
+datings:
+  - method: scholarly-consensus
+    range:
+      earliest: "1863"
+      latest: "1902"
+      precision: year
+      circa: false
+    grade: B
+    label: Documented lifespan
+    sources:
+      - src.mcgetchin-2013-vivekananda
+claims:
+  - text: Vivekananda addressed the 1893 World’s Parliament of Religions in Chicago and spoke about
+      toleration in his opening response.
+    grade: A
+    sources:
+      - src.barrows-1893-worlds-parliament-religions
+      - src.mcgetchin-2013-vivekananda
+  - text: He was a disciple of Ramakrishna and taught Vedanta in India and abroad.
+    grade: B
+    sources:
+      - src.mcgetchin-2013-vivekananda
+relations:
+  - kind: student-of
+    target: person.ramakrishna
+  - kind: related-to
+    target: event.vivekananda-parliament-1893
+image:
+  commons: File:Swami Vivekananda 1893 Chicago image Harrison - no text.jpg
+  alt: Photographic portrait of Vivekananda in Chicago in 1893
+  credit: Thomas Harrison
+  license: Public domain in the United States (PD-US)
+tags:
+  - vedanta
+  - religious-reform
+  - parliament-of-religions
+review:
+  status: draft
+  author: codex-gpt-6

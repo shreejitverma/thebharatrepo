@@ -1,0 +1,79 @@
+id: person.purandara-dasa
+type: person
+kind: art
+names:
+  en: Purandara Dasa
+  iast: Purandara Dāsa
+  native: ಪುರಂದರದಾಸ
+summary: Purandara Dasa (traditional dates 1484-1564 CE) was a Kannada Vaishnava Haridasa poet-saint and composer
+  associated with the Vijayanagara Empire. Revered as Karnataka Sangita Pitamaha (grandfather of Carnatic music), he is
+  credited by tradition with standardising beginner vocal exercises (sarali varisai, alankaras, gitas) in
+  Mayamalavagowla raga and composing hundreds of surviving devotional padas.
+summaries:
+  kids: Purandara Dasa was a poet and musician from Karnataka during the Vijayanagara period who created the basic lessons
+    still used to teach Carnatic music today.
+  teen: Honoured as the 'grandfather of Carnatic music', the Haridasa saint-composer Purandara Dasa shaped South Indian
+    musical pedagogy and composed influential Kannada devotional songs in the Vijayanagara era.
+region: Karnataka (Vijayanagara / Hampi and Pandharpur)
+location:
+  name: Hampi, Karnataka
+  lat: 15.335
+  lon: 76.46
+datings:
+  - method: traditional-sampradaya
+    range:
+      earliest: 1484
+      latest: 1564
+      precision: year
+      circa: true
+    grade: D
+    label: Haridasa tradition dates (1484-1564 CE)
+    sources:
+      - src.jackson-2000-songs-three-saints
+      - src.viswanathan-2004-music-in-south-india
+    note: Haridasa sampradaya records place his birth near Purandaragada around 1484 CE and death in 1564 CE, closely linked
+      to Vijayanagara guru Vyasatirtha.
+  - method: scholarly-consensus
+    range:
+      earliest: 1480
+      latest: 1565
+      precision: decade
+      circa: true
+    grade: B
+    label: Vijayanagara-era activity corroborated by contemporary Haridasa references
+    sources:
+      - src.jackson-2000-songs-three-saints
+      - src.grove-2001-karnatak-music
+    note: Songs by his younger contemporary Kanaka Dasa and inscriptions/Vijayanagara contexts place Purandara Dasa firmly
+      in the late fifteenth to mid-sixteenth century.
+claims:
+  - text: Carnatic pedagogy attributes to Purandara Dasa the graded introductory exercises (sarali, janta, alankara, pilari
+      gitas) set to Mayamalavagowla raga and Suladi Sapta Talas.
+    grade: B
+    sources:
+      - src.viswanathan-2004-music-in-south-india
+      - src.grove-2001-karnatak-music
+  - text: Composing in accessible Kannada under the signature 'Purandara Vittala', he bridged Madhwa Dvaita philosophy and
+      popular devotional song (devaranama / dasara pada).
+    grade: B
+    sources:
+      - src.jackson-2000-songs-three-saints
+relations:
+  - kind: influenced
+    target: tradition.carnatic-music
+  - kind: contemporary-of
+    target: person.krishnadevaraya
+  - kind: related-to
+    target: site.hampi
+  - kind: related-to
+    target: person.madhvacharya
+wikidata: Q2350157
+tags:
+  - purandara-dasa
+  - carnatic-music
+  - haridasa
+  - vijayanagara
+  - kannada
+review:
+  status: draft
+  author: gemini-4-hydrogen-xhigh

@@ -1,0 +1,48 @@
+id: person.babur
+type: person
+kind: person
+names:
+  en: Babur
+summary: Babur was a Timurid ruler who founded the Mughal Empire in northern India after the First
+  Battle of Panipat. His autobiography records his movements, political relationships and
+  observations of the country.
+summaries:
+  kids: Babur won the Battle of Panipat and began the Mughal ruling line. He also wrote about his life
+    and the places he saw.
+  teen: Babur moved from Central Asia to Kabul and then into northern India. The Baburnama offers a
+    ruler's perspective on the campaigns that brought him to power.
+region: Central Asia, Kabul and northern India
+datings:
+  - method: documentary
+    range:
+      earliest: "1526"
+      latest: "1530"
+      precision: year
+      circa: false
+    grade: B
+    label: Reign or recorded political activity
+    sources:
+      - src.babur-1921-memoirs
+      - src.richards-1993-mughal-empire
+      - src.eaton-2019-india-persianate-age
+    note: These are the years of Babur's rule in northern India. His Central Asian and Kabul career
+      began much earlier.
+claims:
+  - text: Babur's memoir records the victory over Ibrahim Lodi at Panipat in 1526.
+    grade: A
+    sources:
+      - src.babur-1921-memoirs
+  - text: Babur had established a power base in Kabul before taking Delhi and Agra.
+    grade: B
+    sources:
+      - src.richards-1993-mughal-empire
+      - src.eaton-2019-india-persianate-age
+relations:
+  - kind: founded
+    target: polity.mughal-empire
+  - kind: related-to
+    target: event.first-battle-of-panipat
+tags: []
+review:
+  status: draft
+  author: codex-gpt-6

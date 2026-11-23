@@ -1,0 +1,56 @@
+id: polity.early-cholas
+type: polity
+kind: polity
+names:
+  en: Early Chola Dynasty
+  iast: Cōḻa
+  native: முற்காலச் சோழர்கள்
+summary: >-
+  The Early Cholas were the Sangam-era ruling lineage of the fertile Kaveri delta, centered on their inland seat at Uraiyur (near Tiruchirappalli) and the coastal emporium of Puhar (Kaveripattinam). Attested as Choda in Ashoka's Major Rock Edicts II and XIII and celebrated in Sangam poems such as Pattinappalai and Porunararruppatai, their foremost recorded ruler was Karikala, after whom Chola power receded during the Kalabhra interregnum until Vijayalaya's 9th-century revival.
+summaries:
+  kids: >-
+    Long before the great medieval Chola Empire, the Early Cholas ruled the Kaveri river valley and traded across the sea from their bustling port city of Poompuhar.
+  teen: >-
+    Known from Ashokan edicts and Sangam poems like Pattinappalai, the Early Cholas governed the Kaveri delta from Uraiyur and Puhar, with legends and later charters recalling King Karikala's embankments and victories.
+region: Kaveri delta (Tiruchirappalli, Thanjavur, and Nagapattinam districts), Tamil Nadu
+location: { name: "Uraiyur (Tiruchirappalli), Tamil Nadu", lat: 10.82, lon: 78.67 }
+datings:
+  - method: foreign-synchronism
+    range: { earliest: "300 BCE", latest: "300 CE", precision: century, circa: true }
+    grade: B
+    label: Ashokan edicts through the late Sangam horizon
+    sources:
+      - src.hultzsch-1925-inscriptions-of-asoka
+      - src.sastri-1955-the-colas
+      - src.karashima-2014-concise-history-south-india
+    note: Named as Choda in Ashoka's edicts (3rd century BCE) and as a distinct polity in Sangam poetry and Greco-Roman notices through roughly the 3rd century CE.
+  - method: textual-internal
+    range: { earliest: "100 CE", latest: "250 CE", precision: century, circa: true }
+    grade: C
+    label: Estimated period of Karikala Chola
+    sources:
+      - src.sastri-1955-the-colas
+      - src.zvelebil-1973-smile-of-murugan
+    note: Karikala is celebrated in Pattinappalai and Porunararruppatai and remembered in later Chola and Telugu Choda grants, though his exact regnal dates remain unattested in contemporary inscriptions.
+claims:
+  - text: Ashoka's Major Rock Edicts II and XIII mention the Chodas among the independent southern kingdoms outside Mauryan rule.
+    grade: A
+    sources:
+      - src.hultzsch-1925-inscriptions-of-asoka
+      - src.sastri-1955-the-colas
+  - text: Sangam poems describe Uraiyur as the inland Chola capital famous for fine cotton textiles and Kaveripattinam (Puhar) as their coastal port receiving overseas merchandise.
+    grade: B
+    sources:
+      - src.champakalakshmi-1996-trade-ideology-urbanization
+      - src.sastri-1955-the-colas
+  - text: After the Sangam period, the Early Cholas disappear from major political dominance for nearly five centuries before Vijayalaya founded the Imperial Chola line at Thanjavur in the mid-9th century CE.
+    grade: B
+    sources:
+      - src.sastri-1955-the-colas
+      - src.singh-2008-ancient-early-medieval-india
+relations:
+  - { kind: preceded, target: polity.chola-dynasty, note: Imperial Chola revival under Vijayalaya in the mid-9th century CE }
+  - { kind: related-to, target: text.sangam-literature }
+  - { kind: related-to, target: polity.early-pandyas }
+tags: [chola, early-chola, sangam, kaveri, uraiyur, karikala]
+review: { status: draft, author: "gemini-4-hydrogen-xhigh" }

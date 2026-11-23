@@ -1,0 +1,80 @@
+id: "site.semthan"
+type: "site"
+kind: "site"
+names:
+  en: "Semthan"
+summary: "Excavations at Semthan, near Bijbehara on a raised terrace above the Jhelum, uncovered
+  successive early historic and medieval occupations. Terracottas and coins from the site and nearby
+  finds illuminate Kashmir's links with the Indo-Greek world."
+summaries:
+  kids: "Archaeologists dug into an old mound above the Jhelum and found things left by people who
+    lived there at different times. Some clay figures show connections with the Greek-speaking
+    world."
+  teen: "Semthan's sequence includes Northern Black Polished Ware levels, a phase identified as
+    Indo-Greek, and later Kushan and post-Kushan material. Coins found nearby and objects from
+    excavated layers provide different kinds of evidence."
+region: "Kashmir Valley"
+datings:
+  - method: "archaeological-stratigraphic"
+    range:
+      earliest: "700 BCE"
+      latest: "500 BCE"
+      precision: "century"
+      circa: true
+    grade: "C"
+    label: "Pre-Northern Black Polished Ware phase"
+    primaryReason: "The site is dated phase by phase, and its earliest occupation phase leads the sequence."
+    sources:
+      - "src.shah-2021-semthan"
+  - method: "archaeological-stratigraphic"
+    range:
+      earliest: "500 BCE"
+      latest: "200 BCE"
+      precision: "century"
+      circa: true
+    grade: "C"
+    label: "Northern Black Polished Ware phase"
+    sources:
+      - "src.shah-2021-semthan"
+  - method: "archaeological-stratigraphic"
+    range:
+      earliest: "200 BCE"
+      latest: "100 CE"
+      precision: "century"
+      circa: true
+    grade: "C"
+    label: "Phase assigned to the Indo-Greek period"
+    sources:
+      - "src.shah-2021-semthan"
+    note: "Shah and Lone reproduce the excavators' broad periodisation. The endpoints are approximate."
+  - method: "archaeological-stratigraphic"
+    range:
+      earliest: 100
+      latest: 1300
+      precision: "century"
+      circa: true
+    grade: "C"
+    label: "Kushan, Huna and early medieval occupations"
+    sources:
+      - "src.shah-2021-semthan"
+claims:
+  - text: "The excavations identified a Northern Black Polished Ware phase below levels classified as
+      Indo-Greek."
+    grade: "B"
+    sources:
+      - "src.shah-2021-semthan"
+  - text: "The site yielded terracotta figurines that Shah and Lone interpret as combining Hellenistic
+      and South Asian subjects."
+    grade: "B"
+    sources:
+      - "src.shah-2021-semthan"
+relations:
+  - kind: "related-to"
+    target: "polity.indo-greek-kingdom"
+tags:
+  - "kashmir"
+  - "excavation"
+  - "indo-greek"
+review:
+  status: "draft"
+  author: "codex-gpt-6"

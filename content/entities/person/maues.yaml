@@ -1,0 +1,56 @@
+id: person.maues
+type: person
+kind: person
+names:
+  en: Maues
+summary: Maues was an early Saka king in the northwestern subcontinent, identifiable on coins as
+  Maues in Greek and Moa on Kharoshthi legends. His absolute dates remain disputed.
+summaries:
+  kids: Maues was a Saka king. His name appears in different forms on the two sides of some of his coins.
+  teen: Maues struck bilingual coins in a monetary world shaped by the Indo-Greek kings. Scholars
+    disagree on where to place his rule in an absolute chronology.
+region: Northwest, including the Taxila region
+datings:
+  - method: numismatic
+    range:
+      earliest: 120 BCE
+      latest: 85 BCE
+      precision: decade
+      circa: true
+    grade: C
+    label: Robert C. Senior's earlier chronology
+    sources:
+      - src.senior-2005-indo-scythian-dynasty
+    note: The dates rest on Senior's arrangement of the coins and the frontier evidence.
+  - method: numismatic
+    range:
+      earliest: 100 BCE
+      latest: 75 BCE
+      precision: decade
+      circa: true
+    grade: C
+    label: A. D. H. Bivar's later Taxila sequence
+    sources:
+      - src.bivar-2009-kushan-dynastic-history
+    note: Bivar places Maues after issues of Archebius. This broad bracket states the implication for
+      Maues's activity.
+claims:
+  - text: Maues is named on bilingual coins issued with a paramount royal title.
+    grade: A
+    sources:
+      - src.senior-2005-indo-scythian-dynasty
+  - text: Maues is generally treated as the earliest major Saka ruler south of the Hindu Kush whose
+      reign is identifiable through coinage.
+    grade: C
+    sources:
+      - src.senior-2005-indo-scythian-dynasty
+      - src.singh-2008-ancient-early-medieval-india
+relations:
+  - kind: founded
+    target: polity.indo-scythian-kingdoms
+debate: Senior starts the reign earlier than reconstructions that place Maues after the Taxila
+  issues of Archebius. Coin series supply the principal evidence for both positions.
+tags: []
+review:
+  status: draft
+  author: codex-gpt-6

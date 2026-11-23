@@ -1,0 +1,69 @@
+id: artifact.tiruvalangadu-shiva-nataraja
+type: artifact
+kind: art
+names:
+  en: Tiruvalangadu Shiva Nataraja
+  iast: Tiruvālaṅkāṭu Śiva Naṭarāja
+summary: "A celebrated Chola solid lost-wax bronze statue of Shiva Nataraja performing the Anandatandava cosmic dance (Government Museum, Chennai; height c. 114.5 cm), from the Vataranyesvara temple at Tiruvalangadu in Tiruvallur district, Tamil Nadu. Dating to the early-to-mid 11th century CE, it lacks its original flame-ring prabhamandala, revealing the poised silhouette of Shiva's extended arms and flying locks."
+summaries:
+  kids: "From a temple at Tiruvalangadu in Tamil Nadu, this graceful 11th-century Chola bronze shows Shiva dancing on a tiny demon, with its missing outer ring of flames making his outstretched arms stand out clearly."
+  teen: >-
+    One of the world's most reproduced Chola sculptures, the Tiruvalangadu Shiva Nataraja (c. 114.5 cm,
+    Government Museum, Chennai) was unearthed alongside Rajendra Chola I's copper plates; the absence of its
+    framing ring of flames spotlights the rhythm of its cast bronze silhouette.
+region: Tiruvalangadu, Tiruvallur District, Tamil Nadu (housed in Government Museum, Chennai)
+location:
+  name: Vataranyesvara Temple hoard site, Tiruvalangadu
+  lat: 13.13
+  lon: 79.775
+datings:
+  - method: art-historical
+    range:
+      earliest: 1000
+      latest: 1060
+      best: 1030
+      precision: decade
+      circa: true
+    grade: B
+    label: Early-to-mid 11th century CE (mid-Chola style, period of Rajendra I)
+    sources:
+      - src.dehejia-2002-sensuous-and-the-sacred
+      - src.dehejia-1990-art-of-the-imperial-cholas
+      - src.srinivasan-2004-pallava-origins-nataraja
+    note: "Stylistically matches early 11th-century metropolitan Chola bronze workshops."
+claims:
+  - text: "Cast in solid bronze by the lost-wax (madhucchistavidhana) method and measuring roughly 114.5 cm high, the figure comes from the Vataranyesvara temple at Tiruvalangadu and is now in the Government Museum, Chennai."
+    grade: A
+    sources:
+      - src.dehejia-2002-sensuous-and-the-sacred
+      - src.dehejia-1990-art-of-the-imperial-cholas
+  - text: >-
+      In standard Anandatandava iconography, four-armed Shiva balances on his bent right leg atop Apasmara
+      Purusha while raising his left leg across his body, holding a damaru drum and flame in his upper hands,
+      showing abhaya mudra, and sweeping his lower left arm across his chest in gajahasta.
+    grade: A
+    sources:
+      - src.dehejia-1990-art-of-the-imperial-cholas
+      - src.srinivasan-2004-pallava-origins-nataraja
+relations:
+  - kind: part-of
+    target: artifact.chola-bronzes
+  - kind: part-of
+    target: polity.chola-dynasty
+wikidata: null
+image:
+  commons: File:Nataraja, Chola period bronze, 11th century, Government Museum, Chennai (2).jpg
+  alt: Chola solid bronze statue of Shiva Nataraja from Tiruvalangadu displayed in Government Museum, Chennai
+  credit: Richard Mortel
+  license: CC BY 2.0
+tags:
+  - sculpture
+  - bronze
+  - chola
+  - nataraja
+  - shiva
+  - tiruvalangadu
+  - chennai
+review:
+  status: draft
+  author: gemini-4-hydrogen-xhigh

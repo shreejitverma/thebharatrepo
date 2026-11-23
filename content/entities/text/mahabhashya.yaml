@@ -1,0 +1,54 @@
+id: text.mahabhashya
+type: text
+kind: text
+names:
+  en: Mahabhashya of Patanjali
+  iast: Mahābhāṣya
+  native: महाभाष्य
+summary: Patanjali’s Mahabhashya is a Sanskrit grammatical commentary on selected rules of Panini’s
+  Ashtadhyayi and on supplementary remarks attributed to Katyayana. Much of the work proceeds by
+  posing objections and testing answers against examples.
+summaries:
+  kids: Patanjali tests rules for speaking and writing Sanskrit. His book often sounds like a
+    conversation in which someone asks whether a rule really works.
+  teen: The commentary preserves discussions attributed to Katyayana and examines what Panini’s rules
+    imply in practice. Its grammatical examples also give historians clues about the period in which
+    it was written.
+datings:
+  - method: textual-internal
+    range:
+      earliest: "200 BCE"
+      latest: "101 BCE"
+      precision: century
+      circa: true
+    grade: B
+    label: "Hartmut Scharfe: second-century BCE commentary"
+    sources:
+      - src.scharfe-1977-grammatical-literature
+      - src.cardona-1988-panini-work-traditions
+    note: Grammatical examples mention a sacrifice for Pushyamitra and Yavana campaigns.
+      Their apparent reference to recent events supports a second-century BCE dating.
+claims:
+  - text: The Mahabhashya transmits many of Katyayana’s supplementary remarks as part of Patanjali’s
+      commentary.
+    grade: B
+    sources:
+      - src.scharfe-1977-grammatical-literature
+      - src.cardona-1988-panini-work-traditions
+  - text: A later tradition identifies the grammarian Patanjali with the author of the Yoga Sutras
+      and a writer on medicine.
+    grade: D
+    sources: [src.maas-2013-concise-historiography-yoga]
+relations:
+  - kind: commented-on
+    target: text.ashtadhyayi
+  - kind: related-to
+    target: text.yoga-sutras
+    note: A later tradition identifies the two authors.
+tags:
+  - sanskrit
+  - grammar
+  - vyakarana
+review:
+  status: draft
+  author: codex-gpt-6

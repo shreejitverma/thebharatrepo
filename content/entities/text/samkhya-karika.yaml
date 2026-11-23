@@ -1,0 +1,63 @@
+id: text.samkhya-karika
+type: text
+kind: text
+names:
+  en: Samkhya Karika
+  iast: Sāṃkhyakārikā
+  native: सांख्यकारिका
+summary: Ishvarakrishna’s Samkhya Karika presents a systematic account of Samkhya in Sanskrit verse.
+  It distinguishes consciousness from the processes of nature. The date of composition is debated.
+summaries:
+  kids: This poem asks why we suffer and how understanding the difference between awareness and the
+    changing world could help.
+  teen: The Karika distinguishes purusha, the conscious witness, from prakriti, the source of material
+    and mental change. Its compact verses became a basis for later commentaries.
+datings:
+  - method: textual-internal
+    range:
+      earliest: 300
+      latest: 450
+      precision: century
+      circa: true
+    grade: C
+    label: "Gerald James Larson: conventional early Gupta-period placement"
+    sources:
+      - src.larson-1987-encyclopedia-samkhya
+    note: Comparisons with other Sanskrit philosophical texts allow a tentative fourth-century placement.
+  - method: textual-internal
+    range:
+      earliest: 447
+      latest: 490
+      precision: decade
+      circa: true
+    grade: C
+    label: "Changjie Yang: late fifth-century proposal"
+    sources:
+      - src.yang-2025-date-samkhyakarika
+    note: Yang reinterprets Paramartha’s historical notices and comparisons with Buddhist thinkers
+      including Dignaga and Bhaviveka.
+claims:
+  - text: The opening verses connect the inquiry with three kinds of suffering and list perception,
+      inference and trustworthy testimony as means of knowledge.
+    grade: A
+    sources:
+      - id: src.larson-1987-encyclopedia-samkhya
+        locator: Samkhyakarika 1-4
+  - text: Paramartha’s sixth-century Chinese translation provides a latest possible limit for the
+      existence of the Sanskrit work.
+    grade: B
+    sources:
+      - src.larson-1987-encyclopedia-samkhya
+      - src.yang-2025-date-samkhyakarika
+relations:
+  - kind: related-to
+    target: text.yoga-sutras
+debate: Larson favours an earlier Gupta-period estimate. Yang’s proposal places the poem later by
+  reading the chronological evidence preserved in Chinese sources differently.
+tags:
+  - samkhya
+  - darshana
+  - philosophy
+review:
+  status: draft
+  author: codex-gpt-6

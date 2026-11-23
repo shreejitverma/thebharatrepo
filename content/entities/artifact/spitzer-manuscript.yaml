@@ -1,0 +1,92 @@
+id: artifact.spitzer-manuscript
+type: artifact
+kind: text
+names:
+  en: Spitzer Manuscript
+  iast: Spitzer Pāṇḍulipi (SHT 810)
+summary: "Over a thousand fragmentary palm-leaf bits from an originally c. 420-folio codex recovered in 1906 by the third German Turfan expedition in the Ming-oi caves at Qizil (Kizil), Xinjiang (Staatsbibliothek zu Berlin, SHT 810). Written in Kushan-period Brahmi script and Sanskrit, it is among the oldest surviving Sanskrit philosophical manuscripts and preserves one of the earliest known lists of the books (parvans) of the Mahabharata."
+summaries:
+  kids: "Pieced together from more than a thousand tiny palm-leaf fragments found in a Central Asian cave in 1906, this Kushan-era book is one of the oldest known Sanskrit philosophy manuscripts and includes an early index of the Mahabharata."
+  teen: >-
+    Catalogued in Berlin as SHT 810 and edited by Eli Franco, the Spitzer Manuscript (c. 1st-3rd century CE)
+    is the oldest surviving Sanskrit philosophical codex, treating Buddhist Abhidharma alongside
+    Nyaya-Vaisesika logic and listing the books of the Mahabharata before later interpolations.
+region: Qizil (Kizil) Caves near Kucha, Xinjiang (housed in Staatsbibliothek zu Berlin, SHT 810)
+location:
+  name: Kizil Caves (Ming-oi) findspot, Xinjiang
+  lat: 41.7829
+  lon: 82.5026
+datings:
+  - method: epigraphic
+    range:
+      earliest: 180
+      latest: 280
+      best: 230
+      precision: decade
+      circa: true
+    grade: B
+    label: Kushan-period Brahmi palaeography (Eli Franco)
+    sources:
+      - src.franco-2004-spitzer-manuscript
+      - src.salomon-1998-indian-epigraphy
+    note: >-
+      Eli Franco (2004) dates the Kushan Brahmi script of SHT 810 palaeographically to the late 2nd or 3rd
+      century CE (c. 200-250 CE).
+  - method: archaeological-radiocarbon
+    range:
+      earliest: 80
+      latest: 230
+      best: 130
+      precision: decade
+      circa: true
+    grade: C
+    label: "Radiocarbon dating of the palm-leaf support"
+    sources:
+      - src.franco-2004-spitzer-manuscript
+    note: "Franco reports radiocarbon results ranging between c. 80 and 230 CE, with a calibrated age of c. 130 CE; he accepts the later end more readily and still favours a late Kushan date on palaeographic grounds."
+claims:
+  - text: >-
+      Recovered by Albert Grunwedel's third Prussian Turfan expedition in 1906 at Qizil and edited by Eli
+      Franco (2004) after initial reconstruction by Moritz Spitzer and Dieter Schlingloff, Berlin SHT 810
+      preserves roughly 1,000 palm-leaf fragments from a pothi codex originally exceeding 400 leaves in Kushan
+      Brahmi.
+    grade: A
+    sources:
+      - src.franco-2004-spitzer-manuscript
+      - src.salomon-1998-indian-epigraphy
+  - text: >-
+      Its Sanskrit text contains a Buddhist scholastic treatise debating rival philosophical schools, citing
+      Nyaya categories, Samkhya, Vaisesika, Lokayata, Mimamsa, and Buddhist Abhidharma arguments.
+    grade: A
+    sources:
+      - src.franco-2004-spitzer-manuscript
+  - text: "Folio fragments preserve one of the oldest surviving lists of the books (parvans) of the Mahabharata, which scholars use as manuscript evidence for the textual history of the epic."
+    grade: B
+    sources:
+      - src.franco-2004-spitzer-manuscript
+relations:
+  - kind: part-of
+    target: polity.kushan-empire
+  - kind: related-to
+    target: text.mahabharata
+    note: Preserves the oldest physical Mahabharata parvan list
+  - kind: related-to
+    target: artifact.bower-manuscript
+    note: Earlier Silk Road Sanskrit palm-leaf manuscript from the Kucha basin
+wikidata: Q48733094
+image:
+  commons: File:2nd-century CE Sanskrit, Kizil China, Spitzer Manuscript folio 383 fragment recto and verso.jpg
+  alt: Palm-leaf fragment folio 383 recto and verso of the Kushan-script Spitzer Manuscript (SHT 810) in Berlin
+  credit: Ms Sarah Welch
+  license: CC BY-SA 4.0
+tags:
+  - manuscript
+  - palm-leaf
+  - spitzer
+  - kushan
+  - sanskrit
+  - philosophy
+  - mahabharata
+review:
+  status: draft
+  author: gemini-4-hydrogen-xhigh

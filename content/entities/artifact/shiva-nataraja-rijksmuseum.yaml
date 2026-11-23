@@ -1,0 +1,82 @@
+id: artifact.shiva-nataraja-rijksmuseum
+type: artifact
+kind: art
+names:
+  en: Rijksmuseum Shiva Nataraja (AK-MAK-187)
+  iast: Śiva Naṭarāja (Rijksmuseum AK-MAK-187)
+summary: "A monumental Chola-period solid bronze statue of Shiva Nataraja with an intact twenty-seven-flame prabhamandala arch and lotus pedestal (Rijksmuseum, Amsterdam, Inv. No. AK-MAK-187; 153 cm high x 114.5 cm wide, combined weight ~295 kg). Dated to the 11th-12th century CE from Tamil Nadu, it is among the largest and best-preserved complete Chola Nataraja processional bronzes outside India."
+summaries:
+  kids: >-
+    Standing over one and a half metres tall in the Rijksmuseum in Amsterdam, this giant Chola bronze still
+    keeps its complete glowing ring of flames surrounding Shiva as he dances on a lotus pedestal.
+  teen: >-
+    Rijksmuseum Inv. No. AK-MAK-187 is among the largest surviving Chola-period Shiva Nataraja bronzes with
+    its original flaming arch intact (153 cm tall, nearly 300 kg with pedestal), designed to be hoisted on
+    wooden poles during South Indian temple festivals.
+region: Tamil Nadu, India (housed in Rijksmuseum, Amsterdam)
+datings:
+  - method: art-historical
+    range:
+      earliest: 1080
+      latest: 1200
+      best: 1125
+      precision: century
+      circa: true
+    grade: B
+    label: "Later Chola style"
+    sources:
+      - src.dehejia-1990-art-of-the-imperial-cholas
+      - src.srinivasan-2016-tamil-chola-bronzes
+      - src.harle-1994-art-architecture-indian-subcontinent
+    note: >-
+      Dated by the crisp circular prabhamandala arch, extended vertical flame finials, and slender torso
+      proportions typical of later Chola bronzes around 1100-1200 CE.
+claims:
+  - text: >-
+      Catalogued as Rijksmuseum AK-MAK-187 (acquired in 1935 for the Society of Friends of Asiatic Art from a
+      Paris dealer), the bronze figure with halo stands 153.0 cm high by 114.5 cm wide and weighs about 255 kg
+      above a separate 40 kg stepped pedestal.
+    grade: A
+    sources:
+      - src.dehejia-1990-art-of-the-imperial-cholas
+      - src.srinivasan-2016-tamil-chola-bronzes
+  - text: >-
+      Unlike the Tiruvalangadu bronze, AK-MAK-187 preserves its full circular prabhamandala rimmed with
+      stylized tongues of flame, flanking horizontal locks of hair bearing miniature Ganga, and intact
+      pedestal lugs used to lash carrying poles for utsavabera temple processions.
+    grade: A
+    sources:
+      - src.srinivasan-2016-tamil-chola-bronzes
+      - src.dehejia-1990-art-of-the-imperial-cholas
+  - text: >-
+      Archaeometallurgical studies of South Indian Chola bronzes show multi-metal leaded copper-tin alloys
+      poured solid in a single wax-lost mould and finished with fine chiselling.
+    grade: B
+    sources:
+      - src.srinivasan-2016-tamil-chola-bronzes
+      - src.harle-1994-art-architecture-indian-subcontinent
+relations:
+  - kind: part-of
+    target: artifact.chola-bronzes
+  - kind: part-of
+    target: polity.chola-dynasty
+  - kind: contemporary-of
+    target: artifact.tiruvalangadu-shiva-nataraja
+wikidata: null
+image:
+  commons: File:Shiva Nataraja, AK-MAK-187.jpg
+  alt: >-
+    Monumental Chola bronze Shiva Nataraja with complete flaming prabhamandala in the Rijksmuseum, Amsterdam
+    (AK-MAK-187)
+  credit: Rijksmuseum
+  license: CC0
+tags:
+  - sculpture
+  - bronze
+  - chola
+  - nataraja
+  - shiva
+  - rijksmuseum
+review:
+  status: draft
+  author: gemini-4-hydrogen-xhigh

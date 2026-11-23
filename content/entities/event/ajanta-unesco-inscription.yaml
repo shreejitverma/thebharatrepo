@@ -1,0 +1,29 @@
+id: event.ajanta-unesco-inscription
+type: event
+kind: site
+names:
+  en: "Ajanta Caves inscribed on the World Heritage List"
+summary: "The World Heritage Committee inscribed the Ajanta Caves in 1983. UNESCO identifies their wall paintings and sculptures as major works of Buddhist religious art."
+summaries:
+  kids: "The Ajanta Caves joined the World Heritage List in 1983. The caves hold old Buddhist paintings and sculptures."
+  teen: "The 1983 inscription recognised the rock-cut Buddhist complex at Ajanta and the artistic importance of its murals and sculptures."
+region: "Ajanta, Maharashtra"
+datings:
+  - method: documentary
+    range: { earliest: "1983", latest: "1983", precision: year, circa: false }
+    grade: A
+    label: "World Heritage inscription"
+    sources: ["src.unesco-1983-ajanta-caves"]
+    note: "UNESCO records Ajanta as inscribed in 1983."
+claims:
+  - text: "The Ajanta Caves were inscribed on the World Heritage List in 1983."
+    grade: A
+    sources: ["src.unesco-1983-ajanta-caves"]
+  - text: "UNESCO identifies the murals and sculptures of the rock-cut Buddhist complex as core features of the property."
+    grade: A
+    sources: ["src.unesco-1983-ajanta-caves"]
+relations:
+  - kind: related-to
+    target: site.ajanta-caves
+tags: ["republic","unesco","heritage"]
+review: { status: draft, author: codex-gpt-6 }

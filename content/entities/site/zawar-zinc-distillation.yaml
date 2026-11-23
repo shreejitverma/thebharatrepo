@@ -1,0 +1,65 @@
+id: site.zawar-zinc-distillation
+type: site
+kind: science
+names:
+  en: Zawar Zinc Distillation Works
+  native: ज़ावर
+summary: Zawar preserves the remains of an important medieval zinc industry. Furnaces and ceramic retorts show
+  how workers captured zinc as vapour and condensed it as metal. Mining predates the well-documented
+  industrial production, and the start of large-scale distillation is uncertain.
+summaries:
+  kids: At Zawar, metalworkers used special clay pots to catch hot zinc vapour and collect it as metal.
+  teen: The site’s mines, furnace remains and spent retorts record different stages of zinc production. Early
+    ore mining and the later industry that recovered metallic zinc have distinct archaeological traces.
+region: Aravalli Hills, Rajasthan
+datings:
+  - method: archaeological-stratigraphic
+    range:
+      earliest: 1050
+      latest: 1250
+      precision: century
+      circa: true
+    grade: C
+    label: Early expansion estimated from industrial debris
+    sources:
+      - src.kharakwal-2006-zinc-brass
+      - src.craddock-2018-brass-zinc-chemical-industry
+    note: Dated residues and other archaeological traces are used to place the emergence of the medieval industry
+      approximately.
+  - method: archaeological-stratigraphic
+    range:
+      earliest: 1300
+      latest: 1600
+      precision: century
+      circa: true
+    grade: B
+    label: Well-attested medieval industrial phase
+    sources:
+      - src.craddock-1983-zinc-production-medieval-india
+      - src.craddock-2018-brass-zinc-chemical-industry
+      - src.stein-2012-smelting-zinc-jawar
+    note: Excavated furnace blocks and concentrations of spent retorts document sustained production.
+claims:
+  - text: Excavation and survey identified furnaces and ceramic retorts consistent with zinc vapour condensing
+      below the heated charge.
+    grade: A
+    sources:
+      - src.craddock-1983-zinc-production-medieval-india
+      - src.craddock-2018-brass-zinc-chemical-industry
+  - text: Zawar’s evidence for mining extends earlier than the securely documented large-scale production of zinc
+      metal.
+    grade: B
+    sources:
+      - src.kharakwal-2006-zinc-brass
+      - src.craddock-2018-brass-zinc-chemical-industry
+relations: []
+debate: Researchers distinguish ancient mining from the later industrial production of metallic zinc. Dated
+  residues have been used to argue for early medieval activity, while the excavated furnaces and retort dumps
+  establish the scale of the later industry.
+tags:
+  - metallurgy
+  - zinc
+  - industrial-archaeology
+review:
+  status: draft
+  author: codex-gpt-6

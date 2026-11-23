@@ -1,0 +1,56 @@
+id: person.madhusudana-saraswati
+type: person
+kind: person
+names:
+  en: Madhusudana Saraswati
+  iast: Madhusūdana Sarasvatī
+  native: मधुसूदन सरस्वती
+summary: Madhusudana Saraswati defended Advaita Vedanta in the Advaitasiddhi and gave Krishna
+  devotion a place in his writings. Reconstructions of his lifespan disagree.
+summaries:
+  kids: Madhusudana wrote arguments about why reality is ultimately one. He also wrote about love for
+    Krishna.
+  teen: Madhusudana’s Advaitasiddhi responds to the Dvaita philosopher Vyasaraja. His writing on
+    bhakti also examines how devotion fits within the pursuit of nondual knowledge.
+datings:
+  - method: textual-internal
+    range:
+      earliest: "1490"
+      latest: "1580"
+      precision: decade
+      circa: true
+    grade: C
+    label: Earlier chronology discussed by Shankar Nair
+    sources:
+      - src.nair-2020-translating-wisdom
+    note: One reconstruction places his lifespan mainly in the sixteenth century.
+  - method: textual-internal
+    range:
+      earliest: "1540"
+      latest: "1647"
+      precision: decade
+      circa: true
+    grade: C
+    label: P. C. Divanji’s later chronology
+    sources:
+      - src.nair-2020-translating-wisdom
+      - src.gupta-2006-advaita-vedanta-vaisnavism
+    note: This reconstruction extends his career into the seventeenth century.
+claims:
+  - text: The Advaitasiddhi defends Advaita against objections raised in the Nyayamrita.
+    grade: B
+    sources:
+      - src.gupta-2006-advaita-vedanta-vaisnavism
+      - src.nair-2020-translating-wisdom
+  - text: Madhusudana discusses the place of devotion in Advaita, including in the Bhaktirasayana.
+    grade: B
+    sources:
+      - src.gupta-2006-advaita-vedanta-vaisnavism
+relations: []
+tags:
+  - advaita
+  - vedanta
+  - krishna-bhakti
+review:
+  status: draft
+  author: codex-gpt-6

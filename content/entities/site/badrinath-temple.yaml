@@ -1,0 +1,57 @@
+id: site.badrinath-temple
+type: site
+kind: site
+names:
+  en: Badrinath Temple
+  iast: Badarīnātha Mandira
+  native: बदरीनाथ मंदिर
+summary: >-
+  The Badrinath Temple on the Alaknanda River in Uttarakhand is a Vishnu shrine in both the pan-Indian
+  Char Dham and the Himalayan Chota Char Dham circuits. The building has undergone repeated repairs.
+  Pilgrimage tradition credits Adi Shankara with re-establishing the worship of Badrinarayana here.
+summaries:
+  kids: >-
+    Nestled beside the Alaknanda River high in the Himalayas, the colourful Badrinath Temple is
+    dedicated to Vishnu and draws pilgrims every summer when the mountain snows melt.
+  teen: >-
+    Badrinath lies on both the pan-Indian Char Dham and Uttarakhand's Chota Char Dham pilgrimage routes.
+    The surviving building incorporates later repairs, and the account of Adi Shankara restoring the
+    image belongs to pilgrimage tradition.
+region: Garhwal Himalaya (Chamoli district, Uttarakhand)
+location: { name: "Badrinath, Uttarakhand", lat: 30.745, lon: 79.491 }
+datings:
+  - method: documentary
+    range: { earliest: "1803 CE", latest: "1900 CE", precision: century, circa: true }
+    grade: B
+    label: "Nineteenth-century repairs to the standing temple"
+    sources:
+      - src.rajendran-2013-central-himalaya-earthquakes
+    note: >-
+      The 1803 Garhwal earthquake damaged the temple. Rajendran and colleagues report repairs in the
+      nineteenth century, including work in 1890.
+claims:
+  - text: >-
+      Badrinath is a Vishnu shrine in both the Char Dham and the Himalayan Chota Char Dham pilgrimage
+      circuits.
+    grade: B
+    sources:
+      - src.eck-2012-india-sacred-geography
+      - src.pinkney-2014-ever-present-history-uttarakhand
+  - text: >-
+      Pilgrimage tradition credits Adi Shankara with recovering the image of Badrinarayana and restoring
+      its worship.
+    grade: D
+    sources:
+      - src.eck-2012-india-sacred-geography
+      - src.pinkney-2014-ever-present-history-uttarakhand
+relations:
+  - { kind: related-to, target: site.kedarnath-temple }
+  - { kind: related-to, target: person.adi-shankara, note: Traditional sampradaya attribution of shrine establishment }
+wikidata: Q799695
+image:
+  commons: "File:Badrinath temple in early morning.JPG"
+  alt: Colourfully painted arched Singh Dwar entrance facade and gilded spire of the Badrinath Temple in the Uttarakhand Himalayas
+  credit: Bahuln89
+  license: CC BY-SA 3.0
+tags: [badrinath, uttarakhand, himalaya, vaishnava, char-dham, temple-architecture]
+review: { status: draft, author: "gemini-4-hydrogen-xhigh" }

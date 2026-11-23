@@ -1,0 +1,70 @@
+id: site.mahabodhi-temple
+type: site
+kind: site
+names:
+  en: Mahabodhi Temple Complex, Bodh Gaya
+  iast: Mahābodhi Vihāra
+  native: महाबोधि विहार
+summary: >-
+  The Mahabodhi Temple Complex at Bodh Gaya, Bihar, marks the place where, in Buddhist tradition, the
+  Buddha attained awakening. The sandstone Vajrasana seat and early railings predate the standing brick
+  tower, which dates mainly to the late ancient period and was restored in the nineteenth century.
+summaries:
+  kids: >-
+    Buddhists remember Bodh Gaya in Bihar as the place where the Buddha found awakening under a tree.
+    The Mahabodhi Temple's tall brick tower stands beside the sacred Bodhi tree.
+  teen: >-
+    At Bodh Gaya, the sandstone Vajrasana and early stone railings belong to building phases before the
+    brick Mahabodhi Temple. A seventh-century account by Xuanzang describes a tall temple at the site,
+    which was restored in the nineteenth century.
+region: Magadha (Gaya district, Bihar)
+location: { name: "Bodh Gaya, Bihar", lat: 24.696, lon: 84.991 }
+datings:
+  - method: archaeological-stratigraphic
+    range: { earliest: "300 BCE", latest: "1 BCE", precision: century, circa: true }
+    grade: B
+    label: "Early shrine, Vajrasana and sandstone railings"
+    sources:
+      - src.cunningham-1892-mahabodhi
+      - src.asher-2008-bodh-gaya
+      - src.falk-2006-asokan-sites-and-artefacts
+    note: >-
+      The sandstone Vajrasana beside the Bodhi tree is usually attributed to the Mauryan period. Early
+      railing fragments include inscriptions that help date subsequent work.
+  - method: scholarly-consensus
+    range: { earliest: "450 CE", latest: "700 CE", precision: century, circa: true }
+    grade: B
+    label: "Main phase of the standing brick temple"
+    sources:
+      - src.asher-2008-bodh-gaya
+      - src.unesco-2002-mahabodhi-temple
+    note: >-
+      Architectural and archaeological evidence places the main brick structure around the fifth to
+      seventh centuries CE. Xuanzang described a tall temple at Bodh Gaya in the seventh century, and
+      the present building incorporates later repairs and extensive nineteenth-century restoration.
+claims:
+  - text: >-
+      The polished sandstone Vajrasana beside the Bodhi tree is conventionally associated with Ashoka's
+      patronage at Bodh Gaya.
+    grade: B
+    sources:
+      - src.cunningham-1892-mahabodhi
+      - src.asher-2008-bodh-gaya
+  - text: >-
+      UNESCO inscribed the Mahabodhi Temple Complex at Bodh Gaya on the World Heritage List in 2002.
+    grade: A
+    sources:
+      - src.unesco-2002-mahabodhi-temple
+relations:
+  - { kind: patronised-by, target: person.ashoka }
+  - { kind: related-to, target: person.gautama-buddha }
+  - { kind: related-to, target: event.xuanzang-travels-in-india }
+  - { kind: related-to, target: event.faxian-travels }
+wikidata: Q4513
+image:
+  commons: "File:Mahabodhitemple.jpg"
+  alt: Pyramidal brick and stucco shikhara tower, carved corner shrines, and sacred Bodhi tree precinct of the Mahabodhi Temple at Bodh Gaya
+  credit: Bpilgrim
+  license: CC BY-SA 2.5
+tags: [mahabodhi, bodh-gaya, buddhism, ashoka, gupta, unesco, bihar]
+review: { status: draft, author: "gemini-4-hydrogen-xhigh" }

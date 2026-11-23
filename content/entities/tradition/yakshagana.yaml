@@ -1,0 +1,70 @@
+id: tradition.yakshagana
+type: tradition
+kind: art
+names:
+  en: Yakshagana
+  iast: Yakṣagāna
+  native: ಯಕ್ಷಗಾನ
+summary: Yakshagana is a nocturnal dance-theatre tradition of coastal and Malnad Karnataka and northern Kasaragod,
+  combining sung prasanga verse, vigorous footwork, extemporaneous Kannada and Tulu prose dialogue and ornate
+  wooden-and-gilt headdresses (kiritas). Documented in palm-leaf scripts from the sixteenth century, it maintains
+  distinct northern (Badagutittu) and southern (Tenkutittu) regional styles.
+summaries:
+  kids: Yakshagana is an all-night musical theatre tradition from coastal Karnataka where performers wear huge decorated
+    crowns, bright face paint and act out epic stories with lively drumming.
+  teen: Blending sung epic poetry (prasangas), improvised dialogue and high-energy drumming on the chande and maddale,
+    Karnataka's Yakshagana is documented in written texts from at least the sixteenth century.
+region: Coastal and Malnad Karnataka, and Kasaragod (Kerala)
+location:
+  name: Udupi, Karnataka
+  lat: 13.341
+  lon: 74.742
+datings:
+  - method: textual-internal
+    range:
+      earliest: 1500
+      latest: 1600
+      precision: century
+      circa: true
+    grade: B
+    label: Earliest dated Yakshagana prasanga texts and epigraphic mentions
+    sources:
+      - src.ashton-1977-yakshagana
+      - src.karanth-1997-yakshagana
+    note: K. Shivarama Karanth and Martha Bush Ashton cite literary references in 16th-century Kannada works and early dated
+      prasanga manuscripts (c. 1564 onwards).
+claims:
+  - text: The Bhagavata serves as narrator-conductor singing prasanga verses to cymbals (tala) while chande and maddale
+      drums drive the actors' improvised dialogues and dances.
+    grade: A
+    sources:
+      - src.ashton-1977-yakshagana
+      - src.karanth-1997-yakshagana
+  - text: Yakshagana divides into major stylistic schools such as Tenkutittu (southern) and Badagutittu (northern), enacting
+      episodes chiefly from the Mahabharata, Ramayana and Bhagavata Purana.
+    grade: A
+    sources:
+      - src.karanth-1997-yakshagana
+      - src.bilimale-2023-ramayana-yakshagana
+relations:
+  - kind: related-to
+    target: text.mahabharata
+  - kind: related-to
+    target: text.valmiki-ramayana
+  - kind: related-to
+    target: tradition.kathakali
+wikidata: Q1584013
+image:
+  commons: File:A character in Yaksha Gaana performance.jpg
+  alt: Yakshagana performer in elaborate headgear, painted face and richly ornamented costume
+  credit: Krishnamoorthy Sudhakar
+  license: CC BY-SA 4.0
+tags:
+  - yakshagana
+  - theatre
+  - karnataka
+  - badagutittu
+  - tenkutittu
+review:
+  status: draft
+  author: gemini-4-hydrogen-xhigh

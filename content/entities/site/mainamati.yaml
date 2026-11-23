@@ -1,0 +1,54 @@
+id: site.mainamati
+type: site
+kind: site
+names:
+  en: Mainamati
+  iast: Maināmatī
+  native: ময়নামতি
+summary: >-
+  Mainamati-Lalmai near Cumilla in southeastern Bangladesh is an 18-kilometre ridge housing more than
+  fifty ancient Buddhist and Brahmanical sites of ancient Samatata from the seventh to twelfth
+  centuries CE. Excavations at Shalban Vihara, Ananda Vihara, Rupban Mura and Kotila Mura revealed
+  cruciform shrines, Deva and Chandra copper-plate grants, coins and bronze icons.
+summaries:
+  kids: >-
+    Along the low hills of Mainamati in Bangladesh, archaeologists uncovered dozens of ancient brick
+    Buddhist monasteries, led by Shalban Vihara with 115 monk rooms around a central temple.
+  teen: >-
+    Centred on ancient Devaparvata in Samatata, the Mainamati complex preserves Shalban Vihara (built
+    by the 8th-century Deva king Bhavadeva) and rich epigraphic, numismatic and sculptural remains
+    through the Chandra period.
+region: Cumilla (Comilla) district, Bangladesh (ancient Samatata)
+location: { name: "Shalban Vihara, Mainamati, Cumilla", lat: 23.427, lon: 91.137 }
+datings:
+  - method: epigraphic
+    range: { earliest: 650, latest: 1200, precision: century, circa: true }
+    grade: B
+    label: Copper-plate grants, seals and stratigraphic phases at Shalban Vihara
+    sources:
+      - src.imam-2000-excavations-at-mainamati
+      - src.husain-1997-mainamati-devaparvata
+      - src.furui-2019-land-society-eastern-india
+    note: Terracotta sealings and copper plates of the Khadga, Early Deva (Sri Bhavadeva Mahavihara) and Chandra dynasties span the late 7th through 11th-12th centuries CE.
+claims:
+  - text: Excavations at Shalban Vihara uncovered a 115-cell quadrangular monastery around a central cruciform shrine and clay seals identifying it as Bhavadeva Mahavihara of the eighth-century Deva king Bhavadeva.
+    grade: A
+    sources:
+      - src.imam-2000-excavations-at-mainamati
+      - src.husain-1997-mainamati-devaparvata
+  - text: Mainamati yielded inscribed copper plates, gold and silver coins of the Pattikera and Harikela series, bronze images and carved terracotta plaques documenting southeastern Bengal's Buddhist polity.
+    grade: A
+    sources:
+      - src.imam-2000-excavations-at-mainamati
+      - src.chattopadhyay-2018-archaeology-of-coastal-bengal
+relations:
+  - { kind: related-to, target: site.somapura-mahavihara }
+  - { kind: related-to, target: tradition.pala-sena-sculpture }
+wikidata: Q6736254
+image:
+  commons: "File:Shalbon-vihara-05-by-Sakib-Ahmed-Nasim.jpg"
+  alt: Central brick cruciform shrine and monastic courtyard of Shalban Vihara at Mainamati, Cumilla, Bangladesh
+  credit: Sakib Ahmed Nasim
+  license: CC BY-SA 3.0
+tags: [mainamati, shalban-vihara, samatata, bangladesh, buddhism, archaeology]
+review: { status: draft, author: "gemini-4-hydrogen-xhigh" }

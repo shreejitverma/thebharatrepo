@@ -1,0 +1,81 @@
+id: artifact.baburnama-illustrated-manuscripts
+type: artifact
+kind: art
+names:
+  en: Baburnama Illustrated Imperial Manuscripts
+  iast: Bābaranāmā Citrāṅkita Pāṇḍulipi
+summary: >-
+  Four deluxe illuminated copies of the Vaqiat-i Baburi - Abd al-Rahim Khan-i Khanan's 1589 Persian
+  translation of Zahir al-Din Muhammad Babur's Chagatai Turkic memoirs - produced in Emperor Akbar's royal
+  studio between c. 1589 and 1598 CE. Key witnesses survive in the British Library (Or. 3714, over 140
+  miniatures), National Museum, New Delhi (50.336, dated 42nd regnal year 1597-1598 CE), Moscow, and dispersed
+  folios in the Victoria and Albert Museum.
+summaries:
+  kids: >-
+    Emperor Babur wrote a candid diary of his life, battles, gardens, birds, and flowers, and decades later
+    his grandson Akbar had teams of royal artists paint vivid scenes from those pages.
+  teen: >-
+    After Abd al-Rahim translated Babur's Turkic autobiography into Persian in 1589, Akbar's studio
+    illustrated four grand copies (such as British Library Or. 3714 and National Museum 50.336), blending
+    court history with meticulous paintings of South Asian flora, fauna, and landscapes.
+region: Lahore and Agra Mughal imperial studio (British Library Or. 3714; National Museum New Delhi; V&A London)
+datings:
+  - method: documentary
+    range:
+      earliest: 1589
+      latest: 1600
+      best: 1593
+      precision: year
+      circa: true
+    grade: A
+    label: 1589 presentation of translation through 1597-1598 colophon of National Museum copy
+    sources:
+      - src.losty-roy-2012-mughal-india-british-library
+      - src.beach-1992-mughal-rajput-painting
+      - src.beveridge-1922-babur-nama
+    note: >-
+      Abu'l Fazl notes the Persian translation was presented to Akbar in November 1589; the V&A/dispersed
+      first copy dates c. 1589, British Library Or. 3714 c. 1590-1593, and National Museum 50.336 carries a
+      42nd Ilahi year date (1597-1598 CE).
+claims:
+  - text: >-
+      Losty and Roy (2012) document the four Akbari illustrated Baburnama manuscripts following Abd al-Rahim
+      Khan-i Khanan's 1589 Persian translation: the dispersed 1589 copy (including V&A leaves such as
+      IM.264-1913), British Library Or. 3714 (more than 140 miniatures), the Moscow-Walters set, and National
+      Museum New Delhi MS 50.336 (dated 1597-1598 CE).
+    grade: A
+    sources:
+      - src.losty-roy-2012-mughal-india-british-library
+      - src.beach-1992-mughal-rajput-painting
+  - text: >-
+      Executed collaboratively by senior Mughal artists such as Mansur, Basawan, Miskin, Bhawani, and Kesavdas
+      (whose names appear in marginal attributions), the paintings illustrate Babur's campaigns alongside
+      zoological and botanical studies of Indian mango, jackfruit, peacock, and rhinoceros.
+    grade: A
+    sources:
+      - src.losty-roy-2012-mughal-india-british-library
+      - src.babur-1921-memoirs
+relations:
+  - kind: patronised-by
+    target: person.akbar
+  - kind: part-of
+    target: polity.mughal-empire
+  - kind: related-to
+    target: artifact.hamzanama-folios
+    note: Built upon the naturalistic portrait and landscape idioms of Akbar's workshop
+wikidata: null
+image:
+  commons: File:Baburnama, Victoria and Albert Museum.jpg
+  alt: Illustrated folio from an Akbar-period Persian Baburnama manuscript held in the Victoria and Albert Museum
+  credit: Victoria and Albert Museum
+  license: Public domain
+tags:
+  - manuscript
+  - mughal
+  - baburnama
+  - akbar
+  - painting
+  - british-library
+review:
+  status: draft
+  author: gemini-4-hydrogen-xhigh

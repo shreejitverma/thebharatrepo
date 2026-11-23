@@ -1,0 +1,49 @@
+id: person.sher-shah-suri
+type: person
+kind: person
+names:
+  en: Sher Shah Suri
+summary: Sher Shah Suri, earlier known as Farid Khan, established Sur rule after defeating Humayun.
+  His reign is associated with silver coinage and the maintenance of routes and staging posts.
+summaries:
+  kids: Sher Shah became ruler after defeating Humayun. He is remembered for coins and roads, and his
+    tomb stands at Sasaram.
+  teen: Sher Shah extended a power base in Bihar and Bengal into North India. Records of his reign
+    help explain the administrative relationship between Sur rule and the later Mughals.
+region: Bihar, Bengal and northern India
+location:
+  name: Sasaram (tomb)
+  lat: 24.95
+  lon: 84.01
+datings:
+  - method: documentary
+    range:
+      earliest: "1540"
+      latest: "1545"
+      precision: year
+      circa: false
+    grade: B
+    label: Reign or recorded political activity
+    sources:
+      - src.asher-talbot-2006-india-before-europe
+      - src.eaton-2019-india-persianate-age
+      - src.richards-1993-mughal-empire
+    note: The range is Sher Shah's rule over Delhi, ending at his death in 1545.
+claims:
+  - text: Sher Shah's victory over Humayun at Kannauj in 1540 secured much of northern India.
+    grade: B
+    sources:
+      - src.asher-talbot-2006-india-before-europe
+      - src.richards-1993-mughal-empire
+  - text: Silver rupees are an important surviving record of his rule.
+    grade: B
+    sources:
+      - src.eaton-2019-india-persianate-age
+      - src.asher-talbot-2006-india-before-europe
+relations:
+  - kind: founded
+    target: polity.sur-empire
+tags: []
+review:
+  status: draft
+  author: codex-gpt-6

@@ -1,0 +1,48 @@
+id: person.kujula-kadphises
+type: person
+kind: person
+names:
+  en: Kujula Kadphises
+summary: Kujula Kadphises established the Kushan ruling house in the first century CE. The Rabatak
+  inscription names him as Kanishka's great-grandfather, and coins issued in Kujula's name survive
+  in several types.
+summaries:
+  kids: Kujula helped build the Kushan kingdom. A stone inscription names him as the great-grandfather
+    of the king Kanishka.
+  teen: Kujula's position in Kushan genealogy is attested at Rabatak. Coins and Chinese historical
+    accounts help reconstruct his rise among the Yuezhi and expansion across the Hindu Kush.
+region: Bactria and the northwestern subcontinent
+datings:
+  - method: numismatic
+    range:
+      earliest: "20"
+      latest: "90"
+      precision: decade
+      circa: true
+    grade: B
+    label: First-century Kushan consolidation
+    sources:
+      - src.cribb-2023-kushan-royal-inscription
+      - src.singh-2008-ancient-early-medieval-india
+    note: The genealogy, coin sequence and Chinese record place Kujula in the first century, with no
+      fixed accession date.
+claims:
+  - text: The Rabatak inscription names Kujula Kadphises as the great-grandfather of Kanishka.
+    grade: A
+    sources:
+      - src.cribb-2023-kushan-royal-inscription
+  - text: Chinese historical accounts and coins are used to reconstruct the rise of Kujula as the Kushan
+      leader among the Yuezhi.
+    grade: B
+    sources:
+      - src.singh-2008-ancient-early-medieval-india
+      - src.cribb-2023-kushan-royal-inscription
+relations:
+  - kind: founded
+    target: polity.kushan-empire
+  - kind: related-to
+    target: artifact.rabatak-inscription
+tags: []
+review:
+  status: draft
+  author: codex-gpt-6

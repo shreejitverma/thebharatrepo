@@ -1,0 +1,45 @@
+id: person.sambhaji
+type: person
+kind: person
+names:
+  en: Chhatrapati Sambhaji
+  native: संभाजी
+summary: Sambhaji succeeded his father Shivaji in 1680 after a struggle over the succession. He
+  ruled during Aurangzeb's expansion in the Deccan and was captured and executed by Mughal
+  forces in 1689.
+summaries:
+  kids: Sambhaji became ruler after his father Shivaji. He fought to hold the kingdom during a
+    long war with the Mughals.
+  teen: Sambhaji took power in a disputed succession as Mughal armies expanded their campaigns in
+    the Deccan. The Maratha state continued to resist after his execution.
+region: Maratha territories in the western Deccan
+datings:
+  - method: scholarly-consensus
+    range:
+      earliest: "1680"
+      latest: "1689"
+      precision: year
+      circa: false
+    grade: B
+    label: Reign
+    sources:
+      - src.gordon-1993-marathas-1600-1818
+      - src.richards-1993-mughal-empire
+    note: The range begins with Sambhaji's accession and ends with his death.
+claims:
+  - text: Mughal forces captured Sambhaji in 1689, and Aurangzeb ordered his execution.
+    grade: B
+    sources:
+      - src.gordon-1993-marathas-1600-1818
+      - src.richards-1993-mughal-empire
+relations:
+  - kind: succeeded
+    target: person.shivaji
+  - kind: ruled
+    target: polity.maratha-empire
+tags:
+  - maratha
+  - deccan
+review:
+  status: draft
+  author: codex-gpt-6

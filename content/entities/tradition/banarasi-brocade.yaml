@@ -1,0 +1,70 @@
+id: tradition.banarasi-brocade
+type: tradition
+kind: art
+names:
+  en: Banarasi Brocade
+  iast: Banārasī Kīṃkhāb
+  native: बनारसी ब्रोकेड / किमख़्वाब
+summary: Banarasi brocade is the luxury silk-and-metallic-thread weaving tradition of Varanasi in Uttar Pradesh, famed
+  for kimkhwab (heavy gold-and-silver brocade), katan silk saris and sheer tanchoi and tissue weaves. While Varanasi has
+  a much older textile reputation, the surviving drawloom (jala) and jacquard brocade industry expanded markedly from
+  the seventeenth to nineteenth centuries, including Gujarati weaver migrations.
+summaries:
+  kids: Banarasi brocade is shimmering silk cloth woven in Varanasi with gold and silver threads to make richly patterned
+    wedding saris and ceremonial fabrics.
+  teen: Woven on pit looms in Varanasi using supplementary weft threads of silk and metallic zari, Banarasi brocades
+    incorporate Mughal floral motifs and historical techniques such as kimkhwab and kadhua.
+region: Varanasi (Banaras), Uttar Pradesh
+location:
+  name: Varanasi, Uttar Pradesh
+  lat: 25.318
+  lon: 82.974
+datings:
+  - method: documentary
+    range:
+      earliest: 1600
+      latest: 2009
+      precision: century
+      circa: true
+    grade: B
+    label: Early modern Mughal-era brocade growth through Geographical Indication registration
+    sources:
+      - src.krishna-1966-banaras-brocades
+      - src.lynton-1995-the-sari
+      - src.chishti-2003-indian-textiles-grove
+    note: Although Varanasi cottons are noted in early Buddhist texts, surviving gold-and-silk kimkhwab brocades and weaver
+      guilds date mainly from the 17th-19th centuries (reinforced by famine migrations from Gujarat in 1603 and 1890s);
+      Banaras brocade received Indian GI status in 2009.
+claims:
+  - text: Banarasi weavers create intricate motifs (butis, bel vines, shikargah hunting scenes) via supplementary weft inlay
+      (kadhua) and cutwork (phekua) using silk and silver-gilt zari thread.
+    grade: A
+    sources:
+      - src.lynton-1995-the-sari
+      - src.gillow-2008-indian-textiles
+  - text: Traditional jala pattern-harness weaving was gradually supplemented from the late nineteenth and twentieth
+      centuries by punched-card Jacquard attachments mounted above handlooms.
+    grade: A
+    sources:
+      - src.krishna-1966-banaras-brocades
+      - src.lynton-1995-the-sari
+relations:
+  - kind: patronised-by
+    target: polity.mughal-empire
+  - kind: related-to
+    target: tradition.patola
+image:
+  commons: File:'Sari' from Varanasi (north-central India), silk and gold-wrapped silk yarn with supplementary weft brocade.jpg
+  alt: Early twentieth-century Varanasi silk sari brocade with gold-wrapped floral paisley border and field butis
+  credit: Unknown Varanasi weaver (public domain museum scan)
+  license: Public domain
+tags:
+  - banarasi
+  - brocade
+  - varanasi
+  - silk
+  - zari
+  - textiles
+review:
+  status: draft
+  author: gemini-4-hydrogen-xhigh

@@ -1,0 +1,75 @@
+id: "event.chittor-sieges"
+type: "event"
+kind: "event"
+names:
+  en: "Sieges of Chittor"
+summary: "Chittor fell to Alauddin Khalji in 1303, Bahadur Shah of Gujarat in 1535, and Akbar in
+  1568. Accounts of the sieges include records close to the events and later literary traditions
+  about the people who defended the fort."
+summaries:
+  kids: "Three different armies captured Chittor over more than two hundred years. Old records tell us
+    when they took the fort, and later poems tell how people remembered those defeats."
+  teen: "The three captures belong to different political contexts. A sixteenth-century poem shaped
+    the memory of the 1303 siege, while Mughal sources describe Akbar's sixteenth-century campaign
+    from the conqueror's viewpoint."
+region: "Mewar, Rajasthan"
+datings:
+  - method: "scholarly-consensus"
+    range:
+      earliest: 1303
+      latest: 1303
+      precision: "year"
+      circa: false
+    grade: "B"
+    label: "Capture by Alauddin Khalji"
+    sources:
+      - "src.sreenivasan-2007-rajput-queen"
+      - "src.jackson-1999-delhi-sultanate"
+  - method: "scholarly-consensus"
+    range:
+      earliest: 1535
+      latest: 1535
+      precision: "year"
+      circa: false
+    grade: "B"
+    label: "Capture by Bahadur Shah of Gujarat"
+    sources:
+      - "src.sreenivasan-2007-rajput-queen"
+      - "src.asher-talbot-2006-india-before-europe"
+  - method: "scholarly-consensus"
+    range:
+      earliest: 1567
+      latest: 1568
+      precision: "year"
+      circa: false
+    grade: "B"
+    label: "Siege and capture by Akbar"
+    sources:
+      - "src.nath-2018-akbars-sieges"
+claims:
+  - text: "Alauddin Khalji captured Chittor in 1303. The Padmini story has a separate literary history,
+      including Malik Muhammad Jayasi's sixteenth-century Padmavat."
+    grade: "B"
+    sources:
+      - "src.sreenivasan-2007-rajput-queen"
+  - text: "Bahadur Shah of Gujarat captured the fort in 1535."
+    grade: "B"
+    sources:
+      - "src.sreenivasan-2007-rajput-queen"
+      - "src.asher-talbot-2006-india-before-europe"
+  - text: "Akbar's forces took Chittor after a siege that began in 1567."
+    grade: "B"
+    sources:
+      - "src.nath-2018-akbars-sieges"
+relations:
+  - kind: "related-to"
+    target: "person.alauddin-khalji"
+  - kind: "related-to"
+    target: "person.akbar"
+tags:
+  - "mewar"
+  - "chittor"
+  - "siege"
+review:
+  status: "draft"
+  author: "codex-gpt-6"

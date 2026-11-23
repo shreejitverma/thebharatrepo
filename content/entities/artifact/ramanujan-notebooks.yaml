@@ -1,0 +1,47 @@
+id: artifact.ramanujan-notebooks
+type: artifact
+kind: science
+names:
+  en: Ramanujan’s Notebooks
+summary: Ramanujan’s three earlier notebooks preserve handwritten mathematical results, many without proofs.
+  The Tata Institute of Fundamental Research issued a facsimile in 1957. Bruce Berndt later published editions
+  and proofs.
+summaries:
+  kids: Ramanujan filled notebooks with math discoveries. Later mathematicians studied his notes and worked out
+    proofs for many of them.
+  teen: The three notebooks document years of work, much of it before Ramanujan went to Cambridge in 1914. The
+    second notebook revises and enlarges much of the first.
+region: India
+datings:
+  - method: documentary
+    range:
+      earliest: 1903
+      latest: 1914
+      precision: decade
+      circa: true
+    grade: B
+    label: Main period of compilation (Berndt)
+    sources:
+      - src.berndt-1991-ramanujan-notebooks
+      - src.berndt-2019-living-with-ramanujan
+    note: The range applies chiefly to the notebook work before Ramanujan left for England.
+claims:
+  - text: The 1957 facsimile places the first notebook in volume one and the second and third in volume two.
+    grade: A
+    sources:
+      - src.berndt-2019-living-with-ramanujan
+  - text: The notebooks often state results without proofs.
+    grade: A
+    sources:
+      - src.berndt-2019-living-with-ramanujan
+      - src.berndt-1991-ramanujan-notebooks
+relations:
+  - kind: authored-by
+    target: person.srinivasa-ramanujan
+tags:
+  - mathematics
+  - manuscripts
+  - number-theory
+review:
+  status: draft
+  author: codex-gpt-6

@@ -1,0 +1,57 @@
+id: polity.manikya-dynasty
+type: polity
+kind: polity
+names:
+  en: Manikya Dynasty of Tripura
+  native: মাণিক্য রাজবংশ
+summary: >-
+  The Manikya dynasty ruled the Tripuri (Twipra) kingdom across present-day Tripura and parts of
+  eastern Bengal from the fifteenth century CE until Tripura's merger with India in 1949. Attested
+  from Ratna Manikya's dated silver coins of 1464 CE onward, rulers such as Dhanya Manikya, Vijaya
+  Manikya and Govinda Manikya contested Bengal Sultans and Mughals, erected the Tripurasundari temple
+  at Udaipur, and sponsored the Rajmala chronicle.
+summaries:
+  kids: >-
+    For roughly five centuries, the Manikya kings ruled Tripura, minting silver coins, building famous
+    temples at Udaipur and keeping their kingdom's history in the Bengali verse chronicle Rajmala.
+  teen: >-
+    Anchored in historical epigraphy and coinage from Ratna Manikya (1464 CE), the Manikya dynasty
+    transformed the Tripuri kingdom into a literate hill-and-plains state whose monarchs resisted
+    Bengal Sultanate and Mughal expansion.
+region: Tripura and Comilla-Chittagong hill-plains frontier
+location: { name: "Udaipur (Rangamati) and Agartala, Tripura", lat: 23.533, lon: 91.486 }
+datings:
+  - method: numismatic
+    range: { earliest: 1464, latest: 1949, precision: year, circa: false }
+    grade: A
+    label: Dated silver coinage (from Ratna Manikya, Shaka 1386 = 1464 CE) to 1949 merger
+    sources:
+      - src.sinha-1896-rajmala-tripurar-itihas
+      - src.long-1978-rajmala
+      - src.sinha-1987-tribal-polities-northeast
+    note: Ratna Manikya's silver tankas dated Shaka 1386 (1464 CE) provide the earliest secure contemporary numismatic anchor for the dynasty, which later ruled as a princely state until 1949.
+  - method: traditional-sampradaya
+    range: { earliest: 590, latest: 1464, precision: century, circa: true }
+    grade: D
+    label: Rajmala royal genealogy before the fifteenth century
+    sources:
+      - src.sinha-1896-rajmala-tripurar-itihas
+      - src.long-1978-rajmala
+    note: The Rajmala traces the dynasty from legendary Tripur and Trilochan through 14th-century Fa/Manikya kings and connects it to the Tripura era (Tripurabda, 590 CE epoch).
+claims:
+  - text: Dated silver coins and Sanskrit inscriptions of Dhanya Manikya (r. c. 1490-1515 CE) document the construction of the Tripurasundari Temple at Udaipur (1501 CE) and resistance against Alauddin Husain Shah of Bengal.
+    grade: A
+    sources:
+      - src.sinha-1896-rajmala-tripurar-itihas
+      - src.eaton-1996-rise-of-islam-bengal-frontier
+  - text: Manikya rulers maintained a dual hill-plains polity combining Tripuri clan chiefs (thakurs) with Bengali court administration and patronage of Bengali and Sanskrit literature.
+    grade: B
+    sources:
+      - src.sinha-1987-tribal-polities-northeast
+      - src.long-1978-rajmala
+relations:
+  - { kind: patronised, target: text.rajmala }
+  - { kind: related-to, target: person.alauddin-husain-shah }
+wikidata: Q6749646
+tags: [manikya-dynasty, tripura, udaipur, coins, northeast-india, state-formation]
+review: { status: draft, author: "gemini-4-hydrogen-xhigh" }

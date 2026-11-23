@@ -1,0 +1,63 @@
+id: site.aihole
+type: site
+kind: site
+names:
+  en: Aihole
+  iast: Aihoḷe
+  native: ಐಹೊಳೆ
+summary: >-
+  Aihole, on the Malaprabha River in Karnataka, preserves Hindu, Jain and Buddhist monuments built in
+  several phases. The Meguti Jain temple carries a dated inscription by Ravikirti from the reign of
+  Pulakeshin II. The apsidal Durga Temple is a prominent example of Early Chalukya architecture.
+summaries:
+  kids: >-
+    Aihole is an old temple town in Karnataka. It has a temple with a rounded back and a Jain temple on
+    a hill where the poet Ravikirti left an inscription.
+  teen: >-
+    Aihole's stone temples show several approaches to shrine design. At the Meguti Jain temple,
+    Ravikirti's Sanskrit inscription dates the building to Shaka 556, corresponding to 634 to 635 CE.
+region: Malaprabha Basin (Bagalkot district, Karnataka)
+location: { name: "Aihole, Karnataka", lat: 16.019, lon: 75.882 }
+datings:
+  - method: art-historical
+    range: { earliest: "550 CE", latest: "800 CE", precision: century, circa: true }
+    grade: B
+    label: "Principal Early Chalukya building phase"
+    sources:
+      - src.tartakov-1997-durga-temple-aihole
+      - src.michell-2014-badami-aihole-pattadakal
+      - src.hardy-1995-indian-temple-architecture
+    note: >-
+      The Early Chalukya monuments include the Meguti and Durga temples. Building also continued under
+      later dynasties.
+claims:
+  - text: >-
+      Ravikirti's inscription of Shaka 556 (634-635 CE) at the Meguti temple praises Pulakeshin II and names the poets Kalidasa
+      and Bharavi.
+    grade: A
+    sources:
+      - src.kielhorn-1900-aihole-inscription
+      - src.salomon-1998-indian-epigraphy
+  - text: >-
+      The apsidal Durga Temple is generally placed in the late seventh or early eighth century CE.
+    grade: B
+    sources:
+      - src.tartakov-1997-durga-temple-aihole
+      - src.michell-2014-badami-aihole-pattadakal
+debate: >-
+  Early surveys assigned some of Aihole's structural temples, including the Durga Temple, to the fifth
+  century CE. Gary Tartakov reassessed the Durga Temple through comparisons of architecture and
+  sculpture and placed it in the late seventh or early eighth century CE.
+relations:
+  - { kind: patronised-by, target: polity.chalukya-dynasty-of-badami }
+  - { kind: related-to, target: artifact.aihole-inscription }
+  - { kind: related-to, target: site.badami-caves }
+  - { kind: related-to, target: site.pattadakal }
+wikidata: Q404851
+image:
+  commons: "File:Durga Temple Aihole October 2018 02.jpg"
+  alt: The pillared Durga Temple precinct at Aihole seen across a field of flowers
+  credit: Parthasarathi Chakrabarty
+  license: CC BY-SA 4.0
+tags: [aihole, chalukya, temple-architecture, karnataka, durga-temple, meguti]
+review: { status: draft, author: "gemini-4-hydrogen-xhigh" }

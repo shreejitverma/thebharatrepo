@@ -1,0 +1,56 @@
+id: person.shishunaga
+type: person
+kind: person
+names:
+  en: Shishunaga
+  iast: Śiśunāga
+summary: Shishunaga is the remembered founder of a Magadhan ruling house. Buddhist and Puranic
+  accounts disagree about his place in the succession, leaving his dates uncertain.
+summaries:
+  kids: An old Buddhist account says Shishunaga became king after the people of Magadha removed their
+    ruler. The story comes from a later book.
+  teen: Buddhist chronicles place Shishunaga after the Haryankas. The Puranic lists preserve a
+    different order, so an exact accession year would go beyond the evidence.
+region: Magadha, Bihar
+datings:
+  - method: textual-internal
+    range:
+      earliest: 425 BCE
+      latest: 375 BCE
+      precision: decade
+      circa: true
+    grade: C
+    label: Buddhist succession reconstructed by Upinder Singh
+    sources:
+      - src.singh-2008-ancient-early-medieval-india
+    note: Broad floruit based on position between the Haryankas and the later pre-Nanda kings.
+  - method: traditional-puranic
+    range:
+      earliest: 700 BCE
+      latest: 450 BCE
+      precision: century
+      circa: true
+    grade: D
+    label: Puranic sequence collated by F. E. Pargiter
+    sources:
+      - src.pargiter-1913-dynasties-kali-age
+    note: The Puranic totals place Shishunaga before Bimbisara. The interval indicates the earlier
+      traditional horizon without fixing an accession year.
+claims:
+  - text: Buddhist tradition describes the removal of Nagadasaka and the elevation of Shishunaga.
+    grade: C
+    sources:
+      - src.singh-2008-ancient-early-medieval-india
+  - text: Puranic lists place Shishunaga earlier in the Magadhan succession.
+    grade: D
+    sources:
+      - src.pargiter-1913-dynasties-kali-age
+relations:
+  - kind: founded
+    target: polity.shishunaga-dynasty
+debate: The Buddhist and Puranic traditions differ in their relative ordering of Shishunaga and
+  Bimbisara. Neither supplies a contemporary accession record.
+tags: []
+review:
+  status: draft
+  author: codex-gpt-6

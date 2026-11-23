@@ -1,0 +1,65 @@
+id: event.chauri-chaura-incident
+type: event
+kind: event
+names:
+  en: Chauri Chaura incident
+summary: In February 1922, a confrontation between police and protesters at Chauri Chaura ended
+  with a crowd burning the police station and killing officers inside. The attack prompted
+  Gandhi to seek the suspension of mass civil disobedience. Sources differ on the exact day.
+summaries:
+  kids: A protest in Chauri Chaura turned deadly when a crowd set fire to a police station. Gandhi
+    then called for a halt to the planned mass protests.
+  teen: The confrontation followed local organising during Non-Cooperation. Its aftermath included
+    criminal trials and a national debate over Gandhi's decision to suspend mass civil
+    disobedience.
+region: Chauri Chaura, Gorakhpur district, present-day Uttar Pradesh
+datings:
+  - method: scholarly-consensus
+    range:
+      earliest: "1922"
+      latest: "1922"
+      precision: day
+      circa: false
+    grade: B
+    label: 4 February in Shahid Amin's reconstruction
+    sources:
+      - src.amin-1995-event-metaphor-memory
+    note: Amin dates the attack to 4 February in his reconstruction based on judicial records and
+      local testimony.
+  - method: documentary
+    range:
+      earliest: "1922"
+      latest: "1922"
+      precision: day
+      circa: true
+    grade: C
+    label: 5 February in the Rajghat chronology
+    sources:
+      - src.rajghat-life-events-of-gandhi
+    note: The Rajghat Samadhi Committee chronology lists 5 February, a day later than Amin's
+      archival reconstruction.
+claims:
+  - text: After a confrontation with police, the crowd set fire to the police station, and police
+      personnel were killed.
+    grade: B
+    sources:
+      - src.amin-1995-event-metaphor-memory
+  - text: The attack was followed by colonial prosecutions and the suspension of mass civil
+      disobedience.
+    grade: B
+    sources:
+      - src.amin-1995-event-metaphor-memory
+      - src.chandra-1989-indias-struggle-for-independence
+relations:
+  - kind: part-of
+    target: event.non-cooperation-movement
+  - kind: related-to
+    target: person.mahatma-gandhi
+debate: Sources differ on the precise day. Shahid Amin's archival study places the attack on 4
+  February 1922, while the Rajghat Samadhi Committee's chronology records 5 February.
+tags:
+  - non-cooperation
+  - colonial-violence
+review:
+  status: draft
+  author: codex-gpt-6

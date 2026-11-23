@@ -1,0 +1,55 @@
+id: site.ranakpur-jain-temple
+type: site
+kind: site
+names:
+  en: Ranakpur Jain Temple
+  iast: Rāṇakpura Caturmukha Vihāra
+  native: रणकपुर जैन मंदिर
+summary: >-
+  The Chaturmukha Jain Temple at Ranakpur in Rajasthan is a fifteenth-century marble temple dedicated to
+  Adinatha. An inscription dated 1439 to 1440 CE names its patron and architect. Pillared halls surround
+  a central sanctuary approached from four sides.
+summaries:
+  kids: >-
+    At Ranakpur in Rajasthan, carved marble pillars fill the halls of a Jain temple. Four entrances lead
+    toward the central shrine to Adinatha.
+  teen: >-
+    A pillar inscription at Ranakpur names the Jain patron Dharanaka and the architect Depaka. The
+    temple's four-sided plan centres on the sanctuary of Adinatha, surrounded by carved marble halls.
+region: Aravalli Valley (Pali district, Rajasthan)
+location: { name: "Ranakpur, Rajasthan", lat: 25.116, lon: 73.473 }
+datings:
+  - method: art-historical
+    range: { earliest: "1425 CE", latest: "1500 CE", precision: century, circa: true }
+    grade: B
+    label: "Fifteenth-century temple building"
+    sources:
+      - src.mankodi-2003-ranakpur
+      - src.hegewald-2009-jaina-temple-architecture
+    note: >-
+      Dated evidence anchors construction in the fifteenth century, and the extent of work beyond the
+      dated inscription is approximate.
+claims:
+  - text: >-
+      The pillar inscription of Vikrama Samvat 1496 (1439-1440 CE) names Dharanaka as the patron and Depaka as the
+      architect.
+    grade: A
+    sources:
+      - src.mankodi-2003-ranakpur
+      - src.kumar-2001-thousand-petalled-lotus
+  - text: >-
+      The four-sided sanctuary of Adinatha is surrounded by pillared halls and subsidiary shrines.
+    grade: B
+    sources:
+      - src.hegewald-2009-jaina-temple-architecture
+      - src.mankodi-2003-ranakpur
+relations:
+  - { kind: related-to, target: site.chittorgarh-fort }
+wikidata: Q12448686
+image:
+  commons: "File:Ranakpur-Adinath-Jaintempel-18-Westseite-2018-gje.jpg"
+  alt: Exterior elevation of the white marble Ranakpur Chaturmukha Jain Temple showing stepped entrance stairs and rows of shikharas
+  credit: Gerd Eichmann
+  license: CC BY-SA 4.0
+tags: [ranakpur, jainism, marble, rajasthan, mewar, temple-architecture]
+review: { status: draft, author: "gemini-4-hydrogen-xhigh" }
