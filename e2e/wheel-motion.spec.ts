@@ -340,8 +340,10 @@ test.describe('wheel motion', () => {
       await expect(page.locator('.kc-panel h2')).toHaveText('Ashoka');
       const entries = await page.evaluate(() => window.history.length);
       await page.getByRole('navigation', { name: 'Main' }).getByRole('link', { name: 'Kaalchakra' }).click();
-      // The link opens /kaalchakra; its canonical form for this reader names the List view, in place.
-      await expect(page).toHaveURL(/\/kaalchakra\?view=list$/);
+      // The link opens /kaalchakra; its canonical form for this reader names the List view, in place. The soft
+      // navigation first downloads the page's RSC payload, which carries the prerendered wheel (about 0.6 MB), and in
+      // Firefox on a loaded machine that alone took over 5 s, so this wait allows for it.
+      await expect(page).toHaveURL(/\/kaalchakra\?view=list$/, { timeout: 15_000 });
       await page.waitForTimeout(400);
       expect(await page.evaluate(() => window.history.length)).toBe(entries + 1);
 
