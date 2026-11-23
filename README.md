@@ -82,12 +82,12 @@ The loader rejects raw negative years in datings; write BCE years as `"N BCE"` s
 
 ## Quality gates
 
-`.github/workflows/ci.yml` runs on every pull request and on `main`, as three parallel jobs on GitHub-hosted Ubuntu runners:
+`.github/workflows/ci.yml` runs on every pull request and on `main`, as parallel jobs on GitHub-hosted Ubuntu runners:
 
 | Job | What fails it |
 |---|---|
 | verify | ESLint, `tsc --noEmit`, Vitest, `content:validate`, the offline source verification gate |
-| e2e | The production build, then Playwright on desktop Chromium, Firefox and WebKit and on Pixel 7 and iPhone 14 profiles: every route type in light and dark with zero serious or critical axe violations and no horizontal scroll, navigation, Kaalchakra zoom, lenses, kind filters, URL state round trips, the wheel's spin (click, era tap, drag, touch swipe, keyboard, scroll with intent, Back and Forward, one announcement at rest, reduced motion), the List fallback (including reduced motion making List the default) and visual snapshots of the Wheel and River (Chromium projects) |
+| e2e | One job per Playwright project (desktop Chromium, Firefox and WebKit, Pixel 7, iPhone 14, and the two debates preview projects), each running the production build and then its project: every route type in light and dark with zero serious or critical axe violations and no horizontal scroll, navigation, Kaalchakra zoom, lenses, kind filters, URL state round trips, the wheel's spin (click, era tap, drag, touch swipe, keyboard, scroll with intent, Back and Forward, one announcement at rest, reduced motion), the List fallback (including reduced motion making List the default) and visual snapshots of the Wheel and River (Chromium projects) |
 | lighthouse | The production build, then Lighthouse CI on a throttled mid-tier Android profile, with the budgets below as hard gates |
 
 Performance budgets (`lighthouserc.js`, median of three runs, Moto G Power class phone, simulated slow 4G, 4x CPU):
