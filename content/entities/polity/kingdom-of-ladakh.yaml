@@ -25,16 +25,6 @@ datings:
     sources:
       - "src.petech-1977-kingdom-ladakh"
     note: "The initial date is a reconstruction of the early dynasty."
-  - method: "documentary"
-    range:
-      earliest: 1834
-      latest: 1842
-      precision: "year"
-      circa: false
-    grade: "B"
-    label: "Dogra conquest and the 1842 settlement"
-    sources:
-      - "src.petech-1977-kingdom-ladakh"
 claims:
   - text: "The Namgyal rulers supported Buddhist institutions, including the royal monastery at Hemis."
     grade: "B"

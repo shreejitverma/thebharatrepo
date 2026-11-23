@@ -31,19 +31,6 @@ datings:
       Dated by comparative Indo-Iranian linguistics, internal stratification between the Family
       Books (Mandalas 2 to 7) and late books (1 and 10), and the absence of iron (shyama ayas) in
       the Rigvedic vocabulary.
-  - method: foreign-synchronism
-    range: { earliest: "1350 BCE", latest: "1322 BCE", precision: decade, circa: true }
-    grade: C
-    label: Mitanni treaty synchronism
-    sources:
-      - src.thieme-1960-aryan-gods-mitanni-treaties
-      - src.beckman-1999-hittite-diplomatic-texts
-      - src.bryce-2005-kingdom-of-the-hittites
-      - src.jamison-brereton-2014-rigveda
-    note: >-
-      The later 14th-century BCE treaty between Suppiluliuma I of Hatti and Shattiwaza of Mitanni invokes the
-      Indo-Aryan deities Mitra, Varuna, Indra, and the Nasatyas, providing an external chronological
-      anchor for early Indo-Aryan religious vocabulary.
   - method: textual-internal
     range: { earliest: "3000 BCE", latest: "1500 BCE", precision: century, circa: true }
     grade: E
@@ -91,6 +78,13 @@ claims:
     sources:
       - src.jamison-brereton-2014-rigveda
       - src.singh-2008-ancient-early-medieval-india
+  - text: "The later fourteenth-century BCE treaty between Suppiluliuma I of Hatti and Shattiwaza of Mitanni (about 1350 to 1322 BCE) invokes the Indo-Aryan deities Mitra, Varuna, Indra and the Nasatyas, an external anchor for early Indo-Aryan religious vocabulary rather than a date for the hymns."
+    grade: "B"
+    sources:
+      - "src.thieme-1960-aryan-gods-mitanni-treaties"
+      - "src.beckman-1999-hittite-diplomatic-texts"
+      - "src.bryce-2005-kingdom-of-the-hittites"
+      - "src.jamison-brereton-2014-rigveda"
 relations:
   - { kind: related-to, target: concept.ghaggar-hakra-sarasvati-debate }
   - { kind: related-to, target: tradition.soma-ritual }

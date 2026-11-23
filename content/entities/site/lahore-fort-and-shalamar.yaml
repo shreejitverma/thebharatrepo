@@ -24,16 +24,6 @@ datings:
     sources:
       - "src.unesco-1981-lahore-fort-shalamar"
       - "src.asher-1992-architecture-of-mughal-india"
-  - method: "documentary"
-    range:
-      earliest: 1641
-      latest: 1642
-      precision: "year"
-      circa: false
-    grade: "B"
-    label: "Construction of Shalamar Gardens under Shah Jahan"
-    sources:
-      - "src.unesco-1981-lahore-fort-shalamar"
 claims:
   - text: "The World Heritage property, inscribed in 1981, groups Lahore Fort and the Shalamar Gardens as two distinct
       complexes."
@@ -42,6 +32,10 @@ claims:
       - "src.unesco-1981-lahore-fort-shalamar"
   - text: "The gardens have terraces and pavilions organised around water features."
     grade: "A"
+    sources:
+      - "src.unesco-1981-lahore-fort-shalamar"
+  - text: "The Shalamar Gardens were laid out under Shah Jahan in 1641 and 1642."
+    grade: "B"
     sources:
       - "src.unesco-1981-lahore-fort-shalamar"
 relations:

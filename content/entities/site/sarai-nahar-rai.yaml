@@ -38,6 +38,7 @@ datings:
     note: >-
       An initial radiocarbon measurement on uncharred calcified bone yielded 8395 +/- 110 BCE, while a charred
       bone sample gave c. 990 BCE; uncharred bone carbonate dates are widely regarded as unreliable.
+    primaryReason: "A competing, now doubted radiocarbon dating of the same occupation, not an event in the site's history."
   - method: scholarly-consensus
     range:
       earliest: "6000 BCE"

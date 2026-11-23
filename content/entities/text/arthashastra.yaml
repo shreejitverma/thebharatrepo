@@ -30,6 +30,7 @@ datings:
       - src.thapar-2012-asoka-decline-mauryas
       - src.trautmann-1971-kautilya-arthasastra
     note: Takes the closing verse, which names the author as the one who rescued the earth from the Nandas, at face value and treats the treatise, or at least its core, as a work of Chandragupta Maurya's reign.
+    primaryReason: "A competing dating of the text's composition, or of its core, not an event in its history."
 claims:
   - text: The Arthashastra sets out the seven constituents (prakriti) of the state - the king, minister, territory with its people, fort, treasury, army and ally - and the circle (mandala) theory of relations between neighbouring kingdoms.
     grade: A

@@ -23,18 +23,8 @@ datings:
     label: "Foundation of the main temple"
     sources:
       - "src.steinkellner-1999-tabo-renovation"
-  - method: "epigraphic"
-    range:
-      earliest: 1042
-      latest: 1042
-      precision: "year"
-      circa: false
-    grade: "A"
-    label: "Renovation of the main temple"
-    sources:
-      - "src.steinkellner-1999-tabo-renovation"
 claims:
-  - text: "The renovation inscription distinguishes the foundation from work carried out 46 years later."
+  - text: "The renovation inscription dates the renovation of the main temple to 1042, 46 years after its foundation in 996."
     grade: "A"
     sources:
       - "src.steinkellner-1999-tabo-renovation"

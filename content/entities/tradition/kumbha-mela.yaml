@@ -41,21 +41,6 @@ datings:
       Traditional accounts derive the festival from the struggle over the amrita pot after the churning,
       whose drops are said to have sanctified four earthly sites; the churning itself is placed in the
       Chakshusha manvantara before the present one.
-  - method: foreign-synchronism
-    range:
-      earliest: 643
-      latest: 644
-      precision: year
-      circa: true
-    grade: C
-    label: Xuanzang's account of Harsha's assembly at Prayag (debated antecedent)
-    sources:
-      - src.maclean-2008-pilgrimage-and-power
-      - src.lochtefeld-2004-construction-kumbha-mela
-    note: >-
-      Popular histories cite the Chinese pilgrim Xuanzang's description of a great gift-giving assembly held
-      by King Harsha at the Prayag confluence as an early Kumbha Mela; Maclean and Lochtefeld point out that
-      he describes a royal five-yearly assembly and mentions neither a kumbha nor a twelve-year cycle.
   - method: documentary
     range:
       earliest: 1650
@@ -92,6 +77,11 @@ claims:
     grade: A
     sources:
       - src.unesco-2017-kumbh-mela
+  - text: "Popular histories cite the Chinese pilgrim Xuanzang's description of a great gift-giving assembly held by King Harsha at the Prayag confluence in about 643 to 644 as an early Kumbha Mela; Maclean and Lochtefeld point out that he describes a royal five-yearly assembly and mentions neither a kumbha nor a twelve-year cycle."
+    grade: "B"
+    sources:
+      - "src.maclean-2008-pilgrimage-and-power"
+      - "src.lochtefeld-2004-construction-kumbha-mela"
 debate: >-
   Popular and devotional accounts trace the four-city Kumbha Mela directly to Puranic antiquity and read
   Xuanzang's 7th-century account of Prayag as an early Kumbha Mela. Historians such as Kama Maclean and

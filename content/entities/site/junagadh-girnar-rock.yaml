@@ -17,41 +17,32 @@ datings:
   - method: "epigraphic"
     range:
       earliest: "270 BCE"
-      latest: "230 BCE"
+      latest: "457 CE"
       precision: "century"
       circa: true
     grade: "A"
-    label: "Ashoka's Major Rock Edicts at Girnar"
+    label: "Inscribed from Ashoka's edicts to Skandagupta's record"
     sources:
       - "src.hultzsch-1925-inscriptions-of-asoka"
-  - method: "epigraphic"
-    range:
-      earliest: 150
-      latest: 151
-      precision: "year"
-      circa: true
+      - "src.kielhorn-1906-junagadh-inscription"
+      - "src.fleet-1888-inscriptions-early-gupta-kings"
+    note: "The rock carries inscriptions of three periods of rule: Ashoka's Major Rock Edicts, Rudradaman's record of era year 72 and Skandagupta's record of the reservoir's restoration."
+claims:
+  - text: "The rock carries a version of Ashoka's Major Rock Edicts, engraved in his reign (about 270 to 230 BCE)."
     grade: "A"
-    label: "Rudradaman's inscription dated to era year 72"
+    sources:
+      - "src.hultzsch-1925-inscriptions-of-asoka"
+  - text: "Rudradaman's inscription is dated to year 72 of the Shaka era, about 150 to 151 CE."
+    grade: "A"
     sources:
       - "src.kielhorn-1906-junagadh-inscription"
-  - method: "epigraphic"
-    range:
-      earliest: 455
-      latest: 457
-      precision: "year"
-      circa: true
-    grade: "A"
-    label: "Skandagupta-period inscriptions on the repairs"
-    sources:
-      - "src.fleet-1888-inscriptions-early-gupta-kings"
-claims:
   - text: "Rudradaman's inscription records a breach after heavy rain and the repair directed by his
       governor Suvishakha."
     grade: "A"
     sources:
       - "src.kielhorn-1906-junagadh-inscription"
-  - text: "A later inscription of Skandagupta's reign records another breach and restoration of the
-      reservoir."
+  - text: "A later inscription of Skandagupta's reign, of about 455 to 457 CE, records another breach and
+      restoration of the reservoir."
     grade: "A"
     sources:
       - "src.fleet-1888-inscriptions-early-gupta-kings"

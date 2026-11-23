@@ -30,15 +30,6 @@ datings:
     note: >-
       Remains and inscriptions document medieval building at the site. A twelfth-century inscription
       records work under Kumarapala.
-  - method: epigraphic
-    range: { earliest: "1169 CE", latest: "1169 CE", precision: year, circa: false }
-    grade: B
-    label: "Inscription commemorating a twelfth-century restoration"
-    sources:
-      - src.thapar-2005-somanatha
-    note: >-
-      A Sanskrit inscription at Prabhas Patan records building work associated with Bhava Brihaspati
-      under Kumarapala.
   - method: documentary
     range: { earliest: "1947 CE", latest: "1951 CE", precision: year, circa: false }
     grade: B
@@ -49,6 +40,7 @@ datings:
     note: >-
       The project was proposed in 1947. The modern shrine was consecrated on 11 May 1951 in the presence
       of President Rajendra Prasad.
+    primaryReason: "The construction of the present temple, a building phase of the site itself, not a single event in its history."
 claims:
   - text: >-
       Medieval accounts record Mahmud of Ghazni's 1026 CE raid on Somnath. An inscription attests
@@ -67,6 +59,10 @@ claims:
     grade: A
     sources:
       - src.somnath-pib-2026
+  - text: "A Sanskrit inscription of 1169 CE at Prabhas Patan records building work at the temple associated with Bhava Brihaspati under the Chaulukya ruler Kumarapala."
+    grade: "B"
+    sources:
+      - "src.thapar-2005-somanatha"
 relations:
   - { kind: related-to, target: event.ghaznavid-raid-on-somnath }
   - { kind: related-to, target: event.somnath-reconstruction-consecrated }

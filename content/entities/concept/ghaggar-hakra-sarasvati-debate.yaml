@@ -59,6 +59,7 @@ datings:
       Giosan et al. proposed that monsoon-fed rivers sustained Harappan settlements and became seasonal
       or dried as the monsoon weakened. Singh et al. inferred that seasonal streams and ponded water
       occupied the abandoned valley, with a decline in fluvial activity preceding urban settlement.
+    primaryReason: "A competing dating of the palaeochannel's own flow regime in the Harappan period, not an event in its history."
   - method: geological
     range:
       earliest: "7000 BCE"
@@ -72,6 +73,7 @@ datings:
     note: >-
       From sediment ages and provenance, Chatterjee et al. inferred that Sutlej distributaries supplied
       parts of the Ghaggar about 9,000 to 4,500 years ago, into the early Harappan period.
+    primaryReason: "A competing dating of the palaeochannel's own flow regime, not an event in its history."
   - method: textual-internal
     range:
       earliest: "3300 BCE"
@@ -88,38 +90,7 @@ datings:
       Lal and Danino identify the river described in Rigveda 7.95.2 and 10.75.5 with the Harappan-era
       Ghaggar-Hakra and read the later accounts of its disappearance at Vinashana alongside evidence
       for declining river flow and Harappan de-urbanisation.
-  - method: linguistic
-    range:
-      earliest: "1500 BCE"
-      latest: "1000 BCE"
-      precision: century
-      circa: true
-    grade: B
-    label: Mainstream philological chronology of the Rigveda
-    sources:
-      - src.jamison-brereton-2014-rigveda
-      - src.parpola-2015-roots-of-hinduism
-      - src.thapar-2002-early-india
-      - src.singh-2008-ancient-early-medieval-india
-    note: >-
-      The usual philological chronology places the Rigvedic hymns in the second millennium BCE
-      after Mature Harappan urbanism. The geographical identification of the river in the late
-      river hymn does not settle what the earlier hymns describe.
-  - method: textual-internal
-    range:
-      earliest: "1500 BCE"
-      latest: "700 BCE"
-      precision: century
-      circa: true
-    grade: C
-    label: Sarasvati in the Rigveda and later Brahmanas
-    sources:
-      - src.jamison-brereton-2014-rigveda
-      - src.witzel-1997-early-sanskritization-kuru
-    note: >-
-      The Rigveda describes a mighty river, while the later Panchavimsha and Jaiminiya Brahmanas
-      describe its disappearance at Vinashana. The range is an approximate chronology for these
-      textual layers and supplies no independent date for hydrological change.
+    primaryReason: "A competing dating of when the river the hymns describe flowed, by the Harappan-era identification, not the date of a text."
 claims:
   - text: >-
       Rigveda 10.75.5 names Sarasvati between the Yamuna and Shutudri (the Sutlej). Rigveda 2.41.16
@@ -155,6 +126,18 @@ claims:
       - src.giosan-2012-fluvial-landscapes-harappan
       - src.singh-2017-himalayan-river-morphodynamics
       - src.possehl-2002-indus-civilization
+  - text: "The usual philological chronology places the Rigvedic hymns that name the Sarasvati in about 1500 to 1000 BCE, after Mature Harappan urbanism; the geographical identification of the river in the late river hymn does not settle what the earlier hymns describe."
+    grade: "B"
+    sources:
+      - "src.jamison-brereton-2014-rigveda"
+      - "src.parpola-2015-roots-of-hinduism"
+      - "src.thapar-2002-early-india"
+      - "src.singh-2008-ancient-early-medieval-india"
+  - text: "The textual layers from the Rigveda to the Brahmanas that describe the Sarasvati, and later its disappearance at Vinashana, are placed in about 1500 to 700 BCE; that chronology supplies no independent date for hydrological change."
+    grade: "C"
+    sources:
+      - "src.jamison-brereton-2014-rigveda"
+      - "src.witzel-1997-early-sanskritization-kuru"
 relations:
   - kind: related-to
     target: tradition.harappan-civilisation

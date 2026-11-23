@@ -25,24 +25,13 @@ datings:
       - "src.eaton-2013-power-memory-architecture"
       - id: "src.desai-epigraphia-indica-methi"
         locator: "p. 315"
-  - method: "documentary"
-    range:
-      earliest: 1326
-      latest: 1328
-      precision: "year"
-      circa: true
-    grade: "B"
-    label: "Daulatabad becomes a Tughluq seat"
-    sources:
-      - "src.eaton-2013-power-memory-architecture"
-      - "src.jackson-1999-delhi-sultanate"
 claims:
   - text: "Devagiri is named as a Yadava capital in a Jaitugi-era inscription."
     grade: "A"
     sources:
       - id: "src.desai-epigraphia-indica-methi"
         locator: "p. 315"
-  - text: "Muhammad bin Tughluq made Daulatabad a centre of government in the fourteenth century."
+  - text: "Muhammad bin Tughluq made Daulatabad a centre of government in about 1326 to 1328."
     grade: "B"
     sources:
       - "src.eaton-2013-power-memory-architecture"

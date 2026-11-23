@@ -117,8 +117,25 @@ describe('entity and source rules', () => {
       expect(issues([dating('scholarly-consensus', 'B', 1572, 1573), dating('scholarly-consensus', 'B', 1572, 1730)]).map((i) => i.path)).toEqual([['datings', 0]]);
     });
 
-    it('accepts the span when it leads and the event ranks below it', () => {
-      expect(issues([dating('scholarly-consensus', 'A', 1767, 1795), dating('epigraphic', 'B', 1769, 1769)])).toEqual([]);
+    it('rejects an event that ranks below the span too, with its own message', () => {
+      // Maharana Pratap: the Battle of Haldighati (1576) beside his reign (1572-1597), both grade B.
+      const found = issues([dating('scholarly-consensus', 'B', 1572, 1597), dating('scholarly-consensus', 'B', 1576, 1576)]);
+      expect(found.map((i) => i.path)).toEqual([['datings', 1]]);
+      expect(found[0].message).toMatch(/^the grade B scholarly-consensus dating .* reads as a single event in the history of site\.fort: .* record that event as a claim/);
+      expect(issues([dating('scholarly-consensus', 'A', 1767, 1795), dating('epigraphic', 'B', 1769, 1769)]).map((i) => i.path)).toEqual([['datings', 1]]);
+    });
+
+    it('reports every event, leading or not', () => {
+      const found = issues([dating('documentary', 'A', 1960, 1960), dating('scholarly-consensus', 'B', 1900, 2000), dating('epigraphic', 'B', 1950, 1950)]);
+      expect(found.map((i) => i.path)).toEqual([['datings', 0], ['datings', 2]]);
+      expect(found[0].message).toMatch(/would stand for/);
+      expect(found[1].message).toMatch(/reads as a single event/);
+    });
+
+    it('accepts a short dating below the span that gives the reason it dates the entity itself', () => {
+      // Guru Ram Das: his years as Guru (1574-1581) beside his lifespan (1534-1581) are his active period, not an event.
+      const guru = dating('scholarly-consensus', 'B', 1574, 1581);
+      expect(issues([dating('scholarly-consensus', 'B', 1534, 1581), { ...guru, primaryReason: 'His active period as Guru, beside the lifespan.' }])).toEqual([]);
     });
 
     it('accepts a short leading dating that gives the reason it dates the entity itself', () => {

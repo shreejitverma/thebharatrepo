@@ -15,12 +15,6 @@ datings:
     label: "Initial issuance"
     sources: ["src.uidai-about-uidai"]
     note: "The UIDAI's institutional history dates the first Aadhaar issuance to 2010."
-  - method: documentary
-    range: { earliest: "2016", latest: "2016", precision: day, circa: false }
-    grade: A
-    label: "Presidential assent to the Aadhaar Act"
-    sources: ["src.india-2016-aadhaar-act"]
-    note: "The Act received assent on 25 March 2016. This dating marks the legislation and the shift towards a statutory authority."
 claims:
   - text: "UIDAI was established as an attached office in 2009 and became a statutory authority under the Aadhaar Act in 2016."
     grade: A
@@ -28,5 +22,9 @@ claims:
   - text: "The Act authorises a system assigning unique identity numbers to individuals residing in India and sets out their use in the delivery of covered public subsidies, benefits and services."
     grade: A
     sources: ["src.india-2016-aadhaar-act"]
+  - text: "The Aadhaar Act received presidential assent on 25 March 2016."
+    grade: "A"
+    sources:
+      - "src.india-2016-aadhaar-act"
 tags: ["republic","digital-identity","governance"]
 review: { status: draft, author: codex-gpt-6 }

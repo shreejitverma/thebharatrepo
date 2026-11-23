@@ -23,16 +23,6 @@ datings:
     sources:
       - "src.asher-talbot-2006-india-before-europe"
       - "src.nath-2023-akbar-journeys-to-ajmer"
-  - method: "scholarly-consensus"
-    range:
-      earliest: 1576
-      latest: 1576
-      precision: "year"
-      circa: false
-    grade: "B"
-    label: "Battle of Haldighati"
-    sources:
-      - "src.nath-2023-akbar-journeys-to-ajmer"
 claims:
   - text: "In 1576 a Mughal force under Man Singh of Amber defeated Pratap's army at Haldighati without
       capturing him."

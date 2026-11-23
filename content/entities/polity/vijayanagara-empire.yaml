@@ -38,19 +38,6 @@ datings:
       - src.unesco-1986-hampi
     note: The conventional starting date is 1336. After the sack of the capital in 1565, Aravidu kings ruled
       from Penukonda, Chandragiri and Vellore until their authority collapsed in the 1640s.
-  - method: documentary
-    range:
-      earliest: "1336"
-      latest: "1346"
-      precision: decade
-      circa: true
-    grade: C
-    label: Foundation understood as a process in Burton Stein's account
-    sources:
-      - src.stein-1989-vijayanagara
-      - src.asher-talbot-2006-india-before-europe
-    note: Stein places the beginning of the fortified capital around 1340. Royal power and the city
-      developed over several years.
 claims:
   - text: Harihara and Bukka of the Sangama family were central to the foundation of Vijayanagara.
     grade: B
@@ -75,6 +62,11 @@ claims:
     sources:
       - src.stein-1989-vijayanagara
       - src.eaton-2005-social-history-deccan
+  - text: "Burton Stein treats the foundation as a process: he places the beginning of the fortified capital around 1340, with royal power and the city developing over several years, about 1336 to 1346."
+    grade: "C"
+    sources:
+      - "src.stein-1989-vijayanagara"
+      - "src.asher-talbot-2006-india-before-europe"
 relations:
   - kind: located-at
     target: site.hampi

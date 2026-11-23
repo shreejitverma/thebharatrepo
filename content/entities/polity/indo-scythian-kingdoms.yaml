@@ -30,17 +30,6 @@ datings:
       - src.senior-2005-indo-scythian-dynasty
     note: Coin sequences place Maues at the beginning of this reconstruction. Regional satrapal issues
       continued after the principal royal line.
-  - method: epigraphic
-    range:
-      earliest: 58 BCE
-      latest: 56 BCE
-      precision: year
-      circa: true
-    grade: C
-    label: Older identification of the Azes and Vikrama eras
-    sources:
-      - src.bivar-2002-gondophares
-    note: Bivar used an epoch in the late 50s BCE to convert era dates.
 claims:
   - text: Coins issued in the name of Maues employ Greek and Kharoshthi legends and royal titles.
     grade: A
@@ -56,6 +45,10 @@ claims:
     grade: B
     sources:
       - src.falk-2009-era-of-azes
+  - text: "A. D. H. Bivar identified the Azes era with the Vikrama era and converted era dates with an epoch in the late 50s BCE (about 58 to 56 BCE)."
+    grade: "C"
+    sources:
+      - "src.bivar-2002-gondophares"
 relations:
   - kind: related-to
     target: polity.indo-greek-kingdom

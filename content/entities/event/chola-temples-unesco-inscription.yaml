@@ -15,12 +15,6 @@ datings:
     label: "Original Thanjavur inscription"
     sources: ["src.unesco-1987-great-living-chola-temples"]
     note: "The initial listing covered the Brihadisvara Temple at Thanjavur."
-  - method: documentary
-    range: { earliest: "2004", latest: "2004", precision: year, circa: false }
-    grade: A
-    label: "Extension to two further temples"
-    sources: ["src.unesco-1987-great-living-chola-temples"]
-    note: "The extension added Gangaikondacholapuram and Darasuram to the property."
 claims:
   - text: "The Committee inscribed the Brihadisvara Temple at Thanjavur in 1987 and extended the property in 2004."
     grade: A
