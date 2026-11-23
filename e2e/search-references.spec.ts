@@ -160,11 +160,46 @@ test.describe('search', () => {
       ['ashoka', 'Ashoka'],
       ['buddha', 'Gautama Buddha'],
       ['aryabhata', 'Aryabhata'],
+      // Two-word exact titles that longer titles containing both words outrank.
+      ['maurya empire', 'Maurya Empire'],
+      ['Elephanta Caves', 'Elephanta Caves'],
     ]) {
-      await page.goto(`/search?q=${q}`);
+      await page.goto(`/search?q=${encodeURIComponent(q)}`);
       await expect(status(page)).toHaveText(new RegExp(`results? for “${q}”`));
       await expect(results(page).first().locator('a[data-result]')).toHaveText(title);
     }
+  });
+
+  test('an IAST name, with or without its diacritics, puts that record first', async ({ page }) => {
+    for (const q of ['aśoka', 'asoka']) {
+      await page.goto(`/search?q=${encodeURIComponent(q)}`);
+      await expect(status(page)).toHaveText(new RegExp(`results? for “${q}”`));
+      const top = results(page).first().locator('a[data-result]');
+      await expect(top).toHaveText('Ashoka');
+      await expect(top).toHaveAttribute('href', '/archive/person/ashoka');
+      // Pinned once: the record is not repeated further down the page.
+      await expect(results(page).locator('a[data-result][href="/archive/person/ashoka"]')).toHaveCount(1);
+    }
+  });
+
+  test('the exact-name lookup is not a facet and leaves the facet counts alone', async ({ page }) => {
+    await page.goto('/search?q=ashoka');
+    await expect(results(page).first().locator('a[data-result]')).toHaveText('Ashoka');
+    await openFilters(page);
+    const legends = await page.locator('.search-facet legend').allTextContents();
+    expect(legends.length).toBeGreaterThan(0);
+    for (const l of legends) expect(['Kind', 'Article category', 'Evidence grade', 'Lens']).toContain(l);
+    // The kind counts add up to the result total: the pinned record is counted once, as itself.
+    const total = Number((await status(page).textContent())!.match(/^(\d+)/)![1]);
+    const kindCounts = await page.getByRole('group', { name: 'Kind' }).locator('.search-facet__count').allTextContents();
+    expect(kindCounts.reduce((n, c) => n + Number(c.match(/\d+/)![0]), 0)).toBe(total);
+  });
+
+  test('an exact name within a filter that excludes its record is not pinned', async ({ page }) => {
+    await page.goto('/search?q=ashoka&kind=source');
+    await expect(status(page)).toHaveText(/results? for “ashoka” with 1 filter\./);
+    await expect(results(page).first()).toBeVisible();
+    await expect(results(page).locator('a[data-result][href="/archive/person/ashoka"]')).toHaveCount(0);
   });
 
   test('a result is dated by its primary dating, and a traditional reckoning says so', async ({ page }) => {

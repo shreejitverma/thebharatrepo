@@ -241,6 +241,7 @@ Never dismiss a traditional position with mockery, and never present it as estab
 
 - Dignified, warm, precise, and free of propaganda in either direction.
 - Use IAST in `names.iast` and Devanagari (or the relevant native script) in `names.native` where useful; plain English spelling in prose (Ashoka, Shankara, Rigveda).
+- List in `names.alternates` only other names a reader would search by that mean this entity and no other (`Buddha` for Gautama Buddha); search puts the entity first for a query that is exactly its title, IAST name or one of these.
 - Avoid outdated or loaded vocabulary: write "Indo-Aryan speakers" or "Vedic people", not "Aryans" as a race; describe varna and jati with historical nuance and sources.
 - "First", "oldest", "earliest" and "greatest" each need a citation and a qualifier ("earliest known", "among the earliest").
 - No emojis, no em dashes.

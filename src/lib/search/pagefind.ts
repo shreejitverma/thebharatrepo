@@ -3,6 +3,9 @@
  * The module is loaded at runtime from the static site, never bundled.
  */
 
+import { FACETS } from './facets';
+import { normaliseWord } from './normalise';
+
 export interface PagefindResultData {
   url: string;
   excerpt: string;
@@ -41,8 +44,10 @@ export const PAGEFIND_URL = '/pagefind/pagefind.js';
 /**
  * Ranking. Pagefind's default page-length penalty (0.75) let short bibliography records outrank the entity
  * a reader is looking for: on 20 name queries ("buddha", "aryabhata", "ashoka", ...) the expected page
- * ranked 4th or 5th for three of them. At 0.25 all but "ashoka" rank first (its two edicts, titled
- * "... of Ashoka", come first; see promoteExactTitle). Lower values changed nothing further.
+ * ranked 4th or 5th for three of them. At 0.25 all but "ashoka" ranked first; lower values changed nothing
+ * further. At 1,027 entities shorter pages that mention a name in their titles outrank its own record again
+ * ("ashoka" 8th, "buddha" 6th), so ranking alone cannot do it: Search pins the record whose title or alternate
+ * name is exactly the query (see pinExact and the `exact` filter in SearchIndexMeta).
  */
 export const RANKING = { pageLength: 0.25 } as const;
 
@@ -75,21 +80,30 @@ export function loadPagefind(): Promise<PagefindHandle> {
   return loading;
 }
 
-/** Folds title case, diacritics and punctuation, so "Ashoka", "ashoka." and "Ásoka" compare by letters only. */
-function titleKey(s: string): string {
-  return s.split(/\s+/).map(normaliseWord).filter(Boolean).join(' ');
+/** Only the facets the filter panel shows: the `exact` lookup filter never reaches the panel or its counts. */
+export function facetCounts(counts: FilterCounts): FilterCounts {
+  return Object.fromEntries(FACETS.filter((f) => counts[f]).map((f) => [f, counts[f]]));
 }
 
 /**
- * Moves results whose title is exactly the query (ignoring case, diacritics and punctuation) to the front,
- * keeping Pagefind's order otherwise. Search applies it to the first batch of results it renders. A reader who types a name expects that record first, even when
+ * Puts the exact-name hits first, then the ranked results without them. Exact hits keep the order the ranked
+ * results give them, as the ranked result objects; one the ranked results lack (a name matched only through an
+ * alternate spelling) follows those, in the order the lookup returned it. A reader who types a name expects that record first, even when
  * shorter pages that mention the name in their own titles score higher.
  */
-export function promoteExactTitle<T extends { meta: Record<string, string | undefined> }>(items: T[], query: string): T[] {
-  const q = titleKey(query);
-  if (!q) return items;
-  const exact = items.filter((d) => titleKey(d.meta.title ?? '') === q);
-  return exact.length ? [...exact, ...items.filter((d) => !exact.includes(d))] : items;
+export function pinExact<T extends { id: string }>(ranked: T[], exact: T[]): T[] {
+  if (!exact.length) return ranked;
+  const rank = new Map(ranked.map((r, i) => [r.id, i]));
+  const ids = [...new Set(exact.map((r) => r.id))];
+  const lookup = new Map(exact.map((r) => [r.id, r]));
+  const pinned = ids
+    .map((id, i) => ({ id, at: rank.get(id) ?? ranked.length + i }))
+    .sort((a, b) => a.at - b.at)
+    // The ranked result, where there is one, carries the query's matched words for excerpts and the
+    // genuine-match check; a filter-only lookup result has none.
+    .map(({ id, at }) => (at < ranked.length ? ranked[at] : lookup.get(id)!));
+  const pinnedIds = new Set(ids);
+  return [...pinned, ...ranked.filter((r) => !pinnedIds.has(r.id))];
 }
 
 /**
@@ -129,11 +143,6 @@ export function excerptWithEllipses(excerpt: string, content: string): { text: s
   if (!flat.startsWith(probe(plain.slice(0, 24)))) out.unshift({ text: '...', mark: false });
   if (!flat.endsWith(probe(plain.slice(-24)))) out.push({ text: '...', mark: false });
   return out;
-}
-
-/** Lowercase letters and digits only, diacritics removed, so "Ṛgveda." compares equal to "rgveda". */
-export function normaliseWord(w: string): string {
-  return w.normalize('NFD').replace(/\p{M}/gu, '').toLowerCase().replace(/[^\p{L}\p{N}]/gu, '');
 }
 
 /** Longest suffix a stem may drop and still count as the same word ("running" to "run"). */

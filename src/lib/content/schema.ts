@@ -183,6 +183,11 @@ export const EntitySchema = z
       native: z.string().optional(),
       /** BCP 47 tag for `native` when the script default is wrong, e.g. "mr" for a Marathi name in Devanagari. */
       nativeLang: z.string().regex(BCP47, 'a BCP 47 tag such as "hi", "mr", "sa-Deva" or "ta"').optional(),
+      /**
+       * Other names a reader searches by, such as "Buddha" for Gautama Buddha. Search pins the entity first when a
+       * query is exactly one of them (or its title, or its IAST name), so add only a name that means this entity.
+       */
+      alternates: z.array(z.string().min(1)).optional(),
     }),
     summary: z.string().min(20).max(600),
     summaries: z
