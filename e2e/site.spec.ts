@@ -1,6 +1,7 @@
 import { createHash } from 'node:crypto';
 import { expect, test, type Page } from '@playwright/test';
 import AxeBuilder from '@axe-core/playwright';
+import { formatCount } from '../src/lib/content/open-data';
 
 /** Stable pages, also measured by Lighthouse CI (lighthouserc.js). */
 const ENTITY = '/archive/artifact/ashoka-major-rock-edict-xiii';
@@ -552,6 +553,8 @@ test('open data page links every export file, each matching its manifest checksu
     expect(createHash('sha256').update(await response.body()).digest('hex')).toBe(sha256);
     await expect(page.locator('.data-file', { hasText: `Download ${name}` }).locator('code')).toHaveText(sha256 as string);
   }
-  await expect(page.locator('.data-counts')).toContainText(String(manifest.counts.entities));
+  // Compared as the page writes it ("1,027"), through the page's own formatter.
+  const entities = page.locator('.data-counts > div').filter({ has: page.locator('dt', { hasText: /^entities$/ }) });
+  await expect(entities.locator('dd')).toHaveText(formatCount(manifest.counts.entities));
   await expect(page.locator('.site-footer').getByRole('link', { name: 'Open data' })).toHaveAttribute('href', '/data');
 });

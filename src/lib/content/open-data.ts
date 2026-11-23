@@ -11,6 +11,11 @@ export const DATA_SCHEMA_VERSION = 1;
 export const DATA_LICENSE = 'CC BY-SA 4.0';
 export const DATA_LICENSE_URL = 'https://creativecommons.org/licenses/by-sa/4.0/';
 
+/** How the /data page writes a record count: Indian digit grouping, as in "1,027" and "1,02,700". */
+export function formatCount(n: number): string {
+  return n.toLocaleString('en-IN');
+}
+
 /** Every file the export writes, besides manifest.json, in the order the /data page lists them. */
 export const DATA_FILES = {
   'archive.json': {
