@@ -631,7 +631,7 @@ export default function MapView({ items, extentItems, unplaced, lens, cal, selec
       <div className="kc-map-controls">
         <label className="kc-map-field">
           <span>Region</span>
-          <select className="select" name="region" value={regionValue} onChange={(e) => e.target.value !== 'custom' && onRegion({ preset: e.target.value as RegionId })}>
+          <select className="select" name="region" autoComplete="off" value={regionValue} onChange={(e) => e.target.value !== 'custom' && onRegion({ preset: e.target.value as RegionId })}>
             {REGIONS.map((r) => (
               <option key={r.id} value={r.id}>
                 {r.label}

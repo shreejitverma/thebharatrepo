@@ -36,6 +36,8 @@ export default function Toolbar({ view, lens, cal, q, kinds, filtersOpen, active
   // React renders `inert` as a boolean attribute; `aria-hidden` keeps the blank shapes out of the accessibility tree.
   const shell = skeleton ? { inert: true, 'aria-hidden': true as const } : {};
   const cls = (base: string) => (skeleton ? `${base} kc-skeleton` : base);
+  // The skeleton's fields keep their labels, under ids of their own, so the controls' ids stay unique to the live toolbar.
+  const id = (base: string) => (skeleton ? `${base}-placeholder` : base);
   return (
     <>
       <div className={cls('kc-toolbar')} {...shell}>
@@ -54,11 +56,11 @@ export default function Toolbar({ view, lens, cal, q, kinds, filtersOpen, active
           ))}
         </div>
         <div className="kc-toolbar__group">
-          <label className="visually-hidden" htmlFor={skeleton ? undefined : 'kc-cal'}>
+          <label className="visually-hidden" htmlFor={id('kc-cal')}>
             Calendar
           </label>
           <select
-            id={skeleton ? undefined : 'kc-cal'}
+            id={id('kc-cal')}
             className="select"
             {...(on ? { value: cal, onChange: (e: React.ChangeEvent<HTMLSelectElement>) => on.cal(e.target.value as CalendarSystem) } : { defaultValue: cal })}
           >
@@ -77,11 +79,11 @@ export default function Toolbar({ view, lens, cal, q, kinds, filtersOpen, active
               </span>
             ) : null}
           </button>
-          <label className="visually-hidden" htmlFor={skeleton ? undefined : 'kc-q'}>
+          <label className="visually-hidden" htmlFor={id('kc-q')}>
             Filter entries
           </label>
           <input
-            id={skeleton ? undefined : 'kc-q'}
+            id={id('kc-q')}
             className="input"
             type="search"
             placeholder="Filter, e.g. Ashoka"
