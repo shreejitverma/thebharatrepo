@@ -2,7 +2,7 @@ import { defineConfig, devices } from '@playwright/test';
 
 const PORT = Number(process.env.E2E_PORT ?? 3107);
 const CI = !!process.env.CI;
-/** A dev server with DEBATES_PREVIEW=1, the owner's preview: renders unpublished debate drafts. */
+/** A dev server with DEBATES_PREVIEW=1, the owner's preview, which renders unpublished debate drafts: here the e2e fixture draft. */
 const PREVIEW_PORT = Number(process.env.E2E_PREVIEW_PORT ?? PORT + 20);
 const PREVIEW = /\.preview\.spec\.ts$/;
 
@@ -36,7 +36,7 @@ export default defineConfig({
       timeout: 60_000,
     },
     {
-      command: `DEBATES_PREVIEW=1 npx next dev -p ${PREVIEW_PORT}`,
+      command: `DEBATES_PREVIEW=1 CONTENT_ROOTS=content:e2e/fixtures/content npx next dev -p ${PREVIEW_PORT}`,
       url: `http://localhost:${PREVIEW_PORT}/debates`,
       reuseExistingServer: !CI,
       timeout: 120_000,

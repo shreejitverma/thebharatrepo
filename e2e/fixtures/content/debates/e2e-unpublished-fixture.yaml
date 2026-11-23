@@ -1,0 +1,47 @@
+# Test fixture, not content. It is loaded only when CONTENT_ROOTS names e2e/fixtures/content (npm run build:e2e,
+# and the Playwright preview server), so the e2e and unit tests can prove that an unpublished debate never reaches
+# the public build. It relates to a real entity and cites a real source so that a leak would show on the Buddha's
+# entity page and in search. Never set published to true.
+id: debate.e2e-unpublished-fixture
+title: "Test fixture: an unpublished debate draft"
+question: Does an unpublished debate draft ever reach the public build?
+summary: >-
+  A test fixture that stands in for a debate awaiting the owner's approval. It must never be built,
+  linked, indexed or exported by a public build, and it renders only in the owner's local preview.
+published: false
+positions:
+  - id: never-built
+    label: "Never built: drafts stay out of the public site"
+    lens: scholarship
+    statement: >-
+      An unpublished draft is validated but left out of the static build, the sitemap, the search index,
+      the data export and every link, so no visitor can reach it.
+    grade: B
+    range: { earliest: "490 BCE", latest: "380 BCE", precision: decade, circa: true }
+    proponents:
+      - name: Fixture proponent
+        role: Stands in for a named scholar
+    evidence:
+      - text: The fixture cites a real source so that its citations resolve exactly as a real draft's would.
+        grade: B
+        sources:
+          - { id: src.cousins-1996-dating-historical-buddha, locator: "pp. 57-63" }
+  - id: tradition-fixture
+    label: "Tradition fixture position"
+    lens: tradition
+    statement: >-
+      A tradition position, graded D as every tradition position is, so the fixture exercises both lenses
+      on the preview page.
+    grade: D
+    proponents:
+      - name: Fixture tradition
+    evidence:
+      - text: The tradition position also cites a real source with a locator.
+        grade: D
+        sources:
+          - { id: src.cousins-1996-dating-historical-buddha, locator: "p. 59" }
+whatWouldChangeThis:
+  - Nothing should change this; a failing test means a draft has reached the public build.
+relatedEntities: [person.gautama-buddha]
+tags: [test-fixture]
+review: { status: draft, author: test-fixture }

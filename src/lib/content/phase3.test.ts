@@ -217,6 +217,30 @@ describe('loader: debates and learning paths', () => {
     });
   });
 
+  it('keeps the e2e fixture draft, loaded beside the real content, out of every public output', async () => {
+    // The same content roots `npm run build:e2e` and the Playwright preview server use.
+    vi.stubEnv('DEBATES_PREVIEW', '');
+    vi.stubEnv('CONTENT_ROOTS', 'content:e2e/fixtures/content');
+    vi.resetModules();
+    const { loadContentUncached } = await import('./load');
+    const { publishedDebates, visibleDebates, debatesForEntity, debateSearchHrefs } = await import('./debates');
+    const g = loadContentUncached();
+    expect(g.errors).toEqual([]);
+    const fixture = g.debates.find((d) => d.id === 'debate.e2e-unpublished-fixture');
+    expect(fixture).toMatchObject({ published: false, file: 'e2e/fixtures/content/debates/e2e-unpublished-fixture.yaml' });
+    expect(publishedDebates(g.debates).length).toBeGreaterThan(0);
+    expect(visibleDebates(g.debates).map((d) => d.id)).toEqual(publishedDebates(g.debates).map((d) => d.id));
+    const buddha = debatesForEntity(g, 'person.gautama-buddha').map((d) => d.id);
+    expect(buddha).toContain('debate.date-of-the-buddha');
+    expect(buddha).not.toContain(fixture!.id);
+    expect(debateSearchHrefs(g)).not.toContain('/debates/e2e-unpublished-fixture');
+    const page = await import('../../app/debates/[slug]/page');
+    expect(page.generateStaticParams()).not.toContainEqual({ slug: 'e2e-unpublished-fixture' });
+    // The draft file is also kept out of every traced server bundle, from whichever content root it comes.
+    const config = (await import('../../../next.config')).default;
+    expect(config.outputFileTracingExcludes?.['*']).toContain('e2e/fixtures/content/debates/e2e-unpublished-fixture.yaml');
+  });
+
   it('lets an article link a published debate and rejects a link to a draft', async () => {
     await inFixture('phase3', async () => {
       const { readContentRecords, assembleContent } = await import('./load');

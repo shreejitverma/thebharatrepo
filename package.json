@@ -7,6 +7,7 @@
     "dev": "next dev",
     "dev:debates-preview": "DEBATES_PREVIEW=1 next dev",
     "build": "npm run content:validate && tsx scripts/content-verify-sources.ts --offline && npm run content:build && npm run data:verify-export && next build && tsx scripts/build-search.ts",
+    "build:e2e": "CONTENT_ROOTS=content:e2e/fixtures/content npm run build",
     "start": "next start",
     "lint": "eslint .",
     "test": "vitest run",
