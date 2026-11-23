@@ -159,7 +159,7 @@ positions:
       300-kilometre transect and inferred renewed Higher and Lesser Himalayan water supply
       sustaining perennial flow between about 9 and 4.5 ka (roughly 7000 to 2500 BCE).
       On this model, reliable Himalayan-fed water persisted into the Early Harappan period
-      before declining around the ~4.2 ka aridification event.
+      before declining by about 4.5 ka, ahead of the ~4.2 ka aridification event.
     proponents:
       - name: Anirban Chatterjee and colleagues
         role: Geochemists and geologists, analysed 40Ar/39Ar and Sr-Nd sediment provenance
@@ -168,7 +168,8 @@ positions:
       - text: >-
           Radiocarbon- and luminescence-dated fluvial layers from 9 to 4.5 ka contain
           40Ar/39Ar muscovite and Sr-Nd signatures matching Higher and Lesser Himalayan
-          sources, attributed to reactivation by Sutlej distributaries before ~4.2 ka.
+          sources, attributed to reactivation by Sutlej distributaries that declined by
+          about 4.5 ka.
         grade: C
         sources:
           - { id: src.chatterjee-2019-perennial-river-harappan-heartland, locator: "Abstract; Fig. 3; The evolving river system" }

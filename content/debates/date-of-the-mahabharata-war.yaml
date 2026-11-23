@@ -156,7 +156,6 @@ positions:
     label: "Traditional Kali Yuga and Yudhishthira reckonings: 3138, 3102 and 2449 BCE"
     lens: tradition
     grade: D
-    range: { earliest: "3138 BCE", latest: "2449 BCE", precision: year, circa: false }
     statement: >-
       In traditional Indian reckoning, the Bharata war marks the transition from Dvapara
       to Kali Yuga. Aryabhata's 499 CE astronomical epoch puts the start of Kali Yuga at
