@@ -11,7 +11,7 @@ summary: >-
   engineered structure is documented. Ramayana tradition identifies the chain as the
   bridge built under Nala's direction for Rama's passage to Lanka.
 published: true
-approval: { by: Shreejit Verma, date: "2026-11-22" }
+approval: { by: Shreejit Verma, date: "2026-11-22", note: "Drafted by Codex; reviewed for fairness, accuracy and sources by Gemini (a machine review). No human editorial review yet." }
 commonGround:
   - text: >-
       Adam's Bridge (Ram Setu) is a roughly 29-kilometre submarine ridge and chain of
@@ -74,7 +74,7 @@ positions:
         unconformities, while dense radiometric dating across cores from multiple shoals
         is still needed to establish exact accumulation histories for every sandbank.
   - id: possible-local-modification
-    label: "Natural barrier with possible local modification or shallow crossings (grade E)"
+    label: "Natural barrier with possible local modification or shallow crossings"
     lens: scholarship
     grade: E
     statement: >-
@@ -156,4 +156,4 @@ whatWouldChangeThis:
 relatedEntities: [text.valmiki-ramayana, person.rama, concept.yuga-chronology-of-the-itihasa]
 relatedArticles: [literature/the-ramayana]
 tags: [ram-setu, adams-bridge, coastal-geology, ramayana]
-review: { status: published, reviewer: Shreejit Verma, lastReviewed: "2026-11-22", author: senior-editor-review }
+review: { status: draft, author: codex }

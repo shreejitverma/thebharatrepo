@@ -8,7 +8,7 @@ summary: >-
   Lankan chronicles, about a century in northern Buddhist sources. The Theravada Buddhist Era is an older
   reckoning of the Sri Lankan count, kept in its own lens.
 published: true
-approval: { by: Shreejit Verma, date: "2026-11-22" }
+approval: { by: Shreejit Verma, date: "2026-11-22", note: "Drafted by Claude (claude-opus-5-5). No human editorial review yet." }
 commonGround:
   - text: >-
       Ashoka's Major Rock Edict XIII names five Hellenistic kings whose reigns are dated independently in
@@ -143,4 +143,4 @@ relatedEntities:
 relatedArticles:
   - philosophy/buddhism
 tags: [buddhism, chronology, ashoka, contested-chronology]
-review: { status: published, reviewer: Shreejit Verma, lastReviewed: "2026-11-22", author: "claude-opus-5-5" }
+review: { status: draft, author: claude-opus-5-5 }

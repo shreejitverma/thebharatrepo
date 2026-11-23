@@ -10,7 +10,7 @@ summary: >-
   sixth-millennium BCE dates (grade E). Puranic and vernacular traditions place Rama's
   reign in Treta Yuga in sacred chronology.
 published: true
-approval: { by: Shreejit Verma, date: "2026-11-22" }
+approval: { by: Shreejit Verma, date: "2026-11-22", note: "Drafted by Codex; reviewed for fairness, accuracy and sources by Gemini (a machine review). No human editorial review yet." }
 commonGround:
   - text: >-
       The transmitted Sanskrit epic consists of seven books (kandas) attributing the poem
@@ -107,7 +107,7 @@ positions:
         Goldman argues that the pre-Magadhan cultural horizon of the core allows a slightly
         earlier origin than the fifth century BCE.
   - id: planetarium-horoscope-reconstructions
-    label: "Planetarium-software reconstructions of Rama's birth chart (grade E)"
+    label: "Planetarium-software reconstructions of Rama's birth chart"
     lens: scholarship
     grade: E
     statement: >-
@@ -191,4 +191,4 @@ relatedEntities:
   - text.ramcharitmanas
 relatedArticles: [literature/the-ramayana]
 tags: [ramayana, valmiki, oral-transmission, chronology]
-review: { status: published, reviewer: Shreejit Verma, lastReviewed: "2026-11-22", author: senior-editor-review }
+review: { status: draft, author: codex }

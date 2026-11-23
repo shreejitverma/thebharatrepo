@@ -10,7 +10,7 @@ summary: >-
   (grade E). Traditional reckonings connect the war to the Kali Yuga epoch (3102 or
   3138 BCE) or to Varahamihira's Yudhishthira era (about 2449 BCE).
 published: true
-approval: { by: Shreejit Verma, date: "2026-11-22" }
+approval: { by: Shreejit Verma, date: "2026-11-22", note: "Drafted by Codex; reviewed for fairness, accuracy and sources by Gemini (a machine review). No human editorial review yet." }
 commonGround:
   - text: >-
       The Mahabharata centres on a succession conflict in the Kuru lineage at Kurukshetra
@@ -217,4 +217,4 @@ whatWouldChangeThis:
 relatedEntities: [event.kurukshetra-war, text.mahabharata, polity.kuru-kingdom, site.hastinapura, event.kali-yuga-epoch]
 relatedArticles: [literature/mahabharata]
 tags: [mahabharata, kurukshetra, astronomy, chronology]
-review: { status: published, reviewer: Shreejit Verma, lastReviewed: "2026-11-22", author: senior-editor-review }
+review: { status: draft, author: codex }

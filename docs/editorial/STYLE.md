@@ -276,7 +276,9 @@ Write `published: false` (the default).
 Unpublished debates are validated by `content:validate` but are left out of the built site, the sitemap, search and every link.
 Only the owner sets `published: true`, and the schema then requires an `approval` record.
 Preview drafts locally with `npm run dev:debates-preview`.
-When publishing, also set `review` to `status: published` with the reviewer and the date (section 10).
+Owner approval is not an editorial review: `review` keeps its truthful status (section 10), so a published debate that no human editor has reviewed stays `draft` and its page says so.
+Record how the text was produced in `approval.note`, for example "Drafted by Codex; reviewed for fairness, accuracy and sources by Gemini (a machine review)."
+Set `review.status` to `reviewed` or `published` only with a human editor's name and date.
 The test suites prove the rule with their own fixture draft in `e2e/fixtures/content/debates/`, so no real draft needs to be kept for them; never add a test fixture to `content/debates/`.
 
 ```yaml

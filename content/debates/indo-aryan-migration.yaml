@@ -11,7 +11,7 @@ summary: >-
   Modern scholarship rejects nineteenth-century theories of a violent Aryan invasion and
   distinguishes biological ancestry, material culture and speech.
 published: true
-approval: { by: Shreejit Verma, date: "2026-11-22" }
+approval: { by: Shreejit Verma, date: "2026-11-22", note: "Drafted by Codex; reviewed for fairness, accuracy and sources by Gemini (a machine review). No human editorial review yet." }
 commonGround:
   - text: >-
       Modern archaeology and historiography reject the older hypothesis of a violent
@@ -100,16 +100,17 @@ positions:
         Mitanni Indo-Aryan vocabulary proves an early presence in western Asia by the
         fourteenth century BCE without directly settling migration direction on its own.
   - id: indigenous-origin
-    label: "Indigenous origin and outward dispersal (grade E)"
+    label: "Indigenous origin and outward dispersal"
     lens: scholarship
     grade: E
     range: { earliest: "3300 BCE", latest: "1500 BCE", precision: century, circa: true }
     statement: >-
       Proponents of indigenous origin argue that northwestern South Asia shows deep
       cultural and biological continuity incompatible with a late outside language
-      replacement. Shinde and colleagues (2019) showed that Rakhigarhi individual I6113's
-      Iranian-related ancestry diverged before Near Eastern agriculture began, ruling out
-      large-scale Iranian-farmer migration into Harappan populations. B. B. Lal stresses
+      replacement. Shinde and colleagues (2019) found that the Iranian-related ancestry of
+      the Rakhigarhi individual I6113 split from the lineage of Iranian farmers before
+      farming began on the Iranian plateau, which proponents read as deep local population
+      continuity rather than a later influx of western farmers. B. B. Lal stresses
       material continuity from Harappan into later North Indian culture and links
       Rigvedic Sarasvati (10.75.5) with the Ghaggar-Hakra valley. Shrikant Talageri sequences
       the Rigvedic mandalas from east to west to argue for outward Indo-European dispersal
@@ -122,23 +123,24 @@ positions:
       - name: Shrikant G. Talageri
         role: Author of an outward-dispersal reconstruction of the Rigveda
         work: { id: src.talageri-2000-rigveda-historical-analysis, locator: "Preface; chs. 3-4" }
-      - name: Edwin Bryant
-        role: Historian of Vedic culture who examined critiques of both migrationist and indigenous models
-        work: { id: src.bryant-2001-quest-origins-vedic-culture, locator: "chs. 5-8 and 11" }
     evidence:
       - text: >-
-          Shinde and colleagues (2019) concluded that the Iranian-related lineage in
-          Rakhigarhi I6113 split prior to the emergence of farming in Iran, countering models
-          of mass agricultural migration from western Iran while noting one genome cannot
-          capture all Harappan diversity.
+          Shinde and colleagues (2019) report that the Iranian-related lineage in Rakhigarhi
+          I6113 split before farming began in Iran, so this Harappan individual's
+          Iranian-related ancestry did not come from a later spread of Iranian farmers. The
+          finding concerns ancestry and the spread of farming, not language: it does not by
+          itself show where Indo-Aryan speech arose, I6113 carried no steppe ancestry, and a
+          single genome cannot capture all Harappan diversity.
         grade: B
         sources:
           - { id: src.shinde-2019-ancient-harappan-genome, locator: "Results and Discussion" }
       - text: >-
           Lal highlights archaeological continuities across Harappan and post-Harappan levels
-          and cites Rigveda 10.75.5 placing Sarasvati between the Yamuna and Sutlej, while
-          Bryant reviews challenges in proving steppe archaeological intrusion or early
-          substrata in India.
+          and cites Rigveda 10.75.5 placing Sarasvati between the Yamuna and Sutlej. Edwin
+          Bryant, who examines the critiques of both the migration and the indigenous models
+          without endorsing either, sets out the indigenist argument that a steppe
+          archaeological intrusion and early non-Indo-Aryan substrata are hard to prove in
+          India.
         grade: C
         sources:
           - { id: src.lal-2002-saraswati-flows-on, locator: "chs. I-IV" }
@@ -186,4 +188,4 @@ relatedArticles:
   - history/vedic-period
   - history/indus-valley-civilisation
 tags: [indo-aryan, linguistics, archaeogenetics, harappan]
-review: { status: published, reviewer: Shreejit Verma, lastReviewed: "2026-11-22", author: senior-editor-review }
+review: { status: draft, author: codex }

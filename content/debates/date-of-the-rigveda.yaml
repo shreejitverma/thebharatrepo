@@ -10,7 +10,7 @@ summary: >-
   BCE timeline from poet attributions and Ghaggar-Hakra river imagery. Puranic tradition
   treats the Veda as eternal and places Vyasa's arrangement in Dvapara Yuga.
 published: true
-approval: { by: Shreejit Verma, date: "2026-11-22" }
+approval: { by: Shreejit Verma, date: "2026-11-22", note: "Drafted by Codex; reviewed for fairness, accuracy and sources by Gemini (a machine review). No human editorial review yet." }
 commonGround:
   - text: >-
       The transmitted Shakala Rigveda comprises 1,028 hymns in ten books (mandalas), whose
@@ -86,7 +86,7 @@ positions:
         Mitanni royal names and gods anchor Indo-Aryan vocabulary in western Asia rather than
         fixing the date of a specific hymn in northwestern South Asia.
   - id: earlier-core
-    label: "Earlier third- or multi-millennium BCE chronologies (grade E)"
+    label: "Earlier third- or multi-millennium BCE chronologies"
     lens: scholarship
     grade: E
     statement: >-
@@ -177,4 +177,4 @@ whatWouldChangeThis:
 relatedEntities: [text.rigveda, event.mitanni-treaty, concept.ghaggar-hakra-sarasvati-debate, tradition.vedic-oral-transmission, cosmology.dvapara-yuga]
 relatedArticles: [philosophy/the-vedas, language/vedic-and-classical-sanskrit]
 tags: [rigveda, veda, oral-transmission, contested-chronology]
-review: { status: published, reviewer: Shreejit Verma, lastReviewed: "2026-11-22", author: senior-editor-review }
+review: { status: draft, author: codex }

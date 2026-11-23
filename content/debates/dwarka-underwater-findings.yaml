@@ -11,7 +11,7 @@ summary: >-
   anchorage phases, distinct from Bet Dwarka's protohistoric settlement. The Mahabharata
   preserves the sacred account of Dvaraka's submergence.
 published: true
-approval: { by: Shreejit Verma, date: "2026-11-22" }
+approval: { by: Shreejit Verma, date: "2026-11-22", note: "Drafted by Codex; reviewed for fairness, accuracy and sources by Gemini (a machine review). No human editorial review yet." }
 commonGround:
   - text: >-
       Marine archaeologists documented stone anchors in a submerged channel off modern
@@ -31,10 +31,10 @@ commonGround:
       - { id: src.gaur-2006-bet-dwarka-indo-roman-trade, locator: "pp. 117-127" }
 positions:
   - id: rao-protohistoric-port
-    label: "Rao's protohistoric port hypothesis: about 1600 to 1300 BCE"
+    label: "Rao's protohistoric port hypothesis: about 1500 to 1400 BCE"
     lens: scholarship
     grade: C
-    range: { earliest: "1600 BCE", latest: "1300 BCE", best: "1500 BCE", precision: century, circa: true }
+    range: { earliest: "1500 BCE", latest: "1400 BCE", precision: century, circa: true }
     statement: >-
       S. R. Rao interpreted the regularly laid dressed masonry along the submerged Gomati
       channel off Dwarka as harbour walls and bastions of an inundated protohistoric port.
@@ -147,4 +147,4 @@ whatWouldChangeThis:
 relatedEntities: [person.krishna, text.mahabharata, tradition.harappan-civilisation, site.lothal]
 relatedArticles: [literature/mahabharata]
 tags: [dwarka, bet-dwarka, maritime-archaeology, krishna, mahabharata]
-review: { status: published, reviewer: Shreejit Verma, lastReviewed: "2026-11-22", author: senior-editor-review }
+review: { status: draft, author: codex }

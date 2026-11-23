@@ -166,7 +166,9 @@ test.describe('every published debate page', () => {
       await expect(page.locator('.kc-strip')).toBeVisible();
       await expect(page.locator('.kc-strip a', { hasText: 'Open in the Kaalchakra' })).toHaveAttribute('href', /^\/kaalchakra\?id=/);
       await expect(page.getByRole('heading', { name: 'What would change this' })).toBeVisible();
-      await expect(page.locator('.review-note')).toContainText(/Review status: published after review by .+ on \d{4}-\d{2}-\d{2}\. Approved for publication by .+ on \d{4}-\d{2}-\d{2}\./);
+      // Owner approval is not an editorial review: the page states the record's real review status, in the entity pages' words.
+      await expect(page.locator('.review-note')).toContainText(/Review status: draft, identifiers machine-verified, awaiting editor review\. Approved for publication by .+ on \d{4}-\d{2}-\d{2}\./);
+      await expect(page.locator('.review-note')).not.toContainText('after review by');
       await noHorizontalScroll(page);
       await noSeriousA11yViolations(page);
     });
