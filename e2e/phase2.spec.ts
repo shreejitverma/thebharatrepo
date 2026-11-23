@@ -210,6 +210,26 @@ test.describe('Map view', () => {
     else await expect(page.getByLabel('Region')).toHaveValue('custom');
   });
 
+  test('the map is laid out at its rendered width from the moment its markers appear', async ({ page }) => {
+    // Records, as soon as the first cluster is in the DOM, the map's drawing width against the width it is shown at.
+    // A map first drawn at a default size and corrected a task later moves every marker under a tap in between.
+    await page.addInitScript(() => {
+      const w = window as unknown as { firstMapWidths?: { drawn: number; shown: number } };
+      const mo = new MutationObserver(() => {
+        const svg = document.querySelector<SVGSVGElement>('.kc-map-svg');
+        if (!svg?.querySelector('.kc-map-cluster')) return;
+        w.firstMapWidths = { drawn: svg.viewBox.baseVal.width, shown: Math.floor(svg.getBoundingClientRect().width) };
+        mo.disconnect();
+      });
+      mo.observe(document, { childList: true, subtree: true });
+    });
+    await page.goto('/kaalchakra?view=map');
+    await expect(page.locator('.kc-map-svg .kc-map-cluster').first()).toBeVisible();
+    const widths = await page.evaluate(() => (window as unknown as { firstMapWidths?: { drawn: number; shown: number } }).firstMapWidths);
+    expect(widths).toBeDefined();
+    expect(widths!.drawn).toBe(widths!.shown);
+  });
+
   test('zoom, pan and stepping work from the keyboard', async ({ page }) => {
     await page.goto('/kaalchakra?view=map');
     await expect(page.locator('.kc-map-svg')).toBeVisible();

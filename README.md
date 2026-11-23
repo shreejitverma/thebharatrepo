@@ -126,7 +126,8 @@ Tests that run axe match labelled landmarks by their attributes, not by a named 
 ## Search
 
 Search is [Pagefind](https://pagefind.app), built inside `npm run build` itself, after content validation, the offline verification gate, the open data export and its round trip, and `next build`; none of these is a lifecycle script, so a package manager that ignores lifecycle scripts cannot skip them.
-`scripts/build-search.ts` reads the prerendered HTML in `.next/server/app`, indexes every entity, article, source and learning path page, and every published debate, under its real route, and writes `public/pagefind/`.
+`scripts/build-search.ts` reads the prerendered HTML that `next build` writes, indexes every entity, article, source and learning path page, and every published debate, under its real route, and writes `public/pagefind/`.
+A plain build writes each page to `.next/server/app/<route>.html`; with a deployment adapter, as on Vercel (`NEXT_ADAPTER_PATH`), Next 16.4 writes it to `.next/server/route-cache/APP_PAGE/<hash>/$/<route>.html` instead, and the script reads both layouts.
 The build fails if any expected page is missing or unindexed.
 On Vercel this is served because the Next.js builder collects `public/` only after the build command exits, and `vercel.json` pins that build command to `npm run build` so a dashboard override cannot drop the index; `vercel build` locally puts all of `public/pagefind/` in `.vercel/output/static/pagefind/`.
 Content-hashed chunks (`/pagefind/{index,filter,fragment}/`) are served as immutable (`next.config.ts`); `pagefind.js` and `pagefind-entry.json` keep the default revalidation.

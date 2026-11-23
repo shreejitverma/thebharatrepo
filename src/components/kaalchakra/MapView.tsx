@@ -156,9 +156,12 @@ export default function MapView({ items, extentItems, unplaced, lens, cal, selec
   const hintTimer = useRef<ReturnType<typeof setTimeout> | undefined>(undefined);
   const selectedDomId = `${useId()}-selected`;
 
-  useEffect(() => {
+  // Measured before the first paint: the observer reports a task later, so the map would first be drawn, and
+  // could be clicked, at the parent's default size, then redrawn with every marker and cluster moved.
+  useLayoutEffect(() => {
     const el = wrapRef.current;
     if (!el) return;
+    onSize(mapSizeFor(el.getBoundingClientRect().width));
     const ro = new ResizeObserver(([entry]) => onSize(mapSizeFor(entry.contentRect.width)));
     ro.observe(el);
     return () => ro.disconnect();

@@ -2,7 +2,7 @@
  * Pagefind index, built by `npm run build` right after `next build` (part of the build script itself, not a
  * lifecycle hook, so no package manager setting can skip it).
  *
- * Reads the prerendered HTML that `next build` writes to .next/server/app, indexes every entity, article,
+ * Reads the prerendered HTML that `next build` writes (see prerenderedPages), indexes every entity, article,
  * source, learning path and published debate page under its real route (Next serves /archive/event/x, not /archive/event/x.html), and
  * writes the browser index to public/pagefind. The Vercel Next.js builder collects public/ after the build
  * command exits (vercel.json pins that command to `npm run build`), and `next start` serves it, so the
@@ -29,7 +29,7 @@ import { learningSearchHrefs } from '../src/lib/content/learning';
 import { EXACT_FILTER, exactFilterValues, exactHash, exactKeys } from '../src/lib/search/normalise';
 
 const ROOT = process.cwd();
-const APP_DIR = path.join(ROOT, '.next', 'server', 'app');
+const SERVER_DIR = path.join(ROOT, '.next', 'server');
 const OUT_DIR = path.join(ROOT, 'public', 'pagefind');
 const DEBATES_BUILD = path.join(ROOT, '.next', 'debates-build.json');
 const EXACT_VALUE = new RegExp(`data-pagefind-filter="${EXACT_FILTER}\\[data-v\\]" data-v="([^"]*)"`, 'g');
@@ -37,6 +37,35 @@ const EXACT_VALUE = new RegExp(`data-pagefind-filter="${EXACT_FILTER}\\[data-v\\
 function fail(message: string): never {
   console.error(`build-search: ${message}`);
   process.exit(1);
+}
+
+/**
+ * Every prerendered app page, by route. Without a deployment adapter `next build` writes a page to
+ * .next/server/app/<route>.html. With one, as on Vercel (which sets NEXT_ADAPTER_PATH), Next 16.4 writes it to
+ * .next/server/route-cache/APP_PAGE/<hash of the source route>/$/<route>.html instead, and nothing to app/.
+ * A route found in both is stale output from another build and fails the build.
+ */
+function prerenderedPages(): Map<string, string> {
+  const roots = [path.join(SERVER_DIR, 'app')];
+  const cache = path.join(SERVER_DIR, 'route-cache', 'APP_PAGE');
+  if (fs.existsSync(cache)) for (const hash of fs.readdirSync(cache)) roots.push(path.join(cache, hash, '$'));
+  const pages = new Map<string, string>();
+  const walk = (root: string, dir: string) => {
+    if (!fs.existsSync(dir)) return;
+    for (const e of fs.readdirSync(dir, { withFileTypes: true })) {
+      const p = path.join(dir, e.name);
+      if (e.isDirectory()) walk(root, p);
+      else if (e.name.endsWith('.html')) {
+        const route = `/${path.relative(root, p).slice(0, -'.html'.length).split(path.sep).join('/')}`;
+        const url = route === '/index' ? '/' : route;
+        const prior = pages.get(url);
+        if (prior) fail(`${url} is prerendered twice, at ${path.relative(ROOT, prior)} and ${path.relative(ROOT, p)}; run next build again`);
+        pages.set(url, p);
+      }
+    }
+  };
+  for (const root of roots) walk(root, root);
+  return pages;
 }
 
 function dirSize(dir: string): { files: number; bytes: number } {
@@ -62,15 +91,16 @@ let pagefind: PagefindModule | undefined;
 
 async function main() {
   pagefind = await import('pagefind');
-  if (!fs.existsSync(APP_DIR)) fail(`${path.relative(ROOT, APP_DIR)} not found; run next build first`);
+  const pages = prerenderedPages();
+  if (!pages.size) fail(`no prerendered pages under ${path.relative(ROOT, SERVER_DIR)}; run next build first`);
   const g = loadContentUncached();
   if (g.errors.length) fail(`${g.errors.length} content problem(s); run npm run content:validate`);
 
   const preview = debatesPreview();
   if (!preview) {
-    const debatesDir = path.join(APP_DIR, 'debates');
-    const built = fs.existsSync(debatesDir) ? fs.readdirSync(debatesDir) : [];
-    const leaked = g.debates.filter((d) => !d.published).flatMap((d) => built.filter((f) => f === d.slug || f.startsWith(`${d.slug}.`)).map((f) => `debates/${f} (${d.id})`));
+    const leaked = g.debates
+      .filter((d) => !d.published)
+      .flatMap((d) => [...pages].filter(([url]) => url === debateHref(d) || url.startsWith(`${debateHref(d)}/`)).map(([, file]) => `${path.relative(ROOT, file)} (${d.id})`));
     if (leaked.length) fail(`unpublished debate output in a public build, which must never ship:\n  ${leaked.join('\n  ')}`);
   }
 
@@ -96,9 +126,9 @@ async function main() {
   const counts: Record<PageType, number> = { entity: 0, article: 0, source: 0, learning: 0, debate: 0 };
   const problems: string[] = [];
   for (const [url, type] of expected) {
-    const file = path.join(APP_DIR, `${url.slice(1)}.html`);
-    if (!fs.existsSync(file)) {
-      problems.push(`${url}: no prerendered HTML at ${path.relative(ROOT, file)}`);
+    const file = pages.get(url);
+    if (!file) {
+      problems.push(`${url}: no prerendered HTML under ${path.relative(ROOT, SERVER_DIR)}`);
       continue;
     }
     const content = fs.readFileSync(file, 'utf8');
