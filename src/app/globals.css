@@ -1596,6 +1596,34 @@ a:hover {
   }
 }
 
+/*
+ * The toolbar and chips of the server-rendered wheel (KaalchakraFallback): the same elements as the interactive ones,
+ * so they take the same space at every breakpoint, drawn as blank shapes until the Kaalchakra loads.
+ */
+.kc-skeleton :is(.segmented, .select, .input, .btn, .chip) {
+  border-color: transparent;
+  background: color-mix(in srgb, var(--line) 65%, transparent);
+  background-image: none;
+  box-shadow: none;
+  opacity: 1;
+  cursor: default;
+}
+.kc-skeleton,
+.kc-skeleton * {
+  /* Chip labels carry an inline colour. */
+  color: transparent !important;
+}
+.kc-skeleton .segmented button {
+  background: transparent;
+  cursor: default;
+}
+.kc-skeleton .input::placeholder {
+  color: transparent;
+}
+.kc-skeleton .chip__dot {
+  visibility: hidden;
+}
+
 .kc-stage {
   display: grid;
   grid-template-columns: minmax(0, 1fr) 380px;

@@ -14,7 +14,7 @@ const FIXTURE = fs.readFileSync(path.join(__dirname, 'fixtures', 'kaalchakra.jso
 async function openWithFixture(page: Page, query: string) {
   await page.route(`**${KC_ITEMS_URL}`, (route) => route.fulfill({ contentType: 'application/json', body: FIXTURE }));
   await page.goto(`/kaalchakra${query}`);
-  await expect(page.locator('.kc-toolbar')).toBeVisible();
+  await expect(page.locator('.kc-toolbar:not(.kc-skeleton)')).toBeVisible();
   await expect(page.locator('.kc-panel')).toContainText('39 entries currently shown');
   await page.evaluate(() => document.fonts.ready);
   // The sticky header would otherwise be drawn over the top of the element when the screenshot scrolls to it.

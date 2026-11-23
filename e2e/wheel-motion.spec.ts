@@ -13,7 +13,7 @@ const JWALAPURAM = 'site.jwalapuram';
 
 async function openWheel(page: Page, query = '') {
   await page.goto(`/kaalchakra${query}`);
-  await expect(page.locator('.kc-toolbar')).toBeVisible();
+  await expect(page.locator('.kc-toolbar:not(.kc-skeleton)')).toBeVisible();
   await expect(page.locator('.kc-canvas .kc-wheel')).toBeVisible();
 }
 
@@ -366,7 +366,7 @@ async function centreWheel(page: Page) {
 
 async function openWheelOrView(page: Page, q: string) {
   await page.goto(`/kaalchakra${q}`);
-  await expect(page.locator('.kc-toolbar')).toBeVisible();
+  await expect(page.locator('.kc-toolbar:not(.kc-skeleton)')).toBeVisible();
 }
 
 /** A point inside an era sector, near its outer edge and between marks, relative to the sector's bounding box. */

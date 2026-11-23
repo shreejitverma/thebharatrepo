@@ -36,7 +36,7 @@ function collectErrors(page: Page): string[] {
 /** Opens the Kaalchakra and waits until the interactive views (not the server fallback) are on screen. */
 async function openKaalchakra(page: Page, query = '') {
   await page.goto(`/kaalchakra${query}`);
-  await expect(page.locator('.kc-toolbar')).toBeVisible();
+  await expect(page.locator('.kc-toolbar:not(.kc-skeleton)')).toBeVisible();
 }
 
 /** On a phone the text filter and kind chips sit behind the Filters button; elsewhere it is hidden and they always show. */
@@ -217,7 +217,7 @@ test.describe('navigation', () => {
     await nav.getByRole('link', { name: 'Kaalchakra' }).click();
     await expect(page).toHaveURL(/\/kaalchakra$/);
     await expect(page.locator('h1')).toHaveText('The wheel of time');
-    await expect(page.locator('.kc-toolbar')).toBeVisible();
+    await expect(page.locator('.kc-toolbar:not(.kc-skeleton)')).toBeVisible();
     await expect(nav.getByRole('link', { name: 'Kaalchakra' })).toHaveAttribute('aria-current', 'page');
 
     await nav.getByRole('link', { name: 'Archive' }).click();
@@ -296,6 +296,73 @@ test.describe('navigation', () => {
     await page.locator('.kc-panel .btn--primary').click();
     await expect(page).toHaveURL(/\/archive\//);
     await expect(page.locator('h1')).toHaveText(name);
+  });
+});
+
+test.describe('Kaalchakra server placeholder', () => {
+  /** The blocks of the Kaalchakra, as page coordinates rounded to a tenth of a pixel; null for a hidden block. */
+  const layout = (page: Page) =>
+    page.evaluate(() =>
+      Object.fromEntries(
+        ['.kc-toolbar', '.kc-toolbar .segmented', '.kc-toolbar .select', '.kc-kinds--filter', '.kc-canvas', '.kc-canvas .kc-wheel', '.kc-scale-note', '.kc-panel'].map((sel) => {
+          const el = document.querySelector(sel);
+          const r = el?.getBoundingClientRect();
+          const round = (n: number) => Math.round(n * 10) / 10;
+          return [sel, r && r.height > 0 ? [round(r.left + scrollX), round(r.top + scrollY), round(r.width), round(r.height)] : null];
+        }),
+      ),
+    );
+
+  for (const width of [360, 1280]) {
+    test(`swapping the placeholder for the interactive wheel moves nothing at ${width} px`, async ({ page }) => {
+      await page.setViewportSize({ width, height: 900 });
+      await page.addInitScript(() => {
+        const w = window as unknown as { __shifts: number[] };
+        w.__shifts = [];
+        if (PerformanceObserver.supportedEntryTypes?.includes('layout-shift')) {
+          new PerformanceObserver((list) => {
+            for (const e of list.getEntries()) w.__shifts.push((e as unknown as { value: number }).value);
+          }).observe({ type: 'layout-shift', buffered: true });
+        }
+      });
+      // Hold the scripts back, so the server-rendered placeholder is what the reader sees first.
+      let release = () => {};
+      const scripts = new Promise<void>((resolve) => (release = resolve));
+      await page.route(/\/_next\/static\/chunks\/.*\.js(\?|$)/, async (route) => {
+        await scripts;
+        await route.continue();
+      });
+      await page.goto('/kaalchakra', { waitUntil: 'commit' });
+      await expect(page.locator('.kc-toolbar.kc-skeleton')).toBeVisible();
+      await page.evaluate(() => document.fonts.ready);
+      const placeholder = await layout(page);
+      // The compact phone toolbar (view and lens rows, calendar beside Filters) and the desktop one both have a skeleton.
+      expect(placeholder['.kc-toolbar']).not.toBeNull();
+      expect(placeholder['.kc-kinds--filter'] === null).toBe(width < 720);
+
+      release();
+      await expect(page.locator('.kc-toolbar:not(.kc-skeleton)')).toBeVisible();
+      await expect(page.locator('.kc-canvas .kc-wheel')).toBeVisible();
+      await page.evaluate(() => document.fonts.ready);
+      expect(await layout(page)).toEqual(placeholder);
+      expect(await page.evaluate(() => (window as unknown as { __shifts: number[] }).__shifts)).toEqual([]);
+    });
+  }
+
+  test('the skeleton is inert and hidden from assistive technology', async ({ page }) => {
+    let release = () => {};
+    const scripts = new Promise<void>((resolve) => (release = resolve));
+    await page.route(/\/_next\/static\/chunks\/.*\.js(\?|$)/, async (route) => {
+      await scripts;
+      await route.continue();
+    });
+    await page.goto('/kaalchakra', { waitUntil: 'commit' });
+    await expect(page.locator('.kc-toolbar.kc-skeleton')).toBeVisible();
+    await expect(page.locator('.kc-toolbar.kc-skeleton')).toHaveAttribute('aria-hidden', 'true');
+    await expect(page.locator('.kc-toolbar.kc-skeleton')).toHaveAttribute('inert', '');
+    await expect(page.getByRole('group', { name: 'View' })).toHaveCount(0);
+    release();
+    await expect(page.getByRole('group', { name: 'View' })).toBeVisible();
   });
 });
 
