@@ -32,19 +32,8 @@ datings:
       - src.bivar-1988-indus-lands
     note: This range groups the early historic evidence, including Persian incorporation. The date of
       the preceding polity's formation is uncertain.
-  - method: epigraphic
-    range:
-      earliest: 522 BCE
-      latest: 518 BCE
-      precision: decade
-      circa: true
-    grade: A
-    label: Gandara in the Behistun inscription of Darius I
-    sources:
-      - src.bivar-1988-indus-lands
-    note: The imperial list attests Gandara during the early reign of Darius I.
 claims:
-  - text: The Old Persian version of Darius I's Behistun inscription names Gandara among the territories
+  - text: The Old Persian version of Darius I's Behistun inscription (522-518 BCE) names Gandara among the territories
       under his authority.
     grade: A
     sources:

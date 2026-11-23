@@ -20,14 +20,14 @@ datings:
     label: Epigraphic chronology from regnal charters and Rashtrakuta synchronisms
     sources:
       - src.chowdhury-1967-dynastic-history-bengal
-      - src.hultzsch-1896-epigraphia-indica-vol4
+      - src.hultzsch-1897-epigraphia-indica-vol-4
       - src.singh-2008-ancient-early-medieval-india
     note: The Khalimpur plate reaches Dharmapala's 32nd regnal year; synchronisms with Pratihara Vatsaraja/Nagabhata II and Rashtrakuta Dhruva/Govinda III place his reign roughly 770-810 or 783-815 CE.
 claims:
   - text: Dharmapala intervened in the succession of Kanyakubja, installing Chakrayudha before facing defeats by Rashtrakuta and Gurjara-Pratihara rulers as attested in Sanjan and Gwalior inscriptions.
     grade: A
     sources:
-      - src.hultzsch-1896-epigraphia-indica-vol4
+      - src.hultzsch-1897-epigraphia-indica-vol-4
       - src.chowdhury-1967-dynastic-history-bengal
       - src.thapar-2002-early-india
   - text: Inscribed clay sealings recovered from Paharpur (Somapura) bear Dharmapala's name as founder of the Dharmapala Mahavihara at Somapura, and Tibetan sources credit him with founding Vikramashila.

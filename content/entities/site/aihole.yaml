@@ -19,15 +19,6 @@ summaries:
 region: Malaprabha Basin (Bagalkot district, Karnataka)
 location: { name: "Aihole, Karnataka", lat: 16.019, lon: 75.882 }
 datings:
-  - method: epigraphic
-    range: { earliest: "634 CE", latest: "635 CE", precision: year, circa: false }
-    grade: A
-    label: "Meguti Jain temple inscription of Shaka 556"
-    sources:
-      - src.kielhorn-1900-aihole-inscription
-    note: >-
-      Ravikirti's inscription records that he had the Jain temple built during the reign of Pulakeshin
-      II.
   - method: art-historical
     range: { earliest: "550 CE", latest: "800 CE", precision: century, circa: true }
     grade: B
@@ -41,7 +32,7 @@ datings:
       later dynasties.
 claims:
   - text: >-
-      Ravikirti's inscription at the Meguti temple praises Pulakeshin II and names the poets Kalidasa
+      Ravikirti's inscription of Shaka 556 (634-635 CE) at the Meguti temple praises Pulakeshin II and names the poets Kalidasa
       and Bharavi.
     grade: A
     sources:

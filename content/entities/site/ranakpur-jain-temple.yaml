@@ -19,15 +19,6 @@ summaries:
 region: Aravalli Valley (Pali district, Rajasthan)
 location: { name: "Ranakpur, Rajasthan", lat: 25.116, lon: 73.473 }
 datings:
-  - method: epigraphic
-    range: { earliest: "1439 CE", latest: "1440 CE", precision: year, circa: false }
-    grade: A
-    label: "Pillar inscription of Vikrama Samvat 1496"
-    sources:
-      - src.mankodi-2003-ranakpur
-      - src.kumar-2001-thousand-petalled-lotus
-    note: >-
-      The inscription names Dharanaka and Depaka during the reign of Rana Kumbha.
   - method: art-historical
     range: { earliest: "1425 CE", latest: "1500 CE", precision: century, circa: true }
     grade: B
@@ -40,7 +31,7 @@ datings:
       dated inscription is approximate.
 claims:
   - text: >-
-      The pillar inscription of Vikrama Samvat 1496 names Dharanaka as the patron and Depaka as the
+      The pillar inscription of Vikrama Samvat 1496 (1439-1440 CE) names Dharanaka as the patron and Depaka as the
       architect.
     grade: A
     sources:

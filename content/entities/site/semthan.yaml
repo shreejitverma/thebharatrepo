@@ -23,6 +23,7 @@ datings:
       circa: true
     grade: "C"
     label: "Pre-Northern Black Polished Ware phase"
+    primaryReason: "The site is dated phase by phase, and its earliest occupation phase leads the sequence."
     sources:
       - "src.shah-2021-semthan"
   - method: "archaeological-stratigraphic"

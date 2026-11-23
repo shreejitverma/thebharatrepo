@@ -19,7 +19,8 @@ datings:
       precision: year
       circa: false
     grade: B
-    label: Adi Granth compilation (Kartarpur manuscript witness)
+    label: Compilation of the Adi Granth by Guru Arjan
+    primaryReason: The 1604 compilation of the Adi Granth is the composition of the text; the longer range adds the ninth Guru's hymns to it.
     sources:
       - id: src.singh-2003-guru-granth-sahib
         locator: Introduction

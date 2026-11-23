@@ -19,16 +19,6 @@ summaries:
 region: Agra district, Uttar Pradesh
 location: { name: "Agra, Uttar Pradesh", lat: 27.175, lon: 78.042 }
 datings:
-  - method: documentary
-    range: { earliest: "1632 CE", latest: "1632 CE", precision: year, circa: false }
-    grade: A
-    label: "Start of construction recorded by the Mughal court"
-    sources:
-      - src.koch-2006-complete-taj-mahal
-      - src.asher-1992-architecture-of-mughal-india
-    note: >-
-      Court chronicles place the laying of the foundations in 1632 CE, following Mumtaz Mahal's death in
-      1631.
   - method: scholarly-consensus
     range: { earliest: "1632 CE", latest: "1655 CE", precision: decade, circa: true }
     grade: B
@@ -59,6 +49,11 @@ claims:
     grade: A
     sources:
       - src.unesco-1983-taj-mahal
+  - text: Court chronicles place the laying of the foundations in 1632 CE, after Mumtaz Mahal's death in 1631.
+    grade: A
+    sources:
+      - src.koch-2006-complete-taj-mahal
+      - src.asher-1992-architecture-of-mughal-india
 relations:
   - { kind: part-of, target: polity.mughal-empire }
 wikidata: Q9141

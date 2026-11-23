@@ -26,30 +26,9 @@ datings:
       - "src.kullu-district-history"
       - "src.goswamy-2014-dussehra-of-kulu"
     note: "The district account also records an earlier Pal dynasty (traditionally placed from the first century CE until c. 1450) before Sidh Singh's line began around 1500."
-  - method: "scholarly-consensus"
-    range:
-      earliest: 1637
-      latest: 1672
-      precision: "decade"
-      circa: true
-    grade: "B"
-    label: "Reign of Jagat Singh in the district history"
-    sources:
-      - "src.kullu-district-history"
-      - "src.goswamy-2014-dussehra-of-kulu"
-  - method: "documentary"
-    range:
-      earliest: 1839
-      latest: 1846
-      precision: "decade"
-      circa: false
-    grade: "B"
-    label: "Sikh occupation and transfer to British administration"
-    sources:
-      - "src.kullu-district-history"
 claims:
   - text: "The district history places the establishment of the Raghunath cult at Kullu in the reign of
-      Jagat Singh."
+      Jagat Singh, 1637-1672."
     grade: "B"
     sources:
       - "src.kullu-district-history"

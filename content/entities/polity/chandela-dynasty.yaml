@@ -32,19 +32,8 @@ datings:
       - src.burgess-1892-epigraphia-indica-vol-1
     note: The range begins with the early dynasty reconstructed from later inscriptions and extends into
       the period of reduced Chandela power.
-  - method: epigraphic
-    range:
-      earliest: "953"
-      latest: "955"
-      precision: year
-      circa: false
-    grade: A
-    label: Khajuraho Lakshmana temple inscription, Vikrama year 1011
-    sources:
-      - src.burgess-1892-epigraphia-indica-vol-1
-    note: The CE interval allows for conventions in converting the dated dedication.
 claims:
-  - text: The Lakshmana temple inscription at Khajuraho names Nannuka in the lineage and credits
+  - text: The Lakshmana temple inscription at Khajuraho, dated Vikrama year 1011 (953-955 CE), names Nannuka in the lineage and credits
       Yashovarman with the Vishnu temple.
     grade: A
     sources:

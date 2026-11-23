@@ -26,17 +26,6 @@ datings:
     label: Reign of Ahilyabai Holkar
     sources:
       - src.green-2012-brahmins-and-sufis
-  - method: epigraphic
-    range:
-      earliest: "1769"
-      latest: "1769"
-      precision: year
-      circa: false
-    grade: A
-    label: Completion of the Ellora tank
-    sources:
-      - src.michell-2012-maratha-complex-ellora
-    note: The inscription names Ahilyabai as sponsor and gives the completion year.
 claims:
   - text: An inscription at Shivalayatirtha identifies Ahilyabai Holkar as sponsor of the tank completed
       in 1769.

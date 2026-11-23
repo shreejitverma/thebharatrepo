@@ -42,16 +42,6 @@ datings:
         locator: "Appendix I"
     note: "The 733 embassy is independently attested. The broad endpoints account for uncertainty in
       aligning Kalhana’s reported reign length with the Tang evidence (commonly placed c. 724-760 CE)."
-  - method: "foreign-synchronism"
-    range:
-      earliest: 733
-      latest: 733
-      precision: "year"
-      circa: false
-    grade: "B"
-    label: "Embassy recorded at the Tang court"
-    sources:
-      - "src.sen-2016-buddhism-diplomacy-trade"
 claims:
   - text: "Tang records report a diplomatic mission from the Kashmiri ruler in 733."
     grade: "B"

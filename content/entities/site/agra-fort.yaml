@@ -18,15 +18,6 @@ summaries:
 region: Braj / Upper Ganga Plain (Agra district, Uttar Pradesh)
 location: { name: "Agra, Uttar Pradesh", lat: 27.180, lon: 78.021 }
 datings:
-  - method: documentary
-    range: { earliest: "1565 CE", latest: "1565 CE", precision: year, circa: false }
-    grade: A
-    label: "Akbar begins rebuilding the fort"
-    sources:
-      - src.asher-1992-architecture-of-mughal-india
-      - src.abulfazl-1907-akbarnama-vol-2
-    note: >-
-      Abu'l Fazl records the rebuilding of the fort at Agra under Akbar.
   - method: scholarly-consensus
     range: { earliest: "1565 CE", latest: "1655 CE", precision: decade, circa: true }
     grade: B
@@ -51,6 +42,11 @@ claims:
     grade: A
     sources:
       - src.unesco-1983-agra-fort
+  - text: Abu'l Fazl records that Akbar began rebuilding the fort at Agra in 1565.
+    grade: A
+    sources:
+      - src.asher-1992-architecture-of-mughal-india
+      - src.abulfazl-1907-akbarnama-vol-2
 relations:
   - { kind: patronised-by, target: person.akbar }
   - { kind: part-of, target: polity.mughal-empire }

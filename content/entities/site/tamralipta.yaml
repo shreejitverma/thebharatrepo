@@ -26,14 +26,6 @@ datings:
       - src.sengupta-2007-eloquent-earth
       - src.singh-2008-ancient-early-medieval-india
     note: Excavations at Tamluk revealed an underlying Chalcolithic/Neolithic horizon followed by NBPW, Mauryan-Shunga terracotta, Rouletted Ware and Gupta levels before port decline in the 8th century CE.
-  - method: foreign-synchronism
-    range: { earliest: 400, latest: 645, precision: century, circa: true }
-    grade: A
-    label: Eyewitness records of Faxian (c. 410 CE) and Xuanzang (c. 638 CE)
-    sources:
-      - src.legge-1886-record-buddhistic-kingdoms
-      - src.beal-1906-si-yu-ki
-    note: Faxian resided two years at Tamralipti copying Buddhist sutras before sailing to Sri Lanka; Xuanzang described it in the 7th century as a prosperous coastal kingdom and bay port.
 claims:
   - text: The Chinese monk Faxian spent two years at Tamralipti around 409-411 CE copying sutras and painting images before embarking on a merchant vessel for Sri Lanka.
     grade: A
@@ -44,6 +36,10 @@ claims:
     sources:
       - src.chattopadhyay-2018-archaeology-of-coastal-bengal
       - src.sengupta-2007-eloquent-earth
+  - text: Xuanzang described Tamralipti around 638 CE as a prosperous coastal kingdom and bay port.
+    grade: A
+    sources:
+      - src.beal-1906-si-yu-ki
 relations:
   - { kind: related-to, target: event.faxian-travels }
   - { kind: related-to, target: event.xuanzang-travels-in-india }

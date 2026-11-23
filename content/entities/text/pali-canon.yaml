@@ -28,16 +28,6 @@ datings:
       - src.hinuber-1996-handbook-of-pali-literature
     note: Comparative work on discourses and monastic texts points to early shared strata. The interval
       describes the formation of material within the corpus, which continued to grow.
-  - method: epigraphic
-    range: { earliest: "270 BCE", latest: "230 BCE", precision: century, circa: true }
-    grade: B
-    label: Discourses named in Ashoka’s Calcutta-Bairat edict
-    sources:
-      - id: src.hultzsch-1925-inscriptions-of-asoka
-        locator: "Calcutta-Bairat rock inscription, pp. 172-173"
-    note: Ashoka recommends seven Buddhist teachings, including the Munigatha, commonly
-      compared with the Muni Sutta in the Pali Sutta Nipata. This dates a witness to individual
-      teachings.
   - method: traditional-sampradaya
     range:
       earliest: "100 BCE"
@@ -63,6 +53,11 @@ claims:
     sources:
       - src.allon-2022-early-buddhist-texts
       - src.hinuber-1996-handbook-of-pali-literature
+  - text: Ashoka’s Calcutta-Bairat edict (c. 270-230 BCE) recommends seven Buddhist teachings, including the Munigatha, commonly compared with the Muni Sutta in the Pali Sutta Nipata.
+    grade: B
+    sources:
+      - id: src.hultzsch-1925-inscriptions-of-asoka
+        locator: "Calcutta-Bairat rock inscription, pp. 172-173"
 relations:
   - kind: related-to
     target: person.gautama-buddha

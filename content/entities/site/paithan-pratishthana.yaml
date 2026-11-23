@@ -14,6 +14,16 @@ summaries:
     distinguishes coins recovered from dated layers from coins found outside controlled contexts."
 region: "Godavari Valley, Maharashtra"
 datings:
+  - method: "archaeological-stratigraphic"
+    range:
+      earliest: "300 BCE"
+      latest: "800 CE"
+      precision: "century"
+      circa: true
+    grade: "B"
+    label: "Early Historic urban occupation through Early Medieval brick temple phases"
+    sources:
+      - "src.kennet-2020-paithan-excavations"
   - method: "numismatic"
     range:
       earliest: "100 BCE"
@@ -27,16 +37,6 @@ datings:
         locator: "Chapter 6"
     note: "Most identifiable Satavahana coins in the report were recovered outside the principal
       excavated sequence."
-  - method: "archaeological-stratigraphic"
-    range:
-      earliest: "300 BCE"
-      latest: "800 CE"
-      precision: "century"
-      circa: true
-    grade: "B"
-    label: "Early Historic urban occupation through Early Medieval brick temple phases"
-    sources:
-      - "src.kennet-2020-paithan-excavations"
 claims:
   - text: "The Periplus names Paithana among inland trading places in the Deccan."
     grade: "A"

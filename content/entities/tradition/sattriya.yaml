@@ -50,16 +50,12 @@ claims:
     sources:
       - src.neog-1973-sattriya-dances
       - src.sarma-1966-neo-vaisnavite-movement
-  - text: Following Maheswar Neog's documentation of sattra rhythmic and movement lineages, the Sangeet Natak Akademi
-      recognised Sattriya in 2000.
-    grade: B
-    sources:
-      - src.neog-1973-sattriya-dances
-      - src.kothari-2013-sattriya
-  - text: In November 2000 the Sangeet Natak Akademi recognised Sattriya as a classical dance of India.
+  - text: In November 2000 the Sangeet Natak Akademi recognised Sattriya as a classical dance of India, after Maheswar
+      Neog had documented its sattra rhythmic and movement lineages.
     grade: A
     sources:
       - src.kothari-2013-sattriya
+      - src.neog-1973-sattriya-dances
 relations:
   - kind: founded-by
     target: person.sankardev

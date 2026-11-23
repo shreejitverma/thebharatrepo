@@ -36,7 +36,7 @@ datings:
     grade: C
     label: Mid-fourth-century placement from the Kadamba genealogy
     sources:
-      - src.kielhorn-1906-epigraphia-indica-vol-8
+      - src.hultzsch-1906-epigraphia-indica-vol-8
       - src.moraes-1931-kadamba-kula
       - src.singh-2008-ancient-early-medieval-india
     note: Reconstructed by counting generations back from the mid-fifth-century Talagunda inscription,
@@ -46,7 +46,7 @@ claims:
       ghatika, took up arms after a quarrel with Pallava officials and was later recognised by the Pallavas.
     grade: A
     sources:
-      - src.kielhorn-1906-epigraphia-indica-vol-8
+      - src.hultzsch-1906-epigraphia-indica-vol-8
       - src.cecil-2021-kadamba-court
   - text: A Prakrit inscription at Chandravalli attributed to Mayurasharma records a water tank and lists
       peoples including the Traikutas, Abhiras and Pallavas.

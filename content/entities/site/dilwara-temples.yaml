@@ -20,25 +20,6 @@ summaries:
 region: Aravalli Range (Mount Abu, Sirohi district, Rajasthan)
 location: { name: "Mount Abu, Rajasthan", lat: 24.609, lon: 72.723 }
 datings:
-  - method: epigraphic
-    range: { earliest: "1031 CE", latest: "1031 CE", precision: year, circa: true }
-    grade: B
-    label: "Vimala Vasahi foundation"
-    sources:
-      - src.kumar-2001-thousand-petalled-lotus
-      - src.hegewald-2009-jaina-temple-architecture
-    note: >-
-      Jain inscriptional and literary accounts date the foundation of the Adinatha temple by Vimala Shah
-      to 1031 CE. Its present halls include later additions and restorations.
-  - method: epigraphic
-    range: { earliest: "1230 CE", latest: "1230 CE", precision: year, circa: false }
-    grade: A
-    label: "Luna Vasahi dedication"
-    sources:
-      - src.hegewald-2009-jaina-temple-architecture
-      - src.kumar-2001-thousand-petalled-lotus
-    note: >-
-      The dated dedication belongs to the Neminatha temple associated with Tejapala and Vastupala.
   - method: scholarly-consensus
     range: { earliest: "1000 CE", latest: "1600 CE", precision: century, circa: true }
     grade: B
@@ -60,6 +41,11 @@ claims:
       The Luna Vasahi temple is dedicated to Neminatha and has a carved ceiling pendant and subsidiary
       shrines around its courtyard.
     grade: B
+    sources:
+      - src.hegewald-2009-jaina-temple-architecture
+      - src.kumar-2001-thousand-petalled-lotus
+  - text: The Luna Vasahi temple, associated with Tejapala and Vastupala, was dedicated in 1230 CE.
+    grade: A
     sources:
       - src.hegewald-2009-jaina-temple-architecture
       - src.kumar-2001-thousand-petalled-lotus

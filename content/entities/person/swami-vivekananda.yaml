@@ -25,19 +25,6 @@ datings:
     label: Documented lifespan
     sources:
       - src.mcgetchin-2013-vivekananda
-  - method: documentary
-    range:
-      earliest: "1893"
-      latest: "1893"
-      precision: day
-      circa: false
-    grade: A
-    label: Opening address at Chicago, 11 September 1893
-    sources:
-      - src.barrows-1893-worlds-parliament-religions
-      - src.mcgetchin-2013-vivekananda
-    note: Vivekananda responded to the welcome on the opening day. He gave further addresses during the
-      Parliament.
 claims:
   - text: Vivekananda addressed the 1893 World’s Parliament of Religions in Chicago and spoke about
       toleration in his opening response.

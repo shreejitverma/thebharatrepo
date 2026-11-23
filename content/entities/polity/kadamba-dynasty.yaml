@@ -36,7 +36,7 @@ datings:
     grade: B
     label: Main Banavasi line, Mayurasharma to the Badami Chalukya takeover
     sources:
-      - src.kielhorn-1906-epigraphia-indica-vol-8
+      - src.hultzsch-1906-epigraphia-indica-vol-8
       - src.moraes-1931-kadamba-kula
       - src.singh-2008-ancient-early-medieval-india
     note: Reconstructed from the Talagunda pillar inscription of Kakusthavarman, copper-plate charters and
@@ -47,7 +47,7 @@ claims:
       and recounts his rise after a dispute with the Pallavas at Kanchipuram.
     grade: A
     sources:
-      - src.kielhorn-1906-epigraphia-indica-vol-8
+      - src.hultzsch-1906-epigraphia-indica-vol-8
       - src.cecil-2021-kadamba-court
   - text: The Halmidi stone inscription, usually dated to the fifth century in the Kadamba period, is
       generally regarded as the earliest known epigraphic record in Kannada.
@@ -59,7 +59,7 @@ claims:
       other royal houses, including the Guptas.
     grade: B
     sources:
-      - src.kielhorn-1906-epigraphia-indica-vol-8
+      - src.hultzsch-1906-epigraphia-indica-vol-8
       - src.singh-2008-ancient-early-medieval-india
   - text: Ravivarman's Gudnapur inscription describes land endowments for a temple at Banavasi.
     grade: A

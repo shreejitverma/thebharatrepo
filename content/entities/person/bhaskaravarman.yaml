@@ -27,14 +27,14 @@ datings:
     label: Xuanzang's visit (643 CE), Harsha alliance and Tang records
     sources:
       - src.beal-1906-si-yu-ki
-      - src.konow-1913-epigraphia-indica-vol12
+      - src.konow-1914-epigraphia-indica-vol-12
       - src.barua-1933-early-history-kamarupa
     note: Contemporaneity with Harsha (accession 606 CE), Xuanzang's stay at the Kamarupa court around 643 CE and Tang diplomatic reports after 648 CE anchor his half-century reign.
 claims:
   - text: The Nidhanpur copper-plate charter, issued from his victorious camp at Karnasuvarna in Bengal, renewed an earlier revenue-free land grant of Bhutivarman to over two hundred Brahmins in Chandrapuri vishaya.
     grade: A
     sources:
-      - src.konow-1913-epigraphia-indica-vol12
+      - src.konow-1914-epigraphia-indica-vol-12
       - src.shin-2022-bhauma-to-varaha-kamarupa
   - text: Banabhatta's Harshacharita records Bhaskaravarman sending his envoy Hamsavega to seal a defensive alliance with Harshavardhana against the Gauda ruler Shashanka.
     grade: A

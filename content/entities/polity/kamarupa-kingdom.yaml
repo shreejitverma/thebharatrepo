@@ -37,7 +37,7 @@ claims:
     grade: B
     sources:
       - src.shin-2022-bhauma-to-varaha-kamarupa
-      - src.konow-1913-epigraphia-indica-vol12
+      - src.konow-1914-epigraphia-indica-vol-12
 relations:
   - { kind: ruled-by, target: polity.varman-dynasty-of-kamarupa }
   - { kind: contemporary-of, target: polity.gupta-empire }

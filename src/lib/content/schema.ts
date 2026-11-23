@@ -88,6 +88,12 @@ export const DatingSchema = z
     label: z.string().optional(),
     sources: z.array(CitationRef).min(1, 'every dating needs at least one source'),
     note: z.string().optional(),
+    /**
+     * Why this dating stands for the entity although a dating of it at least five times longer exists: for example a
+     * competing dating of the same deposit, or the foundation that the later building phases follow. Without it the
+     * validator treats such a dating as a single event in the entity's history, which belongs in a claim.
+     */
+    primaryReason: z.string().min(10).optional(),
   })
   .superRefine((d, ctx) => {
     const trad = isTraditional(d.method);
@@ -170,27 +176,22 @@ export const ImageSchema = z.strictObject({
   license: z.string().min(2),
 });
 
-/** Methods that date one recorded event, such as a founding, a transfer, a recognition or a later inscription. */
-const EVENT_METHODS: readonly string[] = ['documentary', 'epigraphic'];
-/** How many times longer than the leading dating a dating must be for the leading one to read as a single event beside it. */
+/** How many times longer than the leading dating another dating must be for the leading one to read as a single event. */
 const EVENT_SPAN_RATIO = 5;
 
 /**
- * The scholarship dating that ranks first stands for the entity everywhere (see rankDatings). When it is a dated event
- * that outranks, by grade, a much longer dating of the entity and lies wholly before or after it, it is one event in the
- * entity's history, not the entity's span, and the item would be labelled and sorted by it. Returns that longer dating.
+ * The scholarship dating that ranks first stands for the entity everywhere (see rankDatings). A dating describes the
+ * entity's own existence, so when the leading dating is at most a fifth as long as another dating of the entity, inside
+ * or outside it, it reads as one event in the entity's history (a speech, a capture, an inscription, the completion of
+ * one work) and the item would be labelled and sorted by it. Returns that event and the longer dating, unless the
+ * leading dating gives a primaryReason.
  */
 function eventOutrankingSpan(datings: readonly Dating[]): { event: Dating; span: Dating } | null {
   const scholarly = datings.filter((d) => !isTraditional(d.method));
   const [event] = rankDatings(scholarly, () => false);
-  if (!event || !EVENT_METHODS.includes(event.method)) return null;
+  if (!event || event.primaryReason) return null;
   const years = (d: Dating) => d.range.latest - d.range.earliest + 1;
-  const span = scholarly.find(
-    (d) =>
-      GRADES.indexOf(d.grade) > GRADES.indexOf(event.grade) &&
-      years(d) >= EVENT_SPAN_RATIO * years(event) &&
-      (event.range.earliest > d.range.latest || event.range.latest < d.range.earliest),
-  );
+  const span = scholarly.find((d) => d !== event && years(d) >= EVENT_SPAN_RATIO * years(event));
   return span ? { event, span } : null;
 }
 
@@ -257,7 +258,7 @@ export const EntitySchema = z
       ctx.addIssue({
         code: 'custom',
         path: ['datings', e.datings.indexOf(event)],
-        message: `the grade ${event.grade} ${event.method} dating ${formatRange(event.range)} would stand for ${e.id}, but it lies outside the grade ${span.grade} dating ${formatRange(span.range)}, which is at least ${EVENT_SPAN_RATIO} times longer; record that event as a claim and keep the span as the dating`,
+        message: `the grade ${event.grade} ${event.method} dating ${formatRange(event.range)} would stand for ${e.id}, but the grade ${span.grade} dating ${formatRange(span.range)} is at least ${EVENT_SPAN_RATIO} times longer; record that event as a claim and keep the span as the dating, or give a primaryReason when the shorter dating dates the entity itself`,
       });
     }
     if (e.aliases.includes(e.id)) ctx.addIssue({ code: 'custom', path: ['aliases'], message: `alias ${e.id} is the entity's own id` });

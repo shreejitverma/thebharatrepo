@@ -16,17 +16,6 @@ datings:
   - method: "scholarly-consensus"
     range:
       earliest: 1572
-      latest: 1573
-      precision: "year"
-      circa: false
-    grade: "B"
-    label: "Akbar's conquest and annexation of Gujarat"
-    sources:
-      - "src.hasan-2004-state-and-locality"
-      - "src.asher-talbot-2006-india-before-europe"
-  - method: "scholarly-consensus"
-    range:
-      earliest: 1572
       latest: 1730
       precision: "decade"
       circa: true
@@ -45,6 +34,11 @@ claims:
     grade: "B"
     sources:
       - "src.hasan-2004-state-and-locality"
+  - text: Akbar conquered and annexed Gujarat in 1572-1573.
+    grade: B
+    sources:
+      - src.hasan-2004-state-and-locality
+      - src.asher-talbot-2006-india-before-europe
 relations:
   - kind: "part-of"
     target: "polity.mughal-empire"

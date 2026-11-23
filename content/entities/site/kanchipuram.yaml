@@ -20,13 +20,13 @@ datings:
     sources:
       - src.minakshi-1938-administration-social-life-pallavas
       - src.scharfe-2002-education-in-ancient-india
-      - src.kielhorn-1906-epigraphia-indica-vol-8
+      - src.hultzsch-1906-epigraphia-indica-vol-8
     note: The 5th-century Talagunda pillar inscription records Mayurasharma travelling to Kanchi's ghatika in the 4th century CE; Pallava, Chola, and Chinese accounts confirm continuous scholarly institutions into the late medieval era.
 claims:
   - text: The Talagunda pillar inscription states that the Brahmin Mayurasharma went to the ghatika (academy of Vedic learning) at Kanchipuram with his teacher Virasharma to complete his studies.
     grade: A
     sources:
-      - src.kielhorn-1906-epigraphia-indica-vol-8
+      - src.hultzsch-1906-epigraphia-indica-vol-8
       - src.scharfe-2002-education-in-ancient-india
   - text: Buddhist sources and Xuanzang's 7th-century account record Kanchipuram as a major Theravada and Mahayana centre associated with scholars including Buddhadatta, Dignaga, and Dharmapala, and the Tamil epic Manimekalai culminates there.
     grade: B

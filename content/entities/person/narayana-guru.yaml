@@ -27,17 +27,6 @@ datings:
     sources:
       - src.pati-2020-sree-narayana-guru
     note: Pati gives 1856 as a possible birth year.
-  - method: documentary
-    range:
-      earliest: "1903"
-      latest: "1903"
-      precision: year
-      circa: false
-    grade: B
-    label: Establishment of the SNDP Yogam
-    sources:
-      - src.pati-2020-sree-narayana-guru
-    note: The organization provides a dated anchor for his public reform work.
   - method: scholarly-consensus
     range:
       earliest: "1854"

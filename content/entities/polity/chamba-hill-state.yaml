@@ -27,17 +27,6 @@ datings:
     note: "Meru Varman's Bharmour inscriptions are undated; script and dynastic context support a late seventh- or eighth-century placement."
   - method: "scholarly-consensus"
     range:
-      earliest: 900
-      latest: 975
-      precision: "century"
-      circa: true
-    grade: "B"
-    label: "Transfer of the political centre to Chamba"
-    sources:
-      - "src.sharma-2009-western-himalayan-temples"
-      - "src.vogel-1994-antiquities-chamba"
-  - method: "scholarly-consensus"
-    range:
       earliest: 650
       latest: 1900
       precision: "century"

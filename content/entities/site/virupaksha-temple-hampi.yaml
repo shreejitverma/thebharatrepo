@@ -29,18 +29,9 @@ datings:
     note: >-
       The principal surviving expansion belongs to the Vijayanagara period. The site has earlier
       evidence of worship and later repairs.
-  - method: epigraphic
-    range: { earliest: "1509 CE", latest: "1510 CE", precision: year, circa: false }
-    grade: A
-    label: "Krishnadevaraya's accession-period building works"
-    sources:
-      - src.fritz-michell-2014-hampi-vijayanagara
-      - src.michell-1995-architecture-art-southern-india
-    note: >-
-      An inscription of Shaka 1431 records work under Krishnadevaraya, including his pillared hall.
 claims:
   - text: >-
-      The inscription of Shaka 1431 records Krishnadevaraya's construction of a pillared hall and work
+      The inscription of Shaka 1431 (1509-1510 CE) records Krishnadevaraya's construction of a pillared hall and work
       on a gateway at the temple.
     grade: A
     sources:

@@ -32,19 +32,8 @@ datings:
       - src.devahuti-1970-harsha-political-study
     note: The beginning brackets the family's early named rulers. Harsha's charters give an anchored
       seventh-century phase.
-  - method: epigraphic
-    range:
-      earliest: "614"
-      latest: "615"
-      precision: year
-      circa: false
-    grade: A
-    label: Harsha's year-eight Punjab grant
-    sources:
-      - src.agrawal-2003-harsa-copper-plate
-    note: The editor converts regnal year eight to 614 to 615 CE.
 claims:
-  - text: Harsha's year-eight copperplate records a grant to a Brahmin and names family members honoured
+  - text: Harsha's year-eight copperplate, which its editor dates to 614-615 CE, records a grant to a Brahmin and names family members honoured
       by it.
     grade: A
     sources:

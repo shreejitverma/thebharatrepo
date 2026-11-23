@@ -34,7 +34,7 @@ datings:
     grade: B
     label: Varman genealogy anchored by Gupta and seventh-century synchronisms
     sources:
-      - src.konow-1913-epigraphia-indica-vol12
+      - src.konow-1914-epigraphia-indica-vol-12
       - src.shin-2022-bhauma-to-varaha-kamarupa
       - src.singh-2008-ancient-early-medieval-india
     note: The start is reconstructed from the later genealogy and the Gupta-period attestation of Kamarupa.
@@ -49,7 +49,7 @@ claims:
       its descent to Bhaskaravarman.
     grade: A
     sources:
-      - src.konow-1913-epigraphia-indica-vol12
+      - src.konow-1914-epigraphia-indica-vol-12
       - src.shin-2022-bhauma-to-varaha-kamarupa
   - text: Bhaskaravarman's reign is attested both in copperplate records and in contemporary literary
       accounts, including Bana's Harshacharita and Xuanzang's travels.

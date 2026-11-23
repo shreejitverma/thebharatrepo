@@ -24,12 +24,6 @@ datings:
     label: Author’s date of composition
     sources: [src.plofker-2009-mathematics-in-india]
     note: Vatesvara gives his birth in Shaka 802 and his age at composition as twenty-four.
-  - method: astronomical-reference
-    range: { earliest: 1050, latest: 1150, precision: century, circa: true }
-    grade: C
-    label: Later revision of the parameters (Billard)
-    sources: [src.billard-1971-astronomie-indienne, src.plofker-2009-mathematics-in-india]
-    note: Billard proposed that a later editor replaced some of the parameters after finding a best fit around 1100.
 claims:
   - text: The treatise combines features of the Arya-paksha, the school associated with Aryabhata, and other astronomical schools.
     grade: B
@@ -37,6 +31,9 @@ claims:
   - text: Plofker notes that the additional manuscript used in Shukla’s edition agrees with the first manuscript in its parameter values.
     grade: B
     sources: [src.plofker-2009-mathematics-in-india]
+  - text: Billard proposed that a later editor replaced some of the parameters after finding a best fit around 1100 CE.
+    grade: C
+    sources: [src.billard-1971-astronomie-indienne, src.plofker-2009-mathematics-in-india]
 relations:
   - { kind: related-to, target: text.aryabhatiya }
 debate: >-

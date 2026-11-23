@@ -25,19 +25,8 @@ datings:
     label: "Maitraka-period religious establishments"
     sources:
       - "src.schmiedchen-2021-maitrakas"
-  - method: "foreign-synchronism"
-    range:
-      earliest: 671
-      latest: 695
-      precision: "decade"
-      circa: true
-    grade: "A"
-    label: "Yijing's testimony to Valabhi's scholarly standing"
-    sources:
-      - "src.takakusu-1896-buddhist-religion"
-      - "src.schmiedchen-2021-maitrakas"
 claims:
-  - text: "Yijing names Valabhi and Nalanda among the principal centres of Buddhist scholarship in
+  - text: "Yijing, who travelled between 671 and 695 CE, names Valabhi and Nalanda among the principal centres of Buddhist scholarship in
       India."
     grade: "A"
     sources:

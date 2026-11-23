@@ -101,17 +101,35 @@ describe('entity and source rules', () => {
       expect(issues([dating('scholarly-consensus', 'B', 1950, 1954), dating('documentary', 'A', 1960, 1960)])).toHaveLength(1);
     });
 
-    it('accepts an event inside the span, such as a construction phase within the occupation', () => {
-      expect(issues([dating('archaeological-stratigraphic', 'B', -500, 1200), dating('epigraphic', 'A', 1010, 1010)])).toEqual([]);
+    it('rejects an event inside the span, whatever its method', () => {
+      // Swami Vivekananda: the 1893 Chicago address (A) inside the documented lifespan 1863-1902 (B).
+      expect(issues([dating('scholarly-consensus', 'B', 1863, 1902), dating('documentary', 'A', 1893, 1893)]).map((i) => i.path)).toEqual([['datings', 1]]);
+      // Brahmagupta: the composition of one work (A) inside his lifetime (B).
+      expect(issues([dating('textual-internal', 'B', 598, 670), dating('textual-internal', 'A', 628, 628)])).toHaveLength(1);
     });
 
-    it('accepts an event that only leads by the author order, at the same grade', () => {
-      expect(issues([dating('documentary', 'B', 1459, 1459), dating('scholarly-consensus', 'B', 1500, 1900)])).toEqual([]);
+    it('rejects the date of a text that mentions the entity', () => {
+      // Gandhara: named in the Behistun inscription of Darius I (522-518 BCE, A) within the Mahajanapada period (B).
+      expect(issues([dating('scholarly-consensus', 'B', -599, -349), dating('epigraphic', 'A', -521, -517)])).toHaveLength(1);
     });
 
-    it('accepts competing scientific datings, which are not dated events', () => {
-      // Bori: the Youngest Toba Tuff correlation (B) against an older 39Ar-40Ar hypothesis (C).
-      expect(issues([dating('geological', 'C', -737974, -597974), dating('geological', 'B', -77974, -67974)])).toEqual([]);
+    it('rejects an event that leads only by the author order, at the same grade', () => {
+      expect(issues([dating('scholarly-consensus', 'B', 1572, 1573), dating('scholarly-consensus', 'B', 1572, 1730)]).map((i) => i.path)).toEqual([['datings', 0]]);
+    });
+
+    it('accepts the span when it leads and the event ranks below it', () => {
+      expect(issues([dating('scholarly-consensus', 'A', 1767, 1795), dating('epigraphic', 'B', 1769, 1769)])).toEqual([]);
+    });
+
+    it('accepts a short leading dating that gives the reason it dates the entity itself', () => {
+      // Bori: the Youngest Toba Tuff correlation (B) against an older 39Ar-40Ar hypothesis (C) for the same tephra.
+      const toba = dating('geological', 'B', -77974, -67974);
+      const older = dating('geological', 'C', -737974, -597974);
+      expect(issues([older, toba])).toHaveLength(1);
+      expect(issues([older, { ...toba, primaryReason: 'A competing dating of the same tephra, not an event.' }])).toEqual([]);
+      // Mehrangarh: the foundation (B) that the later building phases (B) follow.
+      const foundation = { ...dating('scholarly-consensus', 'B', 1459, 1459), primaryReason: "The foundation begins the fort's existence." };
+      expect(issues([foundation, dating('art-historical', 'B', 1500, 1900)])).toEqual([]);
     });
 
     it('ignores traditional reckoning', () => {

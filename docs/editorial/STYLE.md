@@ -67,8 +67,11 @@ Never date a figure or event by the composition date of a text about it.
 For a figure or event known only from tradition (Rama, Krishna, Manu, the churning of the ocean), scholarship dates the texts and inscriptions that tell of it, not the figure, so it carries only traditional datings and records those dates as graded claims; the texts carry their own datings.
 The validator rejects a non-traditional dating on a non-text entity whose label or note calls it the date of the text.
 UNESCO inscription years, publication, recognition and identification years, and manuscript or translation dates are claims, not datings.
-A single later or earlier event in an entity's history (a founding, an end or transfer, a revival, a survey, a later inscription on an older object) is a claim too: keep the entity's span as its dating, even when the span is only graded B or C.
-The validator rejects a `documentary` or `epigraphic` dating that ranks first by grade and lies wholly before or after a worse-graded dating of the entity at least five times longer, because it would otherwise stand for the entity on cards and in sort order.
+A dating describes the entity's own existence: a person's lifespan or active period, a polity's span, a site's construction or occupation, a text's composition, a tradition's span.
+A single dated event in its history is a claim, whether it falls inside or outside that span: a speech, a capture, a founding, an end or transfer, a revival, a recognition, a survey, an inscription or text that names it, or the completion of one work.
+Keep the entity's span as its dating, even when the span is only graded B or C.
+The validator rejects a scholarship dating that ranks first (see rankDatings) when another scholarship dating of the entity is at least five times longer, inside or outside it, because the shorter one would otherwise stand for the entity on cards and in sort order.
+When the shorter dating does date the entity itself, such as a competing dating of the same deposit or the foundation that later building phases follow, give it a `primaryReason` that says so.
 Give an entity several datings when methods disagree.
 For example, a text can have a `linguistic` dating graded C and a `traditional-puranic` dating graded D.
 Use the `label` field to name the position, for example `label: "Mainstream Indology"` or `label: "Kanchi and Dwaraka matha tradition"`, and the `note` field to explain the basis in one or two sentences.

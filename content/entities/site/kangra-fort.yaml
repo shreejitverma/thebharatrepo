@@ -14,25 +14,18 @@ region: "Kangra, Himachal Pradesh"
 datings:
   - method: "documentary"
     range:
-      earliest: 1620
-      latest: 1620
-      precision: "year"
-      circa: false
-    grade: "A"
-    label: "Mughal capture under Jahangir"
-    sources:
-      - "src.jahangir-1909-tuzuk"
-      - "src.incredible-india-kangra-fort"
-  - method: "documentary"
-    range:
-      earliest: 1905
+      earliest: 1009
       latest: 1905
-      precision: "year"
-      circa: false
-    grade: "B"
-    label: "Damage in the Kangra earthquake"
+      precision: "century"
+      circa: true
+    grade: "C"
+    label: "Documented use of the fort, from Mahmud of Ghazni's capture to the 1905 earthquake"
     sources:
-      - "src.incredible-india-kangra-fort"
+      - "src.kangra-district-history"
+      - "src.kangra-district-kangra-fort"
+    note: "The district history records that Mahmud of Ghazni seized the fort in 1009, so it is older
+      than that, and the fort was heavily damaged in the earthquake of 4 April 1905. The range is the
+      fort's documented use, not its construction, which is undated, so it is graded C."
 claims:
   - text: "Jahangir's memoir records the capture of Kangra Fort by Mughal forces in 1620."
     grade: "A"
@@ -41,6 +34,15 @@ claims:
   - text: "The British took over the fort after the First Anglo-Sikh War, in 1846."
     grade: "B"
     sources:
+      - "src.incredible-india-kangra-fort"
+  - text: "The district history records that Mahmud of Ghazni seized the fort of Kangra in 1009."
+    grade: "B"
+    sources:
+      - "src.kangra-district-history"
+  - text: "The Kangra earthquake of 4 April 1905 caused massive structural damage to the fort."
+    grade: "B"
+    sources:
+      - "src.kangra-district-kangra-fort"
       - "src.incredible-india-kangra-fort"
 relations:
   - kind: "related-to"

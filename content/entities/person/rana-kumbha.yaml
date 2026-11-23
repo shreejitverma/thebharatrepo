@@ -24,18 +24,8 @@ datings:
     sources:
       - "src.unesco-2013-hill-forts-rajasthan"
       - "src.vyas-1937-kumbhalgarh-inscription"
-  - method: "epigraphic"
-    range:
-      earliest: 1460
-      latest: 1460
-      precision: "year"
-      circa: false
-    grade: "A"
-    label: "Kumbhalgarh inscription, Vikrama Samvat 1517"
-    sources:
-      - "src.vyas-1937-kumbhalgarh-inscription"
 claims:
-  - text: "The Kumbhalgarh inscription was associated with Kumbha's Kumbhasvamin temple, now called
+  - text: "The Kumbhalgarh inscription of Vikrama Samvat 1517 (1460 CE) was associated with Kumbha's Kumbhasvamin temple, now called
       Mamadeva."
     grade: "A"
     sources:

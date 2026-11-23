@@ -41,18 +41,6 @@ datings:
     sources:
       - src.bivar-2002-gondophares
     note: Bivar used an epoch in the late 50s BCE to convert era dates.
-  - method: epigraphic
-    range:
-      earliest: 48 BCE
-      latest: 46 BCE
-      precision: year
-      circa: true
-    grade: B
-    label: Harry Falk and Chris Bennett's recalculation of the Azes era
-    sources:
-      - src.falk-2009-era-of-azes
-    note: The intercalary month on a reliquary inscription, read with a system of Macedonian calendar
-      intercalation, shifts the proposed epoch.
 claims:
   - text: Coins issued in the name of Maues employ Greek and Kharoshthi legends and royal titles.
     grade: A
@@ -64,6 +52,10 @@ claims:
     sources:
       - src.senior-2005-indo-scythian-dynasty
       - src.singh-2008-ancient-early-medieval-india
+  - text: Harry Falk and Chris Bennett place the epoch of the Azes era in 48-46 BCE, reading the intercalary month on a reliquary inscription with a system of Macedonian calendar intercalation.
+    grade: B
+    sources:
+      - src.falk-2009-era-of-azes
 relations:
   - kind: related-to
     target: polity.indo-greek-kingdom
