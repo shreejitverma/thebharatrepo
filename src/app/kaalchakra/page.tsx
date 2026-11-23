@@ -17,10 +17,10 @@ export default function KaalchakraPage() {
   preload(KC_ITEMS_URL, { as: 'fetch', crossOrigin: 'anonymous' });
   const aliases = Object.fromEntries(getGraph().aliases);
   return (
-    <div className="main-content">
+    <div className="main-content kc-page">
       <p className="eyebrow">The Kaalchakra</p>
       <h1>The wheel of time</h1>
-      <p className="lede" style={{ marginTop: 0 }}>
+      <p className="lede kc-intro" style={{ marginTop: 0 }}>
         {items.length} entries from the archive, each placed in time by its evidence. Switch lenses to see where scholarship and tradition agree, and where they differ.
       </p>
       {/* Kaalchakra reads its state from the search params and fetches its items, so static prerendering stops at this boundary. */}

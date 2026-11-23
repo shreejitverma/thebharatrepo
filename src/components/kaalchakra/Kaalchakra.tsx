@@ -306,11 +306,16 @@ function KaalchakraInner({ items, byId, external, epoch, onWrite }: { items: KcI
     update({ kinds: next.length ? next : [...KINDS] });
   };
 
+  // On a phone the text filter and the kind chips fold into a Filters disclosure, so the wheel starts on the first
+  // screen; the button counts the filters in force while they are folded away. Wider screens always show them.
+  const [filtersOpen, setFiltersOpen] = useState(false);
+  const activeFilters = (s.q.trim() ? 1 : 0) + (s.kinds.length < KINDS.length ? 1 : 0);
+
   const hoverItem = hover ? visible.find((i) => i.id === hover.id) : undefined;
   const hoverDating = hoverItem ? primaryDating(hoverItem, s.lens) : undefined;
 
   return (
-    <div className="kc">
+    <div className="kc" data-filters-open={filtersOpen || undefined}>
       <div className="kc-toolbar">
         <div className="segmented" role="group" aria-label="View">
           {VIEWS.map((v) => (
@@ -337,13 +342,22 @@ function KaalchakraInner({ items, byId, external, epoch, onWrite }: { items: KcI
               </option>
             ))}
           </select>
+          <button type="button" className="btn kc-filters-toggle" aria-expanded={filtersOpen} aria-controls="kc-q kc-kinds" onClick={() => setFiltersOpen((o) => !o)}>
+            Filters
+            {activeFilters ? (
+              <span className="kc-filters-toggle__count">
+                {activeFilters}
+                <span className="visually-hidden"> active</span>
+              </span>
+            ) : null}
+          </button>
           <label className="visually-hidden" htmlFor="kc-q">
             Filter entries
           </label>
           <input id="kc-q" className="input" type="search" placeholder="Filter, e.g. Ashoka" value={s.q} onChange={(e) => update({ q: e.target.value })} />
         </div>
       </div>
-      <div className="kc-kinds" role="group" aria-label="Kinds of entry">
+      <div className="kc-kinds kc-kinds--filter" id="kc-kinds" role="group" aria-label="Kinds of entry">
         {KINDS.map((k) => (
           <button key={k} type="button" className="chip" aria-pressed={kindSet.has(k)} onClick={() => toggleKind(k)} style={{ color: kindColor(k) }}>
             <span className="chip__dot" aria-hidden="true" />

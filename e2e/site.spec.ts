@@ -38,6 +38,12 @@ async function openKaalchakra(page: Page, query = '') {
   await expect(page.locator('.kc-toolbar')).toBeVisible();
 }
 
+/** On a phone the text filter and kind chips sit behind the Filters button; elsewhere it is hidden and they always show. */
+async function showFilters(page: Page) {
+  const toggle = page.locator('.kc-filters-toggle');
+  if ((await toggle.isVisible()) && (await toggle.getAttribute('aria-expanded')) === 'false') await toggle.click();
+}
+
 function viewButton(page: Page, name: 'Wheel' | 'River' | 'List') {
   return page.getByRole('group', { name: 'View' }).getByRole('button', { name, exact: true });
 }
@@ -308,8 +314,62 @@ test.describe('Kaalchakra', () => {
     await expect(page.locator('.kc-panel h2')).toHaveText('One wheel, two lenses');
   });
 
+  test('on a phone the top of the wheel and its indicator are on the first screen', async ({ page, isMobile }) => {
+    test.skip(!isMobile, 'the compact toolbar is for phones');
+    for (const viewport of [
+      { width: 360, height: 640 },
+      { width: 390, height: 664 },
+      { width: 412, height: 839 },
+    ]) {
+      await page.setViewportSize(viewport);
+      await openKaalchakra(page);
+      const pin = page.locator('.kc-wheel__indicator').first();
+      await expect(pin).toBeVisible();
+      const box = (await pin.boundingBox())!;
+      expect(box.y + box.height, `${viewport.width} x ${viewport.height}`).toBeLessThan(viewport.height - 24);
+      await noHorizontalScroll(page);
+    }
+  });
+
+  test('on a phone the filters fold behind a Filters button that counts them', async ({ page, isMobile }) => {
+    test.skip(!isMobile, 'the compact toolbar is for phones');
+    await openKaalchakra(page, '?view=list');
+    const toggle = page.getByRole('button', { name: /^Filters/ });
+    const input = page.getByLabel('Filter entries');
+    const kinds = page.getByRole('group', { name: 'Kinds of entry' });
+    await expect(toggle).toHaveAttribute('aria-expanded', 'false');
+    await expect(toggle).toHaveAccessibleName('Filters');
+    await expect(input).toBeHidden();
+    await expect(kinds).toBeHidden();
+    // Every control in the toolbar is a 44 px target.
+    for (const el of [toggle, page.getByLabel('Calendar'), page.getByRole('group', { name: 'View' }).getByRole('button', { name: 'Wheel' }), page.getByRole('group', { name: 'Lens' }).getByRole('button', { name: 'Tradition' })]) {
+      expect((await el.boundingBox())!.height).toBeGreaterThanOrEqual(44);
+    }
+
+    await toggle.click();
+    await expect(toggle).toHaveAttribute('aria-expanded', 'true');
+    await input.fill('Ashoka');
+    await kinds.getByRole('button', { name: 'People' }).click();
+    await expect(toggle).toHaveAccessibleName('Filters 2 active');
+    await toggle.click();
+    await expect(input).toBeHidden();
+    // Folded away, the filters still apply, and the button still says how many are in force.
+    await expect(toggle).toHaveAccessibleName('Filters 2 active');
+    await expect(page.locator('.kc-list__kind', { hasText: /^People$/ })).toHaveCount(0);
+    await noSeriousA11yViolations(page);
+  });
+
+  test('on a wide screen the filters are always shown and there is no Filters button', async ({ page, isMobile }) => {
+    test.skip(isMobile, 'phones fold the filters');
+    await openKaalchakra(page);
+    await expect(page.getByLabel('Filter entries')).toBeVisible();
+    await expect(page.getByRole('group', { name: 'Kinds of entry' })).toBeVisible();
+    await expect(page.locator('.kc-filters-toggle')).toBeHidden();
+  });
+
   test('filtering by text shows a definitive empty state', async ({ page }) => {
     await openKaalchakra(page, '?view=list');
+    await showFilters(page);
     await page.getByLabel('Filter entries').fill('zzzzqqqq');
     await expect(page.getByText('0 entries match these filters.')).toBeVisible();
   });
@@ -317,6 +377,7 @@ test.describe('Kaalchakra', () => {
   test('kind filters narrow every view and are reflected in the URL', async ({ page }) => {
     await openKaalchakra(page, '?view=list');
     const all = await listCount(page);
+    await showFilters(page);
     const kinds = page.getByRole('group', { name: 'Kinds of entry' });
     await kinds.getByRole('button', { name: 'People' }).click();
     await expect(kinds.getByRole('button', { name: 'People' })).toHaveAttribute('aria-pressed', 'false');
@@ -448,6 +509,7 @@ test.describe('Kaalchakra', () => {
       await viewButton(page, 'River').click();
       await lensButton(page, 'Scholarship').click();
       await page.getByLabel('Calendar').selectOption('vs');
+      await showFilters(page);
       await page.getByRole('group', { name: 'Kinds of entry' }).getByRole('button', { name: 'People' }).click();
       await page.getByLabel('Filter entries').fill('India');
       await page.getByRole('button', { name: 'Zoom in' }).click();
@@ -465,6 +527,7 @@ test.describe('Kaalchakra', () => {
       await expect(viewButton(fresh, 'River')).toHaveAttribute('aria-pressed', 'true');
       await expect(lensButton(fresh, 'Scholarship')).toHaveAttribute('aria-pressed', 'true');
       await expect(fresh.getByLabel('Calendar')).toHaveValue('vs');
+      await showFilters(fresh);
       await expect(fresh.getByRole('group', { name: 'Kinds of entry' }).getByRole('button', { name: 'People' })).toHaveAttribute('aria-pressed', 'false');
       await expect(fresh.getByLabel('Filter entries')).toHaveValue('India');
       await expect(fresh.locator('.kc-river-controls span')).toHaveText(range);
@@ -502,6 +565,8 @@ test.describe('Kaalchakra', () => {
       await expect(viewButton(page, 'Wheel')).toHaveAttribute('aria-pressed', 'true');
       await expect(lensButton(page, 'Both lenses')).toHaveAttribute('aria-pressed', 'true');
       await expect(page.getByLabel('Calendar')).toHaveValue('ce');
+      await showFilters(page);
+      await expect(page.getByRole('group', { name: 'Kinds of entry' }).getByRole('button')).toHaveCount(11);
       await expect(page.getByRole('group', { name: 'Kinds of entry' }).locator('button[aria-pressed="false"]')).toHaveCount(0);
       await expect(page.locator('.kc-panel h2')).toHaveText('One wheel, two lenses');
       expect(errors).toEqual([]);

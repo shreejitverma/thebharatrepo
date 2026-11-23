@@ -80,6 +80,12 @@ test.describe('Map view', () => {
     await expect(status(page)).toContainText('within 500 years of 269 BCE');
     await expect(page.getByLabel('Window')).toHaveValue('millennium');
     await expect(page.getByLabel('Region')).toHaveValue('ganga');
+    // On a phone the kind chips sit behind the Filters button, which counts the kind filter as active.
+    const toggle = page.locator('.kc-filters-toggle');
+    if (await toggle.isVisible()) {
+      await expect(toggle).toContainText('1');
+      await toggle.click();
+    }
     await expect(page.getByRole('group', { name: 'Kinds of entry' }).getByRole('button', { pressed: true })).toHaveCount(3);
     expect(await mapCount(page)).toBeGreaterThan(0);
     // The state survives the debounced URL write unchanged.
