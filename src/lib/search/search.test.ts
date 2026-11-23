@@ -36,8 +36,9 @@ describe('search URL state', () => {
     expect(f.grade).toEqual(['A']);
   });
 
-  it('offers every entity kind plus articles and sources, and all five grades', () => {
-    expect(FACET_OPTIONS.kind.map((o) => o.value)).toEqual(expect.arrayContaining(['text', 'person', 'cosmology', 'article', 'source']));
+  it('offers every entity kind plus articles, sources, learning paths and debates, and all five grades', () => {
+    expect(FACET_OPTIONS.kind.map((o) => o.value)).toEqual(expect.arrayContaining(['text', 'person', 'cosmology', 'article', 'source', 'learning-path', 'debate']));
+    expect(FACET_OPTIONS.kind.find((o) => o.value === 'debate')?.label).toBe('Debates');
     expect(FACET_OPTIONS.grade.map((o) => o.value)).toEqual(['A', 'B', 'C', 'D', 'E']);
   });
 });

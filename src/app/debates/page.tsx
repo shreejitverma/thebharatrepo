@@ -2,14 +2,15 @@ import type { Metadata } from 'next';
 import Link from 'next/link';
 import GradeBadge from '@/components/GradeBadge';
 import { getGraph } from '@/lib/content/site';
-import { debateHref, debatePlacement, debatesPreview, placementLabel, visibleDebates } from '@/lib/content/debates';
+import { debateHref, debatePlacement, debatesPreview, placementLabel, publishedDebates, visibleDebates } from '@/lib/content/debates';
 
 export function generateMetadata(): Metadata {
   return {
     title: 'Debates',
     description: 'Where credible positions disagree: each position at its strongest, with named proponents, graded evidence and what would change the picture.',
     // An empty index is not worth a search result; it is indexed once the owner approves the first debate.
-    robots: visibleDebates(getGraph().debates).length ? undefined : { index: false, follow: true },
+    // Drafts listed by a preview build do not count: a preview of drafts alone stays noindex.
+    robots: publishedDebates(getGraph().debates).length ? undefined : { index: false, follow: true },
   };
 }
 
