@@ -80,15 +80,21 @@ function titleKey(s: string): string {
   return s.split(/\s+/).map(normaliseWord).filter(Boolean).join(' ');
 }
 
+/** A title key without a leading "the", so "date of the buddha" names "The date of the Buddha". */
+function bareTitleKey(s: string): string {
+  const key = titleKey(s);
+  return key.startsWith('the ') ? key.slice(4) : key;
+}
+
 /**
- * Moves results whose title is exactly the query (ignoring case, diacritics and punctuation) to the front,
- * keeping Pagefind's order otherwise. Search applies it to the first batch of results it renders. A reader who types a name expects that record first, even when
- * shorter pages that mention the name in their own titles score higher.
+ * Moves results whose title is exactly the query (ignoring case, diacritics, punctuation and a leading "The") to the
+ * front, keeping Pagefind's order otherwise. Search applies it to the first batch of results it renders. A reader who
+ * types a name expects that record first, even when shorter pages that mention the name in their own titles score higher.
  */
 export function promoteExactTitle<T extends { meta: Record<string, string | undefined> }>(items: T[], query: string): T[] {
-  const q = titleKey(query);
+  const q = bareTitleKey(query);
   if (!q) return items;
-  const exact = items.filter((d) => titleKey(d.meta.title ?? '') === q);
+  const exact = items.filter((d) => bareTitleKey(d.meta.title ?? '') === q);
   return exact.length ? [...exact, ...items.filter((d) => !exact.includes(d))] : items;
 }
 

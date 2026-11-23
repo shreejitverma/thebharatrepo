@@ -16,6 +16,9 @@ import { yearToUnit } from '@/lib/time/scale';
 
 export const dynamicParams = false;
 
+/** Pagefind weight of a debate's positions, evidence and related records, against 1 for body text (see the page body). */
+const DISCUSSION_WEIGHT = '0.5';
+
 /** Unpublished debates are not built unless DEBATES_PREVIEW=1 (see lib/content/debates.ts). */
 export function generateStaticParams() {
   return visibleDebates(getGraph().debates).map((d) => ({ slug: d.slug }));
@@ -69,6 +72,10 @@ export default async function DebatePage({ params }: { params: Promise<{ slug: s
   const articles = d.relatedArticles.map((ref) => g.articles.find((a) => `${a.category}/${a.slug}` === ref)!);
   const u = place ? yearToUnit(place.range.best ?? (place.range.earliest + place.range.latest) / 2) : 0;
 
+  // Search weight: a debate names its subjects in nearly every line of its positions and evidence, which would outrank the
+  // subjects' own records for a name query ("buddha" would find this page before Gautama Buddha). The title, question and
+  // summary keep full weight; the discussion below is down-weighted, and repeated or borrowed text is left out of the index.
+  const discussion = { 'data-pagefind-weight': DISCUSSION_WEIGHT };
   return (
     // Only a published debate is marked for the search index; the indexer also lists published debates only.
     <div className="main-content" data-pagefind-body={d.published ? true : undefined}>
@@ -90,7 +97,8 @@ export default async function DebatePage({ params }: { params: Promise<{ slug: s
       </p>
 
       {ranged.length ? (
-        <section className="position-chart" aria-labelledby="glance">
+        // Repeats the position headings below.
+        <section className="position-chart" aria-labelledby="glance" data-pagefind-ignore>
           <h2 id="glance" style={{ fontSize: '1.05rem', margin: '0 0 10px' }}>
             Positions at a glance
           </h2>
@@ -123,16 +131,19 @@ export default async function DebatePage({ params }: { params: Promise<{ slug: s
       ) : null}
 
       {place ? (
-        <KaalchakraStrip
-          items={getIndex()}
-          dating={place}
-          selfId={null}
-          focusHref={`/kaalchakra?id=${encodeURIComponent(d.relatedEntities[0])}&view=river&win=${Math.max(0, u - 0.02).toFixed(5)},${Math.min(1, u + 0.02).toFixed(5)}`}
-        />
+        // Names neighbouring entries in time, not this debate's subject.
+        <div data-pagefind-ignore>
+          <KaalchakraStrip
+            items={getIndex()}
+            dating={place}
+            selfId={null}
+            focusHref={`/kaalchakra?id=${encodeURIComponent(d.relatedEntities[0])}&view=river&win=${Math.max(0, u - 0.02).toFixed(5)},${Math.min(1, u + 0.02).toFixed(5)}`}
+          />
+        </div>
       ) : null}
 
       {d.commonGround.length ? (
-        <section aria-labelledby="common">
+        <section aria-labelledby="common" {...discussion}>
           <h2 id="common">What every position accepts</h2>
           <ul className="evidence-list">
             {d.commonGround.map((ev, i) => (
@@ -149,7 +160,7 @@ export default async function DebatePage({ params }: { params: Promise<{ slug: s
       <h2>The positions</h2>
       <p className="section-note">Each position is stated as its proponents would state it, with the evidence it relies on and the strongest objections it has to answer.</p>
       {d.positions.map((p) => (
-        <section key={p.id} id={p.id} className={`position position--${p.lens}`} aria-labelledby={`h-${p.id}`}>
+        <section key={p.id} id={p.id} className={`position position--${p.lens}`} aria-labelledby={`h-${p.id}`} {...discussion}>
           <h2 id={`h-${p.id}`}>{p.label}</h2>
           <div className="position__meta">
             <GradeBadge grade={p.grade} />
@@ -198,7 +209,7 @@ export default async function DebatePage({ params }: { params: Promise<{ slug: s
         </section>
       ))}
 
-      <section aria-labelledby="change">
+      <section aria-labelledby="change" {...discussion}>
         <h2 id="change">What would change this</h2>
         <ul className="objections" style={{ maxWidth: 860 }}>
           {d.whatWouldChangeThis.map((w, i) => (
@@ -207,7 +218,7 @@ export default async function DebatePage({ params }: { params: Promise<{ slug: s
         </ul>
       </section>
 
-      <section aria-labelledby="related">
+      <section aria-labelledby="related" {...discussion}>
         <h2 id="related">In the archive</h2>
         <div className="category-grid">
           {related.map((i) => (

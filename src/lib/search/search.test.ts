@@ -104,6 +104,14 @@ describe('exact title promotion', () => {
     expect(titles(promoteExactTitle(items, '  aryabhata '))).toEqual(['Āryabhaṭa.', 'Other']);
   });
 
+  it('ignores a leading "The" on either side, but not a "the" inside the title', () => {
+    const items = [r('The Dating of the Historical Buddha'), r('The date of the Buddha'), r('Gautama Buddha')];
+    expect(titles(promoteExactTitle(items, 'date of the buddha'))).toEqual(['The date of the Buddha', 'The Dating of the Historical Buddha', 'Gautama Buddha']);
+    expect(titles(promoteExactTitle([r('Other'), r('Ramayana')], 'the ramayana'))).toEqual(['Ramayana', 'Other']);
+    const none = [r('Date of the Buddha, the')];
+    expect(promoteExactTitle(none, 'date of buddha')).toBe(none);
+  });
+
   it('keeps every exact match, in order, and changes nothing without one', () => {
     const items = [r('Kalidasa in context'), r('Kalidasa'), r('Kālidāsa')];
     expect(titles(promoteExactTitle(items, 'Kalidasa'))).toEqual(['Kalidasa', 'Kālidāsa', 'Kalidasa in context']);
