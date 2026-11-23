@@ -75,8 +75,6 @@ relations:
   - kind: related-to
     target: site.shortugai
   - kind: related-to
-    target: concept.harappan-carnelian-bead-making
-  - kind: related-to
     target: concept.harappan-weights-and-measures
 wikidata: Q483421
 image:

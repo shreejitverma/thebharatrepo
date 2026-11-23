@@ -3,6 +3,9 @@ type: person
 kind: person
 names:
   en: Sankardev
+  iast: Śaṅkaradeva
+  native: শংকৰদেৱ
+  nativeLang: as
 summary: Sankardev was an Assamese religious teacher, poet and
   institution-builder associated with the Ekasarana tradition. His community and
   cultural influence continued well into the 16th century.
@@ -10,20 +13,20 @@ summaries:
   kids: Sankardev taught devotion to one God and helped shape Assamese literature,
     music and community life.
   teen: Sankardev’s teachings and institutions influenced Assamese Vaishnavism and
-    regional cultural traditions. His historical dates are conventionally given
-    as 1449 to 1568.
+    regional cultural traditions. The traditional account places his life from
+    1449 to 1568. His birth year varies across the biographies.
 datings:
-  - method: scholarly-consensus
+  - method: traditional-sampradaya
     range:
       earliest: "1449"
       latest: "1568"
       precision: year
       circa: true
-    grade: B
-    label: Historical scholarship
+    grade: D
+    label: Conventional Ekasarana lifespan
     sources:
-      - src.cantlie-1984-the-assamese
-      - src.hawley-2015-storm-of-songs
+      - src.sarma-1966-neo-vaisnavite-movement
+    note: Later biographies give competing birth years of 1449 and 1463. The earlier biographer Daityari Thakur gives 1568 as the death year and leaves the birth year unstated.
 claims:
   - text: Sankardev was an Assamese religious teacher, poet and institution-builder
       associated with the Ekasarana tradition. His community and cultural

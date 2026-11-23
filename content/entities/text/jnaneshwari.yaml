@@ -5,6 +5,7 @@ names:
   en: Jnaneshwari
   iast: Jñāneśvarī
   native: ज्ञानेश्वरी
+  nativeLang: mr
 summary: >-
   The Jnaneshwari, also called Bhavarthadipika, is Jnaneshwar's Marathi exposition of the Bhagavad
   Gita. Its colophon associates its completion at Nevasa with 1290 and places the work among early
@@ -30,7 +31,6 @@ claims:
   - text: A state publication quotes the closing verses as dating its composition to 1290 at Nevasa.
     grade: B
     sources: [src.pradhan-1987-jnaneshvari-translation]
-relations:
-  - { kind: authored-by, target: person.jnaneshwar }
+relations: []
 tags: [marathi, literature, bhagavad-gita, varkari]
 review: { status: draft, author: "codex-gpt-6" }

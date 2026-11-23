@@ -1,0 +1,131 @@
+id: learn.maurya-ashoka-inscriptions-kids
+title: Emperor Ashoka's messages in stone
+level: kids
+audience: Ages 8 to 12, with a parent or teacher
+summary: >-
+  About 2,300 years ago the Maurya emperors ruled most of the Indian subcontinent. Emperor Ashoka carved
+  messages on rocks and pillars so that people could read his words. Follow the clues to learn what he
+  said, and how people learned to read his writing again.
+focus: { earliest: "324 BCE", latest: "185 BCE", precision: decade, circa: true }
+goals:
+  - Say who founded the Maurya Empire and who Ashoka was.
+  - Explain what Ashoka's messages in stone tell us.
+  - Explain how people learned to read Ashoka's writing again.
+steps:
+  - entity: polity.maurya-empire
+    title: A very big empire
+    note: >-
+      The Maurya Empire was ruled from Pataliputra and covered most of the subcontinent. Look at the names of
+      its emperors.
+  - entity: person.chandragupta-maurya
+    title: The first Maurya emperor
+    note: >-
+      Chandragupta Maurya started the empire. Notice how far it stretched, from Magadha in the east to the
+      Indus in the northwest.
+  - entity: person.ashoka
+    title: Emperor Ashoka
+    note: >-
+      Ashoka was Chandragupta's grandson. After a terrible war he carved messages asking people to be kind
+      and honest and to respect all religions.
+  - entity: artifact.ashoka-major-rock-edict-xiii
+    title: Sorry for a war
+    note: >-
+      In this message Ashoka says he was deeply sorry for the suffering of the Kalinga war. Look at what he
+      decided to do instead of fighting.
+  - entity: artifact.lumbini-pillar-inscription
+    title: A pillar where the Buddha was born
+    note: >-
+      Ashoka visited Lumbini, where the Buddha was born, and put up a stone pillar there. Look for the kind
+      thing he did for the village.
+  - entity: site.sanchi-stupa
+    title: The Great Stupa at Sanchi
+    note: >-
+      Ashoka started this dome-shaped monument. Later people added carved stone gateways. Notice that it was
+      built in stages over a long time.
+  - entity: event.brahmi-decipherment-prinsep
+    title: Cracking the code
+    note: >-
+      For a long time nobody could read Ashoka's letters. In 1837 James Prinsep worked them out using short
+      gift messages carved at Sanchi.
+quiz:
+  - id: messages
+    question: How do we know what Emperor Ashoka wanted to tell his people?
+    choices:
+      - text: He recorded his voice.
+        explanation: >-
+          There were no recordings 2,300 years ago; his words survive because they were carved in stone.
+      - text: He wrote a diary that was printed in a book.
+        explanation: >-
+          No diary of Ashoka survives. His inscriptions are how we know his words.
+      - text: He had his messages carved on rocks and stone pillars, and many still survive.
+        correct: true
+        explanation: >-
+          His inscriptions are found in many parts of India and beyond, so we can read his own words today.
+    sources:
+      - src.hultzsch-1925-inscriptions-of-asoka
+      - src.lahiri-2015-ashoka-ancient-india
+  - id: kalinga
+    question: What did Ashoka say after the war in Kalinga?
+    choices:
+      - text: That he was deeply sorry for the suffering and would follow dharma instead
+        correct: true
+        explanation: >-
+          In Rock Edict XIII he writes about the many people killed and taken away, and about his deep regret.
+      - text: That he wanted to fight many more wars
+        explanation: >-
+          The edict says the opposite: he regretted the war.
+      - text: That Kalinga had won the war
+        explanation: >-
+          Ashoka conquered Kalinga; afterwards he regretted the suffering it caused.
+    sources:
+      - { id: src.hultzsch-1925-inscriptions-of-asoka, locator: "Rock Edict XIII" }
+  - id: lumbini
+    question: What did Ashoka do when he visited Lumbini?
+    choices:
+      - text: He built a new capital city there.
+        explanation: >-
+          Ashoka's capital was Pataliputra. At Lumbini he set up a pillar.
+      - text: He was born there himself.
+        explanation: >-
+          Lumbini is the Buddha's birthplace, not Ashoka's.
+      - text: He set up a stone pillar where the Buddha was born and lowered the village's taxes.
+        correct: true
+        explanation: >-
+          The pillar's message says the Buddha was born there, and that the village would pay less tax.
+    sources:
+      - { id: src.hultzsch-1925-inscriptions-of-asoka, locator: "Rummindei pillar inscription" }
+      - src.paranavitana-1962-rummindei-pillar
+  - id: sanchi
+    question: What does the Great Stupa at Sanchi show about old buildings?
+    choices:
+      - text: That every old building was finished in one year
+        explanation: >-
+          Sanchi was built and decorated over several centuries.
+      - text: That some were built in stages, with later people adding to what earlier people started
+        correct: true
+        explanation: >-
+          Ashoka began it in brick. Later it was covered in stone, and about two centuries after Ashoka it was
+          given four carved gateways.
+      - text: That Ashoka carved all four gateways himself
+        explanation: >-
+          The gateways were added long after Ashoka, and inscriptions on them name later donors and craftsmen.
+    sources:
+      - src.shaw-2016-buddhist-landscapes-sanchi
+  - id: prinsep
+    question: How did people learn to read Ashoka's letters again?
+    choices:
+      - text: James Prinsep worked them out in 1837 from short gift messages carved at Sanchi.
+        correct: true
+        explanation: >-
+          Many of the Sanchi messages end with the same word, meaning "gift", which gave Prinsep the sounds of
+          several letters.
+      - text: Ashoka left a key explaining each letter.
+        explanation: >-
+          No such key exists; the letters had to be worked out from the inscriptions themselves.
+      - text: People had always been able to read them.
+        explanation: >-
+          The script had been forgotten for many centuries before 1837.
+    sources:
+      - src.salomon-1998-indian-epigraphy
+tags: [maurya, ashoka, epigraphy]
+review: { status: draft, author: "claude-opus-5-5" }

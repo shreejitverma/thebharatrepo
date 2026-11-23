@@ -64,13 +64,7 @@ claims:
     sources:
       - src.staal-1983-agni-fire-altar
       - src.flood-2003-blackwell-companion-hinduism
-relations:
-  - { kind: related-to, target: tradition.soma-ritual }
-  - { kind: related-to, target: tradition.agnicayana }
-  - { kind: related-to, target: text.brahmanas }
-  - { kind: related-to, target: text.shulba-sutras }
-  - { kind: patronised-by, target: polity.kuru-kingdom }
-  - { kind: related-to, target: text.yajurveda }
+relations: []
 wikidata: Q4526594
 image:
   commons: "File:Agnidhriyam.JPG"

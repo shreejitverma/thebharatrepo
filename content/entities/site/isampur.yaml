@@ -22,8 +22,8 @@ location:
 datings:
   - method: archaeological-stratigraphic
     range:
-      earliest: "1200000 BCE"
-      latest: "700000 BCE"
+      earliest: "1.2 Ma"
+      latest: "700 ka"
       precision: Ma
       circa: true
     grade: B
@@ -46,8 +46,6 @@ claims:
 relations:
   - kind: located-at
     target: site.hunsgi-baichbal-valley
-  - kind: contemporary-of
-    target: site.attirampakkam
 tags:
   - palaeolithic
   - acheulian

@@ -21,11 +21,14 @@
     --accent-ink: #fff;
     --gold: #000;
     --indigo: #000;
-    --grade-a: #1f6b3a;
-    --grade-b: #2b5a8a;
-    --grade-c: #8a5a00;
-    --grade-d: #7a3f8f;
-    --grade-e: #7a4a3a;
+    /* Grades and lenses print in the light palette's values, whatever theme the screen uses (docs/design/palette.md). */
+    --grade-a: #1b3f73;
+    --grade-b: #2a6390;
+    --grade-c: #4a6a37;
+    --grade-d: #9a430f;
+    --grade-e: #6a5d61;
+    --lens-scholarship: #22508f;
+    --lens-tradition: #9a430f;
     --shadow: none;
   }
 
@@ -35,8 +38,8 @@
 
   html,
   body {
-    background: #fff !important;
-    color: #000 !important;
+    background: var(--bg) !important;
+    color: var(--ink) !important;
     font-size: 11pt;
   }
 
@@ -55,8 +58,8 @@
   }
 
   .draft-notice {
-    border: 1px solid #888;
-    background: #fff !important;
+    border: 1px solid var(--line-strong);
+    background: var(--bg) !important;
     font-size: 9pt;
   }
 
@@ -66,7 +69,7 @@
   }
 
   a {
-    color: #000;
+    color: var(--ink);
     text-decoration: none;
   }
 
@@ -92,8 +95,8 @@
   /* Backgrounds do not print by default: badges become outlined text. */
   .level-badge {
     background: none;
-    color: #000;
-    border: 1px solid #000;
+    color: var(--ink);
+    border: 1px solid var(--ink);
   }
 
   .print-break {
@@ -101,7 +104,7 @@
   }
 
   .grade__letter {
-    color: #fff !important;
+    color: var(--bg) !important;
     print-color-adjust: exact;
     -webkit-print-color-adjust: exact;
   }

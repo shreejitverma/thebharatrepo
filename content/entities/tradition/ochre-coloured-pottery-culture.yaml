@@ -40,23 +40,19 @@ datings:
       in the Jodhpura-Ganeshwar complex of Rajasthan).
 claims:
   - text: >-
-      At Saipai in Etawah district, Uttar Pradesh, controlled excavation recovered a hooked copper spearhead
-      and a harpoon in situ within an undisturbed Ochre Coloured Pottery deposit, confirming the association
-      between OCP and the Gangetic Copper Hoards.
-    grade: A
+      At Saipai in Etawah district, Uttar Pradesh, excavators recovered a hooked copper spearhead in a
+      trial trench and a copper harpoon with Ochre Coloured Pottery in a subsequent excavation.
+    grade: B
     sources:
       - src.misra-2001-prehistoric-colonization-india
       - src.coningham-2015-archaeology-south-asia
   - text: >-
-      Excavations at Lal Qila in Bulandshahr district showed that well-preserved OCP was a sturdy wheel-made
-      red-slipped pottery painted in black and decorated with incised motifs, whose rolled appearance at other
-      Doab sites resulted from prolonged waterlogging.
-    grade: A
+      Well-preserved Ochre Coloured Pottery from Lal Qila in Bulandshahr district includes wheel-made,
+      red-slipped vessels with painted or incised decoration. Some examples from other sites have worn surfaces.
+    grade: B
     sources:
       - src.coningham-2015-archaeology-south-asia
-relations:
-  - kind: contemporary-of
-    target: tradition.copper-hoard-culture
+relations: []
 wikidata: Q2663163
 tags:
   - chalcolithic

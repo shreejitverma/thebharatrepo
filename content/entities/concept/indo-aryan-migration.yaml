@@ -3,7 +3,6 @@ type: concept
 kind: civilisation
 names:
   en: Indo-Aryan Migration Debate
-  iast: Ārya
 summary: >-
   The origin and dispersal of Indo-Aryan speakers into the Indian subcontinent is a central,
   contested question in South Asian historiography. Mainstream historical linguistics, archaeology,
@@ -41,9 +40,10 @@ datings:
       - src.anthony-2007-horse-wheel-language
       - src.kuzmina-2007-origin-indo-iranians
       - src.witzel-1997-early-sanskritization-kuru
+      - src.bryce-2005-kingdom-of-the-hittites
     note: >-
       Comparative linguistics links Vedic Sanskrit with Old Iranian (Avestan), Finno-Ugric loanwords,
-      Mitanni Indo-Aryan (c. 1380 BCE), and the Sintashta-Andronovo archaeological horizon (c. 2100
+      Mitanni Indo-Aryan (later 14th century BCE), and the Sintashta-Andronovo archaeological horizon (c. 2100
       to 1500 BCE).
   - method: archaeological-stratigraphic
     range: { earliest: "3300 BCE", latest: "1500 BCE", precision: century, circa: true }
@@ -90,7 +90,6 @@ relations:
   - { kind: related-to, target: text.rigveda }
   - { kind: related-to, target: concept.vedic-sanskrit }
   - { kind: related-to, target: event.mitanni-treaty }
-  - { kind: related-to, target: concept.gandhara-grave-culture }
   - { kind: related-to, target: concept.sintashta-steppe-chariot-question }
   - { kind: related-to, target: concept.ghaggar-hakra-sarasvati-debate }
 wikidata: Q269145

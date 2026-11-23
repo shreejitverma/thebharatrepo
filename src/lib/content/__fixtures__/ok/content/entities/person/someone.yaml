@@ -12,4 +12,5 @@ datings:
     range: { earliest: "1501 BCE", latest: "1501 BCE", precision: year, circa: true }
     grade: D
     sources: [{ id: src.doe-2001-a-book, locator: "p. 4" }]
+aliases: [person.someone-else]
 review: { status: draft }

@@ -30,10 +30,14 @@ Mechanical rules (the validator rejects violations):
 ## 3. Years
 
 **Write years as strings** and let the build convert them: `"7000 BCE"`, `"320 CE"`, `"1947"`, `"385 ka"`, `"1.5 Ma"`, `"1.97 Ga"`.
-This is the preferred form because it removes BCE arithmetic, the most common authoring error.
+Every BCE year must be written as an `"N BCE"` string (or as `ka`, `Ma`, `Ga` for deep time), because BCE arithmetic is the most common authoring error.
+The loader rejects any raw negative year in an entity or article dating (`earliest`, `latest` or `best`); raw non-negative numbers such as `1947` are still accepted.
+Dates a source reports in years before present must be written `"385 ka"` or `"1.5 Ma"`, not `"385000 BCE"`, which would land about 2,025 years too early; the loader rejects a non-traditional `"N BCE"` endpoint with N above 10000.
+CE years need no shift: a range that ends in the fifth century CE ends at `"500 CE"`, not `"499 CE"`.
+The loader rejects a non-traditional `latest` of the form N99 CE when the entity's or article's own text names (N+1)00 CE or the century ending then, and never names the N99 year itself.
 
 Internally all years are **astronomical year numbers**: 1 CE = `1`, 1 BCE = `0`, 2 BCE = `-1`, N BCE = `1 - N`.
-Raw numbers are still accepted and must follow this rule; the validator rejects a range that stores `-N` where the text says "N BCE".
+The table shows that internal form for reference only; never write the right-hand column in content.
 
 | Historical | Astronomical |
 |---|---|
@@ -58,6 +62,10 @@ Use the widest range the evidence supports, not the narrowest one you have seen 
 
 `archaeological-radiocarbon`, `archaeological-stratigraphic`, `luminescence`, `epigraphic`, `numismatic`, `foreign-synchronism`, `textual-internal`, `linguistic`, `astronomical-reference`, `art-historical`, `genetic`, `geological`, `documentary`, `scholarly-consensus`, `traditional-puranic`, `traditional-siddhantic`, `traditional-sampradaya`.
 
+A dating places the entity itself.
+Never date a figure or event by the composition date of a text about it.
+For a figure or event known only from tradition (Rama, Krishna, Manu, the churning of the ocean), scholarship dates the texts and inscriptions that tell of it, not the figure, so it carries only traditional datings and records those dates as graded claims; the texts carry their own datings.
+The validator rejects a non-traditional dating on a non-text entity whose label or note calls it the date of the text.
 Give an entity several datings when methods disagree.
 For example, a text can have a `linguistic` dating graded C and a `traditional-puranic` dating graded D.
 Use the `label` field to name the position, for example `label: "Mainstream Indology"` or `label: "Kanchi and Dwaraka matha tradition"`, and the `note` field to explain the basis in one or two sentences.
@@ -161,7 +169,31 @@ Rules:
   A relation always reads as a sentence with this entity as the subject: `<this entity> <kind> <target>`.
   For example, on `text.aitareya-brahmana` write `{ kind: commented-on, target: text.rigveda }` (the Brahmana comments on the Rigveda), and on `person.ashoka` write `{ kind: ruled, target: polity.maurya-empire }`.
   Never use a kind in the reverse sense; the site shows inbound relations automatically.
+  Author each connection once, on one of the two entities: the validator rejects a second relation between the same pair, in either direction and of any kind, because the page would list the other entity twice.
+  Keep the most specific kind and put any further detail in `note`.
   Relation kinds: `part-of`, `authored`, `authored-by`, `ruled`, `ruled-by`, `patronised`, `patronised-by`, `succeeded`, `preceded`, `commented-on`, `located-at`, `excavated-at`, `issued-by`, `founded`, `founded-by`, `taught`, `student-of`, `influenced`, `contemporary-of`, `related-to`.
+- `aliases` (optional) lists former ids of entities merged into this one, for example `aliases: [concept.rigvedic-sarasvati]` on `concept.ghaggar-hakra-sarasvati-debate`.
+  The build turns each alias into a permanent (308) redirect from `/archive/<type>/<slug>` and from the Kaalchakra deep link `/kaalchakra?id=<id>`, so published URLs keep working.
+  An alias must not be a live entity id and may be claimed by only one entity; relations and articles link to the surviving id, never to an alias.
+  When you merge or rename an entity, add its old id here and record the merge in `corrections.yaml`.
+- `extents` (optional) gives approximate territorial extents for the Map view, usually for a polity.
+  Each extent is a claim: it carries a `grade` and at least one source, and the map draws nothing where no extent is authored.
+  `polygon` is one ring of `[longitude, latitude]` vertices (3 to 400; the last joins the first).
+  `from` and `to` are optional years, given together, for an extent that held only part of the entity's span; `label` names it.
+  Grade D marks an extent from traditional geography, shown in the Tradition lens.
+
+  ```yaml
+  extents:
+    - label: Under Ashoka
+      from: "260 BCE"
+      to: "232 BCE"
+      polygon: [[66.0, 34.5], [72.5, 36.0], [88.5, 26.5], [77.0, 14.0]]
+      grade: C
+      sources: [src.example-a]
+      note: Outline follows the find-spots of the edicts; the frontier is not known precisely.
+  ```
+
+  The coordinates above are illustrative, not data.
 - `debate` (optional) is a short neutral paragraph, shown under "Where scholars disagree", summarising the positions for a contested entity.
 - `wikidata` and `image` are optional; include them only when verified.
 - `review.status` is `draft` for new content.
@@ -179,7 +211,7 @@ updated: "2026-11-21"
 tags: [ancient history, maurya]
 datings:
   - method: scholarly-consensus
-    range: { earliest: -321, latest: -184, precision: year, circa: true }
+    range: { earliest: "322 BCE", latest: "185 BCE", precision: year, circa: true }
     grade: B
     sources: [src.thapar-2002-early-india]
 entities: [polity.maurya-empire, person.ashoka]
@@ -213,11 +245,28 @@ Never dismiss a traditional position with mockery, and never present it as estab
 - "First", "oldest", "earliest" and "greatest" each need a citation and a qualifier ("earliest known", "among the earliest").
 - No emojis, no em dashes.
 
-## 10. Corrections
+## 10. Editorial review
+
+New entities and articles use `review.status: draft`.
+After reviewing the claims, citations, dating methods, and grades, the subject editor sets `reviewed` and records their name and the calendar date.
+When releasing the approved revision, editors may change the status to `published` and keep the sign-off details.
+Return a record to `draft` if substantive changes require a fresh sign-off.
+
+```yaml
+review:
+  status: reviewed
+  reviewer: Reviewer Name
+  lastReviewed: "2026-11-22"
+```
+
+`npm run content:review-queue` groups entities and articles awaiting human review.
+Legacy `machine-checked` records also appear in the queue.
+
+## 11. Corrections
 
 Every substantive change to an existing published claim is recorded in `content/corrections.yaml` with the date, the target, the text before and after, the reason, and sources.
 
-## 11. Debates
+## 12. Debates
 
 Debate pages live at `content/debates/<slug>.yaml`, id `debate.<slug>`.
 They present every serious position on a contested question at its strongest.
@@ -276,7 +325,7 @@ Rules:
 - `range` is the span the position proposes; ranges are drawn on one shared scale, and the Kaalchakra placement is the span of the scholarship positions' ranges (or, without ranges, of the related entities' datings).
 - The loader rejects unknown sources, entities and articles, duplicate position ids, and a file whose id does not match its filename.
 
-## 12. Learning paths and quizzes
+## 13. Learning paths and quizzes
 
 Learning paths live at `content/learning/<slug>.yaml`, id `learn.<slug>`.
 A path tells a story across the archive, one step at a time, and ends with a quiz that rewards reasoning about evidence.
@@ -288,7 +337,7 @@ level: teen                       # adult, teen (ages 13 to 17) or kids (ages 8 
 audience: Ages 13 to 17, in class or at home
 summary: >-                       # 20 to 600 characters
   ...
-focus: { earliest: "324 BCE", latest: "232 BCE", precision: decade, circa: true }   # optional: Kaalchakra placement when steps span more than the subject
+focus: { earliest: "324 BCE", latest: "232 BCE", precision: decade, circa: true }   # optional: Kaalchakra placement, in the scholarship lens, when steps span more than the subject
 goals:                            # at least one: what the learner will be able to do
   - Explain why Rock Edict XIII lets historians date Ashoka using Greek records.
 steps:                            # at least two, in order; each references exactly one entity or article
@@ -319,14 +368,17 @@ Rules:
 - Every entity step on a `teen` or `kids` path must have that level's summary (`summaries.teen` or `summaries.kids`); the loader rejects the path otherwise.
 - Story first, then evidence: the step page shows the entity's summary at the path's level, then its first claim under "How do we know?".
 - No trick questions: no "all of the above" or "none of the above", no emphasised NOT, EXCEPT or NEVER, and no choice that is partly true.
+- Choices are shown in the order written, so vary where the correct answer sits; `content:validate` rejects a quiz of three or more questions whose correct answers all share one position.
   Ask what the evidence shows, not for a memorised date.
 - Every correct answer cites a source that supports it; add a locator when you are sure of it.
 - Progress and quiz answers stay in the viewer's browser; nothing is sent or tracked.
 - Every path has a printable pack at `/learn/<slug>/print`: summary, goals, entity cards, the quiz, and the answer key on its own page.
 
-## 13. Names in native script and IAST
+## 14. Names in native script and IAST
 
 - `names.native` is tagged by its script: Devanagari as Sanskrit (`sa-Deva`) for entities placed before 1200 CE and as Hindi (`hi`) after, Tamil as `ta`, Kannada as `kn`, Perso-Arabic as `fa` or `ar`, and so on.
 - When the default is wrong, set `names.nativeLang` to a BCP 47 tag, for example `nativeLang: mr` for a Marathi name in Devanagari.
+  Tag the language the name is written in, not the entity's era: a modern Hindi place name for an ancient site is `hi` (the default would call it Sanskrit), and a Sanskrit-form name of a later figure is `sa-Deva`.
+  Others in use: `awa` (Awadhi), `pi` (Pali), `as` (Assamese in the Bengali-Assamese script), and for Perso-Arabic script `ur` (Urdu), `sd` (Sindhi) and `ks` (Kashmiri), where the default would be `fa` or `ar`.
 - `names.iast` is tagged as the romanisation of the same language (`sa-Latn`, `ta-Latn`): IAST for Sanskrit, ISO 15919 conventions for Dravidian names (`Tirukkuṟaḷ`).
 - `content:validate` prints a warning with the number of entities missing `names.iast` or `names.native`; it is not an error, but new entities should carry both where they exist.

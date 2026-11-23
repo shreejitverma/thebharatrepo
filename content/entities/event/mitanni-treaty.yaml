@@ -3,18 +3,17 @@ type: event
 kind: event
 names:
   en: Hittite-Mitanni Treaty of Suppiluliuma I and Shattiwaza
-  iast: Mitrāvaruṇa-Indra-Nāsatya
 summary: >-
-  The cuneiform treaty concluded around 1380 BCE between the Hittite king Suppiluliuma I and the
+  The cuneiform treaty from the later 14th century BCE between the Hittite king Suppiluliuma I and the
   Mitanni prince Shattiwaza (Kurtiwaza), discovered at Hattusa (Bogazkoy), invokes four Vedic
   deities - Mitra, Varuna, Indra, and the Nasatyas (Ashvins) - as divine witnesses. It is the
-  oldest directly dated epigraphic attestation of Indo-Aryan divine names.
+  among the earliest epigraphic attestations of Indo-Aryan divine names.
 summaries:
   kids: >-
-    Around 1380 BCE, two ancient kings in West Asia signed a clay-tablet peace treaty that called
+    In the 14th century BCE, two ancient kings in West Asia signed a clay-tablet peace treaty that called
     upon four Vedic gods - Mitra, Varuna, Indra, and the Nasatyas - as witnesses.
   teen: >-
-    Excavated on cuneiform tablets at the Hittite capital of Hattusa, the c. 1380 BCE treaty
+    Excavated on cuneiform tablets at the Hittite capital of Hattusa, the later 14th-century BCE treaty
     between Suppiluliuma I and Shattiwaza of Mitanni invokes Mitra, Varuna, Indra, and the
     Nasatyas, providing an external chronological benchmark for early Indo-Aryan language and
     religion.
@@ -22,16 +21,15 @@ region: Upper Mesopotamia and Anatolia (found at Hattusa, modern Bogazkale, Turk
 location: { name: "Hattusa (Bogazkale)", lat: 40.0197, lon: 34.6153 }
 datings:
   - method: epigraphic
-    range: { earliest: "1386 BCE", latest: "1340 BCE", best: "1380 BCE", precision: decade, circa: true }
-    grade: A
-    label: Reign of Suppiluliuma I of Hatti (Hattusa cuneiform archive)
+    range: { earliest: "1350 BCE", latest: "1322 BCE", precision: decade, circa: true }
+    grade: B
+    label: Reign of Suppiluliuma I in Bryce’s Hittite chronology
     sources:
       - src.beckman-1999-hittite-diplomatic-texts
       - src.thieme-1960-aryan-gods-mitanni-treaties
-      - src.anthony-2007-horse-wheel-language
+      - src.bryce-2005-kingdom-of-the-hittites
     note: >-
-      Directly attested on Akkadian cuneiform tablets from the royal archives of Hattusa dated to
-      the reign of Suppiluliuma I (c. 1380 to 1346 BCE).
+      The Hattusa tablets identify the treaty parties. The BCE range is the approximate reign of Suppiluliuma I in Bryce’s chronology.
 claims:
   - text: >-
       Among the Hurrian and Mesopotamian gods of Mitanni, the treaty invokes the divine sequence
@@ -59,8 +57,5 @@ claims:
       - src.thieme-1960-aryan-gods-mitanni-treaties
 relations:
   - { kind: related-to, target: text.rigveda }
-  - { kind: related-to, target: concept.vedic-sanskrit }
-  - { kind: related-to, target: concept.indo-aryan-migration }
-  - { kind: related-to, target: concept.sintashta-steppe-chariot-question }
 tags: [mitanni, hattusa, cuneiform, synchronism, indra, mitra, varuna, nasatya]
 review: { status: draft, author: "gemini-4-argon" }

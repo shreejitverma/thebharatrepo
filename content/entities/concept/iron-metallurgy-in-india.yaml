@@ -73,7 +73,6 @@ claims:
       - src.singh-2008-ancient-early-medieval-india
 relations:
   - { kind: related-to, target: concept.painted-grey-ware-culture }
-  - { kind: related-to, target: concept.black-and-red-ware-culture }
   - { kind: related-to, target: concept.northern-black-polished-ware-culture }
   - { kind: related-to, target: site.atranjikhera }
   - { kind: related-to, target: text.yajurveda }

@@ -60,8 +60,6 @@ claims:
       - src.flood-2003-blackwell-companion-hinduism
 relations:
   - { kind: succeeded, target: text.aranyakas }
-  - { kind: related-to, target: text.brihadaranyaka-upanishad }
-  - { kind: related-to, target: text.chandogya-upanishad }
   - { kind: related-to, target: text.shatapatha-brahmana }
 wikidata: Q6113985
 image:

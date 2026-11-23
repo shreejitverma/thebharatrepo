@@ -5,6 +5,7 @@ names:
   en: Kalibangan
   iast: Kālībaṅgan
   native: कालीबंगन
+  nativeLang: hi
 summary: >-
   A major Early and Mature Harappan fortified town on the southern bank of the dry Ghaggar (ancient Sarasvati/Hakra)
   riverbed in Hanumangarh District, Rajasthan (c. 3000-1900 BCE), renowned for preserving the earliest known
@@ -82,11 +83,7 @@ relations:
   - kind: part-of
     target: tradition.harappan-civilisation
   - kind: contemporary-of
-    target: site.banawali
-  - kind: contemporary-of
     target: site.rakhigarhi
-  - kind: related-to
-    target: concept.ghaggar-hakra-sarasvati-debate
 wikidata: Q1722226
 image:
   commons: "File:Kalibangan cylinder seal.jpg"

@@ -3,7 +3,7 @@ import { notFound } from 'next/navigation';
 import Link from 'next/link';
 import { CATEGORIES } from '@/lib/content/schema';
 import { CATEGORY_META, getGraph } from '@/lib/content/site';
-import { formatRange } from '@/lib/time';
+import { primaryDating, summarizeDatings } from '@/lib/content/lens';
 
 type Cat = (typeof CATEGORIES)[number];
 
@@ -25,7 +25,7 @@ export default async function CategoryPage({ params }: { params: Promise<{ categ
   const meta = CATEGORY_META[category as Cat];
   const articles = getGraph()
     .articles.filter((a) => a.category === category)
-    .sort((a, b) => a.datings[0].range.earliest - b.datings[0].range.earliest);
+    .sort((a, b) => primaryDating(a.datings).range.earliest - primaryDating(b.datings).range.earliest);
   return (
     <div className="main-content">
       <p className="eyebrow">Articles</p>
@@ -37,9 +37,9 @@ export default async function CategoryPage({ params }: { params: Promise<{ categ
         <div className="category-grid" style={{ marginTop: 24 }}>
           {articles.map((a) => (
             <Link key={a.slug} href={`/${category}/${a.slug}`} className="card">
-              <h3>{a.title}</h3>
+              <h2>{a.title}</h2>
               <p>{a.summary}</p>
-              <p className="card__meta">{formatRange(a.datings[0].range)}</p>
+              <p className="card__meta">{summarizeDatings(a.datings)}</p>
             </Link>
           ))}
         </div>

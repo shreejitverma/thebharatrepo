@@ -36,7 +36,6 @@ claims:
     sources:
       - src.plofker-2009-mathematics-in-india
 relations:
-  - { kind: authored-by, target: person.aryabhata }
   - { kind: influenced, target: person.varahamihira }
   - { kind: related-to, target: event.kali-yuga-epoch }
 wikidata: Q3518429

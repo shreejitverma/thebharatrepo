@@ -36,22 +36,6 @@ datings:
       Puranic tradition, summarised in Wilson's notes to the Vishnu Purana, sets the churning in the
       Chakshusha manvantara, the one before the present; in the standard scheme that manvantara (71
       mahayugas plus a junction) ran from about 428.98 million to 120.53 million years before 3102 BCE.
-  - method: textual-internal
-    range:
-      earliest: "300 BCE"
-      latest: "400 CE"
-      precision: century
-      circa: true
-    grade: B
-    label: Attestation in the Sanskrit epics and early Puranas (date of the texts)
-    sources:
-      - src.brockington-1998-sanskrit-epics
-      - src.goldman-1984-ramayana-balakanda
-      - src.rocher-1986-puranas
-    note: >-
-      The full narrative appears in the Adiparvan of the Mahabharata (1.15-17) and in the Balakanda of the
-      Ramayana, both of which reached their present form in roughly the last centuries BCE and the first
-      centuries CE.
 claims:
   - text: >-
       In the Mahabharata (1.15-17) and the Vishnu Purana (1.9), the devas and asuras churn the ocean with
@@ -69,6 +53,15 @@ claims:
     sources:
       - src.maclean-2008-pilgrimage-and-power
       - src.lochtefeld-2004-construction-kumbha-mela
+  - text: >-
+      The full narrative appears in the Adiparvan of the Mahabharata (1.15-17) and in the Balakanda of the
+      Ramayana, both of which reached their present form in roughly the last centuries BCE and the first
+      centuries CE; this dates the tellings, not the churning.
+    grade: B
+    sources:
+      - src.brockington-1998-sanskrit-epics
+      - src.goldman-1984-ramayana-balakanda
+      - src.rocher-1986-puranas
 relations:
   - kind: related-to
     target: tradition.kumbha-mela

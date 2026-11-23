@@ -62,8 +62,6 @@ relations:
     target: site.mohenjo-daro
   - kind: part-of
     target: tradition.harappan-civilisation
-  - kind: related-to
-    target: concept.harappan-town-planning-and-drainage
 wikidata: Q3346415
 image:
   commons: "File:Great bath view Mohenjodaro.JPG"

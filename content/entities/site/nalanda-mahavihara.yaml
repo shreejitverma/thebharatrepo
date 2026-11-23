@@ -6,35 +6,34 @@ names:
   iast: Nālandā Mahāvihāra
   native: नालन्दा महाविहार
 summary: >-
-  Nalanda Mahavihara in Bihar was a renowned Buddhist monastic university complex founded during the fifth-century CE Gupta period under Kumaragupta I (Shakraditya, reigned c. 415-455 CE) and expanded by subsequent Gupta, Maukhari, Pushyabhuti and Pala monarchs until the twelfth-thirteenth centuries CE. Excavations by the Archaeological Survey of India across twenty-three hectares uncovered eleven multi-courtyard brick monasteries (viharas), a parallel row of stupas and temples (chaityas), and royal and monastic terracotta seals confirming its fifth-century CE Gupta foundation.
+  Nalanda Mahavihara in Bihar developed into a major Buddhist centre of learning under the Guptas in the fifth century CE. Xuanzang attributed its founding to Shakraditya, often identified with Kumaragupta I. Later rulers supported the complex, and it remained in use into the thirteenth century.
 summaries:
   kids: >-
-    Founded in Bihar during the Gupta Empire over 1,500 years ago, Nalanda Mahavihara grew into a famous residential university where thousands of scholars and students from across Asia studied philosophy, logic, medicine and grammar.
+    Nalanda grew into a great centre of learning in Bihar during the Gupta Empire. Students and scholars from across Asia lived and studied there.
   teen: >-
-    Established as a royal monastery under the Gupta emperor Kumaragupta I (Shakraditya) in the fifth century CE and excavated by the ASI, Nalanda Mahavihara functioned fornearly eight hundred years as an international centre of Buddhist and secular learning.
+    Nalanda became a major centre of Buddhist learning under the Guptas. The traveller Xuanzang credited a king named Shakraditya with founding it. Historians often identify him with Kumaragupta I. The monastery was still in use in the thirteenth century.
 region: Magadha (Nalanda District, Bihar, near Rajgir)
 location: { name: "Nalanda, Bihar", lat: 25.136, lon: 85.443 }
 datings:
-  - method: epigraphic
-    range: { earliest: 415, latest: 1200, best: 427, precision: decade, circa: true }
-    grade: A
-    label: Gupta royal seals of Kumaragupta I / Narasimhagupta, Budhagupta, Vainyagupta and Xuanzang's Shakraditya account
+  - method: scholarly-consensus
+    range: { earliest: "401 CE", latest: "1300 CE", precision: century, circa: true }
+    grade: B
+    label: Gupta-era development and use into the thirteenth century
     sources:
       - src.unesco-2016-nalanda-mahavihara
       - src.kulke-2004-history-of-india
-    note: Terracotta royal seals excavated by the ASI at Nalanda bear the genealogies of the Gupta emperors Kumaragupta I, Budhagupta, Narasimhagupta Baladitya, Kumaragupta III and Vishnugupta, corroborating Xuanzang's seventh-century CE report that the royal monastic complex was founded by Shakraditya (a title of Kumaragupta I, c. 415-455 CE) and enlarged by his Gupta successors.
+    note: Gupta-period remains and Xuanzang's account inform the dating of the institution's early development. The site remained in use into the thirteenth century.
 claims:
-  - text: Archaeological Survey of India excavations at Nalanda uncovered eleven aligned brick monasteries (viharas) with residential cells, lecture courtyards, wells and kitchens facing a parallel row of monumental temples (including Temple 3, built in seven successive structural phases with Gupta-era sixth-century CE stucco sculptures of Buddhas and Bodhisattvas).
-    grade: A
+  - text: The excavated complex includes residential monasteries (viharas), stupas and temples arranged on a north-south axis.
+    grade: B
     sources:
       - src.unesco-2016-nalanda-mahavihara
-  - text: Official clay sealings bearing the institutional legend "Sri-Nalanda-Mahavihariya-Arya-Bhikshu-Sanghasya" ("Of the Community of Noble Monks of the Great Monastery of Illustrious Nalanda") alongside royal genealogical seals of the Gupta emperors prove that organized institutional administration at Nalanda began in the fifth century CE under Gupta patronage.
-    grade: A
+  - text: Gupta-period finds and Xuanzang's account support a fifth-century CE phase of monastic development under Gupta patronage.
+    grade: B
     sources:
       - src.unesco-2016-nalanda-mahavihara
       - src.kulke-2004-history-of-india
 relations:
-  - { kind: patronised-by, target: polity.gupta-empire }
   - { kind: related-to, target: polity.magadha, note: In the historical Magadha region }
   - { kind: patronised-by, target: polity.pala-empire }
 wikidata: Q216243

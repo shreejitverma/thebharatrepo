@@ -3,7 +3,9 @@ type: site
 kind: site
 names:
   en: Chanhudaro (Chanhu-daro)
-  iast: Chāñhu-dāro
+  iast: Cānhūn jo Daṛo
+  native: چانهون جو دڙو
+  nativeLang: sd
 summary: >-
   An intensive craft-manufacturing Harappan town in Nawabshah (Shaheed Benazirabad) District, Sindh, excavated
   by N. G. Majumdar (1930) and E. J. H. Mackay (1935-1936), renowned as a major centre for steatite seal carving,
@@ -71,10 +73,6 @@ relations:
     target: tradition.harappan-civilisation
   - kind: contemporary-of
     target: site.mohenjo-daro
-  - kind: related-to
-    target: tradition.jhukar-phase
-  - kind: related-to
-    target: concept.harappan-carnelian-bead-making
 wikidata: Q1062208
 image:
   commons: "File:Chanhu-Daro beads.jpg"

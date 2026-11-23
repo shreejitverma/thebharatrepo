@@ -17,8 +17,11 @@ async function noHorizontalScroll(page: Page) {
 
 function collectErrors(page: Page): string[] {
   const errors: string[] = [];
-  page.on('pageerror', (e) => errors.push(e.message));
-  page.on('console', (m) => m.type() === 'error' && errors.push(m.text()));
+  // WebKit reports every prefetch that a navigation cancels as a failed load "due to access control checks", in the
+  // console and as a rejected fetch; that is the browser describing its own cancellation, not an error on the page.
+  const cancelledPrefetch = (text: string) => /[?&]_rsc=\w+ due to access control checks\.?\s*$/.test(text);
+  page.on('pageerror', (e) => !cancelledPrefetch(e.message) && errors.push(e.message));
+  page.on('console', (m) => m.type() === 'error' && !cancelledPrefetch(m.text()) && errors.push(m.text()));
   return errors;
 }
 
@@ -29,6 +32,9 @@ test.describe('debates: unpublished drafts stay out of the public build', () => 
     await expect(page.locator('h1')).toHaveText('Where the evidence is contested');
     await expect(page.getByText('0 debates published yet.')).toBeVisible();
     await expect(page.locator('a[href^="/debates/"]')).toHaveCount(0);
+    // An empty index is kept out of search results and out of the site footer until a debate is approved.
+    await expect(page.locator('meta[name="robots"]')).toHaveAttribute('content', /noindex/);
+    await expect(page.locator('.site-footer a[href="/debates"]')).toHaveCount(0);
     await noHorizontalScroll(page);
     await noSeriousA11yViolations(page);
     expect(errors).toEqual([]);
@@ -39,13 +45,16 @@ test.describe('debates: unpublished drafts stay out of the public build', () => 
     expect(res?.status()).toBe(404);
   });
 
-  test('related entity pages and search do not link the draft', async ({ page, request }) => {
+  test('related entity pages and search do not link the draft', async ({ page }) => {
     await page.goto(BUDDHA);
     await expect(page.getByRole('heading', { name: 'Debates' })).toHaveCount(0);
     await expect(page.locator('a[href^="/debates/"]')).toHaveCount(0);
-    const search = await (await request.get('/search.json')).text();
-    expect(search).not.toContain('/debates/');
-    expect(search).toContain('/learn/how-we-date-ashoka');
+    // The Pagefind index holds the learning path and no debate: searching the draft's subject finds no debate page.
+    await page.goto('/search?q=How%20we%20date%20Ashoka');
+    await expect(page.locator('.search-results a[data-result][href="/learn/how-we-date-ashoka"]')).toBeVisible();
+    await page.goto('/search?q=date%20of%20the%20Buddha');
+    await expect(page.locator('.search-status')).toContainText('for');
+    await expect(page.locator('.search-results a[data-result][href^="/debates/"]')).toHaveCount(0);
   });
 });
 
@@ -153,6 +162,8 @@ test.describe('learning path', () => {
     await expect(page.getByText('2 of 7 steps done.')).toBeVisible();
     await page.getByRole('button', { name: 'Reset progress' }).click();
     await expect(page.getByText('0 of 7 steps done.')).toBeVisible();
+    // The reset button goes away; focus stays on the count it changed instead of falling to the page.
+    await expect(page.locator('.progress__status')).toBeFocused();
     await noHorizontalScroll(page);
     await noSeriousA11yViolations(page);
     expect(errors).toEqual([]);
@@ -171,6 +182,7 @@ test.describe('learning path', () => {
     await qs.nth(0).getByRole('radio', { name: 'Major Rock Edict XIII' }).check();
     await qs.nth(0).getByRole('button', { name: 'Check answer' }).click();
     await expect(qs.nth(0)).toContainText('Correct.');
+    await expect(qs.nth(0).locator('.quiz__result')).toBeFocused();
     await expect(qs.nth(0)).toContainText('Your answer: correct');
     await expect(qs.nth(0).locator('.quiz__sources li').first()).toContainText('Hultzsch');
     await expect(qs.nth(0).getByRole('radio').first()).toBeDisabled();
@@ -182,8 +194,9 @@ test.describe('learning path', () => {
     await expect(qs.nth(1)).toContainText('Correct answer');
     await expect(quiz.locator('.quiz__score')).toHaveText('1 of 2 checked answers correct so far; 3 to go.');
 
+    const correct = ['Sandrokottos', /Shakyamuni was born there/, /tied to Greek kings/];
     for (let i = 2; i < 5; i++) {
-      await qs.nth(i).getByRole('radio').first().check();
+      await qs.nth(i).getByRole('radio', { name: correct[i - 2] }).check();
       await qs.nth(i).getByRole('button', { name: 'Check answer' }).click();
     }
     await expect(quiz.locator('.quiz__score')).toHaveText('You answered 4 of 5 correctly.');
@@ -193,18 +206,58 @@ test.describe('learning path', () => {
     await expect(quiz.locator('.quiz__score')).toHaveText('5 questions. Choose an answer, then check it.');
     await expect(qs.nth(0).getByRole('radio').first()).toBeEnabled();
     await expect(qs.nth(0).getByRole('radio').first()).not.toBeChecked();
+    await expect(qs.nth(0).getByRole('radio').first()).toBeFocused();
   });
 
-  test('keyboard users can answer a question', async ({ page, isMobile }) => {
+  test('choices are not listed with the correct answer always first', async ({ page }) => {
+    await page.goto(PATH);
+    const qs = page.locator('fieldset.quiz__q');
+    const slots: number[] = [];
+    for (let i = 0; i < 5; i++) {
+      const labels = await qs.nth(i).locator('.quiz__choice > span:first-of-type').allTextContents();
+      const name = ['Major Rock Edict XIII', 'He noticed', 'Sandrokottos', 'That the Buddha Shakyamuni', 'The edict is tied'][i];
+      slots.push(labels.findIndex((t) => t.startsWith(name)));
+    }
+    expect(slots).not.toContain(-1);
+    expect(new Set(slots).size).toBeGreaterThan(1);
+  });
+
+  test('keyboard users can answer a question', async ({ page, isMobile, browserName }) => {
     test.skip(isMobile, 'keyboard flow is a desktop concern');
+    test.skip(browserName === 'webkit', 'WebKit moves Tab focus to links only, by default, as Safari does');
     await page.goto(PATH);
     const q = page.locator('fieldset.quiz__q').nth(2);
-    await q.getByRole('radio').first().focus();
+    const answer = q.getByRole('radio', { name: 'Sandrokottos' });
+    await answer.focus();
     await page.keyboard.press('Space');
-    await expect(q.getByRole('radio').first()).toBeChecked();
-    await q.getByRole('button', { name: 'Check answer' }).focus();
+    await expect(answer).toBeChecked();
+    await page.keyboard.press('Tab');
+    await expect(q.getByRole('button', { name: 'Check answer' })).toBeFocused();
     await page.keyboard.press('Enter');
     await expect(q).toContainText('Correct.');
+    // The button is gone; focus lands on the verdict, and Tab continues to the sources that back it.
+    await expect(q.locator('.quiz__result')).toBeFocused();
+    await page.keyboard.press('Tab');
+    await expect(page.locator('fieldset.quiz__q').nth(2).locator('.quiz__sources a').first()).toBeFocused();
+  });
+});
+
+/** The clause after "Review status:" in a page's review note. */
+async function reviewClause(page: Page, path: string): Promise<string> {
+  await page.goto(path, { waitUntil: 'domcontentloaded' });
+  const text = (await page.locator('.review-note').first().textContent()) ?? '';
+  const m = /Review status: ([^.]*)\./.exec(text);
+  expect(m, `review note on ${path} reads "${text}"`).not.toBeNull();
+  return m![1];
+}
+
+test.describe('review status', () => {
+  test('a learning path and its printable pack state a review status in the same words as an entity page', async ({ page }) => {
+    // The path and the Buddha's entry are both drafts, so the entity page's wording is the expected wording.
+    const entity = await reviewClause(page, BUDDHA);
+    expect(entity).toMatch(/^draft, .*awaiting editor review$/);
+    expect(await reviewClause(page, PATH)).toBe(entity);
+    expect(await reviewClause(page, `${PATH}/print`)).toBe(entity);
   });
 });
 
@@ -216,7 +269,7 @@ test.describe('printable pack', () => {
     await expect(page.locator('.print-card')).toHaveCount(7);
     await expect(page.locator('.print-quiz > li')).toHaveCount(5);
     await expect(page.locator('.answer-key > li')).toHaveCount(5);
-    await expect(page.locator('.answer-key > li').first()).toContainText('A. Major Rock Edict XIII');
+    await expect(page.locator('.answer-key > li').first()).toContainText('B. Major Rock Edict XIII');
     await expect(page.getByRole('button', { name: 'Print this pack' })).toBeVisible();
     await noHorizontalScroll(page);
     await noSeriousA11yViolations(page);
@@ -238,4 +291,16 @@ test.describe('printable pack', () => {
     const ink = await page.locator('h1').evaluate((el) => getComputedStyle(el).color);
     expect(ink).toBe('rgb(0, 0, 0)');
   });
+});
+
+test.describe('narrow screens', () => {
+  test.use({ viewport: { width: 360, height: 800 } });
+  // A DOI (Rock Edict XIII), a slash-joined list in a dating note (Puranas) and a claim's sources (Pashupati seal)
+  // have no break opportunities and once set the page's minimum width.
+  for (const url of ['/archive/artifact/ashoka-major-rock-edict-xiii', '/archive/text/puranas', '/archive/artifact/pashupati-seal', PATH, `${PATH}/print`]) {
+    test(`${url} fits a 360 px screen`, async ({ page }) => {
+      await page.goto(url);
+      await noHorizontalScroll(page);
+    });
+  }
 });

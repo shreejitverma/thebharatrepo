@@ -139,6 +139,35 @@ describe('learning path schema', () => {
     const step = { entity: 'person.someone', note: 'Look at how the person is dated.' };
     expect(LearningPathSchema.safeParse(lp({ steps: [step, step] })).success).toBe(false);
   });
+  it('rejects a quiz whose correct answer always sits in the same slot', () => {
+    const at = (id: string, slot: number) => {
+      const choices = [choice(`Wrong one for ${id}`), choice(`Wrong two for ${id}`)];
+      choices.splice(slot, 0, choice(`Right for ${id}`, true));
+      return question({ id, choices });
+    };
+    const first = LearningPathSchema.safeParse(lp({ quiz: [at('q1', 0), at('q2', 0), at('q3', 0)] }));
+    expect(first.success).toBe(false);
+    expect(first.error?.issues.map((i) => i.message)).toContain('every correct answer is choice 1; vary where the correct answer sits');
+    expect(LearningPathSchema.safeParse(lp({ quiz: [at('q1', 2), at('q2', 2), at('q3', 2)] })).success).toBe(false);
+    // Any slot is fine for the correct answer, first, middle or last, as long as the quiz varies it.
+    expect(LearningPathSchema.safeParse(lp({ quiz: [at('q1', 1), at('q2', 2), at('q3', 0)] })).success).toBe(true);
+    // Too few questions to give a pattern away.
+    expect(LearningPathSchema.safeParse(lp({ quiz: [at('q1', 0), at('q2', 0)] })).success).toBe(true);
+  });
+});
+
+describe('the seed learning path', () => {
+  it('varies where the correct answer sits and keeps each explanation with its choice', async () => {
+    const fs = await import('node:fs');
+    const YAML = (await import('yaml')).default;
+    const raw = YAML.parse(fs.readFileSync(path.join(process.cwd(), 'content/learning/how-we-date-ashoka.yaml'), 'utf8'));
+    const p = LearningPathSchema.parse(raw);
+    expect(p.quiz.map((q) => q.choices.findIndex((c) => c.correct))).toEqual([1, 2, 0, 2, 1]);
+    const right = (id: string) => p.quiz.find((q) => q.id === id)!.choices.find((c) => c.correct)!;
+    expect(right('edict-xiii').text).toBe('Major Rock Edict XIII');
+    expect(right('edict-xiii').explanation).toContain('Antiochus II');
+    expect(right('lumbini').explanation).toContain('Shakyamuni was born here');
+  });
 });
 
 describe('loader: debates and learning paths', () => {
@@ -161,13 +190,13 @@ describe('loader: debates and learning paths', () => {
     await inFixture('phase3', async () => {
       vi.stubEnv('DEBATES_PREVIEW', '');
       const { loadContentUncached } = await import('./load');
-      const { visibleDebates, debatesForEntity, debateSearchDocs, debateRange } = await import('./debates');
+      const { visibleDebates, debatesForEntity, debateSearchHrefs, debatePlacement } = await import('./debates');
       const g = loadContentUncached();
       expect(visibleDebates(g.debates).map((d) => d.slug)).toEqual(['approved-one']);
       expect(debatesForEntity(g, 'person.someone').map((d) => d.slug)).toEqual(['approved-one']);
-      expect(debateSearchDocs(g).map((d) => d.href)).toEqual(['/debates/approved-one']);
+      expect(debateSearchHrefs(g)).toEqual(['/debates/approved-one']);
       // Placement in time comes from the scholarship positions' ranges.
-      expect(debateRange(g, g.debates[0])).toMatchObject({ earliest: -299, latest: -249 });
+      expect(debatePlacement(g, g.debates[0])).toMatchObject({ range: { earliest: -299, latest: -249 }, lens: 'scholarship' });
 
       // The static params Next.js builds from: drafts produce no page.
       const page = await import('../../app/debates/[slug]/page');
@@ -179,19 +208,49 @@ describe('loader: debates and learning paths', () => {
     await inFixture('phase3', async () => {
       vi.stubEnv('DEBATES_PREVIEW', '1');
       const { loadContentUncached } = await import('./load');
-      const { visibleDebates, debateSearchDocs } = await import('./debates');
+      const { visibleDebates, debateSearchHrefs } = await import('./debates');
       const g = loadContentUncached();
       expect(visibleDebates(g.debates).map((d) => d.slug)).toEqual(['approved-one', 'draft-one']);
-      expect(debateSearchDocs(g)).toHaveLength(1);
+      expect(debateSearchHrefs(g)).toEqual(['/debates/approved-one']);
       const page = await import('../../app/debates/[slug]/page');
       expect(page.generateStaticParams()).toEqual([{ slug: 'approved-one' }, { slug: 'draft-one' }]);
     });
   });
 
+  it('lets an article link a published debate and rejects a link to a draft', async () => {
+    await inFixture('phase3', async () => {
+      const { readContentRecords, assembleContent } = await import('./load');
+      const { records, errors } = readContentRecords();
+      const article = records.articles[0] as { body: string };
+      article.body += '\n\nSee [the approved debate](/debates/approved-one) and [the draft](/debates/draft-one).';
+      const msgs = assembleContent(records, errors).errors.map((e) => e.message);
+      expect(msgs).toEqual(['link /debates/draft-one does not reach a published debate; a draft debate is never linked']);
+    });
+  });
+
+  it('refuses a preview build that would be deployed, through the real next.config', async () => {
+    const { assertPreviewNotDeployed } = await import('./debates');
+    // Allowed: the owner's local preview build and dev server, CI's preview dev server, and any build without the flag.
+    expect(() => assertPreviewNotDeployed({ DEBATES_PREVIEW: '1', NODE_ENV: 'production' })).not.toThrow();
+    expect(() => assertPreviewNotDeployed({ DEBATES_PREVIEW: '1', NODE_ENV: 'development' })).not.toThrow();
+    expect(() => assertPreviewNotDeployed({ DEBATES_PREVIEW: '1', NODE_ENV: 'development', CI: 'true' })).not.toThrow();
+    expect(() => assertPreviewNotDeployed({ DEBATES_PREVIEW: '1', NODE_ENV: 'production', CI: 'false' })).not.toThrow();
+    expect(() => assertPreviewNotDeployed({ NODE_ENV: 'production', VERCEL: '1' })).not.toThrow();
+    // Refused: a Vercel build, whatever its environment, and a production build in CI.
+    expect(() => assertPreviewNotDeployed({ DEBATES_PREVIEW: '1', VERCEL: '1', NODE_ENV: 'development' })).toThrow(/must never be deployed/);
+    expect(() => assertPreviewNotDeployed({ DEBATES_PREVIEW: '1', VERCEL_ENV: 'preview', NODE_ENV: 'production' })).toThrow(/must never be deployed/);
+    expect(() => assertPreviewNotDeployed({ DEBATES_PREVIEW: '1', CI: 'true', NODE_ENV: 'production' })).toThrow(/must never be deployed/);
+    // Next.js evaluates next.config.ts on every build, so loading it is what stops a deployed preview build.
+    vi.stubEnv('DEBATES_PREVIEW', '1');
+    vi.stubEnv('VERCEL', '1');
+    vi.resetModules();
+    await expect(import('../../../next.config')).rejects.toThrow(/must never be deployed/);
+  });
+
   it('resolves learning path steps and search documents', async () => {
     await inFixture('phase3', async () => {
       const { loadContentUncached } = await import('./load');
-      const { resolveSteps, pathsForEntity, learningSearchDocs, summaryAtLevel } = await import('./learning');
+      const { resolveSteps, pathsForEntity, learningSearchHrefs, summaryAtLevel } = await import('./learning');
       const g = loadContentUncached();
       const p = g.learningPaths[0];
       expect(resolveSteps(g, p).map((s) => [s.kind, s.href])).toEqual([
@@ -199,7 +258,7 @@ describe('loader: debates and learning paths', () => {
         ['article', '/history/fixture'],
       ]);
       expect(pathsForEntity(g, 'person.someone').map((x) => x.id)).toEqual(['learn.a-path']);
-      expect(learningSearchDocs(g)[0].href).toBe('/learn/a-path');
+      expect(learningSearchHrefs(g)).toEqual(['/learn/a-path']);
       expect(summaryAtLevel(g.entities.get('person.someone')!, 'teen')).toContain('teenage readers');
     });
   });
@@ -299,5 +358,41 @@ describe('reading level', () => {
     };
     expect(runBoot('', blocked)).toBeUndefined();
     expect(runBoot('?level=teen', blocked)).toBe('teen');
+  });
+});
+
+describe('source locators', () => {
+  it('binds an abbreviation to its number with a no-break space', async () => {
+    const { bindLocator } = await import('../../components/SourceCitation');
+    expect(bindLocator('pp. 163-167')).toBe('pp.\u00a0163-167');
+    expect(bindLocator('p. 4, fig. 2')).toBe('p.\u00a04, fig.\u00a02');
+    expect(bindLocator('Rock Edict XIII')).toBe('Rock Edict XIII');
+    expect(bindLocator('Rummindei pillar inscription')).toBe('Rummindei pillar inscription');
+  });
+});
+
+describe('placing debates and learning paths in time', () => {
+  const r = (earliest: number, latest: number) => ({ earliest, latest, precision: 'decade' as const, circa: true });
+  it('spans scholarly datings and never mixes in traditional ones', async () => {
+    const { datingsSpan, placementLabel } = await import('./debates');
+    const span = datingsSpan([
+      { method: 'traditional-puranic', range: r(-3101, -3101) },
+      { method: 'epigraphic', range: r(-268, -232) },
+      { method: 'textual-internal', range: r(-300, -250) },
+    ]);
+    expect(span).toEqual({ range: { earliest: -300, latest: -232, precision: 'decade', circa: true }, lens: 'scholarship' });
+    const traditional = datingsSpan([{ method: 'traditional-puranic', range: r(-3101, -3101) }]);
+    expect(traditional?.lens).toBe('tradition');
+    expect(placementLabel(traditional!)).toMatch(/\(tradition\)$/);
+    expect(placementLabel(span!)).not.toMatch(/tradition/);
+    expect(datingsSpan([])).toBeNull();
+  });
+  it('prefers scholarship placements when combining several', async () => {
+    const { spanOf } = await import('./debates');
+    const s = { range: r(-300, -250), lens: 'scholarship' as const };
+    const t = { range: r(-3101, -3101), lens: 'tradition' as const };
+    expect(spanOf([t, s, null])).toEqual(s);
+    expect(spanOf([t, null])?.lens).toBe('tradition');
+    expect(spanOf([null])).toBeNull();
   });
 });

@@ -1,17 +1,15 @@
 /**
  * Build-time artifacts derived from validated content:
- *   public/search.json        compact search index (entities, articles, published debates, learning paths)
- *   public/data/archive.json  open data export of the full entity graph and sources
+ *   public/data/kaalchakra.json   the Kaalchakra index, fetched by the client instead of being inlined in the page
+ *
+ * The open data export in public/data (archive.json and its companions) is written by scripts/data.ts.
+ * The full-text search index is built after next build from the rendered pages (scripts/build-search.ts).
  */
 
 import fs from 'node:fs';
 import path from 'node:path';
 import { loadContentUncached } from '../src/lib/content/load';
-import { KIND_LABELS } from '../src/lib/content/labels';
-import { entityHref } from '../src/lib/content/kaalchakra';
-import { formatRange } from '../src/lib/time';
-import { debateSearchDocs } from '../src/lib/content/debates';
-import { learningSearchDocs } from '../src/lib/content/learning';
+import { buildKaalchakraIndex } from '../src/lib/content/kaalchakra';
 
 const g = loadContentUncached();
 if (g.errors.length) {
@@ -22,35 +20,7 @@ if (g.errors.length) {
 const pub = path.join(process.cwd(), 'public');
 fs.mkdirSync(path.join(pub, 'data'), { recursive: true });
 
-const docs = [
-  ...[...g.entities.values()].map((e) => ({
-    href: entityHref(e.id),
-    title: e.names.en,
-    summary: e.summary,
-    kind: KIND_LABELS[e.kind],
-    when: formatRange(e.datings[0].range),
-    text: [e.names.iast, e.names.native, e.region, ...e.tags].filter(Boolean).join(' '),
-  })),
-  ...g.articles.map((a) => ({
-    href: `/${a.category}/${a.slug}`,
-    title: a.title,
-    summary: a.summary,
-    kind: 'Article',
-    when: formatRange(a.datings[0].range),
-    text: [a.tags.join(' '), a.body.replace(/\[@[^\]]+\]/g, '').replace(/[#*_>`]/g, ' ').slice(0, 1500)].join(' '),
-  })),
-  // Published debates only: drafts awaiting owner approval never reach the index.
-  ...debateSearchDocs(g),
-  ...learningSearchDocs(g),
-];
-fs.writeFileSync(path.join(pub, 'search.json'), JSON.stringify(docs));
+const kaalchakra = buildKaalchakraIndex(g);
+fs.writeFileSync(path.join(pub, 'data', 'kaalchakra.json'), JSON.stringify(kaalchakra));
 
-const archive = {
-  generatedAt: new Date().toISOString(),
-  license: 'CC BY-SA 4.0',
-  entities: [...g.entities.values()],
-  sources: [...g.sources.values()],
-};
-fs.writeFileSync(path.join(pub, 'data', 'archive.json'), JSON.stringify(archive));
-
-console.log(`build-content: search.json (${docs.length} docs), data/archive.json (${archive.entities.length} entities, ${archive.sources.length} sources)`);
+console.log(`build-content: data/kaalchakra.json (${kaalchakra.length} items)`);

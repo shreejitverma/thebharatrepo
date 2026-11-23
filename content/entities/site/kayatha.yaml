@@ -3,8 +3,11 @@ type: site
 kind: prehistory
 names:
   en: Kayatha Chalcolithic Site and Culture
+  iast: Kāyathā
+  native: कायथा
+  nativeLang: hi
 summary: >-
-  The type-site of the earliest Chalcolithic farming culture of the Malwa region (c. 2400-2000 BCE), situated
+  The type-site of the earliest Chalcolithic farming culture of the Malwa region (c. 2450-1800 BCE), situated
   on the bank of the Choti Kali Sindh river in Ujjain district, Madhya Pradesh (later identified with ancient
   Kapitthaka, birthplace of Varahamihira), notable for chocolate-slipped Kayatha ware, cast copper axes and
   steatite micro-bead necklaces showing Harappan affinities.
@@ -14,7 +17,7 @@ summaries:
     copper axes and pots filled with tens of thousands of tiny white stone beads.
   teen: >-
     Discovered and excavated by V. S. Wakankar in 1965, Kayatha in the Chambal basin defines the earliest
-    Chalcolithic horizon in central India (c. 2400-2000 BCE), preceding the Ahar-Banas and Malwa levels at the site.
+    Chalcolithic horizon in central India (c. 2450-1800 BCE), preceding the Ahar-Banas and Malwa levels at the site.
 region: Malwa Plateau (Choti Kali Sindh valley), Ujjain district, Madhya Pradesh
 location:
   name: Kayatha
@@ -25,17 +28,19 @@ datings:
     range:
       earliest: "2450 BCE"
       latest: "1800 BCE"
-      best: "2100 BCE"
       precision: century
       circa: true
-    grade: A
+    grade: B
     label: Period I Kayatha Chalcolithic radiocarbon chronology
     sources:
       - src.misra-2001-prehistoric-colonization-india
       - src.coningham-2015-archaeology-south-asia
     note: >-
-      Calibrated radiocarbon dates place Period I (Kayatha culture) at c. 2400/2350-2000 BCE, followed by
-      Period II (Ahar-Banas white-painted Black-and-Red Ware) and Period III (Malwa culture).
+      Misra (2001) reports radiocarbon dates suggesting 2000 to 1800 BC for the Kayatha culture (Period I), after
+      which the site was reoccupied, following a break, by people with an Ahar-like culture (Period II) and later
+      by the Malwa culture (Period III).
+      An earlier start of about 2400 BCE could not be confirmed against Coningham and Young (2015) for this entry,
+      so the range keeps the broader span of about 2450 to 1800 BCE.
 claims:
   - text: >-
       Period I at Kayatha is defined by sturdy wheel-made chocolate-slipped ware painted in violet or deep red,

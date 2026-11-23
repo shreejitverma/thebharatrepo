@@ -24,6 +24,8 @@ export default function EntityNames({
           {native}
         </span>
       ) : null}
+      {/* A real space between the two, so text extracted from the page (the search excerpt) does not run them together. */}
+      {native && iast ? ' ' : null}
       {iast ? (
         <span className="name-iast" lang={iastLang ?? 'sa-Latn'}>
           {iast}

@@ -45,7 +45,6 @@ claims:
       - src.kulke-2004-history-of-india
 relations:
   - { kind: patronised, target: site.sanchi-stupa }
-  - { kind: contemporary-of, target: person.kharavela }
   - { kind: contemporary-of, target: polity.kushan-empire }
   - { kind: patronised, target: site.ajanta-caves }
 wikidata: Q5257

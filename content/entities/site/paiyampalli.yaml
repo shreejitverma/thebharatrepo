@@ -3,6 +3,8 @@ type: site
 kind: prehistory
 names:
   en: Paiyampalli Neolithic and Megalithic Site
+  iast: Paiyampaḷḷi
+  native: பையம்பள்ளி
 summary: >-
   A stratified terrace settlement at the foot of the Talathapamalai hills in Tirupattur (formerly North Arcot)
   district, Tamil Nadu, excavated by S. R. Rao, documenting the southward expansion of the Southern Neolithic
@@ -27,32 +29,30 @@ datings:
       best: "1500 BCE"
       precision: century
       circa: true
-    grade: A
-    label: Radiocarbon dates for Period I Neolithic and Period II Megalithic levels
+    grade: B
+    label: Approximate chronology of Period I Neolithic and Period II Megalithic levels
     sources:
       - src.fuller-2006-agricultural-origins-south-asia
       - src.fuller-2007-dating-neolithic-south-india
       - src.coningham-2015-archaeology-south-asia
     note: >-
-      Calibrated charcoal radiocarbon dates place Period I (Neolithic) at c. 1800-1300 BCE and Period II
-      (Megalithic with Black-and-Red Ware and iron slag) from the late 2nd to mid-1st millennium BCE.
+      The placement of the Neolithic and Megalithic levels is approximate and draws on radiocarbon
+      dates and the site's stratigraphic sequence.
 claims:
   - text: >-
       Period I at Paiyampalli featured circular and oval dwelling pits cut into natural soil, post-hole superstructures,
       burnished grey and pale grey pottery, ground stone axes and charred horsegram (Macrotyloma uniflorum) and green gram.
-    grade: A
+    grade: B
     sources:
       - src.fuller-2006-agricultural-origins-south-asia
       - src.coningham-2015-archaeology-south-asia
   - text: >-
       Period II at Paiyampalli shows stratigraphic overlap between late Neolithic grey wares and wheel-made
       Megalithic Black-and-Red Ware accompanied by abundant iron slag, sickles and spears.
-    grade: A
+    grade: B
     sources:
       - src.coningham-2015-archaeology-south-asia
 relations:
-  - kind: related-to
-    target: concept.southern-neolithic-ash-mounds
   - kind: contemporary-of
     target: site.sanganakallu
 tags:

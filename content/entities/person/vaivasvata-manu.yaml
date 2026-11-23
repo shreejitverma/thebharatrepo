@@ -33,21 +33,6 @@ datings:
     note: >-
       Puranic and Siddhantic reckoning places the start of the Vaivasvata manvantara 27 mahayugas and three
       yugas (120,528,000 years) before the Kali Yuga epoch of 3102 BCE.
-  - method: linguistic
-    range:
-      earliest: "1500 BCE"
-      latest: "600 BCE"
-      precision: century
-      circa: true
-    grade: B
-    label: Earliest Vedic attestations, Rigveda to Shatapatha Brahmana (date of the texts)
-    sources:
-      - src.jamison-brereton-2014-rigveda
-      - src.eggeling-1882-satapatha-brahmana-part-1
-      - src.flood-2003-blackwell-companion-hinduism
-    note: >-
-      Manu appears as an ancestral sacrificer in the Rigveda (c. 1500-1000 BCE) and as the hero of the flood
-      story in Shatapatha Brahmana 1.8.1 (c. 8th to 6th centuries BCE).
 claims:
   - text: >-
       In Shatapatha Brahmana 1.8.1.1-10, Manu rears a small fish that warns him of a flood and draws his ship
@@ -63,13 +48,16 @@ claims:
       - src.wilson-1840-vishnu-purana
       - src.thapar-2002-early-india
       - src.rocher-1986-puranas
+  - text: >-
+      Manu appears as an ancestral sacrificer in the Rigveda (c. 1500 to 1000 BCE) and as the hero of the
+      flood story in Shatapatha Brahmana 1.8.1 (c. 8th to 6th centuries BCE); these are dates for the texts,
+      not for Manu.
+    grade: B
+    sources:
+      - src.jamison-brereton-2014-rigveda
+      - src.eggeling-1882-satapatha-brahmana-part-1
+      - src.flood-2003-blackwell-companion-hinduism
 relations:
-  - kind: related-to
-    target: cosmology.vaivasvata-manvantara
-  - kind: related-to
-    target: cosmology.manvantara
-  - kind: related-to
-    target: event.matsya-flood-narrative
   - kind: related-to
     target: text.rigveda
   - kind: related-to

@@ -11,11 +11,11 @@ datings:
     sources: [src.witzel-1997-early-sanskritization-kuru, src.jamison-brereton-2014-rigveda, src.cardona-1988-panini-work-traditions]
     note: "Historical linguists distinguish successive layers of Vedic from the Rigveda to the Sutras, with the Rigveda as the oldest. The absolute dates of the oldest layer are inferred, not directly attested."
   - method: linguistic
-    range: { earliest: "500 BCE", latest: "350 BCE", precision: century, circa: true }
-    grade: B
+    range: { earliest: "600 BCE", latest: "350 BCE", precision: century, circa: true }
+    grade: C
     label: "Panini and the codification of the standard language"
     sources: [src.cardona-1988-panini-work-traditions, src.katre-1987-astadhyayi-panini]
-    note: "Panini is usually placed in the 5th or 4th century BCE."
+    note: "Panini is usually placed in the 5th or 4th century BCE, with some estimates reaching back to the 6th."
   - method: traditional-puranic
     range: { earliest: "3102 BCE", latest: "3000 BCE", precision: century, circa: true }
     grade: D

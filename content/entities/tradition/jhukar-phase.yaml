@@ -57,10 +57,6 @@ relations:
     target: site.chanhudaro
   - kind: located-at
     target: site.mohenjo-daro
-  - kind: contemporary-of
-    target: tradition.cemetery-h-culture
-  - kind: related-to
-    target: event.harappan-deurbanisation
 wikidata: Q12823976
 tags:
   - harappan

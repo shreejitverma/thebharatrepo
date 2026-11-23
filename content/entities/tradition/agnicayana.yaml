@@ -66,11 +66,6 @@ claims:
 relations:
   - { kind: part-of, target: tradition.shrauta-ritual }
   - { kind: related-to, target: tradition.soma-ritual }
-  - { kind: related-to, target: text.yajurveda }
-  - { kind: related-to, target: text.krishna-yajurveda }
-  - { kind: related-to, target: text.shatapatha-brahmana }
-  - { kind: related-to, target: text.shulba-sutras }
-  - { kind: related-to, target: text.baudhayana-shulba-sutra }
 wikidata: Q1812470
 image:
   commons: "File:Agnichayanam अग्निचयनम्.jpg"

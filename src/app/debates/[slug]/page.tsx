@@ -4,11 +4,13 @@ import { notFound } from 'next/navigation';
 import EntityNames from '@/components/EntityNames';
 import GradeBadge, { LensTag } from '@/components/GradeBadge';
 import KaalchakraStrip from '@/components/KaalchakraStrip';
+import SearchIndexMeta from '@/components/SearchIndexMeta';
 import SourceCitation from '@/components/SourceCitation';
 import { getGraph, getIndex, issueUrl } from '@/lib/content/site';
-import { debateRange, visibleDebates } from '@/lib/content/debates';
+import { debatePlacement, placementLabel, visibleDebates } from '@/lib/content/debates';
+import { formatDating, primaryDating } from '@/components/kaalchakra/shared';
 import { toKcItem } from '@/lib/content/kaalchakra';
-import { citationId, type CitationRef } from '@/lib/content/schema';
+import { citationId, reviewStatusText, type CitationRef } from '@/lib/content/schema';
 import { formatRange } from '@/lib/time';
 import { yearToUnit } from '@/lib/time/scale';
 
@@ -52,7 +54,7 @@ export default async function DebatePage({ params }: { params: Promise<{ slug: s
   const d = find(slug);
   if (!d) notFound();
   const g = getGraph();
-  const range = debateRange(g, d);
+  const place = debatePlacement(g, d);
   const ranged = d.positions.filter((p) => p.range);
   const lo = Math.min(...ranged.map((p) => p.range!.earliest));
   const hi = Math.max(...ranged.map((p) => p.range!.latest));
@@ -60,11 +62,13 @@ export default async function DebatePage({ params }: { params: Promise<{ slug: s
   const x = (year: number) => ((year - (lo - pad)) / (hi - lo + 2 * pad)) * 100;
   const related = d.relatedEntities.map((id) => toKcItem(g.entities.get(id)!));
   const articles = d.relatedArticles.map((ref) => g.articles.find((a) => `${a.category}/${a.slug}` === ref)!);
-  const u = range ? yearToUnit(range.best ?? (range.earliest + range.latest) / 2) : 0;
+  const u = place ? yearToUnit(place.range.best ?? (place.range.earliest + place.range.latest) / 2) : 0;
 
   return (
-    <div className="main-content">
-      <nav className="breadcrumbs" aria-label="Breadcrumb">
+    // Only a published debate is marked for the search index; the indexer also lists published debates only.
+    <div className="main-content" data-pagefind-body={d.published ? true : undefined}>
+      {d.published ? <SearchIndexMeta title={d.title} kind="debate" when={place ? placementLabel(place) : undefined} filters={{ kind: ['debate'] }} /> : null}
+      <nav className="breadcrumbs" aria-label="Breadcrumb" data-pagefind-ignore>
         <Link href="/debates">Debates</Link>
       </nav>
       {d.published ? null : (
@@ -113,10 +117,10 @@ export default async function DebatePage({ params }: { params: Promise<{ slug: s
         </section>
       ) : null}
 
-      {range ? (
+      {place ? (
         <KaalchakraStrip
           items={getIndex()}
-          range={range}
+          dating={place}
           selfId={null}
           focusHref={`/kaalchakra?id=${encodeURIComponent(d.relatedEntities[0])}&view=river&win=${Math.max(0, u - 0.02).toFixed(5)},${Math.min(1, u + 0.02).toFixed(5)}`}
         />
@@ -205,7 +209,7 @@ export default async function DebatePage({ params }: { params: Promise<{ slug: s
             <Link key={i.id} href={i.href} className="card">
               <h3>{i.name}</h3>
               <EntityNames native={i.native} iast={i.iast} nativeLang={i.nativeLang} iastLang={i.iastLang} className="card__names" />
-              <p className="card__meta">{formatRange(i.datings.find((x) => x.lens === 'scholarship') ?? i.datings[0])}</p>
+              {primaryDating(i, 'both') ? <p className="card__meta">{formatDating(primaryDating(i, 'both')!, 'ce')}</p> : null}
             </Link>
           ))}
         </div>
@@ -223,7 +227,7 @@ export default async function DebatePage({ params }: { params: Promise<{ slug: s
       </section>
 
       <p className="review-note" style={{ marginTop: 32, maxWidth: 860 }}>
-        Review status: {d.review.status === 'reviewed' ? `reviewed by ${d.review.reviewer} on ${d.review.lastReviewed}` : 'draft, awaiting editor and advisory review'}.
+        Review status: {reviewStatusText(d.review)}.
         {d.approval ? ` Approved for publication by ${d.approval.by} on ${d.approval.date}.` : ' Not yet approved for publication.'}{' '}
         <a href={issueUrl(`Correction: ${d.title} (${d.id})`, `Debate: ${d.id}\n\nWhat is wrong or missing:\n\nEvidence (with source):\n`)}>Report an error</a>
       </p>

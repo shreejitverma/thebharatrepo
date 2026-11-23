@@ -7,10 +7,10 @@ tags: [art and culture, cinema, bollywood, satyajit ray, phalke]
 datings:
   - method: documentary
     range: { earliest: "1896", latest: "2023", precision: year, circa: false }
-    grade: A
-    label: From the first Bombay screenings to the present
-    sources: [src.rajadhyaksha-1999-encyclopaedia-indian-cinema]
-    note: The first commercial film shows in India took place in Bombay in July 1896; the story continues to the present day.
+    grade: B
+    label: From the first Bombay screenings to the 2023 Academy Awards
+    sources: [src.rajadhyaksha-1999-encyclopaedia-indian-cinema, src.academy-2023-95th-awards]
+    note: The encyclopaedia dates the Bombay screenings to July 1896. The Academy documents the award for "Naatu Naatu" in 2023.
 entities: []
 readingLevel: adult
 review: { status: draft, author: "claude-sonnet-5-5" }

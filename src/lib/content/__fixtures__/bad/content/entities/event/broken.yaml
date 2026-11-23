@@ -2,7 +2,11 @@ id: event.broken
 type: event
 kind: event
 names: { en: Broken }
-summary: A fixture with an unknown source and an unknown relation target.
+summary: A fixture with an unknown source, an unknown relation target, a self relation and an unsourced extent.
+extents:
+  - polygon: [[70, 20], [80, 20], [80, 30]]
+    grade: C
+    sources: [src.nobody-1999-nothing]
 datings:
   - method: epigraphic
     range: { earliest: 100, latest: 120, precision: year, circa: true }
@@ -10,4 +14,6 @@ datings:
     sources: [src.nobody-1999-nothing]
 relations:
   - { kind: related-to, target: person.ghost }
+  - { kind: related-to, target: event.former-toba }
+  - { kind: part-of, target: event.broken }
 review: { status: draft }

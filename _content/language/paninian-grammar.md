@@ -5,11 +5,11 @@ date: "2026-11-21"
 tags: [sanskrit, grammar, panini, ashtadhyayi, vyakarana, linguistics]
 datings:
   - method: linguistic
-    range: { earliest: "500 BCE", latest: "350 BCE", best: "400 BCE", precision: century, circa: true }
+    range: { earliest: "600 BCE", latest: "350 BCE", best: "400 BCE", precision: century, circa: true }
     grade: C
     label: Mainstream scholarly dating of the Aṣṭādhyāyī
     sources: [src.cardona-1988-panini-work-traditions, src.katre-1987-astadhyayi-panini]
-    note: Placed in the 5th or 4th century BCE from the state of the language described and from its place before the later grammatical commentators.
+    note: Usually placed in the 5th or 4th century BCE, with some estimates reaching back to the 6th century from the state of the language described and from its place before the later grammatical commentators.
 entities: [person.panini, text.ashtadhyayi, concept.vedic-sanskrit, text.vedangas]
 readingLevel: adult
 review: { status: draft, author: "codex-gpt-6" }
@@ -23,7 +23,7 @@ Scholars commonly place him in the 5th or 4th century BCE, but the evidence does
 
 The text has eight chapters, each split into four quarters, and holds roughly four thousand rules (*sūtras*), the exact count varying slightly between transmitted versions [@src.katre-1987-astadhyayi-panini].
 It does not list words.
-It works as a derivation machine: you start with a root (see [the article on verbal roots](/archive/article/language/dhatu-the-verbal-roots)) and an affix, apply rules in a fixed order, and a finished word comes out [@src.cardona-1988-panini-work-traditions; @src.kiparsky-2009-architecture-paninis-grammar].
+It works as a derivation machine: you start with a root (see [the article on verbal roots](/language/dhatu-the-verbal-roots)) and an affix, apply rules in a fixed order, and a finished word comes out [@src.cardona-1988-panini-work-traditions; @src.kiparsky-2009-architecture-paninis-grammar].
 The grammar also records where the older Vedic language differs from the speech of Pāṇini's own day, including the pitch accents of Vedic recitation [@src.katre-1987-astadhyayi-panini; @src.cardona-1988-panini-work-traditions].
 It is one of the six Vedāṅgas, the "limbs of the Veda", and Pāṇini names a number of earlier grammarians whose work he built on [@src.cardona-1988-panini-work-traditions].
 
@@ -94,7 +94,7 @@ Katyāyana's *vārttikas* and Patañjali's *Mahābhāṣya* (the "Great Commenta
 ## How formal was it? Separating claims from evidence
 
 Pāṇini's grammar is widely admired by modern linguists, and that admiration sometimes grows into claims no source supports.
-Popular summaries call it the first "Turing-complete" grammar or credit particular modern scientists with saying so; we found no scholarly source making that claim in a checkable form, so it is not repeated here.
+Popular summaries call it the first "Turing-complete" grammar or credit particular modern scientists with saying so; no scholarly source making that claim in a checkable form was found, so it is not repeated here.
 What is documented is narrower and still remarkable:
 
 - The grammar is explicit, ordered and economical enough that scholars compare its architecture with modern generative frameworks, with each part of the derivation (meaning-to-relation, relation-to-form, form-to-sound) handled by distinct rule blocks [@src.kiparsky-2009-architecture-paninis-grammar; @src.staal-1988-universals].

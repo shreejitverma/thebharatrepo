@@ -5,6 +5,7 @@ names:
   en: Bhimbetka Rock Shelters
   iast: Bhīmabeṭakā
   native: भीमबेटका
+  nativeLang: hi
 summary: >-
   A UNESCO World Heritage complex of over 700 sandstone rock shelters in the Vindhyan hills of Raisen district,
   Madhya Pradesh, preserving continuous stratified human occupation from the Lower Palaeolithic Acheulian through
@@ -24,7 +25,7 @@ location:
 datings:
   - method: archaeological-stratigraphic
     range:
-      earliest: "100000 BCE"
+      earliest: "100 ka"
       latest: "1000 BCE"
       precision: ka
       circa: true

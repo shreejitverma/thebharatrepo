@@ -5,6 +5,7 @@ names:
   en: Rakhigarhi
   iast: Rākhīgaṛhī
   native: राखीगढ़ी
+  nativeLang: hi
 summary: >-
   One of the largest urban metropolises of the Harappan Civilisation, spanning at least seven mounds (RGR-1 to RGR-7)
   in the Chautang (Drishadvati) palaeochannel basin in Hisar District, Haryana, occupied from the Early Harappan
@@ -62,16 +63,6 @@ claims:
 relations:
   - kind: part-of
     target: tradition.harappan-civilisation
-  - kind: contemporary-of
-    target: site.mohenjo-daro
-  - kind: contemporary-of
-    target: site.harappa
-  - kind: contemporary-of
-    target: site.kalibangan
-  - kind: contemporary-of
-    target: site.banawali
-  - kind: related-to
-    target: concept.rakhigarhi-i6113-genome
 wikidata: Q3418050
 image:
   commons: "File:Harappan Burial Remains from Rakhigarhi.jpg"

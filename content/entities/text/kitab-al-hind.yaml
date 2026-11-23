@@ -3,6 +3,7 @@ type: text
 kind: text
 names:
   en: Kitab al-Hind of al-Biruni
+  iast: Taḥqīq mā li-l-Hind
   native: تحقيق ما للهند
 summary: >-
   Al-Biruni's Arabic work on India, Tahqiq ma li-l-Hind ("Verifying what belongs to India"), completed
@@ -31,7 +32,6 @@ claims:
     grade: A
     sources: [src.sachau-1910-alberunis-india]
 relations:
-  - { kind: authored-by, target: person.al-biruni }
   - { kind: related-to, target: event.ghaznavid-raid-on-somnath }
   - { kind: related-to, target: text.brahmasphutasiddhanta, note: One of its Sanskrit sources }
 tags: [foreign-account, arabic, ethnography, astronomy]

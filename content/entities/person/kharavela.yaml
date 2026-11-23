@@ -16,22 +16,23 @@ region: Kalinga (Odisha)
 location: { name: "Udayagiri Hills, Bhubaneswar", lat: 20.263, lon: 85.786 }
 datings:
   - method: epigraphic
-    range: { earliest: "100 BCE", latest: "2 BCE", precision: century, circa: true }
+    range: { earliest: "100 BCE", latest: "1 BCE", precision: century, circa: true }
     grade: B
     label: First century BCE palaeographic and Satakarni synchronism
     sources:
       - src.salomon-1998-indian-epigraphy
       - src.kulke-2004-history-of-india
+      - { id: src.stewart-2025-classical-art-and-ancient-india, locator: "Upinder Singh, Yavanas in Early Indian Inscriptions" }
       - src.dundas-2002-the-jains
     note: Most epigraphists date Kharavela to the first century BCE based on the developed post-Mauryan Brahmi paleography of the Hathigumpha inscription and his synchronism with an early Satavahana king named Satakarni.
   - method: epigraphic
-    range: { earliest: "180 BCE", latest: "130 BCE", precision: decade, circa: true }
+    range: { earliest: "200 BCE", latest: "151 BCE", precision: century, circa: true }
     grade: C
-    label: Second century BCE dating based on proposed reading of Demetrius and Nanda era
+    label: Jayaswal and Banerji's early second-century BCE interpretation
     sources:
-      - src.fleet-1910-hathigumpha-inscription
+      - { id: src.stewart-2025-classical-art-and-ancient-india, locator: "Upinder Singh, Yavanas in Early Indian Inscriptions" }
       - src.salomon-1998-indian-epigraphy
-    note: An older scholarly view read a damaged passage in line 8 as referring to the Indo-Greek king Demetrius (Dimita) and interpreted line 16 as a year count from the Nandas, placing Kharavela in the second century BCE.
+    note: Jayaswal and Banerji linked the damaged name they read as Dimita to Demetrius and proposed the first half of the second century BCE. The reading and identification are disputed.
 claims:
   - text: In his Hathigumpha inscription, Kharavela records campaigning west without regard for King Satakarni, marching into Magadha, and recovering a Kalinga Jina image that had been carried away by a Nanda king.
     grade: B
@@ -46,7 +47,6 @@ claims:
       - src.dundas-2002-the-jains
 relations:
   - { kind: contemporary-of, target: polity.satavahana-dynasty }
-  - { kind: related-to, target: artifact.hathigumpha-inscription }
   - { kind: related-to, target: polity.nanda-dynasty }
 wikidata: Q1391280
 tags: [kharavela, kalinga, odisha, jainism, hathigumpha]

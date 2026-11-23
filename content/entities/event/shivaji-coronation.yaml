@@ -3,6 +3,9 @@ type: event
 kind: event
 names:
   en: Shivaji’s Coronation
+  iast: Śivarājyābhiṣeka
+  native: शिवराज्याभिषेक
+  nativeLang: mr
 summary: Shivaji was formally crowned at Raigad in 1674, adopting royal titles
   and rites that expressed his sovereignty.
 summaries:

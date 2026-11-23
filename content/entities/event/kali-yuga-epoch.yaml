@@ -41,21 +41,6 @@ datings:
       The Surya Siddhanta and Aryabhata's midnight (ardharatrika) system place the epoch at midnight at
       Ujjain ending 17 February 3102 BCE (Julian); the Aryabhatiya's sunrise (audayika) system places it at
       mean sunrise on 18 February.
-  - method: textual-internal
-    range:
-      earliest: 499
-      latest: 499
-      precision: year
-      circa: false
-    grade: A
-    label: Earliest known statement of the epoch, Aryabhatiya Kalakriyapada 10 (499 CE)
-    sources:
-      - src.shukla-sarma-1976-aryabhatiya
-      - src.plofker-2009-mathematics-in-india
-      - src.saha-1955-calendar-reform-committee-report
-    note: >-
-      Aryabhata states that when 3,600 years and three yuga-quarters had elapsed he was 23 years old;
-      Kali year 3600 corresponds to Shaka 421, that is 499 CE.
 claims:
   - text: >-
       In Aryabhatiya Kalakriyapada 10, Aryabhata states that 3,600 years had elapsed of the current
@@ -64,6 +49,14 @@ claims:
     sources:
       - src.shukla-sarma-1976-aryabhatiya
       - src.plofker-2009-mathematics-in-india
+  - text: >-
+      This is the earliest known statement of the epoch. Kali year 3600 corresponds to Shaka 421, so Aryabhata
+      wrote it in 499 CE; that is the date of the statement in the Aryabhatiya, not of the epoch itself.
+    grade: A
+    sources:
+      - src.shukla-sarma-1976-aryabhatiya
+      - src.plofker-2009-mathematics-in-india
+      - src.saha-1955-calendar-reform-committee-report
   - text: >-
       The epoch was conceived as a mean conjunction of the planets at the start of the Siddhantic zodiac;
       recalculation with modern planetary data shows no such conjunction at that date, so historians regard
@@ -86,12 +79,6 @@ debate: >-
   CE to give a common starting point for planetary revolutions, and that it is not mentioned in any text or
   inscription before Aryabhata.
 relations:
-  - kind: related-to
-    target: cosmology.kali-yuga
-  - kind: related-to
-    target: concept.kali-era-in-inscriptions
-  - kind: related-to
-    target: concept.yuga-chronology-of-the-itihasa
   - kind: related-to
     target: person.krishna
 wikidata: null

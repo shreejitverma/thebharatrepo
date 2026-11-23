@@ -23,7 +23,7 @@ export default function KaalchakraFallback({ items }: { items: KcItem[] }) {
             Time runs clockwise from the traditional start of the present kalpa, at the top, to today. Each ring holds one kind of entry.
           </p>
           <p>
-            <Link href="/archive">Browse every entry in the archive</Link>
+            <Link href="/archive" prefetch={false}>Browse every entry in the archive</Link>
           </p>
         </aside>
       </div>

@@ -58,11 +58,8 @@ claims:
       - src.singh-2008-ancient-early-medieval-india
 relations:
   - { kind: succeeded, target: text.rigveda }
-  - { kind: related-to, target: text.krishna-yajurveda }
-  - { kind: related-to, target: text.shukla-yajurveda }
   - { kind: related-to, target: tradition.shrauta-ritual }
   - { kind: related-to, target: tradition.agnicayana }
-  - { kind: related-to, target: polity.kuru-kingdom }
 wikidata: Q47142
 image:
   commons: "File:1200-1000 BCE, Vajasneyi samhita sample i, Shukla Yajurveda, Sanskrit, Devanagari.jpg"

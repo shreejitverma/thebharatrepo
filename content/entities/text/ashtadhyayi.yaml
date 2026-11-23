@@ -22,8 +22,8 @@ region: Gandhara (northwestern Indian subcontinent)
 datings:
   - method: linguistic
     range: { earliest: "600 BCE", latest: "350 BCE", best: "400 BCE", precision: century, circa: true }
-    grade: B
-    label: Mainstream Indological and linguistic consensus (Cardona, Katre)
+    grade: C
+    label: Linguistic and textual dating (Cardona, Katre)
     sources:
       - src.cardona-1988-panini-work-traditions
       - src.katre-1987-astadhyayi-panini
@@ -58,10 +58,8 @@ claims:
       - src.katre-1987-astadhyayi-panini
       - src.cardona-1988-panini-work-traditions
 relations:
-  - { kind: authored-by, target: person.panini }
   - { kind: part-of, target: text.vedangas }
   - { kind: succeeded, target: text.nirukta }
-  - { kind: related-to, target: concept.vedic-sanskrit }
 wikidata: Q2868351
 tags: [vedanga, vyakarana, grammar, linguistics, sanskrit, panini]
 review: { status: draft, author: "gemini-4-argon" }

@@ -3,10 +3,11 @@ type: site
 kind: site
 names:
   en: Sanauli (Sinauli)
-  iast: Sanaulī
+  iast: Sinaulī
   native: सिनौली
+  nativeLang: hi
 summary: >-
-  A major Bronze Age necropolis in Baghpat District, western Uttar Pradesh, in the Ganga-Yamuna Doab (c. 2100-1800 BCE),
+  A major Bronze Age necropolis in Baghpat District, western Uttar Pradesh, in the Ganga-Yamuna Doab (early second millennium BCE),
   excavated by the Archaeological Survey of India in 2005-2006 (D. V. Sharma) and 2018 (Sanjay Kumar Manjul), where
   over 120 burials, wooden legged coffins, antenna-hilted copper swords, shields, helmets, and three two-wheeled
   copper-sheathed vehicles sparked a major scholarly debate over Late Harappan vs Copper Hoard/Ochre Coloured Pottery
@@ -17,7 +18,7 @@ summaries:
     copper swords, and two-wheeled wooden vehicles decorated with copper triangles.
   teen: >-
     Excavated by the ASI in 2005-2006 and 2018, the Sanauli cemetery in western Uttar Pradesh yielded elite warrior
-    graves with copper weapons and solid-wheeled two-wheeled vehicles dated to c. 2100-1800 BCE, prompting debate
+    graves with copper weapons and solid-wheeled two-wheeled vehicles dated to the early second millennium BCE, prompting debate
     over whether they were horse-drawn battle chariots or bull-drawn solid-wheeled carts.
 region: Baghpat District, western Uttar Pradesh, India (Yamuna-Hindon interfluve)
 location:
@@ -27,18 +28,18 @@ location:
 datings:
   - method: archaeological-radiocarbon
     range:
-      earliest: "2200 BCE"
-      latest: "1800 BCE"
+      earliest: "2000 BCE"
+      latest: "1500 BCE"
       precision: century
       circa: true
-    grade: A
-    label: Radiocarbon and Thermoluminescence Dates of the Sanauli Cemeteries (2005 and 2018)
+    grade: B
+    label: Early second-millennium BCE burial contexts at Sanauli
     sources:
+      - src.sharma-2024-sinauli-radiocarbon
       - src.parpola-2020-sanauli-chariot-burials
       - src.singh-2008-ancient-early-medieval-india
     note: >-
-      Calibrated AMS radiocarbon dates on organic material from the 2018 ASI excavations and luminescence dates
-      from the 2005-2006 cemetery cluster between c. 2200/2100 and 1800 BCE.
+      The 2005-2006 cemetery is assigned to the Late Harappan horizon by its grave goods. Sharma and colleagues place the later-excavated burials in the early second millennium BCE using dated burial samples and associated finds.
 claims:
   - text: >-
       During the 2005-2006 excavations led by D. V. Sharma, the ASI uncovered 116 Late Harappan / Bara-related graves
@@ -67,8 +68,6 @@ claims:
 relations:
   - kind: part-of
     target: tradition.harappan-civilisation
-  - kind: related-to
-    target: artifact.sanauli-wheeled-vehicles
   - kind: related-to
     target: event.harappan-deurbanisation
 wikidata: Q7415547

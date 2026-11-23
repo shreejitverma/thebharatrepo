@@ -5,11 +5,17 @@ date: "2026-11-21"
 tags: [philosophy, yoga, patanjali, samkhya, meditation, darshana]
 datings:
   - method: textual-internal
-    range: { earliest: "325 CE", latest: "500 CE", best: "400 CE", precision: century, circa: true }
+    range: { earliest: "325 CE", latest: "425 CE", precision: decade, circa: true }
     grade: C
     label: "Philipp Maas (sutra and Bhashya as one work)"
     sources: [src.maas-2013-concise-historiography-yoga, src.maas-2006-samadhipada]
-    note: "Maas dates the Patanjalayogashastra, the sutras together with the Bhashya, to about 400 CE on the basis of its relation to Buddhist and Samkhya literature and its manuscript tradition. Older scholarship that placed the sutras centuries earlier is discussed in the article."
+    note: "Maas dates the Patanjalayogashastra, the sutras together with the Bhashya, to roughly 325-425 CE on the basis of its relation to Buddhist and Samkhya literature and its manuscript tradition. Older scholarship that placed the sutras centuries earlier is discussed in the article."
+  - method: traditional-sampradaya
+    range: { earliest: "200 BCE", latest: "100 BCE", precision: century, circa: true }
+    grade: D
+    label: "Traditional identification with Patañjali the grammarian"
+    sources: [src.maas-2013-concise-historiography-yoga]
+    note: "The second-century BCE placement follows the traditional identification with the author of the grammatical Mahabhashya."
 entities: []
 readingLevel: adult
 review: { status: draft, author: "claude-sonnet-5-5" }
@@ -40,7 +46,7 @@ Tradition names the author as Patañjali, and the name is often identified with 
 Whether those are one person is uncertain, and the dating of the text is genuinely contested [@src.bryant-2009-yoga-sutras-patanjali, introduction; @src.maas-2013-concise-historiography-yoga].
 
 - **Earlier-date position.** Older scholarship often placed the sutras several centuries before the Common Era, sometimes by identifying the author with the grammarian Patañjali, with the Bhāṣya added later [@src.maas-2013-concise-historiography-yoga].
-- **Later-date position.** Philipp Maas argues from textual history that the sutras and the Bhāṣya were composed and transmitted as one work, the *Pātañjalayogaśāstra*, with Patañjali as its author-compiler, and dates it to about 400 CE [@src.maas-2013-concise-historiography-yoga; @src.maas-2006-samadhipada].
+- **Later-date position.** Philipp Maas argues from textual history that the sutras and the Bhāṣya were composed and transmitted as one work, the *Pātañjalayogaśāstra*, with Patañjali as its author-compiler, and dates it to roughly 325-425 CE [@src.maas-2013-concise-historiography-yoga; @src.maas-2006-samadhipada].
   On this view the text responds to Buddhist and Samkhya ideas of its time.
 
 We grade the dating C: it rests on internal and comparative textual evidence with live disagreement.

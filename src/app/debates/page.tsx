@@ -2,13 +2,16 @@ import type { Metadata } from 'next';
 import Link from 'next/link';
 import GradeBadge from '@/components/GradeBadge';
 import { getGraph } from '@/lib/content/site';
-import { debateHref, debateRange, debatesPreview, visibleDebates } from '@/lib/content/debates';
-import { formatRange } from '@/lib/time';
+import { debateHref, debatePlacement, debatesPreview, placementLabel, visibleDebates } from '@/lib/content/debates';
 
-export const metadata: Metadata = {
-  title: 'Debates',
-  description: 'Where credible positions disagree: each position at its strongest, with named proponents, graded evidence and what would change the picture.',
-};
+export function generateMetadata(): Metadata {
+  return {
+    title: 'Debates',
+    description: 'Where credible positions disagree: each position at its strongest, with named proponents, graded evidence and what would change the picture.',
+    // An empty index is not worth a search result; it is indexed once the owner approves the first debate.
+    robots: visibleDebates(getGraph().debates).length ? undefined : { index: false, follow: true },
+  };
+}
 
 export default function DebatesPage() {
   const g = getGraph();
@@ -33,26 +36,32 @@ export default function DebatesPage() {
       {debates.length === 0 ? (
         <p className="empty">0 debates published yet. Drafts are under review and appear here once approved.</p>
       ) : (
-        <div className="category-grid" style={{ marginTop: 16 }}>
-          {debates.map((d) => {
-            const r = debateRange(g, d);
-            return (
-              <Link key={d.id} href={debateHref(d)} className="card">
-                <h3>{d.title}</h3>
-                <p>{d.question}</p>
-                <p className="card__meta">
-                  {d.positions.length} positions{r ? `, ${formatRange(r)}` : ''}
-                  {d.published ? '' : ', unpublished draft'}
-                </p>
-                <p className="card__meta" style={{ display: 'flex', gap: 6, flexWrap: 'wrap' }}>
-                  {d.positions.map((p) => (
-                    <GradeBadge key={p.id} grade={p.grade} showLabel={false} />
-                  ))}
-                </p>
-              </Link>
-            );
-          })}
-        </div>
+        <section aria-labelledby="debate-list">
+          {/* Keeps the heading outline h1, h2, h3 for the cards' titles. */}
+          <h2 id="debate-list" className="visually-hidden">
+            All debates
+          </h2>
+          <div className="category-grid" style={{ marginTop: 16 }}>
+            {debates.map((d) => {
+              const r = debatePlacement(g, d);
+              return (
+                <Link key={d.id} href={debateHref(d)} className="card">
+                  <h3>{d.title}</h3>
+                  <p>{d.question}</p>
+                  <p className="card__meta">
+                    {d.positions.length} positions{r ? `, ${placementLabel(r)}` : ''}
+                    {d.published ? '' : ', unpublished draft'}
+                  </p>
+                  <p className="card__meta" style={{ display: 'flex', gap: 6, flexWrap: 'wrap' }}>
+                    {d.positions.map((p) => (
+                      <GradeBadge key={p.id} grade={p.grade} showLabel={false} />
+                    ))}
+                  </p>
+                </Link>
+              );
+            })}
+          </div>
+        </section>
       )}
     </div>
   );

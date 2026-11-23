@@ -2,9 +2,9 @@ import type { Metadata } from 'next';
 import Link from 'next/link';
 import { ProgressSummary } from '@/components/learn/Progress';
 import { getGraph } from '@/lib/content/site';
-import { learnHref, pathRange } from '@/lib/content/learning';
+import { learnHref, pathPlacement } from '@/lib/content/learning';
+import { placementLabel } from '@/lib/content/debates';
 import { READING_LEVEL_AUDIENCE, READING_LEVEL_LABELS } from '@/lib/content/labels';
-import { formatRange } from '@/lib/time';
 
 export const metadata: Metadata = {
   title: 'Learn',
@@ -26,26 +26,36 @@ export default function LearnPage() {
       {paths.length === 0 ? (
         <p className="empty">0 learning paths yet.</p>
       ) : (
-        <div className="category-grid" style={{ marginTop: 16 }}>
-          {paths.map((p) => {
-            const r = pathRange(g, p);
-            const steps = p.steps.map((s) => (s.entity ?? s.article)!);
-            return (
-              <Link key={p.id} href={learnHref(p)} className="card">
-                <p style={{ marginBottom: 8 }}>
-                  <span className="level-badge">{READING_LEVEL_LABELS[p.level]}</span>
-                </p>
-                <h3>{p.title}</h3>
-                <p>{p.summary.length > 160 ? `${p.summary.slice(0, 157).replace(/\s+\S*$/, '')}...` : p.summary}</p>
-                <p className="card__meta">
-                  {READING_LEVEL_AUDIENCE[p.level]}. <ProgressSummary pathId={p.id} steps={steps} />
-                  {p.quiz.length ? `, ${p.quiz.length}-question quiz` : ''}
-                  {r ? `. ${formatRange(r)}` : ''}
-                </p>
-              </Link>
-            );
-          })}
-        </div>
+        <section aria-labelledby="paths">
+          {/* Keeps the heading outline h1, h2, h3 for the cards' titles. */}
+          <h2 id="paths" className="visually-hidden">
+            All learning paths
+          </h2>
+          <div className="category-grid" style={{ marginTop: 16 }}>
+            {paths.map((p) => {
+              const r = pathPlacement(g, p);
+              const steps = p.steps.map((s) => (s.entity ?? s.article)!);
+              return (
+                <Link key={p.id} href={learnHref(p)} className="card">
+                  <p style={{ marginBottom: 8 }}>
+                    <span className="level-badge">{READING_LEVEL_LABELS[p.level]}</span>
+                  </p>
+                  <h3>{p.title}</h3>
+                  <p>{p.summary.length > 160 ? `${p.summary.slice(0, 157).replace(/\s+\S*$/, '')}...` : p.summary}</p>
+                  <p className="card__meta">
+                    {READING_LEVEL_AUDIENCE[p.level]}. <ProgressSummary pathId={p.id} steps={steps} />
+                    {p.quiz.length ? `, ${p.quiz.length}-question quiz` : ''}
+                    {r ? (
+                      <>
+                        . <span className="nowrap">{placementLabel(r)}</span>
+                      </>
+                    ) : null}
+                  </p>
+                </Link>
+              );
+            })}
+          </div>
+        </section>
       )}
     </div>
   );

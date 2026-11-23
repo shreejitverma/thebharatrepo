@@ -64,7 +64,8 @@ export default function ReadingLevelSwitcher({ available = READING_LEVELS, class
       ? `Showing ${level === 'adult' ? 'the full text' : `the ${READING_LEVEL_LABELS[level].toLowerCase()} version (${READING_LEVEL_AUDIENCE[level].toLowerCase()})`}.`
       : `No ${READING_LEVEL_LABELS[level].toLowerCase()} version here yet; showing the ${shown === 'adult' ? 'full text' : `${READING_LEVEL_LABELS[shown].toLowerCase()} version`}.`;
   return (
-    <div className={`reading-level ${className ?? ''}`}>
+    // A control, not content: kept out of the search index, where its labels would open every excerpt.
+    <div className={`reading-level ${className ?? ''}`} data-pagefind-ignore>
       <div className="segmented" role="group" aria-label="Reading level" aria-describedby={statusId}>
         {READING_LEVELS.map((l) => (
           <button key={l} type="button" aria-pressed={level === l} onClick={() => setReadingLevel(l)} title={READING_LEVEL_AUDIENCE[l]}>

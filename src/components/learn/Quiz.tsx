@@ -1,6 +1,6 @@
 'use client';
 
-import { useId, useState } from 'react';
+import { useEffect, useId, useRef, useState } from 'react';
 import type { CitationView } from '@/lib/content/learning';
 
 export interface QuizQuestionView {
@@ -25,7 +25,13 @@ function Question({ q, n, onChecked }: { q: QuizQuestionView; n: number; onCheck
   const [checked, setChecked] = useState(false);
   const [hint, setHint] = useState(false);
   const name = useId();
+  const result = useRef<HTMLParagraphElement>(null);
   const correctIdx = q.choices.findIndex((c) => c.correct);
+
+  // "Check answer" disappears once used; focus moves to the verdict so keyboard and screen-reader users keep their place.
+  useEffect(() => {
+    if (checked) result.current?.focus();
+  }, [checked]);
 
   const check = () => {
     if (choice === null) {
@@ -60,29 +66,29 @@ function Question({ q, n, onChecked }: { q: QuizQuestionView; n: number; onCheck
         </ul>
         <div className="quiz__feedback" role="status" aria-live="polite">
           {hint && !checked ? <p>Choose an answer first.</p> : null}
-          {checked && choice !== null ? (
-            <>
-              <p>
-                <strong>{choice === correctIdx ? 'Correct.' : 'Not quite.'}</strong> {q.choices[correctIdx].explanation}
-              </p>
-              {choice !== correctIdx ? (
-                <p>
-                  <strong>About your answer:</strong> {q.choices[choice].explanation}
-                </p>
-              ) : null}
-              <p className="muted" style={{ marginBottom: 0 }}>
-                How we know:
-              </p>
-              <ul className="quiz__sources">
-                {q.sources.map((s, i) => (
-                  <li key={i}>
-                    <Citation c={s} />
-                  </li>
-                ))}
-              </ul>
-            </>
-          ) : null}
         </div>
+        {checked && choice !== null ? (
+          <div className="quiz__feedback">
+            <p className="quiz__result" ref={result} tabIndex={-1}>
+              <strong>{choice === correctIdx ? 'Correct.' : 'Not quite.'}</strong> {q.choices[correctIdx].explanation}
+            </p>
+            {choice !== correctIdx ? (
+              <p>
+                <strong>About your answer:</strong> {q.choices[choice].explanation}
+              </p>
+            ) : null}
+            <p className="muted" style={{ marginBottom: 0 }}>
+              How we know:
+            </p>
+            <ul className="quiz__sources">
+              {q.sources.map((s, i) => (
+                <li key={i}>
+                  <Citation c={s} />
+                </li>
+              ))}
+            </ul>
+          </div>
+        ) : null}
         {!checked ? (
           <button type="button" className="btn" style={{ marginTop: 10 }} onClick={check}>
             Check answer
@@ -100,9 +106,15 @@ export default function Quiz({ questions }: { questions: QuizQuestionView[] }) {
   const answered = Object.keys(results).length;
   const right = Object.values(results).filter(Boolean).length;
   const done = answered === questions.length;
+  const root = useRef<HTMLDivElement>(null);
+
+  // The restart button disappears with the answers; focus goes to the first choice of the fresh quiz.
+  useEffect(() => {
+    if (round > 0) root.current?.querySelector<HTMLInputElement>('input[type="radio"]')?.focus();
+  }, [round]);
 
   return (
-    <div className="quiz">
+    <div className="quiz" ref={root}>
       {/* A new key remounts every question, clearing its answer, when the quiz is restarted. */}
       <ol className="quiz__list" key={round}>
         {questions.map((q, i) => (

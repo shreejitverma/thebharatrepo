@@ -3,8 +3,8 @@ type: site
 kind: site
 names:
   en: Lothal
-  iast: Lothala
-  native: लोथल
+  iast: Lothal
+  native: લોથલ
 summary: >-
   A compact Mature and Late Harappan manufacturing and trading town near the Gulf of Khambhat in Gujarat
   (c. 2400-1600 BCE), famous for its carnelian bead factory, Persian Gulf seal, warehouse with 65 clay sealings,
@@ -82,12 +82,6 @@ claims:
 relations:
   - kind: part-of
     target: tradition.harappan-civilisation
-  - kind: contemporary-of
-    target: site.dholavira
-  - kind: related-to
-    target: concept.harappan-mesopotamian-trade
-  - kind: related-to
-    target: concept.harappan-carnelian-bead-making
 wikidata: Q9443
 image:
   commons: "File:Lothal Dockyard N-GJ-60.jpg"

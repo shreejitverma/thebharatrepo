@@ -62,9 +62,5 @@ claims:
       - src.staal-1983-agni-fire-altar
 relations:
   - { kind: part-of, target: tradition.shrauta-ritual }
-  - { kind: related-to, target: text.rigveda }
-  - { kind: related-to, target: text.samaveda }
-  - { kind: related-to, target: text.aitareya-brahmana }
-  - { kind: related-to, target: tradition.agnicayana }
 tags: [soma, somayaga, agnishtoma, rigveda, samaveda, shrauta, ephedra]
 review: { status: draft, author: "gemini-4-argon" }

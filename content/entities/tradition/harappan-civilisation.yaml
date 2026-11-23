@@ -5,6 +5,7 @@ names:
   en: Harappan Civilisation (Indus Valley Civilisation)
   iast: Sindhu-Sarasvatī Sabhyatā
   native: सिन्धु-सरस्वती सभ्यता
+  nativeLang: hi
 summary: >-
   The Bronze Age urban civilisation of the Indus and Ghaggar-Hakra river basins in northwestern South Asia,
   conventionally divided into the Early Harappan (Regionalisation Era, c. 3300-2600 BCE), Mature Harappan
@@ -14,30 +15,15 @@ summaries:
     Over four thousand years ago, people along the Indus and Ghaggar-Hakra rivers built planned brick cities
     with covered drains, standard weights, and carved stone seals.
   teen: >-
-    The Harappan or Indus Valley Civilisation was South Asia's first urban culture, spanning early village
-    farming phases from c. 3300 BCE, mature planned cities between 2600 and 1900 BCE, and regional post-urban
-    cultures down to c. 1300 BCE.
+    The Harappan or Indus Valley Civilisation developed some of South Asia's earliest known cities.
+    Archaeologists distinguish early farming settlements from about 3300 BCE, mature planned cities
+    from about 2600 to 1900 BCE, and later regional cultures down to about 1300 BCE.
 region: Indus and Ghaggar-Hakra basins, Gujarat, Punjab, Sindh, Balochistan, Haryana and western Uttar Pradesh
 location:
   name: Harappa
   lat: 30.6311
   lon: 72.8639
 datings:
-  - method: archaeological-radiocarbon
-    range:
-      earliest: "3300 BCE"
-      latest: "2600 BCE"
-      precision: century
-      circa: true
-    grade: A
-    label: Early Harappan Phase (Regionalisation Era)
-    sources:
-      - src.kenoyer-1998-ancient-cities-indus
-      - src.possehl-2002-indus-civilization
-      - src.wright-2010-ancient-indus
-    note: >-
-      Formative regional cultures (Ravi, Hakra, Kot Diji, Amri-Nal, Sothi-Siswal) showing fortified towns,
-      early craft specialisation, and proto-inscribed potsherds prior to full urban integration.
   - method: archaeological-radiocarbon
     range:
       earliest: "2600 BCE"
@@ -53,6 +39,21 @@ datings:
     note: >-
       Peak urban phase anchored by calibrated radiocarbon sequences across Harappa, Mohenjo-daro, Dholavira,
       Rakhigarhi, and Kalibangan, and corroborated by Akkadian and Ur III synchronisms in Mesopotamia.
+  - method: archaeological-radiocarbon
+    range:
+      earliest: "3300 BCE"
+      latest: "2600 BCE"
+      precision: century
+      circa: true
+    grade: A
+    label: Early Harappan Phase (Regionalisation Era)
+    sources:
+      - src.kenoyer-1998-ancient-cities-indus
+      - src.possehl-2002-indus-civilization
+      - src.wright-2010-ancient-indus
+    note: >-
+      Formative regional cultures (Ravi, Hakra, Kot Diji, Amri-Nal, Sothi-Siswal) showing fortified towns,
+      early craft specialisation, and proto-inscribed potsherds prior to full urban integration.
   - method: archaeological-radiocarbon
     range:
       earliest: "1900 BCE"

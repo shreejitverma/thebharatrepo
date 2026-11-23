@@ -12,6 +12,14 @@ const LANE_H = 38;
 const TOP = 30;
 const AXIS_H = 34;
 const LABEL_W_PER_CHAR = 6.6;
+/** Lane titles: 10 px uppercase semibold with 0.05em tracking, measured at about 6.5 px per character. */
+const LANE_TITLE_X = 6;
+const LANE_TITLE_W_PER_CHAR = 6.8;
+/** Minimum horizontal gap between labels in a lane, and between the lane title and the first label. */
+const LABEL_GAP = 8;
+/** Era headers: 12 px semibold, about 7 px per character, with this much clear space on each side. */
+const SEG_LABEL_W_PER_CHAR = 7;
+const SEG_LABEL_PAD = 6;
 /** Marks are clamped to this margin beyond the canvas so huge off-screen rects are never drawn. */
 const BLEED = 10;
 /** Horizontal movement in pixels before a press becomes a drag. */
@@ -99,11 +107,16 @@ export default function River({ items, kinds, lens, selectedId, win, onWindow, o
     .map((s) => ({ s, px: x(yearToUnit(s.from)) }))
     .filter((b) => b.px > 0 && b.px < width);
 
-  const segLabels = SEGMENTS.map((s) => {
+  // Every visible era keeps its band, coloured by its own index so the alternation matches the wheel; its header is
+  // the longest form that fits ("Palaeolithic (log scale)", then "Palaeolithic", then none), so headers never collide.
+  const segLabels = SEGMENTS.map((s, i) => {
     const a = Math.max(0, x(yearToUnit(s.from)));
     const b = Math.min(width, x(yearToUnit(s.to)));
-    return { s, a, b };
-  }).filter((l) => l.b - l.a > 70);
+    const name = SHORT_SEGMENT_LABELS[s.id];
+    const fits = (t: string) => t.length * SEG_LABEL_W_PER_CHAR + 2 * SEG_LABEL_PAD <= b - a;
+    const full = s.interp === 'log' ? `${name} (log scale)` : name;
+    return { s, i, a, b, label: fits(full) ? full : fits(name) ? name : null };
+  }).filter((l) => l.b > l.a);
 
   const commit = (next: UnitWindow) => {
     winRef.current = next;
@@ -219,19 +232,20 @@ export default function River({ items, kinds, lens, selectedId, win, onWindow, o
         onPointerCancel={onPointerUp}
         onLostPointerCapture={onLostPointerCapture}
       >
-        {segLabels.map(({ s, a, b }, i) => (
+        {segLabels.map(({ s, i, a, b, label }) => (
           <g key={s.id}>
-            <rect x={a} y={0} width={b - a} height={height - AXIS_H} fill={i % 2 ? 'var(--wheel-seg-b)' : 'var(--wheel-seg-a)'} opacity={0.6} />
-            <text x={(a + b) / 2} y={18} textAnchor="middle" fontSize={12} fontWeight={600} fill="var(--ink-faint)">
-              {SHORT_SEGMENT_LABELS[s.id]}
-              {s.interp === 'log' ? ' (log scale)' : ''}
-            </text>
+            <rect x={a} y={0} width={b - a} height={height - AXIS_H} fill={`var(--era-${i + 1})`} opacity={0.75} />
+            {label ? (
+              <text x={(a + b) / 2} y={18} textAnchor="middle" fontSize={12} fontWeight={600} fill="var(--ink-faint)">
+                {label}
+              </text>
+            ) : null}
           </g>
         ))}
         {kinds.map((k, i) => (
           <g key={k}>
             <line x1={0} x2={width} y1={TOP + (i + 1) * LANE_H} y2={TOP + (i + 1) * LANE_H} stroke="var(--line)" strokeWidth={0.6} />
-            <text x={6} y={TOP + i * LANE_H + 11} fontSize={10} fill="var(--ink-faint)" fontWeight={600} letterSpacing="0.05em">
+            <text x={LANE_TITLE_X} y={TOP + i * LANE_H + 11} fontSize={10} fill="var(--ink-faint)" fontWeight={600} letterSpacing="0.05em">
               {KIND_LABELS[k].toUpperCase()}
             </text>
           </g>
@@ -248,7 +262,9 @@ export default function River({ items, kinds, lens, selectedId, win, onWindow, o
           const marks = kinds.map((k, i) => {
             const list = lanes.get(k) ?? [];
             const y = TOP + i * LANE_H + LANE_H / 2 + 5;
-            let labelEnd = -Infinity;
+            // Range labels sit on the same line as the lane title, so no label may start before the title ends.
+            const titleEnd = LANE_TITLE_X + KIND_LABELS[k].length * LANE_TITLE_W_PER_CHAR;
+            let labelEnd = titleEnd;
             return (
               <g key={k}>
                 {list.map(({ item, key, x0, x1, trad }) => {
@@ -256,14 +272,16 @@ export default function River({ items, kinds, lens, selectedId, win, onWindow, o
                   const cx = (x0 + x1) / 2;
                   const left = clampX(x0);
                   const right = clampX(x1);
-                  const labelX = isPoint ? cx + 8 : Math.max(x0, 0) + 4;
                   const lw = item.name.length * LABEL_W_PER_CHAR;
+                  let labelX = isPoint ? cx + 8 : Math.max(x0, 0) + 4;
+                  // A range label slides right along its bar, past the lane title or the previous label, while the bar still holds it.
+                  if (!isPoint && labelX < labelEnd + LABEL_GAP && x1 >= labelEnd + LABEL_GAP + lw) labelX = labelEnd + LABEL_GAP;
                   const active = item.id === selectedId;
-                  if (!trad && labelX >= 4 && labelX > labelEnd + 8 && labelX + lw < width - 4) {
+                  if (!trad && labelX >= 4 && labelX >= labelEnd + LABEL_GAP && labelX + lw < width - 4) {
                     labelEnd = labelX + lw;
                     labels.push({ key, x: labelX, y: isPoint ? y + 4 : y - 8, text: item.name, active });
                   }
-                  const color = trad ? 'var(--gold)' : kindColor(item.kind);
+                  const color = trad ? 'var(--lens-tradition)' : kindColor(item.kind);
                   const hitLeft = isPoint ? cx - 10 : left;
                   const hitRight = isPoint ? cx + 10 : Math.max(right, left + 20);
                   return (

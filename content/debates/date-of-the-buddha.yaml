@@ -73,7 +73,7 @@ positions:
       view the long interval is a later chronicle construction, and the shorter one fits the other evidence
       better.
     grade: C
-    range: { earliest: "490 BCE", latest: "380 BCE", best: "400 BCE", precision: decade, circa: true }
+    range: { earliest: "490 BCE", latest: "370 BCE", best: "400 BCE", precision: decade, circa: true }
     proponents:
       - name: Heinz Bechert
         role: Indologist, organiser of the 1988 symposium on the date of the Buddha and editor of its volumes

@@ -36,6 +36,5 @@ claims:
     sources: [src.thapar-2002-early-india]
 relations:
   - { kind: authored, target: text.harshacharita }
-  - { kind: patronised-by, target: person.harshavardhana }
 tags: [sanskrit-literature, kavya, prose]
 review: { status: draft, author: "claude-opus-5-5" }

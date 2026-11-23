@@ -17,7 +17,10 @@ import {
   DATING_METHODS,
   ENTITY_TYPES,
   KINDS,
+  RELATION_KINDS,
   READING_LEVELS,
+  CATEGORIES,
+  REVIEW_STATUSES,
   isTraditional,
 } from './labels';
 
@@ -102,29 +105,6 @@ export const ClaimSchema = z.strictObject({
 });
 export type Claim = z.infer<typeof ClaimSchema>;
 
-export const RELATION_KINDS = [
-  'part-of',
-  'authored',
-  'authored-by',
-  'ruled',
-  'ruled-by',
-  'patronised',
-  'patronised-by',
-  'succeeded',
-  'preceded',
-  'commented-on',
-  'located-at',
-  'excavated-at',
-  'issued-by',
-  'founded',
-  'founded-by',
-  'taught',
-  'student-of',
-  'influenced',
-  'contemporary-of',
-  'related-to',
-] as const;
-
 export const RelationSchema = z.strictObject({
   kind: z.enum(RELATION_KINDS),
   target: z.string().regex(ENTITY_ID),
@@ -137,16 +117,48 @@ export const LocationSchema = z.strictObject({
   lon: z.number().min(-180).max(180),
 });
 
+/**
+ * Approximate territorial extent of an entity, usually a polity, for the Map view. Optional: the map
+ * draws an extent only where one has been authored, and an extent is a claim like any other, so it
+ * carries a grade and at least one source.
+ */
+export const ExtentSchema = z
+  .strictObject({
+    /** Names the extent when an entity has several, for example "Under Ashoka, c. 250 BCE". */
+    label: z.string().min(1).optional(),
+    /** When the extent applies. Omit both to use the entity's own datings. */
+    from: Year.optional(),
+    to: Year.optional(),
+    /** One closed ring of [longitude, latitude] vertices; the last vertex joins the first. */
+    polygon: z
+      .array(z.tuple([z.number().min(-180).max(180), z.number().min(-90).max(90)]))
+      .min(3, 'an extent polygon needs at least three [lon, lat] vertices')
+      .max(400, 'keep an extent polygon to 400 vertices; it is an approximation'),
+    grade: z.enum(GRADES),
+    sources: z.array(CitationRef).min(1, 'every extent needs at least one source'),
+    note: z.string().optional(),
+  })
+  .superRefine((x, ctx) => {
+    if ((x.from === undefined) !== (x.to === undefined)) ctx.addIssue({ code: 'custom', message: 'give both from and to, or neither' });
+    if (x.from !== undefined && x.to !== undefined && x.from > x.to) ctx.addIssue({ code: 'custom', message: `from (${x.from}) is after to (${x.to})` });
+  });
+export type Extent = z.infer<typeof ExtentSchema>;
+
 export const ReviewSchema = z
   .strictObject({
-    status: z.enum(['draft', 'machine-checked', 'reviewed']),
+    status: z.enum(REVIEW_STATUSES),
     reviewer: z.string().nullable().default(null),
     lastReviewed: z.string().nullable().default(null),
     author: z.string().optional(),
   })
   .superRefine((r, ctx) => {
-    if (r.status === 'reviewed' && (!r.reviewer || !r.lastReviewed)) {
-      ctx.addIssue({ code: 'custom', message: 'status reviewed requires reviewer and lastReviewed' });
+    if (r.status === 'reviewed' || r.status === 'published') {
+      if (!r.reviewer?.trim()) {
+        ctx.addIssue({ code: 'custom', path: ['reviewer'], message: `status ${r.status} requires the human reviewer's name` });
+      }
+      if (!z.iso.date().safeParse(r.lastReviewed).success) {
+        ctx.addIssue({ code: 'custom', path: ['lastReviewed'], message: `status ${r.status} requires a review date in YYYY-MM-DD format` });
+      }
     }
   });
 
@@ -156,6 +168,9 @@ export const ImageSchema = z.strictObject({
   credit: z.string().min(2),
   license: z.string().min(2),
 });
+
+/** Wording that marks a dating as the date of a text, or of a text's statement or attestation, rather than of the entity. */
+const TEXT_DATE = /\b(?:date of the texts?|dates? the texts?|earliest (?:known )?(?:statement|mention|attestation|reference)|first (?:attested|stated|mentioned) in)\b/i;
 
 export const EntitySchema = z
   .strictObject({
@@ -178,9 +193,15 @@ export const EntitySchema = z
       .optional(),
     region: z.string().optional(),
     location: LocationSchema.optional(),
+    extents: z.array(ExtentSchema).optional(),
     datings: z.array(DatingSchema).min(1, 'every entity needs at least one dating'),
     claims: z.array(ClaimSchema).default([]),
     relations: z.array(RelationSchema).default([]),
+    /**
+     * Former ids of entities merged into this one. Each alias keeps its old URLs working: the build turns it
+     * into permanent redirects from /archive/<type>/<slug> and /kaalchakra?id=<id> to this entity.
+     */
+    aliases: z.array(z.string().regex(ENTITY_ID, 'an alias is a former entity id, such as concept.old-slug')).default([]),
     wikidata: z.string().regex(/^Q\d+$/).nullable().optional(),
     image: ImageSchema.optional(),
     debate: z.string().optional(),
@@ -191,6 +212,20 @@ export const EntitySchema = z
     if (!e.id.startsWith(`${e.type}.`)) ctx.addIssue({ code: 'custom', message: `id ${e.id} must start with "${e.type}."` });
     if (e.type === 'cosmology' && e.datings.some((d) => !isTraditional(d.method))) {
       ctx.addIssue({ code: 'custom', message: 'cosmology entities may only carry traditional datings' });
+    }
+    // A dating places the entity itself. For a figure or event known only from tradition, the date of the texts
+    // that tell of it is evidence about those texts: it belongs on the text entity or in a claim, or the marker
+    // reads as a scholarly date for the figure.
+    e.datings.forEach((d, i) => {
+      if (e.type !== 'text' && !isTraditional(d.method) && TEXT_DATE.test(`${d.label ?? ''} ${d.note ?? ''}`)) {
+        ctx.addIssue({ code: 'custom', path: ['datings', i], message: `this ${d.method} dating dates a text, not ${e.id}; record the attestation as a claim or on the text entity` });
+      }
+    });
+    if (e.aliases.includes(e.id)) ctx.addIssue({ code: 'custom', path: ['aliases'], message: `alias ${e.id} is the entity's own id` });
+    const seen = new Set<string>();
+    for (const a of e.aliases) {
+      if (seen.has(a)) ctx.addIssue({ code: 'custom', path: ['aliases'], message: `alias ${a} is listed twice` });
+      seen.add(a);
     }
   });
 export type Entity = z.infer<typeof EntitySchema>;
@@ -253,8 +288,6 @@ export const SourceSchema = z
     }
   });
 export type Source = z.infer<typeof SourceSchema>;
-
-export const CATEGORIES = ['history', 'philosophy', 'science', 'literature', 'art-and-culture', 'music', 'language'] as const;
 
 export const ArticleFrontmatterSchema = z.strictObject({
   title: z.string().min(3),
@@ -430,6 +463,11 @@ export const LearningPathSchema = z
     for (const r of refs.filter((x, i) => refs.indexOf(x) !== i)) ctx.addIssue({ code: 'custom', path: ['steps'], message: `step ${r} appears twice` });
     const ids = p.quiz.map((q) => q.id);
     for (const id of ids.filter((x, i) => ids.indexOf(x) !== i)) ctx.addIssue({ code: 'custom', path: ['quiz'], message: `duplicate question id ${id}` });
+    // Choices are shown in the order written, so a quiz whose answer always sits in one slot gives itself away.
+    const slots = new Set(p.quiz.map((q) => q.choices.findIndex((c) => c.correct)));
+    if (p.quiz.length >= 3 && slots.size === 1) {
+      ctx.addIssue({ code: 'custom', path: ['quiz'], message: `every correct answer is choice ${[...slots][0] + 1}; vary where the correct answer sits` });
+    }
   });
 export type LearningPath = z.infer<typeof LearningPathSchema>;
 

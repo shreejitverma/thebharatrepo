@@ -3,7 +3,9 @@ type: artifact
 kind: science
 names:
   en: Gwalior Chaturbhuj temple zero inscription
-  native: चतुर्भुज मंदिर, ग्वालियर
+  iast: "Caturbhuj Mandir, Gvāliyar"
+  native: "चतुर्भुज मंदिर, ग्वालियर"
+  nativeLang: hi
 summary: >-
   Two inscriptions of the small rock-cut Vaillabhattasvamin (Chaturbhuj) temple in Gwalior fort,
   dated Vikrama Samvat 932 and 933 (875 to 877 CE) in the reign of the Pratihara king Bhoja, write the

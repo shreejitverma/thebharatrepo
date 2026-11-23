@@ -36,25 +36,11 @@ datings:
       - src.goldman-1984-ramayana-balakanda
       - src.wilson-1840-vishnu-purana
       - src.gonzalezreimann-2002-mahabharata-yugas
+      - src.plofker-2009-mathematics-in-india
     note: >-
       The epic and Puranic tradition places Rama in a Treta Yuga; this range is the Treta of the present
       (28th) mahayuga in the standard 4:3:2:1 scheme. Other reckonings place him at the Treta-Dvapara
       junction or in the Treta of an earlier mahayuga.
-  - method: linguistic
-    range:
-      earliest: "750 BCE"
-      latest: "300 CE"
-      precision: century
-      circa: true
-    grade: B
-    label: Composition of the Valmiki Ramayana (date of the text; Goldman, Brockington)
-    sources:
-      - src.goldman-1984-ramayana-balakanda
-      - src.brockington-1998-sanskrit-epics
-    note: >-
-      Goldman places the core of the poem (Books 2 to 6) as early as about 750-500 BCE and Brockington
-      somewhat later; both regard the Balakanda and Uttarakanda as additions of roughly the last centuries
-      BCE to the early centuries CE.
 claims:
   - text: >-
       Philological study of the critical edition shows that Books 2 to 6 (Ayodhyakanda to Yuddhakanda) form
@@ -71,6 +57,14 @@ claims:
       - src.goldman-1984-ramayana-balakanda
       - src.wilson-1840-vishnu-purana
       - src.thapar-2002-early-india
+  - text: >-
+      Goldman places the core of the Valmiki Ramayana (Books 2 to 6) as early as about 750 to 500 BCE and
+      Brockington somewhat later, and both regard Books 1 and 7 as additions of roughly the last centuries
+      BCE to the early centuries CE; these are dates for the poem, not for Rama.
+    grade: C
+    sources:
+      - src.goldman-1984-ramayana-balakanda
+      - src.brockington-1998-sanskrit-epics
 debate: >-
   Traditional chronology places Rama's life in the Treta Yuga, hundreds of thousands of years or more
   before the present, and some modern authors propose dates in the last few millennia BCE from the
@@ -78,11 +72,7 @@ debate: >-
   directly attests Rama as a historical individual, and confines itself to dating the stages of the text.
 relations:
   - kind: related-to
-    target: cosmology.treta-yuga
-  - kind: related-to
     target: person.vaivasvata-manu
-  - kind: related-to
-    target: concept.yuga-chronology-of-the-itihasa
 wikidata: Q160213
 image:
   commons: "File:Rama and Sita, with Lakshmana returning to Ayodhya.jpg"

@@ -52,6 +52,18 @@ test('the draft debate page shows steelmanned positions with proponents, graded 
   await noSeriousA11yViolations(page);
 });
 
+test('the draft debate states its review status in the same words as an entity page', async ({ page }) => {
+  // The debate and the Buddha's entry are both drafts, so the entity page's wording is the expected wording.
+  const clause = async (path: string) => {
+    await page.goto(path, { waitUntil: 'domcontentloaded' });
+    const text = (await page.locator('.review-note').first().textContent()) ?? '';
+    return /Review status: ([^.]*)\./.exec(text)?.[1];
+  };
+  const entity = await clause('/archive/person/gautama-buddha');
+  expect(entity).toMatch(/^draft, .*awaiting editor review$/);
+  expect(await clause(DEBATE)).toBe(entity);
+});
+
 test('related entity pages link the draft in the preview build', async ({ page }) => {
   await page.goto('/archive/person/gautama-buddha');
   await expect(page.getByRole('heading', { name: 'Debates' })).toBeVisible();

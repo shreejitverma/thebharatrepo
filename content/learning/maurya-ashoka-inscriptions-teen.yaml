@@ -1,0 +1,146 @@
+id: learn.maurya-ashoka-inscriptions-teen
+title: The Maurya Empire in Ashoka's own words
+level: teen
+audience: Ages 13 to 17, in class or at home
+summary: >-
+  The Maurya Empire joined much of the subcontinent under one government, and its third ruler, Ashoka,
+  left messages carved on rocks and pillars across it. This path follows the empire from the Nandas to
+  Ashoka, and asks what his inscriptions, a lost Greek book and the spread of the Brahmi script tell us
+  about how the empire worked. It builds on the path on how we date Ashoka.
+focus: { earliest: "370 BCE", latest: "185 BCE", precision: decade, circa: true }
+goals:
+  - Describe how the Mauryas came to power after the Nandas and Alexander's campaign.
+  - Use the places where Ashoka's inscriptions were found to describe the empire's reach.
+  - Summarise what Ashoka's edicts ask of his subjects.
+  - Explain why a lost Greek book must be read with care.
+steps:
+  - entity: polity.nanda-dynasty
+    title: Before the Mauryas
+    note: >-
+      The Nandas ruled the Gangetic plain from Pataliputra. Notice that Greek writers say reports of their
+      huge army helped stop Alexander's soldiers at the Beas.
+  - entity: person.chandragupta-maurya
+    title: The founder
+    note: >-
+      Chandragupta overthrew the Nandas and made a treaty with the Greek king Seleucus I. Look at how Greek
+      writers knew him as Sandrokottos, and at the later Jain story about the end of his life.
+  - entity: text.megasthenes-indica
+    title: A Greek visitor at court
+    note: >-
+      Megasthenes described Pataliputra and Indian society, but his book is lost. Notice that we read him
+      only through later writers who quoted him, sometimes repeating his tall tales.
+  - entity: person.ashoka
+    title: The emperor who wrote on stone
+    note: >-
+      Ashoka is the earliest Indian ruler whose own inscriptions survive. Look at what his dhamma asked
+      people to do, and how he speaks about respect among different religious groups.
+  - entity: artifact.ashoka-major-rock-edict-xiii
+    title: Remorse after Kalinga
+    note: >-
+      In this edict Ashoka describes the suffering of the Kalinga war and his regret. Notice that the same
+      edict names five Greek kings, which is why it matters for dating too.
+  - entity: polity.maurya-empire
+    title: Mapping an empire with inscriptions
+    note: >-
+      Ashoka's inscriptions are found from Kandahar in Afghanistan to Karnataka and Odisha. Think about why
+      the places where his messages were carved are good evidence for how far his rule reached.
+  - entity: concept.brahmi-to-gupta-script
+    title: A script with many descendants
+    note: >-
+      The Brahmi letters of Ashoka's edicts changed slowly over centuries into the Gupta script. Notice how
+      dated inscriptions let historians follow that change step by step, down to Devanagari and other
+      scripts.
+  - article: history/maurya-empire
+    title: Going further, the whole empire
+    note: >-
+      Read the full article to see how Ashoka's inscriptions, Greek fragments and later Indian texts fit
+      together, and where they disagree.
+quiz:
+  - id: reach
+    question: How do historians work out how far Ashoka's rule reached?
+    choices:
+      - text: From the places where his inscriptions have been found, from Afghanistan to Karnataka and Odisha
+        correct: true
+        explanation: >-
+          Edicts at Kandahar and Laghman in the northwest, Maski and Brahmagiri in the south, and Dhauli and
+          Jaugada in the east mark the reach of Mauryan authority.
+      - text: From a map of the empire drawn by Megasthenes
+        explanation: >-
+          No map by Megasthenes survives; his book is lost and known only from quotations.
+      - text: From a list of provinces carved on the Lumbini pillar
+        explanation: >-
+          The Lumbini pillar records Ashoka's visit to the Buddha's birthplace, not a list of provinces.
+    sources:
+      - src.lahiri-2015-ashoka-ancient-india
+      - src.hultzsch-1925-inscriptions-of-asoka
+  - id: dhamma
+    question: What do Ashoka's edicts ask his subjects to do?
+    choices:
+      - text: Give up their own religions and follow a single state religion
+        explanation: >-
+          Ashoka supported Buddhism, but his edicts ask for respect among all sects rather than imposing one
+          religion.
+      - text: Pay a new tax to build his palace
+        explanation: >-
+          The edicts are about moral conduct, and at Lumbini Ashoka records lowering the village's tax, not
+          raising one.
+      - text: Avoid harming living beings, obey their parents, be generous to brahmanas and shramanas, and speak with restraint about other sects
+        correct: true
+        explanation: >-
+          These are recurring themes of his dhamma, and Rock Edict XII in particular urges restraint and
+          respect among followers of different sects.
+    sources:
+      - { id: src.hultzsch-1925-inscriptions-of-asoka, locator: "Rock Edict XII" }
+      - src.lahiri-2015-ashoka-ancient-india
+  - id: kalinga
+    question: What does Rock Edict XIII say about the Kalinga war?
+    choices:
+      - text: That the war was won without any fighting
+        explanation: >-
+          The edict describes great suffering and loss of life.
+      - text: That very many people were killed and deported, and that Ashoka felt deep remorse
+        correct: true
+        explanation: >-
+          The edict gives figures of 150,000 deported and 100,000 killed, says many more died, and records the
+          king's regret.
+      - text: That Kalinga defeated the Maurya army
+        explanation: >-
+          The edict records Ashoka's conquest of Kalinga in his eighth regnal year.
+    sources:
+      - { id: src.hultzsch-1925-inscriptions-of-asoka, locator: "Rock Edict XIII" }
+      - src.lahiri-2015-ashoka-ancient-india
+  - id: megasthenes
+    question: Why must historians read Megasthenes' description of India with care?
+    choices:
+      - text: His book is lost, so we know it only through later writers who quoted or paraphrased it, and he also repeated tall tales.
+        correct: true
+        explanation: >-
+          Each fragment has passed through another author's hands, so historians compare it with other
+          evidence before relying on it.
+      - text: He never visited India.
+        explanation: >-
+          Megasthenes went to Chandragupta's court as the envoy of Seleucus I.
+      - text: He wrote in a script nobody can read.
+        explanation: >-
+          He wrote in Greek, which is well understood; the problem is that the book itself is lost.
+    sources:
+      - src.stoneman-2019-greek-experience-of-india
+  - id: brahmi
+    question: Why is Ashoka's Brahmi important for the history of writing in India?
+    choices:
+      - text: It is the same script as the Indus script.
+        explanation: >-
+          The Indus script is undeciphered and much older; no link between the two has been shown.
+      - text: Dated inscriptions let historians trace how it changed into the Gupta script, an ancestor of Devanagari and many other scripts.
+        correct: true
+        explanation: >-
+          Inscriptions from the Mauryas to the Guptas form a continuous dated sequence, so each change in the
+          letters can be followed over time.
+      - text: It was used only for Ashoka's edicts and then forgotten at once.
+        explanation: >-
+          Brahmi stayed in use for centuries and evolved into later scripts, even though the early form was
+          later forgotten until 1837.
+    sources:
+      - src.salomon-1998-indian-epigraphy
+tags: [maurya, ashoka, epigraphy]
+review: { status: draft, author: "claude-opus-5-5" }

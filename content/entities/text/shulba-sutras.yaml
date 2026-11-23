@@ -59,7 +59,6 @@ claims:
       - src.plofker-2009-mathematics-in-india
 relations:
   - { kind: part-of, target: text.vedangas }
-  - { kind: related-to, target: text.baudhayana-shulba-sutra }
   - { kind: related-to, target: tradition.agnicayana }
   - { kind: related-to, target: tradition.shrauta-ritual }
   - { kind: related-to, target: text.yajurveda }

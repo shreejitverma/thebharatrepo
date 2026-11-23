@@ -6,10 +6,10 @@ updated: "2026-11-21"
 tags: [music, instruments, veena, tabla, natyashastra]
 datings:
   - method: textual-internal
-    range: { earliest: "200 BCE", latest: "200 CE", precision: century, circa: true }
+    range: { earliest: "200 BCE", latest: "300 CE", precision: century, circa: true }
     grade: C
     label: "Date of the Natyashastra's four-fold classification"
-    sources: [src.rowell-1992-music-musical-thought-early-india]
+    sources: [src.rowell-1992-music-musical-thought-early-india, src.pollock-2016-rasa-reader]
     note: "The Natyashastra is a composite text whose date is debated; the range is deliberately wide."
   - method: numismatic
     range: { earliest: "335 CE", latest: "380 CE", precision: decade, circa: true }

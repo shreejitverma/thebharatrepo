@@ -48,20 +48,31 @@ function trimNumber(n: number, maxFractionDigits: number): string {
   return n.toLocaleString('en-US', { maximumFractionDigits: maxFractionDigits });
 }
 
+/** True when `ago` shown in `unit` with `digits` decimals would not round to zero. */
+function shows(ago: number, unit: number, digits: number): boolean {
+  return Math.round((ago / unit) * 10 ** digits) > 0;
+}
+
 /**
  * Format an astronomical year for display.
- * Deep time (older than 10,000 BCE, or precision ka/Ma/cosmological) is shown as
- * "years ago" because BCE numbering is meaningless at that scale.
+ * Deep time (older than 10,000 BCE, or precision ka/Ma) is shown as "years ago" because BCE
+ * numbering is meaningless at that scale. Precision cosmological uses million or billion years ago
+ * only for values at least 1 million years ago; more recent values (such as the Kali Yuga epoch)
+ * fall through to ka or BCE/CE.
+ * A deep-time precision never prints a value that rounds to zero: a recent endpoint of a deep range
+ * falls through to the next unit, down to BCE/CE, and the present itself reads "the present".
  */
-export function formatYear(astro: number, precision: Precision = 'year', circa = false): string {
+export function formatYear(astro: number, precision: Precision = 'year', circa = false, extraDigits = 0): string {
   const ago = yearsAgo(astro);
   const c = circa ? 'c. ' : '';
-  if (precision === 'cosmological' || ago >= 100 * MA) {
-    if (ago >= GA) return `${c}${trimNumber(ago / GA, 3)} billion years ago`;
-    return `${c}${trimNumber(ago / MA, 1)} million years ago`;
+  const deepPrecision = precision === 'cosmological' || precision === 'Ma' || precision === 'ka';
+  if (deepPrecision && ago <= 0) return 'the present';
+  if ((precision === 'cosmological' && ago >= MA) || ago >= 100 * MA) {
+    if (ago >= GA) return `${c}${trimNumber(ago / GA, 3 + extraDigits)} billion years ago`;
+    return `${c}${trimNumber(ago / MA, 1 + extraDigits)} million years ago`;
   }
-  if (precision === 'Ma' || ago >= MA) return `${c}${trimNumber(ago / MA, 2)} Ma`;
-  if (precision === 'ka' || ago >= 10 * KA + PRESENT_YEAR) return `${c}${trimNumber(ago / KA, 1)} ka`;
+  if ((precision === 'Ma' || ago >= MA) && shows(ago, MA, 2 + extraDigits)) return `${c}${trimNumber(ago / MA, 2 + extraDigits)} Ma`;
+  if ((precision === 'ka' || ago >= 10 * KA + PRESENT_YEAR) && shows(ago, KA, 1 + extraDigits)) return `${c}${trimNumber(ago / KA, 1 + extraDigits)} ka`;
 
   const { year, era } = fromAstronomical(Math.round(astro));
   switch (precision) {
@@ -109,10 +120,16 @@ export function formatRange(r: YearRange): string {
   if (r.earliest === r.latest) return formatYear(r.earliest, r.precision, r.circa);
   const a = fromAstronomical(Math.round(r.earliest));
   const b = fromAstronomical(Math.round(r.latest));
-  const deep = yearsAgo(r.earliest) >= 10 * KA + PRESENT_YEAR || ['ka', 'Ma', 'cosmological'].includes(r.precision);
+  const deep = yearsAgo(r.earliest) >= 10 * KA + PRESENT_YEAR || r.precision === 'ka' || r.precision === 'Ma';
   const c = r.circa ? 'c. ' : '';
   if (deep) {
-    return `${c}${formatYear(r.earliest, r.precision)} to ${formatYear(r.latest, r.precision)}`;
+    let from = formatYear(r.earliest, r.precision);
+    let to = formatYear(r.latest, r.precision);
+    for (let extra = 1; from === to && extra <= 9; extra++) {
+      from = formatYear(r.earliest, r.precision, false, extra);
+      to = formatYear(r.latest, r.precision, false, extra);
+    }
+    return `${c}${from} to ${to}`;
   }
   // Ordinal centuries read well only for a single century or millennium; wider ranges use round years.
   if ((r.precision === 'century' || r.precision === 'millennium') && formatYear(r.earliest, r.precision) === formatYear(r.latest, r.precision)) {

@@ -143,8 +143,6 @@ relations:
   - kind: related-to
     target: person.rama
   - kind: related-to
-    target: concept.kali-era-in-inscriptions
-  - kind: related-to
     target: polity.kuru-kingdom
 wikidata: null
 tags:

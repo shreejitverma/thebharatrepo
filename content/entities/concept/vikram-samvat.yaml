@@ -73,8 +73,6 @@ debate: >-
   legend, which may also echo the Gupta king Chandragupta II Vikramaditya.
 relations:
   - kind: related-to
-    target: concept.shaka-era
-  - kind: related-to
     target: concept.kali-era-in-inscriptions
 wikidata: null
 tags:

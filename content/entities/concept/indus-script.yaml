@@ -21,6 +21,18 @@ region: Pan-Harappan (with examples discovered in Mesopotamia and the Persian Gu
 datings:
   - method: archaeological-radiocarbon
     range:
+      earliest: "2600 BCE"
+      latest: "1900 BCE"
+      precision: century
+      circa: true
+    grade: B
+    label: Mature Harappan Inscriptions
+    sources:
+      - src.kenoyer-1998-ancient-cities-indus
+      - src.wright-2010-ancient-indus
+    note: The range refers to the Mature Harappan archaeological contexts in which inscribed objects are found.
+  - method: archaeological-radiocarbon
+    range:
       earliest: "3300 BCE"
       latest: "2600 BCE"
       precision: century
@@ -33,21 +45,19 @@ datings:
     note: >-
       Pre-firing and post-firing potters' marks and single or paired graphic signs on pottery from Harappa Periods 1
       and 2 (c. 3300-2600 BCE) that prefigure Mature Harappan sign forms.
-  - method: archaeological-radiocarbon
+  - method: linguistic
     range:
       earliest: "2600 BCE"
       latest: "1900 BCE"
       precision: century
       circa: true
-    grade: A
+    grade: C
     label: Mature Harappan Logo-Syllabic / Proto-Dravidian Hypothesis (Asko Parpola, Iravatham Mahadevan)
     sources:
       - src.parpola-1994-deciphering-indus-script
-      - src.rao-2009-entropic-evidence-indus-script
     note: >-
-      Mainstream linguistic decipherment school interpreting the Mature Harappan sign system (c. 2600-1900 BCE,
-      roughly 400-450 core signs) as a logo-syllabic writing system using the rebus principle, most plausibly
-      encoding an early Dravidian language; supported by conditional entropy analyses (Rao et al. 2009).
+      Parpola and Mahadevan proposed that the Mature Harappan signs formed a logo-syllabic script and used
+      rebus readings to argue for an early Dravidian language. The proposed readings remain unconfirmed.
   - method: linguistic
     range:
       earliest: "2600 BCE"
@@ -82,16 +92,15 @@ claims:
       Indus inscriptions are predominantly written from right to left (demonstrated by sign crowding and overlapping
       strokes at the left edge of seals and potsherds), with occasional boustrophedon (alternating direction)
       multi-line texts.
-    grade: A
+    grade: B
     sources:
       - src.parpola-1994-deciphering-indus-script
       - src.kenoyer-1998-ancient-cities-indus
       - src.possehl-2002-indus-civilization
   - text: >-
       The surviving corpus comprises around 4,000 to 5,000 short texts with an average length of roughly five signs
-      and a core sign inventory estimated by concordances (Mahadevan 1977; Parpola 1994; Wells) at 400 to 450 signs,
-      a count typical of logo-syllabic systems rather than pure alphabets.
-    grade: A
+      and a core inventory often estimated at 400 to 450 signs. Counts vary with the treatment of sign variants.
+    grade: B
     sources:
       - src.parpola-1994-deciphering-indus-script
       - src.possehl-2002-indus-civilization
@@ -108,9 +117,9 @@ claims:
       - src.sproat-2014-statistical-comparison-symbol-systems
   - text: >-
       Despite over a hundred published decipherment claims since the 1920s, scholarly consensus holds that the
-      Indus script remains undeciphered due to the absence of verified bilingual inscriptions and the extreme
-      brevity of surviving texts.
-    grade: A
+      Indus script remains undeciphered. The brevity of most inscriptions and the absence of a verified bilingual
+      text make proposed readings difficult to test.
+    grade: B
     sources:
       - src.possehl-2002-indus-civilization
       - src.kenoyer-1998-ancient-cities-indus
@@ -118,12 +127,6 @@ claims:
 relations:
   - kind: part-of
     target: tradition.harappan-civilisation
-  - kind: related-to
-    target: artifact.harappan-steatite-seals
-  - kind: related-to
-    target: artifact.dholavira-signboard
-  - kind: related-to
-    target: artifact.pashupati-seal
 wikidata: Q601388
 debate: >-
   The Indus script is contested along two axes: (1) whether it encodes spoken language (the majority position,

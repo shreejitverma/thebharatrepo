@@ -7,9 +7,9 @@ import SourceCitation from '@/components/SourceCitation';
 import { PrintButton } from '@/components/learn/Progress';
 import { SITE_URL, getGraph } from '@/lib/content/site';
 import { learnHref, resolveSteps, summaryAtLevel } from '@/lib/content/learning';
+import { datingSummary, primaryDating, summarizeDatings } from '@/lib/content/lens';
 import { toKcItem } from '@/lib/content/kaalchakra';
-import { READING_LEVEL_AUDIENCE, READING_LEVEL_LABELS, citationId, isTraditional, type CitationRef } from '@/lib/content/schema';
-import { formatRange } from '@/lib/time';
+import { READING_LEVEL_AUDIENCE, READING_LEVEL_LABELS, citationId, reviewStatusText, type CitationRef } from '@/lib/content/schema';
 
 export const dynamicParams = false;
 
@@ -36,12 +36,10 @@ export default async function PrintPackPage({ params }: { params: Promise<{ slug
   const g = getGraph();
   const steps = resolveSteps(g, p);
 
-  // Every source the pack cites, in first-use order, for the reference list.
-  const cited = new Map<string, string | undefined>();
-  const note = (ref: CitationRef) => {
-    const id = citationId(ref);
-    if (!cited.has(id)) cited.set(id, typeof ref === 'string' ? undefined : ref.locator);
-  };
+  // Every source the pack cites, in first-use order, for the reference list. Locators belong to each
+  // citation, so the list itself carries none.
+  const cited = new Set<string>();
+  const note = (ref: CitationRef) => cited.add(citationId(ref));
   for (const s of steps) if (s.kind === 'entity' && s.entity.claims[0]) note(s.entity.claims[0].sources[0]);
   for (const q of p.quiz) q.sources.forEach(note);
   const cite = (ref: CitationRef) => {
@@ -83,7 +81,7 @@ export default async function PrintPackPage({ params }: { params: Promise<{ slug
               <h3>
                 {i + 1}. {s.title}
               </h3>
-              <p className="muted">Article: {s.article.title}. {formatRange(s.article.datings[0].range)}</p>
+              <p className="muted">Article: {s.article.title}. {summarizeDatings(s.article.datings)}</p>
               <p>
                 <strong>{s.step.note}</strong>
               </p>
@@ -97,7 +95,7 @@ export default async function PrintPackPage({ params }: { params: Promise<{ slug
         }
         const e = s.entity;
         const item = toKcItem(e);
-        const d = [...e.datings].sort((a, b) => Number(isTraditional(a.method)) - Number(isTraditional(b.method)))[0];
+        const d = primaryDating(e.datings);
         const claim = e.claims[0];
         return (
           <section key={i} className="print-card">
@@ -107,7 +105,7 @@ export default async function PrintPackPage({ params }: { params: Promise<{ slug
             {s.title !== e.names.en ? <p className="muted">{e.names.en}</p> : null}
             <EntityNames native={item.native} iast={item.iast} nativeLang={item.nativeLang} iastLang={item.iastLang} />
             <p>
-              {formatRange(d.range)} <GradeBadge grade={d.grade} />
+              {datingSummary(d.range, d.method)} <GradeBadge grade={d.grade} />
             </p>
             <p>
               <strong>{s.step.note}</strong>
@@ -172,16 +170,16 @@ export default async function PrintPackPage({ params }: { params: Promise<{ slug
       <section aria-labelledby="pack-sources">
         <h2 id="pack-sources">Sources</h2>
         <ol className="references">
-          {[...cited.entries()].map(([id, locator]) => {
+          {[...cited].map((id) => {
             const src = g.sources.get(id);
-            return <li key={id}>{src ? <SourceCitation source={src} locator={locator} /> : id}</li>;
+            return <li key={id}>{src ? <SourceCitation source={src} /> : id}</li>;
           })}
         </ol>
       </section>
 
       <p className="review-note" style={{ marginTop: 24 }}>
         {READING_LEVEL_AUDIENCE[p.level]}. From {SITE_URL}
-        {learnHref(p)}. Content licensed CC BY-SA 4.0. Review status: {p.review.status === 'reviewed' ? `reviewed by ${p.review.reviewer} on ${p.review.lastReviewed}` : 'draft, awaiting editor review'}.
+        {learnHref(p)}. Content licensed CC BY-SA 4.0. Review status: {reviewStatusText(p.review)}.
       </p>
     </div>
   );

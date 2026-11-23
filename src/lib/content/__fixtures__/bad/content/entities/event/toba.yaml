@@ -1,0 +1,15 @@
+id: event.toba
+type: event
+kind: event
+names: { en: Toba }
+summary: A fixture eruption the cited source dates to 74 ka, written as a calendar year by mistake.
+datings:
+  - method: luminescence
+    range: { earliest: "74000 BCE", latest: "74000 BCE", precision: ka, circa: true }
+    grade: A
+    sources: [src.roe-1990-a-work]
+relations:
+  - { kind: related-to, target: event.misdated }
+  - { kind: related-to, target: event.toba }
+aliases: [event.former-toba]
+review: { status: draft }

@@ -28,7 +28,7 @@ The other is expressive dance, in which the dancer acts out the words of a song 
 These ideas, along with the theory of *rasa* (the emotional flavour a performance aims to awaken in the audience), come from Sanskrit writing on theatre, above all the *Natyashastra* [@src.ghosh-1951-natyasastra; @src.pollock-2016-rasa-reader].
 
 The *Natyashastra* is a treatise attributed to Bharata.
-Scholars cannot date it precisely and usually place it somewhere between about 200 BCE and 200 CE, with some suggesting earlier or later [@src.ghosh-1951-natyasastra].
+Scholars cannot date it precisely and usually place it somewhere between about 200 BCE and 300 CE, with some suggesting earlier or later [@src.ghosh-1951-natyasastra; @src.pollock-2016-rasa-reader].
 It is a manual for theatre as a whole, not a handbook for one regional dance, so the claim that Bharatanatyam simply descends from it is a simplification.
 Modern dancers and teachers draw on it selectively, and the link has often been stressed because it gives the dance an ancient and respectable pedigree [@src.allen-1997-rewriting-script-south-indian-dance].
 

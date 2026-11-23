@@ -3,6 +3,7 @@ type: site
 kind: site
 names:
   en: Hampi
+  iast: Hampi
   native: ಹಂಪಿ
 summary: >-
   Hampi contains the archaeological remains of Vijayanagara, a major South Indian capital from the
@@ -31,7 +32,6 @@ claims:
     grade: A
     sources: [src.unesco-1986-hampi]
 relations:
-  - { kind: related-to, target: event.founding-of-vijayanagara }
   - { kind: related-to, target: event.battle-of-talikota, note: The defeat of Vijayanagara was followed by the sack of its capital }
 tags: [hampi, vijayanagara, archaeology, unesco]
 review: { status: draft, author: "codex-gpt-6" }

@@ -3,6 +3,8 @@ type: site
 kind: prehistory
 names:
   en: Langhnaj Mesolithic Site
+  iast: Lāṅghaṇaj
+  native: લાંઘણજ
 summary: >-
   A major Mesolithic sand-dune habitation and burial site in Mehsana district, North Gujarat, excavated by
   H. D. Sankalia from the 1940s onward, yielding geometric microliths, wild mammal fauna, flexed human burials
@@ -50,9 +52,7 @@ claims:
     sources:
       - src.misra-2001-prehistoric-colonization-india
       - src.coningham-2015-archaeology-south-asia
-relations:
-  - kind: contemporary-of
-    target: site.bagor
+relations: []
 tags:
   - mesolithic
   - microlithic

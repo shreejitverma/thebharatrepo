@@ -55,11 +55,7 @@ relations:
   - kind: part-of
     target: cosmology.shveta-varaha-kalpa
   - kind: related-to
-    target: cosmology.manvantara
-  - kind: related-to
     target: person.vaivasvata-manu
-  - kind: related-to
-    target: cosmology.mahayuga
 wikidata: null
 tags:
   - cosmology

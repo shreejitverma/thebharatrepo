@@ -21,17 +21,6 @@ summaries:
     positions across the 27 nakshatras and the variation of daylight between solstices.
 region: Northern Indian subcontinent
 datings:
-  - method: astronomical-reference
-    range: { earliest: "1400 BCE", latest: "1200 BCE", best: "1300 BCE", precision: century, circa: true }
-    grade: C
-    label: Solstice nakshatra observation epoch (Pingree, Plofker)
-    sources:
-      - src.pingree-1981-jyotihsastra
-      - src.plofker-2009-mathematics-in-india
-    note: >-
-      The text places the winter solstice at the beginning of the nakshatra Dhanishtha
-      (Shravishtha) and the summer solstice at the middle of Ashlesha, an astronomical configuration
-      corresponding via precession of the equinoxes to roughly the 14th to 12th century BCE.
   - method: linguistic
     range: { earliest: "500 BCE", latest: "300 BCE", best: "400 BCE", precision: century, circa: true }
     grade: B
@@ -43,6 +32,17 @@ datings:
       David Pingree and Kim Plofker date the compilation of the surviving Rigvedic and Yajurvedic
       metrical recensions attributed to Lagadha to roughly the 5th or 4th century BCE, preserving
       the earlier solstice tradition.
+  - method: astronomical-reference
+    range: { earliest: "1400 BCE", latest: "1200 BCE", best: "1300 BCE", precision: century, circa: true }
+    grade: C
+    label: Solstice nakshatra observation epoch (Pingree, Plofker)
+    sources:
+      - src.pingree-1981-jyotihsastra
+      - src.plofker-2009-mathematics-in-india
+    note: >-
+      The text places the winter solstice at the beginning of the nakshatra Dhanishtha
+      (Shravishtha) and the summer solstice at the middle of Ashlesha, an astronomical configuration
+      corresponding via precession of the equinoxes to roughly the 14th to 12th century BCE.
 claims:
   - text: >-
       The Vedanga Jyotisha defines a five-year luni-solar cycle (yuga) containing 1,830 civil days

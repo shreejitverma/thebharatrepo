@@ -44,7 +44,6 @@ claims:
 debate: >-
   The 2019 report of the Tamil Nadu Department of Archaeology argues from its AMS dates that Tamil-Brahmi writing and a second urbanisation in the Vaigai valley go back to the 6th century BCE, earlier than the 3rd century BCE start usually given for the early historic period in Tamil Nadu. The radiocarbon dates themselves are not in dispute; what remains debated is how closely the inscribed sherds are tied to the dated charcoal layers, which a full stratigraphic publication would settle.
 relations:
-  - { kind: related-to, target: artifact.tamil-brahmi-inscriptions }
   - { kind: related-to, target: text.sangam-literature }
 tags: [keezhadi, keeladi, vaigai, sangam, tamil-brahmi, archaeology]
 review: { status: draft, author: "gemini-4-argon" }

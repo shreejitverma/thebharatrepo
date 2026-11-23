@@ -53,10 +53,6 @@ claims:
       - src.dimmitt-vanbuitenen-1978-classical-hindu-mythology
 relations:
   - kind: related-to
-    target: cosmology.kalpa
-  - kind: related-to
-    target: cosmology.brahma-lifespan
-  - kind: related-to
     target: event.matsya-flood-narrative
 wikidata: Q2627710
 tags:

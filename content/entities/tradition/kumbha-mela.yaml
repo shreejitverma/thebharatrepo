@@ -71,19 +71,6 @@ datings:
       Lochtefeld traces the twelve-year Kumbha at Haridwar, timed by Jupiter in Aquarius, through records
       from the late 17th century; Maclean documents how the Prayag Magh Mela came to be called a Kumbh Mela
       during the 19th century under colonial administration.
-  - method: documentary
-    range:
-      earliest: 2017
-      latest: 2017
-      precision: year
-      circa: false
-    grade: A
-    label: UNESCO inscription on the Representative List of Intangible Cultural Heritage
-    sources:
-      - src.unesco-2017-kumbh-mela
-    note: >-
-      Inscribed by the UNESCO Intergovernmental Committee for the Safeguarding of the Intangible Cultural
-      Heritage in 2017.
 claims:
   - text: >-
       At Haridwar the festival is timed by Jupiter (Brihaspati) in the sign Kumbha (Aquarius) with the Sun in
@@ -111,9 +98,9 @@ debate: >-
   James Lochtefeld argue that bathing fairs at Prayag and the other sites are old, but that the name Kumbha
   and the twelve-year cycle belong first to Haridwar and were extended to the other three sites between the
   late 18th and 19th centuries.
-relations:
-  - kind: related-to
-    target: event.samudra-manthana
+relations: []
+aliases:
+  - tradition.kumbh-mela-unesco-inscription
 wikidata: Q10283
 image:
   commons: "File:Kumbh Mela 2019, India (47216681442).jpg"
