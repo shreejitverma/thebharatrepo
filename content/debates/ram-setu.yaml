@@ -1,0 +1,114 @@
+id: debate.ram-setu
+title: "Ram Setu (Adam's Bridge): geology and tradition"
+question: How did the shoals between India and Sri Lanka form, and how does tradition understand them?
+summary: >-
+  Satellite bathymetry maps a shallow submerged ridge and shoals between Rameswaram and
+  Mannar. Geological studies explain the formation primarily through coastal processes and
+  leave open whether people altered any part of it. Ramayana tradition identifies the
+  crossing with the bridge built under Nala's direction for Rama's journey to Lanka.
+published: false
+commonGround:
+  - text: >-
+      A chain of shoals extends for about 30 kilometres from Dhanushkodi on Rameswaram
+      Island toward Talaimannar on Mannar Island. Much of the ridge lies below sea level.
+    grade: A
+    sources:
+      - { id: src.dandabathula-2024-adams-bridge-bathymetry, locator: "Fig. 1; Abstract" }
+positions:
+  - id: natural-coastal-formation
+    label: A ridge and shoals shaped by coastal processes
+    lens: scholarship
+    grade: B
+    statement: >-
+      A submerged ridge and mobile shoals can form and persist in shallow seas. Sediment
+      transport between the Gulf of Mannar and Palk Strait helps shape the ridge and its
+      intervening channels. The mapped relief and the area's sand and reef material fit
+      a coastal formation with a long history of deposition and reworking. In the surrounding
+      strait, buried river channels mark an earlier landscape that was inundated as sea level rose.
+    proponents:
+      - name: Giribabu Dandabathula and colleagues
+        work: { id: src.dandabathula-2024-adams-bridge-bathymetry, locator: "Results and discussion" }
+      - name: K. M. Dubey and colleagues
+        work: { id: src.dubey-2023-ramasetu-evolution, locator: "Abstract" }
+    evidence:
+      - text: >-
+          ICESat-2 depth measurements show a continuous shallow ridge with sandbanks and
+          narrow cross-ridge channels. The authors discuss how currents and sediment
+          exchange can account for patterns in its relief.
+        grade: B
+        sources:
+          - { id: src.dandabathula-2024-adams-bridge-bathymetry, locator: "Results and discussion; Figs. 2-3 and 5" }
+      - text: >-
+          Seismic profiles reveal buried channels that ran from the Palk Strait into the Gulf
+          of Mannar. Dubey and colleagues infer that seawater began entering the region about
+          8,500 years ago and the youngest channels were buried by about 7,000 years ago.
+        grade: B
+        sources:
+          - { id: src.dubey-2023-ramasetu-evolution, locator: "Abstract" }
+    objections:
+      - >-
+        Bathymetry maps the seabed surface, and the seismic interpretation dates regional
+        changes. Individual shoals still require dated cores to establish how and when
+        each accumulated.
+  - id: possible-local-modification
+    label: A natural formation with possible local modification
+    lens: scholarship
+    grade: E
+    statement: >-
+      A naturally shallow ridge could have guided a crossing and provided a base for local
+      alterations. Jayarajan, Sreepadi and Vineesh combine community oral accounts with
+      geological and spatial observations. They interpret the formation as primarily natural
+      while leaving room for traces of later human modification.
+    proponents:
+      - name: K. Jayarajan, Sreelu Sreepadi and V. Vineesh
+        work: { id: src.jayarajan-2026-geomythology-ram-setu, locator: "Abstract" }
+    evidence:
+      - text: >-
+          The study reports community interviews and spatial mapping and raises possible
+          modification alongside a natural explanation for the sandbanks and shoals.
+        grade: E
+        sources:
+          - { id: src.jayarajan-2026-geomythology-ram-setu, locator: "Abstract" }
+    objections:
+      - >-
+        A plausible use for the ridge does not identify worked stone or a construction layer.
+        A documented alteration would still need an independent date.
+  - id: ramayana-crossing
+    label: Nala's crossing in Ramayana tradition
+    lens: tradition
+    grade: D
+    statement: >-
+      The Ramayana tells how the ocean makes passage possible and Nala directs the
+      vanaras in building a crossing for Rama's army to reach Lanka and rescue Sita.
+      The identification of the shoals with that crossing gives Ram Setu its place
+      in the sacred geography of the epic.
+    proponents:
+      - name: Valmiki Ramayana tradition
+        work: { id: src.goldman-2009-ramayana-yuddhakanda, locator: "Yuddhakanda, sarga 15" }
+    evidence:
+      - text: >-
+          The Yuddhakanda names Nala as the builder and describes the vanaras carrying
+          trees and stones into the sea so Rama's forces can cross.
+        grade: D
+        sources:
+          - { id: src.goldman-2009-ramayana-yuddhakanda, locator: "6.15.8-25, Baroda critical edition numbering" }
+      - text: >-
+          Interviews and documentary research record the continuing association of the
+          shoals with Rama's crossing in local tradition.
+        grade: D
+        sources:
+          - { id: src.jayarajan-2026-geomythology-ram-setu, locator: "Abstract" }
+    objections:
+      - >-
+        The epic and the place tradition establish the meaning of the crossing for their
+        communities. Dating a construction phase would require material evidence in context.
+whatWouldChangeThis:
+  - >-
+    Transects of securely dated cores across several shoals and channels could distinguish
+    reef growth, storm deposits and recurring sand transport and establish their sequence.
+  - >-
+    Repeated courses of demonstrably worked or placed material in a sealed layer, with dated
+    associated finds, would let archaeologists test and date a case for local construction.
+relatedEntities: [text.valmiki-ramayana, person.rama, concept.yuga-chronology-of-the-itihasa]
+tags: [ram-setu, adams-bridge, coastal-geology, ramayana]
+review: { status: draft, author: Codex }

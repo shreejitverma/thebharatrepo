@@ -1,0 +1,108 @@
+id: debate.date-of-adi-shankara
+title: The date of Adi Shankara
+question: When did the Advaita commentator Adi Shankara live?
+summary: >-
+  The dates 788 to 820 CE became a scholarly convention and remain widely cited. Hajime
+  Nakamura proposed about 700 to 750 CE from the relative chronology of philosophical
+  works. Some matha traditions reckon Shankara's life as 509 to 477 BCE through their
+  accounts of the founding teacher and his succession.
+published: false
+commonGround:
+  - text: >-
+      Shankara's commentary on the Brahmasutras is a central witness to his teaching. The
+      traditional biographies tell much more about his life than his accepted writings do.
+    grade: B
+    sources:
+      - { id: src.isayeva-1993-shankara-indian-philosophy, locator: "ch. 3, Biography of Sankara and His Main Works, sections 1-2" }
+positions:
+  - id: conventional-788-820
+    label: "The conventional dates: 788 to 820 CE"
+    lens: scholarship
+    grade: C
+    range: { earliest: "788 CE", latest: "820 CE", precision: year, circa: false }
+    statement: >-
+      The conventional dates provide a consistent reading of transmitted calendar notices
+      and the short life ascribed to Shankara. The birth year came into scholarly use
+      through a later Vedanta account cited by Tiele and through a manuscript notice
+      discussed by K. B. Pathak. Earlier histories of Indian philosophy adopted the
+      dates as a working chronology for the commentator.
+    proponents:
+      - name: Surendranath Dasgupta
+        role: Adopted this chronology in the first volume of his history
+        work: { id: src.dasgupta-1922-history-of-indian-philosophy, locator: "ch. X, section 5, p. 429" }
+      - name: K. B. Pathak
+        role: Reported a manuscript basis for the conventional dates
+        work: { id: src.isayeva-1993-shankara-indian-philosophy, locator: "pp. 83-84 and n. 14, discussing Pathak's The Date of Sankaracharya" }
+    evidence:
+      - text: >-
+          Isayeva traces the birth date to a notice in Yajnesvara Shastri that cites an earlier
+          work and to the manuscript evidence Pathak cited in support of the chronology.
+        grade: C
+        sources:
+          - { id: src.isayeva-1993-shankara-indian-philosophy, locator: "pp. 83-84" }
+    objections:
+      - >-
+        The notices are late, and their independence and calendar interpretation are uncertain.
+        Relative dates inferred from Shankara's intellectual context have led scholars to place him earlier.
+  - id: nakamura-700-750
+    label: "Nakamura's estimate: about 700 to 750 CE"
+    lens: scholarship
+    grade: C
+    range: { earliest: "700 CE", latest: "750 CE", precision: decade, circa: true }
+    statement: >-
+      Shankara's place among philosophers is better recovered through the texts closest to
+      him. Comparing his arguments and the chronology of earlier and later authors, including
+      thinkers in Mimamsa and early Advaita, points to the first half of the eighth century.
+      The argument gives an approximate life span because it is based on relationships between works.
+    proponents:
+      - name: Hajime Nakamura
+        work: { id: src.nakamura-1983-early-vedanta, locator: "pp. 48-88" }
+    evidence:
+      - text: >-
+          Nakamura evaluates the relative chronology of philosophical authors alongside the
+          conflicting biographical notices and arrives at an estimate of about 700 to 750 CE.
+        grade: C
+        sources:
+          - { id: src.nakamura-1983-early-vedanta, locator: "pp. 48-88" }
+          - { id: src.dalal-2021-shankara, locator: "section 1, Life and Works" }
+    objections:
+      - >-
+        A shared argument can reflect a common source rather than one thinker reading another.
+        Some of the other authors' dates and identities are themselves uncertain.
+  - id: early-matha-reckoning
+    label: "An early matha reckoning: 509 to 477 BCE"
+    lens: tradition
+    grade: D
+    range: { earliest: "509 BCE", latest: "477 BCE", precision: year, circa: false }
+    statement: >-
+      Kanchi's lineage reckons the life of its founding teacher from 509 to 477 BCE.
+      An early published Dwaraka succession list also begins with a birth reckoned as
+      509 BCE. The teacher's place at the head of the lineage dates the transmission
+      that the institutions understand themselves to preserve.
+    proponents:
+      - name: Kanchi Kamakoti matha tradition
+        work: { id: src.clark-2006-dasanami-samnyasis, locator: "ch. 4, p. 126, Kanchi succession, n. 91" }
+      - name: Dwaraka matha succession tradition
+        work: { id: src.clark-2006-dasanami-samnyasis, locator: "ch. 4, p. 124, on the published Dwaraka list" }
+    evidence:
+      - text: >-
+          Clark records a Kanchi account that places Shankara's life in 509 to 477 BCE and
+          names Sureshvara as his successor. He also records a published Dwaraka list that
+          places Shankara's birth in year 2631 of the Yudhishthira era, reckoned as 509 BCE.
+        grade: D
+        sources:
+          - { id: src.clark-2006-dasanami-samnyasis, locator: "pp. 124-126" }
+    objections:
+      - >-
+        Succession lists have variant forms and some were revised. Their early dates need
+        independent corroboration to date the author of the Brahmasutra commentary.
+whatWouldChangeThis:
+  - >-
+    A dated manuscript colophon or inscription naming Shankara with an identifiable work,
+    teacher or student could anchor a generation and distinguish him from later holders of the title.
+  - >-
+    A securely dated work demonstrably responding to an authentic passage of Shankara would
+    establish a latest possible date for that passage.
+relatedEntities: [person.adi-shankara, person.kumarila-bhatta, text.upanishads, text.bhagavad-gita]
+tags: [adi-shankara, advaita, vedanta, chronology]
+review: { status: draft, author: Codex }

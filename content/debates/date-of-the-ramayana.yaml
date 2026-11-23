@@ -1,0 +1,104 @@
+id: debate.date-of-the-ramayana
+title: The date of the Ramayana
+question: When did the Valmiki Ramayana take shape, and how does tradition place its story in time?
+summary: >-
+  Robert Goldman and John Brockington both find an older narrative within the Sanskrit epic,
+  but date that narrative differently. Their estimates concern the growth of the poem.
+  Puranic and vernacular traditions place Rama's reign in Treta Yuga, within a sacred
+  chronology that situates him before Krishna and the beginning of Kali Yuga.
+published: false
+commonGround:
+  - text: >-
+      The transmitted Sanskrit epic presents Valmiki as poet and makes Rama of Ayodhya the
+      central figure. Its opening book includes a synopsis of the story and an account of
+      the poem's first performance.
+    grade: A
+    sources:
+      - { id: src.goldman-1984-ramayana-balakanda, locator: "Balakanda, sargas 1-4" }
+positions:
+  - id: goldman-early-core
+    label: "Goldman: an early core around 750 to 500 BCE"
+    lens: scholarship
+    grade: C
+    range: { earliest: "750 BCE", latest: "500 BCE", precision: century, circa: true }
+    statement: >-
+      The oldest recoverable poem fits an early northern Indian political setting in which
+      Kosala is prominent and Ayodhya is its capital. The narrative gives little indication
+      of the later prominence of Magadha or of Buddhism. Taken together with the older shape
+      of the central narrative, that setting supports an early date for the oral composition
+      of the core. The outer books contain later material and have their own history.
+    proponents:
+      - name: Robert P. Goldman
+        work: { id: src.goldman-1984-ramayana-balakanda, locator: "General Introduction, pp. 14-24" }
+    evidence:
+      - text: >-
+          Goldman contrasts the prominence of Kosala and Ayodhya in the core narrative with
+          the later political geography of the eastern Ganges plain.
+        grade: C
+        sources:
+          - { id: src.goldman-1984-ramayana-balakanda, locator: "General Introduction, pp. 20-23" }
+    objections:
+      - >-
+        A poet can set a story in an older political world. The absence of a reference to a
+        religious movement or rival kingdom can reflect the plot and subject of the poem.
+  - id: brockington-layered-composition
+    label: "Brockington: a core in the fifth or fourth century BCE"
+    lens: scholarship
+    grade: C
+    range: { earliest: "500 BCE", latest: "301 BCE", precision: century, circa: true }
+    statement: >-
+      The epic grew through distinguishable stages. Brockington places the initial stage of
+      the central books around the fifth to fourth century BCE, using differences in language,
+      metre and subject matter to separate that stage from expansions. Later additions to the
+      narrative, including much of the first and last books, show how its theology and interests
+      developed beyond the earliest recoverable form.
+    proponents:
+      - name: John Brockington
+        work: { id: src.brockington-1998-sanskrit-epics, locator: "pp. 379-383, dating and stages of the Ramayana" }
+    evidence:
+      - text: >-
+          Brockington's reconstruction identifies an older narrative running mainly through Books
+          2 to 6 and distinguishes it from later layers by their language and narrative content.
+        grade: B
+        sources:
+          - { id: src.brockington-1998-sanskrit-epics, locator: "pp. 379-383" }
+    objections:
+      - >-
+        Patterns of language and metre can support a relative sequence more securely than an absolute
+        century. Oral transmission can preserve old forms or introduce new ones into older episodes.
+  - id: treta-yuga
+    label: Rama's reign in Treta Yuga
+    lens: tradition
+    grade: D
+    statement: >-
+      The Bhagavata Purana and Tulsidas's Ramcharitmanas place Rama in Treta Yuga and describe
+      his reign as recovering the qualities of the more righteous Krita age. Valmiki is honoured
+      as the poet who gives the story its Sanskrit form. In this reckoning the yuga expresses
+      both Rama's place in sacred time and the character of his rule.
+    proponents:
+      - name: Bhagavata Purana tradition
+        work: { id: src.gonzalezreimann-2021-ramayana-and-yugas, locator: "pp. 258-260, citing Bhagavata Purana 9.10.52" }
+      - name: Tulsidas
+        role: Poet of the Ramcharitmanas
+        work: { id: src.gonzalezreimann-2021-ramayana-and-yugas, locator: "p. 258, citing Ramcharitmanas, Book 7, caupai 21" }
+    evidence:
+      - text: >-
+          Both retellings compare Rama's reign in Treta to Krita. Some earlier accounts locate
+          Rama at the boundary between Treta and Dvapara, showing variation within sacred chronology.
+        grade: D
+        sources:
+          - { id: src.gonzalezreimann-2021-ramayana-and-yugas, locator: "pp. 258-260" }
+    objections:
+      - >-
+        The tradition gives a place in sacred chronology. Dating the Sanskrit wording or
+        identifying a historical event requires independent evidence with a calendar anchor.
+whatWouldChangeThis:
+  - >-
+    A securely dated quotation distinctive to a particular book would establish that the
+    relevant passage circulated by that time and could tighten the sequence of textual layers.
+  - >-
+    A contemporary inscription identifying the people and events of a specific episode would
+    give the events an independent historical anchor.
+relatedEntities: [text.valmiki-ramayana, person.rama, cosmology.treta-yuga, concept.yuga-chronology-of-the-itihasa, text.kamba-ramayanam]
+tags: [ramayana, valmiki, oral-transmission, chronology]
+review: { status: draft, author: Codex }

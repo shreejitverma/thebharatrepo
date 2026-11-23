@@ -1,0 +1,105 @@
+id: debate.dwarka-underwater-findings
+title: Dwarka underwater findings
+question: What do the submerged remains off Dwarka and Bet Dwarka establish about the port and its epic association?
+summary: >-
+  Underwater surveys documented anchors and dressed stone off Dwarka. S. R. Rao linked some
+  structures to a second-millennium BCE port and proposed an identification with the epic city.
+  Later research found that anchor forms support repeated use over a long period, including
+  Indo-Arab trade. The Mahabharata independently preserves the sacred account of Dvaraka's submergence.
+published: false
+commonGround:
+  - text: >-
+      Marine archaeologists recorded groups of stone anchors in a submerged channel off modern
+      Dwarka. Rao also reported dressed masonry along the submerged course of the Gomati.
+    grade: A
+    sources:
+      - { id: src.gaur-2001-dwarka-stone-anchors, locator: "pp. 95-108, survey and anchor catalogue" }
+      - { id: src.rao-1990-excavation-legendary-city-dwarka, locator: "p. 95; Fig. 9" }
+positions:
+  - id: rao-protohistoric-port
+    label: Rao's interpretation of a submerged protohistoric port
+    lens: scholarship
+    grade: C
+    statement: >-
+      Dressed courses and regularly placed structures along the former Gomati channel are
+      consistent with deliberate harbour works, including protective walls. If the pottery
+      sequence and offshore structures can be correlated, they point to harbour activity
+      in the second millennium BCE. The coastal location and subsequent inundation make this
+      a plausible setting for a remembered port behind the epic account.
+    proponents:
+      - name: S. R. Rao
+        work: { id: src.rao-1990-excavation-legendary-city-dwarka, locator: "pp. 59-98, especially p. 95 and Fig. 9" }
+    evidence:
+      - text: >-
+          Rao plotted masonry near the former Gomati channel and interpreted projecting
+          structures as bastions. He assigned an early phase to about 1500 to 1400 BCE
+          and distinguished it from later activity.
+        grade: C
+        sources:
+          - { id: src.rao-1990-excavation-legendary-city-dwarka, locator: "p. 95; Fig. 9" }
+    objections:
+      - >-
+        Ceramic dating can establish an occupation phase without dating an offshore wall.
+        A secure stratigraphic link between independently dated material and the construction
+        of a wall would be needed to establish its date.
+      - >-
+        A port of the proposed period would still require independent evidence to identify
+        its builders with Krishna and the people named in the epic.
+  - id: harbour-used-over-centuries
+    label: Anchorage used in several periods
+    lens: scholarship
+    grade: C
+    statement: >-
+      The anchor assemblage makes best sense as the result of repeated maritime use. The
+      1998 to 1999 survey found distinct anchor forms, some with parallels in medieval
+      Indo-Arab trade. Triangular anchors were used for much longer, so a resemblance to
+      a Bronze Age example alone cannot date the Dwarka finds or adjacent structures.
+    proponents:
+      - name: A. S. Gaur, Sundaresh and colleagues
+        work: { id: src.gaur-2001-dwarka-stone-anchors, locator: "pp. 95-108, especially discussion of anchor chronology" }
+    evidence:
+      - text: >-
+          The survey recorded twenty anchors of three types in a submerged channel.
+          Grapnel forms have medieval Indo-Arab parallels, while triangular composite
+          types remained in use across a much wider span.
+        grade: C
+        sources:
+          - { id: src.gaur-2001-dwarka-stone-anchors, locator: "p. 95; pp. 105-108" }
+    objections:
+      - >-
+        Comparison with medieval forms does not fix the age of every anchor. Later
+        trade at the site is also compatible with smaller-scale use in earlier periods.
+  - id: krishna-dvaraka-tradition
+    label: Dvaraka in the Krishna tradition
+    lens: tradition
+    grade: D
+    statement: >-
+      The Mausala Parva remembers Dvaraka as the city of Krishna's people. After their
+      destruction and Krishna's departure, Arjuna leads survivors out and the sea covers
+      the city. In the Krishna tradition the loss of Dvaraka belongs to the close of his
+      earthly life and gives the coastal setting lasting sacred significance.
+    proponents:
+      - name: Mahabharata Mausala Parva tradition
+        work: { id: src.doniger-2022-after-the-war, locator: "Book 16, chs. 5-8" }
+    evidence:
+      - text: >-
+          The Mausala Parva tells of Krishna's death, the evacuation led by Arjuna and the
+          submergence of Dvaraka after the survivors leave.
+        grade: D
+        sources:
+          - { id: src.doniger-2022-after-the-war, locator: "Book 16, chs. 5 and 8" }
+    objections:
+      - >-
+        The epic gives the meaning and sequence of events within the tradition. A date
+        for an inundation or an identification of a particular submerged site needs
+        independent archaeological evidence.
+whatWouldChangeThis:
+  - >-
+    An excavated wall foundation sealed by dated occupation and inundation layers could
+    establish when the wall was built and when the sea covered it.
+  - >-
+    A readable contemporary inscription recovered in place, naming the city and its
+    occupants, would test the historical identification independently of anchor types.
+relatedEntities: [person.krishna, text.mahabharata, tradition.harappan-civilisation, site.lothal]
+tags: [dwarka, bet-dwarka, maritime-archaeology, krishna, mahabharata]
+review: { status: draft, author: Codex }

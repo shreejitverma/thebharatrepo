@@ -1,0 +1,117 @@
+id: debate.date-of-the-rigveda
+title: The date of the Rigveda
+question: When were the surviving Rigvedic hymns composed and collected?
+summary: >-
+  Philologists usually place composition of the surviving hymns in the later second millennium BCE.
+  An alternative reconstruction makes the early books considerably older and assigns more time to
+  the growth of the collection. The Puranic account places Vyasa's arrangement of the Veda in
+  Dvapara Yuga and understands the Veda itself as eternal.
+published: false
+commonGround:
+  - text: >-
+      The transmitted Rigveda includes ten books. Their received order reflects features such
+      as poet families, deities and metres, which supply evidence for how the collection was organised.
+    grade: A
+    sources:
+      - { id: src.jamison-brereton-2014-rigveda, locator: "Introduction, section E, Structure of the Rigveda" }
+positions:
+  - id: later-second-millennium
+    label: Composition in the later second millennium BCE
+    lens: scholarship
+    grade: B
+    range: { earliest: "1400 BCE", latest: "1000 BCE", precision: century, circa: true }
+    statement: >-
+      The surviving hymns took shape over several generations, plausibly around 1400 to 1000 BCE.
+      Older language and inherited poetic formulas connect them with Old Avestan. Within the corpus,
+      variation in diction and organisation points to a family-book core and younger material.
+      Copper or bronze fits the hymns' material setting, while explicit evidence for iron appears
+      in later Vedic literature. The estimate dates identifiable compositions and leaves their
+      inherited formulas much older.
+    proponents:
+      - name: Stephanie W. Jamison
+        work: { id: src.jamison-brereton-2014-rigveda, locator: "Introduction, section B, pp. 5-6" }
+      - name: Joel P. Brereton
+        work: { id: src.jamison-brereton-2014-rigveda, locator: "Introduction, section B, pp. 5-6" }
+    evidence:
+      - text: >-
+          Jamison and Brereton compare the absence of explicit iron in the Rigveda with its presence
+          in the Atharvaveda. They combine this relative sequence with the appearance of iron in
+          the northwest and a proposed count of generations of named poets and patrons.
+        grade: C
+        sources:
+          - { id: src.jamison-brereton-2014-rigveda, locator: "Introduction, section B, pp. 5-6" }
+      - text: >-
+          Fourteenth-century BCE Mitanni documents attest related Indo-Aryan ritual vocabulary
+          outside South Asia, giving an independent date for the attested forms.
+        grade: B
+        sources:
+          - { id: src.thieme-1960-aryan-gods-mitanni-treaties, locator: "pp. 301-317" }
+    objections:
+      - >-
+        Genre can account for the absence of a metal from praise poetry. Named generations may be
+        incomplete, and the Mitanni forms do not establish a date for any particular hymn.
+  - id: earlier-core
+    label: A substantially earlier core and longer period of composition
+    lens: scholarship
+    grade: E
+    statement: >-
+      Talageri reconstructs a longer history by tracing references to dynasties and seer families
+      through the hymns. He places Book 6 first and infers that the collection developed over at
+      least two millennia, while leaving absolute endpoints open in his 2000 study. Lal's reading
+      of a powerful Sarasvati in the Ghaggar-Hakra valley supplies a separate argument that some
+      hymns could recall a landscape earlier than the conventional interval.
+    proponents:
+      - name: Shrikant G. Talageri
+        work: { id: src.talageri-2000-rigveda-historical-analysis, locator: "ch. 3, section V.D, The Chronology of the Mandalas" }
+      - name: B. B. Lal
+        work: { id: src.lal-2002-saraswati-flows-on, locator: "chs. I-III" }
+    evidence:
+      - text: >-
+          Talageri uses attributions and cross-references to poets and patrons to distinguish early,
+          middle and late books and assigns a minimum duration to each phase.
+        grade: E
+        sources:
+          - { id: src.talageri-2000-rigveda-historical-analysis, locator: "ch. 3, sections V.C-V.D" }
+      - text: >-
+          The description of Sarasvati flowing from mountains to sea can be read as a memory of a
+          stronger Ghaggar-Hakra, whose sediment record includes wetter phases.
+        grade: C
+        sources:
+          - { id: src.jamison-brereton-2014-rigveda, locator: "7.95.2" }
+          - { id: src.chatterjee-2019-perennial-river-harappan-heartland, locator: "Fig. 3; The evolving river system" }
+    objections:
+      - >-
+        An ordering based on relative genealogies does not establish how many years the stages
+        lasted. The hymn's river imagery could have survived long after any change in flow.
+  - id: vyasa-and-vedic-transmission
+    label: Vyasa's arrangement of the Veda in Dvapara Yuga
+    lens: tradition
+    grade: D
+    statement: >-
+      In the Vishnu Purana, the Veda is eternal and is arranged anew in successive Dvapara ages.
+      Krishna Dvaipayana Vyasa divides it in the current cycle and entrusts the Rigveda to Paila.
+      The reckoning concerns the ordering and transmission of sacred knowledge within a yuga.
+    proponents:
+      - name: Vishnu Purana tradition
+        work: { id: src.taylor-2021-vishnu-purana, locator: "Book 3, chs. 3-4" }
+    evidence:
+      - text: >-
+          The Vishnu Purana names Krishna Dvaipayana as Vyasa of the twenty-eighth Dvapara,
+          assigns the Rigveda to Paila, and describes the primal Veda as eternal.
+        grade: D
+        sources:
+          - { id: src.taylor-2021-vishnu-purana, locator: "Book 3, chs. 3-4, especially 3.4.32" }
+    objections:
+      - >-
+        The Puranic account gives the tradition's understanding of transmission. Its yuga setting
+        supplies no independent calendar date for the language of the surviving hymns.
+whatWouldChangeThis:
+  - >-
+    A securely dated inscription quoting a distinctive passage from a particular book would
+    establish that the passage was already in circulation by that time.
+  - >-
+    An independent date for a named poet or patron, or a more securely sequenced set of shared
+    innovations in early Indo-Iranian, would tighten the proposed chronology.
+relatedEntities: [text.rigveda, event.mitanni-treaty, concept.ghaggar-hakra-sarasvati-debate, tradition.vedic-oral-transmission, cosmology.dvapara-yuga]
+tags: [rigveda, veda, oral-transmission, contested-chronology]
+review: { status: draft, author: Codex }
