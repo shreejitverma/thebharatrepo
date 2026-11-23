@@ -295,8 +295,22 @@ test.describe('references', () => {
     await page.locator('.references a.source-record').first().click();
     await expect(page).toHaveURL(/\/sources\/[a-z0-9-]+$/);
     await expect(page.getByRole('heading', { name: 'Cited in the archive' })).toBeVisible();
-    await expect(page.locator('.cited-by__summary')).toHaveText(/^Cited by \d+ articles?, \d+ archive records? and \d+ corrections?\.$/);
+    await expect(page.locator('.cited-by__summary')).toHaveText(/^Cited by \d+ articles?, \d+ archive records?,? (and )?\d+ corrections?(,? (and )?\d+ learning-path quiz(zes)?)?(,? (and )?\d+ debates?)?\.$/);
     await expect(page.locator('.cited-by').getByRole('link', { name: title!, exact: true })).toHaveAttribute('href', '/history/maurya-empire');
+    await noHorizontalScroll(page);
+    await noSeriousA11yViolations(page);
+  });
+
+  test('a source record lists the learning-path quizzes that cite it, with the questions', async ({ page }) => {
+    await page.goto('/sources/cousins-1996-dating-historical-buddha');
+    const quizzes = page.getByRole('heading', { name: /^Learning-path quizzes \(\d+\)$/ });
+    await expect(quizzes).toBeVisible();
+    await expect(page.locator('.cited-by__summary')).toContainText(/\d+ learning-path quiz(zes)?/);
+    const link = page.locator('.cited-by a[href="/learn/how-we-date-ashoka#quiz"]');
+    await expect(link).toHaveText('How do we know when Ashoka lived?');
+    await expect(link.locator('xpath=..').locator('.cited-by__contexts li').first()).toContainText('Question');
+    // The only debate citing this source is an unpublished draft, which a public build never shows.
+    await expect(page.locator('.cited-by a[href^="/debates/"]')).toHaveCount(0);
     await noHorizontalScroll(page);
     await noSeriousA11yViolations(page);
   });

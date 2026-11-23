@@ -1,8 +1,8 @@
 import path from 'node:path';
 import { describe, expect, it, vi } from 'vitest';
-import { articleGradeSummary, buildCitationIndex, buildReferences, correctionAnchors, normalizeLocator, backlinkLabel } from './references';
+import { articleGradeSummary, buildCitationIndex, buildReferences, citedByCount, correctionAnchors, normalizeLocator, backlinkLabel } from './references';
 import { CorrectionSchema, EntitySchema, SourceSchema } from './schema';
-import type { Article } from './load';
+import type { Article, DebateDoc, LearningPathDoc } from './load';
 
 const src = (id: string) => SourceSchema.parse({ id, type: 'book', title: `Title of ${id}`, authors: ['A Author'], isbn: '9780520242258' });
 
@@ -140,6 +140,64 @@ describe('buildCitationIndex', () => {
 
     expect(index.get('src.c')!.articles[0]).toMatchObject({ inText: 0, dating: true });
     expect(index.get('src.unused')).toBeUndefined();
+  });
+});
+
+describe('buildCitationIndex for quizzes and debates', () => {
+  const question = (id: string, sources: LearningPathDoc['quiz'][number]['sources']) => ({
+    id,
+    question: `Question ${id} asks something checkable?`,
+    choices: [
+      { text: 'Right', correct: true, explanation: 'Because the source says so.' },
+      { text: 'Wrong', correct: false, explanation: 'The source says otherwise.' },
+    ],
+    sources,
+  });
+  const path = (slug: string, title: string, quiz: LearningPathDoc['quiz']) => ({ id: `learn.${slug}`, slug, title, level: 'adult', quiz }) as unknown as LearningPathDoc;
+  const evidence = (sources: { id: string; locator: string }[]) => ({ text: 'An evidence item long enough to pass.', grade: 'B', sources });
+  const debate = (slug: string, published: boolean) =>
+    ({
+      id: `debate.${slug}`,
+      slug,
+      title: `Debate ${slug}`,
+      published,
+      commonGround: [evidence([{ id: 'src.common', locator: 'p. 1' }])],
+      positions: [
+        { id: 'long', label: 'Long chronology', proponents: [{ name: 'A Proponent', work: { id: 'src.a', locator: 'ch. 2' } }], evidence: [evidence([{ id: 'src.a', locator: 'p. 5' }, { id: 'src.a', locator: 'P.  5' }])] },
+        { id: 'short', label: 'Short chronology', proponents: [{ name: 'B Proponent' }], evidence: [evidence([{ id: 'src.a', locator: 'p. 9' }])] },
+      ],
+    }) as unknown as DebateDoc;
+
+  const index = buildCitationIndex({
+    entities: new Map(),
+    articles: [],
+    corrections: [],
+    learningPaths: [path('zeta', 'Zeta path', [question('q1', [{ id: 'src.a', locator: 'p. 3' }, 'src.a']), question('q2', ['src.b'])]), path('alpha', 'Alpha path', [question('q1', ['src.a'])])],
+    debates: [debate('published', true), debate('draft', false)],
+  });
+
+  it('lists each learning path whose quiz cites a source, with the questions that cite it', () => {
+    const a = index.get('src.a')!;
+    expect(a.quizzes.map((q) => q.path.slug)).toEqual(['alpha', 'zeta']);
+    expect(a.quizzes[1].questions).toEqual([{ id: 'q1', question: 'Question q1 asks something checkable?', locator: 'p. 3' }]);
+    expect(index.get('src.b')!.quizzes.map((q) => [q.path.slug, q.questions.map((x) => x.id)])).toEqual([['zeta', ['q2']]]);
+  });
+
+  it('lists published debates by position, and never a draft', () => {
+    const a = index.get('src.a')!;
+    expect(a.debates.map((d) => d.debate.slug)).toEqual(['published']);
+    expect(a.debates[0].contexts).toEqual([
+      { position: 'long', label: 'Long chronology', locators: ['ch. 2', 'p. 5'] },
+      { position: 'short', label: 'Short chronology', locators: ['p. 9'] },
+    ]);
+    expect(index.get('src.common')!.debates[0].contexts).toEqual([{ position: null, label: 'What every position accepts', locators: ['p. 1'] }]);
+    const draftOnly = buildCitationIndex({ entities: new Map(), articles: [], corrections: [], debates: [debate('draft', false)] });
+    expect(draftOnly.get('src.a')).toBeUndefined();
+  });
+
+  it('counts quizzes and debates as citing records', () => {
+    expect(citedByCount(index.get('src.a'))).toBe(3);
+    expect(citedByCount(index.get('src.b'))).toBe(1);
   });
 });
 
