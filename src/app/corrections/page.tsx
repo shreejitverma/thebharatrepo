@@ -1,7 +1,7 @@
 import type { Metadata } from 'next';
 import Link from 'next/link';
 import SourceCitation from '@/components/SourceCitation';
-import { entityHref } from '@/lib/content/kaalchakra';
+import { entityHref, sourceHref } from '@/lib/content/kaalchakra';
 import { citationId } from '@/lib/content/schema';
 import { correctionAnchors } from '@/lib/content/references';
 import { getGraph } from '@/lib/content/site';
@@ -13,7 +13,7 @@ export default function CorrectionsPage() {
   const list = g.corrections;
   const anchors = correctionAnchors(list);
   // Link a target only when it is a page that exists.
-  const pages = new Set([...g.articles.map((a) => `/${a.category}/${a.slug}`), ...[...g.entities.keys()].map(entityHref)]);
+  const pages = new Set([...g.articles.map((a) => `/${a.category}/${a.slug}`), ...[...g.entities.keys()].map(entityHref), ...[...g.sources.keys()].map(sourceHref)]);
   return (
     <div className="main-content">
       <div className="prose-wrap">

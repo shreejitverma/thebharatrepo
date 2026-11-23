@@ -671,6 +671,22 @@ test.describe('merged entities keep their old URLs', () => {
   });
 });
 
+test.describe('renamed sources keep their old URLs', () => {
+  for (const [old, now, title] of [
+    ['/sources/steinkellner-1999-tabo-renovation', '/sources/petech-luczanits-1999-tabo-inscriptions', 'Inscriptions from the Tabo Main Temple: Texts and Translations'],
+    ['/sources/asi-1906-annual-report-1904-05', '/sources/asi-1908-annual-report-1904-05', 'Archaeological Survey Of India Annual Reports 1904 05'],
+  ]) {
+    test(`${old} redirects permanently to ${now}`, async ({ page, request }) => {
+      const res = await request.get(old, { maxRedirects: 0 });
+      expect(res.status()).toBe(308);
+      expect(new URL(res.headers()['location'], 'http://x').pathname).toBe(now);
+      await page.goto(old);
+      await expect(page).toHaveURL(now);
+      await expect(page.locator('h1')).toHaveText(title);
+    });
+  }
+});
+
 test('open data page links every export file, each matching its manifest checksum', async ({ page, request }) => {
   await page.goto('/data');
   await expect(page.getByRole('heading', { level: 1, name: 'Download the archive' })).toBeVisible();

@@ -98,6 +98,8 @@ export interface ContentGraph<T extends ArticleMetadata = Article> {
   inbound: Map<string, { from: string; kind: string }[]>;
   /** former entity id (alias) -> the live entity it was merged into */
   aliases: Map<string, string>;
+  /** former source id (alias) -> the live source that replaced it */
+  sourceAliases: Map<string, string>;
   errors: ContentProblem[];
   /** Advisory findings that do not fail the build, such as inconsistent relation pairs. */
   warnings: ContentProblem[];
@@ -316,17 +318,20 @@ function identifierKeys(s: Source): string[] {
 }
 
 /**
- * Maps every alias to the entity that declares it. An alias is a former id, so it must not be a live
- * entity id (the redirect would hide that page) and only one entity may claim it.
+ * Maps every alias to the record (an entity, or a source with `noun: 'source'`) that declares it. An alias is a
+ * former id, so it must not be a live id (the redirect would hide that page) and only one record may claim it.
  */
-export function resolveAliases(entities: Iterable<Pick<Entity, 'id' | 'aliases'>>): { aliases: Map<string, string>; problems: { id: string; message: string }[] } {
-  const list = [...entities];
+export function resolveAliases(
+  records: Iterable<{ id: string; aliases?: readonly string[] }>,
+  noun: 'entity' | 'source' = 'entity',
+): { aliases: Map<string, string>; problems: { id: string; message: string }[] } {
+  const list = [...records];
   const live = new Set(list.map((e) => e.id));
   const aliases = new Map<string, string>();
   const problems: { id: string; message: string }[] = [];
   for (const e of list) {
-    for (const a of e.aliases) {
-      if (live.has(a)) problems.push({ id: e.id, message: `alias ${a} collides with a live entity id; an alias names an entity that no longer exists` });
+    for (const a of e.aliases ?? []) {
+      if (live.has(a)) problems.push({ id: e.id, message: `alias ${a} collides with a live ${noun} id; an alias names ${noun === 'entity' ? 'an entity' : 'a source id'} that no longer exists` });
       else if (aliases.has(a) && aliases.get(a) !== e.id) problems.push({ id: e.id, message: `alias ${a} is already claimed by ${aliases.get(a)}` });
       else aliases.set(a, e.id);
     }
@@ -553,8 +558,11 @@ export function assembleContent<T extends ArticleMetadata>(
   }
 
   // Cross-reference checks.
+  const { aliases: sourceAliases, problems: sourceAliasProblems } = resolveAliases(sources.values(), 'source');
+  for (const p of sourceAliasProblems) errors.push({ file: sourceFile.get(p.id) ?? p.id, message: p.message });
   const checkSource = (file: string, where: string, id: string) => {
     if (id.startsWith('!invalid:')) errors.push({ file, message: `${where}: malformed citation "${id.slice(9)}"` });
+    else if (sourceAliases.has(id)) errors.push({ file, message: `${where}: ${id} is a former id of ${sourceAliases.get(id)}; cite that id` });
     else if (!sources.has(id)) errors.push({ file, message: `${where}: unknown source ${id}` });
   };
 
@@ -642,7 +650,7 @@ export function assembleContent<T extends ArticleMetadata>(
   const relations = checkRelations(entities.values());
   const warnings = relations.warnings.map((w) => ({ file: entityFile.get(w.id) ?? w.id, message: w.message }));
 
-  return { entities, sources, articles, corrections, debates, learningPaths, articlesByEntity, inbound, aliases, errors, warnings, relationStats: relations.stats };
+  return { entities, sources, articles, corrections, debates, learningPaths, articlesByEntity, inbound, aliases, sourceAliases, errors, warnings, relationStats: relations.stats };
 }
 
 /* ---------- Debates and learning paths ---------- */

@@ -318,8 +318,16 @@ export const SourceSchema = z
     url: z.string().url().optional(),
     corpus: z.string().optional(),
     note: z.string().optional(),
+    /**
+     * Former ids of this source, such as an id that named the wrong author or year. Each keeps its old
+     * /sources/<slug> URL working: the build turns it into a permanent redirect to this source. Content must
+     * cite the live id; citing an alias is an error.
+     */
+    aliases: z.array(z.string().regex(SOURCE_ID, 'an alias is a former source id, such as src.author-year-title')).optional(),
   })
   .superRefine((s, ctx) => {
+    if (s.aliases?.includes(s.id)) ctx.addIssue({ code: 'custom', path: ['aliases'], message: `alias ${s.id} is the source's own id` });
+    for (const a of (s.aliases ?? []).filter((x, i, all) => all.indexOf(x) !== i)) ctx.addIssue({ code: 'custom', path: ['aliases'], message: `alias ${a} is listed twice` });
     if (s.type === 'journal-article' && !s.doi && !s.url) {
       ctx.addIssue({ code: 'custom', message: 'journal articles need a DOI (or a stable URL such as JSTOR for pre-DOI articles)' });
     }

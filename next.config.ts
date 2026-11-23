@@ -3,7 +3,7 @@ import path from "node:path";
 import type { NextConfig } from "next";
 import { assertPreviewNotDeployed } from "./src/lib/content/debates";
 import { contentRoots, loadContentUncached } from "./src/lib/content/load";
-import { aliasRedirects } from "./src/lib/content/redirects";
+import { aliasRedirects, sourceAliasRedirects } from "./src/lib/content/redirects";
 
 /** Pagefind names its index, filter and fragment chunks by content hash, and fonts sit in versioned directories, so a URL never changes meaning. */
 const immutable = [{ key: "Cache-Control", value: "public, max-age=31536000, immutable" }];
@@ -31,9 +31,10 @@ assertPreviewNotDeployed();
 
 const nextConfig: NextConfig = {
   reactCompiler: true,
-  // Old URLs of merged entities, generated from each surviving entity's `aliases`.
+  // Old URLs of merged entities and renamed sources, generated from each surviving record's `aliases`.
   async redirects() {
-    return aliasRedirects(loadContentUncached().aliases);
+    const g = loadContentUncached();
+    return [...aliasRedirects(g.aliases), ...sourceAliasRedirects(g.sourceAliases)];
   },
   async headers() {
     // Font files live in a versioned directory (public/fonts/v1) and are never edited in place.

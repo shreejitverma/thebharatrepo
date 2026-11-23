@@ -2893,3 +2893,24 @@
   reason: The inscription is a fact about the festival and is recorded with it, so a separate stub duplicated its claims.
   sources:
     - src.unesco-2017-kumbh-mela
+- date: 2026-11-22
+  target: /sources/petech-luczanits-1999-tabo-inscriptions
+  before: The Tabo inscriptions volume was cited as src.steinkellner-1999-tabo-renovation, an id that named Ernst Steinkellner as its author.
+  after: The volume is cited as src.petech-luczanits-1999-tabo-inscriptions, after its editors Luciano Petech and Christian Luczanits, and its old address redirects there.
+  reason: Source ids name the first author or editor, and Steinkellner contributed one edition inside a volume edited by Petech and Luczanits.
+  sources:
+    - src.petech-luczanits-1999-tabo-inscriptions
+- date: 2026-11-22
+  target: /sources/asi-1908-annual-report-1904-05
+  before: The Archaeological Survey of India annual report for 1904-05 was cited as src.asi-1906-annual-report-1904-05.
+  after: The report is cited as src.asi-1908-annual-report-1904-05, and its old address redirects there.
+  reason: The report was published in 1908, as its own record states, so the id named the wrong year.
+  sources:
+    - src.asi-1908-annual-report-1904-05
+- date: 2026-11-22
+  target: /sources/shivaji-2004-mohiniyattam
+  before: The source record gave 2009 as the year of Bharati Shivaji and Vijayalakshmi's Mohiniyattam.
+  after: The record gives 2004.
+  reason: The Harvard Library catalogue record for ISBN 9788186685365 (OCLC 55032850) gives New Delhi, Wisdom Tree, 2004; 2009 came from a bookseller listing.
+  sources:
+    - src.shivaji-2004-mohiniyattam

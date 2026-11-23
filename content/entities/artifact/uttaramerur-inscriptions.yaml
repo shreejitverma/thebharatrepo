@@ -34,7 +34,7 @@ datings:
     grade: A
     label: Regnal Years 12 (919 CE) and 14 (921 CE) of Parantaka Chola I
     sources:
-      - src.asi-1906-annual-report-1904-05
+      - src.asi-1908-annual-report-1904-05
       - src.sastri-1955-the-colas
       - src.karashima-2014-concise-history-south-india
     note: >-
@@ -47,7 +47,7 @@ claims:
       Perumal sabha hall at Uttaramerur-chaturvedimangalam.
     grade: A
     sources:
-      - src.asi-1906-annual-report-1904-05
+      - src.asi-1908-annual-report-1904-05
       - src.sastri-1955-the-colas
   - text: >-
       The Year 14 (921 CE) ordinance divides the village into 30 wards (kudumbu), sets strict age (35-70
@@ -55,7 +55,7 @@ claims:
       and bars former defaulters or their kin from standing.
     grade: A
     sources:
-      - src.asi-1906-annual-report-1904-05
+      - src.asi-1908-annual-report-1904-05
       - src.sastri-1955-the-colas
   - text: >-
       Qualified names written on palm-leaf tickets (olai) were placed in a sealed pot (kudam) and drawn by a
@@ -63,7 +63,7 @@ claims:
       committees (variyams).
     grade: A
     sources:
-      - src.asi-1906-annual-report-1904-05
+      - src.asi-1908-annual-report-1904-05
       - src.karashima-2014-concise-history-south-india
 relations:
   - kind: part-of

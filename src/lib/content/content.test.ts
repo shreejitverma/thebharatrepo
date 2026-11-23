@@ -206,6 +206,30 @@ describe('aliases of merged entities', () => {
       },
     ]);
   });
+  it('maps each former source id to its source and redirects the old source page', async () => {
+    const { resolveAliases } = await import('./load');
+    const { sourceAliasRedirects } = await import('./redirects');
+    const r = resolveAliases([{ id: 'src.new-1999-x', aliases: ['src.old-1999-x'] }, { id: 'src.other-2000-y' }, { id: 'src.z-2001-z', aliases: ['src.other-2000-y'] }], 'source');
+    expect(r.aliases).toEqual(new Map([['src.old-1999-x', 'src.new-1999-x']]));
+    expect(r.problems).toEqual([{ id: 'src.z-2001-z', message: 'alias src.other-2000-y collides with a live source id; an alias names a source id that no longer exists' }]);
+    expect(sourceAliasRedirects(r.aliases)).toEqual([{ source: '/sources/old-1999-x', destination: '/sources/new-1999-x', permanent: true }]);
+  });
+  it('rejects a source alias that is its own id or listed twice', async () => {
+    const { SourceSchema } = await import('./schema');
+    const src = { id: 'src.a-2000-a', type: 'web', title: 'A page', publisher: 'P', url: 'https://example.org/a' };
+    expect(SourceSchema.safeParse({ ...src, aliases: ['src.old-2000-a'] }).success).toBe(true);
+    expect(SourceSchema.safeParse({ ...src, aliases: ['src.a-2000-a'] }).success).toBe(false);
+    expect(SourceSchema.safeParse({ ...src, aliases: ['src.old-2000-a', 'src.old-2000-a'] }).success).toBe(false);
+    expect(SourceSchema.safeParse({ ...src, aliases: ['old-2000-a'] }).success).toBe(false);
+  });
+  it('keeps the production URLs of renamed sources', async () => {
+    const { loadContentUncached } = await import('./load');
+    const { sourceAliases } = loadContentUncached();
+    expect(Object.fromEntries(sourceAliases)).toEqual({
+      'src.asi-1906-annual-report-1904-05': 'src.asi-1908-annual-report-1904-05',
+      'src.steinkellner-1999-tabo-renovation': 'src.petech-luczanits-1999-tabo-inscriptions',
+    });
+  });
   it('covers every entity removed from the corpus since the last production deploy', async () => {
     const { loadContentUncached } = await import('./load');
     const { aliases } = loadContentUncached();
@@ -307,6 +331,8 @@ describe('loader against fixtures', () => {
       const msgs = g.errors.map((e) => e.message);
       expect(msgs).toContain('datings[0]: unknown source src.nobody-1999-nothing');
       expect(msgs).toContain('extents[0]: unknown source src.nobody-1999-nothing');
+      expect(msgs).toContain('claims[0]: src.doe-1990-a-work is a former id of src.roe-1990-a-work; cite that id');
+      expect(g.sourceAliases).toEqual(new Map([['src.doe-1990-a-work', 'src.roe-1990-a-work']]));
       // The relation graph's own checks are advisory warnings; the loader separately rejects a self relation and
       // a second relation between the same two entities as errors (duplicateRelations), so both lists name them.
       expect(g.warnings).toEqual([

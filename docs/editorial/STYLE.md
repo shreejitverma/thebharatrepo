@@ -117,6 +117,10 @@ Types: `primary-text`, `translation`, `inscription`, `excavation-report`, `coin-
 Journal articles need a `doi` (or a stable `url`, such as JSTOR, for pre-DOI articles).
 Books need an `isbn` (digits only, no hyphens, quoted), `oclc`, `doi` or stable `url` such as archive.org for out-of-copyright editions.
 Web sources need a `url`.
+`aliases` (optional) lists former ids of a renamed source, for example an id that named the wrong author or year.
+The build turns each into a permanent (308) redirect from `/sources/<old-slug>`, so published URLs keep working.
+An alias must not be a live source id, and content cites the live id: citing an alias is an error.
+When you rename a source, add its old id here and record the change in `corrections.yaml`.
 
 ## 6. Entities
 

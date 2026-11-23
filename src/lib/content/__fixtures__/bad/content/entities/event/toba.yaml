@@ -8,6 +8,8 @@ datings:
     range: { earliest: "74000 BCE", latest: "74000 BCE", precision: ka, circa: true }
     grade: A
     sources: [src.roe-1990-a-work]
+claims:
+  - { text: A claim that cites the source by its former id., grade: B, sources: [src.doe-1990-a-work] }
 relations:
   - { kind: related-to, target: event.misdated }
   - { kind: related-to, target: event.toba }
