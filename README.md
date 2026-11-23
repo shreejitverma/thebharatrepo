@@ -137,7 +137,7 @@ Each page carries a hidden `exact` Pagefind filter: a 32-bit hash of its normali
 A debate's positions, common ground, what would change it and related records are indexed at Pagefind weight 0.5, so a debate that names a person in every line does not outrank that person's record for a name query.
 Alternate names are stored with a `~` mark, so Search runs two filter-only lookups (title or alternate name, and title alone) and pins records titled with the query before records that only have it as an alternate name: "mahavira" puts the Jain teacher Mahavira before the mathematician whose IAST name is Mahāvīra.
 Search looks the query's hash up in that filter alongside the main search and fetches the hits' fragments with the first batch; the filter is not a facet and never appears in the filter panel or its counts.
-Hashes keep the filter index small (21.5 KB compressed for 2,822 names, against 48.9 KB as text), and `scripts/build-search.ts` fails the build if a page's hashes do not match its title and names or two names share a hash.
+Hashes keep the `exact` filter file small (21.5 KB compressed for 2,833 names, against 50.7 KB as text), and `scripts/build-search.ts` fails the build if a page's hashes do not match its title and names or two names share a hash.
 `npm run dev` serves the index from the last production build; run `npm run build` once before testing search locally.
 
 ## References

@@ -11,9 +11,9 @@
  * query before one that only has it as an alternate name ("mahavira" is the Jain teacher's title and the
  * mathematician's IAST name).
  *
- * Hashes, not the keys themselves: with 2,342 pages the filter file is 21.5 KB compressed as hashes and
- * 48.9 KB as text (116 KB unpacked), and every search waits for it. scripts/build-search.ts fails the build
- * if two distinct keys ever share a hash.
+ * Hashes, not the keys themselves: every search waits for the filter file, and hashes keep it under half the
+ * size of the text keys (measured in README.md, Search). scripts/build-search.ts fails the build if two
+ * distinct keys ever share a hash.
  */
 export const EXACT_FILTER = 'exact';
 
