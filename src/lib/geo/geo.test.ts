@@ -198,7 +198,37 @@ describe('clusterPoints', () => {
       30,
     );
     expect(out).toHaveLength(1);
-    expect(out[0].ids.sort()).toEqual(['a', 'b', 'c', 'd']);
+    // Members stay in input order across the merge, not seed a's members followed by seed c's.
+    expect(out[0].ids).toEqual(['a', 'c', 'b', 'd']);
+  });
+  it('lists members in input order after a merge', () => {
+    // Seeds a and b; c joins b, d joins a, and the merge must interleave them back into input order.
+    const out = clusterPoints(
+      [
+        { id: 'a', x: 0, y: 0 },
+        { id: 'b', x: 40, y: 0 },
+        { id: 'c', x: 25, y: 0 },
+        { id: 'd', x: 15, y: 0 },
+      ],
+      30,
+    );
+    expect(out.map((c) => c.ids)).toEqual([['a', 'b', 'c', 'd']]);
+  });
+  it('breaks a tie between two seeds by input order, wherever the grid cells fall', () => {
+    // P3 is exactly as far from P1 as from P2. Shifting every point moves the grid cell boundaries,
+    // which used to change the scan order and with it the seed P3 joined.
+    const tie: ScreenPoint[] = [
+      { id: 'p1', x: 99, y: 1 },
+      { id: 'p2', x: 1, y: 99 },
+      { id: 'p3', x: 50, y: 50 },
+    ];
+    for (const dx of [0, 2, 37, -51]) {
+      const out = clusterPoints(
+        tie.map((p) => ({ ...p, x: p.x + dx })),
+        100,
+      );
+      expect(out.map((c) => c.ids)).toEqual([['p1', 'p3'], ['p2']]);
+    }
   });
   it('merges coincident points', () => {
     const out = clusterPoints([{ id: 'x', x: 5, y: 5 }, { id: 'y', x: 5, y: 5 }], 10);

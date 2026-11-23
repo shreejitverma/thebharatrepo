@@ -275,6 +275,48 @@ test.describe('Map view', () => {
     else await expect.poll(async () => (await focused()).key).not.toBeNull();
   });
 
+  test('arrow keys carry focus to the new selection even when the old one joins a cluster', async ({ page, isMobile }) => {
+    test.skip(isMobile, 'keyboard access is covered on desktop');
+    const focusedKey = () => page.evaluate(() => (document.activeElement as HTMLElement | null)?.dataset.key ?? null);
+    // A member of a crowded cluster, selected so that it is drawn on its own until the selection moves on.
+    await page.goto('/kaalchakra?view=map');
+    const crowded = page.locator('.kc-map-svg .kc-map-cluster');
+    await expect(crowded.first()).toBeVisible();
+    const keys = await crowded.evaluateAll((els) => els.filter((el) => Number(el.getAttribute('data-count')) >= 3).map((el) => el.getAttribute('data-key')!.slice('cluster:'.length)));
+    expect(keys.length).toBeGreaterThan(0);
+    const id = keys[0];
+    await page.goto(`/kaalchakra?view=map&id=${encodeURIComponent(id)}`);
+    const mark = page.locator(`.kc-map-svg .kc-mark[data-key="${id}"]`);
+    await expect(mark).toHaveAttribute('data-active', 'true');
+    await mark.focus();
+    await page.keyboard.press('ArrowRight');
+    await expect(page.locator(`.kc-map-svg .kc-mark[data-active="true"]:not([data-key="${id}"])`)).toHaveCount(1);
+    const next = await page.locator('.kc-map-svg .kc-mark[data-active="true"]').getAttribute('data-key');
+    // The old selection went back into its cluster, so its marker is gone; focus is on the new one, not on that cluster.
+    await expect(mark).toHaveCount(0);
+    await expect.poll(focusedKey).toBe(next);
+  });
+
+  test('an open cluster list closes when the view changes and does not come back', async ({ page, isMobile }) => {
+    test.skip(isMobile, 'keyboard access is covered on desktop');
+    // Entries a few hundred metres apart never separate, so their cluster opens a list.
+    await page.goto('/kaalchakra?view=map&region=68.14,27.33,1.5');
+    const cluster = page.locator('.kc-map-svg .kc-map-cluster').first();
+    await expect(cluster).toBeVisible();
+    const list = page.locator('.kc-map-open');
+    await cluster.focus();
+    await page.keyboard.press('Enter');
+    await expect(list).toHaveCount(1);
+    // Pan away and back to exactly the same view: the list stays closed.
+    await page.locator('.kc-canvas').focus();
+    await page.keyboard.press('Shift+ArrowRight');
+    await expect(list).toHaveCount(0);
+    await page.keyboard.press('Shift+ArrowLeft');
+    await expect(page).toHaveURL(/region=68\.14%2C27\.33%2C1\.5/);
+    await page.waitForTimeout(300);
+    await expect(list).toHaveCount(0);
+  });
+
   test('on a touch screen one finger scrolls the page and two fingers move the map', async ({ page, isMobile, context, browserName }) => {
     test.skip(!isMobile || browserName !== 'chromium', 'touch input is driven through the Chromium DevTools protocol');
     await page.goto('/kaalchakra?view=map');
