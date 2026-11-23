@@ -30,7 +30,7 @@ datings:
     grade: B
     label: Primary inscription mentioning Indo-Greek King Menander I
     sources:
-      - src.desai-1938-epigraphia-indica-vol-24
+      - src.chakravarti-1938-epigraphia-indica-vol-24
       - src.stoneman-2019-greek-experience-of-india
     note: >-
       First stratigraphic Kharoshthi hand invokes the reign of Maharaja Minadra (Menander I, c. 155-130 BCE)
@@ -45,7 +45,7 @@ datings:
     grade: C
     label: Secondary Apraca re-consecration inscription (5th regnal year of Vijayamitra)
     sources:
-      - src.desai-1938-epigraphia-indica-vol-24
+      - src.chakravarti-1938-epigraphia-indica-vol-24
       - src.salomon-1998-indian-epigraphy
     note: >-
       Later epigraphs on the bowl/lid record re-establishment by Apracaraja Vijayamitra in Year 5 (25th day of
@@ -56,7 +56,7 @@ claims:
       Richard Salomon, the Shinkot steatite casket bears two distinct layers of Kharoshthi inscriptions.
     grade: A
     sources:
-      - src.desai-1938-epigraphia-indica-vol-24
+      - src.chakravarti-1938-epigraphia-indica-vol-24
       - src.salomon-1998-indian-epigraphy
   - text: >-
       The earlier epigraphic stratum refers to "Maharajasa Minadrasa" (King Menander I) on the 14th day of
@@ -64,7 +64,7 @@ claims:
       Buddha by Viyakamitra.
     grade: A
     sources:
-      - src.desai-1938-epigraphia-indica-vol-24
+      - src.chakravarti-1938-epigraphia-indica-vol-24
       - src.stoneman-2019-greek-experience-of-india
   - text: >-
       The later Apraca inscription in the 5th regnal year of Vijayamitra (on the 25th day of Vaisakha) states
@@ -72,7 +72,7 @@ claims:
       proving ongoing Buddhist relic cults from Indo-Greek into Indo-Scythian times.
     grade: B
     sources:
-      - src.desai-1938-epigraphia-indica-vol-24
+      - src.chakravarti-1938-epigraphia-indica-vol-24
       - src.salomon-1998-indian-epigraphy
 relations:
   - kind: related-to

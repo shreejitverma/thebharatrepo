@@ -71,7 +71,7 @@ A dating describes the entity's own existence: a person's lifespan or active per
 A single dated event in its history is a claim, whether it falls inside or outside that span: a speech, a capture, a founding, an end or transfer, a revival, a recognition, a survey, an inscription or text that names it, or the completion of one work.
 Keep the entity's span as its dating, even when the span is only graded B or C.
 The validator rejects a scholarship dating that ranks first (see rankDatings) when another scholarship dating of the entity is at least five times longer, inside or outside it, because the shorter one would otherwise stand for the entity on cards and in sort order.
-When the shorter dating does date the entity itself, such as a competing dating of the same deposit or the foundation that later building phases follow, give it a `primaryReason` that says so.
+When the shorter dating does date the entity itself, such as a competing dating of the same deposit, give it a `primaryReason` that says so.
 Give an entity several datings when methods disagree.
 For example, a text can have a `linguistic` dating graded C and a `traditional-puranic` dating graded D.
 Use the `label` field to name the position, for example `label: "Mainstream Indology"` or `label: "Kanchi and Dwaraka matha tradition"`, and the `note` field to explain the basis in one or two sentences.

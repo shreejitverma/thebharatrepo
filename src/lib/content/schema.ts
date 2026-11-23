@@ -89,9 +89,9 @@ export const DatingSchema = z
     sources: z.array(CitationRef).min(1, 'every dating needs at least one source'),
     note: z.string().optional(),
     /**
-     * Why this dating stands for the entity although a dating of it at least five times longer exists: for example a
-     * competing dating of the same deposit, or the foundation that the later building phases follow. Without it the
-     * validator treats such a dating as a single event in the entity's history, which belongs in a claim.
+     * Why this dating stands for the entity although a dating of it at least five times longer exists, such as a
+     * competing dating of the same deposit. Without it the validator treats such a dating as a single event in the
+     * entity's history, which belongs in a claim.
      */
     primaryReason: z.string().min(10).optional(),
   })

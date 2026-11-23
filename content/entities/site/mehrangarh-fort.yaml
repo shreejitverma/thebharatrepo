@@ -12,29 +12,18 @@ summaries:
     fort's plans and decoration changed with successive Marwar courts."
 region: "Jodhpur, Rajasthan"
 datings:
-  - method: "scholarly-consensus"
-    range:
-      earliest: 1459
-      latest: 1459
-      precision: "year"
-      circa: false
-    grade: "B"
-    label: "Foundation attributed to Rao Jodha"
-    primaryReason: "The foundation begins the fort's existence; the later building phases follow it."
-    sources:
-      - "src.mehrangarh-architecture"
   - method: "art-historical"
     range:
-      earliest: 1500
+      earliest: 1459
       latest: 1900
       precision: "century"
       circa: true
     grade: "B"
-    label: "Major phases of construction and rebuilding"
+    label: "Foundation by Rao Jodha and later phases of construction and rebuilding"
     sources:
       - "src.mehrangarh-architecture"
 claims:
-  - text: "The Mehrangarh Museum Trust identifies Rao Jodha as the fort's founder and Maldeo's reign as
+  - text: "The Mehrangarh Museum Trust identifies Rao Jodha as the fort's founder, in 1459, and Maldeo's reign as
       an early major period of construction."
     grade: "B"
     sources:

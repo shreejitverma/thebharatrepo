@@ -127,9 +127,6 @@ describe('entity and source rules', () => {
       const older = dating('geological', 'C', -737974, -597974);
       expect(issues([older, toba])).toHaveLength(1);
       expect(issues([older, { ...toba, primaryReason: 'A competing dating of the same tephra, not an event.' }])).toEqual([]);
-      // Mehrangarh: the foundation (B) that the later building phases (B) follow.
-      const foundation = { ...dating('scholarly-consensus', 'B', 1459, 1459), primaryReason: "The foundation begins the fort's existence." };
-      expect(issues([foundation, dating('art-historical', 'B', 1500, 1900)])).toEqual([]);
     });
 
     it('ignores traditional reckoning', () => {
